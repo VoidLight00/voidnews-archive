@@ -36,27 +36,27 @@ function LinkBtn({ href, label }: { href: string; label: string }) {
 // ── OG 링크 프리뷰 ───────────────────────────────
 interface OGData { title?: string; description?: string; image?: string; hostname?: string; }
 
-function LinkPreview({ url }: { url: string }) {
+function useOGData(url: string, enabled: boolean) {
   const [data, setData] = useState<OGData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    if (!enabled || !url) return;
     const cacheKey = `voidnews-og:${url}`;
     try {
       const cached = localStorage.getItem(cacheKey);
-      if (cached) { setData(JSON.parse(cached)); setLoading(false); return; }
+      if (cached) { setData(JSON.parse(cached)); return; }
     } catch {}
-
+    setLoading(true);
     fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}`)
       .then(r => r.json())
       .then(d => {
         if (d.status === "success") {
-          const img = d.data.image?.url || d.data.screenshot?.url;
           const og: OGData = {
             title: d.data.title,
             description: d.data.description,
-            image: img,
-            hostname: (() => { try { return new URL(url).hostname; } catch { return url; } })(),
+            image: d.data.image?.url || d.data.screenshot?.url,
+            hostname: (() => { try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; } })(),
           };
           setData(og);
           try { localStorage.setItem(cacheKey, JSON.stringify(og)); } catch {}
@@ -64,17 +64,74 @@ function LinkPreview({ url }: { url: string }) {
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [url]);
+  }, [url, enabled]);
+
+  return { data, loading };
+}
+
+// 카드용 작은 OG 프리뷰 (Intersection Observer lazy load)
+function CardLinkPreview({ url }: { url: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  const { data, loading } = useOGData(url, visible);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold: 0.1 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} onClick={e => e.stopPropagation()}>
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block" }}>
+        <div style={{ border: "1px solid #1e1e1e", borderRadius: 8, overflow: "hidden",
+          background: "#0c0c0c", display: "flex", minHeight: 72, transition: "border-color 0.15s" }}
+          onMouseEnter={e => (e.currentTarget.style.borderColor = "#333")}
+          onMouseLeave={e => (e.currentTarget.style.borderColor = "#1e1e1e")}>
+          {loading && (
+            <div style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "10px 12px" }}>
+              <div style={{ width: 60, height: 52, background: "#1a1a1a", borderRadius: 4, flexShrink: 0 }} />
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
+                <div style={{ height: 10, background: "#1a1a1a", borderRadius: 3, width: "60%" }} />
+                <div style={{ height: 9, background: "#1a1a1a", borderRadius: 3, width: "85%" }} />
+              </div>
+            </div>
+          )}
+          {!loading && data?.image && (
+            <img src={data.image} alt="" style={{ width: 80, objectFit: "cover", flexShrink: 0 }}
+              onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
+          )}
+          {!loading && (
+            <div style={{ padding: "10px 12px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", gap: 3, minWidth: 0 }}>
+              <p style={{ fontSize: 10, color: "#555", margin: 0 }}>{data?.hostname || url}</p>
+              <p style={{ fontSize: 12, fontWeight: 600, color: "#C0C0C0", margin: 0,
+                overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const }}>
+                {data?.title || url}
+              </p>
+            </div>
+          )}
+          <div style={{ padding: "10px 10px 10px 0", display: "flex", alignItems: "center", flexShrink: 0 }}>
+            <span style={{ fontSize: 12, color: "#333" }}>↗</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+}
+
+// 모달용 큰 OG 프리뷰
+function LinkPreview({ url }: { url: string }) {
+  const { data, loading } = useOGData(url, true);
 
   if (loading) return (
     <div style={{ border: "1px solid #222", borderRadius: 10, overflow: "hidden",
-      background: "#111", marginBottom: 20, display: "flex", height: 90, alignItems: "center",
-      padding: "0 16px", gap: 12 }}>
-      <div style={{ width: 90, height: 90, background: "#1a1a1a", flexShrink: 0 }} />
+      background: "#111", marginBottom: 20, display: "flex", height: 90, alignItems: "center", padding: "0 16px", gap: 12 }}>
+      <div style={{ width: 90, height: 66, background: "#1a1a1a", borderRadius: 4, flexShrink: 0 }} />
       <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
         <div style={{ height: 12, background: "#1a1a1a", borderRadius: 4, width: "70%" }} />
         <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "90%" }} />
-        <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "40%" }} />
       </div>
     </div>
   );
@@ -82,22 +139,18 @@ function LinkPreview({ url }: { url: string }) {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block", marginBottom: 20 }}>
       <div style={{ border: "1px solid #2a2a2a", borderRadius: 10, overflow: "hidden",
-        background: "#0e0e0e", display: "flex", transition: "border-color 0.15s",
-        cursor: "pointer" }}
+        background: "#0e0e0e", display: "flex", transition: "border-color 0.15s" }}
         onMouseEnter={e => (e.currentTarget.style.borderColor = "#444")}
         onMouseLeave={e => (e.currentTarget.style.borderColor = "#2a2a2a")}>
         {data?.image && (
-          <img src={data.image} alt={data.title || ""}
+          <img src={data.image} alt={data?.title || ""}
             style={{ width: 140, height: 100, objectFit: "cover", flexShrink: 0 }}
-            onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
-          />
+            onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
         )}
-        <div style={{ padding: "12px 14px", flex: 1, display: "flex", flexDirection: "column",
-          justifyContent: "center", gap: 4, minWidth: 0 }}>
-          <p style={{ fontSize: 11, color: "#555", margin: 0 }}>{data?.hostname || new URL(url).hostname}</p>
+        <div style={{ padding: "12px 14px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", gap: 4, minWidth: 0 }}>
+          <p style={{ fontSize: 11, color: "#555", margin: 0 }}>{data?.hostname}</p>
           <p style={{ fontSize: 13, fontWeight: 700, color: "#E0E0E0", margin: 0,
-            overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical" as const }}>
+            overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const }}>
             {data?.title || url}
           </p>
           {data?.description && (
@@ -283,7 +336,7 @@ function PostCard({ post, companyColor, onClick, bookmarked, onBookmark }: {
   bookmarked: boolean; onBookmark: () => void;
 }) {
   const [copied, setCopied] = useState(false);
-  const hasDetail = !!(post.content || post.source);
+  const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -326,12 +379,8 @@ function PostCard({ post, companyColor, onClick, bookmarked, onBookmark }: {
       {post.summary && (
         <p style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5 }}>{post.summary}</p>
       )}
-      {(post.threadsUrl || post.xUrl) && (
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }} onClick={e => e.stopPropagation()}>
-          {post.threadsUrl && <LinkBtn href={post.threadsUrl} label="Threads" />}
-          {post.xUrl && <LinkBtn href={post.xUrl} label="X" />}
-        </div>
-      )}
+      {/* 원본 소스 OG 프리뷰 (카드에서 바로 표시) */}
+      {post.source && <CardLinkPreview url={post.source} />}
     </div>
   );
 }
