@@ -394,3 +394,7 @@ export function getLatestSlug(): string {
 export function getAllSlugs(): string[] {
   return weeks.map((w) => w.slug);
 }
+
+export function getWeekList() {
+  return weeks.map(w => ({ slug: w.slug, week: w.week, year: w.year })).reverse();
+}
