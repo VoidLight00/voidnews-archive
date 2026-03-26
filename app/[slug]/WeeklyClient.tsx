@@ -33,6 +33,88 @@ function LinkBtn({ href, label }: { href: string; label: string }) {
   );
 }
 
+// ── OG 링크 프리뷰 ───────────────────────────────
+interface OGData { title?: string; description?: string; image?: string; hostname?: string; }
+
+function LinkPreview({ url }: { url: string }) {
+  const [data, setData] = useState<OGData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const cacheKey = `voidnews-og:${url}`;
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) { setData(JSON.parse(cached)); setLoading(false); return; }
+    } catch {}
+
+    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}`)
+      .then(r => r.json())
+      .then(d => {
+        if (d.status === "success") {
+          const img = d.data.image?.url || d.data.screenshot?.url;
+          const og: OGData = {
+            title: d.data.title,
+            description: d.data.description,
+            image: img,
+            hostname: (() => { try { return new URL(url).hostname; } catch { return url; } })(),
+          };
+          setData(og);
+          try { localStorage.setItem(cacheKey, JSON.stringify(og)); } catch {}
+        }
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [url]);
+
+  if (loading) return (
+    <div style={{ border: "1px solid #222", borderRadius: 10, overflow: "hidden",
+      background: "#111", marginBottom: 20, display: "flex", height: 90, alignItems: "center",
+      padding: "0 16px", gap: 12 }}>
+      <div style={{ width: 90, height: 90, background: "#1a1a1a", flexShrink: 0 }} />
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
+        <div style={{ height: 12, background: "#1a1a1a", borderRadius: 4, width: "70%" }} />
+        <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "90%" }} />
+        <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "40%" }} />
+      </div>
+    </div>
+  );
+
+  return (
+    <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block", marginBottom: 20 }}>
+      <div style={{ border: "1px solid #2a2a2a", borderRadius: 10, overflow: "hidden",
+        background: "#0e0e0e", display: "flex", transition: "border-color 0.15s",
+        cursor: "pointer" }}
+        onMouseEnter={e => (e.currentTarget.style.borderColor = "#444")}
+        onMouseLeave={e => (e.currentTarget.style.borderColor = "#2a2a2a")}>
+        {data?.image && (
+          <img src={data.image} alt={data.title || ""}
+            style={{ width: 140, height: 100, objectFit: "cover", flexShrink: 0 }}
+            onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+          />
+        )}
+        <div style={{ padding: "12px 14px", flex: 1, display: "flex", flexDirection: "column",
+          justifyContent: "center", gap: 4, minWidth: 0 }}>
+          <p style={{ fontSize: 11, color: "#555", margin: 0 }}>{data?.hostname || new URL(url).hostname}</p>
+          <p style={{ fontSize: 13, fontWeight: 700, color: "#E0E0E0", margin: 0,
+            overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical" as const }}>
+            {data?.title || url}
+          </p>
+          {data?.description && (
+            <p style={{ fontSize: 11, color: "#666", margin: 0, overflow: "hidden",
+              display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const }}>
+              {data.description}
+            </p>
+          )}
+        </div>
+        <div style={{ padding: "12px 12px 12px 0", display: "flex", alignItems: "center" }}>
+          <span style={{ fontSize: 14, color: "#444" }}>↗</span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
 // ── 임베드 프리뷰 (X / Threads) ──────────────────
 function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string }) {
   const [tab, setTab] = useState<"x" | "threads">(xUrl ? "x" : "threads");
@@ -175,19 +257,13 @@ function PostModal({ post, companyColor, onClose }: { post: Post; companyColor: 
         {/* 🔑 공식 게시글 임베드 */}
         <EmbedPreview xUrl={post.xUrl} threadsUrl={post.threadsUrl} />
 
+        {/* 원본 소스 OG 프리뷰 */}
+        {post.source && <LinkPreview url={post.source} />}
+
         {post.content && (
           <div style={{ background: "#111", border: "1px solid #222", borderRadius: 8, padding: "16px 18px", marginBottom: 20 }}>
             <p style={{ fontSize: 12, fontWeight: 700, color: "#555", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>포스팅 내용</p>
             <p style={{ fontSize: 14, color: "#B0B0B0", lineHeight: 1.8, whiteSpace: "pre-line" }}>{post.content}</p>
-          </div>
-        )}
-        {post.source && (
-          <div style={{ marginBottom: 20 }}>
-            <p style={{ fontSize: 11, color: "#555", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>원본 소스</p>
-            <a href={post.source} target="_blank" rel="noopener noreferrer"
-              style={{ fontSize: 13, color: "#4A9EFF", wordBreak: "break-all", textDecoration: "none" }}>
-              {post.source}
-            </a>
           </div>
         )}
         <button onClick={onClose}
