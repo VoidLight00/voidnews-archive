@@ -1,20 +1,103 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback, useRef } from "react";
-import type { WeeklyData, Post, Company } from "@/lib/data";
+import {
+  startTransition,
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
+import type { Company, Post, WeeklyData } from "@/lib/data";
 import { getWeekList } from "@/lib/data";
+
+const BOOKMARKS_STORAGE_KEY = "voidnews-bookmarks";
+const READ_STORAGE_PREFIX = "voidnews-read:";
+
+function getReadStorageKey(title: string) {
+  return `${READ_STORAGE_PREFIX}${title}`;
+}
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightText(text: string, query: string): ReactNode {
+  const trimmed = query.trim();
+  if (!trimmed) return text;
+
+  const regex = new RegExp(`(${escapeRegExp(trimmed)})`, "gi");
+  const parts = text.split(regex);
+
+  return parts.map((part, index) => {
+    if (!part) return null;
+    const matched = part.toLowerCase() === trimmed.toLowerCase();
+    return matched ? (
+      <mark
+        key={`${part}-${index}`}
+        style={{
+          background: "#E87040",
+          color: "#111",
+          borderRadius: 4,
+          padding: "0 2px",
+        }}
+      >
+        {part}
+      </mark>
+    ) : (
+      <span key={`${part}-${index}`}>{part}</span>
+    );
+  });
+}
+
+function buildUrlWithParams(pathname: string, params: URLSearchParams) {
+  const query = params.toString();
+  return query ? `${pathname}?${query}` : pathname;
+}
+
+function getPostLink(postTitle: string) {
+  if (typeof window === "undefined") return "";
+  const params = new URLSearchParams(window.location.search);
+  params.set("post", postTitle);
+  return `${window.location.origin}${buildUrlWithParams(window.location.pathname, params)}`;
+}
+
+type SelectedPostState = {
+  companyName: string;
+  title: string;
+};
+
+type ModalNavigation = {
+  hasPrev: boolean;
+  hasNext: boolean;
+  onPrev: () => void;
+  onNext: () => void;
+  positionLabel: string;
+};
 
 // ── 플랫폼 배지 ─────────────────────────────────
 function PlatformBadge({ platform }: { platform: Post["platform"] }) {
   const map: Record<string, { bg: string; color: string }> = {
-    X:           { bg: "#18181B", color: "#E4E4E7" },
-    Threads:     { bg: "#1A1A2E", color: "#A78BFA" },
+    X: { bg: "#18181B", color: "#E4E4E7" },
+    Threads: { bg: "#1A1A2E", color: "#A78BFA" },
     "X+Threads": { bg: "#1A2A2E", color: "#60A5FA" },
   };
   const s = map[platform] || map.X;
   return (
-    <span style={{ background: s.bg, color: s.color, fontSize: 11, fontWeight: 600,
-      padding: "2px 7px", borderRadius: 4, letterSpacing: "0.04em", whiteSpace: "nowrap" }}>
+    <span
+      style={{
+        background: s.bg,
+        color: s.color,
+        fontSize: 11,
+        fontWeight: 600,
+        padding: "2px 7px",
+        borderRadius: 4,
+        letterSpacing: "0.04em",
+        whiteSpace: "nowrap",
+      }}
+    >
       {platform}
     </span>
   );
@@ -23,18 +106,36 @@ function PlatformBadge({ platform }: { platform: Post["platform"] }) {
 // ── 링크 버튼 ────────────────────────────────────
 function LinkBtn({ href, label }: { href: string; label: string }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer"
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="link-btn"
-      style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 12,
-        fontWeight: 600, color: "#E87040", textDecoration: "none", padding: "4px 10px",
-        border: "1px solid #E87040", borderRadius: 4 }}>
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 4,
+        fontSize: 12,
+        fontWeight: 600,
+        color: "#E87040",
+        textDecoration: "none",
+        padding: "4px 10px",
+        border: "1px solid #E87040",
+        borderRadius: 4,
+      }}
+    >
       {label} ↗
     </a>
   );
 }
 
 // ── OG 링크 프리뷰 ───────────────────────────────
-interface OGData { title?: string; description?: string; image?: string; hostname?: string; }
+interface OGData {
+  title?: string;
+  description?: string;
+  image?: string;
+  hostname?: string;
+}
 
 function useOGData(url: string, enabled: boolean) {
   const [data, setData] = useState<OGData | null>(null);
@@ -45,21 +146,33 @@ function useOGData(url: string, enabled: boolean) {
     const cacheKey = `voidnews-og:${url}`;
     try {
       const cached = localStorage.getItem(cacheKey);
-      if (cached) { setData(JSON.parse(cached)); return; }
+      if (cached) {
+        setData(JSON.parse(cached));
+        return;
+      }
     } catch {}
+
     setLoading(true);
     fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}`)
-      .then(r => r.json())
-      .then(d => {
+      .then((r) => r.json())
+      .then((d) => {
         if (d.status === "success") {
           const og: OGData = {
             title: d.data.title,
             description: d.data.description,
             image: d.data.image?.url || d.data.screenshot?.url,
-            hostname: (() => { try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return url; } })(),
+            hostname: (() => {
+              try {
+                return new URL(url).hostname.replace(/^www\./, "");
+              } catch {
+                return url;
+              }
+            })(),
           };
           setData(og);
-          try { localStorage.setItem(cacheKey, JSON.stringify(og)); } catch {}
+          try {
+            localStorage.setItem(cacheKey, JSON.stringify(og));
+          } catch {}
         }
         setLoading(false);
       })
@@ -78,21 +191,59 @@ function CardLinkPreview({ url }: { url: string }) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold: 0.1 });
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
 
   return (
-    <div ref={ref} onClick={e => e.stopPropagation()}>
-      <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block" }}>
-        <div style={{ border: "1px solid #1e1e1e", borderRadius: 8, overflow: "hidden",
-          background: "#0c0c0c", display: "flex", minHeight: 72, transition: "border-color 0.15s" }}
-          onMouseEnter={e => (e.currentTarget.style.borderColor = "#333")}
-          onMouseLeave={e => (e.currentTarget.style.borderColor = "#1e1e1e")}>
+    <div ref={ref} onClick={(e) => e.stopPropagation()}>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none", display: "block" }}
+      >
+        <div
+          style={{
+            border: "1px solid #1e1e1e",
+            borderRadius: 8,
+            overflow: "hidden",
+            background: "#0c0c0c",
+            display: "flex",
+            minHeight: 72,
+            transition: "border-color 0.15s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#333")}
+          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#1e1e1e")}
+        >
           {loading && (
-            <div style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "10px 12px" }}>
-              <div style={{ width: 60, height: 52, background: "#1a1a1a", borderRadius: 4, flexShrink: 0 }} />
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                padding: "10px 12px",
+              }}
+            >
+              <div
+                style={{
+                  width: 60,
+                  height: 52,
+                  background: "#1a1a1a",
+                  borderRadius: 4,
+                  flexShrink: 0,
+                }}
+              />
               <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
                 <div style={{ height: 10, background: "#1a1a1a", borderRadius: 3, width: "60%" }} />
                 <div style={{ height: 9, background: "#1a1a1a", borderRadius: 3, width: "85%" }} />
@@ -100,14 +251,40 @@ function CardLinkPreview({ url }: { url: string }) {
             </div>
           )}
           {!loading && data?.image && (
-            <img src={data.image} alt="" style={{ width: 80, objectFit: "cover", flexShrink: 0 }}
-              onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
+            <img
+              src={data.image}
+              alt=""
+              style={{ width: 80, objectFit: "cover", flexShrink: 0 }}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = "none";
+              }}
+            />
           )}
           {!loading && (
-            <div style={{ padding: "10px 12px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", gap: 3, minWidth: 0 }}>
+            <div
+              style={{
+                padding: "10px 12px",
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: 3,
+                minWidth: 0,
+              }}
+            >
               <p style={{ fontSize: 10, color: "#555", margin: 0 }}>{data?.hostname || url}</p>
-              <p style={{ fontSize: 12, fontWeight: 600, color: "#C0C0C0", margin: 0,
-                overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const }}>
+              <p
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  color: "#C0C0C0",
+                  margin: 0,
+                  overflow: "hidden",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical" as const,
+                }}
+              >
                 {data?.title || url}
               </p>
             </div>
@@ -125,37 +302,98 @@ function CardLinkPreview({ url }: { url: string }) {
 function LinkPreview({ url }: { url: string }) {
   const { data, loading } = useOGData(url, true);
 
-  if (loading) return (
-    <div style={{ border: "1px solid #222", borderRadius: 10, overflow: "hidden",
-      background: "#111", marginBottom: 20, display: "flex", height: 90, alignItems: "center", padding: "0 16px", gap: 12 }}>
-      <div style={{ width: 90, height: 66, background: "#1a1a1a", borderRadius: 4, flexShrink: 0 }} />
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
-        <div style={{ height: 12, background: "#1a1a1a", borderRadius: 4, width: "70%" }} />
-        <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "90%" }} />
+  if (loading) {
+    return (
+      <div
+        style={{
+          border: "1px solid #222",
+          borderRadius: 10,
+          overflow: "hidden",
+          background: "#111",
+          marginBottom: 20,
+          display: "flex",
+          height: 90,
+          alignItems: "center",
+          padding: "0 16px",
+          gap: 12,
+        }}
+      >
+        <div style={{ width: 90, height: 66, background: "#1a1a1a", borderRadius: 4, flexShrink: 0 }} />
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
+          <div style={{ height: 12, background: "#1a1a1a", borderRadius: 4, width: "70%" }} />
+          <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "90%" }} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "block", marginBottom: 20 }}>
-      <div style={{ border: "1px solid #2a2a2a", borderRadius: 10, overflow: "hidden",
-        background: "#0e0e0e", display: "flex", transition: "border-color 0.15s" }}
-        onMouseEnter={e => (e.currentTarget.style.borderColor = "#444")}
-        onMouseLeave={e => (e.currentTarget.style.borderColor = "#2a2a2a")}>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none", display: "block", marginBottom: 20 }}
+    >
+      <div
+        style={{
+          border: "1px solid #2a2a2a",
+          borderRadius: 10,
+          overflow: "hidden",
+          background: "#0e0e0e",
+          display: "flex",
+          transition: "border-color 0.15s",
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#444")}
+        onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#2a2a2a")}
+      >
         {data?.image && (
-          <img src={data.image} alt={data?.title || ""}
+          <img
+            src={data.image}
+            alt={data?.title || ""}
             style={{ width: 140, height: 100, objectFit: "cover", flexShrink: 0 }}
-            onError={e => { (e.currentTarget as HTMLImageElement).style.display = "none"; }} />
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).style.display = "none";
+            }}
+          />
         )}
-        <div style={{ padding: "12px 14px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", gap: 4, minWidth: 0 }}>
+        <div
+          style={{
+            padding: "12px 14px",
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: 4,
+            minWidth: 0,
+          }}
+        >
           <p style={{ fontSize: 11, color: "#555", margin: 0 }}>{data?.hostname}</p>
-          <p style={{ fontSize: 13, fontWeight: 700, color: "#E0E0E0", margin: 0,
-            overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const }}>
+          <p
+            style={{
+              fontSize: 13,
+              fontWeight: 700,
+              color: "#E0E0E0",
+              margin: 0,
+              overflow: "hidden",
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical" as const,
+            }}
+          >
             {data?.title || url}
           </p>
           {data?.description && (
-            <p style={{ fontSize: 11, color: "#666", margin: 0, overflow: "hidden",
-              display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const }}>
+            <p
+              style={{
+                fontSize: 11,
+                color: "#666",
+                margin: 0,
+                overflow: "hidden",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical" as const,
+              }}
+            >
               {data.description}
             </p>
           )}
@@ -176,22 +414,24 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
   const [xHtml, setXHtml] = useState<string | null>(null);
   const [xLoading, setXLoading] = useState(false);
 
-  // Twitter oEmbed fetch
   useEffect(() => {
     if (!xUrl) return;
     setXLoading(true);
     fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(xUrl)}&dnt=1&theme=dark&hide_thread=false`)
-      .then(r => r.json())
-      .then(d => { setXHtml(d.html); setXLoading(false); })
+      .then((r) => r.json())
+      .then((d) => {
+        setXHtml(d.html);
+        setXLoading(false);
+      })
       .catch(() => setXLoading(false));
   }, [xUrl]);
 
-  // Twitter widget 렌더링
   useEffect(() => {
     if (!xHtml || !xRef.current) return;
     xRef.current.innerHTML = xHtml;
-    // Twitter widget script 로드 or reload
-    const w = window as any;
+    const w = window as Window & {
+      twttr?: { widgets?: { load: (el?: HTMLElement) => void } };
+    };
     if (w.twttr?.widgets) {
       w.twttr.widgets.load(xRef.current);
     } else {
@@ -202,13 +442,14 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
     }
   }, [xHtml]);
 
-  // Threads embed script 로드
   useEffect(() => {
     if (!threadsUrl || !thRef.current) return;
     thRef.current.innerHTML = `<blockquote class="text-post-media" data-url="${threadsUrl}"><a href="${threadsUrl}" target="_blank">Threads에서 보기</a></blockquote>`;
-    const w = window as any;
+    const w = window as Window & {
+      instgrm?: { Embeds?: { process?: () => void } };
+    };
     if (w.instgrm?.Embeds) {
-      w.instgrm.Embeds.process();
+      w.instgrm.Embeds.process?.();
     } else {
       const existing = document.getElementById("threads-embed-script");
       if (!existing) {
@@ -216,10 +457,14 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
         s.id = "threads-embed-script";
         s.src = "https://www.threads.net/embed.js";
         s.async = true;
-        s.onload = () => { (window as any).instgrm?.Embeds?.process?.(); };
+        s.onload = () => {
+          (window as Window & { instgrm?: { Embeds?: { process?: () => void } } }).instgrm?.Embeds?.process?.();
+        };
         document.head.appendChild(s);
       } else {
-        setTimeout(() => (window as any).instgrm?.Embeds?.process?.(), 500);
+        setTimeout(() => {
+          (window as Window & { instgrm?: { Embeds?: { process?: () => void } } }).instgrm?.Embeds?.process?.();
+        }, 500);
       }
     }
   }, [threadsUrl, tab]);
@@ -228,47 +473,86 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
 
   return (
     <div style={{ marginBottom: 24 }}>
-      {/* 탭 */}
       {xUrl && threadsUrl && (
         <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-          <button onClick={() => setTab("x")}
-            style={{ fontSize: 12, fontWeight: 600, padding: "4px 12px", borderRadius: 20, cursor: "pointer", border: "1px solid",
+          <button
+            onClick={() => setTab("x")}
+            style={{
+              fontSize: 12,
+              fontWeight: 600,
+              padding: "4px 12px",
+              borderRadius: 20,
+              cursor: "pointer",
+              border: "1px solid",
               borderColor: tab === "x" ? "#E87040" : "#333",
               background: tab === "x" ? "#E8704022" : "transparent",
-              color: tab === "x" ? "#E87040" : "#555" }}>
+              color: tab === "x" ? "#E87040" : "#555",
+            }}
+          >
             X 포스트
           </button>
-          <button onClick={() => setTab("threads")}
-            style={{ fontSize: 12, fontWeight: 600, padding: "4px 12px", borderRadius: 20, cursor: "pointer", border: "1px solid",
+          <button
+            onClick={() => setTab("threads")}
+            style={{
+              fontSize: 12,
+              fontWeight: 600,
+              padding: "4px 12px",
+              borderRadius: 20,
+              cursor: "pointer",
+              border: "1px solid",
               borderColor: tab === "threads" ? "#A78BFA" : "#333",
               background: tab === "threads" ? "#A78BFA22" : "transparent",
-              color: tab === "threads" ? "#A78BFA" : "#555" }}>
+              color: tab === "threads" ? "#A78BFA" : "#555",
+            }}
+          >
             Threads 포스트
           </button>
         </div>
       )}
 
-      {/* X 임베드 */}
       {(tab === "x" || !threadsUrl) && xUrl && (
         <div>
           {xLoading && (
-            <div style={{ background: "#111", border: "1px solid #222", borderRadius: 12, padding: "20px 16px",
-              display: "flex", alignItems: "center", gap: 10, color: "#555", fontSize: 13 }}>
-              <span style={{ animation: "spin 1s linear infinite", display: "inline-block" }}>⏳</span> 불러오는 중...
+            <div
+              style={{
+                background: "#111",
+                border: "1px solid #222",
+                borderRadius: 12,
+                padding: "20px 16px",
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                color: "#555",
+                fontSize: 13,
+              }}
+            >
+              <span style={{ animation: "spin 1s linear infinite", display: "inline-block" }}>⏳</span>
+              불러오는 중...
             </div>
           )}
           <div ref={xRef} style={{ borderRadius: 12, overflow: "hidden" }} />
           {!xHtml && !xLoading && (
-            <a href={xUrl} target="_blank" rel="noopener noreferrer"
-              style={{ display: "block", background: "#111", border: "1px solid #222", borderRadius: 12,
-                padding: "16px", color: "#4A9EFF", fontSize: 13, textDecoration: "none" }}>
+            <a
+              href={xUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "block",
+                background: "#111",
+                border: "1px solid #222",
+                borderRadius: 12,
+                padding: "16px",
+                color: "#4A9EFF",
+                fontSize: 13,
+                textDecoration: "none",
+              }}
+            >
               🐦 X에서 원문 보기 ↗
             </a>
           )}
         </div>
       )}
 
-      {/* Threads 임베드 */}
       {(tab === "threads" || !xUrl) && threadsUrl && (
         <div ref={thRef} style={{ borderRadius: 12, overflow: "hidden" }} />
       )}
@@ -277,145 +561,412 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
 }
 
 // ── 상세 모달 ────────────────────────────────────
-function PostModal({ post, companyColor, onClose }: { post: Post; companyColor: string; onClose: () => void }) {
+function PostModal({
+  post,
+  companyColor,
+  bookmarked,
+  onToggleBookmark,
+  onClose,
+  navigation,
+}: {
+  post: Post;
+  companyColor: string;
+  bookmarked: boolean;
+  onToggleBookmark: () => void;
+  onClose: () => void;
+  navigation: ModalNavigation;
+}) {
+  const navBtnStyle = {
+    fontSize: 13,
+    fontWeight: 700,
+    padding: "10px 14px",
+    borderRadius: 10,
+    border: "1px solid #333",
+    background: "#1C1C1C",
+    color: "#DDD",
+    cursor: "pointer",
+  } as const;
+
   return (
     <div
       onClick={onClose}
-      style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 1000,
-        display: "flex", alignItems: "flex-end", justifyContent: "center",
-        backdropFilter: "blur(4px)" }}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(0,0,0,0.75)",
+        zIndex: 1000,
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "center",
+        backdropFilter: "blur(4px)",
+      }}
     >
       <div
-        onClick={e => e.stopPropagation()}
-        style={{ background: "#161616", border: "1px solid #2a2a2a", borderRadius: "16px 16px 0 0",
-          width: "100%", maxWidth: 680, maxHeight: "85vh", overflowY: "auto",
-          padding: "28px 28px 40px", position: "relative" }}
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          background: "#161616",
+          border: "1px solid #2a2a2a",
+          borderRadius: "16px 16px 0 0",
+          width: "100%",
+          maxWidth: 680,
+          maxHeight: "85vh",
+          overflowY: "auto",
+          padding: "28px 28px 40px",
+          position: "relative",
+        }}
       >
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>
           <div style={{ width: 40, height: 4, borderRadius: 2, background: "#333" }} />
         </div>
+
+        <div style={{ position: "absolute", top: 20, right: 20, display: "flex", gap: 8 }}>
+          <button
+            onClick={onToggleBookmark}
+            style={{
+              background: "#222",
+              border: "none",
+              color: bookmarked ? "#F5B942" : "#888",
+              fontSize: 18,
+              cursor: "pointer",
+              width: 32,
+              height: 32,
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            title={bookmarked ? "북마크 해제" : "북마크"}
+          >
+            {bookmarked ? "★" : "☆"}
+          </button>
+          <button
+            onClick={onClose}
+            style={{
+              background: "#222",
+              border: "none",
+              color: "#888",
+              fontSize: 18,
+              cursor: "pointer",
+              width: 32,
+              height: 32,
+              borderRadius: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            ×
+          </button>
+        </div>
+
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
           <PlatformBadge platform={post.platform} />
           <span style={{ fontSize: 12, color: "#555", fontVariantNumeric: "tabular-nums" }}>{post.date}</span>
         </div>
-        <h2 style={{ fontSize: 20, fontWeight: 800, color: "#F0F0F0", lineHeight: 1.4, marginBottom: 16, letterSpacing: "-0.01em" }}>
+
+        <h2
+          style={{
+            fontSize: 20,
+            fontWeight: 800,
+            color: "#F0F0F0",
+            lineHeight: 1.4,
+            marginBottom: 16,
+            letterSpacing: "-0.01em",
+            paddingRight: 80,
+          }}
+        >
           {post.title}
         </h2>
+
         {post.summary && (
-          <p style={{ fontSize: 14, color: "#888", marginBottom: 20, lineHeight: 1.6, paddingLeft: 12, borderLeft: `3px solid ${companyColor}` }}>
+          <p
+            style={{
+              fontSize: 14,
+              color: "#888",
+              marginBottom: 20,
+              lineHeight: 1.6,
+              paddingLeft: 12,
+              borderLeft: `3px solid ${companyColor}`,
+            }}
+          >
             {post.summary}
           </p>
         )}
 
-        {/* 🔑 공식 게시글 임베드 */}
         <EmbedPreview xUrl={post.xUrl} threadsUrl={post.threadsUrl} />
 
-        {/* 원본 소스 OG 프리뷰 */}
         {post.source && <LinkPreview url={post.source} />}
 
         {post.content && (
-          <div style={{ background: "#111", border: "1px solid #222", borderRadius: 8, padding: "16px 18px", marginBottom: 20 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: "#555", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>포스팅 내용</p>
+          <div
+            style={{
+              background: "#111",
+              border: "1px solid #222",
+              borderRadius: 8,
+              padding: "16px 18px",
+              marginBottom: 20,
+            }}
+          >
+            <p
+              style={{
+                fontSize: 12,
+                fontWeight: 700,
+                color: "#555",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: 10,
+              }}
+            >
+              포스팅 내용
+            </p>
             <p style={{ fontSize: 14, color: "#B0B0B0", lineHeight: 1.8, whiteSpace: "pre-line" }}>{post.content}</p>
           </div>
         )}
-        <button onClick={onClose}
-          style={{ position: "absolute", top: 20, right: 20, background: "#222", border: "none",
-            color: "#888", fontSize: 18, cursor: "pointer", width: 32, height: 32,
-            borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          ×
-        </button>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+            marginTop: 24,
+            paddingTop: 16,
+            borderTop: "1px solid #242424",
+            flexWrap: "wrap",
+          }}
+        >
+          <button
+            onClick={navigation.onPrev}
+            disabled={!navigation.hasPrev}
+            style={{
+              ...navBtnStyle,
+              opacity: navigation.hasPrev ? 1 : 0.35,
+              cursor: navigation.hasPrev ? "pointer" : "default",
+            }}
+          >
+            ← 이전
+          </button>
+          <span style={{ fontSize: 12, color: "#666", fontVariantNumeric: "tabular-nums" }}>{navigation.positionLabel}</span>
+          <button
+            onClick={navigation.onNext}
+            disabled={!navigation.hasNext}
+            style={{
+              ...navBtnStyle,
+              opacity: navigation.hasNext ? 1 : 0.35,
+              cursor: navigation.hasNext ? "pointer" : "default",
+            }}
+          >
+            다음 →
+          </button>
+        </div>
       </div>
     </div>
   );
 }
 
 // ── 포스트 카드 ──────────────────────────────────
-function PostCard({ post, companyColor, onClick, bookmarked, onBookmark }: {
-  post: Post; companyColor: string; onClick: () => void;
-  bookmarked: boolean; onBookmark: () => void;
+function PostCard({
+  post,
+  onClick,
+  bookmarked,
+  onBookmark,
+  read,
+  searchQuery,
+}: {
+  post: Post;
+  onClick: () => void;
+  bookmarked: boolean;
+  onBookmark: () => void;
+  read: boolean;
+  searchQuery: string;
 }) {
   const [copied, setCopied] = useState(false);
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    const postUrl = getPostLink(post.title);
+    if (!postUrl) return;
+
+    navigator.clipboard.writeText(postUrl).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     });
   };
 
   return (
-    <div className="post-card" onClick={onClick}
-      style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8,
-        padding: "14px 16px", display: "flex", flexDirection: "column", gap: 10,
-        cursor: "pointer", position: "relative" }}>
+    <div
+      id={`post-${post.title.slice(0, 20)}`}
+      className="post-card"
+      onClick={onClick}
+      style={{
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        borderRadius: 8,
+        padding: "14px 16px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 10,
+        cursor: "pointer",
+        position: "relative",
+        opacity: read ? 0.7 : 1,
+        transition: "opacity 0.15s, border-color 0.15s",
+      }}
+    >
       <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
         <PlatformBadge platform={post.platform} />
         <span style={{ fontSize: 12, color: "var(--dim)", fontVariantNumeric: "tabular-nums" }}>{post.date}</span>
         {hasDetail && (
-          <span className="detail-hint" style={{ marginLeft: "auto", fontSize: 10, color: "#555", letterSpacing: "0.05em", transition: "color 0.15s" }}>
+          <span
+            className="detail-hint"
+            style={{
+              marginLeft: "auto",
+              fontSize: 10,
+              color: "#555",
+              letterSpacing: "0.05em",
+              transition: "color 0.15s",
+            }}
+          >
             자세히 보기 →
           </span>
         )}
-        {/* 북마크 + 공유 버튼 */}
-        <div style={{ display: "flex", gap: 4, marginLeft: hasDetail ? 8 : "auto" }} onClick={e => e.stopPropagation()}>
-          <button onClick={handleCopy}
-            style={{ background: "none", border: "none", cursor: "pointer", fontSize: 13,
-              color: copied ? "#E87040" : "#444", padding: "2px 4px", lineHeight: 1 }}
-            title="링크 복사">
+        <div style={{ display: "flex", gap: 4, marginLeft: hasDetail ? 8 : "auto" }} onClick={(e) => e.stopPropagation()}>
+          <button
+            onClick={handleCopy}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: 13,
+              color: copied ? "#E87040" : "#444",
+              padding: "2px 4px",
+              lineHeight: 1,
+            }}
+            title="포스팅 링크 복사"
+          >
             {copied ? "✓" : "🔗"}
           </button>
-          <button onClick={(e) => { e.stopPropagation(); onBookmark(); }}
-            style={{ background: "none", border: "none", cursor: "pointer", fontSize: 13,
-              color: bookmarked ? "#F5B942" : "#444", padding: "2px 4px", lineHeight: 1 }}
-            title={bookmarked ? "북마크 해제" : "북마크"}>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onBookmark();
+            }}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: 13,
+              color: bookmarked ? "#F5B942" : "#444",
+              padding: "2px 4px",
+              lineHeight: 1,
+            }}
+            title={bookmarked ? "북마크 해제" : "북마크"}
+          >
             {bookmarked ? "★" : "☆"}
           </button>
         </div>
       </div>
-      <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text)", fontWeight: 500 }}>{post.title}</p>
+
+      <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text)", fontWeight: 500, margin: 0 }}>
+        {highlightText(post.title, searchQuery)}
+        {read && (
+          <span style={{ marginLeft: 6, fontSize: 11, color: "#78C97C", verticalAlign: "middle" }} title="읽음">
+            ●
+          </span>
+        )}
+      </p>
+
       {post.summary && (
-        <p style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5 }}>{post.summary}</p>
+        <p style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5, margin: 0 }}>
+          {highlightText(post.summary, searchQuery)}
+        </p>
       )}
-      {/* 원본 소스 OG 프리뷰 (카드에서 바로 표시) */}
+
       {post.source && <CardLinkPreview url={post.source} />}
     </div>
   );
 }
 
 // ── 회사 섹션 ────────────────────────────────────
-function CompanySection({ company, onPostClick, bookmarks, onBookmark }: {
+function CompanySection({
+  company,
+  onPostClick,
+  bookmarks,
+  onBookmark,
+  readPosts,
+  searchQuery,
+  collapsed,
+  onToggleCollapsed,
+}: {
   company: Company;
-  onPostClick: (post: Post, color: string) => void;
-  bookmarks: string[];
+  onPostClick: (post: Post, companyName: string) => void;
+  bookmarks: Set<string>;
   onBookmark: (title: string) => void;
+  readPosts: Set<string>;
+  searchQuery: string;
+  collapsed: boolean;
+  onToggleCollapsed: () => void;
 }) {
-  const [collapsed, setCollapsed] = useState(false);
   return (
     <section style={{ marginBottom: 40 }}>
-      <button onClick={() => setCollapsed(!collapsed)}
-        style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: collapsed ? 0 : 16,
-          paddingLeft: 14, borderLeft: `4px solid ${company.color}`,
-          background: "none", border: "none", cursor: "pointer", width: "100%", textAlign: "left" }}>
-        <h2 style={{ fontSize: 15, fontWeight: 700, color: "var(--text)", letterSpacing: "0.02em" }}>{company.name}</h2>
-        <span style={{ fontSize: 12, fontWeight: 600, color: company.color,
-          background: `${company.color}18`, padding: "2px 8px", borderRadius: 20 }}>
+      <button
+        onClick={onToggleCollapsed}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: collapsed ? 0 : 16,
+          paddingLeft: 14,
+          borderLeft: `4px solid ${company.color}`,
+          background: "none",
+          borderTop: "none",
+          borderRight: "none",
+          borderBottom: "none",
+          cursor: "pointer",
+          width: "100%",
+          textAlign: "left",
+        }}
+      >
+        <h2 style={{ fontSize: 15, fontWeight: 700, color: "var(--text)", letterSpacing: "0.02em", margin: 0 }}>
+          {company.name}
+        </h2>
+        <span
+          style={{
+            fontSize: 12,
+            fontWeight: 600,
+            color: company.color,
+            background: `${company.color}18`,
+            padding: "2px 8px",
+            borderRadius: 20,
+          }}
+        >
           {company.posts.length}건
         </span>
-        <span style={{ marginLeft: "auto", color: "#444", fontSize: 14,
-          transform: collapsed ? "rotate(-90deg)" : "none", transition: "transform 0.2s" }}>
+        <span
+          style={{
+            marginLeft: "auto",
+            color: "#444",
+            fontSize: 14,
+            transform: collapsed ? "rotate(-90deg)" : "none",
+            transition: "transform 0.2s",
+          }}
+        >
           ▾
         </span>
       </button>
+
       {!collapsed && (
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {company.posts.map((post, i) => (
-            <PostCard key={i} post={post} companyColor={company.color}
-              onClick={() => onPostClick(post, company.color)}
-              bookmarked={bookmarks.includes(post.title)}
-              onBookmark={() => onBookmark(post.title)} />
+          {company.posts.map((post, index) => (
+            <PostCard
+              key={`${post.title}-${index}`}
+              post={post}
+              onClick={() => onPostClick(post, company.name)}
+              bookmarked={bookmarks.has(post.title)}
+              onBookmark={() => onBookmark(post.title)}
+              read={readPosts.has(post.title)}
+              searchQuery={searchQuery}
+            />
           ))}
         </div>
       )}
@@ -424,36 +975,112 @@ function CompanySection({ company, onPostClick, bookmarks, onBookmark }: {
 }
 
 // ── 통계 바 ──────────────────────────────────────
-function StatsBar({ companies, onCompanyClick }: {
+function StatsBar({
+  companies,
+  onCompanyClick,
+}: {
   companies: Company[];
   onCompanyClick: (name: string) => void;
 }) {
-  const max = Math.max(...companies.map(c => c.posts.length));
+  const [hoveredCompany, setHoveredCompany] = useState<string | null>(null);
+  const max = Math.max(...companies.map((c) => c.posts.length));
+  const total = companies.reduce((sum, company) => sum + company.posts.length, 0);
+
   return (
-    <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12,
-      padding: "22px 24px", marginBottom: 40 }}>
-      <h3 style={{ fontSize: 11, fontWeight: 700, color: "var(--muted)", letterSpacing: "0.12em",
-        textTransform: "uppercase", marginBottom: 18 }}>
-        회사별 분포 <span style={{ fontSize: 10, color: "#444", fontWeight: 400 }}>(클릭 → 필터)</span>
-      </h3>
+    <div
+      style={{
+        background: "var(--card)",
+        border: "1px solid var(--border)",
+        borderRadius: 12,
+        padding: "22px 24px",
+        marginBottom: 24,
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 18 }}>
+        <h3
+          style={{
+            fontSize: 11,
+            fontWeight: 700,
+            color: "var(--muted)",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            margin: 0,
+          }}
+        >
+          회사별 분포 <span style={{ fontSize: 10, color: "#444", fontWeight: 400 }}>(클릭 → 필터)</span>
+        </h3>
+        <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", whiteSpace: "nowrap" }}>총 {total}건</span>
+      </div>
+
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {companies.map(c => (
-          <div key={c.name} onClick={() => onCompanyClick(c.name)}
-            style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }}
-            title={c.name}>
-            <span style={{ fontSize: 12, color: "var(--muted)", minWidth: 80, maxWidth: 160, flexShrink: 0,
-              whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-              {c.name}
-            </span>
-            <div style={{ flex: 1, background: "var(--border)", borderRadius: 4, height: 8, overflow: "hidden" }}>
-              <div style={{ width: `${(c.posts.length / max) * 100}%`, height: "100%",
-                background: c.color, borderRadius: 4, transition: "width 0.3s" }} />
+        {companies.map((company) => {
+          const ratio = total > 0 ? (company.posts.length / total) * 100 : 0;
+          const visible = hoveredCompany === company.name;
+
+          return (
+            <div
+              key={company.name}
+              onClick={() => onCompanyClick(company.name)}
+              onMouseEnter={() => setHoveredCompany(company.name)}
+              onMouseLeave={() => setHoveredCompany(null)}
+              style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", position: "relative" }}
+              title={company.name}
+            >
+              <span
+                style={{
+                  fontSize: 12,
+                  color: "var(--muted)",
+                  minWidth: 80,
+                  maxWidth: 160,
+                  flexShrink: 0,
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {company.name}
+              </span>
+
+              <div style={{ flex: 1, position: "relative" }}>
+                {visible && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: 0,
+                      bottom: 16,
+                      background: "#0F0F0F",
+                      border: "1px solid #2C2C2C",
+                      borderRadius: 8,
+                      padding: "6px 8px",
+                      fontSize: 11,
+                      color: "#E8E8E8",
+                      whiteSpace: "nowrap",
+                      pointerEvents: "none",
+                      boxShadow: "0 10px 24px rgba(0,0,0,0.28)",
+                    }}
+                  >
+                    {company.posts.length}건 · {ratio.toFixed(1)}%
+                  </div>
+                )}
+                <div style={{ background: "var(--border)", borderRadius: 4, height: 8, overflow: "hidden" }}>
+                  <div
+                    style={{
+                      width: `${max > 0 ? (company.posts.length / max) * 100 : 0}%`,
+                      height: "100%",
+                      background: company.color,
+                      borderRadius: 4,
+                      transition: "width 0.3s",
+                    }}
+                  />
+                </div>
+              </div>
+
+              <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", width: 24, textAlign: "right" }}>
+                {company.posts.length}
+              </span>
             </div>
-            <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", width: 24, textAlign: "right" }}>
-              {c.posts.length}
-            </span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
@@ -466,28 +1093,59 @@ function WeekDropdown({ currentSlug, currentWeek }: { currentSlug: string; curre
 
   return (
     <div style={{ position: "relative" }}>
-      <button onClick={() => setOpen(!open)}
-        style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 6,
-          padding: "4px 12px", color: "var(--text)", fontSize: 13, fontWeight: 700,
-          cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}>
+      <button
+        onClick={() => setOpen(!open)}
+        style={{
+          background: "var(--card)",
+          border: "1px solid var(--border)",
+          borderRadius: 6,
+          padding: "4px 12px",
+          color: "var(--text)",
+          fontSize: 13,
+          fontWeight: 700,
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+        }}
+      >
         W{currentWeek} <span style={{ fontSize: 10, color: "var(--muted)" }}>▾</span>
       </button>
       {open && (
         <>
-          <div onClick={() => setOpen(false)}
-            style={{ position: "fixed", inset: 0, zIndex: 99 }} />
-          <div style={{ position: "absolute", top: "calc(100% + 8px)", left: "50%",
-            transform: "translateX(-50%)", background: "#1a1a1a", border: "1px solid #333",
-            borderRadius: 8, padding: 8, zIndex: 100, minWidth: 120,
-            boxShadow: "0 8px 24px rgba(0,0,0,0.5)" }}>
-            {weekList.map(w => (
-              <a key={w.slug} href={`/${w.slug}`}
-                style={{ display: "block", padding: "6px 14px", fontSize: 13, fontWeight: 600,
-                  color: w.slug === currentSlug ? "#E87040" : "var(--muted)",
-                  textDecoration: "none", borderRadius: 4,
-                  background: w.slug === currentSlug ? "#E8704018" : "transparent" }}
-                onClick={() => setOpen(false)}>
-                {w.year} W{w.week}
+          <div onClick={() => setOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 99 }} />
+          <div
+            style={{
+              position: "absolute",
+              top: "calc(100% + 8px)",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "#1a1a1a",
+              border: "1px solid #333",
+              borderRadius: 8,
+              padding: 8,
+              zIndex: 100,
+              minWidth: 120,
+              boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+            }}
+          >
+            {weekList.map((week) => (
+              <a
+                key={week.slug}
+                href={`/${week.slug}`}
+                style={{
+                  display: "block",
+                  padding: "6px 14px",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: week.slug === currentSlug ? "#E87040" : "var(--muted)",
+                  textDecoration: "none",
+                  borderRadius: 4,
+                  background: week.slug === currentSlug ? "#E8704018" : "transparent",
+                }}
+                onClick={() => setOpen(false)}
+              >
+                {week.year} W{week.week}
               </a>
             ))}
           </div>
@@ -498,229 +1156,580 @@ function WeekDropdown({ currentSlug, currentWeek }: { currentSlug: string; curre
 }
 
 // ── 메인 컴포넌트 ────────────────────────────────
-export default function WeeklyClient({ data, prevWeek, nextWeek }: {
+export default function WeeklyClient({
+  data,
+  prevWeek,
+  nextWeek,
+}: {
   data: WeeklyData;
   prevWeek?: { slug: string; week: number };
   nextWeek?: { slug: string; week: number };
 }) {
-  const [selectedPost, setSelectedPost] = useState<{ post: Post; color: string } | null>(null);
+  const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
   const [search, setSearch] = useState("");
+  const deferredSearch = useDeferredValue(search);
   const [platformFilter, setPlatformFilter] = useState<string>("all");
   const [companyFilter, setCompanyFilter] = useState<string>("all");
   const [bookmarkFilter, setBookmarkFilter] = useState(false);
+  const [hideReadFilter, setHideReadFilter] = useState(false);
   const [bookmarks, setBookmarks] = useState<string[]>([]);
+  const [readPosts, setReadPosts] = useState<string[]>([]);
+  const [collapsedCompanies, setCollapsedCompanies] = useState<string[]>([]);
+  const urlReadyRef = useRef(false);
+  const pendingPostFromUrlRef = useRef<string | null>(null);
 
-  // localStorage 북마크 로드
+  const companiesByName = useMemo(() => {
+    return new Map(data.companies.map((company) => [company.name, company]));
+  }, [data.companies]);
+
+  const bookmarkSet = useMemo(() => new Set(bookmarks), [bookmarks]);
+  const readSet = useMemo(() => new Set(readPosts), [readPosts]);
+  const collapsedSet = useMemo(() => new Set(collapsedCompanies), [collapsedCompanies]);
+
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("voidnews-bookmarks");
+      const stored = localStorage.getItem(BOOKMARKS_STORAGE_KEY);
       if (stored) setBookmarks(JSON.parse(stored));
     } catch {}
+
+    try {
+      const storedReadPosts = data.companies.flatMap((company) =>
+        company.posts
+          .filter((post) => localStorage.getItem(getReadStorageKey(post.title)))
+          .map((post) => post.title)
+      );
+      setReadPosts(storedReadPosts);
+    } catch {}
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q") ?? "";
+    const initialPost = params.get("post");
+
+    if (initialQuery) setSearch(initialQuery);
+    if (initialPost) pendingPostFromUrlRef.current = initialPost;
+    urlReadyRef.current = true;
+  }, [data.companies]);
+
+  useEffect(() => {
+    const pendingTitle = pendingPostFromUrlRef.current;
+    if (!pendingTitle) return;
+
+    for (const company of data.companies) {
+      const post = company.posts.find((item) => item.title === pendingTitle);
+      if (post) {
+        setSelectedPost({ companyName: company.name, title: post.title });
+        pendingPostFromUrlRef.current = null;
+        return;
+      }
+    }
+
+    pendingPostFromUrlRef.current = null;
+  }, [data.companies]);
+
+  const syncUrlState = useCallback((nextSearch: string, nextSelectedPost: SelectedPostState | null) => {
+    if (typeof window === "undefined" || !urlReadyRef.current) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const trimmedSearch = nextSearch.trim();
+
+    if (trimmedSearch) {
+      params.set("q", trimmedSearch);
+    } else {
+      params.delete("q");
+    }
+
+    if (nextSelectedPost?.title) {
+      params.set("post", nextSelectedPost.title);
+    } else {
+      params.delete("post");
+    }
+
+    const nextUrl = buildUrlWithParams(window.location.pathname, params);
+    const currentUrl = `${window.location.pathname}${window.location.search}`;
+    if (nextUrl !== currentUrl) {
+      window.history.pushState({}, "", nextUrl);
+    }
   }, []);
 
-  const toggleBookmark = useCallback((title: string) => {
-    setBookmarks(prev => {
-      const next = prev.includes(title) ? prev.filter(t => t !== title) : [...prev, title];
-      try { localStorage.setItem("voidnews-bookmarks", JSON.stringify(next)); } catch {}
+  useEffect(() => {
+    syncUrlState(search, selectedPost);
+  }, [search, selectedPost, syncUrlState]);
+
+  const markAsRead = useCallback((title: string) => {
+    setReadPosts((prev) => {
+      if (prev.includes(title)) return prev;
+      const next = [...prev, title];
+      try {
+        localStorage.setItem(getReadStorageKey(title), "1");
+      } catch {}
       return next;
     });
   }, []);
 
-  // 키보드 단축키
+  const toggleBookmark = useCallback((title: string) => {
+    setBookmarks((prev) => {
+      const next = prev.includes(title) ? prev.filter((item) => item !== title) : [...prev, title];
+      try {
+        localStorage.setItem(BOOKMARKS_STORAGE_KEY, JSON.stringify(next));
+      } catch {}
+      return next;
+    });
+  }, []);
+
+  const openPost = useCallback(
+    (post: Post, companyName: string) => {
+      markAsRead(post.title);
+      setSelectedPost({ companyName, title: post.title });
+    },
+    [markAsRead]
+  );
+
+  const toggleCompanyCollapsed = useCallback((companyName: string) => {
+    setCollapsedCompanies((prev) =>
+      prev.includes(companyName) ? prev.filter((item) => item !== companyName) : [...prev, companyName]
+    );
+  }, []);
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      const active = document.activeElement as HTMLElement;
+      const active = document.activeElement as HTMLElement | null;
       const inInput = active?.tagName === "INPUT" || active?.tagName === "TEXTAREA";
 
       if (e.key === "Escape") {
         setSelectedPost(null);
-      } else if (e.key === "/" && !inInput) {
+        return;
+      }
+
+      if (e.key === "/" && !inInput) {
         e.preventDefault();
         document.getElementById("search-input")?.focus();
-      } else if (e.key === "ArrowLeft" && !inInput && prevWeek) {
+        return;
+      }
+
+      if (selectedPost && (e.key === "ArrowLeft" || e.key === "ArrowRight")) {
+        e.preventDefault();
+        const company = companiesByName.get(selectedPost.companyName);
+        const visibleCompany = filteredCompaniesRef.current.find((item) => item.name === selectedPost.companyName);
+        const posts = visibleCompany?.posts ?? company?.posts ?? [];
+        const currentIndex = posts.findIndex((post) => post.title === selectedPost.title);
+        if (currentIndex === -1) return;
+
+        if (e.key === "ArrowLeft" && currentIndex > 0) {
+          const prevPost = posts[currentIndex - 1];
+          markAsRead(prevPost.title);
+          setSelectedPost({ companyName: selectedPost.companyName, title: prevPost.title });
+        }
+
+        if (e.key === "ArrowRight" && currentIndex < posts.length - 1) {
+          const nextPost = posts[currentIndex + 1];
+          markAsRead(nextPost.title);
+          setSelectedPost({ companyName: selectedPost.companyName, title: nextPost.title });
+        }
+        return;
+      }
+
+      if (inInput) return;
+
+      if (e.key === "ArrowLeft" && prevWeek) {
         window.location.href = `/${prevWeek.slug}`;
-      } else if (e.key === "ArrowRight" && !inInput && nextWeek) {
+      } else if (e.key === "ArrowRight" && nextWeek) {
         window.location.href = `/${nextWeek.slug}`;
       }
     };
+
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [prevWeek, nextWeek]);
+  }, [companiesByName, markAsRead, nextWeek, prevWeek, selectedPost]);
 
-  // 필터링
   const filteredCompanies = useMemo(() => {
-    return data.companies
-      .map(company => ({
-        ...company,
-        posts: company.posts.filter(post => {
-          const q = search.toLowerCase();
-          const matchSearch = !q ||
-            post.title.toLowerCase().includes(q) ||
-            (post.summary || "").toLowerCase().includes(q) ||
-            (post.content || "").toLowerCase().includes(q);
-          const matchPlatform = platformFilter === "all" || post.platform === platformFilter || post.platform.includes(platformFilter);
-          const matchBookmark = !bookmarkFilter || bookmarks.includes(post.title);
-          return matchSearch && matchPlatform && matchBookmark;
-        })
-      }))
-      .filter(c => {
-        if (companyFilter !== "all" && c.name !== companyFilter) return false;
-        return c.posts.length > 0;
-      });
-  }, [data.companies, search, platformFilter, companyFilter, bookmarkFilter, bookmarks]);
+    const query = deferredSearch.trim().toLowerCase();
 
-  const totalFiltered = filteredCompanies.reduce((sum, c) => sum + c.posts.length, 0);
-  const isFiltering = search || platformFilter !== "all" || companyFilter !== "all" || bookmarkFilter;
+    return data.companies
+      .map((company) => ({
+        ...company,
+        posts: company.posts.filter((post) => {
+          const matchSearch =
+            !query ||
+            post.title.toLowerCase().includes(query) ||
+            (post.summary || "").toLowerCase().includes(query) ||
+            (post.content || "").toLowerCase().includes(query);
+          const matchPlatform =
+            platformFilter === "all" || post.platform === platformFilter || post.platform.includes(platformFilter);
+          const matchBookmark = !bookmarkFilter || bookmarkSet.has(post.title);
+          const matchRead = !hideReadFilter || !readSet.has(post.title);
+          return matchSearch && matchPlatform && matchBookmark && matchRead;
+        }),
+      }))
+      .filter((company) => {
+        if (companyFilter !== "all" && company.name !== companyFilter) return false;
+        return company.posts.length > 0;
+      });
+  }, [bookmarkFilter, bookmarkSet, companyFilter, data.companies, deferredSearch, hideReadFilter, platformFilter, readSet]);
+
+  const filteredCompaniesRef = useRef<Company[]>(filteredCompanies);
+  useEffect(() => {
+    filteredCompaniesRef.current = filteredCompanies;
+  }, [filteredCompanies]);
+
+  const selectedCompany = selectedPost ? companiesByName.get(selectedPost.companyName) ?? null : null;
+  const selectedPostData = selectedCompany?.posts.find((post) => post.title === selectedPost?.title) ?? null;
+
+  const modalNavigation = useMemo<ModalNavigation>(() => {
+    if (!selectedPost) {
+      return {
+        hasPrev: false,
+        hasNext: false,
+        onPrev: () => {},
+        onNext: () => {},
+        positionLabel: "",
+      };
+    }
+
+    const visibleCompany = filteredCompanies.find((company) => company.name === selectedPost.companyName);
+    const sourceCompany = visibleCompany ?? companiesByName.get(selectedPost.companyName) ?? null;
+    const posts = sourceCompany?.posts ?? [];
+    const currentIndex = posts.findIndex((post) => post.title === selectedPost.title);
+    const total = posts.length;
+
+    return {
+      hasPrev: currentIndex > 0,
+      hasNext: currentIndex >= 0 && currentIndex < total - 1,
+      onPrev: () => {
+        if (currentIndex <= 0) return;
+        const prevPost = posts[currentIndex - 1];
+        markAsRead(prevPost.title);
+        setSelectedPost({ companyName: selectedPost.companyName, title: prevPost.title });
+      },
+      onNext: () => {
+        if (currentIndex === -1 || currentIndex >= total - 1) return;
+        const nextPost = posts[currentIndex + 1];
+        markAsRead(nextPost.title);
+        setSelectedPost({ companyName: selectedPost.companyName, title: nextPost.title });
+      },
+      positionLabel: currentIndex >= 0 && total > 0 ? `${currentIndex + 1} / ${total}` : "현재 필터 밖 포스팅",
+    };
+  }, [companiesByName, filteredCompanies, markAsRead, selectedPost]);
+
+  const totalFiltered = filteredCompanies.reduce((sum, company) => sum + company.posts.length, 0);
+  const visibleCompanyNames = filteredCompanies.map((company) => company.name);
+  const isFiltering =
+    search.trim().length > 0 || platformFilter !== "all" || companyFilter !== "all" || bookmarkFilter || hideReadFilter;
 
   return (
     <>
-      {selectedPost && (
-        <PostModal post={selectedPost.post} companyColor={selectedPost.color}
-          onClose={() => setSelectedPost(null)} />
+      {selectedPostData && selectedCompany && (
+        <PostModal
+          post={selectedPostData}
+          companyColor={selectedCompany.color}
+          bookmarked={bookmarkSet.has(selectedPostData.title)}
+          onToggleBookmark={() => toggleBookmark(selectedPostData.title)}
+          onClose={() => setSelectedPost(null)}
+          navigation={modalNavigation}
+        />
       )}
 
       <main style={{ maxWidth: 720, margin: "0 auto", padding: "48px 20px 96px" }}>
-
-        {/* 주차 네비 */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
           {prevWeek ? (
-            <a href={`/${prevWeek.slug}`} style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
-              title="이전 주차 (←)">
+            <a
+              href={`/${prevWeek.slug}`}
+              style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
+              title="이전 주차 (←)"
+            >
               ← W{prevWeek.week}
             </a>
-          ) : <div />}
+          ) : (
+            <div />
+          )}
 
           <WeekDropdown currentSlug={data.slug} currentWeek={data.week} />
 
           {nextWeek ? (
-            <a href={`/${nextWeek.slug}`} style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
-              title="다음 주차 (→)">
+            <a
+              href={`/${nextWeek.slug}`}
+              style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
+              title="다음 주차 (→)"
+            >
               W{nextWeek.week} →
             </a>
-          ) : <div />}
+          ) : (
+            <div />
+          )}
         </div>
 
-        {/* 헤더 */}
-        <div style={{ marginBottom: 40, marginTop: 24 }}>
+        <div style={{ marginBottom: 28, marginTop: 24 }}>
           <p style={{ fontSize: 11, color: "var(--muted)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 10 }}>
             {data.year} · Week {data.week}
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
             <svg width="32" height="32" viewBox="0 0 32 32" style={{ flexShrink: 0 }}>
-              <rect width="32" height="32" rx="8" fill="#E87040"/>
-              <text x="16" y="22" textAnchor="middle" fill="white" fontSize="18" fontWeight="800" fontFamily="Arial, sans-serif">V</text>
+              <rect width="32" height="32" rx="8" fill="#E87040" />
+              <text x="16" y="22" textAnchor="middle" fill="white" fontSize="18" fontWeight="800" fontFamily="Arial, sans-serif">
+                V
+              </text>
             </svg>
-            <h1 style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", lineHeight: 1.2 }}>
+            <h1 style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", lineHeight: 1.2, margin: 0 }}>
               VoidNews — Week {data.week}
             </h1>
           </div>
-          <p style={{ fontSize: 15, color: "var(--muted)" }}>
+          <p style={{ fontSize: 15, color: "var(--muted)", margin: 0 }}>
             {data.period} &nbsp;·&nbsp;
             <span style={{ color: "#E87040", fontWeight: 700 }}>{data.totalPosts}건</span> 포스팅
           </p>
         </div>
 
-        {/* 검색 + 필터 */}
-        <div style={{ marginBottom: 32, display: "flex", flexDirection: "column", gap: 12 }}>
-          <input id="search-input" type="text" placeholder="포스팅 검색... ( / 단축키)"
-            value={search} onChange={e => setSearch(e.target.value)}
-            style={{ background: "var(--card)", border: "1px solid var(--border)",
-              borderRadius: 8, padding: "10px 14px", color: "var(--text)", fontSize: 14,
-              outline: "none", width: "100%" }} />
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
+          <button
+            onClick={() => setCollapsedCompanies(visibleCompanyNames)}
+            style={{
+              fontSize: 12,
+              fontWeight: 700,
+              padding: "7px 12px",
+              borderRadius: 999,
+              border: "1px solid var(--border)",
+              background: "var(--card)",
+              color: "var(--text)",
+              cursor: "pointer",
+            }}
+          >
+            전체 접기 ▲
+          </button>
+          <button
+            onClick={() =>
+              setCollapsedCompanies((prev) => prev.filter((companyName) => !visibleCompanyNames.includes(companyName)))
+            }
+            style={{
+              fontSize: 12,
+              fontWeight: 700,
+              padding: "7px 12px",
+              borderRadius: 999,
+              border: "1px solid var(--border)",
+              background: "var(--card)",
+              color: "var(--text)",
+              cursor: "pointer",
+            }}
+          >
+            전체 펼치기 ▼
+          </button>
+        </div>
 
-          {/* 플랫폼 필터 */}
+        <div style={{ marginBottom: 32, display: "flex", flexDirection: "column", gap: 12 }}>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="포스팅 검색... ( / 단축키)"
+            value={search}
+            onChange={(e) => {
+              const nextValue = e.target.value;
+              startTransition(() => {
+                setSearch(nextValue);
+              });
+            }}
+            style={{
+              background: "var(--card)",
+              border: "1px solid var(--border)",
+              borderRadius: 8,
+              padding: "10px 14px",
+              color: "var(--text)",
+              fontSize: 14,
+              outline: "none",
+              width: "100%",
+            }}
+          />
+
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-            {["all", "X", "Threads"].map(p => (
-              <button key={p} onClick={() => setPlatformFilter(p)}
-                style={{ fontSize: 12, fontWeight: 600, padding: "5px 12px", borderRadius: 20,
-                  border: "1px solid", cursor: "pointer", transition: "all 0.15s", flexShrink: 0,
-                  borderColor: platformFilter === p ? "#E87040" : "var(--border)",
-                  background: platformFilter === p ? "#E87040" : "transparent",
-                  color: platformFilter === p ? "#000" : "var(--muted)" }}>
-                {p === "all" ? "전체" : p}
+            {["all", "X", "Threads"].map((platform) => (
+              <button
+                key={platform}
+                onClick={() => setPlatformFilter(platform)}
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  padding: "5px 12px",
+                  borderRadius: 20,
+                  border: "1px solid",
+                  cursor: "pointer",
+                  transition: "all 0.15s",
+                  flexShrink: 0,
+                  borderColor: platformFilter === platform ? "#E87040" : "var(--border)",
+                  background: platformFilter === platform ? "#E87040" : "transparent",
+                  color: platformFilter === platform ? "#000" : "var(--muted)",
+                }}
+              >
+                {platform === "all" ? "전체" : platform}
               </button>
             ))}
+
             <div style={{ width: 1, background: "var(--border)", alignSelf: "stretch" }} />
-            {/* 북마크 필터 */}
-            <button onClick={() => setBookmarkFilter(!bookmarkFilter)}
-              style={{ fontSize: 12, fontWeight: 600, padding: "5px 12px", borderRadius: 20,
-                border: "1px solid", cursor: "pointer", flexShrink: 0,
+
+            <button
+              onClick={() => setBookmarkFilter((prev) => !prev)}
+              style={{
+                fontSize: 12,
+                fontWeight: 600,
+                padding: "5px 12px",
+                borderRadius: 20,
+                border: "1px solid",
+                cursor: "pointer",
+                flexShrink: 0,
                 borderColor: bookmarkFilter ? "#F5B942" : "var(--border)",
                 background: bookmarkFilter ? "#F5B94222" : "transparent",
-                color: bookmarkFilter ? "#F5B942" : "var(--muted)" }}>
+                color: bookmarkFilter ? "#F5B942" : "var(--muted)",
+              }}
+            >
               {bookmarkFilter ? "★" : "☆"} 북마크 {bookmarks.length > 0 ? `(${bookmarks.length})` : ""}
+            </button>
+
+            <button
+              onClick={() => setHideReadFilter((prev) => !prev)}
+              style={{
+                fontSize: 12,
+                fontWeight: 600,
+                padding: "5px 12px",
+                borderRadius: 20,
+                border: "1px solid",
+                cursor: "pointer",
+                flexShrink: 0,
+                borderColor: hideReadFilter ? "#78C97C" : "var(--border)",
+                background: hideReadFilter ? "#78C97C22" : "transparent",
+                color: hideReadFilter ? "#78C97C" : "var(--muted)",
+              }}
+            >
+              읽음 숨기기 {readPosts.length > 0 ? `(${readPosts.length})` : ""}
             </button>
           </div>
 
-          {/* 회사 필터 - 가로 스크롤 */}
           <div className="filter-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
-            <button onClick={() => setCompanyFilter("all")}
-              style={{ fontSize: 12, fontWeight: 600, padding: "5px 12px", borderRadius: 20,
-                border: "1px solid", cursor: "pointer", flexShrink: 0,
+            <button
+              onClick={() => setCompanyFilter("all")}
+              style={{
+                fontSize: 12,
+                fontWeight: 600,
+                padding: "5px 12px",
+                borderRadius: 20,
+                border: "1px solid",
+                cursor: "pointer",
+                flexShrink: 0,
                 borderColor: companyFilter === "all" ? "#E87040" : "var(--border)",
                 background: companyFilter === "all" ? "#E87040" : "transparent",
-                color: companyFilter === "all" ? "#000" : "var(--muted)" }}>
+                color: companyFilter === "all" ? "#000" : "var(--muted)",
+              }}
+            >
               전체 회사
             </button>
-            {data.companies.map(c => (
-              <button key={c.name} onClick={() => setCompanyFilter(companyFilter === c.name ? "all" : c.name)}
-                style={{ fontSize: 12, fontWeight: 600, padding: "5px 12px", borderRadius: 20,
-                  border: "1px solid", cursor: "pointer", transition: "all 0.15s", flexShrink: 0,
-                  borderColor: companyFilter === c.name ? c.color : "var(--border)",
-                  background: companyFilter === c.name ? `${c.color}22` : "transparent",
-                  color: companyFilter === c.name ? c.color : "var(--muted)" }}>
-                {c.name.split(" /")[0]}
+            {data.companies.map((company) => (
+              <button
+                key={company.name}
+                onClick={() => setCompanyFilter(companyFilter === company.name ? "all" : company.name)}
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  padding: "5px 12px",
+                  borderRadius: 20,
+                  border: "1px solid",
+                  cursor: "pointer",
+                  transition: "all 0.15s",
+                  flexShrink: 0,
+                  borderColor: companyFilter === company.name ? company.color : "var(--border)",
+                  background: companyFilter === company.name ? `${company.color}22` : "transparent",
+                  color: companyFilter === company.name ? company.color : "var(--muted)",
+                }}
+              >
+                {company.name.split(" /")[0]}
               </button>
             ))}
           </div>
 
           {isFiltering && (
-            <p style={{ fontSize: 12, color: "var(--muted)" }}>
+            <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>
               {totalFiltered}건 검색됨
-              <button onClick={() => { setSearch(""); setPlatformFilter("all"); setCompanyFilter("all"); setBookmarkFilter(false); }}
-                style={{ marginLeft: 12, fontSize: 11, color: "#E87040", background: "none", border: "none", cursor: "pointer" }}>
+              <button
+                onClick={() => {
+                  setSearch("");
+                  setPlatformFilter("all");
+                  setCompanyFilter("all");
+                  setBookmarkFilter(false);
+                  setHideReadFilter(false);
+                }}
+                style={{
+                  marginLeft: 12,
+                  fontSize: 11,
+                  color: "#E87040",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
                 필터 초기화
               </button>
             </p>
           )}
         </div>
 
-        {/* 통계 */}
-        <StatsBar companies={data.companies}
-          onCompanyClick={(name) => setCompanyFilter(companyFilter === name ? "all" : name)} />
+        <StatsBar companies={data.companies} onCompanyClick={(name) => setCompanyFilter(companyFilter === name ? "all" : name)} />
 
-        {/* 회사 섹션 */}
-        {filteredCompanies.length > 0 ? filteredCompanies.map(company => (
-          <CompanySection key={company.name} company={company}
-            onPostClick={(post, color) => setSelectedPost({ post, color })}
-            bookmarks={bookmarks}
-            onBookmark={toggleBookmark} />
-        )) : (
+        {filteredCompanies.length > 0 ? (
+          filteredCompanies.map((company) => (
+            <CompanySection
+              key={company.name}
+              company={company}
+              onPostClick={openPost}
+              bookmarks={bookmarkSet}
+              onBookmark={toggleBookmark}
+              readPosts={readSet}
+              searchQuery={search}
+              collapsed={collapsedSet.has(company.name)}
+              onToggleCollapsed={() => toggleCompanyCollapsed(company.name)}
+            />
+          ))
+        ) : (
           <div style={{ textAlign: "center", padding: "60px 0", color: "var(--muted)" }}>
             <p style={{ fontSize: 32, marginBottom: 12 }}>🔍</p>
             <p>검색 결과가 없습니다</p>
           </div>
         )}
 
-        {/* 단축키 힌트 */}
         <div style={{ borderTop: "1px solid var(--border)", paddingTop: 24, marginBottom: 16 }}>
           <p style={{ fontSize: 11, color: "#333", textAlign: "center", letterSpacing: "0.05em" }}>
-            ⌨️ &nbsp; <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>/</kbd> 검색 &nbsp;·&nbsp;
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>←</kbd>
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>→</kbd> 주차 이동 &nbsp;·&nbsp;
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>ESC</kbd> 닫기
+            ⌨️ &nbsp;
+            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+              /
+            </kbd>{" "}
+            검색 &nbsp;·&nbsp;
+            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+              ←
+            </kbd>
+            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+              →
+            </kbd>{" "}
+            모달 열림 시 포스팅 이동 / 기본 주차 이동 &nbsp;·&nbsp;
+            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+              ESC
+            </kbd>{" "}
+            닫기
           </p>
         </div>
 
-        {/* 푸터 */}
         <div style={{ paddingTop: 8, textAlign: "center" }}>
           <p style={{ fontSize: 12, color: "var(--dim)" }}>
             by{" "}
-            <a href="https://www.threads.com/@voidlight00" target="_blank" rel="noopener noreferrer"
-              style={{ color: "var(--muted)", textDecoration: "none" }}>@voidlight00</a>
+            <a
+              href="https://www.threads.com/@voidlight00"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--muted)", textDecoration: "none" }}
+            >
+              @voidlight00
+            </a>
             {" "}&nbsp;·&nbsp;{" "}
-            <a href="https://x.com/VoidLight_Hyeon" target="_blank" rel="noopener noreferrer"
-              style={{ color: "var(--muted)", textDecoration: "none" }}>@VoidLight_Hyeon</a>
+            <a
+              href="https://x.com/VoidLight_Hyeon"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--muted)", textDecoration: "none" }}
+            >
+              @VoidLight_Hyeon
+            </a>
           </p>
         </div>
       </main>
