@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import type { WeeklyData, Post, Company } from "@/lib/data";
 import { getWeekList } from "@/lib/data";
 
@@ -30,6 +30,114 @@ function LinkBtn({ href, label }: { href: string; label: string }) {
         border: "1px solid #E87040", borderRadius: 4 }}>
       {label} ↗
     </a>
+  );
+}
+
+// ── 임베드 프리뷰 (X / Threads) ──────────────────
+function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string }) {
+  const [tab, setTab] = useState<"x" | "threads">(xUrl ? "x" : "threads");
+  const xRef = useRef<HTMLDivElement>(null);
+  const thRef = useRef<HTMLDivElement>(null);
+  const [xHtml, setXHtml] = useState<string | null>(null);
+  const [xLoading, setXLoading] = useState(false);
+
+  // Twitter oEmbed fetch
+  useEffect(() => {
+    if (!xUrl) return;
+    setXLoading(true);
+    fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(xUrl)}&dnt=1&theme=dark&hide_thread=false`)
+      .then(r => r.json())
+      .then(d => { setXHtml(d.html); setXLoading(false); })
+      .catch(() => setXLoading(false));
+  }, [xUrl]);
+
+  // Twitter widget 렌더링
+  useEffect(() => {
+    if (!xHtml || !xRef.current) return;
+    xRef.current.innerHTML = xHtml;
+    // Twitter widget script 로드 or reload
+    const w = window as any;
+    if (w.twttr?.widgets) {
+      w.twttr.widgets.load(xRef.current);
+    } else {
+      const s = document.createElement("script");
+      s.src = "https://platform.twitter.com/widgets.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, [xHtml]);
+
+  // Threads embed script 로드
+  useEffect(() => {
+    if (!threadsUrl || !thRef.current) return;
+    thRef.current.innerHTML = `<blockquote class="text-post-media" data-url="${threadsUrl}"><a href="${threadsUrl}" target="_blank">Threads에서 보기</a></blockquote>`;
+    const w = window as any;
+    if (w.instgrm?.Embeds) {
+      w.instgrm.Embeds.process();
+    } else {
+      const existing = document.getElementById("threads-embed-script");
+      if (!existing) {
+        const s = document.createElement("script");
+        s.id = "threads-embed-script";
+        s.src = "https://www.threads.net/embed.js";
+        s.async = true;
+        s.onload = () => { (window as any).instgrm?.Embeds?.process?.(); };
+        document.head.appendChild(s);
+      } else {
+        setTimeout(() => (window as any).instgrm?.Embeds?.process?.(), 500);
+      }
+    }
+  }, [threadsUrl, tab]);
+
+  if (!xUrl && !threadsUrl) return null;
+
+  return (
+    <div style={{ marginBottom: 24 }}>
+      {/* 탭 */}
+      {xUrl && threadsUrl && (
+        <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+          <button onClick={() => setTab("x")}
+            style={{ fontSize: 12, fontWeight: 600, padding: "4px 12px", borderRadius: 20, cursor: "pointer", border: "1px solid",
+              borderColor: tab === "x" ? "#E87040" : "#333",
+              background: tab === "x" ? "#E8704022" : "transparent",
+              color: tab === "x" ? "#E87040" : "#555" }}>
+            X 포스트
+          </button>
+          <button onClick={() => setTab("threads")}
+            style={{ fontSize: 12, fontWeight: 600, padding: "4px 12px", borderRadius: 20, cursor: "pointer", border: "1px solid",
+              borderColor: tab === "threads" ? "#A78BFA" : "#333",
+              background: tab === "threads" ? "#A78BFA22" : "transparent",
+              color: tab === "threads" ? "#A78BFA" : "#555" }}>
+            Threads 포스트
+          </button>
+        </div>
+      )}
+
+      {/* X 임베드 */}
+      {(tab === "x" || !threadsUrl) && xUrl && (
+        <div>
+          {xLoading && (
+            <div style={{ background: "#111", border: "1px solid #222", borderRadius: 12, padding: "20px 16px",
+              display: "flex", alignItems: "center", gap: 10, color: "#555", fontSize: 13 }}>
+              <span style={{ animation: "spin 1s linear infinite", display: "inline-block" }}>⏳</span> 불러오는 중...
+            </div>
+          )}
+          <div ref={xRef} style={{ borderRadius: 12, overflow: "hidden" }} />
+          {!xHtml && !xLoading && (
+            <a href={xUrl} target="_blank" rel="noopener noreferrer"
+              style={{ display: "block", background: "#111", border: "1px solid #222", borderRadius: 12,
+                padding: "16px", color: "#4A9EFF", fontSize: 13, textDecoration: "none" }}>
+              🐦 X에서 원문 보기 ↗
+            </a>
+          )}
+        </div>
+      )}
+
+      {/* Threads 임베드 */}
+      {(tab === "threads" || !xUrl) && threadsUrl && (
+        <div ref={thRef} style={{ borderRadius: 12, overflow: "hidden" }} />
+      )}
+    </div>
   );
 }
 
@@ -63,6 +171,10 @@ function PostModal({ post, companyColor, onClose }: { post: Post; companyColor: 
             {post.summary}
           </p>
         )}
+
+        {/* 🔑 공식 게시글 임베드 */}
+        <EmbedPreview xUrl={post.xUrl} threadsUrl={post.threadsUrl} />
+
         {post.content && (
           <div style={{ background: "#111", border: "1px solid #222", borderRadius: 8, padding: "16px 18px", marginBottom: 20 }}>
             <p style={{ fontSize: 12, fontWeight: 700, color: "#555", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>포스팅 내용</p>
@@ -76,15 +188,6 @@ function PostModal({ post, companyColor, onClose }: { post: Post; companyColor: 
               style={{ fontSize: 13, color: "#4A9EFF", wordBreak: "break-all", textDecoration: "none" }}>
               {post.source}
             </a>
-          </div>
-        )}
-        {(post.threadsUrl || post.xUrl) && (
-          <div>
-            <p style={{ fontSize: 11, color: "#555", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>포스팅 링크</p>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              {post.threadsUrl && <LinkBtn href={post.threadsUrl} label="Threads에서 보기" />}
-              {post.xUrl && <LinkBtn href={post.xUrl} label="X에서 보기" />}
-            </div>
           </div>
         )}
         <button onClick={onClose}
