@@ -1299,18 +1299,23 @@ function PostCard({
             ★
           </button>
           {hasDetail && (
-            <span
+            <button
+              onClick={(e) => { e.stopPropagation(); setExpanded(v => !v); }}
               style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
                 fontFamily: "var(--mono)",
                 fontSize: 11,
                 color: expanded ? "var(--gold)" : "var(--muted)",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 transition: "color 0.12s",
+                padding: "4px 0",
               }}
             >
               {expanded ? "CLOSE ↑" : "EXPAND ↓"}
-            </span>
+            </button>
           )}
         </div>
       </div>
