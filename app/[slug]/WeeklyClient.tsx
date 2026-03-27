@@ -50,6 +50,18 @@ function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+function stripMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, "$1")   // **bold**
+    .replace(/\*(.+?)\*/g, "$1")        // *italic*
+    .replace(/^#{1,6}\s+/gm, "")        // # 헤딩
+    .replace(/`{1,3}([^`]+)`{1,3}/g, "$1") // `code`
+    .replace(/^[-*]\s+/gm, "- ")        // 리스트 기호 정규화
+    .replace(/__(.+?)__/g, "$1")         // __bold__
+    .replace(/_(.+?)_/g, "$1")           // _italic_
+    .trim();
+}
+
 function highlightText(text: string, query: string): ReactNode {
   const trimmed = query.trim();
   if (!trimmed) return text;
@@ -932,7 +944,7 @@ function PostModal({
             >
               포스팅 내용
             </p>
-            <p style={{ fontSize: 14, color: "#B0B0B0", lineHeight: 1.8, whiteSpace: "pre-line" }}>{post.content}</p>
+            <p style={{ fontSize: 14, color: "#B0B0B0", lineHeight: 1.8, whiteSpace: "pre-line" }}>{stripMarkdown(post.content || "")}</p>
           </div>
         )}
 
@@ -1143,7 +1155,7 @@ function PostCard({
               whiteSpace: "pre-line",
               margin: 0,
             }}>
-              {highlightText(post.content || post.summary || "", searchQuery)}
+              {highlightText(stripMarkdown(post.content || post.summary || ""), searchQuery)}
             </p>
           </div>
         )}
