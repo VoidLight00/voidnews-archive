@@ -77,6 +77,7 @@ export const weeks: WeeklyData[] = [
             date: "3/26 13:26", platform: "X+Threads",
             title: "Obsidian 노트 안에서 Claude Code를 실행한다 — Claudian 플러그인",
             summary: "Obsidian 노트에 Claude Code를 직접 내장 — 노트 작성 중 AI 코딩 에이전트 실행",
+            officialUrl: "https://x.com/tom_doerr/status/2036564539748049212",
             content: "Claudian이 Obsidian을 Claude Code 작업 공간으로 바꿔놓았습니다.\n\n단순한 챗봇 사이드바가 아닙니다. 볼트 자체가 Claude의 작업 디렉토리가 되어 파일 읽기/쓰기, 검색, bash 명령어, 다단계 워크플로우까지 전부 가능합니다.\n\nObsidian + AI의 판도를 바꾸는 플러그인입니다.\n\nx.com/tom_doerr/status/2036564539748049212\n\nClaudian이 다른 AI 플러그인과 다른 점은 이겁니다. 볼트 자체가 컨텍스트예요. 복사 붙여넣기가 필요 없습니다.\n\n@멘션으로 파일 참조, 태그로 제외, 에디터 선택 영역 첨부까지 됩니다. 이미지도 드래그앤드롭으로 바로 분석 가능하고, 인라인 편집은 단어 수준 diff 미리보기를 지원합니다.\n\n오픈소스이고 MIT 라이선스입니다. Obsidian과 Claude를 함께 쓰고 있다면, 이게 그동안 빠져있던 퍼즐 조각이에요.\n\ngithub.com/YishenTu/claudian\n\n이런 워크플로우가 가능해집니다.\n\n1. Obsidian에서 노트 열기\n2. Claude가 볼트 구조를 읽기\n3. \"이 프로젝트 리팩토링해줘\" 한마디\n4. Claude가 파일 수정, 테스트 실행, 커밋까지 전부 처리\n\n터미널 전환 없이 노트와 에이전트만으로 개발하는 시대입니다.\n\n파워 기능도 강력합니다.\n\n슬래시 커맨드로 재사용 가능한 프롬프트 템플릿을 만들 수 있고, Skills 모듈은 컨텍스트에 따라 자동 실행됩니다. Claude Code 포맷과 호환돼요.\n\n커스텀 서브에이전트도 정의할 수 있고, ~/.claude/plugins에서 플러그인을 자동 인식합니다.\n\n---",
             source: "https://x.com/tom_doerr/status/2036564539748049212",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVZ2fYDwOg",
@@ -102,6 +103,7 @@ export const weeks: WeeklyData[] = [
             date: "3/25 07:23", platform: "Threads",
             title: "Anthropic이 공개한 에이전트 팀 운영법 — 장기 앱 개발의 새 공식",
             summary: "장기 실행 앱 개발을 위한 멀티에이전트 하네스 설계 공식 블로그",
+            officialUrl: "https://x.com/AnthropicAI/status/2036481033621623056",
             content: "Anthropic Engineering Blog — 멀티에이전트 하니스로 장기 앱 개발.\n\nClaude Code/Cowork를 어떻게 만드는가.\n프론트엔드 디자인과 자율 소프트웨어 엔지니어링을 확장하는 아키텍처.\n\n---\n\n하나의 Claude가 여러 역할을 동시에 수행하는 구조예요.\n프론트엔드 디자인 + 장기 자율 개발을 하나의 하니스로 관리합니다.\n\n---\n\n- 공식 블로그: http://anthropic.com/engineering-blog",
             source: "https://x.com/AnthropicAI/status/2036481033621623056",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWSKa44EwJQ",
@@ -131,6 +133,7 @@ export const weeks: WeeklyData[] = [
             date: "3/24 15:23", platform: "X+Threads",
             title: "Computer Use 다음은 Phone Use — Claude가 스마트폰을 직접 조작한다",
             summary: "Computer Use에 이은 Phone Use — AI가 스마트폰을 직접 제어하는 에이전트",
+            officialUrl: "https://x.com/claudeai/status/2036195789601374705",
             content: "Anthropic Phone Use (mobile) 개발 중 — Claude가 모바일 기기에서 전화 걸기 + 작업 실행 가능\n\nComputer Use의 확장판 (데스크탑 → 모바일). 곧 Claude Cowork/Code Research Preview 출시 예정. M1Astra 발견 🪐\n\n지금까지 Computer Use는 macOS 데스크탑에서만 가능했는데, 이제 모바일 기기까지 제어 범위가 확장되는 거죠. Claude Dispatch로 폰에서 명령 → 데스크탑 실행은 가능했지만, 이번엔 폰 자체를 Claude가 직접 제어하는 방향.\n\n음성 통화 자동 실행 + 앱 조작 + 스케줄 관리까지 모바일 AI 에이전트 완성도가 높아질 것 같습니다.\n\nComputer Use가 데스크탑이었다면 Phone Use는 모바일이에요. Claude가 전화 걸고 앱 조작하는 시대가 오고 있습니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWQdAQ7D1zH",
           },
@@ -138,6 +141,7 @@ export const weeks: WeeklyData[] = [
             date: "3/24 09:17", platform: "X+Threads",
             title: "Claude가 내 맥을 직접 클릭한다 — macOS 컴퓨터 제어 첫 데모",
             summary: "Claude가 macOS 화면을 직접 보고 클릭·입력하는 컴퓨터 제어 에이전트",
+            officialUrl: "https://x.com/claudeai/status/2036195789601374705",
             content: "Claude가 이제 컴퓨터와 앱을 직접 사용할 수 있습니다.\n\nClaude Cowork 및 Claude Code에서 Finder나 Chrome 같은 앱을 열 때 권한을 요청하고, 사용자 화면의 앱을 직접 제어할 수 있습니다.\n\nmacOS 전용 Research Preview로 공개되었습니다.\n\nFinder, Chrome, 스프레드시트까지 Claude가 직접 조작해요. 코딩뿐 아니라 일반 업무 자동화까지 확장된 게 핵심입니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWPzYNED4y_",
           },
@@ -178,6 +182,7 @@ export const weeks: WeeklyData[] = [
             platform: "X+Threads",
             title: "손 안에서 AI 에이전트를 지휘한다 — Claude Dispatch 모바일 제어",
             summary: "Claude Dispatch — 모바일 Cowork 제어",
+            officialUrl: "https://x.com/felixrieseberg/status/2034005731457044577",
             content: "Anthropic이 Claude Dispatch를 공개했습니다.\n\n모바일 폰으로 Claude Cowork(데스크톱 AI 에이전트)를 원격 제어하는 기능이에요.\n\n데스크톱과 모바일이 하나의 persistent thread로 동기화됩니다.\n\nThe New Stack은 이걸 \"OpenClaw 대항마\"라고 불렀어요.\n\n어떻게 작동하나요?\n\nClaude Cowork는 데스크톱에서 돌아가는 AI 에이전트예요. 파일 관리, 이메일, 브라우징, 코딩 작업을 대신 처리합니다.\n\nDispatch는 이 Cowork 세션을 폰에서 시작하고, 중간에 확인하고, 결과를 받을 수 있게 해요.\n\n\"회의 중에 폰으로 작업 시켜두고, 돌아오면 완료돼 있다\"는 시나리오가 핵심입니다.\n\n3월 24일, Anthropic이 Computer use 기능을 Cowork에 추가했어요.\n\nClaude가 사용자 컴퓨터를 직접 제어할 수 있게 됐습니다. 앱 실행, 클릭, 타이핑, 스크린샷까지.\n\nDispatch + Computer use 조합으로, 폰에서 \"Slack에서 이번 주 미팅 요약해줘\" 같은 명령을 내리면 Claude가 데스크톱에서 실행하고 결과를 폰으로 돌려줍니다.\n\n\"Claude가 실수할 수 있고, 위협은 계속 진화한다\"는 게 Anthropic의 경고예요.\n\n안전장치:\n- 새 앱 접근 전 항상 권한 요청\n- 사용자가 명시적으로 승인해야 실행\n- 민감한 작업(금융, 개인정보)은 추가 확인\n\nComputer use는 강력하지만 조심스럽게 풀고 있습니다.\n\nThe New Stack이 직접 비교했어요.\n\nOpenClaw: 오픈소스, 자체 호스팅, 로컬 우선, 커뮤니티 확장\nDispatch: Anthropic 공식, 클라우드 동기화, Cowork 전용\n\nDispatch는 \"모바일 제어\"라는 UX 포인트로 OpenClaw와 정면 경쟁합니다.\n\nAI 에이전트 경쟁이 기능에서 접근성으로 넘어가고 있어요.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWYkjJDD1oU",
             xUrl: "https://x.com/VoidLight_Hyeon/status/2037468317368369310",
@@ -230,12 +235,14 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/24 13:17", platform: "X+Threads",
             title: "ChatGPT에 갤러리가 생겼다 — AI 이미지 히스토리 관리 탭 추가",
+            officialUrl: "https://x.com/OpenAI/status/2036183180219392103",
             summary: "AI 생성 이미지 전용 갤러리 탭 — ChatGPT 내 이미지 히스토리 관리",
             content: "ChatGPT에 Library 탭 추가.\n\n기능:\n- DALL-E로 생성한 이미지 전체 보관\n- 날짜/프롬프트 기반 검색\n- 생성 이미지 재편집 및 변형\n- 갤러리 뷰로 한눈에 확인",
           },
           {
             date: "3/24 03:17", platform: "X+Threads",
             title: "Python 생태계를 인수했다 — OpenAI의 Astral 흡수와 그 의미",
+            officialUrl: "https://x.com/OpenAINewsroom/status/2034616934671724639",
             summary: "Python 패키지 관리 도구 Astral 인수 — ChatGPT/Codex와 Python 생태계 통합",
             content: "OpenAI가 Astral(uv, ruff 개발사) 인수 발표.\n\nAstral의 주요 도구:\n- uv: 초고속 Python 패키지 관리자\n- ruff: 초고속 Python 린터\n\nChatGPT/Codex 에이전트가 Python 환경을 자동으로 설정하는 워크플로우 강화 예상.",
           },
@@ -393,6 +400,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/25 18:48", platform: "X+Threads",
             title: "5배 빠르고 2K 해상도 — Midjourney V8이 기준을 다시 썼다",
+            officialUrl: "https://x.com/midjourney/status/2034015403542974793",
             summary: "5배 빠른 속도, 2K 네이티브 해상도, SREF 강화 — AI 이미지 생성의 새 기준",
             content: "Midjourney V8 정식 출시.\n\n주요 업그레이드:\n- 생성 속도 5배 향상\n- 2K 네이티브 해상도 지원\n- 텍스트 렌더링 정확도 대폭 향상\n- SREF(Style Reference) 기능 강화\n- 프롬프트 이해도 전반적 개선\n- 인물 일관성(Character Reference) 개선",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWT7NYIj2E3",
@@ -400,6 +408,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/20 14:52", platform: "X+Threads",
             title: "AI 음악을 팔 수 있게 됐다 — ElevenLabs 음악 마켓플레이스",
+            officialUrl: "https://x.com/elevenlabsio/status/1952754097976721737",
             summary: "AI 생성 음악 거래 플랫폼 — 크리에이터가 AI 음악을 판매하는 마켓플레이스",
             content: "ElevenLabs가 AI 생성 음악 마켓플레이스를 오픈했습니다.\n\n크리에이터가 AI로 만든 음악을 직접 판매하고 구매할 수 있는 플랫폼입니다. 유튜브 배경음악, 팟캐스트 인트로, 광고 음악 등 실용적인 AI 음악 거래가 가능해졌습니다.\n\nAI 음악 창작 → 상업적 유통의 전체 파이프라인이 ElevenLabs 하나로 완결되는 구조입니다.",
           },
@@ -430,6 +439,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/24 22:50", platform: "Threads",
             title: "디자인에서 코드로 바로 — Copilot이 Figma 디자인을 직접 읽는다",
+            officialUrl: "https://x.com/figma/status/2036434766661296602",
             summary: "Figma 디자인에서 코드로 — MCP 통해 디자인 토큰 직접 읽는 Copilot 에이전트",
             content: "GitHub Copilot과 Figma MCP 통합 소식.\n\n- Copilot 에이전트가 Figma 디자인 토큰과 구조를 직접 읽는 흐름\n- 디자인 산출물을 코드 구현으로 더 짧게 연결하는 방향\n- MCP를 통해 디자인 시스템 맥락을 개발 도구에 전달하는 사례",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRQJZVD0O1",
@@ -437,6 +447,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/26 07:17", platform: "X+Threads",
             title: "AGI를 측정하는 새 잣대 — ARC-AGI-3 공개",
+            officialUrl: "https://x.com/fchollet/status/2036863769981403497",
             summary: "AGI 측정 새 기준점 — 기존 ARC-AGI보다 어렵고 다양한 추론 평가 체계",
             content: "ARC-AGI-3 벤치마크 공개 요약.\n\n- 기존 ARC-AGI보다 더 어렵고 다양한 추론 과제를 포함\n- 단순 정답률이 아니라 일반화와 문제 해결 능력을 더 엄격하게 측정\n- AGI 수준 추론 평가 기준을 다시 끌어올리려는 시도로 보임\n\n직접 풀어볼 수 있어요 → arcprize.org",
             source: "https://arcprize.org/",
@@ -459,6 +470,8 @@ export const weeks: WeeklyData[] = [
             platform: "X+Threads",
             title: "AI가 Figma 캔버스에 직접 그린다 — Figma MCP 첫 데모",
             summary: "Figma MCP — AI가 캔버스에 직접 디자인",
+            officialUrl: "https://x.com/figma/status/2036434766661296602",
+
             content: "Figma가 MCP(Model Context Protocol)를 공식 지원합니다.\n\nClaude Code나 Cursor에서 Figma 파일을 직접 읽고 수정할 수 있게 됐습니다. 디자인 토큰, 컴포넌트 속성, 레이아웃 정보를 코드 에이전트가 직접 파싱.\n\n\"이 버튼 색을 #E87040으로 바꿔줘\"라고 말하면 Figma 캔버스에 바로 반영됩니다. 디자인-개발 핸드오프의 개념이 바뀌는 시작점입니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWXl0uODxVT",
             xUrl: "https://x.com/VoidLight_Hyeon/status/2037331806505283895"
