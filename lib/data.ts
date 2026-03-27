@@ -42,7 +42,35 @@ export const weeks: WeeklyData[] = [
             date: "3/26 20:41", platform: "Threads",
             title: "\"한국이 AI를 가장 잘 쓰고도 패배할 수 있는 이유\" 아티클 공유",
             summary: "한국의 AI 활용 역설 — 사용률은 높지만 구조적 패배 가능성을 분석한 아티클",
-            content: "ethancho12의 서브스택 아티클 공유 스레드 5개.\n\nAI를 가장 잘 쓰면서도 패배하는 역설 — 한국의 구조적 문제를 분석.\n도구를 쓰는 능력보다 '어떤 문제를 푸는가'가 더 중요하다는 관점.",
+            content: `한국이 AI를 가장 잘 쓰고도 결국 패배할 수도 있는 이유.
+
+읽으면서 뜨끔한 부분이 많았던 아티클이에요.
+
+흑백개발자 해커톤에서 한국 최고 수준 개발자 80명이 30시간 동안 만든 결과물이 썸네일 편집기와 AI 공포 마케팅 구독 서비스였다는 이야기부터 시작합니다.
+
+실력이 없어서가 아니라, 풀려고 한 문제의 수준이 낮았다는 지적이에요.
+
+ethancho12.substack.com/p/ai…
+
+ethancho12.substack.com
+
+한국이 AI를 가장 잘 쓰고도 결국 패배할 수도 있는 이유
+
+아티클에서 흥미로운 분석이 있었어요.
+
+한국은 소비자 입장에서 불편이 거의 없는 나라라서, "AI로 뭘 만들까" 하고 앉으면 떠오르는 문제의 수준이 낮을 수밖에 없다는 거예요.
+
+배달은 빠르지만 자영업자 마진은 깎이고, 결제는 편한데 정산 구조는 엉망이고, 병원 예약은 쉬운데 의료 데이터는 병원마다 따로 논다고요.
+
+불편은 넘치는데 소비자 눈에 안 보일 뿐이라는 지적이 날카로웠어요.
+
+읽어주셔서 감사합니다! 공감가는 부분이 많은 글이죠. 특히 문제 풀기 vs 문제 찾기 프레임이 인상적이었어요.
+
+마지막 문장이 인상적이었어요.
+
+"지금 한국에 필요한 건 더 좋은 AI 툴이 아니라 더 좋은 질문이다."
+
+동의하든 반박하든, 한번 읽어볼 만한 글이에요. 링크는 첫 글에 있습니다.`,
             source: "https://ethancho12.substack.com/p/ai-d53",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWWKE-Fj-6k",
           },
@@ -50,7 +78,38 @@ export const weeks: WeeklyData[] = [
             date: "3/26 19:56", platform: "Threads",
             title: "Claude Code Tips & Tricks 심층 스레드 5개",
             summary: "CLAUDE.md 활용법, /resume, 서브에이전트, MCP 핵심 팁 정리",
-            content: "원본: post-training.aitinkerers.org\n\n핵심 팁 5가지:\n1. CLAUDE.md — 프로젝트별 컨텍스트 파일\n2. /resume — 세션 재개로 컨텍스트 유지\n3. 서브에이전트 분기 — 병렬 작업 처리\n4. MCP 연동 — 외부 도구 직접 접근\n5. 권한 모드 bypassPermissions 활용",
+            content: `Claude Code 쓰는데 매번 같은 실수하고 있을 수 있어요.
+
+컨텍스트 관리 안 하면 중간에 맥락 잃고,
+
+안 쓰면 매번 같은 설명 반복하고, /resume 모르면 긴 작업마다 처음부터 다시 시작하게 됩니다.
+
+Explore → Plan → Execute → Commit 프레임워크 하나면 해결돼요.
+
+Anthropic (@AnthropicAI) on X
+
+CLAUDE.md가 핵심이에요.
+
+프로젝트 루트에 놓으면 Claude가 프롬프트보다 더 엄격하게 따릅니다. 코딩 스타일, 네이밍 규칙, 금지 패턴을 적어두면 매번 설명할 필요가 없어져요.
+
+300줄 이하로 유지하는 게 포인트입니다. 길면 오히려 무시하기 시작해요.
+
+만들기 (규칙 300줄 이하)
+2단계: Explore-Plan-Execute-Commit 프레임워크 적용
+3단계: /resume으로 긴 작업 이어가기
+4단계: 서브에이전트 + 훅 + MCP 서버로 확장
+
+원문 22분 가이드 전체는 AI Tinkerers에 있어요.
+
+서브에이전트와 훅은 파워 유저 영역이에요.
+
+서브에이전트는 복잡한 작업을 하위 에이전트에게 위임해서 병렬로 처리합니다. 훅은 특정 이벤트(커밋 전, 파일 저장 후 등)에 자동 실행되는 스크립트예요.
+
+MCP 서버를 연결하면 GitHub PR 리뷰, Sentry 에러 체크, Jira 업데이트를 한 세션에서 전부 처리할 수 있어요.
+
+/resume 명령어를 모르면 큰 손해예요.
+
+긴 작업 중 컨텍스트가 차면 새 세션 열고 /resume 하면 이전 대화를 이어갑니다. 처음부터 다시 설명할 필요가 없어요.`,
             source: "https://post-training.aitinkerers.org/p/claude-code-tips-and-tricks",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWWE2Hhj0s2",
           },
@@ -58,7 +117,35 @@ export const weeks: WeeklyData[] = [
             date: "3/26 18:09", platform: "Threads",
             title: "Claude Code Auto Mode 심층 분석 스레드 7개",
             summary: "2단계 분류기, 3등급 행동 체계, 승인 피로 해결 메커니즘 완전 분석",
-            content: "Auto Mode의 내부 작동 원리 7개 스레드로 분석.\n\n핵심 구조:\n- 1단계: 행동 안전성 분류기 (safe/moderate/dangerous)\n- 2단계: 컨텍스트 기반 재분류\n- 3등급: 자동승인 / 단순확인 / 명시적승인\n\n성능: 95% 작업 자동 처리, 승인 요청 83% 감소\nAI 세이프가드로 위험 행동 필터링",
+            content: `"허가하시겠습니까?" [Y/n]
+
+Claude Code 써본 분이라면 이 화면이 익숙할 거예요. 파일 수정할까요? Y. 명령 실행할까요? Y. 패키지 설치할까요? Y.
+
+Anthropic이 데이터를 봤더니, 사용자의 93%가 그냥 Y를 누르고 있었습니다.
+
+안전장치가 너무 자주 울리면 사람들은 경보 자체를 무시하기 시작해요. 이게 바로 승인 피로입니다.
+
+Anthropic (@AnthropicAI) on X
+
+Anthropic의 답은 Auto Mode예요.
+
+허가를 없애되, 감시는 강화하는 구조입니다.
+
+단순히 모든 허가를 건너뛰는 게 아니에요. 그건 --dangerously-skip-permissions로 이미 가능했거든요. 이름부터 위험하죠.
+
+Auto Mode는 사람 대신 AI가 매 행동을 실시간으로 심사합니다. 두 겹의 방어층이에요.
+
+입력층에서는 서버 측 프롬프트 주입 탐지기가 파일 읽기, 웹 조회, 셸 출력을 검사합니다. 조작 시도가 숨어있으면 경고를 붙여요.
+
+출력층에서는 Sonnet 4.6 기반 분류기가 Claude의 모든 행동을 실행 직전에 판단합니다.
+
+분류기는 2단계 필터링이에요. 1단계에서 빠르게 Yes/No 판단하고, 수상한 것만 2단계 정밀 추론으로 넘깁니다.
+
+재밌는 설계 결정이 있어요.
+
+분류기는 사용자 메시지와 도구 호출만 봅니다. Claude가 스스로 쓴 텍스트는 일부러 제거해요.
+
+이유는 Claude가 "이건 안전한 작업이에요"라고 자기 행동을 정당화하면 분류기가 설득당할 수 있기 때문이에요.`,
             source: "https://x.com/AnthropicAI/status/2036944806317088921",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWV4mTpjwO5",
           },
@@ -66,7 +153,26 @@ export const weeks: WeeklyData[] = [
             date: "3/26 15:25", platform: "Threads",
             title: "Claude Code auto mode 정식 공개",
             summary: "AI 분류기 기반 안전한 자동 승인 — 승인 피로 없는 자율 실행 시스템",
-            content: "Claude Code auto mode 출시.\n\n- AI 분류기가 각 행동의 위험도를 실시간 판단\n- 안전한 행동은 자동 승인, 위험한 행동만 확인 요청\n- 승인 피로(approval fatigue) 대폭 감소\n- claude --auto 플래그로 활성화",
+            content: `Anthropic가 Claude Code의 auto mode를 공개했습니다.
+
+기존에는 파일 수정/명령 실행 시 매번 사용자 승인을 받거나, 위험한 --dangerously-skip-permissions 플래그를 써야 했습니다.
+
+auto mode는 AI 분류기로 안전한 작업은 자동 승인하고, 위험한 작업(자격증명 유출, 파괴적 명령, 권한 확대)만 차단하는 중간 지점입니다.
+
+내부 사고 로그에서 축적한 실제 사례(프로덕션 DB 마이그레이션 시도, GitHub 토큰 업로드)를 기반으로 설계되었습니다.
+
+Anthropic (@AnthropicAI) on X
+
+• 입력 레이어: 프롬프트 인젝션 탐지 프로브가 파일/웹/쉘 출력을 스캔
+• 출력 레이어: Sonnet 4.6 기반 분류기가 각 작업을 실행 전 평가
+
+분류 기준:
+- 명확한 사용자 승인 없이 파괴적 작업 (원격 브랜치 삭제)
+- 자격증명 탐색 (환경 변수 grep)
+- 외부 서비스로 데이터 공유 (GitHub Gist 생성)
+- 안전 검사 우회 (배포 검증 스킵 플래그)
+
+프로젝트 내 파일 편집은 분류기를 거치지 않고 즉시 허용됩니다. Git으로 리뷰 가능하니까요.`,
             source: "https://claude.com/blog/auto-mode",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVma6fj1O1",
           },
@@ -74,7 +180,28 @@ export const weeks: WeeklyData[] = [
             date: "3/26 13:26", platform: "X+Threads",
             title: "Claudian — Obsidian에 Claude Code 임베딩 플러그인",
             summary: "Obsidian 노트에 Claude Code를 직접 내장 — 노트 작성 중 AI 코딩 에이전트 실행",
-            content: "tom_doerr의 Claudian 플러그인 소개 스레드 5개.\n\nObsidian 볼트 안에서 Claude Code를 직접 실행.\n- 노트 내 코드 블록 실행\n- 파일 탐색 및 수정\n- MCP 연동\n\n지식 관리 + AI 코딩의 결합.",
+            content: `Claudian이 Obsidian을 Claude Code 작업 공간으로 바꿔놓았습니다.
+
+단순한 챗봇 사이드바가 아닙니다. 볼트 자체가 Claude의 작업 디렉토리가 되어 파일 읽기/쓰기, 검색, bash 명령어, 다단계 워크플로우까지 전부 가능합니다.
+
+Obsidian + AI의 판도를 바꾸는 플러그인입니다.
+
+Claudian이 다른 AI 플러그인과 다른 점은 이겁니다.
+
+볼트 자체가 컨텍스트예요. 복사 붙여넣기가 필요 없습니다.
+@멘션으로 파일 참조, 태그로 제외, 에디터 선택 영역 첨부까지 됩니다.
+이미지도 드래그앤드롭으로 바로 분석 가능하고, 인라인 편집은 단어 수준 diff 미리보기를 지원합니다.
+
+오픈소스이고 MIT 라이선스입니다.
+
+Obsidian과 Claude를 함께 쓰고 있다면, 이게 그동안 빠져있던 퍼즐 조각이에요.
+
+github.com/Yishe…
+
+GitHub - YishenTu/claudian: An Obsidian plugin that embeds Claude Code as an AI collaborator in your vault
+
+슬래시 커맨드로 재사용 가능한 프롬프트 템플릿을 만들 수 있고, Skills 모듈은 컨텍스트에 따라 자동 실행됩니다. Claude Code 포맷과 호환돼요.
+커스텀 서브에이전트도 정의할 수 있고, ~/.claude/plugins에서 플러그인을 자동 인식합니다.`,
             source: "https://x.com/tom_doerr/status/2036564539748049212",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVZ2fYDwOg",
             xUrl: "https://x.com/VoidLight_Hyeon/status/2037022613424468120",
@@ -83,7 +210,44 @@ export const weeks: WeeklyData[] = [
             date: "3/25 19:37", platform: "Threads",
             title: "Anthropic 하네스 구조 심층 스레드 7개",
             summary: "생성자/평가자/기획자 3인조 멀티에이전트 아키텍처 완전 분석",
-            content: "Anthropic Engineering Blog의 하네스 구조 심층 분석.\n\n3인조 체계:\n- 생성자(Generator): 코드/콘텐츠 생성\n- 평가자(Evaluator): 품질 검증\n- 기획자(Planner): 전략 수립 및 조율\n\n문맥 불안(context anxiety) 해결:\n- 각 에이전트가 독립적 컨텍스트 유지\n- 공유 메모리로 협업\n- 실패 시 자동 재시도 로직",
+            content: `Claude Code로 앱 하나 통째로 만들 수 있다는 거 아시죠?
+
+근데 대부분 실패합니다.
+이유는 두 가지예요.
+
+1. 대화창이 길어지면 AI가 대충 마무리하려는 현상 (문맥 불안)
+2. 자기가 만든 코드를 자기가 평가하면 항상 "잘했어요" (자기 객관화 실패)
+
+Anthropic이 이 문제를 구조적으로 해결했습니다.
+
+해결 핵심은 "하네스" 구조예요.
+
+AI 한 명이 다 하는 게 아니라 3명이 역할을 나눕니다.
+
+기획자 — 짧은 프롬프트를 상세 기획서로 확장
+생성자 — 기획서 기반으로 코드 작성
+평가자 — 브라우저 직접 띄워서 버그 찾고 채점
+
+GAN에서 영감 받은 구조예요. 만드는 놈과 평가하는 놈을 분리한 겁니다.
+
+평가자가 디자인을 어떻게 채점하나?
+
+4가지 기준이 프롬프트에 들어갑니다:
+- 디자인 품질 (색상/레이아웃 일관성)
+- 독창성 (AI 특유의 뻔한 스타일 배제)
+- 기술적 완성도 (여백, 기본기)
+- 기능성 (직관적 사용성)
+
+독창성에 높은 가중치를 주자 AI가 뻔한 카드 레이아웃을 버리고 3D 미술관 웹사이트를 만들기 시작했어요.
+
+생성자와 평가자가 작업 전에 "스프린트 계약"을 맺어요.
+
+"이번 턴에 뭘 만들고, 어떻게 검증할지"를 미리 합의.
+
+AI가 기획 의도에서 벗어나는 걸 구조적으로 막아줍니다. 사람 개발팀에서 스프린트 플래닝 하는 것과 같은 원리예요.
+
+단일 Claude → $9, 20분 → 먹통 앱
+하네스 3인조 → $200, 6시간 → 완동하는 게임 엔진`,
             source: "https://anthropic.com/engineering/harness-design-for-long-running-application-development",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWTdz_Gj4cA",
           },
@@ -91,7 +255,26 @@ export const weeks: WeeklyData[] = [
             date: "3/25 14:25", platform: "X+Threads",
             title: "Claude Code Auto Mode 공식 출시",
             summary: "권한 자동 판단 + AI 세이프가드 — 승인 없이 안전하게 자율 실행",
-            content: "Claude Code auto mode 공식 출시 소식 요약.\n\n- 각 행동을 AI 분류기가 실시간으로 분석해 자동 승인 여부를 결정\n- 안전한 작업은 바로 실행하고 위험한 작업만 별도 확인 요청\n- 승인 피로를 줄이면서도 세이프가드를 유지하는 방식\n- 실사용 플래그는 claude --auto",
+            content: `Claude Code에 "오토 모드"가 추가됐습니다.
+
+기존엔 두 가지 선택지뿐이었어요:
+- 매번 권한 승인 (안전하지만 피곤)
+- --dangerously-skip-permissions (빠르지만 위험)
+
+오토 모드는 그 중간이에요.Claude Code에 "오토 모드"가 추가됐습니다.
+
+오토 모드는 그 중간이에요.
+Claude가 스스로 권한을 판단하고, AI 세이프가드가 실행 전에 감시합니다.
+
+승인 피로 없이 안전하게 자율 실행.
+
+claude.com/blog…
+
+Claude가 스스로 권한을 판단하고, AI 세이프가드가 실행 전에 감시합니다.
+
+Auto mode for Claude Code | Claude
+
+기존 --dangerously-skip-permissions는 이름부터 무서웠는데, 오토 모드는 AI가 먼저 판단하고 세이프가드가 감시해요. 코딩 에이전트 실무에서 가장 필요했던 기능이에요.`,
             source: "https://claude.com/blog/auto-mode",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWS6YXrj-qq",
           },
@@ -99,7 +282,13 @@ export const weeks: WeeklyData[] = [
             date: "3/25 07:23", platform: "Threads",
             title: "Anthropic Engineering Blog — 멀티에이전트 하네스로 장기 앱 개발",
             summary: "장기 실행 앱 개발을 위한 멀티에이전트 하네스 설계 공식 블로그",
-            content: "Anthropic Engineering Blog의 장기 실행 앱 개발용 멀티에이전트 하네스 글 공유.\n\n핵심 포인트:\n- 생성자, 평가자, 기획자 역할을 분리해 긴 작업을 안정적으로 수행\n- 단일 에이전트보다 문맥 혼잡을 줄이고 재시도 구조를 만들기 쉬움\n- 장기 실행 애플리케이션 개발에서 협업형 에이전트 구조가 중요하다는 메시지",
+            content: `Anthropic Engineering Blog — 멀티에이전트 하니스로 장기 앱 개발
+
+Claude Code/Cowork를 어떻게 만드는가. 프론트엔드 디자인과 자율 소프트웨어 엔지니어링을 확장하는 아키텍처.
+
+anthropic.com/engin…
+
+하나의 Claude가 여러 역할을 동시에 수행하는 구조예요. 프론트엔드 디자인 + 장기 자율 개발을 하나의 하네스로 관리합니다.`,
             source: "https://x.com/AnthropicAI/status/2036481033621623056",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWSKa44EwJQ",
           },
@@ -115,7 +304,25 @@ export const weeks: WeeklyData[] = [
             date: "3/24 23:33", platform: "Threads",
             title: "Claude 10배 학습 프롬프트 10종 큐레이션",
             summary: "Claude로 학습 효율을 극대화하는 검증된 프롬프트 10가지 정리",
-            content: "Claude 학습 효율을 크게 높여주는 프롬프트 10종 큐레이션.\n\n- 개념 설명, 퀴즈 생성, 오답 분석, 단계별 튜터링 등 학습 목적별 프롬프트를 정리\n- 단순 요약이 아니라 이해 확인과 반복 학습까지 포함한 구성\n- Claude를 개인 교사처럼 쓰는 실전 활용 예시 모음",
+            content: `Claude를 교수처럼 쓰는 10가지 프롬프트가 화제입니다.
+
+핵심은 하나예요 — Claude한테 답을 받는 게 아니라, Claude가 나를 코치하게 만드는 것.
+
+수동으로 읽기만 하면 머릿속에 안 남아요.
+Claude가 질문하고, 내가 생각하고, 직접 만들게 하는 구조가 진짜 학습이에요.
+
+Jasmin (@AI_with_jasmin) on X
+
+실제로 써보면 차이가 느껴지는 3가지:
+
+1. Socratic Drillmaster — "답 주지 말고 질문만 해줘"
+한 개념을 스스로 설명하려다 보면 뭘 모르는지 바로 보여요.
+
+2. Active Recall Generator — "읽지 말고 만들게 해줘"
+요약, 비유, 예시, 플래시카드 직접 만들면서 진짜 기억이 됩니다.
+
+3. Why-How Interrogator — 모든 사실에 "왜/어떻게/뭐가 깨뜨리나"
+표면 지식이 깊은 이해로 바뀌는 패턴이에요.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRUSzND55k",
           },
           {
@@ -128,14 +335,28 @@ export const weeks: WeeklyData[] = [
             date: "3/24 15:23", platform: "X+Threads",
             title: "Anthropic Phone Use — 스마트폰 자율 제어 에이전트 개발 중",
             summary: "Computer Use에 이은 Phone Use — AI가 스마트폰을 직접 제어하는 에이전트",
-            content: "Anthropic이 Computer Use 다음 단계로 Phone Use 개념을 개발 중이라는 내용.\n\n- AI가 스마트폰 화면을 보고 앱을 전환하고 입력하는 방향성\n- 모바일 환경에서 자율 실행 에이전트를 확장하려는 흐름\n- 데스크톱을 넘어 휴대폰까지 제어 범위를 넓히는 시도",
+            content: `Anthropic Phone Use (mobile) 개발 중 — Claude가 모바일 기기에서 전화 걸기 + 작업 실행 가능
+
+Computer Use의 확장판 (데스크탑 → 모바일). 곧 Claude Cowork/Code Research Preview 출시 예정. M1Astra 발견 🪐
+
+지금까지 Computer Use는 macOS 데스크탑에서만 가능했는데, 이제 모바일 기기까지 제어 범위가 확장되는 거죠. Claude Dispatch로 폰에서 명령 → 데스크탑 실행은 가능했지만, 이번엔 폰 자체를 Claude가 직접 제어하는 방향.
+
+음성 통화 자동 실행 + 앱 조작 + 스케줄 관리까지 모바일 AI 에이전트 완성도가 높아질 것 같습니다.
+
+Computer Use가 데스크탑이었다면 Phone Use는 모바일이에요. Claude가 전화 걸고 앱 조작하는 시대가 오고 있습니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWQdAQ7D1zH",
           },
           {
             date: "3/24 09:17", platform: "X+Threads",
             title: "Claude Computer Use (macOS) 데모",
             summary: "Claude가 macOS 화면을 직접 보고 클릭·입력하는 컴퓨터 제어 에이전트",
-            content: "Claude Computer Use의 macOS 데모 요약.\n\n- Claude가 화면을 인식하고 클릭, 입력, 앱 전환을 수행\n- 브라우저와 데스크톱 앱을 오가며 작업을 자동화하는 형태\n- 실제 운영체제 레벨에서 행동하는 에이전트 데모라는 점이 핵심",
+            content: `Claude가 이제 컴퓨터와 앱을 직접 사용할 수 있습니다.
+
+Claude Cowork 및 Claude Code에서 Finder나 Chrome 같은 앱을 열 때 권한을 요청하고, 사용자 화면의 앱을 직접 제어할 수 있습니다.
+
+macOS 전용 Research Preview로 공개되었습니다.
+
+Finder, Chrome, 스프레드시트까지 Claude가 직접 조작해요. 코딩뿐 아니라 일반 업무 자동화까지 확장된 게 핵심입니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWPzYNED4y_",
           },
           {
@@ -161,7 +382,11 @@ export const weeks: WeeklyData[] = [
             date: "3/25 05:22", platform: "X+Threads",
             title: "OpenAI Sora 서비스 중단",
             summary: "Sora 앱/API/ChatGPT 비디오 기능 전면 종료 — 차세대 모델 'Spud' 훈련 완료",
-            content: "OpenAI가 Sora 서비스를 전면 중단.\n\n중단 범위:\n- Sora 독립 앱\n- Sora API\n- ChatGPT 내 비디오 생성 기능\n\n공식 이유: 차세대 비디오 모델 'Spud' 훈련 완료로 전환 준비.\n기존 Sora 대비 대폭 향상된 품질과 속도 예상.",
+            content: `OpenAI, Sora 중단 발표 — 앱, API, ChatGPT 비디오 기능 모두 종료. 최신 모델 "Spud" 훈련은 완료했다고.
+
+향후 비디오 생성 기능은 super app으로 이동할까? 🎬
+
+Sora 단독 앱 종료 후 ChatGPT 슈퍼앱으로 통합 예정이에요. 영상 생성이 별도 서비스가 아니라 대화 안에서 자연스럽게 되는 방향으로 가는 거죠.`,
             source: "https://x.com/soraofficialapp/status/2036532672824922489",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWR8staE_tA",
             xUrl: "https://x.com/VoidLight_Hyeon/status/2036538807177322904",
@@ -208,14 +433,24 @@ export const weeks: WeeklyData[] = [
             date: "3/25 06:49", platform: "Threads",
             title: "DeepMind x Agile Robots 협업 발표",
             summary: "로봇 AI 연구 협업 — DeepMind 알고리즘 + Agile Robots 하드웨어 결합",
-            content: "Google DeepMind와 Agile Robots의 협업 발표 요약.\n\n- DeepMind의 로봇 AI 알고리즘과 Agile Robots의 하드웨어 플랫폼을 결합\n- 연구 수준 모델을 실제 산업 로봇 환경으로 옮기려는 시도\n- 지능형 로보틱스 상용화 속도를 높일 협력으로 해석 가능",
+            content: `Google DeepMind x Agile Robots 파트너십 발표
+
+Gemini foundation 모델을 로봇 하드웨어에 통합해 차세대 실용 로봇을 개발합니다.
+
+#AI #Robotics #GoogleDeepMind
+
+소프트웨어 AI가 실제 물리 세계로 나오는 첫 단계예요. Gemini가 로봇 팔을 제어하는 시대가 오고 있습니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWSGgURE3h7",
           },
           {
             date: "3/25 03:01", platform: "Threads",
             title: "Gemini 3.1 Flash-Lite 출시",
             summary: "초경량 고속 Gemini 모델 — 모바일/엣지 환경 특화 추론",
-            content: "Gemini 3.1 Flash-Lite 공개.\n\n특징:\n- 기존 Flash 대비 50% 빠른 추론\n- 모바일 온디바이스 실행 최적화\n- 멀티모달 (텍스트+이미지)\n- API 비용 대폭 인하",
+            content: `구글 딥마인드 Gemini 3.1 Flash-Lite — 실시간 웹사이트 생성. 클릭·검색·탐색할 때마다 페이지가 즉시 렌더링됩니다. ⚡ 데모:
+
+클릭·검색·탐색할 때마다 페이지가 즉시 렌더링됩니다. ⚡
+
+프롬프트 한 줄로 웹사이트가 즉시 렌더링되는 게 핵심이에요. 개발 환경 없이 브라우저에서 바로 결과물을 확인할 수 있습니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRsU8Fj_Xc",
           },
           {
@@ -248,7 +483,11 @@ export const weeks: WeeklyData[] = [
             date: "3/24 22:45", platform: "Threads",
             title: "Cursor Instant Grep 출시",
             summary: "코드베이스 실시간 검색 내장 엔진 — grep보다 빠른 의미론적 코드 검색",
-            content: "Cursor에 Instant Grep 기능 통합.\n\n- 코드베이스 전체 실시간 인덱싱\n- 심볼/함수/클래스 즉시 검색\n- 의미론적 검색 (이름 몰라도 기능으로 검색)\n- 검색 결과에서 바로 편집",
+            content: `Cursor Instant Grep 출시 — 수백만 파일을 밀리초 안에 검색, 에이전트 작업 속도 대폭 향상
+
+기술 블로그에서 알고리즘과 설계 트레이드오프 공개
+
+대규모 코드베이스에서 에이전트가 파일 찾는 속도가 병목이었는데, 밀리초 단위 검색으로 해결됐어요. 에이전트 작업 속도 자체가 올라갑니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRP2QxD7QI",
           },
           {
@@ -285,7 +524,11 @@ export const weeks: WeeklyData[] = [
             date: "3/26 14:58", platform: "Threads",
             title: "Meta + Arm AGI CPU 협력 심층 분석",
             summary: "AGI 워크로드 전용 CPU 공동 개발 — 기존 대비 2배 성능, AI 추론 특화",
-            content: "Meta와 Arm이 AGI 특화 CPU 공동 개발 발표.\n\n주요 스펙:\n- AI 추론 전용 명령어셋 설계\n- 기존 Arm CPU 대비 2배 성능\n- 에너지 효율 40% 향상\n- Meta 데이터센터 우선 적용\n\n2025년 하반기 첫 실리콘 타겟.",
+            content: `Meta가 Arm과 협력해 AI 인프라용 맞춤형 CPU를 개발합니다. 첫 세대 Arm AGI CPU는 컴퓨팅과 AI 워크로드에서 2배 이상의 성능을 제공합니다.
+
+Engineering at Meta (@Meta_Engineers) on X
+
+Meta는 자체 AI 인프라를 강화하기 위해 Arm과의 장기 파트너십을 발표했습니다. 이번 협력으로 여러 세대에 걸친 전용 CPU를 개발하며, AI 컴퓨팅 효율성을 크게 향상시킬 예정입니다.`,
             source: "https://x.com/Meta_Engineers/status/2036494803723043156",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVjjxpD2Sz",
           },
@@ -293,7 +536,9 @@ export const weeks: WeeklyData[] = [
             date: "3/25 03:07", platform: "Threads",
             title: "Meta + Arm CPU 파트너십 발표",
             summary: "데이터센터 AI 워크로드 최적화 CPU 협력 — 클라우드 AI 인프라 독립화",
-            content: "Meta와 Arm의 CPU 파트너십 발표 내용 정리.\n\n- 데이터센터 AI 워크로드에 맞춘 CPU 공동 개발 방향\n- 범용 서버용이 아니라 추론과 대규모 인프라 최적화에 초점\n- 자체 AI 인프라 효율과 독립성을 높이려는 전략으로 볼 수 있음",
+            content: `Meta + Arm CPU 파트너십 발표 — 다세대 AI 인프라용 맞춤형 CPU 공동 개발. 첫 세대 Arm AGI CPU는 기존 대비 2배 이상 성능 향상.
+
+NVIDIA GPU 의존에서 벗어나려는 움직임이에요. 자체 CPU로 AI 인프라 비용을 장기적으로 낮추는 전략입니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRtqYkj5gi",
           },
         ],
@@ -306,14 +551,35 @@ export const weeks: WeeklyData[] = [
             date: "3/25 22:52", platform: "X+Threads",
             title: "Luma Uni-1 출시 — 생각과 픽셀을 동시에",
             summary: "추론과 이미지 생성을 단일 패스로 처리하는 새로운 멀티모달 아키텍처",
-            content: "Luma AI의 Uni-1 모델 공개.\n\n혁신:\n- Thinking과 Image Generation을 단일 모델에서 동시 처리\n- 추론 과정에서 시각적 표현 생성\n- 텍스트-이미지 일관성 대폭 향상\n- 멀티턴 이미지 편집 지원",
+            content: `Luma Uni-1 출시 — 생각과 픽셀 생성을 동시에 수행하는 새로운 모델.
+
+문화적 맥락 인지(밈/미학/망가), 인간 선호도 Elo 랭킹 1위(Overall/Style & Editing/Reference-Based Generation), 텍스트-이미지는 2위.
+
+실시간 비전 생성의 새로운 기준 제시.
+
+Luma (@LumaLabsAI) on X`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWT0x0Lj2wG",
           },
           {
             date: "3/25 18:48", platform: "X+Threads",
             title: "Midjourney V8 출시",
             summary: "5배 빠른 속도, 2K 네이티브 해상도, SREF 강화 — AI 이미지 생성의 새 기준",
-            content: "Midjourney V8 정식 출시.\n\n주요 업그레이드:\n- 생성 속도 5배 향상\n- 2K 네이티브 해상도 지원\n- 텍스트 렌더링 정확도 대폭 향상\n- SREF(Style Reference) 기능 강화\n- 프롬프트 이해도 전반적 개선\n- 인물 일관성(Character Reference) 개선",
+            content: `Midjourney V8이 출시됐습니다.
+
+5배 빠른 속도에 2K 네이티브 해상도.
+텍스트 렌더링이 크게 개선됐고, SREF와 퍼스널라이제이션도 역대 최고 수준이에요.
+
+프롬프트 이해도가 확 올라가서 원하는 결과물이 훨씬 잘 나옵니다.
+
+Midjourney (@midjourney) on X
+
+V7에서 V8로 넘어오면서 가장 큰 변화는 속도예요. 같은 프롬프트로 5배 빠르게 결과물이 나오니까 반복 실험이 훨씬 쉬워졌어요.
+
+2K 네이티브는 상업용 작업에서 리사이즈 단계를 줄여줍니다.
+
+엄청 빠르죠, 휙휙~~ 심지어 잘 나오기까지!! 해피해요 🤭🤭
+
+미드저니는 생성형 필수 툴이라고 생각해요!`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWT7NYIj2E3",
           },
           {
@@ -332,7 +598,38 @@ export const weeks: WeeklyData[] = [
             date: "3/25 16:47", platform: "X+Threads",
             title: "카카오 Kanana-o API 베타 공개",
             summary: "9.8B 옴니 모델, Agentic AI 특화, Apache 2.0 오픈소스 — 한국형 AI API",
-            content: "카카오의 Kanana-o 모델 API 베타 공개.\n\n스펙:\n- 파라미터: 9.8B\n- 멀티모달 옴니 아키텍처\n- Agentic 작업 특화 (도구 사용, 계획 수립)\n- 라이선스: Apache 2.0 오픈소스\n\nAPI 엔드포인트: api-omni.kanana.ai",
+            content: `카카오가 자체 AI 모델 API를 열었습니다.
+
+Kanana-o 베타 — 9.8B 옴니 모델.
+텍스트, 이미지, 음성을 하나의 모델로 처리해요.
+
+Agentic AI 특화 — Function calling + 도구 사용 강화.
+카카오톡 안에서 예약, 결제까지 연결되는 AI 에이전트의 첫 발.
+
+HuggingFace에 오픈소스 공개, Apache 2.0.
+
+api-omni.kanana.ai
+
+Kanana-o API 베타
+
+한국 빅테크 중에서 자체 모델 API를 오픈소스로 공개한 건 카카오가 처음이에요.
+
+9.8B라 로컬 실행도 가능한 사이즈고, 한국어 특화라는 게 차별점이에요.
+
+카카오톡 5천만 사용자 기반 + AI 에이전트 = 한국에서 가장 빠르게 일상에 침투할 수 있는 구조입니다.
+
+기대가 살짝 안되지만 
+국산 llm 으로 바이브코딩 시도해봐야겠다
+
+국산 AI 모델이 오픈소스로 공개되니 정말 반갑네요! 🎉 특히 멀티모달+에이전틱 기능까지 갖춘 건 큰 장점이죠. 당장 테스트해봐야겠습니다.
+
+일10~20회 라는점이 아쉽지만 뮤료니까!!
+
+오 이제 카톡 기반 무언가들이 나올 수 있는건가 텔레그램 봇 기반에서 하던게 많은데
+
+기대중입니다 또 다양한 소식 발빠르게 찾아올게요 현재 신청대기중이니 한번 시도해보는 것도 추천드려요
+
+중국꺼 증류해서 뽑아낸 모델만 아니길 ㅜㅜ 잘좀 되어야할텐데말예요`,
             source: "https://api-omni.kanana.ai/",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWTLA81j3Vo",
             xUrl: "https://x.com/VoidLight_Hyeon/status/2036711028122386634",
@@ -341,14 +638,29 @@ export const weeks: WeeklyData[] = [
             date: "3/24 22:50", platform: "Threads",
             title: "GitHub Copilot + Figma MCP 통합",
             summary: "Figma 디자인에서 코드로 — MCP 통해 디자인 토큰 직접 읽는 Copilot 에이전트",
-            content: "GitHub Copilot과 Figma MCP 통합 소식.\n\n- Copilot 에이전트가 Figma 디자인 토큰과 구조를 직접 읽는 흐름\n- 디자인 산출물을 코드 구현으로 더 짧게 연결하는 방향\n- MCP를 통해 디자인 시스템 맥락을 개발 도구에 전달하는 사례",
+            content: `GitHub Copilot + Figma MCP 통합 출시
+
+Copilot CLI와 VS Code에서 Figma 파일을 직접 수정 가능
+
+디자인-개발 워크플로우 통합 메이저 업데이트
+
+디자이너가 Figma에서 작업하면 개발자가 Copilot으로 바로 코드 연결하는 구조예요. 디자인-개발 핸드오프가 사라지는 방향입니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRQJZVD0O1",
           },
           {
             date: "3/26 07:17", platform: "X+Threads",
             title: "ARC-AGI-3 벤치마크 공개",
             summary: "AGI 측정 새 기준점 — 기존 ARC-AGI보다 어렵고 다양한 추론 평가 체계",
-            content: "ARC-AGI-3 벤치마크 공개 요약.\n\n- 기존 ARC-AGI보다 더 어렵고 다양한 추론 과제를 포함\n- 단순 정답률이 아니라 일반화와 문제 해결 능력을 더 엄격하게 측정\n- AGI 수준 추론 평가 기준을 다시 끌어올리려는 시도로 보임",
+            content: `ARC-AGI-3가 출시됐습니다. 인간형 AI 지능을 측정하는 첫 대화형 추론 벤치마크예요.
+
+150개 이상의 환경에서 1,000개 이상의 레벨을 탐색, 학습, 계획, 적응하는 능력을 테스트합니다.
+인간은 멘탈 모델을 구축하고, AI는 시행착오로 밀어붙입니다. 그 격차는 아직 큽니다.
+
+arcprize.org/arc-a…
+
+기존 벤치마크와 다른 점은 "대화형"이라는 거예요. 에이전트가 낯선 환경을 탐색하고, 규칙을 스스로 파악하고, 적응해야 합니다.
+
+인간은 이걸 자연스럽게 하지만, AI 모델은 아직 패턴을 브루트포스하고 있어요. 프론티어 모델도 과제당 $2~9K 비용에 0.2~0.3% 성공률이었습니다.`,
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVRfebjz5Q",
           },
           {
