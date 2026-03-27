@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             justifyContent: "space-between",
             position: "sticky",
             top: 0,
-            background: "rgba(10,10,10,0.95)",
+            background: "var(--header-bg, rgba(10,10,10,0.95))",
             backdropFilter: "blur(8px)",
             zIndex: 100,
           }}

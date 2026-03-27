@@ -16,10 +16,26 @@ import { getWeekList } from "@/lib/data";
 const BOOKMARKS_STORAGE_KEY = "voidnews-bookmarks";
 const READ_STORAGE_PREFIX = "voidnews-read:";
 const RECENT_SEARCHES_STORAGE_KEY = "voidnews-recent-searches";
+const THEME_STORAGE_KEY = "voidnews-theme";
+const VIEW_MODE_STORAGE_KEY = "voidnews-view-mode";
+const SORT_ORDER_STORAGE_KEY = "voidnews-sort-order";
+const STATS_ACTION_STORAGE_KEY = "voidnews-stats-action";
 const MAX_RECENT_SEARCHES = 5;
 
 function getReadStorageKey(title: string) {
   return `${READ_STORAGE_PREFIX}${title}`;
+}
+
+function extractDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url.length > 30 ? `${url.slice(0, 30)}…` : url;
+  }
+}
+
+function getCompanySectionId(name: string) {
+  return `company-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}`;
 }
 
 function escapeRegExp(value: string) {
@@ -176,6 +192,11 @@ type ModalNavigation = {
   onNext: () => void;
   positionLabel: string;
 };
+
+type ThemeMode = "dark" | "light";
+type ViewMode = "list" | "grid";
+type SortOrder = "latest" | "oldest" | "company";
+type StatsActionMode = "filter" | "scroll";
 
 // ── 플랫폼 배지 ─────────────────────────────────
 function PlatformBadge({ platform }: { platform: Post["platform"] }) {
@@ -372,12 +393,12 @@ function CardLinkPreview({ url }: { url: string }) {
                 minWidth: 0,
               }}
             >
-              <p style={{ fontSize: 10, color: "#555", margin: 0 }}>{data?.hostname || url}</p>
+              <p style={{ fontSize: 10, color: "var(--dim)", margin: 0 }}>{extractDomain(url)}</p>
               <p
                 style={{
                   fontSize: 12,
                   fontWeight: 600,
-                  color: "#C0C0C0",
+                  color: "var(--text)",
                   margin: 0,
                   overflow: "hidden",
                   display: "-webkit-box",
@@ -385,7 +406,7 @@ function CardLinkPreview({ url }: { url: string }) {
                   WebkitBoxOrient: "vertical" as const,
                 }}
               >
-                {data?.title || url}
+                {data?.title || extractDomain(url)}
               </p>
             </div>
           )}
@@ -922,7 +943,7 @@ function PostCard({
     <div
       id={`post-${post.title.slice(0, 20)}`}
       className="post-card"
-      onClick={onClick}
+      onClick={hasDetail ? onClick : undefined}
       style={{
         background: "var(--card)",
         border: "1px solid var(--border)",
@@ -931,30 +952,35 @@ function PostCard({
         display: "flex",
         flexDirection: "column",
         gap: 10,
-        cursor: "pointer",
+        cursor: hasDetail ? "pointer" : "default",
         position: "relative",
         opacity: read ? 0.7 : 1,
         transition: "opacity 0.15s, border-color 0.15s",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-        <PlatformBadge platform={post.platform} />
-        <PostDateLabel date={post.date} defaultYear={defaultYear} />
-        {hasDetail && (
-          <span
-            className="detail-hint"
-            style={{
-              marginLeft: "auto",
-              fontSize: 10,
-              color: "#555",
-              letterSpacing: "0.05em",
-              transition: "color 0.15s",
-            }}
-          >
-            자세히 보기 →
-          </span>
-        )}
-        <div style={{ display: "flex", gap: 4, marginLeft: hasDetail ? 8 : "auto" }} onClick={(e) => e.stopPropagation()}>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", minWidth: 0, flex: 1 }}>
+          <PlatformBadge platform={post.platform} />
+          <PostDateLabel date={post.date} defaultYear={defaultYear} />
+        </div>
+        <div
+          style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {hasDetail && (
+            <span
+              className="detail-hint"
+              style={{
+                fontSize: 10,
+                color: "var(--dim)",
+                letterSpacing: "0.05em",
+                transition: "color 0.15s",
+                whiteSpace: "nowrap",
+              }}
+            >
+              자세히 보기 →
+            </span>
+          )}
           <button
             onClick={handleCopy}
             style={{
@@ -1022,6 +1048,7 @@ function CompanySection({
   searchQuery,
   collapsed,
   onToggleCollapsed,
+  viewMode,
 }: {
   company: Company;
   defaultYear: number;
@@ -1032,9 +1059,10 @@ function CompanySection({
   searchQuery: string;
   collapsed: boolean;
   onToggleCollapsed: () => void;
+  viewMode: ViewMode;
 }) {
   return (
-    <section style={{ marginBottom: 40 }}>
+    <section id={getCompanySectionId(company.name)} style={{ marginBottom: 40, scrollMarginTop: 150 }}>
       <button
         onClick={onToggleCollapsed}
         style={{
@@ -1082,7 +1110,17 @@ function CompanySection({
       </button>
 
       {!collapsed && (
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        <div
+          style={
+            viewMode === "grid"
+              ? {
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+                  gap: 12,
+                }
+              : { display: "flex", flexDirection: "column", gap: 10 }
+          }
+        >
           {company.posts.map((post, index) => (
             <PostCard
               key={`${post.title}-${index}`}
@@ -1104,10 +1142,16 @@ function CompanySection({
 // ── 통계 바 ──────────────────────────────────────
 function StatsBar({
   companies,
+  actionMode,
   onCompanyClick,
+  onCompanyScroll,
+  onToggleActionMode,
 }: {
   companies: Company[];
+  actionMode: StatsActionMode;
   onCompanyClick: (name: string) => void;
+  onCompanyScroll: (name: string) => void;
+  onToggleActionMode: () => void;
 }) {
   const [hoveredCompany, setHoveredCompany] = useState<string | null>(null);
   const max = Math.max(...companies.map((c) => c.posts.length));
@@ -1134,9 +1178,30 @@ function StatsBar({
             margin: 0,
           }}
         >
-          회사별 분포 <span style={{ fontSize: 10, color: "#444", fontWeight: 400 }}>(클릭 → 필터)</span>
+          회사별 분포{" "}
+          <span style={{ fontSize: 10, color: "var(--dim)", fontWeight: 400 }}>
+            (클릭 → {actionMode === "filter" ? "필터" : "스크롤"})
+          </span>
         </h3>
-        <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", whiteSpace: "nowrap" }}>총 {total}건</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
+          <button
+            onClick={onToggleActionMode}
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              color: actionMode === "filter" ? "var(--muted)" : "#E87040",
+              border: "1px solid var(--border)",
+              background: "transparent",
+              borderRadius: 999,
+              padding: "5px 10px",
+              cursor: "pointer",
+            }}
+            title={actionMode === "filter" ? "클릭 시 섹션 스크롤로 전환" : "클릭 시 회사 필터로 전환"}
+          >
+            {actionMode === "filter" ? "필터" : "스크롤 ↓"}
+          </button>
+          <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", whiteSpace: "nowrap" }}>총 {total}건</span>
+        </div>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -1147,7 +1212,7 @@ function StatsBar({
           return (
             <div
               key={company.name}
-              onClick={() => onCompanyClick(company.name)}
+              onClick={() => (actionMode === "filter" ? onCompanyClick(company.name) : onCompanyScroll(company.name))}
               onMouseEnter={() => setHoveredCompany(company.name)}
               onMouseLeave={() => setHoveredCompany(null)}
               style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", position: "relative" }}
@@ -1352,6 +1417,10 @@ export default function WeeklyClient({
   const [showRecentSearches, setShowRecentSearches] = useState(false);
   const [bookmarksCopied, setBookmarksCopied] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [theme, setTheme] = useState<ThemeMode>("dark");
+  const [viewMode, setViewMode] = useState<ViewMode>("list");
+  const [sortOrder, setSortOrder] = useState<SortOrder>("latest");
+  const [statsActionMode, setStatsActionMode] = useState<StatsActionMode>("filter");
   const urlReadyRef = useRef(false);
   const pendingPostFromUrlRef = useRef<string | null>(null);
   const searchBlurTimeoutRef = useRef<number | null>(null);
@@ -1376,6 +1445,28 @@ export default function WeeklyClient({
     } catch {}
 
     try {
+      const storedTheme = localStorage.getItem(THEME_STORAGE_KEY) as ThemeMode | null;
+      if (storedTheme === "dark" || storedTheme === "light") setTheme(storedTheme);
+    } catch {}
+
+    try {
+      const storedViewMode = localStorage.getItem(VIEW_MODE_STORAGE_KEY) as ViewMode | null;
+      if (storedViewMode === "list" || storedViewMode === "grid") setViewMode(storedViewMode);
+    } catch {}
+
+    try {
+      const storedSortOrder = localStorage.getItem(SORT_ORDER_STORAGE_KEY) as SortOrder | null;
+      if (storedSortOrder === "latest" || storedSortOrder === "oldest" || storedSortOrder === "company") {
+        setSortOrder(storedSortOrder);
+      }
+    } catch {}
+
+    try {
+      const storedStatsAction = localStorage.getItem(STATS_ACTION_STORAGE_KEY) as StatsActionMode | null;
+      if (storedStatsAction === "filter" || storedStatsAction === "scroll") setStatsActionMode(storedStatsAction);
+    } catch {}
+
+    try {
       const storedReadPosts = data.companies.flatMap((company) =>
         company.posts
           .filter((post) => localStorage.getItem(getReadStorageKey(post.title)))
@@ -1392,6 +1483,65 @@ export default function WeeklyClient({
     if (initialPost) pendingPostFromUrlRef.current = initialPost;
     urlReadyRef.current = true;
   }, [data.companies]);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const palette =
+      theme === "light"
+        ? {
+            bg: "#f8f8f8",
+            card: "#ffffff",
+            cardHover: "#f2f2f2",
+            border: "#e8e8e8",
+            text: "#1a1a1a",
+            muted: "#666666",
+            dim: "#999999",
+            headerBg: "rgba(248,248,248,0.92)",
+          }
+        : {
+            bg: "#0A0A0A",
+            card: "#111111",
+            cardHover: "#1A1A1A",
+            border: "#222222",
+            text: "#F0F0F0",
+            muted: "#888888",
+            dim: "#555555",
+            headerBg: "rgba(10,10,10,0.95)",
+          };
+
+    root.style.setProperty("--bg", palette.bg);
+    root.style.setProperty("--card", palette.card);
+    root.style.setProperty("--card-hover", palette.cardHover);
+    root.style.setProperty("--border", palette.border);
+    root.style.setProperty("--text", palette.text);
+    root.style.setProperty("--muted", palette.muted);
+    root.style.setProperty("--dim", palette.dim);
+    root.style.setProperty("--header-bg", palette.headerBg);
+    root.style.colorScheme = theme;
+    document.body.style.background = palette.bg;
+
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {}
+  }, [theme]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(VIEW_MODE_STORAGE_KEY, viewMode);
+    } catch {}
+  }, [viewMode]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(SORT_ORDER_STORAGE_KEY, sortOrder);
+    } catch {}
+  }, [sortOrder]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATS_ACTION_STORAGE_KEY, statsActionMode);
+    } catch {}
+  }, [statsActionMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1581,6 +1731,14 @@ export default function WeeklyClient({
 
   const filteredCompanies = useMemo(() => {
     const query = deferredSearch.trim().toLowerCase();
+    const getCompanySortValue = (company: Company, mode: SortOrder) => {
+      const timestamps = company.posts
+        .map((post) => parsePostDate(post.date, data.year)?.getTime() ?? null)
+        .filter((value): value is number => value !== null);
+
+      if (timestamps.length === 0) return 0;
+      return mode === "oldest" ? Math.min(...timestamps) : Math.max(...timestamps);
+    };
 
     return data.companies
       .map((company) => ({
@@ -1601,8 +1759,29 @@ export default function WeeklyClient({
       .filter((company) => {
         if (companyFilter !== "all" && company.name !== companyFilter) return false;
         return company.posts.length > 0;
+      })
+      .sort((a, b) => {
+        if (sortOrder === "company") {
+          return a.name.localeCompare(b.name, "ko");
+        }
+
+        const aValue = getCompanySortValue(a, sortOrder);
+        const bValue = getCompanySortValue(b, sortOrder);
+        const diff = sortOrder === "oldest" ? aValue - bValue : bValue - aValue;
+        return diff || a.name.localeCompare(b.name, "ko");
       });
-  }, [bookmarkFilter, bookmarkSet, companyFilter, data.companies, deferredSearch, hideReadFilter, platformFilter, readSet]);
+  }, [
+    bookmarkFilter,
+    bookmarkSet,
+    companyFilter,
+    data.companies,
+    data.year,
+    deferredSearch,
+    hideReadFilter,
+    platformFilter,
+    readSet,
+    sortOrder,
+  ]);
 
   const filteredCompaniesRef = useRef<Company[]>(filteredCompanies);
   useEffect(() => {
@@ -1701,6 +1880,12 @@ export default function WeeklyClient({
     });
   }, [bookmarkSet, data.companies]);
 
+  const scrollToCompany = useCallback((companyName: string) => {
+    const section = document.getElementById(getCompanySectionId(companyName));
+    if (!section) return;
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <>
       {selectedPostData && selectedCompany && (
@@ -1715,7 +1900,14 @@ export default function WeeklyClient({
         />
       )}
 
-      <main style={{ maxWidth: 720, margin: "0 auto", padding: "48px 20px 96px" }}>
+      <main
+        style={{
+          maxWidth: viewMode === "grid" ? 1040 : 720,
+          margin: "0 auto",
+          padding: "48px 20px 96px",
+          transition: "max-width 0.2s ease",
+        }}
+      >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
           {prevWeek ? (
             <a
@@ -1731,17 +1923,35 @@ export default function WeeklyClient({
 
           <WeekDropdown currentSlug={data.slug} currentWeek={data.week} />
 
-          {nextWeek ? (
-            <a
-              href={`/${nextWeek.slug}`}
-              style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
-              title="다음 주차 (→)"
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <button
+              onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
+              style={{
+                width: 34,
+                height: 34,
+                borderRadius: "50%",
+                border: "1px solid var(--border)",
+                background: "var(--card)",
+                color: "var(--text)",
+                cursor: "pointer",
+                fontSize: 16,
+              }}
+              title={theme === "dark" ? "라이트 모드" : "다크 모드"}
             >
-              W{nextWeek.week} →
-            </a>
-          ) : (
-            <div />
-          )}
+              {theme === "dark" ? "☀️" : "🌙"}
+            </button>
+            {nextWeek ? (
+              <a
+                href={`/${nextWeek.slug}`}
+                style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
+                title="다음 주차 (→)"
+              >
+                W{nextWeek.week} →
+              </a>
+            ) : (
+              <div />
+            )}
+          </div>
         </div>
 
         <div style={{ marginBottom: 28, marginTop: 24 }}>
@@ -1793,149 +2003,190 @@ export default function WeeklyClient({
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
-          <button
-            onClick={() => setCollapsedCompanies(visibleCompanyNames)}
-            style={{
-              fontSize: 12,
-              fontWeight: 700,
-              padding: "7px 12px",
-              borderRadius: 999,
-              border: "1px solid var(--border)",
-              background: "var(--card)",
-              color: "var(--text)",
-              cursor: "pointer",
-            }}
-          >
-            전체 접기 ▲
-          </button>
-          <button
-            onClick={() =>
-              setCollapsedCompanies((prev) => prev.filter((companyName) => !visibleCompanyNames.includes(companyName)))
-            }
-            style={{
-              fontSize: 12,
-              fontWeight: 700,
-              padding: "7px 12px",
-              borderRadius: 999,
-              border: "1px solid var(--border)",
-              background: "var(--card)",
-              color: "var(--text)",
-              cursor: "pointer",
-            }}
-          >
-            전체 펼치기 ▼
-          </button>
-        </div>
-
-        <div style={{ marginBottom: 32, display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ position: "relative" }}>
-            <input
-              id="search-input"
-              type="text"
-              placeholder="포스팅 검색... ( / 단축키)"
-              value={search}
-              onFocus={() => {
-                if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
-                setShowRecentSearches(true);
-              }}
-              onBlur={() => {
-                searchBlurTimeoutRef.current = window.setTimeout(() => setShowRecentSearches(false), 120);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") saveRecentSearch(search);
-              }}
-              onChange={(e) => {
-                const nextValue = e.target.value;
-                startTransition(() => {
-                  setSearch(nextValue);
-                });
-              }}
-              style={{
-                background: "var(--card)",
-                border: "1px solid var(--border)",
-                borderRadius: 8,
-                padding: "10px 14px",
-                color: "var(--text)",
-                fontSize: 14,
-                outline: "none",
-                width: "100%",
-              }}
-            />
-            {showRecentSearches && recentSearches.length > 0 && (
-              <div
-                style={{
-                  position: "absolute",
-                  top: "calc(100% + 8px)",
-                  left: 0,
-                  right: 0,
-                  background: "#161616",
-                  border: "1px solid var(--border)",
-                  borderRadius: 10,
-                  padding: 8,
-                  zIndex: 30,
-                  boxShadow: "0 16px 40px rgba(0,0,0,0.28)",
-                }}
-              >
-                <p style={{ fontSize: 11, color: "var(--muted)", margin: "2px 6px 8px" }}>최근 검색어</p>
-                {[...recentSearches].reverse().slice(0, 3).map((item) => (
+        <div
+          style={{
+            position: "sticky",
+            top: 56,
+            zIndex: 40,
+            background: "var(--header-bg, rgba(10,10,10,0.95))",
+            paddingTop: 12,
+            paddingBottom: 12,
+            marginBottom: 32,
+            borderBottom: "1px solid var(--border)",
+            backdropFilter: "blur(12px)",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+              <div style={{ position: "relative", flex: "1 1 280px", minWidth: 0 }}>
+                <input
+                  id="search-input"
+                  type="text"
+                  placeholder="포스팅 검색... ( / 단축키)"
+                  value={search}
+                  onFocus={() => {
+                    if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
+                    setShowRecentSearches(true);
+                  }}
+                  onBlur={() => {
+                    searchBlurTimeoutRef.current = window.setTimeout(() => setShowRecentSearches(false), 120);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") saveRecentSearch(search);
+                  }}
+                  onChange={(e) => {
+                    const nextValue = e.target.value;
+                    startTransition(() => {
+                      setSearch(nextValue);
+                    });
+                  }}
+                  style={{
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
+                    borderRadius: 8,
+                    padding: "10px 14px",
+                    color: "var(--text)",
+                    fontSize: 14,
+                    outline: "none",
+                    width: "100%",
+                  }}
+                />
+                {showRecentSearches && recentSearches.length > 0 && (
                   <div
-                    key={item}
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      gap: 8,
-                      borderRadius: 8,
+                      position: "absolute",
+                      top: "calc(100% + 8px)",
+                      left: 0,
+                      right: 0,
+                      background: "var(--card)",
+                      border: "1px solid var(--border)",
+                      borderRadius: 10,
+                      padding: 8,
+                      zIndex: 30,
+                      boxShadow: "0 16px 40px rgba(0,0,0,0.28)",
                     }}
                   >
-                    <button
-                      onMouseDown={(e) => e.preventDefault()}
-                      onClick={() => {
-                        if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
-                        setSearch(item);
-                        setShowRecentSearches(false);
-                      }}
-                      style={{
-                        flex: 1,
-                        textAlign: "left",
-                        background: "transparent",
-                        border: "none",
-                        color: "var(--text)",
-                        padding: "10px 8px",
-                        cursor: "pointer",
-                        fontSize: 13,
-                      }}
-                    >
-                      {item}
-                    </button>
-                    <button
-                      onMouseDown={(e) => e.preventDefault()}
-                      onClick={() => removeRecentSearch(item)}
-                      style={{
-                        background: "transparent",
-                        border: "none",
-                        color: "var(--muted)",
-                        cursor: "pointer",
-                        fontSize: 16,
-                        padding: "6px 8px",
-                        lineHeight: 1,
-                      }}
-                      title="최근 검색어 삭제"
-                    >
-                      ×
-                    </button>
+                    <p style={{ fontSize: 11, color: "var(--muted)", margin: "2px 6px 8px" }}>최근 검색어</p>
+                    {[...recentSearches].reverse().slice(0, 3).map((item) => (
+                      <div
+                        key={item}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          gap: 8,
+                          borderRadius: 8,
+                        }}
+                      >
+                        <button
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => {
+                            if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
+                            setSearch(item);
+                            setShowRecentSearches(false);
+                          }}
+                          style={{
+                            flex: 1,
+                            textAlign: "left",
+                            background: "transparent",
+                            border: "none",
+                            color: "var(--text)",
+                            padding: "10px 8px",
+                            cursor: "pointer",
+                            fontSize: 13,
+                          }}
+                        >
+                          {item}
+                        </button>
+                        <button
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => removeRecentSearch(item)}
+                          style={{
+                            background: "transparent",
+                            border: "none",
+                            color: "var(--muted)",
+                            cursor: "pointer",
+                            fontSize: 16,
+                            padding: "6px 8px",
+                            lineHeight: 1,
+                          }}
+                          title="최근 검색어 삭제"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
-            )}
-          </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0, flexWrap: "wrap" }}>
+                <button
+                  onClick={() => setViewMode((prev) => (prev === "list" ? "grid" : "list"))}
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 700,
+                    padding: "10px 12px",
+                    borderRadius: 8,
+                    border: "1px solid var(--border)",
+                    background: "var(--card)",
+                    color: "var(--text)",
+                    cursor: "pointer",
+                    minWidth: 82,
+                  }}
+                  title={viewMode === "list" ? "그리드 보기" : "리스트 보기"}
+                >
+                  {viewMode === "list" ? "⊞ 그리드" : "☰ 리스트"}
+                </button>
+                <select
+                  value={sortOrder}
+                  onChange={(e) => setSortOrder(e.target.value as SortOrder)}
+                  style={{
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
+                    borderRadius: 8,
+                    padding: "10px 12px",
+                    color: "var(--text)",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    outline: "none",
+                    cursor: "pointer",
+                  }}
+                  aria-label="정렬"
+                >
+                  <option value="latest">최신순</option>
+                  <option value="oldest">날짜 오래된순</option>
+                  <option value="company">회사명 가나다순</option>
+                </select>
+              </div>
+            </div>
 
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-            {["all", "X", "Threads"].map((platform) => (
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+              {["all", "X", "Threads"].map((platform) => (
+                <button
+                  key={platform}
+                  onClick={() => setPlatformFilter(platform)}
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    padding: "5px 12px",
+                    borderRadius: 20,
+                    border: "1px solid",
+                    cursor: "pointer",
+                    transition: "all 0.15s",
+                    flexShrink: 0,
+                    borderColor: platformFilter === platform ? "#E87040" : "var(--border)",
+                    background: platformFilter === platform ? "#E87040" : "transparent",
+                    color: platformFilter === platform ? "#000" : "var(--muted)",
+                  }}
+                >
+                  {platform === "all" ? "전체" : platform}
+                </button>
+              ))}
+
+              <span style={{ color: "var(--dim)", fontSize: 12 }}>·</span>
+
               <button
-                key={platform}
-                onClick={() => setPlatformFilter(platform)}
+                onClick={() => setBookmarkFilter((prev) => !prev)}
                 style={{
                   fontSize: 12,
                   fontWeight: 600,
@@ -1943,96 +2194,16 @@ export default function WeeklyClient({
                   borderRadius: 20,
                   border: "1px solid",
                   cursor: "pointer",
-                  transition: "all 0.15s",
                   flexShrink: 0,
-                  borderColor: platformFilter === platform ? "#E87040" : "var(--border)",
-                  background: platformFilter === platform ? "#E87040" : "transparent",
-                  color: platformFilter === platform ? "#000" : "var(--muted)",
+                  borderColor: bookmarkFilter ? "#F5B942" : "var(--border)",
+                  background: bookmarkFilter ? "#F5B94222" : "transparent",
+                  color: bookmarkFilter ? "#F5B942" : "var(--muted)",
                 }}
               >
-                {platform === "all" ? "전체" : platform}
+                ★ 북마크 {bookmarks.length > 0 ? `(${bookmarks.length})` : ""}
               </button>
-            ))}
-
-            <div style={{ width: 1, background: "var(--border)", alignSelf: "stretch" }} />
-
-            <button
-              onClick={() => setBookmarkFilter((prev) => !prev)}
-              style={{
-                fontSize: 12,
-                fontWeight: 600,
-                padding: "5px 12px",
-                borderRadius: 20,
-                border: "1px solid",
-                cursor: "pointer",
-                flexShrink: 0,
-                borderColor: bookmarkFilter ? "#F5B942" : "var(--border)",
-                background: bookmarkFilter ? "#F5B94222" : "transparent",
-                color: bookmarkFilter ? "#F5B942" : "var(--muted)",
-              }}
-            >
-              {bookmarkFilter ? "★" : "☆"} 북마크 {bookmarks.length > 0 ? `(${bookmarks.length})` : ""}
-            </button>
-            {bookmarks.length > 0 && (
               <button
-                onClick={exportBookmarks}
-                style={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  padding: "5px 12px",
-                  borderRadius: 20,
-                  border: "1px solid #E87040",
-                  cursor: "pointer",
-                  flexShrink: 0,
-                  background: bookmarksCopied ? "#E87040" : "transparent",
-                  color: bookmarksCopied ? "#111" : "#E87040",
-                }}
-              >
-                {bookmarksCopied ? "복사됨 ✓" : "내보내기 ↓"}
-              </button>
-            )}
-
-            <button
-              onClick={() => setHideReadFilter((prev) => !prev)}
-              style={{
-                fontSize: 12,
-                fontWeight: 600,
-                padding: "5px 12px",
-                borderRadius: 20,
-                border: "1px solid",
-                cursor: "pointer",
-                flexShrink: 0,
-                borderColor: hideReadFilter ? "#78C97C" : "var(--border)",
-                background: hideReadFilter ? "#78C97C22" : "transparent",
-                color: hideReadFilter ? "#78C97C" : "var(--muted)",
-              }}
-            >
-              읽음 숨기기 {readPosts.length > 0 ? `(${readPosts.length})` : ""}
-            </button>
-          </div>
-
-          <div className="filter-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
-            <button
-              onClick={() => setCompanyFilter("all")}
-              style={{
-                fontSize: 12,
-                fontWeight: 600,
-                padding: "5px 12px",
-                borderRadius: 20,
-                border: "1px solid",
-                cursor: "pointer",
-                flexShrink: 0,
-                borderColor: companyFilter === "all" ? "#E87040" : "var(--border)",
-                background: companyFilter === "all" ? "#E87040" : "transparent",
-                color: companyFilter === "all" ? "#000" : "var(--muted)",
-              }}
-            >
-              전체 회사
-            </button>
-            {data.companies.map((company) => (
-              <button
-                key={company.name}
-                onClick={() => setCompanyFilter(companyFilter === company.name ? "all" : company.name)}
+                onClick={() => setHideReadFilter((prev) => !prev)}
                 style={{
                   fontSize: 12,
                   fontWeight: 600,
@@ -2040,42 +2211,122 @@ export default function WeeklyClient({
                   borderRadius: 20,
                   border: "1px solid",
                   cursor: "pointer",
-                  transition: "all 0.15s",
                   flexShrink: 0,
-                  borderColor: companyFilter === company.name ? company.color : "var(--border)",
-                  background: companyFilter === company.name ? `${company.color}22` : "transparent",
-                  color: companyFilter === company.name ? company.color : "var(--muted)",
+                  borderColor: hideReadFilter ? "#78C97C" : "var(--border)",
+                  background: hideReadFilter ? "#78C97C22" : "transparent",
+                  color: hideReadFilter ? "#78C97C" : "var(--muted)",
                 }}
               >
-                {company.name.split(" /")[0]}
+                읽음숨기기 {readPosts.length > 0 ? `(${readPosts.length})` : ""}
               </button>
-            ))}
-          </div>
-
-          {isFiltering && (
-            <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>
-              {totalFiltered}건 검색됨
               <button
-                onClick={() => {
-                  setSearch("");
-                  setPlatformFilter("all");
-                  setCompanyFilter("all");
-                  setBookmarkFilter(false);
-                  setHideReadFilter(false);
-                }}
+                onClick={() =>
+                  setCollapsedCompanies((prev) =>
+                    visibleCompanyNames.every((companyName) => prev.includes(companyName))
+                      ? prev.filter((companyName) => !visibleCompanyNames.includes(companyName))
+                      : [...new Set([...prev, ...visibleCompanyNames])]
+                  )
+                }
                 style={{
-                  marginLeft: 12,
-                  fontSize: 11,
-                  color: "#E87040",
-                  background: "none",
-                  border: "none",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  padding: "5px 12px",
+                  borderRadius: 20,
+                  border: "1px solid var(--border)",
+                  background: "var(--card)",
+                  color: "var(--text)",
                   cursor: "pointer",
                 }}
               >
-                필터 초기화
+                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "전체 펼치기" : "전체 접기"}
               </button>
-            </p>
-          )}
+
+              {bookmarks.length > 0 && (
+                <button
+                  onClick={exportBookmarks}
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    padding: "5px 12px",
+                    borderRadius: 20,
+                    border: "1px solid #E87040",
+                    cursor: "pointer",
+                    flexShrink: 0,
+                    background: bookmarksCopied ? "#E87040" : "transparent",
+                    color: bookmarksCopied ? "#111" : "#E87040",
+                  }}
+                >
+                  {bookmarksCopied ? "복사됨 ✓" : "내보내기 ↓"}
+                </button>
+              )}
+            </div>
+
+            <div className="filter-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
+              <button
+                onClick={() => setCompanyFilter("all")}
+                style={{
+                  fontSize: 12,
+                  fontWeight: 600,
+                  padding: "5px 12px",
+                  borderRadius: 20,
+                  border: "1px solid",
+                  cursor: "pointer",
+                  flexShrink: 0,
+                  borderColor: companyFilter === "all" ? "#E87040" : "var(--border)",
+                  background: companyFilter === "all" ? "#E87040" : "transparent",
+                  color: companyFilter === "all" ? "#000" : "var(--muted)",
+                }}
+              >
+                전체 회사
+              </button>
+              {data.companies.map((company) => (
+                <button
+                  key={company.name}
+                  onClick={() => setCompanyFilter(companyFilter === company.name ? "all" : company.name)}
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    padding: "5px 12px",
+                    borderRadius: 20,
+                    border: "1px solid",
+                    cursor: "pointer",
+                    transition: "all 0.15s",
+                    flexShrink: 0,
+                    borderColor: companyFilter === company.name ? company.color : "var(--border)",
+                    background: companyFilter === company.name ? `${company.color}22` : "transparent",
+                    color: companyFilter === company.name ? company.color : "var(--muted)",
+                  }}
+                >
+                  {company.name.split(" /")[0]}
+                </button>
+              ))}
+            </div>
+
+            {isFiltering && (
+              <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>
+                {totalFiltered}건 검색됨
+                <button
+                  onClick={() => {
+                    setSearch("");
+                    setPlatformFilter("all");
+                    setCompanyFilter("all");
+                    setBookmarkFilter(false);
+                    setHideReadFilter(false);
+                  }}
+                  style={{
+                    marginLeft: 12,
+                    fontSize: 11,
+                    color: "#E87040",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  필터 초기화
+                </button>
+              </p>
+            )}
+          </div>
         </div>
 
         {highlightedEntry && (
@@ -2091,7 +2342,15 @@ export default function WeeklyClient({
           </div>
         )}
 
-        <StatsBar companies={data.companies} onCompanyClick={(name) => setCompanyFilter(companyFilter === name ? "all" : name)} />
+        <StatsBar
+          companies={filteredCompanies}
+          actionMode={statsActionMode}
+          onCompanyClick={(name) => setCompanyFilter(companyFilter === name ? "all" : name)}
+          onCompanyScroll={scrollToCompany}
+          onToggleActionMode={() =>
+            setStatsActionMode((prev) => (prev === "filter" ? "scroll" : "filter"))
+          }
+        />
 
         {filteredCompanies.length > 0 ? (
           filteredCompanies.map((company) => (
@@ -2106,6 +2365,7 @@ export default function WeeklyClient({
               searchQuery={search}
               collapsed={collapsedSet.has(company.name)}
               onToggleCollapsed={() => toggleCompanyCollapsed(company.name)}
+              viewMode={viewMode}
             />
           ))
         ) : (
