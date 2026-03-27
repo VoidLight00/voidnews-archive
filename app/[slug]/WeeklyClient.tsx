@@ -16,7 +16,6 @@ import { getWeekList } from "@/lib/data";
 const BOOKMARKS_STORAGE_KEY = "voidnews-bookmarks";
 const READ_STORAGE_PREFIX = "voidnews-read:";
 const RECENT_SEARCHES_STORAGE_KEY = "voidnews-recent-searches";
-const THEME_STORAGE_KEY = "voidnews-theme";
 const VIEW_MODE_STORAGE_KEY = "voidnews-view-mode";
 const SORT_ORDER_STORAGE_KEY = "voidnews-sort-order";
 const STATS_ACTION_STORAGE_KEY = "voidnews-stats-action";
@@ -36,6 +35,15 @@ function extractDomain(url: string): string {
 
 function getCompanySectionId(name: string) {
   return `company-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")}`;
+}
+
+function formatIntelIndex(index: number) {
+  return String(index).padStart(3, "0");
+}
+
+function renderIntelBar(value: number, max: number, width = 20) {
+  const filled = max > 0 ? Math.round((value / max) * width) : 0;
+  return `${"█".repeat(filled)}${"░".repeat(Math.max(0, width - filled))}`;
 }
 
 function escapeRegExp(value: string) {
@@ -172,7 +180,13 @@ function PostDateLabel({ date, defaultYear }: { date: string; defaultYear: numbe
 
   return (
     <span
-      style={{ fontSize: 12, color: "var(--dim)", fontVariantNumeric: "tabular-nums" }}
+      style={{
+        fontSize: 11,
+        color: "var(--muted)",
+        fontVariantNumeric: "tabular-nums",
+        fontFamily: "var(--mono)",
+        letterSpacing: "0.04em",
+      }}
       title={absolute}
     >
       {relative || date}
@@ -193,7 +207,6 @@ type ModalNavigation = {
   positionLabel: string;
 };
 
-type ThemeMode = "dark" | "light";
 type ViewMode = "list" | "grid";
 type SortOrder = "latest" | "oldest" | "company";
 type StatsActionMode = "filter" | "scroll";
@@ -209,14 +222,16 @@ function PlatformBadge({ platform }: { platform: Post["platform"] }) {
   return (
     <span
       style={{
-        background: s.bg,
+        background: "transparent",
         color: s.color,
         fontSize: 11,
         fontWeight: 600,
-        padding: "2px 7px",
-        borderRadius: 4,
-        letterSpacing: "0.04em",
+        padding: 0,
+        borderRadius: 0,
+        letterSpacing: "0.08em",
         whiteSpace: "nowrap",
+        fontFamily: "var(--mono)",
+        textTransform: "uppercase",
       }}
     >
       {platform}
@@ -909,6 +924,9 @@ function PostModal({
 
 // ── 포스트 카드 ──────────────────────────────────
 function PostCard({
+  index,
+  companyName,
+  companyColor,
   post,
   defaultYear,
   onClick,
@@ -917,6 +935,9 @@ function PostCard({
   read,
   searchQuery,
 }: {
+  index: number;
+  companyName: string;
+  companyColor: string;
   post: Post;
   defaultYear: number;
   onClick: () => void;
@@ -927,6 +948,7 @@ function PostCard({
 }) {
   const [copied, setCopied] = useState(false);
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
+  const sourceDomain = post.source ? extractDomain(post.source) : "NO SOURCE";
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -942,59 +964,122 @@ function PostCard({
   return (
     <div
       id={`post-${post.title.slice(0, 20)}`}
-      className="post-card"
+      className="intel-card"
       onClick={hasDetail ? onClick : undefined}
       style={{
-        background: "var(--card)",
-        border: "1px solid var(--border)",
-        borderRadius: 8,
-        padding: "14px 16px",
         display: "flex",
         flexDirection: "column",
-        gap: 10,
+        gap: 0,
         cursor: hasDetail ? "pointer" : "default",
         position: "relative",
         opacity: read ? 0.7 : 1,
-        transition: "opacity 0.15s, border-color 0.15s",
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 10 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", minWidth: 0, flex: 1 }}>
+      <div
+        style={{
+          background: "var(--surface)",
+          borderBottom: "1px solid var(--border)",
+          padding: "8px 14px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 10,
+          flexWrap: "wrap",
+          fontFamily: "var(--mono)",
+          fontSize: 11,
+          letterSpacing: "0.06em",
+          textTransform: "uppercase",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", minWidth: 0 }}>
+          <span style={{ color: "var(--gold)" }}>{formatIntelIndex(index)}</span>
+          <span style={{ color: "var(--dim)" }}>[</span>
           <PlatformBadge platform={post.platform} />
+          <span style={{ color: "var(--dim)" }}>]</span>
           <PostDateLabel date={post.date} defaultYear={defaultYear} />
+          <span style={{ color: "var(--dim)" }}>---</span>
+          <span style={{ color: companyColor, whiteSpace: "nowrap" }}>{companyName.toUpperCase()}</span>
         </div>
-        <div
-          style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}
-          onClick={(e) => e.stopPropagation()}
+      </div>
+
+      <div style={{ padding: "14px", display: "flex", flexDirection: "column", gap: 10 }}>
+        <p
+          style={{
+            fontSize: 14,
+            fontWeight: 600,
+            letterSpacing: "-0.01em",
+            lineHeight: 1.45,
+            color: "var(--text)",
+            margin: 0,
+          }}
         >
-          {hasDetail && (
+          {highlightText(post.title, searchQuery)}
+          {read && (
             <span
-              className="detail-hint"
-              style={{
-                fontSize: 10,
-                color: "var(--dim)",
-                letterSpacing: "0.05em",
-                transition: "color 0.15s",
-                whiteSpace: "nowrap",
-              }}
+              style={{ marginLeft: 8, fontSize: 10, color: "var(--gold)", verticalAlign: "middle", fontFamily: "var(--mono)" }}
+              title="읽음"
             >
-              자세히 보기 →
+              READ
             </span>
           )}
+        </p>
+
+        {post.summary && (
+          <p
+            style={{
+              fontSize: 12,
+              color: "var(--muted)",
+              lineHeight: 1.65,
+              margin: 0,
+              paddingLeft: 10,
+              borderLeft: `2px solid ${companyColor}40`,
+            }}
+          >
+            {highlightText(post.summary, searchQuery)}
+          </p>
+        )}
+
+        {post.source && <CardLinkPreview url={post.source} />}
+      </div>
+
+      <div
+        style={{
+          borderTop: "1px solid var(--border)",
+          padding: "10px 14px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 10,
+          flexWrap: "wrap",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "var(--mono)",
+            fontSize: 10,
+            color: "var(--dim)",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+          }}
+        >
+          {sourceDomain}
+        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }} onClick={(e) => e.stopPropagation()}>
           <button
             onClick={handleCopy}
             style={{
               background: "none",
               border: "none",
               cursor: "pointer",
-              fontSize: 13,
-              color: copied ? "#E87040" : "#444",
-              padding: "2px 4px",
+              fontSize: 12,
+              color: copied ? "var(--accent)" : "var(--muted)",
+              padding: 0,
               lineHeight: 1,
+              fontFamily: "var(--mono)",
             }}
             title="포스팅 링크 복사"
           >
-            {copied ? "✓" : "🔗"}
+            🔗
           </button>
           <button
             onClick={(e) => {
@@ -1005,34 +1090,30 @@ function PostCard({
               background: "none",
               border: "none",
               cursor: "pointer",
-              fontSize: 13,
-              color: bookmarked ? "#F5B942" : "#444",
-              padding: "2px 4px",
+              fontSize: 12,
+              color: bookmarked ? "var(--gold)" : "var(--muted)",
+              padding: 0,
               lineHeight: 1,
+              fontFamily: "var(--mono)",
             }}
             title={bookmarked ? "북마크 해제" : "북마크"}
           >
-            {bookmarked ? "★" : "☆"}
+            ★
           </button>
+          <span
+            className="card-reveal"
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: 11,
+              color: hasDetail ? "var(--text)" : "var(--dim)",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+            }}
+          >
+            {hasDetail ? "OPEN →" : "NO FILE"}
+          </span>
         </div>
       </div>
-
-      <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--text)", fontWeight: 500, margin: 0 }}>
-        {highlightText(post.title, searchQuery)}
-        {read && (
-          <span style={{ marginLeft: 6, fontSize: 11, color: "#78C97C", verticalAlign: "middle" }} title="읽음">
-            ●
-          </span>
-        )}
-      </p>
-
-      {post.summary && (
-        <p style={{ fontSize: 12, color: "var(--muted)", lineHeight: 1.5, margin: 0 }}>
-          {highlightText(post.summary, searchQuery)}
-        </p>
-      )}
-
-      {post.source && <CardLinkPreview url={post.source} />}
     </div>
   );
 }
@@ -1040,6 +1121,7 @@ function PostCard({
 // ── 회사 섹션 ────────────────────────────────────
 function CompanySection({
   company,
+  startIndex,
   defaultYear,
   onPostClick,
   bookmarks,
@@ -1051,6 +1133,7 @@ function CompanySection({
   viewMode,
 }: {
   company: Company;
+  startIndex: number;
   defaultYear: number;
   onPostClick: (post: Post, companyName: string) => void;
   bookmarks: Set<string>;
@@ -1069,40 +1152,56 @@ function CompanySection({
           display: "flex",
           alignItems: "center",
           gap: 12,
-          marginBottom: collapsed ? 0 : 16,
-          paddingLeft: 14,
-          borderLeft: `4px solid ${company.color}`,
+          marginBottom: collapsed ? 0 : 14,
+          padding: "14px 0 0",
+          borderLeft: "none",
+          borderTop: "1px solid var(--border)",
           background: "none",
-          borderTop: "none",
           borderRight: "none",
           borderBottom: "none",
+          borderInline: "none",
           cursor: "pointer",
           width: "100%",
           textAlign: "left",
         }}
       >
-        <h2 style={{ fontSize: 15, fontWeight: 700, color: "var(--text)", letterSpacing: "0.02em", margin: 0 }}>
+        <span style={{ width: 3, height: 18, background: company.color, flexShrink: 0 }} />
+        <h2
+          style={{
+            fontSize: 13,
+            fontWeight: 700,
+            color: "var(--text)",
+            letterSpacing: "0.08em",
+            margin: 0,
+            fontFamily: "var(--mono)",
+            textTransform: "uppercase",
+          }}
+        >
           {company.name}
         </h2>
         <span
           style={{
-            fontSize: 12,
+            fontSize: 11,
             fontWeight: 600,
             color: company.color,
-            background: `${company.color}18`,
-            padding: "2px 8px",
-            borderRadius: 20,
+            background: `${company.color}14`,
+            padding: "3px 8px",
+            border: `1px solid ${company.color}30`,
+            fontFamily: "var(--mono)",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
           }}
         >
-          {company.posts.length}건
+          [{company.posts.length} ITEMS]
         </span>
         <span
           style={{
             marginLeft: "auto",
-            color: "#444",
-            fontSize: 14,
+            color: "var(--dim)",
+            fontSize: 12,
             transform: collapsed ? "rotate(-90deg)" : "none",
             transition: "transform 0.2s",
+            fontFamily: "var(--mono)",
           }}
         >
           ▾
@@ -1116,14 +1215,17 @@ function CompanySection({
               ? {
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-                  gap: 12,
+                  gap: 6,
                 }
-              : { display: "flex", flexDirection: "column", gap: 10 }
+              : { display: "flex", flexDirection: "column", gap: 6 }
           }
         >
           {company.posts.map((post, index) => (
             <PostCard
               key={`${post.title}-${index}`}
+              index={startIndex + index}
+              companyName={company.name}
+              companyColor={company.color}
               post={post}
               defaultYear={defaultYear}
               onClick={() => onPostClick(post, company.name)}
@@ -1162,26 +1264,24 @@ function StatsBar({
       style={{
         background: "var(--card)",
         border: "1px solid var(--border)",
-        borderRadius: 12,
-        padding: "22px 24px",
+        borderRadius: 2,
+        padding: "18px 16px",
         marginBottom: 24,
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 18 }}>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 14 }}>
         <h3
           style={{
             fontSize: 11,
             fontWeight: 700,
-            color: "var(--muted)",
+            color: "var(--text)",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             margin: 0,
+            fontFamily: "var(--mono)",
           }}
         >
-          회사별 분포{" "}
-          <span style={{ fontSize: 10, color: "var(--dim)", fontWeight: 400 }}>
-            (클릭 → {actionMode === "filter" ? "필터" : "스크롤"})
-          </span>
+          INTELLIGENCE DISTRIBUTION
         </h3>
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
           <button
@@ -1189,25 +1289,31 @@ function StatsBar({
             style={{
               fontSize: 11,
               fontWeight: 700,
-              color: actionMode === "filter" ? "var(--muted)" : "#E87040",
+              color: actionMode === "filter" ? "var(--muted)" : "var(--accent)",
               border: "1px solid var(--border)",
               background: "transparent",
-              borderRadius: 999,
+              borderRadius: 2,
               padding: "5px 10px",
               cursor: "pointer",
+              fontFamily: "var(--mono)",
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
             }}
             title={actionMode === "filter" ? "클릭 시 섹션 스크롤로 전환" : "클릭 시 회사 필터로 전환"}
           >
-            {actionMode === "filter" ? "필터" : "스크롤 ↓"}
+            {actionMode === "filter" ? "FILTER" : "SCROLL"}
           </button>
-          <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", whiteSpace: "nowrap" }}>총 {total}건</span>
+          <span style={{ fontSize: 11, fontWeight: 700, color: "var(--gold)", whiteSpace: "nowrap", fontFamily: "var(--mono)" }}>
+            {String(total).padStart(2, "0")} TOTAL
+          </span>
         </div>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {companies.map((company) => {
           const ratio = total > 0 ? (company.posts.length / total) * 100 : 0;
           const visible = hoveredCompany === company.name;
+          const bar = renderIntelBar(company.posts.length, max);
 
           return (
             <div
@@ -1215,60 +1321,37 @@ function StatsBar({
               onClick={() => (actionMode === "filter" ? onCompanyClick(company.name) : onCompanyScroll(company.name))}
               onMouseEnter={() => setHoveredCompany(company.name)}
               onMouseLeave={() => setHoveredCompany(null)}
-              style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", position: "relative" }}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "minmax(120px, 160px) 30px minmax(0, 1fr)",
+                alignItems: "center",
+                gap: 10,
+                cursor: "pointer",
+                position: "relative",
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+              }}
               title={company.name}
             >
               <span
                 style={{
-                  fontSize: 12,
                   color: "var(--muted)",
-                  minWidth: 80,
-                  maxWidth: 160,
-                  flexShrink: 0,
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.05em",
                 }}
               >
                 {company.name}
               </span>
-
-              <div style={{ flex: 1, position: "relative" }}>
-                {visible && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      left: 0,
-                      bottom: 16,
-                      background: "#0F0F0F",
-                      border: "1px solid #2C2C2C",
-                      borderRadius: 8,
-                      padding: "6px 8px",
-                      fontSize: 11,
-                      color: "#E8E8E8",
-                      whiteSpace: "nowrap",
-                      pointerEvents: "none",
-                      boxShadow: "0 10px 24px rgba(0,0,0,0.28)",
-                    }}
-                  >
-                    {company.posts.length}건 · {ratio.toFixed(1)}%
-                  </div>
-                )}
-                <div style={{ background: "var(--border)", borderRadius: 4, height: 8, overflow: "hidden" }}>
-                  <div
-                    style={{
-                      width: `${max > 0 ? (company.posts.length / max) * 100 : 0}%`,
-                      height: "100%",
-                      background: company.color,
-                      borderRadius: 4,
-                      transition: "width 0.3s",
-                    }}
-                  />
-                </div>
-              </div>
-
-              <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text)", width: 24, textAlign: "right" }}>
+              <span style={{ width: 30, textAlign: "right", color: company.color, fontWeight: 700 }}>
                 {company.posts.length}
+              </span>
+              <span style={{ color: visible ? "var(--text)" : "var(--dim)", letterSpacing: "0.04em", whiteSpace: "nowrap", overflow: "hidden" }}>
+                <span style={{ color: company.color }}>{bar.slice(0, bar.indexOf("░") === -1 ? bar.length : bar.indexOf("░"))}</span>
+                <span style={{ color: "var(--dim)" }}>{bar.slice(bar.indexOf("░") === -1 ? bar.length : bar.indexOf("░"))}</span>
+                <span style={{ marginLeft: 10, color: "var(--muted)" }}>{ratio.toFixed(1)}%</span>
               </span>
             </div>
           );
@@ -1293,10 +1376,10 @@ function HighlightCard({
       style={{
         width: "100%",
         textAlign: "left",
-        background: "color-mix(in srgb, var(--card) 92%, #E87040 8%)",
-        border: "1px solid color-mix(in srgb, var(--border) 70%, #E87040 30%)",
-        borderLeft: "5px solid #E87040",
-        borderRadius: 12,
+        background: "var(--surface)",
+        border: "1px solid var(--border)",
+        borderLeft: "3px solid var(--accent)",
+        borderRadius: 2,
         padding: "18px 20px",
         marginBottom: 18,
         cursor: "pointer",
@@ -1306,17 +1389,17 @@ function HighlightCard({
         <span
           style={{
             fontSize: 11,
-            fontWeight: 800,
-            color: "#111",
-            background: "#E87040",
-            borderRadius: 999,
-            padding: "5px 10px",
-            letterSpacing: "0.04em",
+            fontWeight: 700,
+            color: "var(--accent)",
+            letterSpacing: "0.08em",
+            fontFamily: "var(--mono)",
           }}
         >
-          ⭐ 하이라이트
+          ▌ THIS WEEK'S LEAD
         </span>
-        <span style={{ fontSize: 12, color: company.color, fontWeight: 700 }}>{company.name}</span>
+        <span style={{ fontSize: 11, color: company.color, fontWeight: 700, fontFamily: "var(--mono)", letterSpacing: "0.06em" }}>
+          {company.name.toUpperCase()}
+        </span>
       </div>
       <p style={{ fontSize: 16, lineHeight: 1.5, color: "var(--text)", fontWeight: 700, margin: "0 0 8px" }}>{post.title}</p>
       {post.summary && <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--muted)", margin: 0 }}>{post.summary}</p>}
@@ -1417,7 +1500,6 @@ export default function WeeklyClient({
   const [showRecentSearches, setShowRecentSearches] = useState(false);
   const [bookmarksCopied, setBookmarksCopied] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [theme, setTheme] = useState<ThemeMode>("dark");
   const [viewMode, setViewMode] = useState<ViewMode>("list");
   const [sortOrder, setSortOrder] = useState<SortOrder>("latest");
   const [statsActionMode, setStatsActionMode] = useState<StatsActionMode>("filter");
@@ -1442,11 +1524,6 @@ export default function WeeklyClient({
     try {
       const storedRecentSearches = localStorage.getItem(RECENT_SEARCHES_STORAGE_KEY);
       if (storedRecentSearches) setRecentSearches(JSON.parse(storedRecentSearches));
-    } catch {}
-
-    try {
-      const storedTheme = localStorage.getItem(THEME_STORAGE_KEY) as ThemeMode | null;
-      if (storedTheme === "dark" || storedTheme === "light") setTheme(storedTheme);
     } catch {}
 
     try {
@@ -1483,47 +1560,6 @@ export default function WeeklyClient({
     if (initialPost) pendingPostFromUrlRef.current = initialPost;
     urlReadyRef.current = true;
   }, [data.companies]);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    const palette =
-      theme === "light"
-        ? {
-            bg: "#f8f8f8",
-            card: "#ffffff",
-            cardHover: "#f2f2f2",
-            border: "#e8e8e8",
-            text: "#1a1a1a",
-            muted: "#666666",
-            dim: "#999999",
-            headerBg: "rgba(248,248,248,0.92)",
-          }
-        : {
-            bg: "#0A0A0A",
-            card: "#111111",
-            cardHover: "#1A1A1A",
-            border: "#222222",
-            text: "#F0F0F0",
-            muted: "#888888",
-            dim: "#555555",
-            headerBg: "rgba(10,10,10,0.95)",
-          };
-
-    root.style.setProperty("--bg", palette.bg);
-    root.style.setProperty("--card", palette.card);
-    root.style.setProperty("--card-hover", palette.cardHover);
-    root.style.setProperty("--border", palette.border);
-    root.style.setProperty("--text", palette.text);
-    root.style.setProperty("--muted", palette.muted);
-    root.style.setProperty("--dim", palette.dim);
-    root.style.setProperty("--header-bg", palette.headerBg);
-    root.style.colorScheme = theme;
-    document.body.style.background = palette.bg;
-
-    try {
-      localStorage.setItem(THEME_STORAGE_KEY, theme);
-    } catch {}
-  }, [theme]);
 
   useEffect(() => {
     try {
@@ -1829,11 +1865,21 @@ export default function WeeklyClient({
 
   const totalFiltered = filteredCompanies.reduce((sum, company) => sum + company.posts.length, 0);
   const visibleCompanyNames = filteredCompanies.map((company) => company.name);
+  const companyStartIndex = useMemo(() => {
+    let running = 1;
+    return new Map(
+      filteredCompanies.map((company) => {
+        const start = running;
+        running += company.posts.length;
+        return [company.name, start];
+      })
+    );
+  }, [filteredCompanies]);
   const readFilteredCount = filteredCompanies.reduce(
     (sum, company) => sum + company.posts.filter((post) => readSet.has(post.title)).length,
     0
   );
-  const readProgressPercent = totalFiltered > 0 ? Math.round((readFilteredCount / totalFiltered) * 100) : 0;
+  const readProgressBar = renderIntelBar(readFilteredCount, Math.max(totalFiltered, 1));
   const highlightedEntry = useMemo(() => {
     for (const company of data.companies) {
       const featuredPost = company.posts.find((post) => post.featured);
@@ -1904,7 +1950,7 @@ export default function WeeklyClient({
         style={{
           maxWidth: viewMode === "grid" ? 1040 : 720,
           margin: "0 auto",
-          padding: "48px 20px 96px",
+          padding: "40px 20px 96px",
           transition: "max-width 0.2s ease",
         }}
       >
@@ -1912,7 +1958,7 @@ export default function WeeklyClient({
           {prevWeek ? (
             <a
               href={`/${prevWeek.slug}`}
-              style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
+              style={{ fontSize: 12, color: "var(--muted)", textDecoration: "none", fontFamily: "var(--mono)" }}
               title="이전 주차 (←)"
             >
               ← W{prevWeek.week}
@@ -1924,26 +1970,10 @@ export default function WeeklyClient({
           <WeekDropdown currentSlug={data.slug} currentWeek={data.week} />
 
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button
-              onClick={() => setTheme((prev) => (prev === "dark" ? "light" : "dark"))}
-              style={{
-                width: 34,
-                height: 34,
-                borderRadius: "50%",
-                border: "1px solid var(--border)",
-                background: "var(--card)",
-                color: "var(--text)",
-                cursor: "pointer",
-                fontSize: 16,
-              }}
-              title={theme === "dark" ? "라이트 모드" : "다크 모드"}
-            >
-              {theme === "dark" ? "☀️" : "🌙"}
-            </button>
             {nextWeek ? (
               <a
                 href={`/${nextWeek.slug}`}
-                style={{ fontSize: 13, color: "var(--muted)", textDecoration: "none" }}
+                style={{ fontSize: 12, color: "var(--muted)", textDecoration: "none", fontFamily: "var(--mono)" }}
                 title="다음 주차 (→)"
               >
                 W{nextWeek.week} →
@@ -1954,24 +1984,33 @@ export default function WeeklyClient({
           </div>
         </div>
 
-        <div style={{ marginBottom: 28, marginTop: 24 }}>
-          <p style={{ fontSize: 11, color: "var(--muted)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 10 }}>
+        <div style={{ marginBottom: 24, marginTop: 20 }}>
+          <p
+            style={{
+              fontSize: 11,
+              color: "var(--gold)",
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              marginBottom: 10,
+              fontFamily: "var(--mono)",
+            }}
+          >
             {data.year} · Week {data.week}
           </p>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-            <svg width="32" height="32" viewBox="0 0 32 32" style={{ flexShrink: 0 }}>
-              <rect width="32" height="32" rx="8" fill="#E87040" />
-              <text x="16" y="22" textAnchor="middle" fill="white" fontSize="18" fontWeight="800" fontFamily="Arial, sans-serif">
-                V
-              </text>
-            </svg>
-            <h1 style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", lineHeight: 1.2, margin: 0 }}>
-              VoidNews — Week {data.week}
-            </h1>
-          </div>
-          <p style={{ fontSize: 15, color: "var(--muted)", margin: 0 }}>
-            {data.period} &nbsp;·&nbsp;
-            <span style={{ color: "#E87040", fontWeight: 700 }}>{data.totalPosts}건</span> 포스팅
+          <h1
+            style={{
+              fontSize: 32,
+              fontWeight: 700,
+              letterSpacing: "-0.03em",
+              color: "var(--text)",
+              lineHeight: 1.1,
+              margin: "0 0 10px",
+            }}
+          >
+            VOIDNEWS // WEEK {String(data.week).padStart(2, "0")} BRIEFING
+          </h1>
+          <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
+            {data.period} · <span style={{ color: "var(--accent)", fontWeight: 700 }}>{data.totalPosts}</span> intelligence items archived
           </p>
         </div>
 
@@ -1979,28 +2018,24 @@ export default function WeeklyClient({
           style={{
             background: "var(--card)",
             border: "1px solid var(--border)",
-            borderRadius: 12,
-            padding: "16px 18px",
+            borderRadius: 2,
+            padding: "14px 16px",
             marginBottom: 18,
           }}
         >
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", marginBottom: 10, flexWrap: "wrap" }}>
-            <p style={{ margin: 0, fontSize: 13, color: "var(--text)", fontWeight: 700 }}>
-              {readFilteredCount} / {totalFiltered} 읽음 ({readProgressPercent}%)
-            </p>
-            <span style={{ fontSize: 11, color: "var(--muted)" }}>현재 필터 기준 읽기 진행률</span>
-          </div>
-          <div style={{ height: 8, borderRadius: 999, background: "var(--border)", overflow: "hidden" }}>
-            <div
-              style={{
-                width: `${readProgressPercent}%`,
-                height: "100%",
-                background: "#E87040",
-                borderRadius: 999,
-                transition: "width 0.2s ease",
-              }}
-            />
-          </div>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 12,
+              color: "var(--text)",
+              fontFamily: "var(--mono)",
+              letterSpacing: "0.04em",
+              whiteSpace: "nowrap",
+              overflowX: "auto",
+            }}
+          >
+            [{readProgressBar}]&nbsp;&nbsp;{readFilteredCount} / {totalFiltered} READ
+          </p>
         </div>
 
         <div
@@ -2008,49 +2043,61 @@ export default function WeeklyClient({
             position: "sticky",
             top: 56,
             zIndex: 40,
-            background: "var(--header-bg, rgba(10,10,10,0.95))",
+            background: "rgba(8,8,8,0.94)",
             paddingTop: 12,
             paddingBottom: 12,
             marginBottom: 32,
             borderBottom: "1px solid var(--border)",
-            backdropFilter: "blur(12px)",
+            backdropFilter: "blur(10px)",
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
               <div style={{ position: "relative", flex: "1 1 280px", minWidth: 0 }}>
-                <input
-                  id="search-input"
-                  type="text"
-                  placeholder="포스팅 검색... ( / 단축키)"
-                  value={search}
-                  onFocus={() => {
-                    if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
-                    setShowRecentSearches(true);
-                  }}
-                  onBlur={() => {
-                    searchBlurTimeoutRef.current = window.setTimeout(() => setShowRecentSearches(false), 120);
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") saveRecentSearch(search);
-                  }}
-                  onChange={(e) => {
-                    const nextValue = e.target.value;
-                    startTransition(() => {
-                      setSearch(nextValue);
-                    });
-                  }}
+                <div
                   style={{
-                    background: "var(--card)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    background: "var(--surface)",
                     border: "1px solid var(--border)",
-                    borderRadius: 8,
-                    padding: "10px 14px",
-                    color: "var(--text)",
-                    fontSize: 14,
-                    outline: "none",
-                    width: "100%",
+                    padding: "10px 12px",
                   }}
-                />
+                >
+                  <span style={{ fontFamily: "var(--mono)", color: "var(--accent)", fontSize: 14, flexShrink: 0 }}>{">"}</span>
+                  <input
+                    id="search-input"
+                    type="text"
+                    placeholder="SEARCH INTELLIGENCE..."
+                    value={search}
+                    onFocus={() => {
+                      if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
+                      setShowRecentSearches(true);
+                    }}
+                    onBlur={() => {
+                      searchBlurTimeoutRef.current = window.setTimeout(() => setShowRecentSearches(false), 120);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") saveRecentSearch(search);
+                    }}
+                    onChange={(e) => {
+                      const nextValue = e.target.value;
+                      startTransition(() => {
+                        setSearch(nextValue);
+                      });
+                    }}
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      color: "var(--text)",
+                      fontSize: 13,
+                      outline: "none",
+                      width: "100%",
+                      fontFamily: "var(--mono)",
+                      letterSpacing: "0.04em",
+                    }}
+                  />
+                </div>
                 {showRecentSearches && recentSearches.length > 0 && (
                   <div
                     style={{
@@ -2060,13 +2107,13 @@ export default function WeeklyClient({
                       right: 0,
                       background: "var(--card)",
                       border: "1px solid var(--border)",
-                      borderRadius: 10,
+                      borderRadius: 2,
                       padding: 8,
                       zIndex: 30,
                       boxShadow: "0 16px 40px rgba(0,0,0,0.28)",
                     }}
                   >
-                    <p style={{ fontSize: 11, color: "var(--muted)", margin: "2px 6px 8px" }}>최근 검색어</p>
+                    <p style={{ fontSize: 11, color: "var(--muted)", margin: "2px 6px 8px", fontFamily: "var(--mono)" }}>RECENT SEARCHES</p>
                     {[...recentSearches].reverse().slice(0, 3).map((item) => (
                       <div
                         key={item}
@@ -2093,7 +2140,8 @@ export default function WeeklyClient({
                             color: "var(--text)",
                             padding: "10px 8px",
                             cursor: "pointer",
-                            fontSize: 13,
+                            fontSize: 12,
+                            fontFamily: "var(--mono)",
                           }}
                         >
                           {item}
@@ -2106,7 +2154,7 @@ export default function WeeklyClient({
                             border: "none",
                             color: "var(--muted)",
                             cursor: "pointer",
-                            fontSize: 16,
+                            fontSize: 14,
                             padding: "6px 8px",
                             lineHeight: 1,
                           }}
@@ -2123,39 +2171,44 @@ export default function WeeklyClient({
                 <button
                   onClick={() => setViewMode((prev) => (prev === "list" ? "grid" : "list"))}
                   style={{
-                    fontSize: 13,
+                    fontSize: 11,
                     fontWeight: 700,
                     padding: "10px 12px",
-                    borderRadius: 8,
+                    borderRadius: 2,
                     border: "1px solid var(--border)",
-                    background: "var(--card)",
+                    background: "var(--surface)",
                     color: "var(--text)",
                     cursor: "pointer",
                     minWidth: 82,
+                    fontFamily: "var(--mono)",
+                    letterSpacing: "0.06em",
                   }}
                   title={viewMode === "list" ? "그리드 보기" : "리스트 보기"}
                 >
-                  {viewMode === "list" ? "⊞ 그리드" : "☰ 리스트"}
+                  {viewMode === "list" ? "GRID" : "LIST"}
                 </button>
                 <select
                   value={sortOrder}
                   onChange={(e) => setSortOrder(e.target.value as SortOrder)}
                   style={{
-                    background: "var(--card)",
+                    background: "var(--surface)",
                     border: "1px solid var(--border)",
-                    borderRadius: 8,
+                    borderRadius: 2,
                     padding: "10px 12px",
                     color: "var(--text)",
-                    fontSize: 13,
+                    fontSize: 11,
                     fontWeight: 600,
                     outline: "none",
                     cursor: "pointer",
+                    fontFamily: "var(--mono)",
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
                   }}
                   aria-label="정렬"
                 >
-                  <option value="latest">최신순</option>
-                  <option value="oldest">날짜 오래된순</option>
-                  <option value="company">회사명 가나다순</option>
+                  <option value="latest">LATEST</option>
+                  <option value="oldest">OLDEST</option>
+                  <option value="company">COMPANY</option>
                 </select>
               </div>
             </div>
@@ -2166,58 +2219,64 @@ export default function WeeklyClient({
                   key={platform}
                   onClick={() => setPlatformFilter(platform)}
                   style={{
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: 600,
                     padding: "5px 12px",
-                    borderRadius: 20,
+                    borderRadius: 2,
                     border: "1px solid",
                     cursor: "pointer",
                     transition: "all 0.15s",
                     flexShrink: 0,
-                    borderColor: platformFilter === platform ? "#E87040" : "var(--border)",
-                    background: platformFilter === platform ? "#E87040" : "transparent",
+                    borderColor: platformFilter === platform ? "var(--accent)" : "var(--border)",
+                    background: platformFilter === platform ? "var(--accent)" : "transparent",
                     color: platformFilter === platform ? "#000" : "var(--muted)",
+                    fontFamily: "var(--mono)",
+                    letterSpacing: "0.06em",
                   }}
                 >
-                  {platform === "all" ? "전체" : platform}
+                  {platform === "all" ? "ALL" : platform.toUpperCase()}
                 </button>
               ))}
 
-              <span style={{ color: "var(--dim)", fontSize: 12 }}>·</span>
+              <span style={{ color: "var(--dim)", fontSize: 12, fontFamily: "var(--mono)" }}>//</span>
 
               <button
                 onClick={() => setBookmarkFilter((prev) => !prev)}
                 style={{
-                  fontSize: 12,
+                  fontSize: 11,
                   fontWeight: 600,
                   padding: "5px 12px",
-                  borderRadius: 20,
+                  borderRadius: 2,
                   border: "1px solid",
                   cursor: "pointer",
                   flexShrink: 0,
-                  borderColor: bookmarkFilter ? "#F5B942" : "var(--border)",
-                  background: bookmarkFilter ? "#F5B94222" : "transparent",
-                  color: bookmarkFilter ? "#F5B942" : "var(--muted)",
+                  borderColor: bookmarkFilter ? "var(--gold)" : "var(--border)",
+                  background: bookmarkFilter ? "#C8A84B16" : "transparent",
+                  color: bookmarkFilter ? "var(--gold)" : "var(--muted)",
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.06em",
                 }}
               >
-                ★ 북마크 {bookmarks.length > 0 ? `(${bookmarks.length})` : ""}
+                ★ BOOKMARKS {bookmarks.length > 0 ? `(${bookmarks.length})` : ""}
               </button>
               <button
                 onClick={() => setHideReadFilter((prev) => !prev)}
                 style={{
-                  fontSize: 12,
+                  fontSize: 11,
                   fontWeight: 600,
                   padding: "5px 12px",
-                  borderRadius: 20,
+                  borderRadius: 2,
                   border: "1px solid",
                   cursor: "pointer",
                   flexShrink: 0,
-                  borderColor: hideReadFilter ? "#78C97C" : "var(--border)",
-                  background: hideReadFilter ? "#78C97C22" : "transparent",
-                  color: hideReadFilter ? "#78C97C" : "var(--muted)",
+                  borderColor: hideReadFilter ? "var(--red)" : "var(--border)",
+                  background: hideReadFilter ? "#CC330016" : "transparent",
+                  color: hideReadFilter ? "var(--red)" : "var(--muted)",
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.06em",
                 }}
               >
-                읽음숨기기 {readPosts.length > 0 ? `(${readPosts.length})` : ""}
+                HIDE READ {readPosts.length > 0 ? `(${readPosts.length})` : ""}
               </button>
               <button
                 onClick={() =>
@@ -2228,66 +2287,72 @@ export default function WeeklyClient({
                   )
                 }
                 style={{
-                  fontSize: 12,
+                  fontSize: 11,
                   fontWeight: 700,
                   padding: "5px 12px",
-                  borderRadius: 20,
+                  borderRadius: 2,
                   border: "1px solid var(--border)",
-                  background: "var(--card)",
+                  background: "var(--surface)",
                   color: "var(--text)",
                   cursor: "pointer",
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.06em",
                 }}
               >
-                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "전체 펼치기" : "전체 접기"}
+                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "EXPAND ALL" : "COLLAPSE ALL"}
               </button>
 
               {bookmarks.length > 0 && (
                 <button
                   onClick={exportBookmarks}
                   style={{
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: 600,
                     padding: "5px 12px",
-                    borderRadius: 20,
-                    border: "1px solid #E87040",
+                    borderRadius: 2,
+                    border: "1px solid var(--accent)",
                     cursor: "pointer",
                     flexShrink: 0,
-                    background: bookmarksCopied ? "#E87040" : "transparent",
+                    background: bookmarksCopied ? "var(--accent)" : "transparent",
                     color: bookmarksCopied ? "#111" : "#E87040",
+                    fontFamily: "var(--mono)",
+                    letterSpacing: "0.06em",
                   }}
                 >
-                  {bookmarksCopied ? "복사됨 ✓" : "내보내기 ↓"}
+                  {bookmarksCopied ? "COPIED" : "EXPORT ↓"}
                 </button>
               )}
             </div>
 
-            <div className="filter-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
+            <div className="scroll-hide" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
               <button
                 onClick={() => setCompanyFilter("all")}
                 style={{
-                  fontSize: 12,
+                  fontSize: 11,
                   fontWeight: 600,
                   padding: "5px 12px",
-                  borderRadius: 20,
+                  borderRadius: 2,
                   border: "1px solid",
                   cursor: "pointer",
                   flexShrink: 0,
-                  borderColor: companyFilter === "all" ? "#E87040" : "var(--border)",
-                  background: companyFilter === "all" ? "#E87040" : "transparent",
+                  borderColor: companyFilter === "all" ? "var(--accent)" : "var(--border)",
+                  background: companyFilter === "all" ? "var(--accent)" : "transparent",
                   color: companyFilter === "all" ? "#000" : "var(--muted)",
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.06em",
                 }}
               >
-                전체 회사
+                ALL COMPANIES
               </button>
               {data.companies.map((company) => (
                 <button
                   key={company.name}
                   onClick={() => setCompanyFilter(companyFilter === company.name ? "all" : company.name)}
                   style={{
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: 600,
                     padding: "5px 12px",
-                    borderRadius: 20,
+                    borderRadius: 2,
                     border: "1px solid",
                     cursor: "pointer",
                     transition: "all 0.15s",
@@ -2295,16 +2360,18 @@ export default function WeeklyClient({
                     borderColor: companyFilter === company.name ? company.color : "var(--border)",
                     background: companyFilter === company.name ? `${company.color}22` : "transparent",
                     color: companyFilter === company.name ? company.color : "var(--muted)",
+                    fontFamily: "var(--mono)",
+                    letterSpacing: "0.06em",
                   }}
                 >
-                  {company.name.split(" /")[0]}
+                  {company.name.split(" /")[0].toUpperCase()}
                 </button>
               ))}
             </div>
 
             {isFiltering && (
-              <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>
-                {totalFiltered}건 검색됨
+              <p style={{ fontSize: 11, color: "var(--muted)", margin: 0, fontFamily: "var(--mono)", letterSpacing: "0.04em" }}>
+                {String(totalFiltered).padStart(2, "0")} MATCHES
                 <button
                   onClick={() => {
                     setSearch("");
@@ -2316,13 +2383,14 @@ export default function WeeklyClient({
                   style={{
                     marginLeft: 12,
                     fontSize: 11,
-                    color: "#E87040",
+                    color: "var(--accent)",
                     background: "none",
                     border: "none",
                     cursor: "pointer",
+                    fontFamily: "var(--mono)",
                   }}
                 >
-                  필터 초기화
+                  RESET FILTERS
                 </button>
               </p>
             )}
@@ -2331,9 +2399,6 @@ export default function WeeklyClient({
 
         {highlightedEntry && (
           <div style={{ marginBottom: 6 }}>
-            <p style={{ fontSize: 11, color: "var(--muted)", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 10px" }}>
-              이 주의 하이라이트
-            </p>
             <HighlightCard
               company={highlightedEntry.company}
               post={highlightedEntry.post}
@@ -2357,6 +2422,7 @@ export default function WeeklyClient({
             <CompanySection
               key={company.name}
               company={company}
+              startIndex={companyStartIndex.get(company.name) ?? 1}
               defaultYear={data.year}
               onPostClick={openPost}
               bookmarks={bookmarkSet}
@@ -2369,30 +2435,30 @@ export default function WeeklyClient({
             />
           ))
         ) : (
-          <div style={{ textAlign: "center", padding: "60px 0", color: "var(--muted)" }}>
-            <p style={{ fontSize: 32, marginBottom: 12 }}>🔍</p>
-            <p>검색 결과가 없습니다</p>
+          <div style={{ textAlign: "center", padding: "60px 0", color: "var(--muted)", fontFamily: "var(--mono)" }}>
+            <p style={{ fontSize: 12, marginBottom: 12 }}>NO MATCHING INTELLIGENCE</p>
+            <p style={{ fontSize: 11, color: "var(--dim)" }}>ADJUST QUERY PARAMETERS</p>
           </div>
         )}
 
         <div style={{ borderTop: "1px solid var(--border)", paddingTop: 24, marginBottom: 16 }}>
-          <p style={{ fontSize: 11, color: "#333", textAlign: "center", letterSpacing: "0.05em" }}>
+          <p style={{ fontSize: 11, color: "var(--dim)", textAlign: "center", letterSpacing: "0.05em", fontFamily: "var(--mono)" }}>
             ⌨️ &nbsp;
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
               /
             </kbd>{" "}
-            검색 &nbsp;·&nbsp;
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+            SEARCH &nbsp;·&nbsp;
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
               ←
             </kbd>
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
               →
             </kbd>{" "}
-            모달 열림 시 포스팅 이동 / 기본 주차 이동 &nbsp;·&nbsp;
-            <kbd style={{ background: "#1a1a1a", border: "1px solid #333", borderRadius: 3, padding: "1px 5px", fontSize: 10 }}>
+            NAVIGATE &nbsp;·&nbsp;
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
               ESC
             </kbd>{" "}
-            닫기
+            CLOSE
           </p>
         </div>
 

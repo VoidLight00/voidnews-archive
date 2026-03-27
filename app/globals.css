@@ -1,40 +1,59 @@
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
 :root {
-  --bg: #0A0A0A;
+  --bg: #080808;
+  --surface: #0f0f0f;
   --card: #111111;
-  --card-hover: #1A1A1A;
-  --border: #222222;
-  --text: #F0F0F0;
-  --muted: #888888;
-  --dim: #555555;
+  --card-hover: #161616;
+  --border: #1e1e1e;
+  --border2: #2a2a2a;
+  --text: #f0ede8;
+  --muted: #7a7570;
+  --dim: #3a3835;
+  --accent: #e87040;
+  --red: #cc3300;
+  --gold: #c8a84b;
+  --mono: "JetBrains Mono", "Courier New", monospace;
+  --sans: "Space Grotesk", "Pretendard Variable", -apple-system, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.post-card { transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
-.post-card:hover { background: var(--card-hover) !important; border-color: #3a3a3a !important; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
-.post-card:hover .detail-hint { color: #E87040 !important; }
-
-.filter-scroll::-webkit-scrollbar { display: none; }
-.filter-scroll { -ms-overflow-style: none; scrollbar-width: none; }
-
-.link-btn { transition: all 0.15s; }
-.link-btn:hover { background: #E87040 !important; color: #000 !important; }
-
-.nav-header a:hover { opacity: 0.7; }
-
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Pretendard Variable', 'Inter', -apple-system, sans-serif;
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background: #E87040;
-  color: #000;
+.intel-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  border-radius: 2px;
+  transition: border-color 0.12s, background 0.12s;
+  cursor: pointer;
+  position: relative;
 }
+
+.intel-card:hover {
+  background: var(--card-hover);
+  border-left-color: var(--accent);
+}
+
+.intel-card:hover .card-reveal { opacity: 1; }
+
+.card-reveal { opacity: 0; transition: opacity 0.12s; }
+
+.mono { font-family: var(--mono); }
+
+.scroll-hide::-webkit-scrollbar { display: none; }
+
+.scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::selection { background: var(--accent); color: #000; }
