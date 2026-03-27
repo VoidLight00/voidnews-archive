@@ -265,6 +265,24 @@ function LinkBtn({ href, label }: { href: string; label: string }) {
   );
 }
 
+function TweetEmbed({ xUrl, expanded }: { xUrl: string; expanded: boolean }) {
+  const tweetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!expanded || !tweetRef.current) return;
+
+    tweetRef.current.innerHTML = `<blockquote class="twitter-tweet" data-theme="dark"><a href="${xUrl}"></a></blockquote>`;
+
+    const twitterWindow = window as Window & {
+      twttr?: { widgets?: { load: (element?: HTMLElement) => void } };
+    };
+
+    twitterWindow.twttr?.widgets?.load(tweetRef.current);
+  }, [expanded, xUrl]);
+
+  return <div ref={tweetRef} style={{ margin: "4px 0", minHeight: 120 }} />;
+}
+
 // ── OG 링크 프리뷰 ───────────────────────────────
 interface OGData {
   title?: string;
@@ -1073,24 +1091,8 @@ function PostCard({
 
         {/* X 트윗 임베드 (영상 포함) */}
         {expanded && post.xUrl && (
-          <div style={{ margin: "4px 0" }} onClick={e => e.stopPropagation()}>
-            <blockquote
-              className="twitter-tweet"
-              data-theme="dark"
-              data-dnt="true"
-              style={{ margin: 0 }}
-            >
-              <a href={post.xUrl}>트윗 로딩 중...</a>
-            </blockquote>
-          </div>
-        )}
-
-        {/* X 트윗 임베드 (영상 포함) */}
-        {expanded && post.xUrl && (
-          <div onClick={e => e.stopPropagation()} style={{ margin: "4px 0" }}>
-            <blockquote className="twitter-tweet" data-theme="dark" data-lang="ko">
-              <a href={post.xUrl}></a>
-            </blockquote>
+          <div onClick={(e) => e.stopPropagation()}>
+            <TweetEmbed xUrl={post.xUrl} expanded={expanded} />
           </div>
         )}
 
@@ -1112,25 +1114,29 @@ function PostCard({
           {post.xUrl && (
             <a href={post.xUrl} target="_blank" rel="noopener noreferrer"
               style={{
-                display: "inline-flex", alignItems: "center", gap: 5,
+                display: "inline-flex", alignItems: "center", gap: 6,
                 fontFamily: "var(--mono)", fontSize: 10,
-                color: "#E4E4E7", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "4px 8px",
-                background: "#18181B", borderRadius: 2,
+                fontWeight: 700, color: "#F4F4F5", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "6px 10px",
+                background: "linear-gradient(135deg, #0A0A0B, #1C1D20)",
+                border: "1px solid #2F3136", borderRadius: 999,
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
               }}>
-              X POST ↗
+              𝕏 원문 보기 ↗
             </a>
           )}
           {post.threadsUrl && (
             <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer"
               style={{
-                display: "inline-flex", alignItems: "center", gap: 5,
+                display: "inline-flex", alignItems: "center", gap: 6,
                 fontFamily: "var(--mono)", fontSize: 10,
-                color: "#A78BFA", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "4px 8px",
-                background: "#1A1A2E", borderRadius: 2,
+                fontWeight: 700, color: "#E9D5FF", letterSpacing: "0.04em",
+                textDecoration: "none", padding: "6px 10px",
+                background: "linear-gradient(135deg, #3B1568, #5F2AB7)",
+                border: "1px solid #8B5CF6", borderRadius: 999,
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08)",
               }}>
-              THREADS ↗
+              🧵 Threads 원문 보기 ↗
             </a>
           )}
         </div>)}

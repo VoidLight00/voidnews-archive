@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -64,8 +65,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
         {children}
-        {/* Twitter/X 위젯 (트윗 임베드 + 영상) */}
-        <script async src="https://platform.twitter.com/widgets.js" crossOrigin="anonymous" />
+        <Script
+          src="https://platform.twitter.com/widgets.js"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
