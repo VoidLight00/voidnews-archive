@@ -274,6 +274,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "LLM의 메모리 병목을 뚫는다 — Google TurboQuant 공개",
+            officialUrl: "https://x.com/GoogleResearch/status/2036533564158910740",
             summary: "고차원 벡터 극한 압축 알고리즘 — KV 캐시 병목 해결로 AI 추론 비용 절감",
             content: "AI 모델의 가장 큰 병목 중 하나는 KV 캐시예요.\n\n긴 대화나 문서를 처리할 때 AI는 이미 처리한 내용을 치트시트처럼 기억해두는데, 이게 엄청난 메모리를 잡아먹습니다. 모델이 커질수록, 맥락이 길수록 더 심해져요.\n\nGoogle Research가 이 문제를 정면으로 공략하는 알고리즘 TurboQuant를 공개했습니다.\n\n고차원 벡터를 극한까지 압축하는 기법이에요. 벡터 탐색 성능은 유지하면서 메모리 사용량을 대폭 줄입니다.\n\n실질적인 의미는 두 가지예요. 같은 하드웨어로 더 긴 맥락을 처리할 수 있고, AI 추론 비용이 내려갑니다.\n\n100만 토큰 컨텍스트 윈도우 시대에 이런 압축 기술이 필수가 되고 있어요.",
             source: "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/",
@@ -550,6 +551,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "경험에서 스킬을 만드는 자가 학습 에이전트 — Hermes Agent",
+            officialUrl: "https://x.com/NousResearch/status/2026758996107898954",
             summary: "NousResearch의 자가 개선 AI 에이전트 — 경험으로 스킬 생성, 과거 대화 검색, 사용자 모델 학습",
             content: "Nous Research가 자기 자신을 개선하는 AI 에이전트 Hermes Agent를 오픈소스로 공개했습니다.\n\n일반 AI 에이전트와 다른 점이 하나 있어요. 경험에서 스킬을 만듭니다.\n\n작업을 수행하면서 배운 패턴을 스킬로 저장하고, 다음번에 비슷한 상황이 오면 그 스킬을 꺼내 씁니다. 과거 대화를 검색해서 이전에 어떻게 처리했는지 참고하고요.\n\n사용자 모델도 쌓아가요. 대화가 쌓일수록 당신이 어떤 사람인지, 어떤 방식을 선호하는지를 학습합니다.\n\n$5짜리 VPS에서도 돌아가고, Telegram으로 명령을 보내면 서버에서 작업을 처리하는 구조입니다.\n\nOpenClaw와 비슷한 방향이지만, 자가 학습 루프에 초점을 맞춘 접근이에요.",
             source: "https://github.com/nousresearch/hermes-agent",
@@ -557,6 +559,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "YC CEO가 직접 공개한 Claude Code 스킬셋 — gstack",
+            officialUrl: "https://x.com/garrytan/status/2032014570118922347",
             summary: "Y Combinator CEO 개리 탄의 실전 Claude Code 15개 스킬 — CEO·디자이너·엔지니어링 매니저 역할 분담",
             content: "Y Combinator CEO 개리 탄이 자신이 실제로 쓰는 Claude Code 스킬 셋업을 오픈소스로 공개했습니다.\n\n이름은 gstack. 15개의 스킬로 이루어져 있어요.\n\nCEO, 디자이너, 엔지니어링 매니저, 릴리즈 매니저, 문서 엔지니어, QA 역할을 각각 맡은 스킬들이에요. 혼자서 팀 전체를 시뮬레이션하는 구조입니다.\n\n개리 탄은 리드미에서 이렇게 말해요. 12월부터 코드를 거의 직접 타이핑하지 않았다. Andrej Karpathy와 같은 이야기예요.\n\nPeter Steinberger는 OpenClaw를 거의 혼자 만들었고, GitHub 스타 24만 7천 개를 달성했습니다. 올바른 툴을 갖춘 1인 빌더가 팀 전체보다 빠르게 움직이는 시대예요.\n\ngstack은 그 출발점을 낮춰주는 구체적인 예시입니다.",
             source: "https://github.com/garrytan/gstack",
