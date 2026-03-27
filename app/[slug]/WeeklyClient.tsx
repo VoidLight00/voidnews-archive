@@ -1039,6 +1039,77 @@ function PostCard({
           </p>
         )}
 
+        {/* 포스팅 전문 */}
+        {post.content && (
+          <div style={{
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+            borderRadius: 2,
+            padding: "10px 12px",
+          }}>
+            <p style={{
+              fontFamily: "var(--mono)",
+              fontSize: 10,
+              color: "var(--dim)",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              marginBottom: 6,
+            }}>
+              CONTENT
+            </p>
+            <p style={{
+              fontSize: 12,
+              color: "var(--text)",
+              lineHeight: 1.75,
+              whiteSpace: "pre-line",
+              margin: 0,
+            }}>
+              {highlightText(post.content, searchQuery)}
+            </p>
+          </div>
+        )}
+
+        {/* 소스 + 플랫폼 링크 */}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} onClick={e => e.stopPropagation()}>
+          {post.source && (
+            <a href={post.source} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 5,
+                fontFamily: "var(--mono)", fontSize: 10,
+                color: "var(--accent)", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "4px 8px",
+                border: "1px solid var(--accent)30",
+                borderRadius: 2,
+              }}>
+              SOURCE ↗
+            </a>
+          )}
+          {post.xUrl && (
+            <a href={post.xUrl} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 5,
+                fontFamily: "var(--mono)", fontSize: 10,
+                color: "#E4E4E7", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "4px 8px",
+                background: "#18181B", borderRadius: 2,
+              }}>
+              X POST ↗
+            </a>
+          )}
+          {post.threadsUrl && (
+            <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 5,
+                fontFamily: "var(--mono)", fontSize: 10,
+                color: "#A78BFA", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "4px 8px",
+                background: "#1A1A2E", borderRadius: 2,
+              }}>
+              THREADS ↗
+            </a>
+          )}
+        </div>
+
       </div>
 
       <div
