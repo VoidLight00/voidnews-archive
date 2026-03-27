@@ -387,6 +387,7 @@ export const weeks: WeeklyData[] = [
             title: "생각하면서 그린다 — Luma Uni-1이 바꾼 이미지 생성의 규칙",
             summary: "추론과 이미지 생성을 단일 패스로 처리하는 새로운 멀티모달 아키텍처",
             content: "Luma Uni-1 출시 — 생각과 픽셀 생성을 동시에 수행하는 새로운 모델.\n\n- 문화적 맥락 인지 (밈/미학/망가)\n- 인간 선호도 Elo 랭킹 1위 (Overall / Style & Editing / Reference-Based Generation)\n- 텍스트-이미지는 2위\n\n실시간 비전 생성의 새로운 기준 제시.",
+            officialUrl: "https://x.com/LumaLabsAI/status/2036107826498544110",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWT0x0Lj2wG",
           },
           {

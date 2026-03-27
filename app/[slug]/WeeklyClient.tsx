@@ -1170,10 +1170,13 @@ function PostCard({
           </div>
         )}
 
-        {/* X 트윗 임베드 (영상 포함) */}
-        {expanded && post.xUrl && (
+        {/* 공식 트윗 임베드 우선, 없으면 내 X 포스팅 */}
+        {expanded && (getOfficialTweetUrl(post) || post.xUrl) && (
           <div onClick={(e) => e.stopPropagation()}>
-            <TweetEmbed xUrl={post.xUrl} expanded={expanded} />
+            <TweetEmbed
+              xUrl={(getOfficialTweetUrl(post) || post.xUrl)!}
+              expanded={expanded}
+            />
           </div>
         )}
 
