@@ -2,6 +2,7 @@ export interface Post {
   date: string;
   platform: "X" | "Threads" | "X+Threads";
   title: string;
+  featured?: boolean;
   summary?: string;      // 한줄 요약 (카드)
   content?: string;      // 전문 / 포스팅 본문
   source?: string;       // 원본 소스 URL
