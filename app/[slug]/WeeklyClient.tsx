@@ -993,6 +993,7 @@ function PostCard({
         position: "relative",
         opacity: read ? 0.7 : 1,
         borderLeftColor: expanded ? "var(--accent)" : undefined,
+        transition: "border-left-color 0.15s, opacity 0.2s",
       }}
     >
       <div
@@ -1057,6 +1058,27 @@ function PostCard({
           >
             {highlightText(post.summary, searchQuery)}
           </p>
+        )}
+
+        {/* 클릭 힌트 */}
+        {hasDetail && (
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 4,
+            marginTop: 2,
+          }}>
+            <span style={{
+              fontSize: 10,
+              fontFamily: "var(--mono)",
+              color: expanded ? "var(--accent)" : "var(--dim)",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              transition: "color 0.15s",
+            }}>
+              {expanded ? "▲ 닫기" : "▼ 전문 보기"}
+            </span>
+          </div>
         )}
 
         {/* 펼쳐진 상태: 전체 상세 정보 */}
