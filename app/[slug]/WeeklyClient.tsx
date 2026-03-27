@@ -560,14 +560,62 @@ function LinkPreview({ url }: { url: string }) {
   );
 }
 
+// ── X URL 공식계정 판별 ──────────────────────────
+function isXPostUrl(url: string): boolean {
+  return /^https?:\/\/(www\.)?(x\.com|twitter\.com)\/[^/]+\/status\/\d+/.test(url);
+}
+
+function getOfficialTweetUrl(post: { officialUrl?: string; source?: string }): string | undefined {
+  if (post.officialUrl) return post.officialUrl;
+  if (post.source && isXPostUrl(post.source)) return post.source;
+  return undefined;
+}
+
 // ── 임베드 프리뷰 (X / Threads) ──────────────────
-function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string }) {
-  const [tab, setTab] = useState<"x" | "threads">(xUrl ? "x" : "threads");
+function EmbedPreview({
+  officialUrl,
+  xUrl,
+  threadsUrl,
+}: {
+  officialUrl?: string;
+  xUrl?: string;
+  threadsUrl?: string;
+}) {
+  const hasOfficial = !!officialUrl;
+  const initialTab = hasOfficial ? "official" : xUrl ? "x" : "threads";
+  const [tab, setTab] = useState<"official" | "x" | "threads">(initialTab as "official" | "x" | "threads");
+  const officialRef = useRef<HTMLDivElement>(null);
   const xRef = useRef<HTMLDivElement>(null);
   const thRef = useRef<HTMLDivElement>(null);
+  const [officialHtml, setOfficialHtml] = useState<string | null>(null);
+  const [officialLoading, setOfficialLoading] = useState(false);
   const [xHtml, setXHtml] = useState<string | null>(null);
   const [xLoading, setXLoading] = useState(false);
 
+  // 공식 트윗 로드
+  useEffect(() => {
+    if (!officialUrl) return;
+    setOfficialLoading(true);
+    fetch(`https://publish.twitter.com/oembed?url=${encodeURIComponent(officialUrl)}&dnt=1&theme=dark&hide_thread=false`)
+      .then((r) => r.json())
+      .then((d) => { setOfficialHtml(d.html); setOfficialLoading(false); })
+      .catch(() => setOfficialLoading(false));
+  }, [officialUrl]);
+
+  useEffect(() => {
+    if (!officialHtml || !officialRef.current) return;
+    officialRef.current.innerHTML = officialHtml;
+    const w = window as Window & { twttr?: { widgets?: { load: (el?: HTMLElement) => void } } };
+    if (w.twttr?.widgets) { w.twttr.widgets.load(officialRef.current); }
+    else {
+      const s = document.createElement("script");
+      s.src = "https://platform.twitter.com/widgets.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, [officialHtml]);
+
+  // 내 X 포스팅 로드
   useEffect(() => {
     if (!xUrl) return;
     setXLoading(true);
@@ -599,12 +647,9 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
   useEffect(() => {
     if (!threadsUrl || !thRef.current) return;
     thRef.current.innerHTML = `<blockquote class="text-post-media" data-url="${threadsUrl}"><a href="${threadsUrl}" target="_blank">Threads에서 보기</a></blockquote>`;
-    const w = window as Window & {
-      instgrm?: { Embeds?: { process?: () => void } };
-    };
-    if (w.instgrm?.Embeds) {
-      w.instgrm.Embeds.process?.();
-    } else {
+    const w = window as Window & { instgrm?: { Embeds?: { process?: () => void } } };
+    if (w.instgrm?.Embeds) { w.instgrm.Embeds.process?.(); }
+    else {
       const existing = document.getElementById("threads-embed-script");
       if (!existing) {
         const s = document.createElement("script");
@@ -623,92 +668,80 @@ function EmbedPreview({ xUrl, threadsUrl }: { xUrl?: string; threadsUrl?: string
     }
   }, [threadsUrl, tab]);
 
-  if (!xUrl && !threadsUrl) return null;
+  if (!officialUrl && !xUrl && !threadsUrl) return null;
+
+  const tabBtnStyle = (active: boolean, color: string) => ({
+    fontSize: 11,
+    fontWeight: 700,
+    padding: "5px 12px",
+    borderRadius: 2,
+    cursor: "pointer" as const,
+    border: "1px solid",
+    borderColor: active ? color : "#2a2a2a",
+    background: active ? `${color}22` : "transparent",
+    color: active ? color : "#555",
+    fontFamily: "var(--mono)",
+    letterSpacing: "0.06em",
+  });
+
+  const loadingPlaceholder = (
+    <div style={{ background: "#111", border: "1px solid #222", borderRadius: 8, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10, color: "#555", fontSize: 13 }}>
+      ⏳ 불러오는 중...
+    </div>
+  );
 
   return (
     <div style={{ marginBottom: 24 }}>
-      {xUrl && threadsUrl && (
-        <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-          <button
-            onClick={() => setTab("x")}
-            style={{
-              fontSize: 12,
-              fontWeight: 600,
-              padding: "4px 12px",
-              borderRadius: 20,
-              cursor: "pointer",
-              border: "1px solid",
-              borderColor: tab === "x" ? "#E87040" : "#333",
-              background: tab === "x" ? "#E8704022" : "transparent",
-              color: tab === "x" ? "#E87040" : "#555",
-            }}
-          >
-            X 포스트
+      {/* 탭 헤더 */}
+      <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
+        {officialUrl && (
+          <button onClick={() => setTab("official")} style={tabBtnStyle(tab === "official", "#22C55E")}>
+            🏢 공식 원문
           </button>
-          <button
-            onClick={() => setTab("threads")}
-            style={{
-              fontSize: 12,
-              fontWeight: 600,
-              padding: "4px 12px",
-              borderRadius: 20,
-              cursor: "pointer",
-              border: "1px solid",
-              borderColor: tab === "threads" ? "#A78BFA" : "#333",
-              background: tab === "threads" ? "#A78BFA22" : "transparent",
-              color: tab === "threads" ? "#A78BFA" : "#555",
-            }}
-          >
-            Threads 포스트
+        )}
+        {xUrl && (
+          <button onClick={() => setTab("x")} style={tabBtnStyle(tab === "x", "#E87040")}>
+            𝕏 내 포스팅
           </button>
-        </div>
-      )}
+        )}
+        {threadsUrl && (
+          <button onClick={() => setTab("threads")} style={tabBtnStyle(tab === "threads", "#A78BFA")}>
+            🧵 내 포스팅
+          </button>
+        )}
+      </div>
 
-      {(tab === "x" || !threadsUrl) && xUrl && (
+      {/* 공식 원문 탭 */}
+      {tab === "official" && officialUrl && (
         <div>
-          {xLoading && (
-            <div
-              style={{
-                background: "#111",
-                border: "1px solid #222",
-                borderRadius: 12,
-                padding: "20px 16px",
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-                color: "#555",
-                fontSize: 13,
-              }}
-            >
-              <span style={{ animation: "spin 1s linear infinite", display: "inline-block" }}>⏳</span>
-              불러오는 중...
-            </div>
-          )}
-          <div ref={xRef} style={{ borderRadius: 12, overflow: "hidden" }} />
-          {!xHtml && !xLoading && (
-            <a
-              href={xUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "block",
-                background: "#111",
-                border: "1px solid #222",
-                borderRadius: 12,
-                padding: "16px",
-                color: "#4A9EFF",
-                fontSize: 13,
-                textDecoration: "none",
-              }}
-            >
-              🐦 X에서 원문 보기 ↗
+          {officialLoading && loadingPlaceholder}
+          <div ref={officialRef} style={{ borderRadius: 8, overflow: "hidden" }} />
+          {!officialHtml && !officialLoading && (
+            <a href={officialUrl} target="_blank" rel="noopener noreferrer"
+              style={{ display: "block", background: "#111", border: "1px solid #1a3a1a", borderRadius: 8, padding: "16px", color: "#22C55E", fontSize: 13, textDecoration: "none" }}>
+              🏢 공식 계정 원문 보기 ↗
             </a>
           )}
         </div>
       )}
 
-      {(tab === "threads" || !xUrl) && threadsUrl && (
-        <div ref={thRef} style={{ borderRadius: 12, overflow: "hidden" }} />
+      {/* 내 X 포스팅 탭 */}
+      {tab === "x" && xUrl && (
+        <div>
+          {xLoading && loadingPlaceholder}
+          <div ref={xRef} style={{ borderRadius: 8, overflow: "hidden" }} />
+          {!xHtml && !xLoading && (
+            <a href={xUrl} target="_blank" rel="noopener noreferrer"
+              style={{ display: "block", background: "#111", border: "1px solid #222", borderRadius: 8, padding: "16px", color: "#4A9EFF", fontSize: 13, textDecoration: "none" }}>
+              𝕏 X에서 보기 ↗
+            </a>
+          )}
+        </div>
+      )}
+
+      {/* 내 Threads 포스팅 탭 */}
+      {tab === "threads" && threadsUrl && (
+        <div ref={thRef} style={{ borderRadius: 8, overflow: "hidden" }} />
       )}
     </div>
   );
@@ -869,7 +902,11 @@ function PostModal({
           </p>
         )}
 
-        <EmbedPreview xUrl={post.xUrl} threadsUrl={post.threadsUrl} />
+        <EmbedPreview
+          officialUrl={getOfficialTweetUrl(post)}
+          xUrl={post.xUrl}
+          threadsUrl={post.threadsUrl}
+        />
 
         {post.source && <LinkPreview url={post.source} />}
 
@@ -1118,15 +1155,30 @@ function PostCard({
           </div>
         )}
 
-        {/* 소스 + 플랫폼 링크 (펼쳐진 상태만) */}
+        {/* 링크 버튼들 (펼쳐진 상태만) */}
         {expanded && (<div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} onClick={e => e.stopPropagation()}>
-          {post.source && (
+          {/* 공식 원문 (최우선) */}
+          {getOfficialTweetUrl(post) && (
+            <a href={getOfficialTweetUrl(post)} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                fontFamily: "var(--mono)", fontSize: 10,
+                fontWeight: 700, color: "#111", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "6px 12px",
+                background: "#22C55E",
+                border: "1px solid #16A34A", borderRadius: 2,
+              }}>
+              🏢 공식 원문 ↗
+            </a>
+          )}
+          {/* 소스 (블로그/기사) */}
+          {post.source && !isXPostUrl(post.source) && (
             <a href={post.source} target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 5,
                 fontFamily: "var(--mono)", fontSize: 10,
                 color: "var(--accent)", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "4px 8px",
+                textDecoration: "none", padding: "6px 10px",
                 border: "1px solid var(--accent)30",
                 borderRadius: 2,
               }}>
@@ -1141,10 +1193,9 @@ function PostCard({
                 fontWeight: 700, color: "#F4F4F5", letterSpacing: "0.06em",
                 textDecoration: "none", padding: "6px 10px",
                 background: "linear-gradient(135deg, #0A0A0B, #1C1D20)",
-                border: "1px solid #2F3136", borderRadius: 999,
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
+                border: "1px solid #2F3136", borderRadius: 2,
               }}>
-              𝕏 원문 보기 ↗
+              𝕏 내 포스팅 ↗
             </a>
           )}
           {post.threadsUrl && (
@@ -1155,10 +1206,9 @@ function PostCard({
                 fontWeight: 700, color: "#E9D5FF", letterSpacing: "0.04em",
                 textDecoration: "none", padding: "6px 10px",
                 background: "linear-gradient(135deg, #3B1568, #5F2AB7)",
-                border: "1px solid #8B5CF6", borderRadius: 999,
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08)",
+                border: "1px solid #8B5CF6", borderRadius: 2,
               }}>
-              🧵 Threads 원문 보기 ↗
+              🧵 내 포스팅 ↗
             </a>
           )}
         </div>)}

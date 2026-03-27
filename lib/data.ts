@@ -5,9 +5,10 @@ export interface Post {
   featured?: boolean;
   summary?: string;      // 한줄 요약 (카드)
   content?: string;      // 전문 / 포스팅 본문
-  source?: string;       // 원본 소스 URL
-  threadsUrl?: string;
-  xUrl?: string;
+  source?: string;       // 원본 소스 URL (블로그/기사)
+  officialUrl?: string;  // 공식 계정 트윗/게시글 URL (이미지·영상 포함)
+  threadsUrl?: string;   // 현님 Threads 포스팅
+  xUrl?: string;         // 현님 X 포스팅
   tags?: string[];
 }
 
@@ -50,6 +51,7 @@ export const weeks: WeeklyData[] = [
             date: "3/26 19:56", platform: "Threads",
             title: "Claude Code 고수들의 비밀 5가지 — 당신이 매번 시간 낭비하는 이유",
             summary: "CLAUDE.md 활용법, /resume, 서브에이전트, MCP 핵심 팁 정리",
+            officialUrl: "https://x.com/AnthropicAI/status/2036944806317088921",
             content: "Claude Code 쓰는데 매번 같은 실수하고 있을 수 있어요.\n\n컨텍스트 관리 안 하면 중간에 맥락 잃고, CLAUDE.md 안 쓰면 매번 같은 설명 반복하고, /resume 모르면 긴 작업마다 처음부터 다시 시작하게 됩니다.\n\nExplore → Plan → Execute → Commit 프레임워크 하나면 해결돼요.\n\nx.com/AnthropicAI/status/2036944806317088921\n\nCLAUDE.md가 핵심이에요.\n\n프로젝트 루트에 놓으면 Claude가 프롬프트보다 더 엄격하게 따릅니다. 코딩 스타일, 네이밍 규칙, 금지 패턴을 적어두면 매번 설명할 필요가 없어져요.\n\n300줄 이하로 유지하는 게 포인트입니다. 길면 오히려 무시하기 시작해요.\n\n서브에이전트와 훅은 파워 유저 영역이에요.\n\n서브에이전트는 복잡한 작업을 하위 에이전트에게 위임해서 병렬로 처리합니다. 훅은 특정 이벤트(커밋 전, 파일 저장 후 등)에 자동 실행되는 스크립트예요.\n\nMCP 서버를 연결하면 GitHub PR 리뷰, Sentry 에러 체크, Jira 업데이트를 한 세션에서 전부 처리할 수 있어요.\n\n정리하면 이 순서예요.\n\n1단계: CLAUDE.md 만들기 (규칙 300줄 이하)\n2단계: Explore-Plan-Execute-Commit 프레임워크 적용\n3단계: /resume으로 긴 작업 이어가기\n4단계: 서브에이전트 + 훅 + MCP 서버로 확장\n\n원문 22분 가이드 전체는 AI Tinkerers에 있어요.\n\n---",
             source: "https://post-training.aitinkerers.org/p/claude-code-tips-and-tricks",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWWE2Hhj0s2",
@@ -58,7 +60,8 @@ export const weeks: WeeklyData[] = [
             date: "3/26 18:09", platform: "Threads",
             title: "93%가 무조건 Y를 눌렀다 — Anthropic이 자율 모드를 만든 이유",
             summary: "2단계 분류기, 3등급 행동 체계, 승인 피로 해결 메커니즘 완전 분석",
-            content: "Claude Code를 쓰면서 \"허가하시겠습니까?\" 화면이 얼마나 자주 뜨는지 아세요?\n\nAnthropicが 데이터를 봤더니 사용자의 93%가 아무 생각 없이 Y를 누르고 있었습니다. 이 승인 피로 문제를 해결하기 위해 Auto Mode를 만들었어요.\n\n2단계 AI 분류기가 작업 위험도를 평가하고, 안전한 작업은 자동 승인, 위험한 작업만 사람에게 묻는 구조입니다. 3등급 행동 체계(허용/확인 필요/금지)로 안전성을 담보합니다.",
+            officialUrl: "https://x.com/AnthropicAI/status/2036944806317088921",
+            content: "Claude Code를 쓰면서 \"허가하시겠습니까?\" 화면이 얼마나 자주 뜨는지 아세요?\n\nAnthropic이 데이터를 봤더니 사용자의 93%가 아무 생각 없이 Y를 누르고 있었습니다. 이 승인 피로 문제를 해결하기 위해 Auto Mode를 만들었어요.\n\n2단계 AI 분류기가 작업 위험도를 평가하고, 안전한 작업은 자동 승인, 위험한 작업만 사람에게 묻는 구조입니다. 3등급 행동 체계(허용/확인 필요/금지)로 안전성을 담보합니다.",
             source: "https://x.com/AnthropicAI/status/2036944806317088921",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWV4mTpjwO5",
           },
@@ -219,6 +222,7 @@ export const weeks: WeeklyData[] = [
             title: "Sora가 사라졌다 — OpenAI AI 영상의 미래는 어디로",
             summary: "Sora 앱/API/ChatGPT 비디오 기능 전면 종료 — 차세대 모델 'Spud' 훈련 완료",
             source: "https://x.com/soraofficialapp/status/2036532672824922489",
+            officialUrl: "https://x.com/soraofficialapp/status/2036532672824922489",
             content: "OpenAI가 Sora 서비스를 전면 종료했습니다.\n\nSora 앱, API, ChatGPT 내 비디오 기능이 모두 사라졌습니다. 공식 이유는 차세대 모델 Spud 훈련 완료로 인한 전환.\n\nSora는 2024년 2월 발표 이후 큰 주목을 받았지만, 실제 서비스에서는 Runway, Kling, Wan 등 경쟁사에 뒤처진다는 평가가 많았습니다. Spud가 그 격차를 메울 수 있을지 주목됩니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWR8staE_tA",
             xUrl: "https://x.com/VoidLight_Hyeon/status/2036538807177322904",
@@ -259,6 +263,7 @@ export const weeks: WeeklyData[] = [
             summary: "3분 길이 프로 퀄리티 음악 생성 — Lyria 3 Pro로 음악 창작의 한계 돌파",
             content: "Google DeepMind Lyria 3 Pro 출시.\n\n- 최대 3분 길이 고품질 음악 트랙 생성\n- 인트로, 벌스, 코러스, 브리지를 포함한 완전한 곡 구성\n- Google AI Studio API로 개발자 접근 가능\n- Gemini App 통합 (유료 구독자 사용 가능)\n\nAI가 프로 퀄리티 음악을 통째로 만드는 시대가 왔습니다.",
             source: "https://x.com/GoogleDeepMind/status/2036836176233918707",
+            officialUrl: "https://x.com/GoogleDeepMind/status/2036836176233918707",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVH56bj902",
           },
           {
@@ -361,6 +366,7 @@ export const weeks: WeeklyData[] = [
             summary: "AGI 워크로드 전용 CPU 공동 개발 — 기존 대비 2배 성능, AI 추론 특화",
             content: "Meta가 Arm과 협력해 AI 인프라용 맞춤형 CPU를 개발합니다. 첫 세대 Arm AGI CPU는 컴퓨팅과 AI 워크로드에서 2배 이상의 성능을 제공합니다.\n\nx.com/Meta_Engineers/status/2036494803723043156\n\nMeta는 자체 AI 인프라를 강화하기 위해 Arm과의 장기 파트너십을 발표했습니다. 이번 협력으로 여러 세대에 걸친 전용 CPU를 개발하며, AI 컴퓨팅 효율성을 크게 향상시킬 예정입니다.\n\n---\n\n- **파트너십:** Meta × Arm 장기 전략 협력\n- **성능:** AI 워크로드 기준 x86 대비 2배 이상\n- **목적:** Meta 자체 AI 인프라 맞춤형 CPU 설계\n- **향후:** 여러 세대에 걸친 전용 CPU 로드맵",
             source: "https://x.com/Meta_Engineers/status/2036494803723043156",
+            officialUrl: "https://x.com/Meta_Engineers/status/2036494803723043156",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVjjxpD2Sz",
           },
           {
