@@ -1042,7 +1042,7 @@ function PostCard({
         )}
 
         {/* 펼쳐진 상태: 전체 상세 정보 */}
-        {expanded && post.content && (
+        {expanded && (post.content || post.summary) && (
           <div style={{
             background: "var(--surface)",
             border: "1px solid var(--border)",
@@ -1066,8 +1066,31 @@ function PostCard({
               whiteSpace: "pre-line",
               margin: 0,
             }}>
-              {highlightText(post.content, searchQuery)}
+              {highlightText(post.content || post.summary || "", searchQuery)}
             </p>
+          </div>
+        )}
+
+        {/* X 트윗 임베드 (영상 포함) */}
+        {expanded && post.xUrl && (
+          <div style={{ margin: "4px 0" }} onClick={e => e.stopPropagation()}>
+            <blockquote
+              className="twitter-tweet"
+              data-theme="dark"
+              data-dnt="true"
+              style={{ margin: 0 }}
+            >
+              <a href={post.xUrl}>트윗 로딩 중...</a>
+            </blockquote>
+          </div>
+        )}
+
+        {/* X 트윗 임베드 (영상 포함) */}
+        {expanded && post.xUrl && (
+          <div onClick={e => e.stopPropagation()} style={{ margin: "4px 0" }}>
+            <blockquote className="twitter-tweet" data-theme="dark" data-lang="ko">
+              <a href={post.xUrl}></a>
+            </blockquote>
           </div>
         )}
 
