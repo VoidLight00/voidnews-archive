@@ -42,6 +42,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "AI 쓰는 사람들끼리 격차가 벌어지고 있다 — Anthropic 경제 지수 3월 리포트",
+            officialUrl: "https://www.anthropic.com/research/economic-index-march-2026-report",
             summary: "고숙련 Claude 사용자는 더 높은 가치 작업에서 더 높은 성공률 — 경험 격차는 시간이 갈수록 심화",
             content: "Anthropic이 Claude 사용 패턴을 분석한 경제 지수 3월 리포트를 공개했습니다.\n\n핵심 발견은 하나예요. 경험 많은 사용자일수록 AI를 더 잘 씁니다.\n\n더 높은 가치의 작업을 시도하고, 성공률도 더 높아요. '러닝 커브'가 존재한다는 겁니다. AI를 오래 쓸수록 쓰는 방법을 배우게 되고, 그 격차는 시간이 지날수록 벌어집니다.\n\nClaude.ai 사용 사례도 다양해졌어요. 상위 10개 작업이 전체 사용량에서 차지하는 비중이 줄었습니다. 코딩 작업은 Claude.ai에서 API 자동화 워크플로우로 이동 중이고요.\n\n지금 AI를 잘 못 쓰는 사람이 나중에 따라잡는 게 점점 어려워지는 구조가 만들어지고 있어요.\n\n'누가 AI를 쓰느냐'보다 '어떻게 쓰느냐'의 격차가 핵심입니다.",
             source: "https://www.anthropic.com/research/economic-index-march-2026-report",
@@ -385,6 +386,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "AI의 뇌를 먼저 해부한다 — Meta TRIBEv2 해석 가능성 도구 공개",
+            officialUrl: "https://aidemos.atmeta.com/tribev2/",
             summary: "AI 모델 내부 표현 직접 분석 — 블랙박스 AI를 투명하게 만드는 해석 가능성 연구 도구",
             content: "AI가 내부적으로 어떻게 생각하는지 알 수 없다는 게 AI 안전성의 핵심 문제예요.\n\nMeta가 AI 모델의 내부 표현을 직접 분석하는 TRIBEv2를 공개했습니다.\n\n모델이 어떤 개념을 어떻게 표현하는지, 어떤 정보를 어디에 저장하는지 들여다볼 수 있는 도구예요. 블랙박스였던 AI의 내부를 해부하는 시도입니다.\n\n모델이 편향을 어디서 학습하는지, 왜 틀린 답을 내는지 추적할 수 있게 돼요. 프로덕션 배포 전에 AI 모델의 뇌 상태를 먼저 확인하는 게 일반화될 수 있는 방향이에요.\n\n인터랙티브 데모로 직접 실험해볼 수 있습니다.",
             source: "https://aidemos.atmeta.com/tribev2/",
@@ -537,6 +539,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "AI가 똑똑해질수록 사람은 생각하기를 포기한다 — 인지 위임의 역설",
+            officialUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646",
             summary: "AI 의존이 깊어질수록 비판적 사고 능력이 저하되는 현상 — SSRN 연구",
             content: "AI가 발전할수록 사람들이 더 편리해지는 게 아니라 더 멍청해질 수도 있다는 연구가 나왔습니다.\n\nSSRN에 올라온 이 연구는 AI 의존도가 높아질수록 비판적 사고 능력이 퇴화한다는 현상을 분석했어요.\n\n핵심 메커니즘은 인지 위임입니다. AI가 답을 주면 사람이 직접 생각하는 과정을 건너뛰게 되고, 그 능력 자체가 약해진다는 거예요.\n\n계산기가 나온 뒤 암산 능력이 약해진 것처럼, AI가 나온 뒤 추론 능력이 약해지는 패턴이에요.\n\n역설적이지만, AI를 잘 쓰려면 AI 없이 생각하는 근육을 유지해야 합니다. 도구에 의존할수록 도구 없이는 아무것도 못하게 되는 구조가 만들어지고 있어요.",
             source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646",
@@ -544,6 +547,7 @@ export const weeks: WeeklyData[] = [
           {
             date: "3/28", platform: "X+Threads",
             title: "논문을 읽고 실험을 복제한다 — 연구용 오픈소스 AI 에이전트 Feynman",
+            officialUrl: "https://github.com/getcompanion-ai/feynman",
             summary: "논문 검색·분석·실험 복제·피어 리뷰 자동화 — Claude Code 기반 오픈소스 연구 에이전트",
             content: "Claude Code를 연구자 전용으로 특화한 오픈소스 에이전트 Feynman이 공개됐습니다.\n\n이름은 물리학자 리처드 파인만에서 땄어요. 이해하지 못하면 가르칠 수 없다는 그의 철학을 AI 연구 에이전트에 적용했습니다.\n\n할 수 있는 일이 실용적이에요.\n\n논문 키워드로 검색하면 관련 논문들을 수집하고 인용 관계를 분석합니다. 실험 방법론을 읽고 코드로 복제를 시도하고요. 피어 리뷰 형식으로 논문의 강점과 약점을 분석해요.\n\n'이 스케일링 법칙에 대해 우리가 아는 게 뭐지?'라고 물으면 논문과 웹을 검색해서 인용 포함 리서치 브리핑을 만들어줍니다.\n\nClaude Code가 코딩 에이전트라면, Feynman은 연구 에이전트예요.",
             source: "https://github.com/getcompanion-ai/feynman",
