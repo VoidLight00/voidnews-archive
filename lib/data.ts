@@ -40,6 +40,13 @@ export const weeks: WeeklyData[] = [
         color: "#E87040",
         posts: [
           {
+            date: "3/28", platform: "X+Threads",
+            title: "AI 쓰는 사람들끼리 격차가 벌어지고 있다 — Anthropic 경제 지수 3월 리포트",
+            summary: "고숙련 Claude 사용자는 더 높은 가치 작업에서 더 높은 성공률 — 경험 격차는 시간이 갈수록 심화",
+            content: "Anthropic이 Claude 사용 패턴을 분석한 경제 지수 3월 리포트를 공개했습니다.\n\n핵심 발견은 하나예요. 경험 많은 사용자일수록 AI를 더 잘 씁니다.\n\n더 높은 가치의 작업을 시도하고, 성공률도 더 높아요. '러닝 커브'가 존재한다는 겁니다. AI를 오래 쓸수록 쓰는 방법을 배우게 되고, 그 격차는 시간이 지날수록 벌어집니다.\n\nClaude.ai 사용 사례도 다양해졌어요. 상위 10개 작업이 전체 사용량에서 차지하는 비중이 줄었습니다. 코딩 작업은 Claude.ai에서 API 자동화 워크플로우로 이동 중이고요.\n\n지금 AI를 잘 못 쓰는 사람이 나중에 따라잡는 게 점점 어려워지는 구조가 만들어지고 있어요.\n\n'누가 AI를 쓰느냐'보다 '어떻게 쓰느냐'의 격차가 핵심입니다.",
+            source: "https://www.anthropic.com/research/economic-index-march-2026-report",
+          },
+          {
             date: "3/26 20:41", platform: "Threads",
             title: "한국은 AI를 가장 잘 쓰면서 패배할 수 있다 — 문제는 실력이 아니다",
             summary: "한국의 AI 활용 역설 — 사용률은 높지만 구조적 패배 가능성을 분석한 아티클",
@@ -265,6 +272,13 @@ export const weeks: WeeklyData[] = [
         color: "#4285F4",
         posts: [
           {
+            date: "3/28", platform: "X+Threads",
+            title: "LLM의 메모리 병목을 뚫는다 — Google TurboQuant 공개",
+            summary: "고차원 벡터 극한 압축 알고리즘 — KV 캐시 병목 해결로 AI 추론 비용 절감",
+            content: "AI 모델의 가장 큰 병목 중 하나는 KV 캐시예요.\n\n긴 대화나 문서를 처리할 때 AI는 이미 처리한 내용을 치트시트처럼 기억해두는데, 이게 엄청난 메모리를 잡아먹습니다. 모델이 커질수록, 맥락이 길수록 더 심해져요.\n\nGoogle Research가 이 문제를 정면으로 공략하는 알고리즘 TurboQuant를 공개했습니다.\n\n고차원 벡터를 극한까지 압축하는 기법이에요. 벡터 탐색 성능은 유지하면서 메모리 사용량을 대폭 줄입니다.\n\n실질적인 의미는 두 가지예요. 같은 하드웨어로 더 긴 맥락을 처리할 수 있고, AI 추론 비용이 내려갑니다.\n\n100만 토큰 컨텍스트 윈도우 시대에 이런 압축 기술이 필수가 되고 있어요.",
+            source: "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/",
+          },
+          {
             date: "3/26 10:57", platform: "Threads",
             title: "3분짜리 프로 음악을 AI가 만든다 — Lyria 3 Pro가 바꾸는 창작의 경계",
             summary: "3분 길이 프로 퀄리티 음악 생성 — Lyria 3 Pro로 음악 창작의 한계 돌파",
@@ -367,6 +381,13 @@ export const weeks: WeeklyData[] = [
         name: "Meta",
         color: "#1877F2",
         posts: [
+          {
+            date: "3/28", platform: "X+Threads",
+            title: "AI의 뇌를 먼저 해부한다 — Meta TRIBEv2 해석 가능성 도구 공개",
+            summary: "AI 모델 내부 표현 직접 분석 — 블랙박스 AI를 투명하게 만드는 해석 가능성 연구 도구",
+            content: "AI가 내부적으로 어떻게 생각하는지 알 수 없다는 게 AI 안전성의 핵심 문제예요.\n\nMeta가 AI 모델의 내부 표현을 직접 분석하는 TRIBEv2를 공개했습니다.\n\n모델이 어떤 개념을 어떻게 표현하는지, 어떤 정보를 어디에 저장하는지 들여다볼 수 있는 도구예요. 블랙박스였던 AI의 내부를 해부하는 시도입니다.\n\n모델이 편향을 어디서 학습하는지, 왜 틀린 답을 내는지 추적할 수 있게 돼요. 프로덕션 배포 전에 AI 모델의 뇌 상태를 먼저 확인하는 게 일반화될 수 있는 방향이에요.\n\n인터랙티브 데모로 직접 실험해볼 수 있습니다.",
+            source: "https://aidemos.atmeta.com/tribev2/",
+          },
           {
             date: "3/26 14:58", platform: "Threads",
             title: "AGI를 위한 칩을 함께 만든다 — Meta와 Arm CPU 협력 전면 해부",
@@ -512,6 +533,34 @@ export const weeks: WeeklyData[] = [
         name: "기타",
         color: "#6B7280",
         posts: [
+          {
+            date: "3/28", platform: "X+Threads",
+            title: "AI가 똑똑해질수록 사람은 생각하기를 포기한다 — 인지 위임의 역설",
+            summary: "AI 의존이 깊어질수록 비판적 사고 능력이 저하되는 현상 — SSRN 연구",
+            content: "AI가 발전할수록 사람들이 더 편리해지는 게 아니라 더 멍청해질 수도 있다는 연구가 나왔습니다.\n\nSSRN에 올라온 이 연구는 AI 의존도가 높아질수록 비판적 사고 능력이 퇴화한다는 현상을 분석했어요.\n\n핵심 메커니즘은 인지 위임입니다. AI가 답을 주면 사람이 직접 생각하는 과정을 건너뛰게 되고, 그 능력 자체가 약해진다는 거예요.\n\n계산기가 나온 뒤 암산 능력이 약해진 것처럼, AI가 나온 뒤 추론 능력이 약해지는 패턴이에요.\n\n역설적이지만, AI를 잘 쓰려면 AI 없이 생각하는 근육을 유지해야 합니다. 도구에 의존할수록 도구 없이는 아무것도 못하게 되는 구조가 만들어지고 있어요.",
+            source: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646",
+          },
+          {
+            date: "3/28", platform: "X+Threads",
+            title: "논문을 읽고 실험을 복제한다 — 연구용 오픈소스 AI 에이전트 Feynman",
+            summary: "논문 검색·분석·실험 복제·피어 리뷰 자동화 — Claude Code 기반 오픈소스 연구 에이전트",
+            content: "Claude Code를 연구자 전용으로 특화한 오픈소스 에이전트 Feynman이 공개됐습니다.\n\n이름은 물리학자 리처드 파인만에서 땄어요. 이해하지 못하면 가르칠 수 없다는 그의 철학을 AI 연구 에이전트에 적용했습니다.\n\n할 수 있는 일이 실용적이에요.\n\n논문 키워드로 검색하면 관련 논문들을 수집하고 인용 관계를 분석합니다. 실험 방법론을 읽고 코드로 복제를 시도하고요. 피어 리뷰 형식으로 논문의 강점과 약점을 분석해요.\n\n'이 스케일링 법칙에 대해 우리가 아는 게 뭐지?'라고 물으면 논문과 웹을 검색해서 인용 포함 리서치 브리핑을 만들어줍니다.\n\nClaude Code가 코딩 에이전트라면, Feynman은 연구 에이전트예요.",
+            source: "https://github.com/getcompanion-ai/feynman",
+          },
+          {
+            date: "3/28", platform: "X+Threads",
+            title: "경험에서 스킬을 만드는 자가 학습 에이전트 — Hermes Agent",
+            summary: "NousResearch의 자가 개선 AI 에이전트 — 경험으로 스킬 생성, 과거 대화 검색, 사용자 모델 학습",
+            content: "Nous Research가 자기 자신을 개선하는 AI 에이전트 Hermes Agent를 오픈소스로 공개했습니다.\n\n일반 AI 에이전트와 다른 점이 하나 있어요. 경험에서 스킬을 만듭니다.\n\n작업을 수행하면서 배운 패턴을 스킬로 저장하고, 다음번에 비슷한 상황이 오면 그 스킬을 꺼내 씁니다. 과거 대화를 검색해서 이전에 어떻게 처리했는지 참고하고요.\n\n사용자 모델도 쌓아가요. 대화가 쌓일수록 당신이 어떤 사람인지, 어떤 방식을 선호하는지를 학습합니다.\n\n$5짜리 VPS에서도 돌아가고, Telegram으로 명령을 보내면 서버에서 작업을 처리하는 구조입니다.\n\nOpenClaw와 비슷한 방향이지만, 자가 학습 루프에 초점을 맞춘 접근이에요.",
+            source: "https://github.com/nousresearch/hermes-agent",
+          },
+          {
+            date: "3/28", platform: "X+Threads",
+            title: "YC CEO가 직접 공개한 Claude Code 스킬셋 — gstack",
+            summary: "Y Combinator CEO 개리 탄의 실전 Claude Code 15개 스킬 — CEO·디자이너·엔지니어링 매니저 역할 분담",
+            content: "Y Combinator CEO 개리 탄이 자신이 실제로 쓰는 Claude Code 스킬 셋업을 오픈소스로 공개했습니다.\n\n이름은 gstack. 15개의 스킬로 이루어져 있어요.\n\nCEO, 디자이너, 엔지니어링 매니저, 릴리즈 매니저, 문서 엔지니어, QA 역할을 각각 맡은 스킬들이에요. 혼자서 팀 전체를 시뮬레이션하는 구조입니다.\n\n개리 탄은 리드미에서 이렇게 말해요. 12월부터 코드를 거의 직접 타이핑하지 않았다. Andrej Karpathy와 같은 이야기예요.\n\nPeter Steinberger는 OpenClaw를 거의 혼자 만들었고, GitHub 스타 24만 7천 개를 달성했습니다. 올바른 툴을 갖춘 1인 빌더가 팀 전체보다 빠르게 움직이는 시대예요.\n\ngstack은 그 출발점을 낮춰주는 구체적인 예시입니다.",
+            source: "https://github.com/garrytan/gstack",
+          },
           { date: "3/17 03:25", platform: "X+Threads", title: "Perplexity Comet + Computer 기능 확장", summary: "브라우저 에이전트 Comet에 Computer Use 기능 통합", content: "브라우저 에이전트 Comet에 Computer Use 기능 통합" },
           { date: "3/17 01:22", platform: "X+Threads", title: "Perplexity Computer 안드로이드 출시", summary: "모바일 에이전트 정식 공개 — 안드로이드 화면 자율 제어", content: "모바일 에이전트 정식 공개 — 안드로이드 화면 자율 제어" },
           { date: "3/22 19:05", platform: "X", title: "Mistral Forge 엔터프라이즈 출시", summary: "기업용 파인튜닝 플랫폼 — 프라이빗 Mistral 모델 구축 서비스", content: "기업용 파인튜닝 플랫폼 — 프라이빗 Mistral 모델 구축 서비스" },
