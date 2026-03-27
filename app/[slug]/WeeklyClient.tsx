@@ -947,6 +947,7 @@ function PostCard({
   searchQuery: string;
 }) {
   const [copied, setCopied] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
   const sourceDomain = post.source ? extractDomain(post.source) : "—";
 
@@ -965,7 +966,7 @@ function PostCard({
     <div
       id={`post-${post.title.slice(0, 20)}`}
       className="intel-card"
-      onClick={hasDetail ? onClick : undefined}
+      onClick={() => { if (hasDetail) { setExpanded(e => !e); onClick(); } }}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -973,6 +974,7 @@ function PostCard({
         cursor: hasDetail ? "pointer" : "default",
         position: "relative",
         opacity: read ? 0.7 : 1,
+        borderLeftColor: expanded ? "var(--accent)" : undefined,
       }}
     >
       <div
@@ -1039,8 +1041,8 @@ function PostCard({
           </p>
         )}
 
-        {/* 포스팅 전문 */}
-        {post.content && (
+        {/* 펼쳐진 상태: 전체 상세 정보 */}
+        {expanded && post.content && (
           <div style={{
             background: "var(--surface)",
             border: "1px solid var(--border)",
@@ -1069,8 +1071,8 @@ function PostCard({
           </div>
         )}
 
-        {/* 소스 + 플랫폼 링크 */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} onClick={e => e.stopPropagation()}>
+        {/* 소스 + 플랫폼 링크 (펼쳐진 상태만) */}
+        {expanded && (<div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} onClick={e => e.stopPropagation()}>
           {post.source && (
             <a href={post.source} target="_blank" rel="noopener noreferrer"
               style={{
@@ -1108,7 +1110,7 @@ function PostCard({
               THREADS ↗
             </a>
           )}
-        </div>
+        </div>)}
 
       </div>
 
@@ -1172,16 +1174,16 @@ function PostCard({
           </button>
           {hasDetail && (
             <span
-              className="card-reveal"
               style={{
                 fontFamily: "var(--mono)",
                 fontSize: 11,
-                color: "var(--accent)",
+                color: expanded ? "var(--gold)" : "var(--muted)",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
+                transition: "color 0.12s",
               }}
             >
-              OPEN →
+              {expanded ? "CLOSE ↑" : "EXPAND ↓"}
             </span>
           )}
         </div>
