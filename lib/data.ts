@@ -438,7 +438,8 @@ export const weeks: WeeklyData[] = [
             date: "3/26 07:17", platform: "X+Threads",
             title: "AGI를 측정하는 새 잣대 — ARC-AGI-3 공개",
             summary: "AGI 측정 새 기준점 — 기존 ARC-AGI보다 어렵고 다양한 추론 평가 체계",
-            content: "ARC-AGI-3 벤치마크 공개 요약.\n\n- 기존 ARC-AGI보다 더 어렵고 다양한 추론 과제를 포함\n- 단순 정답률이 아니라 일반화와 문제 해결 능력을 더 엄격하게 측정\n- AGI 수준 추론 평가 기준을 다시 끌어올리려는 시도로 보임",
+            content: "ARC-AGI-3 벤치마크 공개 요약.\n\n- 기존 ARC-AGI보다 더 어렵고 다양한 추론 과제를 포함\n- 단순 정답률이 아니라 일반화와 문제 해결 능력을 더 엄격하게 측정\n- AGI 수준 추론 평가 기준을 다시 끌어올리려는 시도로 보임\n\n직접 풀어볼 수 있어요 → arcprize.org",
+            source: "https://arcprize.org/",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWVRfebjz5Q",
           },
           {
