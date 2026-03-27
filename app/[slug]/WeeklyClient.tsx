@@ -948,7 +948,7 @@ function PostCard({
 }) {
   const [copied, setCopied] = useState(false);
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
-  const sourceDomain = post.source ? extractDomain(post.source) : "NO SOURCE";
+  const sourceDomain = post.source ? extractDomain(post.source) : "—";
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -1039,7 +1039,6 @@ function PostCard({
           </p>
         )}
 
-        {post.source && <CardLinkPreview url={post.source} />}
       </div>
 
       <div
@@ -1100,18 +1099,20 @@ function PostCard({
           >
             ★
           </button>
-          <span
-            className="card-reveal"
-            style={{
-              fontFamily: "var(--mono)",
-              fontSize: 11,
-              color: hasDetail ? "var(--text)" : "var(--dim)",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            {hasDetail ? "OPEN →" : "NO FILE"}
-          </span>
+          {hasDetail && (
+            <span
+              className="card-reveal"
+              style={{
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                color: "var(--accent)",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}
+            >
+              OPEN →
+            </span>
+          )}
         </div>
       </div>
     </div>
