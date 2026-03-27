@@ -51,14 +51,24 @@ function escapeRegExp(value: string) {
 }
 
 function stripMarkdown(text: string): string {
-  return text
-    .replace(/\*\*(.+?)\*\*/g, "$1")   // **bold**
-    .replace(/\*(.+?)\*/g, "$1")        // *italic*
-    .replace(/^#{1,6}\s+/gm, "")        // # 헤딩
-    .replace(/`{1,3}([^`]+)`{1,3}/g, "$1") // `code`
-    .replace(/^[-*]\s+/gm, "- ")        // 리스트 기호 정규화
-    .replace(/__(.+?)__/g, "$1")         // __bold__
-    .replace(/_(.+?)_/g, "$1")           // _italic_
+  // 댓글/답글 블록 제거 (--- 이후 @멘션 또는 답변: 패턴)
+  const commentBlockRegex = /\n*---\s*\n([\s\S]*?(@\w|답변:|답글:)[\s\S]*?)$/;
+  let cleaned = text.replace(commentBlockRegex, "");
+
+  // 인라인 @멘션 답글 줄 제거
+  cleaned = cleaned
+    .split("\n")
+    .filter(line => !/^[-\s]*@\w+.*[:：]/.test(line) && !/voidlight00\s*(답변|답글)/.test(line))
+    .join("\n");
+
+  return cleaned
+    .replace(/\*\*(.+?)\*\*/g, "$1")        // **bold**
+    .replace(/\*(.+?)\*/g, "$1")             // *italic*
+    .replace(/^#{1,6}\s+/gm, "")             // # 헤딩
+    .replace(/`{1,3}([^`]+)`{1,3}/g, "$1")  // `code`
+    .replace(/__(.+?)__/g, "$1")              // __bold__
+    .replace(/_(.+?)_/g, "$1")                // _italic_
+    .replace(/\n{3,}/g, "\n\n")               // 빈줄 3개 이상 → 2개로
     .trim();
 }
 

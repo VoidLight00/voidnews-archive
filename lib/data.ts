@@ -207,7 +207,7 @@ export const weeks: WeeklyData[] = [
             platform: "X+Threads",
             title: "콘텐츠 크리에이터의 Claude 활용 프롬프트 50개 완전 정리",
             summary: "크리에이터를 위한 Claude 프롬프트 50개",
-            content: "크리에이터를 위한 Claude 프롬프트 50개가 정리됐어요.\n\n개발자가 아니라 콘텐츠 제작자를 위한 프롬프트예요. 글쓰기, 영상 대본, SNS, SEO, 이메일 마케팅, 브랜드 보이스까지.\n\n각 프롬프트가 복사해서 바로 쓸 수 있는 형태입니다.\n\nbuilder.io/blog/claude-prompts\n\n특히 유용한 건 브랜드 보이스 프롬프트예요. \"내 기존 콘텐츠 3개를 분석해서 톤, 어휘, 문장 구조 패턴을 뽑아줘\"처럼 구체적으로 지시하면 일관된 브랜드 톤을 유지할 수 있어요.\n\n개발자 프롬프트는 넘치는데 크리에이터용은 드물어서 가치가 있습니다.\n\n---\n\n- @dal_kom.ai: 감사해요, 현님!!!🤎\n- @koracleceo: 안 보여집니다 (링크 미리보기 이슈)\n- voidlight00 답변: builder.io 사이트에서 \"claude prompts\" 검색하시면 바로 나와요!",
+            content: "크리에이터를 위한 Claude 프롬프트 50개가 정리됐어요.\n\n개발자가 아니라 콘텐츠 제작자를 위한 프롬프트예요. 글쓰기, 영상 대본, SNS, SEO, 이메일 마케팅, 브랜드 보이스까지.\n\n각 프롬프트가 복사해서 바로 쓸 수 있는 형태입니다.\n\nbuilder.io/blog/claude-prompts\n\n특히 유용한 건 브랜드 보이스 프롬프트예요. \"내 기존 콘텐츠 3개를 분석해서 톤, 어휘, 문장 구조 패턴을 뽑아줘\"처럼 구체적으로 지시하면 일관된 브랜드 톤을 유지할 수 있어요.\n\n개발자 프롬프트는 넘치는데 크리에이터용은 드물어서 가치가 있습니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWXgPQWjwv4",
             source: "https://builder.io/blog/claude-prompts"
           }
