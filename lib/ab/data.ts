@@ -25,6 +25,19 @@ export interface ABHighlight {
   keyQuote?: string;
 }
 
+export interface ABEditorPick {
+  title: string;
+  subtitle?: string;
+  category: string; // "AI 데이터 인프라", "개발 도구" 등 자유 분류
+  sourceUrl: string; // 시작/랜딩 URL
+  sourceLabel?: string; // 버튼 텍스트 (기본 "시작하기 →")
+  summary: string; // 한 줄 요약
+  body: string; // 풍부한 본문 (마크다운 허용 — 줄바꿈은 \n)
+  editorial?: string; // 큐레이터 맥락 (왜 이걸 넣었는지)
+  tags?: string[];
+  tier?: HighlightTier; // 기본 feature
+}
+
 export interface ABEdition {
   slug: string; // "2026-04a"
   volume: number; // 1-based
@@ -38,6 +51,9 @@ export interface ABEdition {
   closing: string;
 
   highlights: ABHighlight[];
+
+  // 큐레이터가 직접 엄선한 도구·자료 (VIP 트윗 아님)
+  editorsPicks?: ABEditorPick[];
 }
 
 import { edition2026_04a } from "./editions/2026-04a";
