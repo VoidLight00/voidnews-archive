@@ -11,7 +11,7 @@ export const week15: WeeklyData = {
   year: 2026,
   slug: "2026-w15",
   period: "4/6 ~ 4/12",
-  totalPosts: 23,
+  totalPosts: 21,
   companies: [
     {
       name: "Anthropic / Claude",
@@ -53,16 +53,6 @@ export const week15: WeeklyData = {
       name: "OpenAI",
       color: "#10A37F",
       posts: [
-        {
-          date: "4/10 03:10",
-          platform: "X",
-          title: "OpenAI ChatGPT Pro $100 tier 출시",
-          summary: "고사양 모델 접근성과 Codex 사용 확대를 강조한 요금제 소식입니다. 개발·에이전트 실험을 자주 하는 사용자에게 영향이 큰 업데이트입니다.",
-          content: "OpenAI가 월 **$100짜리 새 ChatGPT 요금제**를 출시했습니다.\n\n\"이 새 요금제는 Plus 대비 **Codex 사용량 5배**를 제공하며, 장시간·고강도 Codex 세션에 최적화되어 있습니다.\"\n\nAnthropic의 최근 rate limit 이슈가 주목받는 시점과 겹치는 건 아마도 우연이 아닐 것입니다.",
-          officialUrl: "https://x.com/TheRundownAI/status/2042304085307671000",
-          source: "https://x.com/TheRundownAI/status/2042304085307671000",
-          tags: ["OpenAI", "Pro", "Codex"],
-        },
         {
           date: "4/10 02:36",
           platform: "X",
@@ -243,16 +233,6 @@ export const week15: WeeklyData = {
       name: "기타",
       color: "#6B7280",
       posts: [
-        {
-          date: "4/10 06:10",
-          platform: "X",
-          title: "TG 채널 Level 5 업그레이드",
-          summary: "자동 번역과 Instant Views, 대형 커뮤니티 기능을 포함한 Telegram 채널 업그레이드 항목입니다. 채널형 정보를 수집·요약하는 에이전트 소스로 보기 좋습니다.",
-          content: "TestingCatalog News **텔레그램 채널**이 **Level 5**로 업그레이드되었습니다.\n- 모든 메시지 **자동 번역**\n- 블로그 포스트 **Instant Views**\n- **5천명+ 커뮤니티 멤버**\n\n텔레그램 사용하시나요? 👀",
-          officialUrl: "https://x.com/testingcatalog/status/2042349382696112438",
-          source: "https://x.com/testingcatalog/status/2042349382696112438",
-          tags: ["Telegram", "커뮤니티", "자동요약"],
-        },
         {
           date: "4/9 23:30",
           platform: "X",
