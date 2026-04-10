@@ -1,3 +1,5 @@
+import { week15 } from "./weeks/2026-w15";
+
 export interface Post {
   date: string;
   platform: "X" | "Threads" | "X+Threads";
@@ -28,6 +30,7 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week15,
   {
     week: 13,
     year: 2026,
