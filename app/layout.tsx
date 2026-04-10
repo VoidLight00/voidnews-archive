@@ -32,19 +32,52 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             zIndex: 100,
           }}
         >
-          <a
-            href="/"
-            style={{
-              fontWeight: 700,
-              fontSize: 15,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "var(--text)",
-              textDecoration: "none",
-            }}
-          >
-            VOID<span style={{ color: "#E87040" }}>NEWS</span>
-          </a>
+          <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+            <a
+              href="/"
+              style={{
+                fontWeight: 700,
+                fontSize: 15,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "var(--text)",
+                textDecoration: "none",
+              }}
+            >
+              VOID<span style={{ color: "#E87040" }}>NEWS</span>
+            </a>
+            <nav style={{ display: "flex", gap: 14, alignItems: "center" }}>
+              <a
+                href="/"
+                style={{
+                  fontSize: 12,
+                  color: "var(--muted)",
+                  textDecoration: "none",
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Weekly
+              </a>
+              <a
+                href="/ab"
+                style={{
+                  fontSize: 12,
+                  color: "#E87040",
+                  textDecoration: "none",
+                  fontFamily: "var(--mono)",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  border: "1px solid #E87040",
+                  padding: "4px 8px",
+                  borderRadius: 2,
+                }}
+              >
+                AB ▸
+              </a>
+            </nav>
+          </div>
           <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
             <a
               href="https://www.threads.com/@voidlight00"
