@@ -1,9 +1,42 @@
 "use client";
 
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState, Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
+
+/* ────────── URL 자동 링크화 ──────────
+   stripMarkdown 후 평문 안에 남아있는 http(s) URL을
+   클릭 가능한 <a>로 변환. 카드 외부에서 상위 onClick으로
+   모달이 열리는 걸 막기 위해 stopPropagation. */
+const URL_SPLIT_REGEX = /(https?:\/\/[^\s)\]]+)/g;
+const URL_MATCH_REGEX = /^https?:\/\/[^\s)\]]+$/;
+
+function linkify(text: string): ReactNode {
+  if (!text) return text;
+  const parts = text.split(URL_SPLIT_REGEX);
+  return parts.map((part, i) => {
+    if (URL_MATCH_REGEX.test(part)) {
+      return (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            color: "var(--accent)",
+            textDecoration: "underline",
+            wordBreak: "break-all",
+          }}
+        >
+          {part}
+        </a>
+      );
+    }
+    return <Fragment key={i}>{part}</Fragment>;
+  });
+}
 
 /* ════════════════════════════════════════════════════════════
    유틸 컴포넌트
@@ -151,7 +184,7 @@ function HighlightModal({
           color: "var(--text)",
         }}
       >
-        {stripMarkdown(item.post.content)}
+        {linkify(stripMarkdown(item.post.content))}
       </p>
 
       {item.editorial && (
@@ -303,7 +336,7 @@ function PickModal({
           color: "var(--text)",
         }}
       >
-        {stripMarkdown(item.body)}
+        {linkify(stripMarkdown(item.body))}
       </p>
 
       {item.editorial && (
