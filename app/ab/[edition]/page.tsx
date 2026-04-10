@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllEditionSlugs, getEdition } from "@/lib/ab/data";
-import type { ABHighlight } from "@/lib/ab/data";
+import type { ABHighlight, ABEditorPick } from "@/lib/ab/data";
 
 export async function generateStaticParams() {
   return getAllEditionSlugs().map((edition) => ({ edition }));
@@ -117,6 +117,30 @@ export default async function EditionPage({
             <div className="grid gap-4 md:grid-cols-2">
               {normals.map((h) => (
                 <NormalCard key={h.rank} item={h} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ───── Editor's Pick ───── */}
+      {data.editorsPicks && data.editorsPicks.length > 0 && (
+        <section className="px-6 py-12 md:px-12">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-6 border-t border-[var(--border2)] pt-8">
+              <div className="mono text-xs uppercase tracking-widest text-[var(--gold)]">
+                🛠 Editor&apos;s Pick
+              </div>
+              <h2 className="mono mt-2 text-xl font-semibold text-[var(--text)] md:text-2xl">
+                VoidLight 엄선 — 직접 써본 도구·자료
+              </h2>
+              <p className="mono mt-1 text-xs text-[var(--muted)]">
+                VIP 트윗 트랙과 별개로, 큐레이터가 직접 검증한 인프라/도구
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {data.editorsPicks.map((pick, i) => (
+                <EditorPickCard key={i} item={pick} />
               ))}
             </div>
           </div>
@@ -276,6 +300,61 @@ function FeatureCard({ item }: { item: ABHighlight }) {
           className="ml-auto text-[var(--accent)] hover:underline"
         >
           원문 →
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function EditorPickCard({ item }: { item: ABEditorPick }) {
+  return (
+    <article className="flex flex-col border-l-4 border-[var(--gold)] border-y border-r border-[var(--border)] bg-[var(--card)] p-6 transition hover:bg-[var(--card-hover)]">
+      <div className="mono flex items-center gap-2 text-xs">
+        <span className="rounded-sm bg-[var(--gold)] px-2 py-0.5 text-[var(--bg)]">
+          🛠 PICK
+        </span>
+        <span className="text-[var(--muted)]">{item.category}</span>
+      </div>
+
+      <h3 className="mt-4 text-xl font-bold leading-tight md:text-2xl">
+        {item.title}
+      </h3>
+      {item.subtitle && (
+        <p className="mono mt-1 text-sm text-[var(--muted)]">{item.subtitle}</p>
+      )}
+
+      <p className="mono mt-4 border-l-2 border-[var(--gold)] pl-3 text-sm text-[var(--text)]">
+        {item.summary}
+      </p>
+
+      <p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-[var(--text)]">
+        {item.body}
+      </p>
+
+      {item.editorial && (
+        <aside className="mt-4 border-t border-[var(--border)] pt-4">
+          <div className="mono mb-2 text-xs uppercase tracking-widest text-[var(--gold)]">
+            ▾ Editor&apos;s Note
+          </div>
+          <p className="text-xs leading-relaxed text-[var(--muted)] md:text-sm">
+            {item.editorial}
+          </p>
+        </aside>
+      )}
+
+      <div className="mono mt-auto flex flex-wrap items-center gap-3 pt-4 text-xs">
+        {item.tags?.slice(0, 5).map((tag) => (
+          <span key={tag} className="text-[var(--dim)]">
+            #{tag}
+          </span>
+        ))}
+        <a
+          href={item.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto rounded-sm bg-[var(--gold)] px-3 py-1 text-[var(--bg)] hover:opacity-90"
+        >
+          {item.sourceLabel || "시작하기 →"}
         </a>
       </div>
     </article>
