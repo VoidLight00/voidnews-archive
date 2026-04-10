@@ -255,10 +255,12 @@ export const edition2026_04a: ABEdition = {
       category: "AI 개발 도구 / 프록시",
       sourceUrl: "https://github.com/automazeio/vibeproxy",
       sourceLabel: "GitHub 보기 →",
+      guideUrl: "https://voidlight-vibeproxy-guide.vercel.app/#port",
+      guideLabel: "한국어 가이드 →",
       summary:
         "Stop paying twice for AI — 기존 AI 구독을 그대로 통과시키는 macOS 메뉴바 프록시. 별도 API 결제 없이 Factory Droids 같은 코딩 툴을 연결합니다.",
       body:
-        "AI 구독을 두 번 결제한 적 있다면 이게 답입니다.\n\nClaude Max · ChatGPT Pro · Gemini · Qwen · Antigravity 같은 AI 구독은 이미 쓰고 있는데, Factory Droids 같은 코딩 에이전트를 붙이려면 또 다른 API 키를 사야 합니다. VibeProxy는 이 중복을 없애줍니다.\n\n핵심 구조:\n- macOS 네이티브 메뉴바 앱 (SwiftUI) — 원클릭 서버 시작/중지\n- 다중 프로바이더 OAuth (Claude Code / Codex / Gemini / Qwen / Antigravity)\n- 멀티 계정 지원 + 라운드로빈 분배 + 페일오버\n- Vercel AI Gateway 통합 — Claude Max를 더 안전하게 경유\n- 프로바이더 우선순위 핫 리로드 · 실시간 연결 상태 모니터\n- Sparkle 자동 업데이트, 코드 사인/공증된 번들\n\nGitHub Releases에서 빌드를 내려받아 /Applications에 넣고 실행하면 끝. MIT 라이선스 · 오픈소스.",
+        "AI 구독을 두 번 결제한 적 있다면 이게 답입니다.\n\nClaude Max · ChatGPT Pro · Gemini · Qwen · Antigravity 같은 AI 구독은 이미 쓰고 있는데, Factory Droids 같은 코딩 에이전트를 붙이려면 또 다른 API 키를 사야 합니다. VibeProxy는 이 중복을 없애줍니다.\n\n핵심 구조:\n- macOS 네이티브 메뉴바 앱 (SwiftUI) — 원클릭 서버 시작/중지\n- 다중 프로바이더 OAuth (Claude Code / Codex / Gemini / Qwen / Antigravity)\n- 멀티 계정 지원 + 라운드로빈 분배 + 페일오버\n- Vercel AI Gateway 통합 — Claude Max를 더 안전하게 경유\n- 프로바이더 우선순위 핫 리로드 · 실시간 연결 상태 모니터\n- Sparkle 자동 업데이트, 코드 사인/공증된 번들\n\nGitHub Releases에서 빌드를 내려받아 /Applications에 넣고 실행하면 끝. MIT 라이선스 · 오픈소스.\n\n━━━━━━━━━━━━━━━━━━━━━━\n⚠ 포트 8318이 정답 — Claude Code 연결 시 반드시 확인:\n\n• 8317 → raw upstream (OpenAI-compatible 엔드포인트)\n• 8318 → thinking proxy 레이어 (Claude Code가 써야 하는 포트)\n\n8318만 reasoning effort 접미사 \"(high)\"를 파싱해서 OpenAI의 reasoning_effort 와 Anthropic의 thinking.budget_tokens 로 변환합니다. 두 포트 모두 /v1/models 카탈로그는 동일 — 라우팅 동작만 다릅니다.\n\n리스닝 확인:\n$ lsof -iTCP:8317,8318 -sTCP:LISTEN\nCLIProxyM 54503 *:8317 (LISTEN)\ncli-proxy 70103 localhost:8318 (LISTEN)\n\n📖 설치·설정 가이드 (한국어):\nhttps://voidlight-vibeproxy-guide.vercel.app/#port",
       editorial:
         "이번 회차의 흐름이 '모델 + 도구 + 데이터' 3층이었다면, VibeProxy는 그 사이를 흐르는 '결제 경로'를 재설계하는 도구입니다. 2026년의 새 규칙 — 구독을 하나의 credit pool처럼 쓰기 — 에 처음으로 깔끔하게 대응한 메뉴바 프록시라서 Picks에 넣었습니다. macOS 개발자라면 설치해 두는 것만으로 OpenAI/Anthropic 추가 결제 한 건을 줄일 수 있습니다.",
       tags: ["프록시", "AI구독", "macOS", "오픈소스", "비용최적화", "VibeProxy"],

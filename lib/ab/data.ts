@@ -31,6 +31,9 @@ export interface ABEditorPick {
   category: string; // "AI 데이터 인프라", "개발 도구" 등 자유 분류
   sourceUrl: string; // 시작/랜딩 URL
   sourceLabel?: string; // 버튼 텍스트 (기본 "시작하기 →")
+  // 보조 가이드 링크 (공식 문서 외, 큐레이터가 직접 작성한 한국어 가이드 등)
+  guideUrl?: string;
+  guideLabel?: string; // 기본 "설치 가이드 →"
   summary: string; // 한 줄 요약
   body: string; // 풍부한 본문 (마크다운 허용 — 줄바꿈은 \n)
   editorial?: string; // 큐레이터 맥락 (왜 이걸 넣었는지)

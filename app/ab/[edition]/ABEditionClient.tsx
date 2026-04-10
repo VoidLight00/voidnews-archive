@@ -346,6 +346,27 @@ function PickModal({
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, flex: 1 }}>
           <TagList tags={item.tags} />
         </div>
+        {item.guideUrl && (
+          <a
+            href={item.guideUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: 12,
+              background: "transparent",
+              color: "var(--gold)",
+              border: "1px solid var(--gold)",
+              padding: "7px 14px",
+              borderRadius: 2,
+              textDecoration: "none",
+              fontWeight: 700,
+              whiteSpace: "nowrap",
+            }}
+          >
+            {item.guideLabel || "설치 가이드 →"}
+          </a>
+        )}
         <a
           href={item.sourceUrl}
           target="_blank"
