@@ -407,7 +407,7 @@ function Modal({
         position: "fixed",
         inset: 0,
         zIndex: 1000,
-        background: "rgba(0,0,0,0.75)",
+        background: "var(--overlay-bg)",
         backdropFilter: "blur(4px)",
         display: "flex",
         alignItems: "flex-end",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import ThemeToggle from "./ThemeToggle";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,8 +14,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // 플리커 방지: body 렌더 전에 localStorage의 테마를 즉시 적용
+  const themeInit = `
+(function(){try{var t=localStorage.getItem('voidnews-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();
+`;
+
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body className="min-h-screen" style={{ background: "var(--bg)" }}>
         {/* Navbar */}
         <header
@@ -27,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             justifyContent: "space-between",
             position: "sticky",
             top: 0,
-            background: "var(--header-bg, rgba(10,10,10,0.95))",
+            background: "var(--header-bg)",
             backdropFilter: "blur(8px)",
             zIndex: 100,
           }}
@@ -78,7 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </a>
             </nav>
           </div>
-          <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+          <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
             <a
               href="https://www.threads.com/@voidlight00"
               target="_blank"
@@ -95,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             >
               X
             </a>
+            <ThemeToggle />
           </div>
         </header>
         {children}
