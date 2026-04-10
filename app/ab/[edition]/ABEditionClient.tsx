@@ -3,6 +3,7 @@
 import { useEffect, useCallback, useState } from "react";
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick } from "@/lib/ab/data";
+import { stripMarkdown } from "@/lib/md";
 
 /* ════════════════════════════════════════════════════════════
    유틸 컴포넌트
@@ -121,7 +122,7 @@ function HighlightModal({
           color: "var(--text)",
         }}
       >
-        {item.post.title}
+        {stripMarkdown(item.post.title)}
       </h2>
 
       {item.keyQuote && (
@@ -137,7 +138,7 @@ function HighlightModal({
             lineHeight: 1.6,
           }}
         >
-          &ldquo;{item.keyQuote}&rdquo;
+          &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
         </blockquote>
       )}
 
@@ -150,7 +151,7 @@ function HighlightModal({
           color: "var(--text)",
         }}
       >
-        {item.post.content}
+        {stripMarkdown(item.post.content)}
       </p>
 
       {item.editorial && (
@@ -180,7 +181,7 @@ function HighlightModal({
               color: "var(--muted)",
             }}
           >
-            {item.editorial}
+            {stripMarkdown(item.editorial)}
           </p>
         </aside>
       )}
@@ -264,7 +265,7 @@ function PickModal({
           color: "var(--text)",
         }}
       >
-        {item.title}
+        {stripMarkdown(item.title)}
       </h2>
       {item.subtitle && (
         <p
@@ -275,7 +276,7 @@ function PickModal({
             color: "var(--muted)",
           }}
         >
-          {item.subtitle}
+          {stripMarkdown(item.subtitle)}
         </p>
       )}
 
@@ -290,7 +291,7 @@ function PickModal({
           lineHeight: 1.7,
         }}
       >
-        {item.summary}
+        {stripMarkdown(item.summary)}
       </p>
 
       <p
@@ -302,7 +303,7 @@ function PickModal({
           color: "var(--text)",
         }}
       >
-        {item.body}
+        {stripMarkdown(item.body)}
       </p>
 
       {item.editorial && (
@@ -326,7 +327,7 @@ function PickModal({
             ▾ Editor&apos;s Note
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "var(--muted)" }}>
-            {item.editorial}
+            {stripMarkdown(item.editorial)}
           </p>
         </aside>
       )}
@@ -530,7 +531,7 @@ function HeroCard({
           color: "var(--text)",
         }}
       >
-        {item.post.title}
+        {stripMarkdown(item.post.title)}
       </h2>
 
       {item.keyQuote && (
@@ -546,7 +547,7 @@ function HeroCard({
             lineHeight: 1.5,
           }}
         >
-          &ldquo;{item.keyQuote}&rdquo;
+          &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
         </blockquote>
       )}
 
@@ -564,7 +565,7 @@ function HeroCard({
           overflow: "hidden",
         }}
       >
-        {item.post.content}
+        {stripMarkdown(item.post.content)}
       </p>
 
       <div
@@ -650,7 +651,7 @@ function FeatureCard({
           color: "var(--text)",
         }}
       >
-        {item.post.title}
+        {stripMarkdown(item.post.title)}
       </h3>
 
       {item.keyQuote && (
@@ -670,7 +671,7 @@ function FeatureCard({
             overflow: "hidden",
           }}
         >
-          &ldquo;{item.keyQuote}&rdquo;
+          &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
         </p>
       )}
 
@@ -686,7 +687,7 @@ function FeatureCard({
           overflow: "hidden",
         }}
       >
-        {item.post.content}
+        {stripMarkdown(item.post.content)}
       </p>
 
       <div
@@ -768,7 +769,7 @@ function NormalCard({
           color: "var(--text)",
         }}
       >
-        {item.post.title}
+        {stripMarkdown(item.post.title)}
       </h3>
 
       <p
@@ -783,7 +784,7 @@ function NormalCard({
           overflow: "hidden",
         }}
       >
-        {item.post.content}
+        {stripMarkdown(item.post.content)}
       </p>
 
       <div
@@ -884,7 +885,7 @@ function EditorPickCard({
           color: "var(--text)",
         }}
       >
-        {item.title}
+        {stripMarkdown(item.title)}
       </h3>
 
       <p
@@ -902,7 +903,7 @@ function EditorPickCard({
           overflow: "hidden",
         }}
       >
-        {item.summary}
+        {stripMarkdown(item.summary)}
       </p>
 
       <div
@@ -1078,7 +1079,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 color: "var(--text)",
               }}
             >
-              {data.intro}
+              {stripMarkdown(data.intro)}
             </p>
           </div>
         </section>
@@ -1253,7 +1254,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 color: "var(--text)",
               }}
             >
-              {data.closing}
+              {stripMarkdown(data.closing)}
             </p>
           </div>
         </section>

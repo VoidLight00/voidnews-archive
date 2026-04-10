@@ -12,6 +12,7 @@ import {
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { getWeekList } from "@/lib/data";
+import { stripMarkdown } from "@/lib/md";
 
 const BOOKMARKS_STORAGE_KEY = "voidnews-bookmarks";
 const READ_STORAGE_PREFIX = "voidnews-read:";
@@ -48,28 +49,6 @@ function renderIntelBar(value: number, max: number, width = 20) {
 
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-function stripMarkdown(text: string): string {
-  // 댓글/답글 블록 제거 (--- 이후 @멘션 또는 답변: 패턴)
-  const commentBlockRegex = /\n*---\s*\n([\s\S]*?(@\w|답변:|답글:)[\s\S]*?)$/;
-  let cleaned = text.replace(commentBlockRegex, "");
-
-  // 인라인 @멘션 답글 줄 제거
-  cleaned = cleaned
-    .split("\n")
-    .filter(line => !/^[-\s]*@\w+.*[:：]/.test(line) && !/voidlight00\s*(답변|답글)/.test(line))
-    .join("\n");
-
-  return cleaned
-    .replace(/\*\*(.+?)\*\*/g, "$1")        // **bold**
-    .replace(/\*(.+?)\*/g, "$1")             // *italic*
-    .replace(/^#{1,6}\s+/gm, "")             // # 헤딩
-    .replace(/`{1,3}([^`]+)`{1,3}/g, "$1")  // `code`
-    .replace(/__(.+?)__/g, "$1")              // __bold__
-    .replace(/_(.+?)_/g, "$1")                // _italic_
-    .replace(/\n{3,}/g, "\n\n")               // 빈줄 3개 이상 → 2개로
-    .trim();
 }
 
 function highlightText(text: string, query: string): ReactNode {
@@ -393,13 +372,13 @@ function CardLinkPreview({ url }: { url: string }) {
             border: "1px solid #1e1e1e",
             borderRadius: 8,
             overflow: "hidden",
-            background: "#0c0c0c",
+            background: "var(--card)",
             display: "flex",
             minHeight: 72,
             transition: "border-color 0.15s",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#333")}
-          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#1e1e1e")}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border2)")}
+          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border)")}
         >
           {loading && (
             <div
@@ -415,14 +394,14 @@ function CardLinkPreview({ url }: { url: string }) {
                 style={{
                   width: 60,
                   height: 52,
-                  background: "#1a1a1a",
+                  background: "var(--surface)",
                   borderRadius: 4,
                   flexShrink: 0,
                 }}
               />
               <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 6 }}>
-                <div style={{ height: 10, background: "#1a1a1a", borderRadius: 3, width: "60%" }} />
-                <div style={{ height: 9, background: "#1a1a1a", borderRadius: 3, width: "85%" }} />
+                <div style={{ height: 10, background: "var(--surface)", borderRadius: 3, width: "60%" }} />
+                <div style={{ height: 9, background: "var(--surface)", borderRadius: 3, width: "85%" }} />
               </div>
             </div>
           )}
@@ -466,7 +445,7 @@ function CardLinkPreview({ url }: { url: string }) {
             </div>
           )}
           <div style={{ padding: "10px 10px 10px 0", display: "flex", alignItems: "center", flexShrink: 0 }}>
-            <span style={{ fontSize: 12, color: "#333" }}>↗</span>
+            <span style={{ fontSize: 12, color: "var(--dim)" }}>↗</span>
           </div>
         </div>
       </a>
@@ -482,10 +461,10 @@ function LinkPreview({ url }: { url: string }) {
     return (
       <div
         style={{
-          border: "1px solid #222",
+          border: "1px solid var(--border)",
           borderRadius: 10,
           overflow: "hidden",
-          background: "#111",
+          background: "var(--card)",
           marginBottom: 20,
           display: "flex",
           height: 90,
@@ -494,10 +473,10 @@ function LinkPreview({ url }: { url: string }) {
           gap: 12,
         }}
       >
-        <div style={{ width: 90, height: 66, background: "#1a1a1a", borderRadius: 4, flexShrink: 0 }} />
+        <div style={{ width: 90, height: 66, background: "var(--surface)", borderRadius: 4, flexShrink: 0 }} />
         <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
-          <div style={{ height: 12, background: "#1a1a1a", borderRadius: 4, width: "70%" }} />
-          <div style={{ height: 10, background: "#1a1a1a", borderRadius: 4, width: "90%" }} />
+          <div style={{ height: 12, background: "var(--surface)", borderRadius: 4, width: "70%" }} />
+          <div style={{ height: 10, background: "var(--surface)", borderRadius: 4, width: "90%" }} />
         </div>
       </div>
     );
@@ -515,12 +494,12 @@ function LinkPreview({ url }: { url: string }) {
           border: "1px solid #2a2a2a",
           borderRadius: 10,
           overflow: "hidden",
-          background: "#0e0e0e",
+          background: "var(--card)",
           display: "flex",
           transition: "border-color 0.15s",
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#444")}
-        onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#2a2a2a")}
+        onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border2)")}
+        onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border2)")}
       >
         {data?.image && (
           <img
@@ -543,12 +522,12 @@ function LinkPreview({ url }: { url: string }) {
             minWidth: 0,
           }}
         >
-          <p style={{ fontSize: 11, color: "#555", margin: 0 }}>{data?.hostname}</p>
+          <p style={{ fontSize: 11, color: "var(--dim)", margin: 0 }}>{data?.hostname}</p>
           <p
             style={{
               fontSize: 13,
               fontWeight: 700,
-              color: "#E0E0E0",
+              color: "var(--text)",
               margin: 0,
               overflow: "hidden",
               display: "-webkit-box",
@@ -562,7 +541,7 @@ function LinkPreview({ url }: { url: string }) {
             <p
               style={{
                 fontSize: 11,
-                color: "#666",
+                color: "var(--dim)",
                 margin: 0,
                 overflow: "hidden",
                 display: "-webkit-box",
@@ -575,7 +554,7 @@ function LinkPreview({ url }: { url: string }) {
           )}
         </div>
         <div style={{ padding: "12px 12px 12px 0", display: "flex", alignItems: "center" }}>
-          <span style={{ fontSize: 14, color: "#444" }}>↗</span>
+          <span style={{ fontSize: 14, color: "var(--dim)" }}>↗</span>
         </div>
       </div>
     </a>
@@ -699,15 +678,15 @@ function EmbedPreview({
     borderRadius: 2,
     cursor: "pointer" as const,
     border: "1px solid",
-    borderColor: active ? color : "#2a2a2a",
+    borderColor: active ? color : "var(--border2)",
     background: active ? `${color}22` : "transparent",
-    color: active ? color : "#555",
+    color: active ? color : "var(--dim)",
     fontFamily: "var(--mono)",
     letterSpacing: "0.06em",
   });
 
   const loadingPlaceholder = (
-    <div style={{ background: "#111", border: "1px solid #222", borderRadius: 8, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10, color: "#555", fontSize: 13 }}>
+    <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10, color: "var(--dim)", fontSize: 13 }}>
       ⏳ 불러오는 중...
     </div>
   );
@@ -740,7 +719,7 @@ function EmbedPreview({
           <div ref={officialRef} style={{ borderRadius: 8, overflow: "hidden" }} />
           {!officialHtml && !officialLoading && (
             <a href={officialUrl} target="_blank" rel="noopener noreferrer"
-              style={{ display: "block", background: "#111", border: "1px solid #1a3a1a", borderRadius: 8, padding: "16px", color: "#22C55E", fontSize: 13, textDecoration: "none" }}>
+              style={{ display: "block", background: "var(--card)", border: "1px solid #1a3a1a", borderRadius: 8, padding: "16px", color: "#22C55E", fontSize: 13, textDecoration: "none" }}>
               🏢 공식 계정 원문 보기 ↗
             </a>
           )}
@@ -754,7 +733,7 @@ function EmbedPreview({
           <div ref={xRef} style={{ borderRadius: 8, overflow: "hidden" }} />
           {!xHtml && !xLoading && (
             <a href={xUrl} target="_blank" rel="noopener noreferrer"
-              style={{ display: "block", background: "#111", border: "1px solid #222", borderRadius: 8, padding: "16px", color: "#4A9EFF", fontSize: 13, textDecoration: "none" }}>
+              style={{ display: "block", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "16px", color: "#4A9EFF", fontSize: 13, textDecoration: "none" }}>
               𝕏 X에서 보기 ↗
             </a>
           )}
@@ -793,9 +772,9 @@ function PostModal({
     fontWeight: 700,
     padding: "10px 14px",
     borderRadius: 10,
-    border: "1px solid #333",
-    background: "#1C1C1C",
-    color: "#DDD",
+    border: "1px solid var(--border2)",
+    background: "var(--surface)",
+    color: "var(--text)",
     cursor: "pointer",
   } as const;
 
@@ -805,7 +784,7 @@ function PostModal({
       style={{
         position: "fixed",
         inset: 0,
-        background: "rgba(0,0,0,0.75)",
+        background: "var(--overlay-bg)",
         zIndex: 1000,
         display: "flex",
         alignItems: "flex-end",
@@ -827,7 +806,7 @@ function PostModal({
           if (endY - startY >= 50) onClose();
         }}
         style={{
-          background: "#161616",
+          background: "var(--card-hover)",
           border: "1px solid #2a2a2a",
           borderRadius: "16px 16px 0 0",
           width: "100%",
@@ -854,9 +833,9 @@ function PostModal({
           <button
             onClick={onToggleBookmark}
             style={{
-              background: "#222",
+              background: "var(--card-hover)",
               border: "none",
-              color: bookmarked ? "#F5B942" : "#888",
+              color: bookmarked ? "#F5B942" : "var(--muted)",
               fontSize: 18,
               cursor: "pointer",
               width: 32,
@@ -873,9 +852,9 @@ function PostModal({
           <button
             onClick={onClose}
             style={{
-              background: "#222",
+              background: "var(--card-hover)",
               border: "none",
-              color: "#888",
+              color: "var(--muted)",
               fontSize: 18,
               cursor: "pointer",
               width: 32,
@@ -899,7 +878,7 @@ function PostModal({
           style={{
             fontSize: 20,
             fontWeight: 800,
-            color: "#F0F0F0",
+            color: "var(--text)",
             lineHeight: 1.4,
             marginBottom: 16,
             letterSpacing: "-0.01em",
@@ -913,14 +892,14 @@ function PostModal({
           <p
             style={{
               fontSize: 14,
-              color: "#888",
+              color: "var(--muted)",
               marginBottom: 20,
               lineHeight: 1.6,
               paddingLeft: 12,
               borderLeft: `3px solid ${companyColor}`,
             }}
           >
-            {post.summary}
+            {stripMarkdown(post.summary)}
           </p>
         )}
 
@@ -935,8 +914,8 @@ function PostModal({
         {post.content && (
           <div
             style={{
-              background: "#111",
-              border: "1px solid #222",
+              background: "var(--card)",
+              border: "1px solid var(--border)",
               borderRadius: 8,
               padding: "16px 18px",
               marginBottom: 20,
@@ -946,7 +925,7 @@ function PostModal({
               style={{
                 fontSize: 12,
                 fontWeight: 700,
-                color: "#555",
+                color: "var(--dim)",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 marginBottom: 10,
@@ -954,7 +933,7 @@ function PostModal({
             >
               포스팅 내용
             </p>
-            <p style={{ fontSize: 14, color: "#B0B0B0", lineHeight: 1.8, whiteSpace: "pre-line" }}>{stripMarkdown(post.content || "")}</p>
+            <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{stripMarkdown(post.content || "")}</p>
           </div>
         )}
 
@@ -966,7 +945,7 @@ function PostModal({
             gap: 12,
             marginTop: 24,
             paddingTop: 16,
-            borderTop: "1px solid #242424",
+            borderTop: "1px solid var(--border)",
             flexWrap: "wrap",
           }}
         >
@@ -981,7 +960,7 @@ function PostModal({
           >
             ← 이전
           </button>
-          <span style={{ fontSize: 12, color: "#666", fontVariantNumeric: "tabular-nums" }}>{navigation.positionLabel}</span>
+          <span style={{ fontSize: 12, color: "var(--dim)", fontVariantNumeric: "tabular-nums" }}>{navigation.positionLabel}</span>
           <button
             onClick={navigation.onNext}
             disabled={!navigation.hasNext}
@@ -1115,7 +1094,7 @@ function PostCard({
               borderLeft: `2px solid ${companyColor}40`,
             }}
           >
-            {highlightText(post.summary, searchQuery)}
+            {highlightText(stripMarkdown(post.summary), searchQuery)}
           </p>
         )}
 
@@ -1607,7 +1586,7 @@ function HighlightCard({
         </span>
       </div>
       <p style={{ fontSize: 16, lineHeight: 1.5, color: "var(--text)", fontWeight: 700, margin: "0 0 8px" }}>{post.title}</p>
-      {post.summary && <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--muted)", margin: 0 }}>{post.summary}</p>}
+      {post.summary && <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--muted)", margin: 0 }}>{stripMarkdown(post.summary)}</p>}
     </button>
   );
 }
@@ -1646,8 +1625,8 @@ function WeekDropdown({ currentSlug, currentWeek }: { currentSlug: string; curre
               top: "calc(100% + 8px)",
               left: "50%",
               transform: "translateX(-50%)",
-              background: "#1a1a1a",
-              border: "1px solid #333",
+              background: "var(--surface)",
+              border: "1px solid var(--border2)",
               borderRadius: 8,
               padding: 8,
               zIndex: 100,
@@ -2248,7 +2227,7 @@ export default function WeeklyClient({
             position: "sticky",
             top: 56,
             zIndex: 40,
-            background: "rgba(8,8,8,0.94)",
+            background: "var(--overlay-bg)",
             paddingTop: 12,
             paddingBottom: 12,
             marginBottom: 32,
