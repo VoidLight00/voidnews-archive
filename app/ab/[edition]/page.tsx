@@ -35,53 +35,128 @@ export default async function EditionPage({
   const normals = data.highlights.filter((h) => h.tier === "normal");
 
   return (
-    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+    <main
+      style={{
+        minHeight: "100vh",
+        background: "var(--bg)",
+        color: "var(--text)",
+        fontFamily: "var(--sans)",
+      }}
+    >
       {/* ───── Header ───── */}
-      <header className="border-b border-[var(--border)] px-6 py-10 md:px-12">
-        <div className="mx-auto max-w-5xl">
-          <div className="mono flex items-center gap-3 text-xs text-[var(--muted)]">
-            <Link href="/" className="hover:text-[var(--accent)]">
+      <header
+        style={{
+          borderBottom: "1px solid var(--border)",
+          padding: "40px 24px",
+        }}
+      >
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <div
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: 11,
+              color: "var(--muted)",
+              display: "flex",
+              gap: 10,
+              alignItems: "center",
+              letterSpacing: "0.08em",
+            }}
+          >
+            <Link href="/" style={{ color: "var(--muted)", textDecoration: "none" }}>
               VOIDNEWS
             </Link>
-            <span>/</span>
-            <Link href="/ab" className="hover:text-[var(--accent)]">
+            <span style={{ color: "var(--dim)" }}>/</span>
+            <Link href="/ab" style={{ color: "var(--muted)", textDecoration: "none" }}>
               AB BRIEFING
             </Link>
-            <span>/</span>
-            <span className="text-[var(--text)]">{data.slug}</span>
+            <span style={{ color: "var(--dim)" }}>/</span>
+            <span style={{ color: "var(--text)" }}>{data.slug}</span>
           </div>
 
-          <div className="mono mt-8 flex flex-wrap items-center gap-3 text-xs">
-            <span className="rounded-sm bg-[var(--accent)] px-2 py-0.5 text-[var(--bg)]">
+          <div
+            style={{
+              fontFamily: "var(--mono)",
+              marginTop: 28,
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 10,
+              alignItems: "center",
+              fontSize: 11,
+              letterSpacing: "0.06em",
+            }}
+          >
+            <span
+              style={{
+                background: "var(--accent)",
+                color: "#000",
+                padding: "3px 8px",
+                borderRadius: 2,
+                fontWeight: 700,
+              }}
+            >
               VOL. {String(data.volume).padStart(2, "0")}
             </span>
-            <span className="text-[var(--muted)]">{data.period}</span>
-            <span className="text-[var(--dim)]">·</span>
-            <span className="text-[var(--muted)]">
-              발표일 {data.announceDate}
-            </span>
-            <span className="text-[var(--dim)]">·</span>
-            <span className="text-[var(--muted)]">
+            <span style={{ color: "var(--muted)" }}>{data.period}</span>
+            <span style={{ color: "var(--dim)" }}>·</span>
+            <span style={{ color: "var(--muted)" }}>발표일 {data.announceDate}</span>
+            <span style={{ color: "var(--dim)" }}>·</span>
+            <span style={{ color: "var(--muted)" }}>
               {data.highlights.length} HIGHLIGHTS
+              {data.editorsPicks && data.editorsPicks.length > 0
+                ? ` + ${data.editorsPicks.length} PICK`
+                : ""}
             </span>
           </div>
 
-          <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-6xl">
+          <h1
+            style={{
+              marginTop: 14,
+              fontSize: "clamp(28px, 5vw, 52px)",
+              fontWeight: 700,
+              letterSpacing: "-0.03em",
+              lineHeight: 1.1,
+              color: "var(--text)",
+            }}
+          >
             {data.title}
           </h1>
-          <p className="mono mt-3 text-sm text-[var(--muted)] md:text-base">
+          <p
+            style={{
+              marginTop: 12,
+              fontFamily: "var(--mono)",
+              fontSize: 13,
+              color: "var(--muted)",
+              lineHeight: 1.6,
+            }}
+          >
             {data.theme}
           </p>
         </div>
       </header>
 
       {/* ───── Intro ───── */}
-      <section className="px-6 py-12 md:px-12">
-        <div className="mx-auto max-w-3xl">
-          <div className="mono text-xs uppercase tracking-widest text-[var(--accent)]">
+      <section style={{ padding: "48px 24px" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <div
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: 11,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+            }}
+          >
             ▾ Opening
           </div>
-          <p className="mt-4 whitespace-pre-wrap text-base leading-relaxed md:text-lg">
+          <p
+            style={{
+              marginTop: 16,
+              whiteSpace: "pre-wrap",
+              fontSize: 16,
+              lineHeight: 1.8,
+              color: "var(--text)",
+            }}
+          >
             {data.intro}
           </p>
         </div>
@@ -89,17 +164,25 @@ export default async function EditionPage({
 
       {/* ───── Hero ───── */}
       {hero && (
-        <section className="px-6 py-8 md:px-12">
-          <div className="mx-auto max-w-5xl">
+        <section style={{ padding: "24px", display: "flex", justifyContent: "center" }}>
+          <div style={{ maxWidth: 960, width: "100%" }}>
             <HeroCard item={hero} />
           </div>
         </section>
       )}
 
-      {/* ───── Features (2개) ───── */}
+      {/* ───── Features ───── */}
       {features.length > 0 && (
-        <section className="px-6 py-8 md:px-12">
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+        <section style={{ padding: "24px" }}>
+          <div
+            style={{
+              maxWidth: 960,
+              margin: "0 auto",
+              display: "grid",
+              gap: 20,
+              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+            }}
+          >
             {features.map((h) => (
               <FeatureCard key={h.rank} item={h} />
             ))}
@@ -107,14 +190,29 @@ export default async function EditionPage({
         </section>
       )}
 
-      {/* ───── Normal (나머지) ───── */}
+      {/* ───── Normals ───── */}
       {normals.length > 0 && (
-        <section className="px-6 py-8 md:px-12">
-          <div className="mx-auto max-w-5xl">
-            <div className="mono mb-4 text-xs uppercase tracking-widest text-[var(--muted)]">
+        <section style={{ padding: "24px" }}>
+          <div style={{ maxWidth: 960, margin: "0 auto" }}>
+            <div
+              style={{
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--muted)",
+                marginBottom: 16,
+              }}
+            >
               ▾ More Highlights
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div
+              style={{
+                display: "grid",
+                gap: 16,
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              }}
+            >
               {normals.map((h) => (
                 <NormalCard key={h.rank} item={h} />
               ))}
@@ -125,20 +223,55 @@ export default async function EditionPage({
 
       {/* ───── Editor's Pick ───── */}
       {data.editorsPicks && data.editorsPicks.length > 0 && (
-        <section className="px-6 py-12 md:px-12">
-          <div className="mx-auto max-w-5xl">
-            <div className="mb-6 border-t border-[var(--border2)] pt-8">
-              <div className="mono text-xs uppercase tracking-widest text-[var(--gold)]">
+        <section style={{ padding: "48px 24px 24px" }}>
+          <div style={{ maxWidth: 960, margin: "0 auto" }}>
+            <div
+              style={{
+                borderTop: "1px solid var(--border2)",
+                paddingTop: 28,
+                marginBottom: 20,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: "var(--mono)",
+                  fontSize: 11,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--gold)",
+                }}
+              >
                 🛠 Editor&apos;s Pick
               </div>
-              <h2 className="mono mt-2 text-xl font-semibold text-[var(--text)] md:text-2xl">
+              <h2
+                style={{
+                  fontFamily: "var(--mono)",
+                  marginTop: 8,
+                  fontSize: 20,
+                  fontWeight: 600,
+                  color: "var(--text)",
+                }}
+              >
                 VoidLight 엄선 — 직접 써본 도구·자료
               </h2>
-              <p className="mono mt-1 text-xs text-[var(--muted)]">
+              <p
+                style={{
+                  fontFamily: "var(--mono)",
+                  marginTop: 4,
+                  fontSize: 11,
+                  color: "var(--muted)",
+                }}
+              >
                 VIP 트윗 트랙과 별개로, 큐레이터가 직접 검증한 인프라/도구
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
+            <div
+              style={{
+                display: "grid",
+                gap: 20,
+                gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+              }}
+            >
               {data.editorsPicks.map((pick, i) => (
                 <EditorPickCard key={i} item={pick} />
               ))}
@@ -148,29 +281,81 @@ export default async function EditionPage({
       )}
 
       {/* ───── Closing ───── */}
-      <section className="px-6 py-16 md:px-12">
-        <div className="mx-auto max-w-3xl border-t border-[var(--border)] pt-12">
-          <div className="mono text-xs uppercase tracking-widest text-[var(--accent)]">
+      <section style={{ padding: "48px 24px 72px" }}>
+        <div
+          style={{
+            maxWidth: 720,
+            margin: "0 auto",
+            borderTop: "1px solid var(--border)",
+            paddingTop: 40,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: 11,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+            }}
+          >
             ▾ Closing
           </div>
-          <p className="mt-4 whitespace-pre-wrap text-base leading-relaxed md:text-lg">
+          <p
+            style={{
+              marginTop: 16,
+              whiteSpace: "pre-wrap",
+              fontSize: 16,
+              lineHeight: 1.8,
+              color: "var(--text)",
+            }}
+          >
             {data.closing}
           </p>
         </div>
       </section>
 
       {/* ───── Footer ───── */}
-      <footer className="border-t border-[var(--border)] px-6 py-10 md:px-12">
-        <div className="mono mx-auto flex max-w-5xl flex-col gap-3 text-xs text-[var(--muted)] md:flex-row md:justify-between">
+      <footer
+        style={{
+          borderTop: "1px solid var(--border)",
+          padding: "32px 24px",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 960,
+            margin: "0 auto",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            gap: 12,
+            fontFamily: "var(--mono)",
+            fontSize: 11,
+            color: "var(--muted)",
+          }}
+        >
           <div>
-            커버 주차: {data.coveredWeeks.map((w) => (
-              <Link key={w} href={`/${w}`} className="mx-1 underline hover:text-[var(--accent)]">
+            커버 주차:{" "}
+            {data.coveredWeeks.map((w) => (
+              <Link
+                key={w}
+                href={`/${w}`}
+                style={{
+                  margin: "0 4px",
+                  color: "var(--muted)",
+                  textDecoration: "underline",
+                }}
+              >
                 {w}
               </Link>
             ))}
           </div>
           <div>
-            <Link href="/ab" className="hover:text-[var(--accent)]">
+            <Link
+              href="/ab"
+              style={{ color: "var(--muted)", textDecoration: "none" }}
+            >
               ← AB 발표 목록
             </Link>
           </div>
@@ -181,77 +366,207 @@ export default async function EditionPage({
 }
 
 /* ════════════════════════════════════════════════════════════
-   카드 컴포넌트
+   카드 컴포넌트 (inline style)
 ═══════════════════════════════════════════════════════════════ */
 
 function RankBadge({ rank, tier }: { rank: number; tier: string }) {
-  const medal = rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null;
+  const medal =
+    rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null;
   return (
-    <span className="mono inline-flex items-center gap-2 text-xs text-[var(--muted)]">
-      {medal && <span className="text-lg">{medal}</span>}
-      <span className="rounded-sm border border-[var(--border2)] px-2 py-0.5">
+    <span
+      style={{
+        fontFamily: "var(--mono)",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        fontSize: 11,
+        color: "var(--muted)",
+      }}
+    >
+      {medal && <span style={{ fontSize: 18 }}>{medal}</span>}
+      <span
+        style={{
+          border: "1px solid var(--border2)",
+          borderRadius: 2,
+          padding: "2px 8px",
+        }}
+      >
         #{String(rank).padStart(2, "0")}
       </span>
-      <span className="uppercase tracking-widest text-[var(--dim)]">{tier}</span>
+      <span
+        style={{
+          textTransform: "uppercase",
+          letterSpacing: "0.12em",
+          color: "var(--dim)",
+        }}
+      >
+        {tier}
+      </span>
     </span>
   );
 }
 
 function CompanyTag({ name }: { name: string }) {
   return (
-    <span className="mono text-xs text-[var(--muted)]">
+    <span
+      style={{
+        fontFamily: "var(--mono)",
+        fontSize: 11,
+        color: "var(--muted)",
+      }}
+    >
       {name}
     </span>
   );
 }
 
+function TagList({ tags, limit = 8 }: { tags?: string[]; limit?: number }) {
+  if (!tags || tags.length === 0) return null;
+  return (
+    <>
+      {tags.slice(0, limit).map((tag) => (
+        <span
+          key={tag}
+          style={{
+            fontFamily: "var(--mono)",
+            fontSize: 11,
+            color: "var(--dim)",
+          }}
+        >
+          #{tag}
+        </span>
+      ))}
+    </>
+  );
+}
+
+function OriginalLink({ url }: { url: string }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        marginLeft: "auto",
+        fontFamily: "var(--mono)",
+        fontSize: 11,
+        color: "var(--accent)",
+        textDecoration: "none",
+      }}
+    >
+      원문 →
+    </a>
+  );
+}
+
 function HeroCard({ item }: { item: ABHighlight }) {
   return (
-    <article className="border-2 border-[var(--accent)] bg-[var(--card)] p-8 md:p-12">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+    <article
+      style={{
+        border: "2px solid var(--accent)",
+        background: "var(--card)",
+        padding: 32,
+        borderRadius: 2,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 12,
+        }}
+      >
         <RankBadge rank={item.rank} tier={item.tier} />
         <CompanyTag name={item.sourceCompany} />
       </div>
 
-      <h2 className="mt-6 text-3xl font-bold leading-tight md:text-5xl">
+      <h2
+        style={{
+          marginTop: 20,
+          fontSize: "clamp(24px, 4vw, 40px)",
+          fontWeight: 700,
+          letterSpacing: "-0.02em",
+          lineHeight: 1.15,
+          color: "var(--text)",
+        }}
+      >
         {item.post.title}
       </h2>
 
       {item.keyQuote && (
-        <blockquote className="mono mt-6 border-l-4 border-[var(--accent)] pl-4 text-base italic text-[var(--text)] md:text-xl">
+        <blockquote
+          style={{
+            fontFamily: "var(--mono)",
+            marginTop: 24,
+            borderLeft: "4px solid var(--accent)",
+            paddingLeft: 16,
+            fontSize: 16,
+            fontStyle: "italic",
+            color: "var(--text)",
+            lineHeight: 1.5,
+          }}
+        >
           &ldquo;{item.keyQuote}&rdquo;
         </blockquote>
       )}
 
-      <p className="mt-6 whitespace-pre-wrap text-sm leading-relaxed text-[var(--text)] md:text-base">
+      <p
+        style={{
+          marginTop: 24,
+          whiteSpace: "pre-wrap",
+          fontSize: 14,
+          lineHeight: 1.8,
+          color: "var(--text)",
+        }}
+      >
         {item.post.content}
       </p>
 
       {item.editorial && (
-        <aside className="mt-8 border-t border-[var(--border)] pt-6">
-          <div className="mono mb-2 text-xs uppercase tracking-widest text-[var(--accent)]">
+        <aside
+          style={{
+            marginTop: 28,
+            borderTop: "1px solid var(--border)",
+            paddingTop: 20,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "var(--mono)",
+              marginBottom: 8,
+              fontSize: 11,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+            }}
+          >
             ▾ Editor&apos;s Note
           </div>
-          <p className="text-sm leading-relaxed text-[var(--muted)] md:text-base">
+          <p
+            style={{
+              fontSize: 14,
+              lineHeight: 1.8,
+              color: "var(--muted)",
+            }}
+          >
             {item.editorial}
           </p>
         </aside>
       )}
 
-      <div className="mono mt-8 flex flex-wrap items-center gap-4 text-xs">
-        {item.post.tags?.map((tag) => (
-          <span key={tag} className="text-[var(--dim)]">
-            #{tag}
-          </span>
-        ))}
-        <a
-          href={item.post.officialUrl || item.post.source}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto text-[var(--accent)] hover:underline"
-        >
-          원문 →
-        </a>
+      <div
+        style={{
+          marginTop: 28,
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: 14,
+        }}
+      >
+        <TagList tags={item.post.tags} />
+        <OriginalLink url={item.post.officialUrl || item.post.source || "#"} />
       </div>
     </article>
   );
@@ -259,103 +574,101 @@ function HeroCard({ item }: { item: ABHighlight }) {
 
 function FeatureCard({ item }: { item: ABHighlight }) {
   return (
-    <article className="flex flex-col border border-[var(--border)] bg-[var(--card)] p-6 transition hover:border-[var(--accent)]">
-      <div className="flex items-center justify-between gap-3">
+    <article
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        border: "1px solid var(--border)",
+        background: "var(--card)",
+        padding: 24,
+        borderRadius: 2,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 12,
+        }}
+      >
         <RankBadge rank={item.rank} tier={item.tier} />
         <CompanyTag name={item.sourceCompany} />
       </div>
 
-      <h3 className="mt-4 text-xl font-semibold leading-tight md:text-2xl">
+      <h3
+        style={{
+          marginTop: 16,
+          fontSize: 20,
+          fontWeight: 600,
+          lineHeight: 1.25,
+          color: "var(--text)",
+        }}
+      >
         {item.post.title}
       </h3>
 
       {item.keyQuote && (
-        <blockquote className="mono mt-4 border-l-2 border-[var(--accent)] pl-3 text-sm italic text-[var(--muted)]">
+        <blockquote
+          style={{
+            fontFamily: "var(--mono)",
+            marginTop: 14,
+            borderLeft: "2px solid var(--accent)",
+            paddingLeft: 12,
+            fontSize: 13,
+            fontStyle: "italic",
+            color: "var(--muted)",
+            lineHeight: 1.5,
+          }}
+        >
           &ldquo;{item.keyQuote}&rdquo;
         </blockquote>
       )}
 
-      <p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-[var(--text)]">
+      <p
+        style={{
+          marginTop: 14,
+          whiteSpace: "pre-wrap",
+          fontSize: 13,
+          lineHeight: 1.8,
+          color: "var(--text)",
+        }}
+      >
         {item.post.content}
       </p>
 
       {item.editorial && (
-        <aside className="mt-4 border-t border-[var(--border)] pt-4">
-          <p className="text-xs leading-relaxed text-[var(--muted)]">
+        <aside
+          style={{
+            marginTop: 14,
+            borderTop: "1px solid var(--border)",
+            paddingTop: 14,
+          }}
+        >
+          <p
+            style={{
+              fontSize: 12,
+              lineHeight: 1.75,
+              color: "var(--muted)",
+            }}
+          >
             {item.editorial}
           </p>
         </aside>
       )}
 
-      <div className="mono mt-auto flex flex-wrap items-center gap-3 pt-4 text-xs">
-        {item.post.tags?.slice(0, 3).map((tag) => (
-          <span key={tag} className="text-[var(--dim)]">
-            #{tag}
-          </span>
-        ))}
-        <a
-          href={item.post.officialUrl || item.post.source}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto text-[var(--accent)] hover:underline"
-        >
-          원문 →
-        </a>
-      </div>
-    </article>
-  );
-}
-
-function EditorPickCard({ item }: { item: ABEditorPick }) {
-  return (
-    <article className="flex flex-col border-l-4 border-[var(--gold)] border-y border-r border-[var(--border)] bg-[var(--card)] p-6 transition hover:bg-[var(--card-hover)]">
-      <div className="mono flex items-center gap-2 text-xs">
-        <span className="rounded-sm bg-[var(--gold)] px-2 py-0.5 text-[var(--bg)]">
-          🛠 PICK
-        </span>
-        <span className="text-[var(--muted)]">{item.category}</span>
-      </div>
-
-      <h3 className="mt-4 text-xl font-bold leading-tight md:text-2xl">
-        {item.title}
-      </h3>
-      {item.subtitle && (
-        <p className="mono mt-1 text-sm text-[var(--muted)]">{item.subtitle}</p>
-      )}
-
-      <p className="mono mt-4 border-l-2 border-[var(--gold)] pl-3 text-sm text-[var(--text)]">
-        {item.summary}
-      </p>
-
-      <p className="mt-4 whitespace-pre-wrap text-sm leading-relaxed text-[var(--text)]">
-        {item.body}
-      </p>
-
-      {item.editorial && (
-        <aside className="mt-4 border-t border-[var(--border)] pt-4">
-          <div className="mono mb-2 text-xs uppercase tracking-widest text-[var(--gold)]">
-            ▾ Editor&apos;s Note
-          </div>
-          <p className="text-xs leading-relaxed text-[var(--muted)] md:text-sm">
-            {item.editorial}
-          </p>
-        </aside>
-      )}
-
-      <div className="mono mt-auto flex flex-wrap items-center gap-3 pt-4 text-xs">
-        {item.tags?.slice(0, 5).map((tag) => (
-          <span key={tag} className="text-[var(--dim)]">
-            #{tag}
-          </span>
-        ))}
-        <a
-          href={item.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ml-auto rounded-sm bg-[var(--gold)] px-3 py-1 text-[var(--bg)] hover:opacity-90"
-        >
-          {item.sourceLabel || "시작하기 →"}
-        </a>
+      <div
+        style={{
+          marginTop: "auto",
+          paddingTop: 14,
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: 10,
+        }}
+      >
+        <TagList tags={item.post.tags} limit={4} />
+        <OriginalLink url={item.post.officialUrl || item.post.source || "#"} />
       </div>
     </article>
   );
@@ -363,41 +676,237 @@ function EditorPickCard({ item }: { item: ABEditorPick }) {
 
 function NormalCard({ item }: { item: ABHighlight }) {
   return (
-    <article className="flex flex-col border border-[var(--border)] bg-[var(--card)] p-5 transition hover:border-[var(--accent)]">
-      <div className="flex items-center justify-between gap-3">
+    <article
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        border: "1px solid var(--border)",
+        background: "var(--card)",
+        padding: 20,
+        borderRadius: 2,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 10,
+        }}
+      >
         <RankBadge rank={item.rank} tier={item.tier} />
         <CompanyTag name={item.sourceCompany} />
       </div>
 
-      <h3 className="mt-3 text-base font-semibold leading-snug md:text-lg">
+      <h3
+        style={{
+          marginTop: 12,
+          fontSize: 16,
+          fontWeight: 600,
+          lineHeight: 1.35,
+          color: "var(--text)",
+        }}
+      >
         {item.post.title}
       </h3>
 
-      <p className="mt-3 whitespace-pre-wrap text-sm leading-relaxed text-[var(--muted)]">
+      <p
+        style={{
+          marginTop: 12,
+          whiteSpace: "pre-wrap",
+          fontSize: 13,
+          lineHeight: 1.75,
+          color: "var(--muted)",
+        }}
+      >
         {item.post.content}
       </p>
 
       {item.editorial && (
-        <aside className="mt-3 border-t border-[var(--border)] pt-3">
-          <p className="text-xs leading-relaxed text-[var(--dim)]">
+        <aside
+          style={{
+            marginTop: 12,
+            borderTop: "1px solid var(--border)",
+            paddingTop: 12,
+          }}
+        >
+          <p
+            style={{
+              fontSize: 11,
+              lineHeight: 1.7,
+              color: "var(--dim)",
+            }}
+          >
             {item.editorial}
           </p>
         </aside>
       )}
 
-      <div className="mono mt-auto flex flex-wrap items-center gap-2 pt-3 text-xs">
-        {item.post.tags?.slice(0, 3).map((tag) => (
-          <span key={tag} className="text-[var(--dim)]">
-            #{tag}
-          </span>
-        ))}
+      <div
+        style={{
+          marginTop: "auto",
+          paddingTop: 12,
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: 8,
+        }}
+      >
+        <TagList tags={item.post.tags} limit={3} />
+        <OriginalLink url={item.post.officialUrl || item.post.source || "#"} />
+      </div>
+    </article>
+  );
+}
+
+function EditorPickCard({ item }: { item: ABEditorPick }) {
+  return (
+    <article
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        borderLeft: "4px solid var(--gold)",
+        borderTop: "1px solid var(--border)",
+        borderRight: "1px solid var(--border)",
+        borderBottom: "1px solid var(--border)",
+        background: "var(--card)",
+        padding: 24,
+        borderRadius: 2,
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "var(--mono)",
+          display: "flex",
+          alignItems: "center",
+          gap: 10,
+          fontSize: 11,
+        }}
+      >
+        <span
+          style={{
+            background: "var(--gold)",
+            color: "#000",
+            padding: "3px 8px",
+            borderRadius: 2,
+            fontWeight: 700,
+          }}
+        >
+          🛠 PICK
+        </span>
+        <span style={{ color: "var(--muted)" }}>{item.category}</span>
+      </div>
+
+      <h3
+        style={{
+          marginTop: 14,
+          fontSize: 22,
+          fontWeight: 700,
+          lineHeight: 1.2,
+          color: "var(--text)",
+        }}
+      >
+        {item.title}
+      </h3>
+      {item.subtitle && (
+        <p
+          style={{
+            fontFamily: "var(--mono)",
+            marginTop: 4,
+            fontSize: 13,
+            color: "var(--muted)",
+          }}
+        >
+          {item.subtitle}
+        </p>
+      )}
+
+      <p
+        style={{
+          fontFamily: "var(--mono)",
+          marginTop: 14,
+          borderLeft: "2px solid var(--gold)",
+          paddingLeft: 12,
+          fontSize: 13,
+          color: "var(--text)",
+          lineHeight: 1.6,
+        }}
+      >
+        {item.summary}
+      </p>
+
+      <p
+        style={{
+          marginTop: 14,
+          whiteSpace: "pre-wrap",
+          fontSize: 13,
+          lineHeight: 1.8,
+          color: "var(--text)",
+        }}
+      >
+        {item.body}
+      </p>
+
+      {item.editorial && (
+        <aside
+          style={{
+            marginTop: 14,
+            borderTop: "1px solid var(--border)",
+            paddingTop: 14,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "var(--mono)",
+              marginBottom: 6,
+              fontSize: 11,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--gold)",
+            }}
+          >
+            ▾ Editor&apos;s Note
+          </div>
+          <p
+            style={{
+              fontSize: 12,
+              lineHeight: 1.75,
+              color: "var(--muted)",
+            }}
+          >
+            {item.editorial}
+          </p>
+        </aside>
+      )}
+
+      <div
+        style={{
+          marginTop: "auto",
+          paddingTop: 14,
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          gap: 10,
+        }}
+      >
+        <TagList tags={item.tags} limit={5} />
         <a
-          href={item.post.officialUrl || item.post.source}
+          href={item.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-auto text-[var(--accent)] hover:underline"
+          style={{
+            marginLeft: "auto",
+            fontFamily: "var(--mono)",
+            fontSize: 12,
+            background: "var(--gold)",
+            color: "#000",
+            padding: "6px 12px",
+            borderRadius: 2,
+            textDecoration: "none",
+            fontWeight: 700,
+          }}
         >
-          원문 →
+          {item.sourceLabel || "시작하기 →"}
         </a>
       </div>
     </article>
