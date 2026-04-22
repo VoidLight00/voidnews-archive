@@ -11,7 +11,7 @@ export const week16: WeeklyData = {
   year: 2026,
   slug: "2026-w16",
   period: "4/13 ~ 4/22",
-  totalPosts: 33,
+  totalPosts: 34,
   companies: [
     {
       name: "Anthropic / Claude",
@@ -108,16 +108,6 @@ export const week16: WeeklyData = {
           source: "https://polymarket.com/event/gpt-5pt5-released-by",
           tags: ["도구릴리스", "text", "image", "audio", "openai", "polymarket"],
         },
-        {
-          date: "4/18",
-          platform: "X",
-          title: "@choi.openai Threads — OpenAI 소식 한국어 큐레이터 (팔로워 23.8만)",
-          summary: "한국어로 OpenAI·AI 관련 뉴스를 정리하는 Threads 계정. 프로필에 \"오픈AI 직원 아님\" 명시. 팔로워 238k 규모.",
-          content: "한국어로 OpenAI·AI 관련 뉴스를 정리하는 Threads 계정. 프로필에 \"오픈AI 직원 아님\" 명시. 팔로워 238k 규모.",
-          officialUrl: "https://www.threads.com/@choi.openai",
-          source: "https://www.threads.com/@choi.openai",
-          tags: ["프롬프트디자인", "image", "text", "openai", "community"],
-        },
       ],
     },
     {
@@ -177,6 +167,28 @@ export const week16: WeeklyData = {
       name: "로컬 AI / 하드웨어",
       color: "#8B5CF6",
       posts: [
+        {
+          date: "4/22",
+          platform: "X",
+          title: "Qwen3.6-27B Dense — SWE-Bench Verified 77.2%, 262K 컨텍스트 (Apache-2.0, 4/22)",
+          featured: true,
+          summary: "Qwen3.6 시리즈의 Dense 27B 모델 (hidden 5120, 64 layers). 35B-A3B MoE와 병렬 공개. SWE-Bench Verified 77.2%, Terminal-Bench 2.0 59.3%, AIME26 94.1%, GPQA Diamond 87.8%. 262K 토큰 네이티브 지원, Agent",
+          content: "Qwen3.6 시리즈의 Dense 27B 모델 (hidden 5120, 64 layers). 35B-A3B MoE와 병렬 공개. SWE-Bench Verified 77.2%, Terminal-Bench 2.0 59.3%, AIME26 94.1%, GPQA Diamond 87.8%. 262K 토큰 네이티브 지원, Agentic Coding + Thinking Preservation + 비전-언어 통합. Apache-2.0 오픈소스. FP8 변형 동시 공개.",
+          officialUrl: "https://huggingface.co/Qwen/Qwen3.6-27B",
+          source: "https://huggingface.co/Qwen/Qwen3.6-27B",
+          tags: ["도구릴리스", "text", "code", "image", "alibaba"],
+        },
+        {
+          date: "4/20",
+          platform: "X",
+          title: "Kimi K2.6 (Moonshot) — 1T MoE 멀티모달 + Agent Swarm 300 sub-agents (Modified MIT, 4/20)",
+          featured: true,
+          summary: "Moonshot AI의 플래그십. 1T 총 파라미터 / 32B activated, 384 전문가(토큰당 8개 선택) MoE. MoonViT 비전 인코더(400M) 네이티브 멀티모달, 256K 컨텍스트. K2.5 대비: SWE-Bench Pro 58.6 (+7.9), HLE w/tools 54.0 (+3.8), Browse",
+          content: "Moonshot AI의 플래그십. 1T 총 파라미터 / 32B activated, 384 전문가(토큰당 8개 선택) MoE. MoonViT 비전 인코더(400M) 네이티브 멀티모달, 256K 컨텍스트. K2.5 대비: SWE-Bench Pro 58.6 (+7.9), HLE w/tools 54.0 (+3.8), BrowseComp Agent Swarm 86.3 (+11.4), AIME 2026 96.4. 신규 역량: Agent Swarm 300 sub-agents·4000 coordinated steps, 24/7 자율 백그라운드 실행. Modified MIT 라이선스 오픈소스.",
+          officialUrl: "https://huggingface.co/moonshotai/Kimi-K2.6",
+          source: "https://huggingface.co/moonshotai/Kimi-K2.6",
+          tags: ["도구릴리스", "text", "code", "image", "moonshot"],
+        },
         {
           date: "4/16",
           platform: "X",
