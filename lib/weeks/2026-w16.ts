@@ -11,7 +11,7 @@ export const week16: WeeklyData = {
   year: 2026,
   slug: "2026-w16",
   period: "4/13 ~ 4/22",
-  totalPosts: 32,
+  totalPosts: 33,
   companies: [
     {
       name: "Anthropic / Claude",
@@ -411,6 +411,17 @@ export const week16: WeeklyData = {
           officialUrl: "https://www.acmicpc.net/board/view/165799",
           source: "https://www.acmicpc.net/board/view/165799",
           tags: ["수익화사례", "text", "korea"],
+        },
+        {
+          date: "4/15",
+          platform: "X",
+          title: "CodeBurn — Claude Code·Codex·Cursor 토큰/비용 TUI 대시보드 (MIT, 3.3k★)",
+          featured: true,
+          summary: "대화/코딩/탐색/디버깅 활동별, 프로젝트별, 모델별(Sonnet/Haiku/Opus)로 토큰 사용량을 분해해 보여주는 오픈소스 TUI 대시보드. Daily Activity 그래프, MCP·플러그인·Playwright 등 도구별 토큰 소모 표시. Claude Code·Codex·Cursor 모두 지원. v0.8.8 (202",
+          content: "대화/코딩/탐색/디버깅 활동별, 프로젝트별, 모델별(Sonnet/Haiku/Opus)로 토큰 사용량을 분해해 보여주는 오픈소스 TUI 대시보드. Daily Activity 그래프, MCP·플러그인·Playwright 등 도구별 토큰 소모 표시. Claude Code·Codex·Cursor 모두 지원. v0.8.8 (2026-04-22), 332 커밋, 3.3k★. 인사이트: \"대화 63% · 코딩 16%\" — 실제 코딩보다 대화(프롬프트/응답)에 토큰이 더 쓰인다. claude-dashboard(상태바)와 상호보완.",
+          officialUrl: "https://github.com/AgentSeal/codeburn",
+          source: "https://github.com/AgentSeal/codeburn",
+          tags: ["도구릴리스", "code", "community"],
         },
       ],
     },
