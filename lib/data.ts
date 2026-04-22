@@ -1,4 +1,5 @@
 import { week15 } from "./weeks/2026-w15";
+import { week16 } from "./weeks/2026-w16";
 
 export interface Post {
   date: string;
@@ -30,6 +31,7 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week16,
   week15,
   {
     week: 13,
