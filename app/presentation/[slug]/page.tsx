@@ -122,7 +122,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
                 </p>
               )}
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2 mb-3">
                 {post.officialUrl && (
                   <a
                     href={post.officialUrl}
@@ -134,19 +134,32 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
                     <span aria-hidden>↗</span>
                   </a>
                 )}
-                {post.tags && post.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-1.5">
-                    {post.tags.slice(0, 5).map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-0.5 rounded text-xs text-neutral-400 bg-neutral-900 border border-neutral-800"
-                      >
-                        {formatTag(tag)}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                {post.backupUrls?.map(({ label, url }) => (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-800 text-neutral-100 text-sm font-medium hover:bg-neutral-700 border border-neutral-700 transition"
+                  >
+                    {label}
+                    <span aria-hidden>↗</span>
+                  </a>
+                ))}
               </div>
+
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {post.tags.slice(0, 5).map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-0.5 rounded text-xs text-neutral-400 bg-neutral-900 border border-neutral-800"
+                    >
+                      {formatTag(tag)}
+                    </span>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </section>

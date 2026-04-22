@@ -10,6 +10,7 @@ export interface Post {
   content?: string;      // 전문 / 포스팅 본문
   source?: string;       // 원본 소스 URL (블로그/기사)
   officialUrl?: string;  // 공식 계정 트윗/게시글 URL (이미지·영상 포함)
+  backupUrls?: { label: string; url: string }[]; // 보조 공식 링크 (벤치마크·문서·콘솔 등)
   threadsUrl?: string;   // 현님 Threads 포스팅
   xUrl?: string;         // 현님 X 포스팅
   tags?: string[];
