@@ -10,8 +10,8 @@ export const week16: WeeklyData = {
   week: 16,
   year: 2026,
   slug: "2026-w16",
-  period: "4/13 ~ 4/22",
-  totalPosts: 34,
+  period: "4/13 ~ 4/23",
+  totalPosts: 37,
   companies: [
     {
       name: "Anthropic / Claude",
@@ -114,6 +114,28 @@ export const week16: WeeklyData = {
       name: "Google / DeepMind",
       color: "#4285F4",
       posts: [
+        {
+          date: "4/23",
+          platform: "X",
+          title: "Google Gemini Enterprise Agent Platform — Vertex AI 진화판, 200+ 모델 에이전트 빌드/거버넌스 (Cloud Next '26, 4/23)",
+          featured: true,
+          summary: "Vertex AI의 진화판. Build(Agent Studio·ADK) + Scale(Agent Runtime·Memory Bank·멀티데이 워크플로우) + Govern(Agent Identity·Registry·Gateway·Model Armor) + Optimize(Simulation·Evaluation·Observa",
+          content: "Vertex AI의 진화판. Build(Agent Studio·ADK) + Scale(Agent Runtime·Memory Bank·멀티데이 워크플로우) + Govern(Agent Identity·Registry·Gateway·Model Armor) + Optimize(Simulation·Evaluation·Observability) 4축 통합 플랫폼. Gemini 3.1 Pro, Gemma 4, Claude Opus/Sonnet/Haiku 등 200+ 모델 지원. Burns & McDonnell, Comcast, PayPal, L'Oréal 실제 배포. 저자: Michael Gerstenhaber (VP Cloud AI) & Michael Bachman.",
+          officialUrl: "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform",
+          source: "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform",
+          tags: ["에이전트자동화", "text", "code", "google"],
+        },
+        {
+          date: "4/23",
+          platform: "X",
+          title: "Google Workspace Intelligence — 메일·채팅·파일·프로젝트 AI 맥락 통합 + Ask Gemini in Chat (Cloud Next '26, 4/23)",
+          featured: true,
+          summary: "Workspace 전반의 분산된 이메일·채팅·파일을 연결해 \"unified real-time understanding for agentic work\"를 제공하는 신규 레이어. Ask Gemini in Chat (태스크 관리), Sheets/Docs/Slides 자연어 생성, AI Inbox (이메일 우선순위 자동화). 데",
+          content: "Workspace 전반의 분산된 이메일·채팅·파일을 연결해 \"unified real-time understanding for agentic work\"를 제공하는 신규 레이어. Ask Gemini in Chat (태스크 관리), Sheets/Docs/Slides 자연어 생성, AI Inbox (이메일 우선순위 자동화). 데이터는 사용자 소유, Workspace 인프라 내 처리, 관리자 거버넌스 통제. 일부 기능 수주 내 롤아웃, 일부는 프리뷰. 저자: Yulie Kwon Kim.",
+          officialUrl: "https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence",
+          source: "https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence",
+          tags: ["워크플로우", "text", "google"],
+        },
         {
           date: "4/17",
           platform: "X",
@@ -323,6 +345,16 @@ export const week16: WeeklyData = {
       name: "기타",
       color: "#6B7280",
       posts: [
+        {
+          date: "4/22",
+          platform: "X",
+          title: "Atomic Bot × Hermes Agent — 1분 원클릭 설치로 24/7 자율 에이전트 실행 (Mac·Windows·Web, 4/22)",
+          summary: "Nous Research Hermes Agent를 터미널·Docker·SSH 없이 1분 만에 실행 가능하게 만든 래퍼. 로컬 모델(Qwen, Gemma via Ollama) + 클라우드 API 키 동시 지원, 세션 간 지속 메모리. 네이티브 대시보드·파일 탐색기·로그 UI. 100+ 앱 연동(Gmail, Slack, Di",
+          content: "Nous Research Hermes Agent를 터미널·Docker·SSH 없이 1분 만에 실행 가능하게 만든 래퍼. 로컬 모델(Qwen, Gemma via Ollama) + 클라우드 API 키 동시 지원, 세션 간 지속 메모리. 네이티브 대시보드·파일 탐색기·로그 UI. 100+ 앱 연동(Gmail, Slack, Discord, Figma, GitHub). Mac/Windows/Web 정식 출시, iOS 준비 중. 클라우드·로컬 둘 다 데이터 암호화. MIT 오픈소스.",
+          officialUrl: "https://atomicbot.ai/hermes",
+          source: "https://atomicbot.ai/hermes",
+          tags: ["에이전트자동화", "text", "code", "community"],
+        },
         {
           date: "4/15",
           platform: "X",
