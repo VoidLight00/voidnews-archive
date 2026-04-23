@@ -41,6 +41,7 @@ export const edition2026_04b: ABEdition = {
         backupUrls: [
           { label: "Arena 벤치마크", url: "https://arena.ai/leaderboard/text-to-image" },
           { label: "OpenAI 공식", url: "https://openai.com/index/images-2-0/" },
+          { label: "GPT Image 2.0 아카이브 (제작)", url: "https://gptimage2-0.vercel.app/" },
         ],
         tags: ["OpenAI", "이미지생성", "Arena1위", "구스벤치마크", "한국어렌더링"],
       },
