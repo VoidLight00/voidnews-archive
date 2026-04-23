@@ -38,9 +38,6 @@ export const edition2026_04b: ABEdition = {
           "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/",
         source:
           "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/",
-        image: "/goose-ducttape.png",
-        imageCaption:
-          '🧪 구스 벤치마크 — 마블 Captain Marvel의 Flerken "Goose"를 덕테이프로 감싼 실사 프롬프트 (GPT Image 2.0 생성)',
         backupUrls: [
           { label: "Arena 벤치마크", url: "https://arena.ai/leaderboard/text-to-image" },
           { label: "OpenAI 공식", url: "https://openai.com/index/images-2-0/" },

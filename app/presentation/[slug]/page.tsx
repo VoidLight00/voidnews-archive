@@ -116,22 +116,6 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
                 {post.title}
               </h2>
 
-              {post.image && (
-                <figure className="mb-5 -mx-1">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={post.image}
-                    alt={post.imageCaption ?? post.title}
-                    className="w-full max-h-[420px] object-contain rounded-lg border border-neutral-800 bg-neutral-950"
-                  />
-                  {post.imageCaption && (
-                    <figcaption className="mt-2 text-xs text-neutral-500 text-center">
-                      {post.imageCaption}
-                    </figcaption>
-                  )}
-                </figure>
-              )}
-
               {post.summary && (
                 <p className="text-neutral-300 leading-relaxed mb-5">
                   {post.summary}

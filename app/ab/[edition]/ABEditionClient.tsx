@@ -588,39 +588,6 @@ function HeroCard({
         {stripMarkdown(item.post.title)}
       </h2>
 
-      {item.post.image && (
-        <figure style={{ margin: "24px 0 0" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={item.post.image}
-            alt={item.post.imageCaption ?? item.post.title}
-            style={{
-              width: "100%",
-              maxHeight: 540,
-              objectFit: "contain",
-              background: "var(--bg)",
-              border: "1px solid var(--border)",
-              borderRadius: 2,
-              display: "block",
-            }}
-          />
-          {item.post.imageCaption && (
-            <figcaption
-              style={{
-                fontFamily: "var(--mono)",
-                marginTop: 10,
-                fontSize: 12,
-                color: "var(--muted)",
-                textAlign: "center",
-                lineHeight: 1.5,
-              }}
-            >
-              {item.post.imageCaption}
-            </figcaption>
-          )}
-        </figure>
-      )}
-
       {item.keyQuote && (
         <blockquote
           style={{
