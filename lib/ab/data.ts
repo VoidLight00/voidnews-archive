@@ -60,8 +60,9 @@ export interface ABEdition {
 }
 
 import { edition2026_04a } from "./editions/2026-04a";
+import { edition2026_04b } from "./editions/2026-04b";
 
-export const editions: ABEdition[] = [edition2026_04a];
+export const editions: ABEdition[] = [edition2026_04b, edition2026_04a];
 
 export function getEdition(slug: string): ABEdition | undefined {
   return editions.find((e) => e.slug === slug);
