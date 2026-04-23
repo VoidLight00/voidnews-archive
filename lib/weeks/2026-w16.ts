@@ -96,10 +96,10 @@ export const week16: WeeklyData = {
         {
           date: "4/22",
           platform: "X",
-          title: "GPT Image 2.0 (gpt-image-2) 출시 — Text-to-Image Arena 1512점 압도적 1위 + 한국어 비라틴 문자 렌더링",
+          title: "GPT Image 2.0 (gpt-image-2) 출시 — Arena 1512점 1위 + \"구스 벤치마크\" 통과",
           featured: true,
-          summary: "ChatGPT + Codex 전 사용자 공개. 2K 해상도, 텍스트·아이콘·UI 요소 렌더링 강화로 메뉴판·인포그래픽 수준 텍스트 이미지 실사용 가능. 한국어·일본어·힌디어·벵골어 등 비라틴 문자 렌더링 개선. 웹 검색 + 다중 이미지 생성 지원. 【Text-to-Image Arena 2026-04-19 기준】 gpt-i",
-          content: "ChatGPT + Codex 전 사용자 공개. 2K 해상도, 텍스트·아이콘·UI 요소 렌더링 강화로 메뉴판·인포그래픽 수준 텍스트 이미지 실사용 가능. 한국어·일본어·힌디어·벵골어 등 비라틴 문자 렌더링 개선. 웹 검색 + 다중 이미지 생성 지원. 【Text-to-Image Arena 2026-04-19 기준】 gpt-image-2 (medium) 1512±8점으로 1위 (15,127 votes) — 2위 Gemini 3.1 Flash Image (1270) 대비 +242, 전임 gpt-image-1.5-high-fidelity (1241) 대비 +271. 유료 사용자 고급 출력. (출처: TechCrunch 2026-04-21 / 공식 OpenAI 페이지는 403)",
+          summary: "🧪 구스 벤치마크(Goose Benchmark): 제가 좋아하는 마블 캐릭터 \"구스(Goose)\"를 덕테이프로 감싼 실사 이미지 테스트. Captain Marvel에 등장하는 Flerken(외계 고양이)이라는 가상 생물인데, GPT Image 2.0이 처음으로 실사 스타일로 정확히 표현해냈습니다. 실존하지 않는 상상의 매",
+          content: "🧪 구스 벤치마크(Goose Benchmark): 제가 좋아하는 마블 캐릭터 \"구스(Goose)\"를 덕테이프로 감싼 실사 이미지 테스트. Captain Marvel에 등장하는 Flerken(외계 고양이)이라는 가상 생물인데, GPT Image 2.0이 처음으로 실사 스타일로 정확히 표현해냈습니다. 실존하지 않는 상상의 매개체일수록 AI 이미지 모델이 취약해지는 약점을 일부러 겨냥한 프롬프트였는데, 이번 모델이 그 한계를 제대로 돌파했습니다. ── ChatGPT + Codex 전 사용자 공개. 2K 해상도, 텍스트·아이콘·UI 요소 렌더링 강화. 한국어·일본어·힌디어·벵골어 등 비라틴 문자 렌더링 개선. 【Text-to-Image Arena 2026-04-19】 gpt-image-2 (medium) 1512±8점 1위 (15,127 votes) — 2위 Gemini 3.1 Flash Image (1270) 대비 +242, 전임 gpt-image-1.5 (1241) 대비 +271.",
           officialUrl: "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/",
           source: "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/",
           backupUrls: [{ label: "Arena 벤치마크", url: "https://arena.ai/leaderboard/text-to-image" }],

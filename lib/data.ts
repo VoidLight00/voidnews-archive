@@ -11,6 +11,8 @@ export interface Post {
   source?: string;       // 원본 소스 URL (블로그/기사)
   officialUrl?: string;  // 공식 계정 트윗/게시글 URL (이미지·영상 포함)
   backupUrls?: { label: string; url: string }[]; // 보조 공식 링크 (벤치마크·문서·콘솔 등)
+  image?: string;        // 카드 내 표시할 이미지 경로 (public/ 기준)
+  imageCaption?: string; // 이미지 하단 캡션
   threadsUrl?: string;   // 현님 Threads 포스팅
   xUrl?: string;         // 현님 X 포스팅
   tags?: string[];
