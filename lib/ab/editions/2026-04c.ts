@@ -12,8 +12,8 @@ export const edition2026_04c: ABEdition = {
     "2026-w19"
   ],
   "announceDate": "2026-05-06",
-  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Anthropic Finance Agents처럼 특정 직무의 반복 업무를 패키지로 묶는 흐름입니다.\n\n그래서 VOL.03은 모든 뉴스를 펼쳐 놓는 대신, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지에 맞는 핵심 카드만 남겼습니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
-  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Finance Agents 10종은 금융 분석가의 반복 업무를 박스 패키지처럼 묶은 사례입니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거입니다.\n\n다음 흐름은 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질로 이어집니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
+  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Anthropic Finance Agents와 Perplexity Computer for Professional Finance처럼 특정 직무의 반복 업무와 라이선스 데이터를 패키지로 묶는 흐름입니다.\n\n그래서 VOL.03은 모든 뉴스를 펼쳐 놓는 대신, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지에 맞는 핵심 카드만 남겼습니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
+  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Anthropic Finance Agents와 Perplexity Computer for Professional Finance는 금융 분석가의 반복 업무를 박스 패키지처럼 묶은 사례입니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거이고, xAI Voice Cloning·Google AI Studio·HappyHorse는 음성·이미지·영상 인터페이스가 제품 제작 흐름으로 들어오는 장면입니다.\n\n다음 흐름은 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질로 이어집니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
   "highlights": [
     {
       "rank": 1,
@@ -130,6 +130,44 @@ export const edition2026_04c: ABEdition = {
       "rank": 4,
       "tier": "feature",
       "post": {
+        "date": "5/05",
+        "platform": "X",
+        "title": "Perplexity Computer for Professional Finance — 라이선스 데이터 + 35개 금융 워크플로우",
+        "summary": "Perplexity가 Computer for Professional Finance를 출시했습니다. Morningstar, PitchBook, Daloopa, Carbon Arc 같은 라이선스 데이터를 가져와 쓸 수 있고, 분석가가 매주 반복하는 35개 금융 워크플로우를 제공합니다. Anthropic Finance Agents와 함께 보면 금융 업무 자동화가 '챗봇'이 아니라 '데이터 권한 + 워크플로우 패키지' 경쟁으로 이동하고 있습니다.",
+        "content": "**이게 뭐예요?**\nPerplexity가 Computer for Professional Finance를 출시했습니다. 금융팀은 Morningstar, PitchBook, Daloopa, Carbon Arc 같은 라이선스 데이터를 Computer 안으로 가져와 쓸 수 있고, 반복적인 분석 업무를 위한 35개 금융 워크플로우를 사용할 수 있습니다.\n\n**무엇이 달라졌나?**\nAnthropic Finance Agents가 10개 분석가 워크플로우를 Claude 쪽에서 패키징했다면, Perplexity는 라이선스 데이터와 출처 추적을 전면에 세웁니다. 투자 리서치, tearsheet, equity comparison, annotated chart처럼 숫자와 출처가 중요한 업무에서 강점이 드러나는 구조입니다.\n\n**어떻게 읽을까?**\n두 발표를 나란히 보면 금융 AI의 경쟁축이 선명해집니다. 하나는 에이전트와 도구 묶음, 다른 하나는 신뢰할 수 있는 데이터 라이선스와 반복 분석 흐름입니다. 결국 금융 업무 자동화는 모델 성능만이 아니라 데이터 접근권, 출처 추적, Excel 같은 기존 업무 환경과의 연결이 함께 결정합니다.\n\n**확인 포인트**\n핵심 질문은 어떤 모델이 더 똑똑한가보다, 우리 조직이 가진 데이터 라이선스와 반복 분석 업무를 어떤 도구 안에서 안전하게 연결할 수 있는가입니다.",
+        "source": "https://x.com/perplexity_ai/status/2051693893473935372",
+        "officialUrl": "https://x.com/perplexity_ai/status/2051693893473935372",
+        "backupUrls": [
+          {
+            "label": "Perplexity Hub",
+            "url": "https://www.perplexity.ai/hub/blog/computer-at-work"
+          },
+          {
+            "label": "Perplexity Finance",
+            "url": "https://www.perplexity.ai/enterprise/use-cases/finance"
+          },
+          {
+            "label": "Morningstar / Daloopa",
+            "url": "https://www.morningstar.com/news/pr-newswire/20260430ny47627/daloopa-integrates-with-perplexity-to-bring-its-trusted-financial-data-layer-into-ai-research-workflows"
+          }
+        ],
+        "tags": [
+          "에이전트자동화",
+          "금융AI",
+          "공식",
+          "perplexity"
+        ],
+        "featured": true
+      },
+      "sourceWeek": "2026-w19",
+      "sourceCompany": "Perplexity",
+      "keyQuote": "Finance AI 경쟁은 모델보다 데이터 라이선스와 반복 워크플로우까지 함께 묶는 방향으로 이동한다",
+      "editorial": "Anthropic Finance Agents와 나란히 보면 의미가 더 선명합니다. Claude 쪽이 에이전트와 도구 묶음을 강조했다면, Perplexity는 Morningstar·PitchBook·Daloopa·Carbon Arc 같은 라이선스 데이터와 35개 금융 워크플로우를 전면에 둡니다. 금융 AI는 이제 좋은 답변을 넘어서, 신뢰 가능한 데이터 접근권과 출처 추적까지 함께 묶는 경쟁으로 이동하고 있습니다."
+    },
+    {
+      "rank": 5,
+      "tier": "feature",
+      "post": {
         "date": "4/28",
         "platform": "X",
         "title": "Open Design (open claude design) — Claude Design 95% 재현 오픈소스 (Tom Huang, 71+ 디자인 시스템 / 30+ 스킬)",
@@ -165,7 +203,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "공식 제품을 기다리지 않고 커뮤니티가 빠르게 비슷한 워크플로우를 오픈소스로 재현했다는 점이 인상적입니다. AI 도구를 단순히 소비하는 데서 끝나지 않고, 오픈소스를 조합해 자기 작업 흐름을 만드는 방향을 보여줍니다."
     },
     {
-      "rank": 5,
+      "rank": 6,
       "tier": "normal",
       "post": {
         "date": "5/03",
@@ -206,7 +244,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "아직 확정 소식은 아니지만, 여러 표면에서 비슷한 이름이 반복적으로 포착된다는 점은 의미가 있습니다. 지금은 출시 확정으로 보기보다 Google의 다음 모델 업데이트를 미리 엿볼 수 있는 신호로 보는 편이 안전합니다."
     },
     {
-      "rank": 6,
+      "rank": 7,
       "tier": "normal",
       "post": {
         "date": "5/02",
@@ -243,7 +281,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Google의 영상 생성 전략이 어디로 향하는지 보여주는 단서입니다. Omni라는 이름이 실제 제품이 된다면 텍스트, 이미지, 영상이 하나의 모델 경험으로 묶일 수 있습니다. 다만 아직은 유출 기반이므로 기대와 검증 필요성을 함께 봐야 합니다."
     },
     {
-      "rank": 7,
+      "rank": 8,
       "tier": "normal",
       "post": {
         "date": "5/01",
@@ -276,7 +314,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "AI 어시스턴트가 클라우드 챗봇을 넘어 기기 내부의 맥락을 이해하는 방향으로 이동하고 있습니다. 화면 액세스와 Recall은 매우 강력한 기능이 될 수 있지만, 동시에 개인정보와 권한 문제를 함께 생각해야 합니다."
     },
     {
-      "rank": 8,
+      "rank": 9,
       "tier": "hero",
       "post": {
         "date": "5/05",
@@ -319,7 +357,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "이번 VOL.03에서 가장 바로 체감되는 변화입니다. Finance Agents가 직무 흐름의 변화를 보여준다면, GPT-5.5 Instant는 오늘 켜는 ChatGPT의 기본값이 달라질 수 있다는 소식입니다. AISI 벤치마크와 초기 사용자 후기를 함께 보면 모델 업데이트가 실제 업무 체감으로 이어지는지 확인해 볼 수 있습니다."
     },
     {
-      "rank": 9,
+      "rank": 10,
       "tier": "feature",
       "post": {
         "date": "5/06",
@@ -381,7 +419,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "GPT-5.5 출시를 단순한 모델 뉴스가 아니라 실제 개발 워크플로우 선택 문제로 바꿔주는 사례입니다. 기본 모델이 바뀌었다는 사실보다 더 중요한 질문은 내 repo에서 어떤 작업에 어떤 모델을 쓸 것인가입니다."
     },
     {
-      "rank": 10,
+      "rank": 11,
       "tier": "feature",
       "post": {
         "date": "4/30",
@@ -428,7 +466,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Codex Goal은 GPT-5.5나 Finance Agents와 같은 방향을 CLI 도구 안에서 보여줍니다. 더 강한 모델을 쓰는 것만큼 중요한 것은 목표, 검증, 재시도 조건을 분명히 적어 에이전트가 오래 일해도 방향을 잃지 않게 만드는 일입니다."
     },
     {
-      "rank": 11,
+      "rank": 12,
       "tier": "normal",
       "post": {
         "date": "4/24",
@@ -480,6 +518,120 @@ export const edition2026_04c: ABEdition = {
       "sourceCompany": "DeepSeek",
       "keyQuote": "1.6T MoE · 1M context — 오픈소스가 다시 스케일을 밀어붙임",
       "editorial": "오픈소스 진영이 다시 고성능과 대형 컨텍스트 경쟁에 힘을 싣고 있습니다. 바로 실무에 넣을 수 있다는 뜻은 아니지만, 선택지와 비용 구조가 달라지고 있다는 점은 분명히 봐야 합니다."
+    },
+    {
+      "rank": 13,
+      "tier": "feature",
+      "post": {
+        "date": "5/06",
+        "platform": "X",
+        "title": "xAI Grok API — Voice Cloning 정식 출시",
+        "summary": "xAI API에 Voice Cloning이 정식 추가됐습니다. 사용자는 2분 미만으로 커스텀 보이스를 만들거나, 28개 언어에 걸친 80개 이상 보이스 라이브러리에서 선택할 수 있습니다. 음성 에이전트, 오디오북, 게임 캐릭터처럼 '텍스트를 말하게 하는 기능'이 아니라 '브랜드·개인·캐릭터의 목소리 인터페이스'를 API로 붙이는 방향입니다.",
+        "content": "**이게 뭐예요?**\nxAI가 Grok API에 Voice Cloning과 Custom Voices를 정식으로 추가했습니다. 사용자는 짧은 자연 발화로 커스텀 보이스를 만들 수 있고, 28개 언어에 걸친 80개 이상 보이스 라이브러리도 함께 사용할 수 있습니다.\n\n**무엇이 달라졌나?**\n기존 TTS가 정해진 목소리로 텍스트를 읽어주는 기능에 가까웠다면, 이번 업데이트는 음성 에이전트와 콘텐츠 제작에 '목소리 정체성'을 붙이는 쪽에 가깝습니다. 오디오북, 게임 캐릭터, 고객 응대 봇, 학습용 튜터처럼 말투와 목소리가 경험의 일부가 되는 영역에서 차이가 납니다.\n\n**어떻게 읽을까?**\n중요한 것은 2분 미만 생성 속도보다, 음성 인터페이스가 API 제품의 기본 요소가 되고 있다는 점입니다. 채팅형 에이전트가 화면 안에서 답하는 단계를 넘어, 실제 사람처럼 말하고 반응하는 제품으로 확장되는 흐름입니다.\n\n**확인 포인트**\nxAI는 커스텀 보이스 생성에 본인 확인과 검증 절차를 둔다고 설명합니다. 실무 적용에서는 음성권, 동의, 브랜드 사용 범위, 악용 방지 정책을 함께 확인해야 합니다.",
+        "source": "https://x.ai/news/grok-custom-voices",
+        "officialUrl": "https://x.ai/news/grok-custom-voices",
+        "backupUrls": [
+          {
+            "label": "xAI API",
+            "url": "https://x.ai/api"
+          },
+          {
+            "label": "X 원문",
+            "url": "https://x.com/xai/status/2050355373052223585"
+          }
+        ],
+        "tags": [
+          "음성AI",
+          "에이전트자동화",
+          "공식",
+          "xai"
+        ],
+        "featured": true
+      },
+      "sourceWeek": "2026-w19",
+      "sourceCompany": "xAI / Grok",
+      "keyQuote": "2분 미만 커스텀 보이스 + 80개 이상 보이스 라이브러리 — 음성 에이전트의 기본 부품화",
+      "editorial": "xAI Voice Cloning은 음성 인터페이스가 별도 데모가 아니라 API 제품의 기본 부품이 되는 흐름을 보여줍니다. 텍스트 에이전트가 말할 수 있게 되는 순간, 교육·게임·오디오북·고객 응대에서 사용자 경험의 중심이 화면에서 목소리로 넓어질 수 있습니다."
+    },
+    {
+      "rank": 14,
+      "tier": "feature",
+      "post": {
+        "date": "5/05",
+        "platform": "X",
+        "title": "Google AI Studio — Nano Banana 2로 앱·이미지 제작 워크플로우 강화",
+        "summary": "Google이 Nano Banana 2(Gemini 3.1 Flash Image)를 AI Studio와 Gemini API에서 쓸 수 있게 하며 이미지 생성·편집 워크플로우를 강화했습니다. 더 나은 텍스트 렌더링, 다국어 이미지 문구, 네이티브 종횡비, 512px 빠른 반복 옵션, 향상된 편집 성능이 핵심입니다.",
+        "content": "**이게 뭐예요?**\nGoogle AI Studio에서 Nano Banana 2, 즉 Gemini 3.1 Flash Image 기반 이미지 생성·편집 흐름이 강화됐습니다. 개발자는 AI Studio와 Gemini API에서 이미지 생성, 텍스트 렌더링, 빠른 시안 반복, 편집 작업을 더 자연스럽게 붙일 수 있습니다.\n\n**무엇이 달라졌나?**\n이전 Nano Banana가 이미지 생성 모델의 체감 품질을 끌어올렸다면, 이번 업데이트는 개발·제작 워크플로우 안에서 쓰기 쉬운 형태로 다듬어진 쪽에 가깝습니다. 다국어 텍스트 렌더링, 더 다양한 종횡비, 512px 빠른 반복 옵션, 향상된 편집 성능이 함께 들어갑니다.\n\n**어떻게 읽을까?**\n중요한 변화는 이미지 생성이 별도 툴에서 끝나는 것이 아니라 AI Studio 안의 앱 빌드와 프로토타이핑 흐름으로 들어온다는 점입니다. 기획자는 빠르게 시안을 만들고, 개발자는 API와 Studio에서 같은 모델 경험을 연결할 수 있습니다.\n\n**확인 포인트**\nAI Studio와 Gemini API에서 실제 사용할 때는 유료 API 키, 지역, 모델 이름, 해상도별 비용 조건을 확인해야 합니다. 이미지 안 텍스트가 좋아졌다고 해도 브랜드 문구나 숫자는 최종 검수가 필요합니다.",
+        "source": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/",
+        "officialUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/",
+        "backupUrls": [
+          {
+            "label": "Google 공식",
+            "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/"
+          },
+          {
+            "label": "DeepMind",
+            "url": "https://deepmind.google/models/gemini-image/"
+          },
+          {
+            "label": "Google AI Studio X",
+            "url": "https://x.com/GoogleAIStudio/status/2051679127824998762"
+          }
+        ],
+        "tags": [
+          "워크플로우",
+          "이미지생성",
+          "공식",
+          "google"
+        ],
+        "featured": true
+      },
+      "sourceWeek": "2026-w19",
+      "sourceCompany": "Google / AI Studio",
+      "keyQuote": "Nano Banana 2가 AI Studio와 Gemini API 안으로 들어오며 이미지 제작이 개발 워크플로우가 된다",
+      "editorial": "Google AI Studio 업데이트는 이미지 생성 모델의 성능 뉴스라기보다 제작 흐름의 변화로 보는 편이 좋습니다. 개발자와 기획자가 같은 Studio/API 환경에서 이미지 생성, 편집, 빠른 시안 반복을 연결할 수 있다는 점이 핵심입니다."
+    },
+    {
+      "rank": 15,
+      "tier": "normal",
+      "post": {
+        "date": "5/06",
+        "platform": "X",
+        "title": "Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개",
+        "summary": "Alibaba 계열 ATH AI Innovation Unit의 HappyHorse 1.0이 공개·확산되며 Artificial Analysis Arena 영상 생성 부문 최상위권에 올랐습니다. text-to-video와 image-to-video, 오디오 포함 생성, 립싱크, 1080p 출력 흐름을 한 모델 경험으로 묶는 방향입니다.",
+        "content": "**이게 뭐예요?**\nHappyHorse 1.0은 Alibaba 계열 팀이 만든 것으로 알려진 영상 생성 모델입니다. text-to-video와 image-to-video를 중심으로, 오디오가 붙은 영상 생성과 립싱크까지 하나의 흐름으로 묶는 방향을 보여줍니다.\n\n**무엇이 달라졌나?**\nArtificial Analysis Arena에서 텍스트 기반 영상과 이미지 기반 영상 부문 최상위권에 오르며 빠르게 주목을 받았습니다. 특히 영상 품질만이 아니라 오디오와 립싱크까지 같이 다루는 점이 핵심입니다. 영상 생성 경쟁이 이미지처럼 빠르게 벤치마크와 API 생태계로 이동하고 있다는 신호입니다.\n\n**어떻게 읽을까?**\nOpenAI·Google·Runway·Kling 중심으로 보던 영상 생성 경쟁에 Alibaba 계열 모델이 강하게 들어온 장면으로 볼 수 있습니다. 다만 공식 제품 페이지와 상용 접근 조건은 아직 제한적으로 확인되므로, 성능 순위와 실제 사용 가능성을 구분해서 읽는 편이 안전합니다.\n\n**확인 포인트**\n현재 확인 가능한 1차 접근 경로는 fal API와 HappyHorse 공개 페이지, 보조 근거는 CNBC·Bloomberg 보도입니다. 교육·업무 활용 전에는 상용 사용권, 지역 제한, 워터마크, 저작권 정책을 다시 확인해야 합니다.",
+        "source": "https://fal.ai/happyhorse-1.0",
+        "officialUrl": "https://fal.ai/happyhorse-1.0",
+        "backupUrls": [
+          {
+            "label": "HappyHorse",
+            "url": "https://happyhorsesai.com/"
+          },
+          {
+            "label": "fal 해설",
+            "url": "https://fal.ai/learn/devs/happyhorse-1-0-what-do-we-know-so-far"
+          },
+          {
+            "label": "CNBC",
+            "url": "https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html"
+          },
+          {
+            "label": "Bloomberg",
+            "url": "https://www.bloomberg.com/news/articles/2026-04-10/stealth-alibaba-video-ai-model-tops-global-ranking-on-debut"
+          }
+        ],
+        "tags": [
+          "영상생성",
+          "Alibaba",
+          "HappyHorse",
+          "벤치마크"
+        ],
+        "featured": true
+      },
+      "sourceWeek": "2026-w19",
+      "sourceCompany": "Alibaba / HappyHorse",
+      "keyQuote": "영상 생성 경쟁이 품질 벤치마크를 넘어 오디오·립싱크·API 생태계로 확장된다",
+      "editorial": "HappyHorse 1.0은 영상 생성 경쟁이 더 넓어지고 있다는 신호입니다. 다만 Alibaba 공식 제품 페이지와 상용 접근 조건은 제한적으로 확인되므로, Artificial Analysis 순위와 실제 사용 가능성은 분리해서 읽는 편이 안전합니다."
     },
   ],
   "editorsPicks": [

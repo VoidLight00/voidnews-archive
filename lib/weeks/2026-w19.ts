@@ -5,7 +5,7 @@ export const week19: WeeklyData = {
   "year": 2026,
   "slug": "2026-w19",
   "period": "5/04 ~ 5/10",
-  "totalPosts": 15,
+  "totalPosts": 16,
   "companies": [
     {
       "name": "Anthropic / Claude",
@@ -41,6 +41,42 @@ export const week19: WeeklyData = {
             "에이전트자동화",
             "공식",
             "anthropic"
+          ],
+          "featured": true
+        }
+      ]
+    },
+    {
+      "name": "Perplexity",
+      "color": "#7C3AED",
+      "posts": [
+        {
+          "date": "5/05",
+          "platform": "X",
+          "title": "Perplexity Computer for Professional Finance — 라이선스 데이터 + 35개 금융 워크플로우",
+          "summary": "Perplexity가 Computer for Professional Finance를 출시했습니다. Morningstar, PitchBook, Daloopa, Carbon Arc 같은 라이선스 데이터를 가져와 쓸 수 있고, 분석가가 매주 반복하는 35개 금융 워크플로우를 제공합니다. Anthropic Finance Agents와 함께 보면 금융 업무 자동화가 '챗봇'이 아니라 '데이터 권한 + 워크플로우 패키지' 경쟁으로 이동하고 있습니다.",
+          "content": "**이게 뭐예요?**\nPerplexity가 Computer for Professional Finance를 출시했습니다. 금융팀은 Morningstar, PitchBook, Daloopa, Carbon Arc 같은 라이선스 데이터를 Computer 안으로 가져와 쓸 수 있고, 반복적인 분석 업무를 위한 35개 금융 워크플로우를 사용할 수 있습니다.\n\n**무엇이 달라졌나?**\nAnthropic Finance Agents가 10개 분석가 워크플로우를 Claude 쪽에서 패키징했다면, Perplexity는 라이선스 데이터와 출처 추적을 전면에 세웁니다. 투자 리서치, tearsheet, equity comparison, annotated chart처럼 숫자와 출처가 중요한 업무에서 강점이 드러나는 구조입니다.\n\n**어떻게 읽을까?**\n두 발표를 나란히 보면 금융 AI의 경쟁축이 선명해집니다. 하나는 에이전트와 도구 묶음, 다른 하나는 신뢰할 수 있는 데이터 라이선스와 반복 분석 흐름입니다. 결국 금융 업무 자동화는 모델 성능만이 아니라 데이터 접근권, 출처 추적, Excel 같은 기존 업무 환경과의 연결이 함께 결정합니다.\n\n**확인 포인트**\n핵심 질문은 어떤 모델이 더 똑똑한가보다, 우리 조직이 가진 데이터 라이선스와 반복 분석 업무를 어떤 도구 안에서 안전하게 연결할 수 있는가입니다.",
+          "source": "https://x.com/perplexity_ai/status/2051693893473935372",
+          "officialUrl": "https://x.com/perplexity_ai/status/2051693893473935372",
+          "backupUrls": [
+            {
+              "label": "Perplexity Hub",
+              "url": "https://www.perplexity.ai/hub/blog/computer-at-work"
+            },
+            {
+              "label": "Perplexity Finance",
+              "url": "https://www.perplexity.ai/enterprise/use-cases/finance"
+            },
+            {
+              "label": "Morningstar / Daloopa",
+              "url": "https://www.morningstar.com/news/pr-newswire/20260430ny47627/daloopa-integrates-with-perplexity-to-bring-its-trusted-financial-data-layer-into-ai-research-workflows"
+            }
+          ],
+          "tags": [
+            "에이전트자동화",
+            "금융AI",
+            "공식",
+            "perplexity"
           ],
           "featured": true
         }
@@ -129,26 +165,32 @@ export const week19: WeeklyData = {
         {
           "date": "5/05",
           "platform": "X",
-          "title": "Google AI Studio — Nano Banana 통합 + 비주얼 에디트 툴 리디자인",
-          "summary": "AI Studio에서 앱을 빌드하는 동안 Nano Banana(Gemini 2.5/3 Image)가 자동으로 커스텀 이미지 에셋을 생성·삽입. 새 비주얼 에디트 툴은 컴포넌트 업데이트, 앱 어노테이션, 에셋 실시간 swap을 지원 — 'code-first'에서 'visual-first AI dev environment'로 전환.",
-          "content": "이게 뭐예요?\nAI Studio에서 앱을 빌드하는 동안 Nano Banana(Gemini 2.5/3 Image)가 자동으로 커스텀 이미지 에셋을 생성·삽입. 새 비주얼 에디트 툴은 컴포넌트 업데이트, 앱 어노테이션, 에셋 실시간 swap을 지원 — 'code-first'에서 'visual-first AI dev environment'로 전환.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 워크플로우 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nNano Banana 자체는 2025-08 공개된 Gemini 2.5 Flash Image. 이번 업데이트는 AI Studio 안에서의 통합·UX 강화. 영상 description의 GoogleAIStudio X 링크가 1차 출처.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
-          "source": "https://x.com/GoogleAIStudio/status/2051679127824998762",
-          "officialUrl": "https://x.com/GoogleAIStudio/status/2051679127824998762",
+          "title": "Google AI Studio — Nano Banana 2로 앱·이미지 제작 워크플로우 강화",
+          "summary": "Google이 Nano Banana 2(Gemini 3.1 Flash Image)를 AI Studio와 Gemini API에서 쓸 수 있게 하며 이미지 생성·편집 워크플로우를 강화했습니다. 더 나은 텍스트 렌더링, 다국어 이미지 문구, 네이티브 종횡비, 512px 빠른 반복 옵션, 향상된 편집 성능이 핵심입니다.",
+          "content": "**이게 뭐예요?**\nGoogle AI Studio에서 Nano Banana 2, 즉 Gemini 3.1 Flash Image 기반 이미지 생성·편집 흐름이 강화됐습니다. 개발자는 AI Studio와 Gemini API에서 이미지 생성, 텍스트 렌더링, 빠른 시안 반복, 편집 작업을 더 자연스럽게 붙일 수 있습니다.\n\n**무엇이 달라졌나?**\n이전 Nano Banana가 이미지 생성 모델의 체감 품질을 끌어올렸다면, 이번 업데이트는 개발·제작 워크플로우 안에서 쓰기 쉬운 형태로 다듬어진 쪽에 가깝습니다. 다국어 텍스트 렌더링, 더 다양한 종횡비, 512px 빠른 반복 옵션, 향상된 편집 성능이 함께 들어갑니다.\n\n**어떻게 읽을까?**\n중요한 변화는 이미지 생성이 별도 툴에서 끝나는 것이 아니라 AI Studio 안의 앱 빌드와 프로토타이핑 흐름으로 들어온다는 점입니다. 기획자는 빠르게 시안을 만들고, 개발자는 API와 Studio에서 같은 모델 경험을 연결할 수 있습니다.\n\n**확인 포인트**\nAI Studio와 Gemini API에서 실제 사용할 때는 유료 API 키, 지역, 모델 이름, 해상도별 비용 조건을 확인해야 합니다. 이미지 안 텍스트가 좋아졌다고 해도 브랜드 문구나 숫자는 최종 검수가 필요합니다.",
+          "source": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/",
+          "officialUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/",
           "backupUrls": [
             {
               "label": "Google 공식",
+              "url": "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/"
+            },
+            {
+              "label": "DeepMind",
               "url": "https://deepmind.google/models/gemini-image/"
             },
             {
-              "label": "Google 공식",
-              "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/"
+              "label": "Google AI Studio X",
+              "url": "https://x.com/GoogleAIStudio/status/2051679127824998762"
             }
           ],
           "tags": [
             "워크플로우",
+            "이미지생성",
             "공식",
             "google"
-          ]
+          ],
+          "featured": true
         },
         {
           "date": "5/05",
@@ -311,6 +353,78 @@ export const week19: WeeklyData = {
       ]
     },
     {
+      "name": "xAI / Grok",
+      "color": "#111827",
+      "posts": [
+        {
+          "date": "5/06",
+          "platform": "X",
+          "title": "xAI Grok API — Voice Cloning 정식 출시",
+          "summary": "xAI API에 Voice Cloning이 정식 추가됐습니다. 사용자는 2분 미만으로 커스텀 보이스를 만들거나, 28개 언어에 걸친 80개 이상 보이스 라이브러리에서 선택할 수 있습니다. 음성 에이전트, 오디오북, 게임 캐릭터처럼 '텍스트를 말하게 하는 기능'이 아니라 '브랜드·개인·캐릭터의 목소리 인터페이스'를 API로 붙이는 방향입니다.",
+          "content": "**이게 뭐예요?**\nxAI가 Grok API에 Voice Cloning과 Custom Voices를 정식으로 추가했습니다. 사용자는 짧은 자연 발화로 커스텀 보이스를 만들 수 있고, 28개 언어에 걸친 80개 이상 보이스 라이브러리도 함께 사용할 수 있습니다.\n\n**무엇이 달라졌나?**\n기존 TTS가 정해진 목소리로 텍스트를 읽어주는 기능에 가까웠다면, 이번 업데이트는 음성 에이전트와 콘텐츠 제작에 '목소리 정체성'을 붙이는 쪽에 가깝습니다. 오디오북, 게임 캐릭터, 고객 응대 봇, 학습용 튜터처럼 말투와 목소리가 경험의 일부가 되는 영역에서 차이가 납니다.\n\n**어떻게 읽을까?**\n중요한 것은 2분 미만 생성 속도보다, 음성 인터페이스가 API 제품의 기본 요소가 되고 있다는 점입니다. 채팅형 에이전트가 화면 안에서 답하는 단계를 넘어, 실제 사람처럼 말하고 반응하는 제품으로 확장되는 흐름입니다.\n\n**확인 포인트**\nxAI는 커스텀 보이스 생성에 본인 확인과 검증 절차를 둔다고 설명합니다. 실무 적용에서는 음성권, 동의, 브랜드 사용 범위, 악용 방지 정책을 함께 확인해야 합니다.",
+          "source": "https://x.ai/news/grok-custom-voices",
+          "officialUrl": "https://x.ai/news/grok-custom-voices",
+          "backupUrls": [
+            {
+              "label": "xAI API",
+              "url": "https://x.ai/api"
+            },
+            {
+              "label": "X 원문",
+              "url": "https://x.com/xai/status/2050355373052223585"
+            }
+          ],
+          "tags": [
+            "음성AI",
+            "에이전트자동화",
+            "공식",
+            "xai"
+          ],
+          "featured": true
+        }
+      ]
+    },
+    {
+      "name": "Alibaba / HappyHorse",
+      "color": "#FF6A00",
+      "posts": [
+        {
+          "date": "5/06",
+          "platform": "X",
+          "title": "Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개",
+          "summary": "Alibaba 계열 ATH AI Innovation Unit의 HappyHorse 1.0이 공개·확산되며 Artificial Analysis Arena 영상 생성 부문 최상위권에 올랐습니다. text-to-video와 image-to-video, 오디오 포함 생성, 립싱크, 1080p 출력 흐름을 한 모델 경험으로 묶는 방향입니다.",
+          "content": "**이게 뭐예요?**\nHappyHorse 1.0은 Alibaba 계열 팀이 만든 것으로 알려진 영상 생성 모델입니다. text-to-video와 image-to-video를 중심으로, 오디오가 붙은 영상 생성과 립싱크까지 하나의 흐름으로 묶는 방향을 보여줍니다.\n\n**무엇이 달라졌나?**\nArtificial Analysis Arena에서 텍스트 기반 영상과 이미지 기반 영상 부문 최상위권에 오르며 빠르게 주목을 받았습니다. 특히 영상 품질만이 아니라 오디오와 립싱크까지 같이 다루는 점이 핵심입니다. 영상 생성 경쟁이 이미지처럼 빠르게 벤치마크와 API 생태계로 이동하고 있다는 신호입니다.\n\n**어떻게 읽을까?**\nOpenAI·Google·Runway·Kling 중심으로 보던 영상 생성 경쟁에 Alibaba 계열 모델이 강하게 들어온 장면으로 볼 수 있습니다. 다만 공식 제품 페이지와 상용 접근 조건은 아직 제한적으로 확인되므로, 성능 순위와 실제 사용 가능성을 구분해서 읽는 편이 안전합니다.\n\n**확인 포인트**\n현재 확인 가능한 1차 접근 경로는 fal API와 HappyHorse 공개 페이지, 보조 근거는 CNBC·Bloomberg 보도입니다. 교육·업무 활용 전에는 상용 사용권, 지역 제한, 워터마크, 저작권 정책을 다시 확인해야 합니다.",
+          "source": "https://fal.ai/happyhorse-1.0",
+          "officialUrl": "https://fal.ai/happyhorse-1.0",
+          "backupUrls": [
+            {
+              "label": "HappyHorse",
+              "url": "https://happyhorsesai.com/"
+            },
+            {
+              "label": "fal 해설",
+              "url": "https://fal.ai/learn/devs/happyhorse-1-0-what-do-we-know-so-far"
+            },
+            {
+              "label": "CNBC",
+              "url": "https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html"
+            },
+            {
+              "label": "Bloomberg",
+              "url": "https://www.bloomberg.com/news/articles/2026-04-10/stealth-alibaba-video-ai-model-tops-global-ranking-on-debut"
+            }
+          ],
+          "tags": [
+            "영상생성",
+            "Alibaba",
+            "HappyHorse",
+            "벤치마크"
+          ],
+          "featured": true
+        }
+      ]
+    },
+    {
       "name": "커뮤니티 / 오픈소스",
       "color": "#6B7280",
       "posts": [
@@ -408,34 +522,6 @@ export const week19: WeeklyData = {
           "tags": [
             "에이전트자동화",
             "커뮤니티",
-            "community"
-          ]
-        },
-        {
-          "date": "5/05",
-          "platform": "X",
-          "title": "Perplexity Computer for Professional Finance — Morningstar/PitchBook/Daloopa/Carbon Arc 라이선스 데이터 + 35개 금융 워크플로우",
-          "summary": "Anthropic 발표와 같은 날 Perplexity가 Computer for Professional Finance 출시 — Morningstar·PitchBook·Daloopa·Carbon Arc 라이선스 데이터를 직접 연결, 35개 finance workflow(tearsheet, equity comparison, annotated chart 등) 내장. Excel 안에서도 작동. AI agents 금융 자동화 경쟁 본격화.",
-          "content": "이게 뭐예요?\nAnthropic 발표와 같은 날 Perplexity가 Computer for Professional Finance 출시 — Morningstar·PitchBook·Daloopa·Carbon Arc 라이선스 데이터를 직접 연결, 35개 finance workflow(tearsheet, equity comparison, annotated chart 등) 내장. Excel 안에서도 작동. AI agents 금융 자동화 경쟁 본격화.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 에이전트 자동화 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n영상 description의 perplexity_ai 트윗 ID(2051698428288090213)와 검색결과 ID(2051693893473935372)가 다름 — 동일 launch 보도가 여러 트윗으로 게재. Anthropic vs Perplexity의 동시 launch 타이밍이 핵심 신호.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
-          "source": "https://x.com/perplexity_ai/status/2051693893473935372",
-          "officialUrl": "https://x.com/perplexity_ai/status/2051693893473935372",
-          "backupUrls": [
-            {
-              "label": "perplexity.ai",
-              "url": "https://www.perplexity.ai/hub/blog/computer-at-work"
-            },
-            {
-              "label": "perplexity.ai",
-              "url": "https://www.perplexity.ai/enterprise/use-cases/finance"
-            },
-            {
-              "label": "trendingtopics.eu",
-              "url": "https://www.trendingtopics.eu/anthropic-and-perplexity-race-to-automate-finance-with-ai-tools-shake-up-financial-stocks/"
-            }
-          ],
-          "tags": [
-            "에이전트자동화",
-            "공식",
             "community"
           ]
         },
