@@ -12,8 +12,8 @@ export const edition2026_04c: ABEdition = {
     "2026-w19"
   ],
   "announceDate": "2026-05-06",
-  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 Anthropic Finance Agents입니다. AI가 이제 단순 답변이 아니라 분석가·의료진·크리에이터처럼 특정 직무의 반복 업무를 패키지로 묶기 시작했다는 신호입니다.\n\n그래서 VOL.03은 13개를 모두 나열하는 뉴스가 아니라, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지로 정리합니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
-  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nFinance Agents 10종은 금융 분석가의 반복 업무를 박스 패키지처럼 묶었고, ChatGPT for Clinicians와 AI Co-Clinician은 의료 영역에서 같은 방향을 보여줍니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거입니다.\n\n다음 격주에는 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질을 이어서 추적하면 됩니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
+  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Anthropic Finance Agents처럼 특정 직무의 반복 업무를 패키지로 묶는 흐름입니다.\n\n그래서 VOL.03은 13개를 모두 나열하는 뉴스가 아니라, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지로 정리합니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
+  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Finance Agents 10종은 금융 분석가의 반복 업무를 박스 패키지처럼 묶은 사례입니다. ChatGPT for Clinicians와 AI Co-Clinician은 의료 영역에서 같은 방향을 보여줍니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거입니다.\n\n다음 격주에는 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질을 이어서 추적하면 됩니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
   "highlights": [
     {
       "rank": 1,
@@ -87,7 +87,7 @@ export const edition2026_04c: ABEdition = {
     },
     {
       "rank": 3,
-      "tier": "hero",
+      "tier": "feature",
       "post": {
         "date": "5/05",
         "platform": "X",
@@ -277,13 +277,13 @@ export const edition2026_04c: ABEdition = {
     },
     {
       "rank": 8,
-      "tier": "feature",
+      "tier": "hero",
       "post": {
         "date": "5/05",
         "platform": "X",
         "title": "OpenAI GPT-5.5 Instant — ChatGPT 신규 기본 모델로 롤아웃",
-        "summary": "영국 AI Security Institute(AISI) 공식 평가 — GPT-5.5가 Expert 난이도 사이버 태스크에서 71.4% 통과율로 Claude Mythos Preview(68.6%)를 처음으로 추월. 32-step 'The Last Ones' 엔드투엔드 시뮬레이션을 완수한 두 번째 모델(GPT-5.5는 10회 중 2회, Mythos는 10회 중 3회). rust_vm 리버스엔지니어링 태스크는 GPT-5.5가 11분·$1.73에 풂 — 인간 전문가는 약 12시간 소요.",
-        "content": "이게 뭐예요?\nOpenAI가 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 롤아웃했다는 소식입니다. 사용자가 별도 설정을 의식하지 않아도, 같은 ChatGPT가 이전보다 다른 품질과 성향으로 응답할 수 있다는 뜻입니다.\n\n왜 중요해요?\n수강생이 가장 체감하기 쉬운 변화입니다. 어제 만든 프롬프트가 오늘 다르게 작동할 수 있고, 기본 모델 교체는 교육 자료·업무 자동화·코딩 워크플로우 전체에 영향을 줍니다.\n\n오늘 바로 해볼 것\n자주 쓰는 프롬프트 3개를 다시 실행해 보세요. 답변 길이, 추론 방식, 환각 감소, 개인화 정도가 어떻게 바뀌었는지 비교하면 모델 업데이트의 실제 체감을 잡을 수 있습니다.",
+        "summary": "ChatGPT 신규 기본 모델 GPT-5.5 Instant 롤아웃. 전 사용자 기본값 변화 + Plus/Pro의 과거 대화·파일·Gmail 기반 개인화 우선 적용. AISI 사이버 평가에서는 Expert 태스크 71.4%로 Claude Mythos Preview(68.6%)를 추월했고, 32-step 'The Last Ones' 시뮬레이션 완수, rust_vm 리버스엔지니어링 11분·$1.73 풀이 사례까지 공개됨.",
+        "content": "이게 뭐예요?\nOpenAI가 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 롤아웃했다는 소식입니다. 사용자가 별도 설정을 의식하지 않아도, 같은 ChatGPT가 이전보다 다른 품질과 성향으로 응답할 수 있다는 뜻입니다. Plus/Pro 사용자는 과거 대화, 파일, Gmail 기반 개인화가 먼저 붙는 흐름도 같이 봐야 합니다.\n\n벤치마크에서 뭐가 달라졌나\n영국 AI Security Institute(AISI) 공식 평가에서 GPT-5.5는 Expert 난이도 사이버 태스크 71.4% 통과율로 Claude Mythos Preview 68.6%를 앞섰습니다. 32-step 'The Last Ones' 엔드투엔드 시뮬레이션을 완수한 두 번째 모델로 기록됐고, rust_vm 리버스엔지니어링 태스크를 11분·$1.73에 풀었다는 사례도 나왔습니다. 인간 전문가 기준 약 12시간짜리 작업과 비교되는 수치라 발표 메인에 올릴 만합니다.\n\n사용자 후기는 어떻게 읽을까\n초기 후기는 '환각이 줄고 답변이 더 개인화됐다'는 쪽과, 'Frontend UI 디자인은 여전히 Claude가 낫다'는 평가가 같이 있습니다. 그래서 이 카드는 무조건 1등 모델 선언이 아니라, ChatGPT 기본값이 바뀌면서 모든 사용자의 프롬프트·자동화·교육 자료가 재검증 대상이 됐다는 메시지로 다루는 게 좋습니다.\n\n오늘 바로 해볼 것\n자주 쓰는 프롬프트 3개를 GPT-5.5 Instant에서 다시 실행해 보세요. 답변 길이, 추론 방식, 환각 감소, 개인화 정도, UI 코드 품질을 Claude와 나란히 비교하면 모델 업데이트의 실제 체감을 잡을 수 있습니다.",
         "source": "https://openai.com/index/gpt-5-5-instant/",
         "officialUrl": "https://openai.com/index/gpt-5-5-instant/",
         "backupUrls": [
@@ -331,8 +331,8 @@ export const edition2026_04c: ABEdition = {
       },
       "sourceWeek": "2026-w19",
       "sourceCompany": "OpenAI",
-      "keyQuote": "ChatGPT 기본 모델 교체 — 어제와 오늘의 ChatGPT가 달라졌다",
-      "editorial": "가장 대중적인 체감 변화입니다. ChatGPT 기본 모델이 바뀌면 사용자는 제품명을 몰라도 결과 변화를 겪습니다. 수강생에게는 자기 프롬프트와 자동화가 모델 업데이트에 얼마나 민감한지 점검하게 만드는 카드입니다."
+      "keyQuote": "GPT-5.5가 기본 ChatGPT가 됐다 — 벤치마크도, 사용자 체감도 다시 재야 한다",
+      "editorial": "이번 VOL.03에서 수강생이 가장 바로 체감할 메인 카드입니다. Finance Agents가 '직무 패키징'의 미래라면, GPT-5.5 Instant는 오늘 켜는 ChatGPT의 기본값 변화입니다. AISI 벤치마크, 사용자 후기, Claude와의 UI·코딩 체감 비교까지 묶어 보여주면 발표의 무게가 살아납니다."
     },
     {
       "rank": 9,
