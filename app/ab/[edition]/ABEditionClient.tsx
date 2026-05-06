@@ -9,13 +9,14 @@ import { stripMarkdown } from "@/lib/md";
    stripMarkdown 후 평문 안에 남아있는 http(s) URL을
    클릭 가능한 <a>로 변환. 카드 외부에서 상위 onClick으로
    모달이 열리는 걸 막기 위해 stopPropagation. */
-const URL_SPLIT_REGEX = /(https?:\/\/[^\s)\]]+)/g;
 const URL_MATCH_REGEX = /^https?:\/\/[^\s)\]]+$/;
 
-function linkify(text: string): ReactNode {
-  if (!text) return text;
-  const parts = text.split(URL_SPLIT_REGEX);
+function renderRichText(text: string): ReactNode {
+  if (!text) return null;
+  const parts = text.split(/(\*\*[^*\n]+?\*\*|https?:\/\/[^\s)\]]+)/g);
+
   return parts.map((part, i) => {
+    if (!part) return null;
     if (URL_MATCH_REGEX.test(part)) {
       return (
         <a
@@ -34,8 +35,66 @@ function linkify(text: string): ReactNode {
         </a>
       );
     }
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} style={{ color: "var(--text)", fontWeight: 800 }}>
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
     return <Fragment key={i}>{part}</Fragment>;
   });
+}
+
+type SourceLink = { label: string; url: string; primary?: boolean };
+
+function collectSourceLinks({
+  officialUrl,
+  source,
+  backupUrls,
+}: {
+  officialUrl?: string;
+  source?: string;
+  backupUrls?: { label: string; url: string }[];
+}): SourceLink[] {
+  const links: SourceLink[] = [];
+  const seen = new Set<string>();
+  const add = (link: SourceLink) => {
+    if (!link.url || seen.has(link.url)) return;
+    seen.add(link.url);
+    links.push(link);
+  };
+
+  const officialLabel = backupUrls?.find((link) => link.url === officialUrl)?.label || "공식 링크";
+  if (officialUrl) add({ label: officialLabel, url: officialUrl, primary: true });
+  if (source) add({ label: "SOURCE", url: source });
+  for (const link of backupUrls || []) add(link);
+
+  return links;
+}
+
+function SourceButton({ link }: { link: SourceLink }) {
+  return (
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        fontFamily: "var(--mono)",
+        fontSize: 12,
+        color: link.primary ? "#000" : "var(--accent)",
+        background: link.primary ? "var(--accent)" : "transparent",
+        border: link.primary ? "1px solid var(--accent)" : "1px solid var(--border2)",
+        padding: "8px 14px",
+        borderRadius: 2,
+        textDecoration: "none",
+        fontWeight: 700,
+        whiteSpace: "nowrap",
+      }}
+    >
+      {link.label} →
+    </a>
+  );
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -208,7 +267,7 @@ function HighlightModal({
   item: ABHighlight;
   onClose: () => void;
 }) {
-  const url = item.post.officialUrl || item.post.source || "#";
+  const sourceLinks = collectSourceLinks(item.post);
   return (
     <div style={{ height: "100%", overflowY: "auto" }}>
       {/* Header */}
@@ -264,7 +323,7 @@ function HighlightModal({
           color: "var(--text)",
         }}
       >
-        {linkify(stripMarkdown(item.post.content))}
+        {renderRichText(item.post.content || "")}
       </p>
 
       <ImageGallery images={item.post.images} tone="accent" />
@@ -316,24 +375,11 @@ function HighlightModal({
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, flex: 1 }}>
           <TagList tags={item.post.tags} />
         </div>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontFamily: "var(--mono)",
-            fontSize: 12,
-            color: "#000",
-            background: "var(--accent)",
-            padding: "8px 16px",
-            borderRadius: 2,
-            textDecoration: "none",
-            fontWeight: 700,
-            whiteSpace: "nowrap",
-          }}
-        >
-          원문 보기 →
-        </a>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "flex-end" }}>
+          {sourceLinks.map((link) => (
+            <SourceButton key={link.url} link={link} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -418,7 +464,7 @@ function PickModal({
           color: "var(--text)",
         }}
       >
-        {linkify(stripMarkdown(item.body))}
+        {renderRichText(item.body)}
       </p>
 
       <ImageGallery images={item.images} tone="gold" />

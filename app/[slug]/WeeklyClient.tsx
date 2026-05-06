@@ -79,6 +79,23 @@ function highlightText(text: string, query: string): ReactNode {
   });
 }
 
+function renderRichText(text: string): ReactNode {
+  if (!text) return null;
+  const parts = text.split(/(\*\*[^*\n]+?\*\*)/g);
+
+  return parts.map((part, index) => {
+    if (!part) return null;
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={index} style={{ color: "var(--text)", fontWeight: 800 }}>
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return <span key={index}>{part}</span>;
+  });
+}
+
 function buildUrlWithParams(pathname: string, params: URLSearchParams) {
   const query = params.toString();
   return query ? `${pathname}?${query}` : pathname;
@@ -566,10 +583,10 @@ function isXPostUrl(url: string): boolean {
   return /^https?:\/\/(www\.)?(x\.com|twitter\.com)\/[^/]+\/status\/\d+/.test(url);
 }
 
-function getOfficialTweetUrl(post: { officialUrl?: string; source?: string }): string | undefined {
-  if (post.officialUrl) return post.officialUrl;
+function getOfficialTweetUrl(post: Pick<Post, "officialUrl" | "source" | "backupUrls">): string | undefined {
+  if (post.officialUrl && isXPostUrl(post.officialUrl)) return post.officialUrl;
   if (post.source && isXPostUrl(post.source)) return post.source;
-  return undefined;
+  return post.backupUrls?.find((link) => isXPostUrl(link.url))?.url;
 }
 
 // ── 임베드 프리뷰 (X / Threads) ──────────────────
@@ -959,7 +976,7 @@ function PostModal({
             >
               포스팅 내용
             </p>
-            <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{stripMarkdown(post.content || "")}</p>
+            <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{renderRichText(post.content || "")}</p>
           </div>
         )}
 
@@ -1188,7 +1205,9 @@ function PostCard({
               whiteSpace: "pre-line",
               margin: 0,
             }}>
-              {highlightText(stripMarkdown(post.content || post.summary || ""), searchQuery)}
+              {searchQuery.trim()
+                ? highlightText(stripMarkdown(post.content || post.summary || ""), searchQuery)
+                : renderRichText(post.content || post.summary || "")}
             </p>
           </div>
         )}
@@ -1220,7 +1239,20 @@ function PostCard({
             </a>
           )}
           {/* 소스 (블로그/기사) */}
-          {post.source && !isXPostUrl(post.source) && (
+          {post.officialUrl && !isXPostUrl(post.officialUrl) && (
+            <a href={post.officialUrl} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 5,
+                fontFamily: "var(--mono)", fontSize: 10,
+                color: "var(--accent)", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "6px 10px",
+                border: "1px solid var(--accent)30",
+                borderRadius: 2,
+              }}>
+              공식 링크 ↗
+            </a>
+          )}
+          {post.source && post.source !== post.officialUrl && !isXPostUrl(post.source) && (
             <a href={post.source} target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 5,
@@ -1233,6 +1265,19 @@ function PostCard({
               SOURCE ↗
             </a>
           )}
+          {post.backupUrls?.map(({ label, url }) => (
+            <a key={url} href={url} target="_blank" rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 5,
+                fontFamily: "var(--mono)", fontSize: 10,
+                color: "var(--muted)", letterSpacing: "0.06em",
+                textDecoration: "none", padding: "6px 10px",
+                border: "1px solid var(--border2)",
+                borderRadius: 2,
+              }}>
+              {label} ↗
+            </a>
+          ))}
           {post.xUrl && (
             <a href={post.xUrl} target="_blank" rel="noopener noreferrer"
               style={{

@@ -5,7 +5,7 @@ export const week19: WeeklyData = {
   "year": 2026,
   "slug": "2026-w19",
   "period": "5/04 ~ 5/10",
-  "totalPosts": 12,
+  "totalPosts": 14,
   "companies": [
     {
       "name": "Anthropic / Claude",
@@ -185,7 +185,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "OpenAI GPT-5.5 Instant — ChatGPT 신규 기본 모델로 롤아웃",
           "summary": "영국 AI Security Institute(AISI) 공식 평가 — GPT-5.5가 Expert 난이도 사이버 태스크에서 71.4% 통과율로 Claude Mythos Preview(68.6%)를 처음으로 추월. 32-step 'The Last Ones' 엔드투엔드 시뮬레이션을 완수한 두 번째 모델(GPT-5.5는 10회 중 2회, Mythos는 10회 중 3회). rust_vm 리버스엔지니어링 태스크는 GPT-5.5가 11분·$1.73에 풂 — 인간 전문가는 약 12시간 소요.",
-          "content": "이게 뭐예요?\nOpenAI가 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 롤아웃했다는 소식입니다. 사용자가 별도 설정을 의식하지 않아도, 같은 ChatGPT가 이전보다 다른 품질과 성향으로 응답할 수 있다는 뜻입니다.\n\n왜 중요해요?\n수강생이 가장 체감하기 쉬운 변화입니다. 어제 만든 프롬프트가 오늘 다르게 작동할 수 있고, 기본 모델 교체는 교육 자료·업무 자동화·코딩 워크플로우 전체에 영향을 줍니다.\n\n오늘 바로 해볼 것\n자주 쓰는 프롬프트 3개를 다시 실행해 보세요. 답변 길이, 추론 방식, 환각 감소, 개인화 정도가 어떻게 바뀌었는지 비교하면 모델 업데이트의 실제 체감을 잡을 수 있습니다.",
+          "content": "**이게 뭐예요?**\nOpenAI가 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 롤아웃했다는 소식입니다. 사용자가 별도 설정을 의식하지 않아도, 같은 ChatGPT가 이전보다 다른 품질과 성향으로 응답할 수 있다는 뜻입니다. Plus/Pro 사용자는 과거 대화, 파일, Gmail 기반 개인화가 먼저 붙는 흐름도 같이 봐야 합니다.\n\n**벤치마크에서 뭐가 달라졌나?**\n영국 AI Security Institute(AISI) 공식 평가에서 GPT-5.5는 Expert 난이도 사이버 태스크 71.4% 통과율로 Claude Mythos Preview 68.6%를 앞섰습니다. 32-step 'The Last Ones' 엔드투엔드 시뮬레이션을 완수한 두 번째 모델로 기록됐고, rust_vm 리버스엔지니어링 태스크를 11분·$1.73에 풀었다는 사례도 나왔습니다. 인간 전문가 기준 약 12시간짜리 작업과 비교되는 수치라 발표 메인에 올릴 만합니다.\n\n**사용자 후기는 어떻게 읽을까?**\n초기 후기는 '환각이 줄고 답변이 더 개인화됐다'는 쪽과, 'Frontend UI 디자인은 여전히 Claude가 낫다'는 평가가 같이 있습니다. 그래서 이 카드는 무조건 1등 모델 선언이 아니라, ChatGPT 기본값이 바뀌면서 모든 사용자의 프롬프트·자동화·교육 자료가 재검증 대상이 됐다는 메시지로 다루는 게 좋습니다.\n\n**오늘 바로 해볼 것**\n자주 쓰는 프롬프트 3개를 GPT-5.5 Instant에서 다시 실행해 보세요. 답변 길이, 추론 방식, 환각 감소, 개인화 정도, UI 코드 품질을 Claude와 나란히 비교하면 모델 업데이트의 실제 체감을 잡을 수 있습니다.",
           "source": "https://openai.com/index/gpt-5-5-instant/",
           "officialUrl": "https://openai.com/index/gpt-5-5-instant/",
           "backupUrls": [
@@ -230,6 +230,60 @@ export const week19: WeeklyData = {
             "anthropic"
           ],
           "featured": true
+        },
+        {
+          "date": "5/06",
+          "platform": "X",
+          "title": "GPT-5.5 vs GPT-5.4 vs Opus 4.7 — 56개 실제 코딩 태스크 벤치마크",
+          "summary": "사용자 제작 4장 벤치마크 카드 반영. GPT-5.5는 46/56, GPT-5.4는 38/56, Opus 4.7은 32/56으로 해결률이 갈렸고, 비용은 Opus 4.7이 가장 낮음. 핵심은 최고 성능 모델과 최저 비용 모델이 다르다는 점.",
+          "content": "**이게 뭐예요?**\nGPT-5.5, GPT-5.4, Opus 4.7을 56개 실제 코딩 작업 기준으로 비교한 벤치마크입니다. 전체 결과만 보면 GPT-5.5가 가장 높은 해결률을 기록했고, GPT-5.4는 성능과 비용의 균형, Opus 4.7은 비용 효율성이 강점으로 나타났습니다.\n\n**벤치마크에서 뭐가 달라졌나?**\n작업 카테고리별로 보면 GPT-5.5가 전반적으로 가장 안정적인 성능을 보였습니다. 특히 백엔드와 알고리즘 작업에서 격차가 컸고, 디버깅·리팩터링·풀스택 작업에서도 일관되게 우세했습니다. 실제 개발 환경에서는 단순 평균보다 어떤 종류의 작업을 맡길 것인가가 더 중요합니다.\n\n**사용자 후기는 어떻게 읽을까?**\n비용과 효율성 관점에서는 다른 그림이 나옵니다. GPT-5.5는 토큰 효율성이 좋지만 작업당 비용은 가장 높고, Opus 4.7은 성공 작업당 비용이 가장 낮습니다. GPT-5.4는 그 중간에서 균형 잡힌 선택지에 가깝습니다.\n\n**오늘 바로 해볼 것**\n코딩 에이전트를 고를 때는 벤치마크 1등만 보지 말고 성공률, 코드 품질, 비용, 토큰 사용량, 리뷰 통과 가능성까지 함께 보세요. 최고 성능이 필요하면 GPT-5.5, 예산 최적화가 중요하면 Opus 4.7, 밸런스가 필요하면 GPT-5.4입니다.",
+          "source": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/",
+          "officialUrl": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/",
+          "thumbnail": {
+            "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-01.jpg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 전체 결과 요약 벤치마크",
+            "caption": "1/4 전체 결과 요약 — GPT-5.5는 46/56, GPT-5.4는 38/56, Opus 4.7은 32/56"
+          },
+          "images": [
+            {
+              "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-01.jpg",
+              "alt": "GPT-5.5, GPT-5.4, Opus 4.7 전체 결과 요약",
+              "caption": "1/4 전체 결과 요약: 가장 잘 푸는 모델과 가장 싸게 쓰는 모델이 다르다"
+            },
+            {
+              "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-02.jpg",
+              "alt": "GPT-5.5, GPT-5.4, Opus 4.7 작업 카테고리별 성공률 비교",
+              "caption": "2/4 작업 카테고리별 성공률: 어떤 종류의 작업을 맡길 것인가가 핵심"
+            },
+            {
+              "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-03.jpg",
+              "alt": "GPT-5.5, GPT-5.4, Opus 4.7 효율성 및 비용 분석",
+              "caption": "3/4 효율성 및 비용: 최고 성능, 예산 최적화, 밸런스 선택지가 나뉜다"
+            },
+            {
+              "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-04.jpg",
+              "alt": "GPT-5.5, GPT-5.4, Opus 4.7 종합 성능 비교",
+              "caption": "4/4 종합 성능 비교: 성공률, 코드 품질, 비용, 토큰 사용량, 리뷰 통과 가능성을 함께 본다"
+            }
+          ],
+          "backupUrls": [
+            {
+              "label": "Reddit 원문",
+              "url": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/"
+            },
+            {
+              "label": "Stet",
+              "url": "https://www.stet.sh"
+            }
+          ],
+          "tags": [
+            "벤치마크",
+            "코딩에이전트",
+            "openai",
+            "anthropic",
+            "community"
+          ],
+          "featured": true
         }
       ]
     },
@@ -237,6 +291,65 @@ export const week19: WeeklyData = {
       "name": "커뮤니티 / 오픈소스",
       "color": "#6B7280",
       "posts": [
+        {
+          "date": "5/06",
+          "platform": "X",
+          "title": "Andrej Karpathy 브리핑 — 코딩에서 위임으로, 앱에서 에이전틱 웹으로",
+          "summary": "Karpathy 대담을 VOL.03 해설 축으로 정리. 소프트웨어 개발의 병목이 직접 코딩에서 에이전트 위임, 메모리 설계, 토큰 처리량 극대화로 이동했다는 메시지.",
+          "content": "**이게 뭐예요?**\nKarpathy가 말하는 핵심은 소프트웨어 개발의 병목이 직접 코딩에서 에이전트 위임, 메모리 설계, 토큰 처리량 극대화로 이동했다는 점입니다. 이제 개발자는 한 줄씩 코드를 치는 사람보다, 에이전트에게 기능 단위 작업을 맡기고 결과를 검토하는 운영자에 가까워집니다.\n\n**벤치마크에서 뭐가 달라졌나?**\n모델 비교보다 중요한 변화는 작업 방식입니다. 과거에는 사람이 직접 구현하고 모델이 보조했다면, 이제는 명확한 지시문, MD 파일, 메모리 도구, 병렬 에이전트 운영 능력이 결과 품질을 좌우합니다.\n\n**사용자 후기는 어떻게 읽을까?**\n에이전트가 실패할 때 단순히 모델이 약하다고 보기보다, 지시·메모리·검증 루프가 부족했는지 봐야 합니다. Karpathy의 관점에서는 좋은 사용자가 좋은 프롬프트 한 줄을 쓰는 사람이 아니라, 에이전트가 오래 굴러가도 망가지지 않는 작업 시스템을 설계하는 사람입니다.\n\n**오늘 바로 해볼 것**\n내 프로젝트의 반복 작업 하나를 골라 Program MD처럼 지시서로 써보세요. 목표, 금지사항, 검증 명령, 완료 기준을 적고 에이전트에게 맡기면 코딩이 아니라 운영으로 바뀌는 감각을 잡을 수 있습니다.",
+          "source": "https://youtu.be/kwSVtQ7dziU?si=-838led0Q315gHC6",
+          "officialUrl": "https://youtu.be/kwSVtQ7dziU?si=-838led0Q315gHC6",
+          "backupUrls": [
+            {
+              "label": "Karpathy 원문",
+              "url": "https://x.com/karpathy/status/2015883857489522876"
+            },
+            {
+              "label": "Skills GitHub",
+              "url": "https://github.com/forrestchang/andrej-karpathy-skills"
+            }
+          ],
+          "thumbnail": {
+            "src": "/ab/2026-04c/karpathy/karpathy-01-delegation.png",
+            "alt": "AI 에이전트에게 코딩 작업을 위임하는 개발자 워크플로우",
+            "caption": "코딩에서 위임으로 — 개발자의 병목이 타이핑에서 에이전트 운영으로 이동"
+          },
+          "images": [
+            {
+              "src": "/ab/2026-04c/karpathy/karpathy-01-delegation.png",
+              "alt": "AI 에이전트에게 코딩 작업을 위임하는 개발자 워크플로우",
+              "caption": "1/5 코딩에서 위임으로 — 사람이 직접 타이핑하는 대신 에이전트에게 기능 단위 작업을 맡기는 흐름"
+            },
+            {
+              "src": "/ab/2026-04c/karpathy/karpathy-02-token-throughput.png",
+              "alt": "여러 AI 에이전트의 토큰 처리량을 감독하는 사람",
+              "caption": "2/5 Human bottleneck 제거 — 실력은 구독 중인 에이전트의 token throughput을 오래 정확히 굴리는 능력"
+            },
+            {
+              "src": "/ab/2026-04c/karpathy/karpathy-03-autoresearch.png",
+              "alt": "밤새 하이퍼파라미터 탐색을 수행하는 자율 연구 루프",
+              "caption": "3/5 Auto-Research — 에이전트가 밤새 실험을 돌리고 인간은 설계와 검증 루프를 관리"
+            },
+            {
+              "src": "/ab/2026-04c/karpathy/karpathy-04-program-md.png",
+              "alt": "Program MD 문서와 AI 에이전트 노드가 연결된 운영 매뉴얼",
+              "caption": "4/5 Program MD — 조직의 일하는 방식을 문서·메모리·검증 규칙으로 코드화"
+            },
+            {
+              "src": "/ab/2026-04c/karpathy/karpathy-05-agentic-web.png",
+              "alt": "스마트홈 기기를 자연어 에이전트가 통합 제어하는 에이전틱 웹",
+              "caption": "5/5 Agentic Web — 앱을 여는 대신 에이전트가 API와 기기를 대신 조작"
+            }
+          ],
+          "tags": [
+            "Karpathy",
+            "AIAgents",
+            "Delegation",
+            "AutoResearch",
+            "AgenticWeb"
+          ],
+          "featured": true
+        },
         {
           "date": "5/04",
           "platform": "X",

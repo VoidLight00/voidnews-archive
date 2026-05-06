@@ -23,6 +23,27 @@ function formatTag(tag: string): string {
   return tag;
 }
 
+function stripInlineMarkdown(text: string): string {
+  return text.replace(/\*\*([^*]+)\*\*/g, "$1");
+}
+
+function renderRichText(text: string) {
+  if (!text) return null;
+  const parts = text.split(/(\*\*[^*\n]+?\*\*)/g);
+
+  return parts.map((part, index) => {
+    if (!part) return null;
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={index} className="font-extrabold text-neutral-100">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return <span key={index}>{part}</span>;
+  });
+}
+
 export default async function PresentationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const data = getWeek(slug);
@@ -118,8 +139,50 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
 
               {post.summary && (
                 <p className="text-neutral-300 leading-relaxed mb-5">
-                  {post.summary}
+                  {stripInlineMarkdown(post.summary)}
                 </p>
+              )}
+
+              {post.thumbnail && (
+                <figure className="mb-5 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
+                  <img
+                    src={post.thumbnail.src}
+                    alt={post.thumbnail.alt}
+                    loading="lazy"
+                    className="block w-full aspect-video object-cover"
+                  />
+                  {post.thumbnail.caption && (
+                    <figcaption className="border-t border-neutral-800 px-4 py-2 text-xs leading-relaxed text-neutral-400">
+                      {stripInlineMarkdown(post.thumbnail.caption)}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+
+              {post.content && (
+                <div className="mb-5 rounded-xl border border-neutral-800 bg-neutral-950/70 p-4 text-sm leading-7 text-neutral-300 whitespace-pre-line">
+                  {renderRichText(post.content)}
+                </div>
+              )}
+
+              {post.images && post.images.length > 0 && (
+                <div className="mb-5 grid gap-3 md:grid-cols-2">
+                  {post.images.map((image) => (
+                    <figure key={image.src} className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        className="block w-full aspect-video object-cover"
+                      />
+                      {image.caption && (
+                        <figcaption className="border-t border-neutral-800 px-3 py-2 text-xs leading-relaxed text-neutral-400">
+                          {stripInlineMarkdown(image.caption)}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
               )}
 
               <div className="flex flex-wrap items-center gap-2 mb-3">

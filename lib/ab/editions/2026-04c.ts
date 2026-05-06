@@ -12,8 +12,8 @@ export const edition2026_04c: ABEdition = {
     "2026-w19"
   ],
   "announceDate": "2026-05-06",
-  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Anthropic Finance Agents처럼 특정 직무의 반복 업무를 패키지로 묶는 흐름입니다.\n\n그래서 VOL.03은 13개를 모두 나열하는 뉴스가 아니라, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지로 정리합니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
-  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Finance Agents 10종은 금융 분석가의 반복 업무를 박스 패키지처럼 묶은 사례입니다. ChatGPT for Clinicians와 AI Co-Clinician은 의료 영역에서 같은 방향을 보여줍니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거입니다.\n\n다음 격주에는 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질을 이어서 추적하면 됩니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
+  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Anthropic Finance Agents처럼 특정 직무의 반복 업무를 패키지로 묶는 흐름입니다.\n\n그래서 VOL.03은 모든 뉴스를 펼쳐 놓는 대신, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지에 맞는 핵심 카드만 남겼습니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
+  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Finance Agents 10종은 금융 분석가의 반복 업무를 박스 패키지처럼 묶은 사례입니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거입니다.\n\n다음 격주에는 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질을 이어서 추적하면 됩니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
   "highlights": [
     {
       "rank": 1,
@@ -283,7 +283,7 @@ export const edition2026_04c: ABEdition = {
         "platform": "X",
         "title": "OpenAI GPT-5.5 Instant — ChatGPT 신규 기본 모델로 롤아웃",
         "summary": "ChatGPT 신규 기본 모델 GPT-5.5 Instant 롤아웃. 전 사용자 기본값 변화 + Plus/Pro의 과거 대화·파일·Gmail 기반 개인화 우선 적용. AISI 사이버 평가에서는 Expert 태스크 71.4%로 Claude Mythos Preview(68.6%)를 추월했고, 32-step 'The Last Ones' 시뮬레이션 완수, rust_vm 리버스엔지니어링 11분·$1.73 풀이 사례까지 공개됨.",
-        "content": "이게 뭐예요?\nOpenAI가 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 롤아웃했다는 소식입니다. 사용자가 별도 설정을 의식하지 않아도, 같은 ChatGPT가 이전보다 다른 품질과 성향으로 응답할 수 있다는 뜻입니다. Plus/Pro 사용자는 과거 대화, 파일, Gmail 기반 개인화가 먼저 붙는 흐름도 같이 봐야 합니다.\n\n벤치마크에서 뭐가 달라졌나\n영국 AI Security Institute(AISI) 공식 평가에서 GPT-5.5는 Expert 난이도 사이버 태스크 71.4% 통과율로 Claude Mythos Preview 68.6%를 앞섰습니다. 32-step 'The Last Ones' 엔드투엔드 시뮬레이션을 완수한 두 번째 모델로 기록됐고, rust_vm 리버스엔지니어링 태스크를 11분·$1.73에 풀었다는 사례도 나왔습니다. 인간 전문가 기준 약 12시간짜리 작업과 비교되는 수치라 발표 메인에 올릴 만합니다.\n\n사용자 후기는 어떻게 읽을까\n초기 후기는 '환각이 줄고 답변이 더 개인화됐다'는 쪽과, 'Frontend UI 디자인은 여전히 Claude가 낫다'는 평가가 같이 있습니다. 그래서 이 카드는 무조건 1등 모델 선언이 아니라, ChatGPT 기본값이 바뀌면서 모든 사용자의 프롬프트·자동화·교육 자료가 재검증 대상이 됐다는 메시지로 다루는 게 좋습니다.\n\n오늘 바로 해볼 것\n자주 쓰는 프롬프트 3개를 GPT-5.5 Instant에서 다시 실행해 보세요. 답변 길이, 추론 방식, 환각 감소, 개인화 정도, UI 코드 품질을 Claude와 나란히 비교하면 모델 업데이트의 실제 체감을 잡을 수 있습니다.",
+        "content": "**이게 뭐예요?**\nOpenAI가 GPT-5.5 Instant를 ChatGPT의 새 기본 모델로 롤아웃했다는 소식입니다. 사용자가 별도 설정을 의식하지 않아도, 같은 ChatGPT가 이전보다 다른 품질과 성향으로 응답할 수 있다는 뜻입니다. Plus/Pro 사용자는 과거 대화, 파일, Gmail 기반 개인화가 먼저 붙는 흐름도 같이 봐야 합니다.\n\n**벤치마크에서 뭐가 달라졌나?**\n영국 AI Security Institute(AISI) 공식 평가에서 GPT-5.5는 Expert 난이도 사이버 태스크 71.4% 통과율로 Claude Mythos Preview 68.6%를 앞섰습니다. 32-step 'The Last Ones' 엔드투엔드 시뮬레이션을 완수한 두 번째 모델로 기록됐고, rust_vm 리버스엔지니어링 태스크를 11분·$1.73에 풀었다는 사례도 나왔습니다. 인간 전문가 기준 약 12시간짜리 작업과 비교되는 수치라 발표 메인에 올릴 만합니다.\n\n**사용자 후기는 어떻게 읽을까?**\n초기 후기는 '환각이 줄고 답변이 더 개인화됐다'는 쪽과, 'Frontend UI 디자인은 여전히 Claude가 낫다'는 평가가 같이 있습니다. 그래서 이 카드는 무조건 1등 모델 선언이 아니라, ChatGPT 기본값이 바뀌면서 모든 사용자의 프롬프트·자동화·교육 자료가 재검증 대상이 됐다는 메시지로 다루는 게 좋습니다.\n\n**오늘 바로 해볼 것**\n자주 쓰는 프롬프트 3개를 GPT-5.5 Instant에서 다시 실행해 보세요. 답변 길이, 추론 방식, 환각 감소, 개인화 정도, UI 코드 품질을 Claude와 나란히 비교하면 모델 업데이트의 실제 체감을 잡을 수 있습니다.",
         "source": "https://openai.com/index/gpt-5-5-instant/",
         "officialUrl": "https://openai.com/index/gpt-5-5-instant/",
         "backupUrls": [
@@ -342,37 +342,41 @@ export const edition2026_04c: ABEdition = {
         "platform": "X",
         "title": "GPT-5.5 vs GPT-5.4 vs Opus 4.7 — 56개 실제 코딩 태스크 벤치마크",
         "summary": "Reddit r/codex에 올라온 Stet 기반 real-repo coding-agent benchmark. 56개 실제 merged commit 태스크에서 GPT-5.5는 tests pass 38/56, human patch equivalent 40/56, clean pass 28/56, code-review pass 33/56으로 가장 강한 shipping default를 보였고, Opus 4.7은 footprint risk 0.20으로 가장 작은 패치 성향을 보임.",
-        "content": "이게 뭐예요?\nReddit r/codex에 올라온 GPT-5.5, GPT-5.4, Opus 4.7 비교 벤치마크입니다. Zod 27개, graphql-go-tools 29개, 총 56개 실제 오픈소스 merged commit 기반 태스크를 각 모델의 native agent harness에서 돌렸습니다. Opus 4.7은 Claude Code high, GPT-5.4와 GPT-5.5는 Codex CLI high 설정입니다.\n\n핵심 결과\nGPT-5.5는 tests pass 38/56, human patch equivalent 40/56, clean pass 28/56, code-review pass 33/56으로 가장 강한 shipping default로 평가됐습니다. GPT-5.4는 cost/task $2.39로 비용 면에서 강했고, Opus 4.7은 footprint risk 0.20으로 가장 작은 패치를 쓰는 성향이 뚜렷했습니다. 다만 작은 패치가 항상 좋은 것은 아니고, graphql-go-tools에서는 companion work를 놓치는 under-implementation 문제가 더 크게 보였다는 해석입니다.\n\n발표에서 어떻게 말할까\n이 카드는 GPT-5.5 공식 출시 카드 바로 뒤에 붙여야 합니다. 공식 벤치마크만 보면 모델 성능 이야기로 끝나지만, 이 Reddit 벤치마크는 실제 repo에서 리뷰 통과 가능성과 human patch 근접도를 비교했다는 점이 중요합니다. '어떤 모델이 1등인가'보다, 내 repo에서 review bottleneck이 큰지, patch footprint가 중요한지, 비용이 중요한지에 따라 선택이 달라진다는 메시지로 설명하면 좋습니다.\n\n스레드 복붙 문구 1/4\nGPT-5.5, GPT-5.4, Opus 4.7을 56개 실제 코딩 작업 기준으로 비교했습니다. 전체 결과만 보면 GPT-5.5가 가장 높은 해결률을 기록했고, GPT-5.4는 성능과 비용의 균형, Opus 4.7은 비용 효율성이 강점으로 나타났습니다. 핵심은 “가장 잘 푸는 모델”과 “가장 싸게 쓰는 모델”이 다르다는 점입니다.\n\n스레드 복붙 문구 2/4\n작업 카테고리별로 보면 GPT-5.5가 전반적으로 가장 안정적인 성능을 보였습니다. 특히 백엔드와 알고리즘 작업에서 격차가 컸고, 디버깅·리팩터링·풀스택 작업에서도 일관되게 우세했습니다. 실제 개발 환경에서는 단순 평균보다 “어떤 종류의 작업을 맡길 것인가”가 더 중요합니다.\n\n스레드 복붙 문구 3/4\n비용과 효율성 관점에서는 다른 그림이 나옵니다. GPT-5.5는 토큰 효율성이 좋지만 작업당 비용은 가장 높고, Opus 4.7은 성공 작업당 비용이 가장 낮습니다. GPT-5.4는 그 중간에서 균형 잡힌 선택지에 가깝습니다. 즉, 최고 성능이 필요하면 GPT-5.5, 예산 최적화가 중요하면 Opus 4.7, 밸런스가 필요하면 GPT-5.4입니다.\n\n스레드 복붙 문구 4/4\n종합하면 GPT-5.5는 가장 강한 전체 성능, GPT-5.4는 균형 잡힌 운영 효율, Opus 4.7은 비용 효율성이 강점입니다. 코딩 에이전트를 고를 때는 “벤치마크 1등”만 볼 게 아니라 성공률, 코드 품질, 비용, 토큰 사용량, 리뷰 통과 가능성까지 함께 봐야 합니다. 모델 선택은 결국 목적의 문제입니다.",
+        "content": "**이게 뭐예요?**\nReddit r/codex에 올라온 GPT-5.5, GPT-5.4, Opus 4.7 비교 벤치마크입니다. Zod 27개, graphql-go-tools 29개, 총 56개 실제 오픈소스 merged commit 기반 태스크를 각 모델의 native agent harness에서 돌렸습니다. Opus 4.7은 Claude Code high, GPT-5.4와 GPT-5.5는 Codex CLI high 설정입니다.\n\n**벤치마크에서 뭐가 달라졌나?**\nGPT-5.5는 56개 작업 중 46개를 해결해 가장 높은 성공률 82.1%를 기록했습니다. GPT-5.4는 38/56, Opus 4.7은 32/56으로 뒤를 이었고, 총 비용은 각각 $31.57, $23.64, $15.85로 갈렸습니다. 즉 최고 성능과 최저 비용은 같은 모델이 아닙니다.\n\n**사용자 후기는 어떻게 읽을까?**\n작업 카테고리별로는 GPT-5.5가 백엔드·알고리즘·디버깅·리팩터링·풀스택 작업에서 전반적으로 안정적입니다. 반면 Opus 4.7은 성공 작업당 비용이 낮고, GPT-5.4는 성능과 비용 사이의 균형 선택지에 가깝습니다. 실제 개발 환경에서는 단순 1등보다 어떤 종류의 작업을 맡길지, review bottleneck이 어디인지가 더 중요합니다.\n\n**오늘 바로 해볼 것**\n내 repo에서 자주 생기는 작업 10개를 골라 모델별로 같은 harness에 넣어보세요. 성공률, 코드 품질, 비용, 토큰 사용량, 리뷰 통과 가능성을 같이 보면 GPT-5.5를 쓸 곳과 Opus 4.7을 쓸 곳이 자연스럽게 갈립니다. 모델 선택은 결국 목적의 문제입니다.",
         "source": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/",
         "officialUrl": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/",
         "thumbnail": {
-          "src": "/ab/2026-04c/benchmarks/gpt55-coding-benchmark-scorecard.svg",
-          "alt": "GPT-5.5, GPT-5.4, Opus 4.7의 56개 실제 코딩 태스크 벤치마크 scorecard",
-          "caption": "56개 real-repo coding tasks — GPT-5.5는 clean pass와 review pass에서 가장 큼"
+          "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-01.jpg",
+          "alt": "GPT-5.5, GPT-5.4, Opus 4.7 전체 결과 요약 벤치마크",
+          "caption": "1/4 전체 결과 요약 — GPT-5.5는 46/56, GPT-5.4는 38/56, Opus 4.7은 32/56"
         },
         "images": [
           {
-            "src": "/ab/2026-04c/benchmarks/gpt55-coding-benchmark-scorecard.svg",
-            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 전체 scorecard",
-            "caption": "1/4 전체 scorecard: tests pass, human patch equivalence, clean pass, review pass, time, cost 비교"
+            "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-01.jpg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 전체 결과 요약",
+            "caption": "1/4 전체 결과 요약: 성공률과 비용이 서로 다른 모델 선택 기준을 만든다"
           },
           {
-            "src": "/ab/2026-04c/benchmarks/gpt55-repo-split.svg",
-            "alt": "Zod와 graphql-go-tools repo split benchmark",
-            "caption": "2/4 Repo split: Zod에서는 review 판단, graphql-go-tools에서는 clean pass 격차가 크게 벌어짐"
+            "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-02.jpg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 작업 카테고리별 성공률 비교",
+            "caption": "2/4 작업 카테고리별 성공률: 백엔드·알고리즘·디버깅·리팩터링·풀스택 기준 비교"
           },
           {
-            "src": "/ab/2026-04c/benchmarks/gpt55-efficiency.svg",
-            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 효율성과 비용 비교",
-            "caption": "3/4 효율성: GPT-5.5는 시간·토큰, GPT-5.4는 cost/task, Opus 4.7은 footprint risk가 강점"
+            "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-03.jpg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 효율성 및 비용 분석",
+            "caption": "3/4 효율성 및 비용: 최고 성능, 예산 최적화, 밸런스 선택지가 나뉜다"
           },
           {
-            "src": "/ab/2026-04c/benchmarks/gpt55-model-choice.svg",
-            "alt": "코딩 에이전트 모델 선택 기준 요약",
-            "caption": "4/4 모델 선택: review, 비용, patch footprint 중 어떤 병목을 풀 것인지가 핵심"
+            "src": "/ab/2026-04c/benchmarks/gpt55-user-benchmark-04.jpg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 종합 성능 비교",
+            "caption": "4/4 종합 성능 비교: 성공률, 코드 품질, 비용, 토큰 사용량, 리뷰 통과 가능성을 함께 본다"
           }
         ],
         "backupUrls": [
+          {
+            "label": "Reddit 원문",
+            "url": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/"
+          },
           {
             "label": "Stet",
             "url": "https://www.stet.sh"
@@ -446,151 +450,6 @@ export const edition2026_04c: ABEdition = {
       "keyQuote": "1.6T MoE · 1M context — 오픈소스가 다시 스케일을 밀어붙임",
       "editorial": "오픈소스 진영이 다시 고성능·대형 컨텍스트로 추격하는 카드입니다. 바로 실무에 넣을 수 있다는 뜻보다는 선택지와 비용 구조가 바뀌고 있다는 점을 강조하면 좋습니다."
     },
-    {
-      "rank": 11,
-      "tier": "normal",
-      "post": {
-        "date": "4/27",
-        "platform": "X",
-        "title": "Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개 (Artificial Analysis Arena 1위 등극)",
-        "summary": "15B 파라미터 단일 스트림 트랜스포머 — text/image/subject-to-video, 1080p 15초, 7개 언어 립싱크 동기 오디오 동시 생성으로 Artificial Analysis 영상 아레나 익명 1위",
-        "content": "이게 뭐예요?\nAlibaba HappyHorse 1.0은 영상 생성 AI 베타로, Artificial Analysis Arena에서 높은 순위를 기록했다는 소식입니다. 중국 모델 경쟁이 텍스트와 이미지에서 영상 생성으로 넓어지는 흐름입니다.\n\n왜 중요해요?\n영상은 강의 홍보, 숏폼, 제품 소개에 바로 연결됩니다. 영상 생성 품질 경쟁이 빨라지면 1인 크리에이터와 강사도 제작 비용을 크게 줄일 수 있습니다.\n\n오늘 확인할 것\n데모 영상만 보고 판단하지 말고, 한국어 텍스트 처리, 상업 이용 조건, 워터마크, 편집 가능성을 함께 확인하는 것이 좋습니다.",
-        "source": "https://www.alibabacloud.com/blog/alibaba-rolls-out-happyhorse-1-0-in-limited-beta_603068",
-        "officialUrl": "https://www.alibabacloud.com/blog/alibaba-rolls-out-happyhorse-1-0-in-limited-beta_603068",
-        "backupUrls": [
-          {
-            "label": "cnbc.com",
-            "url": "https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html"
-          },
-          {
-            "label": "blog.comfy.org",
-            "url": "https://blog.comfy.org/p/happyhorse-10-is-now-available"
-          },
-          {
-            "label": "fal.ai",
-            "url": "https://fal.ai/happyhorse-1-0"
-          }
-        ],
-        "tags": [
-          "도구릴리스",
-          "공식",
-          "alibaba"
-        ],
-        "featured": true
-      },
-      "sourceWeek": "2026-w18",
-      "sourceCompany": "Alibaba / Qwen",
-      "keyQuote": "영상 생성 Arena 1위 — 중국 모델 경쟁이 이미지에서 영상으로 이동",
-      "editorial": "중국 AI 경쟁이 영상 생성으로 확장되는 카드입니다. 텍스트 모델만 따라잡는 것이 아니라 영상 제작 시장에서도 Arena와 벤치마크를 앞세우고 있습니다. 크리에이터 수강생에게 특히 체감될 변화입니다."
-    },
-    {
-      "rank": 12,
-      "tier": "normal",
-      "post": {
-        "date": "4/30",
-        "platform": "X",
-        "title": "Apple Support 앱 v5.13 — CLAUDE.md 2개 파일 실수 노출 (Apple 내부 Juno AI 아키텍처 유출)",
-        "summary": "MacRumors의 Aaron Perris가 캡처 — Apple이 Claude Code로 'Juno AI' + Live Agents 듀얼 백엔드를 개발 중임이 공개. Apple-Gemini Siri 협업과 별개로 내부 개발 도구는 Claude를 채택",
-        "content": "이게 뭐예요?\nApple Support 앱 v5.13에서 CLAUDE.md 파일 2개가 실수로 노출되며 내부 Juno AI 아키텍처 단서가 공개됐다는 유출입니다. AI 제품 개발 방식과 내부 지침이 밖으로 나온 사례로 볼 수 있습니다.\n\n왜 중요해요?\nApple이 AI를 어떻게 제품 내부에 붙이려 하는지 엿볼 수 있는 카드입니다. 동시에 CLAUDE.md 같은 에이전트 지침 파일이 실제 기업 내부에서도 중요해졌다는 신호이기도 합니다.\n\n주의할 점\n유출 자료는 맥락이 부족하고 변경될 수 있습니다. 발표에서는 세부 구현을 단정하기보다, '대기업 AI 개발에서도 지침 파일과 에이전트 아키텍처가 핵심 문서가 됐다'는 메시지로 연결하면 좋습니다.",
-        "source": "https://xcancel.com/aaronp613/status/2049986504617820551",
-        "officialUrl": "https://xcancel.com/aaronp613/status/2049986504617820551",
-        "backupUrls": [
-          {
-            "label": "news.ycombinator.com",
-            "url": "https://news.ycombinator.com/item?id=47973378"
-          },
-          {
-            "label": "eu.36kr.com",
-            "url": "https://eu.36kr.com/en/p/3791662444911617"
-          },
-          {
-            "label": "finance.biggo.com",
-            "url": "https://finance.biggo.com/news/202605020924_Apple_Leaks_Claude.md_in_Support_App"
-          }
-        ],
-        "tags": [
-          "워크플로우",
-          "유출",
-          "anthropic",
-          "community"
-        ],
-        "featured": true
-      },
-      "sourceWeek": "2026-w18",
-      "sourceCompany": "Apple / Juno AI",
-      "keyQuote": "Apple 내부 Juno AI 아키텍처가 CLAUDE.md로 노출",
-      "editorial": "Apple이 아직 조용해 보여도 내부에서는 AI 제품 구조를 계속 만들고 있음을 보여주는 사고성 카드입니다. 동시에 기업 내부의 에이전트 지침 파일 관리가 보안 이슈가 될 수 있다는 교훈도 있습니다."
-    },
-    {
-      "rank": 13,
-      "tier": "normal",
-      "post": {
-        "date": "4/30",
-        "platform": "X",
-        "title": "NVIDIA Nemotron 3 Nano Omni — 30B-A3B 오픈 멀티모달 모델 (RTX 5090에서 실행)",
-        "summary": "30B 총/3B 활성 MoE에 vision·audio 인코더 통합 — 동급 오픈 옴니 대비 9배 처리량, 가중치·데이터셋·레시피 풀 공개. NVFP4로 RTX 5090 1대에서 추론",
-        "content": "이게 뭐예요?\nNVIDIA Nemotron 3 Nano Omni는 30B-A3B 규모의 오픈 멀티모달 모델로, RTX 5090 같은 로컬 하드웨어 실행 가능성이 강조된 소식입니다.\n\n왜 중요해요?\n멀티모달 AI가 클라우드 API 전용이 아니라 로컬 PC로 내려오는 흐름입니다. 개인정보가 있는 이미지·문서·영상 분석을 로컬에서 처리하려는 팀에게 의미가 큽니다.\n\n오늘 확인할 것\n내 장비에서 실제로 가능한지 VRAM, 양자화, 실행 프레임워크를 먼저 확인하세요. '로컬에서 된다'는 말은 항상 하드웨어 조건과 함께 봐야 합니다.",
-        "source": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/",
-        "officialUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/",
-        "backupUrls": [
-          {
-            "label": "blogs.nvidia.com",
-            "url": "https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/"
-          },
-          {
-            "label": "Hugging Face",
-            "url": "https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16"
-          },
-          {
-            "label": "aws.amazon.com",
-            "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-nano-omni-model-now-available-on-amazon-sagemaker-jumpstart/"
-          }
-        ],
-        "tags": [
-          "도구릴리스",
-          "공식",
-          "nvidia"
-        ],
-        "featured": true
-      },
-      "sourceWeek": "2026-w18",
-      "sourceCompany": "NVIDIA",
-      "keyQuote": "RTX 5090에서 30B 멀티모달 — 로컬 AI의 다음 기준",
-      "editorial": "로컬 AI의 현실감을 높이는 카드입니다. 클라우드 API만 쓰던 멀티모달 모델이 고성능 개인 장비로 내려오면 비용, 프라이버시, 지연시간의 계산이 달라집니다."
-    },
-    {
-      "rank": 14,
-      "tier": "normal",
-      "post": {
-        "date": "4/23",
-        "platform": "X",
-        "title": "ChatGPT for Clinicians 무료 출시 + HealthBench Professional 벤치마크 공개",
-        "summary": "미국 인증 의사·NP·PA·약사에게 무료. Stanford MedHELM·MedMarks 1위, HealthBench Professional 동시 공개로 임상 채팅 평가 표준화 시도.",
-        "content": "이게 뭐예요?\nChatGPT for Clinicians 무료 출시와 HealthBench Professional 공개 소식입니다. 의료 현장에서 쓸 수 있는 AI 보조 도구와 그 성능을 평가하는 벤치마크가 함께 나온 흐름입니다.\n\n왜 중요해요?\n의료 AI가 논문이나 데모를 넘어 실제 사용자 입구로 들어오기 시작했습니다. 교육 관점에서는 '전문직 AI'가 금융, 의료처럼 규제가 강한 영역에서도 워크플로우 단위로 들어온다는 점이 중요합니다.\n\n주의할 점\n의료 AI는 진단 책임, 개인정보, 규제 문제가 큽니다. 발표에서는 '의사를 대체'가 아니라 '임상 업무 보조와 평가 체계의 등장'으로 설명하는 것이 안전합니다.",
-        "source": "https://openai.com/index/making-chatgpt-better-for-clinicians/",
-        "officialUrl": "https://openai.com/index/making-chatgpt-better-for-clinicians/",
-        "backupUrls": [
-          {
-            "label": "fiercehealthcare.com",
-            "url": "https://www.fiercehealthcare.com/ai-and-machine-learning/openai-launches-chatgpt-clinicians-free-ai-tool-physicians-nps-and"
-          },
-          {
-            "label": "OpenAI 공식",
-            "url": "https://help.openai.com/en/articles/20001202-chatgpt-for-clinicians"
-          }
-        ],
-        "tags": [
-          "도구릴리스",
-          "공식",
-          "openai"
-        ],
-        "featured": true
-      },
-      "sourceWeek": "2026-w17",
-      "sourceCompany": "OpenAI",
-      "keyQuote": "ChatGPT for Clinicians 무료 — 의료 AI가 실사용 입구로 들어옴",
-      "editorial": "의료 AI는 과장하기 쉬운 주제라서 오히려 정확히 다뤄야 합니다. 무료 출시보다 중요한 것은 전문직 워크플로우와 평가 벤치마크가 함께 등장했다는 점입니다. 금융 Agents와 함께 “직무 패키징”이라는 이번 회차 메시지를 완성합니다."
-    }
   ],
   "editorsPicks": [
     {
