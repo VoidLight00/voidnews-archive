@@ -346,7 +346,7 @@ function HighlightModal({
               color: "var(--accent)",
             }}
           >
-            ▾ Editor&apos;s Note
+            ▾ 생각해볼 점
           </div>
           <p
             style={{
@@ -487,7 +487,7 @@ function PickModal({
               color: "var(--gold)",
             }}
           >
-            ▾ Editor&apos;s Note
+            ▾ 생각해볼 점
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.8, color: "var(--muted)" }}>
             {stripMarkdown(item.editorial)}
@@ -1347,7 +1347,6 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </section>
         )}
 
-        {/* ───── Editor's Pick ───── */}
         {data.editorsPicks && data.editorsPicks.length > 0 && (
           <section
             style={{
@@ -1372,7 +1371,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--gold)",
                   }}
                 >
-                  🛠 Editor&apos;s Pick
+                  🛠 실전 참고 자료
                 </div>
                 <h2
                   style={{
@@ -1383,7 +1382,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--text)",
                   }}
                 >
-                  VoidLight 엄선 — 직접 써본 도구·자료
+                  메인 흐름을 이해하는 데 도움이 되는 자료
                 </h2>
                 <p
                   style={{
@@ -1393,7 +1392,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--muted)",
                   }}
                 >
-                  VIP 트윗 트랙과 별개로, 큐레이터가 직접 검증한 인프라/도구
+                  발표 본문에서 다루는 흐름을 더 깊게 확인할 수 있는 원문과 도구
                 </p>
               </div>
               <div
