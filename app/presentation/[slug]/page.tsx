@@ -44,6 +44,71 @@ function renderRichText(text: string) {
   });
 }
 
+type PresentationLink = { label: string; url: string; primary?: boolean };
+
+function isXUrl(url: string): boolean {
+  return url.includes("x.com/") || url.includes("twitter.com/");
+}
+
+function isVideoUrl(url: string): boolean {
+  return url.includes("youtube.com/") || url.includes("youtu.be/");
+}
+
+function labelForUrl(url: string, fallback: string): string {
+  if (isVideoUrl(url)) return "영상 보기";
+  if (isXUrl(url)) return "X 원문";
+  return fallback;
+}
+
+function collectPresentationLinks(post: Post, slug: string): PresentationLink[] {
+  const links: PresentationLink[] = [];
+  const seen = new Set<string>();
+  const add = (link: PresentationLink) => {
+    if (!link.url || seen.has(link.url)) return;
+    seen.add(link.url);
+    links.push(link);
+  };
+
+  add({ label: "상세 카드", url: `/${slug}?post=${encodeURIComponent(post.title)}`, primary: true });
+  if (post.officialUrl) {
+    add({ label: labelForUrl(post.officialUrl, "공식 원문"), url: post.officialUrl, primary: true });
+  }
+  if (post.source) {
+    add({ label: labelForUrl(post.source, "자료 원문"), url: post.source });
+  }
+  for (const link of post.backupUrls || []) add(link);
+
+  return links;
+}
+
+function SourceButtons({ post, slug }: { post: Post; slug: string }) {
+  const links = collectPresentationLinks(post, slug);
+
+  return (
+    <div className="flex flex-wrap items-center gap-2 mb-3">
+      {links.map((link) => {
+        const external = !link.url.startsWith("/");
+        return (
+          <a
+            key={link.url}
+            href={link.url}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition ${
+              link.primary
+                ? "bg-neutral-100 text-neutral-900 hover:bg-white"
+                : "bg-neutral-800 text-neutral-100 hover:bg-neutral-700 border border-neutral-700"
+            }`}
+          >
+            {link.label}
+            <span aria-hidden>↗</span>
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 export default async function PresentationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const data = getWeek(slug);
@@ -62,10 +127,9 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
     return (
       <main className="min-h-dvh bg-neutral-950 text-neutral-100 flex items-center justify-center p-8">
         <div className="text-center space-y-4">
-          <h1 className="text-2xl font-semibold">발표용 featured 항목이 없습니다</h1>
+          <h1 className="text-2xl font-semibold">이 회차에는 발표 하이라이트가 아직 없습니다</h1>
           <p className="text-neutral-400">
-            lib/weeks/{slug}.ts 의 Post에 <code className="text-amber-300">featured: true</code>를
-            추가하세요.
+            전체 아카이브에서 이번 주 AI 소식을 확인할 수 있습니다.
           </p>
           <Link
             href={`/${slug}`}
@@ -185,31 +249,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
                 </div>
               )}
 
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                {post.officialUrl && (
-                  <a
-                    href={post.officialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-100 text-neutral-900 text-sm font-medium hover:bg-white transition"
-                  >
-                    공식 링크
-                    <span aria-hidden>↗</span>
-                  </a>
-                )}
-                {post.backupUrls?.map(({ label, url }) => (
-                  <a
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-800 text-neutral-100 text-sm font-medium hover:bg-neutral-700 border border-neutral-700 transition"
-                  >
-                    {label}
-                    <span aria-hidden>↗</span>
-                  </a>
-                ))}
-              </div>
+              <SourceButtons post={post} slug={slug} />
 
               {post.tags && post.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">

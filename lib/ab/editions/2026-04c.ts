@@ -3,8 +3,8 @@ import type { ABEdition } from "../data";
 export const edition2026_04c: ABEdition = {
   "slug": "2026-04c",
   "volume": 3,
-  "title": "Finance Agents·Open Design·GPT-5.5 — AI가 직무를 패키징하기 시작한 2주",
-  "theme": "VOL.02에서 예고한 흐름이 굳어진 회차 — Anthropic 직무 에이전트, OpenAI 기본 모델 교체, Google 차기 시그널, 오픈소스·로컬 AI 확장",
+  "title": "Perplexity Finance·Open Design·GPT-5.5 — AI가 직무를 패키징하기 시작한 2주",
+  "theme": "VOL.02에서 예고한 흐름이 굳어진 회차 — Perplexity 금융 워크플로우, OpenAI 기본 모델 교체, Google 차기 시그널, 오픈소스·로컬 AI 확장",
   "period": "2026-04-23 ~ 2026-05-06",
   "coveredWeeks": [
     "2026-w17",
@@ -12,8 +12,8 @@ export const edition2026_04c: ABEdition = {
     "2026-w19"
   ],
   "announceDate": "2026-05-06",
-  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Anthropic Finance Agents와 Perplexity Computer for Professional Finance처럼 특정 직무의 반복 업무와 라이선스 데이터를 패키지로 묶는 흐름입니다.\n\n그래서 VOL.03은 모든 뉴스를 펼쳐 놓는 대신, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지에 맞는 핵심 카드만 남겼습니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
-  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Anthropic Finance Agents와 Perplexity Computer for Professional Finance는 금융 분석가의 반복 업무를 박스 패키지처럼 묶은 사례입니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거이고, xAI Voice Cloning·Google AI Studio·HappyHorse는 음성·이미지·영상 인터페이스가 제품 제작 흐름으로 들어오는 장면입니다.\n\n다음 흐름은 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질로 이어집니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
+  "intro": "지난 회차에서 예고한 거의 모든 신호가 굳어진 2주였습니다. GPT-5.5 출시 임박 신호는 ChatGPT 기본 모델 교체로 이어졌고, Claude Design은 Creative Connectors 9종과 Open Design 오픈소스 클론으로 실제 워크플로우가 됐습니다.\n\n이번 회차의 중심은 두 갈래입니다. 하나는 ChatGPT 기본 모델이 GPT-5.5 Instant로 바뀌며 수강생 모두가 바로 체감할 모델 업데이트이고, 다른 하나는 Perplexity Computer for Professional Finance처럼 특정 직무의 반복 업무와 라이선스 데이터를 패키지로 묶는 흐름입니다. Claude Financial Services Agents는 비교 자료로 Perplexity 카드에 함께 연결했습니다.\n\n그래서 VOL.03은 모든 뉴스를 펼쳐 놓는 대신, 'AI가 직무를 직접 제품화하기 시작했다'는 한 줄 메시지에 맞는 핵심 카드만 남겼습니다. 각 카드는 수강생이 바로 이해할 수 있도록 이게 무엇인지, 왜 중요한지, 오늘 무엇을 확인하면 되는지까지 함께 풀었습니다.",
+  "closing": "이번 회차의 큰 변화는 하나입니다. AI가 도구에서 직무 패키지로 넘어가고 있습니다.\n\nGPT-5.5 Instant는 ChatGPT를 매일 쓰는 사람이 바로 느끼는 기본값의 변화이고, Perplexity Computer for Professional Finance는 금융 분석가의 반복 업무와 라이선스 데이터를 박스 패키지처럼 묶은 사례입니다. Creative Connectors와 Open Design은 창작 직무의 작업 흐름을 AI가 직접 만지기 시작했다는 증거이고, xAI Voice Cloning·Google AI Studio·HappyHorse는 음성·이미지·영상 인터페이스가 제품 제작 흐름으로 들어오는 장면입니다.\n\n다음 흐름은 Gemini 3.2 Flash 정식화, Jupiter/Sonnet 후속 발표 여부, GPT-5.5 본 모델의 실제 체감 품질로 이어집니다. 핵심 질문은 계속 같습니다. '내 직무에서 반복되는 10개 워크플로우를 AI 에이전트 묶음으로 바꾸면 무엇이 사라지고 무엇이 남는가?'\n\n— VoidLight",
   "highlights": [
     {
       "rank": 1,
@@ -23,7 +23,7 @@ export const edition2026_04c: ABEdition = {
         "platform": "X",
         "title": "Anthropic 'Claude Jupiter v1-p' red-team probe — possible Sonnet 4.8 / next Sonnet-class drop",
         "summary": "Anthropic이 'claude-jupiter-v1-p' 코드네임 모델을 레드팀에 투입했다는 루머 — 5/6 'Code with Claude' SF 컨퍼런스 직전 타이밍이라 Sonnet 4.8 또는 새 Sonnet급 모델 발표가 임박했다는 시그널.",
-        "content": "이게 뭐예요?\nAnthropic 내부 테스트명으로 보이는 'Claude Jupiter v1-p'가 레드팀 환경에서 포착됐다는 소식입니다. 공식 발표는 아니지만, Code with Claude 행사 직전이라는 시점 때문에 다음 Sonnet급 모델 신호로 읽히고 있습니다.\n\n왜 중요해요?\n지난 VOL.02에서는 Opus 4.7과 Claude Design이 중심이었고, 이번에는 그 다음 모델 라인이 움직일 가능성이 보입니다. 핵심은 현재 쓰는 Claude 경험도 짧은 주기로 다시 바뀔 수 있다는 일정 감각입니다.\n\n확인 포인트\nTestingCatalog 원문은 루머와 공식 발표를 구분해서 읽는 편이 안전합니다. 모델명, 출시일, 성능은 아직 확정되지 않았고, 지금은 다음 회차에서 이어서 확인할 신호에 가깝습니다.",
+        "content": "이게 뭐예요?\nAnthropic 내부 테스트명으로 보이는 'Claude Jupiter v1-p'가 레드팀 환경에서 포착됐다는 소식입니다. 공식 발표는 아니지만, Code with Claude 행사 직전이라는 시점 때문에 다음 Sonnet급 모델 신호로 읽히고 있습니다.\n\n왜 중요해요?\n지난 VOL.02에서는 Opus 4.7과 Claude Design이 중심이었고, 이번에는 그 다음 모델 라인이 움직일 가능성이 보입니다. 핵심은 현재 쓰는 Claude 경험도 짧은 주기로 다시 바뀔 수 있다는 일정 감각입니다.\n\n확인 포인트\nTestingCatalog 원문은 루머와 공식 발표를 구분해서 읽는 편이 안전합니다. 모델명, 출시일, 성능은 아직 확정되지 않았고, 지금은 아직은 이어서 추적할 신호에 가깝습니다.",
         "source": "https://x.com/testingcatalog/status/2049896926997369194",
         "officialUrl": "https://x.com/testingcatalog/status/2049896926997369194",
         "backupUrls": [
@@ -91,47 +91,6 @@ export const edition2026_04c: ABEdition = {
       "post": {
         "date": "5/05",
         "platform": "X",
-        "title": "Anthropic Claude Financial Services Agents — 10개 분석가 워크플로우 템플릿 패키징",
-        "summary": "Pitch builder, Meeting preparer, Earnings reviewer, Model builder, Market researcher, Valuation reviewer, GL reconciler, Month-end closer, Statement auditor, KYC screener — 10개 reference architecture(skills + connectors + subagents)를 Claude Code 플러그인 또는 Managed Agent로 배포. Excel→PowerPoint→Outlook 전 흐름이 single context로 연결. 월스트리트 1년차 analyst grunt work를 24/7 자동화.",
-        "content": "이게 뭐예요?\nAnthropic이 금융권을 위한 Claude Financial Services Agents를 발표했습니다. Pitch builder, Earnings reviewer, Market researcher, KYC screener처럼 금융 분석가가 반복하는 10개 업무 흐름을 Skills, connectors, subagents 구조로 패키징한 것입니다.\n\n왜 중요해요?\n이번 회차에서 가장 중요하게 볼 변화입니다. AI가 단순히 질문에 답하는 단계가 아니라 '직무 단위 워크플로우'를 제품처럼 묶기 시작했습니다. 앞으로 AI 교육도 '프롬프트 몇 개'가 아니라 '내 직무를 어떤 에이전트 묶음으로 재설계할 것인가'로 바뀔 가능성이 큽니다.\n\n확인 포인트\n핵심은 금융이라는 업종보다 반복 업무를 10개 흐름으로 나누는 방식입니다. 강의안 작성, 예제 제작, 과제 피드백, 홍보 문안, 수강생 Q&A처럼 다른 직무도 비슷한 템플릿으로 재구성할 수 있습니다.",
-        "source": "https://www.anthropic.com/news/finance-agents",
-        "officialUrl": "https://www.anthropic.com/news/finance-agents",
-        "backupUrls": [
-          {
-            "label": "X 원문",
-            "url": "https://x.com/claudeai/status/2051679629488865498"
-          },
-          {
-            "label": "claude.com",
-            "url": "https://claude.com/solutions/financial-services#finance-agents"
-          },
-          {
-            "label": "fortune.com",
-            "url": "https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/"
-          },
-          {
-            "label": "theregister.com",
-            "url": "https://www.theregister.com/2026/05/05/anthropic_unleashes_finance_agents_claude/"
-          }
-        ],
-        "tags": [
-          "에이전트자동화",
-          "공식",
-          "anthropic"
-        ],
-        "featured": true
-      },
-      "sourceWeek": "2026-w19",
-      "sourceCompany": "Anthropic / Claude",
-      "keyQuote": "10개 분석가 워크플로우를 Skills + connectors + subagents로 패키징",
-      "editorial": "이번 VOL.03에서 가장 중요하게 볼 변화입니다. 겉으로는 금융 전용 발표처럼 보이지만, 실제로는 직무 안의 반복 업무를 하나의 에이전트 흐름으로 묶는 사례에 가깝습니다. 강의, 마케팅, 개발, 회계 같은 다른 직무도 앞으로 이런 방식으로 재구성될 가능성이 큽니다."
-    },
-    {
-      "rank": 4,
-      "tier": "feature",
-      "post": {
-        "date": "5/05",
-        "platform": "X",
         "title": "Perplexity Computer for Professional Finance — 라이선스 데이터 + 35개 금융 워크플로우",
         "summary": "Perplexity가 Computer for Professional Finance를 출시했습니다. Morningstar, PitchBook, Daloopa, Carbon Arc 같은 라이선스 데이터를 가져와 쓸 수 있고, 분석가가 매주 반복하는 35개 금융 워크플로우를 제공합니다. Anthropic Finance Agents와 함께 보면 금융 업무 자동화가 '챗봇'이 아니라 '데이터 권한 + 워크플로우 패키지' 경쟁으로 이동하고 있습니다.",
         "content": "**이게 뭐예요?**\nPerplexity가 Computer for Professional Finance를 출시했습니다. 금융팀은 Morningstar, PitchBook, Daloopa, Carbon Arc 같은 라이선스 데이터를 Computer 안으로 가져와 쓸 수 있고, 반복적인 분석 업무를 위한 35개 금융 워크플로우를 사용할 수 있습니다.\n\n**무엇이 달라졌나?**\nAnthropic Finance Agents가 10개 분석가 워크플로우를 Claude 쪽에서 패키징했다면, Perplexity는 라이선스 데이터와 출처 추적을 전면에 세웁니다. 투자 리서치, tearsheet, equity comparison, annotated chart처럼 숫자와 출처가 중요한 업무에서 강점이 드러나는 구조입니다.\n\n**어떻게 읽을까?**\n두 발표를 나란히 보면 금융 AI의 경쟁축이 선명해집니다. 하나는 에이전트와 도구 묶음, 다른 하나는 신뢰할 수 있는 데이터 라이선스와 반복 분석 흐름입니다. 결국 금융 업무 자동화는 모델 성능만이 아니라 데이터 접근권, 출처 추적, Excel 같은 기존 업무 환경과의 연결이 함께 결정합니다.\n\n**확인 포인트**\n핵심 질문은 어떤 모델이 더 똑똑한가보다, 우리 조직이 가진 데이터 라이선스와 반복 분석 업무를 어떤 도구 안에서 안전하게 연결할 수 있는가입니다.",
@@ -150,7 +109,15 @@ export const edition2026_04c: ABEdition = {
             "label": "Morningstar / Daloopa",
             "url": "https://www.morningstar.com/news/pr-newswire/20260430ny47627/daloopa-integrates-with-perplexity-to-bring-its-trusted-financial-data-layer-into-ai-research-workflows"
           }
-        ],
+        ,
+          {
+            "label": "Claude Financial Services Agents",
+            "url": "https://www.anthropic.com/news/finance-agents"
+          },
+        {
+          "label": "Claude Financial 상세 카드",
+          "url": "/2026-w19/?post=Anthropic+Claude+Financial+Services+Agents+%E2%80%94+10%EA%B0%9C+%EB%B6%84%EC%84%9D%EA%B0%80+%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0+%ED%85%9C%ED%94%8C%EB%A6%BF+%ED%8C%A8%ED%82%A4%EC%A7%95"
+        }],
         "tags": [
           "에이전트자동화",
           "금융AI",
@@ -165,7 +132,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Anthropic Finance Agents와 나란히 보면 의미가 더 선명합니다. Claude 쪽이 에이전트와 도구 묶음을 강조했다면, Perplexity는 Morningstar·PitchBook·Daloopa·Carbon Arc 같은 라이선스 데이터와 35개 금융 워크플로우를 전면에 둡니다. 금융 AI는 이제 좋은 답변을 넘어서, 신뢰 가능한 데이터 접근권과 출처 추적까지 함께 묶는 경쟁으로 이동하고 있습니다."
     },
     {
-      "rank": 5,
+      "rank": 4,
       "tier": "feature",
       "post": {
         "date": "4/28",
@@ -203,14 +170,14 @@ export const edition2026_04c: ABEdition = {
       "editorial": "공식 제품을 기다리지 않고 커뮤니티가 빠르게 비슷한 워크플로우를 오픈소스로 재현했다는 점이 인상적입니다. AI 도구를 단순히 소비하는 데서 끝나지 않고, 오픈소스를 조합해 자기 작업 흐름을 만드는 방향을 보여줍니다."
     },
     {
-      "rank": 6,
+      "rank": 5,
       "tier": "normal",
       "post": {
         "date": "5/03",
         "platform": "X",
         "title": "Gemini 3.2 Flash A/B 테스트 — Ajax/Hercules/Hector/Orpheus 4개 체크포인트 LM Arena 등장",
         "summary": "Google IO 직전 Gemini 3.2 Flash가 Anti-Gravity Arena·AI Studio·iOS Gemini 앱에서 동시 노출됨. Pro급 추론을 Flash 속도로 — $0.25/$2 per 1M tokens, 2026-01 지식컷오프, 5월 정식 출시 임박.",
-        "content": "이게 뭐예요?\nGemini 3.2 Flash로 추정되는 여러 체크포인트가 LM Arena와 앱 코드에서 포착됐다는 소식입니다. Ajax, Hercules, Hector, Orpheus 같은 이름이 함께 언급되며 Google I/O 전후의 모델 업데이트 가능성을 키웁니다.\n\n왜 중요해요?\nFlash 라인은 빠르고 저렴한 모델 계층입니다. Pro급 성능을 더 낮은 비용과 빠른 속도로 쓰게 된다면, 일상 업무 자동화와 교육용 실습 비용이 크게 달라집니다.\n\n주의할 점\n아직 공식 발표가 아니라 테스트 신호입니다. 지금은 '확정 출시'가 아니라 'Google의 다음 업데이트 예고편' 정도로 보는 것이 안전합니다.",
+        "content": "이게 뭐예요?\nGemini 3.2 Flash로 추정되는 여러 체크포인트가 LM Arena와 앱 코드에서 포착됐다는 소식입니다. Ajax, Hercules, Hector, Orpheus 같은 이름이 함께 언급되며 Google I/O 전후의 모델 업데이트 가능성을 키웁니다.\n\n왜 중요해요?\nFlash 라인은 빠르고 저렴한 모델 계층입니다. Pro급 성능을 더 낮은 비용과 빠른 속도로 쓰게 된다면, 일상 업무 자동화와 교육용 실습 비용이 크게 달라집니다.\n\n확인 포인트\n아직 공식 발표가 아니라 테스트 신호입니다. 지금은 '확정 출시'가 아니라 'Google의 다음 업데이트 예고편' 정도로 보는 것이 안전합니다.",
         "source": "https://www.geeky-gadgets.com/google-gemini-flash-leak-lm-arena/",
         "officialUrl": "https://www.geeky-gadgets.com/google-gemini-flash-leak-lm-arena/",
         "backupUrls": [
@@ -244,14 +211,14 @@ export const edition2026_04c: ABEdition = {
       "editorial": "아직 확정 소식은 아니지만, 여러 표면에서 비슷한 이름이 반복적으로 포착된다는 점은 의미가 있습니다. 지금은 출시 확정으로 보기보다 Google의 다음 모델 업데이트를 미리 엿볼 수 있는 신호로 보는 편이 안전합니다."
     },
     {
-      "rank": 7,
+      "rank": 6,
       "tier": "normal",
       "post": {
         "date": "5/02",
         "platform": "X",
         "title": "Gemini Omni 비디오 생성 leak — 'Powered by Omni' UI 문구 + 내부 코드네임 Toucan",
         "summary": "Gemini 비디오 생성 탭 UI에 'Start with an idea or try a template. Powered by Omni' 문구가 노출. 내부 코드네임 Toucan과 인접 — 단일 omni-model이 텍스트·이미지·비디오를 통합 생성하는 GPT-4o식 접근 가능성. Google IO 2026(5/19~20) 직전 launch window.",
-        "content": "이게 뭐예요?\nGoogle의 영상 생성 UI에서 'Powered by Omni'라는 문구가 노출됐다는 유출입니다. 텍스트·이미지·비디오를 하나의 omni 모델이 통합 생성하는 방향일 수 있다는 해석이 붙었습니다.\n\n왜 중요해요?\n영상 생성은 지금 모델·편집툴·템플릿이 분리되어 있습니다. Omni가 실제로 나오면 Veo 후속 경쟁뿐 아니라, 하나의 모델이 아이디어에서 영상까지 이어주는 워크플로우로 바뀔 수 있습니다.\n\n주의할 점\n원천은 스크린샷 유출입니다. 공식 제품 페이지가 아니므로 기능·가격·출시 시점은 아직 열어두고 봐야 합니다.",
+        "content": "이게 뭐예요?\nGoogle의 영상 생성 UI에서 'Powered by Omni'라는 문구가 노출됐다는 유출입니다. 텍스트·이미지·비디오를 하나의 omni 모델이 통합 생성하는 방향일 수 있다는 해석이 붙었습니다.\n\n왜 중요해요?\n영상 생성은 지금 모델·편집툴·템플릿이 분리되어 있습니다. Omni가 실제로 나오면 Veo 후속 경쟁뿐 아니라, 하나의 모델이 아이디어에서 영상까지 이어주는 워크플로우로 바뀔 수 있습니다.\n\n확인 포인트\n원천은 스크린샷 유출입니다. 공식 제품 페이지가 아니므로 기능·가격·출시 시점은 아직 열어두고 봐야 합니다.",
         "source": "https://x.com/testingcatalog/status/2050705594458292496",
         "officialUrl": "https://x.com/testingcatalog/status/2050705594458292496",
         "backupUrls": [
@@ -281,40 +248,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Google의 영상 생성 전략이 어디로 향하는지 보여주는 단서입니다. Omni라는 이름이 실제 제품이 된다면 텍스트, 이미지, 영상이 하나의 모델 경험으로 묶일 수 있습니다. 다만 아직은 유출 기반이므로 기대와 검증 필요성을 함께 봐야 합니다."
     },
     {
-      "rank": 8,
-      "tier": "normal",
-      "post": {
-        "date": "5/01",
-        "platform": "X",
-        "title": "Google COSMO — 온디바이스 Gemini Nano 기반 프로액티브 AI 어시스턴트 앱 유출",
-        "summary": "Google이 Play Store에 COSMO를 잠깐 올렸다 내림 — 화면 액세스, Voice Match, Recall, 브라우저 에이전트(Mariner), 딥리서치를 1.13GB 로컬 패키지로 통합한 프로액티브 어시스턴트",
-        "content": "이게 뭐예요?\nGoogle COSMO는 Play Store에 잠깐 노출됐다 내려간 온디바이스 AI 어시스턴트 앱으로 알려졌습니다. 화면 액세스, Voice Match, Recall, 브라우저 에이전트, 딥리서치 같은 기능을 로컬 Gemini Nano 패키지와 결합하는 형태로 보입니다.\n\n왜 중요해요?\nAI 어시스턴트가 클라우드 챗봇을 넘어 휴대폰 안에서 상황을 읽고 먼저 도와주는 방향입니다. 우리가 체감할 변화는 '앱을 열어 질문하는 AI'에서 '내 화면과 맥락을 이해하는 AI'로 넘어가는 흐름입니다.\n\n주의할 점\n앱 유출 기반이라 개인정보·권한·배터리·지역 출시 여부가 모두 미정입니다. 기능보다 방향성, 즉 온디바이스 에이전트 흐름을 잡는 카드로 보면 됩니다.",
-        "source": "https://x.com/minchoi/status/2050290896382353432",
-        "officialUrl": "https://x.com/minchoi/status/2050290896382353432",
-        "backupUrls": [
-          {
-            "label": "nokiapoweruser.com",
-            "url": "https://nokiapoweruser.com/google-cosmo-ai-assistant-leak-gemini-nano-mariner/"
-          },
-          {
-            "label": "androidheadlines.com",
-            "url": "https://www.androidheadlines.com/2026/05/google-cosmo-ai-assistant-experimental-app.html"
-          }
-        ],
-        "tags": [
-          "도구릴리스",
-          "유출",
-          "google"
-        ],
-        "featured": true
-      },
-      "sourceWeek": "2026-w18",
-      "sourceCompany": "Google / DeepMind",
-      "keyQuote": "1.13GB 로컬 패키지 + 화면 액세스 + Voice Match",
-      "editorial": "AI 어시스턴트가 클라우드 챗봇을 넘어 기기 내부의 맥락을 이해하는 방향으로 이동하고 있습니다. 화면 액세스와 Recall은 매우 강력한 기능이 될 수 있지만, 동시에 개인정보와 권한 문제를 함께 생각해야 합니다."
-    },
-    {
-      "rank": 9,
+      "rank": 7,
       "tier": "hero",
       "post": {
         "date": "5/05",
@@ -357,7 +291,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "이번 VOL.03에서 가장 바로 체감되는 변화입니다. Finance Agents가 직무 흐름의 변화를 보여준다면, GPT-5.5 Instant는 오늘 켜는 ChatGPT의 기본값이 달라질 수 있다는 소식입니다. AISI 벤치마크와 초기 사용자 후기를 함께 보면 모델 업데이트가 실제 업무 체감으로 이어지는지 확인해 볼 수 있습니다."
     },
     {
-      "rank": 10,
+      "rank": 8,
       "tier": "feature",
       "post": {
         "date": "5/06",
@@ -419,7 +353,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "GPT-5.5 출시를 단순한 모델 뉴스가 아니라 실제 개발 워크플로우 선택 문제로 바꿔주는 사례입니다. 기본 모델이 바뀌었다는 사실보다 더 중요한 질문은 내 repo에서 어떤 작업에 어떤 모델을 쓸 것인가입니다."
     },
     {
-      "rank": 11,
+      "rank": 9,
       "tier": "feature",
       "post": {
         "date": "4/30",
@@ -466,7 +400,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Codex Goal은 GPT-5.5나 Finance Agents와 같은 방향을 CLI 도구 안에서 보여줍니다. 더 강한 모델을 쓰는 것만큼 중요한 것은 목표, 검증, 재시도 조건을 분명히 적어 에이전트가 오래 일해도 방향을 잃지 않게 만드는 일입니다."
     },
     {
-      "rank": 12,
+      "rank": 10,
       "tier": "normal",
       "post": {
         "date": "4/24",
@@ -520,7 +454,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "오픈소스 진영이 다시 고성능과 대형 컨텍스트 경쟁에 힘을 싣고 있습니다. 바로 실무에 넣을 수 있다는 뜻은 아니지만, 선택지와 비용 구조가 달라지고 있다는 점은 분명히 봐야 합니다."
     },
     {
-      "rank": 13,
+      "rank": 11,
       "tier": "feature",
       "post": {
         "date": "5/06",
@@ -554,7 +488,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "xAI Voice Cloning은 음성 인터페이스가 별도 데모가 아니라 API 제품의 기본 부품이 되는 흐름을 보여줍니다. 텍스트 에이전트가 말할 수 있게 되는 순간, 교육·게임·오디오북·고객 응대에서 사용자 경험의 중심이 화면에서 목소리로 넓어질 수 있습니다."
     },
     {
-      "rank": 14,
+      "rank": 12,
       "tier": "feature",
       "post": {
         "date": "5/05",
@@ -592,7 +526,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Google AI Studio 업데이트는 이미지 생성 모델의 성능 뉴스라기보다 제작 흐름의 변화로 보는 편이 좋습니다. 개발자와 기획자가 같은 Studio/API 환경에서 이미지 생성, 편집, 빠른 시안 반복을 연결할 수 있다는 점이 핵심입니다."
     },
     {
-      "rank": 15,
+      "rank": 13,
       "tier": "normal",
       "post": {
         "date": "5/06",

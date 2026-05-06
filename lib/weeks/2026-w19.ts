@@ -16,7 +16,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "Anthropic Claude Financial Services Agents — 10개 분석가 워크플로우 템플릿 패키징",
           "summary": "Pitch builder, Meeting preparer, Earnings reviewer, Model builder, Market researcher, Valuation reviewer, GL reconciler, Month-end closer, Statement auditor, KYC screener — 10개 reference architecture(skills + connectors + subagents)를 Claude Code 플러그인 또는 Managed Agent로 배포. Excel→PowerPoint→Outlook 전 흐름이 single context로 연결. 월스트리트 1년차 analyst grunt work를 24/7 자동화.",
-          "content": "이게 뭐예요?\nAnthropic이 금융권을 위한 Claude Financial Services Agents를 발표했습니다. Pitch builder, Earnings reviewer, Market researcher, KYC screener처럼 금융 분석가가 반복하는 10개 업무 흐름을 Skills, connectors, subagents 구조로 패키징한 것입니다.\n\n왜 중요해요?\n이번 회차의 핵심입니다. AI가 단순히 질문에 답하는 단계가 아니라 '직무 단위 워크플로우'를 제품처럼 묶기 시작했습니다. 앞으로 AI 교육도 '프롬프트 몇 개'가 아니라 '내 직무를 어떤 에이전트 묶음으로 재설계할 것인가'로 바뀔 가능성이 큽니다.\n\n확인 포인트\n핵심은 금융이라는 업종보다 반복 업무를 10개 흐름으로 나누는 방식입니다. 강의안 작성, 예제 제작, 과제 피드백, 홍보 문안, 수강생 Q&A처럼 다른 직무도 비슷한 템플릿으로 재구성할 수 있습니다.",
+          "content": "이게 뭐예요?\nAnthropic이 금융권을 위한 Claude Financial Services Agents를 발표했습니다. Pitch builder, Earnings reviewer, Market researcher, KYC screener처럼 금융 분석가가 반복하는 10개 업무 흐름을 Skills, connectors, subagents 구조로 패키징한 것입니다.\n\n왜 중요해요?\nPerplexity 금융 카드와 함께 볼 비교 자료입니다. AI가 단순히 질문에 답하는 단계가 아니라 '직무 단위 워크플로우'를 제품처럼 묶기 시작했습니다. 앞으로 AI 교육도 '프롬프트 몇 개'가 아니라 '내 직무를 어떤 에이전트 묶음으로 재설계할 것인가'로 바뀔 가능성이 큽니다.\n\n확인 포인트\n핵심은 금융이라는 업종보다 반복 업무를 10개 흐름으로 나누는 방식입니다. 강의안 작성, 예제 제작, 과제 피드백, 홍보 문안, 수강생 Q&A처럼 다른 직무도 비슷한 템플릿으로 재구성할 수 있습니다.",
           "source": "https://www.anthropic.com/news/finance-agents",
           "officialUrl": "https://www.anthropic.com/news/finance-agents",
           "backupUrls": [
@@ -41,8 +41,7 @@ export const week19: WeeklyData = {
             "에이전트자동화",
             "공식",
             "anthropic"
-          ],
-          "featured": true
+          ]
         }
       ]
     },
@@ -70,8 +69,16 @@ export const week19: WeeklyData = {
             {
               "label": "Morningstar / Daloopa",
               "url": "https://www.morningstar.com/news/pr-newswire/20260430ny47627/daloopa-integrates-with-perplexity-to-bring-its-trusted-financial-data-layer-into-ai-research-workflows"
+            },
+            {
+              "label": "Claude Financial Services Agents",
+              "url": "https://www.anthropic.com/news/finance-agents"
             }
-          ],
+          ,
+            {
+              "label": "Claude Financial 상세 카드",
+              "url": "/2026-w19/?post=Anthropic+Claude+Financial+Services+Agents+%E2%80%94+10%EA%B0%9C+%EB%B6%84%EC%84%9D%EA%B0%80+%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0+%ED%85%9C%ED%94%8C%EB%A6%BF+%ED%8C%A8%ED%82%A4%EC%A7%95"
+            }],
           "tags": [
             "에이전트자동화",
             "금융AI",
@@ -91,7 +98,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "Project Mariner discontinued — 24/7 Gemini Agent로 흡수",
           "summary": "Google IO 2024 발표 웹브라우징 에이전트 Project Mariner가 2026-05-04 정식 discontinued. 핵심 인력·기능은 Gemini 3 Pro/Flash의 Computer Use와 Gemini Agent 제품으로 흡수 — 'Computer Use' 기능이 별도 프로토타입에서 메인 모델 내장으로 전환되는 구조 변화.",
-          "content": "이게 뭐예요?\nGoogle IO 2024 발표 웹브라우징 에이전트 Project Mariner가 2026-05-04 정식 discontinued. 핵심 인력·기능은 Gemini 3 Pro/Flash의 Computer Use와 Gemini Agent 제품으로 흡수 — 'Computer Use' 기능이 별도 프로토타입에서 메인 모델 내장으로 전환되는 구조 변화.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 도구 릴리스 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nWikipedia 페이지가 명시적으로 'Project Mariner was discontinued on May 4, 2026' 기재. 영상은 'shutdown'으로 표현하지만 실제로는 후속 Gemini Agent로 통합 evolution.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
+          "content": "이게 뭐예요?\nGoogle IO 2024 발표 웹브라우징 에이전트 Project Mariner가 2026-05-04 정식 discontinued. 핵심 인력·기능은 Gemini 3 Pro/Flash의 Computer Use와 Gemini Agent 제품으로 흡수 — 'Computer Use' 기능이 별도 프로토타입에서 메인 모델 내장으로 전환되는 구조 변화.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 도구 릴리스 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nWikipedia 페이지가 명시적으로 'Project Mariner was discontinued on May 4, 2026' 기재. 영상은 'shutdown'으로 표현하지만 실제로는 후속 Gemini Agent로 통합 evolution.\n\n확인 포인트\n공식 출처 기반 소식입니다. 실제 활용 전에는 가격, 지역, 접근 권한을 함께 확인해야 합니다.",
           "source": "https://en.wikipedia.org/wiki/Project_Mariner",
           "officialUrl": "https://en.wikipedia.org/wiki/Project_Mariner",
           "backupUrls": [
@@ -115,7 +122,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "Pomelli Catalogs — 제품 URL 일괄 입력으로 캠페인·AI 포토슛 자동 생성",
           "summary": "Google Labs Pomelli이 Catalogs 출시 — 매장 URL 한 번으로 전체 인벤토리를 ingest, 제품별 맞춤 마케팅 캠페인 + Nano Banana 기반 스튜디오급 product photoshoot 자동 생성. 글로벌 무료. SMB 대상 'free growth lever' 포지셔닝.",
-          "content": "이게 뭐예요?\nGoogle Labs Pomelli이 Catalogs 출시 — 매장 URL 한 번으로 전체 인벤토리를 ingest, 제품별 맞춤 마케팅 캠페인 + Nano Banana 기반 스튜디오급 product photoshoot 자동 생성. 글로벌 무료. SMB 대상 'free growth lever' 포지셔닝.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 워크플로우 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nPhotoshoot 기능은 2026-02 선공개. 이번 업데이트는 Catalogs 추가가 핵심. 미국·캐나다·호주·뉴질랜드·EEA·UK·스위스 가용. testingcatalog가 사전 leak.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
+          "content": "이게 뭐예요?\nGoogle Labs Pomelli이 Catalogs 출시 — 매장 URL 한 번으로 전체 인벤토리를 ingest, 제품별 맞춤 마케팅 캠페인 + Nano Banana 기반 스튜디오급 product photoshoot 자동 생성. 글로벌 무료. SMB 대상 'free growth lever' 포지셔닝.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 워크플로우 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nPhotoshoot 기능은 2026-02 선공개. 이번 업데이트는 Catalogs 추가가 핵심. 미국·캐나다·호주·뉴질랜드·EEA·UK·스위스 가용. testingcatalog가 사전 leak.\n\n확인 포인트\n공식 출처 기반 소식입니다. 실제 활용 전에는 가격, 지역, 접근 권한을 함께 확인해야 합니다.",
           "source": "https://x.com/PomelliByGoogle/status/2051693177053340073",
           "officialUrl": "https://x.com/PomelliByGoogle/status/2051693177053340073",
           "backupUrls": [
@@ -143,7 +150,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "NotebookLM Mind Maps 업데이트 — 커스텀 프롬프트, 이름 변경/공유, 부드러운 노드 전환",
           "summary": "Mind Map 3대 업그레이드 — (1) 사용자 프롬프트로 맵 방향 조정, (2) 인스턴트 rename·share, (3) 노드 간 매끄러운 transition. 단순 시각화에서 'interactive thinking surface'로 격상.",
-          "content": "이게 뭐예요?\nMind Map 3대 업그레이드 — (1) 사용자 프롬프트로 맵 방향 조정, (2) 인스턴트 rename·share, (3) 노드 간 매끄러운 transition. 단순 시각화에서 'interactive thinking surface'로 격상.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 워크플로우 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n공식 NotebookLM X 계정이 1차 출처. 동시기에 Play Books 소스 통합 테스트도 진행 중(testingcatalog 보도).\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
+          "content": "이게 뭐예요?\nMind Map 3대 업그레이드 — (1) 사용자 프롬프트로 맵 방향 조정, (2) 인스턴트 rename·share, (3) 노드 간 매끄러운 transition. 단순 시각화에서 'interactive thinking surface'로 격상.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 워크플로우 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n공식 NotebookLM X 계정이 1차 출처. 동시기에 Play Books 소스 통합 테스트도 진행 중(testingcatalog 보도).\n\n확인 포인트\n공식 출처 기반 소식입니다. 실제 활용 전에는 가격, 지역, 접근 권한을 함께 확인해야 합니다.",
           "source": "https://x.com/NotebookLM/status/2051715594697977870",
           "officialUrl": "https://x.com/NotebookLM/status/2051715594697977870",
           "backupUrls": [
@@ -197,7 +204,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "Gemma 4 Multi-Token Prediction (MTP) drafters — 추론 최대 3배 가속",
           "summary": "Gemma 4 패밀리에 MTP drafter 추가 — 경량 drafter가 미래 토큰을 병렬 예측하고 target 모델이 단일 forward pass로 검증하는 speculative decoding. KV 캐시 공유로 컨텍스트 재계산 제거. 출력 품질 손실 0, 최대 3배 속도. Apache 2.0 라이선스 유지, HuggingFace/Kaggle 가중치 + transformers/MLX/vLLM/SGLang/Ollama 지원.",
-          "content": "이게 뭐예요?\nGemma 4 패밀리에 MTP drafter 추가 — 경량 drafter가 미래 토큰을 병렬 예측하고 target 모델이 단일 forward pass로 검증하는 speculative decoding. KV 캐시 공유로 컨텍스트 재계산 제거. 출력 품질 손실 0, 최대 3배 속도. Apache 2.0 라이선스 유지, HuggingFace/Kaggle 가중치 + transformers/MLX/vLLM/SGLang/Ollama 지원.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 도구 릴리스 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nEdge용 E2B/E4B 모델은 embedder 클러스터링 추가 가속. on-device·실시간 음성 응용에 직접 효과. dense 모델에서 효과 큼, 26B MoE는 batch 1에서 제한적이라는 외부 분석도 존재.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
+          "content": "이게 뭐예요?\nGemma 4 패밀리에 MTP drafter 추가 — 경량 drafter가 미래 토큰을 병렬 예측하고 target 모델이 단일 forward pass로 검증하는 speculative decoding. KV 캐시 공유로 컨텍스트 재계산 제거. 출력 품질 손실 0, 최대 3배 속도. Apache 2.0 라이선스 유지, HuggingFace/Kaggle 가중치 + transformers/MLX/vLLM/SGLang/Ollama 지원.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 도구 릴리스 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nEdge용 E2B/E4B 모델은 embedder 클러스터링 추가 가속. on-device·실시간 음성 응용에 직접 효과. dense 모델에서 효과 큼, 26B MoE는 batch 1에서 제한적이라는 외부 분석도 존재.\n\n확인 포인트\n공식 출처 기반 소식입니다. 실제 활용 전에는 가격, 지역, 접근 권한을 함께 확인해야 합니다.",
           "source": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
           "officialUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
           "backupUrls": [
@@ -492,7 +499,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "대신콜 — AI 에이전트가 회식·예약 전화 대신해 주는 콜비아 베타",
           "summary": "여러 식당에 자동 전화·자리 확인 후 결과만 사용자에게 전달 — '전화 공포'를 가진 사용자에게 AI 에이전트 위임 형 콜비아 서비스",
-          "content": "이게 뭐예요?\n여러 식당에 자동 전화·자리 확인 후 결과만 사용자에게 전달 — '전화 공포'를 가진 사용자에게 AI 에이전트 위임 형 콜비아 서비스\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화 사례 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n사전 신청자 초기 크레딧 증정. 친구 통화 대리도 가능\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 확인한 뒤 실무 적용 여부를 판단하는 편이 안전합니다.",
+          "content": "이게 뭐예요?\n여러 식당에 자동 전화·자리 확인 후 결과만 사용자에게 전달 — '전화 공포'를 가진 사용자에게 AI 에이전트 위임 형 콜비아 서비스\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화 사례 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n사전 신청자 초기 크레딧 증정. 친구 통화 대리도 가능\n\n확인 포인트\n커뮤니티 기반 소식입니다. 재현성, 라이선스, 유지보수 상태를 함께 확인하면 실제 활용 가능성을 더 정확히 판단할 수 있습니다.",
           "source": "https://delegate-call.pages.dev/",
           "officialUrl": "https://delegate-call.pages.dev/",
           "tags": [
@@ -506,7 +513,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "AgentWatch — Claude Code/Codex 에이전트 모니터링 + Apple Watch 알람 솔루션 (출시 임박)",
           "summary": "Claude Code/Codex 실행 중 macOS notch에 상태 표시, 종료 시 스마트폰/Apple Watch 알림. 워치에서 원격 승인, 멀티 에이전트·멀티 세션 동시 조작. 사전 예약자 출시 후 1개월 무료 쿠폰.",
-          "content": "이게 뭐예요?\nClaude Code/Codex 실행 중 macOS notch에 상태 표시, 종료 시 스마트폰/Apple Watch 알림. 워치에서 원격 승인, 멀티 에이전트·멀티 세션 동시 조작. 사전 예약자 출시 후 1개월 무료 쿠폰.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 에이전트 자동화 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n커뮤니티 기반 자체 서비스. 대기자 한 달 무료 쿠폰 + 다음 주 출시 예정. WebSocket 릴레이로 데스크탑↔모바일 연결 | Digital Software Solutions, LLC 운영. 공식 사이트는 7일 trial 회원가입 형태입니다. agent-watch.com과 동일 서비스로 추정되나, 운영 주체와 최신 가격은 공식 사이트에서 재확인하는 편이 안전합니다.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 확인한 뒤 실무 적용 여부를 판단하는 편이 안전합니다.",
+          "content": "이게 뭐예요?\nClaude Code/Codex 실행 중 macOS notch에 상태 표시, 종료 시 스마트폰/Apple Watch 알림. 워치에서 원격 승인, 멀티 에이전트·멀티 세션 동시 조작. 사전 예약자 출시 후 1개월 무료 쿠폰.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 에이전트 자동화 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n커뮤니티 기반 자체 서비스. 대기자 한 달 무료 쿠폰 + 다음 주 출시 예정. WebSocket 릴레이로 데스크탑↔모바일 연결 | Digital Software Solutions, LLC 운영. 공식 사이트는 7일 trial 회원가입 형태입니다. agent-watch.com과 동일 서비스로 추정되나, 운영 주체와 최신 가격은 공식 사이트에서 재확인하는 편이 안전합니다.\n\n확인 포인트\n커뮤니티 기반 소식입니다. 재현성, 라이선스, 유지보수 상태를 함께 확인하면 실제 활용 가능성을 더 정확히 판단할 수 있습니다.",
           "source": "https://www.agentwatch.tools/",
           "officialUrl": "https://www.agentwatch.tools/",
           "backupUrls": [
@@ -530,7 +537,7 @@ export const week19: WeeklyData = {
           "platform": "X",
           "title": "Subquadratic 'SubQ' — 12M token 컨텍스트, 풀 sub-quadratic sparse attention 첫 frontier 모델",
           "summary": "Meta 전 Generative AI 헤드 Alex Whedon이 CTO인 Subquadratic이 $29M 시드와 함께 SubQ 공개. SSA(Subquadratic Sparse Attention)로 컨텍스트 길이에 선형 스케일 — 1M 토큰에서 Flash Attention 대비 50배 빠르고 50배 저렴, 12M 토큰에서 컴퓨트 ~1000배 절감 주장. 연구 모델은 12M, 프로덕션 API는 1M 컨텍스트.",
-          "content": "이게 뭐예요?\nMeta 전 Generative AI 헤드 Alex Whedon이 CTO인 Subquadratic이 $29M 시드와 함께 SubQ 공개. SSA(Subquadratic Sparse Attention)로 컨텍스트 길이에 선형 스케일 — 1M 토큰에서 Flash Attention 대비 50배 빠르고 50배 저렴, 12M 토큰에서 컴퓨트 ~1000배 절감 주장. 연구 모델은 12M, 프로덕션 API는 1M 컨텍스트.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 도구 릴리스 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n공식 발표일 2026-05-05. 영상은 'sub quadratic' 발음 기준이라 회사명을 SubQ로 부르나 실제 회사명은 Subquadratic, 모델명이 SubQ. SubQ Code(코딩 에이전트) + SubQ Search(딥리서치) 동시 공개. 벤치마크 검증은 진행중 — 일부 외부 평가자는 클레임에 신중 입장.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 가격, 지역, 접근 권한은 실제 사용 전에 다시 확인이 필요합니다.",
+          "content": "이게 뭐예요?\nMeta 전 Generative AI 헤드 Alex Whedon이 CTO인 Subquadratic이 $29M 시드와 함께 SubQ 공개. SSA(Subquadratic Sparse Attention)로 컨텍스트 길이에 선형 스케일 — 1M 토큰에서 Flash Attention 대비 50배 빠르고 50배 저렴, 12M 토큰에서 컴퓨트 ~1000배 절감 주장. 연구 모델은 12M, 프로덕션 API는 1M 컨텍스트.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 도구 릴리스 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\n공식 발표일 2026-05-05. 영상은 'sub quadratic' 발음 기준이라 회사명을 SubQ로 부르나 실제 회사명은 Subquadratic, 모델명이 SubQ. SubQ Code(코딩 에이전트) + SubQ Search(딥리서치) 동시 공개. 벤치마크 검증은 진행중 — 일부 외부 평가자는 클레임에 신중 입장.\n\n확인 포인트\n공식 출처 기반 소식입니다. 실제 활용 전에는 가격, 지역, 접근 권한을 함께 확인해야 합니다.",
           "source": "https://subq.ai/introducing-subq",
           "officialUrl": "https://subq.ai/introducing-subq",
           "backupUrls": [
