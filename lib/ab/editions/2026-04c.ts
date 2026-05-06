@@ -336,6 +336,64 @@ export const edition2026_04c: ABEdition = {
     },
     {
       "rank": 9,
+      "tier": "feature",
+      "post": {
+        "date": "5/06",
+        "platform": "X",
+        "title": "GPT-5.5 vs GPT-5.4 vs Opus 4.7 — 56개 실제 코딩 태스크 벤치마크",
+        "summary": "Reddit r/codex에 올라온 Stet 기반 real-repo coding-agent benchmark. 56개 실제 merged commit 태스크에서 GPT-5.5는 tests pass 38/56, human patch equivalent 40/56, clean pass 28/56, code-review pass 33/56으로 가장 강한 shipping default를 보였고, Opus 4.7은 footprint risk 0.20으로 가장 작은 패치 성향을 보임.",
+        "content": "이게 뭐예요?\nReddit r/codex에 올라온 GPT-5.5, GPT-5.4, Opus 4.7 비교 벤치마크입니다. Zod 27개, graphql-go-tools 29개, 총 56개 실제 오픈소스 merged commit 기반 태스크를 각 모델의 native agent harness에서 돌렸습니다. Opus 4.7은 Claude Code high, GPT-5.4와 GPT-5.5는 Codex CLI high 설정입니다.\n\n핵심 결과\nGPT-5.5는 tests pass 38/56, human patch equivalent 40/56, clean pass 28/56, code-review pass 33/56으로 가장 강한 shipping default로 평가됐습니다. GPT-5.4는 cost/task $2.39로 비용 면에서 강했고, Opus 4.7은 footprint risk 0.20으로 가장 작은 패치를 쓰는 성향이 뚜렷했습니다. 다만 작은 패치가 항상 좋은 것은 아니고, graphql-go-tools에서는 companion work를 놓치는 under-implementation 문제가 더 크게 보였다는 해석입니다.\n\n발표에서 어떻게 말할까\n이 카드는 GPT-5.5 공식 출시 카드 바로 뒤에 붙여야 합니다. 공식 벤치마크만 보면 모델 성능 이야기로 끝나지만, 이 Reddit 벤치마크는 실제 repo에서 리뷰 통과 가능성과 human patch 근접도를 비교했다는 점이 중요합니다. '어떤 모델이 1등인가'보다, 내 repo에서 review bottleneck이 큰지, patch footprint가 중요한지, 비용이 중요한지에 따라 선택이 달라진다는 메시지로 설명하면 좋습니다.\n\n스레드 복붙 문구 1/4\nGPT-5.5, GPT-5.4, Opus 4.7을 56개 실제 코딩 작업 기준으로 비교했습니다. 전체 결과만 보면 GPT-5.5가 가장 높은 해결률을 기록했고, GPT-5.4는 성능과 비용의 균형, Opus 4.7은 비용 효율성이 강점으로 나타났습니다. 핵심은 “가장 잘 푸는 모델”과 “가장 싸게 쓰는 모델”이 다르다는 점입니다.\n\n스레드 복붙 문구 2/4\n작업 카테고리별로 보면 GPT-5.5가 전반적으로 가장 안정적인 성능을 보였습니다. 특히 백엔드와 알고리즘 작업에서 격차가 컸고, 디버깅·리팩터링·풀스택 작업에서도 일관되게 우세했습니다. 실제 개발 환경에서는 단순 평균보다 “어떤 종류의 작업을 맡길 것인가”가 더 중요합니다.\n\n스레드 복붙 문구 3/4\n비용과 효율성 관점에서는 다른 그림이 나옵니다. GPT-5.5는 토큰 효율성이 좋지만 작업당 비용은 가장 높고, Opus 4.7은 성공 작업당 비용이 가장 낮습니다. GPT-5.4는 그 중간에서 균형 잡힌 선택지에 가깝습니다. 즉, 최고 성능이 필요하면 GPT-5.5, 예산 최적화가 중요하면 Opus 4.7, 밸런스가 필요하면 GPT-5.4입니다.\n\n스레드 복붙 문구 4/4\n종합하면 GPT-5.5는 가장 강한 전체 성능, GPT-5.4는 균형 잡힌 운영 효율, Opus 4.7은 비용 효율성이 강점입니다. 코딩 에이전트를 고를 때는 “벤치마크 1등”만 볼 게 아니라 성공률, 코드 품질, 비용, 토큰 사용량, 리뷰 통과 가능성까지 함께 봐야 합니다. 모델 선택은 결국 목적의 문제입니다.",
+        "source": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/",
+        "officialUrl": "https://www.reddit.com/r/codex/comments/1t0xt5m/gpt55_vs_gpt54_vs_opus_47_on_56_real_coding_tasks/",
+        "thumbnail": {
+          "src": "/ab/2026-04c/benchmarks/gpt55-coding-benchmark-scorecard.svg",
+          "alt": "GPT-5.5, GPT-5.4, Opus 4.7의 56개 실제 코딩 태스크 벤치마크 scorecard",
+          "caption": "56개 real-repo coding tasks — GPT-5.5는 clean pass와 review pass에서 가장 큼"
+        },
+        "images": [
+          {
+            "src": "/ab/2026-04c/benchmarks/gpt55-coding-benchmark-scorecard.svg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 전체 scorecard",
+            "caption": "1/4 전체 scorecard: tests pass, human patch equivalence, clean pass, review pass, time, cost 비교"
+          },
+          {
+            "src": "/ab/2026-04c/benchmarks/gpt55-repo-split.svg",
+            "alt": "Zod와 graphql-go-tools repo split benchmark",
+            "caption": "2/4 Repo split: Zod에서는 review 판단, graphql-go-tools에서는 clean pass 격차가 크게 벌어짐"
+          },
+          {
+            "src": "/ab/2026-04c/benchmarks/gpt55-efficiency.svg",
+            "alt": "GPT-5.5, GPT-5.4, Opus 4.7 효율성과 비용 비교",
+            "caption": "3/4 효율성: GPT-5.5는 시간·토큰, GPT-5.4는 cost/task, Opus 4.7은 footprint risk가 강점"
+          },
+          {
+            "src": "/ab/2026-04c/benchmarks/gpt55-model-choice.svg",
+            "alt": "코딩 에이전트 모델 선택 기준 요약",
+            "caption": "4/4 모델 선택: review, 비용, patch footprint 중 어떤 병목을 풀 것인지가 핵심"
+          }
+        ],
+        "backupUrls": [
+          {
+            "label": "Stet",
+            "url": "https://www.stet.sh"
+          }
+        ],
+        "tags": [
+          "벤치마크",
+          "코딩에이전트",
+          "openai",
+          "anthropic",
+          "community"
+        ],
+        "featured": true
+      },
+      "sourceWeek": "2026-w19",
+      "sourceCompany": "OpenAI / Anthropic",
+      "keyQuote": "GPT-5.5 ships more often. Opus ships smaller.",
+      "editorial": "GPT-5.5 출시를 단순 모델 뉴스가 아니라 실제 개발 workflow 선택 문제로 바꿔주는 카드입니다. 공식 발표 뒤에 붙이면 '기본 모델이 바뀌었다'에서 '내 repo에서는 어떤 기준으로 모델을 고를까'로 발표가 깊어집니다."
+    },
+    {
+      "rank": 10,
       "tier": "normal",
       "post": {
         "date": "4/24",
@@ -389,7 +447,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "오픈소스 진영이 다시 고성능·대형 컨텍스트로 추격하는 카드입니다. 바로 실무에 넣을 수 있다는 뜻보다는 선택지와 비용 구조가 바뀌고 있다는 점을 강조하면 좋습니다."
     },
     {
-      "rank": 10,
+      "rank": 11,
       "tier": "normal",
       "post": {
         "date": "4/27",
@@ -426,7 +484,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "중국 AI 경쟁이 영상 생성으로 확장되는 카드입니다. 텍스트 모델만 따라잡는 것이 아니라 영상 제작 시장에서도 Arena와 벤치마크를 앞세우고 있습니다. 크리에이터 수강생에게 특히 체감될 변화입니다."
     },
     {
-      "rank": 11,
+      "rank": 12,
       "tier": "normal",
       "post": {
         "date": "4/30",
@@ -464,7 +522,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "Apple이 아직 조용해 보여도 내부에서는 AI 제품 구조를 계속 만들고 있음을 보여주는 사고성 카드입니다. 동시에 기업 내부의 에이전트 지침 파일 관리가 보안 이슈가 될 수 있다는 교훈도 있습니다."
     },
     {
-      "rank": 12,
+      "rank": 13,
       "tier": "normal",
       "post": {
         "date": "4/30",
@@ -501,7 +559,7 @@ export const edition2026_04c: ABEdition = {
       "editorial": "로컬 AI의 현실감을 높이는 카드입니다. 클라우드 API만 쓰던 멀티모달 모델이 고성능 개인 장비로 내려오면 비용, 프라이버시, 지연시간의 계산이 달라집니다."
     },
     {
-      "rank": 13,
+      "rank": 14,
       "tier": "normal",
       "post": {
         "date": "4/23",
@@ -544,6 +602,38 @@ export const edition2026_04c: ABEdition = {
       "guideUrl": "https://x.com/karpathy/status/2015883857489522876",
       "guideLabel": "Karpathy 원문 맥락 →",
       "summary": "Karpathy가 말하는 핵심은 소프트웨어 개발의 병목이 직접 코딩에서 에이전트 위임, 메모리 설계, 토큰 처리량 극대화로 이동했다는 점입니다.",
+      "thumbnail": {
+        "src": "/ab/2026-04c/karpathy/karpathy-01-delegation.png",
+        "alt": "AI 에이전트에게 코딩 작업을 위임하는 개발자 워크플로우",
+        "caption": "코딩에서 위임으로 — 개발자의 병목이 타이핑에서 에이전트 운영으로 이동"
+      },
+      "images": [
+        {
+          "src": "/ab/2026-04c/karpathy/karpathy-01-delegation.png",
+          "alt": "AI 에이전트에게 코딩 작업을 위임하는 개발자 워크플로우",
+          "caption": "1/5 코딩에서 위임으로 — 사람이 직접 타이핑하는 대신 에이전트에게 기능 단위 작업을 맡기는 흐름"
+        },
+        {
+          "src": "/ab/2026-04c/karpathy/karpathy-02-token-throughput.png",
+          "alt": "여러 AI 에이전트의 토큰 처리량을 감독하는 사람",
+          "caption": "2/5 Human bottleneck 제거 — 실력은 구독 중인 에이전트의 token throughput을 오래 정확히 굴리는 능력"
+        },
+        {
+          "src": "/ab/2026-04c/karpathy/karpathy-03-autoresearch.png",
+          "alt": "밤새 하이퍼파라미터 탐색을 수행하는 자율 연구 루프",
+          "caption": "3/5 Auto-Research — 에이전트가 밤새 실험을 돌리고 인간은 설계와 검증 루프를 관리"
+        },
+        {
+          "src": "/ab/2026-04c/karpathy/karpathy-04-program-md.png",
+          "alt": "Program MD 문서와 AI 에이전트 노드가 연결된 운영 매뉴얼",
+          "caption": "4/5 Program MD — 조직의 일하는 방식을 문서·메모리·검증 규칙으로 코드화"
+        },
+        {
+          "src": "/ab/2026-04c/karpathy/karpathy-05-agentic-web.png",
+          "alt": "스마트홈 기기를 자연어 에이전트가 통합 제어하는 에이전틱 웹",
+          "caption": "5/5 Agentic Web — 앱을 여는 대신 에이전트가 API와 기기를 대신 조작"
+        }
+      ],
       "body": "왜 메인에 넣나\n\n이 브리핑은 이번 VOL.03의 전체 해석 프레임입니다. GPT-5.5 Instant가 기본 ChatGPT를 바꾸고, Finance Agents가 직무 워크플로우를 패키징했다면, Karpathy 대담은 그 변화가 개발자와 지식 노동자의 일하는 방식을 어떻게 바꾸는지 설명합니다. 핵심은 더 이상 사람이 코드를 한 줄씩 치는 것이 아니라, 에이전트에게 기능 단위의 매크로 작업을 위임하고 결과를 검토하는 구조로 이동했다는 점입니다.\n\n핵심 요약\n\n첫째, 소프트웨어 엔지니어링은 코딩에서 위임으로 이동합니다. Karpathy는 2023년 12월 이후 직접 코드를 타이핑하기보다 에이전트를 관리하는 방식으로 일한다고 설명합니다. 병목은 타이핑 속도가 아니라 명확한 지시문, MD 파일, 메모리 도구, 병렬 에이전트 운영 능력입니다.\n\n둘째, 인간 병목 제거가 새 실력입니다. 과거에는 GPU FLOPs를 얼마나 잘 쓰느냐가 중요했다면, 이제는 구독 중인 에이전트들의 토큰 처리량을 얼마나 오래, 많이, 정확히 굴리느냐가 중요합니다. 에이전트가 실패할 때도 단순히 모델 탓을 하기보다 지시·메모리·검증 루프가 부족했는지 봐야 합니다.\n\n셋째, 자율 연구는 인간 연구자를 루프 밖으로 밀어냅니다. Data Chat 사례처럼 에이전트가 하룻밤 사이에 하이퍼파라미터 조합을 탐색하고, weight decay, embedding 값, Adam betas 사이의 상호작용을 찾아내는 장면은 연구 조직 자체가 Program MD로 코드화될 가능성을 보여줍니다.\n\n넷째, 앱의 종말과 에이전틱 웹입니다. Karpathy의 스마트 홈 에이전트 Dobby 사례는 사용자가 개별 앱을 여는 대신, 에이전트가 Sonos, 조명, 보안 시스템 API를 통합하고 자연어 명령으로 집 전체를 제어하는 방향을 보여줍니다. 미래의 고객은 인간이 아니라 인간을 대신해 행동하는 에이전트가 될 수 있습니다.\n\n수강생에게 줄 메시지\n\n이번 브리핑은 'AI가 코딩을 대신한다'에서 끝나면 안 됩니다. 진짜 질문은 내 업무를 어떤 MD 지시서, 어떤 메모리, 어떤 검증 루프, 어떤 에이전트 팀 구조로 바꿀 것인가입니다. 앞으로의 실력은 프롬프트 한 줄이 아니라, 에이전트가 오래 굴러가도 망가지지 않는 작업 시스템을 설계하는 능력입니다.",
       "editorial": "이 내용은 VOL.03의 해설 축으로 넣는 게 맞습니다. GPT-5.5와 Finance Agents가 각각 모델과 제품 뉴스라면, Karpathy 브리핑은 그 뉴스들이 왜 '코딩의 미래'와 '직업의 재구성'으로 이어지는지 설명해 줍니다. 발표에서는 이 카드를 마지막 추천이 아니라 메인 해석 프레임으로 보여주면 좋습니다.",
       "tags": [

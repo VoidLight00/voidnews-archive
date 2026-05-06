@@ -2,7 +2,7 @@
 // Weekly 아카이브와 분리된 큐레이션 레이어.
 // 엄선된 5-10개 항목을 발표 모드로 보여주는 한 페이지.
 
-import type { Post } from "../data";
+import type { MediaImage, Post } from "../data";
 
 export type HighlightTier = "hero" | "feature" | "normal";
 
@@ -37,6 +37,8 @@ export interface ABEditorPick {
   summary: string; // 한 줄 요약
   body: string; // 풍부한 본문 (마크다운 허용 — 줄바꿈은 \n)
   editorial?: string; // 큐레이터 맥락 (왜 이걸 넣었는지)
+  thumbnail?: MediaImage;
+  images?: MediaImage[];
   tags?: string[];
   tier?: HighlightTier; // 기본 feature
 }

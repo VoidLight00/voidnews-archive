@@ -113,6 +113,86 @@ function TagList({ tags, limit = 8 }: { tags?: string[]; limit?: number }) {
   );
 }
 
+function ThumbnailPreview({
+  image,
+  tone = "accent",
+}: {
+  image?: { src: string; alt: string; caption?: string };
+  tone?: "accent" | "gold";
+}) {
+  if (!image) return null;
+  const color = tone === "gold" ? "var(--gold)" : "var(--accent)";
+  return (
+    <figure
+      style={{
+        marginTop: 16,
+        border: "1px solid var(--border)",
+        background: "var(--surface)",
+        overflow: "hidden",
+        borderRadius: 4,
+      }}
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        loading="lazy"
+        style={{
+          display: "block",
+          width: "100%",
+          aspectRatio: "16 / 9",
+          objectFit: "cover",
+        }}
+      />
+      {image.caption && (
+        <figcaption
+          style={{
+            borderTop: `1px solid ${color}`,
+            padding: "8px 10px",
+            fontFamily: "var(--mono)",
+            fontSize: 11,
+            lineHeight: 1.5,
+            color: "var(--muted)",
+          }}
+        >
+          {stripMarkdown(image.caption)}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
+function ImageGallery({
+  images,
+  tone = "gold",
+}: {
+  images?: { src: string; alt: string; caption?: string }[];
+  tone?: "accent" | "gold";
+}) {
+  if (!images || images.length === 0) return null;
+  const color = tone === "gold" ? "var(--gold)" : "var(--accent)";
+  return (
+    <div style={{ marginTop: 24 }}>
+      <div
+        style={{
+          fontFamily: "var(--mono)",
+          marginBottom: 10,
+          fontSize: 11,
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
+          color,
+        }}
+      >
+        ▾ Visual Brief
+      </div>
+      <div style={{ display: "grid", gap: 12 }}>
+        {images.map((image) => (
+          <ThumbnailPreview key={image.src} image={image} tone={tone} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ════════════════════════════════════════════════════════════
    모달 컴포넌트
 ═══════════════════════════════════════════════════════════════ */
@@ -186,6 +266,8 @@ function HighlightModal({
       >
         {linkify(stripMarkdown(item.post.content))}
       </p>
+
+      <ImageGallery images={item.post.images} tone="accent" />
 
       {item.editorial && (
         <aside
@@ -338,6 +420,8 @@ function PickModal({
       >
         {linkify(stripMarkdown(item.body))}
       </p>
+
+      <ImageGallery images={item.images} tone="gold" />
 
       {item.editorial && (
         <aside
@@ -605,6 +689,8 @@ function HeroCard({
         </blockquote>
       )}
 
+      <ThumbnailPreview image={item.post.thumbnail} />
+
       <p
         style={{
           marginTop: 20,
@@ -744,6 +830,8 @@ function FeatureCard({
         {stripMarkdown(item.post.content)}
       </p>
 
+      <ThumbnailPreview image={item.post.thumbnail} />
+
       <div
         style={{
           marginTop: "auto",
@@ -840,6 +928,8 @@ function NormalCard({
       >
         {stripMarkdown(item.post.content)}
       </p>
+
+      <ThumbnailPreview image={item.post.thumbnail} />
 
       <div
         style={{
@@ -959,6 +1049,8 @@ function EditorPickCard({
       >
         {stripMarkdown(item.summary)}
       </p>
+
+      <ThumbnailPreview image={item.thumbnail || item.images?.[0]} tone="gold" />
 
       <div
         style={{

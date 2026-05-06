@@ -4,6 +4,12 @@ import { week17 } from "./weeks/2026-w17";
 import { week18 } from "./weeks/2026-w18";
 import { week19 } from "./weeks/2026-w19";
 
+export interface MediaImage {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
 export interface Post {
   date: string;
   platform: "X" | "Threads" | "X+Threads";
@@ -16,6 +22,8 @@ export interface Post {
   backupUrls?: { label: string; url: string }[]; // 보조 공식 링크 (벤치마크·문서·콘솔 등)
   threadsUrl?: string;   // 현님 Threads 포스팅
   xUrl?: string;         // 현님 X 포스팅
+  thumbnail?: MediaImage;
+  images?: MediaImage[];
   tags?: string[];
 }
 

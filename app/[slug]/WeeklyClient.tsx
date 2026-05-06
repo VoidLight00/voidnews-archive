@@ -909,7 +909,33 @@ function PostModal({
           threadsUrl={post.threadsUrl}
         />
 
+        {post.thumbnail && (
+          <figure style={{ margin: "0 0 20px", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", background: "var(--card)" }}>
+            <img src={post.thumbnail.src} alt={post.thumbnail.alt} style={{ display: "block", width: "100%", objectFit: "cover" }} />
+            {post.thumbnail.caption && (
+              <figcaption style={{ padding: "10px 12px", fontSize: 12, color: "var(--muted)", borderTop: "1px solid var(--border)", lineHeight: 1.6 }}>
+                {stripMarkdown(post.thumbnail.caption)}
+              </figcaption>
+            )}
+          </figure>
+        )}
+
         {post.source && <LinkPreview url={post.source} />}
+
+        {post.images && post.images.length > 0 && (
+          <div style={{ display: "grid", gap: 12, marginBottom: 20 }}>
+            {post.images.map((image) => (
+              <figure key={image.src} style={{ margin: 0, border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", background: "var(--card)" }}>
+                <img src={image.src} alt={image.alt} loading="lazy" style={{ display: "block", width: "100%", objectFit: "cover" }} />
+                {image.caption && (
+                  <figcaption style={{ padding: "10px 12px", fontSize: 12, color: "var(--muted)", borderTop: "1px solid var(--border)", lineHeight: 1.6 }}>
+                    {stripMarkdown(image.caption)}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        )}
 
         {post.content && (
           <div
@@ -1096,6 +1122,24 @@ function PostCard({
           >
             {highlightText(stripMarkdown(post.summary), searchQuery)}
           </p>
+        )}
+
+        {post.thumbnail ? (
+          <img
+            src={post.thumbnail.src}
+            alt={post.thumbnail.alt}
+            loading="lazy"
+            style={{
+              width: "100%",
+              aspectRatio: "16 / 9",
+              objectFit: "cover",
+              border: "1px solid var(--border)",
+              borderRadius: 4,
+              background: "var(--surface)",
+            }}
+          />
+        ) : (
+          !expanded && post.source && <CardLinkPreview url={post.source} />
         )}
 
         {/* 클릭 힌트 */}

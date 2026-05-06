@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#08101f"/>
+  <rect x="52" y="48" width="1496" height="804" rx="26" fill="#101827" stroke="#26354d" stroke-width="2"/>
+  <text x="86" y="112" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="44" font-weight="800" fill="#f7f3ea">Repo split: Zod vs graphql-go-tools</text>
+  <text x="86" y="154" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="25" fill="#aab4c3">GPT-5.5 ties Opus on Zod tests, then pulls away on review and GraphQL clean passes.</text>
+
+  <g transform="translate(92 220)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#f7f3ea">Zod · 27 scored tasks</text>
+    <rect x="0" y="32" width="660" height="230" rx="18" fill="#f8fafc"/>
+    <g font-family="Arial, sans-serif" font-size="22" fill="#111827">
+      <text x="34" y="82" font-weight="700">Model</text><text x="220" y="82" font-weight="700">Tests</text><text x="350" y="82" font-weight="700">Review</text><text x="500" y="82" font-weight="700">Clean</text>
+      <text x="34" y="132">Opus 4.7</text><text x="220" y="132" font-weight="800">12</text><text x="350" y="132">6</text><text x="500" y="132">5</text>
+      <text x="34" y="178">GPT-5.4</text><text x="220" y="178">9</text><text x="350" y="178">10</text><text x="500" y="178">5</text>
+      <text x="34" y="224" fill="#0f8b4c" font-weight="800">GPT-5.5</text><text x="220" y="224" fill="#0f8b4c" font-weight="800">12</text><text x="350" y="224" fill="#0f8b4c" font-weight="800">14</text><text x="500" y="224" fill="#0f8b4c" font-weight="800">10</text>
+    </g>
+  </g>
+
+  <g transform="translate(850 220)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#f7f3ea">graphql-go-tools · 29 tasks</text>
+    <rect x="0" y="32" width="660" height="230" rx="18" fill="#f8fafc"/>
+    <g font-family="Arial, sans-serif" font-size="22" fill="#111827">
+      <text x="34" y="82" font-weight="700">Model</text><text x="220" y="82" font-weight="700">Tests</text><text x="350" y="82" font-weight="700">Review</text><text x="500" y="82" font-weight="700">Clean</text>
+      <text x="34" y="132">Opus 4.7</text><text x="220" y="132">21</text><text x="350" y="132">5</text><text x="500" y="132">5</text>
+      <text x="34" y="178">GPT-5.4</text><text x="220" y="178">22</text><text x="350" y="178">6</text><text x="500" y="178">6</text>
+      <text x="34" y="224" fill="#0f8b4c" font-weight="800">GPT-5.5</text><text x="220" y="224" fill="#0f8b4c" font-weight="800">26</text><text x="350" y="224" fill="#0f8b4c" font-weight="800">19</text><text x="500" y="224" fill="#0f8b4c" font-weight="800">18</text>
+    </g>
+  </g>
+
+  <g transform="translate(92 560)" font-family="Arial, 'Apple SD Gothic Neo', sans-serif">
+    <rect x="0" y="0" width="1418" height="210" rx="22" fill="#152238" stroke="#32445f"/>
+    <text x="36" y="58" font-size="30" font-weight="800" fill="#f7f3ea">왜 이 카드가 중요하나</text>
+    <text x="36" y="108" font-size="25" fill="#d7deea">• 전체 평균 하나보다 repo별 failure mode가 더 중요합니다.</text>
+    <text x="36" y="150" font-size="25" fill="#d7deea">• Opus 4.7은 작은 패치가 강점이지만 GraphQL에서는 under-implementation이 커졌습니다.</text>
+    <text x="36" y="192" font-size="25" fill="#d7deea">• GPT-5.5는 테스트 통과보다 “리뷰 통과 + human patch 근접도”에서 차이가 벌어졌습니다.</text>
+  </g>
+</svg>

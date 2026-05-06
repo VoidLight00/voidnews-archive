@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f8fb"/>
+  <rect x="48" y="42" width="1504" height="816" rx="28" fill="#ffffff" stroke="#d8e0ec" stroke-width="2"/>
+  <text x="82" y="106" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="46" font-weight="800" fill="#081225">GPT-5.5 vs GPT-5.4 vs Opus 4.7</text>
+  <text x="82" y="150" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="26" font-weight="600" fill="#5b667a">56 real coding tasks from Zod + graphql-go-tools · Reddit r/codex / Stet benchmark</text>
+
+  <rect x="82" y="198" width="1436" height="92" rx="14" fill="#061f3f"/>
+  <text x="146" y="254" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff">Metric</text>
+  <text x="646" y="254" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">Opus 4.7</text>
+  <text x="956" y="254" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">GPT-5.4</text>
+  <text x="1268" y="254" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">GPT-5.5</text>
+
+  <g font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="25" fill="#0b1020">
+    <rect x="82" y="290" width="1436" height="84" fill="#ffffff" stroke="#e1e7f0"/>
+    <text x="116" y="343" font-weight="700">Tests pass</text>
+    <text x="646" y="343" text-anchor="middle">33/56</text>
+    <text x="956" y="343" text-anchor="middle">31/56</text>
+    <text x="1268" y="343" text-anchor="middle" fill="#0f8b4c" font-weight="800">38/56</text>
+
+    <rect x="82" y="374" width="1436" height="84" fill="#f9fbfe" stroke="#e1e7f0"/>
+    <text x="116" y="427" font-weight="700">Equivalent to human patch</text>
+    <text x="646" y="427" text-anchor="middle">19/56</text>
+    <text x="956" y="427" text-anchor="middle">35/56</text>
+    <text x="1268" y="427" text-anchor="middle" fill="#0f8b4c" font-weight="800">40/56</text>
+
+    <rect x="82" y="458" width="1436" height="84" fill="#ffffff" stroke="#e1e7f0"/>
+    <text x="116" y="511" font-weight="700">Clean pass: tests + review</text>
+    <text x="646" y="511" text-anchor="middle">10/56</text>
+    <text x="956" y="511" text-anchor="middle">11/56</text>
+    <text x="1268" y="511" text-anchor="middle" fill="#0f8b4c" font-weight="800">28/56</text>
+
+    <rect x="82" y="542" width="1436" height="84" fill="#f9fbfe" stroke="#e1e7f0"/>
+    <text x="116" y="595" font-weight="700">Code-review pass</text>
+    <text x="646" y="595" text-anchor="middle">11/56</text>
+    <text x="956" y="595" text-anchor="middle">16/56</text>
+    <text x="1268" y="595" text-anchor="middle" fill="#0f8b4c" font-weight="800">33/56</text>
+
+    <rect x="82" y="626" width="1436" height="84" fill="#ffffff" stroke="#e1e7f0"/>
+    <text x="116" y="679" font-weight="700">Mean time / task</text>
+    <text x="646" y="679" text-anchor="middle">11m18s</text>
+    <text x="956" y="679" text-anchor="middle">8m24s</text>
+    <text x="1268" y="679" text-anchor="middle" fill="#0f8b4c" font-weight="800">6m56s</text>
+
+    <rect x="82" y="710" width="1436" height="84" fill="#f9fbfe" stroke="#e1e7f0"/>
+    <text x="116" y="763" font-weight="700">Cost / task</text>
+    <text x="646" y="763" text-anchor="middle">$3.43</text>
+    <text x="956" y="763" text-anchor="middle" fill="#2563eb" font-weight="800">$2.39</text>
+    <text x="1268" y="763" text-anchor="middle">$2.86</text>
+  </g>
+
+  <rect x="82" y="812" width="1436" height="2" fill="#d8e0ec"/>
+  <text x="82" y="846" font-family="Arial, 'Apple SD Gothic Neo', sans-serif" font-size="22" fill="#5b667a">핵심: GPT-5.5는 “가장 많이 ship되는 기본값”, Opus 4.7은 “작은 패치/낮은 footprint”, GPT-5.4는 “저비용 중간 선택지”.</text>
+</svg>
