@@ -240,17 +240,11 @@ export const week19: WeeklyData = {
         {
           "date": "5/04",
           "platform": "X",
-          "title": "조코레터(Jocoletter) — 매일 아침 핵심 AI 뉴스 요약 뉴스레터 시작",
-          "summary": "조코딩 주간 영상은 너무 길고 일간 AI 뉴스는 너무 많다는 갭에 매일 아침 핵심만 정리한 뉴스레터로 진입",
-          "content": "이게 뭐예요?\n조코딩 주간 영상은 너무 길고 일간 AI 뉴스는 너무 많다는 갭에 매일 아침 핵심만 정리한 뉴스레터로 진입\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n주간 유튜브와 보완 관계. AX 컨설팅·바이브 코딩 부트캠프와 묶인 자체 콘텐츠 생태계 확장\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
+          "title": "Jocoletter — 매일 아침 핵심 AI 뉴스 요약 뉴스레터 시작",
+          "summary": "주간 영상은 길고 일간 AI 뉴스는 너무 많다는 갭에 맞춰, 매일 아침 핵심만 정리하는 뉴스레터형 AI 정보 서비스로 진입",
+          "content": "이게 뭐예요?\n주간 영상은 길고 일간 AI 뉴스는 너무 많다는 갭에 맞춰, 매일 아침 핵심만 정리하는 뉴스레터형 AI 정보 서비스로 진입한 사례입니다.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 AI 뉴스 큐레이션이 영상·뉴스레터·컨설팅으로 묶이는 콘텐츠 비즈니스 확장 사례로 보면 됩니다.\n\n조금 더 풀어보면\n주간 영상과 보완 관계를 만들고, AX 컨설팅·바이브 코딩 부트캠프와 연결되는 자체 콘텐츠 생태계로 확장하는 흐름입니다.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
           "source": "https://jocoletter.jocoding.io/",
           "officialUrl": "https://jocoletter.jocoding.io/",
-          "backupUrls": [
-            {
-              "label": "youtube.com",
-              "url": "https://www.youtube.com/watch?v=WWw_s07IYh8"
-            }
-          ],
           "tags": [
             "수익화사례",
             "커뮤니티",
@@ -260,17 +254,11 @@ export const week19: WeeklyData = {
         {
           "date": "5/04",
           "platform": "X",
-          "title": "조코딩 대신콜 — AI 에이전트가 회식·예약 전화 대신해 주는 콜비아 베타",
+          "title": "대신콜 — AI 에이전트가 회식·예약 전화 대신해 주는 콜비아 베타",
           "summary": "여러 식당에 자동 전화·자리 확인 후 결과만 사용자에게 전달 — '전화 공포'를 가진 사용자에게 AI 에이전트 위임 형 콜비아 서비스",
           "content": "이게 뭐예요?\n여러 식당에 자동 전화·자리 확인 후 결과만 사용자에게 전달 — '전화 공포'를 가진 사용자에게 AI 에이전트 위임 형 콜비아 서비스\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n사전 신청자 초기 크레딧 증정. 친구 통화 대리도 가능\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
           "source": "https://delegate-call.pages.dev/",
           "officialUrl": "https://delegate-call.pages.dev/",
-          "backupUrls": [
-            {
-              "label": "youtube.com",
-              "url": "https://www.youtube.com/watch?v=WWw_s07IYh8"
-            }
-          ],
           "tags": [
             "수익화사례",
             "커뮤니티",
@@ -280,9 +268,9 @@ export const week19: WeeklyData = {
         {
           "date": "5/04",
           "platform": "X",
-          "title": "조코딩 AgentWatch — Claude Code/Codex 에이전트 모니터링 + Apple Watch 알람 솔루션 (출시 임박)",
+          "title": "AgentWatch — Claude Code/Codex 에이전트 모니터링 + Apple Watch 알람 솔루션 (출시 임박)",
           "summary": "Claude Code/Codex 실행 중 macOS notch에 상태 표시, 종료 시 스마트폰/Apple Watch 알림. 워치에서 원격 승인, 멀티 에이전트·멀티 세션 동시 조작. 사전 예약자 출시 후 1개월 무료 쿠폰.",
-          "content": "이게 뭐예요?\nClaude Code/Codex 실행 중 macOS notch에 상태 표시, 종료 시 스마트폰/Apple Watch 알림. 워치에서 원격 승인, 멀티 에이전트·멀티 세션 동시 조작. 사전 예약자 출시 후 1개월 무료 쿠폰.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 에이전트자동화 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n조코딩 프로덕트 빌더 자체 서비스. 대기자 한 달 무료 쿠폰 + 다음 주 출시 예정. WebSocket 릴레이로 데스크탑↔모바일 연결 | Digital Software Solutions, LLC 운영. 영상에서는 '대기자 등록' 언급되나 사이트는 7일 trial 회원가입 형태. agent-watch.com이 영상에서 소개한 'AgentWatch'와 동일 추정(이름·기능·jocoding 프로덕트 빌더 맥락 일치). community 분류.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
+          "content": "이게 뭐예요?\nClaude Code/Codex 실행 중 macOS notch에 상태 표시, 종료 시 스마트폰/Apple Watch 알림. 워치에서 원격 승인, 멀티 에이전트·멀티 세션 동시 조작. 사전 예약자 출시 후 1개월 무료 쿠폰.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 에이전트자동화 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n커뮤니티 기반 자체 서비스. 대기자 한 달 무료 쿠폰 + 다음 주 출시 예정. WebSocket 릴레이로 데스크탑↔모바일 연결 | Digital Software Solutions, LLC 운영. 공식 사이트는 7일 trial 회원가입 형태입니다. agent-watch.com과 동일 서비스로 추정되나, 운영 주체와 최신 가격은 공식 사이트에서 재확인하는 편이 안전합니다.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
           "source": "https://www.agentwatch.tools/",
           "officialUrl": "https://www.agentwatch.tools/",
           "backupUrls": [
@@ -291,16 +279,8 @@ export const week19: WeeklyData = {
               "url": "https://testflight.apple.com/join/4g5V7v6M"
             },
             {
-              "label": "agentwatch.jocoding.io",
-              "url": "https://agentwatch.jocoding.io/"
-            },
-            {
               "label": "agent-watch.com",
               "url": "https://agent-watch.com/"
-            },
-            {
-              "label": "jocoding.io",
-              "url": "https://jocoding.io/links"
             }
           ],
           "tags": [

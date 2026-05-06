@@ -541,10 +541,10 @@ export const edition2026_04c: ABEdition = {
       "category": "Claude Code / 작업 원칙",
       "sourceUrl": "https://github.com/forrestchang/andrej-karpathy-skills",
       "sourceLabel": "GitHub 보기 →",
-      "guideUrl": "https://youtu.be/-E9chn_gtfY?si=9XGBXvL9WYBxGJ1K",
-      "guideLabel": "영상 보기 →",
+      "guideUrl": "https://x.com/karpathy/status/2015883857489522876",
+      "guideLabel": "Karpathy 원문 보기 →",
       "summary": "Karpathy가 지적한 LLM 코딩의 실패 패턴을 Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution 네 가지 원칙으로 압축한 CLAUDE.md 템플릿.",
-      "body": "왜 발표 마지막에 넣나\n\n이 저장소는 새 모델 뉴스가 아니라, Claude Code를 실제 업무에 쓸 때 결과 품질을 올리는 운영 원칙입니다. 핵심은 AI에게 '코드를 더 많이 치게 하는 것'이 아니라, 성공 기준과 검증 루프를 명확히 줘서 스스로 반복하게 만드는 것입니다.\n\n영상에서 가져올 인사이트도 여기에 붙습니다. 이제 코딩의 병목은 한 줄 한 줄 입력하는 능력보다, 무엇을 만들지 정의하고, 어디까지가 성공인지 정하고, 에이전트가 과하게 추상화하거나 엉뚱한 파일을 건드리지 않게 제어하는 능력으로 이동합니다. 그래서 수강생에게는 이걸 단순 팁이 아니라 'AI 시대의 작업 지시서' 예시로 보여주면 좋습니다.\n\n바로 해볼 것은 간단합니다. 기존 프로젝트의 CLAUDE.md에 네 원칙 중 Surgical Changes와 Goal-Driven Execution만 먼저 추가해도 diff가 작아지고, 검증 없는 질주가 줄어듭니다.",
+      "body": "왜 발표 마지막에 넣나\n\n이 저장소는 새 모델 뉴스가 아니라, Claude Code를 실제 업무에 쓸 때 결과 품질을 올리는 운영 원칙입니다. 핵심은 AI에게 '코드를 더 많이 치게 하는 것'이 아니라, 성공 기준과 검증 루프를 명확히 줘서 스스로 반복하게 만드는 것입니다.\n\nKarpathy 원문에서 가져올 인사이트도 여기에 붙습니다. 이제 코딩의 병목은 한 줄 한 줄 입력하는 능력보다, 무엇을 만들지 정의하고, 어디까지가 성공인지 정하고, 에이전트가 과하게 추상화하거나 엉뚱한 파일을 건드리지 않게 제어하는 능력으로 이동합니다. 그래서 수강생에게는 이걸 단순 팁이 아니라 'AI 시대의 작업 지시서' 예시로 보여주면 좋습니다.\n\n바로 해볼 것은 간단합니다. 기존 프로젝트의 CLAUDE.md에 네 원칙 중 Surgical Changes와 Goal-Driven Execution만 먼저 추가해도 diff가 작아지고, 검증 없는 질주가 줄어듭니다.",
       "editorial": "이번 회차가 Finance Agents처럼 큰 제품 발표로 끝나면, 수강생은 '그래서 내일부터 뭘 바꾸지?'에서 막힐 수 있습니다. Karpathy Skills는 그 답을 작업 습관 쪽에서 줍니다. 더 강한 모델을 기다리기보다, 모델이 덜 망치게 만드는 규칙을 먼저 갖추자는 메시지입니다.",
       "tags": [
         "ClaudeCode",

@@ -191,7 +191,7 @@ export const week18: WeeklyData = {
           "platform": "X",
           "title": "Demis Hassabis 방한 — 서울 Google AI Campus(해외 첫 사례) MOU 체결",
           "summary": "Google·DeepMind가 영국 본사 외 최초로 세우는 해외 AI 캠퍼스가 서울 — 미국 본사 엔지니어 10명 상주, 한국 스타트업·연구진과 직접 연결되는 R&D 허브",
-          "content": "이게 뭐예요?\nGoogle·DeepMind가 영국 본사 외 최초로 세우는 해외 AI 캠퍼스가 서울 — 미국 본사 엔지니어 10명 상주, 한국 스타트업·연구진과 직접 연결되는 R&D 허브\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n이재명 대통령·하사비스 청와대 회동 후 과기정통부와 MOU. 연내 가동. 조코딩이 현장에서 직접 참석\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 그래도 가격·지역·접근 권한은 실제 사용 전에 다시 확인하세요.",
+          "content": "이게 뭐예요?\nGoogle·DeepMind가 영국 본사 외 최초로 세우는 해외 AI 캠퍼스가 서울 — 미국 본사 엔지니어 10명 상주, 한국 스타트업·연구진과 직접 연결되는 R&D 허브\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n이재명 대통령·하사비스 청와대 회동 후 과기정통부와 MOU. 연내 가동 예정.\n\n주의·확인 포인트\n공식 항목입니다. 공식 출처 기반 항목입니다. 그래도 가격·지역·접근 권한은 실제 사용 전에 다시 확인하세요.",
           "source": "https://thenextweb.com/news/google-deepmind-ai-campus-seoul",
           "officialUrl": "https://thenextweb.com/news/google-deepmind-ai-campus-seoul",
           "backupUrls": [
@@ -440,18 +440,10 @@ export const week18: WeeklyData = {
           "platform": "X",
           "title": "GPT-Image-2 + Seedance 2.0 댄스 안무 스토리보드 워크플로우",
           "summary": "'Redraw the attached image in the most clumsy, scribbly, and utterly pathetic way possible. MS Paint with a mouse' — 모델의 고품질 출력과 의도적 저품질의 대비가 SNS에서 폭발",
-          "content": "이게 뭐예요?\n'Redraw the attached image in the most clumsy, scribbly, and utterly pathetic way possible. MS Paint with a mouse' — 모델의 고품질 출력과 의도적 저품질의 대비가 SNS에서 폭발\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 프롬프트디자인 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n캐릭터 일관성 + 안무 시퀀스 컨트롤 패턴. 농구 슈팅 등 액션 장면도 동일 워크플로우 | 영상은 '가든 러시 님' 언급, 실제 바이럴 진원지는 X 사용자 @CHOI(트윗 ID 2049689793118998717). 동일 프롬프트가 여러 한국 커뮤니티에서 재유행 | 지문 추출 가능성 등 프라이버시 경고 동반. 미롤리(mirrorly.jocoding.io)가 한국에서 0.99달러 SaaS화. GPT-Image-2 정식 출시: 2026-04-21 | Palmistry GPT 스토어 앱들과 경쟁. 한국어 텍스트 깨짐 없는 GPT-Image-2 능력이 결정적\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
+          "content": "이게 뭐예요?\n'Redraw the attached image in the most clumsy, scribbly, and utterly pathetic way possible. MS Paint with a mouse' — 모델의 고품질 출력과 의도적 저품질의 대비가 SNS에서 폭발\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 프롬프트디자인 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n캐릭터 일관성 + 안무 시퀀스 컨트롤 패턴. 농구 슈팅 등 액션 장면도 동일 워크플로우 | 실제 바이럴 진원지는 X 사용자 @CHOI(트윗 ID 2049689793118998717). 동일 프롬프트가 여러 커뮤니티에서 재유행 | 지문 추출 가능성 등 프라이버시 경고 동반. 국내 유료 SaaS화 사례도 등장. GPT-Image-2 정식 출시: 2026-04-21 | Palmistry GPT 스토어 앱들과 경쟁. 한국어 텍스트 깨짐 없는 GPT-Image-2 능력이 결정적\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
           "source": "https://github.com/EvoLinkAI/GPT-Image-2-Seedance2-Workflow",
           "officialUrl": "https://github.com/EvoLinkAI/GPT-Image-2-Seedance2-Workflow",
           "backupUrls": [
-            {
-              "label": "youtube.com",
-              "url": "https://www.youtube.com/watch?v=4swPHBbsqtg"
-            },
-            {
-              "label": "youtube.com",
-              "url": "https://www.youtube.com/watch?v=q8m8yIusQVg"
-            },
             {
               "label": "X 원문",
               "url": "https://x.com/i/status/2049689793118998717"
@@ -566,11 +558,11 @@ export const week18: WeeklyData = {
         {
           "date": "4/28",
           "platform": "X",
-          "title": "조코딩, Netflix '기리고' 1화 7:37 — 랭체인 강의·대사 등장 (한국 다큐/드라마 글로벌 노출)",
-          "summary": "Netflix 한국 1위 작품 '기리고' 1화 7:37 부근, 배우 현우석이 연기한 캐릭터 강화준이 조코딩의 LangChain 강의를 시청하는 장면 등장. 다국어 자막·더빙으로 글로벌 노출. 크레딧에도 표기.",
-          "content": "이게 뭐예요?\nNetflix 한국 1위 작품 '기리고' 1화 7:37 부근, 배우 현우석이 연기한 캐릭터 강화준이 조코딩의 LangChain 강의를 시청하는 장면 등장. 다국어 자막·더빙으로 글로벌 노출. 크레딧에도 표기.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n조코딩 본인 영상 발표(self-reported, 비공식). Netflix 측 공식 보도자료/검증 미확인 → community 분류. 출처 추적 시 Netflix 한국 콘텐츠 페이지 또는 작품 크레딧 직접 확인 필요.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
-          "source": "https://www.youtube.com/@jocoding",
-          "officialUrl": "https://www.youtube.com/@jocoding",
+          "title": "Netflix '기리고' 1화 7:37 — LangChain 강의 장면 등장 주장",
+          "summary": "Netflix 작품 '기리고' 1화 7:37 부근에 LangChain 강의 장면이 등장했다는 커뮤니티 제보. Netflix 공식 보도자료 확인 전까지는 작품 페이지·크레딧으로 직접 검증이 필요한 항목.",
+          "content": "이게 뭐예요?\nNetflix 작품 '기리고' 1화 7:37 부근에 LangChain 강의 장면이 등장했다는 커뮤니티 제보입니다. 다국어 자막·더빙으로 글로벌 노출됐다는 주장도 있으나, 공식 보도자료 확인 전까지는 작품 페이지와 크레딧으로 직접 검증해야 합니다.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 AI 교육 콘텐츠가 대중문화 장면 안에 들어가는 사례로 볼 수 있지만, 출처 신뢰도는 낮게 표시하는 것이 안전합니다.\n\n조금 더 풀어보면\n커뮤니티 기반 제보이며 Netflix 측 공식 보도자료는 확인되지 않았습니다. 출처 추적 시 Netflix 작품 페이지 또는 작품 크레딧을 직접 확인하는 편이 YouTube 2차 해설보다 낫습니다.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
+          "source": "https://www.netflix.com/",
+          "officialUrl": "https://www.netflix.com/",
           "tags": [
             "수익화사례",
             "커뮤니티",
@@ -608,11 +600,11 @@ export const week18: WeeklyData = {
         {
           "date": "4/28",
           "platform": "X",
-          "title": "Nulli — Qwen 3 기반 동영상 자막 번역·더빙 서비스 (조코딩 프로덕트 빌더 출신)",
-          "summary": "조코딩 '프로덕트 빌더' 커뮤니티 회원이 만든 영상 다국어 자막·번역·더빙 서비스. Qwen 3 기반으로 YouTube 기본 더빙 대비 자연스러운 음성 톤 매칭.",
-          "content": "이게 뭐예요?\n조코딩 '프로덕트 빌더' 커뮤니티 회원이 만든 영상 다국어 자막·번역·더빙 서비스. Qwen 3 기반으로 YouTube 기본 더빙 대비 자연스러운 음성 톤 매칭.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 최신 모델 이름을 외우는 것보다, 이 변화가 내 업무·학습·제작 흐름의 어느 부분을 바꾸는지 보는 것이 중요합니다.\n\n조금 더 풀어보면\n공식 도메인/Product Hunt 페이지 미확인 → 출처 추적 실패. jocoding.io/links에 링크 게시 추정. 영상 내 데모만 존재. Qwen 3은 Alibaba Cloud 공식 모델로 백업 첨부.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
-          "source": "https://jocoding.io/links",
-          "officialUrl": "https://jocoding.io/links",
+          "title": "Nulli — Qwen 3 기반 동영상 자막 번역·더빙 서비스",
+          "summary": "영상 다국어 자막·번역·더빙을 목표로 한 커뮤니티 서비스. Qwen 3 기반 음성 톤 매칭을 내세우지만 공식 도메인과 1차 게시글 확인이 더 필요한 항목.",
+          "content": "이게 뭐예요?\n영상 다국어 자막·번역·더빙을 목표로 한 커뮤니티 서비스입니다. Qwen 3 기반으로 YouTube 기본 더빙보다 자연스러운 음성 톤 매칭을 내세우지만, 공식 도메인과 1차 게시글 확인이 더 필요합니다.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 AI 영상 번역이 빠르게 개인·소규모 서비스로 내려오는 사례로 보면 됩니다.\n\n조금 더 풀어보면\n공식 도메인/Product Hunt 페이지는 아직 확인되지 않았습니다. Qwen 3 관련 공식 자료는 Alibaba Cloud 원문을 우선 연결해 두고, 서비스 자체는 추가 검증 대상으로 남깁니다.\n\n주의·확인 포인트\n커뮤니티 항목입니다. 커뮤니티 기반 항목입니다. 재현성, 라이선스, 유지보수 상태를 직접 확인한 뒤 실무에 쓰는 것이 좋습니다.",
+          "source": "https://www.alibabacloud.com/blog/qwen3%E2%80%91livetranslate-real%E2%80%91time-multimodal-interpretation-%E2%80%94-see-it-hear-it-speak-it%EF%BC%81_602585",
+          "officialUrl": "https://www.alibabacloud.com/blog/qwen3%E2%80%91livetranslate-real%E2%80%91time-multimodal-interpretation-%E2%80%94-see-it-hear-it-speak-it%EF%BC%81_602585",
           "backupUrls": [
             {
               "label": "alibabacloud.com",
