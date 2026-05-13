@@ -5,7 +5,7 @@ export const week20: WeeklyData = {
   year: 2026,
   slug: "2026-w20",
   period: "5/07 ~ 5/14",
-  totalPosts: 8,
+  totalPosts: 15,
   companies: [
     {
       name: "Anthropic / Claude",
@@ -150,9 +150,71 @@ export const week20: WeeklyData = {
       ]
     },
     {
+      name: "Google / Cloud & Health",
+      color: "#4285F4",
+      posts: [
+        {
+          date: "5/07",
+          platform: "X",
+          title: "Google Health Coach + Fitbit Air — 건강 데이터와 AI 코치가 하나의 앱으로 모이는 흐름",
+          summary: "Google이 Google Health 앱, Google Health Coach, Fitbit Air를 공개했습니다. Health Connect, Apple Health, 의료 기록, 웨어러블 데이터를 한곳에 모으고 Gemini 기반 건강 질문·진료 준비·웰니스 코칭 흐름을 강화하는 방향입니다.",
+          content: "**이게 뭐예요?**\nGoogle이 Google Health 앱과 Google Health Coach, Fitbit Air를 발표했습니다. 핵심은 건강 데이터를 여러 앱과 기기 사이에 흩어두는 대신, 하나의 건강 앱과 AI 코치 경험으로 묶는 것입니다.\n\n**무엇이 달라졌나?**\nGoogle Health 앱은 웨어러블, Health Connect, Apple Health, 의료 기록 데이터를 한곳에 모읍니다. Google Health Coach는 운동, 수면, 회복, 웰니스에 대한 개인화 가이드를 제공하는 AI 기반 동반자로 소개됐습니다. Fitbit Air는 Google Health Premium과 함께 묶여 건강 데이터 수집 표면을 넓힙니다.\n\n**어떻게 읽을까?**\n헬스케어 AI는 단순 챗봇보다 데이터 연결과 신뢰 설계가 중요합니다. 사용자의 생활 데이터, 의료 기록, 웨어러블 신호를 AI가 어떻게 읽고 어떤 조언으로 바꾸는지가 제품 경쟁의 핵심이 됩니다.\n\n**읽을 때 볼 점**\n개인 건강 데이터는 편의성만큼 민감도가 큽니다. 실제 도입에서는 데이터 공유 범위, 의료 조언의 한계, 지역별 출시 일정, 유료 플랜 조건을 함께 확인해야 합니다.",
+          source: "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
+          officialUrl: "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
+          tags: ["Google", "Health", "Fitbit", "Gemini", "공식"],
+          featured: false
+        },
+        {
+          date: "5/08",
+          platform: "X",
+          title: "Gemini 3.1 Flash-Lite GA — 초저지연·대량 호출용 Gemini 3 모델의 정식 출시",
+          summary: "Google Cloud가 Gemini 3.1 Flash-Lite를 정식 출시했습니다. 초저지연, 비용 효율, 대량 처리, tool calling과 orchestration을 강조한 모델로 고객지원·금융·개발 보조처럼 빠른 응답이 중요한 에이전트 워크로드를 겨냥합니다.",
+          content: "**이게 뭐예요?**\nGoogle Cloud가 Gemini 3.1 Flash-Lite를 generally available로 공개했습니다. Gemini 3 계열 중 빠르고 비용 효율적인 모델로, 대량 요청과 낮은 지연 시간이 중요한 서비스에 맞춘 선택지입니다.\n\n**무엇이 달라졌나?**\nGoogle은 Flash-Lite를 ultra-low latency, high-volume task, tool calling, orchestration에 적합한 모델로 설명합니다. 고객지원, 금융 통화 중 실시간 답변, 코드 보조, 이미지 분석 같은 사용 사례가 함께 제시됐습니다.\n\n**어떻게 읽을까?**\n모델 경쟁은 최고 성능 모델만의 문제가 아닙니다. 실제 제품에서는 빠르게 많이 호출할 수 있고, 도구 호출이 안정적인 모델이 더 중요할 때가 많습니다. Gemini 3.1 Flash-Lite는 그런 운영형 에이전트 레이어를 겨냥합니다.\n\n**읽을 때 볼 점**\n벤치마크보다 중요한 것은 내 서비스의 지연 시간, 비용, 성공률입니다. 대량 고객지원이나 실시간 워크플로우에서는 최고 지능보다 p95 latency와 tool call 안정성이 더 큰 차이를 만듭니다.",
+          source: "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available",
+          officialUrl: "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available",
+          backupUrls: [
+            {
+              label: "공식 문서",
+              url: "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite"
+            }
+          ],
+          tags: ["Google", "Gemini", "FlashLite", "Enterprise", "공식"],
+          featured: false
+        }
+      ]
+    },
+    {
       name: "OpenAI",
       color: "#10A37F",
       posts: [
+        {
+          date: "5/07",
+          platform: "X",
+          title: "OpenAI Realtime Voice Models — 음성 에이전트용 실시간 모델 3종 공개",
+          summary: "OpenAI가 API용 실시간 음성 모델 3종을 공개했습니다. GPT-Realtime-2, GPT-Realtime-Translate, GPT-Realtime-Whisper로 음성 추론, 실시간 번역, 스트리밍 음성 인식을 나눠 제공하며 voice agent 제품군을 넓히는 흐름입니다.",
+          content: "**이게 뭐예요?**\nOpenAI가 실시간 음성 앱을 위한 API 모델 3종을 공개했습니다. GPT-Realtime-2는 더 어려운 음성 대화와 추론을, GPT-Realtime-Translate는 실시간 음성 번역을, GPT-Realtime-Whisper는 말하는 동안 바로 받아쓰는 스트리밍 음성 인식을 담당합니다.\n\n**무엇이 달라졌나?**\n음성 AI가 단순 STT/TTS 조합에서 실시간 대화, 번역, 추론을 API 레벨에서 나눠 제공하는 구조로 바뀌고 있습니다. 개발자는 음성 상담, 회의 통역, 실시간 코치, 콜센터 에이전트 같은 제품을 더 직접적으로 설계할 수 있습니다.\n\n**어떻게 읽을까?**\n음성 에이전트는 지연 시간이 경험을 결정합니다. 텍스트 챗봇은 몇 초 늦어도 버틸 수 있지만, 전화나 실시간 통역은 반응 속도와 끊김이 곧 품질입니다. OpenAI가 음성 전용 모델군을 나눈 것은 이 시장을 제품 레이어로 본다는 신호입니다.\n\n**읽을 때 볼 점**\n음성 모델은 성능뿐 아니라 분당 과금, 캐시 입력, 지원 언어, 개인정보 처리 조건이 중요합니다. 실제 서비스에서는 모델 이름보다 지연 시간, 비용, 녹취 보관 정책을 함께 봐야 합니다.",
+          source: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+          officialUrl: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+          tags: ["OpenAI", "Realtime", "Voice", "API", "공식"],
+          featured: false
+        },
+        {
+          date: "5/07",
+          platform: "X",
+          title: "Codex for Chrome — 로그인된 브라우저 상태를 코딩 에이전트 작업에 연결",
+          summary: "OpenAI Codex changelog에 Codex for Chrome이 추가됐습니다. Codex가 로그인 상태가 필요한 웹 앱을 Chrome 확장으로 다루되, 사용자가 허용한 웹사이트 안에서 백그라운드 탭으로 병렬 작업하는 구조입니다.",
+          content: "**이게 뭐예요?**\nCodex for Chrome은 Codex가 사용자의 로그인된 Chrome 상태를 이용해 브라우저 기반 작업을 수행하게 하는 공식 확장입니다. Salesforce, Gmail, LinkedIn처럼 로그인 상태가 필요한 웹 앱을 다룰 때 쓰는 흐름입니다.\n\n**무엇이 달라졌나?**\nCodex는 로컬 개발 서버나 공개 페이지에는 내장 브라우저를 우선 쓰고, 로그인 상태가 필요한 웹사이트에는 Chrome 확장을 사용합니다. 사용자는 도메인별 allowlist와 blocklist로 접근 범위를 관리하고, Codex는 백그라운드 탭에서 병렬로 작업할 수 있습니다.\n\n**어떻게 읽을까?**\n코딩 에이전트는 IDE 안 코드만 만지는 단계에서 실제 SaaS, 관리자 화면, 업무 웹앱까지 연결되는 단계로 이동하고 있습니다. 그만큼 브라우저 권한, 로그인 상태, 스크린샷, 컨텍스트 저장 범위가 제품 신뢰의 핵심이 됩니다.\n\n**읽을 때 볼 점**\nChrome 확장은 강한 권한을 요구합니다. 편의성보다 먼저 어떤 사이트를 허용할지, 작업 내용이 어떤 Codex context로 저장되는지, 조직 계정에서 허용해도 되는지 확인해야 합니다.",
+          source: "https://developers.openai.com/codex/changelog",
+          officialUrl: "https://developers.openai.com/codex/changelog",
+          backupUrls: [
+            {
+              label: "공식 문서",
+              url: "https://developers.openai.com/codex/app/chrome-extension"
+            }
+          ],
+          tags: ["OpenAI", "Codex", "Chrome", "브라우저에이전트", "공식"],
+          featured: false
+        },
         {
           date: "5/08",
           platform: "X",
@@ -180,6 +242,57 @@ export const week20: WeeklyData = {
           ],
           tags: ["OpenAI", "GPT-5.5-Cyber", "사이버방어", "접근통제", "공식"],
           featured: true
+        }
+      ]
+    },
+    {
+      name: "Telegram",
+      color: "#2AABEE",
+      posts: [
+        {
+          date: "5/07",
+          platform: "X",
+          title: "Telegram AI Bot Revolution — 모든 채팅에서 AI 봇을 호출하는 메신저 플랫폼 전략",
+          summary: "Telegram이 AI Bot Revolution 업데이트를 공개했습니다. 어떤 채팅에서든 봇 username을 태그해 AI 응답을 받고, 텍스트·이미지 생성 봇, bot-to-bot communication, streaming text, profile automation, custom AI styles를 확장하는 흐름입니다.",
+          content: "**이게 뭐예요?**\nTelegram이 AI Bot Revolution 업데이트를 발표했습니다. 사용자는 어떤 채팅에서든 AI 봇 username을 태그해 응답을 받을 수 있고, 봇은 텍스트나 이미지를 생성할 수 있습니다.\n\n**무엇이 달라졌나?**\nGuest Bots, Bot-to-Bot Communication, Streaming Text for Bots, Chat Automation in Profiles, Custom AI Styles 같은 기능이 추가됐습니다. Telegram은 다양한 AI 모델이 플랫폼 안에서 경쟁하고 작동할 수 있는 구조를 강조합니다.\n\n**어떻게 읽을까?**\n메신저는 사람들이 가장 자주 쓰는 업무·일상 인터페이스입니다. Telegram이 AI 봇 호출과 자동화를 채팅 기본 기능처럼 넣으면, 별도 앱을 여는 대신 대화방 안에서 AI를 호출하는 패턴이 더 자연스러워집니다.\n\n**읽을 때 볼 점**\nAI 봇이 편해질수록 권한, 대화 맥락 접근, 자동화 범위가 중요해집니다. 개인 채팅과 그룹 채팅에서 어떤 봇이 어떤 데이터를 볼 수 있는지 확인하는 습관이 필요합니다.",
+          source: "https://telegram.org/blog/ai-bot-revolution-11-new-features",
+          officialUrl: "https://telegram.org/blog/ai-bot-revolution-11-new-features",
+          tags: ["Telegram", "AIBots", "Automation", "Messenger", "공식"],
+          featured: false
+        }
+      ]
+    },
+    {
+      name: "Thinking Machines",
+      color: "#111827",
+      posts: [
+        {
+          date: "5/11",
+          platform: "X",
+          title: "Interaction Models — 실시간 음성·영상·텍스트 협업을 모델 안으로 넣는 접근",
+          summary: "Thinking Machines가 Interaction Models를 공개했습니다. 외부 turn detection이나 별도 scaffolding에 의존하지 않고, audio·video·text 입력을 200ms 단위 multi-stream micro-turn 구조로 처리해 실시간 인간-AI 협업을 모델 레벨에서 다루려는 연구입니다.",
+          content: "**이게 뭐예요?**\nThinking Machines가 Interaction Models라는 접근을 공개했습니다. AI가 사용자의 말, 화면, 영상, 텍스트 흐름을 끊어진 턴이 아니라 동시에 흐르는 상호작용으로 다루게 하려는 모델 구조입니다.\n\n**무엇이 달라졌나?**\nTML-Interaction-Small은 276B parameter mixture-of-experts 모델이며, 12B active parameters로 동작한다고 설명됩니다. 200ms 단위의 multi-stream micro-turn 설계를 통해 실시간 반응 모델과 비동기 background 모델을 결합합니다.\n\n**어떻게 읽을까?**\nAI 협업의 다음 단계는 질문 하나에 답 하나를 주는 챗봇이 아니라, 사용자의 말과 화면 변화에 맞춰 끼어들고 기다리고 보조하는 상호작용입니다. 이 흐름은 음성 에이전트, 영상 회의 보조, 실시간 코딩·디자인 협업으로 이어질 수 있습니다.\n\n**읽을 때 볼 점**\nInteraction model은 데모 능력만이 아니라 지연 시간, 끼어드는 타이밍, 사용자 통제권이 중요합니다. 실시간 AI일수록 빠른 응답보다 적절한 응답이 더 중요합니다.",
+          source: "https://thinkingmachines.ai/blog/interaction-models/",
+          officialUrl: "https://thinkingmachines.ai/blog/interaction-models/",
+          tags: ["ThinkingMachines", "InteractionModels", "Voice", "Realtime", "공식"],
+          featured: false
+        }
+      ]
+    },
+    {
+      name: "Meta",
+      color: "#0866FF",
+      posts: [
+        {
+          date: "5/12",
+          platform: "X",
+          title: "Muse Spark May update — Meta AI 앱·안경·마켓플레이스에 들어가는 제품형 모델 확장",
+          summary: "Meta가 Muse Spark 발표문을 5월 12일 업데이트하며 voice conversations, faster voice responses, shopping mode, Ray-Ban Meta와 Oakley Meta glasses 확장을 추가했습니다. 4월 공개된 모델이 Meta 제품 표면으로 배포되는 단계입니다.",
+          content: "**이게 뭐예요?**\nMeta가 Muse Spark 공식 발표문을 업데이트했습니다. Muse Spark는 Meta Superintelligence Labs의 첫 LLM으로 소개됐고, 5월 12일 업데이트에서는 Meta AI 앱의 voice conversations, faster voice responses, shopping mode, AI glasses 확장이 강조됐습니다.\n\n**무엇이 달라졌나?**\n4월 발표가 모델 소개였다면, 이번 업데이트는 제품 표면 확장에 가깝습니다. Meta AI 앱, Facebook Marketplace, Ray-Ban Meta, Oakley Meta glasses 같은 실제 사용자 접점으로 Muse Spark 기능이 들어갑니다.\n\n**어떻게 읽을까?**\nMeta의 AI 전략은 별도 챗봇 하나보다 앱과 하드웨어 표면 전체에 모델을 심는 방향입니다. 음성, 카메라, 쇼핑, 안경이 연결되면 AI는 검색창이 아니라 사용자가 보는 환경 안으로 들어갑니다.\n\n**읽을 때 볼 점**\n이 항목은 4월 최초 발표와 5월 제품 업데이트를 구분해야 합니다. 아카이브에서는 5월 12일 업데이트로 다루되, 최초 모델 공개는 4월 사건으로 남기는 것이 정확합니다.",
+          source: "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+          officialUrl: "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+          tags: ["Meta", "MuseSpark", "Voice", "Glasses", "공식"],
+          featured: false
         }
       ]
     },
