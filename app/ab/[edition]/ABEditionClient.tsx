@@ -1016,31 +1016,18 @@ function EditorPickCard({
         if (e.key === "Enter" || e.key === " ") onOpen({ kind: "pick", item });
       }}
       style={{
-        display: "flex",
-        flexDirection: "column",
-        borderLeft: "4px solid var(--gold)",
-        borderTop: "1px solid var(--border)",
-        borderRight: "1px solid var(--border)",
-        borderBottom: "1px solid var(--border)",
-        background: "var(--card)",
-        padding: "clamp(16px, 3vw, 24px)",
-        borderRadius: 2,
+        borderTop: "1px solid var(--border2)",
+        padding: "clamp(22px, 4vw, 30px) 0",
         cursor: "pointer",
         WebkitTapHighlightColor: "transparent",
-        minHeight: 180,
       }}
       onPointerEnter={(e) => {
-        (e.currentTarget as HTMLElement).style.borderTopColor = "var(--gold)";
-        (e.currentTarget as HTMLElement).style.borderRightColor = "var(--gold)";
-        (e.currentTarget as HTMLElement).style.borderBottomColor =
-          "var(--gold)";
+        const title = e.currentTarget.querySelector("h3") as HTMLElement | null;
+        if (title) title.style.color = "var(--gold)";
       }}
       onPointerLeave={(e) => {
-        (e.currentTarget as HTMLElement).style.borderTopColor = "var(--border)";
-        (e.currentTarget as HTMLElement).style.borderRightColor =
-          "var(--border)";
-        (e.currentTarget as HTMLElement).style.borderBottomColor =
-          "var(--border)";
+        const title = e.currentTarget.querySelector("h3") as HTMLElement | null;
+        if (title) title.style.color = "var(--text)";
       }}
     >
       <div
@@ -1048,31 +1035,25 @@ function EditorPickCard({
           fontFamily: "var(--mono)",
           display: "flex",
           alignItems: "center",
-          gap: 10,
+          gap: 8,
           fontSize: 11,
+          letterSpacing: "0.08em",
+          color: "var(--muted)",
         }}
       >
-        <span
-          style={{
-            background: "var(--gold)",
-            color: "#000",
-            padding: "3px 8px",
-            borderRadius: 2,
-            fontWeight: 700,
-          }}
-        >
-          🛠 PICK
-        </span>
-        <span style={{ color: "var(--muted)" }}>{item.category}</span>
+        <span style={{ color: "var(--gold)" }}>참고 자료</span>
+        <span style={{ color: "var(--dim)" }}>·</span>
+        <span>{item.category}</span>
       </div>
 
       <h3
         style={{
-          marginTop: 12,
-          fontSize: "clamp(18px, 3vw, 22px)",
-          fontWeight: 700,
-          lineHeight: 1.2,
+          marginTop: 10,
+          fontSize: "clamp(17px, 2.4vw, 20px)",
+          fontWeight: 650,
+          lineHeight: 1.35,
           color: "var(--text)",
+          transition: "color 120ms ease",
         }}
       >
         {stripMarkdown(item.title)}
@@ -1080,13 +1061,11 @@ function EditorPickCard({
 
       <p
         style={{
-          fontFamily: "var(--mono)",
           marginTop: 10,
-          borderLeft: "2px solid var(--gold)",
-          paddingLeft: 10,
-          fontSize: 13,
-          color: "var(--text)",
-          lineHeight: 1.6,
+          maxWidth: 760,
+          fontSize: 14,
+          color: "var(--muted)",
+          lineHeight: 1.8,
           display: "-webkit-box",
           WebkitLineClamp: 2,
           WebkitBoxOrient: "vertical",
@@ -1096,12 +1075,9 @@ function EditorPickCard({
         {stripMarkdown(item.summary)}
       </p>
 
-      <ThumbnailPreview image={item.thumbnail || item.images?.[0]} tone="gold" />
-
       <div
         style={{
-          marginTop: "auto",
-          paddingTop: 14,
+          marginTop: 12,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -1109,8 +1085,8 @@ function EditorPickCard({
           flexWrap: "wrap",
         }}
       >
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-          <TagList tags={item.tags} limit={3} />
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <TagList tags={item.tags} limit={5} />
         </div>
         <span
           style={{
@@ -1119,7 +1095,7 @@ function EditorPickCard({
             color: "var(--gold)",
           }}
         >
-          탭하여 전체 보기 →
+          자세히 보기 →
         </span>
       </div>
     </article>
@@ -1397,9 +1373,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               </div>
               <div
                 style={{
-                  display: "grid",
-                  gap: 16,
-                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
+                  maxWidth: 760,
                 }}
               >
                 {data.editorsPicks.map((pick, i) => (
