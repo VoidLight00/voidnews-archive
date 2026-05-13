@@ -3,6 +3,7 @@ import { week16 } from "./weeks/2026-w16";
 import { week17 } from "./weeks/2026-w17";
 import { week18 } from "./weeks/2026-w18";
 import { week19 } from "./weeks/2026-w19";
+import { week20 } from "./weeks/2026-w20";
 
 export interface MediaImage {
   src: string;
@@ -43,6 +44,7 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week20,
   week19,
   week18,
   week17,
