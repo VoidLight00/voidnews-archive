@@ -5,7 +5,7 @@ export const week18: WeeklyData = {
   "year": 2026,
   "slug": "2026-w18",
   "period": "4/27 ~ 5/03",
-  "totalPosts": 28,
+  "totalPosts": 29,
   "companies": [
     {
       "name": "Alibaba / Qwen",
@@ -75,8 +75,8 @@ export const week18: WeeklyData = {
           "date": "4/30",
           "platform": "X",
           "title": "Anthropic Claude Code — git commit에 'OpenClaw'·'HERMES.md' 단어만 있어도 추가 과금 라우팅 (논란→환불)",
-          "summary": "OpenRouter에 출처 미상 stealth 모델 'Owl Alpha'가 등장 — 1M 토큰 컨텍스트, 강력한 tool use, agentic 워크로드 최적화, Claude Code/OpenClaw 호환, 무료 제공(프롬프트 로깅 동의). 영상은 Minimax(M2.x) 또는 GLM 신모델 가능성을 추측.",
-          "content": "이게 뭐예요?\nOpenRouter에 출처 미상 stealth 모델 'Owl Alpha'가 등장 — 1M 토큰 컨텍스트, 강력한 tool use, agentic 워크로드 최적화, Claude Code/OpenClaw 호환, 무료 제공(프롬프트 로깅 동의). 영상은 Minimax(M2.x) 또는 GLM 신모델 가능성을 추측.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 핵심은 최신 모델 이름보다, 이 변화가 업무·학습·제작 흐름의 어느 부분을 바꾸는지입니다.\n\n조금 더 풀어보면\nBoris Cherny: 'subscriptions weren't built for the usage patterns of these third-party tools' (4/4 정책). 엔지니어 Tariq가 'third-party harness detection 버그' 공식 인정 | Altman 트윗 ID는 검증 필요(시간상 5/2). OpenClaw GitHub 346k stars, 3.2M users. 가격 정책 차이가 사용자 이주를 가속 | OpenRouter 공식 X 계정이 4/28 'New stealth model: Owl Alpha!'로 공지. 누가 만들었는지 미공개(stealth/cloaked), 컨텍스트 1,048,756 토큰, 출력 262,144 토큰, 무료. 영상의 'Minimax M2.8' 추정은 추측에 불과 — 공식 소속 라벨 없음. cluster는 community(stealth lab) 분류로도 가능하지만 본질은 '미공개 lab의 모델 드롭'이라 tool_drop 유지.\n\n확인 포인트\n공식 출처 기반 소식입니다. 실제 활용 전에는 가격, 지역, 접근 권한을 함께 확인해야 합니다.",
+          "summary": "Claude Code 사용 중 git commit 메시지나 저장소 단서에 'OpenClaw'·'HERMES.md' 같은 third-party harness 관련 문자열이 있을 때 사용량 라우팅과 과금이 예상과 다르게 처리됐다는 논란입니다. Anthropic 쪽 설명과 환불 흐름까지 이어지며, 에이전트 도구의 사용량 분류와 비용 투명성이 중요한 운영 이슈로 떠올랐습니다.",
+          "content": "이게 뭐예요?\nClaude Code 사용 중 git commit 메시지나 저장소 단서에 'OpenClaw'·'HERMES.md' 같은 third-party harness 관련 문자열이 있을 때 사용량 라우팅과 과금이 예상과 다르게 처리됐다는 논란입니다. 사용자는 정상 Claude Code 사용으로 봤지만, 일부 흐름이 third-party tool usage로 분류됐다는 문제 제기였습니다.\n\n왜 중요해요?\n코딩 에이전트는 모델 호출, 터미널 실행, 외부 도구, 서드파티 하네스가 섞여 움직입니다. 그래서 어떤 사용이 어떤 요금·제한·정책으로 분류되는지가 실제 비용과 신뢰에 직접 영향을 줍니다. 기능이 강해질수록 비용 분류와 감사 가능성도 제품 품질의 일부가 됩니다.\n\n조금 더 풀어보면\n핵심은 특정 단어 하나가 아니라, Claude Code가 third-party harness 사용을 감지하고 분류하는 방식입니다. Anthropic 측 설명과 환불 흐름이 이어졌고, 커뮤니티에서는 OpenClaw 같은 대체 도구와 Claude Code 과금 정책을 함께 비교했습니다.\n\n확인 포인트\n에이전트형 개발 도구를 팀에서 쓸 때는 모델 성능뿐 아니라 사용량 분류, 요금 정책, 로그, 환불 기준을 함께 확인해야 합니다.",
           "source": "https://github.com/anthropics/claude-code/issues/53262",
           "officialUrl": "https://github.com/anthropics/claude-code/issues/53262",
           "backupUrls": [
@@ -126,7 +126,7 @@ export const week18: WeeklyData = {
           "platform": "X",
           "title": "Apple Support 앱 v5.13 — CLAUDE.md 2개 파일 실수 노출 (Apple 내부 Juno AI 아키텍처 유출)",
           "summary": "MacRumors의 Aaron Perris가 캡처 — Apple이 Claude Code로 'Juno AI' + Live Agents 듀얼 백엔드를 개발 중임이 공개. Apple-Gemini Siri 협업과 별개로 내부 개발 도구는 Claude를 채택",
-          "content": "이게 뭐예요?\nApple Support 앱 v5.13에서 CLAUDE.md 파일 2개가 실수로 노출되며 내부 Juno AI 아키텍처 단서가 공개됐다는 유출입니다. AI 제품 개발 방식과 내부 지침이 밖으로 나온 사례로 볼 수 있습니다.\n\n왜 중요해요?\nApple이 AI를 어떻게 제품 내부에 붙이려 하는지 엿볼 수 있는 카드입니다. 동시에 CLAUDE.md 같은 에이전트 지침 파일이 실제 기업 내부에서도 중요해졌다는 신호이기도 합니다.\n\n확인 포인트\n유출 자료는 맥락이 부족하고 변경될 수 있습니다. 발표에서는 세부 구현을 단정하기보다, '대기업 AI 개발에서도 지침 파일과 에이전트 아키텍처가 핵심 문서가 됐다'는 메시지로 연결하면 좋습니다.",
+          "content": "이게 뭐예요?\nApple Support 앱 v5.13에서 CLAUDE.md 파일 2개가 실수로 노출되며 내부 Juno AI 아키텍처 단서가 공개됐다는 유출입니다. AI 제품 개발 방식과 내부 지침이 밖으로 나온 사례로 볼 수 있습니다.\n\n왜 중요해요?\nApple이 AI를 어떻게 제품 내부에 붙이려 하는지 엿볼 수 있는 카드입니다. 동시에 CLAUDE.md 같은 에이전트 지침 파일이 실제 기업 내부에서도 중요해졌다는 신호이기도 합니다.\n\n확인 포인트\n유출 자료는 맥락이 부족하고 변경될 수 있습니다. 세부 구현을 단정하기보다, '대기업 AI 개발에서도 지침 파일과 에이전트 아키텍처가 핵심 문서가 됐다'는 메시지로 읽는 편이 안전합니다.",
           "source": "https://xcancel.com/aaronp613/status/2049986504617820551",
           "officialUrl": "https://xcancel.com/aaronp613/status/2049986504617820551",
           "backupUrls": [
@@ -156,7 +156,7 @@ export const week18: WeeklyData = {
           "platform": "X",
           "title": "Anthropic 'Claude Jupiter v1-p' red-team probe — possible Sonnet 4.8 / next Sonnet-class drop",
           "summary": "Anthropic이 'claude-jupiter-v1-p' 코드네임 모델을 레드팀에 투입했다는 루머 — 5/6 'Code with Claude' SF 컨퍼런스 직전 타이밍이라 Sonnet 4.8 또는 새 Sonnet급 모델 발표가 임박했다는 시그널.",
-          "content": "이게 뭐예요?\nAnthropic 내부 테스트명으로 보이는 'Claude Jupiter v1-p'가 레드팀 환경에서 포착됐다는 소식입니다. 공식 발표는 아니지만, Code with Claude 행사 직전이라는 시점 때문에 다음 Sonnet급 모델 신호로 읽히고 있습니다.\n\n왜 중요해요?\n지난 VOL.02에서는 Opus 4.7과 Claude Design이 중심이었고, 이번에는 그 다음 모델 라인이 움직일 가능성이 보입니다. 수강생 입장에서는 '지금 쓰는 Claude가 곧 다시 바뀔 수 있다'는 일정 감각을 잡는 카드입니다.\n\n확인 포인트\nTestingCatalog 원문을 보고, 루머인지 공식 발표인지 구분해서 받아들이면 됩니다. 모델명·출시일·성능은 아직 확정이 아니므로 발표에서는 '다음 회차 추적 대상'으로 다루는 게 안전합니다.",
+          "content": "이게 뭐예요?\nAnthropic 내부 테스트명으로 보이는 'Claude Jupiter v1-p'가 레드팀 환경에서 포착됐다는 소식입니다. 공식 발표는 아니지만, Code with Claude 행사 직전이라는 시점 때문에 다음 Sonnet급 모델 신호로 읽히고 있습니다.\n\n왜 중요해요?\n지난 VOL.02에서는 Opus 4.7과 Claude Design이 중심이었고, 이번에는 그 다음 모델 라인이 움직일 가능성이 보입니다. 사용자 관점에서는 '지금 쓰는 Claude가 곧 다시 바뀔 수 있다'는 일정 감각을 잡는 카드입니다.\n\n확인 포인트\nTestingCatalog 원문을 보고, 루머인지 공식 발표인지 구분해서 받아들이면 됩니다. 모델명·출시일·성능은 아직 확정이 아니므로 '다음 회차 추적 대상'으로 다루는 게 안전합니다.",
           "source": "https://x.com/testingcatalog/status/2049896926997369194",
           "officialUrl": "https://x.com/testingcatalog/status/2049896926997369194",
           "backupUrls": [
@@ -340,7 +340,7 @@ export const week18: WeeklyData = {
           "platform": "X",
           "title": "Gemini 3.2 Flash A/B 테스트 — Ajax/Hercules/Hector/Orpheus 4개 체크포인트 LM Arena 등장",
           "summary": "Google IO 직전 Gemini 3.2 Flash가 Anti-Gravity Arena·AI Studio·iOS Gemini 앱에서 동시 노출됨. Pro급 추론을 Flash 속도로 — $0.25/$2 per 1M tokens, 2026-01 지식컷오프, 5월 정식 출시 임박.",
-          "content": "이게 뭐예요?\nGemini 3.2 Flash로 추정되는 여러 체크포인트가 LM Arena와 앱 코드에서 포착됐다는 소식입니다. Ajax, Hercules, Hector, Orpheus 같은 이름이 함께 언급되며 Google I/O 전후의 모델 업데이트 가능성을 키웁니다.\n\n왜 중요해요?\nFlash 라인은 빠르고 저렴한 모델 계층입니다. Pro급 성능을 더 낮은 비용과 빠른 속도로 쓰게 된다면, 일상 업무 자동화와 교육용 실습 비용이 크게 달라집니다.\n\n확인 포인트\n아직 공식 발표가 아니라 테스트 신호입니다. 발표에서는 '확정 출시'가 아니라 'Google의 다음 업데이트 예고편'으로 설명하는 것이 안전합니다.",
+          "content": "이게 뭐예요?\nGemini 3.2 Flash로 추정되는 여러 체크포인트가 LM Arena와 앱 코드에서 포착됐다는 소식입니다. Ajax, Hercules, Hector, Orpheus 같은 이름이 함께 언급되며 Google I/O 전후의 모델 업데이트 가능성을 키웁니다.\n\n왜 중요해요?\nFlash 라인은 빠르고 저렴한 모델 계층입니다. Pro급 성능을 더 낮은 비용과 빠른 속도로 쓰게 된다면, 일상 업무 자동화와 교육용 실습 비용이 크게 달라집니다.\n\n확인 포인트\n아직 공식 발표가 아니라 테스트 신호입니다. '확정 출시'가 아니라 'Google의 다음 업데이트 예고편'으로 읽는 것이 안전합니다.",
           "source": "https://www.geeky-gadgets.com/google-gemini-flash-leak-lm-arena/",
           "officialUrl": "https://www.geeky-gadgets.com/google-gemini-flash-leak-lm-arena/",
           "backupUrls": [
@@ -527,6 +527,39 @@ export const week18: WeeklyData = {
       ]
     },
     {
+      "name": "GitHub / Microsoft",
+      "color": "#24292F",
+      "posts": [
+        {
+          "date": "4/27",
+          "platform": "X",
+          "title": "GitHub Copilot usage-based billing — AI 코딩 도구가 비용 거버넌스 대상이 되는 전환",
+          "summary": "GitHub Copilot이 2026년 6월 1일부터 usage-based billing 구조로 이동합니다. Copilot Chat, CLI, cloud agent, Spaces, Spark, third-party coding agents 같은 사용이 AI Credits 소비와 연결되며, AI 코딩 도구 선택에도 비용 기준이 더 중요해집니다.",
+          "content": "**이게 뭐예요?**\nGitHub Copilot이 usage-based billing 구조로 이동합니다. 2026년 6월 1일부터 여러 Copilot 기능이 AI Credits 사용량과 연결됩니다. 코드 자동완성과 next-edit suggestions는 유료 플랜에서 계속 포함되지만, 더 강한 에이전트형 기능은 사용량 관리 대상이 됩니다.\n\n**무엇이 달라졌나?**\nCopilot Chat, CLI, cloud agent, Spaces, Spark, third-party coding agents 같은 기능이 credit 소비와 연결됩니다. AI 코딩 도구가 정액제 느낌의 보조 도구에서, 사용량을 추적하고 예산을 배분해야 하는 운영 자원으로 바뀌는 장면입니다.\n\n**어떻게 읽을까?**\nCodex safety가 권한과 보안의 문제라면, Copilot billing은 비용의 문제입니다. 좋은 모델을 많이 쓰는 것보다 어떤 작업을 어떤 모델과 에이전트에 맡길지 기준을 세우는 것이 중요해집니다.\n\n**읽을 때 볼 점**\n팀 단위로 쓰는 경우에는 사용량 한도, 예산 알림, 사용자별 소비 추적을 먼저 확인해야 합니다. 코딩 에이전트를 교육이나 업무에 붙일 때도 성능, 보안, 비용을 함께 보는 습관이 필요합니다.",
+          "source": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+          "officialUrl": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+          "backupUrls": [
+            {
+              "label": "GitHub Docs",
+              "url": "https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/prepare-for-your-move-to-usage-based-billing"
+            },
+            {
+              "label": "Copilot code review billing changelog",
+              "url": "https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/"
+            }
+          ],
+          "tags": [
+            "GitHub",
+            "Copilot",
+            "AI Credits",
+            "비용관리",
+            "공식"
+          ],
+          "featured": true
+        }
+      ]
+    },
+    {
       "name": "커뮤니티 / 오픈소스",
       "color": "#6B7280",
       "posts": [
@@ -587,7 +620,7 @@ export const week18: WeeklyData = {
           "platform": "X",
           "title": "Nulli — Qwen 3 기반 동영상 자막 번역·더빙 서비스",
           "summary": "영상 다국어 자막·번역·더빙을 목표로 한 커뮤니티 서비스. Qwen 3 기반 음성 톤 매칭을 내세우지만 공식 도메인과 1차 게시글 확인이 더 필요한 항목.",
-          "content": "이게 뭐예요?\n영상 다국어 자막·번역·더빙을 목표로 한 커뮤니티 서비스입니다. Qwen 3 기반으로 YouTube 기본 더빙보다 자연스러운 음성 톤 매칭을 내세우지만, 공식 도메인과 1차 게시글 확인이 더 필요합니다.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 수강생 입장에서는 AI 영상 번역이 빠르게 개인·소규모 서비스로 내려오는 사례로 보면 됩니다.\n\n조금 더 풀어보면\n공식 도메인/Product Hunt 페이지는 아직 확인되지 않았습니다. Qwen 3 관련 공식 자료는 Alibaba Cloud 원문을 우선 연결해 두고, 서비스 자체는 추가 검증 대상으로 남깁니다.\n\n확인 포인트\n커뮤니티 기반 소식은 확산이 빠른 만큼 재현성, 라이선스, 유지보수 상태를 함께 확인해야 합니다.",
+          "content": "이게 뭐예요?\n영상 다국어 자막·번역·더빙을 목표로 한 커뮤니티 서비스입니다. Qwen 3 기반으로 YouTube 기본 더빙보다 자연스러운 음성 톤 매칭을 내세우지만, 공식 도메인과 1차 게시글 확인이 더 필요합니다.\n\n왜 중요해요?\n이 항목은 이번 VOL.03의 수익화사례 흐름에 속합니다. 사용자 관점에서는 AI 영상 번역이 빠르게 개인·소규모 서비스로 내려오는 사례로 보면 됩니다.\n\n조금 더 풀어보면\n공식 도메인/Product Hunt 페이지는 아직 확인되지 않았습니다. Qwen 3 관련 공식 자료는 Alibaba Cloud 원문을 우선 연결해 두고, 서비스 자체는 추가 검증 대상으로 남깁니다.\n\n확인 포인트\n커뮤니티 기반 소식은 확산이 빠른 만큼 재현성, 라이선스, 유지보수 상태를 함께 확인해야 합니다.",
           "source": "https://www.alibabacloud.com/blog/qwen3%E2%80%91livetranslate-real%E2%80%91time-multimodal-interpretation-%E2%80%94-see-it-hear-it-speak-it%EF%BC%81_602585",
           "officialUrl": "https://www.alibabacloud.com/blog/qwen3%E2%80%91livetranslate-real%E2%80%91time-multimodal-interpretation-%E2%80%94-see-it-hear-it-speak-it%EF%BC%81_602585",
           "backupUrls": [

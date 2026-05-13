@@ -157,7 +157,7 @@ export const week17: WeeklyData = {
           "platform": "X",
           "title": "ChatGPT for Clinicians 무료 출시 + HealthBench Professional 벤치마크 공개",
           "summary": "미국 인증 의사·NP·PA·약사에게 무료. Stanford MedHELM·MedMarks 1위, HealthBench Professional 동시 공개로 임상 채팅 평가 표준화 시도.",
-          "content": "이게 뭐예요?\nChatGPT for Clinicians 무료 출시와 HealthBench Professional 공개 소식입니다. 의료 현장에서 쓸 수 있는 AI 보조 도구와 그 성능을 평가하는 벤치마크가 함께 나온 흐름입니다.\n\n왜 중요해요?\n의료 AI가 논문이나 데모를 넘어 실제 사용자 입구로 들어오기 시작했습니다. 교육 관점에서는 '전문직 AI'가 금융, 의료처럼 규제가 강한 영역에서도 워크플로우 단위로 들어온다는 점이 중요합니다.\n\n확인 포인트\n의료 AI는 진단 책임, 개인정보, 규제 문제가 큽니다. 발표에서는 '의사를 대체'가 아니라 '임상 업무 보조와 평가 체계의 등장'으로 설명하는 것이 안전합니다.",
+          "content": "이게 뭐예요?\nChatGPT for Clinicians 무료 출시와 HealthBench Professional 공개 소식입니다. 의료 현장에서 쓸 수 있는 AI 보조 도구와 그 성능을 평가하는 벤치마크가 함께 나온 흐름입니다.\n\n왜 중요해요?\n의료 AI가 논문이나 데모를 넘어 실제 사용자 입구로 들어오기 시작했습니다. 교육 관점에서는 '전문직 AI'가 금융, 의료처럼 규제가 강한 영역에서도 워크플로우 단위로 들어온다는 점이 중요합니다.\n\n확인 포인트\n의료 AI는 진단 책임, 개인정보, 규제 문제가 큽니다. 이 항목은 '의사를 대체'가 아니라 '임상 업무 보조와 평가 체계의 등장'으로 읽는 것이 안전합니다.",
           "source": "https://openai.com/index/making-chatgpt-better-for-clinicians/",
           "officialUrl": "https://openai.com/index/making-chatgpt-better-for-clinicians/",
           "backupUrls": [

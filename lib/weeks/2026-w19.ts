@@ -5,7 +5,7 @@ export const week19: WeeklyData = {
   "year": 2026,
   "slug": "2026-w19",
   "period": "5/04 ~ 5/10",
-  "totalPosts": 16,
+  "totalPosts": 18,
   "companies": [
     {
       "name": "Anthropic / Claude",
@@ -42,6 +42,60 @@ export const week19: WeeklyData = {
             "공식",
             "anthropic"
           ]
+        },
+        {
+          "date": "5/06",
+          "platform": "X",
+          "title": "Anthropic higher limits + SpaceX compute — Claude Code 5시간 한도 2배 확대",
+          "summary": "Anthropic이 SpaceX와의 compute 협력을 공개하며 Claude Code 5시간 rate limit을 2배로 늘렸습니다. Claude 사용량 제한은 단순 가격 정책이 아니라 대규모 compute 확보, 엔터프라이즈 수요, 에이전트형 개발 워크로드가 함께 움직이는 지표가 되고 있습니다.",
+          "content": "**이게 뭐예요?**\nAnthropic이 SpaceX와의 compute 협력을 공개하며 Claude Code의 5시간 rate limit을 2배로 늘렸습니다. Pro, Max, Team, seat-based Enterprise 같은 플랜에서 Claude Code를 더 오래, 더 많이 돌릴 수 있게 되는 흐름입니다.\n\n**무엇이 달라졌나?**\n중요한 변화는 Claude Code 사용량이 제품 기능만의 문제가 아니라 compute capacity와 직접 연결된다는 점입니다. 에이전트형 개발은 짧은 질의응답보다 토큰과 실행 시간이 많이 필요합니다. 그래서 한도 확대는 단순 혜택이 아니라, 장시간 코딩 에이전트를 운영할 수 있는 기반이 커졌다는 의미입니다.\n\n**어떻게 읽을까?**\nClaude Financial Services Agents가 직무 워크플로우 패키징이라면, 이 소식은 그 워크플로우를 실제로 더 오래 굴릴 compute와 요금제 여유에 관한 뉴스입니다. 앞으로 AI 도구 경쟁은 모델 성능, 제품 기능, 사용량 한도, compute 계약이 함께 움직일 가능성이 큽니다.\n\n**확인 포인트**\n한도가 늘었다고 모든 계정과 지역에서 같은 체감이 보장되는 것은 아닙니다. 본인 플랜, peak hour 정책, 팀·기업 좌석 조건, 실제 Claude Code 사용량을 함께 확인해야 합니다.",
+          "source": "https://www.anthropic.com/news/higher-limits-spacex",
+          "officialUrl": "https://www.anthropic.com/news/higher-limits-spacex",
+          "backupUrls": [
+            {
+              "label": "TestingCatalog",
+              "url": "https://www.testingcatalog.com/anthropic-partners-with-spacexai-and-doubles-5-hour-rate-limits/"
+            }
+          ],
+          "tags": [
+            "ClaudeCode",
+            "사용량한도",
+            "컴퓨트",
+            "공식",
+            "anthropic"
+          ],
+          "featured": true
+        },
+        {
+          "date": "5/06",
+          "platform": "X",
+          "title": "Claude Managed Agents public beta — multiagent sessions와 Outcomes가 표준 beta로 이동",
+          "summary": "Anthropic이 Claude Managed Agents의 multiagent sessions와 Outcomes를 public beta로 공개했습니다. 에이전트 세션, vault credential refresh, webhooks, session/event filtering이 함께 정리되며 Claude API 쪽에서도 에이전트 운영 하네스가 제품화되고 있습니다.",
+          "content": "**이게 뭐예요?**\nAnthropic이 Claude Managed Agents의 multiagent sessions와 Outcomes를 public beta로 공개했습니다. managed-agents-2026-04-01 beta header 아래에서 여러 에이전트 세션을 운영하고, 결과 조건을 정의하는 기능을 API 레벨에서 다룰 수 있게 된 흐름입니다.\n\n**무엇이 달라졌나?**\n이번 release note에는 vault credential의 background refresh, Managed Agents webhooks, session과 event filtering 개선도 함께 포함됐습니다. 단순히 에이전트를 실행하는 데서 끝나는 것이 아니라, 인증 갱신, 이벤트 수신, 상태 조회까지 운영 레이어가 갖춰지는 쪽입니다.\n\n**어떻게 읽을까?**\nClaude Code의 /goal과 Agent View가 로컬·CLI 사용자 경험이라면, Managed Agents 업데이트는 API와 서비스 운영 쪽의 에이전트 하네스입니다. 둘을 함께 보면 Anthropic이 개인 개발 도구와 기업 API 양쪽에서 에이전트 운영 구조를 제품화하고 있다는 흐름이 보입니다.\n\n**확인 포인트**\n이 기능은 beta header와 문서 조건을 확인해야 합니다. 실제 도입 전에는 세션 권한, vault credential, webhook 수신 보안, 이벤트 보존 정책을 같이 설계해야 합니다.",
+          "source": "https://platform.claude.com/docs/en/release-notes/overview",
+          "officialUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "backupUrls": [
+            {
+              "label": "Multiagent sessions",
+              "url": "https://platform.claude.com/docs/en/managed-agents/multi-agent"
+            },
+            {
+              "label": "Outcomes",
+              "url": "https://platform.claude.com/docs/en/managed-agents/define-outcomes"
+            },
+            {
+              "label": "Managed Agents webhooks",
+              "url": "https://platform.claude.com/docs/en/managed-agents/webhooks"
+            }
+          ],
+          "tags": [
+            "ClaudeManagedAgents",
+            "에이전트자동화",
+            "API",
+            "공식",
+            "anthropic"
+          ],
+          "featured": true
         }
       ]
     },
@@ -49,6 +103,23 @@ export const week19: WeeklyData = {
       "name": "Perplexity",
       "color": "#7C3AED",
       "posts": [
+        {
+          "date": "5/04",
+          "platform": "X",
+          "title": "Perplexity Computer enterprise updates — 기업 데이터와 반복 업무를 연결하는 Computer 흐름",
+          "summary": "Perplexity Computer가 Snowflake·Databricks 연결, Space skills, Workflows, admin controls를 강화했습니다. Google이 OS와 기기 레벨에서 Gemini를 실행 레이어로 만들고 있다면, Perplexity는 기업 데이터와 반복 업무 레벨에서 Computer를 만들고 있습니다.",
+          "content": "**이게 뭐예요?**\nPerplexity가 Computer의 enterprise 업데이트를 공개했습니다. Snowflake와 Databricks 연결, Space skills, Workflows, admin controls가 핵심입니다. 기업 안의 데이터와 반복 업무를 Computer가 직접 다루게 하려는 방향입니다.\n\n**무엇이 달라졌나?**\nSpace skills는 팀이 반복해서 쓰는 능력을 패키지처럼 저장하는 방식입니다. Workflows는 market research, sales prep, slide creation, website audits/building처럼 반복 업무를 실행 흐름으로 묶습니다. admin controls는 semantic-layer edits와 권한 관리를 다룹니다.\n\n**어떻게 읽을까?**\nGoogle이 스마트폰 OS와 노트북이라는 개인 기기 레벨에서 Gemini를 실행 레이어로 만들고 있다면, Perplexity는 기업 데이터와 반복 업무 레벨에서 Computer를 만들고 있습니다. 둘 다 AI가 답변창을 넘어 실제 작업 환경으로 들어가는 흐름입니다.\n\n**읽을 때 볼 점**\n기업 업무에 AI를 붙일 때는 모델 성능보다 데이터 연결 권한, 관리자의 통제, 반복 작업의 패키징 방식이 중요해집니다. 실제 도입 전에는 Snowflake·Databricks 연결 권한과 팀별 데이터 접근 정책을 먼저 확인해야 합니다.",
+          "source": "https://www.perplexity.ai/changelog/improved-computer-models-and-enterprise-updates---may-4-2026",
+          "officialUrl": "https://www.perplexity.ai/changelog/improved-computer-models-and-enterprise-updates---may-4-2026",
+          "tags": [
+            "Perplexity",
+            "Computer",
+            "Enterprise",
+            "Workflows",
+            "공식"
+          ],
+          "featured": true
+        },
         {
           "date": "5/05",
           "platform": "X",
@@ -74,11 +145,7 @@ export const week19: WeeklyData = {
               "label": "Claude Financial Services Agents",
               "url": "https://www.anthropic.com/news/finance-agents"
             }
-          ,
-            {
-              "label": "Claude Financial 상세 카드",
-              "url": "/2026-w19/?post=Anthropic+Claude+Financial+Services+Agents+%E2%80%94+10%EA%B0%9C+%EB%B6%84%EC%84%9D%EA%B0%80+%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0+%ED%85%9C%ED%94%8C%EB%A6%BF+%ED%8C%A8%ED%82%A4%EC%A7%95"
-            }],
+          ],
           "tags": [
             "에이전트자동화",
             "금융AI",
@@ -318,45 +385,6 @@ export const week19: WeeklyData = {
           ],
           "featured": true
         },
-        {
-          "date": "4/30",
-          "platform": "X",
-          "title": "OpenAI Codex CLI — /goal 슬래시 커맨드와 자체 검증 루프",
-          "summary": "Codex CLI 0.128.0 계열에서 /goal 워크플로우가 등장하며, 에이전트가 목표를 유지한 채 실행·상태 확인·완료 판단을 이어가는 구조가 확인됐습니다. 핵심은 작업 지시가 아니라 완료 기준을 에이전트 루프 안에 넣는 것입니다.",
-          "content": "**이게 뭐예요?**\nCodex CLI의 /goal은 장기 작업에 목표를 붙여두고, 에이전트가 그 목표를 기준으로 실행·상태 확인·완료 판단을 이어가게 하는 흐름입니다. 기존의 한 번짜리 명령보다, 작업이 길어질 때 목표가 흐려지지 않게 잡아주는 기능에 가깝습니다.\n\n**무엇이 달라졌나?**\n중요한 변화는 에이전트가 단순히 '작업을 했다'에서 멈추지 않고, 목표와 완료 조건을 계속 의식하게 된다는 점입니다. plan→act→test→review→iterate에 가까운 루프를 제품 기능으로 끌어올린 사례로 볼 수 있습니다.\n\n**어떻게 읽을까?**\n이 기능은 GPT-5.5나 Finance Agents와 같은 흐름에 있습니다. 모델은 더 강해지고, 직무는 에이전트 묶음으로 제품화되고, CLI 도구는 목표·검증·재시도 루프를 기본 기능으로 넣기 시작했습니다. AI 사용 능력이 프롬프트 한 줄보다 완료 기준을 설계하는 능력으로 이동하고 있다는 신호입니다.\n\n**확인 포인트**\n좋은 Goal은 '무엇을 할지'보다 '무엇이 만족되면 끝인지'를 적는 쪽에 가깝습니다. 예를 들어 버그 수정이라면 관련 테스트 추가, 빌드 통과, 회귀 없음처럼 관측 가능한 완료 조건이 같이 있어야 합니다.",
-          "source": "https://developers.openai.com/codex/cli/slash-commands",
-          "officialUrl": "https://developers.openai.com/codex/cli/slash-commands",
-          "backupUrls": [
-            {
-              "label": "OpenAI Changelog",
-              "url": "https://developers.openai.com/codex/changelog"
-            },
-            {
-              "label": "Codex GitHub Issue",
-              "url": "https://github.com/openai/codex/issues/20536"
-            },
-            {
-              "label": "Simon Willison",
-              "url": "https://simonwillison.net/2026/Apr/30/codex-goals/"
-            },
-            {
-              "label": "Ralph Loop 해설",
-              "url": "https://ralphable.com/blog/codex-goal-command-ralph-loop-openai-built-in-autonomous-coding-agent-2026"
-            },
-            {
-              "label": "YouTube 해설",
-              "url": "https://youtu.be/nw-9Nbv3-Ko?si=MI_WMrA-xv6fdWwP"
-            }
-          ],
-          "tags": [
-            "에이전트자동화",
-            "Codex",
-            "OpenAI",
-            "Goal",
-            "검증루프"
-          ],
-          "featured": true
-        }
       ]
     },
     {

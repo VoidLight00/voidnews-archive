@@ -129,7 +129,7 @@ export const edition2026_05a: ABEdition = {
         tags: ["GitHub", "Copilot", "AI Credits", "비용관리", "공식"],
         featured: true
       },
-      sourceWeek: "2026-w20",
+      sourceWeek: "2026-w18",
       sourceCompany: "GitHub / Microsoft",
       keyQuote: "AI 코딩 도구는 더 강해지는 동시에 사용량과 예산을 관리해야 하는 도구가 된다",
       editorial: "강한 에이전트를 쓰는 시대에는 보안뿐 아니라 비용도 운영 대상입니다. 수강생에게는 어떤 작업을 어떤 모델과 에이전트에 맡길지 기준을 세워야 한다는 현실적인 메시지로 연결됩니다."
@@ -148,7 +148,7 @@ export const edition2026_05a: ABEdition = {
         tags: ["Perplexity", "Computer", "Enterprise", "Workflows", "공식"],
         featured: true
       },
-      sourceWeek: "2026-w20",
+      sourceWeek: "2026-w19",
       sourceCompany: "Perplexity",
       keyQuote: "Google은 OS 레벨, Perplexity는 기업 데이터와 반복 업무 레벨에서 Computer를 만든다",
       editorial: "이번 회차의 실행 레이어 메시지를 기업 업무 쪽으로 확장해 주는 카드입니다. 개인 기기 안의 Gemini와 기업 데이터 안의 Computer를 비교하면 흐름이 잘 보입니다."
@@ -164,7 +164,7 @@ export const edition2026_05a: ABEdition = {
       guideUrl: "https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/prepare-for-your-move-to-usage-based-billing",
       guideLabel: "Copilot spending guide →",
       summary: "코딩 에이전트를 쓸 때 목표, 권한, 네트워크, 승인 규칙, 관측 로그, 비용 한도를 분리해서 설계하는 실무 체크리스트.",
-      body: "왜 같이 봐야 하나\n\n이번 회차에서 Google은 AI가 OS와 기기 안으로 들어오는 장면을 보여줬고, OpenAI와 GitHub는 그 AI를 어떻게 안전하고 지속 가능하게 운영할지에 가까운 신호를 줬습니다. 그래서 Editor's Pick은 새 도구 하나보다 운영 체크리스트로 잡는 편이 좋습니다.\n\n핵심은 다섯 가지입니다. 첫째, 에이전트에게 맡길 목표를 결과물과 완료 조건으로 나눕니다. 둘째, 파일·네트워크·외부 서비스 권한을 기본 차단에서 필요한 만큼만 열어 둡니다. 셋째, 익숙한 도메인은 허용하고 낯선 도메인은 승인하도록 네트워크 정책을 분리합니다. 넷째, 낮은 위험 작업과 높은 위험 작업을 같은 승인 흐름에 넣지 않습니다. 다섯째, 사용량과 비용 한도를 팀 단위로 추적합니다.\n\n이 체크리스트는 Claude Code, Codex, Cursor, Copilot 어디에나 적용됩니다. 좋은 모델을 고르는 일보다 중요한 것은 에이전트가 오래 일해도 권한, 비용, 안전 경계를 넘지 않게 만드는 운영 구조입니다.",
+      body: "왜 같이 봐야 하나\n\n이번 회차에서 Google은 AI가 OS와 기기 안으로 들어오는 장면을 보여줬고, OpenAI와 GitHub는 그 AI를 어떻게 안전하고 지속 가능하게 운영할지에 가까운 신호를 줬습니다. 그래서 이번 추천 항목은 새 도구 하나보다 운영 체크리스트로 잡는 편이 좋습니다.\n\n핵심은 다섯 가지입니다. 첫째, 에이전트에게 맡길 목표를 결과물과 완료 조건으로 나눕니다. 둘째, 파일·네트워크·외부 서비스 권한을 기본 차단에서 필요한 만큼만 열어 둡니다. 셋째, 익숙한 도메인은 허용하고 낯선 도메인은 승인하도록 네트워크 정책을 분리합니다. 넷째, 낮은 위험 작업과 높은 위험 작업을 같은 승인 흐름에 넣지 않습니다. 다섯째, 사용량과 비용 한도를 팀 단위로 추적합니다.\n\n이 체크리스트는 Claude Code, Codex, Cursor, Copilot 어디에나 적용됩니다. 좋은 모델을 고르는 일보다 중요한 것은 에이전트가 오래 일해도 권한, 비용, 안전 경계를 넘지 않게 만드는 운영 구조입니다.",
       editorial: "이번 회차를 단순히 Google 발표 모음으로 끝내지 않고, 수강생이 바로 가져갈 실전 원칙으로 묶어주는 항목입니다. 에이전트가 강해질수록 목표와 경계 설계가 실력이 됩니다.",
       tags: ["AI에이전트", "Codex", "Copilot", "보안운영", "비용관리"],
       tier: "feature"

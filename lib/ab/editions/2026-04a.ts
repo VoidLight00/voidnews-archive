@@ -1,5 +1,5 @@
 // AB 발표 첫 회차 — 2026-04a (Volume 1)
-// VoidLight 재선정 12개 (VIP Gold 23 기준) + Editor's Pick 1개
+// VoidLight 재선정 12개 (VIP Gold 23 기준) + 추천 항목 1개
 // 발표일: 2026-04-10
 
 import type { ABEdition } from "../data";
@@ -13,7 +13,7 @@ export const edition2026_04a: ABEdition = {
   coveredWeeks: ["2026-w15"],
   announceDate: "2026-04-10",
 
-  intro: "이번 2주는 AI 산업이 '어떤 모델이 더 크냐'에서 '모델들을 어떻게 엮느냐'로 경쟁의 축이 옮겨간 분기점이었습니다.\n\n같은 주에 Anthropic(Advisor Strategy), OpenAI(Pro 티어 $100), Google(Gemini 시각화)이 공식 발표로 정면 대응했고, 그 뒤로 Meta·Netflix·Mistral까지 후속 뉴스가 이어졌습니다.\n\n이번 회차 12개 항목은 '멀티모델 운영 전략이 곧 경쟁력'이라는 한 줄 메시지로 수렴합니다. 거기에 제가 직접 써보고 있는 Bright Data를 Editor's Pick으로 얹어서, 발표 내용을 실제로 활용할 수 있는 도구 하나까지 함께 가져갑니다.",
+  intro: "이번 2주는 AI 산업이 '어떤 모델이 더 크냐'에서 '모델들을 어떻게 엮느냐'로 경쟁의 축이 옮겨간 분기점이었습니다.\n\n같은 주에 Anthropic(Advisor Strategy), OpenAI(Pro 티어 $100), Google(Gemini 시각화)이 공식 발표로 정면 대응했고, 그 뒤로 Meta·Netflix·Mistral까지 후속 뉴스가 이어졌습니다.\n\n이번 회차 12개 항목은 '멀티모델 운영 전략이 곧 경쟁력'이라는 한 줄 메시지로 수렴합니다. 거기에 제가 직접 써보고 있는 Bright Data를 추천 항목으로 더해, 발표 내용을 실제로 활용할 수 있는 도구 하나까지 함께 가져갑니다.",
 
   closing: "이번 브리핑의 핵심은 명확합니다. **더 큰 모델 하나**가 아니라 **모델들을 엮는 전략**이 경쟁력이 됐다는 것.\n\nAnthropic은 'Opus를 자문 역할로' 선언했고(#7), OpenAI는 'Codex 5배 · $100 Pro'로 장시간 코딩 에이전트 시장을 가져가려 하고(#8), Google은 '인터랙티브 시각화'로 사용자 경험에서 차별화했습니다(#22).\n\nMeta는 Muse Spark(#13)와 TRIBE v2(#16)로 '인지와 뇌'라는 다른 축을 열었고, Netflix는 장면 재구성(#17), Mistral은 음성(#20), DeepTeam은 보안(#21)으로 수평 확장이 이어졌습니다.\n\n그리고 Claude Mythos 샌드박스 탈출 사건(#14)은 이 모든 질주에 '안전 설계는 아직 해결되지 않았다'는 경고로 작용합니다.\n\n다음 2주는 이 프레임(멀티모델 × 안전 × 도메인 확장)이 구체적으로 어떻게 뭉쳐지는지를 볼 차례입니다.\n\n— VoidLight",
 
