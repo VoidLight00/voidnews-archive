@@ -319,77 +319,46 @@ function XPostEmbed({ url }: { url?: string }) {
    모달 컴포넌트
 ═══════════════════════════════════════════════════════════════ */
 
-type ModalContent =
-  | { kind: "highlight"; item: ABHighlight }
-  | { kind: "pick"; item: ABEditorPick };
+type ModalContent = { kind: "pick"; item: ABEditorPick };
 
-function HighlightModal({
-  item,
-  onClose,
-}: {
-  item: ABHighlight;
-  onClose: () => void;
-}) {
+function HighlightDetail({ item }: { item: ABHighlight }) {
   const sourceLinks = collectSourceLinks(item.post);
+  const xStatusUrl = getXStatusUrl(item);
+
   return (
-    <div style={{ height: "100%", overflowY: "auto" }}>
-      {/* Header */}
+    <div
+      style={{
+        marginTop: 18,
+        paddingTop: 18,
+        borderTop: "1px solid var(--border2)",
+      }}
+    >
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 12,
-          flexWrap: "wrap",
+          fontFamily: "var(--mono)",
+          fontSize: 11,
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
+          color: "var(--accent)",
         }}
       >
-        <RankBadge rank={item.rank} tier={item.tier} />
-        <CompanyTag name={item.sourceCompany} />
+        ▾ Detail Brief
       </div>
-
-      <h2
-        style={{
-          marginTop: 20,
-          fontSize: "clamp(22px, 4vw, 36px)",
-          fontWeight: 700,
-          letterSpacing: "-0.02em",
-          lineHeight: 1.2,
-          color: "var(--text)",
-        }}
-      >
-        {stripMarkdown(item.post.title)}
-      </h2>
-
-      {item.keyQuote && (
-        <blockquote
-          style={{
-            fontFamily: "var(--mono)",
-            marginTop: 20,
-            borderLeft: "4px solid var(--accent)",
-            paddingLeft: 16,
-            fontSize: 15,
-            fontStyle: "italic",
-            color: "var(--text)",
-            lineHeight: 1.6,
-          }}
-        >
-          &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
-        </blockquote>
-      )}
 
       <p
         style={{
-          marginTop: 20,
+          marginTop: 14,
           whiteSpace: "pre-wrap",
           fontSize: 14,
           lineHeight: 1.9,
           color: "var(--text)",
         }}
       >
-        {renderRichText(item.post.content || "")}
+        {renderRichText(item.post.content || item.post.summary || "")}
       </p>
 
       <ImageGallery images={item.post.images} tone="accent" />
+      <XPostEmbed url={xStatusUrl} />
 
       {item.editorial && (
         <aside
@@ -423,7 +392,6 @@ function HighlightModal({
         </aside>
       )}
 
-      {/* Footer */}
       <div
         style={{
           marginTop: 28,
@@ -637,13 +605,7 @@ function Modal({
     };
   }, [onClose]);
 
-  const borderColor =
-    content.kind === "highlight" &&
-    content.item.tier === "hero"
-      ? "var(--accent)"
-      : content.kind === "pick"
-      ? "var(--gold)"
-      : "var(--border)";
+  const borderColor = "var(--gold)";
 
   return (
     /* 오버레이 */
@@ -708,11 +670,7 @@ function Modal({
           ESC ✕
         </button>
 
-        {content.kind === "highlight" ? (
-          <HighlightModal item={content.item} onClose={onClose} />
-        ) : (
-          <PickModal item={content.item} onClose={onClose} />
-        )}
+        <PickModal item={content.item} onClose={onClose} />
       </div>
     </div>
   );
@@ -724,123 +682,157 @@ function Modal({
 
 function HighlightArticle({
   item,
-  onOpen,
+  expanded,
+  onToggle,
 }: {
   item: ABHighlight;
-  onOpen: (c: ModalContent) => void;
+  expanded: boolean;
+  onToggle: (rank: number) => void;
 }) {
-  const sourceLinks = collectSourceLinks(item.post);
-  const primaryLinks = sourceLinks.slice(0, 2);
-  const xStatusUrl = getXStatusUrl(item);
+  const cardRef = useRef<HTMLElement>(null);
   const accent = item.tier === "hero" ? "var(--accent)" : "var(--muted)";
+  const detailId = `ab-highlight-detail-${item.rank}`;
+
+  useEffect(() => {
+    if (!expanded) return;
+    cardRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }, [expanded]);
 
   return (
     <article
+      ref={cardRef}
+      role="listitem"
       style={{
-        borderTop: `1px solid ${item.tier === "hero" ? "var(--accent)" : "var(--border2)"}`,
-        padding: "clamp(28px, 5vw, 44px) 0",
+        gridColumn: item.tier === "hero" ? "1 / -1" : undefined,
+        border: `1px solid ${expanded || item.tier === "hero" ? "var(--accent)" : "var(--border2)"}`,
+        background:
+          expanded || item.tier === "hero"
+            ? "linear-gradient(145deg, rgba(0,229,255,0.08), rgba(255,255,255,0.02))"
+            : "var(--card)",
+        borderRadius: 10,
+        padding: "clamp(18px, 3vw, 26px)",
+        boxShadow: expanded ? "0 18px 60px rgba(0, 0, 0, 0.28)" : "none",
+        transition: "border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease",
       }}
     >
-      <div
+      <button
+        type="button"
+        aria-expanded={expanded}
+        aria-controls={detailId}
+        onClick={() => onToggle(item.rank)}
         style={{
-          fontFamily: "var(--mono)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 12,
-          flexWrap: "wrap",
-          fontSize: 11,
-          letterSpacing: "0.08em",
-          color: "var(--muted)",
+          display: "block",
+          width: "100%",
+          padding: 0,
+          border: 0,
+          background: "transparent",
+          color: "inherit",
+          textAlign: "left",
+          cursor: "pointer",
+          WebkitTapHighlightColor: "transparent",
         }}
       >
-        <span style={{ color: accent }}>{String(item.rank).padStart(2, "0")}</span>
-        <span>{item.sourceCompany}</span>
-        <span>{item.post.date}</span>
-      </div>
-
-      <h2
-        style={{
-          marginTop: 12,
-          fontSize: "clamp(22px, 4vw, 34px)",
-          fontWeight: item.tier === "hero" ? 760 : 680,
-          letterSpacing: "-0.025em",
-          lineHeight: 1.18,
-          color: "var(--text)",
-        }}
-      >
-        {stripMarkdown(item.post.title)}
-      </h2>
-
-      {item.keyQuote && (
-        <blockquote
+        <div
           style={{
-            marginTop: 16,
-            borderLeft: `3px solid ${accent}`,
-            paddingLeft: 14,
-            fontSize: "clamp(14px, 2vw, 16px)",
-            lineHeight: 1.7,
+            fontFamily: "var(--mono)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+            flexWrap: "wrap",
+            fontSize: 11,
+            letterSpacing: "0.08em",
+            color: "var(--muted)",
+          }}
+        >
+          <span style={{ color: accent }}>{String(item.rank).padStart(2, "0")}</span>
+          <span>{item.sourceCompany}</span>
+          <span>{item.post.date}</span>
+        </div>
+
+        <h2
+          style={{
+            marginTop: 12,
+            fontSize:
+              item.tier === "hero" ? "clamp(24px, 4vw, 38px)" : "clamp(19px, 2.8vw, 25px)",
+            fontWeight: item.tier === "hero" ? 760 : 680,
+            letterSpacing: "-0.025em",
+            lineHeight: 1.18,
             color: "var(--text)",
           }}
         >
-          &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
-        </blockquote>
-      )}
+          {stripMarkdown(item.post.title)}
+        </h2>
 
-      <p
-        style={{
-          marginTop: 16,
-          whiteSpace: "pre-wrap",
-          fontSize: 15,
-          lineHeight: 1.9,
-          color: "var(--muted)",
-          display: "-webkit-box",
-          WebkitLineClamp: 6,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
-        }}
-      >
-        {stripMarkdown(item.post.content || item.post.summary || "")}
-      </p>
+        {item.keyQuote && (
+          <blockquote
+            style={{
+              marginTop: 14,
+              borderLeft: `3px solid ${accent}`,
+              paddingLeft: 12,
+              fontSize: "clamp(13px, 1.8vw, 15px)",
+              lineHeight: 1.7,
+              color: "var(--text)",
+            }}
+          >
+            &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
+          </blockquote>
+        )}
 
-      <ThumbnailPreview image={item.post.thumbnail} />
-      <XPostEmbed url={xStatusUrl} />
+        <p
+          style={{
+            marginTop: 14,
+            whiteSpace: "pre-wrap",
+            fontSize: 14,
+            lineHeight: 1.8,
+            color: "var(--muted)",
+            display: "-webkit-box",
+            WebkitLineClamp: expanded ? 3 : item.tier === "hero" ? 4 : 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
+          {stripMarkdown(item.post.summary || item.post.content || "")}
+        </p>
 
-      <div
-        style={{
-          marginTop: 18,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 12,
-          flexWrap: "wrap",
-        }}
-      >
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          <TagList tags={item.post.tags} limit={6} />
-        </div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {primaryLinks.map((link) => (
-            <SourceButton key={link.url} link={link} />
-          ))}
-          <button
-            type="button"
-            onClick={() => onOpen({ kind: "highlight", item })}
+        <ThumbnailPreview image={item.post.thumbnail} />
+
+        <div
+          style={{
+            marginTop: 16,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+            flexWrap: "wrap",
+          }}
+        >
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            <TagList tags={item.post.tags} limit={6} />
+          </div>
+          <span
             style={{
               fontFamily: "var(--mono)",
               fontSize: 12,
-              color: accent,
-              background: "transparent",
+              color: item.tier === "hero" ? "var(--accent)" : "var(--muted)",
               border: "1px solid var(--border2)",
-              padding: "8px 14px",
-              borderRadius: 2,
+              padding: "8px 12px",
+              borderRadius: 999,
               fontWeight: 700,
-              cursor: "pointer",
             }}
           >
-            전체 읽기 →
-          </button>
+            {expanded ? "접기 ↑" : "카드 펼치기 →"}
+          </span>
         </div>
+      </button>
+
+      <div
+        id={detailId}
+        role="region"
+        aria-label={`${stripMarkdown(item.post.title)} 상세 내용`}
+        hidden={!expanded}
+      >
+        {expanded && <HighlightDetail item={item} />}
       </div>
     </article>
   );
@@ -954,8 +946,12 @@ function EditorPickCard({
 
 export default function ABEditionClient({ data }: { data: ABEdition }) {
   const [modal, setModal] = useState<ModalContent | null>(null);
+  const [expandedRank, setExpandedRank] = useState<number | null>(null);
   const openModal = useCallback((c: ModalContent) => setModal(c), []);
   const closeModal = useCallback(() => setModal(null), []);
+  const toggleHighlight = useCallback((rank: number) => {
+    setExpandedRank((current) => (current === rank ? null : rank));
+  }, []);
 
   const highlights = [...data.highlights].sort((a, b) => a.rank - b.rank);
 
@@ -1092,22 +1088,66 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             padding: "0 clamp(16px, 4vw, 24px) clamp(28px, 5vw, 40px)",
           }}
         >
-          <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div style={{ maxWidth: 1180, margin: "0 auto" }}>
             <div
               style={{
-                fontFamily: "var(--mono)",
-                fontSize: 11,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-                color: "var(--accent)",
-                marginBottom: 4,
+                borderTop: "1px solid var(--border2)",
+                paddingTop: 24,
+                marginBottom: 18,
               }}
             >
-              ▾ Main Letter
+              <div
+                style={{
+                  fontFamily: "var(--mono)",
+                  fontSize: 11,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--accent)",
+                }}
+              >
+                ▾ Main Card Section
+              </div>
+              <h2
+                style={{
+                  marginTop: 8,
+                  fontSize: "clamp(20px, 3vw, 28px)",
+                  fontWeight: 720,
+                  letterSpacing: "-0.03em",
+                  color: "var(--text)",
+                }}
+              >
+                3주 동안 가장 바이럴한 AI 흐름 10개
+              </h2>
+              <p
+                style={{
+                  marginTop: 8,
+                  maxWidth: 720,
+                  fontSize: 14,
+                  lineHeight: 1.8,
+                  color: "var(--muted)",
+                }}
+              >
+                카드를 누르면 발표용 상세 설명, 공식 출처, X/Twitter 게시글이 카드 안에서 바로 펼쳐집니다.
+              </p>
             </div>
-            {highlights.map((h) => (
-              <HighlightArticle key={h.rank} item={h} onOpen={openModal} />
-            ))}
+            <div
+              role="list"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
+                gap: "clamp(14px, 2.4vw, 22px)",
+                alignItems: "start",
+              }}
+            >
+              {highlights.map((h) => (
+                <HighlightArticle
+                  key={h.rank}
+                  item={h}
+                  expanded={expandedRank === h.rank}
+                  onToggle={toggleHighlight}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
