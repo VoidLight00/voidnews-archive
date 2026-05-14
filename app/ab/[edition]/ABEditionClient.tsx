@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback, useState, Fragment, type ReactNode } from "react";
+import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
@@ -9,6 +9,16 @@ import { stripMarkdown } from "@/lib/md";
    stripMarkdown 후 평문 안에 남아있는 http(s) URL을
    클릭 가능한 <a>로 변환. 카드 외부에서 상위 onClick으로
    모달이 열리는 걸 막기 위해 stopPropagation. */
+declare global {
+  interface Window {
+    twttr?: {
+      widgets?: {
+        load: (element?: HTMLElement) => void;
+      };
+    };
+  }
+}
+
 const URL_MATCH_REGEX = /^https?:\/\/[^\s)\]]+$/;
 
 function renderRichText(text: string): ReactNode {
@@ -248,6 +258,59 @@ function ImageGallery({
           <ThumbnailPreview key={image.src} image={image} tone={tone} />
         ))}
       </div>
+    </div>
+  );
+}
+
+function getXStatusUrl(item: ABHighlight) {
+  const links = [
+    item.post.officialUrl,
+    item.post.source,
+    ...(item.post.backupUrls || []).map((link) => link.url),
+  ].filter(Boolean) as string[];
+
+  return links.find((url) => /https?:\/\/(x|twitter)\.com\/[^/]+\/status\//.test(url));
+}
+
+function XPostEmbed({ url }: { url?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!url || !ref.current) return;
+
+    const loadEmbed = () => window.twttr?.widgets?.load(ref.current || undefined);
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[src="https://platform.twitter.com/widgets.js"]'
+    );
+
+    if (existingScript) {
+      loadEmbed();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.onload = loadEmbed;
+    document.body.appendChild(script);
+  }, [url]);
+
+  if (!url) return null;
+
+  return (
+    <div
+      ref={ref}
+      onClick={(e) => e.stopPropagation()}
+      style={{
+        marginTop: 18,
+        padding: "12px 0",
+        borderTop: "1px solid var(--border2)",
+        borderBottom: "1px solid var(--border2)",
+      }}
+    >
+      <blockquote className="twitter-tweet" data-dnt="true" data-theme="dark">
+        <a href={url}>{url}</a>
+      </blockquote>
     </div>
   );
 }
@@ -659,59 +722,50 @@ function Modal({
    카드 컴포넌트 (클릭 가능)
 ═══════════════════════════════════════════════════════════════ */
 
-function HeroCard({
+function HighlightArticle({
   item,
   onOpen,
 }: {
   item: ABHighlight;
   onOpen: (c: ModalContent) => void;
 }) {
+  const sourceLinks = collectSourceLinks(item.post);
+  const primaryLinks = sourceLinks.slice(0, 2);
+  const xStatusUrl = getXStatusUrl(item);
+  const accent = item.tier === "hero" ? "var(--accent)" : "var(--muted)";
+
   return (
     <article
-      onClick={() => onOpen({ kind: "highlight", item })}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ")
-          onOpen({ kind: "highlight", item });
-      }}
       style={{
-        border: "2px solid var(--accent)",
-        background: "var(--card)",
-        padding: "clamp(20px, 4vw, 32px)",
-        borderRadius: 2,
-        cursor: "pointer",
-        transition: "border-color 0.15s, transform 0.15s",
-        WebkitTapHighlightColor: "transparent",
-      }}
-      onPointerEnter={(e) => {
-        (e.currentTarget as HTMLElement).style.borderColor =
-          "var(--accent-hover, #ff9060)";
-      }}
-      onPointerLeave={(e) => {
-        (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)";
+        borderTop: `1px solid ${item.tier === "hero" ? "var(--accent)" : "var(--border2)"}`,
+        padding: "clamp(28px, 5vw, 44px) 0",
       }}
     >
       <div
         style={{
+          fontFamily: "var(--mono)",
           display: "flex",
-          flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "space-between",
           gap: 12,
+          flexWrap: "wrap",
+          fontSize: 11,
+          letterSpacing: "0.08em",
+          color: "var(--muted)",
         }}
       >
-        <RankBadge rank={item.rank} tier={item.tier} />
-        <CompanyTag name={item.sourceCompany} />
+        <span style={{ color: accent }}>{String(item.rank).padStart(2, "0")}</span>
+        <span>{item.sourceCompany}</span>
+        <span>{item.post.date}</span>
       </div>
 
       <h2
         style={{
-          marginTop: 20,
-          fontSize: "clamp(22px, 4vw, 40px)",
-          fontWeight: 700,
-          letterSpacing: "-0.02em",
-          lineHeight: 1.15,
+          marginTop: 12,
+          fontSize: "clamp(22px, 4vw, 34px)",
+          fontWeight: item.tier === "hero" ? 760 : 680,
+          letterSpacing: "-0.025em",
+          lineHeight: 1.18,
           color: "var(--text)",
         }}
       >
@@ -721,102 +775,40 @@ function HeroCard({
       {item.keyQuote && (
         <blockquote
           style={{
-            fontFamily: "var(--mono)",
-            marginTop: 20,
-            borderLeft: "4px solid var(--accent)",
-            paddingLeft: 16,
-            fontSize: 14,
-            fontStyle: "italic",
-            color: "var(--muted)",
-            lineHeight: 1.5,
+            marginTop: 16,
+            borderLeft: `3px solid ${accent}`,
+            paddingLeft: 14,
+            fontSize: "clamp(14px, 2vw, 16px)",
+            lineHeight: 1.7,
+            color: "var(--text)",
           }}
         >
           &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
         </blockquote>
       )}
 
-      <ThumbnailPreview image={item.post.thumbnail} />
-
       <p
         style={{
-          marginTop: 20,
+          marginTop: 16,
           whiteSpace: "pre-wrap",
-          fontSize: 14,
-          lineHeight: 1.8,
-          color: "var(--text)",
-          // 미리보기: 3줄만 표시
+          fontSize: 15,
+          lineHeight: 1.9,
+          color: "var(--muted)",
           display: "-webkit-box",
-          WebkitLineClamp: 4,
+          WebkitLineClamp: 6,
           WebkitBoxOrient: "vertical",
           overflow: "hidden",
         }}
       >
-        {stripMarkdown(item.post.content)}
+        {stripMarkdown(item.post.content || item.post.summary || "")}
       </p>
 
-      <div
-        style={{
-          marginTop: 20,
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          gap: 10,
-          justifyContent: "space-between",
-        }}
-      >
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          <TagList tags={item.post.tags} limit={5} />
-        </div>
-        <span
-          style={{
-            fontFamily: "var(--mono)",
-            fontSize: 11,
-            color: "var(--accent)",
-          }}
-        >
-          탭하여 전체 보기 →
-        </span>
-      </div>
-    </article>
-  );
-}
+      <ThumbnailPreview image={item.post.thumbnail} />
+      <XPostEmbed url={xStatusUrl} />
 
-function FeatureCard({
-  item,
-  onOpen,
-}: {
-  item: ABHighlight;
-  onOpen: (c: ModalContent) => void;
-}) {
-  return (
-    <article
-      onClick={() => onOpen({ kind: "highlight", item })}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ")
-          onOpen({ kind: "highlight", item });
-      }}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        border: "1px solid var(--border)",
-        background: "var(--card)",
-        padding: "clamp(16px, 3vw, 24px)",
-        borderRadius: 2,
-        cursor: "pointer",
-        WebkitTapHighlightColor: "transparent",
-        minHeight: 200,
-      }}
-      onPointerEnter={(e) => {
-        (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)";
-      }}
-      onPointerLeave={(e) => {
-        (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
-      }}
-    >
       <div
         style={{
+          marginTop: 18,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -824,177 +816,31 @@ function FeatureCard({
           flexWrap: "wrap",
         }}
       >
-        <RankBadge rank={item.rank} tier={item.tier} />
-        <CompanyTag name={item.sourceCompany} />
-      </div>
-
-      <h3
-        style={{
-          marginTop: 14,
-          fontSize: "clamp(17px, 2.5vw, 20px)",
-          fontWeight: 600,
-          lineHeight: 1.3,
-          color: "var(--text)",
-        }}
-      >
-        {stripMarkdown(item.post.title)}
-      </h3>
-
-      {item.keyQuote && (
-        <p
-          style={{
-            fontFamily: "var(--mono)",
-            marginTop: 10,
-            borderLeft: "2px solid var(--accent)",
-            paddingLeft: 10,
-            fontSize: 12,
-            fontStyle: "italic",
-            color: "var(--muted)",
-            lineHeight: 1.5,
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
-        </p>
-      )}
-
-      <p
-        style={{
-          marginTop: 12,
-          fontSize: 13,
-          lineHeight: 1.75,
-          color: "var(--muted)",
-          display: "-webkit-box",
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
-        }}
-      >
-        {stripMarkdown(item.post.content)}
-      </p>
-
-      <ThumbnailPreview image={item.post.thumbnail} />
-
-      <div
-        style={{
-          marginTop: "auto",
-          paddingTop: 12,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--mono)",
-            fontSize: 11,
-            color: "var(--accent)",
-          }}
-        >
-          탭하여 전체 보기 →
-        </span>
-      </div>
-    </article>
-  );
-}
-
-function NormalCard({
-  item,
-  onOpen,
-}: {
-  item: ABHighlight;
-  onOpen: (c: ModalContent) => void;
-}) {
-  return (
-    <article
-      onClick={() => onOpen({ kind: "highlight", item })}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ")
-          onOpen({ kind: "highlight", item });
-      }}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        border: "1px solid var(--border)",
-        background: "var(--card)",
-        padding: "clamp(14px, 2.5vw, 20px)",
-        borderRadius: 2,
-        cursor: "pointer",
-        WebkitTapHighlightColor: "transparent",
-        minHeight: 140,
-      }}
-      onPointerEnter={(e) => {
-        (e.currentTarget as HTMLElement).style.borderColor = "var(--accent)";
-      }}
-      onPointerLeave={(e) => {
-        (e.currentTarget as HTMLElement).style.borderColor = "var(--border)";
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 10,
-          flexWrap: "wrap",
-        }}
-      >
-        <RankBadge rank={item.rank} tier={item.tier} />
-        <CompanyTag name={item.sourceCompany} />
-      </div>
-
-      <h3
-        style={{
-          marginTop: 10,
-          fontSize: "clamp(15px, 2.2vw, 17px)",
-          fontWeight: 600,
-          lineHeight: 1.35,
-          color: "var(--text)",
-        }}
-      >
-        {stripMarkdown(item.post.title)}
-      </h3>
-
-      <p
-        style={{
-          marginTop: 8,
-          fontSize: 13,
-          lineHeight: 1.7,
-          color: "var(--muted)",
-          display: "-webkit-box",
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
-        }}
-      >
-        {stripMarkdown(item.post.content)}
-      </p>
-
-      <ThumbnailPreview image={item.post.thumbnail} />
-
-      <div
-        style={{
-          marginTop: "auto",
-          paddingTop: 10,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--mono)",
-            fontSize: 11,
-            color: "var(--dim)",
-          }}
-        >
-          →
-        </span>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <TagList tags={item.post.tags} limit={6} />
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          {primaryLinks.map((link) => (
+            <SourceButton key={link.url} link={link} />
+          ))}
+          <button
+            type="button"
+            onClick={() => onOpen({ kind: "highlight", item })}
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: 12,
+              color: accent,
+              background: "transparent",
+              border: "1px solid var(--border2)",
+              padding: "8px 14px",
+              borderRadius: 2,
+              fontWeight: 700,
+              cursor: "pointer",
+            }}
+          >
+            전체 읽기 →
+          </button>
+        </div>
       </div>
     </article>
   );
@@ -1111,9 +957,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
   const openModal = useCallback((c: ModalContent) => setModal(c), []);
   const closeModal = useCallback(() => setModal(null), []);
 
-  const hero = data.highlights.find((h) => h.tier === "hero");
-  const features = data.highlights.filter((h) => h.tier === "feature");
-  const normals = data.highlights.filter((h) => h.tier === "normal");
+  const highlights = [...data.highlights].sort((a, b) => a.rank - b.rank);
 
   return (
     <>
@@ -1132,10 +976,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         <header
           style={{
             borderBottom: "1px solid var(--border)",
-            padding: "clamp(24px, 5vw, 40px) clamp(16px, 4vw, 24px)",
+            padding: "clamp(32px, 6vw, 56px) clamp(16px, 4vw, 24px) clamp(28px, 5vw, 44px)",
           }}
         >
-          <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <div
               style={{
                 fontFamily: "var(--mono)",
@@ -1173,34 +1017,25 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             >
               <span
                 style={{
-                  background: "var(--accent)",
-                  color: "#000",
-                  padding: "3px 8px",
-                  borderRadius: 2,
+                  color: "var(--accent)",
                   fontWeight: 700,
                 }}
               >
                 VOL. {String(data.volume).padStart(2, "0")}
               </span>
+              <span style={{ color: "var(--dim)" }}>·</span>
               <span style={{ color: "var(--muted)" }}>{data.period}</span>
               <span style={{ color: "var(--dim)" }}>·</span>
-              <span style={{ color: "var(--muted)" }}>발표일 {data.announceDate}</span>
-              <span style={{ color: "var(--dim)" }}>·</span>
-              <span style={{ color: "var(--muted)" }}>
-                {data.highlights.length} HIGHLIGHTS
-                {data.editorsPicks && data.editorsPicks.length > 0
-                  ? ` + ${data.editorsPicks.length} PICK`
-                  : ""}
-              </span>
+              <span style={{ color: "var(--muted)" }}>VoidLight Letter</span>
             </div>
 
             <h1
               style={{
-                marginTop: 14,
-                fontSize: "clamp(24px, 5vw, 52px)",
-                fontWeight: 700,
-                letterSpacing: "-0.03em",
-                lineHeight: 1.1,
+                marginTop: 18,
+                fontSize: "clamp(30px, 6vw, 58px)",
+                fontWeight: 760,
+                letterSpacing: "-0.045em",
+                lineHeight: 1.05,
                 color: "var(--text)",
               }}
             >
@@ -1208,11 +1043,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             </h1>
             <p
               style={{
-                marginTop: 12,
-                fontFamily: "var(--mono)",
-                fontSize: 13,
+                marginTop: 16,
+                fontSize: "clamp(15px, 2vw, 18px)",
                 color: "var(--muted)",
-                lineHeight: 1.6,
+                lineHeight: 1.75,
               }}
             >
               {data.theme}
@@ -1223,10 +1057,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         {/* ───── Intro ───── */}
         <section
           style={{
-            padding: "clamp(32px, 6vw, 48px) clamp(16px, 4vw, 24px)",
+            padding: "clamp(34px, 6vw, 54px) clamp(16px, 4vw, 24px)",
           }}
         >
-          <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <div style={{ maxWidth: 640, margin: "0 auto" }}>
             <div
               style={{
                 fontFamily: "var(--mono)",
@@ -1240,10 +1074,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             </div>
             <p
               style={{
-                marginTop: 16,
+                marginTop: 18,
                 whiteSpace: "pre-wrap",
-                fontSize: "clamp(14px, 2vw, 16px)",
-                lineHeight: 1.9,
+                fontSize: "clamp(16px, 2.3vw, 19px)",
+                lineHeight: 2.0,
                 color: "var(--text)",
               }}
             >
@@ -1252,76 +1086,30 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </div>
         </section>
 
-        {/* ───── Hero ───── */}
-        {hero && (
-          <section
-            style={{
-              padding: "0 clamp(16px, 4vw, 24px) clamp(24px, 4vw, 32px)",
-            }}
-          >
-            <div style={{ maxWidth: 960, margin: "0 auto" }}>
-              <HeroCard item={hero} onOpen={openModal} />
-            </div>
-          </section>
-        )}
-
-        {/* ───── Features ───── */}
-        {features.length > 0 && (
-          <section
-            style={{
-              padding: "0 clamp(16px, 4vw, 24px) clamp(24px, 4vw, 32px)",
-            }}
-          >
+        {/* ───── Highlights ───── */}
+        <section
+          style={{
+            padding: "0 clamp(16px, 4vw, 24px) clamp(28px, 5vw, 40px)",
+          }}
+        >
+          <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <div
               style={{
-                maxWidth: 960,
-                margin: "0 auto",
-                display: "grid",
-                gap: 16,
-                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--accent)",
+                marginBottom: 4,
               }}
             >
-              {features.map((h) => (
-                <FeatureCard key={h.rank} item={h} onOpen={openModal} />
-              ))}
+              ▾ Main Letter
             </div>
-          </section>
-        )}
-
-        {/* ───── Normals ───── */}
-        {normals.length > 0 && (
-          <section
-            style={{
-              padding: "0 clamp(16px, 4vw, 24px) clamp(24px, 4vw, 32px)",
-            }}
-          >
-            <div style={{ maxWidth: 960, margin: "0 auto" }}>
-              <div
-                style={{
-                  fontFamily: "var(--mono)",
-                  fontSize: 11,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                  marginBottom: 14,
-                }}
-              >
-                ▾ More Highlights
-              </div>
-              <div
-                style={{
-                  display: "grid",
-                  gap: 12,
-                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
-                }}
-              >
-                {normals.map((h) => (
-                  <NormalCard key={h.rank} item={h} onOpen={openModal} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+            {highlights.map((h) => (
+              <HighlightArticle key={h.rank} item={h} onOpen={openModal} />
+            ))}
+          </div>
+        </section>
 
         {data.editorsPicks && data.editorsPicks.length > 0 && (
           <section
