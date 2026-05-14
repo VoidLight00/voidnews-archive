@@ -2,7 +2,7 @@
 
 import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } from "react";
 import Link from "next/link";
-import type { ABEdition, ABHighlight, ABEditorPick } from "@/lib/ab/data";
+import type { ABEdition, ABHighlight, ABEditorPick, ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
 
 /* ────────── URL 자동 링크화 ──────────
@@ -838,6 +838,142 @@ function HighlightArticle({
   );
 }
 
+function DemoCard({ item }: { item: ABDemoCard }) {
+  return (
+    <article
+      style={{
+        border: "1px solid var(--border2)",
+        borderLeft: "4px solid var(--gold)",
+        background: "linear-gradient(145deg, rgba(255, 209, 102, 0.11), rgba(0,229,255,0.06))",
+        borderRadius: 12,
+        padding: "clamp(20px, 4vw, 34px)",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "var(--mono)",
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          flexWrap: "wrap",
+          fontSize: 11,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase",
+          color: "var(--gold)",
+        }}
+      >
+        <span>GPT-5.5 실전</span>
+        <span style={{ color: "var(--dim)" }}>·</span>
+        <span style={{ color: "var(--muted)" }}>{item.category}</span>
+      </div>
+
+      <h2
+        style={{
+          marginTop: 12,
+          fontSize: "clamp(24px, 4vw, 38px)",
+          fontWeight: 760,
+          letterSpacing: "-0.035em",
+          lineHeight: 1.12,
+          color: "var(--text)",
+        }}
+      >
+        {stripMarkdown(item.title)}
+      </h2>
+
+      {item.subtitle && (
+        <p
+          style={{
+            marginTop: 10,
+            fontSize: "clamp(15px, 2vw, 17px)",
+            lineHeight: 1.7,
+            color: "var(--text)",
+          }}
+        >
+          {stripMarkdown(item.subtitle)}
+        </p>
+      )}
+
+      {item.workflow && (
+        <p
+          style={{
+            fontFamily: "var(--mono)",
+            marginTop: 16,
+            border: "1px solid rgba(255, 209, 102, 0.45)",
+            background: "rgba(0, 0, 0, 0.18)",
+            borderRadius: 999,
+            padding: "10px 14px",
+            fontSize: 12,
+            lineHeight: 1.6,
+            color: "var(--gold)",
+          }}
+        >
+          {stripMarkdown(item.workflow)}
+        </p>
+      )}
+
+      <p
+        style={{
+          marginTop: 18,
+          fontSize: 15,
+          lineHeight: 1.9,
+          color: "var(--muted)",
+        }}
+      >
+        {stripMarkdown(item.summary)}
+      </p>
+
+      <p
+        style={{
+          marginTop: 14,
+          whiteSpace: "pre-wrap",
+          fontSize: 14,
+          lineHeight: 1.9,
+          color: "var(--text)",
+        }}
+      >
+        {renderRichText(item.body)}
+      </p>
+
+      <div
+        style={{
+          marginTop: 22,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 12,
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          <TagList tags={item.tags} limit={6} />
+        </div>
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="궁합방 데모 새 창에서 열기"
+          style={{
+            fontFamily: "var(--mono)",
+            minHeight: 44,
+            display: "inline-flex",
+            alignItems: "center",
+            fontSize: 12,
+            background: "var(--gold)",
+            color: "#000",
+            padding: "0 18px",
+            borderRadius: 999,
+            textDecoration: "none",
+            fontWeight: 800,
+            whiteSpace: "nowrap",
+          }}
+        >
+          {item.label || "DEMO 열기 →"}
+        </a>
+      </div>
+    </article>
+  );
+}
+
 function EditorPickCard({
   item,
   onOpen,
@@ -1151,6 +1287,53 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </div>
         </section>
 
+        {data.demoCards && data.demoCards.length > 0 && (
+          <section
+            style={{
+              padding:
+                "clamp(28px, 5vw, 42px) clamp(16px, 4vw, 24px) clamp(20px, 4vw, 28px)",
+            }}
+          >
+            <div style={{ maxWidth: 960, margin: "0 auto" }}>
+              <div
+                style={{
+                  borderTop: "1px solid var(--border2)",
+                  paddingTop: 28,
+                  marginBottom: 18,
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "var(--mono)",
+                    fontSize: 11,
+                    letterSpacing: "0.16em",
+                    textTransform: "uppercase",
+                    color: "var(--gold)",
+                  }}
+                >
+                  ▾ DEMO BUILD
+                </div>
+                <h2
+                  style={{
+                    marginTop: 8,
+                    fontSize: "clamp(19px, 3vw, 26px)",
+                    fontWeight: 720,
+                    letterSpacing: "-0.03em",
+                    color: "var(--text)",
+                  }}
+                >
+                  GPT-5.5가 실제 서비스 제작으로 이어진 사례
+                </h2>
+              </div>
+              <div style={{ display: "grid", gap: 16 }}>
+                {data.demoCards.map((demo) => (
+                  <DemoCard key={demo.url} item={demo} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {data.editorsPicks && data.editorsPicks.length > 0 && (
           <section
             style={{
@@ -1175,7 +1358,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--gold)",
                   }}
                 >
-                  🛠 실전 참고 자료
+                  🛠 직접 써본 오픈소스·도구
                 </div>
                 <h2
                   style={{
@@ -1186,7 +1369,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--text)",
                   }}
                 >
-                  메인 흐름을 이해하는 데 도움이 되는 자료
+                  직접 써보고 추천드리는 오픈소스와 도구
                 </h2>
                 <p
                   style={{
@@ -1196,7 +1379,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--muted)",
                   }}
                 >
-                  발표 본문에서 다루는 흐름을 더 깊게 확인할 수 있는 원문과 도구
+                  발표자가 실제로 써봤거나 직접 깎아본 도구 중, 작업 시스템에 바로 연결되는 추천 목록
                 </p>
               </div>
               <div

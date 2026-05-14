@@ -43,6 +43,18 @@ export interface ABEditorPick {
   tier?: HighlightTier; // 기본 feature
 }
 
+export interface ABDemoCard {
+  title: string;
+  subtitle?: string;
+  category: string;
+  url: string;
+  label?: string;
+  summary: string;
+  body: string;
+  workflow?: string;
+  tags?: string[];
+}
+
 export interface ABEdition {
   slug: string; // "2026-04a"
   volume: number; // 1-based
@@ -59,6 +71,9 @@ export interface ABEdition {
 
   // 큐레이터가 직접 엄선한 도구·자료 (VIP 트윗 아님)
   editorsPicks?: ABEditorPick[];
+
+  // 발표자가 직접 만든 실전 데모·사례 카드
+  demoCards?: ABDemoCard[];
 }
 
 import { edition2026_04a } from "./editions/2026-04a";
