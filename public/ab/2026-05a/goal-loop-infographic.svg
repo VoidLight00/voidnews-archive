@@ -1,0 +1,81 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#05070A"/>
+  <defs>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 440) rotate(90) scale(360 560)">
+      <stop stop-color="#00E5FF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1210 260) rotate(90) scale(260 360)">
+      <stop stop-color="#FFB84D" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFB84D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2 2 L10 6 L2 10" stroke="#00E5FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="60" y="58" width="1480" height="784" rx="34" fill="#090D13" stroke="#182432" stroke-width="2"/>
+  <rect width="1600" height="900" fill="url(#cyanGlow)"/>
+  <rect width="1600" height="900" fill="url(#goldGlow)"/>
+
+  <text x="112" y="136" fill="#00E5FF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" letter-spacing="6">AGENT GOAL LOOP</text>
+  <text x="112" y="188" fill="#F4F7FA" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="54" font-weight="800">/goal은 ‘질문’이 아니라 완료 조건이다</text>
+  <text x="112" y="232" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24">목표를 주고, 에이전트가 실행하고, 검증 결과를 보고 다시 이어가는 장기 작업 루프</text>
+
+  <g filter="url(#softGlow)">
+    <circle cx="800" cy="462" r="126" fill="#071118" stroke="#00E5FF" stroke-width="4"/>
+    <circle cx="800" cy="462" r="80" fill="#0D1E29" stroke="#FFB84D" stroke-width="3"/>
+    <path d="M764 462C764 442.118 780.118 426 800 426C819.882 426 836 442.118 836 462C836 481.882 819.882 498 800 498C780.118 498 764 481.882 764 462Z" fill="#FFB84D"/>
+    <path d="M800 404V426M800 498V520M858 462H836M764 462H742" stroke="#FFB84D" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="800" y="624" text-anchor="middle" fill="#F4F7FA" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="30" font-weight="800">완료 조건</text>
+  <text x="800" y="662" text-anchor="middle" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20">테스트 통과 · 빌드 성공 · 요구사항 충족</text>
+
+  <g stroke="#00E5FF" stroke-width="3" stroke-dasharray="10 12" opacity="0.9" marker-end="url(#arrow)">
+    <path d="M800 318 C800 246 620 238 534 290"/>
+    <path d="M630 418 C520 360 382 420 354 548"/>
+    <path d="M800 606 C798 710 1006 724 1092 646"/>
+    <path d="M964 420 C1106 352 1262 412 1280 544"/>
+  </g>
+
+  <g>
+    <rect x="360" y="260" width="280" height="150" rx="22" fill="#0D1118" stroke="#263647" stroke-width="2"/>
+    <text x="500" y="314" text-anchor="middle" fill="#FFB84D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="800">01</text>
+    <text x="500" y="352" text-anchor="middle" fill="#F4F7FA" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800">목표 선언</text>
+    <text x="500" y="386" text-anchor="middle" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18">무엇이 끝인지 먼저 고정</text>
+  </g>
+
+  <g>
+    <rect x="180" y="520" width="320" height="150" rx="22" fill="#0D1118" stroke="#263647" stroke-width="2"/>
+    <text x="340" y="574" text-anchor="middle" fill="#FFB84D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="800">02</text>
+    <text x="340" y="612" text-anchor="middle" fill="#F4F7FA" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800">에이전트 실행</text>
+    <text x="340" y="646" text-anchor="middle" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18">파일 수정 · 명령 실행 · 재시도</text>
+  </g>
+
+  <g>
+    <rect x="960" y="640" width="330" height="150" rx="22" fill="#0D1118" stroke="#263647" stroke-width="2"/>
+    <text x="1125" y="694" text-anchor="middle" fill="#FFB84D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="800">03</text>
+    <text x="1125" y="732" text-anchor="middle" fill="#F4F7FA" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800">검증</text>
+    <text x="1125" y="766" text-anchor="middle" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18">테스트 · 타입체크 · 리뷰</text>
+  </g>
+
+  <g>
+    <rect x="1100" y="502" width="330" height="150" rx="22" fill="#0D1118" stroke="#263647" stroke-width="2"/>
+    <text x="1265" y="556" text-anchor="middle" fill="#FFB84D" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="800">04</text>
+    <text x="1265" y="594" text-anchor="middle" fill="#F4F7FA" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800">부족하면 반복</text>
+    <text x="1265" y="628" text-anchor="middle" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18">완료 조건을 만족할 때까지</text>
+  </g>
+
+  <g opacity="0.55" stroke="#24384A" stroke-width="1">
+    <path d="M112 758H880"/>
+    <path d="M112 792H760"/>
+  </g>
+  <text x="112" y="734" fill="#96A3B2" font-family="Inter, Pretendard, -apple-system, BlinkMacSystemFont, sans-serif" font-size="21">핵심: 한 번 답하고 끝나는 채팅이 아니라, 목표와 검증 루프를 가진 작업 운영 방식</text>
+</svg>
