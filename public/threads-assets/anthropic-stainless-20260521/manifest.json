@@ -1,0 +1,55 @@
+{
+  "topic": "Anthropic acquires Stainless for agent connectivity",
+  "official_source_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+  "image_director_rules": {
+    "aspect_ratio": "4:5",
+    "resolution": "1080x1350",
+    "style": "premium Korean AI journalism, cinematic, Anthropic theme",
+    "rumor_label": false,
+    "direct_png_required": true
+  },
+  "assets": [
+    {
+      "page": 1,
+      "role": "main_thumbnail",
+      "local_path": "/Users/voidlight/threads-automation/data/threads/images/anthropic-stainless-20260521/01-main.png",
+      "public_repo_path": "/Users/voidlight/projects/voidnews-archive/public/threads-assets/anthropic-stainless-20260521/01-main.png",
+      "raw_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/anthropic-stainless-20260521/01-main.png"
+    },
+    {
+      "page": 2,
+      "role": "key_changes_summary",
+      "local_path": "/Users/voidlight/threads-automation/data/threads/images/anthropic-stainless-20260521/02-reply-key-changes.png",
+      "public_repo_path": "/Users/voidlight/projects/voidnews-archive/public/threads-assets/anthropic-stainless-20260521/02-reply-key-changes.png",
+      "raw_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/anthropic-stainless-20260521/02-reply-key-changes.png"
+    },
+    {
+      "page": 3,
+      "role": "why_it_matters",
+      "local_path": "/Users/voidlight/threads-automation/data/threads/images/anthropic-stainless-20260521/03-reply-why-it-matters.png",
+      "public_repo_path": "/Users/voidlight/projects/voidnews-archive/public/threads-assets/anthropic-stainless-20260521/03-reply-why-it-matters.png",
+      "raw_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/anthropic-stainless-20260521/03-reply-why-it-matters.png"
+    },
+    {
+      "page": 4,
+      "role": "competitive_landscape",
+      "local_path": "/Users/voidlight/threads-automation/data/threads/images/anthropic-stainless-20260521/04-reply-landscape.png",
+      "public_repo_path": "/Users/voidlight/projects/voidnews-archive/public/threads-assets/anthropic-stainless-20260521/04-reply-landscape.png",
+      "raw_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/anthropic-stainless-20260521/04-reply-landscape.png"
+    },
+    {
+      "page": 5,
+      "role": "real_world_use_cases",
+      "local_path": "/Users/voidlight/threads-automation/data/threads/images/anthropic-stainless-20260521/05-reply-use-cases.png",
+      "public_repo_path": "/Users/voidlight/projects/voidnews-archive/public/threads-assets/anthropic-stainless-20260521/05-reply-use-cases.png",
+      "raw_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/anthropic-stainless-20260521/05-reply-use-cases.png"
+    },
+    {
+      "page": 6,
+      "role": "future_prediction",
+      "local_path": "/Users/voidlight/threads-automation/data/threads/images/anthropic-stainless-20260521/06-reply-future.png",
+      "public_repo_path": "/Users/voidlight/projects/voidnews-archive/public/threads-assets/anthropic-stainless-20260521/06-reply-future.png",
+      "raw_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/anthropic-stainless-20260521/06-reply-future.png"
+    }
+  ]
+}
