@@ -1,0 +1,45 @@
+{
+  "item_id": "evening_20260521_claude_smb",
+  "topic": "Anthropic Claude for Small Business",
+  "official_source_url": "https://www.anthropic.com/news/claude-for-small-business",
+  "public_base_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521",
+  "pages": [
+    {
+      "page": 1,
+      "file": "01-main.png",
+      "role": "cinematic_thumbnail",
+      "public_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521/01-main.png"
+    },
+    {
+      "page": 2,
+      "file": "02-reply-key-changes.png",
+      "role": "key_changes_summary",
+      "public_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521/02-reply-key-changes.png"
+    },
+    {
+      "page": 3,
+      "file": "03-reply-why-it-matters.png",
+      "role": "why_it_matters",
+      "public_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521/03-reply-why-it-matters.png"
+    },
+    {
+      "page": 4,
+      "file": "04-reply-landscape.png",
+      "role": "competitive_landscape",
+      "public_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521/04-reply-landscape.png"
+    },
+    {
+      "page": 5,
+      "file": "05-reply-use-cases.png",
+      "role": "real_world_use_cases",
+      "public_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521/05-reply-use-cases.png"
+    },
+    {
+      "page": 6,
+      "file": "06-reply-future.png",
+      "role": "future_prediction",
+      "public_url": "https://raw.githubusercontent.com/VoidLight00/voidnews-archive/main/public/threads-assets/claude-smb-20260521/06-reply-future.png"
+    }
+  ],
+  "generated_at": "2026-05-21T18:38:10.360333+09:00"
+}
