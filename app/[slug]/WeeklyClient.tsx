@@ -228,7 +228,7 @@ type ModalNavigation = {
   positionLabel: string;
 };
 
-type ViewMode = "list" | "grid";
+type ViewDensity = "compact" | "comfortable";
 type SortOrder = "latest" | "oldest" | "company";
 type StatsActionMode = "filter" | "scroll";
 
@@ -1358,7 +1358,6 @@ function CompanySection({
   searchQuery,
   collapsed,
   onToggleCollapsed,
-  viewMode,
 }: {
   company: Company;
   startIndex: number;
@@ -1370,7 +1369,6 @@ function CompanySection({
   searchQuery: string;
   collapsed: boolean;
   onToggleCollapsed: () => void;
-  viewMode: ViewMode;
 }) {
   return (
     <section id={getCompanySectionId(company.name)} style={{ marginBottom: 48, scrollMarginTop: 150 }}>
@@ -1451,17 +1449,7 @@ function CompanySection({
       </button>
 
       {!collapsed && (
-        <div
-          style={
-            viewMode === "grid"
-              ? {
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-                  gap: 14,
-                }
-              : { display: "flex", flexDirection: "column", gap: 12 }
-          }
-        >
+        <div className="tc-article-grid tc-company-grid">
           {company.posts.map((post, index) => (
             <PostCard
               key={`${post.title}-${index}`}
@@ -1980,7 +1968,7 @@ export default function WeeklyClient({
   const [showRecentSearches, setShowRecentSearches] = useState(false);
   const [bookmarksCopied, setBookmarksCopied] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [viewMode, setViewMode] = useState<ViewMode>("list");
+  const [viewDensity, setViewDensity] = useState<ViewDensity>("comfortable");
   const [sortOrder, setSortOrder] = useState<SortOrder>("latest");
   const [statsActionMode, setStatsActionMode] = useState<StatsActionMode>("filter");
   const urlReadyRef = useRef(false);
@@ -2007,8 +1995,8 @@ export default function WeeklyClient({
     } catch {}
 
     try {
-      const storedViewMode = localStorage.getItem(VIEW_MODE_STORAGE_KEY) as ViewMode | null;
-      if (storedViewMode === "list" || storedViewMode === "grid") setViewMode(storedViewMode);
+      const storedViewDensity = localStorage.getItem(VIEW_MODE_STORAGE_KEY) as ViewDensity | null;
+      if (storedViewDensity === "compact" || storedViewDensity === "comfortable") setViewDensity(storedViewDensity);
     } catch {}
 
     try {
@@ -2043,9 +2031,9 @@ export default function WeeklyClient({
 
   useEffect(() => {
     try {
-      localStorage.setItem(VIEW_MODE_STORAGE_KEY, viewMode);
+      localStorage.setItem(VIEW_MODE_STORAGE_KEY, viewDensity);
     } catch {}
-  }, [viewMode]);
+  }, [viewDensity]);
 
   useEffect(() => {
     try {
@@ -2458,6 +2446,7 @@ export default function WeeklyClient({
       )}
 
       <main
+        data-card-density={viewDensity}
         style={{
           maxWidth: 1440,
           margin: "0 auto",
@@ -2644,7 +2633,7 @@ export default function WeeklyClient({
               </div>
               <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0, flexWrap: "wrap" }}>
                 <button
-                  onClick={() => setViewMode((prev) => (prev === "list" ? "grid" : "list"))}
+                  onClick={() => setViewDensity((prev) => (prev === "comfortable" ? "compact" : "comfortable"))}
                   style={{
                     fontSize: 11,
                     fontWeight: 700,
@@ -2658,9 +2647,9 @@ export default function WeeklyClient({
                     fontFamily: "var(--mono)",
                     letterSpacing: "0.06em",
                   }}
-                  title={viewMode === "list" ? "그리드 보기" : "리스트 보기"}
+                  title={viewDensity === "comfortable" ? "작은 카드 보기" : "기본 카드 보기"}
                 >
-                  {viewMode === "list" ? "GRID" : "LIST"}
+                  {viewDensity === "comfortable" ? "COMPACT" : "COMFY"}
                 </button>
                 <select
                   value={sortOrder}
@@ -2874,7 +2863,6 @@ export default function WeeklyClient({
                 searchQuery={search}
                 collapsed={collapsedSet.has(company.name)}
                 onToggleCollapsed={() => toggleCompanyCollapsed(company.name)}
-                viewMode={viewMode}
               />
             ))}
           </section>

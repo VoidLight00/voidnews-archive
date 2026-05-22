@@ -743,7 +743,6 @@ function HighlightArticle({
       role="listitem"
       className="tc-feed-card"
       style={{
-        gridColumn: item.tier === "hero" ? "1 / -1" : undefined,
         borderColor: expanded || item.tier === "hero" ? "var(--accent)" : "var(--border)",
         boxShadow: expanded ? "0 18px 60px rgba(0, 0, 0, 0.28)" : "none",
       }}
@@ -1235,15 +1234,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 카드를 누르면 발표용 상세 설명, 공식 출처, X/Twitter 게시글이 카드 안에서 바로 펼쳐집니다.
               </p>
             </div>
-            <div
-              role="list"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
-                gap: "clamp(14px, 2.4vw, 22px)",
-                alignItems: "start",
-              }}
-            >
+            <div role="list" className="tc-article-grid">
               {highlights.map((h) => (
                 <HighlightArticle
                   key={h.rank}
@@ -1340,11 +1331,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   발표자가 실제로 써봤거나 직접 깎아본 도구 중, 작업 시스템에 바로 연결되는 추천 목록.
                 </p>
               </div>
-              <div
-                style={{
-                  maxWidth: 760,
-                }}
-              >
+              <div className="tc-article-grid">
                 {data.editorsPicks.map((pick, i) => (
                   <EditorPickCard key={i} item={pick} onOpen={openModal} />
                 ))}
