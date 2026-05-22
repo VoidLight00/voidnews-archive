@@ -227,6 +227,47 @@ function ThumbnailPreview({
   );
 }
 
+function EditorialImageFrame({
+  image,
+  label,
+  tone = "accent",
+  priority = false,
+}: {
+  image?: { src: string; alt: string; caption?: string };
+  label: string;
+  tone?: "accent" | "gold";
+  priority?: boolean;
+}) {
+  const color = tone === "gold" ? "var(--gold)" : "var(--accent)";
+  const safeLabel = stripMarkdown(label);
+
+  return (
+    <div
+      className="tc-source-thumb tc-source-thumb--card"
+      style={{
+        borderBottom: `1px solid ${color}`,
+        background: `radial-gradient(circle at 24% 18%, ${color}33 0%, transparent 42%), linear-gradient(135deg, var(--surface-2), var(--card))`,
+      }}
+    >
+      {image ? (
+        <img
+          src={image.src}
+          alt={stripMarkdown(image.alt || safeLabel)}
+          loading={priority ? "eager" : "lazy"}
+          width={720}
+          height={450}
+        />
+      ) : (
+        <div className="tc-source-fallback">
+          <span className="mono" style={{ color, fontWeight: 800 }}>VOIDNEWS</span>
+          <span className="mono">{safeLabel}</span>
+        </div>
+      )}
+      {image && <span className="tc-source-domain mono">{safeLabel}</span>}
+    </div>
+  );
+}
+
 function ImageGallery({
   images,
   tone = "gold",
@@ -688,6 +729,7 @@ function HighlightArticle({
 }) {
   const cardRef = useRef<HTMLElement>(null);
   const accent = item.tier === "hero" ? "var(--accent)" : "var(--muted)";
+  const image = item.post.thumbnail ?? item.post.images?.[0];
   const detailId = `ab-highlight-detail-${item.rank}`;
 
   useEffect(() => {
@@ -699,27 +741,30 @@ function HighlightArticle({
     <article
       ref={cardRef}
       role="listitem"
+      className="tc-feed-card"
       style={{
         gridColumn: item.tier === "hero" ? "1 / -1" : undefined,
-        border: `1px solid ${expanded || item.tier === "hero" ? "var(--accent)" : "var(--border2)"}`,
-        background:
-          expanded || item.tier === "hero"
-            ? "linear-gradient(145deg, rgba(0,229,255,0.08), rgba(255,255,255,0.02))"
-            : "var(--card)",
-        borderRadius: 10,
-        padding: "clamp(18px, 3vw, 26px)",
+        borderColor: expanded || item.tier === "hero" ? "var(--accent)" : "var(--border)",
         boxShadow: expanded ? "0 18px 60px rgba(0, 0, 0, 0.28)" : "none",
-        transition: "border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease",
       }}
     >
-      <button
-        type="button"
+      <div
+        role="button"
+        tabIndex={0}
         aria-expanded={expanded}
         aria-controls={detailId}
+        aria-label={`${stripMarkdown(item.post.title)} ${expanded ? "접기" : "펼치기"}`}
         onClick={() => onToggle(item.rank)}
+        onKeyDown={(e) => {
+          if (e.key !== "Enter" && e.key !== " ") return;
+          e.preventDefault();
+          onToggle(item.rank);
+        }}
         style={{
-          display: "block",
+          display: "flex",
           width: "100%",
+          minWidth: 0,
+          flexDirection: "column",
           padding: 0,
           border: 0,
           background: "transparent",
@@ -729,105 +774,62 @@ function HighlightArticle({
           WebkitTapHighlightColor: "transparent",
         }}
       >
-        <div
-          style={{
-            fontFamily: "var(--mono)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 12,
-            flexWrap: "wrap",
-            fontSize: 11,
-            letterSpacing: "0.08em",
-            color: "var(--muted)",
-          }}
-        >
-          <span style={{ color: accent }}>{String(item.rank).padStart(2, "0")}</span>
-          <span>{item.sourceCompany}</span>
-          <span>{item.post.date}</span>
-        </div>
+        <EditorialImageFrame
+          image={image}
+          label={item.sourceCompany}
+          tone="accent"
+          priority={item.tier === "hero"}
+        />
 
-        <h2
-          style={{
-            marginTop: 12,
-            fontSize:
-              item.tier === "hero" ? "clamp(24px, 4vw, 38px)" : "clamp(19px, 2.8vw, 25px)",
-            fontWeight: item.tier === "hero" ? 760 : 680,
-            letterSpacing: "-0.025em",
-            lineHeight: 1.18,
-            color: "var(--text)",
-          }}
-        >
-          {stripMarkdown(item.post.title)}
-        </h2>
+        <div className="tc-feed-body">
+          <div className="tc-feed-meta mono">
+            <span style={{ color: accent, fontWeight: 800 }}>{String(item.rank).padStart(2, "0")}</span>
+            <span aria-hidden>·</span>
+            <span>{item.sourceCompany}</span>
+            <span aria-hidden>·</span>
+            <span>{item.post.date}</span>
+            <span aria-hidden>·</span>
+            <span>{item.tier}</span>
+          </div>
 
-        {item.keyQuote && (
-          <blockquote
-            style={{
-              marginTop: 14,
-              borderLeft: `3px solid ${accent}`,
-              paddingLeft: 12,
-              fontSize: "clamp(13px, 1.8vw, 15px)",
-              lineHeight: 1.7,
-              color: "var(--text)",
-            }}
-          >
-            &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
-          </blockquote>
-        )}
+          <h2 className="tc-feed-title serif">{stripMarkdown(item.post.title)}</h2>
 
-        <p
-          style={{
-            marginTop: 14,
-            whiteSpace: "pre-wrap",
-            fontSize: 14,
-            lineHeight: 1.8,
-            color: "var(--muted)",
-            display: "-webkit-box",
-            WebkitLineClamp: expanded ? 3 : item.tier === "hero" ? 4 : 3,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
-        >
-          {stripMarkdown(item.post.summary || item.post.content || "")}
-        </p>
+          {item.keyQuote && (
+            <blockquote
+              style={{
+                margin: 0,
+                borderLeft: `2px solid ${accent}`,
+                paddingLeft: 10,
+                fontSize: 13,
+                lineHeight: 1.6,
+                color: "var(--text)",
+              }}
+            >
+              &ldquo;{stripMarkdown(item.keyQuote)}&rdquo;
+            </blockquote>
+          )}
 
-        <ThumbnailPreview image={item.post.thumbnail} />
+          <p className="tc-feed-summary">
+            {stripMarkdown(item.post.summary || item.post.content || "")}
+          </p>
 
-        <div
-          style={{
-            marginTop: 16,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 12,
-            flexWrap: "wrap",
-          }}
-        >
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             <TagList tags={item.post.tags} limit={6} />
           </div>
-          <span
-            style={{
-              fontFamily: "var(--mono)",
-              fontSize: 12,
-              color: item.tier === "hero" ? "var(--accent)" : "var(--muted)",
-              border: "1px solid var(--border2)",
-              padding: "8px 12px",
-              borderRadius: 999,
-              fontWeight: 700,
-            }}
-          >
-            {expanded ? "접기 ↑" : "카드 펼치기 →"}
-          </span>
+
+          <div className="tc-feed-footer mono">
+            <span>#{String(item.rank).padStart(2, "0")}</span>
+            <span>{expanded ? "Close ↑" : "Read more →"}</span>
+          </div>
         </div>
-      </button>
+      </div>
 
       <div
         id={detailId}
         role="region"
         aria-label={`${stripMarkdown(item.post.title)} 상세 내용`}
         hidden={!expanded}
+        style={{ padding: expanded ? "0 14px 16px" : 0 }}
       >
         {expanded && <HighlightDetail item={item} />}
       </div>
@@ -978,6 +980,8 @@ function EditorPickCard({
   item: ABEditorPick;
   onOpen: (c: ModalContent) => void;
 }) {
+  const image = item.thumbnail ?? item.images?.[0];
+
   return (
     <article
       onClick={() => onOpen({ kind: "pick", item })}
@@ -986,88 +990,41 @@ function EditorPickCard({
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") onOpen({ kind: "pick", item });
       }}
+      className="tc-feed-card"
       style={{
-        borderTop: "1px solid var(--border2)",
-        padding: "clamp(22px, 4vw, 30px) 0",
         cursor: "pointer",
         WebkitTapHighlightColor: "transparent",
       }}
-      onPointerEnter={(e) => {
-        const title = e.currentTarget.querySelector("h3") as HTMLElement | null;
-        if (title) title.style.color = "var(--gold)";
-      }}
-      onPointerLeave={(e) => {
-        const title = e.currentTarget.querySelector("h3") as HTMLElement | null;
-        if (title) title.style.color = "var(--text)";
-      }}
     >
-      <div
-        style={{
-          fontFamily: "var(--mono)",
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          fontSize: 11,
-          letterSpacing: "0.08em",
-          color: "var(--muted)",
-        }}
-      >
-        <span style={{ color: "var(--gold)" }}>참고 자료</span>
-        <span style={{ color: "var(--dim)" }}>·</span>
-        <span>{item.category}</span>
-      </div>
+      <EditorialImageFrame image={image} label={item.category} tone="gold" />
 
-      <h3
-        style={{
-          marginTop: 10,
-          fontSize: "clamp(17px, 2.4vw, 20px)",
-          fontWeight: 650,
-          lineHeight: 1.35,
-          color: "var(--text)",
-          transition: "color 120ms ease",
-        }}
-      >
-        {stripMarkdown(item.title)}
-      </h3>
+      <div className="tc-feed-body">
+        <div className="tc-feed-meta mono">
+          <span style={{ color: "var(--gold)", fontWeight: 800 }}>참고 자료</span>
+          <span aria-hidden>·</span>
+          <span>{item.category}</span>
+          {item.tier && (
+            <>
+              <span aria-hidden>·</span>
+              <span>{item.tier}</span>
+            </>
+          )}
+        </div>
 
-      <p
-        style={{
-          marginTop: 10,
-          maxWidth: 760,
-          fontSize: 14,
-          color: "var(--muted)",
-          lineHeight: 1.8,
-          display: "-webkit-box",
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
-        }}
-      >
-        {stripMarkdown(item.summary)}
-      </p>
+        <h3 className="tc-feed-title serif">{stripMarkdown(item.title)}</h3>
 
-      <div
-        style={{
-          marginTop: 12,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 10,
-          flexWrap: "wrap",
-        }}
-      >
+        {item.subtitle && <p className="tc-feed-summary">{stripMarkdown(item.subtitle)}</p>}
+
+        <p className="tc-feed-summary">{stripMarkdown(item.summary)}</p>
+
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
           <TagList tags={item.tags} limit={5} />
         </div>
-        <span
-          style={{
-            fontFamily: "var(--mono)",
-            fontSize: 11,
-            color: "var(--gold)",
-          }}
-        >
-          자세히 보기 →
-        </span>
+
+        <div className="tc-feed-footer mono">
+          <span>{item.sourceLabel || "Source"}</span>
+          <span>Read more →</span>
+        </div>
       </div>
     </article>
   );

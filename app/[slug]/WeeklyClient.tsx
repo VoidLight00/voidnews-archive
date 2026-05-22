@@ -1110,7 +1110,6 @@ function PostCard({
   const [copied, setCopied] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
-  const sourceDomain = post.source ? extractDomain(post.source) : "—";
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -1126,186 +1125,154 @@ function PostCard({
   return (
     <article
       id={`post-${post.title.slice(0, 20)}`}
-      className="article-card"
-      onClick={() => { if (hasDetail) { setExpanded(e => !e); onClick(); } }}
+      className="article-card tc-feed-card"
+      onClick={() => {
+        if (!hasDetail) return;
+        setExpanded((current) => !current);
+        onClick();
+      }}
       style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: 0,
         cursor: hasDetail ? "pointer" : "default",
-        position: "relative",
         opacity: read ? 0.78 : 1,
         borderTop: expanded ? `2px solid ${companyColor}` : `2px solid transparent`,
-        transition: "border-color 0.15s, opacity 0.2s, background 0.15s",
       }}
     >
-      <header
-        className="mono"
-        style={{
-          borderBottom: "1px solid var(--border)",
-          padding: "10px 16px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 10,
-          flexWrap: "wrap",
-          fontSize: 10.5,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", minWidth: 0 }}>
-          <span
-            aria-hidden
-            style={{
-              width: 6,
-              height: 6,
-              borderRadius: 999,
-              background: companyColor,
-              display: "inline-block",
-            }}
-          />
-          <span style={{ color: companyColor, fontWeight: 700, whiteSpace: "nowrap" }}>
-            {companyName}
-          </span>
-          <span aria-hidden style={{ color: "var(--dim)" }}>·</span>
-          <PlatformBadge platform={post.platform} />
-          <span aria-hidden style={{ color: "var(--dim)" }}>·</span>
-          <PostDateLabel date={post.date} defaultYear={defaultYear} />
-        </div>
-        <span style={{ color: "var(--dim)" }}>
-          № {formatIntelIndex(index)}
-        </span>
-      </header>
+      <SourceThumbnail post={post} companyColor={companyColor} variant="card" />
 
-      <div style={{ padding: "18px 18px 14px", display: "flex", flexDirection: "column", gap: 12 }}>
-        <h3
-          className="article-card-title serif"
-          style={{
-            fontSize: "clamp(17px, 1.55vw, 21px)",
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.22,
-            color: "var(--text-strong)",
-            margin: 0,
-          }}
-        >
-          {highlightText(post.title, searchQuery)}
+      <div className="tc-feed-body" style={{ padding: "15px 15px 14px", gap: 10 }}>
+        <div className="tc-feed-meta mono">
+          <span style={{ color: companyColor, fontWeight: 800 }}>{getCompanyShortName(companyName)}</span>
+          <span aria-hidden>·</span>
+          <PlatformBadge platform={post.platform} />
+          <span aria-hidden>·</span>
+          <PostDateLabel date={post.date} defaultYear={defaultYear} />
+          <span aria-hidden>·</span>
+          <span>{estimateReadTime(post)} min read</span>
           {read && (
-            <span
-              className="mono"
-              style={{
-                marginLeft: 8,
-                fontSize: 9.5,
-                color: "var(--gold)",
-                verticalAlign: "middle",
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-                border: "1px solid var(--gold)",
-                padding: "1px 6px",
-                borderRadius: 999,
-              }}
-              title="읽음"
-            >
-              Read
-            </span>
+            <>
+              <span aria-hidden>·</span>
+              <span style={{ color: "var(--gold)", fontWeight: 800 }}>Read</span>
+            </>
           )}
+        </div>
+
+        <h3 className="tc-feed-title serif article-card-title">
+          {highlightText(post.title, searchQuery)}
         </h3>
 
-        {post.summary && (
-          <p
-            className="serif"
-            style={{
-              fontSize: 14.5,
-              fontStyle: "italic",
-              color: "var(--muted)",
-              lineHeight: 1.55,
-              margin: 0,
-              paddingLeft: 12,
-              borderLeft: `2px solid ${companyColor}55`,
-            }}
-          >
-            {highlightText(stripMarkdown(post.summary), searchQuery)}
+        {(post.summary || post.content) && (
+          <p className="tc-feed-summary">
+            {highlightText(stripMarkdown(post.summary || post.content || ""), searchQuery)}
           </p>
         )}
 
-        {post.thumbnail ? (
-          <img
-            src={post.thumbnail.src}
-            alt={post.thumbnail.alt}
-            loading="lazy"
+        <div className="tc-feed-footer mono">
+          <span>#{formatIntelIndex(index)}</span>
+          <div
+            style={{ display: "inline-flex", alignItems: "center", gap: 12 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={handleCopy}
+              aria-label="포스팅 링크 복사"
+              title="포스팅 링크 복사"
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: copied ? "var(--accent)" : "var(--muted)",
+                padding: 0,
+                lineHeight: 1,
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onBookmark();
+              }}
+              aria-label={bookmarked ? "북마크 해제" : "북마크"}
+              title={bookmarked ? "북마크 해제" : "북마크"}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: bookmarked ? "var(--gold)" : "var(--muted)",
+                padding: 0,
+                lineHeight: 1,
+                display: "inline-flex",
+                alignItems: "center",
+              }}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill={bookmarked ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+              </svg>
+            </button>
+            {hasDetail && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setExpanded((current) => !current);
+                  onClick();
+                }}
+                className="mono"
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: 10,
+                  color: expanded ? "var(--accent)" : "var(--accent)",
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: 0,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 4,
+                  fontWeight: 800,
+                }}
+              >
+                {expanded ? "Close ↑" : "Read more →"}
+              </button>
+            )}
+          </div>
+        </div>
+
+        {expanded && (post.content || post.summary) && (
+          <div
             style={{
-              width: "100%",
-              aspectRatio: "16 / 9",
-              objectFit: "cover",
+              background: "var(--surface)",
               border: "1px solid var(--border)",
               borderRadius: 2,
-              background: "var(--surface)",
+              padding: "10px 12px",
             }}
-          />
-        ) : (
-          !expanded && post.source && <CardLinkPreview url={post.source} />
-        )}
-
-        {hasDetail && (
-          <div style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 6,
-            marginTop: 2,
-          }}>
-            <span style={{
-              fontSize: 10.5,
-              fontFamily: "var(--mono)",
-              color: expanded ? "var(--accent)" : "var(--muted)",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              transition: "color 0.15s",
-            }}>
-              {expanded ? "닫기" : "전문 보기"}
-            </span>
-            <svg
-              width="11"
-              height="11"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke={expanded ? "var(--accent)" : "var(--muted)"}
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden
-              style={{ transform: expanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.15s" }}
+          >
+            <p
+              className="mono"
+              style={{
+                fontSize: 10,
+                color: "var(--dim)",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: 6,
+              }}
             >
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </div>
-        )}
-
-        {/* 펼쳐진 상태: 전체 상세 정보 */}
-        {expanded && (post.content || post.summary) && (
-          <div style={{
-            background: "var(--surface)",
-            border: "1px solid var(--border)",
-            borderRadius: 2,
-            padding: "10px 12px",
-          }}>
-            <p style={{
-              fontFamily: "var(--mono)",
-              fontSize: 10,
-              color: "var(--dim)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: 6,
-            }}>
-              CONTENT
+              Content
             </p>
-            <p style={{
-              fontSize: 12,
-              color: "var(--text)",
-              lineHeight: 1.75,
-              whiteSpace: "pre-line",
-              margin: 0,
-            }}>
+            <p
+              style={{
+                fontSize: 12,
+                color: "var(--text)",
+                lineHeight: 1.75,
+                whiteSpace: "pre-line",
+                margin: 0,
+              }}
+            >
               {searchQuery.trim()
                 ? highlightText(stripMarkdown(post.content || post.summary || ""), searchQuery)
                 : renderRichText(post.content || post.summary || "")}
@@ -1313,212 +1280,68 @@ function PostCard({
           </div>
         )}
 
-        {/* 공식 트윗 임베드 우선, 없으면 내 X 포스팅 */}
         {expanded && (getOfficialTweetUrl(post) || post.xUrl) && (
           <div onClick={(e) => e.stopPropagation()}>
-            <TweetEmbed
-              xUrl={(getOfficialTweetUrl(post) || post.xUrl)!}
-              expanded={expanded}
-            />
+            <TweetEmbed xUrl={(getOfficialTweetUrl(post) || post.xUrl)!} expanded={expanded} />
           </div>
         )}
 
-        {/* 링크 버튼들 (펼쳐진 상태만) */}
-        {expanded && (<div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} onClick={e => e.stopPropagation()}>
-          {/* 공식 원문 (최우선) */}
-          {getOfficialTweetUrl(post) && (
-            <a href={getOfficialTweetUrl(post)} target="_blank" rel="noopener noreferrer"
-              className="mono"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                fontSize: 10.5, fontWeight: 700, color: "var(--ink)",
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                textDecoration: "none", padding: "6px 12px",
-                background: "var(--accent)",
-                border: "1px solid var(--accent)", borderRadius: 999,
-              }}>
-              공식 원문 →
-            </a>
-          )}
-          {/* 소스 (블로그/기사) */}
-          {post.officialUrl && !isXPostUrl(post.officialUrl) && (
-            <a href={post.officialUrl} target="_blank" rel="noopener noreferrer"
-              className="mono"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 5,
-                fontSize: 10.5, color: "var(--accent)",
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                textDecoration: "none", padding: "6px 12px",
-                border: "1px solid var(--accent)",
-                borderRadius: 999,
-              }}>
-              공식 링크 →
-            </a>
-          )}
-          {post.source && post.source !== post.officialUrl && !isXPostUrl(post.source) && (
-            <a href={post.source} target="_blank" rel="noopener noreferrer"
-              className="mono"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 5,
-                fontSize: 10.5, color: "var(--accent)",
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                textDecoration: "none", padding: "6px 12px",
-                border: "1px solid var(--accent)",
-                borderRadius: 999,
-              }}>
-              Source →
-            </a>
-          )}
-          {post.backupUrls?.map(({ label, url }) => (
-            <a key={url} href={url} target="_blank" rel="noopener noreferrer"
-              className="mono"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 5,
-                fontSize: 10.5, color: "var(--muted)",
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                textDecoration: "none", padding: "6px 12px",
-                border: "1px solid var(--border2)",
-                borderRadius: 999,
-              }}>
-              {label} →
-            </a>
-          ))}
-          {post.xUrl && (
-            <a href={post.xUrl} target="_blank" rel="noopener noreferrer"
-              className="mono"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                fontSize: 10.5, fontWeight: 700, color: "#F4F4F5",
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                textDecoration: "none", padding: "6px 12px",
-                background: "#0a0a0d",
-                border: "1px solid #2F3136", borderRadius: 999,
-              }}>
-              <span aria-hidden style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontWeight: 800 }}>X</span>
-              My post →
-            </a>
-          )}
-          {post.threadsUrl && (
-            <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer"
-              className="mono"
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                fontSize: 10.5, fontWeight: 700, color: "#E9D5FF",
-                letterSpacing: "0.12em", textTransform: "uppercase",
-                textDecoration: "none", padding: "6px 12px",
-                background: "#1d1230",
-                border: "1px solid #8B5CF6", borderRadius: 999,
-              }}>
-              Threads →
-            </a>
-          )}
-        </div>)}
-
-      </div>
-
-      <footer
-        style={{
-          borderTop: "1px solid var(--border)",
-          padding: "10px 16px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 10,
-          flexWrap: "wrap",
-        }}
-      >
-        <span
-          className="mono"
-          style={{
-            fontSize: 10.5,
-            color: "var(--dim)",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-          }}
-        >
-          {sourceDomain}
-        </span>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }} onClick={(e) => e.stopPropagation()}>
-          <button
-            onClick={handleCopy}
-            aria-label="포스팅 링크 복사"
-            title="포스팅 링크 복사"
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: copied ? "var(--accent)" : "var(--muted)",
-              padding: 0,
-              lineHeight: 1,
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg>
-          </button>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onBookmark();
-            }}
-            aria-label={bookmarked ? "북마크 해제" : "북마크"}
-            title={bookmarked ? "북마크 해제" : "북마크"}
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: bookmarked ? "var(--gold)" : "var(--muted)",
-              padding: 0,
-              lineHeight: 1,
-              display: "inline-flex",
-              alignItems: "center",
-            }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill={bookmarked ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </button>
-          {hasDetail && (
-            <button
-              onClick={(e) => { e.stopPropagation(); setExpanded(v => !v); }}
-              className="mono"
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                fontSize: 10.5,
-                color: expanded ? "var(--accent)" : "var(--muted)",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                transition: "color 0.12s",
-                padding: "4px 0",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 4,
-              }}
-            >
-              {expanded ? "Close" : "Expand"}
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden
-                style={{ transform: expanded ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.15s" }}
+        {expanded && (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} onClick={(e) => e.stopPropagation()}>
+            {getOfficialTweetUrl(post) && (
+              <a
+                href={getOfficialTweetUrl(post)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mono"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  fontSize: 10.5,
+                  fontWeight: 700,
+                  color: "var(--ink)",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  padding: "6px 12px",
+                  background: "var(--accent)",
+                  border: "1px solid var(--accent)",
+                  borderRadius: 999,
+                }}
               >
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </button>
-          )}
-        </div>
-      </footer>
+                공식 원문 →
+              </a>
+            )}
+            {post.officialUrl && !isXPostUrl(post.officialUrl) && (
+              <a href={post.officialUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10.5, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", border: "1px solid var(--accent)", borderRadius: 999 }}>
+                공식 링크 →
+              </a>
+            )}
+            {post.source && post.source !== post.officialUrl && !isXPostUrl(post.source) && (
+              <a href={post.source} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10.5, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", border: "1px solid var(--accent)", borderRadius: 999 }}>
+                Source →
+              </a>
+            )}
+            {post.backupUrls?.map(({ label, url }) => (
+              <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10.5, color: "var(--muted)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", border: "1px solid var(--border2)", borderRadius: 999 }}>
+                {label} →
+              </a>
+            ))}
+            {post.xUrl && (
+              <a href={post.xUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, color: "#F4F4F5", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", background: "#0a0a0d", border: "1px solid #2F3136", borderRadius: 999 }}>
+                <span aria-hidden style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontWeight: 800 }}>X</span>
+                My post →
+              </a>
+            )}
+            {post.threadsUrl && (
+              <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, color: "#E9D5FF", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", background: "#1d1230", border: "1px solid #8B5CF6", borderRadius: 999 }}>
+                Threads →
+              </a>
+            )}
+          </div>
+        )}
+      </div>
     </article>
   );
 }
