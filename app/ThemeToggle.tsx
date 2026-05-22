@@ -4,13 +4,30 @@ import { useEffect, useState } from "react";
 
 type Theme = "dark" | "light";
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("dark");
+function SunIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+  );
+}
 
-  // 초기 상태 동기화 (inline script가 이미 설정한 값을 읽음)
+function MoonIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  );
+}
+
+export default function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>("light");
+
+  // Sync initial state (inline script may have already applied it)
   useEffect(() => {
     const current = (document.documentElement.getAttribute("data-theme") ||
-      "dark") as Theme;
+      "light") as Theme;
     setTheme(current);
   }, []);
 
@@ -32,25 +49,34 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={isDark ? "라이트 모드로 전환" : "다크 모드로 전환"}
       title={isDark ? "Light mode" : "Dark mode"}
+      className="mono"
       style={{
         display: "inline-flex",
         alignItems: "center",
         gap: 6,
-        fontFamily: "var(--mono)",
-        fontSize: 12,
+        fontSize: 11,
         color: "var(--muted)",
         background: "transparent",
         border: "1px solid var(--border2)",
-        borderRadius: 2,
-        padding: "4px 10px",
+        borderRadius: 999,
+        padding: "5px 10px",
         cursor: "pointer",
-        letterSpacing: "0.08em",
+        letterSpacing: "0.14em",
         textTransform: "uppercase",
         lineHeight: 1,
         WebkitTapHighlightColor: "transparent",
+        transition: "color 0.12s, border-color 0.12s",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.color = "var(--text)";
+        e.currentTarget.style.borderColor = "var(--border2)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.color = "var(--muted)";
+        e.currentTarget.style.borderColor = "var(--border2)";
       }}
     >
-      <span style={{ fontSize: 13 }}>{isDark ? "☀" : "☾"}</span>
+      {isDark ? <SunIcon /> : <MoonIcon />}
       <span>{isDark ? "Light" : "Dark"}</span>
     </button>
   );

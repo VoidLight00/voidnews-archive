@@ -8,6 +8,7 @@ import {
   useMemo,
   useRef,
   useState,
+  type MouseEvent,
   type ReactNode,
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
@@ -21,6 +22,8 @@ const VIEW_MODE_STORAGE_KEY = "voidnews-view-mode";
 const SORT_ORDER_STORAGE_KEY = "voidnews-sort-order";
 const STATS_ACTION_STORAGE_KEY = "voidnews-stats-action";
 const MAX_RECENT_SEARCHES = 5;
+const OG_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 7;
+const OG_FAILURE_CACHE_TTL_MS = 1000 * 60 * 60 * 6;
 
 function getReadStorageKey(title: string) {
   return `${READ_STORAGE_PREFIX}${title}`;
@@ -309,46 +312,91 @@ interface OGData {
   hostname?: string;
 }
 
+interface CachedOGData {
+  data: OGData | null;
+  expiresAt: number;
+}
+
+function isSafeImageUrl(url?: string) {
+  if (!url) return false;
+  if (url.startsWith("/") && !url.startsWith("//")) return true;
+  try {
+    return new URL(url).protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 function useOGData(url: string, enabled: boolean) {
   const [data, setData] = useState<OGData | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (!enabled || !url) return;
-    const cacheKey = `voidnews-og:${url}`;
+    let cancelled = false;
+    const cacheKey = `voidnews-og:v3:${url}`;
+    const hostname = (() => {
+      try {
+        return new URL(url).hostname.replace(/^www\./, "");
+      } catch {
+        return url;
+      }
+    })();
+
     try {
       const cached = localStorage.getItem(cacheKey);
       if (cached) {
-        setData(JSON.parse(cached));
-        return;
+        const parsed = JSON.parse(cached) as CachedOGData;
+        if (parsed.expiresAt > Date.now()) {
+          setData(parsed.data);
+          return;
+        }
       }
     } catch {}
 
     setLoading(true);
-    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}`)
+    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true`)
       .then((r) => r.json())
       .then((d) => {
-        if (d.status === "success") {
-          const og: OGData = {
-            title: d.data.title,
-            description: d.data.description,
-            image: d.data.image?.url || d.data.screenshot?.url,
-            hostname: (() => {
-              try {
-                return new URL(url).hostname.replace(/^www\./, "");
-              } catch {
-                return url;
+        if (cancelled) return;
+        const screenshotUrl = d.status === "success" ? d.data.screenshot?.url : undefined;
+        const imageUrl = d.status === "success" ? d.data.image?.url : undefined;
+        const safeImage = isSafeImageUrl(screenshotUrl) ? screenshotUrl : isSafeImageUrl(imageUrl) ? imageUrl : undefined;
+        const og: OGData | null =
+          d.status === "success"
+            ? {
+                title: d.data.title,
+                description: d.data.description,
+                image: safeImage,
+                hostname,
               }
-            })(),
-          };
-          setData(og);
-          try {
-            localStorage.setItem(cacheKey, JSON.stringify(og));
-          } catch {}
-        }
+            : null;
+        setData(og);
+        try {
+          localStorage.setItem(
+            cacheKey,
+            JSON.stringify({
+              data: og,
+              expiresAt: Date.now() + (og ? OG_CACHE_TTL_MS : OG_FAILURE_CACHE_TTL_MS),
+            } satisfies CachedOGData)
+          );
+        } catch {}
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(() => {
+        if (cancelled) return;
+        setLoading(false);
+        try {
+          localStorage.setItem(
+            cacheKey,
+            JSON.stringify({ data: null, expiresAt: Date.now() + OG_FAILURE_CACHE_TTL_MS } satisfies CachedOGData)
+          );
+        } catch {}
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, [url, enabled]);
 
   return { data, loading };
@@ -704,7 +752,7 @@ function EmbedPreview({
 
   const loadingPlaceholder = (
     <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10, color: "var(--dim)", fontSize: 13 }}>
-      ⏳ 불러오는 중...
+      불러오는 중...
     </div>
   );
 
@@ -714,7 +762,7 @@ function EmbedPreview({
       <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
         {officialUrl && (
           <button onClick={() => setTab("official")} style={tabBtnStyle(tab === "official", "#22C55E")}>
-            🏢 공식 원문
+            공식 원문
           </button>
         )}
         {xUrl && (
@@ -724,7 +772,7 @@ function EmbedPreview({
         )}
         {threadsUrl && (
           <button onClick={() => setTab("threads")} style={tabBtnStyle(tab === "threads", "#A78BFA")}>
-            🧵 내 포스팅
+            Threads 내 포스팅
           </button>
         )}
       </div>
@@ -737,7 +785,7 @@ function EmbedPreview({
           {!officialHtml && !officialLoading && (
             <a href={officialUrl} target="_blank" rel="noopener noreferrer"
               style={{ display: "block", background: "var(--card)", border: "1px solid #1a3a1a", borderRadius: 8, padding: "16px", color: "#22C55E", fontSize: 13, textDecoration: "none" }}>
-              🏢 공식 계정 원문 보기 ↗
+              공식 계정 원문 보기 ↗
             </a>
           )}
         </div>
@@ -783,7 +831,9 @@ function PostModal({
   onClose: () => void;
   navigation: ModalNavigation;
 }) {
+  const dialogRef = useRef<HTMLDivElement>(null);
   const touchStartYRef = useRef<number | null>(null);
+  const titleId = `post-modal-title-${post.title.replace(/[^a-zA-Z0-9가-힣]+/g, "-").replace(/^-+|-+$/g, "")}`;
   const navBtnStyle = {
     fontSize: 13,
     fontWeight: 700,
@@ -795,8 +845,17 @@ function PostModal({
     cursor: "pointer",
   } as const;
 
+  useEffect(() => {
+    const previousActiveElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    dialogRef.current?.focus();
+    return () => previousActiveElement?.focus();
+  }, []);
+
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={titleId}
       onClick={onClose}
       style={{
         position: "fixed",
@@ -810,6 +869,8 @@ function PostModal({
       }}
     >
       <div
+        ref={dialogRef}
+        tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
         onTouchStart={(e) => {
           touchStartYRef.current = e.touches[0]?.clientY ?? null;
@@ -892,6 +953,7 @@ function PostModal({
         </div>
 
         <h2
+          id={titleId}
           style={{
             fontSize: 20,
             fontWeight: 800,
@@ -1062,9 +1124,9 @@ function PostCard({
   };
 
   return (
-    <div
+    <article
       id={`post-${post.title.slice(0, 20)}`}
-      className="intel-card"
+      className="article-card"
       onClick={() => { if (hasDetail) { setExpanded(e => !e); onClick(); } }}
       style={{
         display: "flex",
@@ -1072,69 +1134,95 @@ function PostCard({
         gap: 0,
         cursor: hasDetail ? "pointer" : "default",
         position: "relative",
-        opacity: read ? 0.7 : 1,
-        borderLeftColor: expanded ? "var(--accent)" : undefined,
-        transition: "border-left-color 0.15s, opacity 0.2s",
+        opacity: read ? 0.78 : 1,
+        borderTop: expanded ? `2px solid ${companyColor}` : `2px solid transparent`,
+        transition: "border-color 0.15s, opacity 0.2s, background 0.15s",
       }}
     >
-      <div
+      <header
+        className="mono"
         style={{
-          background: "var(--surface)",
           borderBottom: "1px solid var(--border)",
-          padding: "8px 14px",
+          padding: "10px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: 10,
           flexWrap: "wrap",
-          fontFamily: "var(--mono)",
-          fontSize: 11,
-          letterSpacing: "0.06em",
+          fontSize: 10.5,
+          letterSpacing: "0.14em",
           textTransform: "uppercase",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", minWidth: 0 }}>
-          <span style={{ color: "var(--gold)" }}>{formatIntelIndex(index)}</span>
-          <span style={{ color: "var(--dim)" }}>[</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", minWidth: 0 }}>
+          <span
+            aria-hidden
+            style={{
+              width: 6,
+              height: 6,
+              borderRadius: 999,
+              background: companyColor,
+              display: "inline-block",
+            }}
+          />
+          <span style={{ color: companyColor, fontWeight: 700, whiteSpace: "nowrap" }}>
+            {companyName}
+          </span>
+          <span aria-hidden style={{ color: "var(--dim)" }}>·</span>
           <PlatformBadge platform={post.platform} />
-          <span style={{ color: "var(--dim)" }}>]</span>
+          <span aria-hidden style={{ color: "var(--dim)" }}>·</span>
           <PostDateLabel date={post.date} defaultYear={defaultYear} />
-          <span style={{ color: "var(--dim)" }}>---</span>
-          <span style={{ color: companyColor, whiteSpace: "nowrap" }}>{companyName.toUpperCase()}</span>
         </div>
-      </div>
+        <span style={{ color: "var(--dim)" }}>
+          № {formatIntelIndex(index)}
+        </span>
+      </header>
 
-      <div style={{ padding: "14px", display: "flex", flexDirection: "column", gap: 10 }}>
-        <p
+      <div style={{ padding: "18px 18px 14px", display: "flex", flexDirection: "column", gap: 12 }}>
+        <h3
+          className="article-card-title serif"
           style={{
-            fontSize: 14,
-            fontWeight: 600,
-            letterSpacing: "-0.01em",
-            lineHeight: 1.45,
-            color: "var(--text)",
+            fontSize: "clamp(17px, 1.55vw, 21px)",
+            fontWeight: 700,
+            letterSpacing: "-0.02em",
+            lineHeight: 1.22,
+            color: "var(--text-strong)",
             margin: 0,
           }}
         >
           {highlightText(post.title, searchQuery)}
           {read && (
             <span
-              style={{ marginLeft: 8, fontSize: 10, color: "var(--gold)", verticalAlign: "middle", fontFamily: "var(--mono)" }}
+              className="mono"
+              style={{
+                marginLeft: 8,
+                fontSize: 9.5,
+                color: "var(--gold)",
+                verticalAlign: "middle",
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                border: "1px solid var(--gold)",
+                padding: "1px 6px",
+                borderRadius: 999,
+              }}
               title="읽음"
             >
-              READ
+              Read
             </span>
           )}
-        </p>
+        </h3>
 
         {post.summary && (
           <p
+            className="serif"
             style={{
-              fontSize: 12,
+              fontSize: 14.5,
+              fontStyle: "italic",
               color: "var(--muted)",
-              lineHeight: 1.65,
+              lineHeight: 1.55,
               margin: 0,
-              paddingLeft: 10,
-              borderLeft: `2px solid ${companyColor}40`,
+              paddingLeft: 12,
+              borderLeft: `2px solid ${companyColor}55`,
             }}
           >
             {highlightText(stripMarkdown(post.summary), searchQuery)}
@@ -1151,7 +1239,7 @@ function PostCard({
               aspectRatio: "16 / 9",
               objectFit: "cover",
               border: "1px solid var(--border)",
-              borderRadius: 4,
+              borderRadius: 2,
               background: "var(--surface)",
             }}
           />
@@ -1159,24 +1247,37 @@ function PostCard({
           !expanded && post.source && <CardLinkPreview url={post.source} />
         )}
 
-        {/* 클릭 힌트 */}
         {hasDetail && (
           <div style={{
             display: "flex",
             alignItems: "center",
-            gap: 4,
+            gap: 6,
             marginTop: 2,
           }}>
             <span style={{
-              fontSize: 10,
+              fontSize: 10.5,
               fontFamily: "var(--mono)",
-              color: expanded ? "var(--accent)" : "var(--dim)",
-              letterSpacing: "0.08em",
+              color: expanded ? "var(--accent)" : "var(--muted)",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
               transition: "color 0.15s",
             }}>
-              {expanded ? "▲ 닫기" : "▼ 전문 보기"}
+              {expanded ? "닫기" : "전문 보기"}
             </span>
+            <svg
+              width="11"
+              height="11"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke={expanded ? "var(--accent)" : "var(--muted)"}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+              style={{ transform: expanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.15s" }}
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </div>
         )}
 
@@ -1227,91 +1328,98 @@ function PostCard({
           {/* 공식 원문 (최우선) */}
           {getOfficialTweetUrl(post) && (
             <a href={getOfficialTweetUrl(post)} target="_blank" rel="noopener noreferrer"
+              className="mono"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
-                fontFamily: "var(--mono)", fontSize: 10,
-                fontWeight: 700, color: "#111", letterSpacing: "0.06em",
+                fontSize: 10.5, fontWeight: 700, color: "var(--ink)",
+                letterSpacing: "0.12em", textTransform: "uppercase",
                 textDecoration: "none", padding: "6px 12px",
-                background: "#22C55E",
-                border: "1px solid #16A34A", borderRadius: 2,
+                background: "var(--accent)",
+                border: "1px solid var(--accent)", borderRadius: 999,
               }}>
-              🏢 공식 원문 ↗
+              공식 원문 →
             </a>
           )}
           {/* 소스 (블로그/기사) */}
           {post.officialUrl && !isXPostUrl(post.officialUrl) && (
             <a href={post.officialUrl} target="_blank" rel="noopener noreferrer"
+              className="mono"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 5,
-                fontFamily: "var(--mono)", fontSize: 10,
-                color: "var(--accent)", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "6px 10px",
-                border: "1px solid var(--accent)30",
-                borderRadius: 2,
+                fontSize: 10.5, color: "var(--accent)",
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                textDecoration: "none", padding: "6px 12px",
+                border: "1px solid var(--accent)",
+                borderRadius: 999,
               }}>
-              공식 링크 ↗
+              공식 링크 →
             </a>
           )}
           {post.source && post.source !== post.officialUrl && !isXPostUrl(post.source) && (
             <a href={post.source} target="_blank" rel="noopener noreferrer"
+              className="mono"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 5,
-                fontFamily: "var(--mono)", fontSize: 10,
-                color: "var(--accent)", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "6px 10px",
-                border: "1px solid var(--accent)30",
-                borderRadius: 2,
+                fontSize: 10.5, color: "var(--accent)",
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                textDecoration: "none", padding: "6px 12px",
+                border: "1px solid var(--accent)",
+                borderRadius: 999,
               }}>
-              SOURCE ↗
+              Source →
             </a>
           )}
           {post.backupUrls?.map(({ label, url }) => (
             <a key={url} href={url} target="_blank" rel="noopener noreferrer"
+              className="mono"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 5,
-                fontFamily: "var(--mono)", fontSize: 10,
-                color: "var(--muted)", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "6px 10px",
+                fontSize: 10.5, color: "var(--muted)",
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                textDecoration: "none", padding: "6px 12px",
                 border: "1px solid var(--border2)",
-                borderRadius: 2,
+                borderRadius: 999,
               }}>
-              {label} ↗
+              {label} →
             </a>
           ))}
           {post.xUrl && (
             <a href={post.xUrl} target="_blank" rel="noopener noreferrer"
+              className="mono"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
-                fontFamily: "var(--mono)", fontSize: 10,
-                fontWeight: 700, color: "#F4F4F5", letterSpacing: "0.06em",
-                textDecoration: "none", padding: "6px 10px",
-                background: "linear-gradient(135deg, #0A0A0B, #1C1D20)",
-                border: "1px solid #2F3136", borderRadius: 2,
+                fontSize: 10.5, fontWeight: 700, color: "#F4F4F5",
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                textDecoration: "none", padding: "6px 12px",
+                background: "#0a0a0d",
+                border: "1px solid #2F3136", borderRadius: 999,
               }}>
-              𝕏 내 포스팅 ↗
+              <span aria-hidden style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontWeight: 800 }}>X</span>
+              My post →
             </a>
           )}
           {post.threadsUrl && (
             <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer"
+              className="mono"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 6,
-                fontFamily: "var(--mono)", fontSize: 10,
-                fontWeight: 700, color: "#E9D5FF", letterSpacing: "0.04em",
-                textDecoration: "none", padding: "6px 10px",
-                background: "linear-gradient(135deg, #3B1568, #5F2AB7)",
-                border: "1px solid #8B5CF6", borderRadius: 2,
+                fontSize: 10.5, fontWeight: 700, color: "#E9D5FF",
+                letterSpacing: "0.12em", textTransform: "uppercase",
+                textDecoration: "none", padding: "6px 12px",
+                background: "#1d1230",
+                border: "1px solid #8B5CF6", borderRadius: 999,
               }}>
-              🧵 내 포스팅 ↗
+              Threads →
             </a>
           )}
         </div>)}
 
       </div>
 
-      <div
+      <footer
         style={{
           borderTop: "1px solid var(--border)",
-          padding: "10px 14px",
+          padding: "10px 16px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -1320,74 +1428,98 @@ function PostCard({
         }}
       >
         <span
+          className="mono"
           style={{
-            fontFamily: "var(--mono)",
-            fontSize: 10,
+            fontSize: 10.5,
             color: "var(--dim)",
-            letterSpacing: "0.06em",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
           }}
         >
           {sourceDomain}
         </span>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }} onClick={(e) => e.stopPropagation()}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }} onClick={(e) => e.stopPropagation()}>
           <button
             onClick={handleCopy}
+            aria-label="포스팅 링크 복사"
+            title="포스팅 링크 복사"
             style={{
               background: "none",
               border: "none",
               cursor: "pointer",
-              fontSize: 12,
               color: copied ? "var(--accent)" : "var(--muted)",
               padding: 0,
               lineHeight: 1,
-              fontFamily: "var(--mono)",
+              display: "inline-flex",
+              alignItems: "center",
             }}
-            title="포스팅 링크 복사"
           >
-            🔗
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
           </button>
           <button
             onClick={(e) => {
               e.stopPropagation();
               onBookmark();
             }}
+            aria-label={bookmarked ? "북마크 해제" : "북마크"}
+            title={bookmarked ? "북마크 해제" : "북마크"}
             style={{
               background: "none",
               border: "none",
               cursor: "pointer",
-              fontSize: 12,
               color: bookmarked ? "var(--gold)" : "var(--muted)",
               padding: 0,
               lineHeight: 1,
-              fontFamily: "var(--mono)",
+              display: "inline-flex",
+              alignItems: "center",
             }}
-            title={bookmarked ? "북마크 해제" : "북마크"}
           >
-            ★
+            <svg width="14" height="14" viewBox="0 0 24 24" fill={bookmarked ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
           </button>
           {hasDetail && (
             <button
               onClick={(e) => { e.stopPropagation(); setExpanded(v => !v); }}
+              className="mono"
               style={{
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                fontFamily: "var(--mono)",
-                fontSize: 11,
-                color: expanded ? "var(--gold)" : "var(--muted)",
-                letterSpacing: "0.08em",
+                fontSize: 10.5,
+                color: expanded ? "var(--accent)" : "var(--muted)",
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
                 transition: "color 0.12s",
                 padding: "4px 0",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
               }}
             >
-              {expanded ? "CLOSE ↑" : "EXPAND ↓"}
+              {expanded ? "Close" : "Expand"}
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+                style={{ transform: expanded ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.15s" }}
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
             </button>
           )}
         </div>
-      </div>
-    </div>
+      </footer>
+    </article>
   );
 }
 
@@ -1418,66 +1550,80 @@ function CompanySection({
   viewMode: ViewMode;
 }) {
   return (
-    <section id={getCompanySectionId(company.name)} style={{ marginBottom: 40, scrollMarginTop: 150 }}>
+    <section id={getCompanySectionId(company.name)} style={{ marginBottom: 48, scrollMarginTop: 150 }}>
       <button
         onClick={onToggleCollapsed}
         style={{
           display: "flex",
           alignItems: "center",
-          gap: 12,
-          marginBottom: collapsed ? 0 : 14,
-          padding: "14px 0 0",
-          borderLeft: "none",
-          borderTop: "1px solid var(--border)",
+          gap: 14,
+          marginBottom: collapsed ? 12 : 18,
+          padding: "22px 0 14px",
+          borderTop: "1px solid var(--rule)",
           background: "none",
-          borderRight: "none",
-          borderBottom: "none",
-          borderInline: "none",
+          border: "none",
+          borderTopWidth: 1,
+          borderTopStyle: "solid",
+          borderTopColor: "var(--rule)",
           cursor: "pointer",
           width: "100%",
           textAlign: "left",
         }}
       >
-        <span style={{ width: 3, height: 18, background: company.color, flexShrink: 0 }} />
-        <h2
+        <span
+          aria-hidden
           style={{
-            fontSize: 13,
+            width: 10,
+            height: 10,
+            borderRadius: 999,
+            background: company.color,
+            flexShrink: 0,
+            boxShadow: `0 0 0 3px ${company.color}22`,
+          }}
+        />
+        <h2
+          className="serif"
+          style={{
+            fontSize: "clamp(20px, 2.2vw, 26px)",
             fontWeight: 700,
-            color: "var(--text)",
-            letterSpacing: "0.08em",
+            letterSpacing: "-0.02em",
+            color: "var(--text-strong)",
             margin: 0,
-            fontFamily: "var(--mono)",
-            textTransform: "uppercase",
+            lineHeight: 1.1,
           }}
         >
           {company.name}
         </h2>
         <span
+          className="mono"
           style={{
             fontSize: 11,
-            fontWeight: 600,
+            fontWeight: 700,
             color: company.color,
-            background: `${company.color}14`,
-            padding: "3px 8px",
-            border: `1px solid ${company.color}30`,
-            fontFamily: "var(--mono)",
-            letterSpacing: "0.06em",
+            border: `1px solid ${company.color}55`,
+            background: `${company.color}10`,
+            padding: "3px 10px",
+            letterSpacing: "0.12em",
             textTransform: "uppercase",
+            borderRadius: 999,
           }}
         >
-          [{company.posts.length} ITEMS]
+          {String(company.posts.length).padStart(2, "0")} items
         </span>
         <span
+          aria-hidden
           style={{
             marginLeft: "auto",
-            color: "var(--dim)",
-            fontSize: 12,
-            transform: collapsed ? "rotate(-90deg)" : "none",
+            color: "var(--muted)",
+            display: "inline-flex",
+            alignItems: "center",
+            transform: collapsed ? "rotate(-90deg)" : "rotate(0deg)",
             transition: "transform 0.2s",
-            fontFamily: "var(--mono)",
           }}
         >
-          ▾
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
         </span>
       </button>
 
@@ -1487,10 +1633,10 @@ function CompanySection({
             viewMode === "grid"
               ? {
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-                  gap: 6,
+                  gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+                  gap: 14,
                 }
-              : { display: "flex", flexDirection: "column", gap: 6 }
+              : { display: "flex", flexDirection: "column", gap: 12 }
           }
         >
           {company.posts.map((post, index) => (
@@ -1538,46 +1684,55 @@ function StatsBar({
         background: "var(--card)",
         border: "1px solid var(--border)",
         borderRadius: 2,
-        padding: "18px 16px",
-        marginBottom: 24,
+        padding: "20px 20px 18px",
+        marginBottom: 28,
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 14 }}>
-        <h3
-          style={{
-            fontSize: 11,
-            fontWeight: 700,
-            color: "var(--text)",
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            margin: 0,
-            fontFamily: "var(--mono)",
-          }}
-        >
-          INTELLIGENCE DISTRIBUTION
-        </h3>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+          <span className="kicker" style={{ color: "var(--kicker)" }}>By the numbers</span>
+          <span aria-hidden style={{ width: 24, height: 1, background: "var(--rule)" }} />
+          <h3
+            className="serif"
+            style={{
+              fontSize: 18,
+              fontWeight: 700,
+              color: "var(--text-strong)",
+              letterSpacing: "-0.015em",
+              margin: 0,
+            }}
+          >
+            Distribution by company
+          </h3>
+        </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
           <button
             onClick={onToggleActionMode}
+            className="chip"
+            style={
+              actionMode === "filter"
+                ? undefined
+                : {
+                    color: "var(--accent)",
+                    borderColor: "var(--accent)",
+                  }
+            }
+            title={actionMode === "filter" ? "클릭 시 섹션 스크롤로 전환" : "클릭 시 회사 필터로 전환"}
+          >
+            {actionMode === "filter" ? "Filter mode" : "Scroll mode"}
+          </button>
+          <span
+            className="mono"
             style={{
               fontSize: 11,
               fontWeight: 700,
-              color: actionMode === "filter" ? "var(--muted)" : "var(--accent)",
-              border: "1px solid var(--border)",
-              background: "transparent",
-              borderRadius: 2,
-              padding: "5px 10px",
-              cursor: "pointer",
-              fontFamily: "var(--mono)",
-              letterSpacing: "0.06em",
+              color: "var(--gold)",
+              whiteSpace: "nowrap",
+              letterSpacing: "0.14em",
               textTransform: "uppercase",
             }}
-            title={actionMode === "filter" ? "클릭 시 섹션 스크롤로 전환" : "클릭 시 회사 필터로 전환"}
           >
-            {actionMode === "filter" ? "FILTER" : "SCROLL"}
-          </button>
-          <span style={{ fontSize: 11, fontWeight: 700, color: "var(--gold)", whiteSpace: "nowrap", fontFamily: "var(--mono)" }}>
-            {String(total).padStart(2, "0")} TOTAL
+            {String(total).padStart(2, "0")} total
           </span>
         </div>
       </div>
@@ -1634,49 +1789,250 @@ function StatsBar({
   );
 }
 
-function HighlightCard({
-  company,
-  post,
-  onOpen,
-}: {
+type TopStoryEntry = {
   company: Company;
   post: Post;
-  onOpen: () => void;
+  issueIndex: number;
+};
+
+function estimateReadTime(post: Post) {
+  const text = [post.title, post.summary, post.content].filter(Boolean).join(" ");
+  const normalizedLength = stripMarkdown(text).replace(/\s+/g, " ").trim().length;
+  return Math.max(1, Math.ceil(normalizedLength / 420));
+}
+
+function getPostSortTime(post: Post, defaultYear: number) {
+  return parsePostDate(post.date, defaultYear)?.getTime() ?? 0;
+}
+
+function getPostIssueHref(issueSlug: string, postTitle: string) {
+  const params = new URLSearchParams({ post: postTitle });
+  return `/${issueSlug}?${params.toString()}`;
+}
+
+function getCompanyShortName(name: string) {
+  return name.split(" /")[0];
+}
+
+function getPostSourceUrl(post: Post) {
+  return post.officialUrl || post.source || post.xUrl || post.threadsUrl || post.backupUrls?.[0]?.url || "";
+}
+
+function getPostPrimaryImage(post: Post) {
+  return post.thumbnail ?? post.images?.[0] ?? null;
+}
+
+function SourceThumbnail({
+  post,
+  companyColor,
+  variant,
+  priority = false,
+}: {
+  post: Post;
+  companyColor: string;
+  variant: "hero" | "card";
+  priority?: boolean;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const explicitImage = getPostPrimaryImage(post);
+  const sourceUrl = getPostSourceUrl(post);
+  const [visible, setVisible] = useState(priority);
+  const { data, loading } = useOGData(sourceUrl, visible && !explicitImage && !!sourceUrl);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
+  const explicitImageSrc = isSafeImageUrl(explicitImage?.src) ? explicitImage?.src : "";
+  const imageSrc = explicitImageSrc || data?.image || "";
+  const visibleImageSrc = imageSrc && failedSrc !== imageSrc ? imageSrc : "";
+  const imageAlt = explicitImage?.alt || data?.title || `${post.title} 출처 이미지`;
+  const domain = sourceUrl ? extractDomain(sourceUrl) : "source";
+
+  useEffect(() => {
+    if (priority || visible) return;
+    const element = ref.current;
+    if (!element) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setVisible(true);
+        observer.disconnect();
+      },
+      { rootMargin: "420px" }
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [priority, visible]);
+
   return (
-    <button
-      onClick={onOpen}
+    <div
+      ref={ref}
+      className={`tc-source-thumb tc-source-thumb--${variant}`}
       style={{
-        width: "100%",
-        textAlign: "left",
-        background: "var(--surface)",
-        border: "1px solid var(--border)",
-        borderLeft: "3px solid var(--accent)",
-        borderRadius: 2,
-        padding: "18px 20px",
-        marginBottom: 18,
-        cursor: "pointer",
+        background: `radial-gradient(circle at 22% 18%, ${companyColor}35 0%, transparent 42%), linear-gradient(135deg, var(--surface-2), var(--card))`,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 10 }}>
-        <span
-          style={{
-            fontSize: 11,
-            fontWeight: 700,
-            color: "var(--accent)",
-            letterSpacing: "0.08em",
-            fontFamily: "var(--mono)",
-          }}
-        >
-          ▌ THIS WEEK'S LEAD
-        </span>
-        <span style={{ fontSize: 11, color: company.color, fontWeight: 700, fontFamily: "var(--mono)", letterSpacing: "0.06em" }}>
-          {company.name.toUpperCase()}
-        </span>
+      {visibleImageSrc ? (
+        <img
+          src={visibleImageSrc}
+          alt={imageAlt}
+          loading={priority ? "eager" : "lazy"}
+          width={variant === "hero" ? 1440 : 640}
+          height={variant === "hero" ? 720 : 400}
+          onError={() => setFailedSrc(visibleImageSrc)}
+        />
+      ) : (
+        <div className="tc-source-fallback">
+          <span className="mono">{loading ? "Loading source image" : domain}</span>
+        </div>
+      )}
+      <span className="tc-source-domain mono">{domain}</span>
+    </div>
+  );
+}
+
+function handleArticleClick(event: MouseEvent<HTMLAnchorElement>, onOpen: () => void) {
+  if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+  event.preventDefault();
+  onOpen();
+}
+
+function TopStoriesSection({
+  stories,
+  issueSlug,
+  onOpenStory,
+}: {
+  stories: TopStoryEntry[];
+  issueSlug: string;
+  onOpenStory: (post: Post, companyName: string) => void;
+}) {
+  if (stories.length === 0) return null;
+
+  const [lead, ...secondary] = stories.slice(0, 3);
+  const href = getPostIssueHref(issueSlug, lead.post.title);
+
+  return (
+    <section className="tc-hero-section rise-in" aria-label="Featured story">
+      <a
+        href={href}
+        className="tc-hero-card"
+        onClick={(event) => handleArticleClick(event, () => onOpenStory(lead.post, lead.company.name))}
+        aria-label={`${lead.post.title} 기사 열기`}
+      >
+        <SourceThumbnail post={lead.post} companyColor={lead.company.color} variant="hero" priority />
+        <div className="tc-hero-shade" />
+        <div className="tc-hero-content">
+          <div className="tc-hero-labels mono">
+            <span>slide 1 of {Math.max(1, stories.slice(0, 3).length)}</span>
+            <span>featured story</span>
+          </div>
+          <h1 className="tc-hero-title serif">{lead.post.title}</h1>
+          {lead.post.summary && (
+            <p className="tc-hero-summary">{stripMarkdown(lead.post.summary)}</p>
+          )}
+          <div className="tc-hero-meta mono">
+            <span style={{ color: lead.company.color }}>{getCompanyShortName(lead.company.name)}</span>
+            <span aria-hidden>·</span>
+            <span>{lead.post.date}</span>
+            <span aria-hidden>·</span>
+            <span>{estimateReadTime(lead.post)} min read</span>
+            <span aria-hidden>·</span>
+            <span>Read post →</span>
+          </div>
+        </div>
+        {secondary.length > 0 && (
+          <div className="tc-hero-dots" aria-hidden>
+            {[lead, ...secondary].map((entry, index) => (
+              <span
+                key={`${entry.company.name}-${entry.post.title}`}
+                style={{
+                  background: index === 0 ? "var(--text-strong)" : "rgba(255,255,255,0.35)",
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </a>
+    </section>
+  );
+}
+
+type FeedStoryEntry = TopStoryEntry;
+
+function FeedArticleCard({
+  entry,
+  issueSlug,
+  defaultYear,
+  index,
+  onOpen,
+}: {
+  entry: FeedStoryEntry;
+  issueSlug: string;
+  defaultYear: number;
+  index: number;
+  onOpen: () => void;
+}) {
+  const { company, post } = entry;
+  const href = getPostIssueHref(issueSlug, post.title);
+
+  return (
+    <a
+      href={href}
+      className="tc-feed-card"
+      onClick={(event) => handleArticleClick(event, onOpen)}
+      aria-label={`${post.title} 기사 열기`}
+    >
+      <SourceThumbnail post={post} companyColor={company.color} variant="card" />
+      <div className="tc-feed-body">
+        <div className="tc-feed-meta mono">
+          <span style={{ color: company.color, fontWeight: 800 }}>{getCompanyShortName(company.name)}</span>
+          <span aria-hidden>·</span>
+          <PostDateLabel date={post.date} defaultYear={defaultYear} />
+          <span aria-hidden>·</span>
+          <span>{estimateReadTime(post)} min read</span>
+        </div>
+        <h2 className="tc-feed-title serif">{post.title}</h2>
+        {(post.summary || post.content) && (
+          <p className="tc-feed-summary">{stripMarkdown(post.summary || post.content || "")}</p>
+        )}
+        <div className="tc-feed-footer mono">
+          <span>#{String(index).padStart(2, "0")}</span>
+          <span>Read more →</span>
+        </div>
       </div>
-      <p style={{ fontSize: 16, lineHeight: 1.5, color: "var(--text)", fontWeight: 700, margin: "0 0 8px" }}>{post.title}</p>
-      {post.summary && <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--muted)", margin: 0 }}>{stripMarkdown(post.summary)}</p>}
-    </button>
+    </a>
+  );
+}
+
+function ChronologicalFeed({
+  stories,
+  issueSlug,
+  defaultYear,
+  onOpenStory,
+}: {
+  stories: FeedStoryEntry[];
+  issueSlug: string;
+  defaultYear: number;
+  onOpenStory: (post: Post, companyName: string) => void;
+}) {
+  if (stories.length === 0) return null;
+
+  return (
+    <section className="tc-feed-section" aria-label="Latest articles">
+      <div className="tc-section-heading">
+        <span className="mono">Latest AI News</span>
+        <span aria-hidden />
+      </div>
+      <div className="tc-article-grid">
+        {stories.map((entry, index) => (
+          <FeedArticleCard
+            key={`${entry.company.name}-${entry.post.title}`}
+            entry={entry}
+            issueSlug={issueSlug}
+            defaultYear={defaultYear}
+            index={index + 1}
+            onOpen={() => onOpenStory(entry.post, entry.company.name)}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -1689,26 +2045,46 @@ function WeekDropdown({ currentSlug, currentWeek }: { currentSlug: string; curre
     <div style={{ position: "relative" }}>
       <button
         onClick={() => setOpen(!open)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className="mono"
         style={{
           background: "var(--card)",
-          border: "1px solid var(--border)",
-          borderRadius: 6,
-          padding: "4px 12px",
+          border: "1px solid var(--border2)",
+          borderRadius: 999,
+          padding: "6px 14px",
           color: "var(--text)",
-          fontSize: 13,
+          fontSize: 11.5,
           fontWeight: 700,
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
           cursor: "pointer",
-          display: "flex",
+          display: "inline-flex",
           alignItems: "center",
-          gap: 6,
+          gap: 8,
         }}
       >
-        W{currentWeek} <span style={{ fontSize: 10, color: "var(--muted)" }}>▾</span>
+        W{String(currentWeek).padStart(2, "0")}
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.15s" }}
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </button>
       {open && (
         <>
           <div onClick={() => setOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 99 }} />
           <div
+            role="listbox"
             style={{
               position: "absolute",
               top: "calc(100% + 8px)",
@@ -1716,32 +2092,38 @@ function WeekDropdown({ currentSlug, currentWeek }: { currentSlug: string; curre
               transform: "translateX(-50%)",
               background: "var(--surface)",
               border: "1px solid var(--border2)",
-              borderRadius: 8,
-              padding: 8,
+              borderRadius: 4,
+              padding: 6,
               zIndex: 100,
-              minWidth: 120,
-              boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+              minWidth: 140,
+              boxShadow: "0 12px 32px rgba(0,0,0,0.4)",
             }}
           >
-            {weekList.map((week) => (
-              <a
-                key={week.slug}
-                href={`/${week.slug}`}
-                style={{
-                  display: "block",
-                  padding: "6px 14px",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  color: week.slug === currentSlug ? "#E87040" : "var(--muted)",
-                  textDecoration: "none",
-                  borderRadius: 4,
-                  background: week.slug === currentSlug ? "#E8704018" : "transparent",
-                }}
-                onClick={() => setOpen(false)}
-              >
-                {week.year} W{week.week}
-              </a>
-            ))}
+            {weekList.map((week) => {
+              const active = week.slug === currentSlug;
+              return (
+                <a
+                  key={week.slug}
+                  href={`/${week.slug}`}
+                  className="mono"
+                  style={{
+                    display: "block",
+                    padding: "8px 14px",
+                    fontSize: 12,
+                    fontWeight: 600,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: active ? "var(--accent)" : "var(--muted)",
+                    textDecoration: "none",
+                    borderRadius: 2,
+                    background: active ? "var(--accent-soft)" : "transparent",
+                  }}
+                  onClick={() => setOpen(false)}
+                >
+                  {week.year} · W{String(week.week).padStart(2, "0")}
+                </a>
+              );
+            })}
           </div>
         </>
       )}
@@ -1754,10 +2136,12 @@ export default function WeeklyClient({
   data,
   prevWeek,
   nextWeek,
+  latestWeek,
 }: {
   data: WeeklyData;
   prevWeek?: { slug: string; week: number };
   nextWeek?: { slug: string; week: number };
+  latestWeek: { slug: string; week: number };
 }) {
   const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
   const [search, setSearch] = useState("");
@@ -2099,6 +2483,7 @@ export default function WeeklyClient({
 
   const selectedCompany = selectedPost ? companiesByName.get(selectedPost.companyName) ?? null : null;
   const selectedPostData = selectedCompany?.posts.find((post) => post.title === selectedPost?.title) ?? null;
+  const isLatestWeek = data.slug === latestWeek.slug;
 
   const modalNavigation = useMemo<ModalNavigation>(() => {
     if (!selectedPost) {
@@ -2138,6 +2523,8 @@ export default function WeeklyClient({
 
   const totalFiltered = filteredCompanies.reduce((sum, company) => sum + company.posts.length, 0);
   const visibleCompanyNames = filteredCompanies.map((company) => company.name);
+  const isFiltering =
+    search.trim().length > 0 || platformFilter !== "all" || companyFilter !== "all" || bookmarkFilter || hideReadFilter;
   const companyStartIndex = useMemo(() => {
     let running = 1;
     return new Map(
@@ -2153,21 +2540,49 @@ export default function WeeklyClient({
     0
   );
   const readProgressBar = renderIntelBar(readFilteredCount, Math.max(totalFiltered, 1));
-  const highlightedEntry = useMemo(() => {
-    for (const company of data.companies) {
-      const featuredPost = company.posts.find((post) => post.featured);
-      if (featuredPost) {
-        return { company, post: featuredPost };
-      }
-    }
+  const topStories = useMemo<TopStoryEntry[]>(() => {
+    const sourceCompanies = isFiltering ? filteredCompanies : data.companies;
+    const entries = sourceCompanies.flatMap((company) =>
+      company.posts.map((post) => ({ company, post }))
+    );
 
-    const topCompany = [...data.companies]
-      .sort((a, b) => b.posts.length - a.posts.length || a.name.localeCompare(b.name))[0];
-    if (!topCompany?.posts[0]) return null;
-    return { company: topCompany, post: topCompany.posts[0] };
-  }, [data.companies]);
-  const isFiltering =
-    search.trim().length > 0 || platformFilter !== "all" || companyFilter !== "all" || bookmarkFilter || hideReadFilter;
+    return [
+      ...entries.filter((entry) => entry.post.featured),
+      ...entries.filter((entry) => !entry.post.featured),
+    ]
+      .slice(0, 3)
+      .map((entry, index) => ({
+        company: entry.company,
+        post: entry.post,
+        issueIndex: index + 1,
+      }));
+  }, [data.companies, filteredCompanies, isFiltering]);
+  const feedStories = useMemo<FeedStoryEntry[]>(() => {
+    const featuredTitles = new Set(topStories.map((entry) => entry.post.title));
+    const entries = filteredCompanies.flatMap((company) =>
+      company.posts
+        .filter((post) => !featuredTitles.has(post.title))
+        .map((post) => ({ company, post }))
+    );
+
+    return entries
+      .sort((a, b) => {
+        if (sortOrder === "company") {
+          const companyDiff = a.company.name.localeCompare(b.company.name, "ko");
+          if (companyDiff !== 0) return companyDiff;
+        }
+
+        const aTime = getPostSortTime(a.post, data.year);
+        const bTime = getPostSortTime(b.post, data.year);
+        const diff = sortOrder === "oldest" ? aTime - bTime : bTime - aTime;
+        return diff || a.post.title.localeCompare(b.post.title, "ko");
+      })
+      .map((entry, index) => ({
+        company: entry.company,
+        post: entry.post,
+        issueIndex: index + 1,
+      }));
+  }, [data.year, filteredCompanies, sortOrder, topStories]);
 
   const exportBookmarks = useCallback(() => {
     const grouped = data.companies
@@ -2221,106 +2636,70 @@ export default function WeeklyClient({
 
       <main
         style={{
-          maxWidth: viewMode === "grid" ? 1040 : 720,
+          maxWidth: 1440,
           margin: "0 auto",
-          padding: "40px 20px 96px",
-          transition: "max-width 0.2s ease",
+          padding: "40px clamp(16px, 3vw, 32px) 96px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-          {prevWeek ? (
-            <a
-              href={`/${prevWeek.slug}`}
-              style={{ fontSize: 12, color: "var(--muted)", textDecoration: "none", fontFamily: "var(--mono)" }}
-              title="이전 주차 (←)"
-            >
-              ← W{prevWeek.week}
-            </a>
-          ) : (
-            <div />
-          )}
+        <section className="tc-issue-strip" aria-label="Issue navigation">
+          <div className="tc-issue-meta mono">
+            <span>VoidNews Weekly</span>
+            <span aria-hidden>·</span>
+            <span>Issue {data.year} · W{String(data.week).padStart(2, "0")}</span>
+            <span aria-hidden>·</span>
+            <span>{data.period}</span>
+            <span aria-hidden>·</span>
+            <span>{String(data.totalPosts).padStart(2, "0")} posts</span>
+          </div>
 
-          <WeekDropdown currentSlug={data.slug} currentWeek={data.week} />
-
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <div className="tc-issue-actions">
+            {isLatestWeek ? (
+              <span className="tc-current-pill mono">Current Issue</span>
+            ) : (
+              <a href={`/${latestWeek.slug}`} className="tc-current-link mono">
+                Back to Current · W{latestWeek.week}
+              </a>
+            )}
+            {prevWeek ? (
+              <a href={`/${prevWeek.slug}`} className="tc-week-link mono" title="이전 주차 (←)">
+                ← W{prevWeek.week}
+              </a>
+            ) : null}
+            <WeekDropdown currentSlug={data.slug} currentWeek={data.week} />
             {nextWeek ? (
-              <a
-                href={`/${nextWeek.slug}`}
-                style={{ fontSize: 12, color: "var(--muted)", textDecoration: "none", fontFamily: "var(--mono)" }}
-                title="다음 주차 (→)"
-              >
+              <a href={`/${nextWeek.slug}`} className="tc-week-link mono" title="다음 주차 (→)">
                 W{nextWeek.week} →
               </a>
-            ) : (
-              <div />
-            )}
+            ) : null}
           </div>
-        </div>
+        </section>
 
-        <div style={{ marginBottom: 24, marginTop: 20 }}>
-          <p
-            style={{
-              fontSize: 11,
-              color: "var(--gold)",
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-              marginBottom: 10,
-              fontFamily: "var(--mono)",
-            }}
-          >
-            {data.year} · Week {data.week}
-          </p>
-          <h1
-            style={{
-              fontSize: 32,
-              fontWeight: 700,
-              letterSpacing: "-0.03em",
-              color: "var(--text)",
-              lineHeight: 1.1,
-              margin: "0 0 10px",
-            }}
-          >
-            VOIDNEWS // WEEK {String(data.week).padStart(2, "0")} BRIEFING
-          </h1>
-          <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>
-            {data.period} · <span style={{ color: "var(--accent)", fontWeight: 700 }}>{data.totalPosts}</span> intelligence items archived
-          </p>
-        </div>
+        <TopStoriesSection
+          stories={topStories}
+          issueSlug={data.slug}
+          onOpenStory={openPost}
+        />
 
-        <div
-          style={{
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 2,
-            padding: "14px 16px",
-            marginBottom: 18,
-          }}
-        >
-          <p
-            style={{
-              margin: 0,
-              fontSize: 12,
-              color: "var(--text)",
-              fontFamily: "var(--mono)",
-              letterSpacing: "0.04em",
-              whiteSpace: "nowrap",
-              overflowX: "auto",
-            }}
-          >
-            [{readProgressBar}]&nbsp;&nbsp;{readFilteredCount} / {totalFiltered} READ
-          </p>
+
+        <div className="tc-progress-row" aria-label="Reading progress">
+          <div className="mono">
+            <span>Reading progress</span>
+            <span aria-hidden>//</span>
+            <strong>{readFilteredCount} / {totalFiltered}</strong>
+          </div>
+          <p className="mono">[{readProgressBar}]</p>
         </div>
 
         <div
           style={{
             position: "sticky",
-            top: 56,
+            top: 64,
             zIndex: 40,
-            background: "var(--overlay-bg)",
-            paddingTop: 12,
-            paddingBottom: 12,
+            background: "var(--header-bg)",
+            padding: "14px 16px",
             marginBottom: 32,
-            borderBottom: "1px solid var(--border)",
+            border: "1px solid var(--border)",
+            borderRadius: 2,
             backdropFilter: "blur(10px)",
           }}
         >
@@ -2491,65 +2870,48 @@ export default function WeeklyClient({
                 <button
                   key={platform}
                   onClick={() => setPlatformFilter(platform)}
-                  style={{
-                    fontSize: 11,
-                    fontWeight: 600,
-                    padding: "5px 12px",
-                    borderRadius: 2,
-                    border: "1px solid",
-                    cursor: "pointer",
-                    transition: "all 0.15s",
-                    flexShrink: 0,
-                    borderColor: platformFilter === platform ? "var(--accent)" : "var(--border)",
-                    background: platformFilter === platform ? "var(--accent)" : "transparent",
-                    color: platformFilter === platform ? "#000" : "var(--muted)",
-                    fontFamily: "var(--mono)",
-                    letterSpacing: "0.06em",
-                  }}
+                  className={`chip${platformFilter === platform ? " chip-active" : ""}`}
                 >
-                  {platform === "all" ? "ALL" : platform.toUpperCase()}
+                  {platform === "all" ? "All" : platform}
                 </button>
               ))}
 
-              <span style={{ color: "var(--dim)", fontSize: 12, fontFamily: "var(--mono)" }}>//</span>
+              <span aria-hidden style={{ color: "var(--dim)", fontSize: 12, fontFamily: "var(--mono)" }}>
+                //
+              </span>
 
               <button
                 onClick={() => setBookmarkFilter((prev) => !prev)}
-                style={{
-                  fontSize: 11,
-                  fontWeight: 600,
-                  padding: "5px 12px",
-                  borderRadius: 2,
-                  border: "1px solid",
-                  cursor: "pointer",
-                  flexShrink: 0,
-                  borderColor: bookmarkFilter ? "var(--gold)" : "var(--border)",
-                  background: bookmarkFilter ? "#C8A84B16" : "transparent",
-                  color: bookmarkFilter ? "var(--gold)" : "var(--muted)",
-                  fontFamily: "var(--mono)",
-                  letterSpacing: "0.06em",
-                }}
+                className="chip"
+                style={
+                  bookmarkFilter
+                    ? {
+                        borderColor: "var(--gold)",
+                        color: "var(--gold)",
+                        background: "#C8A84B12",
+                      }
+                    : undefined
+                }
               >
-                ★ BOOKMARKS {bookmarks.length > 0 ? `(${bookmarks.length})` : ""}
+                <span aria-hidden style={{ fontSize: 12, lineHeight: 1 }}>★</span>
+                Bookmarks
+                {bookmarks.length > 0 ? ` · ${bookmarks.length}` : ""}
               </button>
               <button
                 onClick={() => setHideReadFilter((prev) => !prev)}
-                style={{
-                  fontSize: 11,
-                  fontWeight: 600,
-                  padding: "5px 12px",
-                  borderRadius: 2,
-                  border: "1px solid",
-                  cursor: "pointer",
-                  flexShrink: 0,
-                  borderColor: hideReadFilter ? "var(--red)" : "var(--border)",
-                  background: hideReadFilter ? "#CC330016" : "transparent",
-                  color: hideReadFilter ? "var(--red)" : "var(--muted)",
-                  fontFamily: "var(--mono)",
-                  letterSpacing: "0.06em",
-                }}
+                className="chip"
+                style={
+                  hideReadFilter
+                    ? {
+                        borderColor: "var(--red)",
+                        color: "var(--red)",
+                        background: "#CC330012",
+                      }
+                    : undefined
+                }
               >
-                HIDE READ {readPosts.length > 0 ? `(${readPosts.length})` : ""}
+                Hide read
+                {readPosts.length > 0 ? ` · ${readPosts.length}` : ""}
               </button>
               <button
                 onClick={() =>
@@ -2559,87 +2921,71 @@ export default function WeeklyClient({
                       : [...new Set([...prev, ...visibleCompanyNames])]
                   )
                 }
-                style={{
-                  fontSize: 11,
-                  fontWeight: 700,
-                  padding: "5px 12px",
-                  borderRadius: 2,
-                  border: "1px solid var(--border)",
-                  background: "var(--surface)",
-                  color: "var(--text)",
-                  cursor: "pointer",
-                  fontFamily: "var(--mono)",
-                  letterSpacing: "0.06em",
-                }}
+                className="chip"
               >
-                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "EXPAND ALL" : "COLLAPSE ALL"}
+                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "Expand all" : "Collapse all"}
               </button>
 
               {bookmarks.length > 0 && (
                 <button
                   onClick={exportBookmarks}
+                  className="chip"
                   style={{
-                    fontSize: 11,
-                    fontWeight: 600,
-                    padding: "5px 12px",
-                    borderRadius: 2,
-                    border: "1px solid var(--accent)",
-                    cursor: "pointer",
-                    flexShrink: 0,
+                    borderColor: "var(--accent)",
+                    color: bookmarksCopied ? "var(--ink)" : "var(--accent)",
                     background: bookmarksCopied ? "var(--accent)" : "transparent",
-                    color: bookmarksCopied ? "#111" : "#E87040",
-                    fontFamily: "var(--mono)",
-                    letterSpacing: "0.06em",
                   }}
                 >
-                  {bookmarksCopied ? "COPIED" : "EXPORT ↓"}
+                  {bookmarksCopied ? "Copied" : "Export"}
+                  <span aria-hidden>↓</span>
                 </button>
               )}
+            </div>
+
+            <div className="divider-label" aria-hidden>
+              <span>By company</span>
             </div>
 
             <div className="scroll-hide" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
               <button
                 onClick={() => setCompanyFilter("all")}
-                style={{
-                  fontSize: 11,
-                  fontWeight: 600,
-                  padding: "5px 12px",
-                  borderRadius: 2,
-                  border: "1px solid",
-                  cursor: "pointer",
-                  flexShrink: 0,
-                  borderColor: companyFilter === "all" ? "var(--accent)" : "var(--border)",
-                  background: companyFilter === "all" ? "var(--accent)" : "transparent",
-                  color: companyFilter === "all" ? "#000" : "var(--muted)",
-                  fontFamily: "var(--mono)",
-                  letterSpacing: "0.06em",
-                }}
+                className={`chip${companyFilter === "all" ? " chip-active" : ""}`}
               >
-                ALL COMPANIES
+                All companies
               </button>
-              {data.companies.map((company) => (
-                <button
-                  key={company.name}
-                  onClick={() => setCompanyFilter(companyFilter === company.name ? "all" : company.name)}
-                  style={{
-                    fontSize: 11,
-                    fontWeight: 600,
-                    padding: "5px 12px",
-                    borderRadius: 2,
-                    border: "1px solid",
-                    cursor: "pointer",
-                    transition: "all 0.15s",
-                    flexShrink: 0,
-                    borderColor: companyFilter === company.name ? company.color : "var(--border)",
-                    background: companyFilter === company.name ? `${company.color}22` : "transparent",
-                    color: companyFilter === company.name ? company.color : "var(--muted)",
-                    fontFamily: "var(--mono)",
-                    letterSpacing: "0.06em",
-                  }}
-                >
-                  {company.name.split(" /")[0].toUpperCase()}
-                </button>
-              ))}
+              {data.companies.map((company) => {
+                const active = companyFilter === company.name;
+                return (
+                  <button
+                    key={company.name}
+                    onClick={() => setCompanyFilter(active ? "all" : company.name)}
+                    className="chip"
+                    style={
+                      active
+                        ? {
+                            color: "var(--ink)",
+                            background: company.color,
+                            borderColor: company.color,
+                          }
+                        : {
+                            color: "var(--muted)",
+                          }
+                    }
+                  >
+                    <span
+                      aria-hidden
+                      style={{
+                        width: 7,
+                        height: 7,
+                        borderRadius: 999,
+                        background: company.color,
+                        display: "inline-block",
+                      }}
+                    />
+                    {company.name.split(" /")[0]}
+                  </button>
+                );
+              })}
             </div>
 
             {isFiltering && (
@@ -2670,15 +3016,12 @@ export default function WeeklyClient({
           </div>
         </div>
 
-        {highlightedEntry && (
-          <div style={{ marginBottom: 6 }}>
-            <HighlightCard
-              company={highlightedEntry.company}
-              post={highlightedEntry.post}
-              onOpen={() => openPost(highlightedEntry.post, highlightedEntry.company.name)}
-            />
-          </div>
-        )}
+        <ChronologicalFeed
+          stories={feedStories}
+          issueSlug={data.slug}
+          defaultYear={data.year}
+          onOpenStory={openPost}
+        />
 
         <StatsBar
           companies={filteredCompanies}
@@ -2691,95 +3034,95 @@ export default function WeeklyClient({
         />
 
         {filteredCompanies.length > 0 ? (
-          filteredCompanies.map((company) => (
-            <CompanySection
-              key={company.name}
-              company={company}
-              startIndex={companyStartIndex.get(company.name) ?? 1}
-              defaultYear={data.year}
-              onPostClick={openPost}
-              bookmarks={bookmarkSet}
-              onBookmark={toggleBookmark}
-              readPosts={readSet}
-              searchQuery={search}
-              collapsed={collapsedSet.has(company.name)}
-              onToggleCollapsed={() => toggleCompanyCollapsed(company.name)}
-              viewMode={viewMode}
-            />
-          ))
+          <section aria-label="Company archive" style={{ marginBottom: 48 }}>
+            <div className="divider-label" style={{ marginBottom: 16 }}>
+              <span>Company archive</span>
+            </div>
+            {filteredCompanies.map((company) => (
+              <CompanySection
+                key={company.name}
+                company={company}
+                startIndex={companyStartIndex.get(company.name) ?? 1}
+                defaultYear={data.year}
+                onPostClick={openPost}
+                bookmarks={bookmarkSet}
+                onBookmark={toggleBookmark}
+                readPosts={readSet}
+                searchQuery={search}
+                collapsed={collapsedSet.has(company.name)}
+                onToggleCollapsed={() => toggleCompanyCollapsed(company.name)}
+                viewMode={viewMode}
+              />
+            ))}
+          </section>
         ) : (
-          <div style={{ textAlign: "center", padding: "60px 0", color: "var(--muted)", fontFamily: "var(--mono)" }}>
-            <p style={{ fontSize: 12, marginBottom: 12 }}>NO MATCHING INTELLIGENCE</p>
-            <p style={{ fontSize: 11, color: "var(--dim)" }}>ADJUST QUERY PARAMETERS</p>
+          <div style={{ textAlign: "center", padding: "80px 0", color: "var(--muted)" }}>
+            <p className="serif" style={{ fontSize: 22, color: "var(--text)", marginBottom: 8, fontStyle: "italic" }}>
+              No matching intelligence
+            </p>
+            <p className="mono" style={{ fontSize: 11, color: "var(--dim)", letterSpacing: "0.16em", textTransform: "uppercase" }}>
+              Adjust query parameters
+            </p>
           </div>
         )}
 
-        <div style={{ borderTop: "1px solid var(--border)", paddingTop: 24, marginBottom: 16 }}>
-          <p style={{ fontSize: 11, color: "var(--dim)", textAlign: "center", letterSpacing: "0.05em", fontFamily: "var(--mono)" }}>
-            ⌨️ &nbsp;
-            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
+        <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 26, marginBottom: 16 }}>
+          <p
+            className="mono"
+            style={{
+              fontSize: 11,
+              color: "var(--dim)",
+              textAlign: "center",
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+            }}
+          >
+            Shortcuts &nbsp;·&nbsp;
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 6px", fontSize: 10 }}>
               /
             </kbd>{" "}
-            SEARCH &nbsp;·&nbsp;
-            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
+            Search &nbsp;·&nbsp;
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 6px", fontSize: 10 }}>
               ←
             </kbd>
-            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 6px", fontSize: 10, marginLeft: 4 }}>
               →
             </kbd>{" "}
-            NAVIGATE &nbsp;·&nbsp;
-            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 5px", fontSize: 10 }}>
-              ESC
+            Navigate &nbsp;·&nbsp;
+            <kbd style={{ background: "var(--surface)", border: "1px solid var(--border2)", borderRadius: 2, padding: "1px 6px", fontSize: 10 }}>
+              Esc
             </kbd>{" "}
-            CLOSE
-          </p>
-        </div>
-
-        <div style={{ paddingTop: 8, textAlign: "center" }}>
-          <p style={{ fontSize: 12, color: "var(--dim)" }}>
-            by{" "}
-            <a
-              href="https://www.threads.com/@voidlight00"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--muted)", textDecoration: "none" }}
-            >
-              @voidlight00
-            </a>
-            {" "}&nbsp;·&nbsp;{" "}
-            <a
-              href="https://x.com/VoidLight_Hyeon"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--muted)", textDecoration: "none" }}
-            >
-              @VoidLight_Hyeon
-            </a>
+            Close
           </p>
         </div>
 
         {showScrollTop && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            aria-label="맨 위로"
+            title="맨 위로"
             style={{
               position: "fixed",
-              right: 20,
-              bottom: 80,
+              right: 24,
+              bottom: 32,
               zIndex: 50,
-              width: 48,
-              height: 48,
+              width: 44,
+              height: 44,
               borderRadius: "50%",
-              border: "none",
-              background: "#E87040",
-              color: "#111",
-              fontSize: 22,
-              fontWeight: 800,
+              border: "1px solid var(--accent)",
+              background: "var(--accent)",
+              color: "var(--ink)",
               cursor: "pointer",
-              boxShadow: "0 12px 28px rgba(232,112,64,0.28)",
+              boxShadow: "0 14px 28px rgba(0,0,0,0.28)",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
-            title="맨 위로"
           >
-            ↑
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 19V5" />
+              <path d="M5 12l7-7 7 7" />
+            </svg>
           </button>
         )}
       </main>

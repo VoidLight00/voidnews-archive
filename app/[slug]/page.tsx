@@ -21,6 +21,7 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
   const data = getWeek(slug);
   if (!data) notFound();
 
+  const latestWeek = weeks[0];
   const currentIdx = weeks.findIndex((w) => w.slug === slug);
   const prevWeek = weeks[currentIdx + 1]
     ? { slug: weeks[currentIdx + 1].slug, week: weeks[currentIdx + 1].week }
@@ -29,5 +30,12 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
     ? { slug: weeks[currentIdx - 1].slug, week: weeks[currentIdx - 1].week }
     : undefined;
 
-  return <WeeklyClient data={data} prevWeek={prevWeek} nextWeek={nextWeek} />;
+  return (
+    <WeeklyClient
+      data={data}
+      prevWeek={prevWeek}
+      nextWeek={nextWeek}
+      latestWeek={{ slug: latestWeek.slug, week: latestWeek.week }}
+    />
+  );
 }

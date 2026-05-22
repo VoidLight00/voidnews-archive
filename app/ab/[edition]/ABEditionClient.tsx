@@ -112,8 +112,6 @@ function SourceButton({ link }: { link: SourceLink }) {
 ═══════════════════════════════════════════════════════════════ */
 
 function RankBadge({ rank, tier }: { rank: number; tier: string }) {
-  const medal =
-    rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null;
   return (
     <span
       style={{
@@ -125,7 +123,6 @@ function RankBadge({ rank, tier }: { rank: number; tier: string }) {
         color: "var(--muted)",
       }}
     >
-      {medal && <span style={{ fontSize: 18 }}>{medal}</span>}
       <span
         style={{
           border: "1px solid var(--border2)",
@@ -443,7 +440,7 @@ function PickModal({
             fontWeight: 700,
           }}
         >
-          🛠 PICK
+          PICK
         </span>
         <span style={{ color: "var(--muted)" }}>{item.category}</span>
       </div>
@@ -1108,109 +1105,130 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         <header
           style={{
             borderBottom: "1px solid var(--border)",
-            padding: "clamp(32px, 6vw, 56px) clamp(16px, 4vw, 24px) clamp(28px, 5vw, 44px)",
+            padding: "clamp(40px, 6vw, 64px) clamp(16px, 3vw, 32px) clamp(32px, 5vw, 48px)",
+            background:
+              "linear-gradient(180deg, var(--surface-2) 0%, var(--bg) 100%)",
           }}
         >
-          <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <div
+          <div style={{ maxWidth: 1040, margin: "0 auto" }}>
+            <nav
+              aria-label="Breadcrumb"
+              className="mono"
               style={{
-                fontFamily: "var(--mono)",
                 fontSize: 11,
                 color: "var(--muted)",
                 display: "flex",
                 gap: 8,
                 alignItems: "center",
                 flexWrap: "wrap",
-                letterSpacing: "0.08em",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
               }}
             >
               <Link href="/" style={{ color: "var(--muted)", textDecoration: "none" }}>
-                VOIDNEWS
+                VoidNews
               </Link>
               <span style={{ color: "var(--dim)" }}>/</span>
               <Link href="/ab" style={{ color: "var(--muted)", textDecoration: "none" }}>
-                AB BRIEFING
+                AB Briefing
               </Link>
               <span style={{ color: "var(--dim)" }}>/</span>
               <span style={{ color: "var(--text)" }}>{data.slug}</span>
-            </div>
+            </nav>
 
             <div
               style={{
-                fontFamily: "var(--mono)",
-                marginTop: 24,
+                marginTop: 28,
                 display: "flex",
                 flexWrap: "wrap",
                 gap: 10,
                 alignItems: "center",
-                fontSize: 11,
-                letterSpacing: "0.06em",
               }}
             >
               <span
+                className="mono"
                 style={{
-                  color: "var(--accent)",
-                  fontWeight: 700,
+                  fontSize: 10.5,
+                  fontWeight: 800,
+                  color: "var(--ink)",
+                  background: "var(--gold)",
+                  padding: "5px 12px",
+                  borderRadius: 999,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
                 }}
               >
-                VOL. {String(data.volume).padStart(2, "0")}
+                Vol. {String(data.volume).padStart(2, "0")}
               </span>
-              <span style={{ color: "var(--dim)" }}>·</span>
-              <span style={{ color: "var(--muted)" }}>{data.period}</span>
-              <span style={{ color: "var(--dim)" }}>·</span>
-              <span style={{ color: "var(--muted)" }}>VoidLight Letter</span>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 10.5,
+                  color: "var(--muted)",
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                }}
+              >
+                {data.period}
+              </span>
+              <span aria-hidden style={{ color: "var(--dim)" }}>·</span>
+              <span
+                className="mono"
+                style={{
+                  fontSize: 10.5,
+                  color: "var(--muted)",
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                }}
+              >
+                VoidLight Letter · Members-only
+              </span>
             </div>
 
             <h1
+              className="headline serif"
               style={{
-                marginTop: 18,
-                fontSize: "clamp(30px, 6vw, 58px)",
-                fontWeight: 760,
-                letterSpacing: "-0.045em",
-                lineHeight: 1.05,
-                color: "var(--text)",
+                marginTop: 22,
+                fontSize: "clamp(34px, 6.5vw, 68px)",
+                letterSpacing: "-0.04em",
+                lineHeight: 1.02,
               }}
             >
               {data.title}
             </h1>
             <p
+              className="deck"
               style={{
-                marginTop: 16,
-                fontSize: "clamp(15px, 2vw, 18px)",
-                color: "var(--muted)",
-                lineHeight: 1.75,
+                marginTop: 18,
+                fontSize: "clamp(15px, 1.7vw, 20px)",
+                lineHeight: 1.55,
+                maxWidth: "62ch",
               }}
             >
               {data.theme}
             </p>
+            <hr className="rule-double" style={{ marginTop: 36 }} />
           </div>
         </header>
 
         {/* ───── Intro ───── */}
         <section
           style={{
-            padding: "clamp(34px, 6vw, 54px) clamp(16px, 4vw, 24px)",
+            padding: "clamp(34px, 6vw, 54px) clamp(16px, 3vw, 32px)",
           }}
         >
-          <div style={{ maxWidth: 640, margin: "0 auto" }}>
-            <div
-              style={{
-                fontFamily: "var(--mono)",
-                fontSize: 11,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-                color: "var(--accent)",
-              }}
-            >
-              ▾ Opening
+          <div style={{ maxWidth: 760, margin: "0 auto" }}>
+            <div className="divider-label" aria-hidden style={{ marginBottom: 18 }}>
+              <span>Opening</span>
             </div>
             <p
+              className="serif dropcap"
               style={{
-                marginTop: 18,
                 whiteSpace: "pre-wrap",
-                fontSize: "clamp(16px, 2.3vw, 19px)",
-                lineHeight: 2.0,
+                fontSize: "clamp(17px, 2.3vw, 20px)",
+                lineHeight: 1.78,
                 color: "var(--text)",
+                margin: 0,
               }}
             >
               {stripMarkdown(data.intro)}
@@ -1221,46 +1239,40 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         {/* ───── Highlights ───── */}
         <section
           style={{
-            padding: "0 clamp(16px, 4vw, 24px) clamp(28px, 5vw, 40px)",
+            padding: "0 clamp(16px, 3vw, 32px) clamp(28px, 5vw, 40px)",
           }}
         >
-          <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+          <div style={{ maxWidth: 1440, margin: "0 auto" }}>
             <div
               style={{
-                borderTop: "1px solid var(--border2)",
-                paddingTop: 24,
-                marginBottom: 18,
+                borderTop: "3px double var(--rule)",
+                paddingTop: 28,
+                marginBottom: 22,
               }}
             >
-              <div
-                style={{
-                  fontFamily: "var(--mono)",
-                  fontSize: 11,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "var(--accent)",
-                }}
-              >
-                ▾ Main Card Section
-              </div>
+              <span className="kicker" style={{ color: "var(--accent)" }}>
+                Main card section
+              </span>
               <h2
+                className="serif"
                 style={{
-                  marginTop: 8,
-                  fontSize: "clamp(20px, 3vw, 28px)",
-                  fontWeight: 720,
-                  letterSpacing: "-0.03em",
-                  color: "var(--text)",
+                  marginTop: 10,
+                  fontSize: "clamp(24px, 3.4vw, 34px)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.025em",
+                  color: "var(--text-strong)",
+                  lineHeight: 1.1,
                 }}
               >
                 3주 동안 가장 바이럴한 AI 흐름 10개
               </h2>
               <p
+                className="deck"
                 style={{
-                  marginTop: 8,
-                  maxWidth: 720,
-                  fontSize: 14,
-                  lineHeight: 1.8,
-                  color: "var(--muted)",
+                  marginTop: 10,
+                  maxWidth: "62ch",
+                  fontSize: 15,
+                  lineHeight: 1.6,
                 }}
               >
                 카드를 누르면 발표용 상세 설명, 공식 출처, X/Twitter 게시글이 카드 안에서 바로 펼쳐집니다.
@@ -1291,35 +1303,29 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           <section
             style={{
               padding:
-                "clamp(28px, 5vw, 42px) clamp(16px, 4vw, 24px) clamp(20px, 4vw, 28px)",
+                "clamp(28px, 5vw, 42px) clamp(16px, 3vw, 32px) clamp(20px, 4vw, 28px)",
             }}
           >
-            <div style={{ maxWidth: 960, margin: "0 auto" }}>
+            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
               <div
                 style={{
-                  borderTop: "1px solid var(--border2)",
+                  borderTop: "3px double var(--rule)",
                   paddingTop: 28,
-                  marginBottom: 18,
+                  marginBottom: 22,
                 }}
               >
-                <div
-                  style={{
-                    fontFamily: "var(--mono)",
-                    fontSize: 11,
-                    letterSpacing: "0.16em",
-                    textTransform: "uppercase",
-                    color: "var(--gold)",
-                  }}
-                >
-                  ▾ DEMO BUILD
-                </div>
+                <span className="kicker" style={{ color: "var(--gold)" }}>
+                  Demo build
+                </span>
                 <h2
+                  className="serif"
                   style={{
-                    marginTop: 8,
-                    fontSize: "clamp(19px, 3vw, 26px)",
-                    fontWeight: 720,
-                    letterSpacing: "-0.03em",
-                    color: "var(--text)",
+                    marginTop: 10,
+                    fontSize: "clamp(22px, 3.2vw, 30px)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.025em",
+                    color: "var(--text-strong)",
+                    lineHeight: 1.12,
                   }}
                 >
                   GPT-5.5가 실제 서비스 제작으로 이어진 사례
@@ -1338,48 +1344,43 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           <section
             style={{
               padding:
-                "clamp(32px, 5vw, 48px) clamp(16px, 4vw, 24px) clamp(24px, 4vw, 32px)",
+                "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
             }}
           >
-            <div style={{ maxWidth: 960, margin: "0 auto" }}>
+            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
               <div
                 style={{
-                  borderTop: "1px solid var(--border2)",
+                  borderTop: "3px double var(--rule)",
                   paddingTop: 28,
-                  marginBottom: 20,
+                  marginBottom: 22,
                 }}
               >
-                <div
-                  style={{
-                    fontFamily: "var(--mono)",
-                    fontSize: 11,
-                    letterSpacing: "0.16em",
-                    textTransform: "uppercase",
-                    color: "var(--gold)",
-                  }}
-                >
-                  🛠 직접 써본 오픈소스·도구
-                </div>
+                <span className="kicker" style={{ color: "var(--gold)" }}>
+                  Editor&apos;s toolkit
+                </span>
                 <h2
+                  className="serif"
                   style={{
-                    fontFamily: "var(--mono)",
-                    marginTop: 8,
-                    fontSize: "clamp(17px, 3vw, 20px)",
-                    fontWeight: 600,
-                    color: "var(--text)",
+                    marginTop: 10,
+                    fontSize: "clamp(22px, 3.2vw, 28px)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.025em",
+                    color: "var(--text-strong)",
+                    lineHeight: 1.12,
                   }}
                 >
                   직접 써보고 추천드리는 오픈소스와 도구
                 </h2>
                 <p
+                  className="deck"
                   style={{
-                    fontFamily: "var(--mono)",
-                    marginTop: 4,
-                    fontSize: 11,
-                    color: "var(--muted)",
+                    marginTop: 8,
+                    fontSize: 14,
+                    lineHeight: 1.55,
+                    maxWidth: "60ch",
                   }}
                 >
-                  발표자가 실제로 써봤거나 직접 깎아본 도구 중, 작업 시스템에 바로 연결되는 추천 목록
+                  발표자가 실제로 써봤거나 직접 깎아본 도구 중, 작업 시스템에 바로 연결되는 추천 목록.
                 </p>
               </div>
               <div
@@ -1399,35 +1400,28 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         <section
           style={{
             padding:
-              "clamp(32px, 5vw, 48px) clamp(16px, 4vw, 24px) clamp(48px, 8vw, 72px)",
+              "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(48px, 8vw, 72px)",
           }}
         >
           <div
             style={{
-              maxWidth: 720,
+              maxWidth: 800,
               margin: "0 auto",
-              borderTop: "1px solid var(--border)",
-              paddingTop: 40,
+              borderTop: "3px double var(--rule)",
+              paddingTop: 36,
             }}
           >
-            <div
-              style={{
-                fontFamily: "var(--mono)",
-                fontSize: 11,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-                color: "var(--accent)",
-              }}
-            >
-              ▾ Closing
+            <div className="divider-label" aria-hidden style={{ marginBottom: 16 }}>
+              <span>Closing</span>
             </div>
             <p
+              className="serif"
               style={{
-                marginTop: 16,
                 whiteSpace: "pre-wrap",
-                fontSize: "clamp(14px, 2vw, 16px)",
-                lineHeight: 1.9,
+                fontSize: "clamp(15px, 2vw, 17px)",
+                lineHeight: 1.85,
                 color: "var(--text)",
+                margin: 0,
               }}
             >
               {stripMarkdown(data.closing)}
@@ -1436,48 +1430,60 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         </section>
 
         {/* ───── Footer ───── */}
-        <footer
+        <div
           style={{
             borderTop: "1px solid var(--border)",
-            padding: "28px clamp(16px, 4vw, 24px)",
+            background: "var(--surface)",
+            padding: "28px clamp(16px, 3vw, 32px)",
           }}
         >
           <div
+            className="mono"
             style={{
-              maxWidth: 960,
+              maxWidth: 1280,
               margin: "0 auto",
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "space-between",
               gap: 12,
-              fontFamily: "var(--mono)",
-              fontSize: 11,
+              fontSize: 10.5,
               color: "var(--muted)",
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
             }}
           >
-            <div>
-              커버 주차:{" "}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <span style={{ color: "var(--dim)" }}>Covered weeks</span>
               {data.coveredWeeks.map((w) => (
                 <Link
                   key={w}
                   href={`/${w}`}
                   style={{
-                    margin: "0 4px",
-                    color: "var(--muted)",
-                    textDecoration: "underline",
+                    color: "var(--text)",
+                    textDecoration: "none",
+                    border: "1px solid var(--border2)",
+                    padding: "3px 9px",
+                    borderRadius: 999,
                   }}
                 >
                   {w}
                 </Link>
               ))}
             </div>
-            <div>
-              <Link href="/ab" style={{ color: "var(--muted)", textDecoration: "none" }}>
-                ← AB 발표 목록
-              </Link>
-            </div>
+            <Link
+              href="/ab"
+              style={{
+                color: "var(--accent)",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+              }}
+            >
+              <span aria-hidden>←</span> AB 발표 목록
+            </Link>
           </div>
-        </footer>
+        </div>
       </main>
     </>
   );
