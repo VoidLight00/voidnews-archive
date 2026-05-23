@@ -1,0 +1,9 @@
+.git
+.next
+out
+node_modules
+_workspace
+.claude-*.png
+*.log
+.DS_Store
+.env*
