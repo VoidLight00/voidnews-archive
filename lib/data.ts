@@ -30,6 +30,11 @@ export interface Post {
   tags?: string[];
   slug?: string;         // 영문 short hash slug — w21/w22 editorial route 전용 (/[week]/[postSlug])
   readMinutes?: number;  // 예상 읽기 시간 (분) — editorial card byline 표시용
+  // 메인 hero 카드 전용 — PostDetail에서 영상/임베드 재생
+  videoUrl?: string;          // YouTube embed URL (예: https://www.youtube.com/embed/xxx)
+  videoPoster?: string;       // 영상 썸네일
+  threadsEmbedUrl?: string;   // Threads 게시물 iframe embed URL
+  galleryImages?: { src: string; alt: string; caption?: string }[]; // 본문 중간 inline 이미지
 }
 
 export interface Company {

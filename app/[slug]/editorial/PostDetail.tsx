@@ -210,7 +210,23 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             </button>
           </div>
 
-          {post.thumbnail?.src ? (
+          {post.videoUrl ? (
+            <figure className={styles.articleHero}>
+              <div className={styles.videoFrame}>
+                <iframe
+                  src={post.videoUrl}
+                  title={post.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+              <figcaption>
+                {activeLang === "ko" ? "공식 영상" : "Official video"}
+              </figcaption>
+            </figure>
+          ) : post.thumbnail?.src ? (
             <figure className={styles.articleHero}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={post.thumbnail.src} alt={post.thumbnail.alt ?? post.title} />
@@ -222,6 +238,38 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
 
           {/* 본문 (탭 선택 언어) */}
           {activeLang === "ko" ? koBody : enBody}
+
+          {/* Gallery — 본문 중간 inline 이미지 */}
+          {post.galleryImages && post.galleryImages.length > 0 ? (
+            <section className={styles.gallery}>
+              {post.galleryImages.map((g, i) => (
+                <figure key={i} className={styles.galleryItem}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={g.src} alt={g.alt} loading="lazy" />
+                  {g.caption ? <figcaption>{g.caption}</figcaption> : null}
+                </figure>
+              ))}
+            </section>
+          ) : null}
+
+          {/* Threads embed (큐레이터 글 / 영상 재생) */}
+          {post.threadsEmbedUrl ? (
+            <section className={styles.threadsBlock}>
+              <h3 className={styles.threadsTitle}>
+                {activeLang === "ko" ? "큐레이터 스레드" : "Curator's Thread"}
+              </h3>
+              <div className={styles.threadsFrame}>
+                <iframe
+                  src={post.threadsEmbedUrl}
+                  title="Threads post"
+                  loading="lazy"
+                  allowTransparency
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+            </section>
+          ) : null}
 
           {/* 공식 출처 reference 카드 */}
           {(post.officialUrl || (post.backupUrls && post.backupUrls.length > 0)) ? (
