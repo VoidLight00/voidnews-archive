@@ -200,13 +200,14 @@ export const week21: WeeklyData = {
           date: "5/14",
           platform: "X+Threads",
           title: "Codex in the ChatGPT mobile app (iOS / Android)",
-          summary: "OpenAI가 ChatGPT 모바일 앱(iOS/Android)에서 Mac/devbox에서 돌아가는 Codex 세션을 원격으로 제어할 수 있게 했다. 같은 주에 Hooks GA, Business/Enterprise programmatic access tokens, HIPAA-compliant Codex, Remote SSH GA가 함께 풀렸다.",
-          officialUrl: "https://openai.com/index/",
+          summary: "OpenAI가 ChatGPT 모바일 앱(iOS/Android)에 Codex 원격 제어를 추가했다. 폰이 코드 편집기가 되는 게 아니라, Mac·devbox·원격 환경에서 돌아가는 Codex 세션을 원격으로 보고 승인·지시하는 컨트롤 표면이 된다. 같은 주에 Hooks GA, Programmatic access tokens, HIPAA-compliant Codex, Remote SSH GA도 같이 풀렸다.",
+content: `**이게 뭐예요?**\n\n2026년 5월 14일 OpenAI가 ChatGPT 모바일 앱(iOS/Android)에 Codex를 통합한다고 발표했습니다. 폰이 IDE가 되는 게 아니라, **이미 돌아가고 있는 Codex 세션을 폰에서 원격으로 조작하는 컨트롤 표면**입니다.\n\n**무엇이 달라졌나?**\n\n- 사용 흐름: Mac의 Codex 앱 → QR 스캔으로 폰 연결 → 출력·승인·새 지시를 폰에서 실시간\n- 모든 ChatGPT 플랜(Free 포함)에서 프리뷰로 제공\n- 폰에서 보이는 것: 터미널 출력, 스크린샷, diff, 테스트 결과, 승인 요청\n- 파일·자격증명·로컬 설정은 Codex가 돌아가는 PC에 그대로 머무름 (모바일은 컨트롤만)\n- 첫 출시 시점에는 macOS Codex 데스크탑 앱에만 연결 가능 (Windows는 \"곧\" 예정)\n\n**같은 주 풀린 묶음 (\"Codex가 어디서나 돈다\"의 완성)**\n\n- Hooks GA — 이벤트 기반 자동 실행\n- Programmatic access tokens (Business/Enterprise) — CI 파이프라인에서 Codex 사용\n- HIPAA-compliant Codex — ChatGPT Enterprise 의료 워크스페이스\n- Remote SSH GA — Codex가 사내 원격 개발 환경에 직접 접속\n\n**왜 중요한가요?**\n\nCodex 주간 사용자 400만 명 + 이번 모바일 추가로 \"코딩 에이전트를 들고 다니는 시대\"가 시작됩니다. OpenAI 공식 인용: *\"Codex가 노트북, devbox, 원격 환경에서 일을 하는 동안 어디서나 흐름을 놓치지 않게 한다.\"* Virgin Atlantic, Cisco, Notion, Rakuten이 이미 프로덕션 도입.\n\n**읽을 때 볼 점**\n\n- 모바일은 코드 작성용이 아니라 \"승인/검토/지시\" 용도\n- Mac 우선, Windows 미정 — 사내 표준 OS가 Windows면 도입 시점 늦어짐\n- Accenture, Capgemini, PwC와 새 Codex Labs 파트너십도 동시기 발표",,
+          officialUrl: "https://openai.com/index/`,
           source: "https://openai.com/index/",
           tags: ["Codex", "ChatGPT mobile", "Codex Mac app", "Hooks", "Remote SSH", "공식", "hero후보"],
           featured: true,
           slug: "codex-in-the-chatgpt-mobile-app-ios-andr-13026e4d",
-          readMinutes: 1,
+          readMinutes: 5,
         },
       ],
     },
@@ -274,13 +275,37 @@ export const week21: WeeklyData = {
           date: "5/19",
           platform: "X+Threads",
           title: "I/O 2026: Welcome to the agentic Gemini era",
-          summary: "Google summarized I/O 2026 AI announcements including Gemini 3.5 Flash, Spark, agentic Search, TPU 8, Gemini Omni, and SynthID expansion.",
+          summary: "Sundar Pichai가 직접 정리한 Google I/O 2026 개요. Gemini 3.5 Flash, Gemini Spark, agentic Search, TPU 8세대, Gemini Omni, SynthID 확장이 한 자리에서 발표됐다.",
+          content: `**이게 뭐예요?**
+
+Google CEO Sundar Pichai가 2026년 5월 19일 I/O 2026 키노트에서 발표한 AI 스택 전체 개요입니다. 단일 제품 발표가 아니라 \"Gemini를 운영체제로 만든다\"는 방향성 선언에 가깝습니다.
+
+**무엇이 달라졌나?**
+
+- 모델: Gemini 3.5 Flash 출시 (속도/비용 최적)
+- 앱: Gemini app이 \"24시간 능동적인 도우미\"로 재정의
+- 에이전트: Gemini Spark (장기 실행 개인 에이전트), Daily Brief
+- 영상: Gemini Omni (텍스트·이미지·오디오·영상 통합 영상 모델)
+- 검색: agentic Search — 검색이 결과 페이지가 아니라 작업 실행 인터페이스로
+- 인프라: TPU 8세대 발표
+- 안전: SynthID 워터마크가 비디오·음성까지 확장
+- 개발자: Managed Agents in Gemini API, Antigravity 2.0, Google AI Studio 모바일 빌드
+
+**왜 중요한가요?**
+
+이번 I/O는 \"기능 추가\"가 아니라 \"제품 카테고리 재정의\"입니다. 검색은 더 이상 링크 목록이 아니고, 챗봇은 더 이상 단발 응답기가 아니며, 영상 모델은 별도 도구가 아니라 Gemini 안에 통합됩니다. OpenAI Codex의 모바일/Skills 확장, Anthropic Claude Code Agent View와 같은 흐름 — \"AI가 작업 환경 전체를 운영한다\"는 패러다임 전환의 가장 큰 단일 묶음입니다.
+
+**읽을 때 볼 점**
+
+- I/O 발표는 데모와 실제 일반 제공 시점이 다릅니다 (Gemini Omni Flash만 5/19 즉시, 나머지 일부는 \"수주 안에\")
+- Antigravity 2.0은 별도 카드로 분리된 \"개발자 키노트\" 결과물입니다
+- SynthID 확장은 의무 + 비가시 워터마크라 사용자가 끌 수 없습니다`,
           officialUrl: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
           source: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
           tags: ["Gemini", "Search", "Workspace", "Cloud", "Android", "TPU", "공식", "hero후보"],
           featured: true,
           slug: "i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd",
-          readMinutes: 1,
+          readMinutes: 5,
           thumbnail: {
             src: "/og-cache/i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd.png",
             alt: "I/O 2026: Welcome to the agentic Gemini era",
@@ -305,13 +330,33 @@ export const week21: WeeklyData = {
           date: "5/19",
           platform: "X+Threads",
           title: "Introducing Managed Agents in the Gemini API",
-          summary: "Google introduced Gemini API Managed Agents running Antigravity-based agents inside secure cloud Linux sandboxes.",
+          summary: "Google이 Gemini API에 Managed Agents(프리뷰)를 공개했다. 개발자가 직접 에이전트 런타임을 운영하지 않고도, Antigravity 기반 에이전트를 보안 클라우드 Linux 샌드박스에서 실행할 수 있다. 도구 호출·다단계 실행·실패 복구·관측이 API 한 번으로 처리된다.",
+          content: `**이게 뭐예요?**
+
+Google이 2026년 5월 19일 I/O 2026에서 **Managed Agents in the Gemini API**를 프리뷰로 공개했습니다. 개발자가 에이전트 인프라를 직접 운영하지 않고 Gemini API 한 번으로 \"진짜 에이전트\"를 실행하는 서비스입니다.
+
+**무엇이 달라졌나?**
+
+- 런타임: **Antigravity 2.0** 기반의 보안 클라우드 Linux 샌드박스
+- 개발자가 책임 안 지는 영역: 도구 호출, 다단계 실행, 실패 복구, 로깅·관측, 격리
+- 개발자가 정의하는 것: 작업 목표, 사용 가능한 도구, 권한 정책
+- AI Studio, Vertex AI에서 바로 호출 가능
+
+**왜 중요한가요?**
+
+에이전트를 만드는 회사들이 가장 많이 막히는 단계는 \"모델 호출\"이 아니라 \"안전한 실행 환경 구축\"입니다. AWS Lambda가 서버 운영을 추상화한 것처럼, Managed Agents는 **에이전트 런타임을 추상화**합니다. Anthropic의 Managed Agents, OpenAI의 Codex Skills/Automations와 같은 흐름 — 빅3 모두 \"에이전트 = 호스팅 서비스\"로 수렴.
+
+**읽을 때 볼 점**
+
+- 프리뷰 단계 — SLA, 가격, 동시성 한도는 정식 GA에서 다시 확인 필요
+- 샌드박스가 \"Linux\"라는 사실은 의도적: 임의 shell·파일시스템 접근을 허용한다는 의미
+- I/O 2026 \"Developer highlights\"의 한 축 (Antigravity 2.0, AI Studio 모바일 빌드와 묶음)`,
           officialUrl: "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/",
           source: "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/",
           tags: ["Gemini API", "Managed Agents", "Antigravity", "공식", "hero후보"],
           featured: true,
           slug: "introducing-managed-agents-in-the-gemini-ac0ae172",
-          readMinutes: 1,
+          readMinutes: 5,
           thumbnail: {
             src: "/og-cache/introducing-managed-agents-in-the-gemini-ac0ae172.png",
             alt: "Introducing Managed Agents in the Gemini API",
@@ -483,13 +528,38 @@ export const week21: WeeklyData = {
           date: "5/20",
           platform: "X+Threads",
           title: "NVIDIA Announces Financial Results for First Quarter Fiscal 2027",
-          summary: "",
+          summary: "NVIDIA가 2026년 회계연도 Q1(FY27 Q1) 실적을 발표했다. 매출 816억 달러(전년 대비 +85%), Data Center 매출 752억 달러(+92%) — 모두 분기 최고치 경신. 'AI factory 수요'라는 narrative의 첫 정량 증거.",
+          content: `**이게 뭐예요?**
+
+NVIDIA가 2026년 5월 20일 회계 분기 Q1 FY27 실적을 공식 발표했습니다.
+
+**핵심 수치 (공식 발표)**
+
+- **총 매출 816억 달러** — 전년 동기 대비 **+85%**, 분기 사상 최고
+- **Data Center 매출 752억 달러** — 전년 동기 대비 **+92%**, 역시 분기 최고
+- 전체 매출 중 데이터센터 비중 ≈ 92%
+
+**무엇이 달라졌나?**
+
+- 데이터센터가 전체 매출의 거의 모두 — \"NVIDIA = AI 인프라 회사\"라는 정체성이 수치로 굳어짐
+- Blackwell 출하가 본격 매출에 반영
+- 같은 주 발표 Vera CPU 첫 출하 + GTC Taipei + Dell AI Factory 확장과 한 묶음
+
+**왜 중요한가요?**
+
+시장은 한동안 \"AI 인프라 투자가 거품인가\"를 물었지만, 이번 분기는 \"수요가 공급을 추월한다\"의 실증입니다. Jensen Huang 인용: *\"Demand is going parabolic — utterly parabolic.\"* 같은 흐름의 정량 근거가 OpenAI/Anthropic의 컴퓨트 계약(SpaceX 등)과 맞물려 산업 전체 capex 사이클을 정당화합니다.
+
+**읽을 때 볼 점**
+
+- 분기 가이던스, 마진, 중국 매출 비중 등은 별도 IR 자료에서 확인 필요
+- AI 거품론은 매출이 아니라 \"이익 지속성\"으로 옮겨감 (전력·공급망)
+- \"AI factory\" 표현은 NVIDIA의 마케팅 프레임 — 모든 데이터센터가 AI factory는 아님",AI factory 수요\"라는 narrative의 첫 정량 증거.`,
           officialUrl: "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
           source: "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
           tags: ["NVIDIA Data Center", "AI factories", "Blackwell", "공식", "hero후보"],
           featured: true,
           slug: "nvidia-announces-financial-results-for-f-b2ddd86c",
-          readMinutes: 1,
+          readMinutes: 5,
           thumbnail: {
             src: "/og-cache/nvidia-announces-financial-results-for-f-b2ddd86c.jpg",
             alt: "NVIDIA Announces Financial Results for First Quarter Fiscal 2027",
@@ -574,13 +644,37 @@ export const week21: WeeklyData = {
           date: "5/18",
           platform: "X+Threads",
           title: "Vera Arrives: NVIDIA's First CPU Built for Agents Lands at Top AI Labs",
-          summary: "",
+          summary: "NVIDIA의 첫 에이전트 전용 CPU 'Vera'가 첫 출하됐다. Anthropic, OpenAI, SpaceXAI, Oracle Cloud Infrastructure가 첫 수령자. Vera는 Vera Rubin NVL72 시스템의 CPU 절반으로, GPU가 추론을 돌리는 동안 도구 호출·오케스트레이션·샌드박싱·분석·장기 컨텍스트 상태 관리 같은 CPU-heavy 에이전트 작업을 전담한다.",
+          content: `**이게 뭐예요?**
+
+NVIDIA가 2026년 5월 18일 첫 에이전트 워크로드 전용 CPU **Vera**의 첫 출하를 발표했습니다. Anthropic, OpenAI, SpaceXAI, Oracle Cloud Infrastructure가 첫 수령자입니다.
+
+**무엇이 달라졌나?**
+
+- Vera는 단독 CPU가 아니라 **Vera Rubin NVL72** 시스템의 핵심 절반
+- Rubin GPU(추론용) + Vera CPU(에이전트 오케스트레이션) + BlueField-4 + Spectrum-X + MGX 폼팩터
+- Vera가 담당하는 \"에이전트 CPU 작업\":
+  - tool calling (LLM이 외부 도구를 호출할 때)
+  - orchestration (여러 모델/단계 조율)
+  - sandboxing (안전 격리)
+  - analytics (실행 결과 분석)
+  - long-context state management (긴 대화 상태 유지)
+
+**왜 중요한가요?**
+
+그동안 \"AI 인프라 = GPU\"였는데, NVIDIA는 \"에이전트 시대에는 GPU만으로는 부족하다 — CPU도 에이전트 전용으로 다시 설계해야 한다\"고 주장합니다. 첫 수령자가 Anthropic/OpenAI/SpaceXAI라는 사실 자체가 \"frontier 랩이 다 같이 줄 서서 받았다\"는 시장 신호입니다.
+
+**읽을 때 볼 점**
+
+- 공급 수량·구체 사양·가격은 미공개 (\"top AI labs\"라는 표현만)
+- 같은 주 NVIDIA Q1 FY27 실적과 묶어 보면 흐름이 일관: \"AI factory 수요가 parabolic\"이라는 Jensen Huang 발언 ↔ 첫 출하 + 752억$ Data Center 매출
+- Dell Technologies World 키노트에서 함께 발표 (Dell AI Factory with NVIDIA 확장)",Vera\"가 첫 출하됐다. Anthropic, OpenAI, SpaceXAI, Oracle Cloud Infrastructure가 첫 수령자. Vera는 Vera Rubin NVL72 시스템의 CPU 절반으로, GPU가 추론을 돌리는 동안 도구 호출·오케스트레이션·샌드박싱·분석·장기 컨텍스트 상태 관리 같은 CPU-heavy 에이전트 작업을 전담한다.`,
           officialUrl: "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
           source: "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
           tags: ["NVIDIA Vera CPU", "Vera Rubin NVL72", "agentic AI infrastructure", "공식", "hero후보"],
           featured: true,
           slug: "vera-arrives-nvidia-s-first-cpu-built-fo-2dd68315",
-          readMinutes: 1,
+          readMinutes: 5,
           thumbnail: {
             src: "/og-cache/vera-arrives-nvidia-s-first-cpu-built-fo-2dd68315.jpg",
             alt: "Vera Arrives: NVIDIA's First CPU Built for Agents Lands at Top AI Labs",
@@ -894,12 +988,37 @@ export const week21: WeeklyData = {
           date: "5/18",
           platform: "X+Threads",
           title: "Krea 2 is live for everyone",
-          summary: "Krea 2 전체 사용자 공개. 한 주 동안 모든 가입자에게 무제한 Krea 2 생성을 제공.",
+          summary: "Krea가 2026년 5월 18일 Krea 2를 전체 사용자에게 공개했다. 5/15 K2 Pro 우선 공개 → 5/18 전체 공개 → 5/19 deep dive → 5/21 LoRA training까지 일주일 안에 풀린 스타일 제어 중심 이미지 파운데이션 모델. 한 주 동안 모든 가입자에게 무제한 Krea 2 생성을 제공.",
+          content: `**이게 뭐예요?**
+
+2026년 5월 18일 Krea가 **Krea 2**를 모든 사용자에게 공개했습니다. Krea가 처음부터 직접 학습한 **첫 자체 파운데이션 이미지 모델**입니다.
+
+**한 주 동안의 출시 흐름**
+
+- 5/15: K2 Pro 우선 공개 (Pro 구독자)
+- 5/15: Cannes Film Festival에서 실시간 데모
+- 5/18: 전체 사용자 공개 + **한 주간 무제한 생성**
+- 5/19: deep dive 가이드 (스타일 레퍼런스, 무드보드, 프롬프트 사용법)
+- 5/21: **LoRA training 출시** — 소수 이미지에서 스타일/캐릭터/오브젝트 학습
+
+**무엇이 달라졌나?**
+
+Krea가 표현한 핵심: 대부분의 이미지 모델은 무엇(what)을 그릴지 잘 알지만, Krea 2는 어떻게(how) 보이는지에 집중한다. 일러스트, 애니메이션, 포토리얼 사이의 스타일 통제가 핵심 차별점. LoRA training은 다중 LoRA stacking + 강도 조절 지원.
+
+**왜 중요한가요?**
+
+Midjourney·SD·FLUX가 주도하던 이미지 모델 시장에 Krea가 스타일 일관성이라는 좁고 깊은 축으로 정면 진입했습니다. 같은 흐름의 Gemini Omni(영상 분야)와 비슷한 패러다임 — 생성 자체보다 편집·일관성·통제로 무게 중심이 이동.
+
+**읽을 때 볼 점**
+
+- 오픈소스 풍문(5/21 Reddit/X)은 Krea 공식 release notes에 발표 없음 — 풍문 단계로만 취급
+- 무제한 생성 프로모션은 한 주 한정
+- LoRA training UX는 사용자 학습 곡선이 있음 — Krea 자체 가이드(deep dive) 필수`,
           officialUrl: "https://www.krea.ai/release-notes/krea-2-is-live-for-everyone",
           source: "https://www.krea.ai/release-notes/krea-2-is-live-for-everyone",
           tags: ["Krea 2", "공식"],
           slug: "krea-2-is-live-for-everyone-b5dfeabe",
-          readMinutes: 1,
+          readMinutes: 5,
           thumbnail: {
             src: "/og-cache/krea-2-is-live-for-everyone-b5dfeabe.webp",
             alt: "Krea 2 is live for everyone",
