@@ -1,8 +1,8 @@
 // Editorial route 전용 헬퍼 — w21/w22의 post를 slug로 lookup
 import { getWeek, weeks, type Post, type WeeklyData } from "./data";
 
-// 우선 w21만 editorial nested route. w22 추가 시 여기에 슬러그 추가.
-export const EDITORIAL_WEEKS = ["2026-w21"] as const;
+// w21·w22 editorial nested route (`/2026-wNN/[postSlug]/page.tsx`)
+export const EDITORIAL_WEEKS = ["2026-w21", "2026-w22"] as const;
 export type EditorialWeekSlug = (typeof EDITORIAL_WEEKS)[number];
 
 export function isEditorialWeek(slug: string): slug is EditorialWeekSlug {

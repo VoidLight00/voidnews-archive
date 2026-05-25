@@ -3,8 +3,8 @@ import { getAllSlugs, getWeek, weeks } from "@/lib/data";
 import WeeklyClient from "./WeeklyClient";
 import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
 
-// 사용자 결정: 우선 w21만 editorial 스타일 적용 (w22는 기존 WeeklyClient 유지)
-const EDITORIAL_SLUGS = new Set(["2026-w21"]);
+// 사용자 결정: w21·w22 모두 editorial 스타일 적용 (TestingCatalog 풀 페이지 라우팅)
+const EDITORIAL_SLUGS = new Set(["2026-w21", "2026-w22"]);
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
