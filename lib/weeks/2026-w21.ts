@@ -23,6 +23,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/adventhealth",
           source: "https://openai.com/index/adventhealth",
           tags: ["ChatGPT for Healthcare", "공식"],
+          slug: "adventhealth-advances-whole-person-care--54bdd59c",
+          readMinutes: 1,
         },
         {
           date: "5/21",
@@ -33,6 +35,8 @@ export const week21: WeeklyData = {
           source: "https://github.com/openai/codex/releases/tag/rust-v0.133.0",
           tags: ["Codex CLI", "Goals", "공식", "hero후보"],
           featured: true,
+          slug: "codex-rust-v0-133-0-184c8422",
+          readMinutes: 1,
         },
         {
           date: "5/20",
@@ -42,6 +46,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
           source: "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
           tags: ["OpenAI Research", "Math", "공식"],
+          slug: "an-openai-model-has-disproved-a-central--73dee1f9",
+          readMinutes: 1,
         },
         {
           date: "5/20",
@@ -51,6 +57,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/the-next-phase-of-education-for-countries",
           source: "https://openai.com/index/the-next-phase-of-education-for-countries",
           tags: ["Education for Countries", "Global Affairs", "공식"],
+          slug: "the-next-phase-of-openai-s-education-for-b2b66ea4",
+          readMinutes: 1,
         },
         {
           date: "5/20",
@@ -60,6 +68,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/ramp",
           source: "https://openai.com/index/ramp",
           tags: ["Codex", "GPT-5.5", "enterprise adoption", "공식"],
+          slug: "how-ramp-engineers-accelerate-code-revie-dfe54bb2",
+          readMinutes: 1,
         },
         {
           date: "5/20",
@@ -69,6 +79,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.com/openai/openai-cookbook/commit/0075904c509819f8d746794001a7a27066258956",
           source: "https://github.com/openai/openai-cookbook/commit/0075904c509819f8d746794001a7a27066258956",
           tags: ["OpenAI Cookbook", "evals", "공식"],
+          slug: "openai-cookbook-commit-macro-evals-cookb-d9bf2d74",
+          readMinutes: 1,
         },
         {
           date: "5/19",
@@ -78,6 +90,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/introducing-openai-for-singapore",
           source: "https://openai.com/index/introducing-openai-for-singapore",
           tags: ["OpenAI for Singapore", "Global Affairs", "공식"],
+          slug: "introducing-openai-for-singapore-39fd4877",
+          readMinutes: 1,
         },
         {
           date: "5/19",
@@ -87,6 +101,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/advancing-content-provenance",
           source: "https://openai.com/index/advancing-content-provenance",
           tags: ["Safety", "Content provenance", "공식"],
+          slug: "advancing-content-provenance-for-a-safer-7ce118d8",
+          readMinutes: 1,
         },
         {
           date: "5/19",
@@ -96,6 +112,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.com/openai/codex/releases/tag/rust-v0.132.0",
           source: "https://github.com/openai/codex/releases/tag/rust-v0.132.0",
           tags: ["Codex CLI", "Python SDK auth", "공식"],
+          slug: "codex-rust-v0-132-0-7e22537d",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/codex-rust-v0-132-0-7e22537d.jpg",
+            alt: "Codex rust-v0.132.0",
+          },
         },
         {
           date: "5/18",
@@ -105,6 +127,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/dell-codex-enterprise-partnership",
           source: "https://openai.com/index/dell-codex-enterprise-partnership",
           tags: ["Codex", "Dell", "enterprise deployment", "공식"],
+          slug: "openai-and-dell-partner-to-bring-codex-t-9d5c4fff",
+          readMinutes: 1,
         },
         {
           date: "5/16",
@@ -114,6 +138,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/malta-chatgpt-plus-partnership",
           source: "https://openai.com/index/malta-chatgpt-plus-partnership",
           tags: ["ChatGPT Plus", "Malta", "Global Affairs", "공식"],
+          slug: "openai-and-malta-partner-to-bring-chatgp-e74cfa1e",
+          readMinutes: 1,
         },
         {
           date: "5/15",
@@ -123,6 +149,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/personal-finance-chatgpt",
           source: "https://openai.com/index/personal-finance-chatgpt",
           tags: ["ChatGPT", "Personal finance", "공식"],
+          slug: "a-new-personal-finance-experience-in-cha-4f6e31bb",
+          readMinutes: 1,
         },
         {
           date: "5/15",
@@ -132,6 +160,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/index/databricks",
           source: "https://openai.com/index/databricks",
           tags: ["GPT-5.5", "Databricks", "agents", "공식"],
+          slug: "databricks-brings-gpt-5-5-to-enterprise--6719cd72",
+          readMinutes: 1,
         },
         {
           date: "5/15",
@@ -141,6 +171,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
           source: "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
           tags: ["Codex for Work", "Sales", "공식"],
+          slug: "how-sales-teams-use-codex-43467e2c",
+          readMinutes: 1,
         },
         {
           date: "5/15",
@@ -150,6 +182,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
           source: "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
           tags: ["Codex for Work", "Business operations", "공식"],
+          slug: "how-business-operations-teams-use-codex-14e2778d",
+          readMinutes: 1,
         },
         {
           date: "5/15",
@@ -159,6 +193,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
           source: "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
           tags: ["Codex for Work", "Data science", "공식"],
+          slug: "how-data-science-teams-use-codex-f9d62a00",
+          readMinutes: 1,
         },
         {
           date: "5/14",
@@ -169,6 +205,8 @@ export const week21: WeeklyData = {
           source: "https://openai.com/index/",
           tags: ["Codex", "ChatGPT mobile", "Codex Mac app", "Hooks", "Remote SSH", "공식", "hero후보"],
           featured: true,
+          slug: "codex-in-the-chatgpt-mobile-app-ios-andr-13026e4d",
+          readMinutes: 1,
         },
       ],
     },
@@ -184,6 +222,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/",
           source: "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/",
           tags: ["Google Beam", "Google Research", "공식"],
+          slug: "a-new-experiment-brings-better-group-mee-01decd7a",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/a-new-experiment-brings-better-group-mee-01decd7a.png",
+            alt: "A new experiment brings better group meetings to Google Beam",
+          },
         },
         {
           date: "5/19",
@@ -194,6 +238,12 @@ export const week21: WeeklyData = {
           source: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
           tags: ["Gemini", "Search", "Workspace", "Cloud", "Android", "TPU", "공식", "hero후보"],
           featured: true,
+          slug: "i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd.png",
+            alt: "I/O 2026: Welcome to the agentic Gemini era",
+          },
         },
         {
           date: "5/19",
@@ -203,6 +253,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
           source: "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
           tags: ["Gemini app", "Gemini 3.5 Flash", "Omni", "Daily Brief", "Spark", "공식"],
+          slug: "the-gemini-app-becomes-more-agentic-deli-8bec6d8c",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/the-gemini-app-becomes-more-agentic-deli-8bec6d8c.jpg",
+            alt: "The Gemini app becomes more agentic, delivering proactive, 24/7 help",
+          },
         },
         {
           date: "5/19",
@@ -213,6 +269,12 @@ export const week21: WeeklyData = {
           source: "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/",
           tags: ["Gemini API", "Managed Agents", "Antigravity", "공식", "hero후보"],
           featured: true,
+          slug: "introducing-managed-agents-in-the-gemini-ac0ae172",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/introducing-managed-agents-in-the-gemini-ac0ae172.png",
+            alt: "Introducing Managed Agents in the Gemini API",
+          },
         },
         {
           date: "5/19",
@@ -222,6 +284,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/",
           source: "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/",
           tags: ["Google AI Studio", "Android", "Workspace", "Antigravity", "공식"],
+          slug: "bring-any-idea-to-life-google-ai-studio--66d64068",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/bring-any-idea-to-life-google-ai-studio--66d64068.png",
+            alt: "Bring any idea to life: Google AI Studio at I/O 2026",
+          },
         },
         {
           date: "5/19",
@@ -231,6 +299,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
           source: "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
           tags: ["Antigravity 2.0", "Gemini API", "Managed Agents", "Google AI Studio", "공식"],
+          slug: "building-the-agentic-future-developer-hi-c8b5b49d",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/building-the-agentic-future-developer-hi-c8b5b49d.png",
+            alt: "Building the agentic future: Developer highlights from I/O 2026",
+          },
         },
         {
           date: "5/19",
@@ -240,6 +314,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/",
           source: "https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/",
           tags: ["NVIDIA AI platform", "Google Cloud", "Gemma", "Nemotron", "공식"],
+          slug: "nvidia-and-google-cloud-empower-the-next-639e55a0",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nvidia-and-google-cloud-empower-the-next-639e55a0.jpg",
+            alt: "NVIDIA and Google Cloud Empower the Next Wave of AI Builders",
+          },
         },
       ],
     },
@@ -255,6 +335,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news/claude-for-small-business",
           source: "https://www.anthropic.com/news/claude-for-small-business",
           tags: ["Claude", "SMB", "go-to-market", "공식"],
+          slug: "anthropic-claude-for-small-business-3b7ab7f2",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/anthropic-claude-for-small-business-3b7ab7f2.jpg",
+            alt: "Anthropic Claude for Small Business",
+          },
         },
         {
           date: "5/19",
@@ -264,6 +350,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news/widening-conversation-ai",
           source: "https://www.anthropic.com/news/widening-conversation-ai",
           tags: ["AI safety", "governance", "Claude values", "공식"],
+          slug: "widening-the-conversation-on-frontier-ai-e122375d",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/widening-the-conversation-on-frontier-ai-e122375d.jpg",
+            alt: "Widening the conversation on frontier AI",
+          },
         },
         {
           date: "5/19",
@@ -273,6 +365,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news/anthropic-kpmg",
           source: "https://www.anthropic.com/news/anthropic-kpmg",
           tags: ["Claude", "Enterprise AI", "Managed Agents", "Claude Code", "공식"],
+          slug: "kpmg-integrates-claude-across-its-core-b-e02f19cc",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/kpmg-integrates-claude-across-its-core-b-e02f19cc.jpg",
+            alt: "KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
+          },
         },
         {
           date: "5/18",
@@ -282,6 +380,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news/anthropic-acquires-stainless",
           source: "https://www.anthropic.com/news/anthropic-acquires-stainless",
           tags: ["Claude Platform", "Stainless", "SDK", "MCP", "공식"],
+          slug: "anthropic-acquires-stainless-c7a48d62",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/anthropic-acquires-stainless-c7a48d62.jpg",
+            alt: "Anthropic acquires Stainless",
+          },
         },
         {
           date: "5/11",
@@ -291,6 +395,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news",
           source: "https://www.anthropic.com/news",
           tags: ["Claude Code", "Agent View", "multi-agent CLI", "공식"],
+          slug: "claude-code-agent-view-research-preview-1cd2fb14",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/claude-code-agent-view-research-preview-1cd2fb14.jpg",
+            alt: "Claude Code Agent View (Research Preview)",
+          },
         },
       ],
     },
@@ -306,6 +416,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/",
           source: "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/",
           tags: ["NVIDIA AI", "GTC Taipei", "COMPUTEX", "Jetson Thor", "공식"],
+          slug: "nvidia-gtc-taipei-at-computex-live-updat-03bdec81",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nvidia-gtc-taipei-at-computex-live-updat-03bdec81.jpg",
+            alt: "NVIDIA GTC Taipei at COMPUTEX: Live Updates on What's Next in AI",
+          },
         },
         {
           date: "5/21",
@@ -315,6 +431,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://developer.nvidia.com/blog/building-token-metered-ai-services-on-telco-ai-factories/",
           source: "https://developer.nvidia.com/blog/building-token-metered-ai-services-on-telco-ai-factories/",
           tags: ["NVIDIA Telco AI", "AI Factory", "NIM", "NeMo", "공식"],
+          slug: "building-token-metered-ai-services-on-te-434cbec0",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/building-token-metered-ai-services-on-te-434cbec0.webp",
+            alt: "Building Token-Metered AI Services on Telco AI Factories",
+          },
         },
         {
           date: "5/20",
@@ -325,6 +447,12 @@ export const week21: WeeklyData = {
           source: "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
           tags: ["NVIDIA Data Center", "AI factories", "Blackwell", "공식", "hero후보"],
           featured: true,
+          slug: "nvidia-announces-financial-results-for-f-b2ddd86c",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nvidia-announces-financial-results-for-f-b2ddd86c.jpg",
+            alt: "NVIDIA Announces Financial Results for First Quarter Fiscal 2027",
+          },
         },
         {
           date: "5/20",
@@ -334,6 +462,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-customization/",
           source: "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-customization/",
           tags: ["NVIDIA NeMo", "Agentic AI", "Nemotron", "공식"],
+          slug: "mastering-agentic-techniques-ai-agent-cu-18dc78b2",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/mastering-agentic-techniques-ai-agent-cu-18dc78b2.webp",
+            alt: "Mastering Agentic Techniques: AI Agent Customization",
+          },
         },
         {
           date: "5/20",
@@ -343,6 +477,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://developer.nvidia.com/blog/add-a-specialized-deep-research-skill-to-agent-harnesses/",
           source: "https://developer.nvidia.com/blog/add-a-specialized-deep-research-skill-to-agent-harnesses/",
           tags: ["NVIDIA AI-Q", "NeMo Agent Toolkit", "agent harness", "공식"],
+          slug: "add-a-specialized-deep-research-skill-to-4d486b31",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/add-a-specialized-deep-research-skill-to-4d486b31.webp",
+            alt: "Add a Specialized Deep Research Skill to Agent Harnesses",
+          },
         },
         {
           date: "5/19",
@@ -352,6 +492,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/",
           source: "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/",
           tags: ["NVIDIA Agent Skills", "agent governance", "공식"],
+          slug: "nvidia-verified-agent-skills-provide-cap-e84a94b7",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nvidia-verified-agent-skills-provide-cap-e84a94b7.webp",
+            alt: "NVIDIA-Verified Agent Skills Provide Capability Governance for AI Agents",
+          },
         },
         {
           date: "5/19",
@@ -361,6 +507,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-evaluation/",
           source: "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-evaluation/",
           tags: ["NVIDIA NeMo Agent Toolkit", "agent evaluation", "공식"],
+          slug: "mastering-agentic-techniques-ai-agent-ev-8987f06f",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/mastering-agentic-techniques-ai-agent-ev-8987f06f.webp",
+            alt: "Mastering Agentic Techniques: AI Agent Evaluation",
+          },
         },
         {
           date: "5/18",
@@ -370,6 +522,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://blogs.nvidia.com/blog/dell-technologies-agent-enterprise-ai/",
           source: "https://blogs.nvidia.com/blog/dell-technologies-agent-enterprise-ai/",
           tags: ["Dell AI Factory with NVIDIA", "Vera Rubin", "enterprise agentic AI", "공식"],
+          slug: "nvidia-ceo-jensen-huang-at-dell-technolo-e58f42c0",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nvidia-ceo-jensen-huang-at-dell-technolo-e58f42c0.jpg",
+            alt: "NVIDIA CEO Jensen Huang at Dell Technologies World: Demand Is Going Parabolic, Utterly Parabolic",
+          },
         },
         {
           date: "5/18",
@@ -380,6 +538,12 @@ export const week21: WeeklyData = {
           source: "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
           tags: ["NVIDIA Vera CPU", "Vera Rubin NVL72", "agentic AI infrastructure", "공식", "hero후보"],
           featured: true,
+          slug: "vera-arrives-nvidia-s-first-cpu-built-fo-2dd68315",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/vera-arrives-nvidia-s-first-cpu-built-fo-2dd68315.jpg",
+            alt: "Vera Arrives: NVIDIA's First CPU Built for Agents Lands at Top AI Labs",
+          },
         },
       ],
     },
@@ -395,6 +559,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.blog/changelog/2026-05-20-auto-model-selection-now-routes-based-on-your-task-in-vs-code",
           source: "https://github.blog/changelog/2026-05-20-auto-model-selection-now-routes-based-on-your-task-in-vs-code",
           tags: ["GitHub Copilot", "VS Code", "model routing", "공식"],
+          slug: "auto-model-selection-now-routes-based-on-cd41cce4",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/auto-model-selection-now-routes-based-on-cd41cce4.png",
+            alt: "Auto model selection now routes based on your task in VS Code",
+          },
         },
         {
           date: "5/19",
@@ -405,6 +575,12 @@ export const week21: WeeklyData = {
           source: "https://github.blog/changelog/2026-05-19-easily-apply-copilot-code-review-feedback-with-copilot-cloud-agent",
           tags: ["GitHub Copilot cloud agent", "code review", "공식", "hero후보"],
           featured: true,
+          slug: "easily-apply-copilot-code-review-feedbac-4683c903",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/easily-apply-copilot-code-review-feedbac-4683c903.jpg",
+            alt: "Easily apply Copilot code review feedback with Copilot cloud agent",
+          },
         },
         {
           date: "5/19",
@@ -414,6 +590,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.blog/changelog/2026-05-19-gemini-3-5-flash-is-generally-available-for-github-copilot",
           source: "https://github.blog/changelog/2026-05-19-gemini-3-5-flash-is-generally-available-for-github-copilot",
           tags: ["GitHub Copilot", "models", "공식"],
+          slug: "gemini-3-5-flash-is-generally-available--4d91d7f1",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gemini-3-5-flash-is-generally-available--4d91d7f1.png",
+            alt: "Gemini 3.5 Flash is generally available for GitHub Copilot",
+          },
         },
         {
           date: "5/18",
@@ -424,6 +606,12 @@ export const week21: WeeklyData = {
           source: "https://github.blog/changelog/2026-05-18-one-click-fixes-for-failing-actions-with-copilot-cloud-agent",
           tags: ["GitHub Actions", "Copilot cloud agent", "공식", "hero후보"],
           featured: true,
+          slug: "one-click-fixes-for-failing-actions-with-e02c868a",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/one-click-fixes-for-failing-actions-with-e02c868a.png",
+            alt: "One-click fixes for failing Actions with Copilot cloud agent",
+          },
         },
         {
           date: "5/17",
@@ -433,6 +621,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.blog/changelog/2026-05-17-gpt-5-3-codex-is-now-the-base-model-for-copilot-business-and-enterprise",
           source: "https://github.blog/changelog/2026-05-17-gpt-5-3-codex-is-now-the-base-model-for-copilot-business-and-enterprise",
           tags: ["GitHub Copilot Business", "GitHub Copilot Enterprise", "공식"],
+          slug: "gpt-5-3-codex-is-now-the-base-model-for--d3b67286",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.png",
+            alt: "GPT-5.3-Codex is now the base model for Copilot Business and Enterprise",
+          },
         },
         {
           date: "5/15",
@@ -442,6 +636,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.blog/changelog/2026-05-15-copilot-memory-supports-user-preferences-for-pro-pro-users",
           source: "https://github.blog/changelog/2026-05-15-copilot-memory-supports-user-preferences-for-pro-pro-users",
           tags: ["GitHub Copilot Memory", "공식"],
+          slug: "copilot-memory-supports-user-preferences-785b4e51",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/copilot-memory-supports-user-preferences-785b4e51.png",
+            alt: "Copilot Memory supports user preferences for Pro, Pro+ users",
+          },
         },
       ],
     },
@@ -457,6 +657,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://cursor.com/changelog/05-20-26",
           source: "https://cursor.com/changelog/05-20-26",
           tags: ["Cursor Automations", "Agents Window", "공식"],
+          slug: "improvements-to-cursor-automations-4b9e0ee2",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/improvements-to-cursor-automations-4b9e0ee2.png",
+            alt: "Improvements to Cursor Automations",
+          },
         },
         {
           date: "5/19",
@@ -466,6 +672,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://cursor.com/changelog/05-19-26",
           source: "https://cursor.com/changelog/05-19-26",
           tags: ["Cursor cloud agent", "Jira", "공식"],
+          slug: "cursor-in-jira-57aa0e15",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/cursor-in-jira-57aa0e15.png",
+            alt: "Cursor in Jira",
+          },
         },
         {
           date: "5/18",
@@ -475,6 +687,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://cursor.com/changelog/composer-2-5",
           source: "https://cursor.com/changelog/composer-2-5",
           tags: ["Cursor Composer", "공식"],
+          slug: "composer-2-5-3507df22",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/composer-2-5-3507df22.png",
+            alt: "Composer 2.5",
+          },
         },
       ],
     },
@@ -490,6 +708,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://devblogs.microsoft.com/visualstudio/plan-before-you-build-introducing-the-plan-agent-in-visual-studio/",
           source: "https://devblogs.microsoft.com/visualstudio/plan-before-you-build-introducing-the-plan-agent-in-visual-studio/",
           tags: ["Visual Studio", "Copilot", "Plan agent", "공식"],
+          slug: "plan-before-you-build-introducing-the-pl-6e7d2f7a",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/plan-before-you-build-introducing-the-pl-6e7d2f7a.webp",
+            alt: "Plan Before You Build: Introducing the Plan agent in Visual Studio",
+          },
         },
       ],
     },
@@ -506,6 +730,12 @@ export const week21: WeeklyData = {
           source: "https://docs.x.ai/developers/release-notes",
           tags: ["xAI API", "Grok Build", "coding agent model", "공식", "hero후보"],
           featured: true,
+          slug: "grok-build-0-1-added-to-xai-release-note-1de20131",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/grok-build-0-1-added-to-xai-release-note-1de20131.jpg",
+            alt: "Grok Build 0.1 added to xAI release notes",
+          },
         },
         {
           date: "5/15",
@@ -515,6 +745,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://docs.x.ai/developers/migration/may-15-retirement",
           source: "https://docs.x.ai/developers/migration/may-15-retirement",
           tags: ["xAI API", "Grok Models", "공식"],
+          slug: "grok-model-retirement-on-may-15-2026-9ba2517f",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/grok-model-retirement-on-may-15-2026-9ba2517f.jpg",
+            alt: "Grok Model Retirement on May 15, 2026",
+          },
         },
       ],
     },
@@ -530,6 +766,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
           source: "https://vercel.com/changelog/qwen-3-7-max-now-available-on-vercel-ai-gateway",
           tags: ["Vercel AI Gateway", "Qwen", "공식"],
+          slug: "qwen-3-7-max-now-available-on-vercel-ai--ea436015",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/qwen-3-7-max-now-available-on-vercel-ai--ea436015.png",
+            alt: "Qwen 3.7 Max now available on Vercel AI Gateway",
+          },
         },
         {
           date: "5/20",
@@ -539,6 +781,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools",
           source: "https://vercel.com/changelog/chat-sdk-now-includes-ai-sdk-tools",
           tags: ["Vercel Chat SDK", "AI SDK", "공식"],
+          slug: "chat-sdk-now-includes-ai-sdk-tools-fbff1453",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/chat-sdk-now-includes-ai-sdk-tools-fbff1453.png",
+            alt: "Chat SDK now includes AI SDK tools",
+          },
         },
         {
           date: "5/20",
@@ -548,6 +796,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
           source: "https://vercel.com/changelog/grok-build-0-1-now-available-on-vercel-ai-gateway",
           tags: ["Vercel AI Gateway", "xAI", "agentic coding", "공식"],
+          slug: "grok-build-0-1-now-available-on-vercel-a-b7c5d45d",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/grok-build-0-1-now-available-on-vercel-a-b7c5d45d.png",
+            alt: "Grok Build 0.1 now available on Vercel AI Gateway",
+          },
         },
       ],
     },
@@ -563,6 +817,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.krea.ai/release-notes/krea-2-lora-training-is-here",
           source: "https://www.krea.ai/release-notes/krea-2-lora-training-is-here",
           tags: ["Krea 2", "LoRA training", "multi-LoRA stacking", "공식"],
+          slug: "krea-2-lora-training-is-here-17d6e9dc",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/krea-2-lora-training-is-here-17d6e9dc.webp",
+            alt: "Krea 2 LoRA training is here",
+          },
         },
         {
           date: "5/19",
@@ -572,6 +832,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.krea.ai/release-notes/krea-2-deep-dive",
           source: "https://www.krea.ai/release-notes/krea-2-deep-dive",
           tags: ["Krea 2", "style references", "moodboard", "공식"],
+          slug: "krea-2-deep-dive-91a631fa",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/krea-2-deep-dive-91a631fa.webp",
+            alt: "Krea 2 deep dive",
+          },
         },
         {
           date: "5/18",
@@ -581,6 +847,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.krea.ai/release-notes/krea-2-is-live-for-everyone",
           source: "https://www.krea.ai/release-notes/krea-2-is-live-for-everyone",
           tags: ["Krea 2", "공식"],
+          slug: "krea-2-is-live-for-everyone-b5dfeabe",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/krea-2-is-live-for-everyone-b5dfeabe.webp",
+            alt: "Krea 2 is live for everyone",
+          },
         },
         {
           date: "5/15",
@@ -590,6 +862,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.krea.ai/release-notes/k2-is-now-available-for-pro",
           source: "https://www.krea.ai/release-notes/k2-is-now-available-for-pro",
           tags: ["Krea 2", "image foundation model", "공식"],
+          slug: "k2-is-now-available-for-pro-4a1a33b6",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/k2-is-now-available-for-pro-4a1a33b6.png",
+            alt: "K2 is now available for Pro",
+          },
         },
         {
           date: "5/15",
@@ -599,6 +877,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.krea.ai/release-notes/krea-at-cannes-film-festival",
           source: "https://www.krea.ai/release-notes/krea-at-cannes-film-festival",
           tags: ["Krea 2", "real-time generation", "film", "공식"],
+          slug: "krea-at-cannes-film-festival-d09a5965",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/krea-at-cannes-film-festival-d09a5965.png",
+            alt: "Krea at Cannes Film Festival",
+          },
         },
       ],
     },
@@ -614,6 +898,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://about.fb.com/news/2026/05/meta-ai-wearables-changing-the-game-for-disabled-people/",
           source: "https://about.fb.com/news/2026/05/meta-ai-wearables-changing-the-game-for-disabled-people/",
           tags: ["Meta AI wearables", "AI glasses", "accessibility", "공식"],
+          slug: "our-ai-wearables-are-changing-the-game-f-e1466393",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/our-ai-wearables-are-changing-the-game-f-e1466393.jpg",
+            alt: "Our AI Wearables Are Changing the Game for Disabled People",
+          },
         },
       ],
     },
@@ -629,6 +919,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
           source: "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
           tags: ["agent evaluation", "leaderboard", "공식"],
+          slug: "the-open-agent-leaderboard-4aacdb26",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/the-open-agent-leaderboard-4aacdb26.png",
+            alt: "The Open Agent Leaderboard",
+          },
         },
       ],
     },
@@ -644,6 +940,12 @@ export const week21: WeeklyData = {
           officialUrl: "https://github.com/Nutlope/hallmark",
           source: "https://github.com/Nutlope/hallmark",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "nutlope-hallmark-anti-ai-slop-디자인-가이드를-코-4fabea9d",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nutlope-hallmark-anti-ai-slop-디자인-가이드를-코-4fabea9d.jpg",
+            alt: "Nutlope/hallmark — anti-AI-slop 디자인 가이드를 코드 스킬로 패키지화한 오픈소스. 사용자가 찾던 '오픈소스 공유할 만한' 후보.",
+          },
         },
         {
           date: "5/21",
@@ -653,6 +955,8 @@ export const week21: WeeklyData = {
           officialUrl: "https://www.youtube.com/watch?v=EN7frwQIbKc",
           source: "https://www.youtube.com/watch?v=EN7frwQIbKc",
           tags: ["실전 팁", "공식"],
+          slug: "yc-diana-hu-ai-native-company-구성-방식-85b5079d",
+          readMinutes: 1,
         },
       ],
     },

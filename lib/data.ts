@@ -28,6 +28,8 @@ export interface Post {
   thumbnail?: MediaImage;
   images?: MediaImage[];
   tags?: string[];
+  slug?: string;         // 영문 short hash slug — w21/w22 editorial route 전용 (/[week]/[postSlug])
+  readMinutes?: number;  // 예상 읽기 시간 (분) — editorial card byline 표시용
 }
 
 export interface Company {

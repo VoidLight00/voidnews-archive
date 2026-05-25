@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import { getAllSlugs, getWeek, weeks } from "@/lib/data";
 import WeeklyClient from "./WeeklyClient";
+import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
+
+const EDITORIAL_SLUGS = new Set(["2026-w21", "2026-w22"]);
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -29,6 +32,17 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
   const nextWeek = weeks[currentIdx - 1]
     ? { slug: weeks[currentIdx - 1].slug, week: weeks[currentIdx - 1].week }
     : undefined;
+
+  if (EDITORIAL_SLUGS.has(slug)) {
+    return (
+      <EditorialWeeklyClient
+        data={data}
+        prevWeek={prevWeek}
+        nextWeek={nextWeek}
+        latestWeek={{ slug: latestWeek.slug, week: latestWeek.week }}
+      />
+    );
+  }
 
   return (
     <WeeklyClient

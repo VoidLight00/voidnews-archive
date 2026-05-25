@@ -23,6 +23,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://help.openai.com/en/articles/6825453-chatgpts-release-notes",
           source: "https://help.openai.com/en/articles/6825453-chatgpts-release-notes",
           tags: ["Codex", "Goal mode", "공식"],
+          slug: "openai-codex-goal-mode-generally-availab-62cd0085",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/openai-codex-goal-mode-generally-availab-62cd0085.png",
+            alt: "OpenAI Codex Goal mode generally available",
+          },
         },
         {
           date: "5/22",
@@ -32,6 +38,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://openai.com/index/gartner-2026-agentic-coding-leader",
           source: "https://openai.com/index/gartner-2026-agentic-coding-leader",
           tags: ["Codex", "Enterprise coding agents", "공식"],
+          slug: "openai-named-a-leader-in-enterprise-codi-1a8ac248",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -41,6 +49,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://openai.com/index/virgin-atlantic",
           source: "https://openai.com/index/virgin-atlantic",
           tags: ["Codex", "enterprise adoption", "공식"],
+          slug: "how-virgin-atlantic-ships-faster-with-co-35f64cca",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -51,6 +61,8 @@ export const week22: WeeklyData = {
           source: "https://openai.com/index/work-with-codex-from-anywhere/",
           tags: ["Codex", "ChatGPT mobile", "공식", "hero후보"],
           featured: true,
+          slug: "work-with-codex-from-anywhere-codex-in-c-aa73b5cd",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -61,6 +73,8 @@ export const week22: WeeklyData = {
           source: "https://openai.com/index/introducing-the-codex-app/",
           tags: ["Codex app", "Skills", "Automations", "공식", "hero후보"],
           featured: true,
+          slug: "introducing-the-codex-app-skills-and-aut-bff38c35",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -70,6 +84,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://x.com/OpenAI/status/2055016850849993072",
           source: "https://x.com/OpenAI/status/2055016850849993072",
           tags: ["Codex", "remote connections", "공식"],
+          slug: "openai-codex-remote-connections-official-094d368b",
+          readMinutes: 1,
         },
       ],
     },
@@ -85,6 +101,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
           source: "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
           tags: ["Gemini", "Android", "공식"],
+          slug: "google-gemini-intelligence-on-android-896850d5",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/google-gemini-intelligence-on-android-896850d5.png",
+            alt: "Google Gemini Intelligence on Android",
+          },
         },
         {
           date: "5/23",
@@ -94,6 +116,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
           source: "https://blog.google/products/ads-commerce/google-marketing-live-search-ads/",
           tags: ["Google Search", "AI Mode", "Ads", "공식"],
+          slug: "google-ai-mode-ads-gemini-built-ad-forma-e9bb3546",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/google-ai-mode-ads-gemini-built-ad-forma-e9bb3546.png",
+            alt: "Google AI Mode ads: Gemini-built ad formats in Search",
+          },
         },
         {
           date: "5/22",
@@ -103,6 +131,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://help.youtube.com/intl/en_sg/chrome/ai-innovations/",
           source: "https://help.youtube.com/intl/en_sg/chrome/ai-innovations/",
           tags: ["Gemini", "Chrome", "공식"],
+          slug: "google-gemini-in-chrome-youtube-help-cur-f2140de6",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/google-gemini-in-chrome-youtube-help-cur-f2140de6.png",
+            alt: "Google Gemini in Chrome (YouTube help curation)",
+          },
         },
         {
           date: "5/22",
@@ -112,6 +146,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://deepmind.google/blog/ai-pointer/",
           source: "https://deepmind.google/blog/ai-pointer/",
           tags: ["Google DeepMind", "AI Pointer", "공식"],
+          slug: "google-deepmind-ai-pointer-40a96ed5",
+          readMinutes: 1,
         },
       ],
     },
@@ -127,6 +163,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news/claude-for-creative-work",
           source: "https://www.anthropic.com/news/claude-for-creative-work",
           tags: ["Claude", "creative", "connectors", "공식"],
+          slug: "claude-for-creative-work-connectors-8113d388",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/claude-for-creative-work-connectors-8113d388.jpg",
+            alt: "Claude for Creative Work — connectors",
+          },
         },
         {
           date: "5/23",
@@ -136,6 +178,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://www.anthropic.com/news/higher-limits-spacex",
           source: "https://www.anthropic.com/news/higher-limits-spacex",
           tags: ["Claude", "compute capacity", "SpaceX", "공식"],
+          slug: "anthropic-claude-limits-and-spacex-compu-f8ea46f3",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/anthropic-claude-limits-and-spacex-compu-f8ea46f3.jpg",
+            alt: "Anthropic Claude limits and SpaceX compute capacity",
+          },
         },
         {
           date: "5/22",
@@ -145,6 +193,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://www.anthropic.com/research/glasswing-initial-update",
           source: "https://www.anthropic.com/research/glasswing-initial-update",
           tags: ["Project Glasswing", "security", "Claude Mythos Preview", "공식"],
+          slug: "project-glasswing-an-initial-update-ade080fa",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/project-glasswing-an-initial-update-ade080fa.jpg",
+            alt: "Project Glasswing: An initial update",
+          },
         },
       ],
     },
@@ -160,6 +214,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
           source: "https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
           tags: ["NVIDIA Nemotron", "diffusion language models", "공식"],
+          slug: "towards-speed-of-light-text-generation-w-f5f64849",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/towards-speed-of-light-text-generation-w-f5f64849.png",
+            alt: "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
+          },
         },
         {
           date: "5/23",
@@ -169,6 +229,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
           source: "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
           tags: ["NVIDIA Nemotron", "multimodal", "long-context", "공식"],
+          slug: "nvidia-nemotron-3-nano-omni-long-context-582dc0fd",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/nvidia-nemotron-3-nano-omni-long-context-582dc0fd.png",
+            alt: "NVIDIA Nemotron 3 Nano Omni long-context multimodal model",
+          },
         },
       ],
     },
@@ -184,6 +250,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://forum.cursor.com/t/cursor-3-5-17-removed-keep-undo-and-applies-agent-changes-directly/161325",
           source: "https://forum.cursor.com/t/cursor-3-5-17-removed-keep-undo-and-applies-agent-changes-directly/161325",
           tags: ["Cursor", "3.5.17", "UX regression", "공식"],
+          slug: "cursor-3-5-17-keep-undo-community-issue-71b08064",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/cursor-3-5-17-keep-undo-community-issue-71b08064.png",
+            alt: "Cursor 3.5.17 Keep/Undo community issue",
+          },
         },
       ],
     },
@@ -199,6 +271,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://vercel.com/blog/ai-gateway-production-index",
           source: "https://vercel.com/blog/ai-gateway-production-index",
           tags: ["Vercel AI Gateway", "agentic workloads", "공식"],
+          slug: "vercel-ai-gateway-production-index-agent-56654a1f",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/vercel-ai-gateway-production-index-agent-56654a1f.png",
+            alt: "Vercel AI Gateway production index — agentic workloads & multi-model routing",
+          },
         },
       ],
     },
@@ -215,6 +293,12 @@ export const week22: WeeklyData = {
           source: "https://thinkingmachines.ai/blog/interaction-models/",
           tags: ["Thinking Machines", "interaction models", "공식", "hero후보"],
           featured: true,
+          slug: "thinking-machines-interaction-models-off-1707227c",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/thinking-machines-interaction-models-off-1707227c.jpg",
+            alt: "Thinking Machines Interaction Models — official demo + blog",
+          },
         },
         {
           date: "5/24",
@@ -224,6 +308,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://github.com/builderpepc/agent-migrator",
           source: "https://github.com/builderpepc/agent-migrator",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "builderpepc-agent-migrator-ai-코딩-세션을-도구--79da5aaf",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/builderpepc-agent-migrator-ai-코딩-세션을-도구--79da5aaf.jpg",
+            alt: "builderpepc/agent-migrator — AI 코딩 세션을 도구 간 마이그레이션하는 오픈소스. Claude Code/Codex/Cursor 사이 컨텍스트 이전 시나리오.",
+          },
         },
         {
           date: "5/24",
@@ -233,6 +323,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://github.com/manaflow-ai/cmux",
           source: "https://github.com/manaflow-ai/cmux",
           tags: ["실전 팁", "공식"],
+          slug: "peter-steinberger-cmux-codex-cli-workflo-8a7988df",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/peter-steinberger-cmux-codex-cli-workflo-8a7988df.jpg",
+            alt: "Peter Steinberger cmux + Codex CLI workflow split",
+          },
         },
         {
           date: "5/23",
@@ -242,6 +338,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://openai.com/index/openai-on-aws/",
           source: "https://openai.com/index/openai-on-aws/",
           tags: ["OpenAI", "AWS Bedrock", "Managed Agents", "공식"],
+          slug: "openai-models-codex-and-managed-agents-o-561b585a",
+          readMinutes: 1,
         },
         {
           date: "5/23",
@@ -251,6 +349,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
           source: "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
           tags: ["PaddleOCR", "Transformers", "공식"],
+          slug: "paddleocr-3-5-transformers-backend-6045b8d7",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/paddleocr-3-5-transformers-backend-6045b8d7.jpg",
+            alt: "PaddleOCR 3.5 Transformers backend",
+          },
         },
         {
           date: "5/23",
@@ -260,6 +364,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale",
           source: "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale",
           tags: ["OCR", "specialization", "공식"],
+          slug: "dharma-ai-specialization-beats-scale-ocr-2060b41d",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/dharma-ai-specialization-beats-scale-ocr-2060b41d.png",
+            alt: "Dharma-AI specialization beats scale OCR benchmark",
+          },
         },
         {
           date: "5/23",
@@ -269,6 +379,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/inference-providers-deepinfra",
           source: "https://huggingface.co/blog/inference-providers-deepinfra",
           tags: ["Hugging Face", "DeepInfra", "Inference Providers", "공식"],
+          slug: "deepinfra-on-hugging-face-inference-prov-78285777",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/deepinfra-on-hugging-face-inference-prov-78285777.jpg",
+            alt: "DeepInfra on Hugging Face Inference Providers",
+          },
         },
         {
           date: "5/23",
@@ -278,6 +394,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/allenai/olmoearth-v1-1",
           source: "https://huggingface.co/blog/allenai/olmoearth-v1-1",
           tags: ["AllenAI", "Earth observation", "공식"],
+          slug: "olmoearth-v1-1-efficient-earth-observati-574e69d6",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/olmoearth-v1-1-efficient-earth-observati-574e69d6.png",
+            alt: "OlmoEarth v1.1 efficient Earth observation AI models",
+          },
         },
         {
           date: "5/23",
@@ -287,6 +409,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
           source: "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
           tags: ["IBM Granite", "embedding", "공식"],
+          slug: "granite-embedding-multilingual-r2-b3435e58",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/granite-embedding-multilingual-r2-b3435e58.png",
+            alt: "Granite Embedding Multilingual R2",
+          },
         },
         {
           date: "5/23",
@@ -296,6 +424,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/continuous_async",
           source: "https://huggingface.co/blog/continuous_async",
           tags: ["Hugging Face", "inference", "batching", "공식"],
+          slug: "hugging-face-asynchronous-continuous-bat-9edd7b70",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/hugging-face-asynchronous-continuous-bat-9edd7b70.png",
+            alt: "Hugging Face asynchronous continuous batching",
+          },
         },
         {
           date: "5/23",
@@ -305,6 +439,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ibm-granite/granite-4-1",
           source: "https://huggingface.co/blog/ibm-granite/granite-4-1",
           tags: ["IBM Granite 4.1", "training", "공식"],
+          slug: "ibm-granite-4-1-llms-training-pipeline-987a2bb7",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/ibm-granite-4-1-llms-training-pipeline-987a2bb7.png",
+            alt: "IBM Granite 4.1 LLMs training pipeline",
+          },
         },
         {
           date: "5/23",
@@ -314,6 +454,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/amazon/foundation-model-building-blocks",
           source: "https://huggingface.co/blog/amazon/foundation-model-building-blocks",
           tags: ["AWS", "foundation model", "training", "공식"],
+          slug: "aws-foundation-model-training-and-infere-8a183928",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/aws-foundation-model-training-and-infere-8a183928.png",
+            alt: "AWS foundation model training and inference building blocks",
+          },
         },
         {
           date: "5/23",
@@ -323,6 +469,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
           source: "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
           tags: ["vLLM", "RLHF", "correctness", "공식"],
+          slug: "vllm-v0-to-v1-rl-backend-correctness-a4477de8",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/vllm-v0-to-v1-rl-backend-correctness-a4477de8.png",
+            alt: "vLLM V0 to V1 RL backend correctness",
+          },
         },
         {
           date: "5/23",
@@ -332,6 +484,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/open-asr-leaderboard-private-data",
           source: "https://huggingface.co/blog/open-asr-leaderboard-private-data",
           tags: ["Open ASR Leaderboard", "evaluation", "공식"],
+          slug: "open-asr-leaderboard-private-evaluation--3ed2efe1",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/open-asr-leaderboard-private-evaluation--3ed2efe1.png",
+            alt: "Open ASR Leaderboard private evaluation sets",
+          },
         },
         {
           date: "5/23",
@@ -341,6 +499,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://github.com/manaflow-ai/cmux",
           source: "https://github.com/manaflow-ai/cmux",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "manaflow-ai-cmux-peter-steinberger가-소개한--0f69a44c",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/manaflow-ai-cmux-peter-steinberger가-소개한--0f69a44c.jpg",
+            alt: "manaflow-ai/cmux — Peter Steinberger가 소개한 Codex CLI 워크플로우 분할용 tmux 보조 도구. 본인이 cmux/cmuxr 하네스 사용자라 직",
+          },
         },
         {
           date: "5/23",
@@ -350,6 +514,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/allenai/olmoearth-v1-1",
           source: "https://huggingface.co/blog/allenai/olmoearth-v1-1",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "allenai-olmoearth-v1-1-earth-observation-632301e1",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/allenai-olmoearth-v1-1-earth-observation-632301e1.png",
+            alt: "allenai/OlmoEarth v1.1 — Earth observation을 위한 경량 오픈 모델.",
+          },
         },
         {
           date: "5/23",
@@ -359,6 +529,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ibm-granite/granite-4-1",
           source: "https://huggingface.co/blog/ibm-granite/granite-4-1",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "ibm-granite-4-1-ibm의-오픈-llm-라인업-4-1-학습-파-21a34a9c",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/ibm-granite-4-1-ibm의-오픈-llm-라인업-4-1-학습-파-21a34a9c.png",
+            alt: "IBM Granite 4.1 — IBM의 오픈 LLM 라인업 4.1 학습 파이프라인 공개.",
+          },
         },
         {
           date: "5/23",
@@ -368,6 +544,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
           source: "https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "vllm-rl-backend-correctness-servicenow-v-b23a6b34",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/vllm-rl-backend-correctness-servicenow-v-b23a6b34.png",
+            alt: "vLLM RL backend correctness (ServiceNow) — vLLM RL 학습 backend의 V0→V1 정합성 정리.",
+          },
         },
         {
           date: "5/23",
@@ -377,6 +559,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/continuous_async",
           source: "https://huggingface.co/blog/continuous_async",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "hf-continuous-async-batching-hf-inferenc-f4c0835a",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/hf-continuous-async-batching-hf-inferenc-f4c0835a.png",
+            alt: "HF continuous async batching — HF inference 비동기 연속 배치 처리 가이드.",
+          },
         },
         {
           date: "5/23",
@@ -386,6 +574,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
           source: "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "ibm-granite-embedding-multilingual-r2-오픈-02a6a250",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/ibm-granite-embedding-multilingual-r2-오픈-02a6a250.png",
+            alt: "IBM Granite Embedding Multilingual R2 — 오픈 다국어 임베딩 모델 R2.",
+          },
         },
         {
           date: "5/23",
@@ -395,6 +589,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
           source: "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "paddleocr-3-5-transformers-paddleocr을-tr-46b1f9d1",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/paddleocr-3-5-transformers-paddleocr을-tr-46b1f9d1.jpg",
+            alt: "PaddleOCR 3.5 Transformers — PaddleOCR을 Transformers 백엔드로 실행하는 가이드.",
+          },
         },
         {
           date: "2026-05 (multiple)",
@@ -404,6 +604,12 @@ export const week22: WeeklyData = {
           officialUrl: "https://github.com/tw93/Mole",
           source: "https://github.com/tw93/Mole",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "tw93-mole-macos-deep-clean-optimize-cli--74a86de7",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/tw93-mole-macos-deep-clean-optimize-cli--74a86de7.jpg",
+            alt: "tw93/Mole — macOS deep clean & optimize CLI. 2026-05 업데이트로 Claude Code, Cursor Agent, GitHub",
+          },
         },
         {
           date: "5/23",
@@ -413,6 +619,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://www.youtube.com/watch?v=eW3oTyfeWZ0",
           source: "https://www.youtube.com/watch?v=eW3oTyfeWZ0",
           tags: ["실전 팁", "공식"],
+          slug: "claude-code-context-management-compact-v-754f9eaa",
+          readMinutes: 1,
         },
         {
           date: "5/23",
@@ -422,6 +630,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://www.youtube.com/watch?v=uSs7PPAJR20",
           source: "https://www.youtube.com/watch?v=uSs7PPAJR20",
           tags: ["실전 팁", "공식"],
+          slug: "jensen-huang-cmu-commencement-ai-jobs-me-15724e4b",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -432,6 +642,12 @@ export const week22: WeeklyData = {
           source: "https://qwen.ai/blog?id=qwen3.7",
           tags: ["Qwen", "Alibaba", "frontier model", "공식", "hero후보"],
           featured: true,
+          slug: "qwen3-7-max-official-benchmark-model-car-76bf5f04",
+          readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/qwen3-7-max-official-benchmark-model-car-76bf5f04.svg",
+            alt: "Qwen3.7-Max official benchmark / model card",
+          },
         },
         {
           date: "5/22",
@@ -441,6 +657,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://platform.openai.com/docs/api-reference/images",
           source: "https://platform.openai.com/docs/api-reference/images",
           tags: ["OpenAI API", "Images", "공식"],
+          slug: "gpt-image-api-n-parameter-usage-tip-be846f4c",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -450,6 +668,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://github.com/jamiepine/voicebox",
           source: "https://github.com/jamiepine/voicebox",
           tags: ["오픈소스 공유 후보", "공식"],
+          slug: "jamiepine-voicebox-오픈소스-음성-도구-24ada790",
+          readMinutes: 1,
         },
         {
           date: "5/22",
@@ -459,6 +679,8 @@ export const week22: WeeklyData = {
           officialUrl: "https://www.instagram.com/p/DYCDIvelD5p/",
           source: "https://www.instagram.com/p/DYCDIvelD5p/",
           tags: ["실전 팁", "공식"],
+          slug: "ai-prompt-usage-method-first-prompting-9be18a5f",
+          readMinutes: 1,
         },
       ],
     },
