@@ -3,8 +3,11 @@ import { getAllSlugs, getWeek, weeks } from "@/lib/data";
 import WeeklyClient from "./WeeklyClient";
 import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
 
-// 사용자 결정: w21·w22 모두 editorial 스타일 적용 (TestingCatalog 풀 페이지 라우팅)
-const EDITORIAL_SLUGS = new Set(["2026-w21", "2026-w22"]);
+// 사용자 결정:
+// - w21: editorial 카드 그리드 UI (TestingCatalog 스타일)
+// - w22: 기존 w20 스타일(WeeklyClient) 외관 + 카드 클릭 시 nested route 풀 페이지 이동 (모달 비활성화)
+const EDITORIAL_SLUGS = new Set(["2026-w21"]);
+const NESTED_ROUTE_SLUGS = new Set(["2026-w21", "2026-w22"]);
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -45,12 +48,15 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
     );
   }
 
+  const nestedRoutePrefix = NESTED_ROUTE_SLUGS.has(slug) ? `/${slug}` : undefined;
+
   return (
     <WeeklyClient
       data={data}
       prevWeek={prevWeek}
       nextWeek={nextWeek}
       latestWeek={{ slug: latestWeek.slug, week: latestWeek.week }}
+      nestedRoutePrefix={nestedRoutePrefix}
     />
   );
 }

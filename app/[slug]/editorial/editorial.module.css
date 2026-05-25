@@ -425,6 +425,72 @@
   color: #d4d4d4;
 }
 
+/* 영문 발췌 접기/펴기 — 한국어 우선 정책 */
+.officialExcerptCollapsed {
+  margin-top: 28px;
+  border: 1px solid #1f1f1f;
+  border-radius: 10px;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.officialExcerptCollapsed summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 160ms ease;
+}
+
+.officialExcerptCollapsed summary::-webkit-details-marker {
+  display: none;
+}
+
+.officialExcerptCollapsed summary::after {
+  content: "▾ 펼치기";
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  color: #84cc16;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.officialExcerptCollapsed[open] summary::after {
+  content: "▴ 접기";
+}
+
+.officialExcerptCollapsed summary {
+  position: relative;
+}
+
+.officialExcerptCollapsed summary:hover {
+  background: #0e0e0e;
+}
+
+.officialExcerptSummaryTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fafafa;
+  letter-spacing: -0.005em;
+}
+
+.officialExcerptSummaryHint {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.officialExcerptCollapsed .officialExcerpt {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #1f1f1f;
+  border-radius: 0;
+  background: transparent;
+}
+
 /* 공식 본문 발췌 (영문 인용, 환각 0) */
 .officialExcerpt {
   margin-top: 36px;

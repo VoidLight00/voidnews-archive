@@ -1948,11 +1948,14 @@ export default function WeeklyClient({
   prevWeek,
   nextWeek,
   latestWeek,
+  // editorial nested route 옵션 — 카드 클릭 시 모달 대신 `${nestedRoutePrefix}/${post.slug}/` 풀 페이지 이동
+  nestedRoutePrefix,
 }: {
   data: WeeklyData;
   prevWeek?: { slug: string; week: number };
   nextWeek?: { slug: string; week: number };
   latestWeek: { slug: string; week: number };
+  nestedRoutePrefix?: string;
 }) {
   const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
   const [search, setSearch] = useState("");
@@ -2150,9 +2153,14 @@ export default function WeeklyClient({
   const openPost = useCallback(
     (post: Post, companyName: string) => {
       markAsRead(post.title);
+      // nested route 분기 — slug + prefix 있으면 모달 대신 풀 페이지로 이동
+      if (nestedRoutePrefix && post.slug && typeof window !== "undefined") {
+        window.location.href = `${nestedRoutePrefix.replace(/\/$/, "")}/${post.slug}/`;
+        return;
+      }
       setSelectedPost({ companyName, title: post.title });
     },
-    [markAsRead]
+    [markAsRead, nestedRoutePrefix]
   );
 
   const toggleCompanyCollapsed = useCallback((companyName: string) => {

@@ -156,49 +156,13 @@ export default function PostDetail({ meta, prev, next, weekSlug }: PostDetailPro
             <div className={styles.articleBody}>{renderMarkdown(post.content!)}</div>
           ) : null}
 
-          {/* (2) 공식 본문 발췌 — 영문 그대로 인용 (환각 0) */}
-          {!hasContent && (officialDescription || paragraphs.length > 0) ? (
-            <section className={styles.officialExcerpt}>
-              <div className={styles.officialExcerptHead}>
-                <span className={styles.officialExcerptLabel}>공식 본문 발췌</span>
-                {officialHost ? (
-                  <span className={styles.officialExcerptHost}>{officialHost}</span>
-                ) : null}
-              </div>
-              {officialDescription ? (
-                <p className={styles.officialDescription}>{officialDescription}</p>
-              ) : null}
-              {paragraphs.slice(0, 5).map((p, i) => (
-                <p key={i} className={styles.officialParagraph}>{p}</p>
-              ))}
-              {quotes.length > 0 ? (
-                <blockquote className={styles.officialQuote}>{quotes[0]}</blockquote>
-              ) : null}
-              {headings.length > 0 ? (
-                <details className={styles.officialOutline}>
-                  <summary>본문 헤딩 / 섹션 보기</summary>
-                  <ul>
-                    {headings.map((h, i) => (
-                      <li key={i} data-level={h.level}>{h.text}</li>
-                    ))}
-                  </ul>
-                </details>
-              ) : null}
-              <p className={styles.officialNote}>
-                ※ 이 발췌는 공식 페이지 영문 본문을 그대로 인용한 것입니다.
-                요약·번역으로 인한 왜곡을 방지하기 위해 원문을 유지합니다.
-                정확한 한국어 풀이는 아래 <strong>전문 용어 사전</strong>을 참고하세요.
-              </p>
-            </section>
-          ) : null}
-
-          {/* (3) 전문 용어 사전 — 본문에서 등장한 용어만 자동 매칭 */}
+          {/* (2) 전문 용어 사전 — 한국어 우선 표시 (영문 발췌보다 먼저) */}
           {glossaryHits.length > 0 ? (
             <section className={styles.glossary}>
               <header className={styles.glossaryHead}>
-                <h3 className={styles.glossaryTitle}>전문 용어 사전</h3>
+                <h3 className={styles.glossaryTitle}>이 글에 나오는 전문 용어</h3>
                 <span className={styles.glossarySub}>
-                  본문에 등장한 {glossaryHits.length}개 용어 · 비개발자 친화 한국어 풀이
+                  본문에 등장한 {glossaryHits.length}개 용어를 한국어로 풀이했습니다 · 비개발자 친화
                 </span>
               </header>
               <dl className={styles.glossaryList}>
@@ -214,6 +178,42 @@ export default function PostDetail({ meta, prev, next, weekSlug }: PostDetailPro
                 ))}
               </dl>
             </section>
+          ) : null}
+
+          {/* (3) 공식 본문 원문 — 영문 발췌는 접기/펴기로 숨김 (환각 방지용 보존) */}
+          {!hasContent && (officialDescription || paragraphs.length > 0) ? (
+            <details className={styles.officialExcerptCollapsed}>
+              <summary>
+                <span className={styles.officialExcerptSummaryTitle}>
+                  공식 본문 원문 보기 (영문)
+                </span>
+                <span className={styles.officialExcerptSummaryHint}>
+                  {officialHost ? `${officialHost} · ` : ""}
+                  요약/번역으로 인한 왜곡을 막기 위해 원문 그대로 보존했습니다
+                </span>
+              </summary>
+              <div className={styles.officialExcerpt}>
+                {officialDescription ? (
+                  <p className={styles.officialDescription}>{officialDescription}</p>
+                ) : null}
+                {paragraphs.slice(0, 5).map((p, i) => (
+                  <p key={i} className={styles.officialParagraph}>{p}</p>
+                ))}
+                {quotes.length > 0 ? (
+                  <blockquote className={styles.officialQuote}>{quotes[0]}</blockquote>
+                ) : null}
+                {headings.length > 0 ? (
+                  <div className={styles.officialOutline}>
+                    <strong>본문 헤딩</strong>
+                    <ul>
+                      {headings.map((h, i) => (
+                        <li key={i} data-level={h.level}>{h.text}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+              </div>
+            </details>
           ) : null}
 
           {/* (4) 공식 출처 reference 카드 */}
