@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import type { Post } from "@/lib/data";
-import { getArticleCache } from "@/lib/article-cache";
+import { type ArticleCacheEntry } from "@/lib/article-cache";
 import { extractGlossaryHits, type GlossaryEntry } from "@/lib/glossary";
+import { useLocale } from "@/app/LocaleProvider";
+import { isKoreanText } from "@/lib/i18n";
 import styles from "./editorial.module.css";
 
 interface PostDetailProps {
@@ -15,6 +20,8 @@ interface PostDetailProps {
   prev: { post: Post; companyName: string; companyColor: string } | null;
   next: { post: Post; companyName: string; companyColor: string } | null;
   weekSlug: string;
+  article: ArticleCacheEntry | null;
+  related: { post: Post; companyName: string; companyColor: string }[];
 }
 
 function formatDateKo(date: string): string {
@@ -27,6 +34,17 @@ function formatDateKo(date: string): string {
   return date;
 }
 
+function formatDateEn(date: string): string {
+  const m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    const [y, mo, d] = date.split("-");
+    return `${parseInt(d, 10)} ${m[parseInt(mo, 10) - 1]} ${y}`;
+  }
+  const [mo, d] = date.split("/");
+  if (mo && d) return `${parseInt(d, 10)} ${m[parseInt(mo, 10) - 1]} 2026`;
+  return date;
+}
+
 function hostnameOf(url: string): string {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -36,12 +54,10 @@ function hostnameOf(url: string): string {
 }
 
 function renderMarkdown(content: string) {
-  // 단순 마크다운: 빈 줄로 단락, **bold**, ## heading, | table |
   const blocks = content.split(/\n\n+/);
   return blocks.map((block, idx) => {
     const t = block.trim();
     if (!t) return null;
-    // table
     if (/^\|.*\|/.test(t)) {
       const lines = t.split("\n").filter((l) => l.trim().startsWith("|"));
       if (lines.length >= 2) {
@@ -61,57 +77,95 @@ function renderMarkdown(content: string) {
         );
       }
     }
-    // heading
-    if (/^##\s+/.test(t)) {
-      return <h2 key={idx}>{t.replace(/^##\s+/, "")}</h2>;
-    }
-    if (/^\*\*[^*]+\*\*$/.test(t)) {
-      return <h2 key={idx}>{t.replace(/^\*\*|\*\*$/g, "")}</h2>;
-    }
-    // bold inline
+    if (/^##\s+/.test(t)) return <h2 key={idx}>{t.replace(/^##\s+/, "")}</h2>;
+    if (/^\*\*[^*]+\*\*$/.test(t)) return <h2 key={idx}>{t.replace(/^\*\*|\*\*$/g, "")}</h2>;
     const html = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
     return <p key={idx} dangerouslySetInnerHTML={{ __html: html }} />;
   });
 }
 
-function categoryLabel(c: GlossaryEntry["category"]): string {
-  return ({
-    model: "모델",
-    agent: "에이전트",
-    infra: "인프라",
-    interface: "인터페이스",
-    security: "보안",
-    process: "운영",
-    ml: "머신러닝",
-    web: "웹",
-    developer: "개발",
-  } as const)[c];
+function categoryLabel(c: GlossaryEntry["category"], locale: "ko" | "en"): string {
+  const koMap = { model: "모델", agent: "에이전트", infra: "인프라", interface: "인터페이스", security: "보안", process: "운영", ml: "머신러닝", web: "웹", developer: "개발" } as const;
+  const enMap = { model: "Model", agent: "Agent", infra: "Infra", interface: "Interface", security: "Security", process: "Process", ml: "ML", web: "Web", developer: "Dev" } as const;
+  return locale === "ko" ? koMap[c] : enMap[c];
 }
 
-export default function PostDetail({ meta, prev, next, weekSlug }: PostDetailProps) {
+export default function PostDetail({ meta, prev, next, weekSlug, article, related }: PostDetailProps) {
   const { post, companyName, companyColor, weekPeriod } = meta;
-  const article = post.slug ? getArticleCache(post.slug) : null;
-  const hasContent = !!post.content;
+  const { locale, t } = useLocale();
+  const [activeLang, setActiveLang] = useState<"ko" | "en">(locale);
+
+  // 자동 분류: 한국어 본문 / 영문 본문
+  const koContent = isKoreanText(post.content) ? post.content : null;
+  const koSummary = isKoreanText(post.summary) ? post.summary : null;
+  const enContent = !isKoreanText(post.content) ? post.content : null;
+  const enSummary = !isKoreanText(post.summary) ? post.summary : null;
+
   const paragraphs = article?.paragraphs ?? [];
   const officialDescription = article?.description ?? null;
   const officialTitle = article?.title ?? null;
   const headings = article?.headings ?? [];
   const quotes = article?.quotes ?? [];
 
-  // 용어 사전: post content + article paragraphs 합쳐서 매칭
+  const officialHost = post.officialUrl ? hostnameOf(post.officialUrl) : null;
+
   const fullText = [
-    post.title,
-    post.summary ?? "",
-    post.content ?? "",
-    officialDescription ?? "",
-    paragraphs.join(" "),
-    quotes.join(" "),
-    (headings ?? []).map((h) => h.text).join(" "),
+    post.title, post.summary ?? "", post.content ?? "",
+    officialDescription ?? "", paragraphs.join(" "),
+    quotes.join(" "), (headings ?? []).map((h) => h.text).join(" "),
     (post.tags ?? []).join(" "),
   ].join("\n");
   const glossaryHits = extractGlossaryHits(fullText);
 
-  const officialHost = post.officialUrl ? hostnameOf(post.officialUrl) : null;
+  const dateStr = activeLang === "ko" ? formatDateKo(post.date) : formatDateEn(post.date);
+  const readStr = post.readMinutes
+    ? activeLang === "ko" ? `${post.readMinutes}분 읽기` : `${post.readMinutes} min read`
+    : null;
+
+  // 한국어 탭 내용
+  const koBody = (
+    <>
+      {koSummary ? <p className={styles.articleLede}>{koSummary}</p> : null}
+      {koContent ? <div className={styles.articleBody}>{renderMarkdown(koContent)}</div> : null}
+      {!koSummary && !koContent ? (
+        <p className={styles.langFallback}>{t("detail.lang.koUnavailable")}</p>
+      ) : null}
+    </>
+  );
+
+  // 영문 탭 내용 — 사용자 작성 영문 content 우선, 없으면 article-cache의 paragraphs
+  const enBody = (
+    <>
+      {enSummary ? <p className={styles.articleLede}>{enSummary}</p> : null}
+      {enContent ? <div className={styles.articleBody}>{renderMarkdown(enContent)}</div> : null}
+      {!enContent && (officialDescription || paragraphs.length > 0) ? (
+        <section className={styles.officialExcerpt}>
+          <div className={styles.officialExcerptHead}>
+            <span className={styles.officialExcerptLabel}>{t("detail.officialExcerpt")}</span>
+            {officialHost ? <span className={styles.officialExcerptHost}>{officialHost}</span> : null}
+          </div>
+          {officialDescription ? <p className={styles.officialDescription}>{officialDescription}</p> : null}
+          {paragraphs.slice(0, 6).map((p, i) => (
+            <p key={i} className={styles.officialParagraph}>{p}</p>
+          ))}
+          {quotes.slice(0, 2).map((q, i) => (
+            <blockquote key={i} className={styles.officialQuote}>{q}</blockquote>
+          ))}
+          {headings.length > 0 ? (
+            <div className={styles.officialOutline}>
+              <strong>{t("detail.officialOutline")}</strong>
+              <ul>
+                {headings.map((h, i) => <li key={i} data-level={h.level}>{h.text}</li>)}
+              </ul>
+            </div>
+          ) : null}
+        </section>
+      ) : null}
+      {!enSummary && !enContent && !officialDescription && paragraphs.length === 0 ? (
+        <p className={styles.langFallback}>{t("detail.lang.enUnavailable")}</p>
+      ) : null}
+    </>
+  );
 
   return (
     <main className={styles.shell}>
@@ -124,113 +178,59 @@ export default function PostDetail({ meta, prev, next, weekSlug }: PostDetailPro
           <div className={styles.articleMeta}>
             <span
               className={styles.pill}
-              style={{
-                position: "static",
-                ["--pill-color" as string]: companyColor,
-              }}
+              style={{ position: "static", ["--pill-color" as string]: companyColor }}
             >
               {companyName.toUpperCase()}
             </span>
-            <span>{formatDateKo(post.date)}</span>
-            {post.readMinutes ? <span>· {post.readMinutes}분 읽기</span> : null}
+            <span>{dateStr}</span>
+            {readStr ? <span>· {readStr}</span> : null}
           </div>
 
           <h1 className={styles.articleTitle}>{post.title}</h1>
 
-          {post.summary ? (
-            <p className={styles.articleLede}>{post.summary}</p>
-          ) : null}
+          {/* Bilingual language tabs */}
+          <div className={styles.langTabs} role="tablist" aria-label="Language">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeLang === "ko"}
+              onClick={() => setActiveLang("ko")}
+              className={`${styles.langTab} ${activeLang === "ko" ? styles.langTabActive : ""}`}
+            >
+              {t("detail.lang.ko")}
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeLang === "en"}
+              onClick={() => setActiveLang("en")}
+              className={`${styles.langTab} ${activeLang === "en" ? styles.langTabActive : ""}`}
+            >
+              {t("detail.lang.en")}
+            </button>
+          </div>
 
           {post.thumbnail?.src ? (
             <figure className={styles.articleHero}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={post.thumbnail.src} alt={post.thumbnail.alt ?? post.title} />
               {officialHost ? (
-                <figcaption>출처 · {officialHost}</figcaption>
+                <figcaption>{activeLang === "ko" ? `출처 · ${officialHost}` : `Source · ${officialHost}`}</figcaption>
               ) : null}
             </figure>
           ) : null}
 
-          {/* (1) 사용자가 직접 작성한 풍부한 content (Grok Build 등) */}
-          {hasContent ? (
-            <div className={styles.articleBody}>{renderMarkdown(post.content!)}</div>
-          ) : null}
+          {/* 본문 (탭 선택 언어) */}
+          {activeLang === "ko" ? koBody : enBody}
 
-          {/* (2) 전문 용어 사전 — 한국어 우선 표시 (영문 발췌보다 먼저) */}
-          {glossaryHits.length > 0 ? (
-            <section className={styles.glossary}>
-              <header className={styles.glossaryHead}>
-                <h3 className={styles.glossaryTitle}>이 글에 나오는 전문 용어</h3>
-                <span className={styles.glossarySub}>
-                  본문에 등장한 {glossaryHits.length}개 용어를 한국어로 풀이했습니다 · 비개발자 친화
-                </span>
-              </header>
-              <dl className={styles.glossaryList}>
-                {glossaryHits.map((g) => (
-                  <div key={g.term} className={styles.glossaryItem}>
-                    <dt>
-                      <span className={styles.glossaryTerm}>{g.term}</span>
-                      <span className={styles.glossaryKo}>{g.ko}</span>
-                      <span className={styles.glossaryCategory}>{categoryLabel(g.category)}</span>
-                    </dt>
-                    <dd>{g.description}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
-          ) : null}
-
-          {/* (3) 공식 본문 원문 — 영문 발췌는 접기/펴기로 숨김 (환각 방지용 보존) */}
-          {!hasContent && (officialDescription || paragraphs.length > 0) ? (
-            <details className={styles.officialExcerptCollapsed}>
-              <summary>
-                <span className={styles.officialExcerptSummaryTitle}>
-                  공식 본문 원문 보기 (영문)
-                </span>
-                <span className={styles.officialExcerptSummaryHint}>
-                  {officialHost ? `${officialHost} · ` : ""}
-                  요약/번역으로 인한 왜곡을 막기 위해 원문 그대로 보존했습니다
-                </span>
-              </summary>
-              <div className={styles.officialExcerpt}>
-                {officialDescription ? (
-                  <p className={styles.officialDescription}>{officialDescription}</p>
-                ) : null}
-                {paragraphs.slice(0, 5).map((p, i) => (
-                  <p key={i} className={styles.officialParagraph}>{p}</p>
-                ))}
-                {quotes.length > 0 ? (
-                  <blockquote className={styles.officialQuote}>{quotes[0]}</blockquote>
-                ) : null}
-                {headings.length > 0 ? (
-                  <div className={styles.officialOutline}>
-                    <strong>본문 헤딩</strong>
-                    <ul>
-                      {headings.map((h, i) => (
-                        <li key={i} data-level={h.level}>{h.text}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
-            </details>
-          ) : null}
-
-          {/* (4) 공식 출처 reference 카드 */}
+          {/* 공식 출처 reference 카드 */}
           {(post.officialUrl || (post.backupUrls && post.backupUrls.length > 0)) ? (
             <section className={styles.referenceBlock}>
-              <h3 className={styles.referenceTitle}>공식 출처</h3>
+              <h3 className={styles.referenceTitle}>{t("detail.references")}</h3>
               {post.officialUrl ? (
-                <a
-                  href={post.officialUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.referenceMain}
-                >
-                  <span className={styles.referenceMainLabel}>공식 원문 보기</span>
-                  <span className={styles.referenceMainTitle}>
-                    {officialTitle || post.title}
-                  </span>
+                <a href={post.officialUrl} target="_blank" rel="noreferrer" className={styles.referenceMain}>
+                  <span className={styles.referenceMainLabel}>{t("detail.referenceMain")}</span>
+                  <span className={styles.referenceMainTitle}>{officialTitle || post.title}</span>
                   <span className={styles.referenceMainHost}>{officialHost ?? ""} →</span>
                 </a>
               ) : null}
@@ -249,21 +249,63 @@ export default function PostDetail({ meta, prev, next, weekSlug }: PostDetailPro
             </section>
           ) : null}
 
-          {/* (5) prev/next nav */}
+          {/* 관련 글 (같은 회사 다른 글) */}
+          {related.length > 0 ? (
+            <section className={styles.related}>
+              <h3 className={styles.relatedTitle}>{t("detail.related")}</h3>
+              <div className={styles.relatedGrid}>
+                {related.map((r) =>
+                  r.post.slug ? (
+                    <Link key={r.post.slug} href={`/${weekSlug}/${r.post.slug}/`} className={styles.relatedCard}>
+                      <span className={styles.relatedCardMeta}>
+                        <span className={styles.relatedCardDot} style={{ background: r.companyColor }} />
+                        {r.companyName}
+                      </span>
+                      <span className={styles.relatedCardTitle}>{r.post.title}</span>
+                    </Link>
+                  ) : null
+                )}
+              </div>
+            </section>
+          ) : null}
+
+          {/* prev/next */}
           <nav className={styles.adjacentNav}>
             {prev?.post.slug ? (
               <Link href={`/${weekSlug}/${prev.post.slug}/`} className={styles.adjLink}>
-                <span className={styles.adjLabel}>← 이전</span>
+                <span className={styles.adjLabel}>← {t("detail.prev")}</span>
                 <span className={styles.adjTitle}>{prev.post.title}</span>
               </Link>
             ) : <span />}
             {next?.post.slug ? (
               <Link href={`/${weekSlug}/${next.post.slug}/`} className={styles.adjLink}>
-                <span className={styles.adjLabel}>다음 →</span>
+                <span className={styles.adjLabel}>{t("detail.next")} →</span>
                 <span className={styles.adjTitle}>{next.post.title}</span>
               </Link>
             ) : <span />}
           </nav>
+
+          {/* (맨 아래) 전문 용어 사전 */}
+          {glossaryHits.length > 0 ? (
+            <section className={styles.glossary}>
+              <header className={styles.glossaryHead}>
+                <h3 className={styles.glossaryTitle}>{t("detail.glossary")}</h3>
+                <span className={styles.glossarySub}>{t("detail.glossarySub")} · {glossaryHits.length}</span>
+              </header>
+              <dl className={styles.glossaryList}>
+                {glossaryHits.map((g) => (
+                  <div key={g.term} className={styles.glossaryItem}>
+                    <dt>
+                      <span className={styles.glossaryTerm}>{g.term}</span>
+                      <span className={styles.glossaryKo}>{activeLang === "ko" ? g.ko : g.term}</span>
+                      <span className={styles.glossaryCategory}>{categoryLabel(g.category, activeLang)}</span>
+                    </dt>
+                    <dd>{g.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ) : null}
         </article>
       </div>
     </main>

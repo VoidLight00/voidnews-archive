@@ -4,7 +4,9 @@ import {
   getAllEditorialPostParams,
   getEditorialPost,
   isEditorialWeek,
+  listEditorialCards,
 } from "@/lib/editorial";
+import { getArticleCache } from "@/lib/article-cache";
 import PostDetail from "../editorial/PostDetail";
 
 export async function generateStaticParams() {
@@ -39,13 +41,28 @@ export default async function EditorialPostPage({
   if (!isEditorialWeek(slug)) notFound();
   const meta = getEditorialPost(slug, postSlug);
   if (!meta) notFound();
+
   const { prev, next } = getAdjacentPosts(slug, postSlug);
+  const article = getArticleCache(postSlug);
+
+  // 같은 회사 다른 글 6개 추천
+  const all = listEditorialCards(slug);
+  const related = all
+    .filter(
+      (item) =>
+        item.companyName === meta.companyName &&
+        item.post.slug !== postSlug
+    )
+    .slice(0, 6);
+
   return (
     <PostDetail
       meta={meta}
       prev={prev}
       next={next}
       weekSlug={slug}
+      article={article}
+      related={related}
     />
   );
 }
