@@ -1506,7 +1506,7 @@ Grok Build의 Plan Mode, Codex 0.133의 Goals와 같은 결의 결정입니다. 
 
 ### 한국 개발자가 고려할 포인트
 
-긍정 평가는 "지금까지 본 AI CLI 중 최고의 TUI", "parallel agent로 대형 작업 속도가 압도적"으로 모인입니다. 한계는 early beta 단계라 일부 reasoning depth에서 Claude Code에 뒤처진다는 의견과 가격 진입 장벽 두 가지.
+긍정 평가는 "지금까지 본 AI CLI 중 가장 잘 다듬어진 TUI", "parallel agent로 대형 작업 속도가 압도적"으로 모이고 있습니다. 한계는 early beta 단계라 일부 reasoning depth에서 Claude Code에 뒤처진다는 의견과 가격 진입 장벽 두 가지.
 
 권장 시나리오는 명확합니다. Claude Code·Codex CLI를 이미 도입한 팀이라면, Grok Build는 "병렬 작업·빠른 prototyping이 잦은 라인"에만 한정해서 추가 도입을 검토하는 게 합리적입니다. SuperGrok Heavy 구독을 별도 잡아야 해서 비용 대비 효과를 명확히 측정해야 합니다. 같은 주차 Vercel AI Gateway가 Grok Build 0.1을 추가했으니, Cloud Gateway 호출 모델로도 점차 접근성이 넓어질 전망입니다.`,
           officialUrl: "https://x.ai/news/grok-build-cli",
