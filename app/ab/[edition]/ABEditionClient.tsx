@@ -844,13 +844,13 @@ function HighlightArticle({
 
         <div className="tc-feed-body">
           <div className="tc-feed-meta mono">
-            <span style={{ color: accent, fontWeight: 800 }}>{String(item.rank).padStart(2, "0")}</span>
-            <span aria-hidden>·</span>
-            <span>{item.sourceCompany}</span>
+            <span style={{ color: accent, fontWeight: 800 }}>{item.sourceCompany}</span>
             <span aria-hidden>·</span>
             <span>{item.post.date}</span>
             <span aria-hidden>·</span>
-            <span>{item.tier}</span>
+            <span style={{ textTransform: "uppercase", letterSpacing: "0.14em" }}>{item.tier}</span>
+            <span aria-hidden>·</span>
+            <span style={{ color: "var(--dim)" }}>#{String(item.rank).padStart(2, "0")}</span>
           </div>
 
           <h2 className="tc-feed-title serif">{stripMarkdown(item.post.title)}</h2>
@@ -859,12 +859,16 @@ function HighlightArticle({
             <p
               className="serif"
               style={{
-                margin: "6px 0 0 0",
-                fontSize: 15,
+                margin: "2px 0 4px 0",
+                fontSize: 14.5,
                 lineHeight: 1.5,
                 color: "var(--text-soft, var(--text))",
-                letterSpacing: "-0.01em",
+                letterSpacing: "-0.005em",
                 fontStyle: "normal",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
               }}
             >
               {stripMarkdown(item.post.deck)}
@@ -1107,12 +1111,16 @@ function EditorPickCard({
           <p
             className="serif"
             style={{
-              margin: "6px 0 0 0",
+              margin: "2px 0 4px 0",
               fontSize: 14,
               lineHeight: 1.5,
               color: "var(--text-soft, var(--text))",
-              letterSpacing: "-0.01em",
+              letterSpacing: "-0.005em",
               fontStyle: "normal",
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {stripMarkdown(item.deck)}
@@ -1157,6 +1165,61 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
     <>
       {/* ───── 모달 ───── */}
       {modal && <Modal content={modal} onClose={closeModal} />}
+
+      {/* ───── AB 메인 grid TC 스타일 오버라이드 (스코프: .ab-tc-grid 내부만) ───── */}
+      <style>{`
+        .ab-tc-grid {
+          gap: clamp(18px, 2vw, 28px);
+        }
+        .ab-tc-grid .tc-feed-card {
+          border-radius: 6px;
+          transition:
+            transform 0.22s ease,
+            box-shadow 0.22s ease,
+            border-color 0.18s ease,
+            background 0.18s ease;
+        }
+        .ab-tc-grid .tc-feed-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+          border-color: var(--border2);
+        }
+        .ab-tc-grid .tc-source-thumb--card {
+          aspect-ratio: 16 / 9;
+          border-bottom: 1px solid var(--border);
+        }
+        .ab-tc-grid .tc-feed-body {
+          gap: 10px;
+          padding: clamp(16px, 1.6vw, 22px) clamp(16px, 1.6vw, 22px) clamp(14px, 1.4vw, 20px);
+        }
+        .ab-tc-grid .tc-feed-meta {
+          font-size: 10.5px;
+          letter-spacing: 0.12em;
+          gap: 7px;
+          color: var(--muted);
+          margin-bottom: 2px;
+        }
+        .ab-tc-grid .tc-feed-title {
+          font-size: clamp(18px, 1.55vw, 22px);
+          line-height: 1.22;
+          letter-spacing: -0.022em;
+          font-weight: 700;
+          color: var(--text-strong, var(--text));
+          margin: 4px 0 2px;
+          -webkit-line-clamp: 3;
+        }
+        .ab-tc-grid .tc-feed-summary {
+          font-size: 13.5px;
+          line-height: 1.55;
+          color: var(--text-soft, var(--muted));
+          -webkit-line-clamp: 2;
+        }
+        .ab-tc-grid .tc-feed-footer {
+          padding-top: 6px;
+          font-size: 10px;
+          letter-spacing: 0.16em;
+        }
+      `}</style>
 
       <main
         style={{
@@ -1357,7 +1420,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 카드를 누르면 발표용 상세 설명, 공식 출처, X/Twitter 게시글이 카드 안에서 바로 펼쳐집니다.
               </p>
             </div>
-            <div role="list" className="tc-article-grid">
+            <div role="list" className="tc-article-grid ab-tc-grid">
               {highlights.map((h) => (
                 <HighlightArticle
                   key={h.rank}
@@ -1414,7 +1477,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   발표자가 실제로 써봤거나 직접 깎아본 도구 중, 작업 시스템에 바로 연결되는 추천 목록.
                 </p>
               </div>
-              <div className="tc-article-grid">
+              <div className="tc-article-grid ab-tc-grid">
                 {data.editorsPicks.map((pick, i) => (
                   <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
                 ))}

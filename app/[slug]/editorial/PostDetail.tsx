@@ -140,10 +140,9 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
     ? activeLang === "ko" ? `${post.readMinutes}분 읽기` : `${post.readMinutes} min read`
     : null;
 
-  // 한국어 탭 내용
+  // 한국어 탭 내용 (summary는 header에서 dek로 표시되므로 본문은 content만)
   const koBody = (
     <>
-      {koSummary ? <p className={styles.articleLede}>{koSummary}</p> : null}
       {koContent ? <div className={styles.articleBody}>{renderMarkdown(koContent)}</div> : null}
       {!koSummary && !koContent ? (
         <p className={styles.langFallback}>{t("detail.lang.koUnavailable")}</p>
@@ -154,7 +153,6 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
   // 영문 탭 내용 — 사용자 작성 영문 content 우선, 없으면 article-cache의 paragraphs
   const enBody = (
     <>
-      {enSummary ? <p className={styles.articleLede}>{enSummary}</p> : null}
       {enContent ? <div className={styles.articleBody}>{renderMarkdown(enContent)}</div> : null}
       {!enContent && (officialDescription || paragraphs.length > 0) ? (
         <section className={styles.officialExcerpt}>
@@ -193,59 +191,33 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             ← {weekSlug} ({weekPeriod})
           </Link>
 
-          <div className={styles.articleMeta}>
+          <div className={styles.articleKicker}>
             <span
               className={styles.pill}
               style={{ position: "static", ["--pill-color" as string]: companyColor }}
             >
               {companyName.toUpperCase()}
             </span>
-            <span>{dateStr}</span>
-            {readStr ? <span>· {readStr}</span> : null}
           </div>
 
           <h1 className={styles.articleTitle}>{post.title}</h1>
 
-          {threeLineSummary && threeLineSummary.length > 0 ? (
-            <section className={styles.quickSummary} aria-label={activeLang === "ko" ? "3줄 요약" : "Three-line summary"}>
-              <span className={styles.quickSummaryLabel}>{activeLang === "ko" ? "3줄 요약" : "Three-line summary"}</span>
-              <ol>
-                {threeLineSummary.map((line, index) => (
-                  <li key={`${index}-${line}`}>{line}</li>
-                ))}
-              </ol>
-            </section>
+          {(activeLang === "ko" ? koSummary : enSummary) ? (
+            <p className={styles.articleDek}>
+              {activeLang === "ko" ? koSummary : enSummary}
+            </p>
           ) : null}
 
-          {weekSlug.startsWith("ab/") ? (
-            <dl className={styles.sourceAudit} aria-label="검증 메타">
-              <div><dt>상태</dt><dd>{post.officialUrl ? "공식 발표" : "보조 검증"}</dd></div>
-              <div><dt>범위</dt><dd>{inferReleaseScope(post)}</dd></div>
-              <div><dt>출처</dt><dd>{officialHost ? `공식 · ${officialHost}` : "출처 대기"}</dd></div>
-              <div><dt>확인</dt><dd>확인일 2026-05-26</dd></div>
-            </dl>
-          ) : null}
-
-          {/* Bilingual language tabs */}
-          <div className={styles.langTabs} role="tablist" aria-label="Language">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeLang === "ko"}
-              onClick={() => setActiveLang("ko")}
-              className={`${styles.langTab} ${activeLang === "ko" ? styles.langTabActive : ""}`}
-            >
-              {t("detail.lang.ko")}
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeLang === "en"}
-              onClick={() => setActiveLang("en")}
-              className={`${styles.langTab} ${activeLang === "en" ? styles.langTabActive : ""}`}
-            >
-              {t("detail.lang.en")}
-            </button>
+          <div className={styles.articleMeta}>
+            <span className={styles.articleMetaByline}>VoidLight</span>
+            <span className={styles.articleMetaSep} aria-hidden>·</span>
+            <span>{dateStr}</span>
+            {readStr ? (
+              <>
+                <span className={styles.articleMetaSep} aria-hidden>·</span>
+                <span>{readStr}</span>
+              </>
+            ) : null}
           </div>
 
           {post.videoUrl ? (
@@ -273,6 +245,48 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
               ) : null}
             </figure>
           ) : null}
+
+          {threeLineSummary && threeLineSummary.length > 0 ? (
+            <section className={styles.quickSummary} aria-label={activeLang === "ko" ? "3줄 요약" : "Three-line summary"}>
+              <span className={styles.quickSummaryLabel}>{activeLang === "ko" ? "3줄 요약" : "Three-line summary"}</span>
+              <ol>
+                {threeLineSummary.map((line, index) => (
+                  <li key={`${index}-${line}`}>{line}</li>
+                ))}
+              </ol>
+            </section>
+          ) : null}
+
+          {weekSlug.startsWith("ab/") ? (
+            <dl className={styles.sourceAudit} aria-label="검증 메타">
+              <div><dt>상태</dt><dd>{post.officialUrl ? "공식 발표" : "보조 검증"}</dd></div>
+              <div><dt>범위</dt><dd>{inferReleaseScope(post)}</dd></div>
+              <div><dt>출처</dt><dd>{officialHost ? `공식 · ${officialHost}` : "출처 대기"}</dd></div>
+              <div><dt>확인</dt><dd>확인일 2026-05-27</dd></div>
+            </dl>
+          ) : null}
+
+          {/* Bilingual language tabs */}
+          <div className={styles.langTabs} role="tablist" aria-label="Language">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeLang === "ko"}
+              onClick={() => setActiveLang("ko")}
+              className={`${styles.langTab} ${activeLang === "ko" ? styles.langTabActive : ""}`}
+            >
+              {t("detail.lang.ko")}
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeLang === "en"}
+              onClick={() => setActiveLang("en")}
+              className={`${styles.langTab} ${activeLang === "en" ? styles.langTabActive : ""}`}
+            >
+              {t("detail.lang.en")}
+            </button>
+          </div>
 
           {/* 본문 (탭 선택 언어) */}
           {activeLang === "ko" ? koBody : enBody}
