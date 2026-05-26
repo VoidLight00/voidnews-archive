@@ -19,7 +19,7 @@ export interface GlossaryEntry {
     | "developer";
 }
 
-export const GLOSSARY: GlossaryEntry[] = [
+const GLOSSARY: GlossaryEntry[] = [
   // ── 모델 / 모델 패밀리 ──────────────────────────────
   { term: "LLM", alias: ["LLMs", "large language model"], ko: "거대 언어 모델", description: "방대한 텍스트로 학습된 AI 모델. ChatGPT·Claude·Gemini 같은 챗봇의 두뇌.", category: "model" },
   { term: "GPT-5.5", ko: "GPT-5.5", description: "OpenAI의 차세대 대형 모델. ChatGPT 기본 응답 모델.", category: "model" },

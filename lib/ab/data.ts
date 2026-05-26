@@ -27,6 +27,7 @@ export interface ABHighlight {
 
 export interface ABEditorPick {
   title: string;
+  deck?: string; // 카드 grid title 밑 1줄 sub-headline
   subtitle?: string;
   category: string; // "AI 데이터 인프라", "개발 도구" 등 자유 분류
   sourceUrl: string; // 시작/랜딩 URL
@@ -45,6 +46,7 @@ export interface ABEditorPick {
 
 export interface ABDemoCard {
   title: string;
+  deck?: string;
   subtitle?: string;
   category: string;
   url: string;
@@ -78,10 +80,11 @@ export interface ABEdition {
 
 import { edition2026_04a } from "./editions/2026-04a";
 import { edition2026_04b } from "./editions/2026-04b";
+import { edition2026_04c } from "./editions/2026-04c";
 import { edition2026_05a } from "./editions/2026-05a";
 import { edition2026_05b } from "./editions/2026-05b";
 
-export const editions: ABEdition[] = [edition2026_05b, edition2026_05a, edition2026_04b, edition2026_04a];
+export const editions: ABEdition[] = [edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
 export function getEdition(slug: string): ABEdition | undefined {
   return editions.find((e) => e.slug === slug);

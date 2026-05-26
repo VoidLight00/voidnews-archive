@@ -18,6 +18,7 @@ export interface Post {
   platform: "X" | "Threads" | "X+Threads";
   title: string;
   featured?: boolean;
+  deck?: string;         // 카드 grid 노출용 sub-headline (title 밑 1줄, 50자 내외)
   summary?: string;      // 한줄 요약 (카드)
   content?: string;      // 전문 / 포스팅 본문
   source?: string;       // 원본 소스 URL (블로그/기사)

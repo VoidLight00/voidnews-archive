@@ -5,7 +5,7 @@ export type Locale = "ko" | "en";
 
 export const DEFAULT_LOCALE: Locale = "ko";
 
-export const messages = {
+const messages = {
   ko: {
     // 헤더
     "site.kicker": "보이드뉴스",

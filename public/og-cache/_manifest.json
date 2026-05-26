@@ -874,5 +874,305 @@
     "file": "claude-for-creative-work-connectors-8113d388.jpg",
     "bytes": 79161,
     "ts": 1779714402050
+  },
+  "built-with-opus-4-7-claude-code-해커톤-cere-d462e65c": {
+    "url": "https://cerebralvalley.ai/e/built-with-4-7-hackathon",
+    "image": "https://cerebralvalley.ai/api/e/og/built-with-4-7-hackathon?v=1777398214801",
+    "file": "built-with-opus-4-7-claude-code-해커톤-cere-d462e65c.png",
+    "ts": 1779733965258
+  },
+  "claude-design-시스템-프롬프트-유출-422줄-약-5천-단어-g-0d05d8b8": {
+    "url": "https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude-Design-Sys-Prompt.txt",
+    "image": "https://opengraph.githubassets.com/a6658b7296da856586dd05ae832e833d0cbf069bcb2998debe07de697cdef978/elder-plinius/CL4R1T4S",
+    "file": "claude-design-시스템-프롬프트-유출-422줄-약-5천-단어-g-0d05d8b8.png",
+    "ts": 1779733966189
+  },
+  "claude-design-공개-프롬프트로-프로토타입-슬라이드-원페이지-생-0573c409": {
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=cactus",
+    "file": "claude-design-공개-프롬프트로-프로토타입-슬라이드-원페이지-생-0573c409.png",
+    "ts": 1779733977814
+  },
+  "claude-opus-4-7-정식-출시-agentic-coding-ste-b5232cfa": {
+    "url": "https://www.anthropic.com/news/claude-opus-4-7",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/96ea2509a90e527642c822303e56296a07bcfce4-1920x1080.png",
+    "file": "claude-opus-4-7-정식-출시-agentic-coding-ste-b5232cfa.png",
+    "ts": 1779733983529
+  },
+  "claude-code-데스크탑-앱-재설계-멀티-세션-사이드바-통합-터미널-db0654ec": {
+    "url": "https://claude.com/blog/claude-code-desktop-redesign",
+    "image": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg",
+    "file": "claude-code-데스크탑-앱-재설계-멀티-세션-사이드바-통합-터미널-db0654ec.jpg",
+    "ts": 1779733983816
+  },
+  "claude-code-routines-스케줄-api-github-트리거--254f3358": {
+    "url": "https://claude.com/blog/introducing-routines-in-claude-code",
+    "image": "https://cdn.prod.website-files.com/6889473510b50328dbb70ae6/68c469d23594abeb9ab6ee48_70ed020ecf8fa028b9bc95fa819720b6_og_claude-generic.jpg",
+    "file": "claude-code-routines-스케줄-api-github-트리거--254f3358.jpg",
+    "ts": 1779733983929
+  },
+  "gpt-image-2-0-gpt-image-2-출시-arena-1512점-0c88065d": {
+    "url": "https://techcrunch.com/2026/04/21/chatgpts-new-images-2-0-model-is-surprisingly-good-at-generating-text/",
+    "image": "https://techcrunch.com/wp-content/uploads/2024/05/openAI-spiral-color-v2.jpg?resize=1200,675",
+    "file": "gpt-image-2-0-gpt-image-2-출시-arena-1512점-0c88065d.jpg",
+    "ts": 1779733984475
+  },
+  "google-gemini-enterprise-agent-platform--0d8b09f9": {
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform",
+    "image": "https://storage.googleapis.com/gweb-cloudblog-publish/images/0_gemini_enterprise_agent_platform.max-2600x2600.jpg",
+    "file": "google-gemini-enterprise-agent-platform--0d8b09f9.jpg",
+    "ts": 1779733986269
+  },
+  "google-workspace-intelligence-메일-채팅-파일-프-9774975f": {
+    "url": "https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence",
+    "image": "https://storage.googleapis.com/gweb-cloudblog-publish/images/26765_Blog_1_Workspace_Intelligence_Hero_2.max-2500x2500.png",
+    "file": "google-workspace-intelligence-메일-채팅-파일-프-9774975f.png",
+    "ts": 1779733987016
+  },
+  "gemini-app-for-mac-출시-네이티브-데스크탑-앱-option-4d1fc804": {
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_for_MacOS_01_Hero_16x9.width-1300.png",
+    "file": "gemini-app-for-mac-출시-네이티브-데스크탑-앱-option-4d1fc804.png",
+    "ts": 1779733987755
+  },
+  "chrome-skills-gemini-프롬프트-저장-재사용-슬래시-커맨드-a7d98974": {
+    "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GoogleChrome_RR_Skills_KeywordHeader-Thumbnai.width-1300.png",
+    "file": "chrome-skills-gemini-프롬프트-저장-재사용-슬래시-커맨드-a7d98974.png",
+    "ts": 1779733988966
+  },
+  "cursor-3-composer-2-4-2-에이전트-우선-ux-멀티-에이-f9da1e8e": {
+    "url": "https://cursor.com/blog/cursor-3",
+    "image": "https://cursor.com/marketing-static/blog/og/cursor-3-opengraph.png",
+    "file": "cursor-3-composer-2-4-2-에이전트-우선-ux-멀티-에이-f9da1e8e.png",
+    "ts": 1779733989172
+  },
+  "qwen3-6-27b-dense-swe-bench-verified-77--2413902e": {
+    "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Qwen/Qwen3.6-27B.png",
+    "file": "qwen3-6-27b-dense-swe-bench-verified-77--2413902e.png",
+    "ts": 1779733990016
+  },
+  "kimi-k2-6-moonshot-1t-moe-멀티모달-agent-swa-353f1f51": {
+    "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K2.6.png",
+    "file": "kimi-k2-6-moonshot-1t-moe-멀티모달-agent-swa-353f1f51.png",
+    "ts": 1779733990734
+  },
+  "qwen3-6-35b-a3b-오픈소스-apache-2-0-agentic--c6e44900": {
+    "url": "https://github.com/QwenLM/Qwen3.6",
+    "image": "https://opengraph.githubassets.com/697752d39a6d433ee3b12504a3161132ba785e66ce51e765eae2323357600c8c/QwenLM/Qwen3.6",
+    "file": "qwen3-6-35b-a3b-오픈소스-apache-2-0-agentic--c6e44900.png",
+    "ts": 1779733993597
+  },
+  "supergemma4-26b-uncensored-한국-개발자-jiunso-d71c5002": {
+    "url": "https://huggingface.co/Jiunsong/supergemma4-26b-uncensored-mlx-4bit-v2",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/Jiunsong/supergemma4-26b-uncensored-mlx-4bit-v2.png",
+    "file": "supergemma4-26b-uncensored-한국-개발자-jiunso-d71c5002.png",
+    "ts": 1779733995484
+  },
+  "zhipu-glm-5-1-swe-bench-pro-58-4-opus-4--5e5964c7": {
+    "url": "https://huggingface.co/zai-org/GLM-5.1",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/zai-org/GLM-5.1.png",
+    "file": "zhipu-glm-5-1-swe-bench-pro-58-4-opus-4--5e5964c7.png",
+    "ts": 1779733996333
+  },
+  "tencent-hy-world-2-0-이미지-1장-네비게이터블-3d-월드-99fac5b4": {
+    "url": "https://github.com/Tencent-Hunyuan/HY-World-2.0",
+    "image": "https://opengraph.githubassets.com/031a2cc66a1bdc3632645a60a85c56d7e7ce97f79b84bbbc2eba796aa6c2eedd/Tencent-Hunyuan/HY-World-2.0",
+    "file": "tencent-hy-world-2-0-이미지-1장-네비게이터블-3d-월드-99fac5b4.png",
+    "ts": 1779733997311
+  },
+  "recraft-v4-최신-이미지-생성-모델-recraft-studio-4-f1ae8e79": {
+    "url": "https://www.recraft.ai/",
+    "image": "https://framerusercontent.com/assets/HvQ4bEfLTmu6moXTB0tfExFJ1l0.png",
+    "file": "recraft-v4-최신-이미지-생성-모델-recraft-studio-4-f1ae8e79.png",
+    "ts": 1779733998734
+  },
+  "bytedance-seedance-2-0-replicate-fal-정식--f52c21c8": {
+    "url": "https://replicate.com/bytedance/seedance-2.0",
+    "image": "https://og-api.replicateassets.com/api/models/bytedance/seedance-2.0",
+    "file": "bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
+    "ts": 1779734000508
+  },
+  "figma-make-디자인에서-프로토타입까지-프롬프트-기반-전환-f8e78ad8": {
+    "url": "https://www.figma.com/make/",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/f71e1d6671d6bb902154760f408a814bf64000e8-2400x1260.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format",
+    "file": "figma-make-디자인에서-프로토타입까지-프롬프트-기반-전환-f8e78ad8.png",
+    "ts": 1779734001843
+  },
+  "elevenlabs-api-4-7-업데이트-v2-42-sdk-scoped-b2962e13": {
+    "url": "https://elevenlabs.io/docs/changelog/2026/4/7",
+    "image": "https://elevenlabs.io/cover.png",
+    "file": "elevenlabs-api-4-7-업데이트-v2-42-sdk-scoped-b2962e13.png",
+    "ts": 1779734002917
+  },
+  "suno-v5-5-voices-custom-models-my-taste--8340c865": {
+    "url": "https://suno.com/blog/v5-5",
+    "image": "https://www.datocms-assets.com/117789/1774532259-suno_v5-5_bloginnerbanner.png?auto=format&amp;fit=max&amp;w=1200",
+    "file": "suno-v5-5-voices-custom-models-my-taste--8340c865.png",
+    "ts": 1779734007319
+  },
+  "atomic-bot-hermes-agent-1분-원클릭-설치로-24-7--477d627b": {
+    "url": "https://atomicbot.ai/hermes",
+    "image": "https://cdn.prod.website-files.com/6981cca3fe2c3f562a2ad751/69e815f5e8229a74ae99b64a_hermes%20opengraph.jpg",
+    "file": "atomic-bot-hermes-agent-1분-원클릭-설치로-24-7--477d627b.jpg",
+    "ts": 1779734007640
+  },
+  "browser-use-video-use-claude-code로-영상-편집-3a55db0d": {
+    "url": "https://github.com/browser-use/video-use",
+    "image": "https://opengraph.githubassets.com/1d9c097144384ab9f39be31a74d5f8aa268dda68d26dac5dd337848583e071b6/browser-use/video-use",
+    "file": "browser-use-video-use-claude-code로-영상-편집-3a55db0d.png",
+    "ts": 1779734008594
+  },
+  "codeburn-claude-code-codex-cursor-토큰-비용--00bf261b": {
+    "url": "https://github.com/AgentSeal/codeburn",
+    "image": "https://opengraph.githubassets.com/2b3c32700876329b65da9e02b8518b9e4790565679efd68d01c0a0d535fb86b5/getagentseal/codeburn",
+    "file": "codeburn-claude-code-codex-cursor-토큰-비용--00bf261b.png",
+    "ts": 1779734010030
+  },
+  "browser-use-browser-harness-self-healing-bb5811b2": {
+    "url": "https://github.com/browser-use/browser-harness",
+    "image": "https://opengraph.githubassets.com/cc75c346bf562fc2194485c71e6df62d9ed26d7e2c6e7f7a95de6b3fe74ac5d0/browser-use/browser-harness",
+    "file": "browser-use-browser-harness-self-healing-bb5811b2.png",
+    "ts": 1779734010955
+  },
+  "nous-research-hermes-agent-v0-10-0-자율-진화-978e35c6": {
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "image": "https://opengraph.githubassets.com/5444bd21bb9fbae52850ee5841b30bd9f9f0b7b33792a34b201b4122acb69d7d/NousResearch/hermes-agent",
+    "file": "nous-research-hermes-agent-v0-10-0-자율-진화-978e35c6.png",
+    "ts": 1779734011759
+  },
+  "notion-3-4-part-2-custom-agents-ai-autof-2813c55d": {
+    "url": "https://www.notion.com/releases",
+    "image": "https://www.notion.com/front-static/meta/releases-v2.png",
+    "file": "notion-3-4-part-2-custom-agents-ai-autof-2813c55d.png",
+    "ts": 1779734011896
+  },
+  "huggingface-inference-providers-pro-2-월--48d7bbef": {
+    "url": "https://huggingface.co/docs/inference-providers/pricing",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/docs/inference-providers/pricing.png",
+    "file": "huggingface-inference-providers-pro-2-월--48d7bbef.png",
+    "ts": 1779734013444
+  },
+  "wispr-flow-mac-windows-iphone-정식-android-04f98300": {
+    "url": "https://wisprflow.ai/use-cases/notion",
+    "image": "https://cdn.prod.website-files.com/682f84b3838c89f8ff7667db/683c611aba65ade013982bcd_wispr-og-min.jpg",
+    "file": "wispr-flow-mac-windows-iphone-정식-android-04f98300.jpg",
+    "ts": 1779734013758
+  },
+  "anthropic-natural-language-autoencoders--722f2940": {
+    "url": "https://www.anthropic.com/research/natural-language-autoencoders",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/645f8c90db35a5d392c816a90c806b2904ccad21-1280x720.png",
+    "file": "anthropic-natural-language-autoencoders--722f2940.png",
+    "ts": 1779734019599
+  },
+  "claude-platform-on-aws-anthropic-managed-54cd8315": {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws",
+    "image": "https://platform.claude.com/docs/og?locale=en&amp;path=build-with-claude/claude-platform-on-aws",
+    "file": "claude-platform-on-aws-anthropic-managed-54cd8315.png",
+    "ts": 1779734023154
+  },
+  "claude-opus-4-7-fast-mode-같은-모델을-더-빠른-출력-0b4cdc91": {
+    "url": "https://platform.claude.com/docs/en/build-with-claude/fast-mode",
+    "image": "https://platform.claude.com/docs/og?locale=en&amp;path=build-with-claude/fast-mode",
+    "file": "claude-opus-4-7-fast-mode-같은-모델을-더-빠른-출력-0b4cdc91.png",
+    "ts": 1779734024848
+  },
+  "googlebook-gemini-intelligence를-전제로-설계한--a610178a": {
+    "url": "https://blog.google/products-and-platforms/platforms/android/meet-googlebook/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Thumbnail_for_video.width-1300.png",
+    "file": "googlebook-gemini-intelligence를-전제로-설계한--a610178a.png",
+    "ts": 1779734025622
+  },
+  "google-health-coach-fitbit-air-건강-데이터와-a-17b7b096": {
+    "url": "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/fitbitair-ss.max-1440x810.png",
+    "file": "google-health-coach-fitbit-air-건강-데이터와-a-17b7b096.png",
+    "ts": 1779734026804
+  },
+  "gemini-3-1-flash-lite-ga-초저지연-대량-호출용-gem-8d0dd736": {
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available",
+    "image": "https://storage.googleapis.com/gweb-cloudblog-publish/images/gemini_3.1_flash.max-2500x2500.jpg",
+    "file": "gemini-3-1-flash-lite-ga-초저지연-대량-호출용-gem-8d0dd736.jpg",
+    "ts": 1779734027584
+  },
+  "codex-for-chrome-로그인된-브라우저-상태를-코딩-에이전트-작-36e5104f": {
+    "url": "https://developers.openai.com/codex/changelog",
+    "image": "https://developers.openai.com/codex/open-graph.png",
+    "file": "codex-for-chrome-로그인된-브라우저-상태를-코딩-에이전트-작-36e5104f.png",
+    "ts": 1779734028446
+  },
+  "telegram-ai-bot-revolution-모든-채팅에서-ai-봇을-2a26fcdd": {
+    "url": "https://telegram.org/blog/ai-bot-revolution-11-new-features",
+    "image": "https://telegram.org/file/400780400422/2/bX6CnHb1Pjc.192812.jpg/d837d2b6f0d47667e8",
+    "file": "telegram-ai-bot-revolution-모든-채팅에서-ai-봇을-2a26fcdd.jpg",
+    "ts": 1779734031204
+  },
+  "muse-spark-may-update-meta-ai-앱-안경-마켓플레이-aef1b5a1": {
+    "url": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+    "image": "https://about.fb.com/wp-content/uploads/2026/04/Introducing-Muse-Spark_Social-Share.jpg?w=1200",
+    "file": "muse-spark-may-update-meta-ai-앱-안경-마켓플레이-aef1b5a1.jpg",
+    "ts": 1779734032497
+  },
+  "codex-rust-v0-133-0-0230f963": {
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0",
+    "image": "https://opengraph.githubassets.com/3d586a69ba2f562578de640848a699c2d34d51e1bea3e92a550e483f9433f478/openai/codex/releases/tag/rust-v0.133.0",
+    "file": "codex-rust-v0-133-0-0230f963.png",
+    "ts": 1779734034169
+  },
+  "jamiepine-voicebox-오픈소스-음성-도구-bfeff07f": {
+    "url": "https://github.com/jamiepine/voicebox",
+    "image": "https://opengraph.githubassets.com/56cf769c215c2578607ea2622cddaed760d1ce2de78328762401b837470029ec/jamiepine/voicebox",
+    "file": "jamiepine-voicebox-오픈소스-음성-도구-bfeff07f.png",
+    "ts": 1779734051821
+  },
+  "mit-media-lab-human-operator-전기근육자극으로-ai-0a313a79": {
+    "url": "https://humanoperator.org/",
+    "image": "https://humanoperator.org/share.png",
+    "file": "mit-media-lab-human-operator-전기근육자극으로-ai-0a313a79.png",
+    "ts": 1779734078737
+  },
+  "google-ai-studio-nano-banana-2-이미지-제작이-앱-df84fd15": {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BuildWith_SocialShare.width-1300.png",
+    "file": "google-ai-studio-nano-banana-2-이미지-제작이-앱-df84fd15.png",
+    "ts": 1779734079534
+  },
+  "alibaba-happyhorse-1-0-영상-생성-경쟁이-오디오-립싱크-80647c1c": {
+    "url": "https://www.alibabacloud.com/blog/alibaba-rolls-out-happyhorse-1-0-in-limited-beta_603068",
+    "image": "https://yqintl.alicdn.com/cae57856d2dec711ae87dcfbdae488aa04ed7166.jpeg",
+    "file": "alibaba-happyhorse-1-0-영상-생성-경쟁이-오디오-립싱크-80647c1c.jpg",
+    "ts": 1779734081646
+  },
+  "figure-helix-02-bedroom-tidy-두-휴머노이드가-침실-d34db0ba": {
+    "url": "https://www.figure.ai/news/helix-02-bedroom-tidy",
+    "image": "https://images.ctfassets.net/qx5k8y1u9drj/2VXRGwCNqarI0PwDCxgY4Y/9c51567997eff0872492d200f3751fa8/BEDROOM_TIDY_OPEN_GRAPH_IMAGE.jpg",
+    "file": "figure-helix-02-bedroom-tidy-두-휴머노이드가-침실-d34db0ba.jpg",
+    "ts": 1779734082965
+  },
+  "rtk-llm-토큰-사용량을-60-90-줄이는-rust-cli-proxy-357d6524": {
+    "url": "https://github.com/rtk-ai/rtk",
+    "image": "https://opengraph.githubassets.com/01276a602642db81a77d18462cb93f6a0d6877af9c4d132468320d92195b95f5/rtk-ai/rtk",
+    "file": "rtk-llm-토큰-사용량을-60-90-줄이는-rust-cli-proxy-357d6524.png",
+    "ts": 1779734084709
+  },
+  "harness-도메인별-에이전트-팀과-스킬을-설계하는-meta-skill-4a239b48": {
+    "url": "https://github.com/revfactory/harness/tree/main",
+    "image": "https://opengraph.githubassets.com/04c19397a990aac389b1841dc505db9a5cfaf3df8c8270ab9bc4186f27217507/revfactory/harness",
+    "file": "harness-도메인별-에이전트-팀과-스킬을-설계하는-meta-skill-4a239b48.png",
+    "ts": 1779734085688
+  },
+  "scenic-ai-영상-프롬프트-갤러리와-seedance-2-0-기반-예-9e6acf0e": {
+    "url": "https://www.scenic.sh/",
+    "image": "https://www.scenic.sh/opengraph-image.png?opengraph-image.0usn0_mzts_rt.png",
+    "file": "scenic-ai-영상-프롬프트-갤러리와-seedance-2-0-기반-예-9e6acf0e.png",
+    "ts": 1779734088089
+  },
+  "claude-code-notebooklm-claude-code-안에서-n-5d8801e6": {
+    "url": "https://github.com/VoidLight00/claude-code-notebooklm",
+    "image": "https://opengraph.githubassets.com/69d96e7f210ff3a18404df52e646e333d637613c693b4d1e8056ce25dca32acf/VoidLight00/claude-code-notebooklm",
+    "file": "claude-code-notebooklm-claude-code-안에서-n-5d8801e6.png",
+    "ts": 1779734089627
   }
 }

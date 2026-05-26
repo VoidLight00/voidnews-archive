@@ -63,6 +63,10 @@ export const week22: WeeklyData = {
           featured: true,
           slug: "work-with-codex-from-anywhere-codex-in-c-aa73b5cd",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.png",
+            alt: "Work with Codex from anywhere — Codex in ChatGPT mobile",
+          },
         },
         {
           date: "5/22",
@@ -75,6 +79,10 @@ export const week22: WeeklyData = {
           featured: true,
           slug: "introducing-the-codex-app-skills-and-aut-bff38c35",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/openai-codex-goal-mode-generally-availab-62cd0085.png",
+            alt: "Introducing the Codex app, Skills, and Automations",
+          },
         },
         {
           date: "5/22",
@@ -381,6 +389,10 @@ Thinking Machines는 OpenAI 출신 톱티어 연구자들이 모인 가장 주�
           tags: ["OpenAI", "AWS Bedrock", "Managed Agents", "공식"],
           slug: "openai-models-codex-and-managed-agents-o-561b585a",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.png",
+            alt: "OpenAI models, Codex, and Managed Agents on Amazon Bedrock",
+          },
         },
         {
           date: "5/23",
@@ -731,6 +743,10 @@ frontier AI는 OpenAI / Anthropic / Google이 독점한 시장으로 보였지�
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "jamiepine-voicebox-오픈소스-음성-도구-24ada790",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/jamiepine-voicebox-오픈소스-음성-도구-bfeff07f.png",
+            alt: "jamiepine/voicebox — 오픈소스 음성 도구.",
+          },
         },
         {
           date: "5/22",

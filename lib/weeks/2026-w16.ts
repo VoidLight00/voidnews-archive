@@ -27,6 +27,10 @@ export const week16: WeeklyData = {
           source: "https://cerebralvalley.ai/e/built-with-4-7-hackathon",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/claudeai/status/2045248224659644654" }],
           tags: ["수익화사례", "code", "anthropic"],
+          thumbnail: {
+            src: "/og-cache/built-with-opus-4-7-claude-code-해커톤-cere-d462e65c.png",
+            alt: "Built with Opus 4.7 — Claude Code 해커톤 (Cerebral Valley)",
+          },
         },
         {
           date: "4/18",
@@ -38,6 +42,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/Claude-Design-Sys-Prompt.txt",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/elder_plinius/status/2045185728093921280" }, { label: "GitHub", url: "https://github.com/asgeirtj/system_prompts_leaks" }, { label: "GitHub", url: "https://github.com/Piebald-AI/claude-code-system-prompts" }],
           tags: ["프롬프트디자인", "text", "anthropic", "community"],
+          thumbnail: {
+            src: "/og-cache/claude-design-시스템-프롬프트-유출-422줄-약-5천-단어-g-0d05d8b8.png",
+            alt: "Claude Design 시스템 프롬프트 유출 — 422줄·약 5천 단어 GitHub 공개",
+          },
         },
         {
           date: "4/17",
@@ -50,6 +58,10 @@ export const week16: WeeklyData = {
           source: "https://www.anthropic.com/news/claude-design-anthropic-labs",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/claudeai/status/2045156267690213649" }, { label: "venturebeat.com", url: "https://venturebeat.com/technology/anthropic-just-launched-claude-design-an-ai-tool-that-turns-prompts-into-prototypes-and-challenges-figma" }, { label: "techcrunch.com", url: "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/" }],
           tags: ["워크플로우", "text", "image", "code", "anthropic"],
+          thumbnail: {
+            src: "/og-cache/claude-design-공개-프롬프트로-프로토타입-슬라이드-원페이지-생-0573c409.png",
+            alt: "Claude Design 공개 — 프롬프트로 프로토타입·슬라이드·원페이지 생성 + Claude Code 핸드오프",
+          },
         },
         {
           date: "4/16",
@@ -62,6 +74,10 @@ export const week16: WeeklyData = {
           source: "https://www.anthropic.com/news/claude-opus-4-7",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/claudeai/status/2044785261393977612" }, { label: "Anthropic 공식", url: "https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-7" }, { label: "Anthropic 공식", url: "https://www.anthropic.com/claude/opus" }],
           tags: ["도구릴리스", "text", "code", "anthropic"],
+          thumbnail: {
+            src: "/og-cache/claude-opus-4-7-정식-출시-agentic-coding-ste-b5232cfa.png",
+            alt: "Claude Opus 4.7 정식 출시 — Agentic Coding step-change + xhigh/task budget/1M ctx/2576px 비전",
+          },
         },
         {
           date: "4/14",
@@ -74,6 +90,10 @@ export const week16: WeeklyData = {
           source: "https://claude.com/blog/claude-code-desktop-redesign",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/claudeai/status/2044131493966909862" }, { label: "venturebeat.com", url: "https://venturebeat.com/orchestration/we-tested-anthropics-redesigned-claude-code-desktop-app-and-routines-heres-what-enterprises-should-know" }, { label: "Anthropic 공식", url: "https://code.claude.com/docs/en/whats-new" }],
           tags: ["도구릴리스", "code", "anthropic"],
+          thumbnail: {
+            src: "/og-cache/claude-code-데스크탑-앱-재설계-멀티-세션-사이드바-통합-터미널-db0654ec.jpg",
+            alt: "Claude Code 데스크탑 앱 재설계 — 멀티 세션 사이드바 + 통합 터미널 + Diff 뷰어",
+          },
         },
         {
           date: "4/14",
@@ -86,6 +106,10 @@ export const week16: WeeklyData = {
           source: "https://claude.com/blog/introducing-routines-in-claude-code",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/claudeai/status/2044095086460309790" }, { label: "Anthropic 공식", url: "https://code.claude.com/docs/en/routines" }, { label: "findskill.ai", url: "https://findskill.ai/blog/claude-code-routines-setup-guide/" }],
           tags: ["에이전트자동화", "code", "anthropic"],
+          thumbnail: {
+            src: "/og-cache/claude-code-routines-스케줄-api-github-트리거--254f3358.jpg",
+            alt: "Claude Code Routines — 스케줄·API·GitHub 트리거 클라우드 자동화",
+          },
         },
       ],
     },
@@ -107,6 +131,10 @@ export const week16: WeeklyData = {
             { label: "GPT Image 2.0 아카이브 (제작)", url: "https://gptimage2-0.vercel.app/" },
           ],
           tags: ["도구릴리스", "image", "text", "openai"],
+          thumbnail: {
+            src: "/og-cache/gpt-image-2-0-gpt-image-2-출시-arena-1512점-0c88065d.jpg",
+            alt: "GPT Image 2.0 (gpt-image-2) 출시 — Arena 1512점 1위 + \\",
+          },
         },
         {
           date: "4/19",
@@ -136,6 +164,10 @@ export const week16: WeeklyData = {
           source: "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform",
           backupUrls: [{ label: "Google Cloud", url: "https://console.cloud.google.com/agent-platform/overview" }, { label: "Google Cloud", url: "https://docs.cloud.google.com/gemini-enterprise-agent-platform" }],
           tags: ["에이전트자동화", "text", "code", "google"],
+          thumbnail: {
+            src: "/og-cache/google-gemini-enterprise-agent-platform--0d8b09f9.jpg",
+            alt: "Google Gemini Enterprise Agent Platform — Vertex AI 진화판, 200+ 모델 에이전트 빌드/거버넌스 (Cloud Next '26, 4/23)",
+          },
         },
         {
           date: "4/23",
@@ -148,6 +180,10 @@ export const week16: WeeklyData = {
           source: "https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence",
           backupUrls: [{ label: "Workspace", url: "https://workspace.google.com/blog/" }],
           tags: ["워크플로우", "text", "google"],
+          thumbnail: {
+            src: "/og-cache/google-workspace-intelligence-메일-채팅-파일-프-9774975f.png",
+            alt: "Google Workspace Intelligence — 메일·채팅·파일·프로젝트 AI 맥락 통합 + Ask Gemini in Chat (Cloud Next '26, 4/23)",
+          },
         },
         {
           date: "4/17",
@@ -159,6 +195,10 @@ export const week16: WeeklyData = {
           source: "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/GeminiApp/status/2044445911716090212" }, { label: "gemini.google", url: "https://gemini.google/mac/" }, { label: "workspaceupdates.googleblog.com", url: "https://workspaceupdates.googleblog.com/2026/04/now-available-gemini-app-for-mac.html" }],
           tags: ["도구릴리스", "text", "image", "video", "audio", "google"],
+          thumbnail: {
+            src: "/og-cache/gemini-app-for-mac-출시-네이티브-데스크탑-앱-option-4d1fc804.png",
+            alt: "Gemini App for Mac 출시 — 네이티브 데스크탑 앱 (Option+Space 단축키)",
+          },
         },
         {
           date: "4/15",
@@ -182,6 +222,10 @@ export const week16: WeeklyData = {
           source: "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/googlechrome/status/2043960122734821847" }, { label: "techcrunch.com", url: "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/" }, { label: "9to5google.com", url: "https://9to5google.com/2026/04/14/gemini-in-chrome-skills/" }],
           tags: ["프롬프트디자인", "text", "google"],
+          thumbnail: {
+            src: "/og-cache/chrome-skills-gemini-프롬프트-저장-재사용-슬래시-커맨드-a7d98974.png",
+            alt: "Chrome Skills — Gemini 프롬프트 저장·재사용 슬래시 커맨드",
+          },
         },
       ],
     },
@@ -199,6 +243,10 @@ export const week16: WeeklyData = {
           source: "https://cursor.com/blog/cursor-3",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/cursor_ai/status/2042935487183924091" }, { label: "cursor.com", url: "https://cursor.com/changelog/3-0" }, { label: "cursor.com", url: "https://cursor.com/blog/2-0" }],
           tags: ["도구릴리스", "code", "cursor"],
+          thumbnail: {
+            src: "/og-cache/cursor-3-composer-2-4-2-에이전트-우선-ux-멀티-에이-f9da1e8e.png",
+            alt: "Cursor 3 + Composer 2 (4/2) — 에이전트 우선 UX + 멀티 에이전트",
+          },
         },
       ],
     },
@@ -217,6 +265,10 @@ export const week16: WeeklyData = {
           source: "https://huggingface.co/Qwen/Qwen3.6-27B",
           backupUrls: [{ label: "GitHub", url: "https://github.com/QwenLM/Qwen3.6" }, { label: "HuggingFace", url: "https://huggingface.co/Qwen/Qwen3.6-27B-FP8" }],
           tags: ["도구릴리스", "text", "code", "image", "alibaba"],
+          thumbnail: {
+            src: "/og-cache/qwen3-6-27b-dense-swe-bench-verified-77--2413902e.png",
+            alt: "Qwen3.6-27B Dense — SWE-Bench Verified 77.2%, 262K 컨텍스트 (Apache-2.0, 4/22)",
+          },
         },
         {
           date: "4/20",
@@ -229,6 +281,10 @@ export const week16: WeeklyData = {
           source: "https://huggingface.co/moonshotai/Kimi-K2.6",
           backupUrls: [{ label: "Moonshot 공식", url: "https://moonshot.cn/" }, { label: "GitHub", url: "https://github.com/MoonshotAI" }],
           tags: ["도구릴리스", "text", "code", "image", "moonshot"],
+          thumbnail: {
+            src: "/og-cache/kimi-k2-6-moonshot-1t-moe-멀티모달-agent-swa-353f1f51.png",
+            alt: "Kimi K2.6 (Moonshot) — 1T MoE 멀티모달 + Agent Swarm 300 sub-agents (Modified MIT, 4/20)",
+          },
         },
         {
           date: "4/16",
@@ -241,6 +297,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/QwenLM/Qwen3.6",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/kimmonismus/status/2044780695361290347" }, { label: "HuggingFace", url: "https://huggingface.co/Qwen/Qwen3.6-35B-A3B" }, { label: "marktechpost.com", url: "https://www.marktechpost.com/2026/04/16/qwen-team-open-sources-qwen3-6-35b-a3b-a-sparse-moe-vision-language-model-with-3b-active-parameters-and-agentic-coding-capabilities/" }],
           tags: ["도구릴리스", "text", "code", "image", "alibaba"],
+          thumbnail: {
+            src: "/og-cache/qwen3-6-35b-a3b-오픈소스-apache-2-0-agentic--c6e44900.png",
+            alt: "Qwen3.6-35B-A3B 오픈소스 (Apache 2.0) — Agentic Coding MoE",
+          },
         },
         {
           date: "4/15",
@@ -253,6 +313,10 @@ export const week16: WeeklyData = {
           source: "https://huggingface.co/Jiunsong/supergemma4-26b-uncensored-mlx-4bit-v2",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/Jiunsong/status/2044562038749183245" }, { label: "ollama.com", url: "https://ollama.com/0xIbra/supergemma4-26b-uncensored-gguf-v2" }, { label: "HuggingFace", url: "https://huggingface.co/Jiunsong/supergemma4-26b-uncensored-gguf-v2" }],
           tags: ["도구릴리스", "text", "google", "community"],
+          thumbnail: {
+            src: "/og-cache/supergemma4-26b-uncensored-한국-개발자-jiunso-d71c5002.png",
+            alt: "SuperGemma4-26B Uncensored — 한국 개발자(Jiunsong)의 Gemma 4 튜닝본",
+          },
         },
         {
           date: "4/7",
@@ -264,6 +328,10 @@ export const week16: WeeklyData = {
           source: "https://huggingface.co/zai-org/GLM-5.1",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/thukeg/status/2011958624859390016" }, { label: "wavespeed.ai", url: "https://wavespeed.ai/blog/posts/glm-5-1-vs-claude-gpt-gemini-deepseek-llm-comparison/" }, { label: "digitalapplied.com", url: "https://www.digitalapplied.com/blog/zhipu-glm-5-1-coding-benchmark-claude-opus-comparison" }],
           tags: ["도구릴리스", "text", "code", "zhipu"],
+          thumbnail: {
+            src: "/og-cache/zhipu-glm-5-1-swe-bench-pro-58-4-opus-4--5e5964c7.png",
+            alt: "Zhipu GLM-5.1 — SWE-Bench Pro 58.4 > Opus 4.6 57.3 (754B MoE, Huawei Ascend 지원)",
+          },
         },
       ],
     },
@@ -281,6 +349,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/Tencent-Hunyuan/HY-World-2.0",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/TencentHunyuan/status/2044232836820279298" }, { label: "HuggingFace", url: "https://huggingface.co/tencent/HY-World-2.0" }, { label: "3d-models.hunyuan.tencent.com", url: "https://3d-models.hunyuan.tencent.com/world/world2_0/HY_World_2_0.pdf" }],
           tags: ["도구릴리스", "3d", "image", "video", "tencent"],
+          thumbnail: {
+            src: "/og-cache/tencent-hy-world-2-0-이미지-1장-네비게이터블-3d-월드-99fac5b4.png",
+            alt: "Tencent HY-World 2.0 — 이미지 1장 → 네비게이터블 3D 월드 (오픈소스 SOTA)",
+          },
         },
         {
           date: "4/15",
@@ -314,6 +386,10 @@ export const week16: WeeklyData = {
           source: "https://www.recraft.ai/",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/recraftai/status/2044012937193927681" }, { label: "recraft.ai", url: "https://www.recraft.ai/docs/recraft-models/recraft-V4" }, { label: "mindstudio.ai", url: "https://www.mindstudio.ai/blog/what-is-recraft-studio-2" }],
           tags: ["도구릴리스", "image", "recraft"],
+          thumbnail: {
+            src: "/og-cache/recraft-v4-최신-이미지-생성-모델-recraft-studio-4-f1ae8e79.png",
+            alt: "Recraft V4 — 최신 이미지 생성 모델 + Recraft Studio (4/6)",
+          },
         },
         {
           date: "4/10",
@@ -325,6 +401,10 @@ export const week16: WeeklyData = {
           source: "https://replicate.com/bytedance/seedance-2.0",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/replicate/status/2016838212748290817" }, { label: "seed.bytedance.com", url: "https://seed.bytedance.com/en/blog/official-launch-of-seedance-2-0" }, { label: "fal.ai", url: "https://fal.ai/seedance-2.0" }],
           tags: ["도구릴리스", "video", "audio", "bytedance"],
+          thumbnail: {
+            src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
+            alt: "ByteDance Seedance 2.0 — Replicate·fal 정식 배포 확대",
+          },
         },
         {
           date: "4/10",
@@ -336,6 +416,10 @@ export const week16: WeeklyData = {
           source: "https://www.figma.com/make/",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/figma/status/2043688294027518123" }, { label: "figma.com", url: "https://www.figma.com/release-notes/" }, { label: "dev.to", url: "https://dev.to/spookuspookus/figma-made-a-huge-step-forward-in-ai-design-april-2026-1cin" }],
           tags: ["도구릴리스", "image", "code", "figma"],
+          thumbnail: {
+            src: "/og-cache/figma-make-디자인에서-프로토타입까지-프롬프트-기반-전환-f8e78ad8.png",
+            alt: "Figma Make — 디자인에서 프로토타입까지 프롬프트 기반 전환",
+          },
         },
         {
           date: "4/9",
@@ -347,6 +431,10 @@ export const week16: WeeklyData = {
           source: "https://elevenlabs.io/docs/changelog/2026/4/7",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/elevenlabsio/status/2042094638302847281" }, { label: "elevenlabs.io", url: "https://elevenlabs.io/docs/changelog" }, { label: "releasebot.io", url: "https://releasebot.io/updates/eleven-labs" }],
           tags: ["도구릴리스", "audio", "elevenlabs"],
+          thumbnail: {
+            src: "/og-cache/elevenlabs-api-4-7-업데이트-v2-42-sdk-scoped-b2962e13.png",
+            alt: "ElevenLabs API 4/7 업데이트 + v2.42 SDK — scoped analysis·test folders·DTMF",
+          },
         },
         {
           date: "4/8",
@@ -369,6 +457,10 @@ export const week16: WeeklyData = {
           source: "https://suno.com/blog/v5-5",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/suno_ai_/status/2035628491203847281" }, { label: "suno.com", url: "https://suno.com/blog" }, { label: "elevenlabs.io", url: "https://elevenlabs.io/blog/eleven-v3" }],
           tags: ["도구릴리스", "audio", "suno"],
+          thumbnail: {
+            src: "/og-cache/suno-v5-5-voices-custom-models-my-taste--8340c865.png",
+            alt: "Suno v5.5 — Voices·Custom Models·My Taste (3/26, 참고)",
+          },
         },
       ],
     },
@@ -386,6 +478,10 @@ export const week16: WeeklyData = {
           source: "https://atomicbot.ai/hermes",
           backupUrls: [{ label: "GitHub", url: "https://github.com/NousResearch/hermes-agent" }],
           tags: ["에이전트자동화", "text", "code", "community"],
+          thumbnail: {
+            src: "/og-cache/atomic-bot-hermes-agent-1분-원클릭-설치로-24-7--477d627b.jpg",
+            alt: "Atomic Bot × Hermes Agent — 1분 원클릭 설치로 24/7 자율 에이전트 실행 (Mac·Windows·Web, 4/22)",
+          },
         },
         {
           date: "4/15",
@@ -398,6 +494,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/browser-use/video-use",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/gregpr07/status/2044554557221675380" }, { label: "mindstudio.ai", url: "https://www.mindstudio.ai/blog/claude-code-video-editing-motion-graphics" }, { label: "aibit.im", url: "https://aibit.im/blog/post/video-use-edit-videos-with-claude-code" }],
           tags: ["도구릴리스", "video", "audio", "code", "browser_use", "community"],
+          thumbnail: {
+            src: "/og-cache/browser-use-video-use-claude-code로-영상-편집-3a55db0d.png",
+            alt: "Browser-Use video-use — Claude Code로 영상 편집 자동화 (오픈소스)",
+          },
         },
         {
           date: "4/15",
@@ -421,6 +521,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/AgentSeal/codeburn",
           backupUrls: [{ label: "Threads 게시글", url: "https://www.threads.com/@kk_fe_1/post/DXI9Potk_gx" }],
           tags: ["도구릴리스", "code", "community"],
+          thumbnail: {
+            src: "/og-cache/codeburn-claude-code-codex-cursor-토큰-비용--00bf261b.png",
+            alt: "CodeBurn — Claude Code·Codex·Cursor 토큰/비용 TUI 대시보드 (MIT, 3.3k★)",
+          },
         },
         {
           date: "4/14",
@@ -432,6 +536,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/browser-use/browser-harness",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/gregpr07/status/2044101283010024234" }, { label: "GitHub", url: "https://github.com/browser-use/browser-harness-js" }, { label: "news.ycombinator.com", url: "https://news.ycombinator.com/item?id=47829234" }],
           tags: ["에이전트자동화", "code", "browser_use"],
+          thumbnail: {
+            src: "/og-cache/browser-use-browser-harness-self-healing-bb5811b2.png",
+            alt: "Browser-Use Browser Harness — Self-Healing 브라우저 하네스 (MIT, 오픈소스)",
+          },
         },
         {
           date: "4/14",
@@ -443,6 +551,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/NousResearch/hermes-agent",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/Teknium/status/2044879261564375326" }, { label: "hermes-agent.nousresearch.com", url: "https://hermes-agent.nousresearch.com/" }, { label: "GitHub", url: "https://github.com/NousResearch/hermes-agent-self-evolution" }],
           tags: ["에이전트자동화", "text", "code", "nous"],
+          thumbnail: {
+            src: "/og-cache/nous-research-hermes-agent-v0-10-0-자율-진화-978e35c6.png",
+            alt: "Nous Research Hermes Agent v0.10.0 — 자율 진화 에이전트 (MIT, 4/16 최신 릴리스)",
+          },
         },
         {
           date: "4/12",
@@ -454,6 +566,10 @@ export const week16: WeeklyData = {
           source: "https://www.notion.com/releases",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/NotionHQ/status/2044162938475739281" }, { label: "releasebot.io", url: "https://releasebot.io/updates/notion" }, { label: "notion.com", url: "https://www.notion.com/releases/2025-09-18" }],
           tags: ["에이전트자동화", "text", "notion"],
+          thumbnail: {
+            src: "/og-cache/notion-3-4-part-2-custom-agents-ai-autof-2813c55d.png",
+            alt: "Notion 3.4 part 2 — Custom Agents + AI Autofill (4/14)",
+          },
         },
         {
           date: "4/5",
@@ -465,6 +581,10 @@ export const week16: WeeklyData = {
           source: "https://huggingface.co/docs/inference-providers/pricing",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/huggingface/status/2044085039274812938" }, { label: "HuggingFace", url: "https://huggingface.co/pricing" }, { label: "HuggingFace", url: "https://huggingface.co/blog/pricing-update" }],
           tags: ["수익화사례", "text", "code", "huggingface"],
+          thumbnail: {
+            src: "/og-cache/huggingface-inference-providers-pro-2-월--48d7bbef.png",
+            alt: "HuggingFace Inference Providers — PRO $2/월 크레딧 (200+ 모델)",
+          },
         },
         {
           date: "2/23",
@@ -476,6 +596,10 @@ export const week16: WeeklyData = {
           source: "https://wisprflow.ai/use-cases/notion",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/WisprAI/status/2037283920419385712" }, { label: "techcrunch.com", url: "https://techcrunch.com/2026/02/23/wispr-flow-launches-an-android-app-for-ai-powered-dictation/" }],
           tags: ["도구릴리스", "audio", "text", "wispr"],
+          thumbnail: {
+            src: "/og-cache/wispr-flow-mac-windows-iphone-정식-android-04f98300.jpg",
+            alt: "Wispr Flow — Mac/Windows/iPhone 정식 + Android 대기자 모집",
+          },
         },
       ],
     },

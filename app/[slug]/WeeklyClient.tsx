@@ -1160,6 +1160,22 @@ function PostCard({
           {highlightText(post.title, searchQuery)}
         </h3>
 
+        {post.deck && (
+          <p
+            className="serif article-card-deck"
+            style={{
+              margin: "6px 0 8px 0",
+              fontSize: 14,
+              lineHeight: 1.5,
+              color: "var(--text-soft, var(--text))",
+              letterSpacing: "-0.01em",
+              fontStyle: "normal",
+            }}
+          >
+            {highlightText(stripMarkdown(post.deck), searchQuery)}
+          </p>
+        )}
+
         {(post.summary || post.content) && (
           <p className="tc-feed-summary">
             {highlightText(stripMarkdown(post.summary || post.content || ""), searchQuery)}

@@ -8,8 +8,20 @@ import { getLatestSlug, getWeekList } from "@/lib/data";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://voidnews-archive.vercel.app"),
   title: "VoidNews Archive",
   description: "AI 뉴스 주간 포스팅 아카이브 by @voidlight00",
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+  other: {
+    "ai-training": "no",
+    noai: "true",
+    noimageai: "true",
+  },
   openGraph: {
     title: "VoidNews Archive",
     description: "AI 뉴스 주간 포스팅 아카이브",
@@ -320,6 +332,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   style={{ color: "var(--muted)", textDecoration: "none" }}
                 >
                   @VoidLight_Hyeon
+                </a>
+              </p>
+              <p
+                style={{
+                  marginTop: 10,
+                  fontSize: 10,
+                  letterSpacing: "0.16em",
+                  color: "var(--dim)",
+                }}
+              >
+                © 2026 VoidLight · 무단 전재 및 AI 학습 금지 ·{" "}
+                <a
+                  href="/tos"
+                  style={{ color: "var(--muted)", textDecoration: "underline" }}
+                >
+                  이용약관
                 </a>
               </p>
             </div>

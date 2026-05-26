@@ -38,7 +38,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["Anthropic", "Claude", "Interpretability", "AI안전", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/anthropic-natural-language-autoencoders--722f2940.png",
+            alt: "Anthropic Natural Language Autoencoders — Claude의 내부 추론을 자연어로 읽는 연구",
+          },
         },
         {
           date: "5/11",
@@ -84,7 +88,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["Anthropic", "ClaudePlatform", "AWS", "Enterprise", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/claude-platform-on-aws-anthropic-managed-54cd8315.png",
+            alt: "Claude Platform on AWS — Anthropic-managed Claude API를 AWS 결제·IAM으로 쓰는 경로",
+          },
         },
         {
           date: "5/12",
@@ -105,7 +113,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["Anthropic", "ClaudeOpus4.7", "FastMode", "API", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/claude-opus-4-7-fast-mode-같은-모델을-더-빠른-출력-0b4cdc91.png",
+            alt: "Claude Opus 4.7 Fast mode — 같은 모델을 더 빠른 출력 속도로 쓰는 연구 preview",
+          },
         }
       ]
     },
@@ -128,7 +140,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["Google", "Gemini", "Android", "에이전트자동화", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/google-gemini-intelligence-on-android-896850d5.png",
+            alt: "Google Gemini Intelligence for Android — 스마트폰 OS가 AI 실행 레이어가 되는 전환",
+          },
         },
         {
           date: "5/12",
@@ -145,7 +161,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["Google", "Googlebook", "Gemini", "노트북", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/googlebook-gemini-intelligence를-전제로-설계한--a610178a.png",
+            alt: "Googlebook — Gemini Intelligence를 전제로 설계한 AI 노트북",
+          },
         }
       ]
     },
@@ -162,7 +182,11 @@ export const week20: WeeklyData = {
           source: "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
           officialUrl: "https://blog.google/products-and-platforms/products/google-health/google-health-fitbit/",
           tags: ["Google", "Health", "Fitbit", "Gemini", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/google-health-coach-fitbit-air-건강-데이터와-a-17b7b096.png",
+            alt: "Google Health Coach + Fitbit Air — 건강 데이터와 AI 코치가 하나의 앱으로 모이는 흐름",
+          },
         },
         {
           date: "5/08",
@@ -179,7 +203,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["Google", "Gemini", "FlashLite", "Enterprise", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/gemini-3-1-flash-lite-ga-초저지연-대량-호출용-gem-8d0dd736.jpg",
+            alt: "Gemini 3.1 Flash-Lite GA — 초저지연·대량 호출용 Gemini 3 모델의 정식 출시",
+          },
         }
       ]
     },
@@ -213,7 +241,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["OpenAI", "Codex", "Chrome", "브라우저에이전트", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/codex-for-chrome-로그인된-브라우저-상태를-코딩-에이전트-작-36e5104f.png",
+            alt: "Codex for Chrome — 로그인된 브라우저 상태를 코딩 에이전트 작업에 연결",
+          },
         },
         {
           date: "5/08",
@@ -258,7 +290,11 @@ export const week20: WeeklyData = {
           source: "https://telegram.org/blog/ai-bot-revolution-11-new-features",
           officialUrl: "https://telegram.org/blog/ai-bot-revolution-11-new-features",
           tags: ["Telegram", "AIBots", "Automation", "Messenger", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/telegram-ai-bot-revolution-모든-채팅에서-ai-봇을-2a26fcdd.jpg",
+            alt: "Telegram AI Bot Revolution — 모든 채팅에서 AI 봇을 호출하는 메신저 플랫폼 전략",
+          },
         }
       ]
     },
@@ -275,7 +311,11 @@ export const week20: WeeklyData = {
           source: "https://thinkingmachines.ai/blog/interaction-models/",
           officialUrl: "https://thinkingmachines.ai/blog/interaction-models/",
           tags: ["ThinkingMachines", "InteractionModels", "Voice", "Realtime", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/thinking-machines-interaction-models-off-1707227c.jpg",
+            alt: "Interaction Models — 실시간 음성·영상·텍스트 협업을 모델 안으로 넣는 접근",
+          },
         }
       ]
     },
@@ -292,7 +332,11 @@ export const week20: WeeklyData = {
           source: "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
           officialUrl: "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
           tags: ["Meta", "MuseSpark", "Voice", "Glasses", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/muse-spark-may-update-meta-ai-앱-안경-마켓플레이-aef1b5a1.jpg",
+            alt: "Muse Spark May update — Meta AI 앱·안경·마켓플레이스에 들어가는 제품형 모델 확장",
+          },
         }
       ]
     },

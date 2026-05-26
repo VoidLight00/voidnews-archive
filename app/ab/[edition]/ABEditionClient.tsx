@@ -793,6 +793,22 @@ function HighlightArticle({
 
           <h2 className="tc-feed-title serif">{stripMarkdown(item.post.title)}</h2>
 
+          {item.post.deck && (
+            <p
+              className="serif"
+              style={{
+                margin: "6px 0 0 0",
+                fontSize: 15,
+                lineHeight: 1.5,
+                color: "var(--text-soft, var(--text))",
+                letterSpacing: "-0.01em",
+                fontStyle: "normal",
+              }}
+            >
+              {stripMarkdown(item.post.deck)}
+            </p>
+          )}
+
           {item.keyQuote && (
             <blockquote
               style={{
@@ -1011,6 +1027,22 @@ function EditorPickCard({
         </div>
 
         <h3 className="tc-feed-title serif">{stripMarkdown(item.title)}</h3>
+
+        {item.deck && (
+          <p
+            className="serif"
+            style={{
+              margin: "6px 0 0 0",
+              fontSize: 14,
+              lineHeight: 1.5,
+              color: "var(--text-soft, var(--text))",
+              letterSpacing: "-0.01em",
+              fontStyle: "normal",
+            }}
+          >
+            {stripMarkdown(item.deck)}
+          </p>
+        )}
 
         {item.subtitle && <p className="tc-feed-summary">{stripMarkdown(item.subtitle)}</p>}
 
@@ -1246,47 +1278,6 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             </div>
           </div>
         </section>
-
-        {data.demoCards && data.demoCards.length > 0 && (
-          <section
-            style={{
-              padding:
-                "clamp(28px, 5vw, 42px) clamp(16px, 3vw, 32px) clamp(20px, 4vw, 28px)",
-            }}
-          >
-            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-              <div
-                style={{
-                  borderTop: "3px double var(--rule)",
-                  paddingTop: 28,
-                  marginBottom: 22,
-                }}
-              >
-                <span className="kicker" style={{ color: "var(--gold)" }}>
-                  Demo build
-                </span>
-                <h2
-                  className="serif"
-                  style={{
-                    marginTop: 10,
-                    fontSize: "clamp(22px, 3.2vw, 30px)",
-                    fontWeight: 700,
-                    letterSpacing: "-0.025em",
-                    color: "var(--text-strong)",
-                    lineHeight: 1.12,
-                  }}
-                >
-                  GPT-5.5가 실제 서비스 제작으로 이어진 사례
-                </h2>
-              </div>
-              <div style={{ display: "grid", gap: 16 }}>
-                {data.demoCards.map((demo) => (
-                  <DemoCard key={demo.url} item={demo} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
         {data.editorsPicks && data.editorsPicks.length > 0 && (
           <section

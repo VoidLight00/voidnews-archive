@@ -2,14 +2,14 @@
 import { getWeek, weeks, type Post, type WeeklyData } from "./data";
 
 // w21·w22 editorial nested route (`/2026-wNN/[postSlug]/page.tsx`)
-export const EDITORIAL_WEEKS = ["2026-w21", "2026-w22"] as const;
-export type EditorialWeekSlug = (typeof EDITORIAL_WEEKS)[number];
+const EDITORIAL_WEEKS = ["2026-w21", "2026-w22"] as const;
+type EditorialWeekSlug = (typeof EDITORIAL_WEEKS)[number];
 
 export function isEditorialWeek(slug: string): slug is EditorialWeekSlug {
   return (EDITORIAL_WEEKS as readonly string[]).includes(slug);
 }
 
-export interface EditorialPostMeta {
+interface EditorialPostMeta {
   post: Post;
   companyName: string;
   companyColor: string;

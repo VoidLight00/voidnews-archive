@@ -173,6 +173,10 @@ export const edition2026_04b: ABEdition = {
           { label: "X 공식 게시글", url: "https://x.com/GeminiApp/status/2044445911716090212" },
         ],
         tags: ["Google", "Gemini", "Mac앱", "Option+Space"],
+        thumbnail: {
+          src: "/og-cache/gemini-app-for-mac-출시-네이티브-데스크탑-앱-option-4d1fc804.png",
+          alt: "Gemini App for Mac 출시 — 네이티브 데스크탑 앱 (Option+Space 단축키)",
+        },
       },
       sourceWeek: "2026-w16",
       sourceCompany: "Google / DeepMind",
@@ -341,6 +345,10 @@ export const edition2026_04b: ABEdition = {
         '이번 회차의 마지막을 **"직접 써본 도구"**로 닫는 것은 의도된 구성입니다. 거대 모델 출시와 Arena 점수 싸움의 한복판에서, 수강생이 다음 주 월요일에 실제로 써볼 도구는 결국 이 레벨의 실전 유틸리티입니다.',
       tags: ["Claude Code", "토큰관리", "비용분석", "TUI", "오픈소스"],
       tier: "feature",
+      thumbnail: {
+        src: "/og-cache/codeburn-claude-code-codex-cursor-토큰-비용--00bf261b.png",
+        alt: "CodeBurn — Claude Code·Codex·Cursor 토큰/비용 TUI 대시보드",
+      },
     },
   ],
 };

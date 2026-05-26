@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!.env.local.example
 
 # vercel
 .vercel
@@ -42,3 +44,7 @@ next-env.d.ts
 
 # local automation outputs
 /_workspace/
+CLAUDE.md
+.supabase-secrets/
+.env.local
+.env*.local

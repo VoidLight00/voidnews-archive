@@ -79,8 +79,16 @@ function renderMarkdown(content: string) {
     }
     if (/^##\s+/.test(t)) return <h2 key={idx}>{t.replace(/^##\s+/, "")}</h2>;
     if (/^\*\*[^*]+\*\*$/.test(t)) return <h2 key={idx}>{t.replace(/^\*\*|\*\*$/g, "")}</h2>;
-    const html = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-    return <p key={idx} dangerouslySetInnerHTML={{ __html: html }} />;
+    // **bold** 토큰을 React node 로 안전하게 분할 (dangerouslySetInnerHTML XSS 위험 제거)
+    const parts = t.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+    return (
+      <p key={idx}>
+        {parts.map((part, pi) => {
+          const m = part.match(/^\*\*([^*]+)\*\*$/);
+          return m ? <strong key={pi}>{m[1]}</strong> : <span key={pi}>{part}</span>;
+        })}
+      </p>
+    );
   });
 }
 
