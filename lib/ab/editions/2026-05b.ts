@@ -11,7 +11,7 @@ export const edition2026_05b: ABEdition = {
   coveredWeeks: ["2026-w21", "2026-w22"],
   announceDate: "2026-05-25",
   intro: `이번 11일은 한 회사의 단일 발표가 아니라, 네 가지 흐름이 동시에 굳어진 구간이었습니다.\n\n첫째, OpenAI는 Codex를 ChatGPT 모바일·Skills·Automations·AWS Bedrock·Dell 하이브리드까지 일주일 안에 풀며 "Codex가 어디서나 돈다"는 그림을 완성했습니다. 둘째, Google I/O 2026은 Gemini 3.5/Spark/Omni와 Managed Agents, Antigravity 2.0, AI Studio로 Gemini를 단순 챗봇이 아니라 agentic platform으로 다시 정의했습니다. 셋째, NVIDIA는 Vera CPU 첫 출하 + Q1 FY27 Data Center 752억$로 "에이전트를 굴리는 인프라"가 산업 코어임을 수치로 증명했습니다. 넷째, Anthropic은 Stainless 인수, KPMG 27.6만명 도입, Project Glasswing 1만+ 취약점 발견, Claude Code Agent View로 모델·플랫폼·기업 운영체제 세 축을 동시에 밀었습니다.`,
-  closing: `한 줄로 묶으면, AI는 이번 11일 사이에 "어디서나 돌고, 인프라를 정당화하며, 기업 운영체제로 들어가는" 단계로 굳었습니다.\n\n직접 써보고 추천드리는 도구 섹션에는 tw93/Mole(macOS deep clean + AI CLI 잔재 정리), Nutlope/hallmark(anti-AI-slop 디자인 스킬), manaflow-ai/cmux(Codex CLI 분할 워크플로), cokacdir(한국어 AI 큐레이션 오픈소스) 네 개를 골라뒀습니다.\n\n— VoidLight`,
+  closing: `한 줄로 묶으면, AI는 이번 11일 사이에 "어디서나 돌고, 인프라를 정당화하며, 기업 운영체제로 들어가는" 단계로 굳었습니다.\n\n직접 써보고 추천드리는 도구 섹션에는 tw93/Mole(macOS deep clean + AI CLI 잔재 정리), Nutlope/hallmark(anti-AI-slop 디자인 스킬), manaflow-ai/cmux(Codex CLI 분할 워크플로), jaehwan02/UltraCat(macOS 메뉴바 시스템·팬·수면 관리), cokacdir(한국어 AI 큐레이션 오픈소스) 다섯 개를 골라뒀습니다.\n\n— VoidLight`,
   coreFlow: [
     "Codex는 모바일·앱·Skills·Automations·AWS·Dell로 확장되며 어디서나 실행되는 코딩 에이전트가 됐다.",
     "Gemini는 I/O 2026에서 Omni·Managed Agents·agentic Search를 묶어 제품 전반에 깔리는 에이전트 플랫폼으로 재정의됐다.",
@@ -120,7 +120,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "AI Industry",
     },
     {
-      rank: 2,
+      rank: 4,
       tier: "hero",
       post: {
         date: "5/22",
@@ -143,7 +143,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "AI Industry",
     },
     {
-      rank: 3,
+      rank: 5,
       tier: "hero",
       post: {
         date: "5/19",
@@ -166,7 +166,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Google",
     },
     {
-      rank: 4,
+      rank: 6,
       tier: "hero",
       post: {
         date: "5/19",
@@ -189,7 +189,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Google",
     },
     {
-      rank: 5,
+      rank: 7,
       tier: "hero",
       post: {
         date: "5/18",
@@ -212,7 +212,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "NVIDIA",
     },
     {
-      rank: 6,
+      rank: 8,
       tier: "hero",
       post: {
         date: "5/20",
@@ -235,7 +235,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "NVIDIA",
     },
     {
-      rank: 7,
+      rank: 9,
       tier: "hero",
       post: {
         date: "5/22",
@@ -258,7 +258,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Anthropic",
     },
     {
-      rank: 8,
+      rank: 10,
       tier: "feature",
       post: {
         date: "5/11",
@@ -281,30 +281,76 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Anthropic",
     },
     {
-      rank: 9,
+      rank: 11,
       tier: "feature",
       post: {
-        date: "5/23",
+        date: "5/19",
         platform: "X+Threads",
-        title: "OpenAI Codex Goal mode 정식 제공 — 목표 기반 코딩 루프가 기본 기능으로 들어왔다",
-        slug: "openai-codex-goal-mode-generally-available",
-        deck: "목표를 먼저 잠그고 Codex가 계획·실행·검증을 반복하는 모드",
-        summary: "OpenAI가 Codex Goal mode를 일반 제공으로 전환했다. 사용자가 목표를 제시하면 Codex가 계획을 세우고 코드 수정과 검증을 반복하는 목표 지향형 작업 흐름이다.",
-        content: "**이게 뭐예요?**\n\nCodex Goal mode는 사용자가 구현 목표를 먼저 제시하고 Codex가 계획·수정·검증을 이어가는 작업 모드입니다.\n\n**무엇이 달라졌나?**\n\n단발 프롬프트가 아니라 목표 달성 여부를 기준으로 파일 탐색, 코드 수정, 테스트 실행을 묶습니다.\n\n**왜 중요한가요?**\n\nAI 코딩 도구가 autocomplete에서 작업 관리자 쪽으로 이동하고 있습니다. Claude Code의 plan/execute 흐름, Vercel Agent, Gemini Managed Agents와 같은 방향입니다.\n\n**한국 청자에게**\n\n기획이 애매한 상태에서 바로 코드부터 시키기보다 완료 조건을 한국어로 명확히 쓰는 습관이 중요해집니다.\n\n**읽을 때 볼 점**\n\n- 자동 검증을 어디까지 신뢰하는지\n- 실패 시 되돌림 방식\n- 긴 작업의 비용 제어\n- Claude Code와 planning 품질 비교",
-        officialUrl: "https://help.openai.com/en/articles/6825453-chatgpts-release-notes",
-        source: "https://help.openai.com/en/articles/6825453-chatgpts-release-notes",
-        tags: ["Codex", "Goal mode", "공식"],
+        title: "Gemini 3.5 Flash 출시 — 가성비 모델 차세대가 agentic 흐름 받침대로",
+        slug: "gemini-3-5-flash-release",
+        deck: "I/O 2026의 가성비 모델 신세대 — 빠른 추론으로 agentic 도구 호출 회전수 끌어올림",
+        summary: "Google이 I/O 2026에서 Gemini 3.5 Flash를 공개했다. 같은 키노트의 agentic Search·Managed Agents·Spark 가 다중 도구 호출 회전수에 의존하는데, 3.5 Flash가 그 회전수를 올려주는 받침대 역할.",
+        content: "**이게 뭐예요?**\n\n2026년 5월 19일 Google I/O 키노트에서 공개된 Gemini 가성비 모델의 차세대 버전. 이전 2.x Flash 대비 추론 속도·도구 호출 응답성을 끌어올렸습니다.\n\n**무엇이 달라졌나?**\n\n- 추론 latency 단축 → agent 의 다중 turn 도구 호출이 체감 가능한 속도로\n- 가격은 Flash 라인 정책 유지 (Pro 대비 저렴)\n- Workspace · Search · AI Studio 에 자동 적용\n\n**왜 중요한가요?**\n\nManaged Agents · agentic Search · Spark 같은 같은 회차 발표는 모두 \"다중 도구 호출 + 실시간 응답\" 에 의존합니다. 3.5 Flash 는 그 회전수를 끌어올려주는 받침대. 모델 자체보다는 agentic 인프라를 지탱하는 역할이 핵심.\n\n**한국 청자에게**\n\n- Gmail/Calendar/Docs 안의 Gemini 가 자동으로 3.5 Flash 로 전환 → 한국어 응답 속도 즉시 체감\n- API 사용자는 가격 동일 + 속도 ↑ 로 기존 코드 그대로 이득\n\n**읽을 때 볼 점**\n\n- 한국어 정확도 vs 영어 (Flash 라인 역대 패턴은 영어 우선)\n- Pro 대비 reasoning 깊이 trade-off\n- agentic 도구 호출 retry 패턴이 cost spike 일으키는지 모니터링 필요",
+        officialUrl: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+        source: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+        tags: ["Google", "Gemini 3.5 Flash", "model release", "agentic", "공식"],
         featured: true,
         thumbnail: {
-          src: "/og-cache/openai-codex-goal-mode-generally-availab-62cd0085.png",
-          alt: "OpenAI Codex Goal mode generally available",
+          src: "/og-cache/i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd.png",
+          alt: "Gemini 3.5 Flash — I/O 2026 키노트",
         },
       },
       sourceWeek: "2026-w21",
-      sourceCompany: "AI Industry",
+      sourceCompany: "Google",
     },
     {
-      rank: 10,
+      rank: 12,
+      tier: "feature",
+      post: {
+        date: "5/19",
+        platform: "X+Threads",
+        title: "Gemini Spark 공개 — 일반 사용자가 직접 에이전트를 조립하는 빌더",
+        slug: "gemini-spark-agent-builder",
+        deck: "노코드에 가까운 에이전트 빌더로 일반 사용자가 자기 워크플로를 직접 만든다",
+        summary: "Google이 I/O 2026에서 Gemini Spark 를 공개했다. 사용자가 도구·트리거·메모리를 직접 조립해 에이전트를 만드는 빌더. agent 가 개발자만의 영역에서 일반 사용자 영역으로 내려오는 변곡점.",
+        content: "**이게 뭐예요?**\n\n2026년 5월 19일 Google I/O 키노트에서 공개된 일반 사용자용 에이전트 빌더. Gmail 답장, Calendar 자동 정리, 반복 검색 자동화 같은 시나리오를 코드 없이 조립.\n\n**무엇이 달라졌나?**\n\n이전: 에이전트 = 개발자가 API + 도구 호출로 직접 작성\n이후: 에이전트 = Gemini 앱 안 Spark 빌더에서 \"트리거 → 도구 → 출력\" 클릭으로 조립\n\n**왜 중요한가요?**\n\nOpenAI 의 GPT Builder, Anthropic 의 Claude Skills 와 같은 결의 발표. Google 의 차별점은 **이미 사용 중인 Google 계정·Workspace·검색에 자동 연결**되어 진입 장벽이 가장 낮음.\n\n에이전트가 개발자에서 일반 사용자 영역으로 내려오는 변곡점.\n\n**한국 청자에게**\n\n- Gmail/Calendar/Docs 자동화는 한국 사무직에 즉시 적용 가능\n- 단점: 빌더 UI 한국어 번역 늦게 따라오는 역대 패턴\n\n**읽을 때 볼 점**\n\n- Skills/Memory 영구 저장 시 권한·프라이버시 정책\n- Spark 가 OpenAI GPT Builder 보다 깊이 가는지 (트리거 + 백그라운드 작업)\n- 일반 사용자가 만든 에이전트의 공유 모델 (마켓플레이스 여부)",
+        officialUrl: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+        source: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+        tags: ["Google", "Gemini Spark", "agent builder", "no-code", "공식"],
+        featured: true,
+        thumbnail: {
+          src: "/og-cache/i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd.png",
+          alt: "Gemini Spark — 일반 사용자 에이전트 빌더",
+        },
+      },
+      sourceWeek: "2026-w21",
+      sourceCompany: "Google",
+    },
+    {
+      rank: 13,
+      tier: "feature",
+      post: {
+        date: "5/19",
+        platform: "X+Threads",
+        title: "agentic Search — Google 검색이 단순 링크에서 다단계 작업 수행으로",
+        slug: "agentic-search-google-2026",
+        deck: "검색 결과가 링크 나열이 아니라 사용자 작업을 대신 수행하는 에이전트로 진화",
+        summary: "Google이 I/O 2026에서 agentic Search 를 공개했다. 검색이 정보 탐색 단계를 넘어 사용자가 요청한 작업(예약·비교·구매)을 다단계로 직접 수행하는 단계로 이동. 25년 역사상 검색 산업 가장 큰 패러다임 변화.",
+        content: "**이게 뭐예요?**\n\n2026년 5월 19일 Google I/O 키노트의 핵심 발표 중 하나. 검색창에 \"다음 주 수요일 강남에서 4명 일식집 예약\" 같은 복합 요청을 넣으면 Google 검색이 후보 검색 → 비교 → 예약 페이지 진입 → 폼 작성까지 다단계 수행.\n\n**무엇이 달라졌나?**\n\n이전: 검색 = 키워드 매칭 → 링크 10개 노출 → 사용자가 직접 클릭·비교·작업\n이후: 검색 = 의도 이해 → 다중 도구·사이트 자동 호출 → 작업 결과 반환\n\nGoogle 검색의 25년 패러다임(\"링크 인덱스\")이 \"작업 수행 인프라\"로 이동.\n\n**왜 중요한가요?**\n\n3가지 신호:\n1. **SEO 패러다임 붕괴 가능성** — 사용자가 링크를 클릭하지 않으면 광고·트래픽 모델 자체가 바뀜\n2. **Perplexity·ChatGPT Search 와 정면 충돌** — Google 의 분배 우위 + agentic 능력으로 검색 stack 재정의\n3. **'에이전틱 웹'의 진짜 출발** — 사용자가 사이트를 방문하지 않고 에이전트가 대신 탐색하는 시대\n\n**한국 청자에게**\n\n- 네이버·다음 검색 시장 직접 위협\n- 한국 e-commerce·예약 사이트가 agentic 호출에 대응 안 하면 트래픽 손실\n- 한국어 agentic Search 정확도는 영어 대비 늦을 가능성\n\n**읽을 때 볼 점**\n\n- 어느 사이트와 파트너십 (예약·결제 통합)\n- 잘못된 작업 수행 시 환불·취소 책임 누가 (Google? 사용자?)\n- Google 외 사이트 트래픽 감소 데이터 (Cloudflare 등이 추적 시작)\n- 한국 시장 출시 시점",
+        officialUrl: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+        source: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+        tags: ["Google", "agentic Search", "검색 패러다임", "agent", "공식"],
+        featured: true,
+        thumbnail: {
+          src: "/og-cache/i-o-2026-welcome-to-the-agentic-gemini-e-4283a2bd.png",
+          alt: "agentic Search — Google 검색 패러다임 전환",
+        },
+      },
+      sourceWeek: "2026-w21",
+      sourceCompany: "Google",
+    },
+    {
+      rank: 14,
       tier: "feature",
       post: {
         date: "5/18",
@@ -327,7 +373,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Anthropic",
     },
     {
-      rank: 11,
+      rank: 15,
       tier: "feature",
       post: {
         date: "5/19",
@@ -350,7 +396,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Anthropic",
     },
     {
-      rank: 12,
+      rank: 16,
       tier: "feature",
       post: {
         date: "5/19",
@@ -383,7 +429,7 @@ export const edition2026_05b: ABEdition = {
       editorial: "Grok Build 발표용 정리 — 공식 + 해외 비교 리뷰 통합, 발표 슬라이드 그대로 사용 가능.",
     },
     {
-      rank: 13,
+      rank: 17,
       tier: "feature",
       post: {
         date: "5/18",
@@ -406,7 +452,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Krea",
     },
     {
-      rank: 14,
+      rank: 18,
       tier: "feature",
       post: {
         date: "5/21",
@@ -429,7 +475,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Krea",
     },
     {
-      rank: 15,
+      rank: 19,
       tier: "feature",
       post: {
         date: "5/25",
@@ -452,7 +498,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "AI Industry",
     },
     {
-      rank: 16,
+      rank: 20,
       tier: "feature",
       post: {
         date: "5/19",
@@ -475,7 +521,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Google",
     },
     {
-      rank: 17,
+      rank: 21,
       tier: "feature",
       post: {
         date: "5/19",
@@ -498,7 +544,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Google",
     },
     {
-      rank: 18,
+      rank: 22,
       tier: "feature",
       post: {
         date: "5/19",
@@ -521,7 +567,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "Google",
     },
     {
-      rank: 19,
+      rank: 23,
       tier: "feature",
       post: {
         date: "5/23",
@@ -544,7 +590,7 @@ export const edition2026_05b: ABEdition = {
       sourceCompany: "AI Industry",
     },
     {
-      rank: 20,
+      rank: 24,
       tier: "feature",
       post: {
         date: "5/18",
@@ -617,6 +663,23 @@ export const edition2026_05b: ABEdition = {
       thumbnail: {
         src: "/og-cache/manaflow-ai-cmux-peter-steinberger가-소개한--0f69a44c.jpg",
         alt: "manaflow-ai/cmux",
+      },
+    },
+    {
+      title: "jaehwan02/UltraCat",
+      slug: "ultracat-macos-menubar",
+      deck: "macOS 메뉴바에서 시스템 상태·팬 제어·잠자기 관리 — Claude Code/Codex 장시간 작업 환경 보조",
+      category: "AI 작업환경 보조 / macOS 유틸리티",
+      sourceUrl: "https://github.com/jaehwan02/UltraCat",
+      sourceLabel: "GitHub →",
+      summary: "UltraCat은 macOS 메뉴바에서 시스템 상태 확인, 팬 제어, 잠자기 관리를 제공하는 유틸리티다. AI 앱은 아니지만 Claude Code·Codex·로컬 LLM·브라우저 자동화처럼 Mac을 장시간 굴리는 AI 작업환경의 발열·팬·수면 관리 보조 도구로 추천.",
+      body: "**이게 뭐예요?**\n\nUltraCat 은 macOS 메뉴바에서 동작하는 유틸리티입니다. 시스템 상태(CPU·메모리·온도), 팬 RPM 직접 제어, 잠자기·디스플레이 슬립 정책 관리를 한 메뉴바 아이콘에서 처리합니다.\n\n**왜 골랐나?**\n\nAI 코딩 도구가 늘면서 노트북 발열이 일상 문제가 됐습니다. Claude Code 백그라운드 세션 + Codex CLI + 로컬 LLM + 브라우저 자동화를 동시에 돌리면 MacBook Pro M2/M3도 팬이 풀로 돕니다. UltraCat 은 그 환경에서 팬·수면 정책을 세밀하게 조절할 수 있어 실용적입니다.\n\n**사용 포인트**\n\n- 장시간 build / agent 세션 중 팬 RPM 수동 boost\n- 잠자기 일시 차단으로 백그라운드 빌드 중단 방지\n- 시스템 온도 메뉴바 상시 노출 → throttling 사전 감지\n- 최신 릴리스 v1.0.4 (2026-05 기준)\n\n**주의할 점**\n\n- AI 도구는 아님 — AI 작업환경 **보조** 유틸리티 카테고리\n- 소스 비공개 (DMG 배포). 회사 장비·민감 환경에서는 권한과 신뢰성 사전 확인 필요\n- 라이선스 미명시 — 개인 Mac 에서 Watch/Trial 권장\n- 팬 직접 제어는 하드웨어 위험. 기본 정책 먼저 테스트 후 사용\n\n**다운로드**\n\nDMG: https://github.com/jaehwan02/UltraCat/releases/latest/download/UltraCat.dmg",
+      editorial: "Mac 장시간 AI 작업의 발열/수면 관리 보조 도구.",
+      tags: ["macOS", "유틸리티", "메뉴바앱", "팬제어", "AI작업환경"],
+      tier: "feature",
+      thumbnail: {
+        src: "/og-cache/cokacdir-telegram-fallback.png",
+        alt: "UltraCat — macOS 메뉴바 유틸리티",
       },
     },
     {
