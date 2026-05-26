@@ -519,6 +519,84 @@
   border: 0;
 }
 
+.quickSummary {
+  margin: 22px 0 22px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.quickSummaryLabel {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.quickSummary ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.quickSummary li {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.sourceAudit {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--border);
+}
+
+.sourceAudit div {
+  min-width: 0;
+  background: var(--surface);
+  padding: 9px 10px;
+}
+
+.sourceAudit dt {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sourceAudit dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 720px) {
+  .sourceAudit {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .sourceAudit {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* 본문 (마크다운) */
 .articleBody {
   font-size: 16px;

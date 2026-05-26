@@ -58,6 +58,54 @@ function renderRichText(text: string): ReactNode {
 
 type SourceLink = { label: string; url: string; primary?: boolean };
 
+type SourceAuditInput = {
+  officialUrl?: string;
+  source?: string;
+  backupUrls?: { label: string; url: string }[];
+  tags?: string[];
+  date?: string;
+};
+
+function hostnameOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+function inferReleaseScope(input: SourceAuditInput): string {
+  const text = [...(input.tags || []), input.source || "", input.officialUrl || ""].join(" ").toLowerCase();
+  if (/preview|research|beta|early/.test(text)) return "Preview / Beta";
+  if (/api|developer|docs|github/.test(text)) return "API / Developer";
+  if (/enterprise|kpmg|dell|aws|bedrock/.test(text)) return "Enterprise";
+  if (/mobile|android|ios|app/.test(text)) return "Web / Mobile";
+  return "공개 발표";
+}
+
+function buildSourceAudit(input: SourceAuditInput) {
+  const primaryUrl = input.officialUrl || input.source || input.backupUrls?.[0]?.url;
+  const host = primaryUrl ? hostnameOf(primaryUrl) : "출처 대기";
+  return {
+    status: input.officialUrl ? "공식 발표" : "보조 검증",
+    scope: inferReleaseScope(input),
+    source: input.officialUrl ? `공식 · ${host}` : `확인 · ${host}`,
+    checked: "확인일 2026-05-26",
+  };
+}
+
+function SourceAuditStrip({ input, tone = "accent" }: { input: SourceAuditInput; tone?: "accent" | "gold" }) {
+  const audit = buildSourceAudit(input);
+  return (
+    <dl className={`ab-source-audit ab-source-audit--${tone}`} aria-label="검증 메타">
+      <div><dt>상태</dt><dd>{audit.status}</dd></div>
+      <div><dt>범위</dt><dd>{audit.scope}</dd></div>
+      <div><dt>출처</dt><dd>{audit.source}</dd></div>
+      <div><dt>확인</dt><dd>{audit.checked}</dd></div>
+    </dl>
+  );
+}
+
 function collectSourceLinks({
   officialUrl,
   source,
@@ -842,6 +890,8 @@ function HighlightArticle({
             {stripMarkdown(item.post.summary || item.post.content || "")}
           </p>
 
+          <SourceAuditStrip input={item.post} />
+
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             <TagList tags={item.post.tags} limit={6} />
           </div>
@@ -1073,6 +1123,8 @@ function EditorPickCard({
 
         <p className="tc-feed-summary">{stripMarkdown(item.summary)}</p>
 
+        <SourceAuditStrip input={{ officialUrl: item.sourceUrl, source: item.sourceUrl, tags: item.tags }} tone="gold" />
+
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
           <TagList tags={item.tags} limit={5} />
         </div>
@@ -1220,6 +1272,20 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             >
               {data.theme}
             </p>
+            {data.coreFlow && data.coreFlow.length > 0 ? (
+              <section className="ab-core-flow" aria-label="이번 호 핵심 흐름">
+                <span className="ab-core-flow__label mono">이번 호 핵심 흐름</span>
+                <ol>
+                  {data.coreFlow.map((flow, index) => (
+                    <li key={flow}>
+                      <span className="mono">{String(index + 1).padStart(2, "0")}</span>
+                      <p>{flow}</p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ) : null}
+
             <hr className="rule-double" style={{ marginTop: 36 }} />
           </div>
         </header>

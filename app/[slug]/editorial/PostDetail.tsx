@@ -16,6 +16,7 @@ interface PostDetailProps {
     companyColor: string;
     weekSlug: string;
     weekPeriod: string;
+    threeLineSummary?: string[];
   };
   prev: { post: Post; companyName: string; companyColor: string } | null;
   next: { post: Post; companyName: string; companyColor: string } | null;
@@ -51,6 +52,15 @@ function hostnameOf(url: string): string {
   } catch {
     return url;
   }
+}
+
+function inferReleaseScope(post: Post): string {
+  const text = [...(post.tags || []), post.source || "", post.officialUrl || ""].join(" ").toLowerCase();
+  if (/preview|research|beta|early/.test(text)) return "Preview / Beta";
+  if (/api|developer|docs|github/.test(text)) return "API / Developer";
+  if (/enterprise|kpmg|dell|aws|bedrock/.test(text)) return "Enterprise";
+  if (/mobile|android|ios|app/.test(text)) return "Web / Mobile";
+  return "공개 발표";
 }
 
 function renderMarkdown(content: string) {
@@ -99,7 +109,7 @@ function categoryLabel(c: GlossaryEntry["category"], locale: "ko" | "en"): strin
 }
 
 export default function PostDetail({ meta, prev, next, weekSlug, article, related }: PostDetailProps) {
-  const { post, companyName, companyColor, weekPeriod } = meta;
+  const { post, companyName, companyColor, weekPeriod, threeLineSummary } = meta;
   const { locale, t } = useLocale();
   const [activeLang, setActiveLang] = useState<"ko" | "en">(locale);
 
@@ -195,6 +205,26 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
           </div>
 
           <h1 className={styles.articleTitle}>{post.title}</h1>
+
+          {threeLineSummary && threeLineSummary.length > 0 ? (
+            <section className={styles.quickSummary} aria-label={activeLang === "ko" ? "3줄 요약" : "Three-line summary"}>
+              <span className={styles.quickSummaryLabel}>{activeLang === "ko" ? "3줄 요약" : "Three-line summary"}</span>
+              <ol>
+                {threeLineSummary.map((line, index) => (
+                  <li key={`${index}-${line}`}>{line}</li>
+                ))}
+              </ol>
+            </section>
+          ) : null}
+
+          {weekSlug.startsWith("ab/") ? (
+            <dl className={styles.sourceAudit} aria-label="검증 메타">
+              <div><dt>상태</dt><dd>{post.officialUrl ? "공식 발표" : "보조 검증"}</dd></div>
+              <div><dt>범위</dt><dd>{inferReleaseScope(post)}</dd></div>
+              <div><dt>출처</dt><dd>{officialHost ? `공식 · ${officialHost}` : "출처 대기"}</dd></div>
+              <div><dt>확인</dt><dd>확인일 2026-05-26</dd></div>
+            </dl>
+          ) : null}
 
           {/* Bilingual language tabs */}
           <div className={styles.langTabs} role="tablist" aria-label="Language">

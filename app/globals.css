@@ -266,6 +266,7 @@ body {
   }
 }
 
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 */
 /* TestingCatalog-inspired issue layout */
 .tc-issue-strip {
   display: flex;
@@ -299,6 +300,110 @@ body {
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+.ab-core-flow {
+  margin-top: clamp(24px, 4vw, 36px);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  background: linear-gradient(135deg, var(--card), var(--surface));
+  padding: clamp(18px, 3vw, 26px);
+}
+
+.ab-core-flow__label {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ab-core-flow ol {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+}
+
+.ab-core-flow li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.ab-core-flow li > span {
+  color: var(--dim);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.ab-core-flow p {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.65;
+}
+
+.ab-source-audit {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 14px 0 2px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--border);
+}
+
+.ab-source-audit div {
+  min-width: 0;
+  background: var(--surface);
+  padding: 9px 10px;
+}
+
+.ab-source-audit dt {
+  margin-bottom: 4px;
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ab-source-audit dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.ab-source-audit--accent dd:first-letter,
+.ab-source-audit--gold dd:first-letter {
+  color: inherit;
+}
+
+.ab-source-audit--accent {
+  border-color: color-mix(in srgb, var(--accent), var(--border) 55%);
+}
+
+.ab-source-audit--gold {
+  border-color: color-mix(in srgb, var(--gold), var(--border) 48%);
+}
+
+@media (max-width: 720px) {
+  .ab-source-audit {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .ab-source-audit {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tc-current-pill,

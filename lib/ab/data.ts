@@ -70,6 +70,7 @@ export interface ABEdition {
 
   intro: string;
   closing: string;
+  coreFlow?: string[];
 
   highlights: ABHighlight[];
 

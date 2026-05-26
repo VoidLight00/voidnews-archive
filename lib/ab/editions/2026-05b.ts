@@ -12,6 +12,11 @@ export const edition2026_05b: ABEdition = {
   announceDate: "2026-05-25",
   intro: `이번 11일은 한 회사의 단일 발표가 아니라, 네 가지 흐름이 동시에 굳어진 구간이었습니다.\n\n첫째, OpenAI는 Codex를 ChatGPT 모바일·Skills·Automations·AWS Bedrock·Dell 하이브리드까지 일주일 안에 풀며 "Codex가 어디서나 돈다"는 그림을 완성했습니다. 둘째, Google I/O 2026은 Gemini 3.5/Spark/Omni와 Managed Agents, Antigravity 2.0, AI Studio로 Gemini를 단순 챗봇이 아니라 agentic platform으로 다시 정의했습니다. 셋째, NVIDIA는 Vera CPU 첫 출하 + Q1 FY27 Data Center 752억$로 "에이전트를 굴리는 인프라"가 산업 코어임을 수치로 증명했습니다. 넷째, Anthropic은 Stainless 인수, KPMG 27.6만명 도입, Project Glasswing 1만+ 취약점 발견, Claude Code Agent View로 모델·플랫폼·기업 운영체제 세 축을 동시에 밀었습니다.`,
   closing: `한 줄로 묶으면, AI는 이번 11일 사이에 "어디서나 돌고, 인프라를 정당화하며, 기업 운영체제로 들어가는" 단계로 굳었습니다.\n\n직접 써보고 추천드리는 도구 섹션에는 tw93/Mole(macOS deep clean + AI CLI 잔재 정리), Nutlope/hallmark(anti-AI-slop 디자인 스킬), manaflow-ai/cmux(Codex CLI 분할 워크플로), cokacdir(한국어 AI 큐레이션 오픈소스) 네 개를 골라뒀습니다.\n\n— VoidLight`,
+  coreFlow: [
+    "Codex는 모바일·앱·Skills·Automations·AWS·Dell로 확장되며 어디서나 실행되는 코딩 에이전트가 됐다.",
+    "Gemini는 I/O 2026에서 Omni·Managed Agents·agentic Search를 묶어 제품 전반에 깔리는 에이전트 플랫폼으로 재정의됐다.",
+    "NVIDIA와 Anthropic은 각각 인프라 풀스택과 기업 업무 계층을 장악하며 AI 운영체제의 하부와 상부를 동시에 밀고 있다.",
+  ],
   highlights: [
     {
       rank: 1,

@@ -67,6 +67,7 @@ export default async function ABPostPage({
     companyColor: sectionColor,
     weekSlug: `ab/${edition}`,
     weekPeriod: meta.editionPeriod,
+    threeLineSummary: meta.threeLineSummary,
   };
 
   const adaptedPrev = prev

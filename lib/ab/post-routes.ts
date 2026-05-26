@@ -14,6 +14,17 @@ export interface ABPostMeta {
   sourceCompany?: string;
   /** editor's pick / demo 의 category */
   category?: string;
+  threeLineSummary?: string[];
+}
+
+function splitThreeLineSummary(text?: string): string[] {
+  if (!text) return [];
+  return text
+    .replace(/\s+/g, " ")
+    .split(/(?<=[.!?。])\s+|\s+—\s+|\s+-\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .slice(0, 3);
 }
 
 /** ABEditorPick → Post 호환 어댑터 */
@@ -68,6 +79,7 @@ export function getABPost(
         editionPeriod: ed.period,
         rank: h.rank,
         sourceCompany: h.sourceCompany,
+        threeLineSummary: splitThreeLineSummary(h.post.summary || h.post.deck || h.post.content),
       };
     }
   }
@@ -81,6 +93,7 @@ export function getABPost(
         editionTitle: ed.title,
         editionPeriod: ed.period,
         category: p.category,
+        threeLineSummary: splitThreeLineSummary(p.summary || p.deck || p.body),
       };
     }
   }
@@ -94,6 +107,7 @@ export function getABPost(
         editionTitle: ed.title,
         editionPeriod: ed.period,
         category: d.category,
+        threeLineSummary: splitThreeLineSummary(d.summary || d.deck || d.body),
       };
     }
   }
