@@ -722,15 +722,27 @@ function HighlightArticle({
   item,
   expanded,
   onToggle,
+  editionSlug,
 }: {
   item: ABHighlight;
   expanded: boolean;
   onToggle: (rank: number) => void;
+  editionSlug: string;
 }) {
   const cardRef = useRef<HTMLElement>(null);
   const accent = item.tier === "hero" ? "var(--accent)" : "var(--muted)";
   const image = item.post.thumbnail ?? item.post.images?.[0];
   const detailId = `ab-highlight-detail-${item.rank}`;
+  // w22 패턴 — slug 있으면 카드 클릭 시 nested route 로 이동
+  const nestedHref = item.post.slug ? `/ab/${editionSlug}/${item.post.slug}/` : null;
+
+  const onCardClick = () => {
+    if (nestedHref && typeof window !== "undefined") {
+      window.location.href = nestedHref;
+      return;
+    }
+    onToggle(item.rank);
+  };
 
   useEffect(() => {
     if (!expanded) return;
@@ -750,14 +762,16 @@ function HighlightArticle({
       <div
         role="button"
         tabIndex={0}
-        aria-expanded={expanded}
-        aria-controls={detailId}
-        aria-label={`${stripMarkdown(item.post.title)} ${expanded ? "접기" : "펼치기"}`}
-        onClick={() => onToggle(item.rank)}
+        aria-expanded={nestedHref ? undefined : expanded}
+        aria-controls={nestedHref ? undefined : detailId}
+        aria-label={nestedHref
+          ? `${stripMarkdown(item.post.title)} 상세 페이지 열기`
+          : `${stripMarkdown(item.post.title)} ${expanded ? "접기" : "펼치기"}`}
+        onClick={onCardClick}
         onKeyDown={(e) => {
           if (e.key !== "Enter" && e.key !== " ") return;
           e.preventDefault();
-          onToggle(item.rank);
+          onCardClick();
         }}
         style={{
           display: "flex",
@@ -991,19 +1005,30 @@ function DemoCard({ item }: { item: ABDemoCard }) {
 function EditorPickCard({
   item,
   onOpen,
+  editionSlug,
 }: {
   item: ABEditorPick;
   onOpen: (c: ModalContent) => void;
+  editionSlug: string;
 }) {
   const image = item.thumbnail ?? item.images?.[0];
+  const nestedHref = item.slug ? `/ab/${editionSlug}/${item.slug}/` : null;
+
+  const onCardActivate = () => {
+    if (nestedHref && typeof window !== "undefined") {
+      window.location.href = nestedHref;
+      return;
+    }
+    onOpen({ kind: "pick", item });
+  };
 
   return (
     <article
-      onClick={() => onOpen({ kind: "pick", item })}
+      onClick={onCardActivate}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") onOpen({ kind: "pick", item });
+        if (e.key === "Enter" || e.key === " ") onCardActivate();
       }}
       className="tc-feed-card"
       style={{
@@ -1273,6 +1298,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   item={h}
                   expanded={expandedRank === h.rank}
                   onToggle={toggleHighlight}
+                  editionSlug={data.slug}
                 />
               ))}
             </div>
@@ -1324,7 +1350,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               </div>
               <div className="tc-article-grid">
                 {data.editorsPicks.map((pick, i) => (
-                  <EditorPickCard key={i} item={pick} onOpen={openModal} />
+                  <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
                 ))}
               </div>
             </div>

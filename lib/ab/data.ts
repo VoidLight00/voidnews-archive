@@ -27,6 +27,7 @@ export interface ABHighlight {
 
 export interface ABEditorPick {
   title: string;
+  slug?: string; // nested route /ab/<edition>/<slug>/
   deck?: string; // 카드 grid title 밑 1줄 sub-headline
   subtitle?: string;
   category: string; // "AI 데이터 인프라", "개발 도구" 등 자유 분류
@@ -46,6 +47,7 @@ export interface ABEditorPick {
 
 export interface ABDemoCard {
   title: string;
+  slug?: string;
   deck?: string;
   subtitle?: string;
   category: string;

@@ -163,6 +163,7 @@ export const edition2026_04b: ABEdition = {
         date: "4/17",
         platform: "X",
         title: "Gemini App for Mac 출시 — 네이티브 데스크탑 앱 (Option+Space 단축키)",
+        slug: "gemini-app-for-mac-출시-네이티브-데스크탑-앱-optionspace-단축키",
         summary:
           "네이티브 macOS 앱 정식 출시. Option+Space 단축키로 어디서든 Gemini 호출. 텍스트·음성·이미지 지원.",
         content:
@@ -331,6 +332,7 @@ export const edition2026_04b: ABEdition = {
   editorsPicks: [
     {
       title: "CodeBurn — Claude Code·Codex·Cursor 토큰/비용 TUI 대시보드",
+      slug: "codeburn-claude-codecodexcursor-토큰비용-tui-대시보드",
       subtitle: "내가 직접 써본 툴",
       category: "개발자 도구",
       sourceUrl: "https://github.com/AgentSeal/codeburn",
