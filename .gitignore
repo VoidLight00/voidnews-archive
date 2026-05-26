@@ -48,3 +48,7 @@ CLAUDE.md
 .supabase-secrets/
 .env.local
 .env*.local
+
+# Claude Code 작업 중 캡처/메모 (commit 의도 X)
+.claude-*.png
+VOL*_HANDOFF.md
