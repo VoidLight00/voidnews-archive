@@ -1151,7 +1151,7 @@ function PostCard({
           {read && (
             <>
               <span aria-hidden>·</span>
-              <span style={{ color: "var(--gold)", fontWeight: 800 }}>Read</span>
+              <span style={{ color: "var(--gold)", fontWeight: 800 }}>읽음</span>
             </>
           )}
         </div>
@@ -1253,7 +1253,7 @@ function PostCard({
                   fontWeight: 800,
                 }}
               >
-                {expanded ? "Close ↑" : "Read more →"}
+                {expanded ? "접기 ↑" : "자세히 보기 →"}
               </button>
             )}
           </div>
@@ -1336,7 +1336,7 @@ function PostCard({
             )}
             {post.source && post.source !== post.officialUrl && !isXPostUrl(post.source) && (
               <a href={post.source} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10.5, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", border: "1px solid var(--accent)", borderRadius: 999 }}>
-                Source →
+                출처 →
               </a>
             )}
             {post.backupUrls?.map(({ label, url }) => (
@@ -1517,7 +1517,7 @@ function StatsBar({
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-          <span className="kicker" style={{ color: "var(--kicker)" }}>By the numbers</span>
+          <span className="kicker" style={{ color: "var(--kicker)" }}>숫자로 보는</span>
           <span aria-hidden style={{ width: 24, height: 1, background: "var(--rule)" }} />
           <h3
             className="serif"
@@ -1546,7 +1546,7 @@ function StatsBar({
             }
             title={actionMode === "filter" ? "클릭 시 섹션 스크롤로 전환" : "클릭 시 회사 필터로 전환"}
           >
-            {actionMode === "filter" ? "Filter mode" : "Scroll mode"}
+            {actionMode === "filter" ? "필터 모드" : "스크롤 모드"}
           </button>
           <span
             className="mono"
@@ -1736,7 +1736,7 @@ function TopStoriesSection({
   const href = getPostIssueHref(issueSlug, lead.post.title);
 
   return (
-    <section className="tc-hero-section rise-in" aria-label="Featured story">
+    <section className="tc-hero-section rise-in" aria-label="메인 기사">
       <a
         href={href}
         className="tc-hero-card"
@@ -1761,7 +1761,7 @@ function TopStoriesSection({
             <span aria-hidden>·</span>
             <span>{estimateReadTime(lead.post)} min read</span>
             <span aria-hidden>·</span>
-            <span>Read post →</span>
+            <span>포스트 보기 →</span>
           </div>
         </div>
         {secondary.length > 0 && (
@@ -1821,7 +1821,7 @@ function FeedArticleCard({
         )}
         <div className="tc-feed-footer mono">
           <span>#{String(index).padStart(2, "0")}</span>
-          <span>Read more →</span>
+          <span>자세히 보기 →</span>
         </div>
       </div>
     </a>
@@ -1844,7 +1844,7 @@ function ChronologicalFeed({
   return (
     <section className="tc-feed-section" aria-label="Latest articles">
       <div className="tc-section-heading">
-        <span className="mono">Latest AI News</span>
+        <span className="mono">최신 AI 뉴스</span>
         <span aria-hidden />
       </div>
       <div className="tc-article-grid">
@@ -2477,7 +2477,7 @@ export default function WeeklyClient({
           padding: "40px clamp(16px, 3vw, 32px) 96px",
         }}
       >
-        <section className="tc-issue-strip" aria-label="Issue navigation">
+        <section className="tc-issue-strip" aria-label="호 이동">
           <div className="tc-issue-meta mono">
             <span>VoidNews Weekly</span>
             <span aria-hidden>·</span>
@@ -2490,7 +2490,7 @@ export default function WeeklyClient({
 
           <div className="tc-issue-actions">
             {isLatestWeek ? (
-              <span className="tc-current-pill mono">Current Issue</span>
+              <span className="tc-current-pill mono">이번 호</span>
             ) : (
               <a href={`/${latestWeek.slug}`} className="tc-current-link mono">
                 Back to Current · W{latestWeek.week}
@@ -2517,9 +2517,9 @@ export default function WeeklyClient({
         />
 
 
-        <div className="tc-progress-row" aria-label="Reading progress">
+        <div className="tc-progress-row" aria-label="읽기 진행도">
           <div className="mono">
-            <span>Reading progress</span>
+            <span>읽기 진행도</span>
             <span aria-hidden>//</span>
             <strong>{readFilteredCount} / {totalFiltered}</strong>
           </div>
@@ -2556,7 +2556,7 @@ export default function WeeklyClient({
                   <input
                     id="search-input"
                     type="text"
-                    placeholder="SEARCH INTELLIGENCE..."
+                    placeholder="제목·요약·태그 검색..."
                     value={search}
                     onFocus={() => {
                       if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);
@@ -2601,7 +2601,7 @@ export default function WeeklyClient({
                       boxShadow: "0 16px 40px rgba(0,0,0,0.28)",
                     }}
                   >
-                    <p style={{ fontSize: 11, color: "var(--muted)", margin: "2px 6px 8px", fontFamily: "var(--mono)" }}>RECENT SEARCHES</p>
+                    <p style={{ fontSize: 11, color: "var(--muted)", margin: "2px 6px 8px", fontFamily: "var(--mono)" }}>최근 검색어</p>
                     {[...recentSearches].reverse().slice(0, 3).map((item) => (
                       <div
                         key={item}
@@ -2673,7 +2673,7 @@ export default function WeeklyClient({
                   }}
                   title={viewDensity === "comfortable" ? "작은 카드 보기" : "기본 카드 보기"}
                 >
-                  {viewDensity === "comfortable" ? "COMPACT" : "COMFY"}
+                  {viewDensity === "comfortable" ? "축약" : "기본"}
                 </button>
                 <select
                   value={sortOrder}
@@ -2694,9 +2694,9 @@ export default function WeeklyClient({
                   }}
                   aria-label="정렬"
                 >
-                  <option value="latest">LATEST</option>
-                  <option value="oldest">OLDEST</option>
-                  <option value="company">COMPANY</option>
+                  <option value="latest">최신</option>
+                  <option value="oldest">오래된</option>
+                  <option value="company">회사</option>
                 </select>
               </div>
             </div>
@@ -2759,7 +2759,7 @@ export default function WeeklyClient({
                 }
                 className="chip"
               >
-                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "Expand all" : "Collapse all"}
+                {visibleCompanyNames.every((companyName) => collapsedSet.has(companyName)) ? "모두 펼치기" : "모두 접기"}
               </button>
 
               {bookmarks.length > 0 && (
@@ -2772,14 +2772,14 @@ export default function WeeklyClient({
                     background: bookmarksCopied ? "var(--accent)" : "transparent",
                   }}
                 >
-                  {bookmarksCopied ? "Copied" : "Export"}
+                  {bookmarksCopied ? "복사됨" : "내보내기"}
                   <span aria-hidden>↓</span>
                 </button>
               )}
             </div>
 
             <div className="divider-label" aria-hidden>
-              <span>By company</span>
+              <span>회사별</span>
             </div>
 
             <div className="scroll-hide" style={{ display: "flex", gap: 8, overflowX: "auto", flexWrap: "nowrap" }}>
@@ -2870,9 +2870,9 @@ export default function WeeklyClient({
         />
 
         {filteredCompanies.length > 0 ? (
-          <section aria-label="Company archive" style={{ marginBottom: 48 }}>
+          <section aria-label="회사 아카이브" style={{ marginBottom: 48 }}>
             <div className="divider-label" style={{ marginBottom: 16 }}>
-              <span>Company archive</span>
+              <span>회사 아카이브</span>
             </div>
             {filteredCompanies.map((company) => (
               <CompanySection

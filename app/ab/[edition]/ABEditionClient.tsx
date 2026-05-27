@@ -77,9 +77,9 @@ function hostnameOf(url: string): string {
 function inferReleaseScope(input: SourceAuditInput): string {
   const text = [...(input.tags || []), input.source || "", input.officialUrl || ""].join(" ").toLowerCase();
   if (/preview|research|beta|early/.test(text)) return "Preview / Beta";
-  if (/api|developer|docs|github/.test(text)) return "API / Developer";
-  if (/enterprise|kpmg|dell|aws|bedrock/.test(text)) return "Enterprise";
-  if (/mobile|android|ios|app/.test(text)) return "Web / Mobile";
+  if (/api|developer|docs|github/.test(text)) return "API / 개발자";
+  if (/enterprise|kpmg|dell|aws|bedrock/.test(text)) return "엔터프라이즈";
+  if (/mobile|android|ios|app/.test(text)) return "웹 / 모바일";
   return "공개 발표";
 }
 
@@ -125,7 +125,7 @@ function collectSourceLinks({
 
   const officialLabel = backupUrls?.find((link) => link.url === officialUrl)?.label || "공식 링크";
   if (officialUrl) add({ label: officialLabel, url: officialUrl, primary: true });
-  if (source) add({ label: "SOURCE", url: source });
+  if (source) add({ label: "출처", url: source });
   for (const link of backupUrls || []) add(link);
 
   return links;
@@ -902,7 +902,7 @@ function HighlightArticle({
 
           <div className="tc-feed-footer mono">
             <span>#{String(item.rank).padStart(2, "0")}</span>
-            <span>{expanded ? "Close ↑" : "Read more →"}</span>
+            <span>{expanded ? "접기 ↑" : "자세히 보기 →"}</span>
           </div>
         </div>
       </div>
@@ -1138,8 +1138,8 @@ function EditorPickCard({
         </div>
 
         <div className="tc-feed-footer mono">
-          <span>{item.sourceLabel || "Source"}</span>
-          <span>Read more →</span>
+          <span>{item.sourceLabel || "출처"}</span>
+          <span>자세히 보기 →</span>
         </div>
       </div>
     </article>
@@ -1361,7 +1361,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         >
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
             <div className="divider-label" aria-hidden style={{ marginBottom: 18 }}>
-              <span>Opening</span>
+              <span>여는 글</span>
             </div>
             <p
               className="serif dropcap"
@@ -1502,7 +1502,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             }}
           >
             <div className="divider-label" aria-hidden style={{ marginBottom: 16 }}>
-              <span>Closing</span>
+              <span>마무리</span>
             </div>
             <p
               className="serif"
@@ -1543,7 +1543,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-              <span style={{ color: "var(--dim)" }}>Covered weeks</span>
+              <span style={{ color: "var(--dim)" }}>다룬 주차</span>
               {data.coveredWeeks.map((w) => (
                 <Link
                   key={w}
