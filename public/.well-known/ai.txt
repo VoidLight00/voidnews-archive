@@ -1,0 +1,40 @@
+# ai.txt — AI Preferences for voidnews-archive
+# Spec draft: https://github.com/ai-pref/ai-pref / .well-known proposal
+# Effective: 2026-05-28
+# Operator: VoidLight (@voidlight00)
+# Site: https://voidnews-archive.vercel.app/
+
+# ───────────────────────────────────────────────────────────────
+# Use of this site's content for AI/ML training is NOT permitted.
+# Use of this site's content for generative model output is NOT permitted.
+# Use of this site's content for retrieval-augmented generation (RAG)
+# corpora is NOT permitted without explicit written permission.
+# ───────────────────────────────────────────────────────────────
+
+User-agent: *
+Disallow-Train: /
+Disallow-Generate: /
+Disallow-RAG: /
+
+# Standard search engine indexing (Google/Bing/Naver/Daum) IS permitted
+# for the purpose of returning links to this site. This permission does
+# NOT extend to AI overview, AI snapshot, AI summary, or any generative
+# answer that substitutes for a visit to the original page.
+
+User-agent: Googlebot
+Disallow-AI-Overview: /
+Disallow-Train: /
+
+User-agent: Bingbot
+Disallow-AI-Overview: /
+Disallow-Train: /
+
+# Legal basis
+#   - Korean Copyright Act Article 136 (criminal liability for
+#     unauthorized reproduction)
+#   - Korean Copyright Act Article 35-5 (text and data mining
+#     limitation does NOT apply when rightsholder has expressed
+#     opt-out via machine-readable signal — this file)
+#   - EU Directive 2019/790 Article 4(3) machine-readable reservation
+
+# Contact for licensing inquiries: via Threads @voidlight00 or X @VoidLight_Hyeon

@@ -1,0 +1,50 @@
+# Do-Not-Train Policy for voidnews-archive
+# Effective: 2026-05-28
+# Operator: VoidLight (@voidlight00)
+# Site: https://voidnews-archive.vercel.app/
+
+# This site opts OUT of all of the following uses of its public content:
+#
+#   1. Inclusion in any pre-training, fine-tuning, alignment,
+#      reinforcement-learning, or distillation dataset for any
+#      AI/ML model, foundation model, multimodal model, or
+#      derivative thereof.
+#
+#   2. Real-time retrieval, scraping, summarization, or generation
+#      of derivative output by any AI agent, AI browser, AI search
+#      engine, or AI overview product, regardless of whether the
+#      original page is also linked.
+#
+#   3. Inclusion in any retrieval-augmented generation (RAG) corpus,
+#      vector index, embedding database, or similar structure built
+#      to serve generative outputs.
+#
+#   4. Inclusion in any commercial AI evaluation, benchmark, or
+#      synthetic-data generation pipeline.
+
+# Permitted uses:
+#   - Standard search engine indexing for link-only results.
+#   - Personal reading by human visitors.
+#   - Fair-use quotation with attribution and link back to the
+#     original page on voidnews-archive.vercel.app.
+
+# Enforcement signals declared on this site:
+#   - /robots.txt           — User-agent blocklist (AI training bots)
+#   - /.well-known/ai.txt   — AI Preferences (machine-readable opt-out)
+#   - HTTP header X-Robots-Tag: noai, noimageai
+#   - HTML meta noai="true", noimageai="true", ai-training="no"
+#   - Footer notice "© VoidLight · No AI training · 한국 저작권법 제136조"
+
+# Legal basis:
+#   - Korean Copyright Act Article 136 (criminal liability for
+#     unauthorized reproduction).
+#   - Korean Copyright Act Article 35-5 (TDM limitation does NOT
+#     apply where rightsholder has reserved use in machine-readable
+#     form — this file).
+#   - EU CDSM Directive 2019/790 Article 4(3) (text and data mining
+#     reservation for commercial purposes).
+#   - US 17 U.S.C. § 1202 (Copyright Management Information removal
+#     prohibition).
+
+# Violations should be reported to the contact handles above.
+# Operator reserves the right to seek injunctive relief and damages.

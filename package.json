@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-slugs.mjs",
     "build": "next build",
     "start": "next start",
-    "audit:thumbnails": "node scripts/audit-thumbnails.mjs"
+    "audit:thumbnails": "node scripts/audit-thumbnails.mjs",
+    "check:slugs": "node scripts/check-slugs.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",

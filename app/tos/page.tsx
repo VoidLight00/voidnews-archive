@@ -24,7 +24,7 @@ export default function TermsOfServicePage() {
         이용약관
       </h1>
       <p style={{ color: "var(--text-soft, #666)", marginBottom: 32, fontSize: 14 }}>
-        최종 개정일 — 2026년 5월 26일
+        최종 개정일 — 2026년 5월 28일
       </p>
 
       <section style={{ marginBottom: 28 }}>
@@ -56,11 +56,38 @@ export default function TermsOfServicePage() {
       </section>
 
       <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>4. AI 학습 거부</h2>
+        <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>4. AI 학습 거부 (4중 신호)</h2>
+        <p>본 사이트는 다음 네 가지 기계 판독 가능한 신호로 AI 학습 데이터셋 수집을 거부합니다.</p>
+        <ul style={{ paddingLeft: 24, margin: "12px 0" }}>
+          <li>
+            <code>/robots.txt</code> — GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, anthropic-ai,
+            Claude-Web, Google-Extended, CCBot, PerplexityBot, Perplexity-User, FacebookBot,
+            Meta-ExternalAgent <code>Disallow: /</code>
+          </li>
+          <li>
+            <a href="/.well-known/ai.txt" style={{ color: "var(--accent, #1B365D)" }}>
+              <code>/.well-known/ai.txt</code>
+            </a>{" "}
+            — AI Preferences 표준 (Disallow-Train / Disallow-Generate / Disallow-RAG /
+            Disallow-AI-Overview)
+          </li>
+          <li>
+            <a href="/.well-known/dnt-policy.txt" style={{ color: "var(--accent, #1B365D)" }}>
+              <code>/.well-known/dnt-policy.txt</code>
+            </a>{" "}
+            — Do-Not-Train Policy (사전 학습 / 파인튜닝 / RLHF / RAG / 벤치마크 / 합성 데이터 일체 opt-out)
+          </li>
+          <li>
+            HTTP 헤더 <code>X-Robots-Tag: noai, noimageai</code> + HTML meta{" "}
+            <code>noai=&quot;true&quot;</code>, <code>noimageai=&quot;true&quot;</code>,{" "}
+            <code>ai-training=&quot;no&quot;</code>
+          </li>
+        </ul>
         <p>
-          본 사이트는 <code>robots.txt</code> 와 <code>X-Robots-Tag: noai, noimageai</code> HTTP
-          헤더로 AI 학습 봇 (GPTBot, ClaudeBot, CCBot, Google-Extended, PerplexityBot 등) 의 접근을
-          거부합니다. 해당 정책을 우회한 학습 데이터셋 수집은 본 약관 위반입니다.
+          위 신호 중 어느 하나라도 우회하여 본 사이트 콘텐츠를 학습 데이터에 포함시킨 행위는 본 약관
+          위반이며, 한국 저작권법 제35조의5 (TDM 제한 적용 배제 — 권리자가 기계 판독 가능 형식으로 사용
+          유보를 표시한 경우) 및 EU CDSM Directive 2019/790 제4조 제3항 (text and data mining
+          reservation) 위반에 해당합니다.
         </p>
       </section>
 

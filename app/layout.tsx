@@ -342,12 +342,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   color: "var(--dim)",
                 }}
               >
-                © 2026 VoidLight · 무단 전재 및 AI 학습 금지 ·{" "}
+                © 2026 VoidLight · No AI training · 무단 전재 및 AI 학습 금지 · 한국 저작권법 제136조 ·{" "}
                 <a
                   href="/tos"
                   style={{ color: "var(--muted)", textDecoration: "underline" }}
                 >
                   이용약관
+                </a>
+                {" · "}
+                <a
+                  href="/.well-known/ai.txt"
+                  style={{ color: "var(--muted)", textDecoration: "underline" }}
+                >
+                  ai.txt
                 </a>
               </p>
             </div>
