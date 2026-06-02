@@ -926,7 +926,7 @@ function DemoCard({ item }: { item: ABDemoCard }) {
       style={{
         border: "1px solid var(--border2)",
         borderLeft: "4px solid var(--gold)",
-        background: "linear-gradient(145deg, rgba(255, 209, 102, 0.11), rgba(0,229,255,0.06))",
+        background: "color-mix(in srgb, var(--card), var(--surface) 22%)",
         borderRadius: 12,
         padding: "clamp(20px, 4vw, 34px)",
       }}
@@ -944,7 +944,7 @@ function DemoCard({ item }: { item: ABDemoCard }) {
           color: "var(--gold)",
         }}
       >
-        <span>GPT-5.5 실전</span>
+        <span>실전 사례</span>
         <span style={{ color: "var(--dim)" }}>·</span>
         <span style={{ color: "var(--muted)" }}>{item.category}</span>
       </div>
@@ -1049,7 +1049,7 @@ function DemoCard({ item }: { item: ABDemoCard }) {
             whiteSpace: "nowrap",
           }}
         >
-          {item.label || "DEMO 열기 →"}
+          {item.label || "사례 열기 →"}
         </a>
       </div>
     </article>
@@ -1166,79 +1166,72 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
       {/* ───── 모달 ───── */}
       {modal && <Modal content={modal} onClose={closeModal} />}
 
-      {/* ───── AB 메인 grid TC 스타일 오버라이드 (스코프: .ab-tc-grid 내부만) ───── */}
+      {/* ───── AB 메인 grid 스타일 오버라이드 (스코프: .ab-edition-grid 내부만) ───── */}
       <style>{`
-        .ab-tc-grid {
-          gap: clamp(18px, 2vw, 28px);
+        .ab-edition-grid {
+          gap: clamp(18px, 2.1vw, 30px);
         }
-        .ab-tc-grid .tc-feed-card {
-          border-radius: 6px;
+        .ab-edition-grid .tc-feed-card {
+          border-radius: 0;
+          background: color-mix(in srgb, var(--card), var(--surface) 18%);
           transition:
-            transform 0.22s ease,
-            box-shadow 0.22s ease,
+            transform 0.18s ease,
             border-color 0.18s ease,
             background 0.18s ease;
         }
-        .ab-tc-grid .tc-feed-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
-          border-color: var(--border2);
+        .ab-edition-grid .tc-feed-card:hover {
+          transform: translateY(-2px);
+          border-color: var(--text);
+          background: var(--card-hover);
+          box-shadow: none;
         }
-        .ab-tc-grid .tc-source-thumb--card {
-          aspect-ratio: 16 / 9;
+        .ab-edition-grid .tc-source-thumb--card {
+          aspect-ratio: 16 / 10;
           border-bottom: 1px solid var(--border);
         }
-        .ab-tc-grid .tc-feed-body {
-          gap: 10px;
-          padding: clamp(16px, 1.6vw, 22px) clamp(16px, 1.6vw, 22px) clamp(14px, 1.4vw, 20px);
+        .ab-edition-grid .tc-source-thumb img {
+          filter: grayscale(0.16) saturate(0.9) contrast(1.04);
         }
-        .ab-tc-grid .tc-feed-meta {
-          font-size: 10.5px;
-          letter-spacing: 0.12em;
+        .ab-edition-grid .tc-feed-body {
+          gap: 11px;
+          padding: clamp(18px, 1.8vw, 24px);
+        }
+        .ab-edition-grid .tc-feed-meta {
+          font-size: 10px;
+          letter-spacing: 0.14em;
           gap: 7px;
           color: var(--muted);
           margin-bottom: 2px;
         }
-        .ab-tc-grid .tc-feed-title {
-          font-size: clamp(18px, 1.55vw, 22px);
-          line-height: 1.22;
-          letter-spacing: -0.022em;
-          font-weight: 700;
+        .ab-edition-grid .tc-feed-title {
+          font-size: clamp(19px, 1.65vw, 24px);
+          line-height: 1.18;
+          letter-spacing: -0.03em;
+          font-weight: 680;
           color: var(--text-strong, var(--text));
           margin: 4px 0 2px;
+          text-decoration: none;
           -webkit-line-clamp: 3;
         }
-        .ab-tc-grid .tc-feed-summary {
+        .ab-edition-grid .tc-feed-summary {
           font-size: 13.5px;
-          line-height: 1.55;
-          color: var(--text-soft, var(--muted));
-          -webkit-line-clamp: 2;
+          line-height: 1.58;
+          color: var(--muted);
+          -webkit-line-clamp: 3;
         }
-        .ab-tc-grid .tc-feed-footer {
-          padding-top: 6px;
+        .ab-edition-grid .tc-feed-footer {
+          border-top: 1px solid var(--border);
+          margin-top: 4px;
+          padding-top: 12px;
           font-size: 10px;
           letter-spacing: 0.16em;
         }
       `}</style>
 
-      <main
-        style={{
-          minHeight: "100vh",
-          background: "var(--bg)",
-          color: "var(--text)",
-          fontFamily: "var(--sans)",
-        }}
-      >
+      <main className="ab-page-shell">
         {/* ───── Header ───── */}
-        <header
-          style={{
-            borderBottom: "1px solid var(--border)",
-            padding: "clamp(40px, 6vw, 64px) clamp(16px, 3vw, 32px) clamp(32px, 5vw, 48px)",
-            background:
-              "linear-gradient(180deg, var(--surface-2) 0%, var(--bg) 100%)",
-          }}
-        >
-          <div style={{ maxWidth: 1040, margin: "0 auto" }}>
+        <header className="ab-index-hero">
+          <div className="ab-shell-inner" style={{ maxWidth: 1120 }}>
             <nav
               aria-label="Breadcrumb"
               className="mono"
@@ -1264,77 +1257,29 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               <span style={{ color: "var(--text)" }}>{data.slug}</span>
             </nav>
 
-            <div
-              style={{
-                marginTop: 28,
-                display: "flex",
-                flexWrap: "wrap",
-                gap: 10,
-                alignItems: "center",
-              }}
-            >
-              <span
-                className="mono"
-                style={{
-                  fontSize: 10.5,
-                  fontWeight: 800,
-                  color: "var(--ink)",
-                  background: "var(--gold)",
-                  padding: "5px 12px",
-                  borderRadius: 999,
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Vol. {String(data.volume).padStart(2, "0")}
-              </span>
-              <span
-                className="mono"
-                style={{
-                  fontSize: 10.5,
-                  color: "var(--muted)",
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                }}
-              >
-                {data.period}
-              </span>
-              <span aria-hidden style={{ color: "var(--dim)" }}>·</span>
-              <span
-                className="mono"
-                style={{
-                  fontSize: 10.5,
-                  color: "var(--muted)",
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                }}
-              >
-                VoidLight Letter · Members-only
-              </span>
+            <div className="ab-hero-grid" style={{ alignItems: "start" }}>
+              <div className="ab-hero-copy">
+                <p className="ab-kicker">VoidLight Letter · {data.period}</p>
+                <h1 className="ab-display-title" style={{ maxWidth: "15ch" }}>{data.title}</h1>
+                <p className="ab-hero-deck">{data.theme}</p>
+              </div>
+
+              <aside className="ab-index-panel" aria-label="이번 호 메타데이터">
+                <div>
+                  <span className="ab-panel-label">Edition</span>
+                  <strong>VOL.{String(data.volume).padStart(2, "0")}</strong>
+                </div>
+                <div>
+                  <span className="ab-panel-label">Published</span>
+                  <strong>{data.announceDate}</strong>
+                </div>
+                <div>
+                  <span className="ab-panel-label">Cards</span>
+                  <strong>{data.highlights.length} highlights</strong>
+                </div>
+              </aside>
             </div>
 
-            <h1
-              className="headline serif"
-              style={{
-                marginTop: 22,
-                fontSize: "clamp(34px, 6.5vw, 68px)",
-                letterSpacing: "-0.04em",
-                lineHeight: 1.02,
-              }}
-            >
-              {data.title}
-            </h1>
-            <p
-              className="deck"
-              style={{
-                marginTop: 18,
-                fontSize: "clamp(15px, 1.7vw, 20px)",
-                lineHeight: 1.55,
-                maxWidth: "62ch",
-              }}
-            >
-              {data.theme}
-            </p>
             {data.coreFlow && data.coreFlow.length > 0 ? (
               <section className="ab-core-flow" aria-label="이번 호 핵심 흐름">
                 <span className="ab-core-flow__label mono">이번 호 핵심 흐름</span>
@@ -1348,8 +1293,6 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 </ol>
               </section>
             ) : null}
-
-            <hr className="rule-double" style={{ marginTop: 36 }} />
           </div>
         </header>
 
@@ -1393,7 +1336,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               }}
             >
               <span className="kicker" style={{ color: "var(--accent)" }}>
-                Main card section
+                핵심 브리핑 카드
               </span>
               <h2
                 className="serif"
@@ -1406,7 +1349,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   lineHeight: 1.1,
                 }}
               >
-                3주 동안 가장 바이럴한 AI 흐름 10개
+                핵심 흐름을 발표 순서대로 읽습니다
               </h2>
               <p
                 className="deck"
@@ -1417,10 +1360,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   lineHeight: 1.6,
                 }}
               >
-                카드를 누르면 발표용 상세 설명, 공식 출처, X/Twitter 게시글이 카드 안에서 바로 펼쳐집니다.
+                카드를 열면 발표용 설명, 검증 출처, 관련 게시글을 같은 맥락 안에서 확인할 수 있습니다.
               </p>
             </div>
-            <div role="list" className="tc-article-grid ab-tc-grid">
+            <div role="list" className="tc-article-grid ab-edition-grid">
               {highlights.map((h) => (
                 <HighlightArticle
                   key={h.rank}
@@ -1463,7 +1406,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     lineHeight: 1.12,
                   }}
                 >
-                  직접 써보고 추천드리는 오픈소스와 도구
+                  실무에 바로 연결되는 도구와 참고 자료
                 </h2>
                 <p
                   className="deck"
@@ -1474,10 +1417,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     maxWidth: "60ch",
                   }}
                 >
-                  발표자가 실제로 써봤거나 직접 깎아본 도구 중, 작업 시스템에 바로 연결되는 추천 목록.
+                  발표자가 검토한 도구 중 작업 흐름에 붙이기 쉬운 자료만 따로 정리했습니다.
                 </p>
               </div>
-              <div className="tc-article-grid ab-tc-grid">
+              <div className="tc-article-grid ab-edition-grid">
                 {data.editorsPicks.map((pick, i) => (
                   <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
                 ))}

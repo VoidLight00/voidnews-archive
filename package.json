@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-slugs.mjs",
+    "prebuild": "node scripts/check-slugs.mjs && node scripts/check-regressions.mjs",
     "build": "next build",
     "start": "next start",
     "audit:thumbnails": "node scripts/audit-thumbnails.mjs",
-    "check:slugs": "node scripts/check-slugs.mjs"
+    "check:slugs": "node scripts/check-slugs.mjs",
+    "check:regressions": "node scripts/check-regressions.mjs",
+    "verify:publish-ready": "node scripts/verify-publish-ready.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",

@@ -1,0 +1,23 @@
+{
+  "_doc": "VoidNews AB 회귀 머신체크. check-regressions.mjs가 소비. type=grep_absent: pattern이 1건이라도 있으면 회귀(빌드 차단). type=grep_present_min: 매치가 min 미만이면 회귀. patterns는 기본 리터럴(부분일치), regex:true면 정규식.",
+  "checks": [
+    {
+      "id": "VN001",
+      "title": "내부 큐레이션 메모 공개 노출",
+      "type": "grep_absent",
+      "globs": ["lib/ab/editions/*.ts", "lib/weeks/*.ts", "lib/data.ts", "lib/ab/data.ts"],
+      "patterns": ["Tier S+A", "후보 풀", "top10 선정", "사용자가 top", "큐레이션 메모", "진행자 노트", "내부 메모"],
+      "owner": "voidbrief-copy-editor",
+      "note": "공개 카드 본문에 진행자 인터널이 새어 나가면 안 됨"
+    },
+    {
+      "id": "VN004",
+      "title": "AI 티 자기지칭 문구 (모델이 자기를 가리키는 말투)",
+      "type": "grep_absent",
+      "globs": ["lib/ab/editions/*.ts", "lib/weeks/*.ts"],
+      "patterns": ["본 카드는 AI가", "이 글은 AI가 작성", "AI로 생성된 콘텐츠", "as an AI language model", "As an AI,", "저는 AI 언어 모델", "죄송하지만 저는"],
+      "owner": "voidbrief-copy-editor",
+      "note": "모델 자기지칭/사과 말투만 차단. 'language model' 같은 뉴스 주제 용어는 정상이므로 잡지 않는다(오탐 방지)."
+    }
+  ]
+}
