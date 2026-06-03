@@ -663,6 +663,50 @@
   margin-top: 0;
 }
 
+.articleBody h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 34px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.articleBody h3:first-child {
+  margin-top: 0;
+}
+
+.articleBody h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 26px;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.inlineCode {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  overflow-wrap: anywhere;
+}
+
+.articleQuote {
+  margin: 22px 0;
+  padding: 12px 20px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  color: var(--text);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.65;
+  border-radius: 0 6px 6px 0;
+}
+
 .articleBody ul,
 .articleBody ol {
   margin: 18px 0 24px;

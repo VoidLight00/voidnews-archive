@@ -153,7 +153,7 @@ export const edition2026_05b: ABEdition = {
         slug: "vera-arrives-nvidias-first-cpu-built-for-agents-lands-at-top",
         deck: "NVIDIA 첫 자체 CPU 'Vera' 출하 — Vera Rubin NVL72 통합 시스템, 에이전트 추론 최적화",
         summary: "NVIDIA가 자체 설계한 첫 CPU 'Vera' 를 top AI 랩에 출하했습니다. GPU 보조용이 아니라 에이전트 추론 워크로드 자체 처리용. Vera Rubin NVL72 통합 시스템으로 출시. 'NVIDIA = GPU 회사' 라는 정체성을 'NVIDIA = AI 인프라 풀스택 회사' 로 확장하는 신호.",
-        content: "NVIDIA가 2026년 5월 18일 자체 설계한 첫 CPU 'Vera'를 OpenAI, Anthropic, Google DeepMind 등 top AI 랩에 출하하기 시작했습니다. GPU 보조용이 아니라 에이전트 추론 워크로드 자체를 처리하기 위한 칩입니다. 동시에 발표된 Vera Rubin NVL72는 Vera CPU와 Rubin GPU를 단일 시스템으로 묶은 통합 박스로, 한 랙에 Rubin GPU 72개와 다수의 Vera CPU가 들어갑니다.\n\n## 왜 자체 CPU를 설계했나\n\n이전까지 NVIDIA는 GPU 회사였고 CPU는 Intel과 AMD가 맡았습니다. 2024-2025년 출시된 Grace CPU가 ARM 기반 데이터센터 CPU의 첫 시도였다면, Vera는 그 후속입니다. 다단계 도구 호출, 메모리 관리, 컨텍스트 전환 같은 에이전트 추론 워크로드에 명령어 셋 단위로 최적화돼 있습니다. AI 데이터센터에서 Intel/AMD CPU 의존도를 점진적으로 0에 가깝게 가져가겠다는 의도가 분명합니다.\n\n## Vera Rubin NVL72가 차세대 reference 시스템이 됩니다.\n\n하이퍼스케일러가 자체 설계 대신 NVIDIA 통합 박스를 그대로 구매하는 흐름이 가속됩니다. 단순 GPU 판매가 아니라 랙 단위 시스템·네트워킹·CPU·소프트웨어 묶음 판매로 NVIDIA의 매출 단위가 한 단계 커집니다. 에이전트 추론이라는 단어가 단순히 모델 호출이 아니라 CPU 역할이 크다는 점을 명시했다는 게 산업 메시지로 의미가 큽니다.\n\n## 삼성·SK하이닉스 HBM 직접 수혜\n\n한국 입장에서 가장 직접적인 영향은 메모리 공급입니다. Rubin GPU에 들어가는 HBM은 삼성 HBM3e/HBM4와 SK하이닉스 HBM이 핵심입니다. NVL72 보급이 가속되면 국내 메모리 공급이 함께 늘어납니다. 국내 AI 인프라 구축에서 NVL72 단위 구매는 가격이 천문학적이라 검토 단계지만, 통신사·금융·정부 데이터센터의 단가 협상 시계가 빨라질 가능성이 있습니다.\n\n## 다음 분기에 추적할 항목\n\nVera CPU의 단독 판매 정책, Rubin GPU 묶음 판매 비중, ARM → x86 소프트웨어 호환성 마이그레이션 진행도가 핵심입니다. 2026년 하반기 Vera Rubin NVL72 일반 출하 시점이 NVIDIA 매출 가속의 변곡점이 되고, 같은 회차 Q1 FY27 Data Center 752억 달러 실적의 다음 분기 가이던스에 바로 반영됩니다 (출처: blogs.nvidia.com/blog/vera-cpu-delivery).",
+        content: "NVIDIA가 2026년 5월 18일 자체 설계한 첫 CPU 'Vera'를 OpenAI, Anthropic, Google DeepMind 등 top AI 랩에 출하하기 시작했습니다. GPU 보조용이 아니라 에이전트 추론 워크로드 자체를 처리하기 위한 칩입니다. 동시에 발표된 Vera Rubin NVL72는 Vera CPU와 Rubin GPU를 단일 시스템으로 묶은 통합 박스로, 한 랙에 Rubin GPU 72개와 다수의 Vera CPU가 들어갑니다.\n\n## 왜 자체 CPU를 설계했나\n\n이전까지 NVIDIA는 GPU 회사였고 CPU는 Intel과 AMD가 맡았습니다. 2024-2025년 출시된 Grace CPU가 ARM 기반 데이터센터 CPU의 첫 시도였다면, Vera는 그 후속입니다. 다단계 도구 호출, 메모리 관리, 컨텍스트 전환 같은 에이전트 추론 워크로드에 명령어 셋 단위로 최적화돼 있습니다. AI 데이터센터에서 Intel/AMD CPU 의존도를 점진적으로 0에 가깝게 가져가겠다는 의도가 분명합니다.\n\n## Vera Rubin NVL72 — 차세대 reference 시스템\n\n하이퍼스케일러가 자체 설계 대신 NVIDIA 통합 박스를 그대로 구매하는 흐름이 가속됩니다. 단순 GPU 판매가 아니라 랙 단위 시스템·네트워킹·CPU·소프트웨어 묶음 판매로 NVIDIA의 매출 단위가 한 단계 커집니다. 에이전트 추론이라는 단어가 단순히 모델 호출이 아니라 CPU 역할이 크다는 점을 명시했다는 게 산업 메시지로 의미가 큽니다.\n\n## 삼성·SK하이닉스 HBM 직접 수혜\n\n한국 입장에서 가장 직접적인 영향은 메모리 공급입니다. Rubin GPU에 들어가는 HBM은 삼성 HBM3e/HBM4와 SK하이닉스 HBM이 핵심입니다. NVL72 보급이 가속되면 국내 메모리 공급이 함께 늘어납니다. 국내 AI 인프라 구축에서 NVL72 단위 구매는 가격이 천문학적이라 검토 단계지만, 통신사·금융·정부 데이터센터의 단가 협상 시계가 빨라질 가능성이 있습니다.\n\n## 다음 분기에 추적할 항목\n\nVera CPU의 단독 판매 정책, Rubin GPU 묶음 판매 비중, ARM → x86 소프트웨어 호환성 마이그레이션 진행도가 핵심입니다. 2026년 하반기 Vera Rubin NVL72 일반 출하 시점이 NVIDIA 매출 가속의 변곡점이 되고, 같은 회차 Q1 FY27 Data Center 752억 달러 실적의 다음 분기 가이던스에 바로 반영됩니다 (출처: blogs.nvidia.com/blog/vera-cpu-delivery).",
         officialUrl: "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
         source: "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
         tags: ["NVIDIA Vera CPU", "Vera Rubin NVL72", "agentic AI infrastructure", "삼성 HBM", "SK하이닉스", "공식", "hero후보"],
@@ -176,7 +176,7 @@ export const edition2026_05b: ABEdition = {
         slug: "project-glasswing-an-initial-update",
         deck: "AI가 직접 보안 취약점을 사냥 — 파트너사 코드에서 high/critical 1만 건+ 발견",
         summary: "Anthropic이 Project Glasswing(Claude Mythos Preview 기반 보안 연구 프로그램) 초기 결과를 공개. 파트너 회사들이 Claude 를 보안 취약점 탐지에 활용한 결과 high/critical 등급 취약점 1만 건 이상 발견. AI가 사람보다 빠르게 코드베이스의 잠재 보안 결함을 사냥하는 시대 신호.",
-        content: "Anthropic이 2026년 5월 22일 Project Glasswing 초기 업데이트를 공개했습니다. 2025년 말부터 시작된 보안 연구 프로그램으로, 차세대 Claude 모델인 Mythos Preview를 파트너 회사들에 제공해 그들 코드베이스의 보안 취약점을 탐지하게 한 뒤 결과를 모아 모델 개선에 활용하는 구조입니다. 이번 업데이트에서 파트너사들이 발견한 high/critical 등급 취약점이 1만 건 이상으로 집계됐습니다. 일부는 이미 패치가 완료됐고, 일부는 coordinated disclosure가 진행 중입니다.\n\n## 방법론 — 단일 라인이 아니라 chain을 본다\n\n전통적 정적 분석 도구(CodeQL, Semgrep)는 SQL injection 같은 단일 라인 결함을 잘 잡지만, 여러 컴포넌트 상호작용으로 인한 권한 우회는 놓치기 쉽습니다. Claude Mythos Preview는 인증 로직 + 세션 관리 + 캐시 정책 같이 세 컴포넌트가 묶여야 드러나는 chain 취약점을 찾습니다. 코드베이스 전체를 읽고 다단계 추론으로 결함을 엮어내는 능력이 차별점입니다.\n\n## offense와 defense가 동시에 가속됩니다.\n\n같은 능력이 공격자 손에 들어가면 1만 건 취약점은 그대로 1만 건 공격 벡터가 됩니다. AI 보안은 dual-use라는 점을 가장 분명하게 보여준 사례입니다. Anthropic이 Constitutional AI 프레임 안에서 안전한 disclosure 프로토콜로 이 능력을 묶은 이유이기도 합니다. Claude Mythos Preview의 실전 성능이 단순 코딩이 아니라 보안 도메인에서도 작동한다는 점도 이번 발표로 노출됐습니다.\n\n## KISA·KrCERT 파트너십 가능성\n\n국내 SI 업체, 은행, 통신사의 레거시 코드베이스에 즉시 적용할 수 있는 종류의 도구입니다. 다만 한국어 주석과 한국어 변수명이 섞인 코드의 정확도는 영어 대비 떨어질 가능성이 있어 첫 도입 전 한국어 시나리오 평가가 필요합니다. KISA와 KrCERT가 한국 파트너로 같은 프로그램에 참여하면 국내 기업이 가장 직접적인 수혜를 받게 됩니다.\n\n## 추적할 항목\n\n1만 건이라는 숫자만 공개됐고 어떤 회사들이 참여했는지, 어느 코드베이스인지, false positive 비율은 얼마인지 모두 NDA로 가려져 있습니다. 실제 critical 비중과 Claude Mythos Preview의 일반 공개 시점이 다음 단계의 핵심 정보가 됩니다. 현재는 Anthropic이 직접 파트너에게만 제공하고 있습니다 (출처: anthropic.com/research/glasswing-initial-update).",
+        content: "Anthropic이 2026년 5월 22일 Project Glasswing 초기 업데이트를 공개했습니다. 2025년 말부터 시작된 보안 연구 프로그램으로, 차세대 Claude 모델인 Mythos Preview를 파트너 회사들에 제공해 그들 코드베이스의 보안 취약점을 탐지하게 한 뒤 결과를 모아 모델 개선에 활용하는 구조입니다. 이번 업데이트에서 파트너사들이 발견한 high/critical 등급 취약점이 1만 건 이상으로 집계됐습니다. 일부는 이미 패치가 완료됐고, 일부는 coordinated disclosure가 진행 중입니다.\n\n## 방법론 — 단일 라인이 아니라 chain을 본다\n\n전통적 정적 분석 도구(CodeQL, Semgrep)는 SQL injection 같은 단일 라인 결함을 잘 잡지만, 여러 컴포넌트 상호작용으로 인한 권한 우회는 놓치기 쉽습니다. Claude Mythos Preview는 인증 로직 + 세션 관리 + 캐시 정책 같이 세 컴포넌트가 묶여야 드러나는 chain 취약점을 찾습니다. 코드베이스 전체를 읽고 다단계 추론으로 결함을 엮어내는 능력이 차별점입니다.\n\n## dual-use — offense와 defense 동시 가속\n\n같은 능력이 공격자 손에 들어가면 1만 건 취약점은 그대로 1만 건 공격 벡터가 됩니다. AI 보안은 dual-use라는 점을 가장 분명하게 보여준 사례입니다. Anthropic이 Constitutional AI 프레임 안에서 안전한 disclosure 프로토콜로 이 능력을 묶은 이유이기도 합니다. Claude Mythos Preview의 실전 성능이 단순 코딩이 아니라 보안 도메인에서도 작동한다는 점도 이번 발표로 노출됐습니다.\n\n## KISA·KrCERT 파트너십 가능성\n\n국내 SI 업체, 은행, 통신사의 레거시 코드베이스에 즉시 적용할 수 있는 종류의 도구입니다. 다만 한국어 주석과 한국어 변수명이 섞인 코드의 정확도는 영어 대비 떨어질 가능성이 있어 첫 도입 전 한국어 시나리오 평가가 필요합니다. KISA와 KrCERT가 한국 파트너로 같은 프로그램에 참여하면 국내 기업이 가장 직접적인 수혜를 받게 됩니다.\n\n## 추적할 항목\n\n1만 건이라는 숫자만 공개됐고 어떤 회사들이 참여했는지, 어느 코드베이스인지, false positive 비율은 얼마인지 모두 NDA로 가려져 있습니다. 실제 critical 비중과 Claude Mythos Preview의 일반 공개 시점이 다음 단계의 핵심 정보가 됩니다. 현재는 Anthropic이 직접 파트너에게만 제공하고 있습니다 (출처: anthropic.com/research/glasswing-initial-update).",
         officialUrl: "https://www.anthropic.com/research/glasswing-initial-update",
         source: "https://www.anthropic.com/research/glasswing-initial-update",
         tags: ["Project Glasswing", "security", "Claude Mythos Preview", "Anthropic", "공식", "hero후보"],
@@ -262,7 +262,29 @@ export const edition2026_05b: ABEdition = {
         slug: "gemini-3-5-flash-release",
         deck: "I/O 2026의 가성비 모델 신세대 — 빠른 추론으로 agentic 도구 호출 회전수 끌어올림",
         summary: "Google이 I/O 2026에서 Gemini 3.5 Flash를 공개했습니다. 같은 키노트의 agentic Search·Managed Agents·Spark 가 다중 도구 호출 회전수에 의존하는데, 3.5 Flash가 그 회전수를 올려주는 받침대 역할.",
-        content: "Google이 2026년 5월 19일 I/O 키노트에서 Gemini 3.5 Flash를 공개했습니다. 이전 2.x Flash 대비 추론 latency를 줄이고 도구 호출 응답성을 끌어올린 가성비 모델의 차세대 버전입니다. 가격은 Flash 라인 정책을 유지하고, Workspace·Search·AI Studio에 자동 적용됩니다.\n\n## agentic 도구 호출의 회전수를 끌어올리는 받침대\n\n같은 키노트에서 발표된 Managed Agents, agentic Search, Spark는 모두 다중 도구 호출과 실시간 응답에 의존합니다. 모델 한 번 부르고 끝나는 게 아니라 다중 turn으로 도구·검색·실행을 반복하는 구조라 latency 1초가 사용자 체감을 크게 바꿉니다. 3.5 Flash는 단독 발표가 아니라 그 회전수를 끌어올리는 받침대 역할입니다. agentic 인프라 전체의 성능을 끌어올리는 인프라성 업데이트로 봐야 합니다.\n\n## 한국 사용자가 가장 빨리 체감하는 부분\n\nGmail, Calendar, Docs 안에서 작동하는 Gemini가 자동으로 3.5 Flash로 전환됩니다. 한국어 응답 속도 개선이 가장 먼저 체감되는 채널입니다. API 사용자는 가격이 동일하고 속도만 올라가서 기존 코드를 바꾸지 않아도 이득을 봅니다.\n\n## Pro와의 trade-off\n\nFlash 라인의 역대 패턴은 영어 우선이라 한국어 reasoning 깊이는 Pro와 차이가 날 수 있습니다. Pro 대비 reasoning trade-off가 agentic 시나리오에서 실패율을 높이는지가 첫 모니터링 항목입니다. agentic 도구 호출이 retry를 자주 일으키면 가격 동일이라도 호출 수 폭증으로 비용이 튈 수 있어 사용량 limit을 미리 잡아두는 편이 안전합니다 (출처: blog.google/innovation-and-ai/sundar-pichai-io-2026).",
+        content: `**Google**이 2026년 5월 19일 I/O 2026 키노트에서 **Gemini 3.5 Flash**를 공개하고 같은 날 전 제품과 API에 즉시 배포했습니다. 더 비싼 상위 모델 **Gemini 3.5 Pro**는 다음 달 출시 예정으로, Flash가 먼저 풀린 순서 자체가 이번 발표의 메시지입니다. 가성비 모델이 곧 agentic Gemini 흐름의 엔진이라는 뜻입니다.
+
+## 빠른데 비싸지 않은 가성비 모델
+
+3.5 Flash의 핵심은 속도와 단가입니다. Google은 출력 토큰 처리량 기준 다른 프런티어 모델 대비 4배 빠르고, 비교 대상 프런티어 모델 가격의 절반 이하라고 밝혔습니다. 지능 수준도 단순 경량 모델이 아니라 거의 모든 벤치마크에서 상위 모델인 **Gemini 3.1 Pro**를 앞섰고, 실제 경제적 가치가 있는 업무를 측정하는 GDPVal에서 큰 폭의 개선을 보였습니다.
+
+- 속도: 출력 토큰/초 기준 다른 프런티어 모델 대비 4배
+- 단가: 비교 가능한 프런티어 모델의 절반 이하
+- 성능: 거의 모든 벤치마크에서 Gemini 3.1 Pro 상회
+- 배포: 발표 당일 전 제품·API 동시 적용
+- 절감 추정: 하루 1조 토큰을 처리하는 기업이 워크로드 80%를 3.5 Flash로 옮기면 연 10억 달러 절감
+
+## agentic 도구 호출의 회전수를 끌어올리는 받침대
+
+같은 키노트에서 발표된 Managed Agents, agentic Search, **Gemini Spark**는 모두 다중 도구 호출과 실시간 응답에 의존합니다. 모델을 한 번 부르고 끝나는 게 아니라 다중 turn으로 도구·검색·실행을 반복하는 구조라 latency 1초가 사용자 체감을 크게 바꿉니다. 24시간 백그라운드로 도는 Spark가 Gemini 3.5 위에서 돌고, 에이전트 개발 환경 **Antigravity 2.0**의 최적화 버전은 다른 프런티어 모델보다 12배 빠르다고 발표됐습니다. 3.5 Flash는 단독 모델 발표가 아니라 그 회전수를 떠받치는 인프라성 업데이트로 읽어야 합니다. Google이 내부 개발 도구에서 쓰는 토큰이 3월 하루 5천억에서 지금 하루 3조 이상으로, 몇 주마다 두 배씩 늘고 있다는 수치가 이 회전수의 규모를 보여줍니다.
+
+## 한국 사용자가 가장 빨리 체감하는 부분
+
+Gmail, Calendar, Docs 안에서 작동하는 Gemini가 자동으로 3.5 Flash로 전환됩니다. 한국어 응답 속도 개선이 가장 먼저 체감되는 채널입니다. API 사용자는 기존 코드를 바꾸지 않아도 속도와 단가 양쪽에서 이득을 봅니다.
+
+## Pro와의 trade-off와 비용 관리
+
+Flash 라인의 역대 패턴은 영어 우선이라 한국어 reasoning 깊이는 다음 달 나올 Gemini 3.5 Pro와 차이가 날 수 있습니다. Pro 대비 reasoning trade-off가 agentic 시나리오에서 실패율을 높이는지가 첫 모니터링 항목입니다. 단가가 절반 이하라도 agentic 도구 호출이 retry를 자주 일으키면 호출 수 폭증으로 비용이 튈 수 있어, 사용량 limit을 미리 잡아두는 편이 안전합니다 (출처: blog.google).`,
         officialUrl: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
         source: "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
         tags: ["Google", "Gemini 3.5 Flash", "model release", "agentic", "공식"],
@@ -318,7 +340,30 @@ export const edition2026_05b: ABEdition = {
         slug: "thinking-machines-interaction-models-official-demo-blog",
         deck: "AI 제품의 핵심을 모델 성능이 아니라 사용자가 모델과 일하는 인터페이스로 보는 관점",
         summary: "Thinking Machines가 Interaction Models 데모와 블로그를 공개했습니다. AI 제품의 차별점은 모델 자체보다 사람이 모델과 상호작용하는 구조, 즉 interaction model에 있다는 메시지입니다.",
-        content: "Thinking Machines가 2026년 5월 25일 Interaction Models라는 글과 데모를 함께 공개했습니다. AI 제품의 차별점이 모델 성능이 아니라 사람이 모델과 일하는 인터페이스, 즉 interaction model에 있다는 관점입니다. 같은 모델을 써도 사용자가 어떻게 지시하고 확인하고 수정하는지에 따라 제품 품질이 달라진다는 게 핵심 주장입니다.\n\n## 채팅창 단일 UI의 한계\n\n초기 AI 제품은 채팅창 하나에 모든 것을 넣었습니다. Interaction Models 관점은 작업 상태, 선택지, 편집 가능성, 피드백 루프, 실패 복구를 UI 안에 명시적으로 설계합니다. 에이전트가 길고 불확실한 작업을 할 때 사용자가 중간 상태를 이해하고 개입할 수 있어야 한다는 문제 인식입니다.\n\n## Claude Code Agent View · cmux와 같은 결\n\n같은 회차의 Claude Code Agent View Research Preview와 manaflow-ai/cmux도 정확히 같은 문제를 풉니다. 채팅 한 줄짜리 인터페이스로는 다중 작업을 관리할 수 없다는 문제 의식이 산업 전반에서 동시에 떠오르고 있습니다. Thinking Machines의 글은 그 문제를 일반 원리 수준에서 정리한 글이라 다른 제품 설계에도 직접 적용 가능한 reference 텍스트가 됩니다.\n\n## 한국 제품팀이 먼저 봐야 할 부분\n\nAI 서비스를 만드는 팀이라면 프롬프트 튜닝보다 UX 설계를 먼저 봐야 합니다. 업무용 에이전트는 무엇을 하고 있는지, 어디서 멈출 수 있는지, 어떻게 되돌릴지를 사용자에게 분명히 보여줘야 신뢰가 쌓입니다. 한국 SaaS 시장에서 채팅 UI 일변도의 AI 제품이 빠르게 정체되는 흐름과 정확히 맞물립니다 (출처: thinkingmachines.ai/blog/interaction-models).",
+        content: `**Thinking Machines Lab**이 2026년 5월 11일 interaction models의 리서치 프리뷰를 공개했습니다. 글 제목은 "Interaction Models: A Scalable Approach to Human-AI Collaboration"입니다. 핵심 정의는 외부 스캐폴딩에 기대지 않고 상호작용 자체를 모델이 네이티브로 처리한다는 것입니다. 모델이 오디오, 비디오, 텍스트를 끊김 없이 받아들이면서 실시간으로 생각하고, 응답하고, 행동합니다.
+
+## 턴 기반 인터페이스라는 병목
+
+**Thinking Machines Lab**의 문제의식은 인터페이스 자체에 있습니다. 사람이 일에서 밀려나는 이유는 일에 사람이 필요 없어서가 아니라 인터페이스에 사람이 들어갈 자리가 없기 때문이라는 진단입니다. 한 번 말하고 한 번 답하는 동기식 턴 방식 대신, 양방향으로 동시에 흐르는 실시간 스트림을 상호작용의 기본 패러다임으로 제안합니다.
+
+## 200ms 마이크로턴으로 작동하는 구조
+
+작동 방식은 입력과 출력을 잘게 교차하는 time-aligned 마이크로턴입니다.
+
+- 클라이언트가 200ms 청크를 각각 별도 요청으로 보내고, 추론 서버가 이를 지속 시퀀스에 이어 붙입니다
+- 오디오는 dMel, 비디오는 40x40 패치로 전처리를 최소화하는 encoder-free early fusion 방식입니다
+- 실시간 interaction model과 더 깊은 추론을 맡는 비동기 백그라운드 모델을 짝지은 이중 구조입니다
+- 공개 모델은 TML-Interaction-Small, 총 276B 파라미터에 활성 12B의 MoE입니다
+
+이 구조 위에서 모델은 사용자와 동시에 말하고, 맥락에 맞게 끼어들고, 대화를 유지하면서 검색과 도구 호출 같은 백그라운드 작업을 함께 돌립니다.
+
+## 데모가 보여주는 실시간 능력
+
+데모는 동물 이야기를 이어가는 자연스러운 대화 관리, 자세가 무너지거나 위험한 상황에서의 음성·시각 개입, 실시간 통역에서의 동시 발화, 타이밍을 의식한 시간 인지 응답을 보여줍니다. Uber 예약과 웹 검색처럼 대화를 끊지 않고 도구를 동시에 호출하는 장면, 식단 코칭과 in-ear 어시스턴트 시나리오도 포함됩니다. 평가에서 모델은 FD-bench v1.5 상호작용 품질 77.8점으로 GPT-realtime-2.0(minimal)의 46.8점을 앞섰고, 턴 전환 지연은 0.40초로 측정됐습니다.
+
+## 한국 제품팀이 읽어야 할 신호
+
+채팅창에 한 줄을 넣고 답을 기다리는 방식이 AI 제품의 기본값이던 시기를 넘어, 상호작용 자체를 모델 능력으로 끌어올리는 방향이 등장했다는 신호입니다. 실시간 음성·영상 응대가 필요한 상담, 통역, 현장 보조 서비스를 설계하는 팀이라면 턴 기반 구조의 한계를 먼저 점검해 볼 만합니다. 다만 리서치 프리뷰 단계라 한국어 환경에서의 지연·정확도, 공개 범위, 실제 제품 적용 가능 시점은 별도로 확인해야 합니다 (출처: thinkingmachines.ai).`,
         officialUrl: "https://thinkingmachines.ai/blog/interaction-models/",
         source: "https://thinkingmachines.ai/blog/interaction-models/",
         tags: ["Thinking Machines", "interaction models", "공식"],
@@ -341,7 +386,32 @@ export const edition2026_05b: ABEdition = {
         slug: "krea-2-is-live-for-everyone",
         deck: "Krea 2가 모든 사용자에게 열리고 한시적 무제한 생성을 제공",
         summary: "Krea가 Krea 2를 전체 사용자에게 공개했습니다. 한 주 동안 모든 가입자에게 무제한 생성을 제공하며 이미지 생성·편집 워크플로를 대중 사용자에게 넓히는 업데이트입니다.",
-        content: "Krea가 2026년 5월 18일 Krea 2를 전체 사용자에게 공개했습니다. 한시적으로 모든 가입자에게 무제한 생성을 제공하면서 모델 품질, 반복 속도, UI, 편집 흐름을 직접 비교해 볼 수 있게 했습니다. Krea는 이미지 생성과 편집을 빠르게 반복하는 크리에이티브 도구입니다.\n\n## 이미지 생성 도구 시장의 역할 분담\n\n현재 이미지 생성 시장은 GPT Image, Recraft, Midjourney, Adobe Firefly, Krea가 각자 다른 영역에서 강점을 가집니다. Midjourney는 아트워크 품질, GPT Image는 자연어 편집과 인페인트, Adobe Firefly는 상업 안전성과 Creative Cloud 통합, Krea는 빠른 실험과 편집 워크플로입니다. 이번 전면 공개로 그 차별점을 사용자가 직접 체감할 기회가 생겼습니다.\n\n## 한국 제작자에게 즉시 쓸 만한 시나리오\n\n썸네일, 발표자료, SNS 카드, 상세페이지 비주얼을 빠르게 뽑는 제작자에게 유용합니다. 특히 같은 회차에 함께 발표된 LoRA training 기능과 묶으면 브랜드·캐릭터 일관성을 자체적으로 잡을 수 있는 작은 파이프라인이 됩니다.\n\n## 검증해야 할 항목\n\n한글 텍스트 렌더링은 글로벌 이미지 모델의 약점이라 실제 출력에서 깨짐 여부를 먼저 봐야 합니다. 상업 사용 라이선스, 무제한 기간 종료 후의 유료 제한 범위, LoRA training과 함께 쓸 때의 품질 안정성이 도입 결정의 핵심 변수입니다 (출처: krea.ai/release-notes/krea-2-is-live-for-everyone).",
+        content: `Krea가 2026년 5월 18일 **Krea 2**를 전체 사용자에게 공개했습니다. 공식 릴리스 노트의 문구는 "Krea 2 is now available to everyone"이고, 출시 후 한 주 동안 모든 구독자에게 Krea 2 무제한 생성을 제공합니다. 그동안 일부 사용자나 유료 등급에 묶여 있던 차세대 이미지 모델을 대중 사용자가 직접 손에 쥐고 모델 품질, 반복 속도, 편집 흐름을 비교해 볼 수 있게 한 업데이트입니다.
+
+## 무제한 생성 한 주가 노리는 것
+
+핵심 장치는 "한시적 무제한"입니다. 출시 직후 일주일 동안 모든 구독자가 생성 횟수 제한 없이 Krea 2를 돌릴 수 있습니다. 이미지 도구 시장은 사용자가 한번 손에 익은 워크플로를 쉽게 바꾸지 않는 구조라, 진입 장벽을 잠깐 0으로 내려 손에 익히게 만드는 전형적인 전환 유도입니다. 무제한 기간이 끝난 뒤의 유료 제한 범위가 실제 정착 여부를 가르는 변수입니다.
+
+## Krea 2가 묶는 생성 파이프라인
+
+Krea는 단일 이미지 모델이 아니라 생성과 편집을 한 화면에서 빠르게 반복하는 크리에이티브 플랫폼입니다. 공식 문서가 명시한 기능군은 다음과 같습니다.
+
+- 이미지 생성: Text to Image, Realtime Image Generation
+- 영상 생성: Text to Video, Motion Transfer
+- 3D 생성: Text to 3D Object, Image to 3D Object
+- 이미지 보정: Upscaling, Generative Image Editing
+- 영상 보정: Frame Interpolation, Video Style Transfer, Video Upscaling
+- 파인튜닝: Image LoRA Finetuning, Video LoRA Finetuning, LoRA Sharing
+
+생성에서 보정, LoRA 파인튜닝까지 한 도구 안에 들어가 있다는 점이 단발 생성 도구와 다른 지점입니다.
+
+## 이미지 생성 도구 시장의 역할 분담
+
+지금 시장은 GPT Image, Recraft, Midjourney, Adobe Firefly, Krea가 각기 다른 영역에서 강점을 가집니다. Midjourney는 아트워크 품질, GPT Image는 자연어 편집과 인페인트, Adobe Firefly는 상업 안전성과 Creative Cloud 통합, Krea는 빠른 실험과 편집 워크플로입니다. 이번 전면 공개로 그 차별점을 사용자가 직접 체감할 기회가 생겼습니다.
+
+## 한국 제작자가 검증할 항목
+
+썸네일, 발표자료, SNS 카드, 상세페이지 비주얼을 빠르게 뽑는 제작자에게 즉시 유용합니다. 특히 Image LoRA Finetuning과 묶으면 브랜드·캐릭터 일관성을 자체적으로 잡는 작은 파이프라인이 됩니다. 다만 한글 텍스트 렌더링은 글로벌 이미지 모델의 약점이라 실제 출력에서 깨짐 여부를 먼저 봐야 하고, 상업 사용 라이선스, 무제한 기간 종료 후의 유료 제한 범위, LoRA 파인튜닝과 함께 쓸 때의 품질 안정성이 도입 결정의 핵심 변수입니다 (출처: krea.ai).`,
         officialUrl: "https://www.krea.ai/release-notes/krea-2-is-live-for-everyone",
         source: "https://www.krea.ai/release-notes/krea-2-is-live-for-everyone",
         tags: ["Krea 2", "공식"],
@@ -414,7 +484,24 @@ export const edition2026_05b: ABEdition = {
       sourceUrl: "https://github.com/Nutlope/hallmark",
       sourceLabel: "GitHub →",
       summary: "Nutlope/hallmark는 AI가 자주 만드는 generic SaaS 디자인, 과한 gradient, 의미 없는 glassmorphism 같은 패턴을 걸러내는 디자인 스킬입니다. UI 작업의 기본 품질 게이트로 쓰기 좋습니다.",
-      body: "Nutlope이 공개한 hallmark는 AI로 UI를 만들 때 반복되는 generic SaaS 디자인을 걸러내는 anti-slop 디자인 스킬입니다. MIT 라이선스로 공개돼 있고, Together AI가 후원합니다. 25개 anti-pattern 룰셋과 65-gate slop-test, 구조 다양성 평가가 묶여 있어 단순히 테마를 고르는 도구가 아닙니다.\n\n## 직접 쓰면서 골라낸 가치\n\n요즘 AI가 만든 UI는 빠르지만 거의 비슷합니다. hero + 3 cards + gradient blob + glassmorphism + 무드 보드 한 장으로 끝나는 기본값이 반복됩니다. hallmark의 가치는 이 기본값을 의식적으로 거부하게 만드는 데 있습니다. 새 페이지, 랜딩, 대시보드를 만들 때 먼저 audit으로 점수화하거나 redesign 기준으로 적용하면 좋습니다.\n\n## 적용 방식\n\n특정 브랜드 톤이 필요할 때는 study 동사로 reference URL이나 스크린샷에서 design.md를 추출해 hallmark의 컨텍스트로 주입합니다. 브랜드 픽셀 카피는 금지지만, 디자인 원칙과 토큰을 영감으로 가져오는 흐름이 적합합니다. 도구가 디자인 감각을 대신하지는 않습니다. 콘텐츠 구조, 제품 맥락, 사용자의 실제 행동을 먼저 잡은 뒤 hallmark이 안티패턴 게이트 역할을 하게 두는 게 맞습니다.",
+      body: `**Nutlope/hallmark**는 Claude Code, Cursor, Codex로 UI를 만들 때 결과물이 AI가 만든 티가 나지 않도록 막아 주는 디자인 스킬이다. Together AI가 만들었고 MIT 라이선스로 공개돼 있다. 단순히 테마를 고르는 도구가 아니라, AI 코딩 에이전트가 반복해 찍어내는 generic SaaS 룩을 의식적으로 거부하게 만드는 룰셋과 평가 게이트를 묶었다. AB 큐레이터가 직접 디자인 작업의 기본값으로 통합해 쓰는 도구로 골랐다.
+
+## 22개 테마와 65-gate slop-test
+
+hallmark의 핵심은 두 축이다. 22개 테마로 매크로 구조와 시각 스타일의 출발점을 다양하게 잡고, 65개 slop-test 게이트로 결과물이 AI 슬롭 패턴에 빠졌는지 점수화한다. 요즘 AI가 만든 UI는 빠르지만 거의 비슷하다. hero + 카드 3개 + gradient blob + glassmorphism으로 끝나는 기본값이 매번 반복된다. hallmark는 이 기본값을 거부하도록 룰셋과 게이트를 통과시키는 구조다.
+
+- 기본 동사: 매크로 구조와 룰셋을 적용해 새 UI를 생성
+- hallmark audit <target>: 기존 코드를 안티패턴 기준으로 점수화
+- hallmark redesign <target>: 구조를 다른 fingerprint로 다시 짜기
+- hallmark study <screenshot 또는 URL>: 디자인 DNA를 추출해 portable한 design.md로 내보내기
+
+## study로 브랜드 톤을 가져오는 흐름
+
+특정 브랜드 톤이 필요할 때는 study 동사로 reference URL이나 스크린샷에서 design.md를 추출해 hallmark의 컨텍스트로 주입한다. 브랜드 픽셀 카피는 금지지만, 디자인 원칙과 토큰을 영감으로 가져오는 흐름은 적합하다. 라이브 데모 usehallmark.com에는 서로 다른 매크로 구조와 테마를 보여 주는 8개 예시 사이트가 올라가 있어, 어떤 결과가 나오는지 먼저 눈으로 확인하고 적용 방향을 잡을 수 있다.
+
+## 누가 쓰면 좋은가
+
+설치는 npx skills add nutlope/hallmark 한 줄이거나 Claude Code, Cursor, Codex 디렉토리에 수동 복사면 된다. 새 페이지, 랜딩, 대시보드를 AI 에이전트로 빠르게 찍어내는 사람일수록 효과가 크다. 먼저 audit으로 점수를 내거나 redesign 기준으로 적용해 기본 품질 게이트로 두면, 산출물이 비슷비슷해지는 문제를 코드 단계에서 잡을 수 있다. 다만 도구가 디자인 감각을 대신하지는 않는다. 콘텐츠 구조, 제품 맥락, 사용자의 실제 행동을 먼저 잡은 뒤 hallmark이 안티패턴 게이트 역할을 하게 두는 게 맞다 (출처: github.com).`,
       editorial: "직접 디자인 작업의 기본값으로 통합한 스킬.",
       tags: ["오픈소스", "직접사용"],
       tier: "feature",
@@ -431,7 +518,29 @@ export const edition2026_05b: ABEdition = {
       sourceUrl: "https://github.com/manaflow-ai/cmux",
       sourceLabel: "GitHub →",
       summary: "manaflow-ai/cmux는 여러 터미널·브라우저·agent 작업을 workspace/pane/surface 단위로 관리하는 도구입니다. Codex CLI, Claude Code, 검증 세션을 나눠 돌리는 병렬 작업에 유용합니다.",
-      body: "manaflow-ai/cmux는 여러 터미널·브라우저·AI agent 작업을 workspace, pane, surface 단위로 관리하는 도구입니다. tmux의 감각을 현대적인 workspace UI로 확장한 쪽에 가깝습니다. Peter Steinberger가 직접 사용 사례를 X에서 공유해 화제가 됐습니다.\n\n## AI 개발이 더 이상 한 대화창에서 끝나지 않는 흐름\n\n같은 회차에서 다룬 Thinking Machines Interaction Models, Claude Code Agent View와 정확히 같은 문제 의식입니다. 구현, 검수, 배포 확인, 테스트가 동시에 움직이는 작업에서 한 화면에 모든 것을 욱여넣으면 사람이 상황을 못 따라갑니다. cmux는 그 흐름을 pane으로 쪼개서 눈에 보이게 만듭니다.\n\n## 사용 패턴\n\n한 pane은 Claude Code 구현, 한 pane은 Codex CLI 검수, 한 pane은 브라우저 자동화 검증을 돌리는 식으로 역할을 분리하면 진행도가 한눈에 보입니다. 각 pane에 명령을 보내거나 화면을 읽는 read/send 흐름이 강점입니다.\n\n## 충돌 관리가 필수\n\n여러 agent가 같은 파일을 동시에 만지면 git 충돌이 납니다. commit owner를 한 채널로 지정하고 나머지는 read-only 또는 다른 디렉토리에서 작업하게 분리해야 합니다. tmux 기반 세션과 함께 쓸 때는 user-data-dir과 dev 서버 포트 충돌을 미리 잡아두는 게 안전합니다.",
+      body: `**manaflow-ai/cmux**는 여러 AI 코딩 에이전트 세션을 한 화면에서 병렬로 굴리기 위해 만든 네이티브 macOS 터미널 앱이다. Electron이나 Tauri가 아니라 Swift와 AppKit으로 짰고, 터미널 렌더링은 Ghostty의 libghostty를 그대로 쓴다. 기존 Ghostty 설정 파일을 읽어 테마, 폰트, 색상을 이어받기 때문에 Ghostty 사용자라면 환경을 다시 맞출 필요가 없다. Lawrence Chen과 Austin Wang을 포함한 manaflow-ai 팀이 만들었고, AB 큐레이터가 병렬 에이전트 작업에 직접 쓰면서 추천하는 도구로 골랐다.
+
+## tmux 감각을 네이티브 앱으로 끌어올린 구조
+
+cmux의 작업 단위는 세 층으로 나뉜다.
+
+- Workspace: 최상위 조직 단위, ⌘1~8로 전환
+- Surface: Workspace 안의 개별 터미널 탭, ⌃1~8로 이동
+- Pane: Surface를 가로(⌘⇧D)·세로(⌘D)로 쪼갠 분할 영역
+
+tmux의 split 감각을 가져오되 GPU 가속 렌더링과 macOS 네이티브 UI로 다시 짠 형태다. 사이드바에는 pane별 git 브랜치, 연결된 PR 상태와 번호, 작업 디렉터리, listening 포트, 최신 알림 텍스트가 함께 표시돼 어느 pane이 무엇을 하고 있는지 한눈에 들어온다.
+
+## AI 개발이 더 이상 한 대화창에서 끝나지 않는 흐름
+
+같은 회차에서 다룬 **Thinking Machines** Interaction Models, Claude Code Agent View와 정확히 같은 문제 의식이다. 구현, 검수, 배포 확인, 테스트가 동시에 움직이는 작업에서 한 화면에 모든 것을 욱여넣으면 사람이 상황을 못 따라간다. cmux는 그 흐름을 pane으로 쪼개고, 주의가 필요한 pane에 파란 링 표시를 띄운 뒤(터미널 OSC 9/99/777 시퀀스를 읽는다) ⌘⇧U로 가장 최근 미확인 알림으로 점프하게 만든다. 어느 에이전트가 사람을 기다리는지가 눈에 보인다.
+
+## 사용 패턴과 에이전트 연동
+
+한 pane은 Claude Code 구현, 한 pane은 Codex 검수, 한 pane은 In-App 브라우저(⌘⇧L) 자동화 검증을 돌리는 식으로 역할을 분리하면 진행도가 한눈에 잡힌다. resume 연동은 **Claude Code**, **Codex**, **Grok**, Gemini, Cursor CLI, Copilot 등 13종을 지원하고, cmux hooks setup으로 자동 감지를, cmux notify로 에이전트 훅에 알림을 연결한다. cmux claude-teams는 tmux 없이 네이티브 split으로 teammate 모드를 띄운다. cmux ssh user@remote로 원격 workspace를 만들면 브라우저 pane이 원격 네트워크를 경유한다.
+
+## 도입 전 챙길 부분
+
+여러 에이전트가 같은 파일을 동시에 만지면 git 충돌이 난다. commit 채널을 하나로 지정하고 나머지는 read-only나 다른 디렉터리에서 작업하게 분리하는 편이 안전하다. 라이선스는 GPL-3.0-or-later이고, GPL 준수가 어려운 상황을 위한 상용 라이선스가 별도로 열려 있다. 설치는 DMG(Sparkle 자동 업데이트) 또는 Homebrew(brew tap manaflow-ai/cmux 후 cask 설치)로 가능하다. 2026년 6월 기준 최신 릴리스는 v0.64.12다 (출처: github.com).`,
       editorial: "직접 사용 중인 워크플로우 도구.",
       tags: ["오픈소스", "직접사용"],
       tier: "feature",
@@ -448,7 +557,29 @@ export const edition2026_05b: ABEdition = {
       sourceUrl: "https://github.com/jaehwan02/UltraCat",
       sourceLabel: "GitHub →",
       summary: "UltraCat은 macOS 메뉴바에서 시스템 상태 확인, 팬 제어, 잠자기 관리를 제공하는 유틸리티입니다. AI 앱은 아니지만 Claude Code·Codex·로컬 LLM·브라우저 자동화처럼 Mac을 장시간 굴리는 AI 작업환경의 발열·팬·수면 관리 보조 도구로 추천.",
-      body: "jaehwan02가 만든 UltraCat은 macOS 메뉴바에서 동작하는 시스템 유틸리티입니다. CPU·메모리·온도 상태, 팬 RPM 직접 제어, 잠자기·디스플레이 슬립 정책 관리를 한 아이콘에서 처리합니다. 최신 릴리스는 2026년 5월 기준 v1.0.4. AI 도구 자체는 아니지만 AI 작업환경을 받쳐주는 보조 유틸리티 카테고리에서 직접 쓰고 있습니다.\n\n## 왜 AI 작업환경에 필요한가\n\nClaude Code 백그라운드 세션 + Codex CLI + 로컬 LLM + 브라우저 자동화를 동시에 돌리면 MacBook Pro M2/M3도 팬이 풀로 도는 일이 잦습니다. macOS 기본 정책은 보수적이라 throttling이 먼저 걸리고 작업 속도가 떨어집니다. UltraCat은 팬 RPM을 수동으로 boost하거나, 장시간 빌드 중 잠자기를 일시 차단하거나, 시스템 온도를 메뉴바에 상시 노출해 throttling을 사전에 감지할 수 있게 해줍니다.\n\n## 직접 쓸 때 챙긴 시나리오\n\n- 장시간 build / agent 세션 중 팬 RPM 수동 boost\n- 잠자기 일시 차단으로 백그라운드 빌드 중단 방지\n- 시스템 온도 메뉴바 상시 노출로 throttling 사전 감지\n\n## 주의할 부분\n\nDMG 배포에 소스는 비공개입니다. 회사 장비나 민감 환경에서는 권한과 신뢰성을 사전 확인하는 게 좋습니다. 라이선스가 명시되지 않은 상태라 개인 Mac에서 watch/trial 쓰는 정도로 시작하는 편이 안전합니다. 팬 직접 제어는 하드웨어 영역이라 기본 정책을 먼저 테스트한 뒤 점진적으로 조정해야 합니다. 다운로드: https://github.com/jaehwan02/UltraCat/releases/latest/download/UltraCat.dmg",
+      body: `jaehwan02가 만든 **UltraCat**은 macOS 메뉴바에서 동작하는 시스템 유틸리티입니다. 시스템 상태 모니터링, 팬 제어, 잠자기 관리를 한 아이콘에서 처리합니다. 최신 릴리스는 2026년 6월 2일 공개된 v1.0.36이고, 저장소에는 지금까지 37개 릴리스가 누적돼 있습니다. AI 도구 자체는 아니지만 Mac을 장시간 굴리는 AI 작업환경을 받쳐주는 보조 유틸리티 카테고리에서 직접 쓰고 있습니다.
+
+## 왜 AI 작업환경에 필요한가
+
+**Claude Code** 백그라운드 세션, **Codex** CLI, 로컬 LLM, 브라우저 자동화를 동시에 돌리면 MacBook Pro도 팬이 풀로 도는 일이 잦습니다. macOS 기본 정책은 보수적이라 throttling이 먼저 걸리고 작업 속도가 떨어집니다. UltraCat은 팬을 수동으로 제어하거나, 장시간 빌드 중 잠자기를 차단하거나, 시스템 상태를 메뉴바에 상시 노출해 throttling을 사전에 감지할 수 있게 해줍니다.
+
+## 기본 정보와 동작 방식
+
+- 시스템 상태 모니터링, 팬 제어, 잠자기 관리를 메뉴바 한 곳에서 처리
+- DMG로 배포하고 Applications 폴더로 드래그해 설치
+- macOS 26.4 이상에서 동작
+- 한국어와 영어 인터페이스 지원
+- Sparkle 기반 자동 업데이트 지원
+
+팬 제어와 일부 전원 관리 기능은 시스템 설정에서 macOS helper 승인을 따로 거쳐야 동작합니다. 단순 표시 도구가 아니라 하드웨어 영역을 건드리는 도구이기 때문에 권한 부여 단계가 별도로 있습니다.
+
+## 직접 쓸 때 챙긴 시나리오
+
+장시간 build나 agent 세션을 돌릴 때 팬을 수동으로 boost해 throttling 진입 시점을 늦추고, 백그라운드 빌드가 잠자기로 끊기지 않도록 슬립을 차단하고, 시스템 상태를 메뉴바에 띄워 발열을 눈으로 추적하는 식으로 씁니다. AI 작업의 병목이 모델이 아니라 기기 발열에서 오는 경우, 이 세 가지만으로도 체감이 달라집니다.
+
+## 도입 전 확인할 것
+
+소스 코드는 비공개이고, 저장소는 앱 배포와 업데이트 전달 용도로만 쓰입니다. 라이선스는 명시돼 있지 않습니다. 회사 장비나 민감 환경에서는 helper 승인 권한 범위와 신뢰성을 사전에 확인하는 게 좋고, 개인 Mac에서 먼저 써보며 패턴을 익히는 편이 안전합니다. 팬 직접 제어는 하드웨어 영역이라 기본 정책을 먼저 테스트한 뒤 점진적으로 조정해야 합니다. 같은 회차의 tw93/Mole과 묶어 보면, AI 작업환경을 받치는 macOS 보조 도구 두 축이 발열·수면 관리와 디스크·캐시 관리로 자연스럽게 나뉘는 흐름이 보입니다 (출처: github.com).`,
       editorial: "Mac 장시간 AI 작업의 발열/수면 관리 보조 도구.",
       tags: ["macOS", "유틸리티", "메뉴바앱", "팬제어", "AI작업환경"],
       tier: "feature",

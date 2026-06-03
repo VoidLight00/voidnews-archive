@@ -63,11 +63,35 @@ function inferReleaseScope(post: Post): string {
   return "공개 발표";
 }
 
+// 인라인 토큰(**bold**, `code`, [label](url))을 React node 로 안전하게 분할
+// (dangerouslySetInnerHTML 없이 XSS 위험 제거)
+function renderInline(text: string, keyPrefix: string | number) {
+  const tokens = text
+    .split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g)
+    .filter(Boolean);
+  return tokens.map((tok, i) => {
+    const key = `${keyPrefix}-${i}`;
+    const bold = tok.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) return <strong key={key}>{bold[1]}</strong>;
+    const code = tok.match(/^`([^`]+)`$/);
+    if (code) return <code key={key} className={styles.inlineCode}>{code[1]}</code>;
+    const link = tok.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link)
+      return (
+        <a key={key} href={link[2]} target="_blank" rel="noreferrer">
+          {link[1]}
+        </a>
+      );
+    return <span key={key}>{tok}</span>;
+  });
+}
+
 function renderMarkdown(content: string) {
   const blocks = content.split(/\n\n+/);
   return blocks.map((block, idx) => {
     const t = block.trim();
     if (!t) return null;
+    // GFM table
     if (/^\|.*\|/.test(t)) {
       const lines = t.split("\n").filter((l) => l.trim().startsWith("|"));
       if (lines.length >= 2) {
@@ -76,29 +100,54 @@ function renderMarkdown(content: string) {
         return (
           <table key={idx} className={styles.articleTable}>
             <thead>
-              <tr>{headerCells.map((c, i) => <th key={i}>{c}</th>)}</tr>
+              <tr>{headerCells.map((c, i) => <th key={i}>{renderInline(c, `${idx}-h-${i}`)}</th>)}</tr>
             </thead>
             <tbody>
               {bodyRows.map((row, ri) => (
-                <tr key={ri}>{row.map((c, ci) => <td key={ci}>{c}</td>)}</tr>
+                <tr key={ri}>{row.map((c, ci) => <td key={ci}>{renderInline(c, `${idx}-${ri}-${ci}`)}</td>)}</tr>
               ))}
             </tbody>
           </table>
         );
       }
     }
-    if (/^##\s+/.test(t)) return <h2 key={idx}>{t.replace(/^##\s+/, "")}</h2>;
+    // Headings — deepest first so ###/#### are not swallowed by the ## test
+    if (/^####\s+/.test(t)) return <h4 key={idx}>{renderInline(t.replace(/^####\s+/, ""), idx)}</h4>;
+    if (/^###\s+/.test(t)) return <h3 key={idx}>{renderInline(t.replace(/^###\s+/, ""), idx)}</h3>;
+    if (/^##\s+/.test(t)) return <h2 key={idx}>{renderInline(t.replace(/^##\s+/, ""), idx)}</h2>;
     if (/^\*\*[^*]+\*\*$/.test(t)) return <h2 key={idx}>{t.replace(/^\*\*|\*\*$/g, "")}</h2>;
-    // **bold** 토큰을 React node 로 안전하게 분할 (dangerouslySetInnerHTML XSS 위험 제거)
-    const parts = t.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
-    return (
-      <p key={idx}>
-        {parts.map((part, pi) => {
-          const m = part.match(/^\*\*([^*]+)\*\*$/);
-          return m ? <strong key={pi}>{m[1]}</strong> : <span key={pi}>{part}</span>;
-        })}
-      </p>
-    );
+    // Blockquote — block whose every line starts with "> "
+    const blockLines = t.split("\n");
+    if (blockLines.every((l) => /^>\s?/.test(l))) {
+      const quote = blockLines.map((l) => l.replace(/^>\s?/, "")).join(" ");
+      return (
+        <blockquote key={idx} className={styles.articleQuote}>
+          {renderInline(quote, idx)}
+        </blockquote>
+      );
+    }
+    // Bullet list — block whose every line is a "- " / "* " item
+    if (blockLines.every((l) => /^\s*[-*]\s+/.test(l))) {
+      return (
+        <ul key={idx}>
+          {blockLines.map((l, li) => (
+            <li key={li}>{renderInline(l.replace(/^\s*[-*]\s+/, ""), `${idx}-${li}`)}</li>
+          ))}
+        </ul>
+      );
+    }
+    // Ordered list — block whose every line is a "1. " item
+    if (blockLines.every((l) => /^\s*\d+\.\s+/.test(l))) {
+      return (
+        <ol key={idx}>
+          {blockLines.map((l, li) => (
+            <li key={li}>{renderInline(l.replace(/^\s*\d+\.\s+/, ""), `${idx}-${li}`)}</li>
+          ))}
+        </ol>
+      );
+    }
+    // Paragraph
+    return <p key={idx}>{renderInline(t, idx)}</p>;
   });
 }
 
