@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Link from "next/link";
 import type { Post } from "@/lib/data";
 import { type ArticleCacheEntry } from "@/lib/article-cache";
@@ -86,69 +86,87 @@ function renderInline(text: string, keyPrefix: string | number) {
   });
 }
 
+// 라인 단위 마크다운 파서. "리드 문장 + 불릿"이 빈 줄 없이 한 블록에 섞여 있어도
+// 문단/리스트/헤딩을 라인 경계로 정확히 분리한다(블록-전체 판정의 한계 해소).
 function renderMarkdown(content: string) {
   const blocks = content.split(/\n\n+/);
-  return blocks.map((block, idx) => {
+  const nodes: ReactNode[] = [];
+
+  blocks.forEach((block, bIdx) => {
     const t = block.trim();
-    if (!t) return null;
-    // GFM table
+    if (!t) return;
+
+    // GFM table — 블록 전체로 처리
     if (/^\|.*\|/.test(t)) {
-      const lines = t.split("\n").filter((l) => l.trim().startsWith("|"));
-      if (lines.length >= 2) {
-        const headerCells = lines[0].split("|").slice(1, -1).map((c) => c.trim());
-        const bodyRows = lines.slice(2).map((row) => row.split("|").slice(1, -1).map((c) => c.trim()));
-        return (
-          <table key={idx} className={styles.articleTable}>
+      const tl = t.split("\n").filter((l) => l.trim().startsWith("|"));
+      if (tl.length >= 2) {
+        const headerCells = tl[0].split("|").slice(1, -1).map((c) => c.trim());
+        const bodyRows = tl.slice(2).map((row) => row.split("|").slice(1, -1).map((c) => c.trim()));
+        nodes.push(
+          <table key={`tbl-${bIdx}`} className={styles.articleTable}>
             <thead>
-              <tr>{headerCells.map((c, i) => <th key={i}>{renderInline(c, `${idx}-h-${i}`)}</th>)}</tr>
+              <tr>{headerCells.map((c, i) => <th key={i}>{renderInline(c, `${bIdx}-h-${i}`)}</th>)}</tr>
             </thead>
             <tbody>
               {bodyRows.map((row, ri) => (
-                <tr key={ri}>{row.map((c, ci) => <td key={ci}>{renderInline(c, `${idx}-${ri}-${ci}`)}</td>)}</tr>
+                <tr key={ri}>{row.map((c, ci) => <td key={ci}>{renderInline(c, `${bIdx}-${ri}-${ci}`)}</td>)}</tr>
               ))}
             </tbody>
           </table>
         );
+        return;
       }
     }
-    // Headings — deepest first so ###/#### are not swallowed by the ## test
-    if (/^####\s+/.test(t)) return <h4 key={idx}>{renderInline(t.replace(/^####\s+/, ""), idx)}</h4>;
-    if (/^###\s+/.test(t)) return <h3 key={idx}>{renderInline(t.replace(/^###\s+/, ""), idx)}</h3>;
-    if (/^##\s+/.test(t)) return <h2 key={idx}>{renderInline(t.replace(/^##\s+/, ""), idx)}</h2>;
-    if (/^\*\*[^*]+\*\*$/.test(t)) return <h2 key={idx}>{t.replace(/^\*\*|\*\*$/g, "")}</h2>;
-    // Blockquote — block whose every line starts with "> "
-    const blockLines = t.split("\n");
-    if (blockLines.every((l) => /^>\s?/.test(l))) {
-      const quote = blockLines.map((l) => l.replace(/^>\s?/, "")).join(" ");
-      return (
-        <blockquote key={idx} className={styles.articleQuote}>
-          {renderInline(quote, idx)}
-        </blockquote>
-      );
+
+    const lines = t.split("\n");
+    let para: string[] = [];
+    const k = (label: string) => `${bIdx}-${label}-${nodes.length}`;
+    const flushPara = () => {
+      if (para.length) {
+        const key = k("p");
+        nodes.push(<p key={key}>{renderInline(para.join(" "), key)}</p>);
+        para = [];
+      }
+    };
+
+    let i = 0;
+    while (i < lines.length) {
+      const l = lines[i];
+      if (/^####\s+/.test(l)) { flushPara(); const key = k("h4"); nodes.push(<h4 key={key}>{renderInline(l.replace(/^####\s+/, ""), key)}</h4>); i++; continue; }
+      if (/^###\s+/.test(l)) { flushPara(); const key = k("h3"); nodes.push(<h3 key={key}>{renderInline(l.replace(/^###\s+/, ""), key)}</h3>); i++; continue; }
+      if (/^##\s+/.test(l)) { flushPara(); const key = k("h2"); nodes.push(<h2 key={key}>{renderInline(l.replace(/^##\s+/, ""), key)}</h2>); i++; continue; }
+      if (/^\*\*[^*]+\*\*$/.test(l.trim())) { flushPara(); const key = k("hb"); nodes.push(<h2 key={key}>{l.trim().replace(/^\*\*|\*\*$/g, "")}</h2>); i++; continue; }
+      if (/^>\s?/.test(l)) {
+        flushPara();
+        const q: string[] = [];
+        while (i < lines.length && /^>\s?/.test(lines[i])) { q.push(lines[i].replace(/^>\s?/, "")); i++; }
+        const key = k("q");
+        nodes.push(<blockquote key={key} className={styles.articleQuote}>{renderInline(q.join(" "), key)}</blockquote>);
+        continue;
+      }
+      if (/^\s*[-*]\s+/.test(l)) {
+        flushPara();
+        const items: string[] = [];
+        while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*[-*]\s+/, "")); i++; }
+        const key = k("ul");
+        nodes.push(<ul key={key}>{items.map((it, ii) => <li key={ii}>{renderInline(it, `${key}-${ii}`)}</li>)}</ul>);
+        continue;
+      }
+      if (/^\s*\d+\.\s+/.test(l)) {
+        flushPara();
+        const items: string[] = [];
+        while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*\d+\.\s+/, "")); i++; }
+        const key = k("ol");
+        nodes.push(<ol key={key}>{items.map((it, ii) => <li key={ii}>{renderInline(it, `${key}-${ii}`)}</li>)}</ol>);
+        continue;
+      }
+      para.push(l);
+      i++;
     }
-    // Bullet list — block whose every line is a "- " / "* " item
-    if (blockLines.every((l) => /^\s*[-*]\s+/.test(l))) {
-      return (
-        <ul key={idx}>
-          {blockLines.map((l, li) => (
-            <li key={li}>{renderInline(l.replace(/^\s*[-*]\s+/, ""), `${idx}-${li}`)}</li>
-          ))}
-        </ul>
-      );
-    }
-    // Ordered list — block whose every line is a "1. " item
-    if (blockLines.every((l) => /^\s*\d+\.\s+/.test(l))) {
-      return (
-        <ol key={idx}>
-          {blockLines.map((l, li) => (
-            <li key={li}>{renderInline(l.replace(/^\s*\d+\.\s+/, ""), `${idx}-${li}`)}</li>
-          ))}
-        </ol>
-      );
-    }
-    // Paragraph
-    return <p key={idx}>{renderInline(t, idx)}</p>;
+    flushPara();
   });
+
+  return nodes;
 }
 
 function categoryLabel(c: GlossaryEntry["category"], locale: "ko" | "en"): string {
@@ -209,12 +227,12 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             <span className={styles.officialExcerptLabel}>{t("detail.officialExcerpt")}</span>
             {officialHost ? <span className={styles.officialExcerptHost}>{officialHost}</span> : null}
           </div>
-          {officialDescription ? <p className={styles.officialDescription}>{officialDescription}</p> : null}
+          {officialDescription ? <p className={styles.officialDescription}>{renderInline(officialDescription, "od")}</p> : null}
           {paragraphs.slice(0, 6).map((p, i) => (
-            <p key={i} className={styles.officialParagraph}>{p}</p>
+            <p key={i} className={styles.officialParagraph}>{renderInline(p, `op-${i}`)}</p>
           ))}
           {quotes.slice(0, 2).map((q, i) => (
-            <blockquote key={i} className={styles.officialQuote}>{q}</blockquote>
+            <blockquote key={i} className={styles.officialQuote}>{renderInline(q, `oq-${i}`)}</blockquote>
           ))}
           {headings.length > 0 ? (
             <div className={styles.officialOutline}>
@@ -253,7 +271,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
 
           {(activeLang === "ko" ? koSummary : enSummary) ? (
             <p className={styles.articleDek}>
-              {activeLang === "ko" ? koSummary : enSummary}
+              {renderInline((activeLang === "ko" ? koSummary : enSummary) as string, "dek")}
             </p>
           ) : null}
 

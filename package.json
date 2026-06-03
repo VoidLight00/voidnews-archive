@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-slugs.mjs && node scripts/check-regressions.mjs",
+    "prebuild": "node scripts/check-slugs.mjs && node scripts/check-regressions.mjs && node scripts/check-card-content.mjs",
     "build": "next build",
+    "postbuild": "node scripts/check-render-leaks.mjs",
     "start": "next start",
     "audit:thumbnails": "node scripts/audit-thumbnails.mjs",
     "check:slugs": "node scripts/check-slugs.mjs",
     "check:regressions": "node scripts/check-regressions.mjs",
+    "check:card-content": "node scripts/check-card-content.mjs",
+    "check:render-leaks": "node scripts/check-render-leaks.mjs",
     "verify:publish-ready": "node scripts/verify-publish-ready.mjs"
   },
   "dependencies": {

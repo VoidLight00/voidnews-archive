@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { getAllSlugs, getWeek } from "@/lib/data";
 import type { Post } from "@/lib/data";
 
@@ -27,21 +28,56 @@ function stripInlineMarkdown(text: string): string {
   return text.replace(/\*\*([^*]+)\*\*/g, "$1");
 }
 
+// 인라인 토큰(**bold** / `code` / [link])을 다크 테마 스타일로 렌더
+function renderInlineSlide(text: string, keyPrefix: string) {
+  const tokens = text.split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g).filter(Boolean);
+  return tokens.map((tok, i) => {
+    const key = `${keyPrefix}-${i}`;
+    const b = tok.match(/^\*\*([^*]+)\*\*$/);
+    if (b) return <strong key={key} className="font-extrabold text-neutral-100">{b[1]}</strong>;
+    const c = tok.match(/^`([^`]+)`$/);
+    if (c) return <code key={key} className="rounded bg-neutral-800 px-1 py-0.5 font-mono text-[0.85em] text-neutral-200">{c[1]}</code>;
+    const l = tok.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (l) return <a key={key} href={l[2]} target="_blank" rel="noreferrer" className="text-sky-400 underline underline-offset-2">{l[1]}</a>;
+    return <span key={key}>{tok}</span>;
+  });
+}
+
+// 라인 단위 마크다운 파서 — ##/### 소제목, 불릿, 번호, 인용, 인라인 토큰 처리
+// (이전엔 **bold** 만 처리해 ###·불릿·백틱이 raw 로 노출됐다)
 function renderRichText(text: string) {
   if (!text) return null;
-  const parts = text.split(/(\*\*[^*\n]+?\*\*)/g);
-
-  return parts.map((part, index) => {
-    if (!part) return null;
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={index} className="font-extrabold text-neutral-100">
-          {part.slice(2, -2)}
-        </strong>
-      );
+  const lines = text.split("\n");
+  const out: ReactNode[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const t = lines[i].trim();
+    if (!t) { out.push(<div key={`sp-${i}`} className="h-2" aria-hidden />); i++; continue; }
+    let m;
+    if ((m = t.match(/^#{2,4}\s+(.*)$/))) {
+      out.push(<div key={`h-${i}`} className="mt-3 mb-1 font-bold text-neutral-100">{renderInlineSlide(m[1], `h-${i}`)}</div>);
+      i++; continue;
     }
-    return <span key={index}>{part}</span>;
-  });
+    if ((m = t.match(/^\*\*([^*]+)\*\*$/))) {
+      out.push(<div key={`hb-${i}`} className="mt-3 mb-1 font-bold text-neutral-100">{m[1]}</div>);
+      i++; continue;
+    }
+    if ((m = t.match(/^[-*]\s+(.*)$/))) {
+      out.push(<div key={`b-${i}`} className="flex gap-2 pl-1"><span className="text-neutral-500">•</span><span>{renderInlineSlide(m[1], `b-${i}`)}</span></div>);
+      i++; continue;
+    }
+    if ((m = t.match(/^(\d+)\.\s+(.*)$/))) {
+      out.push(<div key={`o-${i}`} className="flex gap-2 pl-1"><span className="text-neutral-500">{m[1]}.</span><span>{renderInlineSlide(m[2], `o-${i}`)}</span></div>);
+      i++; continue;
+    }
+    if (/^>\s?/.test(t)) {
+      out.push(<div key={`q-${i}`} className="border-l-2 border-neutral-700 pl-3 italic text-neutral-400">{renderInlineSlide(t.replace(/^>\s?/, ""), `q-${i}`)}</div>);
+      i++; continue;
+    }
+    out.push(<div key={`p-${i}`}>{renderInlineSlide(t, `p-${i}`)}</div>);
+    i++;
+  }
+  return out;
 }
 
 type PresentationLink = { label: string; url: string; primary?: boolean };
@@ -224,7 +260,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
               )}
 
               {post.content && (
-                <div className="mb-5 rounded-xl border border-neutral-800 bg-neutral-950/70 p-4 text-sm leading-7 text-neutral-300 whitespace-pre-line">
+                <div className="mb-5 space-y-1 rounded-xl border border-neutral-800 bg-neutral-950/70 p-4 text-sm leading-7 text-neutral-300">
                   {renderRichText(post.content)}
                 </div>
               )}

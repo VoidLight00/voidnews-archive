@@ -13,6 +13,7 @@
 import { readFileSync, existsSync, globSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { spawnSync } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -123,6 +124,29 @@ if (totalCards > 0) {
     const line = `deck 누락 카드 ${deckGap}개 (커버리지 ${pct}%)`;
     if (STRICT) strictFail.push(line);
     else notes.push(`  (deck 미보유는 현재 비차단. --strict 시 차단. backfill 권장)`);
+  }
+}
+
+// ---- D. 카드 본문 렌더 안전성 (VN-RENDER-LEAK 재확인) ----
+// 소스 게이트(check-card-content)는 항상, 빌드 산출물 게이트(check-render-leaks)는 out/ 존재 시 재실행한다.
+{
+  const r1 = spawnSync(process.execPath, [join(__dirname, "check-card-content.mjs")], { cwd: ROOT, encoding: "utf-8" });
+  if (r1.status !== 0) {
+    fail.push("카드 본문 미지원 마크다운 (check-card-content):");
+    for (const ln of (r1.stdout + r1.stderr).split("\n").filter((l) => /—|미지원/.test(l)).slice(0, 8)) fail.push(`    ${ln.trim()}`);
+  } else {
+    notes.push("카드 본문 렌더 안전성(check-card-content): 미지원 마크다운 0");
+  }
+  if (existsSync(join(ROOT, "out"))) {
+    const r2 = spawnSync(process.execPath, [join(__dirname, "check-render-leaks.mjs")], { cwd: ROOT, encoding: "utf-8" });
+    if (r2.status !== 0) {
+      fail.push("빌드 HTML raw 마크다운 누수 (check-render-leaks):");
+      for (const ln of (r2.stdout + r2.stderr).split("\n").filter((l) => /\[|—/.test(l) && /html|raw|heading|code|bold/i.test(l)).slice(0, 8)) fail.push(`    ${ln.trim()}`);
+    } else {
+      notes.push("빌드 HTML 렌더 누수(check-render-leaks): raw 마크다운 0");
+    }
+  } else {
+    notes.push("out/ 없음 — check-render-leaks 생략(빌드 후 postbuild 에서 강제됨)");
   }
 }
 

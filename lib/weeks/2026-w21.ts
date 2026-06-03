@@ -886,7 +886,7 @@ LLM API 회사의 진짜 락인은 모델 성능보다 SDK·도구 라인의 폭
           date: "5/11",
           platform: "X+Threads",
           title: "Claude Code Agent View — 병렬 에이전트 관제 화면 Research Preview",
-          summary: "Anthropic이 Claude Code 2.1.139부터 모든 병렬 세션을 한 화면에서 관리하는 Agent View를 Research Preview로 공개했습니다. 이후 `claude agents --cwd <path>`와 pinned background sessions 같은 후속 업데이트가 같은 주에 추가되며 5월 15일 이후에도 영향이 이어졌습니다.",
+          summary: "Anthropic이 Claude Code 2.1.139부터 모든 병렬 세션을 한 화면에서 관리하는 Agent View를 Research Preview로 공개했습니다. 이후 claude agents --cwd 옵션과 pinned background sessions 같은 후속 업데이트가 같은 주에 추가되며 5월 15일 이후에도 영향이 이어졌습니다.",
           content: `Anthropic이 2026년 5월 11일 Claude Code 2.1.139부터 Agent View를 Research Preview로 공개했고, 이번 w21 주차에 \`claude agents --cwd <path>\`와 pinned background sessions 후속 업데이트가 같이 풀렸습니다. 여러 병렬 에이전트 세션을 한 화면에서 관리하는 단일 콘트롤 인터페이스가 핵심입니다.
 
 - Agent View: 모든 활성 세션을 한 패널에서 시각화 (작업, 상태, 토큰, 마지막 출력)
