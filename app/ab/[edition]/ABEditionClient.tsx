@@ -140,18 +140,52 @@ function SourceButton({ link }: { link: SourceLink }) {
       style={{
         fontFamily: "var(--mono)",
         fontSize: 12,
-        color: link.primary ? "#000" : "var(--accent)",
+        minHeight: 44,
+        display: "inline-flex",
+        alignItems: "center",
+        color: link.primary ? "var(--ink)" : "var(--accent)",
         background: link.primary ? "var(--accent)" : "transparent",
         border: link.primary ? "1px solid var(--accent)" : "1px solid var(--border2)",
-        padding: "8px 14px",
-        borderRadius: 2,
+        padding: "0 16px",
+        borderRadius: "var(--radius-xs)",
         textDecoration: "none",
         fontWeight: 700,
+        letterSpacing: "0.02em",
         whiteSpace: "nowrap",
+        transition: "border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out)",
       }}
     >
       {link.label} →
     </a>
+  );
+}
+
+/* 에디토리얼 섹션 라벨 — mono eyebrow, 장식 글리프 없이 hairline 룰로 구획 */
+function SectionEyebrow({
+  label,
+  tone = "accent",
+}: {
+  label: string;
+  tone?: "accent" | "gold" | "muted";
+}) {
+  const color = tone === "gold" ? "var(--gold)" : tone === "muted" ? "var(--muted)" : "var(--accent)";
+  return (
+    <div
+      className="mono"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        fontSize: 11,
+        fontWeight: 800,
+        letterSpacing: "0.18em",
+        textTransform: "uppercase",
+        color,
+      }}
+    >
+      <span>{label}</span>
+      <span aria-hidden style={{ flex: 1, borderTop: "1px solid var(--rule)" }} />
+    </div>
   );
 }
 
@@ -243,7 +277,7 @@ function ThumbnailPreview({
         border: "1px solid var(--border)",
         background: "var(--surface)",
         overflow: "hidden",
-        borderRadius: 4,
+        borderRadius: "var(--radius-xs)",
       }}
     >
       <img
@@ -324,20 +358,10 @@ function ImageGallery({
   tone?: "accent" | "gold";
 }) {
   if (!images || images.length === 0) return null;
-  const color = tone === "gold" ? "var(--gold)" : "var(--accent)";
   return (
     <div style={{ marginTop: 24 }}>
-      <div
-        style={{
-          fontFamily: "var(--mono)",
-          marginBottom: 10,
-          fontSize: 11,
-          letterSpacing: "0.16em",
-          textTransform: "uppercase",
-          color,
-        }}
-      >
-        ▾ Visual Brief
+      <div style={{ marginBottom: 12 }}>
+        <SectionEyebrow label="Visual brief" tone={tone} />
       </div>
       <div style={{ display: "grid", gap: 12 }}>
         {images.map((image) => (
@@ -419,24 +443,15 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
         borderTop: "1px solid var(--border2)",
       }}
     >
-      <div
-        style={{
-          fontFamily: "var(--mono)",
-          fontSize: 11,
-          letterSpacing: "0.16em",
-          textTransform: "uppercase",
-          color: "var(--accent)",
-        }}
-      >
-        ▾ Detail Brief
-      </div>
+      <SectionEyebrow label="Detail brief" tone="accent" />
 
       <p
         style={{
-          marginTop: 14,
+          marginTop: 16,
+          maxWidth: "62ch",
           whiteSpace: "pre-wrap",
-          fontSize: 14,
-          lineHeight: 1.9,
+          fontSize: "var(--text-base)",
+          lineHeight: 1.85,
           color: "var(--text)",
         }}
       >
@@ -450,27 +465,21 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
         <aside
           style={{
             marginTop: 24,
-            borderTop: "1px solid var(--border)",
-            paddingTop: 20,
+            borderLeft: "2px solid var(--accent)",
+            paddingLeft: 16,
           }}
         >
-          <div
-            style={{
-              fontFamily: "var(--mono)",
-              marginBottom: 8,
-              fontSize: 11,
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-              color: "var(--accent)",
-            }}
-          >
-            ▾ 생각해볼 점
+          <div style={{ marginBottom: 10 }}>
+            <SectionEyebrow label="생각해볼 점" tone="accent" />
           </div>
           <p
+            className="serif"
             style={{
-              fontSize: 14,
-              lineHeight: 1.8,
-              color: "var(--muted)",
+              maxWidth: "60ch",
+              fontSize: "var(--text-base)",
+              fontStyle: "italic",
+              lineHeight: 1.7,
+              color: "var(--text-soft)",
             }}
           >
             {stripMarkdown(item.editorial)}
@@ -512,45 +521,53 @@ function PickModal({
   return (
     <div style={{ height: "100%", overflowY: "auto" }}>
       <div
+        className="mono"
         style={{
-          fontFamily: "var(--mono)",
           display: "flex",
           alignItems: "center",
           gap: 10,
           fontSize: 11,
+          letterSpacing: "0.14em",
+          textTransform: "uppercase",
         }}
       >
         <span
           style={{
             background: "var(--gold)",
-            color: "#000",
-            padding: "3px 8px",
-            borderRadius: 2,
-            fontWeight: 700,
+            color: "var(--ink)",
+            padding: "3px 9px",
+            borderRadius: "var(--radius-xs)",
+            fontWeight: 800,
+            letterSpacing: "0.16em",
           }}
         >
-          PICK
+          Pick
         </span>
         <span style={{ color: "var(--muted)" }}>{item.category}</span>
       </div>
 
       <h2
+        className="serif"
         style={{
-          marginTop: 16,
-          fontSize: "clamp(22px, 4vw, 36px)",
+          marginTop: 18,
+          maxWidth: "20ch",
+          fontSize: "clamp(24px, 4vw, 40px)",
           fontWeight: 700,
-          lineHeight: 1.2,
-          color: "var(--text)",
+          letterSpacing: "-0.035em",
+          lineHeight: 1.06,
+          color: "var(--text-strong)",
         }}
       >
         {stripMarkdown(item.title)}
       </h2>
       {item.subtitle && (
         <p
+          className="serif"
           style={{
-            fontFamily: "var(--mono)",
-            marginTop: 4,
-            fontSize: 14,
+            marginTop: 8,
+            fontSize: "var(--text-lg)",
+            fontStyle: "italic",
+            lineHeight: 1.45,
             color: "var(--muted)",
           }}
         >
@@ -560,13 +577,13 @@ function PickModal({
 
       <p
         style={{
-          fontFamily: "var(--mono)",
-          marginTop: 20,
+          marginTop: 22,
+          maxWidth: "62ch",
           borderLeft: "2px solid var(--gold)",
-          paddingLeft: 14,
-          fontSize: 14,
+          paddingLeft: 16,
+          fontSize: "var(--text-md)",
           color: "var(--text)",
-          lineHeight: 1.7,
+          lineHeight: 1.6,
         }}
       >
         {stripMarkdown(item.summary)}
@@ -575,9 +592,10 @@ function PickModal({
       <p
         style={{
           marginTop: 20,
+          maxWidth: "62ch",
           whiteSpace: "pre-wrap",
-          fontSize: 14,
-          lineHeight: 1.9,
+          fontSize: "var(--text-base)",
+          lineHeight: 1.85,
           color: "var(--text)",
         }}
       >
@@ -590,23 +608,23 @@ function PickModal({
         <aside
           style={{
             marginTop: 24,
-            borderTop: "1px solid var(--border)",
-            paddingTop: 20,
+            borderLeft: "2px solid var(--gold)",
+            paddingLeft: 16,
           }}
         >
-          <div
+          <div style={{ marginBottom: 10 }}>
+            <SectionEyebrow label="생각해볼 점" tone="gold" />
+          </div>
+          <p
+            className="serif"
             style={{
-              fontFamily: "var(--mono)",
-              marginBottom: 8,
-              fontSize: 11,
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-              color: "var(--gold)",
+              maxWidth: "60ch",
+              fontSize: "var(--text-base)",
+              fontStyle: "italic",
+              lineHeight: 1.7,
+              color: "var(--text-soft)",
             }}
           >
-            ▾ 생각해볼 점
-          </div>
-          <p style={{ fontSize: 14, lineHeight: 1.8, color: "var(--muted)" }}>
             {stripMarkdown(item.editorial)}
           </p>
         </aside>
@@ -634,13 +652,17 @@ function PickModal({
             style={{
               fontFamily: "var(--mono)",
               fontSize: 12,
+              minHeight: 44,
+              display: "inline-flex",
+              alignItems: "center",
               background: "transparent",
               color: "var(--gold)",
               border: "1px solid var(--gold)",
-              padding: "7px 14px",
-              borderRadius: 2,
+              padding: "0 16px",
+              borderRadius: "var(--radius-xs)",
               textDecoration: "none",
               fontWeight: 700,
+              letterSpacing: "0.02em",
               whiteSpace: "nowrap",
             }}
           >
@@ -654,12 +676,16 @@ function PickModal({
           style={{
             fontFamily: "var(--mono)",
             fontSize: 12,
+            minHeight: 44,
+            display: "inline-flex",
+            alignItems: "center",
             background: "var(--gold)",
-            color: "#000",
-            padding: "8px 16px",
-            borderRadius: 2,
+            color: "var(--ink)",
+            padding: "0 18px",
+            borderRadius: "var(--radius-xs)",
             textDecoration: "none",
-            fontWeight: 700,
+            fontWeight: 800,
+            letterSpacing: "0.02em",
             whiteSpace: "nowrap",
           }}
         >
@@ -691,8 +717,6 @@ function Modal({
     };
   }, [onClose]);
 
-  const borderColor = "var(--gold)";
-
   return (
     /* 오버레이 */
     <div
@@ -719,13 +743,15 @@ function Modal({
         style={{
           position: "relative",
           background: "var(--bg)",
-          border: `2px solid ${borderColor}`,
-          borderRadius: "8px 8px 0 0",
+          border: "1px solid var(--border2)",
+          borderTop: "3px solid var(--gold)",
+          borderRadius: "var(--radius-xs) var(--radius-xs) 0 0",
+          boxShadow: "0 -1px 0 var(--border)",
           width: "100%",
           maxWidth: 760,
           maxHeight: "92dvh",
           overflowY: "auto",
-          padding: "28px 24px 40px",
+          padding: "clamp(24px, 4vw, 36px) clamp(20px, 3vw, 32px) clamp(36px, 5vw, 48px)",
           // 데스크톱에서는 중앙 정렬
           margin: "0 auto",
           boxSizing: "border-box",
@@ -741,19 +767,23 @@ function Modal({
             float: "right",
             marginLeft: 12,
             marginBottom: 8,
+            minHeight: 32,
             background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: 4,
+            border: "1px solid var(--border2)",
+            borderRadius: "var(--radius-xs)",
             color: "var(--muted)",
             fontFamily: "var(--mono)",
-            fontSize: 12,
-            padding: "4px 10px",
+            fontSize: 11,
+            fontWeight: 700,
+            padding: "5px 11px",
             cursor: "pointer",
             zIndex: 10,
-            letterSpacing: "0.08em",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            transition: "color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out)",
           }}
         >
-          ESC ✕
+          Esc ✕
         </button>
 
         <PickModal item={content.item} onClose={onClose} />
@@ -804,7 +834,7 @@ function HighlightArticle({
       className="tc-feed-card"
       style={{
         borderColor: expanded || item.tier === "hero" ? "var(--accent)" : "var(--border)",
-        boxShadow: expanded ? "0 18px 60px rgba(0, 0, 0, 0.28)" : "none",
+        boxShadow: expanded ? "0 6px 24px -12px var(--overlay-bg)" : "none",
       }}
     >
       <div
@@ -862,9 +892,9 @@ function HighlightArticle({
                 margin: "2px 0 4px 0",
                 fontSize: 14.5,
                 lineHeight: 1.5,
-                color: "var(--text-soft, var(--text))",
+                color: "var(--text-soft)",
                 letterSpacing: "-0.005em",
-                fontStyle: "normal",
+                fontStyle: "italic",
                 display: "-webkit-box",
                 WebkitLineClamp: 2,
                 WebkitBoxOrient: "vertical",
@@ -925,38 +955,26 @@ function DemoCard({ item }: { item: ABDemoCard }) {
     <article
       style={{
         border: "1px solid var(--border2)",
-        borderLeft: "4px solid var(--gold)",
+        borderLeft: "3px solid var(--gold)",
         background: "color-mix(in srgb, var(--card), var(--surface) 22%)",
-        borderRadius: 12,
-        padding: "clamp(20px, 4vw, 34px)",
+        borderRadius: "var(--radius-xs)",
+        padding: "clamp(22px, 4vw, 34px)",
       }}
     >
-      <div
-        style={{
-          fontFamily: "var(--mono)",
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          flexWrap: "wrap",
-          fontSize: 11,
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          color: "var(--gold)",
-        }}
-      >
-        <span>실전 사례</span>
-        <span style={{ color: "var(--dim)" }}>·</span>
-        <span style={{ color: "var(--muted)" }}>{item.category}</span>
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <SectionEyebrow label={`실전 사례 · ${item.category}`} tone="gold" />
       </div>
 
       <h2
+        className="serif"
         style={{
-          marginTop: 12,
+          marginTop: 16,
+          maxWidth: "22ch",
           fontSize: "clamp(24px, 4vw, 38px)",
-          fontWeight: 760,
+          fontWeight: 700,
           letterSpacing: "-0.035em",
-          lineHeight: 1.12,
-          color: "var(--text)",
+          lineHeight: 1.08,
+          color: "var(--text-strong)",
         }}
       >
         {stripMarkdown(item.title)}
@@ -964,11 +982,14 @@ function DemoCard({ item }: { item: ABDemoCard }) {
 
       {item.subtitle && (
         <p
+          className="serif"
           style={{
             marginTop: 10,
-            fontSize: "clamp(15px, 2vw, 17px)",
-            lineHeight: 1.7,
-            color: "var(--text)",
+            maxWidth: "60ch",
+            fontSize: "var(--text-lg)",
+            fontStyle: "italic",
+            lineHeight: 1.5,
+            color: "var(--muted)",
           }}
         >
           {stripMarkdown(item.subtitle)}
@@ -980,11 +1001,12 @@ function DemoCard({ item }: { item: ABDemoCard }) {
           style={{
             fontFamily: "var(--mono)",
             marginTop: 16,
-            border: "1px solid rgba(255, 209, 102, 0.45)",
-            background: "rgba(0, 0, 0, 0.18)",
-            borderRadius: 999,
-            padding: "10px 14px",
+            border: "1px solid color-mix(in srgb, var(--gold), var(--border) 45%)",
+            background: "var(--surface)",
+            borderRadius: "var(--radius-xs)",
+            padding: "11px 14px",
             fontSize: 12,
+            letterSpacing: "0.02em",
             lineHeight: 1.6,
             color: "var(--gold)",
           }}
@@ -996,8 +1018,9 @@ function DemoCard({ item }: { item: ABDemoCard }) {
       <p
         style={{
           marginTop: 18,
-          fontSize: 15,
-          lineHeight: 1.9,
+          maxWidth: "62ch",
+          fontSize: "var(--text-md)",
+          lineHeight: 1.75,
           color: "var(--muted)",
         }}
       >
@@ -1007,9 +1030,10 @@ function DemoCard({ item }: { item: ABDemoCard }) {
       <p
         style={{
           marginTop: 14,
+          maxWidth: "62ch",
           whiteSpace: "pre-wrap",
-          fontSize: 14,
-          lineHeight: 1.9,
+          fontSize: "var(--text-base)",
+          lineHeight: 1.85,
           color: "var(--text)",
         }}
       >
@@ -1018,7 +1042,9 @@ function DemoCard({ item }: { item: ABDemoCard }) {
 
       <div
         style={{
-          marginTop: 22,
+          marginTop: 24,
+          paddingTop: 18,
+          borderTop: "1px solid var(--border)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -1041,11 +1067,12 @@ function DemoCard({ item }: { item: ABDemoCard }) {
             alignItems: "center",
             fontSize: 12,
             background: "var(--gold)",
-            color: "#000",
+            color: "var(--ink)",
             padding: "0 18px",
-            borderRadius: 999,
+            borderRadius: "var(--radius-xs)",
             textDecoration: "none",
             fontWeight: 800,
+            letterSpacing: "0.02em",
             whiteSpace: "nowrap",
           }}
         >
@@ -1114,9 +1141,9 @@ function EditorPickCard({
               margin: "2px 0 4px 0",
               fontSize: 14,
               lineHeight: 1.5,
-              color: "var(--text-soft, var(--text))",
+              color: "var(--text-soft)",
               letterSpacing: "-0.005em",
-              fontStyle: "normal",
+              fontStyle: "italic",
               display: "-webkit-box",
               WebkitLineClamp: 2,
               WebkitBoxOrient: "vertical",
@@ -1259,9 +1286,13 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
 
             <div className="ab-hero-grid" style={{ alignItems: "start" }}>
               <div className="ab-hero-copy">
-                <p className="ab-kicker">VoidLight Letter · {data.period}</p>
+                <p className="ab-kicker" style={{ color: "var(--gold)" }}>
+                  VoidLight Letter · {data.period}
+                </p>
                 <h1 className="ab-display-title" style={{ maxWidth: "15ch" }}>{data.title}</h1>
-                <p className="ab-hero-deck">{data.theme}</p>
+                <p className="ab-hero-deck" style={{ color: "var(--text-soft)", maxWidth: "46ch" }}>
+                  {data.theme}
+                </p>
               </div>
 
               <aside className="ab-index-panel" aria-label="이번 호 메타데이터">
@@ -1358,6 +1389,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   maxWidth: "62ch",
                   fontSize: 15,
                   lineHeight: 1.6,
+                  color: "var(--text-soft)",
                 }}
               >
                 카드를 열면 발표용 설명, 검증 출처, 관련 게시글을 같은 맥락 안에서 확인할 수 있습니다.
@@ -1415,6 +1447,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     fontSize: 14,
                     lineHeight: 1.55,
                     maxWidth: "60ch",
+                    color: "var(--text-soft)",
                   }}
                 >
                   발표자가 검토한 도구 중 작업 흐름에 붙이기 쉬운 자료만 따로 정리했습니다.
@@ -1492,11 +1525,15 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   key={w}
                   href={`/${w}`}
                   style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    minHeight: 28,
                     color: "var(--text)",
                     textDecoration: "none",
                     border: "1px solid var(--border2)",
-                    padding: "3px 9px",
-                    borderRadius: 999,
+                    padding: "0 11px",
+                    borderRadius: "var(--radius-pill)",
+                    transition: "border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out)",
                   }}
                 >
                   {w}

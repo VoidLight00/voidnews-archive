@@ -2,59 +2,115 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 @import "tailwindcss";
 
+/* ════════════════════════════════════════════════════════════════
+   VoidNews AB — Design System (single site-wide system)
+   Hallmark · genre: editorial · macrostructure: Long Document
+   theme: warm-ink-paper (dark = night print · light = warm paper)
+   tokens locked — surfaces reference names only, never raw values
+   spec: _workspace/oneway/20260604-ab-aislop-oneway/redesign/design-system.md
+   pre-emit critique: P5 H4 E4 S4 R5 V4
+═══════════════════════════════════════════════════════════════════ */
+
 :root {
-  /* Dark theme (default) — editorial/news magazine palette */
-  --bg: #07070a;
-  --surface: #0f0f12;
-  --surface-2: #14141a;
-  --card: #111116;
-  --card-hover: #161620;
-  --border: #1f1f28;
-  --border2: #2c2c38;
-  --rule: #232330;
+  /* ── Color · Dark (default) — night newsprint, brand-tinted neutrals ── */
+  --bg: #08070a;
+  --surface: #100f13;
+  --surface-2: #16151b;
+  --card: #121116;
+  --card-hover: #181722;
+  --border: #211f2a;
+  --border2: #2e2c39;
+  --rule: #242230;
   --text: #f2efe8;
-  --text-strong: #ffffff;
-  --muted: #8a857e;
-  --dim: #4a4843;
-  --accent: #e87040;
-  --accent-soft: #e8704022;
+  --text-strong: #fbf9f4;
+  --text-soft: #cdc7bc;
+  --muted: #8c877f;
+  --dim: #56534d;
+  --accent: #e8703f;
+  --accent-soft: #e8703f1f;
   --red: #cc3300;
-  --gold: #c8a84b;
+  --gold: #c9a94c;
   --ink: #0a0a0d;
-  --header-bg: rgba(10, 10, 12, 0.85);
+  --header-bg: rgba(9, 8, 11, 0.86);
   --overlay-bg: rgba(0, 0, 0, 0.78);
-  --kicker: #c8a84b;
+  --kicker: #c9a94c;
   --hero-from: #18251f;
   --hero-to: #28d28b;
   --hero-accent: #20e6a0;
+
+  /* ── Type roles ── */
   --mono: "JetBrains Mono", "Courier New", monospace;
   --sans: "Space Grotesk", "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
   --serif: "Fraunces", "Pretendard Variable", ui-serif, Georgia, "Times New Roman", serif;
+
+  /* ── Type scale (modular · fluid clamp) ── */
+  --text-xs: clamp(10.5px, 0.7vw + 9px, 12px);
+  --text-sm: clamp(12px, 0.5vw + 11px, 13.5px);
+  --text-base: clamp(14px, 0.4vw + 13px, 16px);
+  --text-md: clamp(16px, 0.8vw + 14px, 18px);
+  --text-lg: clamp(18px, 1.2vw + 15px, 22px);
+  --text-xl: clamp(22px, 2vw + 16px, 30px);
+  --text-2xl: clamp(26px, 3vw + 16px, 40px);
+  --text-3xl: clamp(30px, 4.5vw + 16px, 58px);
+  --text-display: clamp(40px, 7vw + 12px, 88px);
+
+  /* ── Spacing rhythm (4pt base · semantic) ── */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 36px;
+  --space-2xl: 56px;
+  --space-3xl: 88px;
+
+  /* ── Layout ── */
+  --container: 1280px;
+  --container-wide: 1480px;
+  --measure: 68ch;
+  --gutter: clamp(16px, 3vw, 32px);
+
+  /* ── Radius / line ── */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-pill: 999px;
+  --hairline: 1px;
+
+  /* ── Motion (restrained) ── */
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 340ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 0.45, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  /* Light theme — warm paper editorial palette */
-  --bg: #f7f5ef;
-  --surface: #efece2;
-  --surface-2: #f3f1e8;
+  /* ── Color · Light — warm paper, brand-tinted neutrals ── */
+  --bg: #f6f3ec;
+  --surface: #efebe0;
+  --surface-2: #f2eee4;
   --card: #ffffff;
-  --card-hover: #fbf9f1;
-  --border: #ddd9cb;
-  --border2: #c5c0af;
-  --rule: #d1ccba;
-  --text: #18161a;
-  --text-strong: #0a0a0a;
-  --muted: #5e5a52;
-  --dim: #9c978c;
-  --accent: #c84a17;
-  --accent-soft: #c84a1716;
+  --card-hover: #fbf8f0;
+  --border: #dcd8ca;
+  --border2: #c4bfae;
+  --rule: #d0cbb9;
+  --text: #1a181c;
+  --text-strong: #0b0a0c;
+  --text-soft: #46433d;
+  --muted: #5c584f;
+  --dim: #928d82;
+  --accent: #c5491a;
+  --accent-soft: #c5491a16;
   --red: #a52500;
-  --gold: #957517;
+  --gold: #947415;
   --ink: #0a0a0a;
-  --header-bg: rgba(247, 245, 239, 0.94);
-  --overlay-bg: rgba(20, 18, 14, 0.55);
-  --kicker: #957517;
+  --header-bg: rgba(246, 243, 236, 0.94);
+  --overlay-bg: rgba(22, 19, 14, 0.55);
+  --kicker: #947415;
   --hero-from: #e8f7ef;
   --hero-to: #54d39f;
   --hero-accent: #0fb879;
@@ -63,13 +119,21 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body { overflow-x: clip; }
+
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+/* Long words / URLs never force horizontal scroll */
+p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 /* ──────────────── Editorial typography ──────────────── */
 
@@ -266,7 +330,6 @@ body {
   }
 }
 
-/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 */
 /* TestingCatalog-inspired issue layout */
 .tc-issue-strip {
   display: flex;
@@ -892,7 +955,7 @@ body {
 }
 
 .rise-in {
-  animation: vn-rise 0.34s ease both;
+  animation: vn-rise var(--dur-slow) var(--ease-out) both;
 }
 
 /* Sticky nav lift */
@@ -907,9 +970,22 @@ body {
   scrollbar-width: none;
 }
 
-::selection { background: var(--accent); color: #000; }
+::selection { background: var(--accent); color: var(--ink); }
 
-/* Focus visibility for keyboard users */
+/* Restrained motion — spatial motion collapses to a short crossfade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .rise-in { animation: none; }
+}
+
+/* Focus visibility for keyboard users — never animated, shows instantly */
 :where(button, a, input, select, textarea):focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

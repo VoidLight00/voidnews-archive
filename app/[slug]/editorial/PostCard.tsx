@@ -104,16 +104,18 @@ export default function PostCard({ post, weekSlug, companyName, companyColor }: 
           {pillLabel}
         </span>
       </Link>
-      <div className={styles.meta}>
-        {dateText} · {readText}
+      <div className={styles.cardBody}>
+        <div className={styles.meta}>
+          {dateText} · {readText}
+        </div>
+        <h2 className={styles.headline}>
+          <Link href={href}>{post.title}</Link>
+        </h2>
+        {post.summary ? <p className={styles.dek}>{post.summary}</p> : null}
+        <Link href={href} className={styles.cta}>
+          자세히 보기 <span aria-hidden>→</span>
+        </Link>
       </div>
-      <h2 className={styles.headline}>
-        <Link href={href}>{post.title}</Link>
-      </h2>
-      {post.summary ? <p className={styles.dek}>{post.summary}</p> : null}
-      <Link href={href} className={styles.cta}>
-        자세히 보기 <span aria-hidden>→</span>
-      </Link>
     </article>
   );
 }

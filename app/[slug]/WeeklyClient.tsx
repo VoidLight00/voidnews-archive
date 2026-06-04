@@ -68,10 +68,12 @@ function highlightText(text: string, query: string): ReactNode {
       <mark
         key={`${part}-${index}`}
         style={{
-          background: "#E87040",
-          color: "#111",
-          borderRadius: 4,
-          padding: "0 2px",
+          background: "var(--accent)",
+          color: "var(--ink)",
+          borderRadius: "var(--radius-xs)",
+          padding: "0 3px",
+          boxDecorationBreak: "clone",
+          WebkitBoxDecorationBreak: "clone",
         }}
       >
         {part}
@@ -90,7 +92,7 @@ function renderRichText(text: string): ReactNode {
     if (!part) return null;
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
-        <strong key={index} style={{ color: "var(--text)", fontWeight: 800 }}>
+        <strong key={index} style={{ color: "var(--text-strong)", fontWeight: 700 }}>
           {part.slice(2, -2)}
         </strong>
       );
@@ -234,17 +236,11 @@ type StatsActionMode = "filter" | "scroll";
 
 // ── 플랫폼 배지 ─────────────────────────────────
 function PlatformBadge({ platform }: { platform: Post["platform"] }) {
-  const map: Record<string, { bg: string; color: string }> = {
-    X: { bg: "#18181B", color: "#E4E4E7" },
-    Threads: { bg: "#1A1A2E", color: "#A78BFA" },
-    "X+Threads": { bg: "#1A2A2E", color: "#60A5FA" },
-  };
-  const s = map[platform] || map.X;
   return (
     <span
       style={{
         background: "transparent",
-        color: s.color,
+        color: "var(--muted)",
         fontSize: 11,
         fontWeight: 600,
         padding: 0,
@@ -267,18 +263,20 @@ function LinkBtn({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="link-btn"
+      className="link-btn mono"
       style={{
         display: "inline-flex",
         alignItems: "center",
         gap: 4,
-        fontSize: 12,
-        fontWeight: 600,
-        color: "#E87040",
+        fontSize: 11,
+        fontWeight: 700,
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        color: "var(--accent)",
         textDecoration: "none",
-        padding: "4px 10px",
-        border: "1px solid #E87040",
-        borderRadius: 4,
+        padding: "6px 12px",
+        border: "1px solid var(--accent)",
+        borderRadius: "var(--radius-xs)",
       }}
     >
       {label} ↗
@@ -434,8 +432,8 @@ function CardLinkPreview({ url }: { url: string }) {
       >
         <div
           style={{
-            border: "1px solid #1e1e1e",
-            borderRadius: 8,
+            border: "1px solid var(--border)",
+            borderRadius: "var(--radius-xs)",
             overflow: "hidden",
             background: "var(--card)",
             display: "flex",
@@ -527,7 +525,7 @@ function LinkPreview({ url }: { url: string }) {
       <div
         style={{
           border: "1px solid var(--border)",
-          borderRadius: 10,
+          borderRadius: "var(--radius-sm)",
           overflow: "hidden",
           background: "var(--card)",
           marginBottom: 20,
@@ -538,7 +536,7 @@ function LinkPreview({ url }: { url: string }) {
           gap: 12,
         }}
       >
-        <div style={{ width: 90, height: 66, background: "var(--surface)", borderRadius: 4, flexShrink: 0 }} />
+        <div style={{ width: 90, height: 66, background: "var(--surface)", borderRadius: 2, flexShrink: 0 }} />
         <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
           <div style={{ height: 12, background: "var(--surface)", borderRadius: 4, width: "70%" }} />
           <div style={{ height: 10, background: "var(--surface)", borderRadius: 4, width: "90%" }} />
@@ -556,14 +554,14 @@ function LinkPreview({ url }: { url: string }) {
     >
       <div
         style={{
-          border: "1px solid #2a2a2a",
-          borderRadius: 10,
+          border: "1px solid var(--border2)",
+          borderRadius: "var(--radius-sm)",
           overflow: "hidden",
           background: "var(--card)",
           display: "flex",
           transition: "border-color 0.15s",
         }}
-        onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--border2)")}
+        onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--text)")}
         onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border2)")}
       >
         {data?.image && (
@@ -736,22 +734,30 @@ function EmbedPreview({
 
   if (!officialUrl && !xUrl && !threadsUrl) return null;
 
-  const tabBtnStyle = (active: boolean, color: string) => ({
+  const tabBtnStyle = (
+    active: boolean,
+    role: { color: string; tint: string; border: string }
+  ) => ({
     fontSize: 11,
     fontWeight: 700,
-    padding: "5px 12px",
-    borderRadius: 2,
+    padding: "6px 13px",
+    borderRadius: "var(--radius-xs)",
     cursor: "pointer" as const,
     border: "1px solid",
-    borderColor: active ? color : "var(--border2)",
-    background: active ? `${color}22` : "transparent",
-    color: active ? color : "var(--dim)",
+    borderColor: active ? role.border : "var(--border2)",
+    background: active ? role.tint : "transparent",
+    color: active ? role.color : "var(--dim)",
     fontFamily: "var(--mono)",
-    letterSpacing: "0.06em",
+    letterSpacing: "0.1em",
+    textTransform: "uppercase" as const,
   });
 
+  const officialRole = { color: "var(--accent)", tint: "var(--accent-soft)", border: "var(--accent)" };
+  const myXRole = { color: "var(--text-strong)", tint: "var(--surface-2)", border: "var(--border2)" };
+  const threadsRole = { color: "var(--gold)", tint: "var(--surface-2)", border: "var(--gold)" };
+
   const loadingPlaceholder = (
-    <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10, color: "var(--dim)", fontSize: 13 }}>
+    <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "var(--radius-xs)", padding: "20px 16px", display: "flex", alignItems: "center", gap: 10, color: "var(--dim)", fontSize: 13, fontFamily: "var(--mono)", letterSpacing: "0.04em" }}>
       불러오는 중...
     </div>
   );
@@ -761,17 +767,17 @@ function EmbedPreview({
       {/* 탭 헤더 */}
       <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
         {officialUrl && (
-          <button onClick={() => setTab("official")} style={tabBtnStyle(tab === "official", "#22C55E")}>
+          <button onClick={() => setTab("official")} style={tabBtnStyle(tab === "official", officialRole)}>
             공식 원문
           </button>
         )}
         {xUrl && (
-          <button onClick={() => setTab("x")} style={tabBtnStyle(tab === "x", "#E87040")}>
+          <button onClick={() => setTab("x")} style={tabBtnStyle(tab === "x", myXRole)}>
             𝕏 내 포스팅
           </button>
         )}
         {threadsUrl && (
-          <button onClick={() => setTab("threads")} style={tabBtnStyle(tab === "threads", "#A78BFA")}>
+          <button onClick={() => setTab("threads")} style={tabBtnStyle(tab === "threads", threadsRole)}>
             Threads 내 포스팅
           </button>
         )}
@@ -781,10 +787,10 @@ function EmbedPreview({
       {tab === "official" && officialUrl && (
         <div>
           {officialLoading && loadingPlaceholder}
-          <div ref={officialRef} style={{ borderRadius: 8, overflow: "hidden" }} />
+          <div ref={officialRef} style={{ borderRadius: "var(--radius-xs)", overflow: "hidden" }} />
           {!officialHtml && !officialLoading && (
-            <a href={officialUrl} target="_blank" rel="noopener noreferrer"
-              style={{ display: "block", background: "var(--card)", border: "1px solid #1a3a1a", borderRadius: 8, padding: "16px", color: "#22C55E", fontSize: 13, textDecoration: "none" }}>
+            <a href={officialUrl} target="_blank" rel="noopener noreferrer" className="mono"
+              style={{ display: "block", background: "var(--card)", border: "1px solid var(--accent)", borderRadius: "var(--radius-xs)", padding: "14px 16px", color: "var(--accent)", fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textDecoration: "none" }}>
               공식 계정 원문 보기 ↗
             </a>
           )}
@@ -795,10 +801,10 @@ function EmbedPreview({
       {tab === "x" && xUrl && (
         <div>
           {xLoading && loadingPlaceholder}
-          <div ref={xRef} style={{ borderRadius: 8, overflow: "hidden" }} />
+          <div ref={xRef} style={{ borderRadius: "var(--radius-xs)", overflow: "hidden" }} />
           {!xHtml && !xLoading && (
-            <a href={xUrl} target="_blank" rel="noopener noreferrer"
-              style={{ display: "block", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "16px", color: "#4A9EFF", fontSize: 13, textDecoration: "none" }}>
+            <a href={xUrl} target="_blank" rel="noopener noreferrer" className="mono"
+              style={{ display: "block", background: "var(--card)", border: "1px solid var(--border2)", borderRadius: "var(--radius-xs)", padding: "14px 16px", color: "var(--text-strong)", fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textDecoration: "none" }}>
               𝕏 X에서 보기 ↗
             </a>
           )}
@@ -807,7 +813,7 @@ function EmbedPreview({
 
       {/* 내 Threads 포스팅 탭 */}
       {tab === "threads" && threadsUrl && (
-        <div ref={thRef} style={{ borderRadius: 8, overflow: "hidden" }} />
+        <div ref={thRef} style={{ borderRadius: "var(--radius-xs)", overflow: "hidden" }} />
       )}
     </div>
   );
@@ -835,10 +841,13 @@ function PostModal({
   const touchStartYRef = useRef<number | null>(null);
   const titleId = `post-modal-title-${post.title.replace(/[^a-zA-Z0-9가-힣]+/g, "-").replace(/^-+|-+$/g, "")}`;
   const navBtnStyle = {
-    fontSize: 13,
+    fontSize: 11,
     fontWeight: 700,
-    padding: "10px 14px",
-    borderRadius: 10,
+    letterSpacing: "0.1em",
+    textTransform: "uppercase",
+    fontFamily: "var(--mono)",
+    padding: "11px 16px",
+    borderRadius: "var(--radius-xs)",
     border: "1px solid var(--border2)",
     background: "var(--surface)",
     color: "var(--text)",
@@ -884,25 +893,26 @@ function PostModal({
           if (endY - startY >= 50) onClose();
         }}
         style={{
-          background: "var(--card-hover)",
-          border: "1px solid #2a2a2a",
-          borderRadius: "16px 16px 0 0",
+          background: "var(--card)",
+          border: "1px solid var(--border2)",
+          borderBottom: "none",
+          borderRadius: "var(--radius-sm) var(--radius-sm) 0 0",
           width: "100%",
-          maxWidth: 680,
-          maxHeight: "85vh",
+          maxWidth: 700,
+          maxHeight: "86vh",
           overflowY: "auto",
-          padding: "28px 28px 40px",
+          padding: "26px clamp(20px, 4vw, 34px) 44px",
           position: "relative",
+          boxShadow: "0 -24px 60px rgba(0,0,0,0.34)",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: 20 }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 22 }}>
           <div
             style={{
-              width: 56,
-              height: 6,
-              borderRadius: 999,
-              background: "#5A5A5A",
-              boxShadow: "0 0 0 1px rgba(255,255,255,0.04)",
+              width: 48,
+              height: 4,
+              borderRadius: "var(--radius-pill)",
+              background: "var(--border2)",
             }}
           />
         </div>
@@ -911,14 +921,14 @@ function PostModal({
           <button
             onClick={onToggleBookmark}
             style={{
-              background: "var(--card-hover)",
-              border: "none",
-              color: bookmarked ? "#F5B942" : "var(--muted)",
-              fontSize: 18,
+              background: "var(--surface)",
+              border: "1px solid var(--border2)",
+              color: bookmarked ? "var(--gold)" : "var(--muted)",
+              fontSize: 16,
               cursor: "pointer",
-              width: 32,
-              height: 32,
-              borderRadius: "50%",
+              width: 34,
+              height: 34,
+              borderRadius: "var(--radius-xs)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -929,15 +939,16 @@ function PostModal({
           </button>
           <button
             onClick={onClose}
+            aria-label="닫기"
             style={{
-              background: "var(--card-hover)",
-              border: "none",
+              background: "var(--surface)",
+              border: "1px solid var(--border2)",
               color: "var(--muted)",
               fontSize: 18,
               cursor: "pointer",
-              width: 32,
-              height: 32,
-              borderRadius: "50%",
+              width: 34,
+              height: 34,
+              borderRadius: "var(--radius-xs)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -954,14 +965,15 @@ function PostModal({
 
         <h2
           id={titleId}
+          className="serif"
           style={{
-            fontSize: 20,
-            fontWeight: 800,
-            color: "var(--text)",
-            lineHeight: 1.4,
-            marginBottom: 16,
-            letterSpacing: "-0.01em",
-            paddingRight: 80,
+            fontSize: "clamp(23px, 2.6vw, 31px)",
+            fontWeight: 700,
+            color: "var(--text-strong)",
+            lineHeight: 1.12,
+            marginBottom: 18,
+            letterSpacing: "-0.03em",
+            paddingRight: 84,
           }}
         >
           {post.title}
@@ -969,13 +981,15 @@ function PostModal({
 
         {post.summary && (
           <p
+            className="serif"
             style={{
-              fontSize: 14,
-              color: "var(--muted)",
-              marginBottom: 20,
+              fontSize: "clamp(15px, 1.4vw, 17px)",
+              color: "var(--text-soft)",
+              marginBottom: 22,
               lineHeight: 1.6,
-              paddingLeft: 12,
-              borderLeft: `3px solid ${companyColor}`,
+              paddingLeft: 16,
+              borderLeft: `2px solid ${companyColor}`,
+              letterSpacing: "-0.01em",
             }}
           >
             {stripMarkdown(post.summary)}
@@ -989,7 +1003,7 @@ function PostModal({
         />
 
         {post.thumbnail && (
-          <figure style={{ margin: "0 0 20px", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", background: "var(--card)" }}>
+          <figure style={{ margin: "0 0 20px", border: "1px solid var(--border)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--card)" }}>
             <img src={post.thumbnail.src} alt={post.thumbnail.alt} style={{ display: "block", width: "100%", objectFit: "cover" }} />
             {post.thumbnail.caption && (
               <figcaption style={{ padding: "10px 12px", fontSize: 12, color: "var(--muted)", borderTop: "1px solid var(--border)", lineHeight: 1.6 }}>
@@ -1004,7 +1018,7 @@ function PostModal({
         {post.images && post.images.length > 0 && (
           <div style={{ display: "grid", gap: 12, marginBottom: 20 }}>
             {post.images.map((image) => (
-              <figure key={image.src} style={{ margin: 0, border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", background: "var(--card)" }}>
+              <figure key={image.src} style={{ margin: 0, border: "1px solid var(--border)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--card)" }}>
                 <img src={image.src} alt={image.alt} loading="lazy" style={{ display: "block", width: "100%", objectFit: "cover" }} />
                 {image.caption && (
                   <figcaption style={{ padding: "10px 12px", fontSize: 12, color: "var(--muted)", borderTop: "1px solid var(--border)", lineHeight: 1.6 }}>
@@ -1019,26 +1033,28 @@ function PostModal({
         {post.content && (
           <div
             style={{
-              background: "var(--card)",
+              background: "var(--surface)",
               border: "1px solid var(--border)",
-              borderRadius: 8,
-              padding: "16px 18px",
+              borderLeft: "2px solid var(--rule)",
+              borderRadius: "var(--radius-xs)",
+              padding: "18px 20px",
               marginBottom: 20,
             }}
           >
             <p
+              className="mono"
               style={{
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: 700,
-                color: "var(--dim)",
-                letterSpacing: "0.1em",
+                color: "var(--muted)",
+                letterSpacing: "0.16em",
                 textTransform: "uppercase",
-                marginBottom: 10,
+                marginBottom: 12,
               }}
             >
               포스팅 내용
             </p>
-            <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{renderRichText(post.content || "")}</p>
+            <p style={{ fontSize: 14, color: "var(--text)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{renderRichText(post.content || "")}</p>
           </div>
         )}
 
@@ -1345,13 +1361,13 @@ function PostCard({
               </a>
             ))}
             {post.xUrl && (
-              <a href={post.xUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, color: "#F4F4F5", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", background: "#0a0a0d", border: "1px solid #2F3136", borderRadius: 999 }}>
+              <a href={post.xUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, color: "var(--text)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", background: "var(--surface-2)", border: "1px solid var(--border2)", borderRadius: 999 }}>
                 <span aria-hidden style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontWeight: 800 }}>X</span>
                 My post →
               </a>
             )}
             {post.threadsUrl && (
-              <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, color: "#E9D5FF", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", background: "#1d1230", border: "1px solid #8B5CF6", borderRadius: 999 }}>
+              <a href={post.threadsUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10.5, fontWeight: 700, color: "var(--gold)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", background: "transparent", border: "1px solid var(--gold)", borderRadius: 999 }}>
                 Threads →
               </a>
             )}
@@ -1522,14 +1538,14 @@ function StatsBar({
           <h3
             className="serif"
             style={{
-              fontSize: 18,
+              fontSize: "clamp(17px, 1.6vw, 20px)",
               fontWeight: 700,
               color: "var(--text-strong)",
-              letterSpacing: "-0.015em",
+              letterSpacing: "-0.02em",
               margin: 0,
             }}
           >
-            Distribution by company
+            회사별 포스팅 분포
           </h3>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -2724,7 +2740,7 @@ export default function WeeklyClient({
                     ? {
                         borderColor: "var(--gold)",
                         color: "var(--gold)",
-                        background: "#C8A84B12",
+                        background: "color-mix(in srgb, var(--gold) 9%, transparent)",
                       }
                     : undefined
                 }
@@ -2741,7 +2757,7 @@ export default function WeeklyClient({
                     ? {
                         borderColor: "var(--red)",
                         color: "var(--red)",
-                        background: "#CC330012",
+                        background: "color-mix(in srgb, var(--red) 9%, transparent)",
                       }
                     : undefined
                 }
@@ -2891,12 +2907,12 @@ export default function WeeklyClient({
             ))}
           </section>
         ) : (
-          <div style={{ textAlign: "center", padding: "80px 0", color: "var(--muted)" }}>
-            <p className="serif" style={{ fontSize: 22, color: "var(--text)", marginBottom: 8, fontStyle: "italic" }}>
-              No matching intelligence
+          <div style={{ padding: "76px 0", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
+            <p className="serif" style={{ fontSize: "clamp(20px, 2.4vw, 26px)", color: "var(--text-strong)", marginBottom: 10, letterSpacing: "-0.025em", lineHeight: 1.15 }}>
+              조건에 맞는 포스팅이 없다
             </p>
-            <p className="mono" style={{ fontSize: 11, color: "var(--dim)", letterSpacing: "0.16em", textTransform: "uppercase" }}>
-              Adjust query parameters
+            <p className="mono" style={{ fontSize: 11, color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>
+              필터를 조정하세요
             </p>
           </div>
         )}

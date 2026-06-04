@@ -65,7 +65,7 @@ export const edition2026_04a: ABEdition = {
         title: "Gemini 인터랙티브 시각화 기능 공개",
         slug: "gemini-interactive-visualization-feature",
         summary: "3D 모델과 인터랙티브 차트로 결과를 탐색하는 기능을 소개한 항목입니다. 분석 결과를 단순 텍스트가 아닌 조작 가능한 뷰로 보는 흐름과 연결됩니다.",
-        content: "Gemini가 이제 여러분의 질문과 복잡한 개념을 채팅창 안에서 커스터마이즈 가능한 인터랙티브 시각화로 변환해줍니다.\n\n변수를 조절하고, 3D 모델을 회전시키고, 데이터를 탐색하면서 더 몰입감 있는 학습·탐색 경험을 Gemini에서 제공합니다.\n\n— via @lucas_flatwhite 큐레이션",
+        content: "Gemini가 이제 사용자의 질문과 복잡한 개념을 채팅창 안에서 커스터마이즈 가능한 인터랙티브 시각화로 변환해줍니다.\n\n변수를 조절하고, 3D 모델을 회전시키고, 데이터를 탐색하면서 더 몰입감 있는 학습·탐색 경험을 Gemini에서 제공합니다.\n\n— via @lucas_flatwhite 큐레이션",
         officialUrl: "https://x.com/GeminiApp/status/2042272415951253932",
         source: "https://x.com/GeminiApp/status/2042272415951253932",
         tags: ["Gemini", "시각화", "3D", "공식인용교체"],
@@ -141,7 +141,7 @@ export const edition2026_04a: ABEdition = {
         title: "Meta TRIBE v2 뇌 예측 모델 공개",
         slug: "meta-tribe-v2-brain-prediction-model",
         summary: "영상·음성·텍스트 입력으로 뇌 활성화 패턴을 예측하는 모델 소개입니다. 인간 반응 이해와 멀티모달 분석 확장 가능성이 핵심입니다.",
-        content: "Meta의 새 AI가 뇌 스캔보다도 더 정확하게 여러분의 뇌를 예측합니다.\n\n**TRIBE v2**는 720명으로부터 수집한 1,000시간+ 뇌 영상 데이터로 학습된 **파운데이션 모델**입니다.\n영상·음성 클립·텍스트를 입력하면 다음을 예측합니다:\n> 어떤 뇌 영역이 활성화되는지\n> 얼마나 강하게\n> 어떤 순서로…",
+        content: "Meta의 새 AI가 뇌 스캔보다도 더 정확하게 사람의 뇌를 예측합니다.\n\n**TRIBE v2**는 720명으로부터 수집한 1,000시간+ 뇌 영상 데이터로 학습된 **파운데이션 모델**입니다.\n영상·음성 클립·텍스트를 입력하면 다음을 예측합니다:\n> 어떤 뇌 영역이 활성화되는지\n> 얼마나 강하게\n> 어떤 순서로…",
         officialUrl: "https://x.com/rowancheung/status/2042260621274861756",
         source: "https://x.com/rowancheung/status/2042260621274861756",
         tags: ["Meta", "멀티모달", "바이오AI"],
@@ -274,7 +274,7 @@ export const edition2026_04a: ABEdition = {
       summary:
         "Stop paying twice for AI — 기존 AI 구독을 그대로 통과시키는 macOS 메뉴바 프록시. 별도 API 결제 없이 Factory Droids 같은 코딩 툴을 연결합니다.",
       body:
-        "AI 구독을 두 번 결제한 적 있다면 이게 답입니다.\n\nClaude Max · ChatGPT Pro · Gemini · Qwen · Antigravity 같은 AI 구독은 이미 쓰고 있는데, Factory Droids 같은 코딩 에이전트를 붙이려면 또 다른 API 키를 사야 합니다. VibeProxy는 이 중복을 없애줍니다.\n\n핵심 구조:\n- macOS 네이티브 메뉴바 앱 (SwiftUI) — 원클릭 서버 시작/중지\n- 다중 프로바이더 OAuth (Claude Code / Codex / Gemini / Qwen / Antigravity)\n- 멀티 계정 지원 + 라운드로빈 분배 + 페일오버\n- Vercel AI Gateway 통합 — Claude Max를 더 안전하게 경유\n- 프로바이더 우선순위 핫 리로드 · 실시간 연결 상태 모니터\n- Sparkle 자동 업데이트, 코드 사인/공증된 번들\n\nGitHub Releases에서 빌드를 내려받아 /Applications에 넣고 실행하면 끝. MIT 라이선스 · 오픈소스.\n\n━━━━━━━━━━━━━━━━━━━━━━\n⚠ 포트 8318이 정답 — Claude Code 연결 시 반드시 확인:\n\n• 8317 → raw upstream (OpenAI-compatible 엔드포인트)\n• 8318 → thinking proxy 레이어 (Claude Code가 써야 하는 포트)\n\n8318만 reasoning effort 접미사 \"(high)\"를 파싱해서 OpenAI의 reasoning_effort 와 Anthropic의 thinking.budget_tokens 로 변환합니다. 두 포트 모두 /v1/models 카탈로그는 동일 — 라우팅 동작만 다릅니다.\n\n리스닝 확인:\n$ lsof -iTCP:8317,8318 -sTCP:LISTEN\nCLIProxyM 54503 *:8317 (LISTEN)\ncli-proxy 70103 localhost:8318 (LISTEN)\n\n📖 설치·설정 가이드 (한국어):\nhttps://voidlight-vibeproxy-guide.vercel.app/#port",
+        "AI 구독을 두 번 결제한 적 있다면 이게 답입니다.\n\nClaude Max · ChatGPT Pro · Gemini · Qwen · Antigravity 같은 AI 구독은 이미 쓰고 있는데, Factory Droids 같은 코딩 에이전트를 붙이려면 또 다른 API 키를 사야 합니다. VibeProxy는 이 중복을 없애줍니다.\n\n핵심 구조:\n- macOS 네이티브 메뉴바 앱 (SwiftUI) — 원클릭 서버 시작/중지\n- 다중 프로바이더 OAuth (Claude Code / Codex / Gemini / Qwen / Antigravity)\n- 멀티 계정 지원 + 라운드로빈 분배 + 페일오버\n- Vercel AI Gateway 통합 — Claude Max를 더 안전하게 경유\n- 프로바이더 우선순위 핫 리로드 · 실시간 연결 상태 모니터\n- Sparkle 자동 업데이트, 코드 사인/공증된 번들\n\nGitHub Releases에서 빌드를 내려받아 /Applications에 넣고 실행하면 끝. MIT 라이선스 · 오픈소스.\n\n━━━━━━━━━━━━━━━━━━━━━━\n포트 8318이 정답 — Claude Code 연결 시 반드시 확인:\n\n• 8317 → raw upstream (OpenAI-compatible 엔드포인트)\n• 8318 → thinking proxy 레이어 (Claude Code가 써야 하는 포트)\n\n8318만 reasoning effort 접미사 \"(high)\"를 파싱해서 OpenAI의 reasoning_effort 와 Anthropic의 thinking.budget_tokens 로 변환합니다. 두 포트 모두 /v1/models 카탈로그는 동일 — 라우팅 동작만 다릅니다.\n\n리스닝 확인:\n$ lsof -iTCP:8317,8318 -sTCP:LISTEN\nCLIProxyM 54503 *:8317 (LISTEN)\ncli-proxy 70103 localhost:8318 (LISTEN)\n\n설치·설정 가이드 (한국어):\nhttps://voidlight-vibeproxy-guide.vercel.app/#port",
       editorial:
         "이번 회차의 흐름이 '모델 + 도구 + 데이터' 3층이었다면, VibeProxy는 그 사이를 흐르는 '결제 경로'를 재설계하는 도구입니다. 2026년의 새 규칙 — 구독을 하나의 credit pool처럼 쓰기 — 에 처음으로 깔끔하게 대응한 메뉴바 프록시라서 Picks에 넣었습니다. macOS 개발자라면 설치해 두는 것만으로 OpenAI/Anthropic 추가 결제 한 건을 줄일 수 있습니다.",
       tags: ["프록시", "AI구독", "macOS", "오픈소스", "비용최적화", "VibeProxy"],

@@ -15,17 +15,21 @@ export default function ABIndexPage() {
   const featured = list[0];
   const rest = list.slice(1);
 
+  // 패널 지표 — getEditionList()가 돌려주는 실제 데이터에서만 파생한다.
+  const totalCards = list.reduce((sum, edition) => sum + edition.highlightCount, 0);
+  const latestPeriod = featured?.period ?? "준비 중";
+
   return (
     <main className="ab-page-shell ab-index-page">
       <header className="ab-index-hero">
         <div className="ab-shell-inner">
-          <Link href="/" className="ab-backlink">
+          <Link href="/" className="ab-backlink rise-in">
             <span aria-hidden>←</span>
             <span>VoidNews Weekly</span>
           </Link>
 
           <div className="ab-hero-grid">
-            <div className="ab-hero-copy">
+            <div className="ab-hero-copy rise-in" style={{ animationDelay: "60ms" }}>
               <p className="ab-kicker">AB Members Briefing</p>
               <h1 className="ab-display-title">AI 흐름을 발표 가능한 단위로 압축합니다.</h1>
               <p className="ab-hero-deck">
@@ -33,18 +37,28 @@ export default function ABIndexPage() {
               </p>
             </div>
 
-            <aside className="ab-index-panel" aria-label="AB 브리핑 운영 기준">
+            <aside
+              className="ab-index-panel rise-in"
+              style={{ animationDelay: "120ms" }}
+              aria-label="AB 브리핑 운영 기준"
+            >
               <div>
                 <span className="ab-panel-label">Cadence</span>
-                <strong>Biweekly</strong>
+                <strong>격주 발행</strong>
               </div>
               <div>
-                <span className="ab-panel-label">Scope</span>
-                <strong>{list.length} editions</strong>
+                <span className="ab-panel-label">Editions</span>
+                <strong>{list.length}호 누적</strong>
               </div>
               <div>
-                <span className="ab-panel-label">Use</span>
-                <strong>Presentation-ready</strong>
+                <span className="ab-panel-label">Curated</span>
+                <strong>{totalCards}개 카드</strong>
+              </div>
+              <div>
+                <span className="ab-panel-label">Latest</span>
+                <strong style={{ fontSize: "var(--text-sm)", letterSpacing: "0.04em" }}>
+                  {latestPeriod}
+                </strong>
               </div>
             </aside>
           </div>
@@ -58,19 +72,33 @@ export default function ABIndexPage() {
           ) : (
             <>
               {featured && (
-                <Link href={`/ab/${featured.slug}`} className="ab-featured-edition">
+                <Link
+                  href={`/ab/${featured.slug}`}
+                  className="ab-featured-edition rise-in"
+                  style={{ animationDelay: "160ms" }}
+                  aria-label={`최신호 ${formatVolume(featured.volume)} ${featured.title} 브리핑 열기`}
+                >
                   <div className="ab-featured-meta">
                     <span className="ab-pill ab-pill--filled">{formatVolume(featured.volume)}</span>
                     <span>Latest brief</span>
+                    <span aria-hidden>·</span>
                     <span>{featured.period}</span>
                   </div>
 
                   <div className="ab-featured-grid">
                     <div>
                       <h2>{featured.title}</h2>
-                      <p>발표일 {featured.announceDate} · {featured.highlightCount}개 핵심 카드</p>
+                      <p>
+                        발표일 {featured.announceDate}
+                        <span aria-hidden style={{ margin: "0 8px", color: "var(--dim)" }}>
+                          ·
+                        </span>
+                        핵심 카드 {featured.highlightCount}개
+                      </p>
                     </div>
-                    <span className="ab-arrow-link">브리핑 열기 →</span>
+                    <span className="ab-arrow-link" style={{ color: "var(--accent)" }}>
+                      브리핑 열기 →
+                    </span>
                   </div>
                 </Link>
               )}
@@ -78,7 +106,7 @@ export default function ABIndexPage() {
               {rest.length > 0 && (
                 <div className="ab-archive-block">
                   <div className="ab-section-heading">
-                    <span>Archive</span>
+                    <span>Archive · {rest.length}</span>
                     <span aria-hidden />
                   </div>
 
@@ -89,7 +117,11 @@ export default function ABIndexPage() {
                           <span className="ab-edition-volume">{formatVolume(edition.volume)}</span>
                           <span className="ab-edition-title">{edition.title}</span>
                           <span className="ab-edition-meta">
-                            {edition.announceDate} · {edition.highlightCount} cards
+                            {edition.announceDate}
+                            <span aria-hidden style={{ margin: "0 6px", color: "var(--dim)" }}>
+                              ·
+                            </span>
+                            {edition.highlightCount} cards
                           </span>
                         </Link>
                       </li>
