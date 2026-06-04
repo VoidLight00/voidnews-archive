@@ -1264,3 +1264,60 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
   .ab-edition-meta { text-align: left; }
 }
+
+/* ============================================================
+   Responsive + overflow safety — mobile/tablet 전체 적용
+   2026-06-04 · 글자 깨짐(긴 영문·URL)·가로 스크롤 방지 + 한국어 어절 보존
+   ============================================================ */
+
+/* 1) 텍스트 오버플로 안전망 — 한글은 어절 단위 유지(keep-all),
+      긴 영문 토큰·URL은 넘칠 때만 강제 분절(anywhere) */
+h1, h2, h3, h4, h5, h6,
+p, li, dd, dt, a, span, strong, em, b, i,
+blockquote, figcaption, summary, td, th, label, button, .mono {
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+/* 미디어·코드·표는 컨테이너를 넘지 않게 */
+img, svg, video, iframe, canvas { max-width: 100%; }
+pre, code, kbd, samp { overflow-wrap: anywhere; word-break: break-word; }
+pre { overflow-x: auto; max-width: 100%; white-space: pre-wrap; }
+table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* 2) 태블릿 가로 / 작은 노트북 (≤1024) */
+@media (max-width: 1024px) {
+  .page-container,
+  .page-container--wide,
+  .page-container--xwide {
+    padding-inline: clamp(14px, 2.4vw, 24px);
+  }
+}
+
+/* 3) 태블릿 세로 / 큰 폰 (≤768) — 모든 다중 컬럼 그리드 단일 컬럼화 */
+@media (max-width: 768px) {
+  .magazine-grid { grid-template-columns: 1fr; }
+  .ab-hero-grid,
+  .ab-featured-grid,
+  .ab-edition-row,
+  .ab-index-panel { grid-template-columns: 1fr; }
+  /* 헤더 메타/네비는 줄바꿈 (이미 wrap이지만 정렬 안정화) */
+  .tc-issue-strip { align-items: flex-start; }
+  .tc-issue-actions { width: 100%; }
+}
+
+/* 4) 폰 (≤480) — 타이포 축소 + 패딩 축소 + 탭 타겟 확보 */
+@media (max-width: 480px) {
+  .page-container,
+  .page-container--wide,
+  .page-container--xwide {
+    padding-inline: 14px;
+  }
+  .tc-issue-meta { font-size: 9.5px; gap: 6px; letter-spacing: 0.1em; }
+  .ab-hero-copy h1,
+  .ab-index-hero h1 { font-size: clamp(26px, 8.5vw, 38px); line-height: 1.18; }
+  .ab-hero-deck { font-size: 15px; }
+  /* 링크형 버튼 탭 타겟 최소 높이 */
+  .tc-current-pill,
+  .tc-current-link,
+  .tc-week-link { min-height: 32px; display: inline-flex; align-items: center; }
+}

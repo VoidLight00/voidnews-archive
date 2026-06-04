@@ -568,7 +568,7 @@ function LinkPreview({ url }: { url: string }) {
           <img
             src={data.image}
             alt={data?.title || ""}
-            style={{ width: 140, height: 100, objectFit: "cover", flexShrink: 0 }}
+            style={{ width: "clamp(96px, 28vw, 140px)", height: 100, objectFit: "cover", flexShrink: 0 }}
             onError={(e) => {
               (e.currentTarget as HTMLImageElement).style.display = "none";
             }}
