@@ -136,6 +136,7 @@ export default function EditorialWeeklyClient({
                   style={{ background: company.color }}
                 />
                 <span className={styles.companyName}>{company.name}</span>
+                <span className={styles.companyRule} aria-hidden />
                 <span className={styles.companyCount}>{company.posts.length}건</span>
               </header>
               <div className={styles.grid}>

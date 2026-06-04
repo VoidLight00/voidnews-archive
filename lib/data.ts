@@ -179,7 +179,7 @@ export const weeks: WeeklyData[] = [
             title: "Computer Use 다음은 Phone Use — Claude가 스마트폰을 직접 조작한다",
             summary: "Computer Use에 이은 Phone Use — AI가 스마트폰을 직접 제어하는 에이전트",
             officialUrl: "https://x.com/claudeai/status/2036195789601374705",
-            content: "Anthropic Phone Use (mobile) 개발 중 — Claude가 모바일 기기에서 전화 걸기 + 작업 실행 가능\n\nComputer Use의 확장판 (데스크탑 → 모바일). 곧 Claude Cowork/Code Research Preview 출시 예정. M1Astra 발견 🪐\n\n지금까지 Computer Use는 macOS 데스크탑에서만 가능했는데, 이제 모바일 기기까지 제어 범위가 확장되는 거죠. Claude Dispatch로 폰에서 명령 → 데스크탑 실행은 가능했지만, 이번엔 폰 자체를 Claude가 직접 제어하는 방향.\n\n음성 통화 자동 실행 + 앱 조작 + 스케줄 관리까지 모바일 AI 에이전트 완성도가 높아질 것 같습니다.\n\nComputer Use가 데스크탑이었다면 Phone Use는 모바일이에요. Claude가 전화 걸고 앱 조작하는 시대가 오고 있습니다.",
+            content: "Anthropic Phone Use (mobile) 개발 중 — Claude가 모바일 기기에서 전화 걸기 + 작업 실행 가능\n\nComputer Use의 확장판 (데스크탑 → 모바일). 곧 Claude Cowork/Code Research Preview 출시 예정. M1Astra 발견\n\n지금까지 Computer Use는 macOS 데스크탑에서만 가능했는데, 이제 모바일 기기까지 제어 범위가 확장되는 거죠. Claude Dispatch로 폰에서 명령 → 데스크탑 실행은 가능했지만, 이번엔 폰 자체를 Claude가 직접 제어하는 방향.\n\n음성 통화 자동 실행 + 앱 조작 + 스케줄 관리까지 모바일 AI 에이전트 완성도가 높아질 것 같습니다.\n\nComputer Use가 데스크탑이었다면 Phone Use는 모바일이에요. Claude가 전화 걸고 앱 조작하는 시대가 오고 있습니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWQdAQ7D1zH",
           },
           {
@@ -345,7 +345,7 @@ export const weeks: WeeklyData[] = [
             title: "더 작고 더 빠른 Gemini — 모바일에서 달리는 Flash-Lite",
             officialUrl: "https://x.com/GoogleDeepMind/status/2028872381477929185",
             summary: "초경량 고속 Gemini 모델 — 모바일/엣지 환경 특화 추론",
-            content: "구글 딥마인드 Gemini 3.1 Flash-Lite — 실시간 웹사이트 생성.\n\n클릭·검색·탐색할 때마다 페이지가 즉시 렌더링됩니다. ⚡\n\n데모: https://goo.gle/4t9In1R\n\n---\n\n프롬프트 한 줄로 웹사이트가 즉시 렌더링되는 게 핵심이에요. 개발 환경 없이 브라우저에서 바로 결과물을 확인할 수 있습니다.",
+            content: "구글 딥마인드 Gemini 3.1 Flash-Lite — 실시간 웹사이트 생성.\n\n클릭·검색·탐색할 때마다 페이지가 즉시 렌더링됩니다.\n\n데모: https://goo.gle/4t9In1R\n\n---\n\n프롬프트 한 줄로 웹사이트가 즉시 렌더링되는 게 핵심이에요. 개발 환경 없이 브라우저에서 바로 결과물을 확인할 수 있습니다.",
             threadsUrl: "https://www.threads.com/@voidlight00/post/DWRsU8Fj_Xc",
           },
           {

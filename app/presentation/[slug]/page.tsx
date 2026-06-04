@@ -28,23 +28,59 @@ function stripInlineMarkdown(text: string): string {
   return text.replace(/\*\*([^*]+)\*\*/g, "$1");
 }
 
-// 인라인 토큰(**bold** / `code` / [link])을 다크 테마 스타일로 렌더
+// 인라인 토큰(**bold** / `code` / [link])을 편집형 토큰 스타일로 렌더
 function renderInlineSlide(text: string, keyPrefix: string) {
   const tokens = text.split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g).filter(Boolean);
   return tokens.map((tok, i) => {
     const key = `${keyPrefix}-${i}`;
     const b = tok.match(/^\*\*([^*]+)\*\*$/);
-    if (b) return <strong key={key} className="font-extrabold text-neutral-100">{b[1]}</strong>;
+    if (b)
+      return (
+        <strong key={key} style={{ fontWeight: 700, color: "var(--text-strong)" }}>
+          {b[1]}
+        </strong>
+      );
     const c = tok.match(/^`([^`]+)`$/);
-    if (c) return <code key={key} className="rounded bg-neutral-800 px-1 py-0.5 font-mono text-[0.85em] text-neutral-200">{c[1]}</code>;
+    if (c)
+      return (
+        <code
+          key={key}
+          className="mono"
+          style={{
+            background: "var(--surface-2)",
+            border: "1px solid var(--border)",
+            borderRadius: "var(--radius-xs)",
+            padding: "1px 5px",
+            fontSize: "0.86em",
+            color: "var(--text)",
+          }}
+        >
+          {c[1]}
+        </code>
+      );
     const l = tok.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-    if (l) return <a key={key} href={l[2]} target="_blank" rel="noreferrer" className="text-sky-400 underline underline-offset-2">{l[1]}</a>;
+    if (l)
+      return (
+        <a
+          key={key}
+          href={l[2]}
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            color: "var(--accent)",
+            textDecoration: "underline",
+            textUnderlineOffset: "3px",
+            textDecorationThickness: "1px",
+          }}
+        >
+          {l[1]}
+        </a>
+      );
     return <span key={key}>{tok}</span>;
   });
 }
 
 // 라인 단위 마크다운 파서 — ##/### 소제목, 불릿, 번호, 인용, 인라인 토큰 처리
-// (이전엔 **bold** 만 처리해 ###·불릿·백틱이 raw 로 노출됐다)
 function renderRichText(text: string) {
   if (!text) return null;
   const lines = text.split("\n");
@@ -52,29 +88,98 @@ function renderRichText(text: string) {
   let i = 0;
   while (i < lines.length) {
     const t = lines[i].trim();
-    if (!t) { out.push(<div key={`sp-${i}`} className="h-2" aria-hidden />); i++; continue; }
+    if (!t) {
+      out.push(<div key={`sp-${i}`} style={{ height: "var(--space-xs)" }} aria-hidden />);
+      i++;
+      continue;
+    }
     let m;
     if ((m = t.match(/^#{2,4}\s+(.*)$/))) {
-      out.push(<div key={`h-${i}`} className="mt-3 mb-1 font-bold text-neutral-100">{renderInlineSlide(m[1], `h-${i}`)}</div>);
-      i++; continue;
+      out.push(
+        <h4
+          key={`h-${i}`}
+          className="serif"
+          style={{
+            marginTop: "var(--space-md)",
+            marginBottom: "var(--space-2xs)",
+            fontWeight: 650,
+            fontSize: "var(--text-md)",
+            letterSpacing: "-0.02em",
+            color: "var(--text-strong)",
+          }}
+        >
+          {renderInlineSlide(m[1], `h-${i}`)}
+        </h4>
+      );
+      i++;
+      continue;
     }
     if ((m = t.match(/^\*\*([^*]+)\*\*$/))) {
-      out.push(<div key={`hb-${i}`} className="mt-3 mb-1 font-bold text-neutral-100">{m[1]}</div>);
-      i++; continue;
+      out.push(
+        <h4
+          key={`hb-${i}`}
+          className="serif"
+          style={{
+            marginTop: "var(--space-md)",
+            marginBottom: "var(--space-2xs)",
+            fontWeight: 650,
+            fontSize: "var(--text-md)",
+            letterSpacing: "-0.02em",
+            color: "var(--text-strong)",
+          }}
+        >
+          {m[1]}
+        </h4>
+      );
+      i++;
+      continue;
     }
     if ((m = t.match(/^[-*]\s+(.*)$/))) {
-      out.push(<div key={`b-${i}`} className="flex gap-2 pl-1"><span className="text-neutral-500">•</span><span>{renderInlineSlide(m[1], `b-${i}`)}</span></div>);
-      i++; continue;
+      out.push(
+        <div key={`b-${i}`} style={{ display: "flex", gap: "10px", paddingLeft: "2px" }}>
+          <span aria-hidden style={{ color: "var(--accent)", flexShrink: 0 }}>
+            —
+          </span>
+          <span>{renderInlineSlide(m[1], `b-${i}`)}</span>
+        </div>
+      );
+      i++;
+      continue;
     }
     if ((m = t.match(/^(\d+)\.\s+(.*)$/))) {
-      out.push(<div key={`o-${i}`} className="flex gap-2 pl-1"><span className="text-neutral-500">{m[1]}.</span><span>{renderInlineSlide(m[2], `o-${i}`)}</span></div>);
-      i++; continue;
+      out.push(
+        <div key={`o-${i}`} style={{ display: "flex", gap: "10px", paddingLeft: "2px" }}>
+          <span
+            className="mono"
+            style={{ color: "var(--dim)", fontWeight: 700, flexShrink: 0 }}
+          >
+            {m[1]}.
+          </span>
+          <span>{renderInlineSlide(m[2], `o-${i}`)}</span>
+        </div>
+      );
+      i++;
+      continue;
     }
     if (/^>\s?/.test(t)) {
-      out.push(<div key={`q-${i}`} className="border-l-2 border-neutral-700 pl-3 italic text-neutral-400">{renderInlineSlide(t.replace(/^>\s?/, ""), `q-${i}`)}</div>);
-      i++; continue;
+      out.push(
+        <blockquote
+          key={`q-${i}`}
+          className="serif"
+          style={{
+            borderLeft: "2px solid var(--border2)",
+            paddingLeft: "var(--space-md)",
+            fontStyle: "italic",
+            color: "var(--muted)",
+          }}
+        >
+          {renderInlineSlide(t.replace(/^>\s?/, ""), `q-${i}`)}
+        </blockquote>
+      );
+      i++;
+      continue;
     }
-    out.push(<div key={`p-${i}`}>{renderInlineSlide(t, `p-${i}`)}</div>);
+    out.push(<p key={`p-${i}`}>{renderInlineSlide(t, `p-${i}`)}</p>);
     i++;
   }
   return out;
@@ -121,7 +226,7 @@ function SourceButtons({ post, slug }: { post: Post; slug: string }) {
   const links = collectPresentationLinks(post, slug);
 
   return (
-    <div className="flex flex-wrap items-center gap-2 mb-3">
+    <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "8px" }}>
       {links.map((link) => {
         const external = !link.url.startsWith("/");
         return (
@@ -130,11 +235,32 @@ function SourceButtons({ post, slug }: { post: Post; slug: string }) {
             href={link.url}
             target={external ? "_blank" : undefined}
             rel={external ? "noopener noreferrer" : undefined}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition ${
-              link.primary
-                ? "bg-neutral-100 text-neutral-900 hover:bg-white"
-                : "bg-neutral-800 text-neutral-100 hover:bg-neutral-700 border border-neutral-700"
-            }`}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "7px",
+              minHeight: "38px",
+              padding: "0 14px",
+              borderRadius: "var(--radius-xs)",
+              fontFamily: "var(--mono)",
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              transition: "background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast)",
+              ...(link.primary
+                ? {
+                    color: "var(--ink)",
+                    background: "var(--accent)",
+                    border: "1px solid var(--accent)",
+                  }
+                : {
+                    color: "var(--text)",
+                    background: "transparent",
+                    border: "1px solid var(--border2)",
+                  }),
+            }}
           >
             {link.label}
             <span aria-hidden>↗</span>
@@ -161,98 +287,213 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
 
   if (featured.length === 0) {
     return (
-      <main className="min-h-dvh bg-neutral-950 text-neutral-100 flex items-center justify-center p-8">
-        <div className="text-center space-y-4">
-          <h1 className="text-2xl font-semibold">이 회차에는 발표 하이라이트가 아직 없습니다</h1>
-          <p className="text-neutral-400">
-            전체 아카이브에서 이번 주 AI 소식을 확인할 수 있습니다.
+      <main className="ab-page-shell" style={{ display: "grid", placeItems: "center", padding: "var(--space-2xl) var(--gutter)" }}>
+        <div className="ab-shell-inner" style={{ maxWidth: "52ch", textAlign: "center", display: "grid", gap: "var(--space-md)" }}>
+          <p className="kicker">AI &amp; Beyond · Week {data.week}</p>
+          <h1 className="headline" style={{ fontSize: "var(--text-2xl)" }}>
+            이 회차에는 발표 하이라이트가 아직 없습니다
+          </h1>
+          <p className="deck" style={{ fontStyle: "normal" }}>
+            전체 아카이브에서 이번 회차 AI 소식을 확인할 수 있습니다.
           </p>
-          <Link
-            href={`/${slug}`}
-            className="inline-block mt-4 px-4 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700"
-          >
-            ← 주간 아카이브로
-          </Link>
+          <div>
+            <Link
+              href={`/${slug}`}
+              className="ab-arrow-link"
+              style={{ color: "var(--accent)" }}
+            >
+              <span aria-hidden>←</span>
+              <span>주간 아카이브로</span>
+            </Link>
+          </div>
         </div>
       </main>
     );
   }
 
   return (
-    <main className="min-h-dvh bg-neutral-950 text-neutral-100 font-sans">
-      <div className="max-w-6xl mx-auto px-6 py-12 lg:py-16">
-        {/* Header */}
-        <header className="mb-10">
-          <div className="flex items-center justify-between text-xs uppercase tracking-widest text-neutral-500 mb-3">
-            <span>AI &amp; Beyond · Week {data.week}</span>
-            <Link
-              href={`/${slug}`}
-              className="text-neutral-400 hover:text-neutral-200 normal-case tracking-normal"
-            >
-              전체 아카이브 →
+    <main className="ab-page-shell">
+      <div
+        className="ab-shell-inner"
+        style={{ paddingTop: "clamp(36px, 6vw, 64px)", paddingBottom: "clamp(56px, 9vw, 96px)" }}
+      >
+        {/* Masthead */}
+        <header
+          className="rise-in"
+          style={{
+            borderBottom: "1px solid var(--border)",
+            paddingBottom: "clamp(28px, 5vw, 44px)",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "16px",
+              flexWrap: "wrap",
+            }}
+          >
+            <p className="kicker">AI &amp; Beyond · Week {data.week}</p>
+            <Link href={`/${slug}`} className="ab-arrow-link">
+              <span>전체 아카이브</span>
+              <span aria-hidden>→</span>
             </Link>
           </div>
-          <h1 className="text-3xl lg:text-5xl font-bold leading-tight">
+
+          <h1
+            className="headline serif"
+            style={{
+              marginTop: "clamp(20px, 3vw, 32px)",
+              maxWidth: "16ch",
+              fontSize: "var(--text-3xl)",
+              fontWeight: 720,
+              letterSpacing: "-0.05em",
+              lineHeight: 0.98,
+            }}
+          >
             목요일 발표 큐레이션
           </h1>
-          <p className="mt-2 text-lg text-neutral-400">
-            {data.period} · Top {featured.length}개 · 공식 출처 교차검증 완료
-          </p>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              flexWrap: "wrap",
+              marginTop: "var(--space-md)",
+              fontFamily: "var(--mono)",
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "var(--muted)",
+            }}
+          >
+            <span style={{ color: "var(--text-strong)" }}>{data.period}</span>
+            <span aria-hidden style={{ color: "var(--dim)" }}>
+              ·
+            </span>
+            <span>Top {featured.length}</span>
+            <span aria-hidden style={{ color: "var(--dim)" }}>
+              ·
+            </span>
+            <span style={{ color: "var(--gold)" }}>공식 출처 교차검증</span>
+          </div>
         </header>
 
-        {/* Featured Cards */}
-        <section className="space-y-5">
+        {/* Featured editorial cards */}
+        <section
+          aria-label="발표 하이라이트"
+          style={{ marginTop: "clamp(28px, 5vw, 48px)", display: "grid", gap: "clamp(20px, 3vw, 32px)" }}
+        >
           {featured.map(({ company, color, post }, idx) => (
             <article
               key={post.title}
-              className="group relative rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-neutral-950 p-6 lg:p-8 hover:border-neutral-700 transition"
+              className="article-card rise-in"
+              style={{
+                borderLeft: "3px solid",
+                borderLeftColor: color,
+                padding: "clamp(22px, 3.4vw, 36px)",
+                animationDelay: `${Math.min(idx, 6) * 50}ms`,
+              }}
             >
-              {/* Accent bar */}
+              {/* Byline row */}
               <div
-                className="absolute left-0 top-6 bottom-6 w-1 rounded-r-full"
-                style={{ backgroundColor: color }}
-                aria-hidden
-              />
-
-              <div className="flex items-start justify-between gap-6 mb-4">
-                <div className="flex items-center gap-3 text-sm">
-                  <span
-                    className="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold text-neutral-900"
-                    style={{ backgroundColor: color }}
-                  >
-                    {idx + 1}
-                  </span>
-                  <span
-                    className="font-medium tracking-tight"
-                    style={{ color }}
-                  >
-                    {company}
-                  </span>
-                  <span className="text-neutral-600">·</span>
-                  <time className="text-neutral-500 font-mono text-xs">{post.date}</time>
-                </div>
+                style={{
+                  display: "flex",
+                  alignItems: "baseline",
+                  gap: "12px",
+                  flexWrap: "wrap",
+                  fontFamily: "var(--mono)",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--muted)",
+                }}
+              >
+                <span
+                  style={{
+                    color: "var(--dim)",
+                    fontVariantNumeric: "tabular-nums",
+                  }}
+                >
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                <span aria-hidden style={{ color: "var(--border2)" }}>
+                  /
+                </span>
+                <span style={{ color: "var(--text-strong)" }}>{company}</span>
+                <span aria-hidden style={{ color: "var(--dim)" }}>
+                  ·
+                </span>
+                <time>{post.date}</time>
               </div>
 
-              <h2 className="text-xl lg:text-2xl font-semibold leading-snug mb-3">
+              <h2
+                className="article-card-title serif"
+                style={{
+                  marginTop: "var(--space-sm)",
+                  fontSize: "var(--text-xl)",
+                  fontWeight: 650,
+                  letterSpacing: "-0.03em",
+                  lineHeight: 1.12,
+                  color: "var(--text-strong)",
+                  textDecorationColor: "transparent",
+                }}
+              >
                 {post.title}
               </h2>
 
               {post.summary && (
-                <p className="text-neutral-300 leading-relaxed mb-5">
+                <p
+                  className="deck serif"
+                  style={{
+                    marginTop: "var(--space-sm)",
+                    maxWidth: "var(--measure)",
+                    fontStyle: "normal",
+                    fontSize: "var(--text-md)",
+                    color: "var(--text-soft)",
+                    lineHeight: 1.55,
+                  }}
+                >
                   {stripInlineMarkdown(post.summary)}
                 </p>
               )}
 
               {post.thumbnail && (
-                <figure className="mb-5 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
+                <figure
+                  style={{
+                    marginTop: "var(--space-lg)",
+                    overflow: "hidden",
+                    border: "1px solid var(--border)",
+                    borderRadius: "var(--radius-xs)",
+                    background: "var(--surface)",
+                  }}
+                >
                   <img
                     src={post.thumbnail.src}
                     alt={post.thumbnail.alt}
                     loading="lazy"
-                    className="block w-full aspect-video object-cover"
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      aspectRatio: "16 / 9",
+                      objectFit: "cover",
+                      borderBottom: "1px solid var(--accent)",
+                    }}
                   />
                   {post.thumbnail.caption && (
-                    <figcaption className="border-t border-neutral-800 px-4 py-2 text-xs leading-relaxed text-neutral-400">
+                    <figcaption
+                      style={{
+                        borderTop: "1px solid var(--border)",
+                        padding: "8px 14px",
+                        fontSize: "var(--text-xs)",
+                        lineHeight: 1.5,
+                        color: "var(--dim)",
+                      }}
+                    >
                       {stripInlineMarkdown(post.thumbnail.caption)}
                     </figcaption>
                   )}
@@ -260,23 +501,64 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
               )}
 
               {post.content && (
-                <div className="mb-5 space-y-1 rounded-xl border border-neutral-800 bg-neutral-950/70 p-4 text-sm leading-7 text-neutral-300">
+                <div
+                  style={{
+                    marginTop: "var(--space-lg)",
+                    padding: "clamp(16px, 2.4vw, 22px)",
+                    background: "color-mix(in srgb, var(--surface), var(--bg) 24%)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "var(--radius-xs)",
+                    display: "grid",
+                    gap: "6px",
+                    fontSize: "var(--text-base)",
+                    lineHeight: 1.75,
+                    color: "var(--text)",
+                  }}
+                >
                   {renderRichText(post.content)}
                 </div>
               )}
 
               {post.images && post.images.length > 0 && (
-                <div className="mb-5 grid gap-3 md:grid-cols-2">
+                <div
+                  style={{
+                    marginTop: "var(--space-lg)",
+                    display: "grid",
+                    gap: "var(--space-sm)",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+                  }}
+                >
                   {post.images.map((image) => (
-                    <figure key={image.src} className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
+                    <figure
+                      key={image.src}
+                      style={{
+                        overflow: "hidden",
+                        border: "1px solid var(--border)",
+                        borderRadius: "var(--radius-xs)",
+                        background: "var(--surface)",
+                      }}
+                    >
                       <img
                         src={image.src}
                         alt={image.alt}
                         loading="lazy"
-                        className="block w-full aspect-video object-cover"
+                        style={{
+                          display: "block",
+                          width: "100%",
+                          aspectRatio: "16 / 9",
+                          objectFit: "cover",
+                        }}
                       />
                       {image.caption && (
-                        <figcaption className="border-t border-neutral-800 px-3 py-2 text-xs leading-relaxed text-neutral-400">
+                        <figcaption
+                          style={{
+                            borderTop: "1px solid var(--border)",
+                            padding: "7px 12px",
+                            fontSize: "var(--text-xs)",
+                            lineHeight: 1.5,
+                            color: "var(--dim)",
+                          }}
+                        >
                           {stripInlineMarkdown(image.caption)}
                         </figcaption>
                       )}
@@ -285,15 +567,23 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
                 </div>
               )}
 
-              <SourceButtons post={post} slug={slug} />
+              <div style={{ marginTop: "var(--space-lg)" }}>
+                <SourceButtons post={post} slug={slug} />
+              </div>
 
               {post.tags && post.tags.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
+                <div
+                  style={{
+                    marginTop: "var(--space-md)",
+                    paddingTop: "var(--space-md)",
+                    borderTop: "1px solid var(--rule)",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px",
+                  }}
+                >
                   {post.tags.slice(0, 5).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 rounded text-xs text-neutral-400 bg-neutral-900 border border-neutral-800"
-                    >
+                    <span key={tag} className="chip" style={{ cursor: "default" }}>
                       {formatTag(tag)}
                     </span>
                   ))}
@@ -303,12 +593,33 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
           ))}
         </section>
 
-        {/* Footer nav */}
-        <footer className="mt-16 pt-8 border-t border-neutral-900 flex items-center justify-between text-sm">
-          <Link href={`/${slug}`} className="text-neutral-500 hover:text-neutral-300">
-            ← 전체 {data.totalPosts}건 아카이브
+        {/* Colophon footer */}
+        <footer
+          style={{
+            marginTop: "clamp(48px, 8vw, 80px)",
+            paddingTop: "var(--space-xl)",
+            borderTop: "3px double var(--rule)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "16px",
+            flexWrap: "wrap",
+          }}
+        >
+          <Link href={`/${slug}`} className="ab-arrow-link">
+            <span aria-hidden>←</span>
+            <span>전체 {data.totalPosts}건 아카이브</span>
           </Link>
-          <span className="text-neutral-600 text-xs">
+          <span
+            style={{
+              fontFamily: "var(--mono)",
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--dim)",
+            }}
+          >
             VoidNews · Thursday Briefing
           </span>
         </footer>
