@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAllSlugs, getWeek, weeks } from "@/lib/data";
+import { getAllSlugs, getWeek, weeks, weekDateLabel } from "@/lib/data";
 import WeeklyClient from "./WeeklyClient";
 import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const data = getWeek(slug);
   if (!data) return {};
   return {
-    title: `VoidNews — Week ${data.week} (${data.period})`,
+    title: `VoidNews — ${weekDateLabel(data.period)} (${data.period})`,
     description: `AI 뉴스 주간 포스팅 정리 ${data.period} · 총 ${data.totalPosts}건`,
   };
 }
@@ -31,10 +31,10 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
   const latestWeek = weeks[0];
   const currentIdx = weeks.findIndex((w) => w.slug === slug);
   const prevWeek = weeks[currentIdx + 1]
-    ? { slug: weeks[currentIdx + 1].slug, week: weeks[currentIdx + 1].week }
+    ? { slug: weeks[currentIdx + 1].slug, week: weeks[currentIdx + 1].week, period: weeks[currentIdx + 1].period }
     : undefined;
   const nextWeek = weeks[currentIdx - 1]
-    ? { slug: weeks[currentIdx - 1].slug, week: weeks[currentIdx - 1].week }
+    ? { slug: weeks[currentIdx - 1].slug, week: weeks[currentIdx - 1].week, period: weeks[currentIdx - 1].period }
     : undefined;
 
   if (EDITORIAL_SLUGS.has(slug)) {
@@ -43,7 +43,7 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
         data={data}
         prevWeek={prevWeek}
         nextWeek={nextWeek}
-        latestWeek={{ slug: latestWeek.slug, week: latestWeek.week }}
+        latestWeek={{ slug: latestWeek.slug, week: latestWeek.week, period: latestWeek.period }}
       />
     );
   }
@@ -55,7 +55,7 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
       data={data}
       prevWeek={prevWeek}
       nextWeek={nextWeek}
-      latestWeek={{ slug: latestWeek.slug, week: latestWeek.week }}
+      latestWeek={{ slug: latestWeek.slug, week: latestWeek.week, period: latestWeek.period }}
       nestedRoutePrefix={nestedRoutePrefix}
     />
   );

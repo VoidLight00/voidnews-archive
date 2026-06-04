@@ -3,14 +3,15 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { WeeklyData } from "@/lib/data";
+import { weekDateLabel } from "@/lib/data";
 import PostCard from "./PostCard";
 import styles from "./editorial.module.css";
 
 interface Props {
   data: WeeklyData;
-  prevWeek?: { slug: string; week: number };
-  nextWeek?: { slug: string; week: number };
-  latestWeek: { slug: string; week: number };
+  prevWeek?: { slug: string; week: number; period: string };
+  nextWeek?: { slug: string; week: number; period: string };
+  latestWeek: { slug: string; week: number; period: string };
 }
 
 const ALL = "__all__";
@@ -54,7 +55,7 @@ export default function EditorialWeeklyClient({
     <main className={styles.shell}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.kicker}>VoidNews · 주차 {data.week}</div>
+          <div className={styles.kicker}>VoidNews · {weekDateLabel(data.period)}</div>
           <h1 className={styles.title}>{data.period} AI 정리</h1>
           <p className={styles.subtitle}>
             공식 출처 우선 · 총 {data.totalPosts}건 · 회사별 분류 + 카드 그리드
@@ -65,17 +66,17 @@ export default function EditorialWeeklyClient({
             </Link>
             {prevWeek ? (
               <Link href={`/${prevWeek.slug}/`} className={styles.navLink}>
-                주차 {prevWeek.week}
+                ← {weekDateLabel(prevWeek.period)}
               </Link>
             ) : null}
             {nextWeek ? (
               <Link href={`/${nextWeek.slug}/`} className={styles.navLink}>
-                주차 {nextWeek.week} →
+                {weekDateLabel(nextWeek.period)} →
               </Link>
             ) : null}
             {latestWeek.slug !== data.slug ? (
               <Link href={`/${latestWeek.slug}/`} className={styles.navLink}>
-                최신호 (주차 {latestWeek.week})
+                최신 · {weekDateLabel(latestWeek.period)}
               </Link>
             ) : null}
             <Link href="/ab/2026-05b/" className={styles.navLink}>

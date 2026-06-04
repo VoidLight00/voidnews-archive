@@ -12,7 +12,7 @@ import {
   type ReactNode,
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
-import { getWeekList } from "@/lib/data";
+import { getWeekList, weekDateLabel } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
 
 const BOOKMARKS_STORAGE_KEY = "voidnews-bookmarks";
@@ -1963,7 +1963,7 @@ function WeekDropdown({ currentSlug, currentWeek }: { currentSlug: string; curre
                   }}
                   onClick={() => setOpen(false)}
                 >
-                  {week.year} · W{String(week.week).padStart(2, "0")}
+                  {weekDateLabel(week.period)}
                 </a>
               );
             })}
@@ -1984,9 +1984,9 @@ export default function WeeklyClient({
   nestedRoutePrefix,
 }: {
   data: WeeklyData;
-  prevWeek?: { slug: string; week: number };
-  nextWeek?: { slug: string; week: number };
-  latestWeek: { slug: string; week: number };
+  prevWeek?: { slug: string; week: number; period: string };
+  nextWeek?: { slug: string; week: number; period: string };
+  latestWeek: { slug: string; week: number; period: string };
   nestedRoutePrefix?: string;
 }) {
   const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
@@ -2497,7 +2497,7 @@ export default function WeeklyClient({
           <div className="tc-issue-meta mono">
             <span>VoidNews Weekly</span>
             <span aria-hidden>·</span>
-            <span>Issue {data.year} · W{String(data.week).padStart(2, "0")}</span>
+            <span>{data.year}년 {weekDateLabel(data.period)}</span>
             <span aria-hidden>·</span>
             <span>{data.period}</span>
             <span aria-hidden>·</span>
@@ -2509,18 +2509,18 @@ export default function WeeklyClient({
               <span className="tc-current-pill mono">이번 호</span>
             ) : (
               <a href={`/${latestWeek.slug}`} className="tc-current-link mono">
-                Back to Current · W{latestWeek.week}
+                최신 · {weekDateLabel(latestWeek.period)}
               </a>
             )}
             {prevWeek ? (
               <a href={`/${prevWeek.slug}`} className="tc-week-link mono" title="이전 주차 (←)">
-                ← W{prevWeek.week}
+                ← {weekDateLabel(prevWeek.period)}
               </a>
             ) : null}
             <WeekDropdown currentSlug={data.slug} currentWeek={data.week} />
             {nextWeek ? (
               <a href={`/${nextWeek.slug}`} className="tc-week-link mono" title="다음 주차 (→)">
-                W{nextWeek.week} →
+                {weekDateLabel(nextWeek.period)} →
               </a>
             ) : null}
           </div>

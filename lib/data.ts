@@ -6,6 +6,7 @@ import { week19 } from "./weeks/2026-w19";
 import { week20 } from "./weeks/2026-w20";
 import { week21 } from "./weeks/2026-w21";
 import { week22 } from "./weeks/2026-w22";
+import { week23 } from "./weeks/2026-w23";
 
 export interface MediaImage {
   src: string;
@@ -54,6 +55,7 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week23,
   week22,
   week21,
   week20,
@@ -647,6 +649,16 @@ export const weeks: WeeklyData[] = [
   },
 ];
 
+// 주차 슬러그(2026-wNN) 대신 노출할 한국어 날짜 라벨 — period 종료일 기준 "M월 N째주"
+export function weekDateLabel(period: string): string {
+  const end = (period.split("~").pop() || "").trim(); // "6/4"
+  const [m, d] = end.split("/").map((x) => parseInt(x, 10));
+  if (!m || !d) return period;
+  const nth = Math.ceil(d / 7);
+  const ord = ["첫째", "둘째", "셋째", "넷째", "다섯째", "여섯째"][nth - 1] || String(nth);
+  return `${m}월 ${ord}주`;
+}
+
 export function getWeek(slug: string): WeeklyData | undefined {
   return weeks.find((w) => w.slug === slug);
 }
@@ -660,5 +672,5 @@ export function getAllSlugs(): string[] {
 }
 
 export function getWeekList() {
-  return weeks.map(w => ({ slug: w.slug, week: w.week, year: w.year })).reverse();
+  return weeks.map(w => ({ slug: w.slug, week: w.week, year: w.year, period: w.period })).reverse();
 }
