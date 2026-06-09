@@ -29,7 +29,7 @@ export const week23: WeeklyData = {
           ]
         },
         {
-          "date": "6/1",
+          "date": "5/29",
           "platform": "X+Threads",
           "title": "OpenAI, Rosalind Biodefense 프로그램 공개",
           "summary": "OpenAI가 게이트형 생명과학 모델 GPT-Rosalind 접근권을 후원해 팬데믹 대비·바이오보안 도구를 짓게 하는 Rosalind Biodefense를 공개했다. 개발자 트랙과 정부 트랙 두 갈래로 방어적 가속을 표방한다.",
