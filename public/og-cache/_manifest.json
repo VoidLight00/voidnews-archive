@@ -1360,5 +1360,53 @@
     "image": "https://winblogs.thesourcemediaassets.com/sites/43/2026/06/SRSDB-Devices-Blog-Hero.jpg",
     "file": "surface-rtx-spark-dev-box-849e019f.jpg",
     "ts": 1781087861727
+  },
+  "vibeproxy-0d3da9b3": {
+    "url": "https://github.com/automazeio/vibeproxy",
+    "image": "https://opengraph.githubassets.com/919e4a0c650742ebfef3a14eca94d57305caf5377d6e0e2c020cfed00e49884f/automazeio/vibeproxy",
+    "file": "vibeproxy-0d3da9b3.png",
+    "ts": 1781091269021
+  },
+  "claude-fable-5-claude-mythos-5-공개-mythos-11c4ac33": {
+    "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
+    "file": "claude-fable-5-claude-mythos-5-공개-mythos-11c4ac33.png",
+    "ts": 1781091276871
+  },
+  "anthropic-claude-opus-4-8-공식-공개-5f3a9a51": {
+    "url": "https://www.anthropic.com/news/claude-opus-4-8",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/0eaa0ed2dce9810169112e1c77de2585fcf1f5c2-2880x1620.jpg",
+    "file": "anthropic-claude-opus-4-8-공식-공개-5f3a9a51.jpg",
+    "ts": 1781091277284
+  },
+  "nvidia-sk-hynix-다년-기술-파트너십-vera-rubin-je-7afef008": {
+    "url": "https://nvidianews.nvidia.com/news/sk-hynix-ai-factory",
+    "image": "https://iprsoftwaremedia.com/219/files/202606/a21bcb532771f27266fe94a96c884769/6a25ccf93d6332f4f6ff121d_nvidia-sk-hynix/nvidia-sk-hynix_4f03a261-71ba-47b3-b2bb-508efe4156f3-prv.png",
+    "file": "nvidia-sk-hynix-다년-기술-파트너십-vera-rubin-je-7afef008.png",
+    "ts": 1781091278083
+  },
+  "sk텔레콤-nvidia-한국에-기가와트급-ai-클라우드-구축-첫-ai-팩-e81ac529": {
+    "url": "https://nvidianews.nvidia.com/news/sk-telecom-ai-infrastructure",
+    "image": "https://iprsoftwaremedia.com/219/files/202606/15b51e671f478532efaf5f2dc38a203f/6a25ccf03d6332f4f6ff1216_nvidia-sk-telecom/nvidia-sk-telecom_bd432d55-02b3-4cd8-8ed4-5588a3efcc7c-prv.png",
+    "file": "sk텔레콤-nvidia-한국에-기가와트급-ai-클라우드-구축-첫-ai-팩-e81ac529.png",
+    "ts": 1781091278636
+  },
+  "gemini-네이티브-이미지-모델-정식-출시-및-영상-이미지-생성-추가-640d57cc": {
+    "url": "https://ai.google.dev/gemini-api/docs/changelog",
+    "image": "https://ai.google.dev/static/site-assets/images/release-notes.png",
+    "file": "gemini-네이티브-이미지-모델-정식-출시-및-영상-이미지-생성-추가-640d57cc.png",
+    "ts": 1781091280677
+  },
+  "nvidia-vera-rubin-풀-프로덕션-진입-에이전틱-ai-팩토리--4c3c3af2": {
+    "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory",
+    "image": "https://iprsoftwaremedia.com/219/files/202605/5997ef43d2b38e2687c10b6f62ed633a/6a1c7fc23d6332ecbb1d64a7_nvidia-vera-rubin-platform/nvidia-vera-rubin-platform_72a0541c-6fc0-4962-8b28-d72709e8c4cb-prv.jpg",
+    "file": "nvidia-vera-rubin-풀-프로덕션-진입-에이전틱-ai-팩토리--4c3c3af2.jpg",
+    "ts": 1781091281139
+  },
+  "gemini-3-5-live-translate-공개-70개-언어-거의-실-6c291e2c": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3-5_Live_Translate_hero.width-1300.png",
+    "file": "gemini-3-5-live-translate-공개-70개-언어-거의-실-6c291e2c.png",
+    "ts": 1781091282830
   }
 }
