@@ -1414,5 +1414,35 @@
     "image": "https://blogs.nvidia.com/wp-content/uploads/2026/06/kr-visit-blog-doosan-robotics-1920x1080-noncredit.jpg",
     "file": "nvidia-두산그룹-피지컬-ai-협력-jetson-thor-기반-age-983ca5f5.jpg",
     "ts": 1781092984757
+  },
+  "qdrant-8cdd4a2f": {
+    "url": "https://github.com/qdrant/qdrant",
+    "image": "https://repository-images.githubusercontent.com/268163609/56a9ef00-965c-4e2b-968f-a55ce68f6b78",
+    "file": "qdrant-8cdd4a2f.png",
+    "ts": 1781093381130
+  },
+  "opendataloader-pdf-965fc61e": {
+    "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+    "image": "https://opengraph.githubassets.com/bf32a562cce172a64d14c6f87abd4acc016bdc2230010ba1599f2d3d5c01905e/opendataloader-project/opendataloader-pdf",
+    "file": "opendataloader-pdf-965fc61e.png",
+    "ts": 1781093382177
+  },
+  "tencentdb-agent-memory-213c7c5a": {
+    "url": "https://github.com/Tencent/TencentDB-Agent-Memory",
+    "image": "https://opengraph.githubassets.com/23b367a13f4f3de7476343323604df1af78fc17734d05c8ac50345c80a12e26a/TencentCloud/TencentDB-Agent-Memory",
+    "file": "tencentdb-agent-memory-213c7c5a.png",
+    "ts": 1781093384009
+  },
+  "avai-d24a46ee": {
+    "url": "https://github.com/iklobato/avai",
+    "image": "https://opengraph.githubassets.com/baae99413065585ca496cd84a139dead3f32854fb9c6393e9260eaf2241b5362/iklobato/avai",
+    "file": "avai-d24a46ee.png",
+    "ts": 1781093385030
+  },
+  "k-skill-b88ceb3d": {
+    "url": "https://github.com/NomaDamas/k-skill",
+    "image": "https://repository-images.githubusercontent.com/1190815318/2eea9dbf-761b-406e-a668-6b91b0deeac8",
+    "file": "k-skill-b88ceb3d.jpg",
+    "ts": 1781093386303
   }
 }
