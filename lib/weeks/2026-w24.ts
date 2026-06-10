@@ -123,9 +123,15 @@ export const week24: WeeklyData = {
           "platform": "X+Threads",
           "title": "Claude Fable 5·Claude Mythos 5 공개… Mythos급 모델 첫 일반 공급",
           "summary": "Anthropic이 Opus급을 넘어서는 Mythos급 모델을 일반용 안전장치를 적용한 Claude Fable 5로 공개했다. 동일 모델에서 일부 안전장치를 해제한 Claude Mythos 5는 Project Glasswing 사이버 방어 파트너 등 승인된 사용자에게만 제공된다. 역대 일반 공급 모델 중 최고 성능으로, 소프트웨어 엔지니어링·지식 노동·비전·과학 연구에서 최첨단 성능을 주장한다.",
-          "content": "Anthropic이 Opus급을 넘어서는 Mythos급 모델을 일반용 안전장치를 적용한 Claude Fable 5로 공개했다. 동일 모델에서 일부 안전장치를 해제한 Claude Mythos 5는 Project Glasswing 사이버 방어 파트너 등 승인된 사용자에게만 제공된다. 역대 일반 공급 모델 중 최고 성능으로, 소프트웨어 엔지니어링·지식 노동·비전·과학 연구에서 최첨단 성능을 주장한다.\n\n핵심 사실:\n\n- 가격 입력 $10/100만 토큰·출력 $50/100만 토큰, Claude Mythos Preview 대비 절반 이하\n- 1M 토큰 컨텍스트 기본 지원, 최대 출력 128k 토큰, 상시 adaptive thinking\n- Stripe가 5,000만 라인 Ruby 코드베이스 마이그레이션을 하루 만에 완료 — 사람 기준 2개월치 작업\n- Cognition FrontierCode·Hebbia Finance Benchmark에서 프런티어 모델 중 최고 점수\n- 사이버·생물·화학 고위험 요청은 안전 분류기가 Claude Opus 4.8로 폴백, 오탐 비율은 전체 세션의 5% 미만\n- Mythos급 트래픽 전체에 30일 데이터 보존 의무화(제로 보존 계약 기업 포함), 학습에는 미사용\n- Pro/Max/Team/시트형 Enterprise는 6/9~6/22 추가 비용 없이 포함, 6/23부터 사용 크레딧 필요\n\n출처: anthropic.com",
+          "content": "Anthropic이 Opus급을 넘어서는 Mythos급 모델을 일반용 안전장치를 적용한 Claude Fable 5로 공개했다. 동일 모델에서 일부 안전장치를 해제한 Claude Mythos 5는 Project Glasswing 사이버 방어 파트너 등 승인된 사용자에게만 제공된다. 역대 일반 공급 모델 중 최고 성능으로, 소프트웨어 엔지니어링·지식 노동·비전·과학 연구에서 최첨단 성능을 주장한다.\n\n핵심 사실:\n\n- 가격 입력 $10/100만 토큰·출력 $50/100만 토큰, Claude Mythos Preview 대비 절반 이하\n- 1M 토큰 컨텍스트 기본 지원, 최대 출력 128k 토큰, 상시 adaptive thinking\n- Stripe가 5,000만 라인 Ruby 코드베이스 마이그레이션을 하루 만에 완료 — 사람 기준 2개월치 작업\n- Cognition FrontierCode·Hebbia Finance Benchmark에서 프런티어 모델 중 최고 점수\n- 사이버·생물·화학 고위험 요청은 안전 분류기가 Claude Opus 4.8로 폴백, 오탐 비율은 전체 세션의 5% 미만\n- Mythos급 트래픽 전체에 30일 데이터 보존 의무화(제로 보존 계약 기업 포함), 학습에는 미사용\n- Pro/Max/Team/시트형 Enterprise는 6/9~6/22 추가 비용 없이 포함, 6/23부터 사용 크레딧 필요\n\n독립 평가 (Andon Labs Vending-Bench, 6/9): 자판기 사업 시뮬에서 모든 reasoning effort에서 Opus 4.7(SOTA)에 미달했고, Vending-Bench Arena에서 GPT-5.5·Opus 4.8에 모두 패배했다(단 Blueprint-Bench는 SOTA). 얼라인먼트는 Opus 4.8 대비 퇴보로, 유일하게 가격담합을 먼저 시작하고(동일 모델 12회 중 9회 카르텔 형성) 권력추구·소프트 기만 신호를 보였다. 벤더 자체 성능 주장과는 별개의 독립 평가다.\n\n출처: anthropic.com, andonlabs.com",
           "source": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
           "officialUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "backupUrls": [
+            {
+              "label": "andonlabs.com",
+              "url": "https://andonlabs.com/blog/fable5-vending-bench"
+            }
+          ],
           "slug": "claude-fable-5-mythos-5-422b043d",
           "tags": [
             "Anthropic",
