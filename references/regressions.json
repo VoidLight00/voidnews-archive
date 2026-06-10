@@ -18,6 +18,16 @@
       "patterns": ["본 카드는 AI가", "이 글은 AI가 작성", "AI로 생성된 콘텐츠", "as an AI language model", "As an AI,", "저는 AI 언어 모델", "죄송하지만 저는"],
       "owner": "voidbrief-copy-editor",
       "note": "모델 자기지칭/사과 말투만 차단. 'language model' 같은 뉴스 주제 용어는 정상이므로 잡지 않는다(오탐 방지)."
+    },
+    {
+      "id": "VN005",
+      "title": "수집 출처 완전성 게이트 배선 제거 (provenance 게이트 우회 재발)",
+      "type": "grep_present_min",
+      "globs": ["scripts/verify-publish-ready.mjs", "package.json"],
+      "patterns": ["check-collection-provenance"],
+      "min": 2,
+      "owner": "voidbrief-qa-auditor",
+      "note": "임시 수집이 official-source-matrix+discovery(TestingCatalog/큐레이터) 단계를 우회했던 VN005 재발 방지. 실제 검증은 scripts/check-collection-provenance.mjs(fail-closed) 가 하고, 이 회귀체크는 그 게이트가 publish-ready 체인+npm script 에서 사라지지 않도록 배선 자체를 지킨다(메타가드). min=2: verify-publish-ready.mjs 호출 1 + package.json 등록 1."
     }
   ]
 }

@@ -8,7 +8,7 @@ export const week24: WeeklyData = {
   "year": 2026,
   "slug": "2026-w24",
   "period": "6/3 ~ 6/10",
-  "totalPosts": 36,
+  "totalPosts": 42,
   "companies": [
     {
       "name": "OpenAI",
@@ -565,6 +565,169 @@ export const week24: WeeklyData = {
             "Alphabet",
             "비즈니스"
           ]
+        }
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "color": "#0078D4",
+      "posts": [
+        {
+          "date": "6/3",
+          "platform": "X+Threads",
+          "title": "Microsoft, 자체 개발 MAI 모델 7종 한꺼번에 공개… OpenAI 의존 탈피",
+          "featured": true,
+          "deck": "추론·코딩·이미지·음성까지 자체 스택, 블라인드 평가서 Sonnet 4.6 우위 주장",
+          "summary": "마이크로소프트 AI팀이 Build 2026에서 증류 없이 처음부터 학습한 자체 모델 7종을 공개했다. 추론 모델 MAI-Thinking-1, 코딩 모델 MAI-Code-1-Flash, MAI-Image-2.5, MAI-Voice-2, MAI-Transcribe-1.5 등으로 구성되며, OpenAI 의존도를 줄이는 자체 스택 행보로 평가된다.",
+          "content": "마이크로소프트 AI팀이 Build 2026에서 증류 없이 처음부터 학습한 자체 모델 7종을 공개했다. 추론 모델 MAI-Thinking-1, 코딩 모델 MAI-Code-1-Flash, MAI-Image-2.5, MAI-Voice-2, MAI-Transcribe-1.5 등으로 구성되며, OpenAI 의존도를 줄이는 자체 스택 행보로 평가된다.\n\n핵심 사실:\n\n- 'Building a hill-climbing machine'이라는 제목으로 신규 MAI 모델 7종 동시 공개\n- MAI-Thinking-1은 블라인드 휴먼 평가(blind human side-by-side)에서 Sonnet 4.6보다 선호된다고 주장\n- MAI-Image-2.5는 Arena 점수에서 Nano Banana Pro를 상회한다고 명시\n- 증류(distillation) 없이 처음부터 학습한 자체 모델군이라는 점을 강조\n- 자체 실리콘 Maia 200과의 코디자인으로 1.4배 효율 향상 언급\n- 모델 제공 채널로 Azure Foundry 외 Fireworks·Baseten·OpenRouter 등 거론\n\n출처: microsoft.ai",
+          "source": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
+          "officialUrl": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
+          "backupUrls": [
+            {
+              "label": "Build 2026 MAI 키노트 트랜스크립트",
+              "url": "https://microsoft.ai/news/microsoft-build-2026-mai-keynote-transcript/"
+            },
+            {
+              "label": "AI매터스 (한국어)",
+              "url": "https://aimatters.co.kr/news-report/43732/"
+            },
+            {
+              "label": "PyTorchKR (한국어)",
+              "url": "https://discuss.pytorch.kr/t/microsoft-ai-5-7-mai/10523"
+            }
+          ],
+          "slug": "building-a-hillclimbing-machine-mai-models-1a7c4e22",
+          "tags": [
+            "Microsoft",
+            "모델/제품"
+          ],
+          "thumbnail": {
+            "src": "/og-cache/building-a-hillclimbing-machine-mai-models-4d11b35c.jpg",
+            "alt": "Microsoft, 자체 개발 MAI 모델 7종 한꺼번에 공개… OpenAI 의존 탈피"
+          }
+        },
+        {
+          "date": "6/3",
+          "platform": "X+Threads",
+          "title": "Microsoft Scout 공개… Copilot 다음 단계 '상시구동 자율 에이전트(Autopilots)'",
+          "deck": "자체 Entra ID 신원으로 Teams·Outlook·브라우저에서 자율 행동하는 Autopilots 첫 제품",
+          "summary": "마이크로소프트가 Build 2026에서 Copilot 후속 카테고리 'Autopilots'의 첫 제품 Scout를 공개했다. 상시 구동되며 자체 Entra ID 신원을 갖고 Teams·Outlook·OneDrive·브라우저·로컬 파일에서 자율적으로 행동하는 개인 에이전트다.",
+          "content": "마이크로소프트가 Build 2026에서 Copilot 후속 카테고리 'Autopilots'의 첫 제품 Scout를 공개했다. 상시 구동되며 자체 Entra ID 신원을 갖고 Teams·Outlook·OneDrive·브라우저·로컬 파일에서 자율적으로 행동하는 개인 에이전트다.\n\n핵심 사실:\n\n- 'Autopilots' 카테고리의 첫 에이전트(our first Autopilot agent)로 소개\n- 상시 구동(always-on) 에이전트로 각자 고유한 신원을 가짐\n- 거버넌스를 위해 자체 Entra ID(its own governed Entra identity) 부여\n- OpenClaw 오픈소스 기술과 Work IQ 기반으로 동작\n- macOS·Windows 데스크톱 클라이언트 제공\n- Frontier 프로그램 가입 사용자 대상 게이트 롤아웃, GA 일정은 미정\n\n출처: microsoft.com",
+          "source": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/",
+          "officialUrl": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/",
+          "slug": "introducing-microsoft-scout-autopilots-9f3b21d7",
+          "tags": [
+            "Microsoft",
+            "에이전트"
+          ],
+          "thumbnail": {
+            "src": "/og-cache/introducing-microsoft-scout-autopilots-34aa1c5c.jpg",
+            "alt": "Microsoft Scout 공개… Copilot 다음 단계 '상시구동 자율 에이전트(Autopilots)'"
+          }
+        },
+        {
+          "date": "6/3",
+          "platform": "X+Threads",
+          "title": "Microsoft, AI 에이전트 전용 OS 'Project Solara' 공개… 앱 아닌 에이전트 중심",
+          "deck": "앱 대신 클라우드 에이전트를 동적 로드하는 에이전트 우선 컴퓨팅 플랫폼",
+          "summary": "마이크로소프트가 Build 2026에서 에이전트 우선 디바이스를 위한 새 플랫폼 'Project Solara'를 공개했다. 전통적인 앱이 아닌 에이전트를 중심에 둔 컴퓨팅 비전으로, OS 패러다임 전환 신호로 주목받는다.",
+          "content": "마이크로소프트가 Build 2026에서 에이전트 우선 디바이스를 위한 새 플랫폼 'Project Solara'를 공개했다. 전통적인 앱이 아닌 에이전트를 중심에 둔 컴퓨팅 비전으로, OS 패러다임 전환 신호로 주목받는다.\n\n핵심 사실:\n\n- 공식 Build 2026 뉴스룸에서 'Composing a new platform for agent-first devices'로 소개\n- 앱 중심이 아닌 에이전트 우선(agent-first) 컴퓨팅을 지향하는 새 비전\n- 사티아 나델라가 직접 발표한 Build 2026 핵심 발표 중 하나\n- 디바이스 운영 패러다임 자체를 에이전트 중심으로 재구성하려는 시도\n\n출처: news.microsoft.com",
+          "source": "https://news.microsoft.com/build-2026/",
+          "officialUrl": "https://news.microsoft.com/build-2026/",
+          "backupUrls": [
+            {
+              "label": "Windows Developer 블로그",
+              "url": "https://blogs.windows.com/windowsdeveloper/2026/06/02/build-2026-furthering-windows-as-the-trusted-platform-for-development/"
+            },
+            {
+              "label": "Engadget Build 2026 라이브",
+              "url": "https://www.engadget.com/2185601/microsoft-build-2026-live-blog-copilot-windows-news/"
+            }
+          ],
+          "slug": "microsoft-project-solara-agent-os-3c8e7f04",
+          "tags": [
+            "Microsoft",
+            "플랫폼/OS"
+          ],
+          "thumbnail": {
+            "src": "/og-cache/microsoft-project-solara-agent-os-4d3cdee0.png",
+            "alt": "Microsoft, AI 에이전트 전용 OS 'Project Solara' 공개… 앱 아닌 에이전트 중심"
+          }
+        },
+        {
+          "date": "6/3",
+          "platform": "X+Threads",
+          "title": "GitHub, Copilot 데스크톱 앱 기술 프리뷰 공개… 에이전트 네이티브 작업 대시보드",
+          "deck": "활성 세션·이슈·PR·백그라운드 자동화를 한 화면에 모은 My Work 뷰",
+          "summary": "Build 2026에서 GitHub Copilot 네이티브 데스크톱 앱이 기술 프리뷰로 공개됐다. 단일 'My Work' 뷰에서 연결된 레포의 활성 세션·이슈·PR·백그라운드 자동화를 한눈에 관리하는 에이전트 네이티브 데스크톱 경험을 표방한다.",
+          "content": "Build 2026에서 GitHub Copilot 네이티브 데스크톱 앱이 기술 프리뷰로 공개됐다. 단일 'My Work' 뷰에서 연결된 레포의 활성 세션·이슈·PR·백그라운드 자동화를 한눈에 관리하는 에이전트 네이티브 데스크톱 경험을 표방한다.\n\n핵심 사실:\n\n- GitHub Copilot app — 에이전트 네이티브 데스크톱 경험으로 소개\n- 기술 프리뷰로 제공(Copilot Pro·Pro+·Business·Enterprise)\n- 단일 'My Work' 뷰에서 활성 세션·이슈·PR·백그라운드 자동화 통합 관리\n- Windows·macOS·Linux 데스크톱 앱 다운로드 제공\n- Copilot SDK가 Node/TypeScript·Python·Go·.NET·Rust·Java로 GA\n- 6/9 공개된 'Copilot CLI 커스텀 에이전트' 가이드와는 별개 제품(앱 vs CLI)\n\n출처: developer.microsoft.com",
+          "source": "https://developer.microsoft.com/blog/build-recap",
+          "officialUrl": "https://developer.microsoft.com/blog/build-recap",
+          "backupUrls": [
+            {
+              "label": "GitHub 커뮤니티 디스커션",
+              "url": "https://github.com/orgs/community/discussions/197336"
+            }
+          ],
+          "slug": "github-copilot-desktop-app-preview-5e1a90bc",
+          "tags": [
+            "GitHub",
+            "개발자 도구"
+          ],
+          "thumbnail": {
+            "src": "/og-cache/github-copilot-desktop-app-preview-c83ac21a.webp",
+            "alt": "GitHub, Copilot 데스크톱 앱 기술 프리뷰 공개… 에이전트 네이티브 작업 대시보드"
+          }
+        },
+        {
+          "date": "6/3",
+          "platform": "X+Threads",
+          "title": "Microsoft IQ(Work·Fabric·Foundry·Web IQ) 정식 출시… 에이전트 컨텍스트 레이어 GA",
+          "deck": "GitHub Copilot·Foundry·Copilot Studio 전반에 깔리는 컨텍스트 레이어",
+          "summary": "마이크로소프트가 Build 2026에서 Microsoft IQ를 GitHub Copilot·Microsoft Foundry·Copilot Studio 전반에 정식 출시(GA)했다. 직장 지식 Work IQ, 정형 데이터 Fabric IQ, Foundry IQ, 웹 그라운딩 Web IQ를 에이전트에 공급하는 컨텍스트 레이어다.",
+          "content": "마이크로소프트가 Build 2026에서 Microsoft IQ를 GitHub Copilot·Microsoft Foundry·Copilot Studio 전반에 정식 출시(GA)했다. 직장 지식 Work IQ, 정형 데이터 Fabric IQ, Foundry IQ, 웹 그라운딩 Web IQ를 에이전트에 공급하는 컨텍스트 레이어다.\n\n핵심 사실:\n\n- Microsoft IQ가 GitHub Copilot·Microsoft Foundry·Copilot Studio 전반에 GA\n- 에이전트에 컨텍스트를 공급하는 새 컨텍스트 레이어(new context layer)로 정의\n- Work IQ는 6/16 GA 예정, M365 시그널 기반 직장 지식 제공\n- Fabric IQ는 정형 비즈니스 데이터, Foundry IQ도 family에 포함\n- Web IQ는 model-agnostic·MCP-native의 AI-first 웹 검색 스택\n- Scout 등 Autopilots의 지능 기반으로 활용\n\n출처: blogs.microsoft.com",
+          "source": "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/",
+          "officialUrl": "https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/",
+          "backupUrls": [
+            {
+              "label": "Build 2026 뉴스룸",
+              "url": "https://news.microsoft.com/build-2026/"
+            }
+          ],
+          "slug": "microsoft-iq-context-layer-ga-4d2f86a1",
+          "tags": [
+            "Microsoft",
+            "엔터프라이즈"
+          ],
+          "thumbnail": {
+            "src": "/og-cache/microsoft-iq-context-layer-ga-70036de3.jpg",
+            "alt": "Microsoft IQ(Work·Fabric·Foundry·Web IQ) 정식 출시… 에이전트 컨텍스트 레이어 GA"
+          }
+        },
+        {
+          "date": "6/3",
+          "platform": "X+Threads",
+          "title": "Microsoft, Surface RTX Spark Dev Box 공개… 책상 위 1 페타플롭 AI 개발 워크스테이션",
+          "deck": "128GB 통합 메모리로 120B+ 모델을 로컬 구동하는 개발자 전용 Surface",
+          "summary": "마이크로소프트가 Build 2026에서 NVIDIA RTX Spark 기반 컴팩트 AI 개발 워크스테이션 Surface RTX Spark Dev Box를 공개했다. 최대 1 페타플롭 AI 연산과 128GB 통합 메모리로 120B 이상 파라미터 모델을 로컬에서 구동하는 개발자 전용 신제품이다.",
+          "content": "마이크로소프트가 Build 2026에서 NVIDIA RTX Spark 기반 컴팩트 AI 개발 워크스테이션 Surface RTX Spark Dev Box를 공개했다. 최대 1 페타플롭 AI 연산과 128GB 통합 메모리로 120B 이상 파라미터 모델을 로컬에서 구동하는 개발자 전용 신제품이다.\n\n핵심 사실:\n\n- 최대 1 페타플롭(petaflop) AI 연산, 128GB 통합 메모리\n- Blackwell RTX GPU + Grace CPU 구성\n- 120B 이상 파라미터 모델을 1M 토큰 컨텍스트로 로컬 구동\n- WSL 2에서 GPU 패스스루와 CUDA 지원\n- 개발자를 위한 새로운 카테고리의 Surface(a new category of Surface)로 명시\n- 5/31 발표된 소비자용 RTX Spark PC와는 별개 SKU\n\n출처: blogs.windows.com",
+          "source": "https://blogs.windows.com/devices/2026/06/02/building-the-next-generation-of-devices-for-developers-surface-rtx-spark-dev-box/",
+          "officialUrl": "https://blogs.windows.com/devices/2026/06/02/building-the-next-generation-of-devices-for-developers-surface-rtx-spark-dev-box/",
+          "backupUrls": [
+            {
+              "label": "Build 2026 뉴스룸",
+              "url": "https://news.microsoft.com/build-2026/"
+            }
+          ],
+          "slug": "surface-rtx-spark-dev-box-8b4c0d6f",
+          "tags": [
+            "Microsoft",
+            "하드웨어"
+          ],
+          "thumbnail": {
+            "src": "/og-cache/surface-rtx-spark-dev-box-849e019f.jpg",
+            "alt": "Microsoft, Surface RTX Spark Dev Box 공개… 책상 위 1 페타플롭 AI 개발 워크스테이션"
+          }
         }
       ]
     }

@@ -364,6 +364,10 @@ export const week16: WeeklyData = {
           source: "https://github.com/Correr-Zhou/OmniShow",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/_akhaliq/status/2045031820485231983" }, { label: "arxiv.org", url: "https://arxiv.org/html/2604.11804v2" }, { label: "replicate.com", url: "https://replicate.com/bytedance/omni-human" }],
           tags: ["도구릴리스", "video", "image", "bytedance"],
+          thumbnail: {
+            src: "/og-cache/bytedance-omnishow-human-object-interact-9e8425bf.png",
+            alt: "ByteDance OmniShow — Human-Object Interaction Video (SOTA, 오픈소스)",
+          },
         },
         {
           date: "4/15",
@@ -446,6 +450,10 @@ export const week16: WeeklyData = {
           source: "https://www.heygen.com/blog/announcing-avatar-v",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/heygen_official/status/2042985920183920401" }, { label: "heygen.com", url: "https://www.heygen.com/blog/unleashing-the-power-of-realtime-avatars" }, { label: "mindstudio.ai", url: "https://www.mindstudio.ai/blog/heygen-avatar-5-clone-appearance-15-seconds-2" }],
           tags: ["도구릴리스", "video", "heygen", "bytedance"],
+          thumbnail: {
+            src: "/og-cache/heygen-avatar-v-seedance-2-0-통합-15초-녹음으로-9d0bde43.png",
+            alt: "HeyGen Avatar V + Seedance 2.0 통합 — 15초 녹음으로 스튜디오 아바타",
+          },
         },
         {
           date: "3/25",

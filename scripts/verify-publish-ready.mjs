@@ -21,6 +21,8 @@ const args = process.argv.slice(2);
 const STRICT = args.includes("--strict");
 const scopeIdx = args.indexOf("--scope");
 const SCOPE = scopeIdx !== -1 ? args[scopeIdx + 1] : "all";
+const runIdx = args.indexOf("--run");
+const RUN = runIdx !== -1 ? args[runIdx + 1] : null;
 
 const fail = [];   // HARD (exit 2)
 const strictFail = []; // exit 3 (strict only)
@@ -148,6 +150,26 @@ if (totalCards > 0) {
   } else {
     notes.push("out/ 없음 — check-render-leaks 생략(빌드 후 postbuild 에서 강제됨)");
   }
+}
+
+// ---- E. 수집 출처 완전성 (VN005) — --run 지정 시 HARD ----
+// 임시 수집 스크립트가 official-source-matrix + discovery(TestingCatalog/큐레이터) 단계를
+// 우회했는지 산출물 증거로 검증. run_id 가 주어진 publish 흐름에서만 강제(증거 디렉토리 필요).
+if (RUN) {
+  const collDir = join(ROOT, "_workspace", "oneway", RUN, "content");
+  if (!existsSync(collDir)) {
+    fail.push(`수집 출처 게이트(VN005): 수집 디렉토리 없음 _workspace/oneway/${RUN}/content`);
+  } else {
+    const rp = spawnSync(process.execPath, [join(__dirname, "check-collection-provenance.mjs"), collDir], { cwd: ROOT, encoding: "utf-8" });
+    if (rp.status !== 0) {
+      fail.push("수집 출처 완전성 미통과 (check-collection-provenance, VN005):");
+      for (const ln of (rp.stdout + rp.stderr).split("\n").filter((l) => /✗|누락|없다/.test(l)).slice(0, 8)) fail.push(`    ${ln.trim()}`);
+    } else {
+      notes.push(`수집 출처 완전성(VN005, run=${RUN}): 매트릭스+discovery 증거 확인`);
+    }
+  }
+} else {
+  notes.push("VN005 수집 출처 게이트: --run 미지정 → 생략 (수집 검증은 run_id 흐름에서 강제)");
 }
 
 // ---- 결과 ----

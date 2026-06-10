@@ -13,6 +13,7 @@
     "check:regressions": "node scripts/check-regressions.mjs",
     "check:card-content": "node scripts/check-card-content.mjs",
     "check:render-leaks": "node scripts/check-render-leaks.mjs",
+    "check:collection-provenance": "node scripts/check-collection-provenance.mjs",
     "verify:publish-ready": "node scripts/verify-publish-ready.mjs"
   },
   "dependencies": {

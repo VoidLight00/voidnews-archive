@@ -26,6 +26,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/_avichawla/status/2042493342303600644",
           source: "https://x.com/_avichawla/status/2042493342303600644",
           tags: ["ClaudeCode", "Skills", "개발도구"],
+          thumbnail: {
+            src: "/og-cache/claude-code-claude-skills-16가지-정리-64af6900.jpg",
+            alt: "Claude Code .claude/ Skills 16가지 정리",
+          },
         },
         {
           date: "4/10 03:28",
@@ -36,6 +40,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/claudeai/status/2042308627478773808",
           source: "https://x.com/claudeai/status/2042308627478773808",
           tags: ["Anthropic", "비용최적화", "멀티모델", "공식인용교체"],
+          thumbnail: {
+            src: "/og-cache/anthropic-advisor-strategy-opus-advisor-6a911a5a.png",
+            alt: "Anthropic Advisor Strategy (Opus = Advisor)",
+          },
         },
         {
           date: "4/9 00:28",
@@ -46,6 +54,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheRundownAI/status/2041901009786536030",
           source: "https://x.com/TheRundownAI/status/2041901009786536030",
           tags: ["보안", "Claude", "샌드박스"],
+          thumbnail: {
+            src: "/og-cache/claude-mythos-sandbox-escape-사건-f5342b4a.jpg",
+            alt: "Claude Mythos sandbox escape 사건",
+          },
         },
       ],
     },
@@ -62,6 +74,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/OpenAI/status/2042295688323875316",
           source: "https://x.com/OpenAI/status/2042295688323875316",
           tags: ["OpenAI", "Codex", "구독플랜", "공식인용교체"],
+          thumbnail: {
+            src: "/og-cache/openai-chatgpt-pro-100-tier-출시-97b15189.jpg",
+            alt: "OpenAI ChatGPT Pro $100 tier 출시",
+          },
         },
       ],
     },
@@ -78,6 +94,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/GeminiApp/status/2042272415951253932",
           source: "https://x.com/GeminiApp/status/2042272415951253932",
           tags: ["Gemini", "시각화", "3D", "공식인용교체"],
+          thumbnail: {
+            src: "/og-cache/gemini-인터랙티브-시각화-기능-공개-ad1e2e9e.png",
+            alt: "Gemini 인터랙티브 시각화 기능 공개",
+          },
         },
         {
           date: "4/10 07:32",
@@ -88,6 +108,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/testingcatalog/status/2042370031116263583",
           source: "https://x.com/testingcatalog/status/2042370031116263583",
           tags: ["Google", "멀티모달", "Photos"],
+          thumbnail: {
+            src: "/og-cache/google-photos-import-for-stitch-테스트-d65190a6.jpg",
+            alt: "Google Photos import for Stitch 테스트",
+          },
         },
         {
           date: "4/10 07:32",
@@ -98,6 +122,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/testingcatalog/status/2042370027039420507",
           source: "https://x.com/testingcatalog/status/2042370027039420507",
           tags: ["Google", "디자인", "Stitch"],
+          thumbnail: {
+            src: "/og-cache/google-stitch-style-tuner-내부-테스트-21059abe.jpg",
+            alt: "Google Stitch Style Tuner 내부 테스트",
+          },
         },
         {
           date: "4/7 00:13",
@@ -108,6 +136,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/rowancheung/status/2041172396116476371",
           source: "https://x.com/rowancheung/status/2041172396116476371",
           tags: ["Google", "재난예측", "공공AI"],
+          thumbnail: {
+            src: "/og-cache/google-flash-flood-예측-ai-7d623e88.jpg",
+            alt: "Google flash flood 예측 AI",
+          },
         },
       ],
     },
@@ -124,6 +156,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/rowancheung/status/2042260621274861756",
           source: "https://x.com/rowancheung/status/2042260621274861756",
           tags: ["Meta", "멀티모달", "바이오AI"],
+          thumbnail: {
+            src: "/og-cache/meta-tribe-v2-뇌-예측-모델-공개-f3a707c8.jpg",
+            alt: "Meta TRIBE v2 뇌 예측 모델 공개",
+          },
         },
         {
           date: "4/9 01:36",
@@ -134,6 +170,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheRundownAI/status/2041918095644643559",
           source: "https://x.com/TheRundownAI/status/2041918095644643559",
           tags: ["Meta", "MuseSpark", "멀티모달"],
+          thumbnail: {
+            src: "/og-cache/meta-muse-spark-첫-모델-출시-9fdff4e0.jpg",
+            alt: "Meta Muse Spark 첫 모델 출시",
+          },
         },
       ],
     },
@@ -150,6 +190,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheAhmadOsman/status/2042465833637527902",
           source: "https://x.com/TheAhmadOsman/status/2042465833637527902",
           tags: ["로컬AI", "Hermes", "Plex"],
+          thumbnail: {
+            src: "/og-cache/rtx-3070-qwen-3-5-9b-hermes-agent-plex-r-63391354.jpg",
+            alt: "RTX 3070 + Qwen 3.5 9B Hermes Agent + Plex RAG",
+          },
         },
         {
           date: "4/10 00:55",
@@ -160,6 +204,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheAhmadOsman/status/2042270126838358204",
           source: "https://x.com/TheAhmadOsman/status/2042270126838358204",
           tags: ["DGX", "MoE", "고성능컴퓨팅"],
+          thumbnail: {
+            src: "/og-cache/4x-dgx-sparks-qwen3-5-397b-moe-fp8-66b8dd3f.jpg",
+            alt: "4x DGX Sparks Qwen3.5 397B MoE FP8",
+          },
         },
         {
           date: "4/9 01:43",
@@ -170,6 +218,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheAhmadOsman/status/2041919753275449599",
           source: "https://x.com/TheAhmadOsman/status/2041919753275449599",
           tags: ["MacBook", "SSH", "로컬노드"],
+          thumbnail: {
+            src: "/og-cache/macbook-로컬-ai-노드-ssh-관리-2b3afd41.jpg",
+            alt: "MacBook 로컬 AI 노드 SSH 관리",
+          },
         },
         {
           date: "4/8 11:50",
@@ -180,6 +232,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheAhmadOsman/status/2041710363465351203",
           source: "https://x.com/TheAhmadOsman/status/2041710363465351203",
           tags: ["Qwen", "Gemma", "단일GPU"],
+          thumbnail: {
+            src: "/og-cache/qwen-3-5-27b-gemma-4-31b-단일-gpu-추천-f78866b8.jpg",
+            alt: "Qwen 3.5 27B / Gemma 4 31B 단일 GPU 추천",
+          },
         },
         {
           date: "4/8 10:44",
@@ -190,6 +246,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheAhmadOsman/status/2041693609217433987",
           source: "https://x.com/TheAhmadOsman/status/2041693609217433987",
           tags: ["Git", "워크플로우", "에이전트개발"],
+          thumbnail: {
+            src: "/og-cache/local-git-repo-agentic-workflow-c4490325.jpg",
+            alt: "Local Git Repo + Agentic Workflow",
+          },
         },
         {
           date: "4/7 18:29",
@@ -200,6 +260,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheAhmadOsman/status/2041448361434218699",
           source: "https://x.com/TheAhmadOsman/status/2041448361434218699",
           tags: ["VRAM", "최적화", "로컬LLM"],
+          thumbnail: {
+            src: "/og-cache/8gb-vram-극한-튜닝-실전-팁-3938f63b.jpg",
+            alt: "8GB VRAM 극한 튜닝 실전 팁",
+          },
         },
       ],
     },
@@ -216,6 +280,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/_avichawla/status/2042145620178387432",
           source: "https://x.com/_avichawla/status/2042145620178387432",
           tags: ["Voxtral", "TTS", "음성AI"],
+          thumbnail: {
+            src: "/og-cache/voxtral-tts-mistral-4b-a529bf0f.jpg",
+            alt: "Voxtral TTS (Mistral 4B)",
+          },
         },
         {
           date: "4/7 22:26",
@@ -226,6 +294,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/rowancheung/status/2041507881858826404",
           source: "https://x.com/rowancheung/status/2041507881858826404",
           tags: ["비디오AI", "생성모델", "Netflix"],
+          thumbnail: {
+            src: "/og-cache/netflix-void-영상-객체-삭제-모델-211cf293.jpg",
+            alt: "Netflix VOID 영상 객체 삭제 모델",
+          },
         },
       ],
     },
@@ -242,6 +314,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/TheRundownAI/status/2042248732297576637",
           source: "https://x.com/TheRundownAI/status/2042248732297576637",
           tags: ["로보틱스", "Android", "하드웨어"],
+          thumbnail: {
+            src: "/og-cache/robotics-top-stories-clone-robotics-20k--ef448a07.jpg",
+            alt: "Robotics Top Stories (Clone Robotics $20K android 등)",
+          },
         },
         {
           date: "4/9 22:50",
@@ -252,6 +328,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/lucas_flatwhite/status/2042238715716878723",
           source: "https://x.com/lucas_flatwhite/status/2042238715716878723",
           tags: ["학습법", "집중력", "프롬프트"],
+          thumbnail: {
+            src: "/og-cache/lobdell-study-less-study-smart-실전-적용-f071b812.jpg",
+            alt: "Lobdell “Study Less Study Smart” 실전 적용",
+          },
         },
         {
           date: "4/7 16:57",
@@ -262,6 +342,10 @@ export const week15: WeeklyData = {
           officialUrl: "https://x.com/_avichawla/status/2041425201330819078",
           source: "https://x.com/_avichawla/status/2041425201330819078",
           tags: ["보안", "LLM테스트", "취약점진단"],
+          thumbnail: {
+            src: "/og-cache/deepteam-llm-vulnerability-testing-tool-f2e5ce2c.jpg",
+            alt: "DeepTeam LLM Vulnerability Testing Tool",
+          },
         },
       ],
     },
