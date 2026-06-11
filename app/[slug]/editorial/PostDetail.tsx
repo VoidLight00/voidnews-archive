@@ -316,7 +316,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
               </video>
               <figcaption>{activeLang === "ko" ? "데모 영상 모음" : "Demo reel"}</figcaption>
             </figure>
-          ) : post.thumbnail?.src ? (
+          ) : (post.images && post.images.length > 0) ? null : post.thumbnail?.src ? (
             <figure className={styles.articleHero}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={post.thumbnail.src} alt={post.thumbnail.alt ?? post.title} />
@@ -324,6 +324,26 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                 <figcaption>{activeLang === "ko" ? `출처 · ${officialHost}` : `Source · ${officialHost}`}</figcaption>
               ) : null}
             </figure>
+          ) : null}
+
+          {post.images && post.images.length > 0 ? (
+            <section aria-label={activeLang === "ko" ? "이미지" : "Images"} style={{ margin: "24px 0", display: "grid", gap: 16 }}>
+              {post.images.map((img, i) => (
+                <figure key={i} style={{ margin: 0 }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={img.src}
+                    alt={img.alt ?? post.title}
+                    style={{ width: "100%", height: "auto", display: "block", borderRadius: 8, border: "1px solid var(--border, #2a2a2a)" }}
+                  />
+                  {img.caption ? (
+                    <figcaption style={{ marginTop: 6, fontSize: 12, lineHeight: 1.45, color: "var(--muted, #888)" }}>
+                      {img.caption}
+                    </figcaption>
+                  ) : null}
+                </figure>
+              ))}
+            </section>
           ) : null}
 
           {post.videoClips && post.videoClips.length > 0 ? (
