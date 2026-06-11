@@ -57,6 +57,8 @@ export interface ABDemoCard {
   body: string;
   workflow?: string;
   tags?: string[];
+  videoSrc?: string;     // 로컬 mp4 경로 (예: /threads-assets/.../demos.mp4) — <video>로 직접 재생
+  videoPoster?: string;  // 영상 썸네일 (poster)
 }
 
 export interface ABEdition {

@@ -312,4 +312,20 @@ export const edition2026_06a: ABEdition = {
       },
     },
   ],
+  demoCards: [
+    {
+      title: "Claude Fable 5 출시 — 24시간 만에 쏟아진 데모 22선",
+      slug: "fable5-launch-demos-24h",
+      category: "출시 데모 · 영상",
+      subtitle: "출시 하루 만에 게임·3D·로봇·도시 시뮬까지, 프롬프트 몇 줄로 만든 사례 모음",
+      url: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      label: "Anthropic 공식 발표 →",
+      videoSrc: "/threads-assets/choi-fable5-demos-20260610/demos.mp4",
+      videoPoster: "/threads-assets/choi-fable5-demos-20260610/poster.jpg",
+      summary: "Claude Fable 5가 공개되고 24시간이 지나기 전에, X 개발자들이 프롬프트만으로 게임·3D CAD·휴머노이드 설계·도시 시뮬레이션·영상 도구를 만들어 낸 데모가 쏟아졌습니다. 그 모음을 영상으로 정리했습니다.",
+      body: "헤더 영상은 출시 직후 공개된 데모 22여 건을 모은 42초 몽타주입니다. 포켓몬·마리오카트·Call of Duty·RPG 같은 게임부터 3D CAD, 휴머노이드 로봇 설계, 도시 교통 시뮬레이션, 영화 촬영 설계 도구까지 — 전부 코드를 직접 작성하지 않고 프롬프트로 만든 사례입니다.\n\n핵심은 '만드는 능력이 흔해졌다'가 아니라 '무엇을 만들지 떠올리는 쪽으로 병목이 옮겨갔다'는 점입니다. 같은 모델을 쥐고도 결과가 갈리며, 목표·채점·검증을 어떻게 설계하느냐가 성과를 가릅니다.\n\n영상 모음은 @choi.openai가 한국어로 큐레이션했고, 개별 데모의 1차 원본은 X 개발자 커뮤니티(earthtojake·bilawalsidhu·johnsavage_ai·kieradev 등)입니다. 제품 자체의 공식 출처는 Anthropic 발표 페이지입니다.",
+      workflow: "원본 데모: X 개발자 커뮤니티 · 큐레이션: @choi.openai (Threads) · 제품 공식: anthropic.com",
+      tags: ["Claude Fable 5", "출시 데모", "영상"],
+    },
+  ],
 };

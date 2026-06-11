@@ -23,6 +23,8 @@ const URL_MATCH_REGEX = /^https?:\/\/[^\s)\]]+$/;
 
 function renderRichText(text: string): ReactNode {
   if (!text) return null;
+  // 마크다운 헤딩(## ~ ######) 라인을 굵은 소제목으로 변환 — 원시 마크다운 노출(VN-RENDER-LEAK) 방지
+  text = text.replace(/^#{1,6}[ \t]+(.+)$/gm, "**$1**");
   const parts = text.split(/(\*\*[^*\n]+?\*\*|https?:\/\/[^\s)\]]+)/g);
 
   return parts.map((part, i) => {
@@ -996,6 +998,27 @@ function DemoCard({ item }: { item: ABDemoCard }) {
         </p>
       )}
 
+      {item.videoSrc && (
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          poster={item.videoPoster}
+          style={{
+            marginTop: 18,
+            width: "100%",
+            maxHeight: 520,
+            borderRadius: "var(--radius-xs)",
+            border: "1px solid var(--border2)",
+            background: "#000",
+            display: "block",
+          }}
+        >
+          <source src={item.videoSrc} type="video/mp4" />
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      )}
+
       {item.workflow && (
         <p
           style={{
@@ -1456,6 +1479,47 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               <div className="tc-article-grid ab-edition-grid">
                 {data.editorsPicks.map((pick, i) => (
                   <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {data.demoCards && data.demoCards.length > 0 && (
+          <section
+            style={{
+              padding:
+                "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
+            }}
+          >
+            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+              <div
+                style={{
+                  borderTop: "3px double var(--rule)",
+                  paddingTop: 28,
+                  marginBottom: 22,
+                }}
+              >
+                <span className="kicker" style={{ color: "var(--gold)" }}>
+                  Demo showcase
+                </span>
+                <h2
+                  className="serif"
+                  style={{
+                    marginTop: 10,
+                    fontSize: "clamp(22px, 3.2vw, 28px)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.025em",
+                    color: "var(--text-strong)",
+                    lineHeight: 1.12,
+                  }}
+                >
+                  실전 데모 — 영상으로 바로 보기
+                </h2>
+              </div>
+              <div style={{ display: "grid", gap: 20 }}>
+                {data.demoCards.map((card, i) => (
+                  <DemoCard key={i} item={card} />
                 ))}
               </div>
             </div>
