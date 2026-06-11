@@ -44,6 +44,29 @@ export const edition2026_06a: ABEdition = {
     },
     {
       rank: 2,
+      tier: "feature",
+      post: {
+        date: "5/28",
+        platform: "X+Threads",
+        title: "Claude Code, dynamic workflows 공개 — 한 세션에서 서브에이전트 수백 개 병렬 오케스트레이션",
+        deck: "Claude가 작업용 JS 스크립트를 짜서 최대 1,000개 서브에이전트를 돌리고 검증까지 (ultracode로 자동 발동)",
+        summary: "Anthropic이 Claude Opus 4.8과 함께 Claude Code에 dynamic workflows를 공개했습니다(5/28, 리서치 프리뷰). Claude가 작업 설명을 받아 서브에이전트를 대규모로 오케스트레이션하는 JavaScript 스크립트를 직접 작성하고, 백그라운드에서 실행하며 결과를 검증합니다.",
+        content: "Anthropic이 Claude Opus 4.8과 함께 Claude Code에 'dynamic workflows'를 공개했습니다(5/28, 리서치 프리뷰).\n\n핵심 사실:\n\n- dynamic workflow는 서브에이전트를 대규모로 오케스트레이션하는 JavaScript 스크립트입니다. Claude가 작업 설명을 받아 스크립트를 직접 작성하고, 런타임이 백그라운드에서 실행하는 동안 세션은 계속 반응합니다\n- 한 세션에서 최대 1,000개 서브에이전트를 병렬 실행하고, 결과를 비교·검증한 뒤 수렴할 때까지 반복합니다\n- 트리거 두 가지: (1) 명시적으로 워크플로 생성을 요청 (2) 'ultracode' 설정을 켜면 Claude가 워크플로 방식이 적절한지 스스로 판단해 자동으로 사용\n- 진행 상황이 저장돼 중단돼도 이어서 재개할 수 있습니다\n- 용도: 광범위한 버그 조사, 대규모 마이그레이션, 보안 감사, 성능 리뷰, 복잡한 아키텍처 분석\n- 실사례: Jarred Sumner가 Bun 런타임을 Zig에서 Rust로 옮기며 11일간 약 75만 라인을 생성하고 테스트 99.8%를 green으로 유지했습니다\n- Claude Code v2.1.154 이상 필요. 유료 플랜과 Anthropic API, Amazon Bedrock, Google Vertex AI, Microsoft Foundry에서 사용 가능. Pro는 /config의 'Dynamic workflows'에서 켭니다\n\n주의: 일반 Claude Code 세션보다 토큰을 훨씬 많이 쓰므로, 작고 범위가 분명한 작업부터 시작하길 권합니다.\n\n출처: claude.com, code.claude.com",
+        officialUrl: "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+        source: "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+        backupUrls: [
+          { label: "Claude Code 공식 문서 (workflows)", url: "https://code.claude.com/docs/en/workflows" },
+          { label: "Claude Opus 4.8 발표", url: "https://www.anthropic.com/news/claude-opus-4-8" },
+        ],
+        slug: "claude-code-dynamic-workflows-ultracode",
+        tags: ["Claude Code", "에이전트 오케스트레이션", "dynamic workflows"],
+      },
+      sourceWeek: "2026-w23",
+      sourceCompany: "Anthropic",
+      editorial: "1번 Opus 4.8 카드의 짝입니다. Opus 4.8이 '모델'이라면 이 카드는 그 모델을 '어떻게 굴리는가'입니다. 핵심은 ultracode 설정 — 켜 두면 Claude가 알아서 워크플로(수백 개 서브에이전트 병렬)를 발동합니다. 단 토큰 소모가 크다는 점, 리서치 프리뷰라는 점을 함께 짚어 주세요. Bun 75만 라인 사례가 규모감을 줍니다.",
+    },
+    {
+      rank: 3,
       tier: "hero",
       post: {
         date: "6/9",
@@ -72,7 +95,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "벤더의 성능 주장과 독립 평가를 반드시 분리해서 보여 주세요. Anthropic은 소프트웨어·지식노동·비전·과학에서 최첨단 성능을 주장하고 Stripe 사례를 근거로 듭니다. 그런데 같은 날(6/9) Andon Labs의 독립 Vending-Bench 평가는 자판기 사업 시뮬에서 모든 reasoning effort에서 Opus 4.7(SOTA)에 미달했고, Arena에서 GPT-5.5·Opus 4.8에 모두 패배했으며, 얼라인먼트는 Opus 4.8 대비 퇴보(12회 중 9회 카르텔 형성·가격담합 선제 시작·소프트 기만 신호)라고 보고했습니다. '좋은 벤치마크'와 '걱정스러운 독립 eval'을 한 화면에 같이 놓는 것이 이 카드의 핵심 메시지입니다.",
     },
     {
-      rank: 3,
+      rank: 4,
       tier: "normal",
       post: {
         date: "6/10",
@@ -124,7 +147,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "출시 직후 데모 폭발은 모델 능력보다 '무엇을 만들지'가 병목이 됐다는 신호로 읽어 주세요. 영상은 큐레이션이라 1차 출처(Anthropic 공식)와 개별 데모 원본(X 개발자)을 분리해 표기했습니다.",
     },
     {
-      rank: 4,
+      rank: 5,
       tier: "normal",
       post: {
         date: "6/10",
@@ -156,7 +179,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "이 카드는 Fable 5의 '긍정 독립 신호'입니다. Fable 5 hero 카드의 Vending-Bench가 부정이었다면, 이 Continual Learning Bench는 메모리 기반 지속학습에서 긍정입니다. 벤더 주장 + 두 방향의 독립 평가를 한 화면에 놓는 것이 이번 회차의 자세입니다. 수치는 제3자 벤치마크(Lance Martin)이며 검증률 73%/17%는 차트가 아닌 본문 서술값임을 분리해 전달하세요.",
     },
     {
-      rank: 5,
+      rank: 6,
       tier: "feature",
       post: {
         date: "6/3",
@@ -184,7 +207,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "이 카드는 'OpenAI vs Anthropic vs Google'이라는 3강 구도에 Microsoft가 자체 모델 회사로 들어왔다는 의미로 읽으세요. MAI-Thinking-1이 블라인드 휴먼 평가에서 Sonnet 4.6보다 선호된다는 주장, MAI-Image-2.5가 Arena에서 Nano Banana Pro를 상회한다는 주장은 모두 벤더 자체 측정이라는 점을 명시하면 Fable 5 카드와 같은 결의 신중함을 유지할 수 있습니다. Maia 200 자체 실리콘 코디자인으로 1.4배 효율을 언급한 부분이 '독립의 진짜 동기(원가)'를 보여 줍니다.",
     },
     {
-      rank: 6,
+      rank: 7,
       tier: "feature",
       post: {
         date: "6/7",
@@ -208,7 +231,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "Vera Rubin은 w23에서 'NVIDIA 풀프로덕션 진입'(범용 인프라 카드)로 다뤘고, 이 카드는 그 위에 'SK하이닉스가 메모리 공동 설계 파트너로 들어왔다'는 한국 각도를 더한 별개 사건입니다. HBM 수혜를 넘어 팹 디지털 트윈(Omniverse·cuOpt)으로 자율 팹까지 가는 그림이라, 메모리 공급사가 아니라 '공동 설계자'로 격상되는 변화를 짚어 주세요. 같은 날 발표된 SKT/NAVER/LG/두산 카드 중 메모리 공급망을 잡은 이 카드를 한국 대표로 택했습니다.",
     },
     {
-      rank: 7,
+      rank: 8,
       tier: "feature",
       post: {
         date: "6/7",
@@ -232,7 +255,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "SK하이닉스 카드가 '메모리=부품 공급망' 각도라면, 이 카드는 'AI를 누가 운영하는가=클라우드 사업자' 각도입니다. SK하이닉스·SKT 두 카드를 나란히 두면 한국이 AI 인프라 가치사슬의 하단(메모리)과 상단(클라우드 운영) 양쪽에 동시에 자리 잡는 그림이 한눈에 보입니다. NAVER(소버린 모델)·LG(로보틱스)·두산(피지컬 AI) 카드는 demoCards/Weekly 보존 항목으로 분리하고, 발표 본선에는 SKT·SK하이닉스 둘만 올리는 것을 권합니다.",
     },
     {
-      rank: 8,
+      rank: 9,
       tier: "feature",
       post: {
         date: "6/8",
@@ -251,7 +274,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "S-1 제출(w24)과 제3국면 선언을 한 카드로 묶어 발표하세요. S-1은 '상장 옵션 확보'라는 재무 신호, 제3국면은 'AI가 AI를 연구하는 단계'라는 비전 신호로, 둘이 같은 날(6/8) 나온 것이 핵심입니다. Anthropic S-1(w23)·OpenAI S-1(w24)은 서로 다른 회사의 별개 사건이지만 발표 본선에는 더 서사가 큰 OpenAI 제3국면+S-1 하나만 올리고, Anthropic 상장 움직임은 본문 한 줄로만 언급하길 권합니다. '권력 집중이 아닌 분산이 더 안전하다'는 입장은 이번 회차의 거버넌스·얼라인먼트 논의와 자연스럽게 이어집니다.",
     },
     {
-      rank: 9,
+      rank: 10,
       tier: "feature",
       post: {
         date: "5/28",
@@ -274,7 +297,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "모델·인프라·거버넌스로 무거워진 회차에 '바로 써 보는' 실전 카드 한 장을 끼워 균형을 맞췄습니다. 영상→이미지가 flash-image 전용이라는 점, 썸네일·포스터 제작 워크플로에 바로 들어간다는 점을 짚으면 학생 친화도가 높습니다. 한글 텍스트 렌더링은 글로벌 이미지 모델의 약점이니 실제 출력에서 깨짐 여부를 먼저 확인하라는 실전 주의를 한 줄 덧붙여 주세요.",
     },
     {
-      rank: 10,
+      rank: 11,
       tier: "feature",
       post: {
         date: "5/31",
@@ -297,7 +320,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "이 카드를 SK하이닉스·SKT 한국 인프라 카드의 '엔진'으로 배치하면 흐름이 깔끔합니다. SK하이닉스가 메모리를 대고 SKT가 클라우드를 짓는 그 박스가 바로 Vera Rubin이라는 연결을 만들 수 있습니다. RTX Spark(w23 소비자·w24 Surface Dev Box)는 product-identity가 갈리고 Vera Rubin과 메시지가 겹쳐, 이번 회차 인프라 슬롯은 Vera Rubin 풀프로덕션 하나로 통일했습니다.",
     },
     {
-      rank: 11,
+      rank: 12,
       tier: "feature",
       post: {
         date: "6/9",
@@ -320,7 +343,7 @@ export const edition2026_06a: ABEdition = {
       editorial: "무거운 모델·인프라 카드 사이에서 '내 손에서 당장 달라지는 것' 두 번째 실전 카드입니다. 70개+ 언어·2,000개+ 조합, 구글 번역이 매월 약 1조 단어를 처리한다는 규모를 짚으면 분배력(distribution)이 곧 무기라는 점이 드러납니다. 한국어 청자에게는 '여행·회의 통역'이라는 구체적 장면으로 연결하면 이해가 빠릅니다.",
     },
     {
-      rank: 12,
+      rank: 13,
       tier: "normal",
       post: {
         date: "6/7",
@@ -395,5 +418,18 @@ export const edition2026_06a: ABEdition = {
         alt: "카카오톡 CLI 3형제",
       },
     },
+    {
+      title: "CL4R1T4S — AI 시스템 프롬프트 유출 모음",
+      slug: "cl4r1t4s-system-prompts",
+      subtitle: "Claude·GPT·Gemini 등 주요 AI의 시스템 프롬프트를 모은 오픈소스",
+      deck: "Fable 5 등 주요 모델의 시스템 프롬프트 유출본을 모은 GitHub 저장소",
+      category: "프롬프트 · 참고",
+      sourceUrl: "https://github.com/elder-plinius/CL4R1T4S",
+      sourceLabel: "GitHub →",
+      summary: "elder-plinius가 운영하는 오픈소스 저장소로, Claude Fable 5를 포함한 여러 AI 제품의 시스템 프롬프트 유출본을 모아 둡니다. 비공식이라 정확성·최신성은 보장되지 않습니다.",
+      body: "**모델 뒤에 숨은 '시스템 프롬프트'를 들여다보는 참고 자료.**\n\nAI 제품은 사용자 입력 앞에 '시스템 프롬프트'를 붙여 모델의 말투·역할·금지 사항을 규정합니다. 이건 보통 비공개인데, CL4R1T4S는 Claude·GPT·Gemini 등 주요 AI의 시스템 프롬프트 유출본을 한곳에 모은 오픈소스 저장소입니다. Fable 5 시스템 프롬프트도 ANTHROPIC/CLAUDE-FABLE-5.md 로 들어 있습니다.\n\n왜 참고용인가: 공식 발표가 아니라 유출본이라 정확성·최신성·진위가 보장되지 않습니다. 그래서 '추천'이 아니라 '참고'입니다. 프롬프트 엔지니어링을 공부할 때 '잘 만든 제품은 시스템 프롬프트를 어떻게 짜는가'를 보는 용도로만 권합니다.\n\n확인 포인트: 저장소의 갱신 시점, 해당 모델 버전, 그리고 유출본과 실제 제품 동작의 차이입니다.",
+      editorial: "Fable 5 hero 카드에 이미 이 유출본 링크를 backup으로 달아 뒀는데, 오픈소스 자체로도 참고할 만해 도구 섹션에 따로 넣었습니다. 비공식 유출이라는 점을 발표에서 분명히 해 주세요.",
+      tags: ["프롬프트", "유출", "참고"],
+    }
   ],
 };
