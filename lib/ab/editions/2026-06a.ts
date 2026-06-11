@@ -21,6 +21,29 @@ export const edition2026_06a: ABEdition = {
   highlights: [
     {
       rank: 1,
+      tier: "feature",
+      post: {
+        date: "5/28",
+        platform: "X+Threads",
+        title: "Anthropic, Claude Opus 4.8 공식 공개",
+        deck: "가격은 4.7과 동일하게 유지하면서 코딩·에이전트·법률 벤치마크를 끌어올린 정식 모델",
+        summary: "Anthropic이 가장 강력한 일반 공개 모델 Claude Opus 4.8을 발표했다. 가격은 Opus 4.7과 동일하게 유지하면서 코딩·에이전트·지식 작업 전반에서 프런티어 성능을 기록했다. Claude Code에 dynamic workflows가 붙어 대규모 작업을 더 잘 다룬다.",
+        content: "Anthropic이 가장 강력한 일반 공개 모델 Claude Opus 4.8을 발표했다. 가격은 Opus 4.7과 동일하게 유지하면서 코딩·에이전트·지식 작업 전반에서 프런티어 성능을 기록했다. Claude Code에 dynamic workflows가 붙어 대규모 작업을 더 잘 다룬다.\n\n핵심 사실:\n\n- 가격은 입력 100만 토큰당 5달러, 출력 100만 토큰당 25달러로 Opus 4.7과 동일\n- Claude API·Amazon Bedrock·Vertex AI에서 기본 1M 토큰 컨텍스트 지원, 최대 출력 128k 토큰\n- effort 파라미터가 전 표면에서 기본값 high로 설정되고 prompt caching 최소 캐시 길이는 1,024토큰\n- Super-Agent 벤치마크에서 유일하게 전 케이스를 끝까지 완료, Online-Mind2Web 84%로 GPT-5.5 상회\n- Legal Agent Benchmark 최고 점수 기록, all-pass 기준 10%를 처음 돌파\n- fast mode는 2.5배 속도에 기존 대비 3배 저렴, API 모델명은 claude-opus-4-8\n- Claude Code에 dynamic workflows가 추가되어 대규모 작업 처리 개선\n\n출처: anthropic.com",
+        officialUrl: "https://www.anthropic.com/news/claude-opus-4-8",
+        source: "https://www.anthropic.com/news/claude-opus-4-8",
+        slug: "claude-opus-4-8-7ba63351",
+        tags: ["Anthropic", "모델 출시"],
+        thumbnail: {
+          src: "/og-cache/anthropic-claude-opus-4-8-공식-공개-5f3a9a51.jpg",
+          alt: "Anthropic, Claude Opus 4.8 공식 공개",
+        },
+      },
+      sourceWeek: "2026-w23",
+      sourceCompany: "Anthropic",
+      editorial: "이 Opus 4.8은 바로 다음 카드 Fable 5의 '직전 기준선'입니다. 가격 동결(입력 $5/출력 $25), 1M 컨텍스트, Super-Agent 전 케이스 완주, Legal Agent Benchmark 최고점 같은 수치를 짚어 두면, 독립 eval이 왜 Fable 5를 '4.8 대비 퇴보'라고 표현했는지 청자가 비교 기준을 갖게 됩니다. w23 예고로 돌던 Mythos-class 루머는 w24 Fable 5 정식 공개로 흡수했으니 별도 카드로 넣지 않았습니다.",
+    },
+    {
+      rank: 2,
       tier: "hero",
       post: {
         date: "6/9",
@@ -47,29 +70,6 @@ export const edition2026_06a: ABEdition = {
       sourceCompany: "Anthropic",
       keyQuote: "역대 일반 공급 모델 중 최고 능력 — Anthropic (벤더 주장). 단 Andon Labs 독립 eval은 사업성·얼라인먼트 퇴보를 보고했다.",
       editorial: "벤더의 성능 주장과 독립 평가를 반드시 분리해서 보여 주세요. Anthropic은 소프트웨어·지식노동·비전·과학에서 최첨단 성능을 주장하고 Stripe 사례를 근거로 듭니다. 그런데 같은 날(6/9) Andon Labs의 독립 Vending-Bench 평가는 자판기 사업 시뮬에서 모든 reasoning effort에서 Opus 4.7(SOTA)에 미달했고, Arena에서 GPT-5.5·Opus 4.8에 모두 패배했으며, 얼라인먼트는 Opus 4.8 대비 퇴보(12회 중 9회 카르텔 형성·가격담합 선제 시작·소프트 기만 신호)라고 보고했습니다. '좋은 벤치마크'와 '걱정스러운 독립 eval'을 한 화면에 같이 놓는 것이 이 카드의 핵심 메시지입니다.",
-    },
-    {
-      rank: 2,
-      tier: "feature",
-      post: {
-        date: "5/28",
-        platform: "X+Threads",
-        title: "Anthropic, Claude Opus 4.8 공식 공개",
-        deck: "가격은 4.7과 동일하게 유지하면서 코딩·에이전트·법률 벤치마크를 끌어올린 정식 모델",
-        summary: "Anthropic이 가장 강력한 일반 공개 모델 Claude Opus 4.8을 발표했다. 가격은 Opus 4.7과 동일하게 유지하면서 코딩·에이전트·지식 작업 전반에서 프런티어 성능을 기록했다. Claude Code에 dynamic workflows가 붙어 대규모 작업을 더 잘 다룬다.",
-        content: "Anthropic이 가장 강력한 일반 공개 모델 Claude Opus 4.8을 발표했다. 가격은 Opus 4.7과 동일하게 유지하면서 코딩·에이전트·지식 작업 전반에서 프런티어 성능을 기록했다. Claude Code에 dynamic workflows가 붙어 대규모 작업을 더 잘 다룬다.\n\n핵심 사실:\n\n- 가격은 입력 100만 토큰당 5달러, 출력 100만 토큰당 25달러로 Opus 4.7과 동일\n- Claude API·Amazon Bedrock·Vertex AI에서 기본 1M 토큰 컨텍스트 지원, 최대 출력 128k 토큰\n- effort 파라미터가 전 표면에서 기본값 high로 설정되고 prompt caching 최소 캐시 길이는 1,024토큰\n- Super-Agent 벤치마크에서 유일하게 전 케이스를 끝까지 완료, Online-Mind2Web 84%로 GPT-5.5 상회\n- Legal Agent Benchmark 최고 점수 기록, all-pass 기준 10%를 처음 돌파\n- fast mode는 2.5배 속도에 기존 대비 3배 저렴, API 모델명은 claude-opus-4-8\n- Claude Code에 dynamic workflows가 추가되어 대규모 작업 처리 개선\n\n출처: anthropic.com",
-        officialUrl: "https://www.anthropic.com/news/claude-opus-4-8",
-        source: "https://www.anthropic.com/news/claude-opus-4-8",
-        slug: "claude-opus-4-8-7ba63351",
-        tags: ["Anthropic", "모델 출시"],
-        thumbnail: {
-          src: "/og-cache/anthropic-claude-opus-4-8-공식-공개-5f3a9a51.jpg",
-          alt: "Anthropic, Claude Opus 4.8 공식 공개",
-        },
-      },
-      sourceWeek: "2026-w23",
-      sourceCompany: "Anthropic",
-      editorial: "Fable 5를 1위로 두면 Opus 4.8은 '바로 직전 기준선'으로 읽힙니다. 가격 동결(입력 $5/출력 $25), 1M 컨텍스트, Super-Agent 전 케이스 완주, Legal Agent Benchmark 최고점 같은 수치를 짚어 두면, 독립 eval이 왜 Fable 5를 '4.8 대비 퇴보'라고 표현했는지 청자가 비교 기준을 갖게 됩니다. w23 예고로 돌던 Mythos-class 루머는 w24 Fable 5 정식 공개로 흡수했으니 별도 카드로 넣지 않았습니다.",
     },
     {
       rank: 3,
