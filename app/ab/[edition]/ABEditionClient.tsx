@@ -484,7 +484,7 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
       {item.post.videoClips && item.post.videoClips.length > 0 && (
         <div style={{ marginTop: 18 }}>
           <div style={{ marginBottom: 10 }}>
-            <SectionEyebrow label={`데모 영상 ${item.post.videoClips.length}편 · 카드에서 바로 재생`} tone="accent" />
+            <SectionEyebrow label={`원본 X 개발자 데모 ${item.post.videoClips.length}편 · 영상마다 원본 트윗 링크`} tone="accent" />
           </div>
           <div
             style={{
@@ -512,32 +512,35 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
                 >
                   <source src={clip.src} type="video/mp4" />
                 </video>
-                {clip.title && (
-                  <figcaption
-                    style={{
-                      marginTop: 6,
-                      fontSize: 12,
-                      lineHeight: 1.45,
-                      color: "var(--text-soft)",
-                    }}
-                  >
-                    {stripMarkdown(clip.title)}
-                    {clip.sourceUrl && (
-                      <>
-                        {" "}
-                        <a
-                          href={clip.sourceUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          style={{ color: "var(--accent)", textDecoration: "none", whiteSpace: "nowrap" }}
-                        >
-                          원본 →
-                        </a>
-                      </>
-                    )}
-                  </figcaption>
-                )}
+                <figcaption
+                  style={{
+                    marginTop: 6,
+                    fontSize: 12,
+                    lineHeight: 1.45,
+                    color: "var(--text-soft)",
+                  }}
+                >
+                  {clip.sourceUrl && (
+                    <a
+                      href={clip.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      style={{
+                        display: "inline-block",
+                        color: "var(--accent)",
+                        fontWeight: 700,
+                        textDecoration: "none",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      @{clip.sourceUrl.split("/").filter(Boolean).pop()} · 원본 X 트윗 →
+                    </a>
+                  )}
+                  {clip.title && (
+                    <span style={{ display: "block", marginTop: 2 }}>{stripMarkdown(clip.title)}</span>
+                  )}
+                </figcaption>
               </figure>
             ))}
           </div>
