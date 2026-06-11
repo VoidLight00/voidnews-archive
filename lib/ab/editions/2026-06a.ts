@@ -275,8 +275,6 @@ export const edition2026_06a: ABEdition = {
         ],
         slug: "fable5-launch-demos-24h-choi",
         tags: ["Claude Fable 5", "출시 데모", "영상"],
-        videoSrc: "/threads-assets/choi-fable5-demos-20260610/demos.mp4",
-        videoPoster: "/threads-assets/choi-fable5-demos-20260610/poster.jpg",
         videoClips: [
           { src: "/threads-assets/choi-fable5-demos-20260610/clips/clip-01.mp4", poster: "/threads-assets/choi-fable5-demos-20260610/clips/clip-01.jpg", title: "Claude Fable 5는 인간형 로봇을 설계해 관절 구조와 부품 분해도까지 포함된 3D 기구 설계 모델을 생성했습니다.", sourceUrl: "https://x.com/earthtojake" },
           { src: "/threads-assets/choi-fable5-demos-20260610/clips/clip-02.mp4", poster: "/threads-assets/choi-fable5-demos-20260610/clips/clip-02.jpg", title: "Claude Fable 5는 차량들이 스스로 움직이는 교통 시뮬레이션과 낮밤 변화가 적용된 도시 블록 환경을 한 번에 생성했습니다.", sourceUrl: "https://x.com/bilawalsidhu" },

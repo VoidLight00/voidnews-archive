@@ -287,7 +287,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             ) : null}
           </div>
 
-          {post.videoUrl ? (
+          {post.videoClips && post.videoClips.length > 0 ? null : post.videoUrl ? (
             <figure className={styles.articleHero}>
               <div className={styles.videoFrame}>
                 <iframe
@@ -303,6 +303,19 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                 {activeLang === "ko" ? "공식 영상" : "Official video"}
               </figcaption>
             </figure>
+          ) : post.videoSrc ? (
+            <figure className={styles.articleHero}>
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster={post.videoPoster}
+                style={{ width: "100%", display: "block", background: "#000", borderRadius: 8 }}
+              >
+                <source src={post.videoSrc} type="video/mp4" />
+              </video>
+              <figcaption>{activeLang === "ko" ? "데모 영상 모음" : "Demo reel"}</figcaption>
+            </figure>
           ) : post.thumbnail?.src ? (
             <figure className={styles.articleHero}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -311,6 +324,42 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                 <figcaption>{activeLang === "ko" ? `출처 · ${officialHost}` : `Source · ${officialHost}`}</figcaption>
               ) : null}
             </figure>
+          ) : null}
+
+          {post.videoClips && post.videoClips.length > 0 ? (
+            <section aria-label={activeLang === "ko" ? "데모 영상" : "Demo clips"} style={{ margin: "24px 0" }}>
+              <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 12, color: "var(--accent, #c8962f)" }}>
+                {activeLang === "ko" ? `원본 X 개발자 데모 ${post.videoClips.length}편 · 영상마다 원본 트윗 링크` : `${post.videoClips.length} X demos`}
+              </div>
+              <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))" }}>
+                {post.videoClips.map((clip, i) => (
+                  <figure key={i} style={{ margin: 0 }}>
+                    <video
+                      controls
+                      playsInline
+                      preload="none"
+                      poster={clip.poster}
+                      style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover", background: "#000", borderRadius: 8, display: "block" }}
+                    >
+                      <source src={clip.src} type="video/mp4" />
+                    </video>
+                    <figcaption style={{ marginTop: 6, fontSize: 12, lineHeight: 1.45 }}>
+                      {clip.sourceUrl ? (
+                        <a
+                          href={clip.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ display: "inline-block", fontWeight: 700, color: "var(--accent, #c8962f)", textDecoration: "none" }}
+                        >
+                          {`@${clip.sourceUrl.split("/").filter(Boolean).pop()} · 원본 X 트윗 →`}
+                        </a>
+                      ) : null}
+                      {clip.title ? <span style={{ display: "block", marginTop: 2, color: "var(--muted, #888)" }}>{clip.title}</span> : null}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
           ) : null}
 
           {threeLineSummary && threeLineSummary.length > 0 ? (
