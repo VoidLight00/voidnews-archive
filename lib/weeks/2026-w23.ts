@@ -454,6 +454,12 @@ export const week23: WeeklyData = {
           "content": "MiniMax가 프런티어급 코딩·100만 토큰 컨텍스트·네이티브 멀티모달을 한 모델에 결합한 오픈웨이트 M3를 공개했다. 자체 측정 SWE-Bench Pro 59.0%로 GPT-5.5·Gemini 3.1 Pro를 앞선다고 밝혔으나 벤치마크는 자가 보고다.\n\n핵심 사실:\n\n- 6월 1일 공개, MiniMax Sparse Attention(MSA)로 100만 토큰 컨텍스트에서 디코딩 15배·프리필 9배 가속을 주장\n- 자체 측정 SWE-Bench Pro 59.0%(GPT-5.5 58.6%·Gemini 3.1 Pro 54.2%), Terminal-Bench 2.1 66.0%, OSWorld-Verified 70.0% 제시\n- API는 즉시 제공되나 가중치와 기술 보고서는 공개 후 약 10일 내 Hugging Face·GitHub 배포로 예고\n- 벤치마크는 Claude Code 등 자체 스캐폴딩·자가 인프라로 측정됐고, 비교 기준이 신형 Opus 4.8이 아닌 4.7이라 독립 검증 전까지 해석에 주의\n- 가격은 입력 0.6·출력 2.40달러(첫 주 50% 할인)로 미국 프런티어 모델의 8~20% 수준\n\n출처: minimax.io",
           "source": "https://www.minimax.io/blog/minimax-m3",
           "officialUrl": "https://www.minimax.io/blog/minimax-m3",
+          "backupUrls": [
+            {
+              "label": "threads.com",
+              "url": "https://www.threads.com/@dailyaionly/post/DZTKKq7DIG-"
+            }
+          ],
           "slug": "minimax-m3-ee38031e",
           "tags": [
             "MiniMax",
