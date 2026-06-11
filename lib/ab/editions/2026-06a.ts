@@ -266,7 +266,7 @@ export const edition2026_06a: ABEdition = {
         platform: "Threads",
         title: "Claude Fable 5 출시 24시간 — 프롬프트로 쏟아진 데모 22선",
         deck: "게임·3D·로봇·도시 시뮬까지, 코드 없이 프롬프트만으로 만든 사례 모음",
-        summary: "Claude Fable 5가 공개되고 24시간이 지나기 전에, X 개발자들이 프롬프트만으로 게임·3D CAD·휴머노이드 설계·도시 시뮬레이션·영상 도구를 만들어 낸 데모가 쏟아졌습니다. @choi.openai가 그 모음을 영상으로 정리했습니다.",
+        summary: "Claude Fable 5가 공개되고 24시간이 지나기 전에, X 개발자들이 프롬프트만으로 게임·3D CAD·휴머노이드 설계·도시 시뮬레이션·영상 도구를 만들어 낸 데모가 쏟아졌습니다.",
         content: "Claude Fable 5 출시 직후 24시간 동안 X 개발자들이 프롬프트만으로 만들어 낸 데모가 쏟아졌습니다. 아래 영상은 그 사례 22여 건을 모은 42초 몽타주입니다.\n\n핵심 사실:\n\n- 포켓몬·마리오카트·Call of Duty·RPG 같은 게임을 프롬프트로 구현\n- 3D CAD, 휴머노이드 로봇 설계, 도시 교통 시뮬레이션\n- 영화 촬영 설계 도구까지, 전부 직접 코딩 없이 생성\n- 영상 모음 큐레이션: @choi.openai (Threads, 한국어)\n- 개별 데모 1차 원본: X 개발자 커뮤니티(earthtojake·bilawalsidhu·johnsavage_ai·kieradev 등)\n- 제품 공식 출처: Anthropic 발표 페이지\n\n핵심은 만드는 능력이 흔해졌다는 게 아니라, 무엇을 만들지 떠올리는 쪽으로 병목이 옮겨갔다는 점입니다.\n\n출처: anthropic.com, @choi.openai",
         officialUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
         source: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
