@@ -481,6 +481,69 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
         </video>
       )}
 
+      {item.post.videoClips && item.post.videoClips.length > 0 && (
+        <div style={{ marginTop: 18 }}>
+          <div style={{ marginBottom: 10 }}>
+            <SectionEyebrow label={`데모 영상 ${item.post.videoClips.length}편 · 카드에서 바로 재생`} tone="accent" />
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gap: 16,
+              gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+            }}
+          >
+            {item.post.videoClips.map((clip, ci) => (
+              <figure key={ci} style={{ margin: 0 }}>
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster={clip.poster}
+                  style={{
+                    width: "100%",
+                    aspectRatio: "16 / 9",
+                    objectFit: "cover",
+                    borderRadius: "var(--radius-xs)",
+                    border: "1px solid var(--border2)",
+                    background: "#000",
+                    display: "block",
+                  }}
+                >
+                  <source src={clip.src} type="video/mp4" />
+                </video>
+                {clip.title && (
+                  <figcaption
+                    style={{
+                      marginTop: 6,
+                      fontSize: 12,
+                      lineHeight: 1.45,
+                      color: "var(--text-soft)",
+                    }}
+                  >
+                    {stripMarkdown(clip.title)}
+                    {clip.sourceUrl && (
+                      <>
+                        {" "}
+                        <a
+                          href={clip.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          style={{ color: "var(--accent)", textDecoration: "none", whiteSpace: "nowrap" }}
+                        >
+                          원본 →
+                        </a>
+                      </>
+                    )}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </div>
+      )}
+
       <ImageGallery images={item.post.images} tone="accent" />
       <XPostEmbed url={xStatusUrl} />
 
