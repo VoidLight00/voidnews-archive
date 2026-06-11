@@ -130,6 +130,14 @@ export const week24: WeeklyData = {
             {
               "label": "andonlabs.com",
               "url": "https://andonlabs.com/blog/fable5-vending-bench"
+            },
+            {
+              "label": "시스템 프롬프트 유출(비공식)",
+              "url": "https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE-FABLE-5.md"
+            },
+            {
+              "label": "Fable 5 프롬프팅 가이드(공식)",
+              "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5"
             }
           ],
           "slug": "claude-fable-5-mythos-5-422b043d",
