@@ -35,6 +35,7 @@ export interface Post {
   readMinutes?: number;  // 예상 읽기 시간 (분) — editorial card byline 표시용
   // 메인 hero 카드 전용 — PostDetail에서 영상/임베드 재생
   videoUrl?: string;          // YouTube embed URL (예: https://www.youtube.com/embed/xxx)
+  videoSrc?: string;          // 로컬 mp4 경로 — <video>로 카드 내 인라인 재생
   videoPoster?: string;       // 영상 썸네일
   threadsEmbedUrl?: string;   // Threads 게시물 iframe embed URL
   galleryImages?: { src: string; alt: string; caption?: string }[]; // 본문 중간 inline 이미지

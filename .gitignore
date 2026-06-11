@@ -55,3 +55,4 @@ VOL*_HANDOFF.md
 
 # Claude Code per-project workspace
 .claude/
+.tmp/

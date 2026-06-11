@@ -258,6 +258,67 @@ export const edition2026_06a: ABEdition = {
       sourceCompany: "NVIDIA / Doosan",
       editorial: "이번 회차가 모델·기업·인프라 세 축에 집중하느라 비워 둔 피지컬 AI(embodied) 축을 채우는 마무리 카드입니다. 3번 카드의 Project Solara가 소프트웨어 쪽 '에이전트용 OS'라면, 이 카드는 하드웨어 쪽 'Agentic Robot OS' — 같은 OS 추상화가 소프트웨어와 로봇 양쪽에서 동시에 일어나는 신호로 읽어 주세요. 두산이라는 한국 제조 대기업이 산업 자동화를 넘어 양팔·휴머노이드 플랫폼까지 확장한다는 점에서, AI가 화면 밖 물리 세계로 넘어가는 그 2주의 대표 장면입니다.",
     },
+    {
+      rank: 11,
+      tier: "normal",
+      post: {
+        date: "6/10",
+        platform: "Threads",
+        title: "Claude Fable 5 출시 24시간 — 프롬프트로 쏟아진 데모 22선",
+        deck: "게임·3D·로봇·도시 시뮬까지, 코드 없이 프롬프트만으로 만든 사례 모음",
+        summary: "Claude Fable 5가 공개되고 24시간이 지나기 전에, X 개발자들이 프롬프트만으로 게임·3D CAD·휴머노이드 설계·도시 시뮬레이션·영상 도구를 만들어 낸 데모가 쏟아졌습니다. @choi.openai가 그 모음을 영상으로 정리했습니다.",
+        content: "Claude Fable 5 출시 직후 24시간 동안 X 개발자들이 프롬프트만으로 만들어 낸 데모가 쏟아졌습니다. 아래 영상은 그 사례 22여 건을 모은 42초 몽타주입니다.\n\n핵심 사실:\n\n- 포켓몬·마리오카트·Call of Duty·RPG 같은 게임을 프롬프트로 구현\n- 3D CAD, 휴머노이드 로봇 설계, 도시 교통 시뮬레이션\n- 영화 촬영 설계 도구까지, 전부 직접 코딩 없이 생성\n- 영상 모음 큐레이션: @choi.openai (Threads, 한국어)\n- 개별 데모 1차 원본: X 개발자 커뮤니티(earthtojake·bilawalsidhu·johnsavage_ai·kieradev 등)\n- 제품 공식 출처: Anthropic 발표 페이지\n\n핵심은 만드는 능력이 흔해졌다는 게 아니라, 무엇을 만들지 떠올리는 쪽으로 병목이 옮겨갔다는 점입니다.\n\n출처: anthropic.com, @choi.openai",
+        officialUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        source: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        backupUrls: [
+          { label: "@choi.openai (Threads)", url: "https://www.threads.com/@choi.openai/post/DZZyWUwj4qe" },
+        ],
+        slug: "fable5-launch-demos-24h-choi",
+        tags: ["Claude Fable 5", "출시 데모", "영상"],
+        videoSrc: "/threads-assets/choi-fable5-demos-20260610/demos.mp4",
+        videoPoster: "/threads-assets/choi-fable5-demos-20260610/poster.jpg",
+        thumbnail: {
+          src: "/threads-assets/choi-fable5-demos-20260610/poster.jpg",
+          alt: "Claude Fable 5 출시 24시간 데모 모음 영상",
+        },
+      },
+      sourceWeek: "2026-w24",
+      sourceCompany: "Anthropic",
+      editorial: "출시 직후 데모 폭발은 모델 능력보다 '무엇을 만들지'가 병목이 됐다는 신호로 읽어 주세요. 영상은 큐레이션이라 1차 출처(Anthropic 공식)와 개별 데모 원본(X 개발자)을 분리해 표기했습니다.",
+    },
+    {
+      rank: 12,
+      tier: "normal",
+      post: {
+        date: "6/10",
+        platform: "Threads",
+        title: "Fable 5, 메모리 기반 지속학습에서 직전 세대 앞서 — Continual Learning Bench",
+        deck: "세션을 가로지르는 메모리가 있을 때 Fable 5가 Opus 4.7·Sonnet 4.6을 앞섰다",
+        summary: "한 세션에서 배운 것을 다음 세션에서 꺼내 쓰는 '메모리'를 줬을 때, Fable 5가 직전 세대보다 높은 점수를 냈다는 제3자 벤치마크(Lance Martin의 Continual Learning Bench)입니다. 앞선 Vending-Bench(부정)와 방향이 다른 독립 신호로, 같이 놓고 봐야 합니다.",
+        content: "Lance Martin이 만든 제3자 벤치마크 Continual Learning Bench로 세 모델의 '세션을 가로지르는 메모리' 능력을 비교했습니다.\n\n핵심 사실:\n\n- 메모리 스토어가 있을 때 점수: Fable 5 0.839 / Opus 4.7 0.700 / Sonnet 4.6 0.364\n- 메모리 없는 baseline 대비 Fable 5는 0.555 → 0.839로 가장 크게 상승\n- 게임 Slay the Spire에서도 파일 메모리를 주면 Fable이 Opus 4.8보다 약 3배 더 멀리 진행\n- 포스트 서술상 메모리 검증률: Fable 5 약 73% / Opus 4.7 약 17% / Sonnet 4.6은 1단계에서 멈춤 (차트가 아니라 본문 서술값)\n- Anthropic 시스템 카드: 일반 박사 팀이 모델만 쥐고 세계 최고 전문가 팀을 이긴 '벼 도열병 방어' 실험도 함께 인용됨\n\n이 자료의 메시지는 '같은 모델을 쥐고도 목표·채점·검증을 설계할 줄 아는 사람이 결과를 가른다'입니다.\n\n주의: 앞선 Vending-Bench 독립 eval은 사업성·얼라인먼트에서 부정 신호였습니다. 둘은 보는 능력이 달라, 한 화면에 같이 놓고 판단해야 합니다.\n\n출처: Lance Martin Continual Learning Bench, anthropic.com 시스템 카드, @unclejobs.ai 큐레이션",
+        officialUrl: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        source: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        backupUrls: [
+          { label: "Anthropic 시스템 카드(PDF)", url: "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf" },
+          { label: "@unclejobs.ai (Threads)", url: "https://www.threads.com/@unclejobs.ai/post/DZTKKq7DIG-" },
+          { label: "Lance Martin — Designing loops with Fable 5", url: "https://x.com/RLanceMartin/status/2064397389189071163" },
+        ],
+        slug: "fable5-continual-learning-bench",
+        tags: ["Claude Fable 5", "벤치마크", "에이전트 메모리"],
+        thumbnail: {
+          src: "/threads-assets/unclejobs-fable5-bench-20260610/continual-learning-bench.jpg",
+          alt: "Continual Learning Bench — Fable 5 메모리 지속학습 우위",
+        },
+        images: [
+          { src: "/threads-assets/unclejobs-fable5-bench-20260610/continual-learning-bench.jpg", alt: "Continual Learning Bench 결과 차트", caption: "메모리 스토어 유무별 점수 — Fable 5 0.839 / Opus 4.7 0.700 / Sonnet 4.6 0.364" },
+          { src: "/threads-assets/unclejobs-fable5-bench-20260610/fable5-loop-diagram.jpg", alt: "Fable 5 에이전트 루프 설계 다이어그램", caption: "Lance Martin — AGENT → WORKERS → grade → loop 구조 (판 까는 기술)" },
+        ],
+      },
+      sourceWeek: "2026-w24",
+      sourceCompany: "Anthropic",
+      editorial: "이 카드는 Fable 5의 '긍정 독립 신호'입니다. 1번 hero 카드의 Vending-Bench가 부정이었다면, 이 Continual Learning Bench는 메모리 기반 지속학습에서 긍정입니다. 벤더 주장 + 두 방향의 독립 평가를 한 화면에 놓는 것이 이번 회차의 자세입니다. 수치는 제3자 벤치마크(Lance Martin)이며 검증률 73%/17%는 차트가 아닌 본문 서술값임을 분리해 전달하세요.",
+    }
+
   ],
   editorsPicks: [
     {
@@ -310,22 +371,6 @@ export const edition2026_06a: ABEdition = {
         src: "/og-cache/카카오톡-cli-3형제-9521644a.png",
         alt: "카카오톡 CLI 3형제",
       },
-    },
-  ],
-  demoCards: [
-    {
-      title: "Claude Fable 5 출시 — 24시간 만에 쏟아진 데모 22선",
-      slug: "fable5-launch-demos-24h",
-      category: "출시 데모 · 영상",
-      subtitle: "출시 하루 만에 게임·3D·로봇·도시 시뮬까지, 프롬프트 몇 줄로 만든 사례 모음",
-      url: "https://www.anthropic.com/news/claude-fable-5-mythos-5",
-      label: "Anthropic 공식 발표 →",
-      videoSrc: "/threads-assets/choi-fable5-demos-20260610/demos.mp4",
-      videoPoster: "/threads-assets/choi-fable5-demos-20260610/poster.jpg",
-      summary: "Claude Fable 5가 공개되고 24시간이 지나기 전에, X 개발자들이 프롬프트만으로 게임·3D CAD·휴머노이드 설계·도시 시뮬레이션·영상 도구를 만들어 낸 데모가 쏟아졌습니다. 그 모음을 영상으로 정리했습니다.",
-      body: "헤더 영상은 출시 직후 공개된 데모 22여 건을 모은 42초 몽타주입니다. 포켓몬·마리오카트·Call of Duty·RPG 같은 게임부터 3D CAD, 휴머노이드 로봇 설계, 도시 교통 시뮬레이션, 영화 촬영 설계 도구까지 — 전부 코드를 직접 작성하지 않고 프롬프트로 만든 사례입니다.\n\n핵심은 '만드는 능력이 흔해졌다'가 아니라 '무엇을 만들지 떠올리는 쪽으로 병목이 옮겨갔다'는 점입니다. 같은 모델을 쥐고도 결과가 갈리며, 목표·채점·검증을 어떻게 설계하느냐가 성과를 가릅니다.\n\n영상 모음은 @choi.openai가 한국어로 큐레이션했고, 개별 데모의 1차 원본은 X 개발자 커뮤니티(earthtojake·bilawalsidhu·johnsavage_ai·kieradev 등)입니다. 제품 자체의 공식 출처는 Anthropic 발표 페이지입니다.",
-      workflow: "원본 데모: X 개발자 커뮤니티 · 큐레이션: @choi.openai (Threads) · 제품 공식: anthropic.com",
-      tags: ["Claude Fable 5", "출시 데모", "영상"],
     },
   ],
 };

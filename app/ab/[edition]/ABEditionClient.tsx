@@ -460,6 +460,27 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
         {renderRichText(item.post.content || item.post.summary || "")}
       </p>
 
+      {item.post.videoSrc && (
+        <video
+          controls
+          playsInline
+          preload="metadata"
+          poster={item.post.videoPoster}
+          style={{
+            marginTop: 18,
+            width: "100%",
+            maxHeight: 520,
+            borderRadius: "var(--radius-xs)",
+            border: "1px solid var(--border2)",
+            background: "#000",
+            display: "block",
+          }}
+        >
+          <source src={item.post.videoSrc} type="video/mp4" />
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      )}
+
       <ImageGallery images={item.post.images} tone="accent" />
       <XPostEmbed url={xStatusUrl} />
 
