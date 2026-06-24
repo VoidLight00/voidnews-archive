@@ -25,6 +25,10 @@ const MISSING_REPORT = path.join(WORKSPACE, "missing.json");
 const args = process.argv.slice(2);
 const ONLY = args.includes("--only") ? args[args.indexOf("--only") + 1] : "all";
 const DRY = args.includes("--dry-run");
+// --files a.ts,b.ts : 지정 basename 만 처리 (편집하지 않은 파일을 건드리지 않기 위한 스코프 제한)
+const FILES = args.includes("--files")
+  ? args[args.indexOf("--files") + 1].split(",").map((s) => s.trim()).filter(Boolean)
+  : null;
 
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15";
@@ -195,7 +199,8 @@ async function processFile(file, kind) {
   const lines = src.split("\n");
 
   // 모든 title 위치 → enclosing { ... } 윈도우 추출
-  const titleRe = /^(\s*)title:\s*"([^"]+)"/;
+  // weekly 자동생성 파일은 quoted-key("title": "...") , AB/일부 weekly는 unquoted(title: "...") 둘 다 지원
+  const titleRe = /^(\s*)"?title"?:\s*"([^"]+)"/;
   const candidates = [];
   for (let i = 0; i < lines.length; i++) {
     const m = lines[i].match(titleRe);
@@ -238,11 +243,13 @@ async function processFile(file, kind) {
   let injected = 0, skipped = 0, fetched = 0, fellback = 0;
 
   for (const c of cards) {
-    if (/\bthumbnail:\s*\{/.test(c.window)) { skipped++; continue; }
+    // thumbnail 존재 체크: 객체 형태(thumbnail: {) 또는 비어있지 않은 문자열 형태(thumbnail: "..." / "thumbnail": "...")
+    if (/"?thumbnail"?:\s*\{/.test(c.window)) { skipped++; continue; }
+    if (/"?thumbnail"?:\s*"[^"]+"/.test(c.window)) { skipped++; continue; }
     const url =
-      (c.window.match(/officialUrl:\s*"([^"]+)"/) || [])[1] ||
-      (c.window.match(/sourceUrl:\s*"([^"]+)"/) || [])[1] ||
-      (c.window.match(/source:\s*"([^"]+)"/) || [])[1];
+      (c.window.match(/"?officialUrl"?:\s*"([^"]+)"/) || [])[1] ||
+      (c.window.match(/"?sourceUrl"?:\s*"([^"]+)"/) || [])[1] ||
+      (c.window.match(/"?source"?:\s*"([^"]+)"/) || [])[1];
     if (!url) {
       missing.push({ file: path.basename(file), title: c.title, reason: "no-url" });
       continue;
@@ -267,7 +274,8 @@ async function processFile(file, kind) {
       missing.push({ file: path.basename(file), title: c.title, url, reason: "no-og-or-fallback" });
       continue;
     }
-    ops.push({ endIdx: c.endIdx, file: cached, alt: c.title });
+    const quoted = /^\s*"title":/m.test(c.window);
+    ops.push({ endIdx: c.endIdx, file: cached, alt: c.title, quoted });
     injected++;
   }
 
@@ -286,12 +294,19 @@ async function processFile(file, kind) {
           newLines[prevIdx] = newLines[prevIdx].trimEnd() + ",";
         }
       }
-      const block = [
-        `${fieldIndent}thumbnail: {`,
-        `${fieldIndent}  src: "/og-cache/${op.file}",`,
-        `${fieldIndent}  alt: "${esc(op.alt)}",`,
-        `${fieldIndent}},`,
-      ];
+      const block = op.quoted
+        ? [
+            `${fieldIndent}"thumbnail": {`,
+            `${fieldIndent}  "src": "/og-cache/${op.file}",`,
+            `${fieldIndent}  "alt": "${esc(op.alt)}"`,
+            `${fieldIndent}},`,
+          ]
+        : [
+            `${fieldIndent}thumbnail: {`,
+            `${fieldIndent}  src: "/og-cache/${op.file}",`,
+            `${fieldIndent}  alt: "${esc(op.alt)}",`,
+            `${fieldIndent}},`,
+          ];
       newLines.splice(op.endIdx, 0, ...block);
     }
     fs.writeFileSync(file, newLines.join("\n"));
@@ -319,8 +334,12 @@ async function main() {
         targets.push({ file: path.join(ad, f), kind: "ab" });
   }
 
+  const scoped = FILES
+    ? targets.filter((t) => FILES.includes(path.basename(t.file)))
+    : targets;
+
   const allMissing = [];
-  for (const t of targets) {
+  for (const t of scoped) {
     const m = await processFile(t.file, t.kind);
     allMissing.push(...m);
   }

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-slugs.mjs && node scripts/check-regressions.mjs && node scripts/check-card-content.mjs",
+    "prebuild": "node scripts/run-all-gates.mjs",
+    "gates": "node scripts/run-all-gates.mjs",
     "build": "next build",
     "postbuild": "node scripts/check-render-leaks.mjs",
     "start": "next start",
@@ -14,7 +15,10 @@
     "check:card-content": "node scripts/check-card-content.mjs",
     "check:render-leaks": "node scripts/check-render-leaks.mjs",
     "check:collection-provenance": "node scripts/check-collection-provenance.mjs",
-    "verify:publish-ready": "node scripts/verify-publish-ready.mjs"
+    "verify:publish-ready": "node scripts/verify-publish-ready.mjs",
+    "verify:no-duplicates": "node scripts/verify-no-duplicates.mjs --scope all",
+    "check:date-coverage": "node scripts/check-date-coverage.mjs",
+    "consolidate": "node scripts/consolidate-runs.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",

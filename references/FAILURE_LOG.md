@@ -58,3 +58,22 @@ QA(`voidbrief-qa-auditor`)나 사용자가 새 결함을 발견하면:
 - 원인 (5-why): (1) collect.js에 discovery 단계 미기재 → (2) 정식 `voidbrief-collector`를 안 쓰고 즉석 스크립트로 대체 → (3) AUP 차단 회피를 위해 fresh 세션에서 collector 로직을 **기억으로 재작성** → (4) 재작성 시 `official-source-matrix.md`의 discovery 2단 구조와 QA 게이트를 누락 → (5) **근본: 임시 파이프라인에 수집-완전성 게이트가 아예 없어 검증 기회 자체가 없었음** (QA가 빠뜨린 게 아니라 QA를 우회).
 - 해결: (a) `scripts/check-collection-provenance.mjs` 신설 — 수집 디렉토리에 `_source_matrix_check.json`(publishers 매트릭스 + discoveryChecked[TestingCatalog]) 증거가 없으면 exit 1. (b) `regressions.json` VN005로 임시 collect 스크립트가 official-source-matrix/TestingCatalog discovery를 빠뜨렸는지 grep. (c) CLAUDE.full 하네스 라우팅에 "정식 하네스가 있으면 임시 스크립트로 대체 금지, 불가피하면 게이트까지 포팅" 규칙 추가(메모리 [[reference_harness_no_adhoc_bypass]]).
 - 담당: `voidbrief-collector`(수집), `voidbrief-qa-auditor`(검증). 머신체크: `scripts/check-collection-provenance.mjs`(수집 후 HARD, exit 1) + `regressions.json` VN005. **재발 방지 핵심: 다음에 누가 임시 수집을 또 짜도, provenance 게이트가 없으면 그 산출물은 사이트 반영 전에 차단된다.**
+
+### VN006 — 같은 officialUrl 카드 중복이 자기보고로만 막힘 (2026-06-20, soundness 감사)
+- 증상: 동일 공식 발표가 여러 주차/edition에 별도 카드로 중복 등재돼도 "중복 없이"가 LLM 판단(SOFT)으로만 보장. 실측 결과 published 데이터에 동일 officialUrl 중복 21건(특정 기사 기준) 존재.
+- 원인: dedup이 normalizer/verifier 에이전트 안에만 있고 exit-code 게이트가 없었음.
+- 해결: `scripts/verify-no-duplicates.mjs`(HARD, 신규 dup → exit 2). generic 인덱스 URL(release-notes/news/changelog)은 allowlist, 기존 21건은 `scripts/known-duplicates-baseline.json`에 legacy로 baseline. `run-all-gates.mjs`(=prebuild) 상시 실행. 회귀 테스트: baseline에서 1건 제거 시 exit 2 실증.
+- 담당: `voidbrief-site-writer`. 머신체크: `verify-no-duplicates.mjs`(prebuild HARD) + `regressions.json` VN006(배선 메타가드).
+- 잔여 tech debt: baseline의 21건 중 일부(PaddleOCR 3.5, higher-limits-spacex 등)는 실제 중복 카드 — 추후 site 정리 대상. 나머지(io-2026 keynote 다중 발표 등)는 한 발표 다중 카드로 정상.
+
+### VN007 — 범위 종료일 직전 커버리지 공백 무검출 (2026-06-20, soundness 감사)
+- 증상: run이 "~ 2026-06-18"을 선언해도 실제 최신 수집물이 2026-06-09에서 끊겨 6/10~6/18 한 주가 통째로 누락되는데, 모든 기존 HARD 게이트는 통과. (이번 consolidate 작업에서 실측: tail gap 9일)
+- 원인: date-rules는 "시작·종료 포함"만 명시, day-by-day/tail-window 커버리지 게이트 부재.
+- 해결: `scripts/check-date-coverage.mjs`(HARD, tail gap > max → exit 2, interior 연속공백도 감지). consolidate-runs.mjs가 자동 호출. 실증: 범위 6/18→exit2, 6/10→exit0.
+- 담당: `voidbrief-conductor`. 머신체크: `check-date-coverage.mjs`(consolidate/run HARD) + `regressions.json` VN007(배선 메타가드).
+
+### VN008 — threads 봇 수집 데이터가 정식 ingest 경로 없이 누락 (2026-06-20, soundness 감사)
+- 증상: `~/threads-automation`이 상시 모은 source_archive.sqlite(482) + content_archive.json(96)이 AB 하네스에 정식 phase/agent로 들어오지 않아, 매 run마다 사람이 안 챙기면 한국·실시간 소스가 통째로 누락. 과거엔 `04_cokacdir_publish_addendum.json` 같은 ad-hoc crosscheck만 존재.
+- 원인: 봇과 AB가 별도 repo라 ingest 계약이 없었음.
+- 해결: `voidbrief-threads-ingest`(Phase 1B) 에이전트 신설(read-only sqlite, role 분류, `discoveredVia:threads-archive`). consolidate 경로는 `scripts/consolidate/extract_collected.py`가 결정론으로 동일 ingest 수행.
+- 담당: `voidbrief-threads-ingest`. 머신체크: `regressions.json` VN008(ingest 경로 배선 메타가드).

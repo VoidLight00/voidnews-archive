@@ -28,6 +28,36 @@
       "min": 2,
       "owner": "voidbrief-qa-auditor",
       "note": "임시 수집이 official-source-matrix+discovery(TestingCatalog/큐레이터) 단계를 우회했던 VN005 재발 방지. 실제 검증은 scripts/check-collection-provenance.mjs(fail-closed) 가 하고, 이 회귀체크는 그 게이트가 publish-ready 체인+npm script 에서 사라지지 않도록 배선 자체를 지킨다(메타가드). min=2: verify-publish-ready.mjs 호출 1 + package.json 등록 1."
+    },
+    {
+      "id": "VN006",
+      "title": "중복 officialUrl 게이트 배선 제거 방지 (메타가드)",
+      "type": "grep_present_min",
+      "globs": ["scripts/run-all-gates.mjs"],
+      "patterns": ["verify-no-duplicates"],
+      "min": 1,
+      "owner": "voidbrief-site-writer",
+      "note": "verify-no-duplicates.mjs(HARD)가 build 게이트 러너에서 빠지면 '중복 없이' 보장이 다시 SOFT로 회귀. run-all-gates.mjs BUILD_GATES에 배선 유지 강제."
+    },
+    {
+      "id": "VN007",
+      "title": "커버리지 공백 게이트 배선 제거 방지 (메타가드)",
+      "type": "grep_present_min",
+      "globs": ["scripts/consolidate-runs.mjs"],
+      "patterns": ["check-date-coverage"],
+      "min": 1,
+      "owner": "voidbrief-conductor",
+      "note": "check-date-coverage.mjs(HARD)가 consolidate 엔진에서 빠지면 tail-window 공백이 다시 무검출. consolidate-runs.mjs 호출 유지 강제."
+    },
+    {
+      "id": "VN008",
+      "title": "threads 봇 ingest 경로 제거 방지 (메타가드)",
+      "type": "grep_present_min",
+      "globs": ["scripts/consolidate/extract_collected.py"],
+      "patterns": ["source_archive", "content_archive"],
+      "min": 2,
+      "owner": "voidbrief-threads-ingest",
+      "note": "consolidate 엔진이 봇 sqlite/content를 읽는 ingest 경로가 사라지면 봇 데이터가 다시 누락. 두 소스 참조 유지 강제(min=2)."
     }
   ]
 }

@@ -1,0 +1,25 @@
+{
+  "accepted": [
+    "anthropic.com/news/claude-fable-5-mythos-5",
+    "anthropic.com/news/claude-for-creative-work",
+    "anthropic.com/news/claude-opus-4-8",
+    "anthropic.com/news/higher-limits-spacex",
+    "blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app",
+    "blog.google/innovation-and-ai/sundar-pichai-io-2026",
+    "blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2",
+    "blog.google/products-and-platforms/platforms/android/gemini-intelligence",
+    "github.com/manaflow-ai/cmux",
+    "huggingface.co/blog/allenai/olmoearth-v1-1",
+    "huggingface.co/blog/continuous_async",
+    "huggingface.co/blog/ibm-granite/granite-4-1",
+    "huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
+    "huggingface.co/blog/paddlepaddle/paddleocr-transformers",
+    "huggingface.co/blog/servicenow-ai/correctness-before-corrections",
+    "openai.com/index/gpt-5-5-instant",
+    "openai.com/index/introducing-the-codex-app",
+    "openai.com/index/model-disproves-discrete-geometry-conjecture",
+    "thinkingmachines.ai/blog/interaction-models",
+    "x.ai/news/grok-custom-voices"
+  ],
+  "note": "legacy duplicate officialUrls accepted as tech debt; new dups outside this list fail the build"
+}
