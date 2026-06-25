@@ -40,7 +40,7 @@ export const week25: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/anthropic-fable-5-mythos-5-접근-차단-수출통제-지침-e8bdc063.png",
+            "src": "/og-cache/hl-anthropic-fable-5-mythos-5-96ce470e.png",
             "alt": "Anthropic, Fable 5·Mythos 5 접근 차단 — 美 수출통제 지침으로 최상위 모델 글로벌 중단"
           },
         },
@@ -442,7 +442,7 @@ export const week25: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/z-ai-zhipu-glm-5-2-오픈웨이트-mit-공개-753b-moe-aa77803b.png",
+            "src": "/og-cache/hl-zai-glm-5-2-cb54c1db.png",
             "alt": "Z.ai(Zhipu), GLM-5.2 오픈웨이트(MIT) 공개 — 753B MoE·1M 컨텍스트"
           },
         }
@@ -494,7 +494,7 @@ export const week25: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/moonshot-ai-kimi-k2-7-code-공개-1t-moe-32b-1880831d.png",
+            "src": "/og-cache/hl-moonshot-kimi-k2-7-code-0d1b8e50.png",
             "alt": "Moonshot AI, Kimi K2.7-Code 공개 — 1T MoE(32B active) 오픈웨이트 코딩 모델"
           },
         }
