@@ -157,5 +157,18 @@ export const edition2026_06b: ABEdition = {
       tags: ["cmux", "모바일", "원격"],
       tier: "normal",
     },
+    {
+      title: "fablelayer — Fable 5 규율 오픈소스 툴킷",
+      category: "AI 코딩 / 프롬프트 규율",
+      deck: "Fable 5식 작업 규율을 에이전트에 주입하는 툴킷",
+      sourceUrl: "https://github.com/VoidLight00/fablelayer",
+      sourceLabel: "GitHub →",
+      thumbnail: { src: "/og-cache/ab06b-pick-fablelayer.png", alt: "fablelayer — Fable 5 규율 오픈소스 툴킷" },
+      summary: "Fable 5의 절차·규율을 에이전트/프롬프트에 주입하는 오픈소스 툴킷.",
+      body: "fablelayer는 Fable 5식 작업 규율(목표·근거 원장 등)을 Claude Code 플러그인·CLI·로컬 LLM 어댑터 형태로 주입하는 오픈소스 툴킷입니다. 에이전트가 더 일관된 절차로 일하도록 규율을 코드로 입힙니다.\n\nVoidLight 제작.",
+      editorial: "이번 2주의 '에이전트를 규율 있게 운영한다'는 흐름과 맞닿아, 절차를 코드로 입히는 도구로 골랐습니다.",
+      tags: ["Fable 5", "오픈소스", "프롬프트 규율"],
+      tier: "normal",
+    },
   ],
 };
