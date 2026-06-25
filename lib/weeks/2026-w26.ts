@@ -30,7 +30,7 @@ export const week26: WeeklyData = {
             "Agent"
           ],
           "thumbnail": {
-            "src": "/og-cache/hl-anthropic-claude-tag-slack-claude-857dbf41.png",
+            "src": "/og-cache/og-anthropic-claude-tag-slack-claude-857dbf41.jpg",
             "alt": "Anthropic, 'Claude Tag' 공개 — Slack 팀원처럼 @Claude로 호출하는 협업 에이전트"
           },
         },
@@ -93,7 +93,7 @@ export const week26: WeeklyData = {
           "officialUrl": "https://code.claude.com/docs/en/changelog",
           "slug": "claude-code-v2-1-187-sandbox-631eafed",
           "thumbnail": {
-            "src": "/og-cache/hl-claude-code-v2-1-187-sandbox-631eafed.png",
+            "src": "/og-cache/og-claude-code-v2-1-187-sandbox-631eafed.jpg",
             "alt": "Claude Code v2.1.187 — sandbox.credentials 추가, 한국어·CJK 붙여넣기 깨짐(mojibake) 수정"
           },
           "tags": [
@@ -191,7 +191,7 @@ export const week26: WeeklyData = {
           "officialUrl": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/",
           "slug": "chatgpt-enterprise-codex-openai-13e45af8",
           "thumbnail": {
-            "src": "/og-cache/hl-chatgpt-enterprise-codex-openai-13e45af8.png",
+            "src": "/og-cache/og-chatgpt-enterprise-codex-openai-13e45af8.jpg",
             "alt": "삼성전자, ChatGPT Enterprise·Codex 전 직원 도입 — OpenAI 공식 발표"
           },
           "tags": [
@@ -233,7 +233,7 @@ export const week26: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/hl-openai-codex-record-replay-d91b48e9.png",
+            "src": "/og-cache/og-openai-codex-record-replay-d91b48e9.jpg",
             "alt": "OpenAI Codex 'Record & Replay' 공개 — 작업을 한 번 시연하면 재사용 가능한 스킬로"
           },
         },
@@ -639,7 +639,7 @@ export const week26: WeeklyData = {
             "반도체/메모리"
           ],
           "thumbnail": {
-            "src": "/og-cache/hl-sk-hbm4e-12-7-hbm-311c2396.png",
+            "src": "/og-cache/og-sk-hbm4e-12-7-hbm-311c2396.jpg",
             "alt": "SK하이닉스, HBM4E 12단 샘플 고객사 공급 개시 — 7세대 HBM 전쟁 본격화"
           },
         }
@@ -722,7 +722,7 @@ export const week26: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/hl-mistral-ocr-4-170-sota-6814b559.png",
+            "src": "/og-cache/og-mistral-ocr-4-170-sota-6814b559.jpg",
             "alt": "Mistral OCR 4 공개 — 170개 언어 문서 인식 SOTA, 단일 컨테이너 셀프호스팅"
           },
         }
@@ -788,7 +788,7 @@ export const week26: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/hl-sakana-ai-fugu-57e543cc.png",
+            "src": "/og-cache/og-sakana-ai-fugu-57e543cc.jpg",
             "alt": "Sakana AI 'Fugu' 공개 — 멀티 에이전트 오케스트레이션을 하나의 모델로"
           },
         }
