@@ -473,6 +473,10 @@ export const week25: WeeklyData = {
           ],
           "backupUrls": [
             {
+              "label": "K2.7-Code 퀵스타트 가이드 →",
+              "url": "https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart"
+            },
+            {
               "label": "Moonshot AI GitHub",
               "url": "https://github.com/moonshotai"
             },
