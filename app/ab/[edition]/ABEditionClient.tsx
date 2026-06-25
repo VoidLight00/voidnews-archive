@@ -554,7 +554,7 @@ function HighlightDetail({ item }: { item: ABHighlight }) {
         <aside
           style={{
             marginTop: 24,
-            borderLeft: "2px solid var(--accent)",
+            borderBottom: "2px solid var(--accent)",
             paddingLeft: 16,
           }}
         >
@@ -668,7 +668,7 @@ function PickModal({
         style={{
           marginTop: 22,
           maxWidth: "62ch",
-          borderLeft: "2px solid var(--gold)",
+          borderBottom: "2px solid var(--gold)",
           paddingLeft: 16,
           fontSize: "var(--text-md)",
           color: "var(--text)",
@@ -697,7 +697,7 @@ function PickModal({
         <aside
           style={{
             marginTop: 24,
-            borderLeft: "2px solid var(--gold)",
+            borderBottom: "2px solid var(--gold)",
             paddingLeft: 16,
           }}
         >
@@ -998,7 +998,7 @@ function HighlightArticle({
             <blockquote
               style={{
                 margin: 0,
-                borderLeft: `2px solid ${accent}`,
+                borderBottom: `2px solid ${accent}`,
                 paddingLeft: 10,
                 fontSize: 13,
                 lineHeight: 1.6,
@@ -1044,7 +1044,7 @@ function DemoCard({ item }: { item: ABDemoCard }) {
     <article
       style={{
         border: "1px solid var(--border2)",
-        borderLeft: "3px solid var(--gold)",
+        borderBottom: "3px solid var(--gold)",
         background: "color-mix(in srgb, var(--card), var(--surface) 22%)",
         borderRadius: "var(--radius-xs)",
         padding: "clamp(22px, 4vw, 34px)",

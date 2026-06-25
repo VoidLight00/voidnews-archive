@@ -541,7 +541,7 @@
   color: var(--text);
   margin: 0 0 var(--space-xl);
   padding: var(--space-md) var(--space-md);
-  border-left: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
   background: var(--surface);
   border-radius: var(--radius-none);
 }
@@ -660,7 +660,7 @@
   margin: var(--space-lg) 0;
   padding: var(--space-lg) var(--space-lg);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
   border-radius: var(--radius-xs);
   background: var(--card);
 }
@@ -805,7 +805,7 @@
 .articleQuote {
   margin: var(--space-lg) 0;
   padding: var(--space-sm) var(--space-lg);
-  border-left: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
   background: var(--surface);
   color: var(--text);
   font-family: var(--serif);
@@ -926,7 +926,7 @@
   margin-top: var(--space-xl);
   padding: var(--space-lg) var(--space-lg);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
   border-radius: var(--radius-xs);
   background: var(--card);
 }
@@ -1042,7 +1042,7 @@
   display: block;
   padding: var(--space-md) var(--space-md);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
   border-radius: var(--radius-xs);
   background: var(--card);
   text-decoration: none;
@@ -1054,7 +1054,7 @@
 
 .referenceMain:hover {
   border-color: var(--border2);
-  border-left-color: var(--accent);
+  border-bottom-color: var(--accent);
   background: var(--card-hover);
   transform: translateY(-2px);
 }

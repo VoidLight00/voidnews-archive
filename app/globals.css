@@ -192,7 +192,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 .intel-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   border-radius: 2px;
   transition: border-color 0.12s, background 0.12s, transform 0.18s;
   cursor: pointer;
@@ -201,7 +201,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 .intel-card:hover {
   background: var(--card-hover);
-  border-left-color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .intel-card:hover .card-reveal { opacity: 1; }
@@ -368,7 +368,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 .ab-core-flow {
   margin-top: clamp(24px, 4vw, 36px);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
   background: linear-gradient(135deg, var(--card), var(--surface));
   padding: clamp(18px, 3vw, 26px);
 }

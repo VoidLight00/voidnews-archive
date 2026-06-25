@@ -988,7 +988,7 @@ function PostModal({
               marginBottom: 22,
               lineHeight: 1.6,
               paddingLeft: 16,
-              borderLeft: `2px solid ${companyColor}`,
+              borderBottom: `2px solid ${companyColor}`,
               letterSpacing: "-0.01em",
             }}
           >

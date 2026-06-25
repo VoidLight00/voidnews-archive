@@ -393,7 +393,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
               className="article-card rise-in"
               style={{
                 borderLeft: "3px solid",
-                borderLeftColor: color,
+                borderBottomColor: color,
                 padding: "clamp(22px, 3.4vw, 36px)",
                 animationDelay: `${Math.min(idx, 6) * 50}ms`,
               }}
