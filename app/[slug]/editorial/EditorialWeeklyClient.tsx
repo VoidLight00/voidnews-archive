@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { WeeklyData } from "@/lib/data";
-import { weekDateLabel } from "@/lib/data";
+import { weekDateLabel } from "@/lib/week-label";
 import PostCard from "./PostCard";
 import styles from "./editorial.module.css";
 

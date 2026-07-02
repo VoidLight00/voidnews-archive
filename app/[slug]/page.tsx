@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAllSlugs, getWeek, weeks, weekDateLabel } from "@/lib/data";
+import { getAllSlugs, getWeek, getWeekList, weeks, weekDateLabel } from "@/lib/data";
 import WeeklyClient from "./WeeklyClient";
 import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
 
@@ -56,6 +56,7 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
       prevWeek={prevWeek}
       nextWeek={nextWeek}
       latestWeek={{ slug: latestWeek.slug, week: latestWeek.week, period: latestWeek.period }}
+      weekList={getWeekList()}
       nestedRoutePrefix={nestedRoutePrefix}
     />
   );

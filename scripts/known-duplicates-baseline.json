@@ -19,7 +19,13 @@
     "openai.com/index/introducing-the-codex-app",
     "openai.com/index/model-disproves-discrete-geometry-conjecture",
     "thinkingmachines.ai/blog/interaction-models",
-    "x.ai/news/grok-custom-voices"
+    "x.ai/news/grok-custom-voices",
+    "x.com/anthropicai/status/2036944806317088921",
+    "x.com/claudeai/status/2036195789601374705",
+    "x.com/figma/status/2036434766661296602",
+    "x.com/meta_engineers/status/2036494803723043156",
+    "x.com/openai/status/2033953592424731072",
+    "x.com/perplexity_ai/status/2034668608375382346"
   ],
   "note": "legacy duplicate officialUrls accepted as tech debt; new dups outside this list fail the build"
 }
