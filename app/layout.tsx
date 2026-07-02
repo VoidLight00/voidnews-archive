@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://voidnews-archive.vercel.app"),
   title: "VoidNews Archive",
   description: "AI 뉴스 주간 포스팅 아카이브 by @voidlight00",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/rss.xml" }, // 피드 리더 자동 발견
+  },
   robots: {
     index: true,
     follow: true,
