@@ -231,7 +231,6 @@ export function PostModal({
             style={{
               background: "var(--surface)",
               border: "1px solid var(--border)",
-              borderLeft: "2px solid var(--rule)",
               borderRadius: "var(--radius-xs)",
               padding: "18px 20px",
               marginBottom: 20,

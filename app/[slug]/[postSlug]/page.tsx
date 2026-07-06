@@ -7,6 +7,7 @@ import {
   listEditorialCards,
 } from "@/lib/editorial";
 import { getArticleCache } from "@/lib/article-cache";
+import { newsArticleLd, breadcrumbLd } from "@/lib/jsonld";
 import PostDetail from "../editorial/PostDetail";
 
 export async function generateStaticParams() {
@@ -24,6 +25,7 @@ export async function generateMetadata({
   return {
     title: `${meta.post.title} — VoidNews ${slug}`,
     description: meta.post.summary ?? meta.post.title,
+    alternates: { canonical: `/${slug}/${postSlug}/` },
     openGraph: {
       title: meta.post.title,
       description: meta.post.summary ?? "",
@@ -55,14 +57,33 @@ export default async function EditorialPostPage({
     )
     .slice(0, 6);
 
+  const ld = newsArticleLd({
+    title: meta.post.title,
+    description: meta.post.summary ?? undefined,
+    imageSrc: meta.post.thumbnail?.src,
+    path: `/${slug}/${postSlug}/`,
+    datePublished: meta.post.date || meta.weekPeriod,
+    yearHint: Number(slug.slice(0, 4)) || undefined,
+    section: meta.companyName,
+  });
+  const crumbs = breadcrumbLd([
+    { name: "VoidNews", path: "/" },
+    { name: slug, path: `/${slug}/` },
+    { name: meta.post.title, path: `/${slug}/${postSlug}/` },
+  ]);
+
   return (
-    <PostDetail
-      meta={meta}
-      prev={prev}
-      next={next}
-      weekSlug={slug}
-      article={article}
-      related={related}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ld }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: crumbs }} />
+      <PostDetail
+        meta={meta}
+        prev={prev}
+        next={next}
+        weekSlug={slug}
+        article={article}
+        related={related}
+      />
+    </>
   );
 }

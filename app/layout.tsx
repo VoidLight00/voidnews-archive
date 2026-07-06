@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "VoidNews Archive",
   description: "AI 뉴스 주간 포스팅 아카이브 by @voidlight00",
   alternates: {
-    canonical: "/",
+    // canonical은 라우트별 generateMetadata에서 지정 — 전역 상속 시 전 페이지가 홈을 정본 선언하는 SEO 결함
     types: { "application/rss+xml": "/rss.xml" }, // 피드 리더 자동 발견
   },
   robots: {

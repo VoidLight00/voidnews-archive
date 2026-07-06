@@ -140,7 +140,7 @@ Gartner Magic Quadrant는 \"공식 순위\"가 아니라 두 축(Ability to Exec
           slug: "work-with-codex-from-anywhere-codex-in-c-aa73b5cd",
           readMinutes: 1,
           thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.png",
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
             alt: "Work with Codex from anywhere — Codex in ChatGPT mobile",
           },
         },
@@ -798,7 +798,7 @@ OpenAI는 2019년 Microsoft 파트너십 이후 사실상 Azure 위에서만 ent
           slug: "openai-models-codex-and-managed-agents-o-561b585a",
           readMinutes: 1,
           thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.png",
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
             alt: "OpenAI models, Codex, and Managed Agents on Amazon Bedrock",
           },
         },
@@ -910,7 +910,7 @@ inference provider 시장이 \"단일 표준\" 없이 다극화되는 흐름이 
           slug: "olmoearth-v1-1-efficient-earth-observati-574e69d6",
           readMinutes: 1,
           thumbnail: {
-            src: "/og-cache/olmoearth-v1-1-efficient-earth-observati-574e69d6.png",
+            src: "/og-cache/olmoearth-v1-1-efficient-earth-observati-574e69d6.webp",
             alt: "OlmoEarth v1.1 efficient Earth observation AI models",
           },
         },
@@ -967,7 +967,7 @@ OpenAI text-embedding-3-large나 Cohere embed-v3가 좋아도 \"데이터를 외
           slug: "hugging-face-asynchronous-continuous-bat-9edd7b70",
           readMinutes: 1,
           thumbnail: {
-            src: "/og-cache/hugging-face-asynchronous-continuous-bat-9edd7b70.png",
+            src: "/og-cache/hugging-face-asynchronous-continuous-bat-9edd7b70.webp",
             alt: "Hugging Face asynchronous continuous batching",
           },
         },
@@ -1137,7 +1137,7 @@ ASR / LLM 양쪽 모두 \"벤치마크 점수와 실제 production 성능의 괴
           slug: "allenai-olmoearth-v1-1-earth-observation-632301e1",
           readMinutes: 1,
           thumbnail: {
-            src: "/og-cache/allenai-olmoearth-v1-1-earth-observation-632301e1.png",
+            src: "/og-cache/allenai-olmoearth-v1-1-earth-observation-632301e1.webp",
             alt: "allenai/OlmoEarth v1.1 — Earth observation을 위한 경량 오픈 모델.",
           },
         },
@@ -1215,7 +1215,7 @@ ASR / LLM 양쪽 모두 \"벤치마크 점수와 실제 production 성능의 괴
           slug: "hf-continuous-async-batching-hf-inferenc-f4c0835a",
           readMinutes: 1,
           thumbnail: {
-            src: "/og-cache/hf-continuous-async-batching-hf-inferenc-f4c0835a.png",
+            src: "/og-cache/hf-continuous-async-batching-hf-inferenc-f4c0835a.webp",
             alt: "HF continuous async batching — HF inference 비동기 연속 배치 처리 가이드.",
           },
         },

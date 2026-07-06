@@ -85,7 +85,7 @@ export const edition2026_06a: ABEdition = {
         slug: "claude-fable-5-mythos-5-422b043d",
         tags: ["Anthropic", "모델/제품"],
         thumbnail: {
-          src: "/og-cache/claude-fable-5-claude-mythos-5-공개-mythos-11c4ac33.png",
+          src: "/og-cache/claude-fable-5-claude-mythos-5-공개-mythos-11c4ac33.webp",
           alt: "Claude Fable 5·Claude Mythos 5 공개 — Mythos급 모델 첫 일반 공급",
         },
       },

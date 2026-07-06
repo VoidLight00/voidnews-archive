@@ -75,7 +75,7 @@ export const week16: WeeklyData = {
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/claudeai/status/2044785261393977612" }, { label: "Anthropic 공식", url: "https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-7" }, { label: "Anthropic 공식", url: "https://www.anthropic.com/claude/opus" }],
           tags: ["도구릴리스", "text", "code", "anthropic"],
           thumbnail: {
-            src: "/og-cache/claude-opus-4-7-정식-출시-agentic-coding-ste-b5232cfa.png",
+            src: "/og-cache/claude-opus-4-7-정식-출시-agentic-coding-ste-b5232cfa.webp",
             alt: "Claude Opus 4.7 정식 출시 — Agentic Coding step-change + xhigh/task budget/1M ctx/2576px 비전",
           },
         },
@@ -244,7 +244,7 @@ export const week16: WeeklyData = {
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/cursor_ai/status/2042935487183924091" }, { label: "cursor.com", url: "https://cursor.com/changelog/3-0" }, { label: "cursor.com", url: "https://cursor.com/blog/2-0" }],
           tags: ["도구릴리스", "code", "cursor"],
           thumbnail: {
-            src: "/og-cache/cursor-3-composer-2-4-2-에이전트-우선-ux-멀티-에이-f9da1e8e.png",
+            src: "/og-cache/cursor-3-composer-2-4-2-에이전트-우선-ux-멀티-에이-f9da1e8e.webp",
             alt: "Cursor 3 + Composer 2 (4/2) — 에이전트 우선 UX + 멀티 에이전트",
           },
         },
@@ -451,7 +451,7 @@ export const week16: WeeklyData = {
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/heygen_official/status/2042985920183920401" }, { label: "heygen.com", url: "https://www.heygen.com/blog/unleashing-the-power-of-realtime-avatars" }, { label: "mindstudio.ai", url: "https://www.mindstudio.ai/blog/heygen-avatar-5-clone-appearance-15-seconds-2" }],
           tags: ["도구릴리스", "video", "heygen", "bytedance"],
           thumbnail: {
-            src: "/og-cache/heygen-avatar-v-seedance-2-0-통합-15초-녹음으로-9d0bde43.png",
+            src: "/og-cache/heygen-avatar-v-seedance-2-0-통합-15초-녹음으로-9d0bde43.webp",
             alt: "HeyGen Avatar V + Seedance 2.0 통합 — 15초 녹음으로 스튜디오 아바타",
           },
         },

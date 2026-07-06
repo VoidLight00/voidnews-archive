@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `발표용 하이라이트 — Week ${data.week} (${data.period})`,
     description: `AI & Beyond 격주 발표 큐레이션 ${data.period}`,
+    alternates: { canonical: `/presentation/${slug}/` },
   };
 }
 
@@ -392,7 +393,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
               key={post.title}
               className="article-card rise-in"
               style={{
-                borderLeft: "3px solid",
+                borderBottom: "2px solid",
                 borderBottomColor: color,
                 padding: "clamp(22px, 3.4vw, 36px)",
                 animationDelay: `${Math.min(idx, 6) * 50}ms`,

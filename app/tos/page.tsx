@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "이용약관 · VoidNews Archive",
   description: "voidnews-archive 사이트 이용약관 및 저작권 정책.",
   robots: { index: true, follow: false },
-  alternates: { canonical: "/tos" },
+  alternates: { canonical: "/tos/" },
 };
 
 export default function TermsOfServicePage() {

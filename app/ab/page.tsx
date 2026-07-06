@@ -4,6 +4,7 @@ import { getEditionList } from "@/lib/ab/data";
 export const metadata = {
   title: "VoidNews — AB 멤버십 발표",
   description: "격주 AB 멤버십 발표 섹션. 핵심 신호와 발표 자료를 정리한 브리핑 아카이브.",
+  alternates: { canonical: "/ab/" },
 };
 
 function formatVolume(volume: number) {

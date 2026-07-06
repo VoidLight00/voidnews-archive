@@ -6,6 +6,7 @@ import {
   listABCards,
 } from "@/lib/ab/post-routes";
 import { getArticleCache } from "@/lib/article-cache";
+import { newsArticleLd, breadcrumbLd } from "@/lib/jsonld";
 import PostDetail from "@/app/[slug]/editorial/PostDetail";
 
 // Edition slug 별 accent color — companyColor 자리에 사용
@@ -106,14 +107,34 @@ export default async function ABPostPage({
       companyColor: ACCENT_BY_KIND[c.kind],
     }));
 
+  const ld = newsArticleLd({
+    title: meta.post.title,
+    description: meta.post.summary ?? meta.post.deck ?? undefined,
+    imageSrc: meta.post.thumbnail?.src,
+    path: `/ab/${edition}/${postSlug}/`,
+    datePublished: meta.post.date || meta.editionPeriod,
+    yearHint: Number(edition.slice(0, 4)) || undefined,
+    section: sectionLabel,
+  });
+  const crumbs = breadcrumbLd([
+    { name: "VoidNews", path: "/" },
+    { name: "AB 발표", path: "/ab/" },
+    { name: edition, path: `/ab/${edition}/` },
+    { name: meta.post.title, path: `/ab/${edition}/${postSlug}/` },
+  ]);
+
   return (
-    <PostDetail
-      meta={adaptedMeta}
-      prev={adaptedPrev}
-      next={adaptedNext}
-      weekSlug={`ab/${edition}`}
-      article={article}
-      related={related}
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ld }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: crumbs }} />
+      <PostDetail
+        meta={adaptedMeta}
+        prev={adaptedPrev}
+        next={adaptedNext}
+        weekSlug={`ab/${edition}`}
+        article={article}
+        related={related}
+      />
+    </>
   );
 }
