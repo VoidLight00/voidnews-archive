@@ -20,6 +20,7 @@ const BUILD_GATES = {
   "check-card-content.mjs": [],
   "verify-no-duplicates.mjs": ["--scope", "all"],
   "verify-improvements.mjs": [],
+  "check-dangling-thumbs.mjs": [],
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([

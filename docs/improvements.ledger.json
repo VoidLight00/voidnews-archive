@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "entries": [
     {
       "id": "IMP-0001",
@@ -9,7 +9,7 @@
       "source": "audit",
       "category": "seo",
       "request": "canonical이 전 라우트에서 홈('/')으로 자기선언되던 결함(약 220 URL) 제거 → 라우트별 self-canonical",
-      "status": "applied",
+      "status": "verified",
       "files": [
         "app/layout.tsx",
         "app/[slug]/page.tsx",
@@ -20,14 +20,14 @@
         "app/presentation/[slug]/page.tsx",
         "app/tos/page.tsx"
       ],
-      "commit": null,
+      "commit": "5aa9c35",
       "evidence": {
         "kind": "count",
         "cmd": "grep -rl 'canonical' app --include='*.tsx' | wc -l",
         "op": "gte",
         "value": 6
       },
-      "notes": "layout 전역 canonical 제거 + 라우트별 주입. 빌드 HTML self-ref 확인함."
+      "notes": "layout 전역 canonical 제거 + 라우트별 주입. 빌드 HTML self-ref 확인함. · 프로덕션 확인(2026-07-07 exhaustive audit: canonical 22/22·JSON-LD 12/12·render 7/7·img 154/160·회귀0)"
     },
     {
       "id": "IMP-0002",
@@ -35,18 +35,18 @@
       "source": "audit",
       "category": "perf",
       "request": "22.5MB 썸네일 포함 1MB 초과 이미지 17건 최적화 (JPG 재압축, PNG→webp)",
-      "status": "applied",
+      "status": "verified",
       "files": [
         "public/og-cache/"
       ],
-      "commit": null,
+      "commit": "5aa9c35",
       "evidence": {
         "kind": "count",
         "cmd": "find public/og-cache -type f -size +1M | wc -l",
         "op": "eq",
         "value": 0
       },
-      "notes": "PNG 15건 cwebp 변환 + 참조 17곳 갱신. JPG 2건 sips 재압축(22.5MB→176KB)."
+      "notes": "PNG 15건 cwebp 변환 + 참조 17곳 갱신. JPG 2건 sips 재압축(22.5MB→176KB). · 프로덕션 확인(2026-07-07 exhaustive audit: canonical 22/22·JSON-LD 12/12·render 7/7·img 154/160·회귀0)"
     },
     {
       "id": "IMP-0003",
@@ -54,20 +54,20 @@
       "source": "user-instruction",
       "category": "design",
       "request": "세로줄(좌측 색 스트라이프 ≥3px) 재유입분 제거 — 영구 금지 규칙",
-      "status": "applied",
+      "status": "verified",
       "files": [
         "app/presentation/[slug]/page.tsx",
         "app/[slug]/weekly/PostModal.tsx",
         "app/[slug]/editorial/editorial.module.css"
       ],
-      "commit": null,
+      "commit": "5aa9c35",
       "evidence": {
         "kind": "count",
         "cmd": "grep -rhoE 'border-left:[[:space:]]*[3-9]px|borderLeft:[[:space:]]*\"[3-9]px' app | wc -l",
         "op": "eq",
         "value": 0
       },
-      "notes": "presentation 3px-left 제거, editorial .officialQuote 3px→2px, PostModal 장식 좌테 제거."
+      "notes": "presentation 3px-left 제거, editorial .officialQuote 3px→2px, PostModal 장식 좌테 제거. · 프로덕션 확인(2026-07-07 exhaustive audit: canonical 22/22·JSON-LD 12/12·render 7/7·img 154/160·회귀0)"
     },
     {
       "id": "IMP-0004",
@@ -75,18 +75,18 @@
       "source": "audit",
       "category": "seo",
       "request": "홈 '/'이 빈 __next_error__ 셸(redirect-only)이라 크롤러 백지 → 실콘텐츠 렌더",
-      "status": "applied",
+      "status": "verified",
       "files": [
         "app/page.tsx"
       ],
-      "commit": null,
+      "commit": "5aa9c35",
       "evidence": {
         "kind": "count",
         "cmd": "grep -cE 'getWeekList|getEditionList' app/page.tsx",
         "op": "gte",
         "value": 1
       },
-      "notes": "next/navigation redirect 제거 → 최근 8주+AB 4 실콘텐츠 + JS location.replace."
+      "notes": "next/navigation redirect 제거 → 최근 8주+AB 4 실콘텐츠 + JS location.replace. · 프로덕션 확인(2026-07-07 exhaustive audit: canonical 22/22·JSON-LD 12/12·render 7/7·img 154/160·회귀0)"
     },
     {
       "id": "IMP-0005",
@@ -94,20 +94,20 @@
       "source": "audit",
       "category": "seo",
       "request": "뉴스 아카이브인데 JSON-LD 구조화 데이터 0건 → NewsArticle + BreadcrumbList 주입",
-      "status": "applied",
+      "status": "verified",
       "files": [
         "lib/jsonld.ts",
         "app/[slug]/[postSlug]/page.tsx",
         "app/ab/[edition]/[postSlug]/page.tsx"
       ],
-      "commit": null,
+      "commit": "5aa9c35",
       "evidence": {
         "kind": "count",
         "cmd": "grep -rl 'application/ld' app | wc -l",
         "op": "gte",
         "value": 2
       },
-      "notes": "두 포스트 타입에 NewsArticle+BreadcrumbList. 날짜 정규화(M/D+yearHint→ISO)."
+      "notes": "두 포스트 타입에 NewsArticle+BreadcrumbList. 날짜 정규화(M/D+yearHint→ISO). · 프로덕션 확인(2026-07-07 exhaustive audit: canonical 22/22·JSON-LD 12/12·render 7/7·img 154/160·회귀0)"
     },
     {
       "id": "IMP-0006",
@@ -254,13 +254,18 @@
       "source": "audit",
       "category": "content",
       "request": "dangling 썸네일 6건(ibm-granite 등) — HEAD에도 없는 기존 broken 참조. 재수집 또는 참조 제거",
-      "status": "pending",
-      "files": [],
+      "status": "applied",
+      "files": [
+        "lib/weeks/2026-w22.ts",
+        "lib/weeks/2026-w21.ts",
+        "scripts/check-dangling-thumbs.mjs"
+      ],
       "commit": null,
       "evidence": {
-        "kind": "manual"
+        "kind": "exit0",
+        "cmd": "node scripts/check-dangling-thumbs.mjs"
       },
-      "notes": "제 변경과 무관한 기존 결함."
+      "notes": "exhaustive 감사가 /2026-w22/ 실제 404 broken 이미지로 확정 → broken thumbnail 6개 제거 + check-dangling-thumbs.mjs 영구 게이트 신설(BUILD_GATES 배선, 재발 시 빌드 차단)."
     },
     {
       "id": "IMP-0016",

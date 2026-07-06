@@ -1890,11 +1890,7 @@ ChatGPT·Claude·Cursor가 만들어 내는 UI가 점점 비슷해지는 게 업
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "nutlope-hallmark-anti-ai-slop-design-guide-4fabea9d",
           readMinutes: 1,
-          thumbnail: {
-            src: "/og-cache/nutlope-hallmark-anti-ai-slop-design-guide-4fabea9d.jpg",
-            alt: "Nutlope/hallmark — anti-AI-slop 디자인 가이드를 코드 스킬로 패키지화한 오픈소스. 사용자가 찾던 '오픈소스 공유할 만한' 후보.",
-          },
-        },
+},
         {
           date: "5/21",
           platform: "X+Threads",
