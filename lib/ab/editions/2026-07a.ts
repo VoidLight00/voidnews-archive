@@ -89,6 +89,27 @@ const grokPost: Post = {
   tags: ["xAI", "프런티어 모델", "미확정"],
 };
 
+// GPT-Live — OpenAI 실시간 음성(2026-07-08 공식, 인-윈도우). 순회 소스 baeksang(curator-web)이 발견, 출처는 openai.com 공식
+const gptLivePost: Post = {
+  date: "7/8",
+  platform: "X+Threads",
+  title: "OpenAI, 실시간 음성 모델 'GPT-Live' 공개 — ChatGPT 음성 전 세계 배포",
+  featured: true,
+  deck: "듣고 말하기 동시(full-duplex), 오늘부터 글로벌 롤아웃 — 주 1.5억 음성 사용자 기본 경험 교체",
+  summary:
+    "OpenAI가 실시간 대화형 음성 모델 GPT-Live를 공개하고 오늘(7/8) ChatGPT 음성에 전 세계로 배포하기 시작했다. 듣기·말하기를 동시에 하는 full-duplex 구조로, 맞장구·끼어들기·기다림이 자연스럽고 깊은 작업은 뒤에서 프런티어 모델(GPT-5.5)에 위임한다. GPT-Live-1(Go·Plus·Pro 기본)·mini(무료 기본)로 iOS·Android·웹 글로벌 제공.",
+  content:
+    "**이게 뭐예요?**\nOpenAI가 실시간 대화형 음성 모델 GPT-Live를 공개하고, 오늘(7/8) ChatGPT 음성에 전 세계로 배포하기 시작했다. 텍스트 챗봇이 사실상 '귀와 입'을 달고 사람처럼 대화하는 방식이다.\n\n**무엇이 달라졌나?**\n- full-duplex 구조 — 듣기와 말하기를 동시에. 'mhmm' 맞장구, 끼어들기, 잠깐 기다려주기까지 자연스럽게\n- 깊은 작업은 뒤에서 프런티어 모델(출시 시 GPT-5.5)에 위임하고, 그 사이에도 대화를 계속 이어감\n- 대화 중 날씨·주식·스포츠 같은 시각 카드도 함께 표시, 9개 음성 리마스터\n\n**규모 / 제공**\n- 매주 1.5억 명이 ChatGPT 음성을 쓴다 — 그 기본 경험이 오늘 바뀐다\n- GPT-Live-1(Go·Plus·Pro 기본) / GPT-Live-1 mini(무료 기본), iOS·Android·웹에 오늘부터 글로벌\n- API는 곧 예정. 단, 지금은 영상·화면공유 미지원, 일부 언어는 억양·유창성 한계\n\n**비개발자용 한 줄**\n'타이핑하는 챗봇'에서 '말로 대화하는 비서'로 넘어간 날이다. 통역, 핸즈프리 질문, 언어 연습 같은 데 당장 체감된다.\n\n**왜 중요한가**\n4위 GPT-5.6이 '성능' 카드라면, 이건 OpenAI의 '소비자 접점' 카드다. 성능 경쟁과 별개로, 사람들이 AI를 매일 어떻게 쓰는지(음성)를 바꾸는 쪽이다.\n\n출처: openai.com (2026-07-08 공식 발표)",
+  source: "https://openai.com/index/introducing-gpt-live/",
+  officialUrl: "https://openai.com/index/introducing-gpt-live/",
+  thumbnail: {
+    src: "/og-cache/openai-gpt-live.png",
+    alt: "OpenAI GPT-Live — 실시간 음성 모델, ChatGPT 음성 글로벌 배포",
+  },
+  slug: "openai-20260708-gpt-live",
+  tags: ["OpenAI", "음성", "소비자"],
+};
+
 export const edition2026_07a: ABEdition = {
   slug: "2026-07a",
   volume: 7,
@@ -230,6 +251,14 @@ export const edition2026_07a: ABEdition = {
     },
     {
       rank: 10,
+      tier: "feature",
+      post: gptLivePost,
+      sourceWeek: "2026-w28",
+      sourceCompany: "OpenAI",
+      editorial: "순회 소스(백상현 '매일의 AI')가 잡아낸 인-윈도우 카드입니다. 발표에서 가장 '보여주기 쉬운' 카드예요 — 폰으로 ChatGPT 음성을 켜서 즉석 시연하면 청중 반응이 바로 옵니다. 4위 GPT-5.6과 묶어 'OpenAI가 이번 2주에 둔 두 수(프런티어 성능 + 소비자 음성)'로 소개하면 흐름이 삽니다. 공식 발표라 미확정 표기는 필요 없고, '오늘 글로벌 롤아웃, API·영상은 아직'만 짚어주세요.",
+    },
+    {
+      rank: 11,
       tier: "feature",
       post: anthropicJspacePost,
       sourceWeek: "2026-w28",
