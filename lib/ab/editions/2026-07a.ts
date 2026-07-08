@@ -91,7 +91,11 @@ export const edition2026_07a: ABEdition = {
     {
       rank: 1,
       tier: "hero",
-      post: findPost(week27, "anthropic-20260630-claude-sonnet-5"),
+      post: {
+        ...findPost(week27, "anthropic-20260630-claude-sonnet-5"),
+        content:
+          "**이게 뭐예요?**\nAnthropic이 새 프런티어 모델 Claude Sonnet 5를 공개했다. Claude 앱의 Free·Pro 기본 모델이자, Claude Code의 기본 모델로 바로 채택됐다.\n\n**무엇이 달라졌나?**\n- 최상위 모델 Opus 4.8에 근접한 성능을, 훨씬 낮은 비용으로 제공\n- 네이티브 1M(100만) 토큰 컨텍스트 — 책 한 권 분량을 한 번에 읽고 다룸\n- 8월 31일까지 $2/$10(100만 토큰당 입력/출력) 프로모션 가격\n\n**비개발자용 한 줄**\n'제일 똑똑한 모델(Opus)에 준하는 걸, 이제 기본값으로 더 싸게 쓴다'는 뜻이다. 따로 상위 모델을 고르지 않아도 Claude 앱·Claude Code를 켜면 기본이 이미 이 수준이다.\n\n**왜 중요한가**\n그동안은 '좋은 모델을 골라 쓰는' 게 실력이었다. 기본 모델이 충분히 좋아지면, 경쟁의 축이 '어떤 모델을 쓰냐'에서 '그 모델로 무엇을 시키느냐(워크플로·에이전트 설계)'로 옮겨 간다. 이번 2주 전체 흐름('성능이 싸졌다')의 출발점이다.\n\n출처: anthropic.com",
+      },
       sourceWeek: "2026-w27",
       sourceCompany: "Anthropic",
       editorial: "이번 2주의 출발점입니다. 최상위급 성능을 절반 이하 비용으로 쓸 수 있게 되면서, 여러분이 쓰는 Claude 앱과 Claude Code의 기본값 자체가 바뀌었습니다. '좋은 모델을 골라 쓰는' 문제가 '기본 모델이 이미 충분히 좋은' 문제로 넘어간 신호라, 실무 도구 선택 기준을 다시 잡을 시점입니다.",
@@ -99,7 +103,11 @@ export const edition2026_07a: ABEdition = {
     {
       rank: 2,
       tier: "hero",
-      post: findPost(week27, "anthropic-20260630-redeploying-fable-5"),
+      post: {
+        ...findPost(week27, "anthropic-20260630-redeploying-fable-5"),
+        content:
+          "**이게 뭐예요?**\n6월 12일 미국 수출통제로 막혔던 Anthropic의 최상위 모델 Fable 5·Mythos 5가, 6월 30일 통제 해제 후 7월 1일 전 세계에서 다시 열렸다.\n\n**타임라인**\n- 6월 12일: 미국 수출통제로 접근 차단\n- 6월 30일: 통제 해제\n- 7월 1일: Claude 플랫폼에서 글로벌 복원\n- 7월 7일까지: 구독에 포함 / 이후: usage credits(사용량 과금)로 전환\n\n**비개발자용 한 줄**\n최상위 AI 모델이 '제품'이 아니라 '전략 물자'처럼 국가 통제의 대상이 됐다는 사건이다. 몇 주 만에 막혔다 풀렸고, 다시 열리면서 과금 방식(구독→사용량)까지 바뀌었다.\n\n**왜 중요한가**\n바로 다음 3번 카드(중국)와 짝이다. 미국이 자국 최상위 모델을 수출통제로 막았다가 풀었고, 이번엔 중국이 자국 모델의 해외 접근을 제한하려 한다. '모델 접근 = 국가안보'라는 프레임이 미·중 양쪽에서 동시에 굳어지는 중이다.\n\n출처: anthropic.com",
+      },
       sourceWeek: "2026-w27",
       sourceCompany: "Anthropic",
       editorial: "최상위 모델이 제품이 아니라 수출통제·국가안보의 대상이 됐다는 걸 가장 선명하게 보여 준 사건입니다. 6월 12일 통제, 6월 30일 해제, 7월 1일 글로벌 복원이 몇 주 만에 오갔습니다. Fable 5·Mythos 5는 7월 7일까지는 구독에 포함되고 이후에는 usage credits로 과금되니, 접근 방식이 바뀐 점만 짚어 주시면 됩니다. 바로 다음 3번 카드(중국)와 짝으로 보시면 좋습니다.",
@@ -115,15 +123,38 @@ export const edition2026_07a: ABEdition = {
     {
       rank: 4,
       tier: "feature",
-      post: findPost(week28, "openai-20260708-gpt-5-6-ga-jul9"),
+      post: {
+        ...findPost(week28, "openai-20260708-gpt-5-6-ga-jul9"),
+        deck: "Sol·Terra·Luna 3종 — Terminal-Bench 2.1 최고점, Terra는 GPT-5.5급을 절반 값에",
+        summary:
+          "OpenAI가 GPT-5.6을 공개했다. Sol(플래그십)·Terra(균형·GPT-5.5급 절반 값)·Luna(경량·최저가) 3종에 새 'max'·'ultra' 추론 모드가 들어갔다. 명령줄 코딩 벤치마크 Terminal-Bench 2.1에서 Sol Ultra 91.9로 1위. 다만 아직 신뢰 파트너 대상 제한 프리뷰이며 전면 공개는 '몇 주 안'(7/9 GA는 Engadget 보도).",
+        content:
+          "**이게 뭐예요?**\nOpenAI가 차세대 모델 GPT-5.6을 공개했다. 하나가 아니라 세 종류다: Sol(최고 성능 플래그십), Terra(일상 업무용 균형형, GPT-5.5급 성능을 절반 값에), Luna(가장 빠르고 저렴한 경량형). 여기에 더 오래 깊이 생각하는 'max' 추론 모드와, 여러 하위 에이전트를 붙여 복잡한 일을 나눠 처리하는 'ultra' 모드가 새로 들어왔다.\n\n**아직 아무나 못 쓴다 (중요)**\n6월 26일 시점은 전면 공개가 아니라 제한적 프리뷰다. API와 Codex를 통해 신뢰할 수 있는 소수 파트너에게만 열렸고, 그 명단은 미국 정부와 공유됐다. OpenAI는 '이런 정부 검토 절차가 상시 기본값이 되면 안 된다'고 못 박으면서도, 지금은 더 넓은 공개로 가는 가장 빠른 길이라 택했다고 밝혔다. 전면 공개(GA)는 '몇 주 안'이며, Engadget은 그 시점을 7월 9일(목)로 보도했다.\n\n**벤치마크 — 각각 무슨 뜻인가 (아래 차트 참고)**\n- Terminal-Bench 2.1 (명령줄 코딩): 사람이 터미널에서 하듯 계획·반복·도구 조작을 해내는 능력. GPT-5.6 Sol Ultra가 91.9점으로 1위, 기본 Sol 88.8, GPT-5.5 88.0, Claude Fable 5 83.4, Gemini 3.1 Pro 70.7. 실제 개발 자동화에 가장 가까운 지표다.\n- GeneBench v1 (유전체·생물학): 오래 걸리는 유전체 분석 같은 과학 작업. Sol이 GPT-5.5보다 높은 점수를 더 적은 토큰(=더 싸게)으로 냈다.\n- ExploitBench (사이버 취약점 연구): Sol이 상위 모델(Mythos Preview)급 성능을 약 1/3 토큰으로 달성.\n- ExploitGym (UC Berkeley·OpenAI 공동): 추론을 늘릴수록 Sol·Terra·Luna 모두 사이버 역량이 뚜렷이 향상.\n쉽게 말해 코딩·과학·보안 세 영역에서 '더 잘, 더 싸게'가 이번 세대의 요지다.\n\n**미국에서 실제로 화제인 지점**\n공개 직후 미국 개발자 사이의 실전 화두는 두 갈래다.\n1. 가격 파괴 — Sol이 최상위인데 Terra는 GPT-5.5급을 절반 값에, Luna는 그보다 더 싸다. 특히 Claude Fable 5와 비교해 절반 수준 비용이라는 점이 코딩 실무자에게 크게 다가왔다.\n2. 벤치마크 대 실사용 — 점수는 최고지만, OpenAI 스스로 '프리뷰 중에는 안전장치가 정상적인 작업까지 가끔 차단하거나 지연시킬 수 있다'고 인정했다. 실제로 일상 코딩 요청이 오탐으로 막히는 경험이 보고되며 '점수만큼 실전도 좋은가'라는 논쟁이 붙었다.\n\n**가격 (100만 토큰당)**\n\n| 모델 | 입력 | 출력 |\n| --- | --- | --- |\n| Sol | $5 | $30 |\n| Terra | $2.50 | $15 |\n| Luna | $1 | $6 |\n\n**확인 포인트**\n- 현재: 제한적 프리뷰(파트너 API·Codex만), 전면 공개는 '몇 주 안'(7/9 GA는 Engadget 보도)\n- 라인업: Sol / Terra / Luna + 새 'max'·'ultra' 모드\n- 속도: Cerebras에서 Sol 최대 750토큰/초(7월, 일부 고객)\n- 안전: Preparedness의 'Cyber Critical' 임계는 넘지 않음. 프리뷰 중 정상 작업 오탐 가능\n\n출처: openai.com (2026-06-26 공식 발표)",
+        galleryImages: [
+          {
+            src: "/og-cache/gpt-5-6-terminal-bench-2-1.png",
+            alt: "Terminal-Bench 2.1 벤치마크 — GPT-5.6 Sol Ultra 91.9점 1위",
+            caption: "Terminal-Bench 2.1(명령줄 코딩 에이전트): Sol Ultra 91.9 > Sol 88.8 > GPT-5.5 88.0 > Fable 5 83.4 > Gemini 3.1 Pro 70.7. 초록이 GPT-5.6 계열. 출처: OpenAI(2026-06-26).",
+          },
+          {
+            src: "/og-cache/gpt-5-6-hero-openai.webp",
+            alt: "GPT-5.6 세 모델 — Sol·Terra·Luna",
+            caption: "GPT-5.6 라인업 — Sol(플래그십)·Terra(균형·GPT-5.5급 절반 값)·Luna(경량·최저가). 출처: OpenAI.",
+          },
+        ],
+      },
       sourceWeek: "2026-w28",
       sourceCompany: "OpenAI",
-      editorial: "발표 다음 날(7월 9일) 전면 공개되는 OpenAI의 대응 카드라 타이밍상 꼭 짚어야 합니다. 6월 26일 약 20개 조직 프리뷰에서 미 정부 안전성 검토를 거쳐 일반 공개로 풀리는 흐름은, 앞의 Fable 5 사이클과 같은 '모델 출시가 안전성 심사와 엮이는' 패턴입니다. Sol·Terra·Luna 세 등급으로 나뉜다는 정도만 기억하시면 됩니다.",
+      editorial: "발표 다음 날(7월 9일 예정) 전면 공개되는 OpenAI의 대응 카드라 타이밍상 꼭 짚어야 합니다. 발표의 핵심은 두 가지입니다. ① 벤치마크: 명령줄 코딩 지표 Terminal-Bench 2.1에서 Sol Ultra 91.9로 1위, Claude Fable 5(83.4)·Gemini 3.1 Pro(70.7)를 앞섭니다(아래 차트). ② 가격: Terra가 GPT-5.5급을 절반 값에 줍니다. 다만 아직 신뢰 파트너 대상 제한 프리뷰이고, OpenAI 스스로 '프리뷰 중엔 정상 작업도 안전장치에 막힐 수 있다'고 인정한 점까지 균형 있게 전하면 좋습니다. Sol·Terra·Luna 3종이라는 것만 기억하셔도 됩니다.",
     },
     {
       rank: 5,
       tier: "feature",
-      post: findPost(week27, "korea-20260629-samsung-skhynix-ai-investment"),
+      post: {
+        ...findPost(week27, "korea-20260629-samsung-skhynix-ai-investment"),
+        content:
+          "**이게 뭐예요?**\n한국이 국민보고회에서 삼성·SK가 참여하는 초대형 AI·반도체 투자 계획을 발표했다.\n\n**금액은 '범위'로 봐야 한다 (중요)**\n출처마다 숫자가 크게 다르다.\n- Al Jazeera: 1조 달러 이상\n- CNN·CNBC: 5,760억 ~ 1조3,000억 달러\n- 국내 보도: 4,755조 원(국가예산의 약 6.5배)\n단일 확정 숫자로 말하면 오해를 부른다. 발표에서도 '출처마다 다르지만 조 단위'라고 범위로 전달하는 편이 안전하다.\n\n**비개발자용 한 줄**\n한국이 AI·반도체 경쟁의 '구경꾼'이 아니라 '직접 투자 주체'로 전면에 섰다는 신호다.\n\n**왜 중요한가**\n이번 2주의 밑바닥 서사는 '결국 반도체·인프라 싸움'이다. 6번 LongCat('엔비디아 없이 학습')과 정면으로 연결된다 — 한쪽은 탈엔비디아를 주장하고, 한쪽(한국)은 그 반도체 공급망의 핵심을 쥐고 대규모로 베팅한다.\n\n출처: 국민보고회 발표 / 국내외 보도 (금액 출처별 상이)",
+      },
       sourceWeek: "2026-w27",
       sourceCompany: "삼성·SK / 한국",
       editorial: "한국 청중에게 가장 직접적인 카드입니다. 삼성·SK가 참여하는 AI·반도체 메가 투자로, 우리나라가 이 흐름의 관전자가 아니라 직접 주체로 올라섰습니다. 다만 발표 금액은 출처마다 달라(1조 달러 이상 / 5,760억~1조3,000억 달러 / 4,755조원) 단일 숫자로 말하지 말고 '범위'로 전달하시길 권합니다.",
@@ -131,7 +162,11 @@ export const edition2026_07a: ABEdition = {
     {
       rank: 6,
       tier: "feature",
-      post: findPost(week27, "meituan-longcat-20260630-longcat-2-0"),
+      post: {
+        ...findPost(week27, "meituan-longcat-20260630-longcat-2-0"),
+        content:
+          "**이게 뭐예요?**\n중국 메이투안이 1.6T(1조6천억) 파라미터 규모의 MoE 오픈소스 모델 'LongCat-2.0'을 MIT 라이선스로 공개했다.\n\n**핵심 주장**\n전량 중국 국산칩으로 학습했다고 밝혔다 — 즉 '엔비디아 없이' 프런티어급 대형 모델을 훈련했다는 것이다.\n\n**비개발자용 한 줄**\n지금 AI의 병목은 엔비디아 GPU다. '그거 없이도 최상급 모델을 만들었다'는 주장은, 사실이라면 AI 하드웨어 판 전체를 흔든다.\n\n**왜 중요한가 / 주의**\n- 5번 한국 반도체 투자 카드와 정면으로 맞물리는 서사다(반도체 공급망의 가치).\n- 1.6T MoE에 MIT 라이선스라 오픈소스 진영엔 큰 자극이다.\n- 다만 '국산칩만으로 학습' 주장은 아직 벤더(메이투안) 발표 기준이며, 독립 검증 전이라는 전제를 붙여 소개하는 게 안전하다.\n\n출처: longcat.chat 공식 블로그",
+      },
       sourceWeek: "2026-w27",
       sourceCompany: "Meituan",
       editorial: "'엔비디아 없이도 프런티어급 모델을 학습했다'는 주장이 핵심입니다. 사실이라면 AI 반도체 공급망의 판이 흔들리고, 이는 5번 한국 반도체 투자 카드와 정면으로 연결됩니다. 1.6T MoE에 MIT 라이선스라 오픈소스 진영에도 큰 자극입니다.",
@@ -139,7 +174,11 @@ export const edition2026_07a: ABEdition = {
     {
       rank: 7,
       tier: "feature",
-      post: findPost(week27, "google-20260630-nano-banana-2-lite-gemini-omni-flash"),
+      post: {
+        ...findPost(week27, "google-20260630-nano-banana-2-lite-gemini-omni-flash"),
+        content:
+          "**이게 뭐예요?**\nGoogle이 저비용 이미지 모델 'Nano Banana 2 Lite'와 멀티모달 모델 'Gemini Omni Flash'를 공개했다.\n\n**가격 파괴가 핵심**\n- 이미지: 1,000장당 $0.034 (약 47원)\n- 영상: 초당 $0.10\nGoogle Flow 스튜디오에서 Omni Flash·Nano Banana·Veo 3.1을 함께 체험할 수 있다.\n\n**비개발자용 한 줄**\n'비싸서 대량으로는 못 돌리던' 이미지·영상 생성이 예산 안으로 들어왔다는 뜻이다. 1,000장에 수십 원 수준이면 썸네일·상세페이지·광고 소재를 통째로 AI로 뽑는 게 현실적인 선택지가 된다.\n\n**왜 중요한가**\n콘텐츠·마케팅 실무자에게 가장 직접적인 카드다. 모델 성능 경쟁만큼이나 '단가 경쟁'이 실전 도입을 결정한다 — 이번엔 그 단가가 한 자릿수 센트로 내려왔다.\n\n출처: Google (Flow / 공식 발표)",
+      },
       sourceWeek: "2026-w27",
       sourceCompany: "Google",
       editorial: "생성형 미디어를 실무에 쓰시는 분께 바로 와닿는 소식입니다. 이미지 1,000장 $0.034, 영상 초당 $0.10까지 단가가 내려가면서, '비싸서 못 돌리던' 대량 생성이 예산 안으로 들어옵니다. 콘텐츠·마케팅 파이프라인의 비용 구조를 다시 계산해 볼 시점입니다.",
