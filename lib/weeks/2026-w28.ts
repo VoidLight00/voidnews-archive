@@ -24,6 +24,10 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nOpenAI가 GPT-5.6 Sol·Terra·Luna 세 모델을 7월 9일(목) 전 사용자에게 공개한다.\n\n**무엇이 달라졌나?**\n- 6월 26일 프리뷰 당시 미 정부 안전성 검토로 약 20개 신뢰 조직에만 제한 공개\n- 상무부 CAISI의 추가 테스트를 통과해 일반 공개 승인\n- Sol=복잡 추론·에이전트 플래그십, Terra=GPT-5.5급 성능 절반 비용, Luna=최경량·최저비용\n\n**어떻게 읽을까?**\n최상위 모델이 정부 검토라는 관문을 거쳐 일반 공개로 풀리는 사건이다. 6/26 프리뷰에서 7/9 전체 공개까지의 흐름은 프런티어 모델 출시가 안전성 심사와 엮이는 새 패턴을 보여 준다.\n\n**확인 포인트**\n- 공개일: 7월 9일(목)\n- 라인업: Sol / Terra / Luna\n\n출처: openai.com",
           "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
           "officialUrl": "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "thumbnail": {
+            "src": "/og-cache/openai-gpt-5-6-ga-jul9.png",
+            "alt": "OpenAI, GPT-5.6 Sol·Terra·Luna 7월 9일 전체 공개(GA)"
+          },
           "slug": "openai-20260708-gpt-5-6-ga-jul9",
           "tags": [
             "OpenAI",
