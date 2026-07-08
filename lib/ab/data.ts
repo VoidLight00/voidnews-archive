@@ -90,8 +90,9 @@ import { edition2026_05a } from "./editions/2026-05a";
 import { edition2026_05b } from "./editions/2026-05b";
 import { edition2026_06a } from "./editions/2026-06a";
 import { edition2026_06b } from "./editions/2026-06b";
+import { edition2026_07a } from "./editions/2026-07a";
 
-export const editions: ABEdition[] = [edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
+export const editions: ABEdition[] = [edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
 export function getEdition(slug: string): ABEdition | undefined {
   return editions.find((e) => e.slug === slug);

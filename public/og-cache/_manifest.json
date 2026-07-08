@@ -1462,5 +1462,179 @@
     "image": "https://opengraph.githubassets.com/d6a254d45af3d7fc6bf54e77e3d94d653289bae02467518f434ef332968f4610/channprj/kmsg",
     "file": "카카오톡-cli-3형제-9521644a.png",
     "ts": 1781117471499
+  },
+  "anthropic-claude-sonnet-5-공개-free-pro-기본-9b2ad380": {
+    "url": "https://www.anthropic.com/news/claude-sonnet-5",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/2039cc549c023bc855671308211d20d3382828a9-2880x1620.jpg",
+    "file": "anthropic-claude-sonnet-5-공개-free-pro-기본-9b2ad380.jpg",
+    "ts": 1783506543942
+  },
+  "anthropic-fable-5-mythos-5-수출통제-해제-후-재배포-24a872ed": {
+    "url": "https://www.anthropic.com/news/redeploying-fable-5",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "file": "anthropic-fable-5-mythos-5-수출통제-해제-후-재배포-24a872ed.jpg",
+    "ts": 1783506550100
+  },
+  "anthropic-과학자용-ai-워크벤치-claude-science-베타-9233f6a7": {
+    "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/0c547c61b24e6ad4985c64f04f212c7411609bfa-2880x1620.png",
+    "file": "anthropic-과학자용-ai-워크벤치-claude-science-베타-9233f6a7.png",
+    "ts": 1783506553816
+  },
+  "claude-code-2-1-198-claude-in-chrome-정식--f6d9c0cc": {
+    "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+    "image": "https://opengraph.githubassets.com/5d293ce3f5af8a6ada493e19123f9d27c02aa4705534f14c48db45d605135ba8/anthropics/claude-code",
+    "file": "claude-code-2-1-198-claude-in-chrome-정식--f6d9c0cc.png",
+    "ts": 1783506556225
+  },
+  "claude-code-2-1-197-sonnet-5-기본-모델-채택-네이-f6d9c0cc": {
+    "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+    "image": "https://opengraph.githubassets.com/5d293ce3f5af8a6ada493e19123f9d27c02aa4705534f14c48db45d605135ba8/anthropics/claude-code",
+    "file": "claude-code-2-1-197-sonnet-5-기본-모델-채택-네이-f6d9c0cc.png",
+    "ts": 1783506556262
+  },
+  "claude-code-2-1-196-조직-기본-모델-설정-mcp-자체승인-f6d9c0cc": {
+    "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+    "image": "https://opengraph.githubassets.com/5d293ce3f5af8a6ada493e19123f9d27c02aa4705534f14c48db45d605135ba8/anthropics/claude-code",
+    "file": "claude-code-2-1-196-조직-기본-모델-설정-mcp-자체승인-f6d9c0cc.png",
+    "ts": 1783506556314
+  },
+  "claude-code-2-1-195-마우스-클릭-비활성화-옵션-음성-받아-f6d9c0cc": {
+    "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+    "image": "https://opengraph.githubassets.com/5d293ce3f5af8a6ada493e19123f9d27c02aa4705534f14c48db45d605135ba8/anthropics/claude-code",
+    "file": "claude-code-2-1-195-마우스-클릭-비활성화-옵션-음성-받아-f6d9c0cc.png",
+    "ts": 1783506556350
+  },
+  "claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc": {
+    "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+    "image": "https://opengraph.githubassets.com/5d293ce3f5af8a6ada493e19123f9d27c02aa4705534f14c48db45d605135ba8/anthropics/claude-code",
+    "file": "claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+    "ts": 1783506556386
+  },
+  "openai-chatgpt에서-gpt-4-5-제거-gpt-5-5로-이관-4b58ca4b": {
+    "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+    "image": "https://help.openai.com/og-image.png",
+    "file": "openai-chatgpt에서-gpt-4-5-제거-gpt-5-5로-이관-4b58ca4b.png",
+    "ts": 1783506558984
+  },
+  "google-nano-banana-2-lite-gemini-omni-fl-5e2add7c": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni__keyword_v6.width-1300.png",
+    "file": "google-nano-banana-2-lite-gemini-omni-fl-5e2add7c.png",
+    "ts": 1783506559834
+  },
+  "github-copilot-claude-sonnet-5-정식-지원-ga-630bcd2a": {
+    "url": "https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-generally-available-for-github-copilot",
+    "image": "https://github.blog/wp-content/uploads/2026/06/614802128-3cdc3c8e-28cf-4a12-bd61-188c6209c7ac.png",
+    "file": "github-copilot-claude-sonnet-5-정식-지원-ga-630bcd2a.jpg",
+    "ts": 1783506561055
+  },
+  "github-copilot-claude-opus-4-8-fast-mode-28a84e5f": {
+    "url": "https://github.blog/changelog/2026-06-29-claude-opus-4-8-fast-mode-is-now-in-preview-for-github-copilot",
+    "image": "https://github.blog/wp-content/uploads/2026/06/613831660-028f47b7-63fe-419c-9fc2-71933d522f4c.png",
+    "file": "github-copilot-claude-opus-4-8-fast-mode-28a84e5f.jpg",
+    "ts": 1783506563211
+  },
+  "github-copilot-mai-code-1-flash를-busines-f723edfb": {
+    "url": "https://github.blog/changelog/2026-06-26-mai-code-1-flash-for-copilot-business-and-copilot-enterprise",
+    "image": "https://github.blog/wp-content/uploads/2026/06/github-copilot-social-card-3.png",
+    "file": "github-copilot-mai-code-1-flash를-busines-f723edfb.jpg",
+    "ts": 1783506563876
+  },
+  "github-copilot-kimi-k2-7-code-정식-지원-ga-6639d63a": {
+    "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot",
+    "image": "https://github.blog/wp-content/uploads/2026/06/613814616-4d64d5a2-d26c-4377-9ce6-a444b1b30840.png",
+    "file": "github-copilot-kimi-k2-7-code-정식-지원-ga-6639d63a.jpg",
+    "ts": 1783506564546
+  },
+  "github-copilot-비전-기능-정식-출시-ga-38d406e4": {
+    "url": "https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available",
+    "image": "https://github.blog/wp-content/uploads/2026/07/615396768-e058369f-6fd7-4e7f-b1c9-68b288b56ca2.jpg",
+    "file": "github-copilot-비전-기능-정식-출시-ga-38d406e4.jpg",
+    "ts": 1783506565147
+  },
+  "github-copilot-에이전트-jetbrains-ai-assista-b3a25490": {
+    "url": "https://github.blog/changelog/2026-06-30-copilot-agent-is-now-available-in-jetbrains-ai-assistant",
+    "image": "https://github.blog/wp-content/themes/github-2021-child/dist/img/social-v3-new-releases.jpg",
+    "file": "github-copilot-에이전트-jetbrains-ai-assista-b3a25490.jpg",
+    "ts": 1783506566298
+  },
+  "github-copilot-for-jira-정식-출시-ga-c06dd032": {
+    "url": "https://github.blog/changelog/2026-06-25-github-copilot-for-jira-is-now-generally-available",
+    "image": "https://github.blog/wp-content/uploads/2026/06/597356780-0bfdf797-a726-4373-9111-9338938b123b.jpg",
+    "file": "github-copilot-for-jira-정식-출시-ga-c06dd032.jpg",
+    "ts": 1783506567450
+  },
+  "github-copilot-엔터프라이즈-자동-모델-선택-기본화-80611594": {
+    "url": "https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection",
+    "image": "https://github.blog/wp-content/uploads/2026/07/616003449-884dafc4-1024-44cb-895c-12c017040dcf.jpg",
+    "file": "github-copilot-엔터프라이즈-자동-모델-선택-기본화-80611594.jpg",
+    "ts": 1783506568036
+  },
+  "github-models-2026년-7월-30일-완전-종료-공지-8893f115": {
+    "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+    "image": "https://github.blog/wp-content/uploads/2026/06/ce03ad363f6ab003243e7f5bf11f382bc37de5f49ae5d6ab6beca6a309228220-2400x1260-1.jpeg",
+    "file": "github-models-2026년-7월-30일-완전-종료-공지-8893f115.jpg",
+    "ts": 1783506568148
+  },
+  "메이투안-1-6t-moe-오픈소스-longcat-2-0-공개-중국-국산칩-e59a73b2": {
+    "url": "https://github.com/meituan-longcat/LongCat-2.0",
+    "image": "https://opengraph.githubassets.com/a2d1ca4364f8a4bef1ef4670ee0e39366d04b0c8b83427e066ba4e3571cb3f75/meituan-longcat/LongCat-2.0",
+    "file": "메이투안-1-6t-moe-오픈소스-longcat-2-0-공개-중국-국산칩-e59a73b2.png",
+    "ts": 1783506570483
+  },
+  "한국-1조-달러대-ai-반도체-메가-투자-발표-삼성-sk-참여-e81ab8a7": {
+    "url": "https://www.fnnews.com/news/202606291705529918",
+    "image": "https://image.fnnews.com/resource/media/image/2026/06/29/202606291652330101_l.jpg",
+    "file": "한국-1조-달러대-ai-반도체-메가-투자-발표-삼성-sk-참여-e81ab8a7.jpg",
+    "ts": 1783506571994
+  },
+  "comfy-org-comfy-mcp-공개-에이전트를-comfyui-생성--5d49e21b": {
+    "url": "https://blog.comfy.org/p/comfy-mcp-turn-your-agent-into-a",
+    "image": "https://substackcdn.com/image/fetch/$s_!ubiW!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7a874c0b-1013-458f-bd5b-b48c470e4590_1920x1080.png",
+    "file": "comfy-org-comfy-mcp-공개-에이전트를-comfyui-생성--5d49e21b.jpg",
+    "ts": 1783506572219
+  },
+  "anthropic-fable-5-사이버-안전장치와-cyber-jailbr-05a4aa29": {
+    "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Lock&amp;backgroundColor=cactus",
+    "file": "anthropic-fable-5-사이버-안전장치와-cyber-jailbr-05a4aa29.png",
+    "ts": 1783506580672
+  },
+  "google-notebooklm-틱톡형-숏폼-비디오-생성-기능-추가-9cbcb4f8": {
+    "url": "https://the-decoder.com/google-brings-tiktok-style-video-shorts-to-notebooklm/",
+    "image": "https://the-decoder.com/wp-content/uploads/2025/07/notebooklm_video_overview.png",
+    "file": "google-notebooklm-틱톡형-숏폼-비디오-생성-기능-추가-9cbcb4f8.png",
+    "ts": 1783506584108
+  },
+  "github-copilot-에이전트-세션-스트리밍-공개-프리뷰-eef01e60": {
+    "url": "https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview",
+    "image": "https://github.blog/wp-content/themes/github-2021-child/dist/img/social-v3-improvements.jpg",
+    "file": "github-copilot-에이전트-세션-스트리밍-공개-프리뷰-eef01e60.jpg",
+    "ts": 1783506584935
+  },
+  "github-copilot-gemini-2-5-pro-3-flash-지원-26bb4c1e": {
+    "url": "https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash",
+    "image": "https://github.blog/wp-content/uploads/2026/07/Gemini-models-deprecation-social.jpg",
+    "file": "github-copilot-gemini-2-5-pro-3-flash-지원-26bb4c1e.jpg",
+    "ts": 1783506585624
+  },
+  "deepseek-추론-가속-프레임워크-dspark-오픈소스-deepspe-1d268b1b": {
+    "url": "https://github.com/deepseek-ai/DeepSpec",
+    "image": "https://opengraph.githubassets.com/9c512cc6eac7a452a9836924a27252483f66e14c592f7482c1767afa849e5cc3/deepseek-ai/DeepSpec",
+    "file": "deepseek-추론-가속-프레임워크-dspark-오픈소스-deepspe-1d268b1b.png",
+    "ts": 1783506663841
+  },
+  "meta-brain2qwerty-cc1fa690": {
+    "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/",
+    "image": "https://scontent-ssn1-1.xx.fbcdn.net/v/t39.2365-6/731147471_987177500749005_1892166673921917145_n.gif?_nc_cat=101&ccb=1-7&_nc_sid=e280be&_nc_ohc=Kyrca1N0VrUQ7kNvwGLZ4rC&_nc_oc=AdouKo4FDSGy4ZPb_t2SmRY3MFLxRbXGHk-WLT32dVEJQBq5Y1TtNDA6JE1ZQQj5PB4&_nc_zt=14&_nc_ht=scontent-ssn1-1.xx&_nc_gid=Ekt0Lo_pFu-PtPWkvA_nvw&_nc_ss=7f289&oh=00_AQD9iycdHshvqCZBrDoJ3qjIifdRBByCsOpLjWhZVEjzYQ&oe=6A686FED",
+    "file": "meta-brain2qwerty-v2-비침습-뇌텍스트-cc1fa690.jpg",
+    "ts": 1783506743879
+  },
+  "teamclaude-다계정-claude-프록시로-쿼터-자동-로테이션-fd46c60b": {
+    "url": "https://github.com/jung-wan-kim/teamclaude",
+    "image": "https://opengraph.githubassets.com/f5b772dca4f543ff714b44a345ccd5ec29a96efc6d410e9ee413104f95bebca7/jung-wan-kim/teamclaude",
+    "file": "teamclaude-다계정-claude-프록시로-쿼터-자동-로테이션-fd46c60b.png",
+    "ts": 1783506941086
   }
 }
