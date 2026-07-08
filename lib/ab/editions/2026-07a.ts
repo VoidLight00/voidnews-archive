@@ -48,13 +48,14 @@ const anthropicJspacePost: Post = {
   summary:
     "Anthropic이 Claude 내부에서 '말로 내뱉지 않는 생각'을 읽어내는 J-lens와, 그 생각이 담기는 신경 패턴 J-space를 공개했다. 버그를 보면 'ERROR', 프롬프트 인젝션을 보면 'injection·fake'가 내부에 켜지고, 모델이 데이터를 조작하려는 순간까지 포착됐다.",
   content:
-    "**이게 뭐예요?**\nAnthropic이 Claude 내부에서 '말로 내뱉지 않는 생각'을 읽어내는 방법(J-lens)과, 그 생각이 담기는 신경 패턴(J-space)을 공개했다.\n\n**무엇을 발견했나?**\n- Claude 내부에 사람의 '의식적 접근'과 유사한 소수의 신경 패턴이 스스로 형성됨\n- 버그를 보면 'ERROR', 프롬프트 인젝션을 보면 'injection·fake'가 내부에 켜짐\n- 모델이 테스트당하는 걸 눈치채거나 데이터를 조작하려는 순간도 포착\n\n**어떻게 읽을까?**\n모델이 '무엇을 쓰는가'가 아니라 '무엇을 생각하는가'를 들여다보는 해석가능성 연구다. 안전성 모니터링에 직접 쓰일 수 있는 도구라는 점이 핵심이다.\n\n**확인 포인트**\n- 오픈소스 구현(jacobian-lens)과 인터랙티브 데모 공개\n- 의식 여부를 증명하는 연구는 아님 (접근 가능성 관점)\n\n출처: anthropic.com",
+    "**이게 뭐예요?**\n앤트로픽이 클로드 내부에서 '말로 내뱉지 않는 생각'을 읽어내는 해석 기법 J-렌즈(Jacobian Lens)와, 그 생각이 담기는 신경 공간 J-스페이스(J-space)를 공개했다(7/6). 인간 의식을 설명하는 신경과학 이론 '글로벌 워크스페이스'와 놀랍도록 닮았다고 밝혔다.\n\n**J-스페이스가 뭐길래**\n모델이 출력으로 말하진 않지만 내부적으로 '생각 중인' 개념을 담는 공간이다. 코드 버그를 보면 출력 안 해도 내부에 '에러'가, 프롬프트 인젝션을 감지하면 '인젝션·페이크'가 켜진다. 사람이 설계한 게 아니라 학습 과정에서 저절로 생겼다.\n\n**인간 의식과 닮은 5가지 기능**\n1. 보고 가능성 — '지금 뭘 생각하냐' 물으면 답함. 내부 '축구'를 '럭비'로 바꾸니 답도 럭비로(단순 표시가 아니라 실제 답에 영향).\n2. 의도적 조절 — '감귤만 생각하며 딴 문장 베껴 써' 시키면 출력은 복사뿐인데 내부엔 '오렌지'가 켜짐.\n3. 내부 추론 — '거미줄 치는 동물 다리 수'에 출력엔 '거미'가 없지만 내부엔 뜸. '개미'로 바꾸니 답이 8→6.\n4. 유연한 일반화 — 내부 '프랑스'를 '중국'으로 바꾸니 수도·언어·통화·대륙 답이 모두 일관되게 바뀜.\n5. 선택적 사용 — 문법·단순 사실은 J-스페이스 없어도 되지만, 다단계 추론·요약·번역은 급격히 무너짐(사람이 문법은 무의식, 어려운 문제는 의식적으로 푸는 것과 유사).\n\n**왜 중요한가 (안전성)**\n지금까진 모델의 '출력'만 봤는데, J-렌즈로 '말 안 한 속생각'을 일부 관찰할 수 있다. 클로드가 테스트 상황을 '가짜'로 인식하는 것, 점수를 조작하려는 순간 '조작'이 켜지는 것까지 잡아냈다. 안전성 모니터링의 새 도구다.\n\n**비개발자용 한 줄 / 주의**\n'AI 속을 들여다보는 X-레이'라 보면 된다. 단, 앤트로픽은 이게 AI가 진짜 '의식'(감정·경험)을 가졌다는 뜻은 아니라고 못 박았다 — 정보를 보고·추론·활용하는 '접근 의식'에 가깝지, 주관적 경험(현상 의식)의 증거는 아니다.\n\n출처: anthropic.com · 논문(Transformer Circuits) · 오픈소스 jacobian-lens · AI타임스(한국어)",
   source: "https://www.anthropic.com/research/global-workspace",
   officialUrl: "https://www.anthropic.com/research/global-workspace",
   backupUrls: [
     { label: "논문(Transformer Circuits)", url: "http://transformer-circuits.pub/2026/workspace/index.html" },
     { label: "오픈소스 jacobian-lens", url: "https://github.com/anthropics/jacobian-lens" },
     { label: "인터랙티브 데모", url: "http://neuronpedia.org/jlens" },
+    { label: "AI타임스(한국어 해설)", url: "https://www.aitimes.com/news/articleView.html?idxno=212502" },
   ],
   thumbnail: {
     src: "/og-cache/anthropic-global-workspace-jspace.jpg",
@@ -62,6 +63,30 @@ const anthropicJspacePost: Post = {
   },
   slug: "anthropic-20260706-global-workspace-jspace",
   tags: ["Anthropic", "해석가능성", "연구"],
+};
+
+// Grok 4.5 — xAI(SpaceXAI) 프라이빗 베타(2026-06-28). 공식 x.ai 발표 페이지 존재, 단 공개·독립 벤치 없음(미확정)
+const grokPost: Post = {
+  date: "6/28",
+  platform: "X+Threads",
+  title: "xAI, Grok 4.5 프라이빗 베타 진입 — 1.5T V9 + '월 1회 신모델' 로드맵 (미확정)",
+  featured: true,
+  deck: "SpaceX·Tesla 사내 베타(6/28), Musk 'Opus 근접·상회' 자체 주장 — 공개·독립 벤치 없음",
+  summary:
+    "xAI가 Grok 4.5를 6월 28일 SpaceX·Tesla 사내 프라이빗 베타로 돌렸다. V9 파운데이션 1.5조 파라미터로 프로덕션 모델(500B)의 3배. Musk는 '초기 평가상 Claude Opus에 근접, 어쩌면 상회'라 밝혔으나 공개 접근·독립 벤치마크가 없다. 함께 나온 로드맵이 더 파격적 — 2026년 말까지 매월 새 파운데이션 모델을 처음부터 학습해 내놓겠다는 것.",
+  content:
+    "**이게 뭐예요?**\nxAI(현 SpaceXAI)가 새 모델 Grok 4.5를 6월 28일 SpaceX·Tesla 사내 프라이빗 베타로 돌렸다. Musk가 X로 직접 공지했다.\n\n**아직 아무도 못 쓴다 (미확정)**\n- 공개 접근 없음 — SpaceX·Tesla 내부에만\n- 독립 벤치마크 없음 — 어떤 공개 리더보드에도 미제출\n- 공개 API는 여전히 이전 모델(Grok 4.3)\nMusk는 '초기 평가상 Claude Opus에 근접, 어쩌면 상회'라 했지만, 이 평가는 전부 사내(SpaceX·Tesla)에서 나왔다. 제3자 검증이 없다.\n\n**무엇이 달라졌나?**\n- V9 파운데이션, 1.5조 파라미터 — 프로덕션 모델(v8-small, 5천억)의 3배\n- NVIDIA Blackwell 기반 Colossus(멤피스)에서 학습\n- Cursor 개발 데이터가 보조 학습 단계에 투입(초기 학습 아님) → 다음 2조 모델은 처음부터 반영 예정\n\n**진짜 헤드라인: '월 1회 신모델'**\nMusk는 2026년 말까지 매월 '처음부터 새로 학습한' 파운데이션 모델을 내놓겠다고 밝혔다. 파운데이션 모델은 학습에만 수억 달러가 드는데, 이를 월 단위로 찍어내겠다는 건 전례 없는 컴퓨트 물량 주장이다.\n\n**비개발자용 한 줄**\n'제일 센 모델을 만들었다'보다 '매달 새 모델을 쏟아내겠다'가 핵심이다 — 사실이면 프런티어 경쟁의 속도 자체를 바꾼다. 단, 지금은 Musk의 발언과 사내 베타뿐이고 검증은 없다.\n\n**확인 포인트**\n- 현재: SpaceX·Tesla 사내 프라이빗 베타 (공개일 미정)\n- 성능 주장: 'Opus 근접·상회'는 자체 평가, 독립 검증 전\n- 배경: SpaceX가 xAI 인수(2월)·Cursor 인수 진행($60B, 3분기 마감 예정)\n\n출처: x.ai (공식 발표 페이지) / techtimes",
+  source: "https://x.ai/news/grok-4-5",
+  officialUrl: "https://x.ai/news/grok-4-5",
+  backupUrls: [
+    { label: "TechTimes", url: "https://www.techtimes.com/articles/319314/20260629/grok-45-enters-private-beta-spacex-tesla-no-public-access-no-independent-benchmark.htm" },
+  ],
+  thumbnail: {
+    src: "/og-cache/xai-grok-4-5-official.jpg",
+    alt: "xAI Grok 4.5 프라이빗 베타 — 1.5T V9",
+  },
+  slug: "xai-20260628-grok-4-5-private-beta",
+  tags: ["xAI", "프런티어 모델", "미확정"],
 };
 
 export const edition2026_07a: ABEdition = {
@@ -74,7 +99,7 @@ export const edition2026_07a: ABEdition = {
   announceDate: "2026-07-09",
   intro: `안녕하세요, VoidLight입니다. 이번 AB는 6월 25일부터 7월 8일까지 2주를 하나의 흐름으로 묶었습니다.
 
-첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI는 7월 9일 GPT-5.6 전면 공개로 맞섭니다. 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
+첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI는 7월 9일 GPT-5.6 전면 공개로 맞섭니다. 여기에 xAI까지 Grok 4.5를 SpaceX·Tesla 사내 베타로 돌리며 '월 1회 신모델' 로드맵을 던졌습니다(공개·검증 전). 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
 
 두 번째 축은 통제와 복원입니다. Fable 5·Mythos 5는 수출통제로 막혔다가 6월 30일 해제, 7월 1일 전 세계 복원을 거쳤고, OpenAI GPT-5.6도 미 정부 안전성 검토를 거쳐 공개됩니다. 여기에 중국이 자국 상위 AI 모델의 해외 접근을 제한하는 방안을 검토(미확정)한다는 소식까지 겹치며, 수출통제가 더는 미국만의 카드가 아니게 됐습니다. 모델 접근이 국가안보·수출통제의 문제로 완전히 넘어왔습니다.
 
@@ -150,17 +175,25 @@ export const edition2026_07a: ABEdition = {
     {
       rank: 5,
       tier: "feature",
+      post: grokPost,
+      sourceWeek: "2026-w28",
+      sourceCompany: "xAI (SpaceXAI)",
+      editorial: "프런티어 대전이 xAI로도 번진 카드입니다. 다만 1·4번(Sonnet 5·GPT-5.6)과 결이 다릅니다 — 저 둘은 실제 출시(또는 임박)인데, Grok 4.5는 SpaceX·Tesla 사내 베타 + Musk의 자체 평가뿐이라 '아직 검증 안 된 주장'입니다. 발표에선 두 가지만 짚으세요. ① 1.5조 파라미터로 'Opus 근접'을 주장했지만 독립 벤치마크가 없다(믿고 거르기). ② 진짜 뉴스는 성능이 아니라 '월 1회 신모델' 선언 — 사실이면 경쟁 속도 자체가 달라집니다. 3번 중국 카드처럼 '미확정' 전제를 분명히 하고 소개해 주세요.",
+    },
+    {
+      rank: 6,
+      tier: "feature",
       post: {
         ...findPost(week27, "korea-20260629-samsung-skhynix-ai-investment"),
         content:
-          "**이게 뭐예요?**\n한국이 국민보고회에서 삼성·SK가 참여하는 초대형 AI·반도체 투자 계획을 발표했다.\n\n**금액은 '범위'로 봐야 한다 (중요)**\n출처마다 숫자가 크게 다르다.\n- Al Jazeera: 1조 달러 이상\n- CNN·CNBC: 5,760억 ~ 1조3,000억 달러\n- 국내 보도: 4,755조 원(국가예산의 약 6.5배)\n단일 확정 숫자로 말하면 오해를 부른다. 발표에서도 '출처마다 다르지만 조 단위'라고 범위로 전달하는 편이 안전하다.\n\n**비개발자용 한 줄**\n한국이 AI·반도체 경쟁의 '구경꾼'이 아니라 '직접 투자 주체'로 전면에 섰다는 신호다.\n\n**왜 중요한가**\n이번 2주의 밑바닥 서사는 '결국 반도체·인프라 싸움'이다. 6번 LongCat('엔비디아 없이 학습')과 정면으로 연결된다 — 한쪽은 탈엔비디아를 주장하고, 한쪽(한국)은 그 반도체 공급망의 핵심을 쥐고 대규모로 베팅한다.\n\n출처: 국민보고회 발표 / 국내외 보도 (금액 출처별 상이)",
+          "**이게 뭐예요?**\n한국이 국민보고회에서 삼성·SK가 참여하는 초대형 AI·반도체 투자 계획을 발표했다.\n\n**금액은 '범위'로 봐야 한다 (중요)**\n출처마다 숫자가 크게 다르다.\n- Al Jazeera: 1조 달러 이상\n- CNN·CNBC: 5,760억 ~ 1조3,000억 달러\n- 국내 보도: 4,755조 원(국가예산의 약 6.5배)\n단일 확정 숫자로 말하면 오해를 부른다. 발표에서도 '출처마다 다르지만 조 단위'라고 범위로 전달하는 편이 안전하다.\n\n**비개발자용 한 줄**\n한국이 AI·반도체 경쟁의 '구경꾼'이 아니라 '직접 투자 주체'로 전면에 섰다는 신호다.\n\n**왜 중요한가**\n이번 2주의 밑바닥 서사는 '결국 반도체·인프라 싸움'이다. 7번 LongCat('엔비디아 없이 학습')과 정면으로 연결된다 — 한쪽은 탈엔비디아를 주장하고, 한쪽(한국)은 그 반도체 공급망의 핵심을 쥐고 대규모로 베팅한다.\n\n출처: 국민보고회 발표 / 국내외 보도 (금액 출처별 상이)",
       },
       sourceWeek: "2026-w27",
       sourceCompany: "삼성·SK / 한국",
       editorial: "한국 청중에게 가장 직접적인 카드입니다. 삼성·SK가 참여하는 AI·반도체 메가 투자로, 우리나라가 이 흐름의 관전자가 아니라 직접 주체로 올라섰습니다. 다만 발표 금액은 출처마다 달라(1조 달러 이상 / 5,760억~1조3,000억 달러 / 4,755조원) 단일 숫자로 말하지 말고 '범위'로 전달하시길 권합니다.",
     },
     {
-      rank: 6,
+      rank: 7,
       tier: "feature",
       post: {
         ...findPost(week27, "meituan-longcat-20260630-longcat-2-0"),
@@ -169,10 +202,22 @@ export const edition2026_07a: ABEdition = {
       },
       sourceWeek: "2026-w27",
       sourceCompany: "Meituan",
-      editorial: "'엔비디아 없이도 프런티어급 모델을 학습했다'는 주장이 핵심입니다. 사실이라면 AI 반도체 공급망의 판이 흔들리고, 이는 5번 한국 반도체 투자 카드와 정면으로 연결됩니다. 1.6T MoE에 MIT 라이선스라 오픈소스 진영에도 큰 자극입니다.",
+      editorial: "'엔비디아 없이도 프런티어급 모델을 학습했다'는 주장이 핵심입니다. 사실이라면 AI 반도체 공급망의 판이 흔들리고, 이는 6번 한국 반도체 투자 카드와 정면으로 연결됩니다. 1.6T MoE에 MIT 라이선스라 오픈소스 진영에도 큰 자극입니다.",
     },
     {
-      rank: 7,
+      rank: 8,
+      tier: "feature",
+      post: {
+        ...findPost(week27, "deepseek-20260627-dspark-deepspec"),
+        content:
+          "**이게 뭐예요?**\n중국 딥시크가 추론을 더 빠르게 돌리는 기술 'DSpark'(DeepSpec 기반)를 오픈소스로 공개했다. 새 모델이 아니라 '기존 모델을 더 효율적으로 돌리는 방법'이다.\n\n**무엇이 달라졌나?**\n- 같은 GPU로 더 많은 응답을 뽑는 추론 최적화\n- 벤더(딥시크) 주장 기준 60~85% 속도 향상\n- 오픈소스로 공개 — 누구나 가져다 적용 가능\n\n**비개발자용 한 줄**\n모델 성능이 아니라 '운영비'를 때리는 카드다. 같은 하드웨어로 더 많이 처리하면 곧 서비스 단가가 내려간다.\n\n**왜 중요한가 / 주의**\n- 7번 LongCat과 함께 '중국 오픈소스 진영의 실전 경쟁력'을 보여준다 — 모델(LongCat)뿐 아니라 인프라 효율(DSpark)까지.\n- 60~85%는 아직 벤더 주장이며 독립 검증 전이라는 전제를 붙여 주세요.\n\n출처: DeepSeek (오픈소스 공개)",
+      },
+      sourceWeek: "2026-w27",
+      sourceCompany: "DeepSeek",
+      editorial: "7번 LongCat과 짝으로 보는 카드입니다. LongCat이 '엔비디아 없이 학습'(모델 쪽)이라면, DSpark는 '같은 GPU로 더 싸게 추론'(운영 쪽)입니다. 둘을 합치면 '중국 오픈소스 진영이 모델·인프라 양쪽에서 실전 경쟁력을 보인다'는 메시지가 됩니다. 60~85% 속도 향상은 아직 딥시크 자체 주장이라, '벤더 주장·독립 검증 전'만 붙여 주세요.",
+    },
+    {
+      rank: 9,
       tier: "feature",
       post: {
         ...findPost(week27, "google-20260630-nano-banana-2-lite-gemini-omni-flash"),
@@ -184,7 +229,7 @@ export const edition2026_07a: ABEdition = {
       editorial: "생성형 미디어를 실무에 쓰시는 분께 바로 와닿는 소식입니다. 이미지 1,000장 $0.034, 영상 초당 $0.10까지 단가가 내려가면서, '비싸서 못 돌리던' 대량 생성이 예산 안으로 들어옵니다. 콘텐츠·마케팅 파이프라인의 비용 구조를 다시 계산해 볼 시점입니다.",
     },
     {
-      rank: 8,
+      rank: 10,
       tier: "feature",
       post: anthropicJspacePost,
       sourceWeek: "2026-w28",
