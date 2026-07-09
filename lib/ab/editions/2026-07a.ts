@@ -102,6 +102,11 @@ const gptLivePost: Post = {
     "**이게 뭐예요?**\nOpenAI가 실시간 대화형 음성 모델 GPT-Live를 공개하고, 오늘(7/8) ChatGPT 음성에 전 세계로 배포하기 시작했다. 텍스트 챗봇이 사실상 '귀와 입'을 달고 사람처럼 대화하는 방식이다.\n\n**무엇이 달라졌나?**\n- full-duplex 구조 — 듣기와 말하기를 동시에. 'mhmm' 맞장구, 끼어들기, 잠깐 기다려주기까지 자연스럽게\n- 깊은 작업은 뒤에서 프런티어 모델(출시 시 GPT-5.5)에 위임하고, 그 사이에도 대화를 계속 이어감\n- 대화 중 날씨·주식·스포츠 같은 시각 카드도 함께 표시, 9개 음성 리마스터\n\n**규모 / 제공**\n- 매주 1.5억 명이 ChatGPT 음성을 쓴다 — 그 기본 경험이 오늘 바뀐다\n- GPT-Live-1(Go·Plus·Pro 기본) / GPT-Live-1 mini(무료 기본), iOS·Android·웹에 오늘부터 글로벌\n- API는 곧 예정. 단, 지금은 영상·화면공유 미지원, 일부 언어는 억양·유창성 한계\n\n**비개발자용 한 줄**\n'타이핑하는 챗봇'에서 '말로 대화하는 비서'로 넘어간 날이다. 통역, 핸즈프리 질문, 언어 연습 같은 데 당장 체감된다.\n\n**왜 중요한가**\n4위 GPT-5.6이 '성능' 카드라면, 이건 OpenAI의 '소비자 접점' 카드다. 성능 경쟁과 별개로, 사람들이 AI를 매일 어떻게 쓰는지(음성)를 바꾸는 쪽이다.\n\n출처: openai.com (2026-07-08 공식 발표)",
   source: "https://openai.com/index/introducing-gpt-live/",
   officialUrl: "https://openai.com/index/introducing-gpt-live/",
+  videoUrl: "https://www.youtube.com/embed/3bL6IpdgddQ",
+  backupUrls: [
+    { label: "데모 영상 · Natural Conversations (OpenAI 공식 유튜브 — CC로 한글 자막 가능)", url: "https://www.youtube.com/watch?v=3bL6IpdgddQ" },
+    { label: "데모 영상 · Listening & Speaking (OpenAI 공식 유튜브)", url: "https://www.youtube.com/watch?v=K-fYBO8t3-A" },
+  ],
   thumbnail: {
     src: "/og-cache/openai-gpt-live.png",
     alt: "OpenAI GPT-Live — 실시간 음성 모델, ChatGPT 음성 글로벌 배포",
