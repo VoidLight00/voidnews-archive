@@ -326,5 +326,21 @@ export const edition2026_07a: ABEdition = {
         alt: "Glaze — macOS 데스크톱 앱 빌더 (by Raycast)",
       },
     },
+    {
+      title: "Barback — 가려진 맥 메뉴바 아이콘을 다시 꺼내 쓰는 유틸 (오픈소스)",
+      category: "개발 도구 / macOS 메뉴바 (오픈소스)",
+      deck: "노치·공간 부족으로 숨겨진 메뉴바 아이콘을 격자로 모아 보고, 클릭하면 진짜 메뉴가 열림",
+      sourceUrl: "https://github.com/joonlab/barback",
+      sourceLabel: "GitHub →",
+      summary: "맥북 노치·공간 부족으로 숨겨진 메뉴바 아이콘을 한곳에 모아 보여주고, 클릭하면 그 앱의 진짜 메뉴가 열리는 macOS 오픈소스 유틸. 아이콘 순서 재배치까지.",
+      body: "Barback은 JoonLab(PARK JOON)이 만든 macOS 메뉴바 아이콘 관리 도구입니다. 노치와 앱 메뉴, 수많은 상태 아이콘이 좁은 메뉴바를 두고 경쟁하다 macOS가 아이콘을 그냥 숨겨버리면, Barback의 격자 패널이 그 가려진 아이콘까지 전부 모아 보여줍니다. ScreenCaptureKit으로 실제 아이콘을 캡처해 표시하고, 클릭하면 숨은 아이템도 잠깐 끌어내 실제 메뉴를 연 뒤 원위치시킵니다. 드래그로 순서 재배치도 됩니다.\n\nSwift 6·AppKit 네이티브(Dock 아이콘 없는 메뉴바 전용), macOS 14+ 지원, MIT 라이선스입니다. 현재 v0.1.",
+      editorial: "이번 추천 도구들이 대부분 '에이전트·생성' 쪽이라면, Barback은 매일 쓰는 맥 자체를 정돈해 주는 실용 유틸입니다. Bartender 같은 상용 메뉴바 앱을 오픈소스로 대체하고 싶은 분께 잘 맞습니다. VoidLight이 직접 설치해 쓰는 도구이고, 한국 개발자(JoonLab)의 MIT 오픈소스라는 점도 반가운 카드입니다.",
+      tags: ["macOS", "메뉴바", "오픈소스"],
+      tier: "feature",
+      thumbnail: {
+        src: "/og-cache/barback.png",
+        alt: "Barback — macOS 메뉴바 아이콘 관리 유틸 (오픈소스)",
+      },
+    },
   ],
 };
