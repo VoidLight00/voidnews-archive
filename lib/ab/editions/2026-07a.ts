@@ -4,8 +4,8 @@ import { week27 } from "../../weeks/2026-w27";
 import { week28 } from "../../weeks/2026-w28";
 
 // 2026-07a — AB VIP 큐레이션 (2026-06-25 ~ 2026-07-08)
-// 메인 발표 섹션은 8카드로 압축. 필수: Sonnet 5·Fable 5·GPT-5.6·중국 수출제한.
-// 신규 2건(중국 수출제한·Anthropic J-space)은 weekly에 없어 인라인 Post로 직접 넣는다.
+// 메인 발표 섹션. 필수: Sonnet 5·Fable 5·GPT-5.6·중국 수출제한.
+// 신규 3건(중국 수출제한·Seedream 5.0 Pro·Anthropic J-space)은 weekly에 없어 인라인 Post로 직접 넣는다.
 // 주간 데이터 재사용. 중복 인라인 복제는 실제 정적 빌드 문제가 생길 때만 되돌린다.
 
 function findPost(week: WeeklyData, slug: string): Post {
@@ -115,6 +115,26 @@ const gptLivePost: Post = {
   tags: ["OpenAI", "음성", "소비자"],
 };
 
+const seedream5Post: Post = {
+  date: "7/9",
+  platform: "X+Threads",
+  title: "ByteDance, 레이어 분리 이미지 모델 Seedream 5.0 Pro 공개",
+  featured: true,
+  deck: "인물·배경·텍스트·오브젝트를 레이어로 분리 — 포토샵식 편집에 가까워진 이미지 생성",
+  summary:
+    "ByteDance Seed가 멀티모달 이미지 생성 모델 Seedream 5.0 Pro를 공개했다. 결과를 한 장의 평면 이미지로만 내는 대신 인물·배경·텍스트·오브젝트를 독립 레이어로 분리해 포토샵처럼 옮기고 키우며 편집할 수 있게 하는 것이 핵심이다.",
+  content:
+    "**이게 뭐예요?**\nByteDance Seed가 이미지 모델 Seedream 5.0 Pro를 공개했다. 지금까지 이미지 생성은 결과가 한 장의 평면 이미지라, 한 군데만 고치려 해도 전체를 다시 생성해야 하는 경우가 많았다.\n\n**무엇이 달라졌나?**\n- 인물·배경·텍스트·오브젝트를 요청하면 독립 레이어로 분리\n- 포토샵처럼 레이어별로 옮기고 키우며 편집 가능\n- 영역별 정밀 편집, 스케치·공간 주석 기반 편집 지원\n- 공식 페이지 기준 영어·중국어·일본어·한국어·스페인어·벵골어·아랍어 등 다국어 텍스트 사례 제시\n\n**비개발자용 한 줄**\n이미지 생성이 '그림 한 장'에서 '편집 가능한 디자인 파일'에 가까워지는 신호다. 그래서 해외에서는 '이제 포토샵은 끝인가' 같은 반응까지 나온다.\n\n**왜 중요한가 / 주의**\nGPT-Image 2 이후 이미지 모델 경쟁이 단순 화질이 아니라 편집성으로 옮겨가고 있다. 다만 공식 페이지는 쇼케이스 중심이고, 본문 텍스트가 아직 깨진다는 지적과 상용 조건·벤치마크 부재는 함께 봐야 한다.\n\n출처: ByteDance Seed 공식 페이지",
+  source: "https://seed.bytedance.com/en/seedream5_0_pro",
+  officialUrl: "https://seed.bytedance.com/en/seedream5_0_pro",
+  thumbnail: {
+    src: "/og-cache/bytedance-seedream-5-pro-layer-editing.webp",
+    alt: "ByteDance Seedream 5.0 Pro — 레이어 분리 이미지 편집",
+  },
+  slug: "bytedance-20260709-seedream-5-pro-layer-editing",
+  tags: ["ByteDance", "이미지 생성", "디자인"],
+};
+
 export const edition2026_07a: ABEdition = {
   slug: "2026-07a",
   volume: 7,
@@ -135,6 +155,7 @@ export const edition2026_07a: ABEdition = {
 발표에서는 Sonnet 5로 '성능이 싸졌다'를 열고, Fable 5 복원과 중국의 접근 제한 검토·GPT-5.6 공개로 '접근은 양쪽에서 통제된다'를 지나, 한국 반도체 투자로 '결국 인프라 싸움'이라는 결론으로 청중에게 연결하면 흐름이 가장 선명합니다.`,
   coreFlow: [
     "Claude Sonnet 5·GPT-5.6로 최상위 성능이 저비용화되고, 발표가 곧 개발 스택 전체로 즉시 배선됐습니다.",
+    "Seedream 5.0 Pro처럼 이미지 생성은 한 장의 결과물에서 레이어 편집 가능한 디자인 파일 쪽으로 이동하고 있습니다.",
     "Fable 5 수출통제 해제·복원, GPT-5.6의 정부 안전성 검토, 그리고 중국의 자국 모델 접근 제한 검토(미확정)까지 — 모델 접근이 미·중 양쪽에서 국가안보·통제의 문제가 됐습니다.",
     "삼성·SK 메가 투자와 메이투안의 '탈엔비디아' 학습 주장까지, 이 흐름의 바닥에는 반도체·인프라가 있고 그 중심에 한국이 있습니다.",
   ],
@@ -270,6 +291,14 @@ export const edition2026_07a: ABEdition = {
     },
     {
       rank: 11,
+      tier: "feature",
+      post: seedream5Post,
+      sourceWeek: "2026-w28",
+      sourceCompany: "ByteDance Seed",
+      editorial: "이미지 생성 경쟁이 '화질'에서 '편집성'으로 넘어가는 카드입니다. Seedream 5.0 Pro는 결과물을 인물·배경·텍스트·오브젝트 레이어로 나눠 포토샵처럼 만질 수 있다는 점이 핵심입니다. 단, 공식 페이지는 쇼케이스 중심이고 본문 텍스트 품질 지적이 남아 있으니 '포토샵 종료'가 아니라 '디자인 파일화 방향'으로 소개하면 안전합니다.",
+    },
+    {
+      rank: 12,
       tier: "feature",
       post: anthropicJspacePost,
       sourceWeek: "2026-w28",
