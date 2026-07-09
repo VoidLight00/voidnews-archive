@@ -65,28 +65,30 @@ const anthropicJspacePost: Post = {
   tags: ["Anthropic", "해석가능성", "연구"],
 };
 
-// Grok 4.5 — xAI(SpaceXAI) 프라이빗 베타(2026-06-28). 공식 x.ai 발표 페이지 존재, 단 공개·독립 벤치 없음(미확정)
+// Grok 4.5 — xAI(SpaceXAI) 공개 출시(2026-07-08). $2/$6로 언더컷, Musk 'Opus-class' 주장 — 단 성능은 대부분 자체 벤치
 const grokPost: Post = {
-  date: "6/28",
+  date: "7/8",
   platform: "X+Threads",
-  title: "xAI, Grok 4.5 프라이빗 베타 진입 — 1.5T V9 + '월 1회 신모델' 로드맵 (미확정)",
+  title: "xAI(SpaceXAI), Grok 4.5 공개 출시 — $2/$6로 Opus·GPT-5.6 언더컷, 'Opus-class' 주장",
   featured: true,
-  deck: "SpaceX·Tesla 사내 베타(6/28), Musk 'Opus 근접·상회' 자체 주장 — 공개·독립 벤치 없음",
+  deck: "7/8 공개 출시(상장·Cursor 인수 후 첫 대형작). 100만 토큰당 $2/$6 — 단 성능은 대부분 자체 벤치",
   summary:
-    "xAI가 Grok 4.5를 6월 28일 SpaceX·Tesla 사내 프라이빗 베타로 돌렸다. V9 파운데이션 1.5조 파라미터로 프로덕션 모델(500B)의 3배. Musk는 '초기 평가상 Claude Opus에 근접, 어쩌면 상회'라 밝혔으나 공개 접근·독립 벤치마크가 없다. 함께 나온 로드맵이 더 파격적 — 2026년 말까지 매월 새 파운데이션 모델을 처음부터 학습해 내놓겠다는 것.",
+    "xAI(SpaceXAI)가 Grok 4.5를 7월 8일 공개 출시했다. V9 파운데이션 1.5조 파라미터, 가격은 100만 토큰당 $2/$6로 Claude Opus 4.8·GPT-5.6을 절반 이하로 언더컷한다. Musk는 'Opus-class'라 했으나(일부 매체는 '작년 Opus급'으로 지적) 성능은 대부분 자체 벤치이며 SWE-Bench Pro 등 일부 지표는 Opus·Fable에 뒤진다. '월 1회 신모델' 로드맵도 유효(8월 2조 모델 예정).",
   content:
-    "**이게 뭐예요?**\nxAI(현 SpaceXAI)가 새 모델 Grok 4.5를 6월 28일 SpaceX·Tesla 사내 프라이빗 베타로 돌렸다. Musk가 X로 직접 공지했다.\n\n**아직 아무도 못 쓴다 (미확정)**\n- 공개 접근 없음 — SpaceX·Tesla 내부에만\n- 독립 벤치마크 없음 — 어떤 공개 리더보드에도 미제출\n- 공개 API는 여전히 이전 모델(Grok 4.3)\nMusk는 '초기 평가상 Claude Opus에 근접, 어쩌면 상회'라 했지만, 이 평가는 전부 사내(SpaceX·Tesla)에서 나왔다. 제3자 검증이 없다.\n\n**무엇이 달라졌나?**\n- V9 파운데이션, 1.5조 파라미터 — 프로덕션 모델(v8-small, 5천억)의 3배\n- NVIDIA Blackwell 기반 Colossus(멤피스)에서 학습\n- Cursor 개발 데이터가 보조 학습 단계에 투입(초기 학습 아님) → 다음 2조 모델은 처음부터 반영 예정\n\n**진짜 헤드라인: '월 1회 신모델'**\nMusk는 2026년 말까지 매월 '처음부터 새로 학습한' 파운데이션 모델을 내놓겠다고 밝혔다. 파운데이션 모델은 학습에만 수억 달러가 드는데, 이를 월 단위로 찍어내겠다는 건 전례 없는 컴퓨트 물량 주장이다.\n\n**비개발자용 한 줄**\n'제일 센 모델을 만들었다'보다 '매달 새 모델을 쏟아내겠다'가 핵심이다 — 사실이면 프런티어 경쟁의 속도 자체를 바꾼다. 단, 지금은 Musk의 발언과 사내 베타뿐이고 검증은 없다.\n\n**확인 포인트**\n- 현재: SpaceX·Tesla 사내 프라이빗 베타 (공개일 미정)\n- 성능 주장: 'Opus 근접·상회'는 자체 평가, 독립 검증 전\n- 배경: SpaceX가 xAI 인수(2월)·Cursor 인수 진행($60B, 3분기 마감 예정)\n\n출처: x.ai (공식 발표 페이지) / techtimes",
+    "**이게 뭐예요?**\nxAI(현 SpaceXAI)가 Grok 4.5를 7월 8일 공개 출시했다. 상장과 Cursor 인수 이후 첫 대형 출시로, 이제 API·Cursor로 누구나 쓸 수 있다.\n\n**가격이 무기다**\n- 100만 토큰당 $2(입력)·$6(출력)\n- Claude Opus 4.8($5/$25)·GPT-5.6 Sol($5/$30)을 절반 이하로 언더컷\n- SiliconAngle: '경쟁사 가격을 극적으로 깎았다'\n\n**성능 주장 (대부분 자체 벤치)**\n- Musk는 'Opus-class'라 표현 — 단 Decrypt 등은 '현 Opus 4.8이 아니라 작년 Opus급'으로 지적\n- 자체 벤치에서 Terminal-Bench는 앞서지만, SWE-Bench Pro는 Opus 4.8(69.2)이 Grok(64.7)을 이기고, xAI 자기 차트에서도 Claude Fable 5가 전부 1위\n- 독립 제3자 벤치마크는 아직 제한적\n\n**진짜 헤드라인: '월 1회 신모델'**\nMusk는 2026년 말까지 매월 '처음부터 새로 학습한' 파운데이션 모델을 내놓겠다고 밝혔다(다음 2조 모델 8월 예정). 사실이면 프런티어 경쟁의 속도 자체가 달라진다 — 단 이건 계획이지 실증된 트랙레코드는 아니다.\n\n**비개발자용 한 줄**\n'제일 센 모델'보다 '최상위급을 제일 싸게 + 매달 새 모델'이 핵심이다. 성능 헤드라인은 자체 주장이니 독립 검증을 기다려 읽자.\n\n**확인 포인트**\n- 현재: 공개 출시(2026-07-08), API·Cursor 제공, 가격 $2/$6\n- 성능: 'Opus-class'는 Musk·자체 벤치 기준, 일부 지표(SWE-Bench Pro 등)는 Opus·Fable에 뒤짐\n- 배경: SpaceX가 xAI 인수(2월)·Cursor 인수($60B)\n\n출처: x.ai 공식 / Axios·TechCrunch·Decrypt·SiliconAngle",
   source: "https://x.ai/news/grok-4-5",
   officialUrl: "https://x.ai/news/grok-4-5",
   backupUrls: [
-    { label: "TechTimes", url: "https://www.techtimes.com/articles/319314/20260629/grok-45-enters-private-beta-spacex-tesla-no-public-access-no-independent-benchmark.htm" },
+    { label: "TechCrunch", url: "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" },
+    { label: "Decrypt (가격·Opus 비교)", url: "https://decrypt.co/373094/grok-4-5-elon-musk-claude-opus" },
+    { label: "SiliconAngle (언더컷)", url: "https://siliconangle.com/2026/07/08/spacexais-newest-ai-model-grok-4-5-dramatically-undercuts-anthropic-openai-price/" },
   ],
   thumbnail: {
     src: "/og-cache/xai-grok-4-5-official.jpg",
-    alt: "xAI Grok 4.5 프라이빗 베타 — 1.5T V9",
+    alt: "xAI Grok 4.5 공개 출시 — 1.5T V9, $2/$6",
   },
-  slug: "xai-20260628-grok-4-5-private-beta",
-  tags: ["xAI", "프런티어 모델", "미확정"],
+  slug: "xai-20260708-grok-4-5-launch",
+  tags: ["xAI", "프런티어 모델", "출시"],
 };
 
 // GPT-Live — OpenAI 실시간 음성(2026-07-08 공식, 인-윈도우). 순회 소스 baeksang(curator-web)이 발견, 출처는 openai.com 공식
@@ -145,7 +147,7 @@ export const edition2026_07a: ABEdition = {
   announceDate: "2026-07-09",
   intro: `안녕하세요, VoidLight입니다. 이번 AB는 6월 25일부터 7월 8일까지 2주를 하나의 흐름으로 묶었습니다.
 
-첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI는 7월 9일 GPT-5.6 전면 공개로 맞섭니다. 여기에 xAI까지 Grok 4.5를 SpaceX·Tesla 사내 베타로 돌리며 '월 1회 신모델' 로드맵을 던졌습니다(공개·검증 전). 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
+첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI는 7월 9일 GPT-5.6 전면 공개로 맞섭니다. 여기에 xAI까지 Grok 4.5를 7월 8일 공개 출시하며(가격 $2/$6로 언더컷) '월 1회 신모델' 로드맵을 던졌습니다(성능 주장은 자체 벤치). 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
 
 두 번째 축은 통제와 복원입니다. Fable 5·Mythos 5는 수출통제로 막혔다가 6월 30일 해제, 7월 1일 전 세계 복원을 거쳤고, OpenAI GPT-5.6도 미 정부 안전성 검토를 거쳐 공개됩니다. 여기에 중국이 자국 상위 AI 모델의 해외 접근을 제한하는 방안을 검토(미확정)한다는 소식까지 겹치며, 수출통제가 더는 미국만의 카드가 아니게 됐습니다. 모델 접근이 국가안보·수출통제의 문제로 완전히 넘어왔습니다.
 
@@ -231,7 +233,7 @@ export const edition2026_07a: ABEdition = {
       post: grokPost,
       sourceWeek: "2026-w28",
       sourceCompany: "xAI (SpaceXAI)",
-      editorial: "프런티어 대전이 xAI로도 번진 카드입니다. 다만 1·4번(Sonnet 5·GPT-5.6)과 결이 다릅니다 — 저 둘은 실제 출시(또는 임박)인데, Grok 4.5는 SpaceX·Tesla 사내 베타 + Musk의 자체 평가뿐이라 '아직 검증 안 된 주장'입니다. 발표에선 두 가지만 짚으세요. ① 1.5조 파라미터로 'Opus 근접'을 주장했지만 독립 벤치마크가 없다(믿고 거르기). ② 진짜 뉴스는 성능이 아니라 '월 1회 신모델' 선언 — 사실이면 경쟁 속도 자체가 달라집니다. 3번 중국 카드처럼 '미확정' 전제를 분명히 하고 소개해 주세요.",
+      editorial: "프런티어 대전이 xAI로도 번진 카드입니다. 6월 사내 베타를 거쳐 7월 8일 공개 출시됐고, 이제 API·Cursor로 누구나 씁니다. 발표에선 세 가지를 짚으세요. ① 가격 — $2/$6로 Opus·GPT-5.6을 절반 이하로 언더컷(진짜 무기). ② 성능 주장은 조심 — Musk는 'Opus-class'라지만 자기 벤치에서도 SWE-Bench Pro는 Opus에 지고 전체적으론 Fable 5에 밀리며, 독립 검증은 아직 제한적입니다. ③ 진짜 뉴스는 '월 1회 신모델' 선언(8월 2조 모델 예정) — 사실이면 경쟁 속도가 달라집니다. '출시는 됐지만 성능 헤드라인은 자체 주장'으로 균형을 잡아 주세요.",
     },
     {
       rank: 6,
