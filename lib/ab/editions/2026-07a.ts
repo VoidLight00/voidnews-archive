@@ -310,5 +310,21 @@ export const edition2026_07a: ABEdition = {
         alt: "Comfy MCP — 에이전트를 ComfyUI 창작 스택에 연결",
       },
     },
+    {
+      title: "Glaze — 말로 설명하면 만들어지는 macOS 데스크톱 앱 빌더",
+      category: "개발 도구 / 앱 빌더 (by Raycast)",
+      deck: "브라우저가 아니라 '내 맥'에 사는 앱을 대화로 생성 — 로컬·오프라인·OS 통합",
+      sourceUrl: "https://www.glaze.app/",
+      sourceLabel: "공식 사이트 →",
+      summary: "원하는 걸 말로 설명하면 macOS 데스크톱 앱을 만들어 주는 도구. 코드 몰라도 되고, 앱은 내 맥에서 오프라인으로 돌며 파일·단축키·메뉴바 등 OS에 직접 접근한다.",
+      body: "Glaze는 Raycast가 만든 데스크톱 앱 빌더입니다. '이런 앱이 있으면 좋겠다'를 자연어로 말하면 실제 macOS 앱으로 만들어 주고, 마음에 안 들면 다시 말로 고칩니다. Lovable·Replit·v0가 브라우저용 앱을 만든다면 Glaze는 '데스크톱'용이라 파일 시스템·키보드 단축키·메뉴바·백그라운드 프로세스까지 접근하고, 데이터는 내 맥에 남습니다.\n\n만든 앱의 코드·콘텐츠는 사용자 소유이고, Glaze Store에 공개하거나 팀에 비공개로 공유할 수 있습니다. 현재 macOS Tahoe·애플 실리콘 전용(윈도우·리눅스는 예정)이며 Product Hunt 오늘의 1위 제품입니다.",
+      editorial: "teamclaude·Comfy MCP가 '에이전트를 인프라·창작 스택에 잇는' 도구라면, Glaze는 '비개발자도 자기 도구를 직접 만든다'는 이번 흐름의 소비자판입니다. 사내 유틸이나 개인 워크플로 자동화를 코드 없이 만들고 싶은 분께 특히 잘 맞습니다.",
+      tags: ["앱 빌더", "macOS", "Raycast"],
+      tier: "feature",
+      thumbnail: {
+        src: "/og-cache/glaze-app.jpg",
+        alt: "Glaze — macOS 데스크톱 앱 빌더 (by Raycast)",
+      },
+    },
   ],
 };
