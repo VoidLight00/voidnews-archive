@@ -180,13 +180,19 @@ export const edition2026_07a: ABEdition = {
           {
             src: "/og-cache/gpt-5-6-terminal-bench-2-1.png",
             alt: "Terminal-Bench 2.1 벤치마크 — GPT-5.6 Sol Ultra 91.9점 1위",
-            caption: "Terminal-Bench 2.1(명령줄 코딩 에이전트): Sol Ultra 91.9 > Sol 88.8 > GPT-5.5 88.0 > Fable 5 83.4 > Gemini 3.1 Pro 70.7. 초록이 GPT-5.6 계열. 출처: OpenAI(2026-06-26).",
+            caption: "Terminal-Bench 2.1(명령줄 코딩 에이전트): Sol Ultra 91.9 > Sol 88.8 > GPT-5.5 88.0 > Fable 5 83.4 > Gemini 3.1 Pro 70.7. 초록이 GPT-5.6 계열. 공식 수치 원본: openai.com/index/previewing-gpt-5-6-sol (2026-06-26).",
           },
           {
             src: "/og-cache/gpt-5-6-hero-openai.webp",
             alt: "GPT-5.6 세 모델 — Sol·Terra·Luna",
-            caption: "GPT-5.6 라인업 — Sol(플래그십)·Terra(균형·GPT-5.5급 절반 값)·Luna(경량·최저가). 출처: OpenAI.",
+            caption: "GPT-5.6 라인업 — Sol(플래그십)·Terra(균형·GPT-5.5급 절반 값)·Luna(경량·최저가). 출처: OpenAI 공식 발표(openai.com/index/previewing-gpt-5-6-sol).",
           },
+        ],
+        backupUrls: [
+          { label: "공식 발표 — 벤치마크 차트·이미지 원본", url: "https://openai.com/index/previewing-gpt-5-6-sol/" },
+          { label: "시스템 카드 — 확장 평가·안전성 이미지", url: "https://deploymentsafety.openai.com/gpt-5-6-preview" },
+          { label: "ExploitGym 벤치마크 (UC Berkeley·arXiv)", url: "https://arxiv.org/abs/2605.11086" },
+          { label: "Engadget — 7/9 GA 보도", url: "https://www.engadget.com/2210308/openai-rolls-out-gpt5-6-july-9/" },
         ],
       },
       sourceWeek: "2026-w28",
