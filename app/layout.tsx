@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import ThemeToggle from "./ThemeToggle";
 import TodayStamp from "./TodayStamp";
-import LocaleToggle from "./LocaleToggle";
 import { LocaleProvider } from "./LocaleProvider";
 import { getLatestSlug, getWeekList } from "@/lib/data";
 import "./globals.css";
@@ -254,7 +253,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 X
               </a>
               <span aria-hidden style={{ width: 1, height: 18, background: "var(--border)" }} />
-              <LocaleToggle />
               <ThemeToggle />
             </div>
           </div>
