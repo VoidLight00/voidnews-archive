@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import type { Post } from "@/lib/data";
 import { type ArticleCacheEntry } from "@/lib/article-cache";
@@ -179,6 +179,12 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
   const { post, companyName, companyColor, weekPeriod, threeLineSummary } = meta;
   const { locale, t } = useLocale();
   const [activeLang, setActiveLang] = useState<"ko" | "en">(locale);
+
+  // 전역 locale과 본문 탭 동기화 — localStorage locale은 hydration 후 effect로 로드되므로
+  // 초기 state만으로는 EN 사용자가 항상 한국어 탭에서 시작하는 문제(round4 M1)가 있다.
+  useEffect(() => {
+    setActiveLang(locale);
+  }, [locale]);
 
   // 영문판: post.en(공식 번역 필드) 우선 → 없으면 자동 분류(본문이 원래 영문인 경우) 폴백
   const koContent = isKoreanText(post.content) ? post.content : null;

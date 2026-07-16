@@ -72,10 +72,16 @@ async function main() {
     process.exit(0);
   }
 
-  const files = fs.readdirSync(WEEKS_DIR).filter((f) => /^\d{4}-w\d+\.ts$/.test(f)).sort();
+  const allTs = fs.readdirSync(WEEKS_DIR).filter((f) => f.endsWith(".ts"));
+  const files = allTs.filter((f) => /^\d{4}-w\d+\.ts$/.test(f)).sort();
   let checked = 0;
   let required = 0;
   const violations = [];
+
+  // fail-closed: 패턴 밖 파일명(예: 2026-w29-extra.ts)으로 게이트를 침묵 우회하는 경로 차단 (round4 finding)
+  for (const f of allTs) {
+    if (!files.includes(f)) violations.push(`${f} — 주차 파일명 패턴(YYYY-wNN.ts) 위반 — 게이트 우회 불가`);
+  }
 
   for (const f of files) {
     const m = f.match(/^(\d{4})-w(\d+)\.ts$/);
