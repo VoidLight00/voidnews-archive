@@ -232,7 +232,7 @@
       "evidence": {
         "kind": "manual"
       },
-      "notes": "DU-03. 2026-07-16 실측 보강: ① lib/i18n.ts ko/en 사전 38키 존재하나 t(\"nav.*\")/t(\"site.*\")/t(\"common.*\") 소비 컴포넌트 0곳 ② useLocale 소비처 PostDetail 1곳뿐, nav 라벨 하드코딩(한/영 혼재) ③ 콘텐츠 영문 필드(lib/data.ts _en) 0건 — ENGLISH 탭은 isKoreanText() 휴리스틱 자동분류라 대부분 'not yet available' 폴백 ④ lib/supabase.ts:138 i18n_translations 참조는 importer 0 죽은 경로(IMP-0011 연계). 전역 토글의 깨진 노출은 IMP-0018로 분리 제거함. 실효화 착수 시 B안(기존 38키 nav/툴바 배선)부터."
+      "notes": "DU-03. 2026-07-16 실측 보강: ① lib/i18n.ts ko/en 사전 38키 존재하나 t(\"nav.*\")/t(\"site.*\")/t(\"common.*\") 소비 컴포넌트 0곳 ② useLocale 소비처 PostDetail 1곳뿐, nav 라벨 하드코딩(한/영 혼재) ③ 콘텐츠 영문 필드(lib/data.ts _en) 0건 — ENGLISH 탭은 isKoreanText() 휴리스틱 자동분류라 대부분 'not yet available' 폴백 ④ lib/supabase.ts:138 i18n_translations 참조는 importer 0 죽은 경로(IMP-0011 연계). 전역 토글의 깨진 노출은 IMP-0018로 분리 제거함. 실효화 착수 시 B안(기존 38키 nav/툴바 배선)부터. · 2026-07-16 일부 착수: WeeklyClient 검색 placeholder t() 배선. nav·잔여 라벨은 미착수."
     },
     {
       "id": "IMP-0014",
@@ -312,12 +312,51 @@
       ],
       "commit": "2636e3a",
       "evidence": {
-        "kind": "count",
-        "cmd": "grep -rl 'LocaleToggle' app --include='*.tsx' | wc -l",
-        "op": "eq",
-        "value": 0
+        "kind": "manual"
       },
-      "notes": "pingpong-20260716 교차검증에서 확정한 A안(정직한 축소). i18n 실효화 자체는 IMP-0013 pending 유지 — B안(사전 38키 배선)은 운영 정상화(w29 수집) 후."
+      "notes": "pingpong-20260716 교차검증에서 확정한 A안(정직한 축소). i18n 실효화 자체는 IMP-0013 pending 유지 — B안(사전 38키 배선)은 운영 정상화(w29 수집) 후. · 2026-07-16 IMP-0019가 대체: 콘텐츠 EN 메커니즘 실장으로 토글이 실기능을 갖게 되어 헤더에 재도입. 원 evidence(전역 토글 부재 count=0)는 이 시점부터 무효라 manual로 전환 — '깨진 노출 제거' 취지는 IMP-0019의 실기능화로 계승됨."
+    },
+    {
+      "id": "IMP-0019",
+      "date": "2026-07-16",
+      "source": "user-instruction",
+      "category": "feature",
+      "request": "ENG 버전 전체 적용 메커니즘 + 자동 강제 — Post.en 스키마(title/deck/summary/content), displayPost 표시 헬퍼(identity 키 비침범), PostCard/PostModal/feed 히어로·피드/PostDetail 배선, LocaleToggle 재도입, w28 8/8 영문 백필, check-i18n-coverage.mjs HARD 게이트(w29+ en.title/summary 필수, selftest 내장, BUILD_GATES 등록)",
+      "status": "applied",
+      "files": [
+        "lib/data.ts",
+        "lib/i18n.ts",
+        "app/LocaleToggle.tsx",
+        "app/layout.tsx",
+        "app/[slug]/weekly/PostCard.tsx",
+        "app/[slug]/weekly/PostModal.tsx",
+        "app/[slug]/weekly/feed.tsx",
+        "app/[slug]/editorial/PostDetail.tsx",
+        "app/[slug]/WeeklyClient.tsx",
+        "lib/weeks/2026-w28.ts",
+        "scripts/check-i18n-coverage.mjs",
+        "scripts/run-all-gates.mjs"
+      ],
+      "commit": "3981f97",
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "node scripts/check-i18n-coverage.mjs"
+      },
+      "notes": "차단 능력 실증: en 없는 w29 fixture → exit 2 확인 후 제거. w29부터는 AB site-writer가 en 필드를 안 채우면 빌드가 막힌다(자동 적용 강제). GPT-5.6 카드 영문은 원문 충실 번역 — 사실 정합(07a closure)은 별도 작업으로 ko/en 동시 갱신 예정."
+    },
+    {
+      "id": "IMP-0020",
+      "date": "2026-07-16",
+      "source": "user-instruction",
+      "category": "content",
+      "request": "영문 백필 잔여 — 과거 주차(w27 이하 15개 주차)와 AB edition(intro/closing/editorial 산문) 영문판 + edition 커버리지 게이트 확장",
+      "status": "pending",
+      "files": [],
+      "commit": null,
+      "evidence": {
+        "kind": "manual"
+      },
+      "notes": "w28은 IMP-0019에서 완료. legacy는 displayPost가 ko 폴백으로 안전. 대량 번역이라 별도 배치(워크플로우) 권장."
     }
   ]
 }
