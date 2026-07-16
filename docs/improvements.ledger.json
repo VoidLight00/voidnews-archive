@@ -324,15 +324,17 @@
       "request": "ENG 버전 전체 적용 메커니즘 + 자동 강제 — Post.en 스키마(title/deck/summary/content), displayPost 표시 헬퍼(identity 키 비침범), PostCard/PostModal/feed 히어로·피드/PostDetail 배선, LocaleToggle 재도입, w28 8/8 영문 백필, check-i18n-coverage.mjs HARD 게이트(w29+ en.title/summary 필수, selftest 내장, BUILD_GATES 등록)",
       "status": "applied",
       "files": [
-        "lib/data.ts",
-        "lib/i18n.ts",
         "app/LocaleToggle.tsx",
-        "app/layout.tsx",
+        "app/[slug]/WeeklyClient.tsx",
+        "app/[slug]/editorial/PostDetail.tsx",
         "app/[slug]/weekly/PostCard.tsx",
         "app/[slug]/weekly/PostModal.tsx",
         "app/[slug]/weekly/feed.tsx",
-        "app/[slug]/editorial/PostDetail.tsx",
-        "app/[slug]/WeeklyClient.tsx",
+        "app/ab/[edition]/components/HighlightDetail.tsx",
+        "app/ab/[edition]/components/cards.tsx",
+        "app/layout.tsx",
+        "lib/data.ts",
+        "lib/i18n.ts",
         "lib/weeks/2026-w28.ts",
         "scripts/check-i18n-coverage.mjs",
         "scripts/run-all-gates.mjs"
@@ -342,7 +344,7 @@
         "kind": "exit0",
         "cmd": "node scripts/check-i18n-coverage.mjs"
       },
-      "notes": "차단 능력 실증: en 없는 w29 fixture → exit 2 확인 후 제거. w29부터는 AB site-writer가 en 필드를 안 채우면 빌드가 막힌다(자동 적용 강제). GPT-5.6 카드 영문은 원문 충실 번역 — 사실 정합(07a closure)은 별도 작업으로 ko/en 동시 갱신 예정."
+      "notes": "차단 능력 실증: en 없는 w29 fixture → exit 2 확인 후 제거. w29부터는 AB site-writer가 en 필드를 안 채우면 빌드가 막힌다(자동 적용 강제). GPT-5.6 카드 영문은 원문 충실 번역 — 사실 정합(07a closure)은 별도 작업으로 ko/en 동시 갱신 예정. · 전수 감사 후속(4203b41): AB 카드/HighlightDetail/검색 en 매칭/관련글 내비 배선 — AB 에디션 페이지도 w28-소스 카드는 EN 전환됨."
     },
     {
       "id": "IMP-0020",
