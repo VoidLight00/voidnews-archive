@@ -4,6 +4,8 @@ import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } fr
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick, ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
+import { displayPost } from "@/lib/i18n";
+import { useLocale } from "@/app/LocaleProvider";
 import { renderRichText } from "./richtext";
 import { SectionEyebrow, TagList } from "./bits";
 import { SourceAuditStrip } from "./source";
@@ -27,6 +29,8 @@ export function HighlightArticle({
   editionSlug: string;
 }) {
   const cardRef = useRef<HTMLElement>(null);
+  const { locale } = useLocale();
+  const d = displayPost(item.post, locale); // 표시 전용 — slug/route/identity는 원본 유지
   const accent = item.tier === "hero" ? "var(--accent)" : "var(--muted)";
   const image = item.post.thumbnail ?? item.post.images?.[0];
   const detailId = `ab-highlight-detail-${item.rank}`;
@@ -102,9 +106,9 @@ export function HighlightArticle({
             <span style={{ color: "var(--dim)" }}>#{String(item.rank).padStart(2, "0")}</span>
           </div>
 
-          <h2 className="tc-feed-title serif">{stripMarkdown(item.post.title)}</h2>
+          <h2 className="tc-feed-title serif">{stripMarkdown(d.title)}</h2>
 
-          {item.post.deck && (
+          {d.deck && (
             <p
               className="serif"
               style={{
@@ -120,7 +124,7 @@ export function HighlightArticle({
                 overflow: "hidden",
               }}
             >
-              {stripMarkdown(item.post.deck)}
+              {stripMarkdown(d.deck)}
             </p>
           )}
 
@@ -140,7 +144,7 @@ export function HighlightArticle({
           )}
 
           <p className="tc-feed-summary">
-            {stripMarkdown(item.post.summary || item.post.content || "")}
+            {stripMarkdown(d.summary || d.content || "")}
           </p>
 
           <SourceAuditStrip input={item.post} />

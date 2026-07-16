@@ -4,12 +4,16 @@ import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } fr
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick, ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
+import { displayPost } from "@/lib/i18n";
+import { useLocale } from "@/app/LocaleProvider";
 import { renderRichText } from "./richtext";
 import { SectionEyebrow, TagList } from "./bits";
 import { collectSourceLinks, SourceButton } from "./source";
 import { ImageGallery, XPostEmbed, getXStatusUrl } from "./media";
 
 export function HighlightDetail({ item }: { item: ABHighlight }) {
+  const { locale } = useLocale();
+  const d = displayPost(item.post, locale);
   const sourceLinks = collectSourceLinks(item.post);
   const xStatusUrl = getXStatusUrl(item);
 
@@ -33,7 +37,7 @@ export function HighlightDetail({ item }: { item: ABHighlight }) {
           color: "var(--text)",
         }}
       >
-        {renderRichText(item.post.content || item.post.summary || "")}
+        {renderRichText(d.content || d.summary || "")}
       </p>
 
       {item.post.videoSrc && (

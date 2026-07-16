@@ -354,7 +354,9 @@ export default function WeeklyClient({
             !query ||
             post.title.toLowerCase().includes(query) ||
             (post.summary || "").toLowerCase().includes(query) ||
-            (post.content || "").toLowerCase().includes(query);
+            (post.content || "").toLowerCase().includes(query) ||
+            (post.en?.title || "").toLowerCase().includes(query) ||
+            (post.en?.summary || "").toLowerCase().includes(query);
           const matchPlatform =
             platformFilter === "all" || post.platform === platformFilter || post.platform.includes(platformFilter);
           const matchBookmark = !bookmarkFilter || bookmarkSet.has(post.title);

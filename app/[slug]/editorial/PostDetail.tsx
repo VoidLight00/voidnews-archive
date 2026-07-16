@@ -499,7 +499,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                         <span className={styles.relatedCardDot} style={{ background: r.companyColor }} />
                         {r.companyName}
                       </span>
-                      <span className={styles.relatedCardTitle}>{r.post.title}</span>
+                      <span className={styles.relatedCardTitle}>{activeLang === "en" && r.post.en?.title ? r.post.en.title : r.post.title}</span>
                     </Link>
                   ) : null
                 )}
@@ -512,13 +512,13 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             {prev?.post.slug ? (
               <Link href={`/${weekSlug}/${prev.post.slug}/`} className={styles.adjLink}>
                 <span className={styles.adjLabel}>← {t("detail.prev")}</span>
-                <span className={styles.adjTitle}>{prev.post.title}</span>
+                <span className={styles.adjTitle}>{activeLang === "en" && prev.post.en?.title ? prev.post.en.title : prev.post.title}</span>
               </Link>
             ) : <span />}
             {next?.post.slug ? (
               <Link href={`/${weekSlug}/${next.post.slug}/`} className={styles.adjLink}>
                 <span className={styles.adjLabel}>{t("detail.next")} →</span>
-                <span className={styles.adjTitle}>{next.post.title}</span>
+                <span className={styles.adjTitle}>{activeLang === "en" && next.post.en?.title ? next.post.en.title : next.post.title}</span>
               </Link>
             ) : <span />}
           </nav>
