@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-07-07 · 총 17건
+> 마지막 갱신: 2026-07-16 · 총 18건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -18,13 +18,14 @@
 | IMP-0007 | 2026-07-02 | feature | RSS 2.0 피드 신설 (/rss.xml) | app/rss.xml/route.ts | d91804b |
 | IMP-0008 | 2026-07-02 | feature | sitemap.xml 정적 생성 (229 URL) | app/sitemap.ts | 59bec3c |
 
-## 적용됨 (applied) (3)
+## 적용됨 (applied) (4)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
 | IMP-0015 | 2026-07-07 | content | dangling 썸네일 6건(ibm-granite 등) — HEAD에도 없는 기존 broken 참조. 재수집 또는 참조 제거 | lib/weeks/2026-w22.ts<br>lib/weeks/2026-w21.ts<br>scripts/check-dangling-thumbs.mjs | — |
 | IMP-0016 | 2026-07-07 | ab-data | AB 2026-07a 2주 수집을 오늘(07-07)까지 확장 + AI Search 큐레이터 영상 promote-to-official, 중복 제거 | _workspace/ab/20260703-142555-ab-20260625-20260708/ | — |
 | IMP-0017 | 2026-07-06 | ab-data | AI Search 유튜브 영상(qtzzN8w2TvU) promote-to-official — 채널은 이미 레지스트리 등록됨, 영상 18 공식링크 마이닝→6 승격/6 교차검증/그외 radar·병합 | _workspace/ab/20260703-142555-ab-20260625-20260708/01c_curator_video_ingest.json | — |
+| IMP-0018 | 2026-07-16 | design | 전역 LocaleToggle 제거(i18n A안) — 토글이 헤더에 전역 노출되나 실작동 범위는 PostDetail 1곳뿐이라 '눌러도 안 바뀌는 깨진 기능'으로 보임. PostDetail 자체 KO/ENGLISH 탭(411·420행)은 유지 | app/layout.tsx<br>app/LocaleToggle.tsx | 2636e3a |
 
 ## 대기 (pending) (6)
 

@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-07-07",
+  "updated": "2026-07-16",
   "entries": [
     {
       "id": "IMP-0001",
@@ -232,7 +232,7 @@
       "evidence": {
         "kind": "manual"
       },
-      "notes": "DU-03."
+      "notes": "DU-03. 2026-07-16 실측 보강: ① lib/i18n.ts ko/en 사전 38키 존재하나 t(\"nav.*\")/t(\"site.*\")/t(\"common.*\") 소비 컴포넌트 0곳 ② useLocale 소비처 PostDetail 1곳뿐, nav 라벨 하드코딩(한/영 혼재) ③ 콘텐츠 영문 필드(lib/data.ts _en) 0건 — ENGLISH 탭은 isKoreanText() 휴리스틱 자동분류라 대부분 'not yet available' 폴백 ④ lib/supabase.ts:138 i18n_translations 참조는 importer 0 죽은 경로(IMP-0011 연계). 전역 토글의 깨진 노출은 IMP-0018로 분리 제거함. 실효화 착수 시 B안(기존 38키 nav/툴바 배선)부터."
     },
     {
       "id": "IMP-0014",
@@ -298,6 +298,26 @@
         "kind": "manual"
       },
       "notes": "channel yt-theaisearch already core-registered (gate exit0). video 2026-07-05. 6 promoted cards folded into 03 (35 items)."
+    },
+    {
+      "id": "IMP-0018",
+      "date": "2026-07-16",
+      "source": "user-instruction",
+      "category": "design",
+      "request": "전역 LocaleToggle 제거(i18n A안) — 토글이 헤더에 전역 노출되나 실작동 범위는 PostDetail 1곳뿐이라 '눌러도 안 바뀌는 깨진 기능'으로 보임. PostDetail 자체 KO/ENGLISH 탭(411·420행)은 유지",
+      "status": "applied",
+      "files": [
+        "app/layout.tsx",
+        "app/LocaleToggle.tsx"
+      ],
+      "commit": "2636e3a",
+      "evidence": {
+        "kind": "count",
+        "cmd": "grep -rl 'LocaleToggle' app --include='*.tsx' | wc -l",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "pingpong-20260716 교차검증에서 확정한 A안(정직한 축소). i18n 실효화 자체는 IMP-0013 pending 유지 — B안(사전 38키 배선)은 운영 정상화(w29 수집) 후."
     }
   ]
 }
