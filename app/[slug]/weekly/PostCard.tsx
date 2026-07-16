@@ -13,6 +13,8 @@ import {
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
+import { displayPost } from "@/lib/i18n";
+import { useLocale } from "@/app/LocaleProvider";
 import { renderRichText, PostDateLabel, PlatformBadge, highlightText, getPostLink, formatIntelIndex } from "./shared";
 import { TweetEmbed, isXPostUrl, getOfficialTweetUrl } from "./previews";
 import { SourceThumbnail, estimateReadTime, getCompanyShortName } from "./feed";
@@ -42,6 +44,8 @@ export function PostCard({
 }) {
   const [copied, setCopied] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const { locale } = useLocale();
+  const d = displayPost(post, locale); // 표시 전용 — identity 키(post.title)는 그대로 유지
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
 
   const handleCopy = (e: React.MouseEvent) => {
@@ -90,10 +94,10 @@ export function PostCard({
         </div>
 
         <h3 className="tc-feed-title serif article-card-title">
-          {highlightText(post.title, searchQuery)}
+          {highlightText(d.title, searchQuery)}
         </h3>
 
-        {post.deck && (
+        {d.deck && (
           <p
             className="serif article-card-deck"
             style={{
@@ -105,13 +109,13 @@ export function PostCard({
               fontStyle: "normal",
             }}
           >
-            {highlightText(stripMarkdown(post.deck), searchQuery)}
+            {highlightText(stripMarkdown(d.deck), searchQuery)}
           </p>
         )}
 
-        {(post.summary || post.content) && (
+        {(d.summary || d.content) && (
           <p className="tc-feed-summary">
-            {highlightText(stripMarkdown(post.summary || post.content || ""), searchQuery)}
+            {highlightText(stripMarkdown(d.summary || d.content || ""), searchQuery)}
           </p>
         )}
 
@@ -192,7 +196,7 @@ export function PostCard({
           </div>
         </div>
 
-        {expanded && (post.content || post.summary) && (
+        {expanded && (d.content || d.summary) && (
           <div
             style={{
               background: "var(--surface)",
@@ -223,8 +227,8 @@ export function PostCard({
               }}
             >
               {searchQuery.trim()
-                ? highlightText(stripMarkdown(post.content || post.summary || ""), searchQuery)
-                : renderRichText(post.content || post.summary || "")}
+                ? highlightText(stripMarkdown(d.content || d.summary || ""), searchQuery)
+                : renderRichText(d.content || d.summary || "")}
             </p>
           </div>
         )}

@@ -94,3 +94,26 @@ export function isKoreanText(text: string | null | undefined): boolean {
   if (!text) return false;
   return /[가-힣]/.test(text);
 }
+
+// 표시용 필드 선택 — en 필드가 있으면 영문, 없으면 한국어 폴백.
+// 구조적 타입이라 Post 외에도 동일 shape면 사용 가능. identity(원본 title 키)는 호출부가 유지한다.
+export interface DisplayFields {
+  title: string;
+  deck?: string;
+  summary?: string;
+  content?: string;
+}
+
+export function displayPost<
+  T extends DisplayFields & { en?: Partial<DisplayFields> }
+>(post: T, locale: Locale): DisplayFields {
+  if (locale !== "en" || !post.en) {
+    return { title: post.title, deck: post.deck, summary: post.summary, content: post.content };
+  }
+  return {
+    title: post.en.title ?? post.title,
+    deck: post.en.deck ?? post.deck,
+    summary: post.en.summary ?? post.summary,
+    content: post.en.content ?? post.content,
+  };
+}

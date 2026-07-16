@@ -13,6 +13,8 @@ import {
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
+import { displayPost } from "@/lib/i18n";
+import { useLocale } from "@/app/LocaleProvider";
 import { renderRichText, PostDateLabel, PlatformBadge, LinkBtn, highlightText, getPostLink, type ModalNavigation } from "./shared";
 import { LinkPreview, EmbedPreview, getOfficialTweetUrl } from "./previews";
 
@@ -35,6 +37,8 @@ export function PostModal({
 }) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const touchStartYRef = useRef<number | null>(null);
+  const { locale } = useLocale();
+  const d = displayPost(post, locale); // 표시 전용 — titleId 등 identity는 원본 title 유지
   const titleId = `post-modal-title-${post.title.replace(/[^a-zA-Z0-9가-힣]+/g, "-").replace(/^-+|-+$/g, "")}`;
   const navBtnStyle = {
     fontSize: 11,
@@ -172,10 +176,10 @@ export function PostModal({
             paddingRight: 84,
           }}
         >
-          {post.title}
+          {d.title}
         </h2>
 
-        {post.summary && (
+        {d.summary && (
           <p
             className="serif"
             style={{
@@ -188,7 +192,7 @@ export function PostModal({
               letterSpacing: "-0.01em",
             }}
           >
-            {stripMarkdown(post.summary)}
+            {stripMarkdown(d.summary)}
           </p>
         )}
 
@@ -226,7 +230,7 @@ export function PostModal({
           </div>
         )}
 
-        {post.content && (
+        {d.content && (
           <div
             style={{
               background: "var(--surface)",
@@ -249,7 +253,7 @@ export function PostModal({
             >
               포스팅 내용
             </p>
-            <p style={{ fontSize: 14, color: "var(--text)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{renderRichText(post.content || "")}</p>
+            <p style={{ fontSize: 14, color: "var(--text)", lineHeight: 1.8, whiteSpace: "pre-line" }}>{renderRichText(d.content || "")}</p>
           </div>
         )}
 

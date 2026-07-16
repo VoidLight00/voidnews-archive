@@ -12,6 +12,7 @@ import {
   type ReactNode,
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
+import { useLocale } from "@/app/LocaleProvider";
 import { weekDateLabel, type WeekListItem } from "@/lib/week-label";
 import { stripMarkdown } from "@/lib/md";
 import {
@@ -49,6 +50,7 @@ export default function WeeklyClient({
   weekList: WeekListItem[];
   nestedRoutePrefix?: string;
 }) {
+  const { t } = useLocale();
   const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
   const [search, setSearch] = useState("");
   const deferredSearch = useDeferredValue(search);
@@ -632,7 +634,7 @@ export default function WeeklyClient({
                   <input
                     id="search-input"
                     type="text"
-                    placeholder="제목·요약·태그 검색..."
+                    placeholder={t("common.search")}
                     value={search}
                     onFocus={() => {
                       if (searchBlurTimeoutRef.current) window.clearTimeout(searchBlurTimeoutRef.current);

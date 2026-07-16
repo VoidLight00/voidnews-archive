@@ -13,6 +13,8 @@ import {
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
+import { displayPost } from "@/lib/i18n";
+import { useLocale } from "@/app/LocaleProvider";
 import { PostDateLabel, parsePostDate, extractDomain } from "./shared";
 import { useOGData, isSafeImageUrl } from "./previews";
 
@@ -130,9 +132,11 @@ export function TopStoriesSection({
   issueSlug: string;
   onOpenStory: (post: Post, companyName: string) => void;
 }) {
+  const { locale } = useLocale();
   if (stories.length === 0) return null;
 
   const [lead, ...secondary] = stories.slice(0, 3);
+  const leadD = displayPost(lead.post, locale);
   const href = getPostIssueHref(issueSlug, lead.post.title);
 
   return (
@@ -150,9 +154,9 @@ export function TopStoriesSection({
             <span>slide 1 of {Math.max(1, stories.slice(0, 3).length)}</span>
             <span>featured story</span>
           </div>
-          <h1 className="tc-hero-title serif">{lead.post.title}</h1>
-          {lead.post.summary && (
-            <p className="tc-hero-summary">{stripMarkdown(lead.post.summary)}</p>
+          <h1 className="tc-hero-title serif">{leadD.title}</h1>
+          {leadD.summary && (
+            <p className="tc-hero-summary">{stripMarkdown(leadD.summary)}</p>
           )}
           <div className="tc-hero-meta mono">
             <span style={{ color: lead.company.color }}>{getCompanyShortName(lead.company.name)}</span>
@@ -197,6 +201,8 @@ export function FeedArticleCard({
   onOpen: () => void;
 }) {
   const { company, post } = entry;
+  const { locale } = useLocale();
+  const d = displayPost(post, locale);
   const href = getPostIssueHref(issueSlug, post.title);
 
   return (
@@ -215,9 +221,9 @@ export function FeedArticleCard({
           <span aria-hidden>·</span>
           <span>{estimateReadTime(post)} min read</span>
         </div>
-        <h2 className="tc-feed-title serif">{post.title}</h2>
-        {(post.summary || post.content) && (
-          <p className="tc-feed-summary">{stripMarkdown(post.summary || post.content || "")}</p>
+        <h2 className="tc-feed-title serif">{d.title}</h2>
+        {(d.summary || d.content) && (
+          <p className="tc-feed-summary">{stripMarkdown(d.summary || d.content || "")}</p>
         )}
         <div className="tc-feed-footer mono">
           <span>#{String(index).padStart(2, "0")}</span>

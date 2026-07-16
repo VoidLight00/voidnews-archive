@@ -21,6 +21,15 @@ export interface MediaImage {
   caption?: string;
 }
 
+// 영문판 필드 — 표시 전용. 북마크·읽음 상태 등 identity 키는 항상 한국어 title을 쓴다.
+// 2026-w29 이후 신규 주차는 title/summary 영문 필수 (scripts/check-i18n-coverage.mjs가 빌드 차단)
+export interface PostEn {
+  title?: string;
+  deck?: string;
+  summary?: string;
+  content?: string;
+}
+
 export interface Post {
   date: string;
   platform: "X" | "Threads" | "X+Threads";
@@ -29,6 +38,7 @@ export interface Post {
   deck?: string;         // 카드 grid 노출용 sub-headline (title 밑 1줄, 50자 내외)
   summary?: string;      // 한줄 요약 (카드)
   content?: string;      // 전문 / 포스팅 본문
+  en?: PostEn;           // 영문판 (표시 전용 — lib/i18n.ts displayPost로 소비)
   source?: string;       // 원본 소스 URL (블로그/기사)
   officialUrl?: string;  // 공식 계정 트윗/게시글 URL (이미지·영상 포함)
   backupUrls?: { label: string; url: string }[]; // 보조 공식 링크 (벤치마크·문서·콘솔 등)

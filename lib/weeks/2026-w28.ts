@@ -28,6 +28,12 @@ export const week28: WeeklyData = {
             "src": "/og-cache/openai-gpt-5-6-ga-jul9.png",
             "alt": "OpenAI, GPT-5.6 Sol·Terra·Luna 7월 9일 전체 공개(GA)"
           },
+          "en": {
+            "title": "OpenAI to make GPT-5.6 Sol·Terra·Luna generally available on July 9",
+            "deck": "June 26 preview (~20 orgs) → US government review passed; general release Thursday, July 9",
+            "summary": "OpenAI opens its three GPT-5.6 models — Sol, Terra, and Luna — to all users on Thursday, July 9. At the June 26 preview they were limited to roughly 20 trusted organizations under a US government safety review, but general availability was approved after additional testing by the Commerce Department's CAISI. Sol is the complex-reasoning and agent flagship, Terra delivers GPT-5.5-class performance at half the cost, and Luna is the lightest, lowest-cost model.",
+            "content": "**What is it?**\nOpenAI opens its three GPT-5.6 models — Sol, Terra, and Luna — to all users on Thursday, July 9.\n\n**What changed?**\n- At the June 26 preview, access was limited to about 20 trusted organizations under a US government safety review\n- General availability was approved after additional testing by the Commerce Department's CAISI\n- Sol = complex-reasoning and agent flagship, Terra = GPT-5.5-class performance at half the cost, Luna = lightest and lowest-cost\n\n**How to read it**\nA frontier model clearing a government review gate on its way to general release. The path from the June 26 preview to the July 9 rollout shows a new pattern where frontier launches are coupled with safety screening.\n\n**Key facts**\n- Release date: Thursday, July 9\n- Lineup: Sol / Terra / Luna\n\nSource: openai.com"
+          },
           "slug": "openai-20260708-gpt-5-6-ga-jul9",
           "tags": [
             "OpenAI",
@@ -57,6 +63,12 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nAnthropic이 Fable 5의 사이버 안전장치와 'Cyber Jailbreak Severity(CJS)' 프레임워크를 상세 공개했다.\n\n**무엇이 달라졌나?**\n- 탈옥(jailbreak) 시도의 심각도를 등급화하는 접근\n- 특정 공격 기법은 99% 이상 차단된다고 밝힘\n\n**어떻게 읽을까?**\n수출통제 해제·복원에 이은 후속으로, 최상위 모델을 '안전하게' 되돌리기 위한 방어 프레임워크다. 모델 접근 재개와 안전장치가 한 묶음으로 움직인다.\n\n**확인 포인트**\n- 프레임워크: Cyber Jailbreak Severity(CJS)\n- 방어: 특정 기법 99% 이상 차단(공식)\n\n출처: anthropic.com",
           "source": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
           "officialUrl": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+          "en": {
+            "title": "Anthropic details Fable 5 cyber safeguards and 'Cyber Jailbreak Severity' framework",
+            "deck": "A CJS framework that grades jailbreak severity, plus Fable 5 cyber defenses",
+            "summary": "Anthropic published details of Fable 5's cyber safeguards and its 'Cyber Jailbreak Severity (CJS)' framework. The approach grades the severity of jailbreak attempts, and Anthropic says certain attack techniques are blocked at a rate above 99%.",
+            "content": "**What is it?**\nAnthropic published details of Fable 5's cyber safeguards and its 'Cyber Jailbreak Severity (CJS)' framework.\n\n**What changed?**\n- An approach that grades the severity of jailbreak attempts\n- Anthropic says certain attack techniques are blocked at a rate above 99%\n\n**How to read it**\nA follow-up to the export-control lift and restoration — a defense framework for bringing the top model back 'safely'. Restored model access and safeguards are moving as one package.\n\n**Key facts**\n- Framework: Cyber Jailbreak Severity (CJS)\n- Defense: certain techniques blocked above 99% (official claim)\n\nSource: anthropic.com"
+          },
           "slug": "anthropic-20260702-fable-5-cyber-safeguards-jailbreak-framework",
           "tags": [
             "Anthropic",
@@ -84,6 +96,12 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nClaude Code 2.1.199가 공개됐다.\n\n**무엇이 달라졌나?**\n- 스택형(stacked) 스킬 지원\n- 서브에이전트 오류 전파 관련 버그 수정\n\n**어떻게 읽을까?**\n스킬을 겹쳐 쓰는 구성을 지원하고 안정성을 손본 릴리스다.\n\n**확인 포인트**\n- 버전: 2.1.199 (7/2)\n\n출처: github.com",
           "source": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
           "officialUrl": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "en": {
+            "title": "Claude Code 2.1.199 — stacked skills support, subagent error-propagation fix",
+            "deck": "A stabilization release adding stacked skills and fixing subagent error propagation",
+            "summary": "Claude Code 2.1.199 is out. A stabilization release that adds support for stacked skills and fixes a bug in subagent error propagation.",
+            "content": "**What is it?**\nClaude Code 2.1.199 is out.\n\n**What changed?**\n- Support for stacked skills\n- Fixed a bug in subagent error propagation\n\n**How to read it**\nA release that enables layered skill setups and shores up stability.\n\n**Key facts**\n- Version: 2.1.199 (July 2)\n\nSource: github.com"
+          },
           "slug": "claude-code-20260702-2-1-199",
           "tags": [
             "Anthropic",
@@ -110,6 +128,12 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nClaude Code 2.1.200이 공개됐다. CLI·VS Code·JetBrains 전반에서 기본 권한 모드를 'Manual'로 바꿨다.\n\n**무엇이 달라졌나?**\n- 'default' 권한 모드 → 'Manual' 전환\n- AskUserQuestion 다이얼로그가 기본으로 자동 진행하지 않음(/config로 idle timeout opt-in)\n- 백그라운드 세션·에이전트 데몬의 다수 버그 수정(stale daemon.lock·핸드오버·roster 손상 등)\n\n**어떻게 읽을까?**\n에이전트가 사람 확인 없이 진행하던 기본값을 보수적으로 되돌린 거버넌스 업데이트다. 권한을 사람이 다시 쥐는 방향이다.\n\n**확인 포인트**\n- 기본값: 권한 모드 Manual\n- 질문 다이얼로그: 자동 진행 off(기본)\n\n출처: github.com",
           "source": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
           "officialUrl": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "en": {
+            "title": "Claude Code 2.1.200 — default permission mode switched to Manual, AskUserQuestion auto-advance off",
+            "deck": "Permission default moves to Manual; question dialogs no longer auto-advance",
+            "summary": "Claude Code 2.1.200 is out. Across CLI, VS Code, and JetBrains, the 'default' permission mode was switched to 'Manual', and AskUserQuestion dialogs no longer auto-advance by default (idle-timeout opt-in via /config). It also fixes multiple background-session and agent-daemon bugs (stale daemon.lock, handover, roster corruption, and more).",
+            "content": "**What is it?**\nClaude Code 2.1.200 is out. The default permission mode is now 'Manual' across CLI, VS Code, and JetBrains.\n\n**What changed?**\n- 'default' permission mode → 'Manual'\n- AskUserQuestion dialogs no longer auto-advance by default (idle-timeout opt-in via /config)\n- Multiple background-session and agent-daemon bug fixes (stale daemon.lock, handover, roster corruption, and more)\n\n**How to read it**\nA governance update that conservatively rolls back the default where agents proceeded without human confirmation — putting permissions back in human hands.\n\n**Key facts**\n- Default: permission mode Manual\n- Question dialogs: auto-advance off (by default)\n\nSource: github.com"
+          },
           "slug": "claude-code-20260703-2-1-200",
           "tags": [
             "Anthropic",
@@ -137,6 +161,12 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nClaude Code 2.1.201이 공개됐다.\n\n**무엇이 달라졌나?**\n- Claude Sonnet 5 세션이 하네스 리마인더에 더 이상 대화 중간 system role을 쓰지 않도록 수정\n\n**어떻게 읽을까?**\n소규모 안정성 패치다.\n\n**확인 포인트**\n- 버전: 2.1.201 (7/3)\n\n출처: github.com",
           "source": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
           "officialUrl": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+          "en": {
+            "title": "Claude Code 2.1.201 — removes mid-conversation system role from Sonnet 5 harness reminders",
+            "deck": "Sonnet 5 sessions no longer use a system role for harness reminders",
+            "summary": "Claude Code 2.1.201 is out. A small stability patch so that Claude Sonnet 5 sessions no longer use a mid-conversation system role for harness reminders.",
+            "content": "**What is it?**\nClaude Code 2.1.201 is out.\n\n**What changed?**\n- Claude Sonnet 5 sessions no longer use a mid-conversation system role for harness reminders\n\n**How to read it**\nA small stability patch.\n\n**Key facts**\n- Version: 2.1.201 (July 3)\n\nSource: github.com"
+          },
           "slug": "claude-code-20260703-2-1-201",
           "tags": [
             "Anthropic",
@@ -168,6 +198,12 @@ export const week28: WeeklyData = {
           "summary": "Google NotebookLM에 틱톡 스타일 숏폼 비디오 생성 기능이 추가된 것으로 보도됐다. 업로드한 소스 자료를 짧은 영상 형식으로 변환한다. 공식 블로그의 정확한 게시 URL은 아직 확정되지 않아 The Decoder 2차 보도가 근거다.",
           "content": "**이게 뭐예요?**\nGoogle NotebookLM에 틱톡 스타일 숏폼 비디오 생성 기능이 추가된 것으로 보도됐다.\n\n**무엇이 달라졌나?**\n- 업로드한 소스 자료를 짧은 영상 형식으로 변환\n\n**어떻게 읽을까?**\n생성형 미디어가 소비 포맷(숏폼)까지 넓어지는 흐름이다. 공식 블로그의 정확한 게시 URL은 아직 확정되지 않아 The Decoder 2차 보도가 근거다.\n\n**확인 포인트**\n- 검증 한계: 공식 1차 URL 미확정, The Decoder 2차 보도 근거\n\n출처: the-decoder.com",
           "source": "https://the-decoder.com/google-brings-tiktok-style-video-shorts-to-notebooklm/",
+          "en": {
+            "title": "Google NotebookLM reportedly adds TikTok-style short-form video generation",
+            "deck": "NotebookLM turns uploaded source material into TikTok-style short videos",
+            "summary": "Google NotebookLM has reportedly gained a TikTok-style short-form video generation feature that turns uploaded source material into short video clips. The exact official blog post URL is not yet confirmed, so the basis is secondary coverage by The Decoder.",
+            "content": "**What is it?**\nGoogle NotebookLM has reportedly gained a TikTok-style short-form video generation feature.\n\n**What changed?**\n- Turns uploaded source material into a short-video format\n\n**How to read it**\nGenerative media expanding into consumption formats (short-form). The exact official blog post URL is not yet confirmed, so the basis is secondary coverage by The Decoder.\n\n**Key facts**\n- Verification limit: no confirmed first-party URL; based on The Decoder's secondary report\n\nSource: the-decoder.com"
+          },
           "slug": "google-20260702-notebooklm-video-shorts",
           "tags": [
             "Google",
@@ -205,6 +241,12 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nGitHub Copilot이 에이전트 세션 스트리밍을 공개 프리뷰로 시작했다.\n\n**무엇이 달라졌나?**\n- 에이전트가 작업하는 과정을 실시간으로 확인\n\n**어떻게 읽을까?**\n에이전트 작업을 '블랙박스'가 아니라 실시간으로 지켜보게 하는 가시화 흐름이다.\n\n**확인 포인트**\n- 상태: 공개 프리뷰\n\n출처: github.blog",
           "source": "https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview",
           "officialUrl": "https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview",
+          "en": {
+            "title": "GitHub Copilot agent session streaming enters public preview",
+            "deck": "A preview that streams an agent's work in real time",
+            "summary": "GitHub Copilot launched agent session streaming in public preview, letting you watch an agent's work as it happens in real time.",
+            "content": "**What is it?**\nGitHub Copilot launched agent session streaming in public preview.\n\n**What changed?**\n- Watch an agent's work in real time\n\n**How to read it**\nPart of the visibility trend — turning agent work from a black box into something you can watch live.\n\n**Key facts**\n- Status: public preview\n\nSource: github.blog"
+          },
           "slug": "github-20260702-copilot-agent-session-streaming-preview",
           "tags": [
             "GitHub",
@@ -226,6 +268,12 @@ export const week28: WeeklyData = {
           "content": "**이게 뭐예요?**\nGitHub Copilot이 Gemini 2.5 Pro와 Gemini 3 Flash의 지원 종료(deprecation)를 예고했다.\n\n**무엇이 달라졌나?**\n- 해당 모델 사용자는 마이그레이션 준비 필요\n\n**어떻게 읽을까?**\n신모델 롤아웃과 함께 구모델을 정리하는 흐름의 일부다.\n\n**확인 포인트**\n- 대상: Gemini 2.5 Pro, Gemini 3 Flash\n\n출처: github.blog",
           "source": "https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash",
           "officialUrl": "https://github.blog/changelog/2026-07-02-upcoming-deprecation-of-gemini-2-5-pro-and-gemini-3-flash",
+          "en": {
+            "title": "GitHub Copilot announces upcoming deprecation of Gemini 2.5 Pro and Gemini 3 Flash",
+            "deck": "Copilot support for Gemini 2.5 Pro and 3 Flash is ending soon",
+            "summary": "GitHub Copilot announced the upcoming deprecation of Gemini 2.5 Pro and Gemini 3 Flash. Users of these models should prepare to migrate.",
+            "content": "**What is it?**\nGitHub Copilot announced the upcoming deprecation of Gemini 2.5 Pro and Gemini 3 Flash.\n\n**What changed?**\n- Users of these models need to prepare for migration\n\n**How to read it**\nPart of the cycle of retiring older models as new ones roll out.\n\n**Key facts**\n- Affected: Gemini 2.5 Pro, Gemini 3 Flash\n\nSource: github.blog"
+          },
           "slug": "github-20260702-gemini-2-5-pro-3-flash-deprecation-copilot",
           "tags": [
             "GitHub",

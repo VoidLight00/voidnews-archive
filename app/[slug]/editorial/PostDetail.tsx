@@ -180,11 +180,11 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
   const { locale, t } = useLocale();
   const [activeLang, setActiveLang] = useState<"ko" | "en">(locale);
 
-  // 자동 분류: 한국어 본문 / 영문 본문
+  // 영문판: post.en(공식 번역 필드) 우선 → 없으면 자동 분류(본문이 원래 영문인 경우) 폴백
   const koContent = isKoreanText(post.content) ? post.content : null;
   const koSummary = isKoreanText(post.summary) ? post.summary : null;
-  const enContent = !isKoreanText(post.content) ? post.content : null;
-  const enSummary = !isKoreanText(post.summary) ? post.summary : null;
+  const enContent = post.en?.content ?? (!isKoreanText(post.content) ? post.content : null);
+  const enSummary = post.en?.summary ?? (!isKoreanText(post.summary) ? post.summary : null);
 
   const paragraphs = article?.paragraphs ?? [];
   const officialDescription = article?.description ?? null;
@@ -267,7 +267,9 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             </span>
           </div>
 
-          <h1 className={styles.articleTitle}>{post.title}</h1>
+          <h1 className={styles.articleTitle}>
+            {activeLang === "en" && post.en?.title ? post.en.title : post.title}
+          </h1>
 
           {(activeLang === "ko" ? koSummary : enSummary) ? (
             <p className={styles.articleDek}>
