@@ -133,9 +133,9 @@ export function getAllABPostParams(): { edition: string; postSlug: string }[] {
 export function getAdjacentABPosts(editionSlug: string, postSlug: string) {
   const ed = getEdition(editionSlug);
   if (!ed) return { prev: null, next: null };
-  const flat: { slug: string; title: string; kind: ABPostMeta["kind"] }[] = [];
+  const flat: { slug: string; title: string; titleEn?: string; kind: ABPostMeta["kind"] }[] = [];
   for (const h of ed.highlights ?? []) {
-    if (h.post.slug) flat.push({ slug: h.post.slug, title: h.post.title, kind: "highlight" });
+    if (h.post.slug) flat.push({ slug: h.post.slug, title: h.post.title, titleEn: h.post.en?.title, kind: "highlight" });
   }
   for (const p of ed.editorsPicks ?? []) {
     if (p.slug) flat.push({ slug: p.slug, title: p.title, kind: "editor_pick" });
