@@ -89,15 +89,30 @@ async function main() {
     if (!files.includes(f)) violations.push(`${f} — 주차 파일명 패턴(YYYY-wNN.ts) 위반 — 게이트 우회 불가`);
   }
 
-  // registry 교차검증 (round5 N2): 주차 파일 ↔ lib/data.ts import 양방향 일치 강제.
-  // 파일만 있고 미등록이면 사이트·sitemap·RSS에 조용히 누락되므로 fail-closed.
+  // registry 교차검증 (round5 N2 + round6 잔존 지적): 주차 파일 ↔ lib/data.ts의
+  // ① import 문 ② weeks 배열 멤버십까지 양방향 일치 강제. import만 있고 배열에 없으면
+  // 여전히 사이트·sitemap·RSS에 조용히 누락되므로 둘 다 fail-closed.
   const dataTs = fs.readFileSync(path.join(ROOT, "lib", "data.ts"), "utf8");
-  const imported = new Set([...dataTs.matchAll(/from\s+"\.\/weeks\/(\d{4}-w\d+)"/g)].map((m) => `${m[1]}.ts`));
-  for (const f of files) {
-    if (!imported.has(f)) violations.push(`${f} — lib/data.ts에 미등록 (import 누락) — 사이트에 노출되지 않는 유령 주차`);
+  const importsByFile = new Map(
+    [...dataTs.matchAll(/import\s*\{\s*(\w+)\s*\}\s*from\s*"\.\/weeks\/(\d{4}-w\d+)"/g)].map((m) => [`${m[2]}.ts`, m[1]])
+  );
+  const weeksArrayMatch = dataTs.match(/export const weeks\s*:[^=]*=\s*\[([\s\S]*?)\]/);
+  if (!weeksArrayMatch) {
+    violations.push("lib/data.ts — export const weeks 배열을 찾지 못함 (registry 검증 불가)");
   }
-  for (const imp of imported) {
-    if (!files.includes(imp)) violations.push(`lib/data.ts가 존재하지 않는 주차 import: ${imp}`);
+  const arrayMembers = new Set(
+    (weeksArrayMatch?.[1] ?? "").split(",").map((s) => s.trim()).filter(Boolean)
+  );
+  for (const f of files) {
+    const ident = importsByFile.get(f);
+    if (!ident) {
+      violations.push(`${f} — lib/data.ts에 미등록 (import 누락) — 사이트에 노출되지 않는 유령 주차`);
+    } else if (!arrayMembers.has(ident)) {
+      violations.push(`${f} — import는 있으나 weeks 배열에 미등록 (${ident}) — 여전히 유령 주차`);
+    }
+  }
+  for (const [impFile] of importsByFile) {
+    if (!files.includes(impFile)) violations.push(`lib/data.ts가 존재하지 않는 주차 import: ${impFile}`);
   }
 
   for (const f of files) {
