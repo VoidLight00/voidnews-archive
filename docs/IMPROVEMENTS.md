@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-07-16 · 총 20건
+> 마지막 갱신: 2026-07-17 · 총 21건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -28,7 +28,7 @@
 | IMP-0018 | 2026-07-16 | design | 전역 LocaleToggle 제거(i18n A안) — 토글이 헤더에 전역 노출되나 실작동 범위는 PostDetail 1곳뿐이라 '눌러도 안 바뀌는 깨진 기능'으로 보임. PostDetail 자체 KO/ENGLISH 탭(411·420행)은 유지 | app/layout.tsx<br>app/LocaleToggle.tsx | 2636e3a |
 | IMP-0019 | 2026-07-16 | feature | ENG 버전 전체 적용 메커니즘 + 자동 강제 — Post.en 스키마(title/deck/summary/content), displayPost 표시 헬퍼(identity 키 비침범), PostCard/PostModal/feed 히어로·피드/PostDetail 배선, LocaleToggle 재도입, w28 8/8 영문 백필, check-i18n-coverage.mjs HARD 게이트(w29+ en.title/summary 필수, selftest 내장, BUILD_GATES 등록) | app/LocaleToggle.tsx<br>app/[slug]/WeeklyClient.tsx<br>app/[slug]/editorial/PostDetail.tsx<br>app/[slug]/weekly/PostCard.tsx<br>app/[slug]/weekly/PostModal.tsx<br>app/[slug]/weekly/feed.tsx<br>app/ab/[edition]/components/HighlightDetail.tsx<br>app/ab/[edition]/components/cards.tsx<br>app/layout.tsx<br>lib/data.ts<br>lib/i18n.ts<br>lib/weeks/2026-w28.ts<br>scripts/check-i18n-coverage.mjs<br>scripts/run-all-gates.mjs | 3981f97 |
 
-## 대기 (pending) (7)
+## 대기 (pending) (8)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
@@ -39,3 +39,4 @@
 | IMP-0013 | 2026-07-07 | feature | i18n 실효화 — LocaleToggle 적용처 PostDetail 1곳뿐, nav·툴바 하드코딩 | — | — |
 | IMP-0014 | 2026-07-07 | perf | next/image 0건 — 빌드타임 이미지 최적화 파이프라인. output:export라 커스텀 loader 필요 | — | — |
 | IMP-0020 | 2026-07-16 | content | 영문 백필 잔여 — 과거 주차(w27 이하 15개 주차)와 AB edition(intro/closing/editorial 산문) 영문판 + edition 커버리지 게이트 확장 | — | — |
+| IMP-0021 | 2026-07-17 | seo | EN 정식 SEO 표면 부재(round5 N4) — locale URL(또는 결정론 쿼리)·hreflang·alternates·영문 canonical/sitemap/OG. 현 구조는 클라이언트 토글이라 크롤러·공유 프리뷰는 ko만 노출 | — | — |

@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-07-16",
+  "updated": "2026-07-17",
   "entries": [
     {
       "id": "IMP-0001",
@@ -344,7 +344,7 @@
         "kind": "exit0",
         "cmd": "node scripts/check-i18n-coverage.mjs"
       },
-      "notes": "차단 능력 실증: en 없는 w29 fixture → exit 2 확인 후 제거. w29부터는 AB site-writer가 en 필드를 안 채우면 빌드가 막힌다(자동 적용 강제). GPT-5.6 카드 영문은 원문 충실 번역 — 사실 정합(07a closure)은 별도 작업으로 ko/en 동시 갱신 예정. · 전수 감사 후속(4203b41): AB 카드/HighlightDetail/검색 en 매칭/관련글 내비 배선 — AB 에디션 하이라이트 중 w28-소스 카드(07a rank4 1/12장)만 EN 전환 — 나머지 11장은 en 부재로 ko 유지(IMP-0020 스코프). (round4 ⑤ 과대 서술 지적 정정) · round4 독립검증(12 findings: major3/minor5/info4, critical0) 반영(96bbc0d): M1 locale동기화 effect·M3 rank4 en 스탠스 정합·게이트 파일명패턴 fail-closed. M2(editions 인라인 카드 게이트 밖)는 IMP-0020 스코프."
+      "notes": "차단 능력 실증: en 없는 w29 fixture → exit 2 확인 후 제거. w29부터는 AB site-writer가 en 필드를 안 채우면 빌드가 막힌다(자동 적용 강제). GPT-5.6 카드 영문은 원문 충실 번역 — 사실 정합(07a closure)은 별도 작업으로 ko/en 동시 갱신 예정. · 전수 감사 후속(4203b41): AB 카드/HighlightDetail/검색 en 매칭/관련글 내비 배선 — AB 에디션 하이라이트 중 w28-소스 카드(07a rank4 1/12장)만 EN 전환 — 나머지 11장은 en 부재로 ko 유지(IMP-0020 스코프). (round4 ⑤ 과대 서술 지적 정정) · round4 독립검증(12 findings: major3/minor5/info4, critical0) 반영(96bbc0d): M1 locale동기화 effect·M3 rank4 en 스탠스 정합·게이트 파일명패턴 fail-closed. M2(editions 인라인 카드 게이트 밖)는 IMP-0020 스코프. · round5(SOL 1M) 재검증: 기존 수정 5건 전부 fixed 판정, 신규 major5/minor2 중 6건 수정(b14f9ce: N1 마스터게이트 fail-closed·N2 registry 교차검증·N3 필드패리티·N5 JSON-LD 발행일·N6 탭 locale·N7 검색 인덱스). N4는 IMP-0021."
     },
     {
       "id": "IMP-0020",
@@ -359,6 +359,20 @@
         "kind": "manual"
       },
       "notes": "w28은 IMP-0019에서 완료. legacy는 displayPost가 ko 폴백으로 안전. 대량 번역이라 별도 배치(워크플로우) 권장. · round4 M2: lib/ab/editions 인라인 Post는 i18n 게이트 밖 — 백필 시 editions 커버리지 게이트 확장을 함께."
+    },
+    {
+      "id": "IMP-0021",
+      "date": "2026-07-17",
+      "source": "audit",
+      "category": "seo",
+      "request": "EN 정식 SEO 표면 부재(round5 N4) — locale URL(또는 결정론 쿼리)·hreflang·alternates·영문 canonical/sitemap/OG. 현 구조는 클라이언트 토글이라 크롤러·공유 프리뷰는 ko만 노출",
+      "status": "pending",
+      "files": [],
+      "commit": null,
+      "evidence": {
+        "kind": "manual"
+      },
+      "notes": "정적 export에서 locale 라우팅은 아키텍처 결정 필요(/en/ 프리렌더 등). IMP-0020(콘텐츠 백필)과 별개 축."
     }
   ]
 }
