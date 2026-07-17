@@ -373,6 +373,29 @@
         "kind": "manual"
       },
       "notes": "정적 export에서 locale 라우팅은 아키텍처 결정 필요(/en/ 프리렌더 등). IMP-0020(콘텐츠 백필)과 별개 축."
+    },
+    {
+      "id": "IMP-0022",
+      "date": "2026-07-17",
+      "source": "user-instruction",
+      "category": "ab-data",
+      "request": "2026-07a closure: GPT-5.6 GA/API 상태 KO·EN 원자적 정렬, SourceAudit verifiedAt, manifest 결정·Seedream 예외, 발표 완료 보고서",
+      "status": "applied",
+      "files": [
+        "lib/weeks/2026-w28.ts",
+        "lib/ab/editions/2026-07a.ts",
+        "lib/data.ts",
+        "app/ab/[edition]/components/source.tsx",
+        "_workspace/ab/20260703-142555-ab-20260625-20260708/RUN_MANIFEST.json",
+        "scripts/verify-07a-closure.mjs",
+        "scripts/run-all-gates.mjs"
+      ],
+      "commit": null,
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "node scripts/verify-07a-closure.mjs"
+      },
+      "notes": "OpenAI Developers 공식 모델 문서로 2026-07-17 GA/API availability 재검증; 7/9 날짜는 Engadget 보조 출처; report gate exit0"
     }
   ]
 }

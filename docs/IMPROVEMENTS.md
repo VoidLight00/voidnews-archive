@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-07-17 · 총 21건
+> 마지막 갱신: 2026-07-17 · 총 22건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -18,7 +18,7 @@
 | IMP-0007 | 2026-07-02 | feature | RSS 2.0 피드 신설 (/rss.xml) | app/rss.xml/route.ts | d91804b |
 | IMP-0008 | 2026-07-02 | feature | sitemap.xml 정적 생성 (229 URL) | app/sitemap.ts | 59bec3c |
 
-## 적용됨 (applied) (5)
+## 적용됨 (applied) (6)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
@@ -27,6 +27,7 @@
 | IMP-0017 | 2026-07-06 | ab-data | AI Search 유튜브 영상(qtzzN8w2TvU) promote-to-official — 채널은 이미 레지스트리 등록됨, 영상 18 공식링크 마이닝→6 승격/6 교차검증/그외 radar·병합 | _workspace/ab/20260703-142555-ab-20260625-20260708/01c_curator_video_ingest.json | — |
 | IMP-0018 | 2026-07-16 | design | 전역 LocaleToggle 제거(i18n A안) — 토글이 헤더에 전역 노출되나 실작동 범위는 PostDetail 1곳뿐이라 '눌러도 안 바뀌는 깨진 기능'으로 보임. PostDetail 자체 KO/ENGLISH 탭(411·420행)은 유지 | app/layout.tsx<br>app/LocaleToggle.tsx | 2636e3a |
 | IMP-0019 | 2026-07-16 | feature | ENG 버전 전체 적용 메커니즘 + 자동 강제 — Post.en 스키마(title/deck/summary/content), displayPost 표시 헬퍼(identity 키 비침범), PostCard/PostModal/feed 히어로·피드/PostDetail 배선, LocaleToggle 재도입, w28 8/8 영문 백필, check-i18n-coverage.mjs HARD 게이트(w29+ en.title/summary 필수, selftest 내장, BUILD_GATES 등록) | app/LocaleToggle.tsx<br>app/[slug]/WeeklyClient.tsx<br>app/[slug]/editorial/PostDetail.tsx<br>app/[slug]/weekly/PostCard.tsx<br>app/[slug]/weekly/PostModal.tsx<br>app/[slug]/weekly/feed.tsx<br>app/ab/[edition]/components/HighlightDetail.tsx<br>app/ab/[edition]/components/cards.tsx<br>app/layout.tsx<br>lib/data.ts<br>lib/i18n.ts<br>lib/weeks/2026-w28.ts<br>scripts/check-i18n-coverage.mjs<br>scripts/run-all-gates.mjs | 3981f97 |
+| IMP-0022 | 2026-07-17 | ab-data | 2026-07a closure: GPT-5.6 GA/API 상태 KO·EN 원자적 정렬, SourceAudit verifiedAt, manifest 결정·Seedream 예외, 발표 완료 보고서 | lib/weeks/2026-w28.ts<br>lib/ab/editions/2026-07a.ts<br>lib/data.ts<br>app/ab/[edition]/components/source.tsx<br>_workspace/ab/20260703-142555-ab-20260625-20260708/RUN_MANIFEST.json<br>scripts/verify-07a-closure.mjs<br>scripts/run-all-gates.mjs | — |
 
 ## 대기 (pending) (8)
 
