@@ -41,6 +41,7 @@ export interface Post {
   en?: PostEn;           // 영문판 (표시 전용 — lib/i18n.ts displayPost로 소비)
   source?: string;       // 원본 소스 URL (블로그/기사)
   officialUrl?: string;  // 공식 계정 트윗/게시글 URL (이미지·영상 포함)
+  verifiedAt?: string;   // 공식 출처를 마지막으로 재검증한 ISO 날짜 (YYYY-MM-DD)
   backupUrls?: { label: string; url: string }[]; // 보조 공식 링크 (벤치마크·문서·콘솔 등)
   threadsUrl?: string;   // 현님 Threads 포스팅
   xUrl?: string;         // 현님 X 포스팅

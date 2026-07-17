@@ -22,6 +22,7 @@ const BUILD_GATES = {
   "verify-improvements.mjs": [],
   "check-dangling-thumbs.mjs": [],
   "check-i18n-coverage.mjs": [], // w29+ 신규 주차 en 필드 필수 — 영문판 회귀 차단
+  "verify-07a-closure.mjs": [], // 2026-07a GA/KO·EN/manifest/report closure 회귀 차단
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([

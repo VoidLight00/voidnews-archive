@@ -13,6 +13,7 @@ export type SourceAuditInput = {
   backupUrls?: { label: string; url: string }[];
   tags?: string[];
   date?: string;
+  verifiedAt?: string;
 };
 
 export function hostnameOf(url: string): string {
@@ -39,7 +40,7 @@ export function buildSourceAudit(input: SourceAuditInput) {
     status: input.officialUrl ? "공식 발표" : "보조 검증",
     scope: inferReleaseScope(input),
     source: input.officialUrl ? `공식 · ${host}` : `확인 · ${host}`,
-    checked: "확인일 2026-05-26",
+    checked: input.verifiedAt ? `확인일 ${input.verifiedAt}` : null,
   };
 }
 
@@ -50,7 +51,7 @@ export function SourceAuditStrip({ input, tone = "accent" }: { input: SourceAudi
       <div><dt>상태</dt><dd>{audit.status}</dd></div>
       <div><dt>범위</dt><dd>{audit.scope}</dd></div>
       <div><dt>출처</dt><dd>{audit.source}</dd></div>
-      <div><dt>확인</dt><dd>{audit.checked}</dd></div>
+      {audit.checked ? <div><dt>확인</dt><dd>{audit.checked}</dd></div> : null}
     </dl>
   );
 }

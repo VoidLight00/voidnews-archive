@@ -17,22 +17,23 @@ export const week28: WeeklyData = {
         {
           "date": "7/8",
           "platform": "X+Threads",
-          "title": "OpenAI, GPT-5.6 Sol·Terra·Luna 7월 9일 전체 공개(GA)",
+          "title": "OpenAI, GPT-5.6 Sol·Terra·Luna 일반 공개 — API 모델 문서 등재",
           "featured": true,
-          "deck": "6/26 프리뷰(약 20개 조직)→미 정부 검토 통과, 7/9 목요일 일반 공개",
-          "summary": "OpenAI가 GPT-5.6 Sol·Terra·Luna 세 모델을 7월 9일(목) 전 사용자에게 공개한다. 6월 26일 프리뷰 당시 미 정부 안전성 검토로 약 20개 신뢰 조직에만 제한 공개됐으나, 상무부 CAISI의 추가 테스트를 통과해 일반 공개가 승인됐다. Sol=복잡 추론·에이전트 플래그십, Terra=GPT-5.5급 성능 절반 비용, Luna=최경량·최저비용.",
-          "content": "**이게 뭐예요?**\nOpenAI가 GPT-5.6 Sol·Terra·Luna 세 모델을 7월 9일(목) 전 사용자에게 공개한다.\n\n**무엇이 달라졌나?**\n- 6월 26일 프리뷰 당시 미 정부 안전성 검토로 약 20개 신뢰 조직에만 제한 공개\n- 상무부 CAISI의 추가 테스트를 통과해 일반 공개 승인\n- Sol=복잡 추론·에이전트 플래그십, Terra=GPT-5.5급 성능 절반 비용, Luna=최경량·최저비용\n\n**어떻게 읽을까?**\n최상위 모델이 정부 검토라는 관문을 거쳐 일반 공개로 풀리는 사건이다. 6/26 프리뷰에서 7/9 전체 공개까지의 흐름은 프런티어 모델 출시가 안전성 심사와 엮이는 새 패턴을 보여 준다.\n\n**확인 포인트**\n- 공개일: 7월 9일(목)\n- 라인업: Sol / Terra / Luna\n\n출처: openai.com",
-          "source": "https://openai.com/index/previewing-gpt-5-6-sol/",
-          "officialUrl": "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "deck": "6/26 제한 프리뷰 이후 일반 공개, 7/9 롤아웃 날짜는 보조 매체 보도",
+          "summary": "OpenAI가 GPT-5.6 Sol·Terra·Luna를 일반 사용 가능한 API 모델로 공개했다. OpenAI Developers 공식 모델 문서에는 세 모델의 ID·가격·지원 엔드포인트·스냅샷이 각각 등재되어 있다. 6월 26일에는 약 20개 신뢰 조직 대상 제한 프리뷰였고, 7월 9일 롤아웃 날짜는 Engadget 보도로 확인된다. Sol은 복잡 추론·에이전트 플래그십, Terra는 균형형, Luna는 비용 최적화형이다.",
+          "content": "**이게 뭐예요?**\nOpenAI의 GPT-5.6 Sol·Terra·Luna가 현재 일반 사용 가능한 API 모델로 제공된다. OpenAI Developers 공식 문서에 세 모델의 ID, 가격, 지원 엔드포인트와 스냅샷이 각각 공개돼 있다.\n\n**프리뷰에서 일반 공개까지**\n- 6월 26일: 약 20개 신뢰 조직 대상 제한 프리뷰\n- 현재: Sol·Terra·Luna 모두 OpenAI 공식 API 모델 카탈로그에 등재\n- 7월 9일 롤아웃 날짜: Engadget 보도(보조 출처)\n\n**라인업**\n- Sol: 복잡 추론·에이전트 플래그십, 입력 $5·출력 $30 / 100만 토큰\n- Terra: 균형형, 입력 $2.50·출력 $15\n- Luna: 비용 최적화형, 입력 $1·출력 $6\n\n**어떻게 읽을까?**\n제한 프리뷰였던 프런티어 모델이 실제 API 카탈로그와 엔드포인트에 올라 일반 사용 단계로 넘어간 사건이다. 다만 정확한 7월 9일 공개 날짜는 OpenAI 공식 페이지가 아니라 보조 매체 보도로 구분해 읽어야 한다.\n\n**확인 포인트**\n- 현재 상태: 일반 공개·API 사용 가능\n- 공식 근거: OpenAI Developers 모델 문서\n- 보도된 롤아웃 날짜: 7월 9일\n\n출처: developers.openai.com (2026-07-17 재검증)",
+          "source": "https://developers.openai.com/api/docs/models/gpt-5.6",
+          "officialUrl": "https://developers.openai.com/api/docs/models/gpt-5.6",
+          "verifiedAt": "2026-07-17",
           "thumbnail": {
             "src": "/og-cache/openai-gpt-5-6-ga-jul9.png",
-            "alt": "OpenAI, GPT-5.6 Sol·Terra·Luna 7월 9일 전체 공개(GA)"
+            "alt": "OpenAI GPT-5.6 Sol·Terra·Luna 일반 공개"
           },
           "en": {
-            "title": "OpenAI to make GPT-5.6 Sol·Terra·Luna generally available on July 9",
-            "deck": "June 26 preview (~20 orgs) → US government review passed; general release Thursday, July 9",
-            "summary": "OpenAI opens its three GPT-5.6 models — Sol, Terra, and Luna — to all users on Thursday, July 9. At the June 26 preview they were limited to roughly 20 trusted organizations under a US government safety review, but general availability was approved after additional testing by the Commerce Department's CAISI. Sol is the complex-reasoning and agent flagship, Terra delivers GPT-5.5-class performance at half the cost, and Luna is the lightest, lowest-cost model.",
-            "content": "**What is it?**\nOpenAI opens its three GPT-5.6 models — Sol, Terra, and Luna — to all users on Thursday, July 9.\n\n**What changed?**\n- At the June 26 preview, access was limited to about 20 trusted organizations under a US government safety review\n- General availability was approved after additional testing by the Commerce Department's CAISI\n- Sol = complex-reasoning and agent flagship, Terra = GPT-5.5-class performance at half the cost, Luna = lightest and lowest-cost\n\n**How to read it**\nA frontier model clearing a government review gate on its way to general release. The path from the June 26 preview to the July 9 rollout shows a new pattern where frontier launches are coupled with safety screening.\n\n**Key facts**\n- Release date: Thursday, July 9\n- Lineup: Sol / Terra / Luna\n\nSource: openai.com"
+            "title": "OpenAI makes GPT-5.6 Sol, Terra, and Luna generally available",
+            "deck": "Now listed as production API models after the June 26 limited preview; July 9 rollout date is secondary reporting",
+            "summary": "OpenAI now lists GPT-5.6 Sol, Terra, and Luna as generally available API models. Official OpenAI Developers pages provide model IDs, pricing, supported endpoints, and snapshots for all three. The lineup began as a limited preview for roughly 20 trusted organizations on June 26; the July 9 rollout date comes from Engadget reporting. Sol is the reasoning and agent flagship, Terra is the balanced option, and Luna is optimized for cost.",
+            "content": "**What is it?**\nGPT-5.6 Sol, Terra, and Luna are now available as production API models. OpenAI's official Developers documentation lists each model's ID, pricing, supported endpoints, and snapshots.\n\n**From preview to general availability**\n- June 26: limited preview for roughly 20 trusted organizations\n- Current status: all three models are listed in OpenAI's official API model catalog\n- July 9 rollout date: reported by Engadget as a secondary source\n\n**The lineup**\n- Sol: reasoning and agent flagship, $5 input / $30 output per 1M tokens\n- Terra: balanced model, $2.50 input / $15 output\n- Luna: cost-optimized model, $1 input / $6 output\n\n**How to read it**\nA frontier model family has moved from a restricted preview into the production API catalog. The current availability is confirmed by OpenAI's official documentation; the exact July 9 rollout date remains attributed to secondary reporting.\n\n**Key facts**\n- Current status: generally available through the API\n- Official evidence: OpenAI Developers model documentation\n- Reported rollout date: July 9\n\nSource: developers.openai.com (re-verified July 17, 2026)"
           },
           "slug": "openai-20260708-gpt-5-6-ga-jul9",
           "tags": [
@@ -42,7 +43,7 @@ export const week28: WeeklyData = {
           ],
           "backupUrls": [
             {
-              "label": "Engadget",
+              "label": "Engadget — 7/9 롤아웃 보도(보조 출처)",
               "url": "https://www.engadget.com/2210308/openai-rolls-out-gpt5-6-july-9/"
             }
           ]

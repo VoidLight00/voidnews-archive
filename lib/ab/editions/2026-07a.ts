@@ -147,18 +147,18 @@ export const edition2026_07a: ABEdition = {
   announceDate: "2026-07-09",
   intro: `안녕하세요, VoidLight입니다. 이번 AB는 6월 25일부터 7월 8일까지 2주를 하나의 흐름으로 묶었습니다.
 
-첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI는 7월 9일 GPT-5.6 전면 공개로 맞섭니다. 여기에 xAI까지 Grok 4.5를 7월 8일 공개 출시하며(가격 $2/$6로 언더컷) '월 1회 신모델' 로드맵을 던졌습니다(성능 주장은 자체 벤치). 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
+첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI의 GPT-5.6 Sol·Terra·Luna도 제한 프리뷰를 지나 일반 사용 가능한 API 모델로 올라왔습니다. OpenAI 공식 개발자 문서가 세 모델의 ID·가격·엔드포인트를 제공하며, 7월 9일 롤아웃 날짜는 보조 매체 보도입니다. 여기에 xAI까지 Grok 4.5를 7월 8일 공개 출시하며(가격 $2/$6로 언더컷) '월 1회 신모델' 로드맵을 던졌습니다(성능 주장은 자체 벤치). 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
 
-두 번째 축은 통제와 복원입니다. Fable 5·Mythos 5는 수출통제로 막혔다가 6월 30일 해제, 7월 1일 전 세계 복원을 거쳤고, OpenAI GPT-5.6도 미 정부 안전성 검토를 거쳐 공개됩니다. 여기에 중국이 자국 상위 AI 모델의 해외 접근을 제한하는 방안을 검토(미확정)한다는 소식까지 겹치며, 수출통제가 더는 미국만의 카드가 아니게 됐습니다. 모델 접근이 국가안보·수출통제의 문제로 완전히 넘어왔습니다.
+두 번째 축은 통제와 복원입니다. Fable 5·Mythos 5는 수출통제로 막혔다가 6월 30일 해제, 7월 1일 전 세계 복원을 거쳤고, OpenAI GPT-5.6도 미 정부 안전성 검토와 제한 프리뷰를 거쳐 일반 API 모델로 제공됩니다. 여기에 중국이 자국 상위 AI 모델의 해외 접근을 제한하는 방안을 검토(미확정)한다는 소식까지 겹치며, 수출통제가 더는 미국만의 카드가 아니게 됐습니다. 모델 접근이 국가안보·수출통제의 문제로 완전히 넘어왔습니다.
 
 세 번째 축은 한국 인프라입니다. 삼성·SK가 참여하는 AI·반도체 메가 투자, 그리고 '엔비디아 없이 학습했다'는 메이투안 LongCat-2.0까지 — 반도체와 인프라가 이 모든 흐름의 바닥에 깔려 있고, 그 중심에 한국이 있습니다.`,
   closing: `이번 2주의 메시지는 분명합니다. 모델은 더 좋아지고 더 싸졌지만, 그 접근권은 수출통제·안전성 검토라는 관문을 지나야 하고(이제는 미국과 중국 양쪽에서), 그 아래에는 반도체와 인프라 투자가 깔려 있습니다.
 
-발표에서는 Sonnet 5로 '성능이 싸졌다'를 열고, Fable 5 복원과 중국의 접근 제한 검토·GPT-5.6 공개로 '접근은 양쪽에서 통제된다'를 지나, 한국 반도체 투자로 '결국 인프라 싸움'이라는 결론으로 청중에게 연결하면 흐름이 가장 선명합니다.`,
+발표에서는 Sonnet 5로 '성능이 싸졌다'를 열고, Fable 5 복원과 중국의 접근 제한 검토·GPT-5.6의 일반 API 공개로 '접근은 양쪽에서 통제된다'를 지나, 한국 반도체 투자로 '결국 인프라 싸움'이라는 결론으로 청중에게 연결하면 흐름이 가장 선명합니다.`,
   coreFlow: [
-    "Claude Sonnet 5·GPT-5.6로 최상위 성능이 저비용화되고, 발표가 곧 개발 스택 전체로 즉시 배선됐습니다.",
+    "Claude Sonnet 5 공개와 GPT-5.6 Sol·Terra·Luna의 일반 API 제공으로 최상위 성능의 저비용화 경쟁이 선명해졌습니다.",
     "Seedream 5.0 Pro처럼 이미지 생성은 한 장의 결과물에서 레이어 편집 가능한 디자인 파일 쪽으로 이동하고 있습니다.",
-    "Fable 5 수출통제 해제·복원, GPT-5.6의 정부 안전성 검토, 그리고 중국의 자국 모델 접근 제한 검토(미확정)까지 — 모델 접근이 미·중 양쪽에서 국가안보·통제의 문제가 됐습니다.",
+    "Fable 5 수출통제 해제·복원, GPT-5.6의 정부 안전성 검토·제한 프리뷰·일반 API 공개, 그리고 중국의 자국 모델 접근 제한 검토(미확정)까지 — 모델 접근이 미·중 양쪽에서 국가안보·통제의 문제가 됐습니다.",
     "삼성·SK 메가 투자와 메이투안의 '탈엔비디아' 학습 주장까지, 이 흐름의 바닥에는 반도체·인프라가 있고 그 중심에 한국이 있습니다.",
   ],
   highlights: [
@@ -199,22 +199,22 @@ export const edition2026_07a: ABEdition = {
       tier: "feature",
       post: {
         ...findPost(week28, "openai-20260708-gpt-5-6-ga-jul9"),
-        deck: "Sol·Terra·Luna 3종 — Terminal-Bench 2.1 최고점, Terra는 GPT-5.5급을 절반 값에",
+        source: "https://developers.openai.com/api/docs/models/gpt-5.6",
+        officialUrl: "https://developers.openai.com/api/docs/models/gpt-5.6",
+        verifiedAt: "2026-07-17",
+        deck: "Sol·Terra·Luna 일반 API 공개 — Terminal-Bench 2.1 최고점, Terra는 GPT-5.5급을 절반 값에",
         summary:
-          "OpenAI가 GPT-5.6을 공개했다. Sol(플래그십)·Terra(균형·GPT-5.5급 절반 값)·Luna(경량·최저가) 3종에 새 'max'·'ultra' 추론 모드가 들어갔다. 명령줄 코딩 벤치마크 Terminal-Bench 2.1에서 Sol Ultra 91.9로 1위. 다만 아직 신뢰 파트너 대상 제한 프리뷰이며 전면 공개는 '몇 주 안'(7/9 GA는 Engadget 보도).",
-        // round4 M3: 이 카드의 ko 오버라이드는 보수적 '제한 프리뷰' 스탠스인데, 스프레드로 승계된
-        // week28 영문판은 'GA 승인' 스탠스라 같은 카드가 언어별로 다른 사실을 주장했다.
-        // en도 카드 스탠스에 맞춰 오버라이드 — 07a closure(GA 공식 재검증) 때 ko/en 동시 갱신.
+          "OpenAI의 GPT-5.6 Sol·Terra·Luna가 제한 프리뷰를 지나 일반 사용 가능한 API 모델로 제공된다. OpenAI Developers 공식 문서에는 세 모델의 ID·가격·지원 엔드포인트·스냅샷이 등재되어 있다. Sol Ultra는 Terminal-Bench 2.1에서 91.9점으로 1위다. 7월 9일 롤아웃 날짜는 Engadget 보도이며, 현재 일반 공개 상태는 OpenAI 공식 모델 문서로 재검증했다.",
         en: {
-          title: "OpenAI unveils GPT-5.6 — Sol, Terra, and Luna",
-          deck: "Three models — tops Terminal-Bench 2.1; Terra offers GPT-5.5-class performance at half the price",
+          title: "OpenAI makes GPT-5.6 Sol, Terra, and Luna generally available",
+          deck: "Three production API models — Sol leads Terminal-Bench 2.1; Terra offers GPT-5.5-class performance at half the price",
           summary:
-            "OpenAI unveiled GPT-5.6 in three variants — Sol (flagship), Terra (balanced, GPT-5.5-class at half the price), and Luna (lightweight, lowest cost) — with new 'max' and 'ultra' reasoning modes. Sol Ultra ranks first on the Terminal-Bench 2.1 command-line coding benchmark at 91.9. As of the announcement it remains a limited preview for trusted partners, with general availability 'in the coming weeks' (the July 9 GA date is an Engadget report).",
+            "OpenAI now provides GPT-5.6 Sol, Terra, and Luna as generally available API models. Official OpenAI Developers pages list model IDs, pricing, supported endpoints, and snapshots for all three. Sol Ultra leads Terminal-Bench 2.1 at 91.9. The July 9 rollout date comes from Engadget reporting; current availability was re-verified in OpenAI's official model documentation.",
           content:
-            "**What is it?**\nOpenAI unveiled its next-generation model GPT-5.6 — not one model but three: Sol (top-performance flagship), Terra (balanced for everyday work, GPT-5.5-class performance at half the price), and Luna (fastest and cheapest). New 'max' reasoning (thinking longer and deeper) and 'ultra' mode (splitting complex work across sub-agents) ship alongside.\n\n**Not open to everyone yet (important)**\nAs of June 26 this is a limited preview, not a general release. Access opened only to a small set of trusted partners via API and Codex, with the partner list shared with the US government. OpenAI stated this government review process 'should not become the permanent default' but chose it as the fastest path to a wider release. General availability is 'in the coming weeks'; Engadget reports the date as Thursday, July 9.\n\n**Benchmarks — what each means**\n- Terminal-Bench 2.1 (command-line coding): planning, iterating, and operating tools the way a human does in a terminal. GPT-5.6 Sol Ultra leads at 91.9, base Sol 88.8, GPT-5.5 88.0, Claude Fable 5 83.4, Gemini 3.1 Pro 70.7.\n- GeneBench v1 (genomics/biology): Sol beats GPT-5.5 with fewer tokens (i.e., cheaper).\n- ExploitBench (cyber vulnerability research): Sol reaches near top-tier (Mythos Preview) performance at roughly 1/3 the tokens.\n- ExploitGym (UC Berkeley·OpenAI): more reasoning budget clearly improves cyber capability across Sol, Terra, and Luna.\nIn short: 'better and cheaper' across coding, science, and security.\n\n**What US developers are actually debating**\n1. Price disruption — Sol is top-tier, Terra gives GPT-5.5-class at half the price, Luna even less; roughly half the cost of Claude Fable 5 resonated with working developers.\n2. Benchmarks vs. real use — scores lead, but OpenAI itself admits preview safeguards 'may occasionally block or delay normal tasks', and reports of false-positive blocking sparked a 'do the scores match real work?' debate.\n\n**Pricing (per 1M tokens)**\n\n| Model | Input | Output |\n| --- | --- | --- |\n| Sol | $5 | $30 |\n| Terra | $2.50 | $15 |\n| Luna | $1 | $6 |\n\n**Key facts**\n- Status: limited preview (partner API·Codex only); GA 'in the coming weeks' (July 9 per Engadget)\n- Lineup: Sol / Terra / Luna + new 'max'·'ultra' modes\n- Speed: up to 750 tokens/sec for Sol on Cerebras (July, select customers)\n- Safety: below Preparedness 'Cyber Critical' threshold; preview may false-positive on normal tasks\n\nSource: openai.com (official announcement, 2026-06-26)",
+            "**What is it?**\nGPT-5.6 Sol, Terra, and Luna have moved from a limited preview into OpenAI's production API catalog. Official Developers pages now list each model's ID, pricing, endpoints, and snapshots.\n\n**From preview to general availability**\n- June 26: limited preview for roughly 20 trusted organizations\n- Current status: Sol, Terra, and Luna are documented as available API models\n- July 9 rollout date: attributed to Engadget as a secondary source\n\n**Benchmarks — what each means**\n- Terminal-Bench 2.1: Sol Ultra leads at 91.9, base Sol 88.8, GPT-5.5 88.0, Claude Fable 5 83.4, Gemini 3.1 Pro 70.7\n- GeneBench v1: Sol beats GPT-5.5 with fewer tokens\n- ExploitBench: Sol reaches near top-tier performance at roughly one-third the tokens\n- ExploitGym: more reasoning budget improves cyber capability across the lineup\n\n**Pricing per 1M tokens**\n\n| Model | Input | Output |\n| --- | --- | --- |\n| Sol | $5 | $30 |\n| Terra | $2.50 | $15 |\n| Luna | $1 | $6 |\n\n**Key facts**\n- Current status: generally available through the API\n- Official evidence: OpenAI Developers model documentation\n- Reported rollout date: July 9\n\nSource: developers.openai.com (re-verified July 17, 2026)",
         },
         content:
-          "**이게 뭐예요?**\nOpenAI가 차세대 모델 GPT-5.6을 공개했다. 하나가 아니라 세 종류다: Sol(최고 성능 플래그십), Terra(일상 업무용 균형형, GPT-5.5급 성능을 절반 값에), Luna(가장 빠르고 저렴한 경량형). 여기에 더 오래 깊이 생각하는 'max' 추론 모드와, 여러 하위 에이전트를 붙여 복잡한 일을 나눠 처리하는 'ultra' 모드가 새로 들어왔다.\n\n**아직 아무나 못 쓴다 (중요)**\n6월 26일 시점은 전면 공개가 아니라 제한적 프리뷰다. API와 Codex를 통해 신뢰할 수 있는 소수 파트너에게만 열렸고, 그 명단은 미국 정부와 공유됐다. OpenAI는 '이런 정부 검토 절차가 상시 기본값이 되면 안 된다'고 못 박으면서도, 지금은 더 넓은 공개로 가는 가장 빠른 길이라 택했다고 밝혔다. 전면 공개(GA)는 '몇 주 안'이며, Engadget은 그 시점을 7월 9일(목)로 보도했다.\n\n**벤치마크 — 각각 무슨 뜻인가 (아래 차트 참고)**\n- Terminal-Bench 2.1 (명령줄 코딩): 사람이 터미널에서 하듯 계획·반복·도구 조작을 해내는 능력. GPT-5.6 Sol Ultra가 91.9점으로 1위, 기본 Sol 88.8, GPT-5.5 88.0, Claude Fable 5 83.4, Gemini 3.1 Pro 70.7. 실제 개발 자동화에 가장 가까운 지표다.\n- GeneBench v1 (유전체·생물학): 오래 걸리는 유전체 분석 같은 과학 작업. Sol이 GPT-5.5보다 높은 점수를 더 적은 토큰(=더 싸게)으로 냈다.\n- ExploitBench (사이버 취약점 연구): Sol이 상위 모델(Mythos Preview)급 성능을 약 1/3 토큰으로 달성.\n- ExploitGym (UC Berkeley·OpenAI 공동): 추론을 늘릴수록 Sol·Terra·Luna 모두 사이버 역량이 뚜렷이 향상.\n쉽게 말해 코딩·과학·보안 세 영역에서 '더 잘, 더 싸게'가 이번 세대의 요지다.\n\n**미국에서 실제로 화제인 지점**\n공개 직후 미국 개발자 사이의 실전 화두는 두 갈래다.\n1. 가격 파괴 — Sol이 최상위인데 Terra는 GPT-5.5급을 절반 값에, Luna는 그보다 더 싸다. 특히 Claude Fable 5와 비교해 절반 수준 비용이라는 점이 코딩 실무자에게 크게 다가왔다.\n2. 벤치마크 대 실사용 — 점수는 최고지만, OpenAI 스스로 '프리뷰 중에는 안전장치가 정상적인 작업까지 가끔 차단하거나 지연시킬 수 있다'고 인정했다. 실제로 일상 코딩 요청이 오탐으로 막히는 경험이 보고되며 '점수만큼 실전도 좋은가'라는 논쟁이 붙었다.\n\n**가격 (100만 토큰당)**\n\n| 모델 | 입력 | 출력 |\n| --- | --- | --- |\n| Sol | $5 | $30 |\n| Terra | $2.50 | $15 |\n| Luna | $1 | $6 |\n\n**확인 포인트**\n- 현재: 제한적 프리뷰(파트너 API·Codex만), 전면 공개는 '몇 주 안'(7/9 GA는 Engadget 보도)\n- 라인업: Sol / Terra / Luna + 새 'max'·'ultra' 모드\n- 속도: Cerebras에서 Sol 최대 750토큰/초(7월, 일부 고객)\n- 안전: Preparedness의 'Cyber Critical' 임계는 넘지 않음. 프리뷰 중 정상 작업 오탐 가능\n\n출처: openai.com (2026-06-26 공식 발표)",
+          "**이게 뭐예요?**\nOpenAI의 GPT-5.6 Sol·Terra·Luna가 제한 프리뷰를 지나 일반 사용 가능한 API 모델로 제공된다. OpenAI Developers 공식 문서에 세 모델의 ID·가격·지원 엔드포인트와 스냅샷이 각각 공개돼 있다.\n\n**프리뷰에서 일반 공개까지**\n- 6월 26일: 약 20개 신뢰 조직 대상 제한 프리뷰\n- 현재: Sol·Terra·Luna 모두 OpenAI 공식 API 모델 카탈로그에 등재\n- 7월 9일 롤아웃 날짜: Engadget 보도(보조 출처)\n\n**벤치마크 — 각각 무슨 뜻인가**\n- Terminal-Bench 2.1: Sol Ultra 91.9점으로 1위, 기본 Sol 88.8, GPT-5.5 88.0, Claude Fable 5 83.4, Gemini 3.1 Pro 70.7\n- GeneBench v1: Sol이 GPT-5.5보다 적은 토큰으로 더 높은 점수\n- ExploitBench: 약 3분의 1 토큰으로 상위 모델급 성능\n- ExploitGym: 추론 예산을 늘릴수록 세 모델의 사이버 역량 향상\n\n**가격 (100만 토큰당)**\n\n| 모델 | 입력 | 출력 |\n| --- | --- | --- |\n| Sol | $5 | $30 |\n| Terra | $2.50 | $15 |\n| Luna | $1 | $6 |\n\n**확인 포인트**\n- 현재 상태: 일반 공개·API 사용 가능\n- 공식 근거: OpenAI Developers 모델 문서\n- 보도된 롤아웃 날짜: 7월 9일\n\n출처: developers.openai.com (2026-07-17 재검증)",
         galleryImages: [
           {
             src: "/og-cache/gpt-5-6-terminal-bench-2-1.png",
@@ -228,15 +228,18 @@ export const edition2026_07a: ABEdition = {
           },
         ],
         backupUrls: [
-          { label: "공식 발표 — 벤치마크 차트·이미지 원본", url: "https://openai.com/index/previewing-gpt-5-6-sol/" },
+          { label: "OpenAI Developers — GPT-5.6 Sol 모델 문서", url: "https://developers.openai.com/api/docs/models/gpt-5.6" },
+          { label: "OpenAI Developers — GPT-5.6 Terra 모델 문서", url: "https://developers.openai.com/api/docs/models/gpt-5.6-terra" },
+          { label: "OpenAI Developers — GPT-5.6 Luna 모델 문서", url: "https://developers.openai.com/api/docs/models/gpt-5.6-luna" },
+          { label: "공식 프리뷰 발표 — 벤치마크 차트·이미지 원본", url: "https://openai.com/index/previewing-gpt-5-6-sol/" },
           { label: "시스템 카드 — 확장 평가·안전성 이미지", url: "https://deploymentsafety.openai.com/gpt-5-6-preview" },
           { label: "ExploitGym 벤치마크 (UC Berkeley·arXiv)", url: "https://arxiv.org/abs/2605.11086" },
-          { label: "Engadget — 7/9 GA 보도", url: "https://www.engadget.com/2210308/openai-rolls-out-gpt5-6-july-9/" },
+          { label: "Engadget — 7/9 롤아웃 보도(보조 출처)", url: "https://www.engadget.com/2210308/openai-rolls-out-gpt5-6-july-9/" },
         ],
       },
       sourceWeek: "2026-w28",
       sourceCompany: "OpenAI",
-      editorial: "발표 다음 날(7월 9일 예정) 전면 공개되는 OpenAI의 대응 카드라 타이밍상 꼭 짚어야 합니다. 발표의 핵심은 두 가지입니다. ① 벤치마크: 명령줄 코딩 지표 Terminal-Bench 2.1에서 Sol Ultra 91.9로 1위, Claude Fable 5(83.4)·Gemini 3.1 Pro(70.7)를 앞섭니다(아래 차트). ② 가격: Terra가 GPT-5.5급을 절반 값에 줍니다. 다만 아직 신뢰 파트너 대상 제한 프리뷰이고, OpenAI 스스로 '프리뷰 중엔 정상 작업도 안전장치에 막힐 수 있다'고 인정한 점까지 균형 있게 전하면 좋습니다. Sol·Terra·Luna 3종이라는 것만 기억하셔도 됩니다.",
+      editorial: "OpenAI의 GPT-5.6 Sol·Terra·Luna가 제한 프리뷰를 지나 일반 API 모델로 올라온 대응 카드입니다. 현재 사용 가능 상태는 OpenAI Developers 공식 모델 문서에서 모델 ID·가격·엔드포인트·스냅샷으로 재검증했고, 정확한 7월 9일 롤아웃 날짜는 Engadget 보조 보도로 구분합니다. 발표의 핵심은 두 가지입니다. ① 벤치마크: Terminal-Bench 2.1에서 Sol Ultra 91.9로 1위. ② 가격: Terra가 GPT-5.5급을 절반 값에 제공합니다. Sol·Terra·Luna 3종과 '프리뷰→일반 API 공개' 전환만 기억하셔도 됩니다.",
     },
     {
       rank: 5,
