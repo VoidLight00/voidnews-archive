@@ -388,7 +388,8 @@
         "app/ab/[edition]/components/source.tsx",
         "_workspace/ab/20260703-142555-ab-20260625-20260708/RUN_MANIFEST.json",
         "scripts/verify-07a-closure.mjs",
-        "scripts/run-all-gates.mjs"
+        "scripts/run-all-gates.mjs",
+        "references/closures/2026-07a.json"
       ],
       "commit": null,
       "evidence": {
