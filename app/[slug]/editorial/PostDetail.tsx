@@ -177,7 +177,7 @@ function categoryLabel(c: GlossaryEntry["category"], locale: "ko" | "en"): strin
 
 export default function PostDetail({ meta, prev, next, weekSlug, article, related }: PostDetailProps) {
   const { post, companyName, companyColor, weekPeriod, threeLineSummary } = meta;
-  const { locale, t } = useLocale();
+  const { locale, setLocale, t } = useLocale();
   const [activeLang, setActiveLang] = useState<"ko" | "en">(locale);
 
   // 전역 locale과 본문 탭 동기화 — localStorage locale은 hydration 후 effect로 로드되므로
@@ -416,7 +416,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
               type="button"
               role="tab"
               aria-selected={activeLang === "ko"}
-              onClick={() => setActiveLang("ko")}
+              onClick={() => { setActiveLang("ko"); setLocale("ko"); }}
               className={`${styles.langTab} ${activeLang === "ko" ? styles.langTabActive : ""}`}
             >
               {t("detail.lang.ko")}
@@ -425,7 +425,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
               type="button"
               role="tab"
               aria-selected={activeLang === "en"}
-              onClick={() => setActiveLang("en")}
+              onClick={() => { setActiveLang("en"); setLocale("en"); }}
               className={`${styles.langTab} ${activeLang === "en" ? styles.langTabActive : ""}`}
             >
               {t("detail.lang.en")}

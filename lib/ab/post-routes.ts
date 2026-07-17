@@ -9,6 +9,7 @@ export interface ABPostMeta {
   editionSlug: string;
   editionTitle: string;
   editionPeriod: string;
+  editionAnnounceDate: string; // JSON-LD datePublished fallback — 기간 시작일 오염 방지(round5 N5)
   /** highlight 의 rank/sourceCompany — 가능한 경우 */
   rank?: number;
   sourceCompany?: string;
@@ -77,6 +78,7 @@ export function getABPost(
         editionSlug: ed.slug,
         editionTitle: ed.title,
         editionPeriod: ed.period,
+        editionAnnounceDate: ed.announceDate,
         rank: h.rank,
         sourceCompany: h.sourceCompany,
         threeLineSummary: splitThreeLineSummary(h.post.summary || h.post.deck || h.post.content),
@@ -92,6 +94,7 @@ export function getABPost(
         editionSlug: ed.slug,
         editionTitle: ed.title,
         editionPeriod: ed.period,
+        editionAnnounceDate: ed.announceDate,
         category: p.category,
         threeLineSummary: splitThreeLineSummary(p.summary || p.deck || p.body),
       };
@@ -106,6 +109,7 @@ export function getABPost(
         editionSlug: ed.slug,
         editionTitle: ed.title,
         editionPeriod: ed.period,
+        editionAnnounceDate: ed.announceDate,
         category: d.category,
         threeLineSummary: splitThreeLineSummary(d.summary || d.deck || d.body),
       };

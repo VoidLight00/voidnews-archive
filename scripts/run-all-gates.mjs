@@ -42,9 +42,12 @@ const results = [];
 for (const f of discovered) {
   if (RUN_SCOPED.has(f)) { results.push([f, "skip(run-scoped)"]); continue; }
   if (!(f in BUILD_GATES)) {
-    // unconfigured new gate: surface it (warn) so it can't be silently dropped
+    // unconfigured new gate: run with --warn, but a non-zero exit still FAILS the build.
+    // (round5 N1: 미등록 게이트의 exit 2가 failed에 합산되지 않아 fail-open이던 결함 — fail-closed로 전환)
     const r = spawnSync("node", [path.join(SCRIPTS, f), "--warn"], { stdio: "inherit" });
-    results.push([f, `DISCOVERED(unconfigured) exit ${r.status}`]);
+    const ok = r.status === 0;
+    if (!ok) failed++;
+    results.push([f, ok ? "DISCOVERED(unconfigured) PASS" : `DISCOVERED(unconfigured) FAIL exit ${r.status === null ? "crash" : r.status}`]);
     console.error(`[run-all-gates] ⚠️ new gate '${f}' is not in BUILD_GATES — add it with proper args.`);
     continue;
   }

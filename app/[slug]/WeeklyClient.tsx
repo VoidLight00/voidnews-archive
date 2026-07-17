@@ -356,7 +356,11 @@ export default function WeeklyClient({
             (post.summary || "").toLowerCase().includes(query) ||
             (post.content || "").toLowerCase().includes(query) ||
             (post.en?.title || "").toLowerCase().includes(query) ||
-            (post.en?.summary || "").toLowerCase().includes(query);
+            (post.en?.summary || "").toLowerCase().includes(query) ||
+            (post.deck || "").toLowerCase().includes(query) ||
+            (post.en?.deck || "").toLowerCase().includes(query) ||
+            (post.en?.content || "").toLowerCase().includes(query) ||
+            (post.tags || []).some((tag) => tag.toLowerCase().includes(query));
           const matchPlatform =
             platformFilter === "all" || post.platform === platformFilter || post.platform.includes(platformFilter);
           const matchBookmark = !bookmarkFilter || bookmarkSet.has(post.title);

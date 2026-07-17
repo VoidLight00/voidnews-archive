@@ -40,6 +40,9 @@ function checkWeek(weekData, { requireEn }) {
       if (requireEn) {
         if (!post.en || !isNonEmptyString(post.en?.title)) violations.push(`${id} — en.title 누락 (w${CUTOFF.week}+ 필수)`);
         if (!post.en || !isNonEmptyString(post.en?.summary)) violations.push(`${id} — en.summary 누락 (w${CUTOFF.week}+ 필수)`);
+        // 필드 패리티 (round5 N3): ko 원본에 deck/content가 있으면 en도 동반 — 무음 ko/en 혼합 렌더 차단
+        if (isNonEmptyString(post.deck) && !isNonEmptyString(post.en?.deck)) violations.push(`${id} — deck 있는데 en.deck 누락 (w${CUTOFF.week}+ 필드 패리티)`);
+        if (isNonEmptyString(post.content) && !isNonEmptyString(post.en?.content)) violations.push(`${id} — content 있는데 en.content 누락 (w${CUTOFF.week}+ 필드 패리티)`);
       }
     }
   }
@@ -51,11 +54,14 @@ function selftest() {
   const full = { title: "제목", en: { title: "Title", summary: "Summary" } };
   const missing = { title: "제목" };
   const empty = { title: "제목", en: { title: "" } };
+  const partial = { title: "제목", deck: "덱", content: "본문", en: { title: "Title", summary: "Summary" } };
   const cases = [
     [checkWeek(mk([full]), { requireEn: true }).length === 0, "en 완비 post는 통과해야 함"],
     [checkWeek(mk([missing]), { requireEn: true }).length === 2, "en 부재는 title+summary 2건 위반이어야 함"],
     [checkWeek(mk([missing]), { requireEn: false }).length === 0, "legacy는 en 부재를 허용해야 함"],
     [checkWeek(mk([empty]), { requireEn: false }).length >= 1, "빈 en.title은 위반이어야 함"],
+    [checkWeek(mk([partial]), { requireEn: true }).length === 2, "deck/content 있는데 en.deck/en.content 없으면 패리티 2건 위반이어야 함"],
+    [checkWeek(mk([partial]), { requireEn: false }).length === 0, "legacy는 패리티를 강제하지 않아야 함"],
   ];
   const failed = cases.filter(([ok]) => !ok);
   for (const [, name] of failed) console.error(`FAIL[i18n-coverage:selftest] ${name}`);
@@ -68,7 +74,7 @@ async function main() {
     process.exit(2);
   }
   if (process.argv.includes("--selftest")) {
-    console.log("PASS[i18n-coverage:selftest] 4/4");
+    console.log("PASS[i18n-coverage:selftest] 6/6");
     process.exit(0);
   }
 
@@ -81,6 +87,17 @@ async function main() {
   // fail-closed: 패턴 밖 파일명(예: 2026-w29-extra.ts)으로 게이트를 침묵 우회하는 경로 차단 (round4 finding)
   for (const f of allTs) {
     if (!files.includes(f)) violations.push(`${f} — 주차 파일명 패턴(YYYY-wNN.ts) 위반 — 게이트 우회 불가`);
+  }
+
+  // registry 교차검증 (round5 N2): 주차 파일 ↔ lib/data.ts import 양방향 일치 강제.
+  // 파일만 있고 미등록이면 사이트·sitemap·RSS에 조용히 누락되므로 fail-closed.
+  const dataTs = fs.readFileSync(path.join(ROOT, "lib", "data.ts"), "utf8");
+  const imported = new Set([...dataTs.matchAll(/from\s+"\.\/weeks\/(\d{4}-w\d+)"/g)].map((m) => `${m[1]}.ts`));
+  for (const f of files) {
+    if (!imported.has(f)) violations.push(`${f} — lib/data.ts에 미등록 (import 누락) — 사이트에 노출되지 않는 유령 주차`);
+  }
+  for (const imp of imported) {
+    if (!files.includes(imp)) violations.push(`lib/data.ts가 존재하지 않는 주차 import: ${imp}`);
   }
 
   for (const f of files) {

@@ -114,7 +114,7 @@ export default async function ABPostPage({
     description: meta.post.summary ?? meta.post.deck ?? undefined,
     imageSrc: meta.post.thumbnail?.src,
     path: `/ab/${edition}/${postSlug}/`,
-    datePublished: meta.post.date || meta.editionPeriod,
+    datePublished: meta.post.date || meta.editionAnnounceDate,
     yearHint: Number(edition.slice(0, 4)) || undefined,
     section: sectionLabel,
   });

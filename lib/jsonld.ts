@@ -21,7 +21,7 @@ interface NewsArticleInput {
 // 완전한 YYYY-MM-DD로 정규화 가능할 때만 반환, 아니면 undefined(잘못된 날짜 주입 방지).
 function toIsoDate(raw?: string, yearHint?: number): string | undefined {
   if (!raw) return undefined;
-  const iso = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+  const iso = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
   if (iso) return `${iso[1]}-${iso[2].padStart(2, "0")}-${iso[3].padStart(2, "0")}`;
   const md = raw.match(/^(\d{1,2})\/(\d{1,2})$/);
   if (md && yearHint) return `${yearHint}-${md[1].padStart(2, "0")}-${md[2].padStart(2, "0")}`;
