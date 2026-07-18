@@ -187,7 +187,28 @@ def compare(
             decisions[video_id] = item
         for video in expected:
             decision = decisions.get(video["videoId"])
-            if decision is None or not valid_decision(decision.get("decision")):
+            if decision is None:
+                failures.append(
+                    "FAIL[video-missing] "
+                    f"{channel_key}/{video['videoId']}/{video['title']}"
+                )
+                continue
+            if decision.get("title") != video["title"]:
+                failures.append(
+                    "FAIL[coverage-mismatch] "
+                    f"{channel_key}/{video['videoId']} title"
+                )
+            try:
+                observed_time = parse_published(video["published"])
+                recorded_time = parse_published(decision["published"])
+                if recorded_time != observed_time:
+                    failures.append(
+                        "FAIL[coverage-mismatch] "
+                        f"{channel_key}/{video['videoId']} published"
+                    )
+            except (CoverageError, KeyError):
+                pass
+            if not valid_decision(decision.get("decision")):
                 failures.append(
                     "FAIL[video-missing] "
                     f"{channel_key}/{video['videoId']}/{video['title']}"

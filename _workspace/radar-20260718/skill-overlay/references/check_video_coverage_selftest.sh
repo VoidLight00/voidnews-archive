@@ -21,6 +21,10 @@ python3 "${COMMON[@]}" --coverage "$FIX/coverage-invalid-fields.json"
 fields_rc=$?
 python3 "${COMMON[@]}" --coverage "$FIX/coverage-invalid-range.json"
 range_rc=$?
+python3 "${COMMON[@]}" --coverage "$FIX/coverage-mismatched-title.json"
+title_rc=$?
+python3 "${COMMON[@]}" --coverage "$FIX/coverage-mismatched-published.json"
+published_rc=$?
 set -e
 
 if [ "$complete_rc" -ne 0 ]; then
@@ -39,5 +43,13 @@ if [ "$range_rc" -ne 2 ]; then
   echo "FAIL[selftest] invalid-range expected=2 actual=$range_rc"
   exit 2
 fi
-echo "PASS[video-coverage-selftest] complete=0 missing=2 invalid-fields=2 invalid-range=2"
+if [ "$title_rc" -ne 2 ]; then
+  echo "FAIL[selftest] mismatched-title expected=2 actual=$title_rc"
+  exit 2
+fi
+if [ "$published_rc" -ne 2 ]; then
+  echo "FAIL[selftest] mismatched-published expected=2 actual=$published_rc"
+  exit 2
+fi
+echo "PASS[video-coverage-selftest] complete=0 missing=2 invalid-fields=2 invalid-range=2 mismatched-title=2 mismatched-published=2"
 exit 0
