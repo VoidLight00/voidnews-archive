@@ -205,7 +205,14 @@ def collect_reddit(
             raise CollectorError(f"Reddit response missing data.children[]: {subreddit}")
         selected = [item for child in children if (item := reddit_item(child, subreddit, start, end, minimum))]
         seeds.extend(selected)
-        statuses.append({"id": source_id, "status": "ok", "itemsFetched": len(children), "itemsSelected": len(selected)})
+        statuses.append(
+            {
+                "id": source_id,
+                "status": "ok",
+                "itemsFetched": len(children),
+                "itemsSelected": len(selected),
+            }
+        )
         if sleep_seconds and index + 1 < len(config["subreddits"]):
             time.sleep(sleep_seconds)
     return dedupe(seeds), statuses
@@ -281,7 +288,10 @@ def main() -> int:
         "failures": len(payload["failures"]),
     }
     marker = "PASS" if exit_code == 0 else "FAIL"
-    print(f"{marker}[community-collector] seeds={counts['seeds']} sources={counts['sources']} failures={counts['failures']}")
+    print(
+        f"{marker}[community-collector] seeds={counts['seeds']} "
+        f"sources={counts['sources']} failures={counts['failures']}"
+    )
     return exit_code
 
 
