@@ -47,7 +47,20 @@ COMMUNITY_LIVE_EXIT=2
 
 ## WP-3 — baeksang.dev 기능 카탈로그
 
-- 상태: 병렬 조사 중
+- 상태: 완료 (2026-07-18)
+- robots.txt 확인 후 허용 경로만 방문. 총 8페이지로 상한 15 이하.
+- `/daily`, `/daily/archive`, 날짜판 5개(2026-07-14~18)를 패턴 분석하고 픽셀·selector는 복제하지 않음.
+- 사용자 선택용 체크박스 기능 22개. 각 항목에 정의, VoidNews 이식 형태, 난이도 S/M/L, 기대 효용 포함.
+- 문서 lines=199, checkboxes=22, 필수 구조 게이트 exit 0.
+
+### WP-3 증거
+
+```text
+BAEKSANG_LINES=199
+BAEKSANG_CHECKBOXES=22
+BAEKSANG_DOC_GATE_EXIT=0
+NO_VERTICAL_STRIPE_EXIT=0
+```
 
 ## WP-4 — 카카오 AI방 knowhow 설계
 
