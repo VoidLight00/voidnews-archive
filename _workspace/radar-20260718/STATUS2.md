@@ -2,9 +2,15 @@
 
 ## 현재 요약
 
-- 상태: WP-5·WP-6 완료 (2026-07-18), WP-7 진행.
-- 브랜치: `feature/radar-layer`; push/deploy 없음.
+- 상태: WP-5·WP-6·WP-7 완료 (2026-07-18) — Phase 2 종료, push 승인 대기.
+- 브랜치: `main` (merge 완료); push/deploy 없음.
 - 경계 준수: 카카오 DB 접근 0, 옵시디언 쓰기 0, 외부 게시 0.
+
+## WP-7 — 로컬 merge
+
+- 상태: 완료 (2026-07-18)
+- `feature/radar-layer` → `main` `--no-ff` merge (`e85fa5e`). push는 하지 않았고 main은 origin 대비 ahead 상태로 대기.
+- merge 후 main 재검증: `MAIN_BUILD_EXIT=0` (prebuild run-all-gates + postbuild leak check 포함), `MAIN_STRIPE_EXIT=0`.
 
 ## WP-6 — baeksang 묶음 A 이식 (사이트 반영)
 
