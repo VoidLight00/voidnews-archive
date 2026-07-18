@@ -17,6 +17,10 @@ complete_rc=$?
 set +e
 python3 "${COMMON[@]}" --coverage "$FIX/coverage-missing.json"
 missing_rc=$?
+python3 "${COMMON[@]}" --coverage "$FIX/coverage-invalid-fields.json"
+fields_rc=$?
+python3 "${COMMON[@]}" --coverage "$FIX/coverage-invalid-range.json"
+range_rc=$?
 set -e
 
 if [ "$complete_rc" -ne 0 ]; then
@@ -27,5 +31,13 @@ if [ "$missing_rc" -ne 2 ]; then
   echo "FAIL[selftest] missing expected=2 actual=$missing_rc"
   exit 2
 fi
-echo "PASS[video-coverage-selftest] complete=0 missing=2"
+if [ "$fields_rc" -ne 2 ]; then
+  echo "FAIL[selftest] invalid-fields expected=2 actual=$fields_rc"
+  exit 2
+fi
+if [ "$range_rc" -ne 2 ]; then
+  echo "FAIL[selftest] invalid-range expected=2 actual=$range_rc"
+  exit 2
+fi
+echo "PASS[video-coverage-selftest] complete=0 missing=2 invalid-fields=2 invalid-range=2"
 exit 0

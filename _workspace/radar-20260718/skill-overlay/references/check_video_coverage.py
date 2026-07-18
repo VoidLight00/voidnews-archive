@@ -108,9 +108,17 @@ def parse_feed(raw: bytes, channel: dict[str, Any], start: date, end: date) -> l
     return videos
 
 
-def coverage_rows(coverage: dict[str, Any]) -> dict[str, dict[str, Any]]:
+def coverage_rows(
+    coverage: dict[str, Any], start: date, end: date
+) -> dict[str, dict[str, Any]]:
     if coverage.get("schemaVersion") != 2:
         raise CoverageError("FAIL[coverage-schema] schemaVersion must be 2")
+    date_range = coverage.get("dateRange")
+    expected_range = {"start": start.isoformat(), "end": end.isoformat()}
+    if date_range != expected_range:
+        raise CoverageError(
+            f"FAIL[coverage-schema] dateRange expected={expected_range} actual={date_range}"
+        )
     rows = coverage.get("coverage")
     if not isinstance(rows, list):
         raise CoverageError("FAIL[coverage-schema] coverage[] required")
@@ -133,8 +141,10 @@ def compare(
     channels: list[dict[str, Any]],
     feeds: dict[str, list[dict[str, str]]],
     coverage: dict[str, Any],
+    start: date,
+    end: date,
 ) -> tuple[list[str], int]:
-    rows = coverage_rows(coverage)
+    rows = coverage_rows(coverage, start, end)
     registry_ids = {row["id"] for row in channels}
     ghost = sorted(set(rows) - registry_ids)
     failures = [f"FAIL[ghost-id] {channel_id}" for channel_id in ghost]
@@ -157,6 +167,23 @@ def compare(
             if not video_id or video_id in decisions:
                 failures.append(f"FAIL[coverage-schema] {channel_key} duplicate/invalid videoId: {video_id}")
                 continue
+            title = item.get("title")
+            published = item.get("published")
+            if not isinstance(title, str) or not title.strip():
+                failures.append(
+                    f"FAIL[coverage-schema] {channel_key}/{video_id} title required"
+                )
+            if not isinstance(published, str) or not published.strip():
+                failures.append(
+                    f"FAIL[coverage-schema] {channel_key}/{video_id} published required"
+                )
+            else:
+                try:
+                    parse_published(published)
+                except CoverageError:
+                    failures.append(
+                        f"FAIL[coverage-schema] {channel_key}/{video_id} published invalid: {published}"
+                    )
             decisions[video_id] = item
         for video in expected:
             decision = decisions.get(video["videoId"])
@@ -183,7 +210,7 @@ def main() -> int:
             row["id"]: parse_feed(fetch_feed(row, fixture_dir), row, start, end)
             for row in channels
         }
-        failures, total = compare(channels, feeds, coverage)
+        failures, total = compare(channels, feeds, coverage, start, end)
         if failures:
             print("\n".join(failures))
             print(f"FAIL[video-coverage] channels={len(channels)} videos={total} missing={len(failures)}")
