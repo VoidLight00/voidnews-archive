@@ -17,8 +17,6 @@
     "maxPagesPerKeyword": 3
   },
   "reddit": {
-    "enabled": false,
-    "disabledReason": "HTTP 403 2026-07-18",
     "endpointPattern": "https://www.reddit.com/r/{subreddit}/top.json?t=week&limit=100&raw_json=1",
     "subreddits": [
       "LocalLLaMA",

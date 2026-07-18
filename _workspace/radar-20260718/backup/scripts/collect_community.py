@@ -244,17 +244,13 @@ def collect(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         failures.append({"source": "hn", "error": f"{type(exc).__name__}: {exc}"})
         statuses.append({"id": "hn", "status": "failed", "error": failures[-1]["error"]})
     for subreddit in reddit_config["subreddits"]:
-        source = f"reddit:{subreddit}"
-        if reddit_config.get("enabled", True) is False:
-            reason = str(reddit_config.get("disabledReason") or "disabled without reason")
-            statuses.append({"id": source, "status": "disabled", "disabledReason": reason})
-            continue
         single_config = {**reddit_config, "subreddits": [subreddit]}
         try:
             reddit_seeds, reddit_statuses = collect_reddit(single_config, start, end, fetch, sleep_seconds)
             seeds.extend(reddit_seeds)
             statuses.extend(reddit_statuses)
         except Exception as exc:
+            source = f"reddit:{subreddit}"
             failures.append({"source": source, "error": f"{type(exc).__name__}: {exc}"})
             statuses.append({"id": source, "status": "failed", "error": failures[-1]["error"]})
     generated_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
