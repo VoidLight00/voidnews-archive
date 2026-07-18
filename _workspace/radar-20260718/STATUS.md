@@ -51,4 +51,18 @@ COMMUNITY_LIVE_EXIT=2
 
 ## WP-4 — 카카오 AI방 knowhow 설계
 
-- 상태: 대기
+- 상태: 완료 (2026-07-18)
+- 설계만 작성했으며 kakao-harness 실행, DB 접근, 코드 작성, 옵시디언 쓰기는 하지 않음.
+- 기존 canonical normalize, sink contract, room backfill plan/approve/apply, requestHash 결속을 재사용하는 두 갈래 흐름(비공개 신규 노트 + `kakao-room` AB seed)을 명시.
+- 신규 컴포넌트 7개와 HARD 게이트 10종, 원본 DB/외부 LLM/옵시디언/AB seed/media 승인 지점을 명시.
+- 문서 lines=225, H2=10, 필수 목차 누락=0, 문서 게이트 exit 0.
+
+### WP-4 증거
+
+```text
+KAKAO_DESIGN_LINES=225
+KAKAO_DESIGN_H2=10
+KAKAO_DESIGN_MISSING=0
+KAKAO_DESIGN_GATE_EXIT=0
+KAKAO_BOUNDARY_GREP_EXIT=0
+```
