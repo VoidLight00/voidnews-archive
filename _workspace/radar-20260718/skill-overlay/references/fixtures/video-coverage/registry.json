@@ -1,0 +1,19 @@
+{
+  "version": "fixture",
+  "channels": [
+    {
+      "id": "yt-fixture-a",
+      "name": "Fixture A",
+      "platform": "youtube",
+      "channelId": "UCfixtureA",
+      "rssUrl": "fixture://a"
+    },
+    {
+      "id": "yt-fixture-b",
+      "name": "Fixture B",
+      "platform": "youtube",
+      "channelId": "UCfixtureB",
+      "rssUrl": "fixture://b"
+    }
+  ]
+}

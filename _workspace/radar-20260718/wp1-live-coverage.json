@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "dateRange": {
+    "start": "2026-07-12",
+    "end": "2026-07-18"
+  },
+  "coverage": [
+    {
+      "id": "yt-theaisearch",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "bEnE5pbpe_Q",
+          "title": "New #1 open source AI model is here! FABLE LEVEL",
+          "published": "2026-07-17T03:29:06+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "Ti1V7OI2Rro",
+          "title": "Girlfriend simulators, GPT 5.6, Grok 4.5, Seedream 5.0, Muse Spark, robot surgery: AI NEWS",
+          "published": "2026-07-12T03:33:34+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    },
+    {
+      "id": "yt-mreflow",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "ss2LaCKUQmU",
+          "title": "AI News: Claude's New Browser, Spotify Gets AI & OpenAI's New Hardware",
+          "published": "2026-07-17T15:15:31+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "FO5zsDIY6Yc",
+          "title": "Which AI Is Better? 🖥️ WEBSITE EDITION",
+          "published": "2026-07-16T14:40:45+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "MDy_b9F7oUc",
+          "title": "Complete Guide to ChatGPT 5.6 + Prompting Guide",
+          "published": "2026-07-15T22:17:52+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "KzJkS00Ztd8",
+          "title": "Try This Awesome AI Video Transition!",
+          "published": "2026-07-14T14:31:02+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "BDWdp_fIOHk",
+          "title": "Build A Custom Browser Extension [SUPER Easy!]",
+          "published": "2026-07-13T20:18:05+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "lIi2FjPgjkg",
+          "title": "This Tech CEO Is Building the “Linux of AI”",
+          "published": "2026-07-12T23:05:51+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    },
+    {
+      "id": "yt-wesroth",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "4fPLsmJNaMI",
+          "title": "Kimi K3 is FABLE LEVEL Open Source AI",
+          "published": "2026-07-18T04:32:06+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "OPuD-UeQGY8",
+          "title": "INSANE AI News: GPT-RED, Kimi K3, Gemini 3.5 Pro and Anthropic's \"END GAME\"",
+          "published": "2026-07-16T05:44:08+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "cwf2vEAigKA",
+          "title": "Claude Built the Ultimate Second Brain",
+          "published": "2026-07-14T02:32:54+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "GtrWMNsXghA",
+          "title": "AI Apps Making $20,000+ per month with 1 person teams.",
+          "published": "2026-07-12T07:02:59+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    },
+    {
+      "id": "yt-matthewberman",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "jsR_2hMPewY",
+          "title": "Kimi K3 just beat FABLE.",
+          "published": "2026-07-17T09:09:19+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "5HTqWgt6ctk",
+          "title": "AI NEWS LIVE",
+          "published": "2026-07-15T19:56:29+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "WMiylHobhBM",
+          "title": "AI NEWS LIVE",
+          "published": "2026-07-15T18:43:18+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "nxr20lcqagg",
+          "title": "OpenAI vs Anthropic",
+          "published": "2026-07-15T17:31:52+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "M2WtYYR_Dk0",
+          "title": "Deepseek ban?",
+          "published": "2026-07-15T13:00:27+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "R2kkm87o_XM",
+          "title": "China's making their own chips now",
+          "published": "2026-07-15T03:05:45+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "etduwo9Lu3M",
+          "title": "You aren't using Codex like me...",
+          "published": "2026-07-14T16:15:00+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "mlc9JSTQoxc",
+          "title": "Codex is GONE",
+          "published": "2026-07-13T07:20:20+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    },
+    {
+      "id": "yt-aiexplained",
+      "visited": true,
+      "videos": []
+    },
+    {
+      "id": "yt-aiadvantage",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "Nq3S_vNjw5E",
+          "title": "I Tested AI on Work That Actually Matters",
+          "published": "2026-07-17T21:16:33+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    },
+    {
+      "id": "yt-allaboutai",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "fKM-wCcawpc",
+          "title": "This GPT-5.6 Trading Bot Is CRUSHING Hyperliquid 24/7 (so far)",
+          "published": "2026-07-15T17:00:36+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    },
+    {
+      "id": "yt-skillleapai",
+      "visited": true,
+      "videos": []
+    },
+    {
+      "id": "yt-twominutepapers",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "axOcn--n_lM",
+          "title": "Claude Just Revealed AI's Biggest Problem",
+          "published": "2026-07-16T15:39:17+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "0CqLVnx-2UM",
+          "title": "Anthropic Found Something That Shouldn't Exist",
+          "published": "2026-07-15T13:58:27+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        },
+        {
+          "videoId": "Ae9q7KsRbuI",
+          "title": "Minecraft Was Missing One Brilliant Idea",
+          "published": "2026-07-12T15:48:43+00:00",
+          "decision": "skipped:WP-1 live gate smoke fixture; editorial review not performed"
+        }
+      ]
+    }
+  ]
+}
