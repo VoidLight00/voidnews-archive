@@ -1,5 +1,21 @@
 # Radar 통합층 구현 상태
 
+## 최종 요약
+
+- 상태: WP-1~4 완료 (2026-07-18)
+- 브랜치: `feature/radar-layer`; push/deploy 없음.
+- 경계 준수: 카카오 DB 접근 0, 옵시디언 쓰기 0, 외부 게시 0.
+- 독립 최종 검증: 미해결 결함 0, git dirty paths=0, overlay↔live 핵심 파일 26개 hash mismatch=0.
+- 최종 주요 게이트: WP-1 selftest exit 0, live RSS `channels=9 videos=26` exit 0, registry exit 0, WP-2 selftest/compile exit 0, WP-3/4 구조 exit 0, 세로 스트라이프 gate exit 0.
+
+## 변경 파일 묶음
+
+- 라이브 스킬: `~/.claude/skills/voidnews-briefing-pipeline/{SKILL.md,references/*,scripts/*}`
+- 커밋 가능한 동기화본: `_workspace/radar-20260718/skill-overlay/`
+- 기존 파일 백업: `_workspace/radar-20260718/backup/`
+- 실측 산출: `wp1-live-coverage.json`, `01c_community_seeds.json`
+- 설계/카탈로그: `baeksang-feature-catalog.md`, `kakao-knowhow-design.md`
+
 ## WP-1 — 전수 커버리지 매트릭스 게이트
 
 - 상태: 완료 (2026-07-18)
