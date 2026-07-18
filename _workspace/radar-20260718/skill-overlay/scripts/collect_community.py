@@ -107,48 +107,55 @@ def collect_hn(
     minimum = int(config["minimumScore"])
     start_ts = int(datetime.combine(start, day_time.min, timezone.utc).timestamp())
     end_ts = int(datetime.combine(end, day_time.max, timezone.utc).timestamp())
-    for index, keyword in enumerate(config["keywords"]):
-        params = {
-            "query": keyword,
-            "tags": "story",
-            "numericFilters": f"created_at_i>={start_ts},created_at_i<={end_ts},points>={minimum}",
-            "hitsPerPage": int(config.get("hitsPerPage", 100)),
-            "page": 0,
-        }
-        url = config["endpoint"] + "?" + urllib.parse.urlencode(params)
-        payload = fetch(url, f"hn-{index}")
-        hits = payload.get("hits")
-        if not isinstance(hits, list):
-            raise CollectorError(f"HN response missing hits[] for keyword {keyword}")
-        fetched += len(hits)
-        for hit in hits:
-            timestamp = hit.get("created_at_i")
-            score = int(hit.get("points") or 0)
-            title = str(hit.get("title") or "").strip()
-            object_id = str(hit.get("objectID") or "").strip()
-            if not object_id or not title or timestamp is None or score < minimum:
-                continue
-            if not in_window(timestamp, start, end):
-                continue
-            source_item_url = f"https://news.ycombinator.com/item?id={object_id}"
-            url_value = str(hit.get("url") or source_item_url)
-            seeds.append(
-                {
-                    "id": f"community-hn-{object_id}",
-                    "title": title,
-                    "url": url_value,
-                    "discoveredVia": "community-hn",
-                    "discoveredAt": iso_timestamp(timestamp),
-                    "score": score,
-                    "officialCandidateUrl": official_candidate(url_value),
-                    "source": "hn",
-                    "sourceItemUrl": source_item_url,
-                    "author": str(hit.get("author") or ""),
-                    "matchedKeywords": [keyword],
-                    "commentCount": int(hit.get("num_comments") or 0),
-                }
-            )
-        if sleep_seconds and index + 1 < len(config["keywords"]):
+    for keyword_index, keyword in enumerate(config["keywords"]):
+        max_pages = int(config.get("maxPagesPerKeyword", 1))
+        for page in range(max_pages):
+            params = {
+                "query": keyword,
+                "tags": "story",
+                "numericFilters": f"created_at_i>={start_ts},created_at_i<={end_ts},points>={minimum}",
+                "hitsPerPage": int(config.get("hitsPerPage", 100)),
+                "page": page,
+            }
+            url = config["endpoint"] + "?" + urllib.parse.urlencode(params)
+            payload = fetch(url, f"hn-{keyword_index}-{page}")
+            hits = payload.get("hits")
+            if not isinstance(hits, list):
+                raise CollectorError(f"HN response missing hits[] for keyword {keyword} page {page}")
+            fetched += len(hits)
+            for hit in hits:
+                timestamp = hit.get("created_at_i")
+                score = int(hit.get("points") or 0)
+                title = str(hit.get("title") or "").strip()
+                object_id = str(hit.get("objectID") or "").strip()
+                if not object_id or not title or timestamp is None or score < minimum:
+                    continue
+                if not in_window(timestamp, start, end):
+                    continue
+                source_item_url = f"https://news.ycombinator.com/item?id={object_id}"
+                url_value = str(hit.get("url") or source_item_url)
+                seeds.append(
+                    {
+                        "id": f"community-hn-{object_id}",
+                        "title": title,
+                        "url": url_value,
+                        "discoveredVia": "community-hn",
+                        "discoveredAt": iso_timestamp(timestamp),
+                        "score": score,
+                        "officialCandidateUrl": official_candidate(url_value),
+                        "source": "hn",
+                        "sourceItemUrl": source_item_url,
+                        "author": str(hit.get("author") or ""),
+                        "matchedKeywords": [keyword],
+                        "commentCount": int(hit.get("num_comments") or 0),
+                    }
+                )
+            available_pages = int(payload.get("nbPages") or 1)
+            if page + 1 >= available_pages:
+                break
+            if sleep_seconds:
+                time.sleep(sleep_seconds)
+        if sleep_seconds and keyword_index + 1 < len(config["keywords"]):
             time.sleep(sleep_seconds)
     selected = dedupe(seeds)
     return selected, {"id": "hn", "status": "ok", "itemsFetched": fetched, "itemsSelected": len(selected)}
