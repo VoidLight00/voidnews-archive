@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "dateRange": {
+    "start": "2026-07-01",
+    "end": "2026-07-18"
+  },
+  "coverage": [
+    {
+      "id": "yt-fixture-a",
+      "visited": true,
+      "videos": [
+        {
+          "videoId": "video-a1",
+          "title": "Fixture AI launch",
+          "published": "2026-07-10T01:00:00+00:00",
+          "decision": "promoted"
+        }
+      ]
+    },
+    {
+      "id": "yt-fixture-b",
+      "visited": true,
+      "videos": []
+    }
+  ]
+}

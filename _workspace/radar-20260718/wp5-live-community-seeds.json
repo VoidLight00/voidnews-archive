@@ -1,0 +1,1500 @@
+{
+  "schemaVersion": 1,
+  "dateRange": {
+    "start": "2026-07-12",
+    "end": "2026-07-18"
+  },
+  "generatedAt": "2026-07-18T10:30:38.782291Z",
+  "seeds": [
+    {
+      "id": "community-hn-48935342",
+      "title": "Kimi K3: Open Frontier Intelligence",
+      "url": "https://www.kimi.com/blog/kimi-k3",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T14:46:05Z",
+      "score": 2031,
+      "officialCandidateUrl": "https://www.kimi.com/blog/kimi-k3",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48935342",
+      "author": "vincent_s",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 1179
+    },
+    {
+      "id": "community-hn-48924912",
+      "title": "Inkling: Our Open-Weights Model",
+      "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T18:12:45Z",
+      "score": 1211,
+      "officialCandidateUrl": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48924912",
+      "author": "vimarsh6739",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 289
+    },
+    {
+      "id": "community-hn-48886741",
+      "title": "Ask HN: Add flag for AI-generated articles",
+      "url": "https://news.ycombinator.com/item?id=48886741",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T01:24:20Z",
+      "score": 1091,
+      "officialCandidateUrl": null,
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48886741",
+      "author": "levkk",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 456
+    },
+    {
+      "id": "community-hn-48883275",
+      "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+      "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T18:25:51Z",
+      "score": 702,
+      "officialCandidateUrl": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48883275",
+      "author": "systima",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 395
+    },
+    {
+      "id": "community-hn-48916975",
+      "title": "I tricked Claude into leaking your deepest, darkest secrets",
+      "url": "https://www.ayush.digital/blog/the-memory-heist",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T06:28:00Z",
+      "score": 665,
+      "officialCandidateUrl": "https://www.ayush.digital/blog/the-memory-heist",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48916975",
+      "author": "macleginn",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 293
+    },
+    {
+      "id": "community-hn-48905248",
+      "title": "How to stop Claude from saying load-bearing",
+      "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T11:46:02Z",
+      "score": 604,
+      "officialCandidateUrl": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48905248",
+      "author": "shintoist",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 609
+    },
+    {
+      "id": "community-hn-48896665",
+      "title": "Building and shipping Mac and iOS apps without opening Xcode",
+      "url": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T18:22:16Z",
+      "score": 549,
+      "officialCandidateUrl": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48896665",
+      "author": "speckx",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 232
+    },
+    {
+      "id": "community-hn-48908178",
+      "title": "Are we offloading too much of our thinking to AI?",
+      "url": "https://www.artfish.ai/p/offloading-thinking-to-ai",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T15:18:13Z",
+      "score": 522,
+      "officialCandidateUrl": "https://www.artfish.ai/p/offloading-thinking-to-ai",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48908178",
+      "author": "yenniejun111",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 477
+    },
+    {
+      "id": "community-hn-48952880",
+      "title": "Kaiser nurses say AI, surveillance are making their jobs and patient care worse",
+      "url": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T22:26:30Z",
+      "score": 512,
+      "officialCandidateUrl": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48952880",
+      "author": "gnabgib",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 335
+    },
+    {
+      "id": "community-hn-48883343",
+      "title": "I love LLMs, I hate hype",
+      "url": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T18:31:56Z",
+      "score": 496,
+      "officialCandidateUrl": "https://geohot.github.io//blog/jekyll/update/2026/07/12/i-love-llms.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48883343",
+      "author": "therepanic",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 322
+    },
+    {
+      "id": "community-hn-48880170",
+      "title": "Old and new apps, via modern coding agents",
+      "url": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T11:09:42Z",
+      "score": 453,
+      "officialCandidateUrl": "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48880170",
+      "author": "subset",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 133
+    },
+    {
+      "id": "community-hn-48910676",
+      "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+      "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T17:58:35Z",
+      "score": 453,
+      "officialCandidateUrl": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48910676",
+      "author": "Synthetic7346",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 202
+    },
+    {
+      "id": "community-hn-48947825",
+      "title": "The state of open source AI",
+      "url": "https://stateofopensource.ai/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T14:31:10Z",
+      "score": 447,
+      "officialCandidateUrl": "https://stateofopensource.ai/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48947825",
+      "author": "rellem",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 320
+    },
+    {
+      "id": "community-hn-48905028",
+      "title": "Codex starts encrypting sub-agent prompts",
+      "url": "https://github.com/openai/codex/issues/28058",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T11:21:32Z",
+      "score": 425,
+      "officialCandidateUrl": "https://github.com/openai/codex/issues/28058",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48905028",
+      "author": "embedding-shape",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 250
+    },
+    {
+      "id": "community-hn-48946303",
+      "title": "Apple targets dozens of OpenAI employees with legal letters",
+      "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T12:02:39Z",
+      "score": 394,
+      "officialCandidateUrl": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48946303",
+      "author": "merksittich",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 339
+    },
+    {
+      "id": "community-hn-48939524",
+      "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+      "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T20:03:23Z",
+      "score": 389,
+      "officialCandidateUrl": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48939524",
+      "author": "hershyb_",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 524
+    },
+    {
+      "id": "community-hn-48936451",
+      "title": "NotebookLM is now Gemini Notebook",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T16:08:13Z",
+      "score": 365,
+      "officialCandidateUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48936451",
+      "author": "xnx",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 181
+    },
+    {
+      "id": "community-hn-48897991",
+      "title": "Samsung Health app threatens data deletion if users opt out AI training",
+      "url": "https://neow.in/cWsyMTV3",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T20:01:43Z",
+      "score": 350,
+      "officialCandidateUrl": "https://neow.in/cWsyMTV3",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48897991",
+      "author": "bundie",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 103
+    },
+    {
+      "id": "community-hn-48939662",
+      "title": "LM Studio Bionic: the AI agent for open models",
+      "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T20:18:15Z",
+      "score": 323,
+      "officialCandidateUrl": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48939662",
+      "author": "minimaxir",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 127
+    },
+    {
+      "id": "community-hn-48923079",
+      "title": "Codex Micro",
+      "url": "https://openai.com/supply/co-lab/work-louder/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T16:12:58Z",
+      "score": 304,
+      "officialCandidateUrl": "https://openai.com/supply/co-lab/work-louder/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48923079",
+      "author": "davidbarker",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 251
+    },
+    {
+      "id": "community-hn-48931588",
+      "title": "At least 105 past YC founders have worked at OpenAI and Anthropic",
+      "url": "https://joinedanthropic.com",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T08:03:35Z",
+      "score": 302,
+      "officialCandidateUrl": "https://joinedanthropic.com",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48931588",
+      "author": "ohong",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 217
+    },
+    {
+      "id": "community-hn-48933310",
+      "title": "The LLM Critics Are Right. I Use LLMs Anyway",
+      "url": "https://www.theocharis.dev/blog/llm-critics-are-right-i-use-llms-anyway/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T11:59:01Z",
+      "score": 296,
+      "officialCandidateUrl": "https://www.theocharis.dev/blog/llm-critics-are-right-i-use-llms-anyway/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48933310",
+      "author": "JeremyTheo",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 294
+    },
+    {
+      "id": "community-hn-48927095",
+      "title": "Governments, companies, nonprofits should invest in free, open source AI [pdf]",
+      "url": "https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T21:16:36Z",
+      "score": 293,
+      "officialCandidateUrl": "https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48927095",
+      "author": "bilsbie",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 107
+    },
+    {
+      "id": "community-hn-48932697",
+      "title": "Ente – Opening Our Books",
+      "url": "https://ente.com/open/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T10:37:17Z",
+      "score": 282,
+      "officialCandidateUrl": "https://ente.com/open/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48932697",
+      "author": "Sherex",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 107
+    },
+    {
+      "id": "community-hn-48883305",
+      "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
+      "url": "https://github.com/juggler-ai/juggler",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T18:28:15Z",
+      "score": 278,
+      "officialCandidateUrl": "https://github.com/juggler-ai/juggler",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48883305",
+      "author": "julesrms",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 118
+    },
+    {
+      "id": "community-hn-48921461",
+      "title": "OpenAI loses trademark dispute at EU court",
+      "url": "https://dpa-international.com/economics/urn:newsml:dpa.com:20090101:260715-930-389143/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T14:32:36Z",
+      "score": 262,
+      "officialCandidateUrl": "https://dpa-international.com/economics/urn:newsml:dpa.com:20090101:260715-930-389143/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48921461",
+      "author": "hermanzegerman",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 166
+    },
+    {
+      "id": "community-hn-48882716",
+      "title": "Migrating a production AI agent to GPT-5.6: 2.2x faster, 27% cheaper",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T17:13:07Z",
+      "score": 258,
+      "officialCandidateUrl": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48882716",
+      "author": "brryant",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 131
+    },
+    {
+      "id": "community-hn-48936880",
+      "title": "Detecting LLM-Generated Texts with “Classical” Machine Learning",
+      "url": "https://blog.lyc8503.net/en/post/llm-classifier/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T16:41:37Z",
+      "score": 240,
+      "officialCandidateUrl": "https://blog.lyc8503.net/en/post/llm-classifier/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48936880",
+      "author": "uneven9434",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 173
+    },
+    {
+      "id": "community-hn-48892859",
+      "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+      "url": "https://github.com/clawkwork/clawk",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T14:02:03Z",
+      "score": 223,
+      "officialCandidateUrl": "https://github.com/clawkwork/clawk",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48892859",
+      "author": "celrenheit",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 157
+    },
+    {
+      "id": "community-hn-48945681",
+      "title": "Ask HN: Any AWS billing issues known? Amazon forecast of 3 billion dollars",
+      "url": "https://news.ycombinator.com/item?id=48945681",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T10:45:21Z",
+      "score": 203,
+      "officialCandidateUrl": null,
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48945681",
+      "author": "mstolpm",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 1
+    },
+    {
+      "id": "community-hn-48878126",
+      "title": "Under federal rule, colleges must leave grads better off or lose financial aid",
+      "url": "https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T04:00:14Z",
+      "score": 198,
+      "officialCandidateUrl": "https://www.npr.org/2026/06/30/nx-s1-5835631/turner-camhi-do-no-harm-college-loans",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48878126",
+      "author": "nradov",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 547
+    },
+    {
+      "id": "community-hn-48920432",
+      "title": "The Three-Second Theft: Why AI Voice Fraud Outruns Every Defence",
+      "url": "https://smarterarticles.co.uk/the-three-second-theft-why-ai-voice-fraud-outruns-every-defence",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T13:18:15Z",
+      "score": 189,
+      "officialCandidateUrl": "https://smarterarticles.co.uk/the-three-second-theft-why-ai-voice-fraud-outruns-every-defence",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48920432",
+      "author": "dxs",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 245
+    },
+    {
+      "id": "community-hn-48906125",
+      "title": "Proof of care in the age of AI",
+      "url": "https://jacobfilipp.com/care/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T12:56:25Z",
+      "score": 185,
+      "officialCandidateUrl": "https://jacobfilipp.com/care/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48906125",
+      "author": "jfil",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 110
+    },
+    {
+      "id": "community-hn-48901292",
+      "title": "What will be left for us to work on?",
+      "url": "https://www.normaltech.ai/p/what-will-be-left-for-us-to-work",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T01:44:40Z",
+      "score": 178,
+      "officialCandidateUrl": "https://www.normaltech.ai/p/what-will-be-left-for-us-to-work",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48901292",
+      "author": "randomwalker",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 265
+    },
+    {
+      "id": "community-hn-48908271",
+      "title": "Show HN: Opening lines of famous literary works",
+      "url": "https://www.verbaprima.com/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T15:24:49Z",
+      "score": 178,
+      "officialCandidateUrl": "https://www.verbaprima.com/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48908271",
+      "author": "plicerin",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 104
+    },
+    {
+      "id": "community-hn-48952439",
+      "title": "FAA lets Boeing sign off on 737 MAX, 787 airworthiness certificates again",
+      "url": "https://www.cnbc.com/2026/07/17/faa-boeing-737-max-787.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T21:22:53Z",
+      "score": 175,
+      "officialCandidateUrl": "https://www.cnbc.com/2026/07/17/faa-boeing-737-max-787.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48952439",
+      "author": "hmm37",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 98
+    },
+    {
+      "id": "community-hn-48913443",
+      "title": "Financing the AI boom: from cash flows to debt [pdf]",
+      "url": "https://www.bis.org/publ/bisbull120.pdf",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T21:58:36Z",
+      "score": 165,
+      "officialCandidateUrl": "https://www.bis.org/publ/bisbull120.pdf",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48913443",
+      "author": "1vuio0pswjnm7",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 106
+    },
+    {
+      "id": "community-hn-48878682",
+      "title": "Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
+      "url": "https://github.com/cosmtrek/mindwalk",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T05:51:32Z",
+      "score": 162,
+      "officialCandidateUrl": "https://github.com/cosmtrek/mindwalk",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48878682",
+      "author": "cosmtrek",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 63
+    },
+    {
+      "id": "community-hn-48904095",
+      "title": "Demis Hassabis has a plan to harness AI safely",
+      "url": "https://twitter.com/demishassabis/status/2076957440109625718",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T09:20:07Z",
+      "score": 158,
+      "officialCandidateUrl": "https://twitter.com/demishassabis/status/2076957440109625718",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48904095",
+      "author": "asiergoni",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 200
+    },
+    {
+      "id": "community-hn-48935687",
+      "title": "How to Train a Gen AI Kick Drum Model on Your Old Linux Desktop with 6GB VRAM",
+      "url": "https://www.zhinit.dev/blog/training-a-kick-drum-diffusion-model",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T15:13:00Z",
+      "score": 156,
+      "officialCandidateUrl": "https://www.zhinit.dev/blog/training-a-kick-drum-diffusion-model",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48935687",
+      "author": "zhinit",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 82
+    },
+    {
+      "id": "community-hn-48881043",
+      "title": "AI boosts research careers but narrow the span of ideas explored: study",
+      "url": "https://spectrum.ieee.org/ai-science-research-flattens-discovery",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T13:26:13Z",
+      "score": 154,
+      "officialCandidateUrl": "https://spectrum.ieee.org/ai-science-research-flattens-discovery",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48881043",
+      "author": "zaikunzhang",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 106
+    },
+    {
+      "id": "community-hn-48937756",
+      "title": "German AI consortium releases Soofi S, an open 30B model that tops benchmarks",
+      "url": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T17:44:46Z",
+      "score": 144,
+      "officialCandidateUrl": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48937756",
+      "author": "amai",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 34
+    },
+    {
+      "id": "community-hn-48903715",
+      "title": "Alternative(s) to run CUDA on non-Nvidia hardware",
+      "url": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T08:24:49Z",
+      "score": 142,
+      "officialCandidateUrl": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48903715",
+      "author": "alok-g",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 75
+    },
+    {
+      "id": "community-hn-48947776",
+      "title": "Claude Code: Anatomy of a Misfeature",
+      "url": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T14:26:58Z",
+      "score": 139,
+      "officialCandidateUrl": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48947776",
+      "author": "oalders",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 118
+    },
+    {
+      "id": "community-hn-48899529",
+      "title": "Claude Code plugin that plays a Mr. Meeseeks voice line whene Claude is waiting",
+      "url": "https://github.com/thephw/claude-meseeks",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T22:03:54Z",
+      "score": 131,
+      "officialCandidateUrl": "https://github.com/thephw/claude-meseeks",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48899529",
+      "author": "patrickwiseman",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 56
+    },
+    {
+      "id": "community-hn-48923111",
+      "title": "Open-source memory for coding agents, synced over SSH",
+      "url": "https://github.com/vshulcz/deja-vu/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T16:15:03Z",
+      "score": 129,
+      "officialCandidateUrl": "https://github.com/vshulcz/deja-vu/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48923111",
+      "author": "vshulcz",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 35
+    },
+    {
+      "id": "community-hn-48882956",
+      "title": "Against Usefulness",
+      "url": "https://www.motivenotes.ai/p/against-usefulness",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T17:47:07Z",
+      "score": 128,
+      "officialCandidateUrl": "https://www.motivenotes.ai/p/against-usefulness",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48882956",
+      "author": "supo",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 40
+    },
+    {
+      "id": "community-hn-48926085",
+      "title": "Brainless: Shadcn components that look like Claude Code, Codex and Grok",
+      "url": "https://brainless.swerdlow.dev",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T19:42:53Z",
+      "score": 127,
+      "officialCandidateUrl": "https://brainless.swerdlow.dev",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48926085",
+      "author": "benswerd",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 26
+    },
+    {
+      "id": "community-hn-48918575",
+      "title": "DSLs Enable Reliable Use of LLMs",
+      "url": "https://martinfowler.com/articles/llm-and-dsls.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T10:11:11Z",
+      "score": 121,
+      "officialCandidateUrl": "https://martinfowler.com/articles/llm-and-dsls.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48918575",
+      "author": "SirOibaf",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 80
+    },
+    {
+      "id": "community-hn-48924929",
+      "title": "Inkling – Open-Weights 975B Parameter LLM",
+      "url": "https://thinkingmachines.ai/inkling/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T18:14:23Z",
+      "score": 121,
+      "officialCandidateUrl": "https://thinkingmachines.ai/inkling/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48924929",
+      "author": "htrp",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 4
+    },
+    {
+      "id": "community-hn-48897975",
+      "title": "Show HN: I implemented a neural network in SQL",
+      "url": "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T20:00:10Z",
+      "score": 119,
+      "officialCandidateUrl": "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48897975",
+      "author": "alxmrs",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 20
+    },
+    {
+      "id": "community-hn-48883090",
+      "title": "Mechanistic interpretability researchers applying causality theory to LLMs",
+      "url": "https://cacm.acm.org/news/can-we-understand-how-large-language-models-reason/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T18:04:41Z",
+      "score": 117,
+      "officialCandidateUrl": "https://cacm.acm.org/news/can-we-understand-how-large-language-models-reason/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48883090",
+      "author": "adunk",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 86
+    },
+    {
+      "id": "community-hn-48904905",
+      "title": "The Future Worth Building Is Human",
+      "url": "https://thinkingmachines.ai/blog/the-future-worth-building-is-human/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T11:05:27Z",
+      "score": 115,
+      "officialCandidateUrl": "https://thinkingmachines.ai/blog/the-future-worth-building-is-human/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48904905",
+      "author": "bilsbie",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 62
+    },
+    {
+      "id": "community-hn-48927373",
+      "title": "We don't use AI in any of our design or production processes",
+      "url": "https://mass-driver.com/article/from-human-hands",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T21:36:49Z",
+      "score": 109,
+      "officialCandidateUrl": "https://mass-driver.com/article/from-human-hands",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48927373",
+      "author": "tony_cannistra",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 112
+    },
+    {
+      "id": "community-hn-48934046",
+      "title": "Generative AI Is an Engineering Disaster",
+      "url": "https://www.theatlantic.com/technology/2026/07/generative-ai-engineering-disaster/687901/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T13:12:24Z",
+      "score": 109,
+      "officialCandidateUrl": "https://www.theatlantic.com/technology/2026/07/generative-ai-engineering-disaster/687901/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48934046",
+      "author": "latexr",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 87
+    },
+    {
+      "id": "community-hn-48898154",
+      "title": "Show HN: YouTube Guitar Tab Parser",
+      "url": "https://github.com/marcelpanse/youtube-guitar-tab-parser",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T20:13:14Z",
+      "score": 108,
+      "officialCandidateUrl": "https://github.com/marcelpanse/youtube-guitar-tab-parser",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48898154",
+      "author": "neogenix",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 66
+    },
+    {
+      "id": "community-hn-48905919",
+      "title": "Show HN: I RL-trained an agent that trains models with RL (for ~$1.3k)",
+      "url": "https://github.com/Danau5tin/ai-trains-ai",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T12:41:25Z",
+      "score": 107,
+      "officialCandidateUrl": "https://github.com/Danau5tin/ai-trains-ai",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48905919",
+      "author": "Danau5tin",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 48
+    },
+    {
+      "id": "community-hn-48930363",
+      "title": "Stop saying that AI is just a tool and it only matters how it is used",
+      "url": "https://www.frank.computer/blog/2025/05/just-a-tool.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T04:31:01Z",
+      "score": 106,
+      "officialCandidateUrl": "https://www.frank.computer/blog/2025/05/just-a-tool.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48930363",
+      "author": "cratermoon",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 115
+    },
+    {
+      "id": "community-hn-48927915",
+      "title": "LLM Networking with MikroTik",
+      "url": "https://blog.greg.technology/2026/07/14/llm-networking-with-mikrotik.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T22:23:27Z",
+      "score": 103,
+      "officialCandidateUrl": "https://blog.greg.technology/2026/07/14/llm-networking-with-mikrotik.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48927915",
+      "author": "gregsadetsky",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 57
+    },
+    {
+      "id": "community-hn-48935487",
+      "title": "We're Building Postgres in Rust. Using the LLVM of Databases",
+      "url": "https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T14:57:07Z",
+      "score": 103,
+      "officialCandidateUrl": "https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48935487",
+      "author": "polyrand",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 25
+    },
+    {
+      "id": "community-hn-48887102",
+      "title": "Frank Lloyd Wright’s first home",
+      "url": "https://www.architecturaldigest.com/story/frank-lloyd-wright-home-and-studio-everything-you-need-to-know",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T02:23:19Z",
+      "score": 102,
+      "officialCandidateUrl": "https://www.architecturaldigest.com/story/frank-lloyd-wright-home-and-studio-everything-you-need-to-know",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48887102",
+      "author": "NaOH",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 53
+    },
+    {
+      "id": "community-hn-48894630",
+      "title": "Show HN: Jacquard, a programming language for AI-written, human-reviewed code",
+      "url": "https://github.com/jbwinters/jacquard-lang",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T15:56:02Z",
+      "score": 102,
+      "officialCandidateUrl": "https://github.com/jbwinters/jacquard-lang",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48894630",
+      "author": "jbwinters",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 58
+    },
+    {
+      "id": "community-hn-48896703",
+      "title": "Show HN: Nobie – an Excel-compatible runtime for agents and humans",
+      "url": "https://nobie.com",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T18:26:04Z",
+      "score": 96,
+      "officialCandidateUrl": "https://nobie.com",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48896703",
+      "author": "matthewgapp",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 69
+    },
+    {
+      "id": "community-hn-48905764",
+      "title": "Coding agents think ahead of time",
+      "url": "https://arxiv.org/abs/2607.05188",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T12:28:09Z",
+      "score": 96,
+      "officialCandidateUrl": null,
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48905764",
+      "author": "andre15silva",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 77
+    },
+    {
+      "id": "community-hn-48906041",
+      "title": "Guardian Angels: LLM Personalization for Productivity and Security",
+      "url": "https://gwern.net/guardian-angel",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T12:50:29Z",
+      "score": 94,
+      "officialCandidateUrl": "https://gwern.net/guardian-angel",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48906041",
+      "author": "andsoitis",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 17
+    },
+    {
+      "id": "community-hn-48947714",
+      "title": "AI Meets Cryptography 2: What AI Found in OpenVM's ZkVM",
+      "url": "https://blog.zksecurity.xyz/posts/openvm-bugs/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T14:21:35Z",
+      "score": 94,
+      "officialCandidateUrl": "https://blog.zksecurity.xyz/posts/openvm-bugs/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48947714",
+      "author": "duha",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 6
+    },
+    {
+      "id": "community-hn-48882730",
+      "title": "Fable extended until 19 July",
+      "url": "https://twitter.com/claudeai/status/2076351399999557669",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T17:14:34Z",
+      "score": 93,
+      "officialCandidateUrl": "https://twitter.com/claudeai/status/2076351399999557669",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48882730",
+      "author": "protoman3000",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 50
+    },
+    {
+      "id": "community-hn-48936389",
+      "title": "Show HN: Leaves – A text-UI disk usage treemap visualizer",
+      "url": "https://github.com/patonw/leaves",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T16:03:43Z",
+      "score": 90,
+      "officialCandidateUrl": "https://github.com/patonw/leaves",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48936389",
+      "author": "patonw",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 29
+    },
+    {
+      "id": "community-hn-48907672",
+      "title": "The Agentic Loop: Three loops in a trench coat",
+      "url": "https://www.bobbytables.io/p/the-agentic-loop-three-loops-in-a",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T14:39:56Z",
+      "score": 88,
+      "officialCandidateUrl": "https://www.bobbytables.io/p/the-agentic-loop-three-loops-in-a",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48907672",
+      "author": "btables",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 32
+    },
+    {
+      "id": "community-hn-48950477",
+      "title": "Ask HN: Did Fable disappear from your Claude usage and requires credits now?",
+      "url": "https://news.ycombinator.com/item?id=48950477",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T18:18:23Z",
+      "score": 88,
+      "officialCandidateUrl": null,
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48950477",
+      "author": "cromka",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 86
+    },
+    {
+      "id": "community-hn-48900790",
+      "title": "Success may not matter if you aren't doing what you love",
+      "url": "https://12gramsofcarbon.com/p/founders-guide-success-may-not-matter",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T00:26:00Z",
+      "score": 85,
+      "officialCandidateUrl": "https://12gramsofcarbon.com/p/founders-guide-success-may-not-matter",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48900790",
+      "author": "theahura",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 31
+    },
+    {
+      "id": "community-hn-48908950",
+      "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+      "url": "https://agnost.ai",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T16:06:18Z",
+      "score": 85,
+      "officialCandidateUrl": "https://agnost.ai",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48908950",
+      "author": "laalshaitaan",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 49
+    },
+    {
+      "id": "community-hn-48922487",
+      "title": "When A.I. is a member of the family",
+      "url": "https://www.newyorker.com/magazine/2026/07/20/when-ai-is-a-member-of-the-family",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T15:37:47Z",
+      "score": 85,
+      "officialCandidateUrl": "https://www.newyorker.com/magazine/2026/07/20/when-ai-is-a-member-of-the-family",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48922487",
+      "author": "fortran77",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 122
+    },
+    {
+      "id": "community-hn-48929660",
+      "title": "Can LLMs Perform Deep Technical Comprehension of Computer Architecture Papers",
+      "url": "https://arxiv.org/abs/2607.11859",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T02:17:31Z",
+      "score": 83,
+      "officialCandidateUrl": null,
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48929660",
+      "author": "Jimmc414",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 25
+    },
+    {
+      "id": "community-hn-48897861",
+      "title": "AI is a bad tool",
+      "url": "https://bytecode.news/posts/2026/07/user-submission-ai-is-a-bad-tool",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T19:51:15Z",
+      "score": 80,
+      "officialCandidateUrl": "https://bytecode.news/posts/2026/07/user-submission-ai-is-a-bad-tool",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48897861",
+      "author": "shtgnwrng",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 100
+    },
+    {
+      "id": "community-hn-48894874",
+      "title": "Designing APIs for Agents",
+      "url": "https://www.freestyle.sh/blog/opinion/designing-apis-for-agents",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T16:15:41Z",
+      "score": 78,
+      "officialCandidateUrl": "https://www.freestyle.sh/blog/opinion/designing-apis-for-agents",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48894874",
+      "author": "benswerd",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 47
+    },
+    {
+      "id": "community-hn-48936982",
+      "title": "'We used acid to sabotage Microsoft hyperscale data centre construction'",
+      "url": "https://techwerkers.nl/en/posts/aanval-microsoft-ai-datacentrum/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T16:49:50Z",
+      "score": 77,
+      "officialCandidateUrl": "https://techwerkers.nl/en/posts/aanval-microsoft-ai-datacentrum/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48936982",
+      "author": "lowbar",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 174
+    },
+    {
+      "id": "community-hn-48902599",
+      "title": "OpenAI's Ad Business Is on Pace to Miss Its Own Forecast by 90%, Analyst Says",
+      "url": "https://www.adweek.com/media/openais-ad-business-is-on-pace-to-miss-its-own-forecast-by-90-analyst-says/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T05:21:02Z",
+      "score": 72,
+      "officialCandidateUrl": "https://www.adweek.com/media/openais-ad-business-is-on-pace-to-miss-its-own-forecast-by-90-analyst-says/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48902599",
+      "author": "EvgeniyZh",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 64
+    },
+    {
+      "id": "community-hn-48896599",
+      "title": "Show HN: BillAI Bass, an AI-Powered Big Mouth Billy Bass Using Strands Agents",
+      "url": "https://github.com/morganwilliscloud/billai-bass",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T18:18:23Z",
+      "score": 71,
+      "officialCandidateUrl": "https://github.com/morganwilliscloud/billai-bass",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48896599",
+      "author": "mtw14",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 27
+    },
+    {
+      "id": "community-hn-48899321",
+      "title": "A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI",
+      "url": "https://arxiv.org/abs/2607.01418",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-13T21:43:51Z",
+      "score": 70,
+      "officialCandidateUrl": null,
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48899321",
+      "author": "softwaredoug",
+      "matchedKeywords": [
+        "Claude"
+      ],
+      "commentCount": 41
+    },
+    {
+      "id": "community-hn-48946692",
+      "title": "VulnHunter: Capital One's agentic AI code security tool",
+      "url": "https://www.capitalone.com/tech/open-source/announcing-vulnhunter/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T12:42:12Z",
+      "score": 69,
+      "officialCandidateUrl": "https://www.capitalone.com/tech/open-source/announcing-vulnhunter/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48946692",
+      "author": "medina",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 34
+    },
+    {
+      "id": "community-hn-48952445",
+      "title": "Everybody's Weirded Out by AI–Except the People Who Foist It on Us",
+      "url": "https://newrepublic.com/article/213004/everybody-weirded-ai-except-people-foist-us",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-17T21:24:07Z",
+      "score": 65,
+      "officialCandidateUrl": "https://newrepublic.com/article/213004/everybody-weirded-ai-except-people-foist-us",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48952445",
+      "author": "jamesgill",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 63
+    },
+    {
+      "id": "community-hn-48932522",
+      "title": "Linus Torvalds on LLM usage in kernel development",
+      "url": "https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T10:11:31Z",
+      "score": 61,
+      "officialCandidateUrl": "https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48932522",
+      "author": "asciimoo",
+      "matchedKeywords": [
+        "LLM"
+      ],
+      "commentCount": 13
+    },
+    {
+      "id": "community-hn-48936407",
+      "title": "800 Canadian wildfires burning as air quality alerts extend to US",
+      "url": "https://www.bbc.com/news/articles/c0m7n427xd8o",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T16:04:51Z",
+      "score": 58,
+      "officialCandidateUrl": "https://www.bbc.com/news/articles/c0m7n427xd8o",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48936407",
+      "author": "geox",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 52
+    },
+    {
+      "id": "community-hn-48907214",
+      "title": "OpenAI mandates hardware-backed passkeys for Trusted Access Cyber members",
+      "url": "https://www.yubico.com/blog/openai-mandates-hardware-backed-passkeys-for-trusted-access-cyber-members-to-log-into-chatgpt-accounts/",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T14:12:39Z",
+      "score": 57,
+      "officialCandidateUrl": "https://www.yubico.com/blog/openai-mandates-hardware-backed-passkeys-for-trusted-access-cyber-members-to-log-into-chatgpt-accounts/",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48907214",
+      "author": "speckx",
+      "matchedKeywords": [
+        "OpenAI"
+      ],
+      "commentCount": 22
+    },
+    {
+      "id": "community-hn-48953924",
+      "title": "A grumpy screed about AI in software engineering",
+      "url": "https://sam.sutch.net/posts/a-grumpy-ai-screed",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-18T00:40:08Z",
+      "score": 56,
+      "officialCandidateUrl": "https://sam.sutch.net/posts/a-grumpy-ai-screed",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48953924",
+      "author": "ssutch3",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 65
+    },
+    {
+      "id": "community-hn-48905667",
+      "title": "Differentiable Fortran with LFortran and Enzyme",
+      "url": "https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-14T12:21:46Z",
+      "score": 55,
+      "officialCandidateUrl": "https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48905667",
+      "author": "dionhaefner",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 17
+    },
+    {
+      "id": "community-hn-48927409",
+      "title": "Speculative Growth and the AI \"Bubble\" [pdf]",
+      "url": "https://economics.mit.edu/sites/default/files/2026-07/speculative_growth_AI_public.pdf",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-15T21:39:21Z",
+      "score": 55,
+      "officialCandidateUrl": "https://economics.mit.edu/sites/default/files/2026-07/speculative_growth_AI_public.pdf",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48927409",
+      "author": "johnbarron",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 63
+    },
+    {
+      "id": "community-hn-48883415",
+      "title": "The One-Step Trap (In AI Research)",
+      "url": "http://incompleteideas.net/IncIdeas/OneStepTrap.html",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-12T18:41:15Z",
+      "score": 53,
+      "officialCandidateUrl": "http://incompleteideas.net/IncIdeas/OneStepTrap.html",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48883415",
+      "author": "jxmorris12",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 10
+    },
+    {
+      "id": "community-hn-48936534",
+      "title": "Agent-talk: Enabling coding agents to work together",
+      "url": "https://github.com/xhluca/agent-talk",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T16:14:20Z",
+      "score": 53,
+      "officialCandidateUrl": "https://github.com/xhluca/agent-talk",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48936534",
+      "author": "xhluca",
+      "matchedKeywords": [
+        "agent"
+      ],
+      "commentCount": 24
+    },
+    {
+      "id": "community-hn-48939580",
+      "title": "Kimi K3 Intelligence, Performance and Price Analysis",
+      "url": "https://artificialanalysis.ai/models/kimi-k3",
+      "discoveredVia": "community-hn",
+      "discoveredAt": "2026-07-16T20:09:46Z",
+      "score": 51,
+      "officialCandidateUrl": "https://artificialanalysis.ai/models/kimi-k3",
+      "source": "hn",
+      "sourceItemUrl": "https://news.ycombinator.com/item?id=48939580",
+      "author": "theanonymousone",
+      "matchedKeywords": [
+        "AI"
+      ],
+      "commentCount": 2
+    }
+  ],
+  "sources": [
+    {
+      "id": "hn",
+      "status": "ok",
+      "itemsFetched": 113,
+      "itemsSelected": 91
+    },
+    {
+      "id": "reddit:LocalLLaMA",
+      "status": "disabled",
+      "disabledReason": "HTTP 403 2026-07-18"
+    },
+    {
+      "id": "reddit:MachineLearning",
+      "status": "disabled",
+      "disabledReason": "HTTP 403 2026-07-18"
+    },
+    {
+      "id": "reddit:artificial",
+      "status": "disabled",
+      "disabledReason": "HTTP 403 2026-07-18"
+    },
+    {
+      "id": "reddit:ClaudeAI",
+      "status": "disabled",
+      "disabledReason": "HTTP 403 2026-07-18"
+    },
+    {
+      "id": "reddit:OpenAI",
+      "status": "disabled",
+      "disabledReason": "HTTP 403 2026-07-18"
+    }
+  ],
+  "failures": []
+}

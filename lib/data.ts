@@ -30,6 +30,12 @@ export interface PostEn {
   content?: string;
 }
 
+export interface CommunityDiscovery {
+  platform: "hn" | "reddit";
+  score: number;
+  itemUrl?: string;
+}
+
 export interface Post {
   date: string;
   platform: "X" | "Threads" | "X+Threads";
@@ -50,6 +56,7 @@ export interface Post {
   tags?: string[];
   slug?: string;         // 영문 short hash slug — w21/w22 editorial route 전용 (/[week]/[postSlug])
   readMinutes?: number;  // 예상 읽기 시간 (분) — editorial card byline 표시용
+  communityDiscovery?: CommunityDiscovery; // 발견 경로의 원 플랫폼 점수 — 공식 출처 승격 후에도 투명성 보존
   // 메인 hero 카드 전용 — PostDetail에서 영상/임베드 재생
   videoUrl?: string;          // YouTube embed URL (예: https://www.youtube.com/embed/xxx)
   videoSrc?: string;          // 로컬 mp4 경로 — <video>로 카드 내 인라인 재생

@@ -1,0 +1,22 @@
+{
+  "hits": [
+    {
+      "objectID": "1001",
+      "title": "Official model launch discussion",
+      "url": "https://example.ai/blog/model",
+      "created_at_i": 1783987200,
+      "points": 120,
+      "author": "alice",
+      "num_comments": 44
+    },
+    {
+      "objectID": "1002",
+      "title": "Low score ignored",
+      "url": "https://example.com/low",
+      "created_at_i": 1783987200,
+      "points": 10,
+      "author": "bob",
+      "num_comments": 1
+    }
+  ]
+}

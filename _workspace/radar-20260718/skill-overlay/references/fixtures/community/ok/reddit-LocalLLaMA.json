@@ -1,0 +1,18 @@
+{
+  "data": {
+    "children": [
+      {
+        "data": {
+          "id": "abc",
+          "title": "Local model benchmark",
+          "created_utc": 1784073600,
+          "score": 88,
+          "url_overridden_by_dest": "https://github.com/example/model",
+          "permalink": "/r/LocalLLaMA/comments/abc/item/",
+          "author": "carol",
+          "num_comments": 12
+        }
+      }
+    ]
+  }
+}

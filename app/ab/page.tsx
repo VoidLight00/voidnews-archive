@@ -46,6 +46,11 @@ export default function ABIndexPage() {
               <div>
                 <span className="ab-panel-label">Cadence</span>
                 <strong>격주 발행</strong>
+                {featured?.nextEditionDate && (
+                  <span style={{ display: "block", marginTop: 4, fontSize: 11, color: "var(--muted)" }}>
+                    다음 호 {featured.nextEditionDate} 예정
+                  </span>
+                )}
               </div>
               <div>
                 <span className="ab-panel-label">Editions</span>
@@ -74,7 +79,7 @@ export default function ABIndexPage() {
             <>
               {featured && (
                 <Link
-                  href={`/ab/${featured.slug}`}
+                  href={featured.href}
                   className="ab-featured-edition rise-in"
                   style={{ animationDelay: "160ms" }}
                   aria-label={`최신호 ${formatVolume(featured.volume)} ${featured.title} 브리핑 열기`}
@@ -113,12 +118,12 @@ export default function ABIndexPage() {
 
                   <ol className="ab-edition-list">
                     {rest.map((edition) => (
-                      <li key={edition.slug}>
-                        <Link href={`/ab/${edition.slug}`} className="ab-edition-row">
+                      <li key={edition.href}>
+                        <Link href={edition.href} className="ab-edition-row">
                           <span className="ab-edition-volume">{formatVolume(edition.volume)}</span>
                           <span className="ab-edition-title">{edition.title}</span>
                           <span className="ab-edition-meta">
-                            {edition.announceDate}
+                            {edition.period}
                             <span aria-hidden style={{ margin: "0 6px", color: "var(--dim)" }}>
                               ·
                             </span>

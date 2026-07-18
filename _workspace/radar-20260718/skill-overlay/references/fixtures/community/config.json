@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "userAgent": "VoidNewsRadar-Selftest/1.0",
+  "requestSleepSeconds": 0,
+  "hn": {
+    "endpoint": "https://fixture.invalid/hn",
+    "keywords": [
+      "AI"
+    ],
+    "minimumScore": 50,
+    "hitsPerPage": 100,
+    "maxPagesPerKeyword": 1
+  },
+  "reddit": {
+    "endpointPattern": "https://fixture.invalid/r/{subreddit}",
+    "subreddits": [
+      "LocalLLaMA",
+      "OpenAI"
+    ],
+    "minimumScore": 50
+  }
+}

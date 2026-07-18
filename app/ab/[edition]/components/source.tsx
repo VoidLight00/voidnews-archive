@@ -14,7 +14,12 @@ export type SourceAuditInput = {
   tags?: string[];
   date?: string;
   verifiedAt?: string;
+  communityDiscovery?: { platform: "hn" | "reddit"; score: number };
 };
+
+export function communityDiscoveryLabel(discovery: { platform: "hn" | "reddit"; score: number }): string {
+  return `${discovery.platform === "hn" ? "HN" : "Reddit"} ${discovery.score}점 경유`;
+}
 
 export function hostnameOf(url: string): string {
   try {
@@ -52,6 +57,9 @@ export function SourceAuditStrip({ input, tone = "accent" }: { input: SourceAudi
       <div><dt>범위</dt><dd>{audit.scope}</dd></div>
       <div><dt>출처</dt><dd>{audit.source}</dd></div>
       {audit.checked ? <div><dt>확인</dt><dd>{audit.checked}</dd></div> : null}
+      {input.communityDiscovery ? (
+        <div><dt>발견</dt><dd>{communityDiscoveryLabel(input.communityDiscovery)}</dd></div>
+      ) : null}
     </dl>
   );
 }

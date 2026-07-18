@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/data";
 import { getAllEditorialPostParams } from "@/lib/editorial";
-import { getAllEditionSlugs } from "@/lib/ab/data";
+import { editions as abEditions, getEditionHref } from "@/lib/ab/data";
 import { getAllABPostParams } from "@/lib/ab/post-routes";
 
 const BASE = "https://voidnews-archive.vercel.app";
@@ -24,8 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const editions = getAllEditionSlugs().map((edition) => ({
-    url: `${BASE}/ab/${edition}/`,
+  // 회차는 slug/날짜 두 URL로 렌더되지만 sitemap엔 canonical(날짜 URL)만 싣는다.
+  const editions = abEditions.map((edition) => ({
+    url: `${BASE}${getEditionHref(edition)}/`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
