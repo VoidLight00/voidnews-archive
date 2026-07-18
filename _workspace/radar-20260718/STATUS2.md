@@ -2,9 +2,39 @@
 
 ## 현재 요약
 
-- 상태: WP-5 완료 (2026-07-18), WP-6 대기.
+- 상태: WP-5·WP-6 완료 (2026-07-18), WP-7 진행.
 - 브랜치: `feature/radar-layer`; push/deploy 없음.
 - 경계 준수: 카카오 DB 접근 0, 옵시디언 쓰기 0, 외부 게시 0.
+
+## WP-6 — baeksang 묶음 A 이식 (사이트 반영)
+
+- 상태: 완료 (2026-07-18)
+- ① 날짜 고정 URL: `dateSlug ?? announceDate` 기본값으로 전 8회차 날짜 URL 정적 생성(과거 회차 데이터 소급 수정 0). slug URL은 그대로 동작, canonical과 sitemap은 날짜 URL 단일화.
+- ② 호수+날짜 동시 표기: 회차 페이지 kicker `VOL.NN · period`, 인덱스 아카이브 행 `VOL + period`.
+- ③ 출처별 수집 건수: `sourceCounts` optional 필드 + 회차 패널 Seeds 블록(데이터 있는 회차만 렌더 — 현재 실측치 있는 회차 없음, 07-12~18 수집분은 차기 회차용).
+- ④ 공식 1차 링크 라벨: 기존 구현 확인으로 충족 — SourceAuditStrip "공식 발표"/"공식 · host", collectSourceLinks primary 필드로 backupUrls와 시각 구분(filled 버튼).
+- ⑤ HN/Reddit 원 점수 병기: `Post.communityDiscovery` + SourceAuditStrip·PostDetail "발견 · HN N점 경유" 행(데이터 있는 카드만).
+- ⑥ cadence 표시: 인덱스 패널 "격주 발행" 하단 "다음 호 2026-07-23 예정"(`nextEditionDate`, 최신 회차만).
+- 스키마는 전부 additive optional. 기존 회차 데이터 값 수정 0. `getEditionList()`가 slug를 더 이상 반환하지 않아 깨질 뻔한 `app/page.tsx`·`app/ab/page.tsx`의 `e.slug` 참조를 `href`로 교체.
+
+### WP-6 증거
+
+```text
+WP6_BUILD_EXIT=0            # prebuild run-all-gates(ledger verify 포함) + postbuild check-render-leaks 통과
+WP6_STRIPE_APP_EXIT=0
+WP6_STRIPE_LIB_EXIT=0
+WP6_INTERNAL_LEAK_FILES=0   # out/ab/ 에서 WP-*/PLAN2/STATUS2/_workspace/radar-20260718 grep 0
+WP6_DATE_URL_STATIC=16paths # /ab/[edition] 8회차 × slug+날짜 URL
+WP6_SITEMAP_DATE_ONLY=1     # sitemap에 2026-07-09 1회, /ab/2026-07a/ 0회
+WP6_CANONICAL=date-url      # slug/날짜 페이지 모두 canonical=/ab/2026-07-09/
+```
+
+### WP-6 변경 파일
+
+- `lib/ab/data.ts`, `lib/data.ts`, `lib/ab/editions/2026-07a.ts`
+- `app/ab/page.tsx`, `app/page.tsx`, `app/sitemap.ts`
+- `app/ab/[edition]/page.tsx`, `app/ab/[edition]/ABEditionClient.tsx`, `app/ab/[edition]/components/source.tsx`
+- `app/[slug]/editorial/PostDetail.tsx`
 
 ## WP-5 — Reddit 403 대응
 

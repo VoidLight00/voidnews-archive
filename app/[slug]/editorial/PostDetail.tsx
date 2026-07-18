@@ -407,6 +407,12 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
               <div><dt>범위</dt><dd>{inferReleaseScope(post)}</dd></div>
               <div><dt>출처</dt><dd>{officialHost ? `공식 · ${officialHost}` : "출처 대기"}</dd></div>
               <div><dt>확인</dt><dd>확인일 2026-05-27</dd></div>
+              {post.communityDiscovery ? (
+                <div>
+                  <dt>발견</dt>
+                  <dd>{post.communityDiscovery.platform === "hn" ? "HN" : "Reddit"} {post.communityDiscovery.score}점 경유</dd>
+                </div>
+              ) : null}
             </dl>
           ) : null}
 

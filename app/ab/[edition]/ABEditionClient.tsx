@@ -2,7 +2,7 @@
 
 import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } from "react";
 import Link from "next/link";
-import type { ABEdition, ABHighlight, ABEditorPick, ABDemoCard } from "@/lib/ab/data";
+import { formatSourceCounts, type ABEdition, type ABHighlight, type ABEditorPick, type ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
 import { HighlightArticle, DemoCard, EditorPickCard } from "./components/cards";
 import { Modal, type ModalContent } from "./components/PickModal";
@@ -121,7 +121,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             <div className="ab-hero-grid" style={{ alignItems: "start" }}>
               <div className="ab-hero-copy">
                 <p className="ab-kicker" style={{ color: "var(--gold)" }}>
-                  VoidLight Letter · {data.period}
+                  VoidLight Letter · VOL.{String(data.volume).padStart(2, "0")} · {data.period}
                 </p>
                 <h1 className="ab-display-title" style={{ maxWidth: "15ch" }}>{data.title}</h1>
                 <p className="ab-hero-deck" style={{ color: "var(--text-soft)", maxWidth: "46ch" }}>
@@ -142,6 +142,14 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   <span className="ab-panel-label">Cards</span>
                   <strong>{data.highlights.length} highlights</strong>
                 </div>
+                {data.sourceCounts && (
+                  <div>
+                    <span className="ab-panel-label">Seeds</span>
+                    <strong style={{ fontSize: "var(--text-sm)", letterSpacing: "0.04em" }}>
+                      {formatSourceCounts(data.sourceCounts)}
+                    </strong>
+                  </div>
+                )}
               </aside>
             </div>
 

@@ -42,8 +42,8 @@ export default function Home() {
         <h2 style={{ fontSize: "1.05rem", margin: "16px 0 8px" }}>AB 멤버십 발표</h2>
         <ul>
           {editions.map((e) => (
-            <li key={e.slug}>
-              <a href={`/ab/${e.slug}/`}>
+            <li key={e.href}>
+              <a href={`${e.href}/`}>
                 VOL.{String(e.volume).padStart(2, "0")} — {e.title}
               </a>
             </li>

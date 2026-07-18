@@ -61,6 +61,9 @@ export interface ABDemoCard {
   videoPoster?: string;  // 영상 썸네일 (poster)
 }
 
+export type ABSource = "youtube" | "x" | "web" | "community-hn" | "community-reddit";
+export type ABSourceCounts = Partial<Record<ABSource, number>>;
+
 export interface ABEdition {
   slug: string; // "2026-04a"
   volume: number; // 1-based
@@ -69,6 +72,9 @@ export interface ABEdition {
   period: string; // "2026-04-06 ~ 2026-04-12"
   coveredWeeks: string[]; // ["2026-w15"]
   announceDate: string; // "2026-04-10"
+  dateSlug?: string; // 안정된 날짜 기반 URL — 기본은 announceDate, 다른 날짜가 필요할 때만 지정
+  sourceCounts?: ABSourceCounts; // 해당 회차 수집 실측이 있을 때만 공개
+  nextEditionDate?: string; // 격주 cadence 기준 다음 회차 예정일
 
   intro: string;
   closing: string;
@@ -94,21 +100,46 @@ import { edition2026_07a } from "./editions/2026-07a";
 
 export const editions: ABEdition[] = [edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
+// 날짜 URL은 announceDate가 기본이라 과거 회차 데이터 수정 없이 전 회차가 날짜로 접근된다.
+function dateSlugOf(edition: ABEdition): string {
+  return edition.dateSlug ?? edition.announceDate;
+}
+
 export function getEdition(slug: string): ABEdition | undefined {
-  return editions.find((e) => e.slug === slug);
+  return editions.find((edition) => edition.slug === slug || dateSlugOf(edition) === slug);
 }
 
 export function getAllEditionSlugs(): string[] {
-  return editions.map((e) => e.slug);
+  return editions.flatMap((edition) => [edition.slug, dateSlugOf(edition)]);
+}
+
+export function getEditionHref(edition: ABEdition): string {
+  return `/ab/${dateSlugOf(edition)}`;
+}
+
+const SOURCE_LABELS: Record<ABSource, string> = {
+  youtube: "YT",
+  x: "X",
+  web: "Web",
+  "community-hn": "HN",
+  "community-reddit": "Reddit",
+};
+
+export function formatSourceCounts(counts: ABSourceCounts): string {
+  return (Object.keys(SOURCE_LABELS) as ABSource[])
+    .filter((key) => counts[key] != null)
+    .map((key) => `${SOURCE_LABELS[key]} ${counts[key]}`)
+    .join(" · ");
 }
 
 export function getEditionList() {
   return editions.map((e) => ({
-    slug: e.slug,
+    href: getEditionHref(e),
     volume: e.volume,
     title: e.title,
     period: e.period,
     announceDate: e.announceDate,
+    nextEditionDate: e.nextEditionDate,
     highlightCount: e.highlights.length,
   }));
 }

@@ -145,6 +145,8 @@ export const edition2026_07a: ABEdition = {
   period: "2026-06-25 ~ 2026-07-08",
   coveredWeeks: ["2026-w27", "2026-w28"],
   announceDate: "2026-07-09",
+  nextEditionDate: "2026-07-23", // 격주 cadence — announceDate +14일 예정치
+
   intro: `안녕하세요, VoidLight입니다. 이번 AB는 6월 25일부터 7월 8일까지 2주를 하나의 흐름으로 묶었습니다.
 
 첫 번째 축은 프런티어 모델 대전입니다. Anthropic이 Claude Sonnet 5를 내놓자 같은 날 Claude Code 기본 모델과 GitHub Copilot이 함께 움직였고, OpenAI의 GPT-5.6 Sol·Terra·Luna도 제한 프리뷰를 지나 일반 사용 가능한 API 모델로 올라왔습니다. OpenAI 공식 개발자 문서가 세 모델의 ID·가격·엔드포인트를 제공하며, 7월 9일 롤아웃 날짜는 보조 매체 보도입니다. 여기에 xAI까지 Grok 4.5를 7월 8일 공개 출시하며(가격 $2/$6로 언더컷) '월 1회 신모델' 로드맵을 던졌습니다(성능 주장은 자체 벤치). 최상위 성능이 '싸지고', 발표가 곧바로 개발 스택 전체로 배선되는 속도가 이번 2주의 온도입니다.
