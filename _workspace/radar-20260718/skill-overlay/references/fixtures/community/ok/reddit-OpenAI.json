@@ -1,0 +1,18 @@
+{
+  "data": {
+    "children": [
+      {
+        "data": {
+          "id": "def",
+          "title": "OpenAI product note reaction",
+          "created_utc": 1784160000,
+          "score": 72,
+          "url": "https://openai.com/index/example",
+          "permalink": "/r/OpenAI/comments/def/item/",
+          "author": "dave",
+          "num_comments": 9
+        }
+      }
+    ]
+  }
+}

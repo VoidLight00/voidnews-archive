@@ -25,7 +25,25 @@ PYCOMPILE_EXIT=0
 
 ## WP-2 — 통합 시드 스키마 + 커뮤니티 어댑터
 
-- 상태: 대기
+- 상태: 완료 (2026-07-18)
+- 시드 계약: 필수 7필드와 `community-hn`, `community-reddit`, `kakao-room`, `telegram-radar` 열거값을 `seed-schema.md`에 정의.
+- 수집기: HN Algolia `search_by_date` + Reddit `top.json?t=week`, 명시적 User-Agent와 요청 간 1초 sleep, 설정 파일 분리.
+- fixture selftest: 성공 fixture exit 0/seeds=3, Reddit 1소스 누락 fixture가 실패 기록 후 exit 2. runner exit 0.
+- 실 API 스모크 범위: 2026-07-12~2026-07-18. HN seeds=91, Reddit 5개 소스는 HTTP 403 Blocked. 전체 collector는 실패를 숨기지 않고 exit 2, failures=5로 fail-closed 동작 확인.
+- Python compile exit 0.
+
+### WP-2 증거
+
+```text
+PASS[community-selftest] success_exit=0 fail_closed_exit=2 seeds=3 failures_recorded=1
+COMMUNITY_SELFTEST_EXIT=0
+COMMUNITY_PYCOMPILE_EXIT=0
+COMMUNITY_LIVE_SEEDS=91
+COMMUNITY_LIVE_HN=91
+COMMUNITY_LIVE_REDDIT=0
+COMMUNITY_LIVE_FAILURES=5
+COMMUNITY_LIVE_EXIT=2
+```
 
 ## WP-3 — baeksang.dev 기능 카탈로그
 

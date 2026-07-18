@@ -113,6 +113,20 @@ Phase 1A vGrok이 ok=true로 반환한 토픽은 collector가 검증·보강 모
 - 모든 seed에 `discoveredVia: "threads-archive"` 태깅 → provenance 추적(check-collection-provenance 정합).
 - 원본 sqlite write 금지, chatId/authorId/토큰 등 비밀값 출력 금지.
 
+### Phase 1C — 커뮤니티 Radar 어댑터
+
+`voidbrief-collector` 앞단에서 결정론 수집기 `scripts/collect_community.py`를 실행해 HN Algolia와 Reddit 공개 JSON을 `01c_community_seeds.json`으로 병합한다. 시드 계약은 `references/seed-schema.md`, 소스·키워드·점수 임계치는 `references/community-sources.json`이 정본이다.
+
+```bash
+python3 ~/.claude/skills/voidnews-briefing-pipeline/scripts/collect_community.py \
+  --start <YYYY-MM-DD> --end <YYYY-MM-DD> \
+  --out <run>/01c_community_seeds.json
+```
+
+- `discoveredVia`는 `community-hn` 또는 `community-reddit`; `kakao-room`과 `telegram-radar`는 예약값이다.
+- 커뮤니티 링크는 discovery-only다. `officialCandidateUrl`도 verifier가 공식성을 확정하기 전에는 `officialUrl`로 승격하지 않는다.
+- 설정된 소스 하나라도 fetch/parse 실패하면 결과의 `failures[]`와 source status를 기록하고 exit 2로 fail-closed한다. 성공 항목이 일부 있어도 silent skip 금지다.
+
 ### Phase 2 — 출처 검증
 
 `voidbrief-source-verifier`가 공식 출처 우선순위를 부여한다. TestingCatalog에서 추출한 공식 사이트·공식 X·GitHub·docs/changelog 후보를 먼저 검증하고, 검증된 공식 URL이 있으면 TestingCatalog와 다른 2차 출처는 `backupUrls`로 낮춘다. 공식 출처가 없거나 루머·삭제·비공식 주장·날짜 범위 밖 항목이면 본문 카드로 승격하지 않고 risk flag로 보낸다.
