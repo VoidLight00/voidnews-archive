@@ -23,7 +23,6 @@ const gpt56 = post({
   backupUrls: [
     { label: "GitHub Copilot 공식 changelog", url: "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot" },
     { label: "Hacker News 반응 스냅샷", url: "https://news.ycombinator.com/item?id=48849066" },
-    { label: "AKwiki 공개 반응 요약", url: "https://akwiki.org/article/2026-07-10-gpt56-day-one-three-rooms" },
     { label: "Cycle Double Cover 증명 PDF", url: "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf" },
     { label: "수학 성과 해외 토론", url: "https://news.ycombinator.com/item?id=48863490" },
     { label: "볼록 최적화 후속 토론", url: "https://news.ycombinator.com/item?id=48957779" },
@@ -60,7 +59,6 @@ const kimiK3 = post({
   officialUrl: "https://www.kimi.com/blog/kimi-k3",
   backupUrls: [
     { label: "Hacker News 출시 반응", url: "https://news.ycombinator.com/item?id=48935342" },
-    { label: "AKwiki 출시 후 실사용 요약", url: "https://akwiki.org/article/2026-07-18-kimi-k3-launch-shock" },
   ],
   thumbnail: { src: "/og-cache/kimi-k3-editorial.svg", alt: "Kimi K3 2.8T MoE and 1M context" },
   slug: "kimi-k3-frontier-alternative",
