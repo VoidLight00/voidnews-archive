@@ -25,7 +25,7 @@ export function renderRichText(text: string): ReactNode {
   if (!text) return null;
   // 마크다운 헤딩(## ~ ######) 라인을 굵은 소제목으로 변환 — 원시 마크다운 노출(VN-RENDER-LEAK) 방지
   text = text.replace(/^#{1,6}[ \t]+(.+)$/gm, "**$1**");
-  const parts = text.split(/(\*\*[^*\n]+?\*\*|https?:\/\/[^\s)\]]+)/g);
+  const parts = text.split(/(==[^=\n]+?==|\*\*[^*\n]+?\*\*|https?:\/\/[^\s)\]]+)/g);
 
   return parts.map((part, i) => {
     if (!part) return null;
@@ -45,6 +45,19 @@ export function renderRichText(text: string): ReactNode {
         >
           {part}
         </a>
+      );
+    }
+    if (part.startsWith("==") && part.endsWith("==")) {
+      return (
+        <span
+          key={i}
+          style={{
+            color: "var(--accent)",
+            fontWeight: 750,
+          }}
+        >
+          {part.slice(2, -2)}
+        </span>
       );
     }
     if (part.startsWith("**") && part.endsWith("**")) {
