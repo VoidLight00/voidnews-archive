@@ -220,6 +220,7 @@ const tools: ABEditorPick[] = [
     body: `NightGuardian은 Claude Code를 tmux 안에서 오래 돌리는 사용자를 위한 감시 도구입니다. 사용량 제한이나 hard limit으로 작업이 멈추면 대상 세션·window·pane·프로세스가 처음 등록한 것과 정확히 일치하는지 확인하고, 안전할 때만 재개 입력을 보냅니다.\n\n**대상 사용자**\n- tmux에서 Claude Code를 장시간 실행하는 사용자\n- 원격 Mac mini나 Linux 서버에서 작업하는 사용자\n- 자동 재개보다 잘못된 입력 방지를 우선하는 사용자\n\n**요구사항**\nmacOS 또는 Linux, Bash 3.2+, Python 3.9+, tmux 3.x, tmux 내부 Claude Code가 필요합니다. 설치 전 make test와 make verify를 실행하고 허용 명령 정규식과 세션 설정을 확인해야 합니다.\n\n**주의**\n사용량 제한을 우회하는 도구가 아닙니다. tmux 밖의 세션은 감시하지 못하며, 허용 명령 범위를 넓히면 자동 입력 대상도 늘어납니다.`,
     editorial: "이번 회차의 핵심이 모델을 오래 실행하는 운영 방식인 만큼, 성능보다 세션 안전을 먼저 챙기는 도구를 첫 번째로 골랐습니다.",
     thumbnail: { src: "/og-cache/nightguardian-46a47193.png", alt: "NightGuardian Claude Code watchdog" },
+    images: [{ src: "/og-cache/nightguardian-auto-session-resume.png", alt: "NightGuardian 자동 세션 감지와 안전한 작업 재개 사례" }],
     tags: ["NightGuardian", "Claude Code", "tmux", "MIT"],
     tier: "hero",
   },
