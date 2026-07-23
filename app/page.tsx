@@ -32,7 +32,7 @@ export default function Home() {
           {weeks.map((w) => (
             <li key={w.slug}>
               <a href={`/${w.slug}/`}>
-                {weekDateLabel(w.period)} ({w.period})
+                {weekDateLabel(w.period)}
               </a>
             </li>
           ))}

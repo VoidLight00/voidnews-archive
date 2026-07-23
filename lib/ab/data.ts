@@ -70,7 +70,7 @@ export interface ABEdition {
   title: string;
   theme: string; // 부제
   period: string; // "2026-04-06 ~ 2026-04-12"
-  coveredWeeks: string[]; // ["2026-w15"]
+  coveredWeeks: Array<string | { slug: string; period: string }>; // 내부 route slug와 사용자 노출 날짜 범위
   announceDate: string; // "2026-04-10"
   dateSlug?: string; // 안정된 날짜 기반 URL — 기본은 announceDate, 다른 날짜가 필요할 때만 지정
   sourceCounts?: ABSourceCounts; // 해당 회차 수집 실측이 있을 때만 공개
@@ -81,6 +81,9 @@ export interface ABEdition {
   coreFlow?: string[];
 
   highlights: ABHighlight[];
+
+  /** Top 10 밖에서 추가로 추적하는 모델 카드 */
+  modelWatch?: ABEditorPick[];
 
   // 큐레이터가 직접 엄선한 도구·자료 (VIP 트윗 아님)
   editorsPicks?: ABEditorPick[];
@@ -97,8 +100,9 @@ import { edition2026_05b } from "./editions/2026-05b";
 import { edition2026_06a } from "./editions/2026-06a";
 import { edition2026_06b } from "./editions/2026-06b";
 import { edition2026_07a } from "./editions/2026-07a";
+import { edition2026_07b } from "./editions/2026-07b";
 
-export const editions: ABEdition[] = [edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
+export const editions: ABEdition[] = [edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
 // 날짜 URL은 announceDate가 기본이라 과거 회차 데이터 수정 없이 전 회차가 날짜로 접근된다.
 function dateSlugOf(edition: ABEdition): string {

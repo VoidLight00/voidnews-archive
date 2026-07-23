@@ -5,7 +5,7 @@ import type { Post } from "../data";
 
 export interface ABPostMeta {
   post: Post;                     // PostDetail 호환
-  kind: "highlight" | "editor_pick" | "demo";
+  kind: "highlight" | "model_watch" | "editor_pick" | "demo";
   editionSlug: string;
   editionTitle: string;
   editionPeriod: string;
@@ -85,6 +85,21 @@ export function getABPost(
       };
     }
   }
+  // model watch
+  for (const p of ed.modelWatch ?? []) {
+    if (p.slug === postSlug) {
+      return {
+        post: adaptEditorPickToPost(p),
+        kind: "model_watch",
+        editionSlug: ed.slug,
+        editionTitle: ed.title,
+        editionPeriod: ed.period,
+        editionAnnounceDate: ed.announceDate,
+        category: p.category,
+        threeLineSummary: splitThreeLineSummary(p.summary || p.deck || p.body),
+      };
+    }
+  }
   // editor's picks
   for (const p of ed.editorsPicks ?? []) {
     if (p.slug === postSlug) {
@@ -124,6 +139,9 @@ export function getAllABPostParams(): { edition: string; postSlug: string }[] {
     for (const h of ed.highlights ?? []) {
       if (h.post.slug) out.push({ edition: ed.slug, postSlug: h.post.slug });
     }
+    for (const p of ed.modelWatch ?? []) {
+      if (p.slug) out.push({ edition: ed.slug, postSlug: p.slug });
+    }
     for (const p of ed.editorsPicks ?? []) {
       if (p.slug) out.push({ edition: ed.slug, postSlug: p.slug });
     }
@@ -140,6 +158,9 @@ export function getAdjacentABPosts(editionSlug: string, postSlug: string) {
   const flat: { slug: string; title: string; titleEn?: string; kind: ABPostMeta["kind"] }[] = [];
   for (const h of ed.highlights ?? []) {
     if (h.post.slug) flat.push({ slug: h.post.slug, title: h.post.title, titleEn: h.post.en?.title, kind: "highlight" });
+  }
+  for (const p of ed.modelWatch ?? []) {
+    if (p.slug) flat.push({ slug: p.slug, title: p.title, kind: "model_watch" });
   }
   for (const p of ed.editorsPicks ?? []) {
     if (p.slug) flat.push({ slug: p.slug, title: p.title, kind: "editor_pick" });
@@ -161,6 +182,9 @@ export function listABCards(editionSlug: string) {
   const out: { post: Post; kind: ABPostMeta["kind"] }[] = [];
   for (const h of ed.highlights ?? []) {
     if (h.post.slug) out.push({ post: h.post, kind: "highlight" });
+  }
+  for (const p of ed.modelWatch ?? []) {
+    if (p.slug) out.push({ post: adaptEditorPickToPost(p), kind: "model_watch" });
   }
   for (const p of ed.editorsPicks ?? []) {
     if (p.slug) out.push({ post: adaptEditorPickToPost(p), kind: "editor_pick" });

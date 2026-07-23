@@ -12,6 +12,7 @@ import PostDetail from "@/app/[slug]/editorial/PostDetail";
 // Edition slug 별 accent color — companyColor 자리에 사용
 const ACCENT_BY_KIND = {
   highlight: "#1B365D",
+  model_watch: "#3C6E71",
   editor_pick: "#B8860B",
   demo: "#4A5568",
 } as const;
@@ -59,7 +60,12 @@ export default async function ABPostPage({
   const sectionLabel =
     meta.kind === "highlight"
       ? meta.sourceCompany ?? "AB Highlight"
-      : meta.category ?? (meta.kind === "editor_pick" ? "Editor's Pick" : "Demo");
+      : meta.category ??
+        (meta.kind === "model_watch"
+          ? "Model Watch"
+          : meta.kind === "editor_pick"
+            ? "Editor's Pick"
+            : "Demo");
   const sectionColor = ACCENT_BY_KIND[meta.kind];
 
   const adaptedMeta = {

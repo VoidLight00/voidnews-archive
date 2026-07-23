@@ -565,9 +565,9 @@ export default function WeeklyClient({
           <div className="tc-issue-meta mono">
             <span>VoidNews Weekly</span>
             <span aria-hidden>·</span>
-            <span>{data.year}년 {weekDateLabel(data.period)}</span>
+            <span>{data.year}년</span>
             <span aria-hidden>·</span>
-            <span>{data.period}</span>
+            <span>{weekDateLabel(data.period)}</span>
             <span aria-hidden>·</span>
             <span>{String(data.totalPosts).padStart(2, "0")} posts</span>
           </div>
@@ -585,7 +585,7 @@ export default function WeeklyClient({
                 ← {weekDateLabel(prevWeek.period)}
               </a>
             ) : null}
-            <WeekDropdown currentSlug={data.slug} currentWeek={data.week} weekList={weekList} />
+            <WeekDropdown currentSlug={data.slug} currentPeriod={data.period} weekList={weekList} />
             {nextWeek ? (
               <a href={`/${nextWeek.slug}`} className="tc-week-link mono" title="다음 주차 (→)">
                 {weekDateLabel(nextWeek.period)} →

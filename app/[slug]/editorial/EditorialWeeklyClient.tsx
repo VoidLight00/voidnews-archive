@@ -55,7 +55,7 @@ export default function EditorialWeeklyClient({
     <main className={styles.shell}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.kicker}>VoidNews · {weekDateLabel(data.period)}</div>
+          <div className={styles.kicker}>VoidNews · Weekly Archive</div>
           <h1 className={styles.title}>{data.period} AI 정리</h1>
           <p className={styles.subtitle}>
             공식 출처 우선 · 총 {data.totalPosts}건 · 회사별 분류 + 카드 그리드

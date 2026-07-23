@@ -77,3 +77,9 @@ QA(`voidbrief-qa-auditor`)나 사용자가 새 결함을 발견하면:
 - 원인: 봇과 AB가 별도 repo라 ingest 계약이 없었음.
 - 해결: `voidbrief-threads-ingest`(Phase 1B) 에이전트 신설(read-only sqlite, role 분류, `discoveredVia:threads-archive`). consolidate 경로는 `scripts/consolidate/extract_collected.py`가 결정론으로 동일 ingest 수행.
 - 담당: `voidbrief-threads-ingest`. 머신체크: `regressions.json` VN008(ingest 경로 배선 메타가드).
+
+### VN-COLLECT-01 — routine 수집까지 Opus 고정으로 토큰·중복 fetch 낭비 (2026-07-22)
+- 증상: 공식 URL 순회·큐레이터 탐색·짧은 메타데이터 추출까지 모든 agent가 Opus를 사용하고 전체 원장을 반복 전달함.
+- 원인: phase별 모델 경계, lane ownership, cache-aware deterministic fetch, policy-pinned resume 계약 부재.
+- 해결: legacy 경로 보존 + Luna URL discovery/Terra verify·normalize/Sol rank·plan shadow 경로, URL-only lossless merge, staged preverify/postverify gate.
+- 담당: `voidbrief-conductor`, `voidbrief-luna-collector`, `voidbrief-source-verifier`. 머신체크: `~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh`.

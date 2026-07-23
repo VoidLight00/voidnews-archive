@@ -395,7 +395,7 @@ export const week27: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/github-copilot-claude-sonnet-5-정식-지원-ga-630bcd2a.jpg",
+            "src": "/og-cache/github-copilot-claude-sonnet-5-ga-630bcd2a.jpg",
             "alt": "GitHub Copilot, Claude Sonnet 5 정식 지원(GA)"
           },
         },
@@ -443,7 +443,7 @@ export const week27: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/github-copilot-mai-code-1-flash를-busines-f723edfb.jpg",
+            "src": "/og-cache/github-copilot-mai-code-1-flash-business-f723edfb.jpg",
             "alt": "GitHub Copilot, MAI-Code-1-Flash를 Business·Enterprise로 확장"
           },
         },
@@ -464,7 +464,7 @@ export const week27: WeeklyData = {
             "개발도구"
           ],
           "thumbnail": {
-            "src": "/og-cache/github-copilot-kimi-k2-7-code-정식-지원-ga-6639d63a.jpg",
+            "src": "/og-cache/github-copilot-kimi-k2-7-code-ga-6639d63a.jpg",
             "alt": "GitHub Copilot, Kimi K2.7 Code 정식 지원(GA)"
           },
         },
@@ -604,7 +604,7 @@ export const week27: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/meta-brain2qwerty-v2-비침습-뇌텍스트-cc1fa690.jpg",
+            "src": "/og-cache/meta-brain2qwerty-v2-brain-text-cc1fa690.jpg",
             "alt": "Meta, 비침습 뇌-텍스트 AI 'Brain2Qwerty v2' — 단어 정확도 61%로 수술 이식에 근접"
           },
         }

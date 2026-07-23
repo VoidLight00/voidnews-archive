@@ -26,7 +26,7 @@ type FeedItem = { title: string; link: string; description: string; date: Date }
 
 export async function GET() {
   const weeklyItems: FeedItem[] = weeks.map((w) => ({
-    title: `VoidNews Weekly — ${w.year}년 ${weekDateLabel(w.period)} (${w.period})`,
+    title: `VoidNews Weekly — ${w.year}년 ${weekDateLabel(w.period)}`,
     link: `${BASE}/${w.slug}/`,
     description: `AI 뉴스 ${w.totalPosts}건 — ${w.companies.map((c) => c.name).join(" · ")}`,
     date: weekEndDate(w.period, w.year),

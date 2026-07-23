@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const data = getWeek(slug);
   if (!data) return {};
   return {
-    title: `VoidNews — ${weekDateLabel(data.period)} (${data.period})`,
+    title: `VoidNews — ${weekDateLabel(data.period)}`,
     description: `AI 뉴스 주간 포스팅 정리 ${data.period} · 총 ${data.totalPosts}건`,
     alternates: { canonical: `/${slug}/` },
   };

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#0b0d12"/>
+  <circle cx="1000" cy="94" r="250" fill="#6857ff" opacity=".22"/>
+  <circle cx="1010" cy="540" r="320" fill="#20d9c3" opacity=".12"/>
+  <path d="M84 116h180" stroke="#20d9c3" stroke-width="8"/>
+  <text x="84" y="202" fill="#f4f1e8" font-family="Arial, sans-serif" font-size="88" font-weight="700">Kimi K3</text>
+  <text x="84" y="286" fill="#b8b5c8" font-family="Arial, sans-serif" font-size="34">OPEN FRONTIER INTELLIGENCE</text>
+  <text x="84" y="430" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="600">2.8T MoE · Native Vision</text>
+  <text x="84" y="494" fill="#ffffff" font-family="Arial, sans-serif" font-size="48" font-weight="600">1M Context</text>
+  <text x="84" y="584" fill="#20d9c3" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">VOIDNEWS · 2026-07B</text>
+</svg>

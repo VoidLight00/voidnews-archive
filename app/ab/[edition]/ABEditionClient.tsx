@@ -251,6 +251,53 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </div>
         </section>
 
+        {data.modelWatch && data.modelWatch.length > 0 && (
+          <section
+            style={{
+              padding:
+                "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
+            }}
+          >
+            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+              <div style={{ marginBottom: 22 }}>
+                <span className="kicker" style={{ color: "var(--accent)" }}>
+                  Model watch
+                </span>
+                <h2
+                  className="serif"
+                  style={{
+                    marginTop: 10,
+                    fontSize: "clamp(22px, 3.2vw, 28px)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.025em",
+                    color: "var(--text-strong)",
+                    lineHeight: 1.12,
+                  }}
+                >
+                  Top 10 밖에서 추가로 볼 모델
+                </h2>
+                <p
+                  className="deck"
+                  style={{
+                    marginTop: 8,
+                    fontSize: 14,
+                    lineHeight: 1.55,
+                    maxWidth: "64ch",
+                    color: "var(--text-soft)",
+                  }}
+                >
+                  회차 마감 직전 확인된 모델을 공식 발표·모델 카드·평가 조건과 함께 보강했습니다. 기존 Top 10 순위에는 합치지 않았습니다.
+                </p>
+              </div>
+              <div className="tc-article-grid ab-edition-grid">
+                {data.modelWatch.map((pick, i) => (
+                  <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {data.editorsPicks && data.editorsPicks.length > 0 && (
           <section
             style={{
@@ -402,11 +449,14 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-              <span style={{ color: "var(--dim)" }}>다룬 주차</span>
-              {data.coveredWeeks.map((w) => (
+              <span style={{ color: "var(--dim)" }}>다룬 기간</span>
+              {data.coveredWeeks.map((week) => {
+                const slug = typeof week === "string" ? week : week.slug;
+                const label = typeof week === "string" ? week : week.period;
+                return (
                 <Link
-                  key={w}
-                  href={`/${w}`}
+                  key={slug}
+                  href={`/${slug}`}
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -419,9 +469,10 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     transition: "border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out)",
                   }}
                 >
-                  {w}
+                  {label}
                 </Link>
-              ))}
+                );
+              })}
             </div>
             <Link
               href="/ab"

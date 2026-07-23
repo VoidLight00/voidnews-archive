@@ -9,12 +9,7 @@ export interface WeekListItem {
   period: string;
 }
 
-// 주차 슬러그(2026-wNN) 대신 노출할 한국어 날짜 라벨 — period 종료일 기준 "M월 N째주"
+// 사용자 화면에는 내부 주차 코드나 월내 서수를 노출하지 않고 실제 수집 날짜 범위만 표시한다.
 export function weekDateLabel(period: string): string {
-  const end = (period.split("~").pop() || "").trim(); // "6/4"
-  const [m, d] = end.split("/").map((x) => parseInt(x, 10));
-  if (!m || !d) return period;
-  const nth = Math.ceil(d / 7);
-  const ord = ["첫째", "둘째", "셋째", "넷째", "다섯째", "여섯째"][nth - 1] || String(nth);
-  return `${m}월 ${ord}주`;
+  return period.trim();
 }

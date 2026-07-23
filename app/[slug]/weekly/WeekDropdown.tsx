@@ -15,11 +15,11 @@ import { weekDateLabel, type WeekListItem } from "@/lib/week-label";
 
 export function WeekDropdown({
   currentSlug,
-  currentWeek,
+  currentPeriod,
   weekList,
 }: {
   currentSlug: string;
-  currentWeek: number;
+  currentPeriod: string;
   weekList: WeekListItem[];
 }) {
   const [open, setOpen] = useState(false);
@@ -47,7 +47,7 @@ export function WeekDropdown({
           gap: 8,
         }}
       >
-        W{String(currentWeek).padStart(2, "0")}
+        {weekDateLabel(currentPeriod)}
         <svg
           width="11"
           height="11"

@@ -1636,5 +1636,168 @@
     "image": "https://opengraph.githubassets.com/f5b772dca4f543ff714b44a345ccd5ec29a96efc6d410e9ee413104f95bebca7/jung-wan-kim/teamclaude",
     "file": "teamclaude-다계정-claude-프록시로-쿼터-자동-로테이션-fd46c60b.png",
     "ts": 1783506941086
+  },
+  "poolside-laguna-s-2-1-banner": {
+    "url": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+    "image": "https://poolside.ai/assets/laguna/laguna-s-2-1-banner.svg",
+    "file": "poolside-laguna-s-2-1-banner.svg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-model-watch",
+    "sha256": "c48f688e621a035bdd848e7fbb9b28a3fe9715e88831b91ec4533e9b963a5373"
+  },
+  "poolside-laguna-s-2-1-chart": {
+    "url": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+    "image": "https://poolside.ai/assets/laguna/laguna-s-2-1-chart.svg",
+    "file": "poolside-laguna-s-2-1-chart.svg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-model-watch",
+    "sha256": "16e991c982f39144234661cc5b58f74dae658c137c1f2d938a22ba45e549c5f0"
+  },
+  "solar-open-2-highlights-kr": {
+    "url": "https://huggingface.co/upstage/Solar-Open2-250B",
+    "image": "https://huggingface.co/upstage/Solar-Open2-250B/resolve/main/assets/Highlights_kr.png",
+    "file": "solar-open-2-highlights-kr.webp",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-model-watch",
+    "derivedFrom": "Highlights_kr.png; cwebp quality 84",
+    "sha256": "5e6e1416608c0c926b5089c496806508139ce158aeaea02165d6c6d604f460f8"
+  },
+  "solar-open-2-kogdpval": {
+    "url": "https://www.upstage.ai/blog/en/solar-open-2",
+    "image": "https://cdn.prod.website-files.com/6743d5190bb2b52f38e99ecd/6a60550dc265f561cff4c474_solaropen2_blog_kogdpval(en).png",
+    "file": "solar-open-2-kogdpval.webp",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-model-watch",
+    "derivedFrom": "solaropen2_blog_kogdpval(en).png; cwebp quality 84",
+    "sha256": "7c7c47a20c1045145c0e616e9dc136f7c5ed3d370c9fe2311998a5e058cd6353"
+  },
+  "gpt-5-6-hero-openai": {
+    "url": "https://openai.com/index/gpt-5-6/",
+    "image": "https://openai.com/index/gpt-5-6/",
+    "file": "gpt-5-6-hero-openai.webp",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "gemini-notebook-47d0768b": {
+    "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+    "image": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+    "file": "gemini-notebook-47d0768b.png",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "kimi-k3-editorial": {
+    "url": "https://www.kimi.com/blog/kimi-k3",
+    "image": "editorial-generated-from-official-facts",
+    "file": "kimi-k3-editorial.svg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "gemini-3-6-flash-2967707c": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+    "image": "official-og-image",
+    "file": "gemini-3-6-flash-2967707c.jpg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "github-agentic-autofix-49094e37": {
+    "url": "https://github.blog/changelog/2026-07-10-agentic-autofix-for-code-scanning-alerts-in-public-preview",
+    "image": "official-og-image",
+    "file": "github-agentic-autofix-49094e37.jpg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "thinking-machines-inkling-93bfddc2": {
+    "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "image": "official-og-image",
+    "file": "thinking-machines-inkling-93bfddc2.png",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "lm-studio-bionic-a1467e2b": {
+    "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
+    "image": "official-og-image",
+    "file": "lm-studio-bionic-a1467e2b.jpg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "claude-robotics-0b890857": {
+    "url": "https://www.anthropic.com/research/claude-plays-robotics",
+    "image": "official-og-image",
+    "file": "claude-robotics-0b890857.jpg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "skt-ai-ran-fe6b0a4f": {
+    "url": "https://news.sktelecom.com/227797",
+    "image": "official-og-image",
+    "file": "skt-ai-ran-fe6b0a4f.png",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "nightguardian-46a47193": {
+    "url": "https://github.com/VoidLight00/nightguardian",
+    "image": "github-og-image",
+    "file": "nightguardian-46a47193.png",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "solgate-private-editorial": {
+    "url": "https://github.com/VoidLight00/solgate",
+    "image": "editorial-generated-private-status-card",
+    "file": "solgate-private-editorial.svg",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "opencode-9bde5582": {
+    "url": "https://github.com/anomalyco/opencode",
+    "image": "github-og-image",
+    "file": "opencode-9bde5582.png",
+    "ts": 1784730030759,
+    "provenance": "2026-07b-vip-brief"
+  },
+  "github-copilot-claude-sonnet-5-ga-630bcd2a": {
+    "url": "https://github.blog/changelog/2026-06-30-claude-sonnet-5-is-now-generally-available-in-github-copilot",
+    "image": "legacy-identical-copy-for-cross-platform-path",
+    "file": "github-copilot-claude-sonnet-5-ga-630bcd2a.jpg",
+    "ts": 1784730867120,
+    "provenance": "vercel-linux-unicode-filename-fix"
+  },
+  "github-copilot-mai-code-1-flash-business-f723edfb": {
+    "url": "https://github.blog/changelog/2026-06-30-mai-code-1-flash-is-now-available-in-github-copilot",
+    "image": "legacy-identical-copy-for-cross-platform-path",
+    "file": "github-copilot-mai-code-1-flash-business-f723edfb.jpg",
+    "ts": 1784730867120,
+    "provenance": "vercel-linux-unicode-filename-fix"
+  },
+  "github-copilot-kimi-k2-7-code-ga-6639d63a": {
+    "url": "https://github.blog/changelog/2026-06-30-kimi-k2-7-code-is-now-generally-available-in-github-copilot",
+    "image": "legacy-identical-copy-for-cross-platform-path",
+    "file": "github-copilot-kimi-k2-7-code-ga-6639d63a.jpg",
+    "ts": 1784730867120,
+    "provenance": "vercel-linux-unicode-filename-fix"
+  },
+  "meta-brain2qwerty-v2-brain-text-cc1fa690": {
+    "url": "https://ai.meta.com/blog/brain2qwerty-v2-noninvasive-brain-to-text-research/",
+    "image": "legacy-identical-copy-for-cross-platform-path",
+    "file": "meta-brain2qwerty-v2-brain-text-cc1fa690.jpg",
+    "ts": 1784730867120,
+    "provenance": "vercel-linux-unicode-filename-fix"
+  },
+  "postmortem-claude-skill": {
+    "url": "https://github.com/VoidLight00/postmortem-claude-skill",
+    "image": "https://raw.githubusercontent.com/VoidLight00/postmortem-claude-skill/main/assets/og.png",
+    "file": "postmortem-claude-skill-og.png",
+    "ts": 1784734884867,
+    "provenance": "official-repository-asset",
+    "sha256": "b2bef967792b8cf153200fa5a142a62d5e756eef19764eedd88716ccc6c5ac4d"
+  },
+  "postmortem-claude-skill-architecture": {
+    "url": "https://github.com/VoidLight00/postmortem-claude-skill/blob/main/assets/architecture.png",
+    "image": "https://raw.githubusercontent.com/VoidLight00/postmortem-claude-skill/main/assets/architecture.png",
+    "file": "postmortem-claude-skill-architecture.webp",
+    "ts": 1784734884867,
+    "provenance": "official-repository-asset",
+    "sha256": "8a263d1574c89dfe97eba65f6e99f3a737c2bd02a7875a07864cc630bc40e07d",
+    "derivedFrom": "postmortem-claude-skill-architecture.png; cwebp quality 82"
   }
 }

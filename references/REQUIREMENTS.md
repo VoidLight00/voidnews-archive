@@ -13,6 +13,9 @@
 | R1.3 | TestingCatalog radar 선행 + 공식 URL 추출 | `01_official_source_matrix_check.json` | voidbrief-collector |
 | R1.4 | **threads 봇 데이터(source_archive.sqlite/content_archive.json) 정식 ingest** | `01b_threads_ingest.json` 존재, seed에 `discoveredVia:threads-archive` | **voidbrief-threads-ingest (Phase 1B)** |
 | R1.5 | 수집 출처 provenance 증거 필수 | `check-collection-provenance.mjs` exit 0 (HARD) · regressions VN005 | voidbrief-qa-auditor |
+| R1.6 | Luna-first lane은 run 적용 curator registry·Threads·community·vGrok·official matrix를 입력으로 사용하고 정확히 한 shard가 각 registry row를 소유 | `verify_collection_routing.sh --stage preverify` `PASS[lane-ownership]` | voidbrief-conductor / voidbrief-luna-collector |
+| R1.7 | pre-verification 병합은 동일 canonical URL fetch만 합치며 provenance 손실 0 | `PASS[url-merge-lossless]` | deterministic merger |
+| R1.8 | community fetch/parse exit 2는 Luna shard 성공으로 상쇄 금지 | `PASS[community-fail-closed]` | voidbrief-conductor |
 
 ## R2 — 검증·중복 (Verification & Dedupe)
 
@@ -22,6 +25,9 @@
 | R2.2 | 제품정체성 기준 중복 병합 (publisher/namespace/officialEventId) | `references/product-identity-dedupe.md` | voidbrief-source-verifier |
 | R2.3 | **동일 officialUrl 카드 중복 0 (신규)** | `verify-no-duplicates.mjs` exit 2 on new dup (HARD) · baseline=legacy | voidbrief-site-writer |
 | R2.4 | 루머·삭제·날짜 밖 항목은 본문 카드 미승격 | `02_risk_flags.json` | voidbrief-source-verifier |
+| R2.5 | vGrok current-run 인용 N개를 current-run claim↔evidence 검사 N개로 100% 재검증 | `verify_collection_routing.sh --stage postverify` `PASS[grok-current-run]` | voidbrief-source-verifier |
+| R2.6 | verifier의 dedupeDecision·officialEventId·sourceIds가 normalized item에 손실 없이 연결 | `PASS[dedupe-boundary]` | voidbrief-normalizer |
+| R2.7 | ranker는 source/event identity 재병합 금지; trendCluster·presentation bundle만 허용 | `PASS[ranker-identity-boundary]` | voidbrief-ranker |
 
 ## R3 — 커버리지 (Coverage)
 
@@ -30,7 +36,7 @@
 | R3.1 | 요구 날짜 범위 종료일 직전 공백 차단 (tail-window) | `check-date-coverage.mjs` exit 2 (HARD) | voidbrief-conductor |
 | R3.2 | 내부 interior 공백(연속 N일) 감지 | `check-date-coverage.mjs --max-interior-gap` | voidbrief-conductor |
 | R3.3 | 필수 publisher 매트릭스 충족 | `01_official_source_matrix_check.json` | voidbrief-collector |
-| R3.4 | **큐레이터 16채널 전수 방문(discovery-only) + 발견사건 공식 1차 출처 승격** | `check_curator_coverage.sh <run>/01_curator_coverage.json` exit 2 (HARD, Phase1 직후) · 레지스트리 무결성 `verify_curator_channels.sh` exit 1 | voidbrief-collector |
+| R3.4 | **run 종료일까지 활성인 큐레이터 레지스트리 전체 방문(discovery-only) + YouTube 창 안 영상 전수 결정 + 발견사건 공식 1차 출처 승격** | `check_curator_coverage.sh` + `check_video_coverage.sh` + `verify_curator_channels.sh` (HARD) | voidbrief-collector / voidbrief-luna-collector |
 
 ## R4 — 사이트 산출 (Site Output)
 
@@ -63,6 +69,10 @@
 | R7.1 | resume로 누락 phase만 재실행 | RUN_MANIFEST 기반 | voidbrief-conductor |
 | R7.2 | **게이트 실패 시 자동 재시도 폐루프 (FAIL[gate]→담당 반송→re-gate ≤3)** | conductor 루프 토큰 | voidbrief-conductor |
 | R7.3 | 신규 결함 → FAILURE_LOG + regressions 자동 승격 | `references/FAILURE_LOG.md` + `references/regressions.json` (site repo) | voidbrief-qa-auditor |
+| R7.4 | run 생성 시 collection policy와 phase input hash를 고정하고 hash 변경 시 downstream 완료 무효화 | `RUN_MANIFEST.collectionRouting` + `PASS[policy-pinned-resume]` | voidbrief-conductor |
+| R7.5 | legacy-v1 산출물·모델 계약을 golden으로 보존하고 Luna-first는 별도 shadow workspace에서 비교 | `PASS[legacy-golden]` + `PASS[shadow-write-isolation]` | voidbrief-conductor |
+| R7.6 | shared quota 동시성·동적 request budget·retry ceiling 준수 | `PASS[request-budget]` | voidbrief-conductor |
+| R7.7 | cache는 공개 HTTPS·SSRF/credential/symlink 방어·secret scan·조건부 재검증 계약을 만족 | `PASS[cache-safety]` | deterministic fetcher |
 
 ## R8 — 배포 안전 (Publish Safety)
 
@@ -87,6 +97,7 @@
 | `check-date-coverage.mjs` | HARD | consolidate/run | 2 |
 | `check_curator_coverage.sh` | HARD | 수집 직후(Phase1) | 2 |
 | `verify_curator_channels.sh` | HARD | 레지스트리 변경 시 | 1 |
+| `verify_collection_routing.sh --stage preverify|postverify` | HARD | Luna-first 수집·검증 경계 | 2 |
 
 신규 `scripts/check-*.mjs` / `verify-*.mjs`는 `run-all-gates.mjs`가 glob으로 자동 합류시킨다(하드코딩 배선 누락 방지, 확장성 축).
 **큐레이터 게이트 2종(`.sh`)은 사이트 빌드가 아니라 run phase용**이라 `run-all-gates`(빌드 prebuild) 자동발견 대상이 아니다. 위치는 `~/.claude/skills/voidnews-briefing-pipeline/references/`, conductor가 Phase1 직후 직접 호출한다(R3.4·conductor 폐루프).

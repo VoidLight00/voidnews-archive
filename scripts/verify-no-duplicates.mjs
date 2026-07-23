@@ -53,7 +53,12 @@ function canon(u) {
       const v = p.searchParams.get("v") || p.pathname.replace(/^\//, "");
       return "yt:" + v;
     }
-    return (host + p.pathname.replace(/\/+$/, "")).toLowerCase();
+    const tracking = /^(utm_|fbclid$|gclid$|mc_cid$|mc_eid$|ref$|source$)/i;
+    const query = [...p.searchParams.entries()]
+      .filter(([key]) => !tracking.test(key))
+      .sort(([ak, av], [bk, bv]) => ak.localeCompare(bk) || av.localeCompare(bv));
+    const suffix = query.length ? `?${new URLSearchParams(query).toString()}` : "";
+    return (host + p.pathname.replace(/\/+$/, "") + suffix).toLowerCase();
   } catch { return u.toLowerCase(); }
 }
 
