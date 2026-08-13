@@ -78,7 +78,7 @@ export function PickModal({
         style={{
           marginTop: 22,
           maxWidth: "62ch",
-          borderBottom: "2px solid var(--gold)",
+          borderBottom: "1px solid var(--rule)",
           paddingLeft: 16,
           fontSize: "var(--text-md)",
           color: "var(--text)",
@@ -107,7 +107,7 @@ export function PickModal({
         <aside
           style={{
             marginTop: 24,
-            borderBottom: "2px solid var(--gold)",
+            borderBottom: "1px solid var(--rule)",
             paddingLeft: 16,
           }}
         >
@@ -243,7 +243,7 @@ export function Modal({
           position: "relative",
           background: "var(--bg)",
           border: "1px solid var(--border2)",
-          borderTop: "3px solid var(--gold)",
+          borderTop: "1px solid var(--rule)",
           borderRadius: "var(--radius-xs) var(--radius-xs) 0 0",
           boxShadow: "0 -1px 0 var(--border)",
           width: "100%",

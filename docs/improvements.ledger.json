@@ -616,6 +616,26 @@
         "value": 1
       },
       "notes": "20260812-075051-ab-20260731-20260812"
+    },
+    {
+      "id": "IMP-0034",
+      "date": "2026-08-13",
+      "source": "ab-run",
+      "category": "design",
+      "request": "컬러 가로 accent line 금지를 HARD 게이트로 배선 + AB 하이라이트 썸네일 누락 수정",
+      "status": "applied",
+      "files": [
+        "scripts/check-horizontal-accent.mjs",
+        "scripts/run-all-gates.mjs",
+        "scripts/inject-thumbnails.mjs",
+        "app/ab"
+      ],
+      "commit": "de27bd1",
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "node scripts/check-horizontal-accent.mjs"
+      },
+      "notes": "VN-DESIGN-02/03"
     }
   ]
 }

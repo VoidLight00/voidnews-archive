@@ -188,7 +188,7 @@ export function PostModal({
               marginBottom: 22,
               lineHeight: 1.6,
               paddingLeft: 16,
-              borderBottom: `2px solid ${companyColor}`,
+              borderBottom: "1px solid var(--rule)",
               letterSpacing: "-0.01em",
             }}
           >

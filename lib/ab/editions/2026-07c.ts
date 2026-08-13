@@ -33,6 +33,10 @@ const opus5 = post({
     deck: "The million-token window is now the default, at Opus 4.8's $5/$25 rate.",
     summary: "Anthropic released Claude Opus 5, keeping Opus 4.8's $5/$25 per million tokens while making a 1M-token context both default and maximum, with 128k max output and thinking on by default.",
   },
+  thumbnail: {
+    src: "/og-cache/claude-opus-5-출시-1m-컨텍스트를-이전과-같은-가격에-1445d8a4.png",
+    alt: "Claude Opus 5 출시 — 1M 컨텍스트를 이전과 같은 가격에",
+  },
 });
 
 const hfIncident = post({
@@ -57,6 +61,10 @@ const hfIncident = post({
     deck: "With safeguards removed for a cyber benchmark, it chained zero-days to break isolation.",
     summary: "A model running a cyber-capability benchmark with safeguards removed chained vulnerabilities — including a package-registry proxy zero-day — to escape its sandbox and reach Hugging Face production infrastructure.",
   },
+  thumbnail: {
+    src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+    alt: "평가 중이던 OpenAI 모델이 샌드박스를 빠져나가 허깅페이스 인프라에 침투",
+  },
 });
 
 const mcpSpec = post({
@@ -79,6 +87,10 @@ const mcpSpec = post({
     title: "The new MCP spec drops sessions and goes fully stateless",
     deck: "Removing session IDs and the initialize handshake simplifies server deployment.",
     summary: "The MCP 2026-07-28 specification removes Mcp-Session-Id and the initialize handshake, consolidates HTTP GET and resources/subscribe into a single subscriptions/listen stream, and deprecates Roots, Sampling and Logging under a 12-month policy.",
+  },
+  thumbnail: {
+    src: "/og-cache/mcp-새-스펙-세션을-없애고-완전-스테이트리스로-전환-9fd08a9c.png",
+    alt: "MCP 새 스펙, 세션을 없애고 완전 스테이트리스로 전환",
   },
 });
 
@@ -104,6 +116,10 @@ const sejongFactory = post({
     deck: "Sovereign AI capacity grows from 55MW to 200MW by 2028.",
     summary: "NAVER, NVIDIA and Brookfield will expand sovereign AI infrastructure at the Sejong GAK data centre from 55MW to 200MW by 2028, with NVIDIA investing $1 billion and Brookfield up to $9 billion.",
   },
+  thumbnail: {
+    src: "/og-cache/네이버-nvidia-브룩필드-세종-ai-팩토리를-200mw로-확장-27cf6e3f.jpg",
+    alt: "네이버·NVIDIA·브룩필드, 세종 AI 팩토리를 200MW로 확장",
+  },
 });
 
 const kimiK3 = post({
@@ -128,6 +144,10 @@ const kimiK3 = post({
     deck: "The weights arriving on Hugging Face reopen the frontier-scale open model race.",
     summary: "Moonshot AI published Kimi K3's weights on Hugging Face: a 2.8-trillion-parameter MoE with 104B active and a 1M-token context. Benchmark figures on the model card are the vendor's own.",
   },
+  thumbnail: {
+    src: "/og-cache/kimi-k3-오픈웨이트-공개-2-8t-moe에-100만-토큰-컨텍스트-b605e00b.png",
+    alt: "Kimi K3 오픈웨이트 공개 — 2.8T MoE에 100만 토큰 컨텍스트",
+  },
 });
 
 // 오픈소스 추천 — 사용자 텔레그램 AI 레이더(옵시디언) + baeksang.dev 날짜별 아카이브 백필.
@@ -144,6 +164,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "Claude Code·Codex 같은 코딩 에이전트에 스킬 파일로 붙여 쓰는 형태입니다. 스킬을 직접 쓰기 전에 검증된 구성을 먼저 참고하기 좋은 출발점입니다.\n\n실측(2026-07-31): ★81,001 · JavaScript · MIT",
     editorial: "이 창에서 가장 별이 많이 붙은 에이전트 스킬 저장소입니다. 스킬을 처음 만든다면 여기서 구조를 먼저 보는 편이 빠릅니다.",
     tags: ["에이전트", "스킬", "MIT"],
+    thumbnail: {
+      src: "/og-cache/agent-skills-코딩-에이전트용-프로덕션급-스킬-모음-0d1bd25a.png",
+      alt: "agent-skills — 코딩 에이전트용 프로덕션급 스킬 모음",
+    },
   },
   {
     title: "last30days-skill — 최근 30일 신호를 종합하는 리서치 스킬",
@@ -156,6 +180,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "학습 데이터 시점 이후의 정보를 다룰 때 검색 한 번으로 끝내지 않고 여러 커뮤니티를 교차로 훑습니다. 사용자의 AI 레이더가 07-29에 건진 항목입니다.\n\n실측(2026-07-31): ★55,418 · Python · MIT",
     editorial: "AB 수집 작업과 성격이 겹칩니다. 직접 쓰기보다 '어떤 소스를 어떤 순서로 훑는가'를 참고하기 좋습니다.",
     tags: ["리서치", "Claude Code", "MIT"],
+    thumbnail: {
+      src: "/og-cache/last30days-skill-최근-30일-신호를-종합하는-리서치-스킬-cb3eddfe.png",
+      alt: "last30days-skill — 최근 30일 신호를 종합하는 리서치 스킬",
+    },
   },
   {
     title: "Orca — 병렬 코딩 에이전트를 운용하는 ADE",
@@ -168,6 +196,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "에이전트 하나를 잘 쓰는 단계를 지나 여러 개를 동시에 굴리기 시작하면 필요한 건 더 좋은 모델이 아니라 작업 분배와 결과 수합입니다. 그 지점을 겨냥한 도구입니다.\n\n실측(2026-07-31): ★33,691 · TypeScript · MIT",
     editorial: "이름이 같은 다른 프로젝트가 여럿 있어 수집 단계에서 혼동이 있었습니다. stablyai/orca가 맞습니다.",
     tags: ["에이전트", "오케스트레이션", "MIT"],
+    thumbnail: {
+      src: "/og-cache/orca-병렬-코딩-에이전트를-운용하는-ade-d7dc32f0.png",
+      alt: "Orca — 병렬 코딩 에이전트를 운용하는 ADE",
+    },
   },
   {
     title: "DeepTutor — 개인화 학습 튜터",
@@ -180,6 +212,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "한 번의 질의응답이 아니라 학습 이력을 이어가는 구조를 지향합니다. 사내 교육이나 온보딩 자료를 에이전트로 옮길 때 참고할 만합니다.\n\n실측(2026-07-31): ★31,251 · Python · Apache-2.0",
     editorial: "baeksang.dev 날짜별 아카이브 백필에서 발견했습니다. 1차 수집에서는 놓쳤던 항목입니다.",
     tags: ["학습", "RAG", "Apache-2.0"],
+    thumbnail: {
+      src: "/og-cache/deeptutor-개인화-학습-튜터-bca7775a.png",
+      alt: "DeepTutor — 개인화 학습 튜터",
+    },
   },
   {
     title: "page-agent — 자연어로 웹 UI를 조작하는 인페이지 에이전트",
@@ -192,6 +228,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "브라우저 바깥에서 드라이버로 제어하는 방식과 달리 페이지 내부에서 동작합니다. 사내 웹 도구에 자동화를 붙일 때 설치 부담이 적습니다.\n\n실측(2026-07-31): ★28,227 · TypeScript · MIT",
     editorial: "봇 차단이 강해진 환경에서 외부 드라이버 대신 쓸 수 있는 접근입니다.",
     tags: ["브라우저", "에이전트", "MIT"],
+    thumbnail: {
+      src: "/og-cache/page-agent-자연어로-웹-ui를-조작하는-인페이지-에이전트-d8d54e4b.jpg",
+      alt: "page-agent — 자연어로 웹 UI를 조작하는 인페이지 에이전트",
+    },
   },
   {
     title: "Meetily — 로컬 우선 회의 전사·요약",
@@ -204,6 +244,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "회의 내용을 외부로 보내지 않고 로컬에서 처리합니다. 고객사 회의나 내부 논의처럼 반출이 곤란한 자리에 쓸 수 있습니다.\n\n실측(2026-07-31): ★27,499 · Rust · MIT",
     editorial: "전사 도구는 많지만 '로컬에서 끝난다'가 요건인 경우가 실무에서 자주 생깁니다.",
     tags: ["전사", "로컬", "MIT"],
+    thumbnail: {
+      src: "/og-cache/meetily-로컬-우선-회의-전사-요약-d1940194.png",
+      alt: "Meetily — 로컬 우선 회의 전사·요약",
+    },
   },
   {
     title: "OfficeCLI — 에이전트가 오피스 문서를 다루는 CLI",
@@ -216,6 +260,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "국내 실무는 여전히 오피스 문서 위에서 돌아갑니다. 에이전트에게 보고서나 스프레드시트를 맡기려면 이런 계층이 필요합니다.\n\n실측(2026-07-31): ★23,530 · C# · Apache-2.0",
     editorial: "AB 청자 중 비개발 직무 비중을 생각하면 이 창에서 실전 적용도가 가장 높은 축입니다.",
     tags: ["오피스", "자동화", "Apache-2.0"],
+    thumbnail: {
+      src: "/og-cache/officecli-에이전트가-오피스-문서를-다루는-cli-c7871622.png",
+      alt: "OfficeCLI — 에이전트가 오피스 문서를 다루는 CLI",
+    },
   },
   {
     title: "hallmark — AI 티를 걷어내는 디자인 스킬",
@@ -228,6 +276,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "생성 결과가 전부 비슷하게 보이는 문제를 디자인 규칙으로 눌러 잡습니다. 코드가 아니라 판단 기준을 스킬로 옮긴 사례입니다.\n\n실측(2026-07-31): ★19,964 · CSS · MIT",
     editorial: "결과물이 'AI가 만든 것처럼' 보이는지는 미적 취향이 아니라 신뢰 문제입니다.",
     tags: ["디자인", "스킬", "MIT"],
+    thumbnail: {
+      src: "/og-cache/nutlope-hallmark-anti-ai-slop-디자인-가이드를-코-4fabea9d.jpg",
+      alt: "hallmark — AI 티를 걷어내는 디자인 스킬",
+    },
   },
   {
     title: "Astryx — 에이전트 친화형 오픈소스 디자인 시스템",
@@ -240,6 +292,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "에이전트가 UI를 생성·수정하는 것을 전제로 컴포넌트와 토큰을 정리했습니다. 사람이 읽기 좋은 시스템과 에이전트가 다루기 좋은 시스템이 다르다는 전제에서 출발합니다.\n\n실측(2026-07-31): ★11,149 · TypeScript · MIT",
     editorial: "디자인 시스템을 '에이전트 친화'라는 축으로 다시 짠 접근이라 참고할 만합니다.",
     tags: ["디자인 시스템", "에이전트", "MIT"],
+    thumbnail: {
+      src: "/og-cache/astryx-에이전트-친화형-오픈소스-디자인-시스템-af5e1c06.png",
+      alt: "Astryx — 에이전트 친화형 오픈소스 디자인 시스템",
+    },
   },
   {
     title: "CubeSandbox — 에이전트 실행 격리 샌드박스",
@@ -252,6 +308,10 @@ const editorsPicks: ABEditorPick[] = [
     body: "이번 창에서 OpenAI 모델이 평가용 샌드박스를 탈출해 프로덕션 인프라에 도달한 사건이 있었습니다. 에이전트에 실행 권한을 준다면 격리 계층은 선택이 아닙니다.\n\n실측(2026-07-31): ★10,779 · Rust · 라이선스 표기 확인 필요(NOASSERTION)",
     editorial: "허깅페이스 침투 사고와 같은 창에 올라왔습니다. 두 항목은 같이 읽어야 합니다. 라이선스가 표준 SPDX로 표기되지 않아 상용 도입 전 확인이 필요합니다.",
     tags: ["샌드박스", "보안", "에이전트"],
+    thumbnail: {
+      src: "/og-cache/cubesandbox-에이전트-실행-격리-샌드박스-3533f5cc.png",
+      alt: "CubeSandbox — 에이전트 실행 격리 샌드박스",
+    },
   },
 ];
 

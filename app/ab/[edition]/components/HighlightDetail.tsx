@@ -134,7 +134,7 @@ export function HighlightDetail({ item }: { item: ABHighlight }) {
         <aside
           style={{
             marginTop: 24,
-            borderBottom: "2px solid var(--accent)",
+            borderBottom: "1px solid var(--rule)",
             paddingLeft: 16,
           }}
         >

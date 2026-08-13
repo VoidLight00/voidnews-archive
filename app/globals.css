@@ -368,7 +368,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 .ab-core-flow {
   margin-top: clamp(24px, 4vw, 36px);
   border: 1px solid var(--border);
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 1px solid var(--rule);
   background: linear-gradient(135deg, var(--card), var(--surface));
   padding: clamp(18px, 3vw, 26px);
 }

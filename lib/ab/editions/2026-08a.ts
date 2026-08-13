@@ -38,6 +38,10 @@ const autoMode = post({
     summary:
       "From August 14 new sessions on Pro, Max and Team plans run in auto mode, routing each tool call through a safety classifier instead of prompting the user.",
   },
+  thumbnail: {
+    src: "/og-cache/클로드-코드-8월-14일부터-auto-모드가-기본값-796635d1.jpg",
+    alt: "클로드 코드, 8월 14일부터 auto 모드가 기본값",
+  },
 });
 
 const astraCritical = post({
@@ -64,6 +68,10 @@ const astraCritical = post({
     deck: "The developer itself declines to rule out the top tier of its own framework.",
     summary:
       "On August 7 OpenAI said preliminary evaluations of its next model, Astra, were strong enough that it cannot rule out the Critical cybersecurity level of its Preparedness Framework, and paused internal Astra work that does not yet meet hardened security requirements.",
+  },
+  thumbnail: {
+    src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+    alt: "오픈AI, 차기 모델의 사이버 최고 위험 등급을 배제할 수 없다고 밝혔다",
   },
 });
 
@@ -98,6 +106,10 @@ const mediaGen = post({
       "ByteDance Seed introduced Seedance 2.5 on July 31, an audio-video joint model built to produce 30 seconds in a single generation, extendable twice. In the same window Luma shipped it inside its product on August 6, released Luma Scenes on August 11, and Higgsfield launched Cinema Studio 4.0 on August 12.",
     content: `**What changed**\nLength has been the hard part of generated video. Ten three-second clips stitched together drift — faces shift, lighting jumps, the camera loses continuity.\n\n**Seedance 2.5**, published by ByteDance Seed on July 31, is built as "a next-generation audio-video joint generation model for 30-second storytelling," producing up to 30 seconds **in a single generation**, extendable twice.\n\nIt "understands reference videos more precisely — capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation." All vendor description.\n\n**The ecosystem followed within ten days**\nAugust 5, SeedRealtime; August 6, Luma shipping Seedance 2.5 in-product; August 7, the developer API per secondary sources; August 11, Luma Scenes for keyframe-first editing; August 12, Higgsfield Cinema Studio 4.0 with lens, camera, lighting, colour and motion control.\n\n**Separate the dates**\nThe July 31 launch and the August 6 Luma integration are distinct events. Reading only the integration news loses the original release.\n\n**Availability is a separate question**\nIn the same window MiniMax H3 released weights under a licence that names South Korea, alongside the US, EU and UK, as excluded territory. A model opening is not the same as your being able to use it.\n\n**What to check**\nIf you hold a video budget, this is a re-estimation point: one pass at thirty seconds differs from ten passes stitched, in both production time and rework. Verify resolution, pricing and territorial limits separately before adopting.`
   },
+  thumbnail: {
+    src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
+    alt: "30초 영상을 한 번에 뽑는 시대가 이 3주에 열렸습니다",
+  },
 });
 
 
@@ -131,6 +143,10 @@ const marking = post({
     summary:
       "Anthropic documented how Claude marks its output: an imperceptible text watermark that survives copy-paste, and signed provenance metadata on files following the C2PA open standard.",
   },
+  thumbnail: {
+    src: "/og-cache/클로드-출력물에-워터마크와-c2pa-표식이-붙는다-60f27f51.png",
+    alt: "클로드 출력물에 워터마크와 C2PA 표식이 붙는다",
+  },
 });
 
 const freeTier = post({
@@ -158,6 +174,10 @@ const freeTier = post({
     summary:
       "On August 6 OpenAI made GPT-5.6 Luna the default for free users and opened unlimited text chats. Five days later it launched ChatGPT ads in the UK, Mexico, Brazil, Japan and South Korea — shown to logged-in adults on exactly those Free and Go tiers.",
   },
+  thumbnail: {
+    src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+    alt: "무료 사용자에게 무제한을 열고, 닷새 뒤 한국에 광고를 넣었다",
+  },
 });
 
 const editorsPicks: ABEditorPick[] = [
@@ -176,6 +196,10 @@ const editorsPicks: ABEditorPick[] = [
     editorial:
       "이 저장소는 발표자가 실제로 쓰고 있는 도구입니다. 다만 로컬에 깔린 판이 1.2.2.dev3이고 상류 최신은 1.4.2라 두 마이너 뒤처져 있습니다. 창 안 두 릴리스가 정확히 검색 정확도와 인제스션 안정성 개선분이니, 쓰고 계신다면 이번 회차를 계기로 올려두십시오. 파괴적 변경이 없다고 명시돼 있어 올리는 비용도 낮습니다.",
     tags: ["메모리", "지식그래프", "자체호스팅", "Apache-2.0"],
+    thumbnail: {
+      src: "/og-cache/cognee-에이전트에게-세션을-넘는-기억을-주는-오픈소스-메모리-827967a7.png",
+      alt: "Cognee — 에이전트에게 세션을 넘는 기억을 주는 오픈소스 메모리",
+    },
   },
   {
     title: "Paseo — 코딩 에이전트를 데스크톱·폰·CLI에서 한 곳으로 조종",
@@ -192,6 +216,10 @@ const editorsPicks: ABEditorPick[] = [
     editorial:
       "설치할 때 스코프를 빠뜨리지 마십시오. npm 최상위 이름 paseo(무스코프)는 완전히 무관한 패키지입니다 — Next.js 스캐폴드, ISC, v0.1.0. 정확한 설치는 npm i -g @getpaseo/cli 입니다. 라이선스도 확인해 두십시오. GitHub API는 NOASSERTION으로 표기하지만 LICENSE 원문은 AGPLv3이고, 서드파티 구성요소는 각자 원 라이선스를 따릅니다. 사내 배포 시 AGPL 조항이 걸리는지 먼저 보십시오.",
     tags: ["에이전트", "오케스트레이션", "AGPLv3", "한국어 지원"],
+    thumbnail: {
+      src: "/og-cache/paseo-코딩-에이전트를-데스크톱-폰-cli에서-한-곳으로-조종-6c416faa.png",
+      alt: "Paseo — 코딩 에이전트를 데스크톱·폰·CLI에서 한 곳으로 조종",
+    },
   },
 ];
 

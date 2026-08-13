@@ -541,7 +541,7 @@
   color: var(--text);
   margin: 0 0 var(--space-xl);
   padding: var(--space-md) var(--space-md);
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
   background: var(--surface);
   border-radius: var(--radius-none);
 }
@@ -562,7 +562,7 @@
   display: block;
   border-radius: var(--radius-xs);
   border: 1px solid var(--border);
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
 }
 
 .articleHero figcaption {
@@ -660,7 +660,7 @@
   margin: var(--space-lg) 0;
   padding: var(--space-lg) var(--space-lg);
   border: 1px solid var(--border);
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
   border-radius: var(--radius-xs);
   background: var(--card);
 }
@@ -805,7 +805,7 @@
 .articleQuote {
   margin: var(--space-lg) 0;
   padding: var(--space-sm) var(--space-lg);
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
   background: var(--surface);
   color: var(--text);
   font-family: var(--serif);
@@ -926,7 +926,7 @@
   margin-top: var(--space-xl);
   padding: var(--space-lg) var(--space-lg);
   border: 1px solid var(--border);
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 1px solid var(--rule);
   border-radius: var(--radius-xs);
   background: var(--card);
 }
@@ -1042,7 +1042,7 @@
   display: block;
   padding: var(--space-md) var(--space-md);
   border: 1px solid var(--border);
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 1px solid var(--rule);
   border-radius: var(--radius-xs);
   background: var(--card);
   text-decoration: none;

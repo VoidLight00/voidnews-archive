@@ -263,6 +263,10 @@ const tools: ABEditorPick[] = [
     editorial: "이번 회차의 ‘모델을 일에 배치한다’는 주제를 실제 오픈소스 운영 도구로 확장하는 카드입니다. 공급자 교체와 fallback은 편리하지만, 공식 제품이 아닌 제3자 프록시라는 경계를 함께 밝혀야 합니다.",
     tags: ["OpenCodex", "Codex", "Claude Code", "모델 라우팅", "MIT"],
     tier: "feature",
+    thumbnail: {
+      src: "/og-cache/opencodex-여러-모델과-코딩-도구를-한-로컬-프록시로-연결-6f6bcb7f.png",
+      alt: "OpenCodex — 여러 모델과 코딩 도구를 한 로컬 프록시로 연결",
+    },
   },
 ];
 

@@ -132,7 +132,7 @@ export function HighlightArticle({
             <blockquote
               style={{
                 margin: 0,
-                borderBottom: `2px solid ${accent}`,
+                borderBottom: "1px solid var(--rule)",
                 paddingLeft: 10,
                 fontSize: 13,
                 lineHeight: 1.6,
@@ -178,7 +178,7 @@ export function DemoCard({ item }: { item: ABDemoCard }) {
     <article
       style={{
         border: "1px solid var(--border2)",
-        borderBottom: "3px solid var(--gold)",
+        borderBottom: "1px solid var(--border2)",
         background: "color-mix(in srgb, var(--card), var(--surface) 22%)",
         borderRadius: "var(--radius-xs)",
         padding: "clamp(22px, 4vw, 34px)",

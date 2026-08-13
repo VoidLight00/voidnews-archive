@@ -3395,5 +3395,77 @@
     "image": "https://opengraph.githubassets.com/acf2edff08f26eeac494152e8bdba4670572050048b23af9a00fcc2e30aa4cbe/guillaumemeyer/watermarks-remover",
     "file": "watermarks-remover-ai-출처-표식의-약한-고리를-드러내다-3c102972.png",
     "ts": 1786603452376
+  },
+  "agent-skills-코딩-에이전트용-프로덕션급-스킬-모음-0d1bd25a": {
+    "url": "https://github.com/addyosmani/agent-skills",
+    "image": "https://opengraph.githubassets.com/bbff132324fb7698d10624d456f79442526957e4e87ba7c921198a180bd54e8d/addyosmani/agent-skills",
+    "file": "agent-skills-코딩-에이전트용-프로덕션급-스킬-모음-0d1bd25a.png",
+    "ts": 1786610122724
+  },
+  "orca-병렬-코딩-에이전트를-운용하는-ade-d7dc32f0": {
+    "url": "https://github.com/stablyai/orca",
+    "image": "https://opengraph.githubassets.com/45739a6058ffb3bbde13dfb7ebd29919a7b35951d0ea43487ed02eb370554f0d/stablyai/orca",
+    "file": "orca-병렬-코딩-에이전트를-운용하는-ade-d7dc32f0.png",
+    "ts": 1786610125428
+  },
+  "page-agent-자연어로-웹-ui를-조작하는-인페이지-에이전트-d8d54e4b": {
+    "url": "https://github.com/alibaba/page-agent",
+    "image": "https://repository-images.githubusercontent.com/1062458369/4f9a1671-3953-4f45-8a8e-b010e33520bc",
+    "file": "page-agent-자연어로-웹-ui를-조작하는-인페이지-에이전트-d8d54e4b.jpg",
+    "ts": 1786610127306
+  },
+  "meetily-로컬-우선-회의-전사-요약-d1940194": {
+    "url": "https://github.com/Zackriya-Solutions/meetily",
+    "image": "https://repository-images.githubusercontent.com/908589694/0e959177-b65c-4f87-b9fd-759b0f1a299d",
+    "file": "meetily-로컬-우선-회의-전사-요약-d1940194.png",
+    "ts": 1786610127996
+  },
+  "cubesandbox-에이전트-실행-격리-샌드박스-3533f5cc": {
+    "url": "https://github.com/TencentCloud/CubeSandbox",
+    "image": "https://opengraph.githubassets.com/2b38c5c2846d9c4c1b964d66a4a50181dacb24334e90d9bb7a874e5e91296087/TencentCloud/CubeSandbox",
+    "file": "cubesandbox-에이전트-실행-격리-샌드박스-3533f5cc.png",
+    "ts": 1786610131583
+  },
+  "cognee-에이전트에게-세션을-넘는-기억을-주는-오픈소스-메모리-827967a7": {
+    "url": "https://www.cognee.ai",
+    "image": "https://www.cognee.ai/images/meta/cognee-social-card.png?v=20260724",
+    "file": "cognee-에이전트에게-세션을-넘는-기억을-주는-오픈소스-메모리-827967a7.png",
+    "ts": 1786610132635
+  },
+  "paseo-코딩-에이전트를-데스크톱-폰-cli에서-한-곳으로-조종-6c416faa": {
+    "url": "https://paseo.sh/",
+    "image": "https://paseo.sh/og-image.png",
+    "file": "paseo-코딩-에이전트를-데스크톱-폰-cli에서-한-곳으로-조종-6c416faa.png",
+    "ts": 1786610133192
+  },
+  "opencodex-여러-모델과-코딩-도구를-한-로컬-프록시로-연결-6f6bcb7f": {
+    "url": "https://github.com/lidge-jun/opencodex",
+    "image": "https://opengraph.githubassets.com/3136bb7f9d2071e2d7e59fdff78691f4b48998a5baaf3519636248cfda7c5387/lidge-jun/opencodex",
+    "file": "opencodex-여러-모델과-코딩-도구를-한-로컬-프록시로-연결-6f6bcb7f.png",
+    "ts": 1786610370944
+  },
+  "last30days-skill-최근-30일-신호를-종합하는-리서치-스킬-cb3eddfe": {
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "image": "https://opengraph.githubassets.com/b525f86f1cd28d77f810fee4565a74b5637d7237c61b2b87ccaef83359235d5f/mvanhorn/last30days-skill",
+    "file": "last30days-skill-최근-30일-신호를-종합하는-리서치-스킬-cb3eddfe.png",
+    "ts": 1786610372482
+  },
+  "deeptutor-개인화-학습-튜터-bca7775a": {
+    "url": "https://github.com/HKUDS/DeepTutor",
+    "image": "https://opengraph.githubassets.com/2abb4c9acc00cf7bf83928ee2503fd476b1a998e124b08c620f50712026a0d24/HKUDS/DeepTutor",
+    "file": "deeptutor-개인화-학습-튜터-bca7775a.png",
+    "ts": 1786610374678
+  },
+  "officecli-에이전트가-오피스-문서를-다루는-cli-c7871622": {
+    "url": "https://github.com/iOfficeAI/OfficeCLI",
+    "image": "https://opengraph.githubassets.com/d779626437df6dc1feb0720736e1c31c1d72a336ddd35d9a35a77d96998d24e2/iOfficeAI/OfficeCLI",
+    "file": "officecli-에이전트가-오피스-문서를-다루는-cli-c7871622.png",
+    "ts": 1786610376209
+  },
+  "astryx-에이전트-친화형-오픈소스-디자인-시스템-af5e1c06": {
+    "url": "https://github.com/facebook/astryx",
+    "image": "https://opengraph.githubassets.com/1d37e35c621003e4365f2b9f7f4d627b0df0239230599845708e42386d987769/facebook/astryx",
+    "file": "astryx-에이전트-친화형-오픈소스-디자인-시스템-af5e1c06.png",
+    "ts": 1786610377845
   }
 }

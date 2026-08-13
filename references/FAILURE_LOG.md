@@ -159,3 +159,39 @@ IMP-0023·0024·0026·0027·0028 은 actual=127, IMP-0025 는 actual=1.
 **재발 방지 규칙**: 리포 게이트의 evidence 는 리포 상대경로만 쓴다. 하네스 산출물을
 근거로 삼아야 하면 그 사실이 명령 자체에 드러나게 두고(`~/.claude/skills/` 접두사),
 검증기가 환경별로 분기하게 한다. "로컬에서 통과했으니 CI 도 통과한다"는 가정 금지.
+
+### VN-DESIGN-02 — 컬러 가로 accent line 재발 (2026-08-13)
+
+**증상**: AB VIP 카드(/ab/2026-08a) 하단에 `--gold` 3px 가로 막대. 좌측 세로 스트라이프와
+같은 부류의 AI 티인데, 세로줄만 HARD 게이트가 있고 가로줄은 산문 규칙뿐이라 컴포넌트를
+새로 만들 때마다 되살아났다. 사이트 전수 스캔에서 8건 더 발견(editorial CSS 6, PostModal 1,
+globals.css 1).
+
+**원인**: 규칙이 코드가 아니라 문서에만 있었다. `no_vertical_stripe_gate.sh` 는 있었지만
+가로 방향 대응물이 없었다.
+
+**수정**: `scripts/check-horizontal-accent.mjs` 신설 후 BUILD_GATES 등록(9개로 증가).
+2px 이상 border-top/bottom 중 색이 accent 계열(--gold/--accent/--kicker/${accent}/
+${companyColor}/amber·yellow/hex)이면 차단, 1px 중립 hairline·hr·accent-color 는 허용.
+캐논 사본 `~/.claude/qa-canon/no_horizontal_accent_gate.sh` 도 같이 뒀다.
+자체검증: 위반 주입 exit 2, 복원 exit 0.
+
+**재발 방지 규칙**: 디자인 금지 규칙은 산문으로 끝내지 않는다. 세로/가로처럼 대칭인
+규칙은 한쪽만 게이트로 만들면 다른 쪽으로 새어 나온다. 그리고 리포 게이트는 캐논
+스크립트를 shell out 하지 말고 자체 구현한다 — `~/.claude` 는 CI 에 없다(VN-CI-01).
+
+### VN-DESIGN-03 — AB 하이라이트 썸네일 전량 누락 (2026-08-13)
+
+**증상**: VIP 카드 이미지 영역이 실제 썸네일 대신 "VOIDNEWS+회사명" 플레이스홀더로 렌더.
+08a·07c 하이라이트의 `thumbnail` 필드가 각각 0개였다.
+
+**원인**: `inject-thumbnails.mjs` 가 AB 파일에서 `indent <= 4` 인 title 을 "회차 제목"으로
+보고 건너뛰었는데, top-level 의 `const x = post({ title: ... })` 도 같은 들여쓰기라 함께
+걸러졌다. 주차 파일은 카드가 깊게 중첩돼 있어 이 버그가 드러나지 않았다.
+
+**수정**: 들여쓰기 대신 회차 객체에만 있는 키(`highlights`/`editorsPicks`/`coveredWeeks`/
+`announceDate`)로 판별하게 바꿨다. 재실행 결과 08a 7건·07c 11건 주입, 08a 하이라이트 5장
+전부 썸네일 확보(missing 0).
+
+**재발 방지 규칙**: 구조 판별에 들여쓰기를 쓰지 않는다. 같은 깊이에 다른 의미의 노드가
+오면 조용히 누락된다. 고유 키로 판별한다.

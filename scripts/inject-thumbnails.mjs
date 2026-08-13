@@ -254,8 +254,14 @@ async function processFile(file, kind) {
     const m = lines[i].match(titleRe);
     if (!m) continue;
     const indent = m[1];
-    // SKIP top-level edition title (indent <= 4)
-    if (kind === "ab" && indent.length <= 4) continue;
+    // 회차 객체 자신의 title 만 건너뛴다. 들여쓰기로 판별하면 top-level 의
+    // post({...}) 상수까지 같이 걸러져 AB 하이라이트가 썸네일 없이 남는다
+    // (08a·07c 하이라이트 전부 0개였고 카드가 VOIDNEWS 플레이스홀더로 렌더됐다).
+    // 회차 객체에만 있는 highlights/editorsPicks 키로 판별한다.
+    if (kind === "ab" && indent.length <= 4) {
+      const w = lines.slice(Math.max(0, i - 12), i + 12).join("\n");
+      if (/\n\s{0,4}(highlights|editorsPicks|coveredWeeks|announceDate):/.test(w)) continue;
+    }
     // backward: enclosing {
     let bal = 0, startIdx = -1;
     for (let j = i - 1; j >= 0; j--) {
