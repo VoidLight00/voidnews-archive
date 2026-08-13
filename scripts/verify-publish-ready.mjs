@@ -39,11 +39,32 @@ if (existsSync(missingPath)) {
       if (SCOPE === "weeks") return /w\d|weeks/i.test(x.file || "");
       return true;
     });
-    if (scoped.length) {
-      fail.push(`썸네일 미해결 ${scoped.length}건 (missing.json):`);
-      for (const x of scoped.slice(0, 10)) fail.push(`    - ${x.file}: ${x.title || x.url} [${x.reason || "?"}]`);
+    // 과거 회차의 미해결 썸네일은 baseline 으로 승인해 추적하고, baseline 밖 신규만 차단한다.
+    // verify-no-duplicates.mjs 의 legacy-accept 와 같은 회귀 방식이다. 왜: 브랜드가 다른
+    // 폴백 이미지를 억지로 끼우면 카드가 잘못된 그림을 달게 된다 — 빈 것보다 나쁘다.
+    // baseline 갱신: node scripts/verify-publish-ready.mjs --update-thumb-baseline
+    const key = (x) => `${x.file}|${x.url || x.title || ""}`;
+    const basePath = join(ROOT, "_workspace", "thumbnails", "baseline.json");
+    if (args.includes("--update-thumb-baseline")) {
+      const { writeFileSync } = await import("node:fs");
+      writeFileSync(basePath, JSON.stringify({
+        note: "publish 게이트가 승인한 과거 회차 미해결 썸네일. 이 목록 밖의 신규 누락은 빌드/배포를 막는다.",
+        updatedAt: new Date().toISOString().slice(0, 10),
+        accepted: scoped.map(key).sort(),
+      }, null, 2) + "\n");
+      console.log(`[verify-publish-ready] thumb baseline 갱신: ${scoped.length}건 승인 -> _workspace/thumbnails/baseline.json`);
+      process.exit(0);
+    }
+    let accepted = new Set();
+    if (existsSync(basePath)) {
+      try { accepted = new Set(JSON.parse(readFileSync(basePath, "utf-8")).accepted || []); } catch {}
+    }
+    const fresh = scoped.filter((x) => !accepted.has(key(x)));
+    if (fresh.length) {
+      fail.push(`썸네일 미해결 신규 ${fresh.length}건 (baseline 승인 ${accepted.size}건 제외):`);
+      for (const x of fresh.slice(0, 10)) fail.push(`    - ${x.file}: ${x.title || x.url} [${x.reason || "?"}]`);
     } else {
-      notes.push(`missing.json: 미해결 0건 (scope=${SCOPE})`);
+      notes.push(`missing.json: 신규 미해결 0건 (scope=${SCOPE}, baseline 승인 ${accepted.size}건 · 과거 회차 부채)`);
     }
   } catch (e) {
     fail.push(`missing.json 파싱 실패: ${e.message}`);

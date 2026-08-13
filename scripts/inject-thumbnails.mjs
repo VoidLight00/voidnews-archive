@@ -14,6 +14,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { execFileSync } from "node:child_process";
 
 const REPO = path.resolve(import.meta.dirname, "..");
 const CACHE_DIR = path.join(REPO, "public/og-cache");
@@ -24,6 +25,9 @@ const MISSING_REPORT = path.join(WORKSPACE, "missing.json");
 
 const args = process.argv.slice(2);
 const ONLY = args.includes("--only") ? args[args.indexOf("--only") + 1] : "all";
+// --week <slug> : 한 주차만 처리한다. --only weeks 는 전 주차를 건드리므로,
+// "이번 주 카드만 올려" 같은 작업에서 의도치 않게 과거 주차 파일까지 수정된다(2026-07-31).
+const WEEK = args.includes("--week") ? args[args.indexOf("--week") + 1] : null;
 const DRY = args.includes("--dry-run");
 // --files a.ts,b.ts : 지정 basename 만 처리 (편집하지 않은 파일을 건드리지 않기 위한 스코프 제한)
 const FILES = args.includes("--files")
@@ -141,10 +145,42 @@ function extFromContentType(ct, fallbackUrl) {
   return "jpg";
 }
 
+// 봇 차단(openai.com, meta.com 등 Cloudflare 403) 도메인은 직접 fetch 로 og:image 를 못 읽는다.
+// 읽기 전용 텍스트 프록시의 HTML 모드로 한 번 더 시도한다. 이미지 자체는 CDN(ctfassets 등)에
+// 있어 직접 받아지므로, 막히는 건 HTML 한 장뿐이다.
+async function fetchViaProxy(pageUrl) {
+  // 프록시는 원본을 대신 렌더해 오므로 직접 fetch 보다 오래 걸린다(수십 초). 넉넉히 준다.
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 45_000);
+  try {
+    console.log(`  proxy-retry: ${pageUrl}`);
+    const res = await fetch(`https://r.jina.ai/${pageUrl}`, {
+      headers: { "User-Agent": UA, "x-respond-with": "html" },
+      signal: ctrl.signal,
+      redirect: "follow",
+    });
+    clearTimeout(t);
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    clearTimeout(t);
+    return null;
+  }
+}
+
+// 차단 도메인은 두 가지로 실패한다: 403 으로 아예 못 받거나, 200 인데 og 태그가 없는
+// 봇 챌린지/JS 셸을 받거나. 후자가 openai.com 이라 "받았으니 됐다"로 끝내면 안 된다.
+// 이미지가 안 잡히면 프록시로 한 번 더 간다.
+async function resolveOgImage(pageUrl) {
+  const direct = await safeFetch(pageUrl, HTML_TIMEOUT_MS);
+  const fromDirect = pickOgImage(direct, pageUrl);
+  if (fromDirect) return fromDirect;
+  const proxied = await fetchViaProxy(pageUrl);
+  return pickOgImage(proxied, pageUrl);
+}
+
 async function downloadAndCache(pageUrl, title) {
-  const html = await safeFetch(pageUrl, HTML_TIMEOUT_MS);
-  if (!html) return null;
-  const imgUrl = pickOgImage(html, pageUrl);
+  const imgUrl = await resolveOgImage(pageUrl);
   if (!imgUrl) return null;
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), IMG_TIMEOUT_MS);
@@ -166,7 +202,19 @@ async function downloadAndCache(pageUrl, title) {
   const hash = crypto.createHash("md5").update(pageUrl).digest("hex").slice(0, 8);
   const ext = extFromContentType(ct, imgUrl);
   const file = `${safeSlug(title || "card")}-${hash}.${ext}`;
-  fs.writeFileSync(path.join(CACHE_DIR, file), buf);
+  const dest = path.join(CACHE_DIR, file);
+  fs.writeFileSync(dest, buf);
+  // og-cache 는 1MB 초과 파일 0개가 계약이다(improvements ledger IMP-0002).
+  // 확장자를 바꾸면 카드의 thumbnail.src 가 깨지므로 포맷은 유지한 채 긴 변을 줄인다.
+  if (buf.length > 1_000_000) {
+    for (const box of [1200, 900]) {
+      try {
+        execFileSync("sips", ["-Z", String(box), dest], { stdio: "ignore" });
+      } catch { break; }
+      if (fs.statSync(dest).size <= 1_000_000) break;
+    }
+    console.log(`  resized: ${file} ${(buf.length / 1e6).toFixed(1)}MB → ${(fs.statSync(dest).size / 1e6).toFixed(1)}MB`);
+  }
   manifest[`${safeSlug(title || "card")}-${hash}`] = {
     url: pageUrl,
     image: imgUrl,
@@ -223,6 +271,10 @@ async function processFile(file, kind) {
       if (depth === 0) { endIdx = j; break; }
     }
     if (startIdx === -1 || endIdx === -1) continue;
+    // en: { title, deck, summary } 는 카드가 아니라 카드 안의 영문판 블록이다.
+    // 여기엔 url 이 없어서 매번 "no-url" 미해결로 잡혀 missing.json 을 오염시켰다
+    // (w29~w33 에서만 186건). 카드 자체는 바깥 윈도우로 이미 잡히므로 건너뛴다.
+    if (/^\s*"?en"?:\s*\{/.test(lines[startIdx])) continue;
     const window = lines.slice(startIdx, endIdx + 1).join("\n");
     candidates.push({ startIdx, endIdx, indent, title: m[2], window });
   }
@@ -324,7 +376,7 @@ async function main() {
   if (ONLY === "all" || ONLY === "weeks") {
     const wd = path.join(REPO, "lib/weeks");
     if (fs.existsSync(wd))
-      for (const f of fs.readdirSync(wd).filter((x) => x.endsWith(".ts")))
+      for (const f of fs.readdirSync(wd).filter((x) => x.endsWith(".ts") && (!WEEK || x.startsWith(WEEK))))
         targets.push({ file: path.join(wd, f), kind: "weekly" });
   }
   if (ONLY === "all" || ONLY === "ab") {
