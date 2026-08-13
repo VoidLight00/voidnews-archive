@@ -1799,5 +1799,1571 @@
     "provenance": "official-repository-asset",
     "sha256": "8a263d1574c89dfe97eba65f6e99f3a737c2bd02a7875a07864cc630bc40e07d",
     "derivedFrom": "postmortem-claude-skill-architecture.png; cwebp quality 82"
+  },
+  "논문을-읽고-실험을-복제한다-연구용-오픈소스-ai-에이전트-feynman-232fbe59": {
+    "url": "https://github.com/getcompanion-ai/feynman",
+    "image": "https://opengraph.githubassets.com/0c133260cf9e28a08dbd394a57e710b9d1d9f875b3b85296b8b04bface66e47e/companion-inc/feynman",
+    "file": "논문을-읽고-실험을-복제한다-연구용-오픈소스-ai-에이전트-feynman-232fbe59.png",
+    "ts": 1785430875649
+  },
+  "경험에서-스킬을-만드는-자가-학습-에이전트-hermes-agent-b4c3cea0": {
+    "url": "https://x.com/NousResearch/status/2026758996107898954",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2026756064591376384/img/GzxCCSwste5osO5v.jpg",
+    "file": "경험에서-스킬을-만드는-자가-학습-에이전트-hermes-agent-b4c3cea0.jpg",
+    "ts": 1785430877370
+  },
+  "yc-ceo가-직접-공개한-claude-code-스킬셋-gstack-75a8071b": {
+    "url": "https://x.com/garrytan/status/2032014570118922347",
+    "image": "https://pbs.twimg.com/media/HDMpiWkbsAApqOl.jpg:large",
+    "file": "yc-ceo가-직접-공개한-claude-code-스킬셋-gstack-75a8071b.jpg",
+    "ts": 1785430878672
+  },
+  "ai-쓰는-사람들끼리-격차가-벌어지고-있다-anthropic-경제-지수--fe759b80": {
+    "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/5ad929225a8b9b6c5dbac7ed039734fb2dd7a84c-1200x630.jpg",
+    "file": "ai-쓰는-사람들끼리-격차가-벌어지고-있다-anthropic-경제-지수--fe759b80.jpg",
+    "ts": 1785430880394
+  },
+  "한국은-ai를-가장-잘-쓰면서-패배할-수-있다-문제는-실력이-아니다-cfb872e7": {
+    "url": "https://ethancho12.substack.com/p/ai-d53",
+    "image": "https://substackcdn.com/image/fetch/$s_!SzA7!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c5f4ab5-a765-4ced-b8d5-8a3ff40fc85c_1500x844.jpeg",
+    "file": "한국은-ai를-가장-잘-쓰면서-패배할-수-있다-문제는-실력이-아니다-cfb872e7.jpg",
+    "ts": 1785430880979
+  },
+  "claude-code-고수들의-비밀-5가지-당신이-매번-시간-낭비하는-이-ac55d1b1": {
+    "url": "https://x.com/AnthropicAI/status/2036944806317088921",
+    "image": "https://pbs.twimg.com/card_img/2081205899603968000/S3Q5JvK1?format=png&amp;name=orig",
+    "file": "claude-code-고수들의-비밀-5가지-당신이-매번-시간-낭비하는-이-ac55d1b1.png",
+    "ts": 1785430882552
+  },
+  "93-가-무조건-y를-눌렀다-anthropic이-자율-모드를-만든-이유-ac55d1b1": {
+    "url": "https://x.com/AnthropicAI/status/2036944806317088921",
+    "image": "https://pbs.twimg.com/card_img/2081205899603968000/S3Q5JvK1?format=png&amp;name=orig",
+    "file": "93-가-무조건-y를-눌렀다-anthropic이-자율-모드를-만든-이유-ac55d1b1.png",
+    "ts": 1785430883647
+  },
+  "claude-code-이제-혼자-결정한다-auto-mode-공식-출시-00a1f67d": {
+    "url": "https://x.com/claudeai/status/2036503582166393240",
+    "image": "https://pbs.twimg.com/media/HEMdixybkAAgCdV.jpg",
+    "file": "claude-code-이제-혼자-결정한다-auto-mode-공식-출시-00a1f67d.jpg",
+    "ts": 1785430884964
+  },
+  "obsidian-노트-안에서-claude-code를-실행한다-claudi-e5aa0b1d": {
+    "url": "https://x.com/tom_doerr/status/2036564539748049212",
+    "image": "https://pbs.twimg.com/media/HENUqCZXQAAsQcH.jpg:large",
+    "file": "obsidian-노트-안에서-claude-code를-실행한다-claudi-e5aa0b1d.jpg",
+    "ts": 1785430886633
+  },
+  "승인-없이-스스로-판단하는-claude-auto-mode-안전-설계-원리-ac55d1b1": {
+    "url": "https://x.com/AnthropicAI/status/2036944806317088921",
+    "image": "https://pbs.twimg.com/card_img/2081205899603968000/S3Q5JvK1?format=png&amp;name=orig",
+    "file": "승인-없이-스스로-판단하는-claude-auto-mode-안전-설계-원리-ac55d1b1.png",
+    "ts": 1785430888440
+  },
+  "anthropic이-공개한-에이전트-팀-운영법-장기-앱-개발의-새-공식-c0ecf553": {
+    "url": "https://x.com/AnthropicAI/status/2036481033621623056",
+    "image": "https://pbs.twimg.com/card_img/2080929124319997952/wj297I8I?format=jpg&amp;name=orig",
+    "file": "anthropic이-공개한-에이전트-팀-운영법-장기-앱-개발의-새-공식-c0ecf553.jpg",
+    "ts": 1785430890165
+  },
+  "computer-use-다음은-phone-use-claude가-스마트폰을-a6a869ed": {
+    "url": "https://x.com/claudeai/status/2036195789601374705",
+    "image": "https://pbs.twimg.com/media/HEIFrMWaIAIHvE0.jpg",
+    "file": "computer-use-다음은-phone-use-claude가-스마트폰을-a6a869ed.jpg",
+    "ts": 1785430892341
+  },
+  "claude가-내-맥을-직접-클릭한다-macos-컴퓨터-제어-첫-데모-a6a869ed": {
+    "url": "https://x.com/claudeai/status/2036195789601374705",
+    "image": "https://pbs.twimg.com/media/HEIFrMWaIAIHvE0.jpg",
+    "file": "claude가-내-맥을-직접-클릭한다-macos-컴퓨터-제어-첫-데모-a6a869ed.jpg",
+    "ts": 1785430893541
+  },
+  "anthropic이-연구-블로그를-열었다-이제-논문도-직접-읽는다-b0327102": {
+    "url": "https://x.com/AnthropicAI/status/2036179042081317370",
+    "image": "https://pbs.twimg.com/card_img/2081846655976890368/hFSbaWVk?format=jpg&amp;name=orig",
+    "file": "anthropic이-연구-블로그를-열었다-이제-논문도-직접-읽는다-b0327102.jpg",
+    "ts": 1785430895076
+  },
+  "당신이-몰랐던-claude-code-고수들의-50가지-사용법-e92f46d4": {
+    "url": "https://www.builder.io/blog/claude-code-tips-best-practices",
+    "image": "https://cdn.builder.io/api/v1/image/assets/YJIGb4i01jvw0SRdL5Bt/b5ba31fce8cc4674b37382264bc667c4?width=1200",
+    "file": "당신이-몰랐던-claude-code-고수들의-50가지-사용법-e92f46d4.png",
+    "ts": 1785430896303
+  },
+  "claude-code에-외부-도구를-연결하는-법-mcp-서버-가이드-640dc3f4": {
+    "url": "https://builder.io/blog/claude-code-mcp-servers",
+    "image": "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F2f4d589d0b6e408aa1be39b5d2429b48?width=1200",
+    "file": "claude-code에-외부-도구를-연결하는-법-mcp-서버-가이드-640dc3f4.jpg",
+    "ts": 1785430897233
+  },
+  "손-안에서-ai-에이전트를-지휘한다-claude-dispatch-모바일--5add4bf1": {
+    "url": "https://x.com/felixrieseberg/status/2034005731457044577",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2034004291279851522/img/sLq3Bw_NNnssdjvW.jpg",
+    "file": "손-안에서-ai-에이전트를-지휘한다-claude-dispatch-모바일--5add4bf1.jpg",
+    "ts": 1785430898510
+  },
+  "chatgpt에-갤러리가-생겼다-ai-이미지-히스토리-관리-탭-추가-9df6b54f": {
+    "url": "https://x.com/OpenAI/status/2036183180219392103",
+    "image": "https://pbs.twimg.com/media/HEH5z9daIAAqFOq.jpg:large",
+    "file": "chatgpt에-갤러리가-생겼다-ai-이미지-히스토리-관리-탭-추가-9df6b54f.jpg",
+    "ts": 1785430902237
+  },
+  "python-생태계를-인수했다-openai의-astral-흡수와-그-의미-1ba70278": {
+    "url": "https://x.com/OpenAINewsroom/status/2034616934671724639",
+    "image": "https://pbs.twimg.com/card_img/2080603340224729088/-114UwMQ?format=jpg&amp;name=orig",
+    "file": "python-생태계를-인수했다-openai의-astral-흡수와-그-의미-1ba70278.jpg",
+    "ts": 1785430904296
+  },
+  "작고-빠른-gpt-5-4-mini-저비용-추론의-새-선택지-d8b55541": {
+    "url": "https://x.com/OpenAI/status/2033953592424731072",
+    "image": "https://pbs.twimg.com/media/HDoN4PhasAAinj_.png:large",
+    "file": "작고-빠른-gpt-5-4-mini-저비용-추론의-새-선택지-d8b55541.png",
+    "ts": 1785430905370
+  },
+  "llm의-메모리-병목을-뚫는다-google-turboquant-공개-7212e038": {
+    "url": "https://x.com/GoogleResearch/status/2036533564158910740",
+    "image": "https://pbs.twimg.com/tweet_video_thumb/HEM4c4CaIAAUm55.jpg",
+    "file": "llm의-메모리-병목을-뚫는다-google-turboquant-공개-7212e038.jpg",
+    "ts": 1785430906553
+  },
+  "3분짜리-프로-음악을-ai가-만든다-lyria-3-pro가-바꾸는-창작의-9dfadafb": {
+    "url": "https://x.com/GoogleDeepMind/status/2036836176233918707",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2036828843244425216/img/9qUMQ-Jgzi2wPNFO.jpg",
+    "file": "3분짜리-프로-음악을-ai가-만든다-lyria-3-pro가-바꾸는-창작의-9dfadafb.jpg",
+    "ts": 1785430907635
+  },
+  "뇌와-몸의-결합-deepmind-알고리즘이-로봇-몸통을-얻다-4f26ec5d": {
+    "url": "https://x.com/demishassabis/status/2036726283464581343",
+    "image": "https://pbs.twimg.com/profile_images/1990472620614053888/xrAu0wQL_200x200.jpg",
+    "file": "뇌와-몸의-결합-deepmind-알고리즘이-로봇-몸통을-얻다-4f26ec5d.jpg",
+    "ts": 1785430908793
+  },
+  "더-작고-더-빠른-gemini-모바일에서-달리는-flash-lite-1cc3982b": {
+    "url": "https://x.com/GoogleDeepMind/status/2028872381477929185",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2028860368622161920/img/UuxkKeNRgJuO7bsL.jpg",
+    "file": "더-작고-더-빠른-gemini-모바일에서-달리는-flash-lite-1cc3982b.jpg",
+    "ts": 1785430910029
+  },
+  "말로-ui를-만든다-google-stitch에-음성-입력이-추가됐다-817529ae": {
+    "url": "https://x.com/stitchbygoogle/status/2034332859058794796",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2034322498465288192/img/OaoF4NI-byrfQF-7.jpg",
+    "file": "말로-ui를-만든다-google-stitch에-음성-입력이-추가됐다-817529ae.jpg",
+    "ts": 1785430911135
+  },
+  "gemini-하나로-풀스택을-짠다-ai-studio-바이브-코딩-데모-ea743660": {
+    "url": "https://x.com/GoogleAI/status/2034655173256122580",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2034649667808694272/img/vRGU6TmDozWQkpG2.jpg",
+    "file": "gemini-하나로-풀스택을-짠다-ai-studio-바이브-코딩-데모-ea743660.jpg",
+    "ts": 1785430912481
+  },
+  "외부로-나가지-않는-cursor-프라이빗-클라우드-에이전트-완성-fdaf21be": {
+    "url": "https://cursor.com",
+    "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/opengraph-default.png",
+    "file": "외부로-나가지-않는-cursor-프라이빗-클라우드-에이전트-완성-fdaf21be.png",
+    "ts": 1785430912661
+  },
+  "파일-수백-개를-한-번에-cursor-composer-2-대규모-리팩토링-02cc3eed": {
+    "url": "https://x.com/cursor_ai/status/2034668943676244133",
+    "image": "https://pbs.twimg.com/media/HDyS34HbAAAEOoq.png:large",
+    "file": "파일-수백-개를-한-번에-cursor-composer-2-대규모-리팩토링-02cc3eed.png",
+    "ts": 1785430913851
+  },
+  "elon이-반도체-공장을-짓는다-xai-terafab-두-번째-공개-422d9da1": {
+    "url": "https://x.com/SpaceX/status/2035519125284380672",
+    "image": "https://pbs.twimg.com/profile_images/1697749409851985920/HbrI04tM_200x200.jpg",
+    "file": "elon이-반도체-공장을-짓는다-xai-terafab-두-번째-공개-422d9da1.jpg",
+    "ts": 1785430915545
+  },
+  "ai-반도체를-직접-만들겠다-xai-terafab-첫-발표-b8bbe927": {
+    "url": "https://x.com/elonmusk/status/2032814398033768737",
+    "image": "https://pbs.twimg.com/profile_images/2053244804520427520/m8mdWZCG_200x200.jpg",
+    "file": "ai-반도체를-직접-만들겠다-xai-terafab-첫-발표-b8bbe927.jpg",
+    "ts": 1785430916814
+  },
+  "agi를-위한-칩을-함께-만든다-meta와-arm-cpu-협력-전면-해부-b89713f6": {
+    "url": "https://x.com/Meta_Engineers/status/2036494803723043156",
+    "image": "https://pbs.twimg.com/media/HEMVFIIWQAAaR8z.jpg:large",
+    "file": "agi를-위한-칩을-함께-만든다-meta와-arm-cpu-협력-전면-해부-b89713f6.jpg",
+    "ts": 1785430921216
+  },
+  "클라우드-ai를-독립시킨다-meta의-자체-ai-칩-전략-b89713f6": {
+    "url": "https://x.com/Meta_Engineers/status/2036494803723043156",
+    "image": "https://pbs.twimg.com/media/HEMVFIIWQAAaR8z.jpg:large",
+    "file": "클라우드-ai를-독립시킨다-meta의-자체-ai-칩-전략-b89713f6.jpg",
+    "ts": 1785430922064
+  },
+  "생각하면서-그린다-luma-uni-1이-바꾼-이미지-생성의-규칙-42d6b984": {
+    "url": "https://x.com/LumaLabsAI/status/2036107826498544110",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2036107041090203648/img/5r_tR97YkDtRyVzT.jpg",
+    "file": "생각하면서-그린다-luma-uni-1이-바꾼-이미지-생성의-규칙-42d6b984.jpg",
+    "ts": 1785430923236
+  },
+  "5배-빠르고-2k-해상도-midjourney-v8이-기준을-다시-썼다-09bfcd8b": {
+    "url": "https://x.com/midjourney/status/2034015403542974793",
+    "image": "https://pbs.twimg.com/media/HDpFZeubEAAjAHI.jpg:large",
+    "file": "5배-빠르고-2k-해상도-midjourney-v8이-기준을-다시-썼다-09bfcd8b.jpg",
+    "ts": 1785430924715
+  },
+  "ai-음악을-팔-수-있게-됐다-elevenlabs-음악-마켓플레이스-89b53493": {
+    "url": "https://x.com/elevenlabsio/status/1952754097976721737",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/1952731755359739905/img/m7M8E5_pBhHAnzxw.jpg",
+    "file": "ai-음악을-팔-수-있게-됐다-elevenlabs-음악-마켓플레이스-89b53493.jpg",
+    "ts": 1785430927695
+  },
+  "여러-장면을-한-번에-연결한다-runway-multi-shot-app-출-6fabc610": {
+    "url": "https://x.com/runwayml/status/2033912903187722713",
+    "image": "https://pbs.twimg.com/card_img/2080658234365644801/-_GPxWXR?format=jpg&amp;name=orig",
+    "file": "여러-장면을-한-번에-연결한다-runway-multi-shot-app-출-6fabc610.jpg",
+    "ts": 1785430928737
+  },
+  "한국판-오픈ai가-온다-카카오-kanana-o-api-베타-공개-ca095fc3": {
+    "url": "https://api-omni.kanana.ai/",
+    "image": "https://t1.kakaocdn.net/brandtool/kanana-o-api/img_og_260304.png",
+    "file": "한국판-오픈ai가-온다-카카오-kanana-o-api-베타-공개-ca095fc3.png",
+    "ts": 1785430929313
+  },
+  "디자인에서-코드로-바로-copilot이-figma-디자인을-직접-읽는다-ea50140e": {
+    "url": "https://x.com/figma/status/2036434766661296602",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2036429643713323008/img/s6Wec1hWII4QzyQR.jpg",
+    "file": "디자인에서-코드로-바로-copilot이-figma-디자인을-직접-읽는다-ea50140e.jpg",
+    "ts": 1785430930526
+  },
+  "agi를-측정하는-새-잣대-arc-agi-3-공개-a1b18357": {
+    "url": "https://x.com/fchollet/status/2036863769981403497",
+    "image": "https://pbs.twimg.com/profile_images/2006806326140350470/Kd5oZv-f_200x200.jpg",
+    "file": "agi를-측정하는-새-잣대-arc-agi-3-공개-a1b18357.jpg",
+    "ts": 1785430931529
+  },
+  "gmail-docs-sheets-meet-google-전-제품에-gemi-3fc4e2b8": {
+    "url": "https://x.com/GoogleWorkspace/status/1879530133003886946",
+    "image": "https://pbs.twimg.com/media/GhVusYyXQAErwur.jpg",
+    "file": "gmail-docs-sheets-meet-google-전-제품에-gemi-3fc4e2b8.jpg",
+    "ts": 1785430932623
+  },
+  "ai가-증상을-분석한다-perplexity-computer의-의료-데이터-9f1ec8ec": {
+    "url": "https://x.com/perplexity_ai/status/2034668608375382346",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2034668487461961728/img/B4Xw9AfnHBmJiriF.jpg",
+    "file": "ai가-증상을-분석한다-perplexity-computer의-의료-데이터-9f1ec8ec.jpg",
+    "ts": 1785430934091
+  },
+  "ai가-figma-캔버스에-직접-그린다-figma-mcp-첫-데모-ea50140e": {
+    "url": "https://x.com/figma/status/2036434766661296602",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2036429643713323008/img/s6Wec1hWII4QzyQR.jpg",
+    "file": "ai가-figma-캔버스에-직접-그린다-figma-mcp-첫-데모-ea50140e.jpg",
+    "ts": 1785430935220
+  },
+  "말로-자동화를-만든다-n8n의-mcp-자연어-워크플로우-e28ebcc6": {
+    "url": "https://synta.io/blog/n8n-mcp-integration",
+    "image": "https://cdn.sanity.io/images/jincnh50/production/99d4cfbe76ac8202d5f9b3b3db107417ce5374fb-1408x768.png?rect=0,15,1408,739&amp;w=1200&amp;h=630&amp;fit=crop",
+    "file": "말로-자동화를-만든다-n8n의-mcp-자연어-워크플로우-e28ebcc6.png",
+    "ts": 1785430936624
+  },
+  "gpt-5-5-코드네임-spud-출시-임박-polymarket-4-23--3051eeed": {
+    "url": "https://polymarket.com/event/gpt-5pt5-released-by",
+    "image": "https://polymarket.com/api/og?eslug=gpt-5pt5-released-by&amp;tid=1785428591270",
+    "file": "gpt-5-5-코드네임-spud-출시-임박-polymarket-4-23--3051eeed.png",
+    "ts": 1785430937871
+  },
+  "anthropic-claude-code-quality-포스트모템-3월-4-2ab8741a": {
+    "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/3f522820d47355885631ebda60e5d1f3e5c0fbc2-2000x1050.heif",
+    "file": "anthropic-claude-code-quality-포스트모템-3월-4-2ab8741a.png",
+    "ts": 1785430939766
+  },
+  "anthropic-project-deal-claude가-직원-대신-사내--0f41715c": {
+    "url": "https://www.anthropic.com/features/project-deal",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/701946d96f607f199fd7d65c8f5e2f50bf9336e4-1200x630.png",
+    "file": "anthropic-project-deal-claude가-직원-대신-사내--0f41715c.png",
+    "ts": 1785430940170
+  },
+  "deepseek-v4-preview-오픈소스-공개-1-6t-moe-1m--0c46f167": {
+    "url": "https://api-docs.deepseek.com/news/news260424",
+    "image": "https://api-docs.deepseek.com/img/deepseek-social-card.jpeg",
+    "file": "deepseek-v4-preview-오픈소스-공개-1-6t-moe-1m--0c46f167.jpg",
+    "ts": 1785430940800
+  },
+  "중국-kinetix-ai-kai-휴머노이드-로봇-공개-115-dof-18-fc5a668e": {
+    "url": "https://www.humanoidsdaily.com/news/kinetix-ai-unveils-kai-a-115-dof-humanoid-aiming-for-physical-intelligence",
+    "image": "https://7jopx6ax2qhwmgqx.public.blob.vercel-storage.com/images/kai-on-stage.webp",
+    "file": "중국-kinetix-ai-kai-휴머노이드-로봇-공개-115-dof-18-fc5a668e.webp",
+    "ts": 1785430945173
+  },
+  "anthropic-claude-code-git-commit에-opencl-a21d210f": {
+    "url": "https://github.com/anthropics/claude-code/issues/53262",
+    "image": "https://opengraph.githubassets.com/635f0f70973b9478febdc589c819bcacf7534de948fcced6e8d60a06b774e1a1/anthropics/claude-code/issues/53262",
+    "file": "anthropic-claude-code-git-commit에-opencl-a21d210f.png",
+    "ts": 1785430946507
+  },
+  "anthropic-claude-jupiter-v1-p-red-team-p-3e4d57e0": {
+    "url": "https://x.com/testingcatalog/status/2049896926997369194",
+    "image": "https://pbs.twimg.com/media/HHKxZh_WcAA3tgm.jpg:large",
+    "file": "anthropic-claude-jupiter-v1-p-red-team-p-3e4d57e0.jpg",
+    "ts": 1785430949950
+  },
+  "demis-hassabis-방한-서울-google-ai-campus-해외-4e88b886": {
+    "url": "https://thenextweb.com/news/google-deepmind-ai-campus-seoul",
+    "image": "https://media.thenextweb.com/2026/04/Google-DeepMind.avif",
+    "file": "demis-hassabis-방한-서울-google-ai-campus-해외-4e88b886.jpg",
+    "ts": 1785430951354
+  },
+  "google-gemini-pdf-word-excel-docs-sheets-f8466840": {
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/generate-files-in-gemini/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/You_can_now_easily_generate_files_in_Gemini.max-1440x810.png",
+    "file": "google-gemini-pdf-word-excel-docs-sheets-f8466840.png",
+    "ts": 1785430952262
+  },
+  "google-photos-wardrobe-사진-라이브러리에서-자동-디지털-0f305895": {
+    "url": "https://blog.google/products-and-platforms/products/photos/google-photos-wardrobe-feature/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/A80_Google_Photos_wardrobe_042426_Final.width-1300.png",
+    "file": "google-photos-wardrobe-사진-라이브러리에서-자동-디지털-0f305895.png",
+    "ts": 1785430953093
+  },
+  "google-cosmo-온디바이스-gemini-nano-기반-프로액티브--27567567": {
+    "url": "https://x.com/minchoi/status/2050290896382353432",
+    "image": "https://pbs.twimg.com/media/HHQYditW0AAN79l.jpg:large",
+    "file": "google-cosmo-온디바이스-gemini-nano-기반-프로액티브--27567567.jpg",
+    "ts": 1785430955150
+  },
+  "gemini-omni-비디오-생성-leak-powered-by-omni--a09a6026": {
+    "url": "https://x.com/testingcatalog/status/2050705594458292496",
+    "image": "https://pbs.twimg.com/media/HHWQRV3WsAAiE-E.jpg:large",
+    "file": "gemini-omni-비디오-생성-leak-powered-by-omni--a09a6026.jpg",
+    "ts": 1785430957082
+  },
+  "gemini-3-2-flash-a-b-테스트-ajax-hercules-h-0246c064": {
+    "url": "https://www.geeky-gadgets.com/google-gemini-flash-leak-lm-arena/",
+    "image": "https://www.geeky-gadgets.com/wp-content/uploads/2026/05/gemini-flash-leak.jpg",
+    "file": "gemini-3-2-flash-a-b-테스트-ajax-hercules-h-0246c064.jpg",
+    "ts": 1785430957642
+  },
+  "nvidia-nemotron-3-nano-omni-30b-a3b-오픈-멀-40ece0c1": {
+    "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/",
+    "image": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/04/Nemotron-3-Nano-Omni.webp",
+    "file": "nvidia-nemotron-3-nano-omni-30b-a3b-오픈-멀-40ece0c1.webp",
+    "ts": 1785430959699
+  },
+  "microsoft-openai-독점-종료-agi-조항-폐기-aws-bed-4bbb320b": {
+    "url": "https://www.cnbc.com/2026/04/28/openai-brings-models-to-aws-after-ending-exclusivity-with-microsoft.html",
+    "image": "https://image.cnbcfm.com/api/v1/image/108298439-1777392364603-gettyimages-2270257492-myv05072_0pwv4wqk.jpeg?v=1777392668&amp;w=1920&amp;h=1080",
+    "file": "microsoft-openai-독점-종료-agi-조항-폐기-aws-bed-4bbb320b.jpg",
+    "ts": 1785430961412
+  },
+  "github-copilot-usage-based-billing-ai-코딩-0b6dce68": {
+    "url": "https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/",
+    "image": "https://github.blog/wp-content/uploads/2026/01/generic-invertocat-logo.png",
+    "file": "github-copilot-usage-based-billing-ai-코딩-0b6dce68.png",
+    "ts": 1785430963526
+  },
+  "중국-meta의-manus-인수-2b-차단-외국인-투자-금지-결정-9e9de1c3": {
+    "url": "https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html",
+    "image": "https://image.cnbcfm.com/api/v1/image/108279325-1773812817915-gettyimages-2255015559-img_4584.jpeg?v=1773812854&amp;w=1920&amp;h=1080",
+    "file": "중국-meta의-manus-인수-2b-차단-외국인-투자-금지-결정-9e9de1c3.jpg",
+    "ts": 1785430965198
+  },
+  "nulli-qwen-3-기반-동영상-자막-번역-더빙-서비스-f6993075": {
+    "url": "https://www.alibabacloud.com/blog/qwen3%E2%80%91livetranslate-real%E2%80%91time-multimodal-interpretation-%E2%80%94-see-it-hear-it-speak-it%EF%BC%81_602585",
+    "image": "https://yqintl.alicdn.com/a42f124764cef847e903112ff118e7a03652df8e.png",
+    "file": "nulli-qwen-3-기반-동영상-자막-번역-더빙-서비스-f6993075.png",
+    "ts": 1785430968594
+  },
+  "휴머노이드-로봇-댄스-영상-ai-생성-가능성이-큰-바이럴-클립-25348bf6": {
+    "url": "https://x.com/pukerrainbrow/status/2051208032873554013",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2051207971754188800/img/5kUX1PP3KdWMD1-k.jpg",
+    "file": "휴머노이드-로봇-댄스-영상-ai-생성-가능성이-큰-바이럴-클립-25348bf6.jpg",
+    "ts": 1785430970321
+  },
+  "stripe-link-ai-에이전트-결제용-디지털-지갑-oauth-spe-34b4a528": {
+    "url": "https://stripe.com/newsroom/news/sessions-2026",
+    "image": "https://images.stripeassets.com/fzn2n1nzq965/6dPmcjb8lAJ0YKPVAr7FKj/e2450447eb9739156473b7a279085873/Sessions2026.png?q=80",
+    "file": "stripe-link-ai-에이전트-결제용-디지털-지갑-oauth-spe-34b4a528.jpg",
+    "ts": 1785430973210
+  },
+  "meta-ari-assured-robot-intelligence-인수-휴-0809bbe4": {
+    "url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2195752979.jpg?resize=1200,800",
+    "file": "meta-ari-assured-robot-intelligence-인수-휴-0809bbe4.jpg",
+    "ts": 1785430974030
+  },
+  "xai-grok-imagine-agent-mode-캔버스-기반-단편-영화-5e049be7": {
+    "url": "https://www.testingcatalog.com/xai-debuts-imagine-agent-in-grok-with-open-canvas-ai-workspace/",
+    "image": "https://storage.ghost.io/c/2a/1b/2a1b1782-8506-4d7d-bf53-ad3fb52e2a0f/content/images/size/w1200/2026/04/Imagine-Grok-04-30-2026_02_24_AM.jpg",
+    "file": "xai-grok-imagine-agent-mode-캔버스-기반-단편-영화-5e049be7.jpg",
+    "ts": 1785430977556
+  },
+  "mistral-medium-3-5-128b-댄스-모델-le-chat-vi-e4fb7f65": {
+    "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+    "image": "https://mistral.ai/cms-media/api/media/file/Thumbnail-Model-Medium.jpg",
+    "file": "mistral-medium-3-5-128b-댄스-모델-le-chat-vi-e4fb7f65.jpg",
+    "ts": 1785430980183
+  },
+  "anthropic-claude-financial-services-agen-8c94bd56": {
+    "url": "https://www.anthropic.com/news/finance-agents",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Node-GraphChart&amp;backgroundColor=clay",
+    "file": "anthropic-claude-financial-services-agen-8c94bd56.png",
+    "ts": 1785430981544
+  },
+  "perplexity-computer-for-professional-fin-46a0efb0": {
+    "url": "https://x.com/perplexity_ai/status/2051693893473935372",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2051693731586420736/img/N0XXbBue5i9SRSTV.jpg",
+    "file": "perplexity-computer-for-professional-fin-46a0efb0.jpg",
+    "ts": 1785430983953
+  },
+  "pomelli-catalogs-제품-url-일괄-입력으로-캠페인-ai-포-cf9676f2": {
+    "url": "https://x.com/PomelliByGoogle/status/2051693177053340073",
+    "image": "https://pbs.twimg.com/amplify_video_thumb/2051689980515561472/img/ep-587HlAqTTlnKc.jpg",
+    "file": "pomelli-catalogs-제품-url-일괄-입력으로-캠페인-ai-포-cf9676f2.jpg",
+    "ts": 1785430985800
+  },
+  "notebooklm-mind-maps-업데이트-커스텀-프롬프트-이름-변경-22738ec0": {
+    "url": "https://x.com/NotebookLM/status/2051715594697977870",
+    "image": "https://pbs.twimg.com/tweet_video_thumb/HHkoXU8aYAAWdql.jpg",
+    "file": "notebooklm-mind-maps-업데이트-커스텀-프롬프트-이름-변경-22738ec0.jpg",
+    "ts": 1785430987711
+  },
+  "gemma-4-multi-token-prediction-mtp-draft-d5ba33cb": {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Social_Share_Image_7bOA183.width-1300.png",
+    "file": "gemma-4-multi-token-prediction-mtp-draft-d5ba33cb.png",
+    "ts": 1785430988804
+  },
+  "subquadratic-subq-12m-token-컨텍스트-풀-sub-q-114cb62a": {
+    "url": "https://subq.ai/introducing-subq",
+    "image": "https://subq.ai/images/introducing-subq.png",
+    "file": "subquadratic-subq-12m-token-컨텍스트-풀-sub-q-114cb62a.png",
+    "ts": 1785430992229
+  },
+  "openai-codex-windows에-computer-use-도입-v2-cb582535": {
+    "url": "https://developers.openai.com/codex/app/computer-use",
+    "image": "https://learn.chatgpt.com/og/docs/computer-use.png",
+    "file": "openai-codex-windows에-computer-use-도입-v2-cb582535.png",
+    "ts": 1785431020199
+  },
+  "gpt-5-5-instant-응답-스타일-업데이트와-canvas의-쓰기--c12e2675": {
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "image": "https://help.openai.com/og-image.png",
+    "file": "gpt-5-5-instant-응답-스타일-업데이트와-canvas의-쓰기--c12e2675.png",
+    "ts": 1785431021139
+  },
+  "llm-as-a-judge-평가-편향-점수는-객관적이지-않다-20a1cbfa": {
+    "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+    "image": "https://developers.openai.com/og/api/docs/guides/evaluation-best-practices.png",
+    "file": "llm-as-a-judge-평가-편향-점수는-객관적이지-않다-20a1cbfa.png",
+    "ts": 1785431024601
+  },
+  "anthropic-1년치-ai-활용-사이버-위협-mitre-att-ck--6ae2642f": {
+    "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Object-LaptopSecure&amp;backgroundColor=cactus",
+    "file": "anthropic-1년치-ai-활용-사이버-위협-mitre-att-ck--6ae2642f.png",
+    "ts": 1785431025447
+  },
+  "anthropic-project-glasswing-약-150개-조직으로--ef5fb5aa": {
+    "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/19e93d85e033d3f992b78cbce2c5a3f60709bd3b-3840x2160.jpg",
+    "file": "anthropic-project-glasswing-약-150개-조직으로--ef5fb5aa.jpg",
+    "ts": 1785431027304
+  },
+  "anthropic-sec에-s-1-초안-비공개-제출-3a733f98": {
+    "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "file": "anthropic-sec에-s-1-초안-비공개-제출-3a733f98.jpg",
+    "ts": 1785431027816
+  },
+  "workspace-studio-리스트-반복-repeat-for-each--cdbc3885": {
+    "url": "https://workspaceupdates.googleblog.com/2026/06/introducing-ability-to-loop-over-list-of-items-in-Workspace-Studio.html",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUvJ_8kl2pEAnX_GfsP5bY1iZ2A7PgSEKa2AwFvqpVKrfqqJ0TnBzFIZvzM1GN_jLHekRnqmMaIERGLsCIEUbF0GCXKSOEDN8fBF6eg0EplpMQTd6RSN05zu8dnP_mo-aYWsP3TDS5LyBAgVz7gvXiKgOX2M1wj359BxRT5DEZ-KdS3ex6tLGYJwD-158/w1200-h630-p-k-no-nu/Introducing%20the%20ability%20to%20loop%20over%20a%20list%20of%20items%20in%20Workspace%20Studio%20-%206937.png",
+    "file": "workspace-studio-리스트-반복-repeat-for-each--cdbc3885.png",
+    "ts": 1785431031542
+  },
+  "nvidia-microsoft-개인-ai-에이전트용-윈도우-pc-rtx--1d4518d5": {
+    "url": "https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark",
+    "image": "https://iprsoftwaremedia.com/219/files/202605/154ea89a7177c7d568f2f4916c7fd53a/6a1c9d873d6332761e1d64a8_nvidia-rtx-spark/nvidia-rtx-spark_597f009e-8bc6-4bfb-bdf4-04317ae69806-prv.png?v=597f009e-8bc6-4bfb-bdf4-04317ae69806",
+    "file": "nvidia-microsoft-개인-ai-에이전트용-윈도우-pc-rtx--1d4518d5.png",
+    "ts": 1785431032771
+  },
+  "nvidia-윈도우용-dgx-station-발표-책상-위-1조-파라미터--88dc4ec5": {
+    "url": "https://nvidianews.nvidia.com/news/nvidia-dgx-station-for-windows-puts-a-trillion-parameter-ai-supercomputer-on-every-enterprise-desk",
+    "image": "https://iprsoftwaremedia.com/219/files/202606/2925226fb77b72cd862a43183694bc08/6a1d11d43d6332be921d64a3_nvidia-dgx-station-for-windows/nvidia-dgx-station-for-windows_50b23c74-f4f4-4b20-ab4d-e44b21bc6909-prv.jpg?v=50b23c74-f4f4-4b20-ab4d-e44b21bc6909",
+    "file": "nvidia-윈도우용-dgx-station-발표-책상-위-1조-파라미터--88dc4ec5.jpg",
+    "ts": 1785431033468
+  },
+  "nvidia-sol-execbench-ai-생성-gpu-커널을-광속-한계-513a866b": {
+    "url": "https://research.nvidia.com/benchmarks/sol-execbench",
+    "image": "https://research.nvidia.com/benchmarks/sol-execbench/og-image.png",
+    "file": "nvidia-sol-execbench-ai-생성-gpu-커널을-광속-한계-513a866b.png",
+    "ts": 1785431034447
+  },
+  "microsoft-copilot-health-프리뷰-출시-건강-기록-웨어-9d459f06": {
+    "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2026/05/29/copilot-health-now-in-preview/",
+    "image": "https://www.microsoft.com/en-us/microsoft-copilot/blog/wp-content/uploads/2026/05/7.png",
+    "file": "microsoft-copilot-health-프리뷰-출시-건강-기록-웨어-9d459f06.png",
+    "ts": 1785431036937
+  },
+  "microsoft-365-copilot-새-디자인-공개-프롬프트-입력창을-8a8be1f2": {
+    "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/05/28/introducing-a-new-design-for-microsoft-365-copilot/",
+    "image": "https://www.microsoft.com/en-us/microsoft-365/blog/wp-content/uploads/sites/2/2026/05/M365Copilot_Hero_BannerImage_1920x1080.png",
+    "file": "microsoft-365-copilot-새-디자인-공개-프롬프트-입력창을-8a8be1f2.png",
+    "ts": 1785431039375
+  },
+  "copilot-studio-5월-업데이트-컴퓨터-사용-에이전트-정식-출시-436fbe98": {
+    "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-and-improved-computer-using-agents-a-new-workflows-experience-and-real-time-voice-experiences/",
+    "image": "https://www.microsoft.com/en-us/microsoft-copilot/blog/wp-content/uploads/2024/08/Copilot-Studio_Whats-New-May-2026.jpg",
+    "file": "copilot-studio-5월-업데이트-컴퓨터-사용-에이전트-정식-출시-436fbe98.jpg",
+    "ts": 1785431039739
+  },
+  "microsoft-agent-governance-toolkit-위험-행동-2b9d770c": {
+    "url": "https://github.com/microsoft/agent-governance-toolkit",
+    "image": "https://opengraph.githubassets.com/fcee592617372fdda8c408d882739ac71b70bce90429455a4fc4a57e6f5df6f5/microsoft/agent-governance-toolkit",
+    "file": "microsoft-agent-governance-toolkit-위험-행동-2b9d770c.png",
+    "ts": 1785431041068
+  },
+  "amd-computex-2026서-am4-10주년-am5-2029년-지원-5bfb7413": {
+    "url": "https://www.amd.com/en/blogs/2026/amd-computex-2026-10-years-of-am4-am5-support-through.html",
+    "image": "https://www.amd.com/content/dam/amd/en/images/blogs/designs/4900850-amd-at-computex-2026.jpg",
+    "file": "amd-computex-2026서-am4-10주년-am5-2029년-지원-5bfb7413.jpg",
+    "ts": 1785431041692
+  },
+  "mistral-medium-3-5-copilot-studio-모델-라인업-6e9040f9": {
+    "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/mistral-joins-copilot-studios-growing-lineup-of-model-providers/",
+    "image": "https://www.microsoft.com/en-us/microsoft-copilot/blog/wp-content/uploads/2024/08/Copilot-Studio-Mistral-1200.jpg",
+    "file": "mistral-medium-3-5-copilot-studio-모델-라인업-6e9040f9.jpg",
+    "ts": 1785431043745
+  },
+  "minimax-오픈웨이트-프런티어-코딩-모델-m3-공개-swe-bench-3e2916ff": {
+    "url": "https://www.minimax.io/blog/minimax-m3",
+    "image": "https://file.cdn.minimax.io/public/11649e5b-3f76-477e-a73d-2abc4882211c.png",
+    "file": "minimax-오픈웨이트-프런티어-코딩-모델-m3-공개-swe-bench-3e2916ff.png",
+    "ts": 1785431045028
+  },
+  "ibm-artificial-analysis-기업-it-에이전트-벤치마크--6c6d47b5": {
+    "url": "https://huggingface.co/blog/ibm-research/itbench-aa",
+    "image": "https://cdn-uploads.huggingface.co/production/uploads/64e8143f6de557454220921e/QzGxABeEDggNYzvgSLQqU.png",
+    "file": "ibm-artificial-analysis-기업-it-에이전트-벤치마크--6c6d47b5.png",
+    "ts": 1785431045613
+  },
+  "reachy-mini-서버-없이-완전-로컬-음성-대화-모드-지원-7cdcfd61": {
+    "url": "https://huggingface.co/blog/local-reachy-mini-conversation",
+    "image": "https://huggingface.co/blog/assets/local-reachy-mini-conversation/thumbnail.png",
+    "file": "reachy-mini-서버-없이-완전-로컬-음성-대화-모드-지원-7cdcfd61.png",
+    "ts": 1785431046054
+  },
+  "hugging-face-에이전트-용어집-모델-스캐폴드-하네스-구분-37be5f05": {
+    "url": "https://huggingface.co/blog/agent-glossary",
+    "image": "https://huggingface.co/blog/assets/agent-glossary/thumbnail.png",
+    "file": "hugging-face-에이전트-용어집-모델-스캐폴드-하네스-구분-37be5f05.png",
+    "ts": 1785431046403
+  },
+  "figure-catalyst-brands와-휴머노이드-물류-배치-계약-체-80a52d3d": {
+    "url": "https://www.figure.ai/news/figure-signs-agreement-with-catalyst-brands",
+    "image": "https://images.ctfassets.net/qx5k8y1u9drj/5Q3lhuJO5kDnbD3PG1WA6v/6b80ee311113bbd7a55a289c02103771/Open_Graph_Image_Catalyst.jpg",
+    "file": "figure-catalyst-brands와-휴머노이드-물류-배치-계약-체-80a52d3d.jpg",
+    "ts": 1785431047694
+  },
+  "pingcap-mem9-에이전트-메모리는-저장소가-아니라-판단-시스템-f7f4b8d6": {
+    "url": "https://www.pingcap.com/blog/how-we-built-mem9-agent-memory-product/",
+    "image": "https://static.pingcap.com/files/2026/04/30122906/Blog-LinkedIn-4.png",
+    "file": "pingcap-mem9-에이전트-메모리는-저장소가-아니라-판단-시스템-f7f4b8d6.png",
+    "ts": 1785431048633
+  },
+  "ui-design-direction-2026-2027-유행어보다-스큐어모-067ef127": {
+    "url": "https://michalmalewicz.medium.com/ui-design-direction-2026-2027-2b4b6eb88336",
+    "image": "https://miro.medium.com/v2/resize:fit:1200/1*0wKIAESzc0Bj0dDqNLUUvg.png",
+    "file": "ui-design-direction-2026-2027-유행어보다-스큐어모-067ef127.png",
+    "ts": 1785431048864
+  },
+  "prismml-bonsai-image-4b-브라우저-webgpu에서-도는-e4582a2d": {
+    "url": "https://prismml.com/",
+    "image": "https://cdn.prod.website-files.com/697a3312d33c2cc715ec3899/69cae04a19115963ea13d12d_prism-og-img%20(2).png",
+    "file": "prismml-bonsai-image-4b-브라우저-webgpu에서-도는-e4582a2d.png",
+    "ts": 1785431049284
+  },
+  "youtube-mcp-에이전트가-영상-자막을-연구-소스로-호출하는-오픈소-e1c524c3": {
+    "url": "https://github.com/ZeroPointRepo/youtube-mcp",
+    "image": "https://opengraph.githubassets.com/bda7452941c554a2e2ae970c48340f2bf95cf4dabb444d235b36d6db972257a7/ZeroPointRepo/youtube-mcp",
+    "file": "youtube-mcp-에이전트가-영상-자막을-연구-소스로-호출하는-오픈소-e1c524c3.png",
+    "ts": 1785431050949
+  },
+  "gentle-coding-압박-대신-멈출-여지를-줘-ai-루프-환각을-줄-a3088ff0": {
+    "url": "https://github.com/OttoRenner/Gentle-Coding",
+    "image": "https://opengraph.githubassets.com/c26240b79215b42b91ba9a015b7f0d9bc7fb434f497ccb8850053e3361e7fe97/OttoRenner/Gentle-Coding",
+    "file": "gentle-coding-압박-대신-멈출-여지를-줘-ai-루프-환각을-줄-a3088ff0.png",
+    "ts": 1785431053504
+  },
+  "metalens-metabase-대시보드를-점검하는-ai-에이전트-8923b953": {
+    "url": "https://metalens.it/",
+    "image": "https://metalens.it/screenshots/xray-scan.png",
+    "file": "metalens-metabase-대시보드를-점검하는-ai-에이전트-8923b953.png",
+    "ts": 1785431055772
+  },
+  "ai-활용은-프롬프트가-아니라-시스템-eugene-yan-정리-e96d3a6c": {
+    "url": "https://eugeneyan.com/writing/working-with-ai/",
+    "image": "https://eugeneyan.com/assets/og_image/working-with-ai.jpg",
+    "file": "ai-활용은-프롬프트가-아니라-시스템-eugene-yan-정리-e96d3a6c.jpg",
+    "ts": 1785431056883
+  },
+  "spice-에이전트-실행-위에-의사결정-층을-분리한-오픈소스-런타임-92008221": {
+    "url": "https://github.com/Dyalwayshappy/Spice",
+    "image": "https://opengraph.githubassets.com/e607a24f810b24aeb5232a32975d283f88184f549a57f8bfec78765c8b0000cc/Dyalwayshappy/Spice",
+    "file": "spice-에이전트-실행-위에-의사결정-층을-분리한-오픈소스-런타임-92008221.png",
+    "ts": 1785431058552
+  },
+  "ai-코딩-에이전트용-로컬-techdocs-문서를-sqlite-지식-지도-f5655127": {
+    "url": "https://www.heltweg.org/posts/improving-local-techdocs-for-your-ai-coding-agent/",
+    "image": "https://heltweg.org/posts/improving-local-techdocs-for-your-ai-coding-agent/index.png",
+    "file": "ai-코딩-에이전트용-로컬-techdocs-문서를-sqlite-지식-지도-f5655127.png",
+    "ts": 1785431059501
+  },
+  "claude-partner-network에-services-track-p-fd099293": {
+    "url": "https://www.anthropic.com/news/services-track-partner-hub",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20ShapeBuild&amp;backgroundColor=fig",
+    "file": "claude-partner-network에-services-track-p-fd099293.png",
+    "ts": 1785431069024
+  },
+  "deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd": {
+    "url": "https://blog.google/topics/google-europe/powering-the-future-of-robotics-in-europe/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/130.width-1300.jpg",
+    "file": "deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+    "ts": 1785431070388
+  },
+  "google-colab-cli-공개-터미널-ai-에이전트에서-gpu-런타-4e1801dc": {
+    "url": "https://developers.googleblog.com/introducing-the-google-colab-cli/",
+    "image": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_7nbuzg7nbu.2e16d0ba.fill-1200x600.jpg",
+    "file": "google-colab-cli-공개-터미널-ai-에이전트에서-gpu-런타-4e1801dc.jpg",
+    "ts": 1785431072642
+  },
+  "gemma-4-12b-공개-인코더-없는-통합-멀티모달-오픈-모델-16b2e2d4": {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Social_Image_G4_12B.width-1300.png",
+    "file": "gemma-4-12b-공개-인코더-없는-통합-멀티모달-오픈-모델-16b2e2d4.png",
+    "ts": 1785431073240
+  },
+  "naver-nvidia-dsx로-소버린-ai-인프라-확장-55mw에서-기-f29a3c01": {
+    "url": "https://nvidianews.nvidia.com/news/naver-ai-infrastructure",
+    "image": "https://iprsoftwaremedia.com/219/files/202606/27d699a0ae1649961d4ae15ab0fcaed9/6a25cce63d6332f506ff1217_nvidia-naver/nvidia-naver_c4082615-b3e4-47e6-8878-476573075ce4-prv.png?v=c4082615-b3e4-47e6-8878-476573075ce4",
+    "file": "naver-nvidia-dsx로-소버린-ai-인프라-확장-55mw에서-기-f29a3c01.png",
+    "ts": 1785431074419
+  },
+  "nvidia-lg그룹-ai-팩토리-구축-가정용-로봇-cloid부터-exa-0f45a45a": {
+    "url": "https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/06/kr-visit-lg-group-1920x1080-no-credit.png",
+    "file": "nvidia-lg그룹-ai-팩토리-구축-가정용-로봇-cloid부터-exa-0f45a45a.png",
+    "ts": 1785431074754
+  },
+  "nvidia-영국-소버린-ai-현황-공개-gh200-5-400개-isam-11892f53": {
+    "url": "https://blogs.nvidia.com/blog/uk-sovereign-ai-advancements/",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/06/london-tech-week-2026-key-visual.jpeg",
+    "file": "nvidia-영국-소버린-ai-현황-공개-gh200-5-400개-isam-11892f53.jpg",
+    "ts": 1785431075339
+  },
+  "nvidia-nemotron-3-ultra-공개-550b-moe-하이브리-d0513437": {
+    "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+    "image": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/Nemotron-3-Ultra.webp",
+    "file": "nvidia-nemotron-3-ultra-공개-550b-moe-하이브리-d0513437.webp",
+    "ts": 1785431075746
+  },
+  "nvidia-cvpr-2026서-graspgen-x-lcdrive-nit-4e0fd56f": {
+    "url": "https://blogs.nvidia.com/blog/cvpr-research-grasping-driving-agent-training/",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/06/CVPR_blog_still-1680x945.png",
+    "file": "nvidia-cvpr-2026서-graspgen-x-lcdrive-nit-4e0fd56f.png",
+    "ts": 1785431076660
+  },
+  "nvidia-cvpr서-피지컬-ai-agent-skills-공개-32b--c7348f96": {
+    "url": "https://blogs.nvidia.com/blog/cvpr-physical-ai-research-agent-skills/",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/06/cvpr-product-blog-still-1920x1080-1.jpg",
+    "file": "nvidia-cvpr서-피지컬-ai-agent-skills-공개-32b--c7348f96.jpg",
+    "ts": 1785431076803
+  },
+  "amd-영국에-5년간-최대-20억-투자-zenith-슈퍼컴퓨터-핵융합-a-49175637": {
+    "url": "https://www.amd.com/en/newsroom/press-releases/2026-6-8-amd-commits-up-to-2-billion-to-accelerate-ai-inno.html",
+    "image": "https://newsroom.amd.com/images/migrated-aem/2026/07/f84cc20c-f79c-43b1-9dda-874ebd02cca5.jpg",
+    "file": "amd-영국에-5년간-최대-20억-투자-zenith-슈퍼컴퓨터-핵융합-a-49175637.jpg",
+    "ts": 1785431077804
+  },
+  "cohere-첫-개발자용-오픈-코딩-모델-north-mini-code-공-385fc388": {
+    "url": "https://cohere.com/blog/north-mini-code",
+    "image": "https://cdn.sanity.io/images/rjtqmwfu/web3-prod/824d32875c1faf5d7048cb18d83e006e46c9b869-3840x2160.png?rect=0,72,3840,2016&amp;w=1200&amp;h=630&amp;q=80&amp;fit=crop&amp;auto=format",
+    "file": "cohere-첫-개발자용-오픈-코딩-모델-north-mini-code-공-385fc388.png",
+    "ts": 1785431080522
+  },
+  "cohere-labs-연구-시각화-도구-co-plot-공개-d33e470f": {
+    "url": "https://cohere.com/blog/coplot",
+    "image": "https://cdn.sanity.io/images/rjtqmwfu/web3-prod/76c331df79d3321b89f47bdf07335dbcc7d1c60e-1379x591.png?rect=127,0,1126,591&amp;w=1200&amp;h=630&amp;q=80&amp;fit=crop&amp;auto=format",
+    "file": "cohere-labs-연구-시각화-도구-co-plot-공개-d33e470f.png",
+    "ts": 1785431083214
+  },
+  "hugging-face-reachy-mini에-mcp-원격-도구-지원-추-951093dd": {
+    "url": "https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini",
+    "image": "https://huggingface.co/blog/assets/adding-mcp-tools-to-reachy-mini/reachy_mini_remote_spaces_thumbnail.png",
+    "file": "hugging-face-reachy-mini에-mcp-원격-도구-지원-추-951093dd.png",
+    "ts": 1785431083573
+  },
+  "github-copilot-cli-커스텀-에이전트-워크플로우-공식-가이드-a1f4adce": {
+    "url": "https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli/",
+    "image": "https://github.blog/wp-content/uploads/2026/01/CLIBanner_BlogHeader_01.jpg?fit=2400%2C1260",
+    "file": "github-copilot-cli-커스텀-에이전트-워크플로우-공식-가이드-a1f4adce.jpg",
+    "ts": 1785431084215
+  },
+  "cursor-3-7-릴리스-sdk-커스텀-도구-중첩-서브에이전트-브라우저-d80904df": {
+    "url": "https://cursor.com/changelog",
+    "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/uploads/changelog-og.png",
+    "file": "cursor-3-7-릴리스-sdk-커스텀-도구-중첩-서브에이전트-브라우저-d80904df.png",
+    "ts": 1785431085079
+  },
+  "ollama-0-30-4-0-30-6-연속-릴리스-gemma-4-qat--2f0a2960": {
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.30.6",
+    "image": "https://opengraph.githubassets.com/3bfa51390bd4ec8ae495293db551fb03b9d49c2eb9b093e3531fe9661708c45f/ollama/ollama/releases/tag/v0.30.6",
+    "file": "ollama-0-30-4-0-30-6-연속-릴리스-gemma-4-qat--2f0a2960.png",
+    "ts": 1785431086601
+  },
+  "alphabet-6월-투자자-프레젠테이션-gemini-앱-mau-9억-명-c7ef9309": {
+    "url": "https://blog.google/alphabet/investor-presentation-june-2026/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Alphabet_Hero.width-1300.jpg",
+    "file": "alphabet-6월-투자자-프레젠테이션-gemini-앱-mau-9억-명-c7ef9309.jpg",
+    "ts": 1785431087414
+  },
+  "openai-gpt-5-6-sol-terra-luna-제한-프리뷰-미-정-4b9bac18": {
+    "url": "https://community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna/1384931",
+    "image": "https://us1.discourse-cdn.com/openai1/optimized/4X/f/0/8/f088bfcb17e4f7a8da3d2ba48d6391fa5a9201d9_2_1024x576.jpeg",
+    "file": "openai-gpt-5-6-sol-terra-luna-제한-프리뷰-미-정-4b9bac18.jpg",
+    "ts": 1785431095234
+  },
+  "github-copilot-gpt-5-6-3종-단계적-제공-bd97de80": {
+    "url": "https://github.blog/changelog/2026-07-09-openais-gpt-5-6-sol-terra-and-luna-are-now-available-in-github-copilot",
+    "image": "https://github.blog/wp-content/uploads/2026/07/github-copilot-social-card-4.png",
+    "file": "github-copilot-gpt-5-6-3종-단계적-제공-bd97de80.png",
+    "ts": 1785431096918
+  },
+  "codeql-2-26-ai-시스템-프롬프트-인젝션-탐지-3c09fe32": {
+    "url": "https://github.blog/changelog/2026-07-10-codeql-2-26-0-adds-kotlin-2-4-0-support-and-ai-prompt-injection-detection",
+    "image": "https://github.blog/wp-content/uploads/2026/07/620083714-db8cf0d2-f457-4e23-b01d-acb6c26d9599.jpeg",
+    "file": "codeql-2-26-ai-시스템-프롬프트-인젝션-탐지-3c09fe32.jpg",
+    "ts": 1785431097567
+  },
+  "copilot-앱에서-커밋-전-보안-검토를-실행한다-be2fb653": {
+    "url": "https://github.blog/changelog/2026-07-14-security-reviews-now-available-in-the-github-copilot-app",
+    "image": "https://github.blog/wp-content/uploads/2026/07/623214648-baf0f7de-43a1-4613-942f-d1bd3bb1ca47.jpg",
+    "file": "copilot-앱에서-커밋-전-보안-검토를-실행한다-be2fb653.jpg",
+    "ts": 1785431098099
+  },
+  "jetbrains-copilot-byok와-claude-에이전트-확장-9f4df634": {
+    "url": "https://github.blog/changelog/2026-07-14-github-copilot-for-jetbrains-expands-byok-capabilities",
+    "image": "https://github.blog/wp-content/uploads/2026/07/CopilotExpandsBYOK_Improvement_Unfurl_TextOnly.jpg",
+    "file": "jetbrains-copilot-byok와-claude-에이전트-확장-9f4df634.jpg",
+    "ts": 1785431098781
+  },
+  "copilot이-처음-보는-저장소의-개요를-만든다-27ed03b4": {
+    "url": "https://github.blog/changelog/2026-07-09-ask-copilot-for-a-repository-overview",
+    "image": "https://github.blog/wp-content/uploads/2026/07/618464884-eb2dabef-692b-4ceb-b4d7-75e41f8cfebc.jpg",
+    "file": "copilot이-처음-보는-저장소의-개요를-만든다-27ed03b4.jpg",
+    "ts": 1785431099404
+  },
+  "네이버-ai탭-1천만-사용자-검색에서-실행으로-확장-a4fa0fb9": {
+    "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034477",
+    "image": "https://www.navercorp.com/img/og/OG_TAG_6_Media.png",
+    "file": "네이버-ai탭-1천만-사용자-검색에서-실행으로-확장-a4fa0fb9.png",
+    "ts": 1785431099769
+  },
+  "네이버-icml-2026에서-ai-풀스택-연구-6편-공개-dc1bc509": {
+    "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034468",
+    "image": "https://www.navercorp.com/img/og/OG_TAG_6_Media.png",
+    "file": "네이버-icml-2026에서-ai-풀스택-연구-6편-공개-dc1bc509.png",
+    "ts": 1785431100171
+  },
+  "codex-cli-0-144-0-쓰기-승인과-mcp-인증-보강-1d0cf1e6": {
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.144.0",
+    "image": "https://opengraph.githubassets.com/7c3a92f0b5ba4efd92c6e963df993797e608324922a5b7d7e8f21d069a5b0b63/openai/codex/releases/tag/rust-v0.144.0",
+    "file": "codex-cli-0-144-0-쓰기-승인과-mcp-인증-보강-1d0cf1e6.png",
+    "ts": 1785431101344
+  },
+  "skt-a-x-k2-산업-적용-컨소시엄-확대-69d2a77f": {
+    "url": "https://news.sktelecom.com/227799",
+    "image": "https://news-static.sktelecom.com/wp-content/uploads/2024/03/SKT%ED%83%80%EC%9B%8C-%EC%A0%84%EA%B2%BD_MO.jpg",
+    "file": "skt-a-x-k2-산업-적용-컨소시엄-확대-69d2a77f.jpg",
+    "ts": 1785431102540
+  },
+  "harness-handbook-에이전트-동작을-하네스-코드에-연결한다-3bb9d0fa": {
+    "url": "https://arxiv.org/abs/2607.13285",
+    "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "file": "harness-handbook-에이전트-동작을-하네스-코드에-연결한다-3bb9d0fa.png",
+    "ts": 1785431102640
+  },
+  "장기-터미널-에이전트-46개-과제-중간-진척까지-평가-8284a774": {
+    "url": "https://arxiv.org/abs/2607.08964",
+    "image": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+    "file": "장기-터미널-에이전트-46개-과제-중간-진척까지-평가-8284a774.png",
+    "ts": 1785431102674
+  },
+  "mistral-studio-프롬프트와-스킬을-거버넌스-자산으로-402b4a95": {
+    "url": "https://mistral.ai/news/manage-prompts-and-skills-in-studio/",
+    "image": "https://mistral.ai/cms-media/api/media/file/Thumbnail-Skillsandprompts.jpg",
+    "file": "mistral-studio-프롬프트와-스킬을-거버넌스-자산으로-402b4a95.jpg",
+    "ts": 1785431107035
+  },
+  "skt-sk바이오팜-ai로-ror1-후보-2종-확보-71ccbc19": {
+    "url": "https://news.sktelecom.com/227875",
+    "image": "https://news-static.sktelecom.com/wp-content/uploads/2026/07/SKT-SK%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8C%9C-AI-%ED%99%9C%EC%9A%A9%ED%95%B4-%EB%82%9C%EC%B9%98%EC%84%B1-%EC%95%94-%EC%8B%A0%EC%95%BD-%EC%97%B0%EA%B5%AC-%EC%86%8D%EB%8F%84-%EB%86%92%EC%98%80%EB%8B%A4-1_FB_1200x628.png",
+    "file": "skt-sk바이오팜-ai로-ror1-후보-2종-확보-71ccbc19.png",
+    "ts": 1785431108167
+  },
+  "ust-claude-code를-반도체-제조-검증에-적용-e6a75647": {
+    "url": "https://www.anthropic.com/news/ust-claude",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Build&amp;backgroundColor=coral",
+    "file": "ust-claude-code를-반도체-제조-검증에-적용-e6a75647.png",
+    "ts": 1785431108974
+  },
+  "claude-code-2-1-210-worktree-격리와-주입-방어-강-e514c912": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.210",
+    "image": "https://opengraph.githubassets.com/f5f95f35976b2002c02020c1536182306f9d13a3c473e796c88b9a07da0fd77b/anthropics/claude-code/releases/tag/v2.1.210",
+    "file": "claude-code-2-1-210-worktree-격리와-주입-방어-강-e514c912.png",
+    "ts": 1785431109771
+  },
+  "claude-code-2-1-211-승인-위조와-결과-조작-경계-수정-bc37f280": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.211",
+    "image": "https://opengraph.githubassets.com/146299704224c75e8edafd266c12897bb2c6345183ef6f0f9c0f7215d9f00248/anthropics/claude-code/releases/tag/v2.1.211",
+    "file": "claude-code-2-1-211-승인-위조와-결과-조작-경계-수정-bc37f280.png",
+    "ts": 1785431110587
+  },
+  "anthropic-미국-k-12-교사용-claude-공개-7d7da69e": {
+    "url": "https://www.anthropic.com/news/claude-for-teachers",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "file": "anthropic-미국-k-12-교사용-claude-공개-7d7da69e.jpg",
+    "ts": 1785431110933
+  },
+  "claude의-가치-표현은-모델과-언어에-따라-달랐다-b26b0925": {
+    "url": "https://www.anthropic.com/research/claude-values-models-languages",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Flower&amp;backgroundColor=heather",
+    "file": "claude의-가치-표현은-모델과-언어에-따라-달랐다-b26b0925.png",
+    "ts": 1785431112775
+  },
+  "claude-code-2-1-208-접근성과-장기-세션-안정성-보강-541a6248": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.208",
+    "image": "https://opengraph.githubassets.com/f002f2d38338acf1fcda63ed9d84e6c972d9dd211b866e26acaa23ee10ff2947/anthropics/claude-code/releases/tag/v2.1.208",
+    "file": "claude-code-2-1-208-접근성과-장기-세션-안정성-보강-541a6248.png",
+    "ts": 1785431114056
+  },
+  "claude가-사용-습관을-돌아보는-회고-기능을-열었다-d27a8a79": {
+    "url": "https://www.anthropic.com/news/reflect-with-claude",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=cactus",
+    "file": "claude가-사용-습관을-돌아보는-회고-기능을-열었다-d27a8a79.png",
+    "ts": 1785431114795
+  },
+  "claude-code-2-1-207-auto-mode-기본화와-주입-경계-1e5b65e0": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.207",
+    "image": "https://opengraph.githubassets.com/6575476acc2447aba467ea7a938406fa893f7f211e4bbff3ade09f26fd2aae0a/anthropics/claude-code/releases/tag/v2.1.207",
+    "file": "claude-code-2-1-207-auto-mode-기본화와-주입-경계-1e5b65e0.png",
+    "ts": 1785431115570
+  },
+  "claude-code-2-1-206-worktree와-mcp-안정성-개선-73601181": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.206",
+    "image": "https://opengraph.githubassets.com/e6fbdc7a75970c56405f584d0662b94143041e993dc79c5a31009b5f038e51f5/anthropics/claude-code/releases/tag/v2.1.206",
+    "file": "claude-code-2-1-206-worktree와-mcp-안정성-개선-73601181.png",
+    "ts": 1785431119698
+  },
+  "anthropic-캐나다-ai-연구에-1천만-캐나다달러-지원-88215e2e": {
+    "url": "https://www.anthropic.com/news/canadian-ai-research",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Node%20Globe&amp;backgroundColor=cactus",
+    "file": "anthropic-캐나다-ai-연구에-1천만-캐나다달러-지원-88215e2e.png",
+    "ts": 1785431120918
+  },
+  "네이버-장애-학생-맞춤형-ai-교육-콘텐츠-개발-54abda2f": {
+    "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034471",
+    "image": "https://www.navercorp.com/img/og/OG_TAG_6_Media.png",
+    "file": "네이버-장애-학생-맞춤형-ai-교육-콘텐츠-개발-54abda2f.png",
+    "ts": 1785431121226
+  },
+  "cursor-3-11-side-chats와-전체-대화-검색-추가-f9abf4fb": {
+    "url": "https://cursor.com/changelog/side-chat",
+    "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/opengraph-changelog-july-10-2026.png",
+    "file": "cursor-3-11-side-chats와-전체-대화-검색-추가-f9abf4fb.png",
+    "ts": 1785431122165
+  },
+  "삼성-ai-구독클럽-블루패스-전문-케어-서비스-소개-4a43070b": {
+    "url": "https://news.samsung.com/kr/%ec%b9%b4%eb%93%9c%eb%89%b4%ec%8a%a4-%ec%9a%b0%eb%a6%ac%ec%a7%91-%ea%b0%80%ec%a0%84%ec%9d%84-%eb%8a%98-%ec%b5%9c%ec%83%81%ec%9c%bc%eb%a1%9c-ai-%ea%b5%ac%eb%8f%85%ed%81%b4%eb%9f%bd",
+    "image": "https://img.kr.news.samsung.com/kr/wp-content/uploads/2026/07/10160600/KV_0710_932x524_rev.1.jpg",
+    "file": "삼성-ai-구독클럽-블루패스-전문-케어-서비스-소개-4a43070b.jpg",
+    "ts": 1785431122864
+  },
+  "codex-cli-0-144-5-위험-명령-탐지-확대-a2d48c3e": {
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.144.5",
+    "image": "https://opengraph.githubassets.com/d22ee38072d481bf0b3cf66f6cc07bbdd2eb27c6ec165f284f1b3601c97c86e7/openai/codex/releases/tag/rust-v0.144.5",
+    "file": "codex-cli-0-144-5-위험-명령-탐지-확대-a2d48c3e.png",
+    "ts": 1785431123684
+  },
+  "codex-cli-0-144-6-gpt-5-6-컨텍스트-창-정정-f5b65cc0": {
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.144.6",
+    "image": "https://opengraph.githubassets.com/dfd32f26127653b94e3a9778c8359d251895614d821cc3fdba9416a8be358655/openai/codex/releases/tag/rust-v0.144.6",
+    "file": "codex-cli-0-144-6-gpt-5-6-컨텍스트-창-정정-f5b65cc0.png",
+    "ts": 1785431124510
+  },
+  "claude-code-2-1-212-백그라운드-fork와-루프-상한-추가-e91190c2": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.212",
+    "image": "https://opengraph.githubassets.com/759e0da341eacbdc9a46fb49ed2f24a54732bf313d4b0d0db6406900561157ee/anthropics/claude-code/releases/tag/v2.1.212",
+    "file": "claude-code-2-1-212-백그라운드-fork와-루프-상한-추가-e91190c2.png",
+    "ts": 1785431125849
+  },
+  "claude-code-2-1-214-권한-우회-차단과-장기-작업-hear-71365681": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+    "image": "https://opengraph.githubassets.com/3db363e5a270e1aa35a042d997b480e6344e350f7a492dd83d674499dd0dd9aa/anthropics/claude-code/releases/tag/v2.1.214",
+    "file": "claude-code-2-1-214-권한-우회-차단과-장기-작업-hear-71365681.png",
+    "ts": 1785431126626
+  },
+  "claude-code-verify-code-review-스킬-자동-실행--4d4f1d9b": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.215",
+    "image": "https://opengraph.githubassets.com/16468bf616042f951224a542804d98f133e6ac04d22e2e3b01294589490b613a/anthropics/claude-code/releases/tag/v2.1.215",
+    "file": "claude-code-verify-code-review-스킬-자동-실행--4d4f1d9b.png",
+    "ts": 1785431127402
+  },
+  "cursor-agent-swarm-model-economics-e75ef27c": {
+    "url": "https://cursor.com/ko/blog/agent-swarm-model-economics",
+    "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/swarm-og.png",
+    "file": "cursor-agent-swarm-model-economics-e75ef27c.png",
+    "ts": 1785431128657
+  },
+  "lg-유네스코-글로벌-ai-윤리-mooc-프로젝트-시작-dcd09a42": {
+    "url": "https://www.lg.co.kr/media/release/30361",
+    "image": "http://www.lg.co.kr/images/common/default_og_image_new.jpg",
+    "file": "lg-유네스코-글로벌-ai-윤리-mooc-프로젝트-시작-dcd09a42.jpg",
+    "ts": 1785431128998
+  },
+  "langchain-agent-trace-평가용-issuebench-소개-4b671916": {
+    "url": "https://www.langchain.com/blog/issuebench-how-we-evaluate-engine",
+    "image": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a5e456b9974fd831e5d3c9a_Screenshot%202026-07-20%20at%208.57.24%E2%80%AFAM.png",
+    "file": "langchain-agent-trace-평가용-issuebench-소개-4b671916.png",
+    "ts": 1785431129353
+  },
+  "lg-퓨리케어-얼음정수기-ai-음성과-맞춤-출수-적용-25fafd6b": {
+    "url": "https://www.lg.co.kr/media/release/30350",
+    "image": "http://www.lg.co.kr/media/images/65725",
+    "file": "lg-퓨리케어-얼음정수기-ai-음성과-맞춤-출수-적용-25fafd6b.png",
+    "ts": 1785431129595
+  },
+  "feyn-데이터베이스를-먼저-살피는-text-to-sql-모델-sqrl--9e9f840c": {
+    "url": "https://usefeyn.com/blog/sqrl-asks-the-database-first/",
+    "image": "https://usefeyn.com/blog/sqrl/sqrl-cover.svg",
+    "file": "feyn-데이터베이스를-먼저-살피는-text-to-sql-모델-sqrl--9e9f840c.svg",
+    "ts": 1785431129835
+  },
+  "lg유플러스-ai-시대-정보보호백서-발간-f59fa46a": {
+    "url": "https://www.lg.co.kr/media/release/30349",
+    "image": "http://www.lg.co.kr/media/images/65723",
+    "file": "lg유플러스-ai-시대-정보보호백서-발간-f59fa46a.png",
+    "ts": 1785431130068
+  },
+  "mcp-새-스펙-세션을-없애고-완전-스테이트리스로-전환-9fd08a9c": {
+    "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+    "image": "https://blog.modelcontextprotocol.io/og-image.png",
+    "file": "mcp-새-스펙-세션을-없애고-완전-스테이트리스로-전환-9fd08a9c.png",
+    "ts": 1785431130389
+  },
+  "일리야-서츠케버의-ssi-nvidia와-장기-파트너십-체결-da53b5bc": {
+    "url": "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership",
+    "image": "https://iprsoftwaremedia.com/219/files/202607/595589fd9c7929f74a3726662e15f4ac/6a6675ff3d63324e142a251a_ssi-nvidia/ssi-nvidia_c11a6442-e59a-4f26-b4a9-a08fb34f2181-prv.jpg?v=c11a6442-e59a-4f26-b4a9-a08fb34f2181",
+    "file": "일리야-서츠케버의-ssi-nvidia와-장기-파트너십-체결-da53b5bc.jpg",
+    "ts": 1785431131034
+  },
+  "kimi-k3-오픈웨이트-공개-2-8t-moe에-100만-토큰-컨텍스트-b605e00b": {
+    "url": "https://huggingface.co/moonshotai/Kimi-K3",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/moonshotai/Kimi-K3.png",
+    "file": "kimi-k3-오픈웨이트-공개-2-8t-moe에-100만-토큰-컨텍스트-b605e00b.png",
+    "ts": 1785431131690
+  },
+  "anthropic-claude가-찾아낸-암호학적-취약점-두-건-공개-ef07e834": {
+    "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Object-LaptopSecure&amp;backgroundColor=sky",
+    "file": "anthropic-claude가-찾아낸-암호학적-취약점-두-건-공개-ef07e834.png",
+    "ts": 1785431132935
+  },
+  "cognizant-claude-파트너-네트워크-최상위-등급으로-격상-2b0c9d29": {
+    "url": "https://www.anthropic.com/news/cognizant-anthropic",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "file": "cognizant-claude-파트너-네트워크-최상위-등급으로-격상-2b0c9d29.jpg",
+    "ts": 1785431133452
+  },
+  "copilot-코드-리뷰-에이전트-스킬과-mcp-지원을-정식-출시-eb80ec1c": {
+    "url": "https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/",
+    "image": "https://github.blog/wp-content/uploads/2026/07/628686521-4a942fe5-24fd-460d-9a84-48d97625dc0c.jpg",
+    "file": "copilot-코드-리뷰-에이전트-스킬과-mcp-지원을-정식-출시-eb80ec1c.jpg",
+    "ts": 1785431133829
+  },
+  "github-copilot에-xai-grok-4-5-추가-83b582fa": {
+    "url": "https://github.blog/changelog/2026-07-28-grok-4-5-is-now-available-in-github-copilot/",
+    "image": "https://github.blog/wp-content/uploads/2026/07/621587455-15e748c5-a2d8-4e1c-ac1f-902495ad4259.png",
+    "file": "github-copilot에-xai-grok-4-5-추가-83b582fa.png",
+    "ts": 1785431134221
+  },
+  "openai-agents-sdk-프로그래매틱-툴-콜링-도입-e69ced4f": {
+    "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.0",
+    "image": "https://opengraph.githubassets.com/1baa38dc0be273a30012aaa2dc591f102e83eb87dc19f519c067ebbecb4c22a8/openai/openai-agents-python/releases/tag/v0.19.0",
+    "file": "openai-agents-sdk-프로그래매틱-툴-콜링-도입-e69ced4f.png",
+    "ts": 1785431135222
+  },
+  "codex-cli-0-146-0-세션-이름-지정과-에이전트-플러그인-b08301f7": {
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
+    "image": "https://opengraph.githubassets.com/a28c47929f859e2b4456fef66e12016316d0593e129a80f85fdfa890627ce027/openai/codex/releases/tag/rust-v0.146.0",
+    "file": "codex-cli-0-146-0-세션-이름-지정과-에이전트-플러그인-b08301f7.png",
+    "ts": 1785431136476
+  },
+  "마이크로소프트-보안-특화-모델-mai-cyber-1-flash-공개-a906cb2f": {
+    "url": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/",
+    "image": "https://microsoft.ai/wp-content/uploads/2026/07/Cyber-1-New-Header.png",
+    "file": "마이크로소프트-보안-특화-모델-mai-cyber-1-flash-공개-a906cb2f.png",
+    "ts": 1785431137086
+  },
+  "sk하이닉스-영업이익률-76-로-2분기-최대-실적-7c9e8abd": {
+    "url": "https://news.skhynix.com/en/q2-2026-business-results/",
+    "image": "https://d18r0a86za96sg.cloudfront.net/wp-content/uploads/2026/07/28133250/en-2q-2026-business-results_Thumb.jpg",
+    "file": "sk하이닉스-영업이익률-76-로-2분기-최대-실적-7c9e8abd.jpg",
+    "ts": 1785431138659
+  },
+  "skt-독자-파운데이션-모델-2세대-a-x-k2-공개-5c50b84f": {
+    "url": "https://news.sktelecom.com/228501",
+    "image": "https://news-static.sktelecom.com/wp-content/uploads/2026/07/SKT%EB%89%B4%EC%8A%A4%EB%A3%B8_Thumb_FB-2.jpg",
+    "file": "skt-독자-파운데이션-모델-2세대-a-x-k2-공개-5c50b84f.jpg",
+    "ts": 1785431139741
+  },
+  "크래프톤-음성-파운데이션-모델-raon-speech-공개-2f90f60b": {
+    "url": "https://github.com/krafton-ai/Raon-Speech",
+    "image": "https://opengraph.githubassets.com/2b0a0f42c6b90e0bfbe764a8b43472590918f8e63b67cf66f5cd37502da2f751/krafton-ai/Raon-Speech",
+    "file": "크래프톤-음성-파운데이션-모델-raon-speech-공개-2f90f60b.png",
+    "ts": 1785431141046
+  },
+  "아틀라시안-forge-llm-api-정식-출시-cc1f29b1": {
+    "url": "https://www.atlassian.com/blog/development/forge-llms-api-is-now-ga-heres-how-you-can-build-ai-native-apps-on-atlassian",
+    "image": "https://atlassianblog.wpengine.com/wp-content/uploads/2026/07/forge-llms-blog-hero-1120-x-562-scaled.png",
+    "file": "아틀라시안-forge-llm-api-정식-출시-cc1f29b1.png",
+    "ts": 1785431143049
+  },
+  "커서-인도-개발자용-저가-요금제-cursor-start-출시-695f902a": {
+    "url": "https://cursor.com/blog/cursor-start-india",
+    "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/cursor-start-centered-DgRsSPBYoGwZXluzSNkXbqamb7PQn7.png",
+    "file": "커서-인도-개발자용-저가-요금제-cursor-start-출시-695f902a.png",
+    "ts": 1785431143670
+  },
+  "codex-cli-0-145-0-스레드-이력-페이지네이션과-bedrock-8ab46b22": {
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.145.0",
+    "image": "https://opengraph.githubassets.com/1224914a93b2d2d25ea2d1062df79a0afa6c383d70c495363f42555189772ae1/openai/codex/releases/tag/rust-v0.145.0",
+    "file": "codex-cli-0-145-0-스레드-이력-페이지네이션과-bedrock-8ab46b22.png",
+    "ts": 1785435516846
+  },
+  "claude-opus-5-출시-1m-컨텍스트를-이전과-같은-가격에-1445d8a4": {
+    "url": "https://www.anthropic.com/news/claude-opus-5",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/54b7ab1d2c2521f83ae5d2da5f9d99321c370d24-2880x1620.png",
+    "file": "claude-opus-5-출시-1m-컨텍스트를-이전과-같은-가격에-1445d8a4.png",
+    "ts": 1785435517646
+  },
+  "claude-5세대-모델을-위한-컨텍스트-엔지니어링-원칙-공개-9b29631a": {
+    "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a639c6b2e881afef80764c6_og_the-new-rules-of-context-engineering-for-claude-5-generation-models.jpg",
+    "file": "claude-5세대-모델을-위한-컨텍스트-엔지니어링-원칙-공개-9b29631a.jpg",
+    "ts": 1785435517934
+  },
+  "네이버-nvidia-브룩필드-세종-ai-팩토리를-200mw로-확장-27cf6e3f": {
+    "url": "https://nvidianews.nvidia.com/news/naver-nvidia-and-brookfield-to-expand-koreas-national-ai-factory-infrastructure-buildout",
+    "image": "https://iprsoftwaremedia.com/219/files/202607/6f17a6451c306392c3376747f022b895/6a63f3113d6332dc5d2a252d_naver-nvidia-brookfield-logos/naver-nvidia-brookfield-logos_23c4d337-017e-4cbe-9f64-6a602ab1abc6-prv.jpg?v=23c4d337-017e-4cbe-9f64-6a602ab1abc6",
+    "file": "네이버-nvidia-브룩필드-세종-ai-팩토리를-200mw로-확장-27cf6e3f.jpg",
+    "ts": 1785435518658
+  },
+  "sk그룹-nvidia-ai-팩토리와-차세대-메모리로-파트너십-확대-173fcf5a": {
+    "url": "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory",
+    "image": "https://iprsoftwaremedia.com/219/files/202607/e5bed52ab6ab2d0b526ce8fc0d495c37/6a63f6713d6332dc622a2636_sk-nvidia-logos/sk-nvidia-logos_63978d76-b4d8-4c57-bb65-18cb2415ad6b-prv.jpg?v=63978d76-b4d8-4c57-bb65-18cb2415ad6b",
+    "file": "sk그룹-nvidia-ai-팩토리와-차세대-메모리로-파트너십-확대-173fcf5a.jpg",
+    "ts": 1785435518966
+  },
+  "nvidia-kaist-공동-ai-연구소-설립-d243103d": {
+    "url": "https://nvidianews.nvidia.com/news/nvidia-and-kaist-launch-joint-ai-research-lab-to-accelerate-korean-ai-innovation",
+    "image": "https://nvidianews.nvidia.com/media/sites/219/images/social-image.jpg",
+    "file": "nvidia-kaist-공동-ai-연구소-설립-d243103d.jpg",
+    "ts": 1785435520413
+  },
+  "삼성전자-브로드컴-5년-200조원-규모-ai-반도체-협력-67ef8df6": {
+    "url": "https://news.samsung.com/kr/삼성전자·브로드컴-2000억-달러-규모-전략적-협력",
+    "image": "https://img.kr.news.samsung.com/kr/wp-content/uploads/2026/07/25143034/KV_932x524_0725_BROADCOM.jpg",
+    "file": "삼성전자-브로드컴-5년-200조원-규모-ai-반도체-협력-67ef8df6.jpg",
+    "ts": 1785435520600
+  },
+  "삼성-갤럭시-언팩-2026-z-폴드8-플립8에-galaxy-ai-최적화-7bfe4cd3": {
+    "url": "https://news.samsung.com/global/samsung-galaxy-z-fold8-ultra-fold8-and-flip8foldables-perfected",
+    "image": "https://img.global.news.samsung.com/global/wp-content/uploads/2026/07/22215407/Samsung-Mobile-Galaxy-Unpacked-July-2026-Galaxy-Z-Fold8-Ultra-Galaxy-Z-Fold8-Galaxy-Z-Flip8-Launch_Thumb932.jpg",
+    "file": "삼성-갤럭시-언팩-2026-z-폴드8-플립8에-galaxy-ai-최적화-7bfe4cd3.jpg",
+    "ts": 1785435521020
+  },
+  "sk-k-ai-서밋에서-엔비디아와-5-000억-달러-loi-체결-80d5ce7c": {
+    "url": "https://news.skhynix.co.kr/k-ai-summit-2026/",
+    "image": "https://skhynix-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/07/k-ai-summit-2026_THUMB.png",
+    "file": "sk-k-ai-서밋에서-엔비디아와-5-000억-달러-loi-체결-80d5ce7c.png",
+    "ts": 1785435521947
+  },
+  "skt-ai-데이터센터-전문회사-sk하이퍼-출범-c1c46700": {
+    "url": "https://news.sktelecom.com/228145",
+    "image": "https://news-static.sktelecom.com/wp-content/uploads/2024/09/SK%ED%85%94%EB%A0%88%EC%BD%A4-%EC%9D%84%EC%A7%80%EB%A1%9C-%EC%82%AC%EC%98%A5F.jpg",
+    "file": "skt-ai-데이터센터-전문회사-sk하이퍼-출범-c1c46700.jpg",
+    "ts": 1785435523749
+  },
+  "리벨리온-국산-npu-서버-1대로-skt-500b-모델-구동-fba17f51": {
+    "url": "https://kr.rebellions.ai/newsroom/rebelserver_axk1_serving/",
+    "image": "https://kr.rebellions.ai/wp-content/uploads/2026/07/260721_%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C-%EC%9D%B4%EB%AF%B8%EC%A7%80-1-1.jpg",
+    "file": "리벨리온-국산-npu-서버-1대로-skt-500b-모델-구동-fba17f51.jpg",
+    "ts": 1785435524551
+  },
+  "블랙포레스트랩스-mimic-robotics-flux-3-기반-비디오-액션-50134b1c": {
+    "url": "https://bfl.ai/blog/flux-3-mimic",
+    "image": "https://bfl.ai/api/og/blog/flux-3-mimic",
+    "file": "블랙포레스트랩스-mimic-robotics-flux-3-기반-비디오-액션-50134b1c.png",
+    "ts": 1785435528160
+  },
+  "github-copilot에-gemini-3-6-flash-정식-출시-e61249fb": {
+    "url": "https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/",
+    "image": "https://github.blog/wp-content/uploads/2026/07/623324231-141b274f-757c-47ad-b9ab-a065823cc201.png",
+    "file": "github-copilot에-gemini-3-6-flash-정식-출시-e61249fb.png",
+    "ts": 1785435528718
+  },
+  "skill-md를-밤새-자동-개선한다-autoimprove-cc-공개-36506f4d": {
+    "url": "https://github.com/VoidLight00/autoimprove-cc",
+    "image": "https://opengraph.githubassets.com/22f735f36da749924386968f6f75de2ef9cceb36f3dcfa962675d5d987ea0f26/VoidLight00/autoimprove-cc",
+    "file": "skill-md를-밤새-자동-개선한다-autoimprove-cc-공개-36506f4d.png",
+    "ts": 1786498517327
+  },
+  "google-anthropic에-최대-40b-투자-현금-10b-마일스톤--8fa0ef48": {
+    "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+    "image": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iMlW29un6T.s/v1/1200x800.jpg",
+    "file": "google-anthropic에-최대-40b-투자-현금-10b-마일스톤--8fa0ef48.jpg",
+    "ts": 1786498528152
+  },
+  "codex에서-gpt-5-4-계열-8월-31일-종료-996eadce": {
+    "url": "https://learn.chatgpt.com/docs/changelog",
+    "image": "https://learn.chatgpt.com/og/docs/changelog.png",
+    "file": "codex에서-gpt-5-4-계열-8월-31일-종료-996eadce.png",
+    "ts": 1786498607284
+  },
+  "7월-gemini-drop-macos-음성-지원-bae1b04e": {
+    "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Drops_Social.max-1440x810.png",
+    "file": "7월-gemini-drop-macos-음성-지원-bae1b04e.png",
+    "ts": 1786498612372
+  },
+  "yc-멀티플레이어-에이전트-하네스-qm-오픈소스-공개-85332718": {
+    "url": "https://github.com/yc-software/qm",
+    "image": "https://opengraph.githubassets.com/cdfe6a4b73c331178eabdcf6ddc2dc8296974ce218255247ee64a7f32faaf7e9/yc-software/qm",
+    "file": "yc-멀티플레이어-에이전트-하네스-qm-오픈소스-공개-85332718.png",
+    "ts": 1786498613485
+  },
+  "딥시크-v4-flash-0731-정식-공개-916a2975": {
+    "url": "https://api-docs.deepseek.com/updates",
+    "image": "https://api-docs.deepseek.com/img/deepseek-social-card.jpeg",
+    "file": "딥시크-v4-flash-0731-정식-공개-916a2975.jpg",
+    "ts": 1786498614398
+  },
+  "lg-7500억-파라미터-k-엑사원-2-0-공개-ebe5e80b": {
+    "url": "https://www.lgresearch.ai/blog/view?seq=677",
+    "image": "https://www.lgresearch.ai/data/upload/image/blog/%EA%B5%AD%EB%AC%B8_1%EC%95%88_344d38041.png?v=20260805",
+    "file": "lg-7500억-파라미터-k-엑사원-2-0-공개-ebe5e80b.png",
+    "ts": 1786498615124
+  },
+  "skt-피지컬-ai-스타트업-8곳과-협력-c69080fb": {
+    "url": "https://news.sktelecom.com/228643",
+    "image": "https://news-static.sktelecom.com/wp-content/uploads/2026/07/SKT-%ED%94%BC%EC%A7%80%EC%BB%AC-AI-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%EA%B3%BC-%EC%86%90%EC%9E%A1%EA%B3%A0-%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4-%EC%83%9D%ED%83%9C%EA%B3%84-%ED%82%A4%EC%9A%B4%EB%8B%A4_1_FB_1200x628.jpg",
+    "file": "skt-피지컬-ai-스타트업-8곳과-협력-c69080fb.jpg",
+    "ts": 1786498616760
+  },
+  "ai-헤지펀드-7월-포트폴리오-67-하락-60a00fd9": {
+    "url": "https://wtvbam.com/2026/07/31/situational-awareness-portfolio-sinks-67-in-july-on-ai-stock-rout-letter-shows/",
+    "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-07/31/2026-07-31T154407Z_1_LYNXMPEM6U1NS_RTROPTP_3_AI-TRAINING.JPG",
+    "file": "ai-헤지펀드-7월-포트폴리오-67-하락-60a00fd9.jpg",
+    "ts": 1786498622728
+  },
+  "ai-숨은-차입-1-65조-달러-채권-973-급증-23ae2b80": {
+    "url": "https://fortune.com/2026/07/31/ai-debt-hypescalers-capex-capital-spending-hidden-borrowing-bond-issuance/",
+    "image": "https://fortune.com/img-assets/wp-content/uploads/2026/07/GettyImages-2249021916-e1785504459772.jpg?resize=1200,600",
+    "file": "ai-숨은-차입-1-65조-달러-채권-973-급증-23ae2b80.jpg",
+    "ts": 1786498623472
+  },
+  "앤스로픽-카네기재단-회장을-글로벌-정책-총괄로-영입-4d687624": {
+    "url": "https://www.anthropic.com/news/tino-cuellar",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "file": "앤스로픽-카네기재단-회장을-글로벌-정책-총괄로-영입-4d687624.jpg",
+    "ts": 1786498624088
+  },
+  "클로드-코드-8월-14일부터-auto-모드가-기본값-796635d1": {
+    "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+    "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/69093b56f1035860a3cfe774_og_claude-code-on-the-web.jpg",
+    "file": "클로드-코드-8월-14일부터-auto-모드가-기본값-796635d1.jpg",
+    "ts": 1786498624503
+  },
+  "fable-5-생물학-안전장치-조정-오탐-85-감소-972ed13f": {
+    "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+    "image": "https://www.anthropic.com/api/opengraph-illustration?name=Node%20Bird&amp;backgroundColor=heather",
+    "file": "fable-5-생물학-안전장치-조정-오탐-85-감소-972ed13f.png",
+    "ts": 1786498625795
+  },
+  "오픈ai-에이전트-자율-해킹-블랙햇-공개-1e47aa1c": {
+    "url": "https://www.cybersecuritydive.com/news/openai-hugging-face-hack-ai-models-black-hat/827167/",
+    "image": "https://imgproxy.divecdn.com/5ViwzWjhokbuXFyk2jKLJMWajKvo3b20NEx375UV0as/g:nowe:71:409/c:3129:1767/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QWExfMjAyNjA4MDVfMjAyNzEzODEwLmpwZw==.webp",
+    "file": "오픈ai-에이전트-자율-해킹-블랙햇-공개-1e47aa1c.webp",
+    "ts": 1786498629832
+  },
+  "구글-바이브-코딩-집중-강좌-35만-명-수강-3ce791ab": {
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.width-1300.png",
+    "file": "구글-바이브-코딩-집중-강좌-35만-명-수강-3ce791ab.png",
+    "ts": 1786498632504
+  },
+  "gemini-클래스룸-전-연령-학생-개방-d532d3be": {
+    "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiLXJJJJaauHljpNQSk6_jdjsZPjJOp-mvHHVgYLvkT7wSvXWaVcfgPeVykN3lZNjfX4M-6LIlJLDD9knSOdcEzP8psdIrX_fsQGw9RPIQe7XYv2TqfMAFPWQMRYhb9330SdVJpclScey-Sq2bVf7wto-71tK_nm1Psr-3Mm068qiGHgWP87j3zJZ0oxM/w1200-h630-p-k-no-nu/Gemini%20in%20Google%20Classroom%20is%20expanding%20to%20users%20of%20all%20ages,%20with%20contextualized%20Gemini%20starter%20prompts%20for%20students%20-%201.png",
+    "file": "gemini-클래스룸-전-연령-학생-개방-d532d3be.png",
+    "ts": 1786498634909
+  },
+  "허사비스-deepmind-회장으로-제프-딘-퇴사-d37d7ece": {
+    "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/super-g_1.width-1300.jpg",
+    "file": "허사비스-deepmind-회장으로-제프-딘-퇴사-d37d7ece.jpg",
+    "ts": 1786498635711
+  },
+  "agent-plugins-개방형-규격-공개-79525d79": {
+    "url": "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/",
+    "image": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/agent-plugins-meta-1234x802.2e16d0ba.fill-1200x600.jpg",
+    "file": "agent-plugins-개방형-규격-공개-79525d79.jpg",
+    "ts": 1786498638395
+  },
+  "gemini-omni-활용-사례-5건-공개-988fd0f4": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-builders/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_hero.width-1300.png",
+    "file": "gemini-omni-활용-사례-5건-공개-988fd0f4.png",
+    "ts": 1786498639595
+  },
+  "ms-flint-0-5-차트-테마-규격-themespec-추가-e2518d0a": {
+    "url": "https://github.com/microsoft/flint-chart/releases",
+    "image": "https://opengraph.githubassets.com/a7e97c8e5744642ed06d47e2346bed1fa5d11229dc6628f91f05104e316c6bd6/microsoft/flint-chart",
+    "file": "ms-flint-0-5-차트-테마-규격-themespec-추가-e2518d0a.png",
+    "ts": 1786498641964
+  },
+  "github-copilot에-오픈웨이트-kimi-k3-추가-c0836b67": {
+    "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot/",
+    "image": "https://github.blog/wp-content/uploads/2026/08/github-copilot-social-card-8.png",
+    "file": "github-copilot에-오픈웨이트-kimi-k3-추가-c0836b67.png",
+    "ts": 1786498642876
+  },
+  "copilot-코드-리뷰-강도-조절-정식-출시-49bb59f3": {
+    "url": "https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available/",
+    "image": "https://github.blog/wp-content/uploads/2026/08/633138121-4de3d5e8-faeb-47a4-9cef-a703cce2b7b2.jpg",
+    "file": "copilot-코드-리뷰-강도-조절-정식-출시-49bb59f3.jpg",
+    "ts": 1786498643283
+  },
+  "cursor-gmail-drive-캘린더-플러그인-출시-d23d151f": {
+    "url": "https://cursor.com/changelog/google-workspace-plugins",
+    "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/opengraph-changelog-aug-03-2028-1--6jUJResHtvYnhvhruXTuoOCA2mKuJP.png",
+    "file": "cursor-gmail-drive-캘린더-플러그인-출시-d23d151f.png",
+    "ts": 1786498643761
+  },
+  "docker-샌드박스-초기-설정-자동화-kits-공개-c8717d8d": {
+    "url": "https://www.docker.com/blog/empty-sandboxes-break-developer-experience/",
+    "image": "https://www.docker.com/app/uploads/2025/03/image.png",
+    "file": "docker-샌드박스-초기-설정-자동화-kits-공개-c8717d8d.png",
+    "ts": 1786498644283
+  },
+  "cloudflare-사내-에이전트-플랫폼-오픈소스-공개-5b6cd3ba": {
+    "url": "https://blog.cloudflare.com/cloudflare-os/",
+    "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KZ7PN06AYFEQJN4FBVAE8WHH.png",
+    "file": "cloudflare-사내-에이전트-플랫폼-오픈소스-공개-5b6cd3ba.png",
+    "ts": 1786498644686
+  },
+  "cloudflare-에이전트-전용-브라우저-kitesurf-공개-8c1f4fb4": {
+    "url": "https://blog.cloudflare.com/kitesurf/",
+    "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KZBWYMKT77FDVB07PHA3R5WM.png",
+    "file": "cloudflare-에이전트-전용-브라우저-kitesurf-공개-8c1f4fb4.png",
+    "ts": 1786498645147
+  },
+  "prime-intellect-자기개선-에이전트-하네스-공개-42b06277": {
+    "url": "https://www.primeintellect.ai/blog/prime-agent",
+    "image": "https://primeintellect.ai/blog/prime-agent/cover.png?v=prime-agent",
+    "file": "prime-intellect-자기개선-에이전트-하네스-공개-42b06277.png",
+    "ts": 1786498646485
+  },
+  "qwen3-8-max-발표-가중치는-미공개-c807447d": {
+    "url": "https://qwen.ai/blog?id=qwen3.8",
+    "image": "https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png",
+    "file": "qwen3-8-max-발표-가중치는-미공개-c807447d.png",
+    "ts": 1786498647329
+  },
+  "미니맥스-h3-가중치-공개-한국은-제외-4bb06a56": {
+    "url": "https://www.minimax.io/news/minimax-h3-open-source",
+    "image": "https://file.cdn.minimax.io/public/abd3b3ab-f64e-4eb7-813c-ca391ee39765.jpeg",
+    "file": "미니맥스-h3-가중치-공개-한국은-제외-4bb06a56.jpg",
+    "ts": 1786498651547
+  },
+  "미스트랄-3b-오픈웨이트-안전-분류기-shieldstral-공개-4826195d": {
+    "url": "https://mistral.ai/news/shieldstral/",
+    "image": "https://mistral.ai/cms-media/api/media/file/Thumbnail-Model%3DShieldstral.jpg",
+    "file": "미스트랄-3b-오픈웨이트-안전-분류기-shieldstral-공개-4826195d.jpg",
+    "ts": 1786498652560
+  },
+  "deepgrove-3진-가중치-20b-moe-온디바이스-모델-공개-f38844ff": {
+    "url": "https://huggingface.co/deepgrove/maple-preview",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/deepgrove/maple-preview.png",
+    "file": "deepgrove-3진-가중치-20b-moe-온디바이스-모델-공개-f38844ff.png",
+    "ts": 1786498653726
+  },
+  "amd-추론-칩-스타트업-탈라스-인수-6b3ab8ee": {
+    "url": "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market",
+    "image": "https://d1io3yog0oux5.cloudfront.net/_f54fb729fac473f1298badcbe60a65e0/amd/db/834/7308/social_image_resized.jpg",
+    "file": "amd-추론-칩-스타트업-탈라스-인수-6b3ab8ee.jpg",
+    "ts": 1786498655533
+  },
+  "애플-오픈ai-영업비밀-소송-대상-확대-54ed8f1e": {
+    "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/07/tim-cook-sam-altman-GettyImages-2233062347.jpg?w=1024",
+    "file": "애플-오픈ai-영업비밀-소송-대상-확대-54ed8f1e.jpg",
+    "ts": 1786498656288
+  },
+  "lg-엑사원-산업-데이터-예측-글로벌-1위-f5a4de4e": {
+    "url": "https://www.lg.co.kr/media/release/30433",
+    "image": "http://www.lg.co.kr/media/images/65978",
+    "file": "lg-엑사원-산업-데이터-예측-글로벌-1위-f5a4de4e.png",
+    "ts": 1786498656831
+  },
+  "삼성전자-fms-2026서-zhbm-목업-첫-공개-bebae1c0": {
+    "url": "https://www.newswire.co.kr/newsRead.php?no=1039948",
+    "image": "https://file.newswire.co.kr/data/datafile2/thumb_480/2026/08/1028147215_20260805104551_7540747143.jpg",
+    "file": "삼성전자-fms-2026서-zhbm-목업-첫-공개-bebae1c0.jpg",
+    "ts": 1786498657565
+  },
+  "sk하이닉스-fms-2026서-hbf-첫-표준-공개-79413585": {
+    "url": "https://news.skhynix.co.kr/fms-2026/",
+    "image": "https://skhynix-prd-data.s3.ap-northeast-2.amazonaws.com/wp-content/uploads/2026/08/thumb_banner_FMS-2026.jpg",
+    "file": "sk하이닉스-fms-2026서-hbf-첫-표준-공개-79413585.jpg",
+    "ts": 1786498660595
+  },
+  "skt-2분기-ai-데이터센터-매출-92-5-증가-d14e9d27": {
+    "url": "https://news.sktelecom.com/228980",
+    "image": "https://news-static.sktelecom.com/wp-content/uploads/2026/05/%EC%9D%84%EC%A7%80%EB%A1%9C-%EC%82%AC%EC%98%A5-%EB%B3%B4%EB%8F%84%EC%9E%90%EB%A3%8C_%ED%8E%98%EB%B6%81.png",
+    "file": "skt-2분기-ai-데이터센터-매출-92-5-증가-d14e9d27.png",
+    "ts": 1786498663950
+  },
+  "네이버-브라질-칠레-ai-인프라-협업-논의-3ccbfd36": {
+    "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034553",
+    "image": "https://www.navercorp.com/img/og/OG_TAG_6_Media.png",
+    "file": "네이버-브라질-칠레-ai-인프라-협업-논의-3ccbfd36.png",
+    "ts": 1786498664640
+  },
+  "카카오-카나나-o-음성-생성-기술-고도화-40da4589": {
+    "url": "https://tech.kakao.com/posts/827",
+    "image": "https://img1.kakaocdn.net/thumb/U896x0/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakao_tech%2Fmedia%2Fc6286f84019f00001.jpeg",
+    "file": "카카오-카나나-o-음성-생성-기술-고도화-40da4589.jpg",
+    "ts": 1786498665335
+  },
+  "npm-공급망-웜-재발-400여-패키지-오염-018e9e70": {
+    "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+    "image": "https://cdn.prod.website-files.com/642adcaf364024654c71df23/6a71ca1f4e190f1129a4d78a_Social_ShaiHulud-Template-Light_16x9.png",
+    "file": "npm-공급망-웜-재발-400여-패키지-오염-018e9e70.png",
+    "ts": 1786498665814
+  },
+  "인터폴-아프리카-사이버범죄-55-가-ai-연계-d1b7834e": {
+    "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+    "image": "https://www.interpol.int/var/interpol/storage/images/4/9/0/7/427094-1-eng-GB/b70c1277e60c-African-Cyberthreat-Assessment-Report.jpeg",
+    "file": "인터폴-아프리카-사이버범죄-55-가-ai-연계-d1b7834e.jpg",
+    "ts": 1786498666751
+  },
+  "클로드가-리만-제타-함수-하한을-41-6-에서-67-2-로-올렸다-e38c742d": {
+    "url": "https://www.anthropic.com/research/riemann-zeta",
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/ca772f1b34e5b58e38694538f017d63f5dd196d9-1200x630.jpg",
+    "file": "클로드가-리만-제타-함수-하한을-41-6-에서-67-2-로-올렸다-e38c742d.jpg",
+    "ts": 1786498667929
+  },
+  "클로드-출력물에-워터마크와-c2pa-표식이-붙는다-60f27f51": {
+    "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+    "image": "https://downloads.intercomcdn.com/i/o/lupk8zyo/792494/717b10d3ebd874823db64841659b/76f3062d78ebbb04863fb1de3ef9cca0.png",
+    "file": "클로드-출력물에-워터마크와-c2pa-표식이-붙는다-60f27f51.png",
+    "ts": 1786498669575
+  },
+  "gemini-앱-월-사용자-10억-명-돌파-51a979e4": {
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/1BSS.max-1440x810.jpg",
+    "file": "gemini-앱-월-사용자-10억-명-돌파-51a979e4.jpg",
+    "ts": 1786498674365
+  },
+  "amie-실시간-화상-진료-연구-공개-af6b5661": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-1440x810.jpg",
+    "file": "amie-실시간-화상-진료-연구-공개-af6b5661.jpg",
+    "ts": 1786498675154
+  },
+  "구글-ai-자격증에-바이브-코딩-과정-추가-3a9d406d": {
+    "url": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/vibe-coding-course/",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ammaar_Trailer_Thumbnail_01.width-1300.png",
+    "file": "구글-ai-자격증에-바이브-코딩-과정-추가-3a9d406d.png",
+    "ts": 1786498676047
+  },
+  "구글-go가-ai-코딩에-맞는-이유-정리-1b2b7dc6": {
+    "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+    "image": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Go_Logo_-_Blue.2e16d0ba.fill-1200x600.png",
+    "file": "구글-go가-ai-코딩에-맞는-이유-정리-1b2b7dc6.png",
+    "ts": 1786498677274
+  },
+  "ms-mai-image-2-6-이미지-아레나-2위-기록-f8550524": {
+    "url": "https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/",
+    "image": "https://microsoft.ai/wp-content/uploads/2026/08/No2_1_Landing_1-LANDING.webp",
+    "file": "ms-mai-image-2-6-이미지-아레나-2위-기록-f8550524.webp",
+    "ts": 1786498679670
+  },
+  "ms-mai-code-1-1-flash-공개-비용-4분의-1-2d6e469f": {
+    "url": "https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/",
+    "image": "https://microsoft.ai/wp-content/uploads/2026/08/Code_1_1_Flash_Socials.webp",
+    "file": "ms-mai-code-1-1-flash-공개-비용-4분의-1-2d6e469f.webp",
+    "ts": 1786498680452
+  },
+  "xai-상시-구동-ai-에이전트-grok-bot-출시-556eab4f": {
+    "url": "https://docs.x.ai/grok-bot/overview",
+    "image": "https://docs.x.ai/api/og?t=eyJ0aXRsZSI6Ikdyb2sgQm90IiwidiI6IjYiLCJzY29wZSI6Imdyb2stYm90Iiwic2VjdGlvbiI6IlN0YXJ0In0.dL-W56IGFlJw93NojhfgFAydjCY-0vXqOEqFCGZHmD4",
+    "file": "xai-상시-구동-ai-에이전트-grok-bot-출시-556eab4f.png",
+    "ts": 1786498681233
+  },
+  "copilot에-mai-code-1-1-flash-추가-가격-73-인하-41baf278": {
+    "url": "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/",
+    "image": "https://github.blog/wp-content/uploads/2026/08/631422949-3a0eb06e-3927-45fb-852c-92050e87a6db.png",
+    "file": "copilot에-mai-code-1-1-flash-추가-가격-73-인하-41baf278.png",
+    "ts": 1786498683564
+  },
+  "jetbrains용-copilot에-메모리-ollama-지원-추가-4a8a669e": {
+    "url": "https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains/",
+    "image": "https://github.blog/wp-content/themes/github-2021-child/dist/img/social-v3-new-releases.jpg",
+    "file": "jetbrains용-copilot에-메모리-ollama-지원-추가-4a8a669e.jpg",
+    "ts": 1786498683922
+  },
+  "vercel-sandbox-오픈소스-관리형-이미지로-전환-2e7a8f8d": {
+    "url": "https://vercel.com/changelog/vercel-sandbox-managed-images",
+    "image": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3vaPqSowzp6g6BxbnsVtHf/b3a486944da4d9972d0370ab16f0ed81/image__20_.png",
+    "file": "vercel-sandbox-오픈소스-관리형-이미지로-전환-2e7a8f8d.png",
+    "ts": 1786498684761
+  },
+  "미스트랄-지역-엔드포인트-정식-출시-2030년-1gw-계획-d1598b19": {
+    "url": "https://mistral.ai/news/regional-inference-open-models-new-compute/",
+    "image": "https://mistral.ai/cms-media/api/media/file/Cover-SovereignAI.png",
+    "file": "미스트랄-지역-엔드포인트-정식-출시-2030년-1gw-계획-d1598b19.png",
+    "ts": 1786498686509
+  },
+  "cactus-14mb짜리-45m-파라미터-에이전트-모델-공개-dc264893": {
+    "url": "https://cactuscompute.com/needle",
+    "image": "https://cactuscompute.com/opengraph-image?9df76a35fe8276e2",
+    "file": "cactus-14mb짜리-45m-파라미터-에이전트-모델-공개-dc264893.png",
+    "ts": 1786498686824
+  },
+  "엔비디아-6개-금융사와-5000억-달러-조달-구조-c4bf2b3b": {
+    "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+    "image": "https://iprsoftwaremedia.com/219/files/20224/6296531eb3aed3741918b6b5_DH1L4415-HDR-20220527-r5/DH1L4415-HDR-20220527-r5_dba29dde-5a9b-4ac8-bf58-a0b78da89547-prv.jpg?v=dba29dde-5a9b-4ac8-bf58-a0b78da89547",
+    "file": "엔비디아-6개-금융사와-5000억-달러-조달-구조-c4bf2b3b.jpg",
+    "ts": 1786498688922
+  },
+  "인텔-200억-달러-유상증자로-ai-투자-조달-2c5b0f54": {
+    "url": "https://www.intc.com/news-events/press-releases/detail/1779/intel-announces-upsize-and-pricing-of-20-billion-common",
+    "image": "https://d1io3yog0oux5.cloudfront.net/_131b70ab721c32cf37e020768efb170c/intel/db/878/6995/social_image_resized.jpg",
+    "file": "인텔-200억-달러-유상증자로-ai-투자-조달-2c5b0f54.jpg",
+    "ts": 1786498690201
+  },
+  "네이버-시니어-맞춤-ai-교과서-공동-개발-d8a8aa3d": {
+    "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034580",
+    "image": "https://www.navercorp.com/img/og/OG_TAG_6_Media.png",
+    "file": "네이버-시니어-맞춤-ai-교과서-공동-개발-d8a8aa3d.png",
+    "ts": 1786498691064
+  },
+  "업스테이지-에이전트형-solar-pro-4-공개-4c658132": {
+    "url": "https://www.upstage.ai/blog/en/solar-pro-4",
+    "image": "https://cdn.prod.website-files.com/6743d5190bb2b52f38e99ecd/6a79e8a0f046f786d388335d_sp4(still).png",
+    "file": "업스테이지-에이전트형-solar-pro-4-공개-4c658132.png",
+    "ts": 1786498691435
+  },
+  "독파모-4개팀-모두-epoch-ai-주목-모델-등재-1635b227": {
+    "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156774084",
+    "image": "https://www.korea.kr/images/event/korea_logo_2024.jpg",
+    "file": "독파모-4개팀-모두-epoch-ai-주목-모델-등재-1635b227.jpg",
+    "ts": 1786498692593
+  },
+  "ai가-잠드는-방법-렘수면에서-영감-받은-에이전트-메모리-설계-bceff5ac": {
+    "url": "https://github.com/VoidLight00/ai-dream",
+    "image": "https://opengraph.githubassets.com/1adf5d246ad08be7d297cd30da10d202ae31970e3300c2fd64fa3c5c2a39760d/VoidLight00/ai-dream",
+    "file": "ai가-잠드는-방법-렘수면에서-영감-받은-에이전트-메모리-설계-bceff5ac.png",
+    "ts": 1786498838048
+  },
+  "agent-workspace-linux-ai-에이전트-전용-격리-linu-79b812a3": {
+    "url": "https://github.com/agent-sh/agent-workspace-linux",
+    "image": "https://opengraph.githubassets.com/6589c19f202cafb4fae3ed053080bddb40eff0225c76a90a055233af62a33510/agent-sh/agent-workspace-linux",
+    "file": "agent-workspace-linux-ai-에이전트-전용-격리-linu-79b812a3.png",
+    "ts": 1786498894725
+  },
+  "카카오-경량-언어모델-카나나-2-네-종을-오픈소스로-공개-db7f84bf": {
+    "url": "https://www.kakaocorp.com/page/detail/12089",
+    "image": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/news/a6042fdf019f00001.png?type=thumb&opt=C800x400",
+    "file": "카카오-경량-언어모델-카나나-2-네-종을-오픈소스로-공개-db7f84bf.png",
+    "ts": 1786499256320
+  },
+  "오픈ai-윤리-총괄-퇴사-후임-없어-46e74120": {
+    "url": "https://www.irishtimes.com/technology/big-tech/2026/08/11/openais-head-of-ethics-leaves-start-up-less-than-a-year-after-joining/",
+    "image": "https://www.irishtimes.com/resizer/v2/VHH7JI3REFEM5GVFWOGFHEFHE4.jpg?smart=true&auth=d08ada37404176c508aa10ddc3771bde67c119db72483fb0c069334d24ece852&width=1200&height=630",
+    "file": "오픈ai-윤리-총괄-퇴사-후임-없어-46e74120.jpg",
+    "ts": 1786499622052
+  },
+  "openai-codex-cli-goal-슬래시-커맨드와-자체-검증-루프-4512c871": {
+    "url": "https://developers.openai.com/codex/cli/slash-commands",
+    "image": "https://learn.chatgpt.com/og/docs/developer-commands.png",
+    "file": "openai-codex-cli-goal-슬래시-커맨드와-자체-검증-루프-4512c871.png",
+    "ts": 1786500068862
+  },
+  "andrej-karpathy-skills-코딩-에이전트를-덜-망치게-만드-098f2d32": {
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "image": "https://opengraph.githubassets.com/c67fa127075716fb1863d702d6240288feb2cfee461e6a9197ac9767e91b4d18/multica-ai/andrej-karpathy-skills",
+    "file": "andrej-karpathy-skills-코딩-에이전트를-덜-망치게-만드-098f2d32.png",
+    "ts": 1786500072163
+  },
+  "claude-code-dynamic-workflows-공개-한-세션에서--0da8068e": {
+    "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+    "image": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a1871a9d0a0bd93c860cda7_og-dynamic-workflows.jpg",
+    "file": "claude-code-dynamic-workflows-공개-한-세션에서--0da8068e.jpg",
+    "ts": 1786500073432
+  },
+  "cl4r1t4s-ai-시스템-프롬프트-유출-모음-f7bd4ce0": {
+    "url": "https://github.com/elder-plinius/CL4R1T4S",
+    "image": "https://opengraph.githubassets.com/d1bc4315932a17451a46793d3b6d348b46ead33be574d0a2f4c98ae48766377b/elder-plinius/CL4R1T4S",
+    "file": "cl4r1t4s-ai-시스템-프롬프트-유출-모음-f7bd4ce0.png",
+    "ts": 1786500076252
+  },
+  "xai-grok-voice-think-fast-1-0-voice-benc-72d521f1": {
+    "url": "https://x.ai/news/grok-voice-think-fast-1",
+    "image": "https://media.x.ai/v1/website/grok-voice-think-fast-1-1d8f155a.webp",
+    "file": "xai-grok-voice-think-fast-1-0-voice-benc-72d521f1.webp",
+    "ts": 1786598486100
+  },
+  "xai-grok-api-voice-cloning-정식-출시-2분-미만-8-4dc8ac0c": {
+    "url": "https://x.ai/news/grok-custom-voices",
+    "image": "https://media.x.ai/v1/website/grok-custom-voices-d5eafa89.webp",
+    "file": "xai-grok-api-voice-cloning-정식-출시-2분-미만-8-4dc8ac0c.webp",
+    "ts": 1786598492287
+  },
+  "xai-이미지-영상-모델-grok-imagine-1-5-preview-a-4a978eec": {
+    "url": "https://x.ai/news/grok-imagine-1-5",
+    "image": "https://media.x.ai/v1/website/grok-imagine-1-5-og-342e9fa3.webp",
+    "file": "xai-이미지-영상-모델-grok-imagine-1-5-preview-a-4a978eec.webp",
+    "ts": 1786598526205
+  },
+  "xai-grok-imagine-video-1-5-정식-출시-ga-imag-7fffe5c6": {
+    "url": "https://x.ai/news/grok-imagine-video-1-5",
+    "image": "https://media.x.ai/v1/website/grok-imagine-video-1-5-og-10a5c726.png",
+    "file": "xai-grok-imagine-video-1-5-정식-출시-ga-imag-7fffe5c6.png",
+    "ts": 1786598527164
+  },
+  "xai-grok-build에-goal-도입-검증-내장-장시간-자율-실행--b1d5c595": {
+    "url": "https://x.ai/news/introducing-goal",
+    "image": "https://media.x.ai/v1/website/introducing-goal-og-62e9a5f8.webp",
+    "file": "xai-grok-build에-goal-도입-검증-내장-장시간-자율-실행--b1d5c595.webp",
+    "ts": 1786598528318
+  },
+  "xai-grok-databricks-agent-bricks에-네이티브-제-9a3988ca": {
+    "url": "https://x.ai/news/grok-databricks",
+    "image": "https://media.x.ai/v1/website/grok-databricks-21d5922f.webp",
+    "file": "xai-grok-databricks-agent-bricks에-네이티브-제-9a3988ca.webp",
+    "ts": 1786598529369
+  },
+  "xai-grok을-구글-워크스페이스-애드온으로-출시-decd04bc": {
+    "url": "https://x.ai/news/introducing-google-workspace-addon",
+    "image": "https://media.x.ai/v1/website/grok-in-google-workspace-og-129ad993.png",
+    "file": "xai-grok을-구글-워크스페이스-애드온으로-출시-decd04bc.png",
+    "ts": 1786598538862
   }
 }

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" role="img" aria-labelledby="title description">
+  <title id="title">SQRL inspects a database before answering</title>
+  <desc id="description">A question enters a database, checks a highlighted row, and exits as a supported SQL answer.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#D7CBB6" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#C6531D"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="400" fill="#F2EDE3"/>
+  <rect width="1600" height="400" fill="url(#grid)"/>
+  <path d="M0 1H1600M0 399H1600" stroke="#1B1714" stroke-width="2"/>
+
+  <g transform="translate(100 105)">
+    <rect width="360" height="190" fill="#FBF7F0" stroke="#1B1714" stroke-width="2"/>
+    <path d="M0 42H360" stroke="#1B1714" stroke-width="2"/>
+    <text x="20" y="27" fill="#756A5E" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="3">QUESTION</text>
+    <path d="M20 76H290M20 104H324M20 132H242" stroke="#3F382F" stroke-width="8"/>
+    <path d="M20 164H124" stroke="#D7CBB6" stroke-width="6"/>
+  </g>
+
+  <path d="M460 200H570V177H630" fill="none" stroke="#C6531D" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="505" y="188" fill="#C6531D" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2">PROBE</text>
+
+  <g transform="translate(630 54)">
+    <rect width="340" height="292" fill="#FBF7F0" stroke="#1B1714" stroke-width="2"/>
+    <rect width="340" height="42" fill="#1B1714"/>
+    <text x="18" y="27" fill="#FBF7F0" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="3">DATABASE</text>
+
+    <path d="M0 96H340M0 151H340M0 206H340M0 251H340" stroke="#D7CBB6" stroke-width="1"/>
+    <rect x="1" y="97" width="338" height="53" fill="#EFD9C6"/>
+    <path d="M1 97H339M1 150H339" stroke="#C6531D" stroke-width="2"/>
+
+    <path d="M20 67H112M138 67H238M263 67H316" stroke="#9A9081" stroke-width="7"/>
+    <path d="M20 123H98M138 123H228M263 123H312" stroke="#C6531D" stroke-width="7"/>
+    <path d="M20 178H126M138 178H204M263 178H304" stroke="#9A9081" stroke-width="7"/>
+    <path d="M20 232H82M138 232H248M263 232H316" stroke="#9A9081" stroke-width="7"/>
+    <path d="M20 273H116M138 273H214M263 273H300" stroke="#9A9081" stroke-width="7"/>
+  </g>
+
+  <path d="M970 177H1070V200H1140" fill="none" stroke="#C6531D" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="999" y="165" fill="#C6531D" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2">OBSERVE</text>
+
+  <g transform="translate(1140 105)">
+    <rect width="360" height="190" fill="#1B1714" stroke="#1B1714" stroke-width="2"/>
+    <path d="M0 42H360" stroke="#756A5E" stroke-width="1"/>
+    <text x="20" y="27" fill="#E0823A" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="3">ANSWER</text>
+    <text x="20" y="82" fill="#9A9081" font-family="IBM Plex Mono, monospace" font-size="12">&lt;answer&gt;</text>
+    <path d="M20 108H302M20 134H252" stroke="#FBF7F0" stroke-width="8"/>
+    <text x="20" y="169" fill="#9A9081" font-family="IBM Plex Mono, monospace" font-size="12">&lt;/answer&gt;</text>
+  </g>
+</svg>
