@@ -36,7 +36,7 @@
 | IMP-0028 | 2026-07-30 | quality | P3 차단 기록 신선도 게이트 (X 37채널 낭비 제거 + 분기 재확인 강제) | references/check_block_staleness.py | HEAD |
 | IMP-0029 | 2026-08-12 | ab-data | 2026-07-31~08-12 AI 정보로 사이트 주차 카드 채우기 (w31 추가분·w32·w33) | lib/weeks/2026-w31.ts<br>lib/weeks/2026-w32.ts<br>lib/weeks/2026-w33.ts<br>lib/data.ts | c560ecf |
 | IMP-0030 | 2026-08-12 | quality | 봇 차단 도메인(openai.com 등) OG 이미지 확보 — 인젝터에 텍스트 프록시 폴백 배선 | scripts/inject-thumbnails.mjs<br>_workspace/thumbnails/fallback-map.json | c560ecf |
-| IMP-0031 | 2026-08-12 | ab-data | AB 2026-08a 회차 생성 — 하이라이트 6(잠정) + 오픈소스 픽 10(paseo 1순위) | lib/ab/editions/2026-08a.ts<br>lib/ab/data.ts | c560ecf |
+| IMP-0031 | 2026-08-12 | ab-data | AB 2026-08a 회차 생성 — 하이라이트 Top5(사용자 확정) + 오픈소스 픽 2종(cognee, paseo) | lib/ab/editions/2026-08a.ts<br>lib/ab/data.ts | c560ecf |
 | IMP-0032 | 2026-08-13 | ab-data | 2026-08a VIP Top6 큐레이터 확정 + 오픈소스 픽을 cognee·paseo 2종으로 교체 | lib/ab/editions/2026-08a.ts | c560ecf |
 | IMP-0033 | 2026-08-13 | ab-data | 2026-08a rev2 — C2PA 워터마크와 무료티어(Luna 무제한+한국 광고) 승격, npm 웜 보강 강등 | lib/ab/editions/2026-08a.ts | c560ecf |
 
