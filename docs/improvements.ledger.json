@@ -697,6 +697,26 @@
         "value": 0
       },
       "notes": "VN-DESIGN-05"
+    },
+    {
+      "id": "IMP-0038",
+      "date": "2026-08-13",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "2026-08a 교훈을 /AB 하네스에 영구 배선 — 게이트 3종·회귀 3종·런타임 문서 2종·헤드리스 수집기",
+      "status": "applied",
+      "files": [
+        "references/regressions.json",
+        "scripts/run-all-gates.mjs"
+      ],
+      "commit": "ad71385",
+      "evidence": {
+        "kind": "count",
+        "cmd": "python3 -c \"import json;print(len(json.load(open('references/regressions.json'))['checks']))\"",
+        "op": "gte",
+        "value": 9
+      },
+      "notes": "VN-DESIGN-02~06 · VN-SRC-03/04 · VN-CI-01"
     }
   ]
 }
