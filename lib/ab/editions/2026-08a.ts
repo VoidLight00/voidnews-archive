@@ -126,7 +126,7 @@ const marking = post({
   deck: "8월 2일 이후 출시 모델은 처음부터 표식을 답니다.",
   summary:
     "Anthropic이 Claude 출력물에 기계 판독 가능한 표식을 넣는 방식을 공개했어요. 텍스트에는 복사·붙여넣기에도 남는 비가시 워터마크를, 파일에는 C2PA 표준을 따르는 서명된 출처 메타데이터를 붙여요.",
-  content: `**무엇이 붙나**\nAnthropic이 Claude 출력물 표식 방식을 문서로 공개했습니다. 두 가지를 함께 씁니다.\n\n- **텍스트**: 읽기에 영향을 주지 않고 복사·붙여넣기에도 남는 비가시 워터마크\n- **파일**: C2PA(Coalition for Content Provenance and Authenticity) 개방 표준을 따르는 **서명된 출처 메타데이터**\n\n적용 범위는 Claude Platform(API), Claude, Claude Code, Claude Cowork, Claude Tag이고 AWS·Google Cloud·Microsoft Foundry를 포함해 전 세계입니다.\n\n**날짜가 우연이 아닙니다**\n"2026년 8월 2일 이후 출시되는 모델은 출시 시점부터 지원한다"가 문서의 기준입니다. 같은 **8월 2일**, EU AI법의 투명성 의무가 시행됐습니다. 챗봇은 사람이 아님을 알려야 하고, 딥페이크는 표시해야 하며, AI 생성·변형 콘텐츠에는 **기계 판독 가능한 표식**이 있어야 합니다. 집행위는 투명성 실무규약에 180개 이상 조직이 서명했다고 밝혔습니다.\n\n규제 조문이 제품 동작으로 내려온 첫 사례입니다.\n\n**그리고 9일 뒤, 제거 도구가 나왔습니다**\n8월 11일 GitHub에 watermarks-remover가 올라왔습니다. MIT 라이선스이고 이틀 만에 별 3,044개, 포크 301개가 붙었습니다. 저장소 토픽에 c2pa, synthid, claude, provenance가 직접 달려 있습니다.\n\nREADME가 대상으로 명시한 것은 Claude, Gemini/SynthID-Text, OpenAI provenance surfaces, 그리고 오픈 LLM의 통계적 워터마크입니다. 비가시 유니코드·이형 공백 같은 텍스트 계층, 통계적 토큰 샘플링 계층, 그리고 파일의 C2PA·EXIF·XMP 메타데이터를 다룬다고 적었습니다.\n\n다만 **저자들이 직접 적어둔 한계가 더 중요합니다.**\n\n> \"Until vendors ship public detectors and keys, no tool can honestly certify 'this fails the official check.'\"\n\n공개 탐지기와 키가 없으니 제거됐다는 것도 증명할 수 없다는 뜻입니다. 덧붙여 텍스트를 다시 쓰면 \"tone, voice, and precision\"이 뭉개진다고 스스로 경고했고, 픽셀 도메인 워터마크와 soft-bound C2PA는 범위 밖이라고 명시했습니다.\n\n**8월 2일 의무화, 8월 11일 제거 도구.** 9일 간격입니다.\n\n**한계는 명시돼 있습니다**\nAnthropic은 탐지 결과가 "완전히 결정적이지는 않다"고 적었습니다. Claude가 기존 글을 편집만 했거나 많이 고쳐 쓴 텍스트에는 표식이 남지 않을 수 있습니다. **표식이 없다 = AI가 안 썼다**가 아닙니다.\n\n**직접 확인할 것**\nEU 시장에 서비스한다면 챗봇 고지와 생성물 표식은 이미 의무입니다. 국내에서도 AI 산출물을 납품·게시하는 조직이라면 표식 유무를 산출물 확인 항목에 넣으십시오. 반대로 표식 부재를 근거로 사람이 썼다고 판정하는 절차는 지금 만들면 안 됩니다.\n\n정리하면 이렇습니다. **표식이 없다고 사람이 쓴 것도 아니고, 표식이 있다고 그것만으로 증명되는 것도 아닙니다.** 출처 판정은 표식 하나가 아니라 작성 이력·제출 경로·검토 기록을 함께 보는 다층 검증이어야 합니다. 워터마크는 그 층 중 하나이지 전부가 아닙니다.`,
+  content: `**무엇이 붙나**\nAnthropic이 Claude 출력물 표식 방식을 문서로 공개했습니다. 두 가지를 함께 씁니다.\n\n- **텍스트**: 읽기에 영향을 주지 않고 복사·붙여넣기에도 남는 비가시 워터마크\n- **파일**: C2PA(Coalition for Content Provenance and Authenticity) 개방 표준을 따르는 **서명된 출처 메타데이터**\n\n적용 범위는 Claude Platform(API), Claude, Claude Code, Claude Cowork, Claude Tag이고 AWS·Google Cloud·Microsoft Foundry를 포함해 전 세계입니다.\n\n**날짜가 우연이 아닙니다**\n"2026년 8월 2일 이후 출시되는 모델은 출시 시점부터 지원한다"가 문서의 기준입니다. 같은 **8월 2일**, EU AI법의 투명성 의무가 시행됐습니다. 챗봇은 사람이 아님을 알려야 하고, 딥페이크는 표시해야 하며, AI 생성·변형 콘텐츠에는 **기계 판독 가능한 표식**이 있어야 합니다. 집행위는 투명성 실무규약에 180개 이상 조직이 서명했다고 밝혔습니다.\n\n규제 조문이 제품 동작으로 내려온 첫 사례입니다.\n\n**그리고 9일 뒤, 제거 도구가 나왔습니다**\n8월 11일 GitHub에 watermarks-remover가 올라왔습니다. MIT 라이선스이고 이틀 만에 별 3천 개를 넘겼습니다(2026-08-13 오후 실측 ★3,432·포크 335). 저장소 토픽에 c2pa, synthid, claude, provenance가 직접 달려 있습니다.\n\nREADME가 대상으로 명시한 것은 Claude, Gemini/SynthID-Text, OpenAI provenance surfaces, 그리고 오픈 LLM의 통계적 워터마크입니다. 비가시 유니코드·이형 공백 같은 텍스트 계층, 통계적 토큰 샘플링 계층, 그리고 파일의 C2PA·EXIF·XMP 메타데이터를 다룬다고 적었습니다.\n\n다만 **저자들이 직접 적어둔 한계가 더 중요합니다.**\n\n> \"Until vendors ship public detectors and keys, no tool can honestly certify 'this fails the official check.'\"\n\n공개 탐지기와 키가 없으니 제거됐다는 것도 증명할 수 없다는 뜻입니다. 덧붙여 텍스트를 다시 쓰면 \"tone, voice, and precision\"이 뭉개진다고 스스로 경고했고, 픽셀 도메인 워터마크와 soft-bound C2PA는 범위 밖이라고 명시했습니다.\n\n**8월 2일 의무화, 8월 11일 제거 도구.** 9일 간격입니다.\n\n**한계는 명시돼 있습니다**\nAnthropic은 탐지 결과가 "완전히 결정적이지는 않다"고 적었습니다. Claude가 기존 글을 편집만 했거나 많이 고쳐 쓴 텍스트에는 표식이 남지 않을 수 있습니다. **표식이 없다 = AI가 안 썼다**가 아닙니다.\n\n**직접 확인할 것**\nEU 시장에 서비스한다면 챗봇 고지와 생성물 표식은 이미 의무입니다. 국내에서도 AI 산출물을 납품·게시하는 조직이라면 표식 유무를 산출물 확인 항목에 넣으십시오. 반대로 표식 부재를 근거로 사람이 썼다고 판정하는 절차는 지금 만들면 안 됩니다.\n\n정리하면 이렇습니다. **표식이 없다고 사람이 쓴 것도 아니고, 표식이 있다고 그것만으로 증명되는 것도 아닙니다.** 출처 판정은 표식 하나가 아니라 작성 이력·제출 경로·검토 기록을 함께 보는 다층 검증이어야 합니다. 워터마크는 그 층 중 하나이지 전부가 아닙니다.`,
   source: "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
   officialUrl: "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
   verifiedAt: "2026-08-12",
@@ -219,6 +219,26 @@ const editorsPicks: ABEditorPick[] = [
     thumbnail: {
       src: "/og-cache/paseo-코딩-에이전트를-데스크톱-폰-cli에서-한-곳으로-조종-6c416faa.png",
       alt: "Paseo — 코딩 에이전트를 데스크톱·폰·CLI에서 한 곳으로 조종",
+    },
+  },
+  {
+    title: "watermarks-remover — AI 출처 표식의 약한 고리를 드러낸 저장소",
+    slug: "watermarks-remover",
+    deck: "8월 2일 표식 의무화, 9일 뒤 제거 도구. 이틀 만에 별 3천 개를 넘겼습니다.",
+    category: "출처·프로버넌스",
+    sourceUrl: "https://github.com/guillaumemeyer/watermarks-remover",
+    sourceLabel: "GitHub에서 보기 →",
+    guideUrl: "https://c2pa.org/",
+    guideLabel: "C2PA 표준 문서 →",
+    summary:
+      "Claude·Gemini SynthID·OpenAI의 출처 표식을 대상으로 삼는다고 밝힌 저장소입니다. 도입 대상이 아니라 지금 워터마크에 무엇을 기대할 수 있고 무엇은 기대하면 안 되는지를 보여주는 자료로 넣었습니다. MIT.",
+    body: "이 픽은 쓰라고 넣은 게 아닙니다. **표식 정책의 한계를 저자들이 직접 문서화해 뒀기 때문에** 넣었습니다.\n\nREADME가 대상으로 명시한 것은 Claude, Gemini/SynthID-Text, OpenAI provenance surfaces, 그리고 오픈 LLM의 통계적 워터마크입니다. 다루는 계층은 세 가지로 적혀 있습니다. 비가시 유니코드와 이형 공백 같은 텍스트 계층, 통계적 토큰 샘플링 계층, 그리고 파일의 C2PA·EXIF·XMP 메타데이터입니다. 지원 포맷은 PNG·JPEG·SVG·PDF·DOCX·ODT·HTML·MD.\n\n**정작 중요한 건 저자들이 스스로 그은 선입니다.**\n\n> \"Until vendors ship public detectors and keys, no tool can honestly certify \u2018this fails the official check.\u2019\"\n\n벤더가 공개 탐지기와 키를 내놓기 전에는 제거됐다는 것조차 증명할 수 없다는 뜻입니다. 텍스트를 다시 쓰는 방식에 대해서도 \"tone, voice, and precision\"이 뭉개진다고 경고했고, 픽셀 도메인 워터마크와 soft-bound C2PA는 **범위 밖**이라고 명시했습니다. SynthID 스코어러는 점수만 매기고 제거하지 않습니다. 용도는 \"본인이 소유한 콘텐츠의 프라이버시·위생\"으로 한정했습니다.\n\n실측(2026-08-13 오후): ★3,432 · fork 335 · Python · **MIT** · 2026-08-11 생성.\n같은 날 오전 실측이 ★3,044였으니 반나절에 약 390개가 더 붙었습니다. 숫자는 계속 움직입니다.",
+    editorial:
+      "4번 카드와 짝입니다. 8월 2일 EU AI법 투명성 의무가 시행되고 Anthropic이 같은 날짜 기준으로 표식을 붙이기 시작했는데, 9일 뒤 이 저장소가 올라와 이틀 만에 별 3천 개를 넘겼습니다. 결론은 우회 가능성이 아니라 판정 방식입니다 — 표식이 없다고 사람이 쓴 것도 아니고, 표식이 있다고 그것만으로 증명되는 것도 아닙니다. 출처 판정은 작성 이력·제출 경로·검토 기록을 함께 보는 다층 검증이어야 하고, 워터마크는 그중 한 층입니다. 설치나 사용법은 싣지 않습니다.",
+    tags: ["프로버넌스", "C2PA", "워터마크", "MIT", "보안"],
+    thumbnail: {
+      src: "/og-cache/watermarks-remover-ai-출처-표식의-약한-고리를-드러내다-3c102972.png",
+      alt: "watermarks-remover — AI 출처 표식의 약한 고리를 드러낸 저장소",
     },
   },
 ];
