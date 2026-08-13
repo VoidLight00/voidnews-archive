@@ -139,3 +139,23 @@ QA(`voidbrief-qa-auditor`)나 사용자가 새 결함을 발견하면:
 **수정**: 집계 키를 호스트가 아니라 **채널 URL 접두**로 바꿨다(`via_hits()`). 재병합 결과 X 36채널이 `visited-blocked-http` 0건으로 교정됐고, 전체 수확합이 **686 → 358**로 내려갔다(686이 부풀려진 값이었다). zeroHarvest 25 → 61이 정직한 수치다.
 
 **교훈**: 게이트가 exit 0을 냈다고 값이 참인 건 아니다. **집계 키가 대상보다 거칠면 게이트는 통과하면서 거짓을 통과시킨다.** 커버리지 수치는 그 채널에 고유한 식별자(URL·handle)로만 귀속한다. 이 결함은 신규 게이트(`check_block_staleness`)를 시험하다 X 행의 `itemsFound=9`가 눈에 걸려 발견됐다 — 게이트를 늘리면 기존 게이트의 거짓 통과도 같이 드러난다.
+
+### VN-CI-01 — 하네스 스코프 evidence 가 Vercel 빌드를 막음 (2026-08-13)
+
+**증상**: 로컬 `npm run build` 8/8 게이트 통과 후 push 했는데 Vercel 프로덕션 빌드가
+22초 만에 실패. `verify-improvements.mjs` FAIL exit 2, ledger 6건이 REGRESSED.
+IMP-0023·0024·0026·0027·0028 은 actual=127, IMP-0025 는 actual=1.
+
+**원인**: 그 6건은 하네스(스킬) 쪽 개선이라 evidence 명령이
+`bash ~/.claude/skills/voidnews-briefing-pipeline/...` 를 실행한다. 스킬 디렉토리는
+작성 머신에만 있고 Vercel 빌더에는 없어 `sh` 가 exit 127(command not found)을 낸다.
+실제 회귀가 아닌데 배포가 막혔고, 로컬에서는 경로가 존재해 통과하므로 잠복했다.
+
+**수정**: `ledger.mjs` 에 환경 인식을 넣었다. evidence cmd 가 `~/.claude/skills/` 를
+참조하는데 그 루트가 없는 환경이면 `skipped(harness-scope)` 로 분리하고 회귀로 세지
+않는다. 경로가 있는 머신에서는 그대로 실측한다. 자체검증: CI 시뮬(HOME 격리)에서
+6 skipped·16 verified·exit 0, 리포 범위 항목을 일부러 깨면 같은 환경에서 exit 2.
+
+**재발 방지 규칙**: 리포 게이트의 evidence 는 리포 상대경로만 쓴다. 하네스 산출물을
+근거로 삼아야 하면 그 사실이 명령 자체에 드러나게 두고(`~/.claude/skills/` 접두사),
+검증기가 환경별로 분기하게 한다. "로컬에서 통과했으니 CI 도 통과한다"는 가정 금지.

@@ -41,8 +41,20 @@ function nextId(entries) {
 }
 
 // evidence 실행: {kind:"exit0"|"count", cmd, op?, value?} → {pass, actual}
+// 하네스(스킬 디렉토리) 쪽 개선은 evidence 명령이 ~/.claude/skills/... 를 가리킨다.
+// 그 경로는 작성 머신에만 있고 CI/Vercel 빌더에는 없어서 sh 가 exit 127 을 낸다.
+// 실제 회귀가 아닌데 배포를 막으므로, 참조 경로가 없는 환경에서는 skipped 로 분리한다.
+// 경로가 있는 머신에서는 그대로 fail-closed 로 실측한다 — 보증이 약해지지 않는다.
+const HARNESS_RE = /(~|\$HOME)\/\.claude\/skills\//;
+function harnessScopeUnavailable(ev) {
+  if (!ev?.cmd || !HARNESS_RE.test(ev.cmd)) return false;
+  const skillRoot = path.join(process.env.HOME || "", ".claude", "skills");
+  return !fs.existsSync(skillRoot);
+}
+
 function runEvidence(ev) {
   if (!ev || ev.kind === "manual") return { pass: true, actual: "manual" };
+  if (harnessScopeUnavailable(ev)) return { pass: true, actual: "skipped(harness-scope)", skipped: true };
   const r = spawnSync("sh", ["-c", ev.cmd], { cwd: ROOT, encoding: "utf8" });
   if (ev.kind === "exit0") return { pass: r.status === 0, actual: `exit ${r.status}` };
   if (ev.kind === "count") {
@@ -93,12 +105,16 @@ function cmdVerify(warn) {
   const d = load();
   const checked = d.entries.filter((e) => ["applied", "verified"].includes(e.status) && e.evidence && e.evidence.kind !== "manual");
   let failed = 0;
+  let skipped = 0;
   for (const e of checked) {
-    const { pass, actual } = runEvidence(e.evidence);
-    if (!pass) failed++;
-    console.log(`  ${pass ? "✓" : "✗"} ${e.id} [${e.status}] ${e.category} — actual=${actual}${pass ? "" : "  REGRESSED: " + e.request.slice(0, 60)}`);
+    const { pass, actual, skipped: sk } = runEvidence(e.evidence);
+    if (sk) skipped++;
+    else if (!pass) failed++;
+    const mark = sk ? "–" : pass ? "✓" : "✗";
+    console.log(`  ${mark} ${e.id} [${e.status}] ${e.category} — actual=${actual}${pass ? "" : "  REGRESSED: " + e.request.slice(0, 60)}`);
   }
-  console.log(`[ledger] verified ${checked.length} applied/verified entries, ${failed} regressed`);
+  const tail = skipped ? `, ${skipped} skipped(하네스 스코프 — 스킬 미설치 환경)` : "";
+  console.log(`[ledger] verified ${checked.length - skipped} applied/verified entries, ${failed} regressed${tail}`);
   if (failed && !warn) process.exit(2);
 }
 
