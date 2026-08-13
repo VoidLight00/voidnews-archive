@@ -10,7 +10,7 @@ export const week31: WeeklyData = {
   year: 2026,
   slug: "2026-w31",
   period: "7/27 ~ 8/2",
-  totalPosts: 28,
+  totalPosts: 29,
   companies: [
     {
       name: "Model Context Protocol",
@@ -817,6 +817,39 @@ export const week31: WeeklyData = {
           },
         },
       ],
+    },    {
+      name: "ByteDance Seed",
+      color: "#325AB4",
+      posts: [
+        {
+          date: "7/31",
+          platform: "X+Threads",
+          title: "시댄스 2.5, 30초 영상을 오디오까지 한 번에 뽑는다",
+          featured: true,
+          deck: "짧은 조각을 이어붙이지 않고 단일 생성으로 30초를 만듭니다.",
+          summary: "ByteDance Seed가 7월 31일 Seedance 2.5를 공개했어요. 30초 분량 이야기를 한 번의 생성으로 만들도록 설계한 오디오·비디오 결합 모델이고, 두 번까지 이어붙여 더 긴 영상으로 확장할 수 있어요. 레퍼런스 영상의 의도와 프레이밍, 촬영 어법까지 읽어 단순 모션 전이를 넘어선다고 밝혔고 편집 지시 수용 범위도 넓혔다고 해요. 전부 벤더 자체 설명이에요.",
+          content: `**무엇이 나왔나**\nByteDance Seed가 7월 31일 **Seedance 2.5**를 공개했습니다. 공식 소개 문구는 "30초 스토리텔링을 위해 만든 차세대 오디오·비디오 결합 생성 모델"입니다.\n\n**핵심은 단일 생성입니다**\n30초짜리를 3초 조각 열 개로 만들어 붙이는 방식이 아니라 **한 번의 생성으로** 뽑습니다. 필요하면 두 번까지 이어 확장할 수 있습니다. 공식 설명으로는 움직임이 더 매끄럽고 일관되며 화면이 더 사실적입니다.\n\n이어붙이기에서 생기는 인물·조명·카메라 불일치가 구조적으로 사라지는 접근입니다.\n\n**레퍼런스와 편집**\n레퍼런스 영상을 더 정확히 이해한다고 밝혔습니다. 의도와 프레이밍, 영화적 어법까지 읽어 **단순 모션 전이를 넘어 창의적 해석으로** 간다는 표현을 썼습니다. 편집은 더 안정적이고, 오디오·비주얼 편집 요청을 더 넓게 받습니다.\n\n**날짜를 정확히 봐야 합니다**\n이 창에 Seedance 2.5 관련 사건이 세 번 있습니다.\n- **7/31** ByteDance Seed 공식 블로그 원 출시\n- **8/6** Luma가 자사 제품에 탑재\n- **8/7** 개발자 API 공개(2차 자료)\n\n통합 서비스 탑재일과 원개발사 출시일은 별개 사건입니다. Luma 소식만 보면 원 출시를 놓칩니다.\n\n**직접 확인할 것**\n제품 페이지에는 게시일이 없고 스펙만 있습니다. 날짜 근거는 공식 블로그 인덱스입니다. 도입 검토하실 때 해상도·요금·지역 제한은 별도로 확인하십시오 — 같은 창에서 MiniMax H3가 라이선스로 한국을 제외한 사례가 있습니다.`,
+          source: "https://seed.bytedance.com/en/seedance2_5",
+          officialUrl: "https://seed.bytedance.com/en/seedance2_5",
+          verifiedAt: "2026-08-13",
+          backupUrls: [
+            { label: "ByteDance Seed 공식 블로그 인덱스 (게시일 Jul 31, 2026 근거)", url: "https://seed.bytedance.com/en/blog" },
+            { label: "Seed 모델 목록", url: "https://seed.bytedance.com/en/models" },
+          ],
+          tags: ["ByteDance", "Seedance", "영상 생성", "생성형 미디어"],
+          slug: "bytedance-20260731-seedance-2-5",
+          en: {
+            title: "Seedance 2.5 generates 30 seconds of video with audio in one pass",
+            deck: "A single generation rather than short clips stitched together.",
+            summary: "ByteDance Seed introduced Seedance 2.5 on July 31, an audio-video joint generation model built for 30-second storytelling in a single generation, extendable twice for longer pieces. The company says it reads a reference video's intention, framing and cinematic language rather than merely transferring motion, and accepts a wider range of editing requests. All figures are the vendor's own.",
+            content: `**What shipped**\nByteDance Seed introduced **Seedance 2.5** on July 31. The official line: "a next-generation audio-video joint generation model, built for 30-second storytelling with precise reference control and powerful editing capabilities."\n\n**Single-pass is the point**\nRather than assembling ten three-second clips, it creates "videos up to 30 seconds in a single generation, with the option to extend twice for richer, more complete storytelling." Motion is "smoother and more consistent," and visuals "more realistic," per the company.\n\nThat approach structurally removes the character, lighting and camera drift that stitching introduces.\n\n**Reference and editing**\nThe model "understands reference videos more precisely — capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation." Editing is described as more reliable across a wider range of audio and visual requests.\n\n**Read the dates carefully**\nThree separate events sit in this window: the ByteDance Seed launch post on July 31, Luma shipping it inside its own product on August 6, and the developer API on August 7 per secondary sources. An integration date is not a launch date.\n\n**What to check**\nThe product page carries specs but no publication date; the date evidence is the official blog index. Verify resolution, pricing and territorial limits separately — MiniMax H3 excluded Korea by licence in this same window.`
+          },
+          thumbnail: {
+            src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
+            alt: "시댄스 2.5, 30초 영상을 오디오까지 한 번에 뽑는다",
+          },
+        }
+      ]
     },
   ],
 };

@@ -10,7 +10,7 @@ export const week32: WeeklyData = {
   year: 2026,
   slug: "2026-w32",
   period: "8/3 ~ 8/9",
-  totalPosts: 41,
+  totalPosts: 42,
   companies: [
     {
       name: "Anthropic",
@@ -1179,6 +1179,37 @@ export const week32: WeeklyData = {
           },
         },
       ],
+    },    {
+      name: "ByteDance Seed",
+      color: "#325AB4",
+      posts: [
+        {
+          date: "8/5",
+          platform: "X+Threads",
+          title: "SeedRealtime, 보고 듣고 말하는 것을 동시에 하는 모델",
+          featured: false,
+          deck: "오디오·영상·시간 정보를 한꺼번에 이해한다고 밝혔습니다.",
+          summary: "ByteDance Seed가 8월 5일 SeedRealtime을 공개했어요. 오디오와 비주얼을 동시에 주고받는 full-duplex 구조의 LLM이고, 소리와 화면과 시간 정보를 함께 이해해 상호작용 대상과 사용자 의도를 파악한다고 밝혔어요. 회사는 이를 \"보고, 듣고, 말하는\" 경험이라고 표현했어요. 벤더 자체 설명이에요.",
+          source: "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+          officialUrl: "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+          verifiedAt: "2026-08-13",
+          backupUrls: [
+            { label: "ByteDance Seed 공식 블로그 인덱스 (게시일 Aug 5, 2026 근거)", url: "https://seed.bytedance.com/en/blog" },
+            { label: "SeedRealtime 제품 페이지", url: "https://seed.bytedance.com/en/SeedRealtime" },
+          ],
+          tags: ["ByteDance", "SeedRealtime", "실시간 상호작용", "옴니모달"],
+          slug: "bytedance-20260805-seedrealtime",
+          en: {
+            title: "SeedRealtime handles seeing, hearing and speaking at once",
+            deck: "Audio, visual and temporal information understood jointly.",
+            summary: "ByteDance Seed released SeedRealtime on August 5, a native audio-visual full-duplex LLM. The company says it jointly understands audio, visual and temporal information to identify the interaction target and user intent, describing the result as a \"watch, listen, and speak\" experience. Vendor description."
+          },
+          thumbnail: {
+            src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
+            alt: "SeedRealtime, 보고 듣고 말하는 것을 동시에 하는 모델",
+          },
+        }
+      ]
     },
   ],
 };

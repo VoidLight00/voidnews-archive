@@ -10,7 +10,7 @@ export const week33: WeeklyData = {
   year: 2026,
   slug: "2026-w33",
   period: "8/10 ~ 8/16",
-  totalPosts: 27,
+  totalPosts: 32,
   companies: [
     {
       name: "Anthropic",
@@ -404,6 +404,34 @@ export const week33: WeeklyData = {
       color: "#000000",
       posts: [
         {
+          date: "8/12",
+          platform: "X+Threads",
+          title: "그록 4.6, 종합 지능 지수에서 GPT-5.6 Sol과 동률",
+          featured: true,
+          deck: "5주 만에 56점에서 61점. 코딩 벤치는 아직 뒤집니다.",
+          summary: "SpaceXAI가 8월 12일 Grok 4.6을 공개했어요. 긴 작업을 여러 단계에 걸쳐 끝까지 끌고 가는 능력과 스스로 결과를 점검하는 동작에 초점을 맞췄어요. 자사 공개 표 기준 Artificial Analysis 지능 지수 61점으로 GPT-5.6 Sol Max와 같고, 5주 전 Grok 4.5의 56점에서 5점 올랐어요. 다만 같은 표에서 DeepSWE는 65.9%로 Sol Max 73%·Fable 5 Max 70%보다 낮고, Terminal-Bench v3.0도 26%로 Sol 34.6%·Fable 34.1%에 못 미쳐요. 가격은 100만 토큰당 입력 2달러·출력 6달러이고 빠른 변형은 두 배예요.",
+          content: `**무엇이 나왔나**\n8월 12일 SpaceXAI가 **Grok 4.6**을 공개했습니다. 공식 발표문의 초점은 성능 숫자가 아니라 지속성입니다. "여러 단계에 걸친 복잡한 작업을 끝까지 붙들고 간다"는 표현을 썼고, 긴 작업에서 모델이 다음으로 넘어가기 전에 자기 결과를 점검하는 동작이 더 자주 관측됐다고 밝혔습니다.\n\n**자사 공개 표 (Grok 4.6 High 기준)**\n- AA 지능 지수 **61** — Grok 4.5는 56, GPT-5.6 Sol Max도 **61**, Fable 5 Max는 **62**\n- GDPVal-AA v2 **1753** — 4.5는 1526, Sol Max 1728, Fable 5 Max 1741\n- CursorBench v3.2 **69.9%** — 4.5는 66.7%, Sol Max 67.2%, Fable 5 Max 70.5%\n- DeepSWE v1.1 **65.9%** — 4.5는 54%, Sol Max **73%**, Fable 5 Max **70%**\n- Terminal-Bench v3.0 **26%** — 4.5는 15.7%, Sol Max **34.6%**, Fable 5 Max **34.1%**\n\n**어디까지가 사실인가**\n"GPT-5.6 Sol을 따라잡았다"가 성립하는 건 **AA 지능 지수 한 줄**입니다. 아홉 개 벤치마크를 합산한 종합 점수라 개별 능력을 가리지 못합니다. 같은 표에서 코딩(DeepSWE)과 터미널 작업(Terminal-Bench)은 Sol과 Fable 5가 여전히 앞섭니다. 상승 폭이 큰 건 분명합니다 — 5주 만에 DeepSWE가 54%에서 65.9%로 올랐습니다.\n\n**쓸 수 있는 곳과 값**\nCursor, Grok Build, API에서 바로 쓸 수 있고 OpenRouter·Vercel·Cloudflare에도 올라갔습니다. 100만 토큰당 입력 2달러, 출력 6달러이고 빠른 변형은 두 배입니다. 첫 주에는 Grok Build와 Cursor에서 포함 사용량을 두 배로 줍니다.\n\n**직접 확인할 것**\n종합 지수만 보고 갈아타지 마십시오. 본인이 실제로 시키는 일이 코드 수정이면 DeepSWE·Terminal-Bench 쪽을, 긴 리서치나 문서 작업이면 GDPVal-AA 쪽을 보는 게 맞습니다. 첫 주 무료 사용량이 있으니 같은 과제를 두 모델에 돌려 비교하는 비용이 지금은 거의 없습니다.`,
+          source: "https://x.ai/news/grok-4-6",
+          officialUrl: "https://x.ai/news/grok-4-6",
+          verifiedAt: "2026-08-13",
+          backupUrls: [
+            { label: "Artificial Analysis 독립 집계", url: "https://artificialanalysis.ai/models/grok-4-6" },
+            { label: "The Decoder 보도", url: "https://the-decoder.com/spacexais-grok-4-6-matches-openais-best-model-and-undercuts-it-on-price/" },
+          ],
+          tags: ["xAI", "SpaceXAI", "Grok", "프런티어 모델", "코딩"],
+          slug: "xai-20260812-grok-4-6",
+          en: {
+            title: "Grok 4.6 ties GPT-5.6 Sol on the composite intelligence index",
+            deck: "56 to 61 in five weeks, though coding benchmarks still trail.",
+            summary: "SpaceXAI released Grok 4.6 on August 12, focused on long-running agents and self-verification. Its own published table puts it at 61 on the Artificial Analysis Intelligence Index, level with GPT-5.6 Sol Max and up from Grok 4.5's 56 five weeks earlier. In the same table DeepSWE (65.9%) and Terminal-Bench v3.0 (26%) still trail Sol Max and Fable 5 Max. Pricing is $2 per million input tokens and $6 per million output.",
+            content: `**What shipped**\nSpaceXAI released **Grok 4.6** on August 12. The announcement leads with persistence rather than raw scores: the model "stays with complex tasks across many steps", and on longer trajectories the team saw more self-testing and verification before moving on.\n\n**Vendor's own table (Grok 4.6 High)**\n- AA Intelligence Index **61** — Grok 4.5 scored 56, GPT-5.6 Sol Max also **61**, Fable 5 Max **62**\n- GDPVal-AA v2 **1753** — 4.5 at 1526, Sol Max 1728, Fable 5 Max 1741\n- CursorBench v3.2 **69.9%** — 4.5 at 66.7%, Sol Max 67.2%, Fable 5 Max 70.5%\n- DeepSWE v1.1 **65.9%** — 4.5 at 54%, Sol Max **73%**, Fable 5 Max **70%**\n- Terminal-Bench v3.0 **26%** — 4.5 at 15.7%, Sol Max **34.6%**, Fable 5 Max **34.1%**\n\n**How far "caught up" goes**\nThe tie with GPT-5.6 Sol holds on **one line**: the composite intelligence index, a blend of nine benchmarks that averages away individual strengths. On coding (DeepSWE) and terminal work in the same table, Sol and Fable 5 remain ahead. The jump itself is real — DeepSWE moved from 54% to 65.9% in five weeks.\n\n**Where and what it costs**\nAvailable in Cursor, Grok Build and the API, plus OpenRouter, Vercel and Cloudflare. Pricing starts at $2 per million input tokens and $6 per million output, with a fast variant at twice the price. Grok Build and Cursor include 2x usage for the first week.\n\n**What to check**\nDon't switch on the composite score alone. If the work is code edits, read DeepSWE and Terminal-Bench; if it is long research or document work, read GDPVal-AA. With the first-week bonus usage, running the same task through both models costs almost nothing right now.`
+          },
+          thumbnail: {
+            src: "/og-cache/그록-4-6-종합-지능-지수에서-gpt-5-6-sol과-동률-692c0339.png",
+            alt: "그록 4.6, 종합 지능 지수에서 GPT-5.6 Sol과 동률",
+          },
+        },
+        {
           date: "8/11",
           platform: "X+Threads",
           title: "xAI, 상시 구동 AI 에이전트 Grok Bot 출시",
@@ -759,6 +787,113 @@ export const week33: WeeklyData = {
           thumbnail: {
             src: "/og-cache/오픈ai-윤리-총괄-퇴사-후임-없어-46e74120.jpg",
             alt: "오픈AI 윤리 총괄 퇴사, 후임 없어",
+          },
+        },
+      ],
+    },
+    {
+      name: "생성 미디어",
+      color: "#8B5CF6",
+      posts: [
+        {
+          date: "8/6",
+          platform: "X+Threads",
+          title: "Luma에 Seedance 2.5 탑재, 오디오 포함 30초를 한 번에 생성",
+          featured: true,
+          deck: "짧은 조각을 잇지 않고 최대 50개 레퍼런스를 함께 씁니다.",
+          summary: "Luma가 8월 6일 Seedance 2.5를 서비스에 추가했어요. Luma 공식 발표 기준 최대 30초 클립을 단일 패스로 만들고, 동기화 오디오와 최대 50개 참조 입력, 앞뒤 확장과 국소 편집을 지원해요. ByteDance 제품 페이지에는 게시일이 없어 이 카드는 원개발사의 출시일이 아니라 Luma 내 제공 시작일만 확정해요.",
+          content: `**무엇이 바뀌었나**\nLuma가 Seedance 2.5를 서비스에 추가했습니다. Luma 공식 발표 기준 최대 30초 분량의 오디오·비디오를 한 번에 만들고, 최대 50개의 이미지·영상·오디오 참조 입력과 앞뒤 확장, 국소 편집을 지원합니다.\n\n**왜 중요한가**\n기존 영상 생성은 몇 초짜리 조각을 여러 번 만든 뒤 이어 붙이는 경우가 많았습니다. 단일 패스 30초 생성은 인물·조명·동작이 조각 경계에서 흔들리는 문제를 줄일 가능성이 있습니다.\n\n**날짜 경계**\nByteDance의 Seedance 2.5 제품 페이지에서는 기능은 확인되지만 게시일과 API 공개일을 검증하지 못했습니다. 따라서 여기서 확정하는 사건은 **8월 6일 Luma 내 제공 시작**입니다. 원개발사 출시일을 7월 31일로 단정하지 않습니다.`,
+          source: "https://lumalabs.ai/news/seedance-2.5-live-in-luma",
+          officialUrl: "https://lumalabs.ai/news/seedance-2.5-live-in-luma",
+          verifiedAt: "2026-08-13",
+          backupUrls: [
+            { label: "ByteDance Seedance 2.5 제품 페이지 — 게시일 미표기", url: "https://seed.bytedance.com/en/seedance2_5" },
+          ],
+          tags: ["Luma", "Seedance", "영상 생성", "멀티모달"],
+          slug: "luma-20260806-seedance-2-5-live",
+          en: {
+            title: "Seedance 2.5 goes live in Luma with 30-second single-pass generation",
+            deck: "Up to 50 references and synchronized audio in one generation.",
+            summary: "Luma added Seedance 2.5 on August 6. Luma says it generates clips up to 30 seconds in a single pass with synchronized audio, up to 50 references, extensions and localized edits. ByteDance's product page does not expose a verifiable publication date, so this card confirms Luma availability rather than an original model-launch date.",
+            content: `**What changed**\nLuma added Seedance 2.5 with up to 30 seconds of audio and video in a single generation, as many as 50 image, video and audio references, extensions and localized edits.\n\n**Why it matters**\nMany video workflows generate short fragments and stitch them together. A 30-second single pass can reduce discontinuities in people, lighting and motion at edit boundaries.\n\n**Date boundary**\nByteDance's product page verifies capabilities but not a publication or API-release date. This card therefore records **availability in Luma on August 6**, not an inferred July 31 model launch.`
+          },
+          thumbnail: {
+            src: "/og-cache/luma에-seedance-2-5-탑재-오디오-포함-30초를-한-번에-생-23804445.jpg",
+            alt: "Luma에 Seedance 2.5 탑재, 오디오 포함 30초를 한 번에 생성",
+          },
+        },
+        {
+          date: "8/11",
+          platform: "X+Threads",
+          title: "Luma Scenes, 완성 영상을 뽑기 전에 키프레임부터 고친다",
+          deck: "스토리보드·프레임·타이밍을 편집한 뒤 렌더합니다.",
+          summary: "Luma가 텍스트와 참조 이미지로 영상을 설계하는 Scenes를 공개했어요. 렌더 전에 스토리보드와 키프레임을 수정하고, 특정 프레임만 다시 만들거나 교체하고 타이밍을 조절한 뒤 Ray 3.2 또는 Seedance 2로 렌더할 수 있어요.",
+          content: `**완성본 재생성에서 설계 편집으로**\nScenes는 텍스트와 참조 이미지로 초안을 만든 뒤 스토리보드와 키프레임을 먼저 보여줍니다. 마음에 안 드는 프레임만 다시 만들거나 교체하고 타이밍을 조절한 뒤 전체 영상을 렌더합니다.\n\n**실무 변화**\n프롬프트를 조금씩 바꾸며 전체 영상을 반복 생성하는 대신, 사람이 장면 구조를 먼저 고정하고 생성 모델은 선택된 프레임과 전환을 채우는 방식입니다. 최종 렌더에는 Ray 3.2 또는 Seedance 2를 쓸 수 있습니다.`,
+          source: "https://lumalabs.ai/news/introducing-luma-scenes",
+          officialUrl: "https://lumalabs.ai/news/introducing-luma-scenes",
+          verifiedAt: "2026-08-13",
+          tags: ["Luma", "Scenes", "영상 생성", "스토리보드"],
+          slug: "luma-20260811-scenes",
+          en: {
+            title: "Luma introduces Scenes, an editable storyboard-first video workflow",
+            deck: "Edit storyboards, keyframes and timing before the final render.",
+            summary: "Luma introduced Scenes, a storyboard-first workflow for video creation from text and reference images. Creators can edit keyframes, regenerate or replace individual frames, adjust timing, and then render with Ray 3.2 or Seedance 2.",
+            content: `**From regenerating the final clip to editing the plan**\nScenes creates a draft storyboard and keyframes from text and reference images. Creators can regenerate or replace individual frames and adjust timing before rendering the full video.\n\n**Workflow change**\nInstead of repeatedly changing a prompt and regenerating everything, people lock the scene structure first and let the model fill selected frames and transitions. Final rendering supports Ray 3.2 or Seedance 2.`
+          },
+          thumbnail: {
+            src: "/og-cache/luma-scenes-완성-영상을-뽑기-전에-키프레임부터-고친다-41a5ad70.jpg",
+            alt: "Luma Scenes, 완성 영상을 뽑기 전에 키프레임부터 고친다",
+          },
+        },
+        {
+          date: "8/12",
+          platform: "X+Threads",
+          title: "Higgsfield Cinema Studio 4.0, 렌즈·조명까지 고르는 AI 영상 스튜디오",
+          deck: "최대 30초·50개 레퍼런스, 촬영 조건을 직접 제어합니다.",
+          summary: "Higgsfield가 Cinema Studio 4.0을 공개했어요. 공식 발표 기준 최대 30초·720p 출력, 최대 50개 참조 이미지, 렌즈·카메라·조명·색·움직임 제어와 팀 협업 기능을 제공해요. 기능과 품질 설명은 벤더 자체 발표예요.",
+          content: `**프롬프트 밖의 촬영 조건**\nCinema Studio 4.0은 최대 30초·720p 출력과 최대 50개 참조 이미지를 지원한다고 밝힙니다. 렌즈, 카메라, 조명, 색, 움직임을 각각 조절하고 팀 단위로 프로젝트를 공유할 수 있습니다.\n\n**어디까지가 사실인가**\n위 기능 범위는 Higgsfield의 공식 제품 발표로 확인했습니다. 품질 우위나 영화 제작 혁신 같은 평가는 독립 비교 결과가 아니라 벤더 설명입니다.`,
+          source: "https://higgsfield.ai/blog/cinema-studio-4-0",
+          officialUrl: "https://higgsfield.ai/blog/cinema-studio-4-0",
+          verifiedAt: "2026-08-13",
+          tags: ["Higgsfield", "Cinema Studio", "영상 생성", "크리에이터"],
+          slug: "higgsfield-20260812-cinema-studio-4",
+          en: {
+            title: "Higgsfield launches Cinema Studio 4.0 with camera and lighting controls",
+            deck: "Up to 30 seconds, 50 references and explicit production controls.",
+            summary: "Higgsfield launched Cinema Studio 4.0 with clips up to 30 seconds at up to 720p, as many as 50 reference images, controls for lens, camera, lighting, color and motion, and team collaboration. The capability and quality descriptions are vendor-reported.",
+            content: `**Production controls beyond the prompt**\nCinema Studio 4.0 claims clips up to 30 seconds at 720p and as many as 50 reference images. It exposes controls for lens, camera, lighting, color and motion, plus team collaboration.\n\n**Evidence boundary**\nThe capability list is verified from Higgsfield's official product announcement. Claims of superior quality or transformed filmmaking remain vendor descriptions rather than independent comparisons.`
+          },
+          thumbnail: {
+            src: "/og-cache/higgsfield-cinema-studio-4-0-렌즈-조명까지-고르는-e9624955.jpg",
+            alt: "Higgsfield Cinema Studio 4.0, 렌즈·조명까지 고르는 AI 영상 스튜디오",
+          },
+        },
+        {
+          date: "8/11",
+          platform: "X+Threads",
+          title: "watermarks-remover, AI 출처 표식의 약한 고리를 드러내다",
+          featured: true,
+          deck: "Unicode·메타데이터는 지우지만 SynthID 픽셀 표식은 제거하지 않습니다.",
+          summary: "MIT 오픈소스 watermarks-remover가 8월 11일 공개됐어요. 코드와 테스트로 확인되는 범위는 제로폭·양방향 제어문자 같은 Unicode 표식과 PNG·JPEG·SVG·PDF·DOCX·ODT·HTML·Markdown의 일부 C2PA·EXIF·XMP·문서 메타데이터 정리예요. 통계적 텍스트 표식은 재작성 기반 최선 노력이고, SynthID 픽셀 표식은 외부 도구로 점수화만 하며 제거하지 않아요. GitHub API 실측 8월 13일 별 2,981개예요.",
+          content: `**무엇을 실제로 지우나**\n코드와 테스트가 직접 다루는 건 제로폭 문자·양방향 제어문자·Unicode 태그·특수 공백과, PNG·JPEG·SVG·PDF·DOCX·ODT·HTML·Markdown에 들어간 일부 C2PA·EXIF·XMP·문서 메타데이터입니다. 저장소는 8월 11일 만들어졌고 MIT 라이선스이며, 8월 13일 GitHub API 실측 별 2,981개였습니다.\n\n**과장하면 안 되는 부분**\n통계적 텍스트 워터마크에는 문장 재작성으로 신호를 약하게 만드는 최선 노력 방식을 쓸 뿐, 공식 탐지기를 통과한다고 보증하지 않습니다. SynthID 픽셀 표식은 외부 reverse-SynthID 도구로 점수화만 하고 **제거하지 않습니다**. 오디오·비디오·픽셀 워터마크와 소프트 바인딩도 지원 범위 밖입니다.\n\n**운영 교훈**\n생성물 감사 절차를 워터마크 한 종류에만 의존하면 안 됩니다. 서명된 원본 보관, 접근 로그, 생성 이력, C2PA, 내용 기반 탐지를 함께 써야 합니다.`,
+          source: "https://github.com/guillaumemeyer/watermarks-remover",
+          officialUrl: "https://github.com/guillaumemeyer/watermarks-remover",
+          verifiedAt: "2026-08-13",
+          backupUrls: [
+            { label: "LinkedIn 발견 경로", url: "https://www.linkedin.com/feed/update/urn:li:share:7493403130831884289" },
+            { label: "초기 릴리스 v0.0.1", url: "https://github.com/guillaumemeyer/watermarks-remover/releases/tag/v0.0.1" },
+          ],
+          tags: ["오픈소스", "워터마크", "C2PA", "콘텐츠 출처", "보안"],
+          slug: "github-20260811-watermarks-remover",
+          en: {
+            title: "watermarks-remover exposes weak links in AI provenance marks",
+            deck: "It cleans Unicode and metadata, but does not remove SynthID pixel marks.",
+            summary: "The MIT-licensed watermarks-remover repository appeared on August 11. Its code and tests cover invisible Unicode cleanup and selected C2PA, EXIF, XMP and document metadata in PNG, JPEG, SVG, PDF, DOCX, ODT, HTML and Markdown. Statistical text marks are addressed through best-effort rewriting, while SynthID pixel marks are scored through an external tool and are not removed. GitHub showed 2,981 stars on August 13.",
+            content: `**What it actually removes**\nThe code and tests directly handle zero-width and bidirectional controls, Unicode tags and unusual spaces, plus selected C2PA, EXIF, XMP and document metadata in PNG, JPEG, SVG, PDF, DOCX, ODT, HTML and Markdown. The MIT repository was created on August 11 and had 2,981 GitHub stars when measured on August 13.\n\n**Where the headline overreaches**\nFor statistical text watermarks it offers best-effort rewriting and does not guarantee that official detectors will fail. For SynthID pixels, an external reverse-SynthID tool provides scoring only and **does not remove the mark**. Audio, video, pixel watermarks and soft binding are outside scope.\n\n**Operational lesson**\nDo not base provenance audits on one watermark. Combine signed originals, access logs, generation history, C2PA and content-based detection.`
+          },
+          thumbnail: {
+            src: "/og-cache/watermarks-remover-ai-출처-표식의-약한-고리를-드러내다-3c102972.png",
+            alt: "watermarks-remover, AI 출처 표식의 약한 고리를 드러내다",
           },
         },
       ],

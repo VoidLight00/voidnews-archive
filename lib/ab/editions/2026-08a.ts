@@ -3,7 +3,8 @@ import type { Post } from "../../data";
 
 // 2026-08a — VIP Brief (2026-07-31 ~ 2026-08-12)
 // Workspace SSoT: _workspace/ab/20260812-075051-ab-20260731-20260812/04_ranked_items.json
-// 선정 상태: 큐레이터 확정. 79개 후보 중 6장을 서사 축(권한 → 위험 → 무료티어 → 규제 → 모델 → 한국)으로 골랐다.
+// 선정 상태: 사용자 확정. Top5 — 서사 축(권한 → 위험 → 무료티어 → 규제 → 미디어).
+// 메타 Muse Glimmer·딥시크 V4-Flash 제외(사용자 지시), 그 자리에 생성형 미디어 축 신설.
 // 6장 모두 officialUrl 이 1차 출처다. 2차 보도는 backupUrls 로만 두고 본문에서 2차임을 밝힌다.
 // 모든 officialUrl 은 수집 단계에서 직접 fetch 해 본문·발행일을 확인했다 (fetchEvidence 필드).
 // 오픈소스 추천은 사용자 지정 2종(cognee, paseo). 둘 다 이 창 안에 릴리스가 있고,
@@ -71,59 +72,39 @@ const astraCritical = post({
 // '같은 표면에서 벌어진 실제 사고' 문단으로 흡수했다.
 
 
-const museGlimmer = post({
-  date: "8/10",
+const mediaGen = post({
+  date: "7/31",
   platform: "X+Threads",
-  title: "메타, 30B 오픈 에이전틱 모델 Muse Glimmer 공개",
+  title: "30초 영상을 한 번에 뽑는 시대가 이 3주에 열렸습니다",
   featured: true,
-  deck: "Apache 2.0에 4비트로 20GB 아래, 소비자 GPU 한 장이면 돕니다.",
+  deck: "짧은 조각을 이어붙이지 않습니다. 단일 생성으로 30초입니다.",
   summary:
-    "메타가 8월 10일 Muse Glimmer를 Apache 2.0으로 공개했어요. 약 29.6B 파라미터(1.8B 비전 인코더 포함), 컨텍스트 131,072 토큰 이상이고, 4비트 양자화 시 20GB 아래로 줄어 소비자용 GPU 한 장에서 돌아가요.",
-  content: `**무엇이 나왔나**\n메타가 8월 10일 **Muse Glimmer**를 Apache 2.0 라이선스로 공개했습니다. 상시 구동되는 로컬 에이전트 워크플로에 맞춘 모델입니다.\n\n- 총 파라미터 약 **29.6B** (1.8B 비전 인코더 포함)\n- 컨텍스트 **131,072 토큰** 이상\n- 4비트 양자화 시 **20GB 아래** — 맥이나 소비자용 GPU 한 장에서 구동\n\n**벤더 자체 수치**\n모델 카드 기준 SWE-Bench Verified 76.0, TerminalBench 2.1 51.7, AIME 2026 94.7. DFlash 추측 디코딩을 적용하면 RTX 5090에서 3.1배, M5-Max에서 1.8배 빠른 생성 속도라고 밝혔습니다. 전부 메타 자체 발표 수치입니다.\n\n**같은 날 나온 에세이**\n저커버그가 같은 날 'The Future is for Everyone'을 올렸습니다. 오픈소스가 권력 집중을 막고 널리 배포된 오픈소스 시스템이 더 안전하다는 주장, 그리고 지금의 오픈소스 생태계를 제한하는 것은 실수라는 결론입니다. 모델 공개와 논지가 한 세트로 나왔습니다.\n\n**이 창의 오픈웨이트 지형**\n같은 2주에 오픈웨이트가 몰렸습니다.\n- **DeepSeek V4-Flash-0731** (7/31) — MIT, 1M 컨텍스트, 출력 100만 토큰 $0.28\n- **Qwen3.8-Max** (8/3) — 2.4조 MoE, 독립 평가 2위. 다만 "다음 주 공개" 예고와 달리 8월 12일까지 가중치는 나오지 않았습니다\n- **LG K-EXAONE 2.0** (7/31) — 750B, Apache 2.0\n- **MiniMax H3** (8/3) — 가중치는 풀렸지만 라이선스가 **한국을 제외 지역으로 명시**했습니다\n\n**직접 확인할 것**\n"오픈웨이트"라는 말이 같은 뜻이 아닙니다. Apache 2.0(Muse Glimmer, K-EXAONE)과 MIT(DeepSeek)는 자유롭게 쓸 수 있지만, MiniMax H3는 한국에서 그 라이선스만으로는 쓸 수 없고, Qwen3.8-Max는 아직 파일이 없습니다. 도입 검토 전에 라이선스 본문과 실제 가중치 존재 여부를 각각 확인하십시오.`,
-  source: "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
-  officialUrl: "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
-  verifiedAt: "2026-08-12",
+    "ByteDance Seed가 7월 31일 Seedance 2.5를 공개했어요. 30초 분량을 한 번의 생성으로 만들도록 설계한 오디오·비디오 결합 모델이고, 두 번까지 이어 확장할 수 있어요. 같은 창에 Luma가 8월 6일 이를 자사 제품에 탑재했고 8월 11일 Luma Scenes를, Higgsfield는 8월 12일 Cinema Studio 4.0을 냈어요.",
+  content: `**무엇이 바뀌었나**\n영상 생성에서 오래 걸린 문제는 길이였습니다. 3초짜리를 열 개 만들어 붙이면 인물 얼굴이 흔들리고 조명이 튀고 카메라가 어긋납니다.\n\n7월 31일 **ByteDance Seed**가 공개한 **Seedance 2.5**는 이 접근을 바꿉니다. 공식 소개 문구가 "30초 스토리텔링을 위해 만든 차세대 오디오·비디오 결합 생성 모델"이고, 30초를 **한 번의 생성으로** 만듭니다. 필요하면 두 번까지 이어 확장합니다.\n\n레퍼런스 영상은 의도와 프레이밍, 촬영 어법까지 읽어 ==단순 모션 전이를 넘어 창의적 해석으로== 간다고 밝혔습니다. 전부 벤더 자체 설명입니다.\n\n**같은 창에 생태계가 따라붙었습니다**\n- **8/5** ByteDance Seed, SeedRealtime 공개 — 오디오·비주얼 full-duplex 모델\n- **8/6** Luma, 자사 제품에 Seedance 2.5 탑재\n- **8/7** 개발자 API 공개(2차 자료)\n- **8/11** Luma Scenes — 완성본을 뽑기 전에 키프레임부터 고치는 편집 방식\n- **8/12** Higgsfield Cinema Studio 4.0 — 렌즈·카메라·조명·색·움직임 제어와 팀 협업\n\n원 모델이 나오고 열흘 안에 편집 도구와 스튜디오가 붙었습니다.\n\n**날짜를 구분해야 합니다**\n**7/31 원 출시**와 **8/6 Luma 탑재**는 별개 사건입니다. 통합 서비스 소식만 보면 원개발사 출시를 놓칩니다. 실제로 이번 회차 수집에서 그 함정에 걸릴 뻔했습니다.\n\n**한국에서 쓸 수 있느냐는 따로 봐야 합니다**\n같은 창에 **MiniMax H3**가 가중치를 풀었는데, 라이선스 적용 제외 지역에 미국·EU·영국과 함께 **대한민국**이 명시돼 있습니다. 모델이 열렸다는 소식과 우리가 쓸 수 있다는 것은 다른 이야기입니다.\n\n**직접 확인할 것**\n영상 예산이 있는 조직이면 지금이 재산정 시점입니다. 30초를 한 번에 뽑는 것과 열 번 뽑아 붙이는 것은 제작 시간과 재작업 횟수가 다릅니다. 다만 도입 전에 해상도·요금·**지역 제한** 세 가지를 각각 확인하십시오.`,
+  source: "https://seed.bytedance.com/en/seedance2_5",
+  officialUrl: "https://seed.bytedance.com/en/seedance2_5",
+  verifiedAt: "2026-08-13",
   backupUrls: [
-    { label: "Hugging Face 모델 카드", url: "https://huggingface.co/meta-models/Muse-Glimmer-30B" },
-    { label: "저커버그 — The Future is for Everyone", url: "https://www.meta.com/thefutureisforeveryone/" },
-    { label: "DeepSeek V4-Flash-0731 공식 체인지로그", url: "https://api-docs.deepseek.com/updates" },
+    { label: "ByteDance Seed 공식 블로그 인덱스 (게시일 Jul 31, 2026 근거)", url: "https://seed.bytedance.com/en/blog" },
+    { label: "Luma — Seedance 2.5 탑재 (8/6)", url: "https://lumalabs.ai/news" },
+    { label: "Higgsfield Cinema Studio 4.0 (8/12)", url: "https://higgsfield.ai/blog" },
   ],
-  slug: "meta-20260810-muse-glimmer-30b",
-  tags: ["Meta", "오픈웨이트", "온디바이스", "Apache 2.0"],
+  slug: "bytedance-20260731-seedance-2-5-media",
+  tags: ["ByteDance", "Seedance", "영상 생성", "생성형 미디어", "Luma"],
   en: {
-    title: "Meta releases Muse Glimmer, a 30B open agentic model",
-    deck: "Apache 2.0, under 20GB at 4-bit, running on a single consumer GPU.",
+    title: "Single-pass 30-second video arrived in these three weeks",
+    deck: "Not short clips stitched together — one generation, thirty seconds.",
     summary:
-      "On August 10 Meta published Muse Glimmer under Apache 2.0: roughly 29.6B parameters including a 1.8B vision encoder, a context above 131,072 tokens, and under 20GB when quantized to 4-bit.",
+      "ByteDance Seed introduced Seedance 2.5 on July 31, an audio-video joint model built to produce 30 seconds in a single generation, extendable twice. In the same window Luma shipped it inside its product on August 6, released Luma Scenes on August 11, and Higgsfield launched Cinema Studio 4.0 on August 12.",
+    content: `**What changed**\nLength has been the hard part of generated video. Ten three-second clips stitched together drift — faces shift, lighting jumps, the camera loses continuity.\n\n**Seedance 2.5**, published by ByteDance Seed on July 31, is built as "a next-generation audio-video joint generation model for 30-second storytelling," producing up to 30 seconds **in a single generation**, extendable twice.\n\nIt "understands reference videos more precisely — capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation." All vendor description.\n\n**The ecosystem followed within ten days**\nAugust 5, SeedRealtime; August 6, Luma shipping Seedance 2.5 in-product; August 7, the developer API per secondary sources; August 11, Luma Scenes for keyframe-first editing; August 12, Higgsfield Cinema Studio 4.0 with lens, camera, lighting, colour and motion control.\n\n**Separate the dates**\nThe July 31 launch and the August 6 Luma integration are distinct events. Reading only the integration news loses the original release.\n\n**Availability is a separate question**\nIn the same window MiniMax H3 released weights under a licence that names South Korea, alongside the US, EU and UK, as excluded territory. A model opening is not the same as your being able to use it.\n\n**What to check**\nIf you hold a video budget, this is a re-estimation point: one pass at thirty seconds differs from ten passes stitched, in both production time and rework. Verify resolution, pricing and territorial limits separately before adopting.`
   },
 });
 
-const kExaone = post({
-  date: "7/31",
-  platform: "X+Threads",
-  title: "LG, 7500억 파라미터 K-엑사원 2.0 공개",
-  featured: true,
-  deck: "국내 최대 750B를 Apache 2.0으로 풀어 상업 사용을 열었습니다.",
-  summary:
-    "LG AI연구원이 7월 31일 과기정통부 주관 독자 AI 파운데이션 모델 프로젝트의 2차수 모델 K-엑사원 2.0을 허깅페이스에 공개했어요. 750B 파라미터로 1차수 236B 대비 3배 이상 커졌고, 라이선스를 Apache 2.0으로 바꿔 상업적 사용이 가능해요.",
-  content: `**무엇이 나왔나**\nLG AI연구원이 7월 31일 **K-엑사원 2.0**을 허깅페이스에 공개했습니다. 과기정통부 주관 독자 AI 파운데이션 모델 프로젝트('독파모')의 2차수 모델입니다.\n\n- 파라미터 **750B(7,500억 개)** — 국내 최대. 1차수 모델 236B 대비 3배 이상\n- 라이선스 **Apache 2.0**으로 전환 → 상업적 사용 가능\n\n**벤더 자체 수치**\n24개 벤치마크 평균 **70.1점** (1차수 63.3점). OpenAI-MRCR 94.4점, Ko-LongBench 89.6점. 코딩·에이전틱 3개 지표는 30% 상승했다고 밝혔습니다.\n\n**같은 창의 한국 신호**\n- **8/7** LG 엑사원 Tabular가 TabArena에서 ELO 1760으로 구글 TabFM(1749)을 앞섰고, 엑사원 Forecast는 GIFT-Eval 제로샷 1위\n- **8/11** 업스테이지가 에이전트형 **Solar Pro 4** 공개 — 512K 컨텍스트, 한·영·일 지원, 9월 10일까지 90% 할인\n- **8/11** 과기정통부가 독파모 4개 정예팀(LG AI연구원·SKT·업스테이지·모티프테크놀로지스) 모델이 **모두** Epoch AI '주목할 만한 인공지능 모델'에 등재됐다고 발표\n\n**직접 확인할 것**\nApache 2.0이라 사내 서버에 올려 파인튜닝·배포하는 데 라이선스 제약이 없습니다. 다만 750B는 자체 호스팅 비용이 만만치 않습니다. 같은 창에 나온 30B급 오픈웨이트(Muse Glimmer)와 용도를 나눠 보십시오 — 긴 한국어 문서 처리는 K-엑사원, 상시 구동 로컬 에이전트는 30B급이 현실적입니다.`,
-  source: "https://www.lgresearch.ai/blog/view?seq=677",
-  officialUrl: "https://www.lgresearch.ai/blog/view?seq=677",
-  verifiedAt: "2026-08-12",
-  backupUrls: [
-    { label: "LG AI Research (English)", url: "https://www.lgresearch.ai/blog/view?seq=678" },
-    { label: "과기정통부 — 독파모 4개팀 Epoch AI 등재 (2026-08-11)", url: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156774084" },
-    { label: "업스테이지 Solar Pro 4 (2026-08-11)", url: "https://www.upstage.ai/blog/en/solar-pro-4" },
-  ],
-  slug: "lg-20260731-k-exaone-2",
-  tags: ["LG AI연구원", "오픈웨이트", "한국", "독파모"],
-  en: {
-    title: "LG releases K-EXAONE 2.0, a 750B-parameter open model",
-    deck: "Korea's largest open model, relicensed to Apache 2.0 for commercial use.",
-    summary:
-      "On July 31 LG AI Research published K-EXAONE 2.0 on Hugging Face, the second-round model of the government's sovereign foundation model project. At 750B parameters it is over three times the 236B first-round model, and the licence moved to Apache 2.0.",
-  },
-});
+
+// LG K-엑사원 2.0(7/31)은 Top5 축소로 하이라이트에서 보강 순위로 내렸다.
+// 카드 원문은 lib/weeks/2026-w31.ts 에 있고, 한국 축은 3번(한국 광고 1차 5개국)과
+// 5번(MiniMax H3 한국 제외 라이선스)이 부분 커버한다.
+
 
 const marking = post({
   date: "8/11",
@@ -133,13 +114,14 @@ const marking = post({
   deck: "8월 2일 이후 출시 모델은 처음부터 표식을 답니다.",
   summary:
     "Anthropic이 Claude 출력물에 기계 판독 가능한 표식을 넣는 방식을 공개했어요. 텍스트에는 복사·붙여넣기에도 남는 비가시 워터마크를, 파일에는 C2PA 표준을 따르는 서명된 출처 메타데이터를 붙여요.",
-  content: `**무엇이 붙나**\nAnthropic이 Claude 출력물 표식 방식을 문서로 공개했습니다. 두 가지를 함께 씁니다.\n\n- **텍스트**: 읽기에 영향을 주지 않고 복사·붙여넣기에도 남는 비가시 워터마크\n- **파일**: C2PA(Coalition for Content Provenance and Authenticity) 개방 표준을 따르는 **서명된 출처 메타데이터**\n\n적용 범위는 Claude Platform(API), Claude, Claude Code, Claude Cowork, Claude Tag이고 AWS·Google Cloud·Microsoft Foundry를 포함해 전 세계입니다.\n\n**날짜가 우연이 아닙니다**\n"2026년 8월 2일 이후 출시되는 모델은 출시 시점부터 지원한다"가 문서의 기준입니다. 같은 **8월 2일**, EU AI법의 투명성 의무가 시행됐습니다. 챗봇은 사람이 아님을 알려야 하고, 딥페이크는 표시해야 하며, AI 생성·변형 콘텐츠에는 **기계 판독 가능한 표식**이 있어야 합니다. 집행위는 투명성 실무규약에 180개 이상 조직이 서명했다고 밝혔습니다.\n\n규제 조문이 제품 동작으로 내려온 첫 사례입니다.\n\n**한계는 명시돼 있습니다**\nAnthropic은 탐지 결과가 "완전히 결정적이지는 않다"고 적었습니다. Claude가 기존 글을 편집만 했거나 많이 고쳐 쓴 텍스트에는 표식이 남지 않을 수 있습니다. **표식이 없다 = AI가 안 썼다**가 아닙니다.\n\n**직접 확인할 것**\nEU 시장에 서비스한다면 챗봇 고지와 생성물 표식은 이미 의무입니다. 국내에서도 AI 산출물을 납품·게시하는 조직이라면 표식 유무를 산출물 확인 항목에 넣으십시오. 반대로 표식 부재를 근거로 사람이 썼다고 판정하는 절차는 지금 만들면 안 됩니다.`,
+  content: `**무엇이 붙나**\nAnthropic이 Claude 출력물 표식 방식을 문서로 공개했습니다. 두 가지를 함께 씁니다.\n\n- **텍스트**: 읽기에 영향을 주지 않고 복사·붙여넣기에도 남는 비가시 워터마크\n- **파일**: C2PA(Coalition for Content Provenance and Authenticity) 개방 표준을 따르는 **서명된 출처 메타데이터**\n\n적용 범위는 Claude Platform(API), Claude, Claude Code, Claude Cowork, Claude Tag이고 AWS·Google Cloud·Microsoft Foundry를 포함해 전 세계입니다.\n\n**날짜가 우연이 아닙니다**\n"2026년 8월 2일 이후 출시되는 모델은 출시 시점부터 지원한다"가 문서의 기준입니다. 같은 **8월 2일**, EU AI법의 투명성 의무가 시행됐습니다. 챗봇은 사람이 아님을 알려야 하고, 딥페이크는 표시해야 하며, AI 생성·변형 콘텐츠에는 **기계 판독 가능한 표식**이 있어야 합니다. 집행위는 투명성 실무규약에 180개 이상 조직이 서명했다고 밝혔습니다.\n\n규제 조문이 제품 동작으로 내려온 첫 사례입니다.\n\n**그리고 9일 뒤, 제거 도구가 나왔습니다**\n8월 11일 GitHub에 watermarks-remover가 올라왔습니다. MIT 라이선스이고 이틀 만에 별 3,044개, 포크 301개가 붙었습니다. 저장소 토픽에 c2pa, synthid, claude, provenance가 직접 달려 있습니다.\n\nREADME가 대상으로 명시한 것은 Claude, Gemini/SynthID-Text, OpenAI provenance surfaces, 그리고 오픈 LLM의 통계적 워터마크입니다. 비가시 유니코드·이형 공백 같은 텍스트 계층, 통계적 토큰 샘플링 계층, 그리고 파일의 C2PA·EXIF·XMP 메타데이터를 다룬다고 적었습니다.\n\n다만 **저자들이 직접 적어둔 한계가 더 중요합니다.**\n\n> \"Until vendors ship public detectors and keys, no tool can honestly certify 'this fails the official check.'\"\n\n공개 탐지기와 키가 없으니 제거됐다는 것도 증명할 수 없다는 뜻입니다. 덧붙여 텍스트를 다시 쓰면 \"tone, voice, and precision\"이 뭉개진다고 스스로 경고했고, 픽셀 도메인 워터마크와 soft-bound C2PA는 범위 밖이라고 명시했습니다.\n\n**8월 2일 의무화, 8월 11일 제거 도구.** 9일 간격입니다.\n\n**한계는 명시돼 있습니다**\nAnthropic은 탐지 결과가 "완전히 결정적이지는 않다"고 적었습니다. Claude가 기존 글을 편집만 했거나 많이 고쳐 쓴 텍스트에는 표식이 남지 않을 수 있습니다. **표식이 없다 = AI가 안 썼다**가 아닙니다.\n\n**직접 확인할 것**\nEU 시장에 서비스한다면 챗봇 고지와 생성물 표식은 이미 의무입니다. 국내에서도 AI 산출물을 납품·게시하는 조직이라면 표식 유무를 산출물 확인 항목에 넣으십시오. 반대로 표식 부재를 근거로 사람이 썼다고 판정하는 절차는 지금 만들면 안 됩니다.\n\n정리하면 이렇습니다. **표식이 없다고 사람이 쓴 것도 아니고, 표식이 있다고 그것만으로 증명되는 것도 아닙니다.** 출처 판정은 표식 하나가 아니라 작성 이력·제출 경로·검토 기록을 함께 보는 다층 검증이어야 합니다. 워터마크는 그 층 중 하나이지 전부가 아닙니다.`,
   source: "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
   officialUrl: "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
   verifiedAt: "2026-08-12",
   backupUrls: [
     { label: "EU AI법 투명성 의무 8월 2일 시행 (집행위 공지)", url: "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august" },
     { label: "C2PA 개방 표준", url: "https://c2pa.org/" },
+    { label: "watermarks-remover (2026-08-11 공개, MIT)", url: "https://github.com/guillaumemeyer/watermarks-remover" },
   ],
   slug: "anthropic-20260811-content-marking-c2pa",
   tags: ["Anthropic", "C2PA", "워터마크", "규제", "투명성"],
@@ -237,8 +219,8 @@ export const edition2026_08a: ABEdition = {
     "승인 버튼이 사라진다 — Claude Code auto 모드 기본값",
     "권한이 닿는 곳이 위험 표면이다 — Astra Critical·블랙햇·npm 웜",
     "무료 티어의 성격이 바뀐다 — 무제한 개방과 한국 광고 출시",
-    "표식이 의무가 됐다 — EU AI법 8월 2일과 C2PA",
-    "모델은 계속 열렸다 — Muse Glimmer·DeepSeek·K-엑사원 2.0",
+    "표식이 의무가 됐다 — 그리고 9일 뒤 제거 도구가 나왔다",
+    "30초 영상이 단일 생성으로 — Seedance 2.5와 그 열흘",
   ],
 
   highlights: [
@@ -246,20 +228,17 @@ export const edition2026_08a: ABEdition = {
       editorial: "이번 창에서 청중이 8월 14일 전에 반드시 알아야 할 단 하나입니다. 승인 흐름이 바뀝니다.",
       keyQuote: "사람 13.6% vs 분류기 89% — 위험한 명령 탐지율" },
     { rank: 2, tier: "hero", post: astraCritical, sourceWeek: "2026-w32", sourceCompany: "OpenAI",
-      editorial: "auto 모드 이야기의 반대편. 권한을 넘긴다는 것이 실제로 무엇을 여는지 보여줍니다.",
+      editorial: "auto 모드의 반대편. 권한을 넘긴다는 것이 실제로 무엇을 여는지 보여줍니다. npm 웜을 같은 표면의 실제 사고로 붙였습니다.",
       keyQuote: "\"AI orchestrated, fully automated offensive attacks are real now.\"" },
     { rank: 3, tier: "hero", post: freeTier, sourceWeek: "2026-w32", sourceCompany: "OpenAI",
       editorial: "무제한을 받은 티어와 광고를 받은 티어가 같습니다. 두 발표를 붙여야 보이는 카드입니다.",
       keyQuote: "무료·Go에 무제한을 열고, 닷새 뒤 같은 티어에 광고" },
     { rank: 4, tier: "feature", post: marking, sourceWeek: "2026-w33", sourceCompany: "Anthropic",
-      editorial: "8월 2일이라는 날짜가 EU AI법 투명성 의무 시행일과 같습니다. 규제가 제품 동작이 된 첫 사례입니다.",
-      keyQuote: "\"표식이 없다\"가 \"사람이 썼다\"는 아닙니다" },
-    { rank: 5, tier: "feature", post: museGlimmer, sourceWeek: "2026-w33", sourceCompany: "Meta",
-      editorial: "오픈웨이트 4건을 한 장에 묶었습니다. 라이선스가 저마다 다르다는 게 요점입니다.",
-      keyQuote: "4비트 20GB 아래 — 소비자 GPU 한 장" },
-    { rank: 6, tier: "feature", post: kExaone, sourceWeek: "2026-w31", sourceCompany: "LG AI연구원",
-      editorial: "한국 축으로 닫습니다. 독파모 2차수 결과와 같은 창의 국내 신호를 함께 담았습니다.",
-      keyQuote: "750B · Apache 2.0 · 24개 벤치마크 평균 70.1점" },
+      editorial: "8월 2일 의무화와 8월 11일 제거 도구가 9일 간격입니다. 표식 하나로는 판정할 수 없다는 결론으로 착지합니다.",
+      keyQuote: "표식 없음도, 표식 있음도 단독으로는 증거가 아닙니다" },
+    { rank: 5, tier: "feature", post: mediaGen, sourceWeek: "2026-w31", sourceCompany: "ByteDance Seed",
+      editorial: "이번 회차에서 처음 들어가는 축입니다. 그동안 수집 레지스트리에 생성형 미디어 publisher가 0개였습니다.",
+      keyQuote: "30초를 한 번의 생성으로 — 이어붙이기가 아닙니다" },
   ],
 
   editorsPicks,
