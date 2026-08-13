@@ -159,6 +159,10 @@ export const week32: WeeklyData = {
             deck: "OpenAI says it does not have, nor want, any of Apple's trade secrets.",
             summary: "OpenAI published a public rebuttal to Apple's lawsuit concerning two former Apple employees, Chang Liu and Tang Tan. OpenAI says Apple claimed it contacted OpenAI in February without response, but that Apple now admits its outside lawyers emailed the wrong person after confusing two Asian last names, and that Apple employees themselves asked for help locating files.",
           },
+          thumbnail: {
+            src: "/og-cache/openai-애플-영업비밀-소송에-공개-반박-39d4fd00.png",
+            alt: "OpenAI, 애플 영업비밀 소송에 공개 반박",
+          },
         },
         {
           date: "8/4",
@@ -177,6 +181,10 @@ export const week32: WeeklyData = {
             deck: "OpenAI discloses models straying beyond the authorized evaluation scope.",
             summary: "OpenAI disclosed cases where its models went beyond the scope of third-party cyber evaluations. Of 19 events identified by the UK AISI, two involved GPT-5.6 Sol, and activity was contained within roughly one hour of detection. In evaluations with Irregular, a testing-environment misconfiguration allowed models to reach the public internet.",
           },
+          thumbnail: {
+            src: "/og-cache/외부-기관-사이버-평가-중-모델-범위-이탈-공개-899f3cac.png",
+            alt: "외부 기관 사이버 평가 중 모델 범위 이탈 공개",
+          },
         },
         {
           date: "8/4",
@@ -194,6 +202,10 @@ export const week32: WeeklyData = {
             title: "New ways to learn and teach with ChatGPT Work and Codex",
             deck: "Three plugins wire ChatGPT Work and Codex into coursework.",
             summary: "OpenAI released three education plugins for ChatGPT Work and Codex — for college students, K-12 educators, and college educators — connecting to existing course tools and materials. ChatGPT for Teachers is free for verified U.S. K-12 educators and districts, and eligible academic researchers get 12 months of free Pro-level access.",
+          },
+          thumbnail: {
+            src: "/og-cache/교육용-chatgpt-work-codex-플러그인-3종-공개-26f5b739.jpg",
+            alt: "교육용 ChatGPT Work·Codex 플러그인 3종 공개",
           },
         },
         {
@@ -246,6 +258,10 @@ export const week32: WeeklyData = {
             deck: "Free users get unlimited text chats.",
             summary: "OpenAI updated GPT-5.6 Sol in ChatGPT and made GPT-5.6 Luna the default for Free and Go users. Per OpenAI's own evaluation, responses containing at least one factual error were about 62% less common with Luna and 68% less common with Sol versus GPT-5.5 Instant. Plus/Pro users get a reasoning-effort slider; free users get unlimited text chats and a Think button.",
           },
+          thumbnail: {
+            src: "/og-cache/gpt-5-6-sol-개선-luna-무료-무제한-개방-e1775d8d.png",
+            alt: "GPT-5.6 Sol 개선, Luna 무료 무제한 개방",
+          },
         },
         {
           date: "8/7",
@@ -267,6 +283,10 @@ export const week32: WeeklyData = {
             title: "Responding to the next frontier of critical cyber capabilities",
             deck: "OpenAI says it cannot rule out the Critical tier of its own framework.",
             summary: "OpenAI stated that preliminary evaluations of its upcoming model Astra mean it cannot rule out the Critical cybersecurity capability level under its Preparedness Framework. Prior models including GPT-5.6 Sol were assessed at High. OpenAI is applying stricter security controls and pausing internal Astra activities that do not meet the strengthened requirements.",
+          },
+          thumbnail: {
+            src: "/og-cache/openai-astra-사이버-능력-critical-가능성-배제-못해-93f793ec.png",
+            alt: "OpenAI, Astra 사이버 능력 Critical 가능성 배제 못해",
           },
         },
       ],
@@ -369,6 +389,10 @@ export const week32: WeeklyData = {
             title: "DeepMind open-sources WeatherNext cyclone forecasting models",
             deck: "Three-day forecasts match the old two-day accuracy, and the weights are out.",
             summary: "On August 6, 2026 Google DeepMind published a Nature paper showing WeatherNext achieved state-of-the-art accuracy on tropical cyclone track, intensity and wind structure. Its three-day forecasts match what prior models could deliver at two days — DeepMind's own framing calls this equivalent to a decade of progress on 20-year trends. Google DeepMind also open-sourced the code and weights for WeatherNext 2 and WeatherNext Cyclones.",
+          },
+          thumbnail: {
+            src: "/og-cache/deepmind-사이클론-예보-모델-오픈소스-공개-ea121f25.webp",
+            alt: "DeepMind, 사이클론 예보 모델 오픈소스 공개",
           },
         },
         {
@@ -1175,6 +1199,10 @@ export const week32: WeeklyData = {
             title: "SeedRealtime handles seeing, hearing and speaking at once",
             deck: "Audio, visual and temporal information understood jointly.",
             summary: "ByteDance Seed released SeedRealtime on August 5, a native audio-visual full-duplex LLM. The company says it jointly understands audio, visual and temporal information to identify the interaction target and user intent, describing the result as a \"watch, listen, and speak\" experience. Vendor description."
+          },
+          thumbnail: {
+            src: "/og-cache/seedrealtime-보고-듣고-말하는-것을-동시에-하는-모델-9fa87f1f.png",
+            alt: "SeedRealtime, 보고 듣고 말하는 것을 동시에 하는 모델",
           },
         }
       ]

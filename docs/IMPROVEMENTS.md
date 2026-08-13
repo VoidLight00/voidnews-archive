@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-08-13 · 총 35건
+> 마지막 갱신: 2026-08-13 · 총 37건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -18,7 +18,7 @@
 | IMP-0007 | 2026-07-02 | feature | RSS 2.0 피드 신설 (/rss.xml) | app/rss.xml/route.ts | d91804b |
 | IMP-0008 | 2026-07-02 | feature | sitemap.xml 정적 생성 (229 URL) | app/sitemap.ts | 59bec3c |
 
-## 적용됨 (applied) (19)
+## 적용됨 (applied) (21)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
@@ -41,6 +41,8 @@
 | IMP-0033 | 2026-08-13 | ab-data | 2026-08a rev2 — C2PA 워터마크와 무료티어(Luna 무제한+한국 광고) 승격, npm 웜 보강 강등 | lib/ab/editions/2026-08a.ts | c560ecf |
 | IMP-0034 | 2026-08-13 | design | 컬러 가로 accent line 금지를 HARD 게이트로 배선 + AB 하이라이트 썸네일 누락 수정 | scripts/check-horizontal-accent.mjs<br>scripts/run-all-gates.mjs<br>scripts/inject-thumbnails.mjs<br>app/ab | de27bd1 |
 | IMP-0035 | 2026-08-13 | ab-data | 오픈소스 픽에 watermarks-remover 추가 (3종) — GitHub 링크 노출 | lib/ab/editions/2026-08a.ts | a81fbd0 |
+| IMP-0036 | 2026-08-13 | ab-data | Grok 4.6 메인 승격(Top6) + Seedance 2.0 등 주제 불일치 폴백 썸네일 25개 제거 | lib/ab/editions/2026-08a.ts<br>lib/weeks/2026-w3*.ts<br>_workspace/thumbnails/fallback-map.json | b8be138 |
+| IMP-0037 | 2026-08-13 | quality | 봇차단 도메인 썸네일 실수집 — 헤드리스 브라우저 경로 확립 (플레이스홀더 20 → 2) | public/og-cache<br>_workspace/thumbnails/baseline.json<br>references/FAILURE_LOG.md | 3968a05 |
 
 ## 대기 (pending) (8)
 

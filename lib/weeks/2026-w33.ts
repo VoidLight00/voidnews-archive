@@ -91,6 +91,10 @@ export const week33: WeeklyData = {
             deck: "Only vetted individuals and organizations get access.",
             summary: "OpenAI expanded its Daybreak program and introduced GPT-5.6-Cyber, built on GPT-5.6 Sol. Daybreak Blue gives access to frontier general-purpose models; Daybreak Red gives access to purpose-trained cybersecurity models, restricted to approved individuals and organizations. Per OpenAI's own numbers, GPT-5.6-Cyber completes 95.0% of Advanced Cybersecurity requests versus 57.3% for GPT-5.5-Cyber and 1.5% for GPT-5.6 Sol.",
           },
+          thumbnail: {
+            src: "/og-cache/daybreak-확대와-gpt-5-6-cyber-공개-d570d270.png",
+            alt: "Daybreak 확대와 GPT-5.6-Cyber 공개",
+          },
         },
         {
           date: "8/10",
@@ -108,6 +112,10 @@ export const week33: WeeklyData = {
             title: "Premium seats are coming to ChatGPT Business",
             deck: "Teams can now assign tiered seats.",
             summary: "OpenAI introduced Premium seats for ChatGPT Business at $125 per user per month, or $100 per user per month billed annually, alongside Standard seats at $25/$20. Premium seats provide 5x more usage than Standard seats and remove the five-hour usage limit. Both seat types can be mixed in one workspace.",
+          },
+          thumbnail: {
+            src: "/og-cache/chatgpt-business에-premium-시트-도입-70ce1451.png",
+            alt: "ChatGPT Business에 Premium 시트 도입",
           },
         },
         {
@@ -127,6 +135,10 @@ export const week33: WeeklyData = {
             deck: "The cyber-specialized models open to defensive partners only.",
             summary: "OpenAI expanded its Daybreak Cyber Partner program so security partners can integrate frontier cyber models into their own products. Named partners include Accenture, IBM, Capgemini, Cognizant, EY, KPMG, PwC, NCC Group, SpecterOps, Palo Alto Networks, CrowdStrike, Cisco, Sophos, Akamai, Fortinet, and Cloudflare.",
           },
+          thumbnail: {
+            src: "/og-cache/프런티어-사이버-모델-보안-파트너사에-개방-dd3ed843.png",
+            alt: "프런티어 사이버 모델, 보안 파트너사에 개방",
+          },
         },
         {
           date: "8/11",
@@ -145,6 +157,10 @@ export const week33: WeeklyData = {
             deck: "Ads land on Free and Go plans only, with Korea in the first five countries.",
             summary: "In an August 11, 2026 update, OpenAI said ChatGPT Ads launched in the United Kingdom, Mexico, Brazil, Japan, and South Korea. Ads appear only for logged-in adult users on the Free and Go tiers; Pro, Business, Enterprise, and Education tiers have no ads. OpenAI states ads do not influence ChatGPT's answers and advertisers receive only aggregate performance data. The base page was originally published February 9, 2026.",
           },
+          thumbnail: {
+            src: "/og-cache/chatgpt-광고-한국-포함-5개국-출시-16251d7b.png",
+            alt: "ChatGPT 광고, 한국 포함 5개국 출시",
+          },
         },
         {
           date: "8/11",
@@ -162,6 +178,10 @@ export const week33: WeeklyData = {
             title: "Daybreak models are now available on AWS",
             deck: "Approved organizations can now reach the models through Bedrock.",
             summary: "OpenAI announced Daybreak models are available on AWS via the Amazon Bedrock console or the Responses API using the bedrock-mantle endpoint. Enrollment and approval in the Daybreak Access program is required for both Daybreak Blue and Daybreak Red. This follows OpenAI frontier models and Codex becoming generally available on AWS earlier this year.",
+          },
+          thumbnail: {
+            src: "/og-cache/daybreak-모델-aws-bedrock에서-제공-ca816138.png",
+            alt: "Daybreak 모델, AWS Bedrock에서 제공",
           },
         },
       ],

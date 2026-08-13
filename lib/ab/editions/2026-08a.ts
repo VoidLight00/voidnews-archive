@@ -69,6 +69,10 @@ const astraCritical = post({
     summary:
       "On August 7 OpenAI said preliminary evaluations of its next model, Astra, were strong enough that it cannot rule out the Critical cybersecurity level of its Preparedness Framework, and paused internal Astra work that does not yet meet hardened security requirements.",
   },
+  thumbnail: {
+    src: "/og-cache/openai-astra-사이버-능력-critical-가능성-배제-못해-93f793ec.png",
+    alt: "오픈AI, 차기 모델의 사이버 최고 위험 등급을 배제할 수 없다고 밝혔다",
+  },
 });
 
 // npm 공급망 웜(8/4)은 이번 회차에서 하이라이트 대신 보강 순위로 내렸다.
@@ -101,6 +105,10 @@ const mediaGen = post({
     summary:
       "ByteDance Seed introduced Seedance 2.5 on July 31, an audio-video joint model built to produce 30 seconds in a single generation, extendable twice. In the same window Luma shipped it inside its product on August 6, released Luma Scenes on August 11, and Higgsfield launched Cinema Studio 4.0 on August 12.",
     content: `**What changed**\nLength has been the hard part of generated video. Ten three-second clips stitched together drift — faces shift, lighting jumps, the camera loses continuity.\n\n**Seedance 2.5**, published by ByteDance Seed on July 31, is built as "a next-generation audio-video joint generation model for 30-second storytelling," producing up to 30 seconds **in a single generation**, extendable twice.\n\nIt "understands reference videos more precisely — capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation." All vendor description.\n\n**The ecosystem followed within ten days**\nAugust 5, SeedRealtime; August 6, Luma shipping Seedance 2.5 in-product; August 7, the developer API per secondary sources; August 11, Luma Scenes for keyframe-first editing; August 12, Higgsfield Cinema Studio 4.0 with lens, camera, lighting, colour and motion control.\n\n**Separate the dates**\nThe July 31 launch and the August 6 Luma integration are distinct events. Reading only the integration news loses the original release.\n\n**Availability is a separate question**\nIn the same window MiniMax H3 released weights under a licence that names South Korea, alongside the US, EU and UK, as excluded territory. A model opening is not the same as your being able to use it.\n\n**What to check**\nIf you hold a video budget, this is a re-estimation point: one pass at thirty seconds differs from ten passes stitched, in both production time and rework. Verify resolution, pricing and territorial limits separately before adopting.`
+  },
+  thumbnail: {
+    src: "/og-cache/시댄스-2-5-30초-영상을-오디오까지-한-번에-뽑는다-056f341d.jpg",
+    alt: "30초 영상을 한 번에 뽑는 시대가 이 3주에 열렸습니다",
   },
 });
 
@@ -165,6 +173,10 @@ const freeTier = post({
     deck: "Two changes to the same Free and Go tiers, five days apart.",
     summary:
       "On August 6 OpenAI made GPT-5.6 Luna the default for free users and opened unlimited text chats. Five days later it launched ChatGPT ads in the UK, Mexico, Brazil, Japan and South Korea — shown to logged-in adults on exactly those Free and Go tiers.",
+  },
+  thumbnail: {
+    src: "/og-cache/gpt-5-6-sol-개선-luna-무료-무제한-개방-e1775d8d.png",
+    alt: "무료 사용자에게 무제한을 열고, 닷새 뒤 한국에 광고를 넣었다",
   },
 });
 

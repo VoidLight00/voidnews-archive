@@ -676,6 +676,27 @@
         "value": 0
       },
       "notes": "VN-DESIGN-04"
+    },
+    {
+      "id": "IMP-0037",
+      "date": "2026-08-13",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "봇차단 도메인 썸네일 실수집 — 헤드리스 브라우저 경로 확립 (플레이스홀더 20 → 2)",
+      "status": "applied",
+      "files": [
+        "public/og-cache",
+        "_workspace/thumbnails/baseline.json",
+        "references/FAILURE_LOG.md"
+      ],
+      "commit": "3968a05",
+      "evidence": {
+        "kind": "count",
+        "cmd": "find public/og-cache -size +1000k -type f | wc -l",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "VN-DESIGN-05"
     }
   ]
 }

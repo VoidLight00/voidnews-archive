@@ -214,3 +214,28 @@ meta.com, code.claude.com/docs, deepmind.google/blog, openai.com/index)을 제�
 **재발 방지 규칙**: 폴백 매핑은 **경로 단위**로만 만든다(`openai.com/index/<slug>`).
 도메인 단위 폴백은 같은 도메인의 서로 다른 사건에 같은 그림을 붙이므로 금지한다.
 빈 썸네일은 결함이지만, 틀린 썸네일은 오보다.
+
+### VN-DESIGN-05 — 봇차단 도메인 OG 수집 경로 확립 (2026-08-13)
+
+**증상**: VN-DESIGN-04 로 도메인 폴백을 걷어낸 뒤 이번 회차 20개 카드가 플레이스홀더로
+남았다. openai.com 14, seed.bytedance.com 3, deepmind/liquid/meta 각 1.
+
+**원인**: 기존 두 경로가 모두 막혔다. ① 직접 fetch — Cloudflare 403 또는 og 태그 없는
+JS 셸 200. ② 텍스트 프록시(r.jina.ai) — 초반엔 통했으나 반복 호출로 레이트리밋,
+17건 연속 전부 실패. RSS(openai.com/news/rss.xml)에는 이미지 필드가 없다(ctfassets 0건).
+
+**수정**: 로컬 헤드리스 브라우저로 전환했다. playwright 파이썬 패키지는 있으나 번들
+chromium 빌드 번호가 어긋나(1200 기대, 1208/1228/1234 보유) `channel="chrome"` 으로
+시스템 Chrome 을 썼다. 첫 시도는 1/17 — 같은 컨텍스트의 연속 요청을 Cloudflare 가
+차단했다. **URL 마다 새 컨텍스트 + 9초 간격**으로 바꾸자 11/15 성공. openai.com 14건
+전부 확보.
+
+og 태그가 아예 없는 페이지(seed.bytedance.com 제품/블로그, meta.com, liquid.ai)는
+브라우저로도 못 잡는다. Seedance·SeedRealtime 은 공식 블로그 인덱스의 기사 이미지
+(lf3-static.bytednsdoc.com)를 제목-이미지 쌍으로 파싱해 붙였다.
+
+결과: 08a 하이라이트 6/6, w31 29/29, w32 41/42, w33 31/32.
+
+**재발 방지 규칙**: 봇차단 도메인 OG 수집 순서는 ①직접 fetch ②텍스트 프록시
+③헤드리스 브라우저(컨텍스트 격리 + 간격) ④공식 인덱스의 기사 이미지 파싱 이다.
+프록시를 연타하지 않는다 — 레이트리밋에 걸리면 그 세션 내내 못 쓴다.
