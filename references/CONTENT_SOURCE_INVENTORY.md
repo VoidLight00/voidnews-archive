@@ -19,8 +19,8 @@
 |---|---:|
 | YouTube | 15 |
 | X/Twitter | 37 |
-| Web·Threads·커뮤니티·연구·로컬 | 33 |
-| **합계** | **85** |
+| Web·Threads·커뮤니티·연구·로컬·미디어 | 54 |
+| **합계** | **106** |
 
 큐레이터·커뮤니티·메신저 링크는 원칙적으로 `discovery-only`다. 발견한 사건은 공식 블로그·문서·changelog·GitHub release·공식 X/YouTube 등 1차 원천으로 승격한 뒤 카드 근거로 사용한다.
 
@@ -486,12 +486,47 @@ sourceType: user-provided
 └─ Insane Research validator: VIP·hero·고위험 claim만
 ```
 
+## 14. 생성형 미디어 공식 채널 — 21개
+
+2026-08a에서 Seedance 2.5를 놓친 뒤 추가한 영구 수집축이다. 공식 news/blog/docs를 날짜 범위 전체로 확인한다.
+
+### 영상·이미지
+
+1. ByteDance Seed — `https://seed.bytedance.com/en/`
+2. Luma AI News — `https://lumalabs.ai/news`
+3. Higgsfield Blog — `https://higgsfield.ai/blog`
+4. MiniMax Blog — `https://www.minimaxi.com/blog`
+5. Kling AI — `https://kling.ai/`
+6. Qwen Blog — `https://qwen.ai/blog`
+7. Tencent Hunyuan — `https://hunyuan.tencent.com/`
+8. Midjourney Updates — `https://updates.midjourney.com/`
+9. Runway Research — `https://runway.com/research`
+10. Pika — `https://pika.art/`
+11. Adobe Firefly — `https://www.adobe.com/products/firefly.html`
+12. Black Forest Labs — `https://bfl.ai/`
+13. Stability AI News — `https://stability.ai/news-updates`
+14. Ideogram — `https://ideogram.ai/features/`
+
+### 음악·음성·3D
+
+15. Suno Blog — `https://suno.com/blog`
+16. ElevenLabs Blog — `https://elevenlabs.io/blog`
+17. Cartesia Blog — `https://www.cartesia.ai/blog`
+18. Hume AI Blog — `https://www.hume.ai/blog`
+19. Meshy Blog — `https://www.meshy.ai/blog`
+20. Tripo Blog — `https://www.tripo3d.ai/blog`
+21. World Labs Blog — `https://www.worldlabs.ai/blog`
+
+제품 페이지에 기능만 있고 게시일이 없으면 출시 날짜를 추정하지 않는다. 통합 서비스의 지원 시작일과 원개발사의 모델 출시일도 별도 사건으로 기록한다.
+
+---
+
 ## 운영 상태 요약
 
-- 활성 강제 레지스트리: 85개
+- 활성 강제 레지스트리: 106개
 - YouTube: 15개
 - X/Twitter: 37개
-- Web·local·community·research: 33개
+- Web·local·community·research·media: 54개
 - Reddit JSON 자동수집: HTTP 403으로 비활성
 - X 계정군: 2026-10-30 재검사 예정
 - Threads 봇 아카이브: 2026-08-12 확인 시 stale

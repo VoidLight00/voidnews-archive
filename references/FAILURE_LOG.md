@@ -96,6 +96,16 @@ QA(`voidbrief-qa-auditor`)나 사용자가 새 결함을 발견하면:
 
 **재발 방지 규칙**: **`discoveredVia` 열거값을 새로 만들 때는 같은 변경에서 `curator-channels.json`에 행을 추가한다.** 레지스트리에 없는 값은 강제되지 않는 산문이다. `seed-schema.md`에 이 규칙을 명시했다.
 
+### VN-SRC-03 — 생성형 미디어 publisher 축이 없어 Seedance 2.5를 통째로 누락 (2026-08-13)
+
+**증상**: 2026-08a(07-31~08-12) 수집·검증·사이트 게이트가 통과했지만 영상·이미지·음성·3D 생성 모델 축이 lane/registry/official matrix 어디에도 없어, 창 안 Luma의 Seedance 2.5 지원(08-06), Luma Scenes(08-11), Higgsfield Cinema Studio 4.0(08-12)을 발견하지 못했다.
+
+**원인**: `curator-channels.json` 85개와 `official-source-matrix.md`가 범용 LLM·코딩·연구·커뮤니티 중심으로 구성됐고, 생성형 미디어 공식 publisher 집합이 0개였다. 게이트는 등록된 집합의 완전성만 검사하므로 레지스트리 공백을 100% 통과시켰다.
+
+**수정**: ByteDance Seed·Luma·Higgsfield·MiniMax·Kling·Qwen·Hunyuan·Midjourney·Runway·Pika·Adobe Firefly·BFL·Stability·Ideogram·Suno·ElevenLabs·Cartesia·Hume·Meshy·Tripo·World Labs 공식 채널 21개를 registry에 추가하고 official source matrix와 콘텐츠 인벤토리에 영상/이미지 및 음성/3D 축을 추가했다. registry gate 실측: channels=106, duplicate=0, identityVerified=all.
+
+**재발 방지 규칙**: 편집 범주를 새로 다룰 때는 개별 사건만 보강하지 말고 공식 publisher 집합을 같은 변경에서 registry와 matrix에 등록한다. 제품 페이지에 기능은 있으나 게시일이 없으면 날짜를 추정하지 않으며, 통합 서비스의 지원 시작일과 원개발사 출시일을 혼동하지 않는다.
+
 ### VN-GATE-01 — 커버리지 게이트 2종이 같은 산출물에 상충하는 규격을 요구 (2026-07-30)
 
 **증상**: 2026-07c 수집에서 `check_curator_coverage.sh`는 exit 0인데 `check_video_coverage.sh`가 `FAIL[ghost-id]`로 exit 2. 같은 `01_curator_coverage.json`을 두 게이트가 읽는데, 전자는 **모든 플랫폼**(youtube/x/web) 채널 행을 요구하고 후자는 **YouTube 외 행을 전부 ghost**로 판정했다.
