@@ -33,7 +33,11 @@ export const week17: WeeklyData = {
             "도구릴리스",
             "공식",
             "anthropic"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-code-quality-포스트모템-3월-4-2ab8741a.png",
+            "alt": "Anthropic Claude Code Quality 포스트모템 — 3월 4일~4월 20일 3개 변경이 6주간 품질 저하 유발"
+          },
         },
         {
           "date": "4/25",
@@ -61,7 +65,11 @@ export const week17: WeeklyData = {
             "에이전트자동화",
             "공식",
             "anthropic"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-project-deal-claude가-직원-대신-사내--0f41715c.png",
+            "alt": "Anthropic Project Deal — Claude가 직원 대신 사내 마켓플레이스에서 협상·매매 (186 deals, $4K+)"
+          },
         }
       ]
     },
@@ -113,7 +121,11 @@ export const week17: WeeklyData = {
             "deepseek",
             "nvidia"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/deepseek-v4-preview-오픈소스-공개-1-6t-moe-1m--0c46f167.jpg",
+            "alt": "DeepSeek-V4 Preview 오픈소스 공개 — 1.6T MoE / 1M context, V3.2 대비 27% inference FLOPs"
+          },
         }
       ]
     },
@@ -144,7 +156,11 @@ export const week17: WeeklyData = {
             "공식",
             "google",
             "anthropic"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/google-anthropic에-최대-40b-투자-현금-10b-마일스톤--8fa0ef48.jpg",
+            "alt": "Google, Anthropic에 최대 $40B 투자 (현금 $10B + 마일스톤 $30B + Cloud 5GW)"
+          },
         }
       ]
     },
@@ -175,7 +191,11 @@ export const week17: WeeklyData = {
             "공식",
             "openai"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "ChatGPT for Clinicians 무료 출시 + HealthBench Professional 벤치마크 공개"
+          },
         }
       ]
     },
@@ -205,7 +225,11 @@ export const week17: WeeklyData = {
             "도구릴리스",
             "공식",
             "xai"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-voice-think-fast-1-0-voice-benc-72d521f1.webp",
+            "alt": "xAI Grok Voice Think Fast 1.0 — τ-voice Bench 67.3% (Gemini/GPT Realtime 추월), Starlink 고객지원 적용"
+          },
         }
       ]
     },
@@ -271,7 +295,11 @@ export const week17: WeeklyData = {
             "도구릴리스",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/중국-kinetix-ai-kai-휴머노이드-로봇-공개-115-dof-18-fc5a668e.webp",
+            "alt": "중국 Kinetix AI — KAI 휴머노이드 로봇 공개 (115 DoF, 18,000 촉각 센서)"
+          },
         }
       ]
     }

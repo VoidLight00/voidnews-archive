@@ -20,8 +20,8 @@ export const week27: WeeklyData = {
           "title": "Anthropic, Claude Sonnet 5 공개 — Free·Pro 기본 모델, 네이티브 1M 컨텍스트",
           "featured": true,
           "deck": "Opus 4.8에 근접한 성능을 저비용으로, Claude Code 기본 모델로 채택",
-          "summary": "Anthropic이 Claude Sonnet 5를 공개했다. Opus 4.8에 근접한 성능을 더 낮은 비용으로 제공하며 네이티브 1M 토큰 컨텍스트를 지원한다. Claude Code의 기본 모델로 채택됐고 8월 31일까지 $2/$10(Mtok) 프로모션 가격이 적용된다.",
-          "content": "**이게 뭐예요?**\nAnthropic이 새 프런티어 모델 Claude Sonnet 5를 공개했다. Claude 앱의 Free·Pro 기본 모델이자 Claude Code의 기본 모델로 채택됐다.\n\n**무엇이 달라졌나?**\n- Opus 4.8에 근접한 성능을 더 낮은 비용으로 제공\n- 네이티브 1M 토큰 컨텍스트 지원\n- Claude Code 기본 모델로 채택\n- 8월 31일까지 $2/$10(Mtok) 프로모션 가격 적용\n\n**어떻게 읽을까?**\n최상위 성능을 '싸게' 쓰는 축이 열렸다. 같은 날 Claude Code 기본 모델 채택과 GitHub Copilot 정식 지원이 동시에 이뤄져, 신규 프런티어 모델이 발표에 그치지 않고 개발 스택 전체로 즉시 배선되는 패턴을 보여 준다.\n\n**확인 포인트**\n- 위치: Claude 앱 Free/Pro 기본, Claude Code 기본\n- 컨텍스트: 네이티브 1M 토큰\n- 가격: 8/31까지 $2/$10(Mtok) 프로모션\n\n출처: anthropic.com",
+          "summary": "Anthropic이 Claude Sonnet 5를 공개했다. Opus 4.8에 근접한 성능을 더 낮은 비용으로 제공하며 네이티브 1M 토큰 컨텍스트를 지원한다. Claude Code의 기본 모델로 채택됐고, 8월 10일에는 기존 $2/$10(Mtok) 도입 가격을 영구 가격으로 확정해 9월 1일 예정이던 $3/$15 인상을 취소했다.",
+          "content": "**이게 뭐예요?**\nAnthropic이 새 프런티어 모델 Claude Sonnet 5를 공개했다. Claude 앱의 Free·Pro 기본 모델이자 Claude Code의 기본 모델로 채택됐다.\n\n**무엇이 달라졌나?**\n- Opus 4.8에 근접한 성능을 더 낮은 비용으로 제공\n- 네이티브 1M 토큰 컨텍스트 지원\n- Claude Code 기본 모델로 채택\n- 8월 10일 $2/$10(Mtok) 도입 가격을 영구 가격으로 확정하고, 9월 1일 예정이던 $3/$15 인상을 취소\n\n**어떻게 읽을까?**\n최상위 성능을 '싸게' 쓰는 축이 열렸다. 같은 날 Claude Code 기본 모델 채택과 GitHub Copilot 정식 지원이 동시에 이뤄져, 신규 프런티어 모델이 발표에 그치지 않고 개발 스택 전체로 즉시 배선되는 패턴을 보여 준다. 가격 영구화로 이 비용 구조가 단기 프로모션이 아니라 운영 기준이 됐다.\n\n**확인 포인트**\n- 위치: Claude 앱 Free/Pro 기본, Claude Code 기본\n- 컨텍스트: 네이티브 1M 토큰\n- 가격: $2/$10(Mtok) 영구 적용, 예정된 $3/$15 인상 취소\n\n출처: anthropic.com",
           "source": "https://www.anthropic.com/news/claude-sonnet-5",
           "officialUrl": "https://www.anthropic.com/news/claude-sonnet-5",
           "slug": "anthropic-20260630-claude-sonnet-5",
@@ -30,6 +30,10 @@ export const week27: WeeklyData = {
             "프런티어 모델"
           ],
           "backupUrls": [
+            {
+              "label": "Claude Platform 릴리스 노트 (가격 영구화 08-10)",
+              "url": "https://platform.claude.com/docs/en/release-notes/overview"
+            },
             {
               "label": "공식 문서 (모델 개요)",
               "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
@@ -265,7 +269,11 @@ export const week27: WeeklyData = {
               "label": "Axios",
               "url": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/openai-gpt-5-6-sol-terra-luna-제한-프리뷰-미-정-4b9bac18.jpg",
+            "alt": "OpenAI, GPT-5.6 Sol·Terra·Luna 제한 프리뷰 — 미 정부 안전성 검토로 약 20개 조직만"
+          },
         },
         {
           "date": "6/25",

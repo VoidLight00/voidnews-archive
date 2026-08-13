@@ -146,6 +146,10 @@ export const week16: WeeklyData = {
           source: "https://polymarket.com/event/gpt-5pt5-released-by",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/Polymarket/status/2045616553308147936" }, { label: "tokenmix.ai", url: "https://tokenmix.ai/blog/gpt-5-5-release-date-spud" }],
           tags: ["도구릴리스", "text", "image", "audio", "openai", "polymarket"],
+          thumbnail: {
+            src: "/og-cache/gpt-5-5-코드네임-spud-출시-임박-polymarket-4-23--3051eeed.png",
+            alt: "GPT-5.5 (코드네임 Spud) 출시 임박 — Polymarket 4/23 92% (2026-04-22 기준)",
+          },
         },
       ],
     },
@@ -210,6 +214,10 @@ export const week16: WeeklyData = {
           source: "https://deepmind.google/blog/gemini-robotics-er-1-6/",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/GoogleDeepMind/status/2044069878781390929" }, { label: "blog.google", url: "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-1-6/" }, { label: "deepmind.google", url: "https://deepmind.google/models/gemini-robotics/gemini-robotics-er/" }],
           tags: ["도구릴리스", "robotics", "image", "google"],
+          thumbnail: {
+            src: "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+            alt: "Gemini Robotics-ER 1.6 공개 — 계기판 판독 + 공간 추론 대폭 향상",
+          },
         },
         {
           date: "4/14",

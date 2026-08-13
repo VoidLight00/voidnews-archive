@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-07-17",
+  "updated": "2026-08-13",
   "entries": [
     {
       "id": "IMP-0001",
@@ -397,6 +397,224 @@
         "cmd": "node scripts/verify-07a-closure.mjs"
       },
       "notes": "OpenAI Developers 공식 모델 문서로 2026-07-17 GA/API availability 재검증; 7/9 날짜는 Engadget 보조 출처; report gate exit0"
+    },
+    {
+      "id": "IMP-0023",
+      "date": "2026-07-30",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "AB 2026-07c 수집: 텔레그램 AI레이더·Choi 카톡 소스를 레지스트리에 등록해 커버리지 게이트가 강제하도록 배선",
+      "status": "applied",
+      "files": [
+        "references/curator-channels.json",
+        "references/FAILURE_LOG.md"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/references/verify_curator_channels.sh >/dev/null 2>&1; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "20260730-ab-20260721-20260730"
+    },
+    {
+      "id": "IMP-0024",
+      "date": "2026-07-30",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "큐레이터 날짜별 아카이브 전수 확인을 HARD 게이트로 강제 (백상 9일치 누락 재발 방지)",
+      "status": "applied",
+      "files": [
+        "references/check_archive_coverage.py",
+        "references/check_archive_coverage.sh",
+        "references/curator-channels.json",
+        "SKILL.md"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/references/check_archive_coverage_selftest.sh >/dev/null 2>&1; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "VN-SRC-02"
+    },
+    {
+      "id": "IMP-0025",
+      "date": "2026-07-30",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "P0 레인 브리핑 정본 템플릿화 (검색 예산·날짜 전수·decision 형식 계약 고정)",
+      "status": "applied",
+      "files": [
+        "references/lane-brief-template.md"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "test -f ~/.claude/skills/voidnews-briefing-pipeline/references/lane-brief-template.md; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "20260730-ab-20260721-20260730"
+    },
+    {
+      "id": "IMP-0026",
+      "date": "2026-07-30",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "P0 검증 완결성 게이트 + resume 플래너 (에이전트 전멸 시 침묵 통과 차단)",
+      "status": "applied",
+      "files": [
+        "references/check_verify_completeness.py"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/references/check_verify_completeness.sh --run ~/projects/voidnews-archive/_workspace/ab/20260730-ab-20260721-20260730 >/dev/null 2>&1; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "20260730-ab-20260721-20260730"
+    },
+    {
+      "id": "IMP-0027",
+      "date": "2026-07-30",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "P1 차단 publisher 대체경로 의무 게이트 (봇차단이 공식 축을 삼키는 것 차단)",
+      "status": "applied",
+      "files": [
+        "references/check_blocked_fallback.py"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/references/check_blocked_fallback.sh --matrix ~/projects/voidnews-archive/_workspace/ab/20260730-ab-20260721-20260730/01_official_source_matrix_check.json >/dev/null 2>&1; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "20260730-ab-20260721-20260730"
+    },
+    {
+      "id": "IMP-0028",
+      "date": "2026-07-30",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "P3 차단 기록 신선도 게이트 (X 37채널 낭비 제거 + 분기 재확인 강제)",
+      "status": "applied",
+      "files": [
+        "references/check_block_staleness.py"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/references/check_block_staleness.sh --run-end 2026-07-30 --run-id 20260730-ab-20260721-20260730 --coverage ~/projects/voidnews-archive/_workspace/ab/20260730-ab-20260721-20260730/01_curator_coverage.json >/dev/null 2>&1; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "20260730-ab-20260721-20260730"
+    },
+    {
+      "id": "IMP-0029",
+      "date": "2026-08-12",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "2026-07-31~08-12 AI 정보로 사이트 주차 카드 채우기 (w31 추가분·w32·w33)",
+      "status": "applied",
+      "files": [
+        "lib/weeks/2026-w31.ts",
+        "lib/weeks/2026-w32.ts",
+        "lib/weeks/2026-w33.ts",
+        "lib/data.ts"
+      ],
+      "commit": "c560ecf",
+      "evidence": {
+        "kind": "count",
+        "cmd": "node scripts/check-dangling-thumbs.mjs >/dev/null 2>&1; echo $?",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "20260812-075051-ab-20260731-20260812"
+    },
+    {
+      "id": "IMP-0030",
+      "date": "2026-08-12",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "봇 차단 도메인(openai.com 등) OG 이미지 확보 — 인젝터에 텍스트 프록시 폴백 배선",
+      "status": "applied",
+      "files": [
+        "scripts/inject-thumbnails.mjs",
+        "_workspace/thumbnails/fallback-map.json"
+      ],
+      "commit": "c560ecf",
+      "evidence": {
+        "kind": "count",
+        "cmd": "grep -c 'resolveOgImage' scripts/inject-thumbnails.mjs",
+        "op": "eq",
+        "value": 2
+      },
+      "notes": "20260812-075051-ab-20260731-20260812 — w31/w32/w33 썸네일 96/96"
+    },
+    {
+      "id": "IMP-0031",
+      "date": "2026-08-12",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "AB 2026-08a 회차 생성 — 하이라이트 6(잠정) + 오픈소스 픽 10(paseo 1순위)",
+      "status": "applied",
+      "files": [
+        "lib/ab/editions/2026-08a.ts",
+        "lib/ab/data.ts"
+      ],
+      "commit": "c560ecf",
+      "evidence": {
+        "kind": "count",
+        "cmd": "grep -c 'rank: ' lib/ab/editions/2026-08a.ts",
+        "op": "eq",
+        "value": 6
+      },
+      "notes": "20260812-075051-ab-20260731-20260812"
+    },
+    {
+      "id": "IMP-0032",
+      "date": "2026-08-13",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "2026-08a VIP Top6 큐레이터 확정 + 오픈소스 픽을 cognee·paseo 2종으로 교체",
+      "status": "applied",
+      "files": [
+        "lib/ab/editions/2026-08a.ts"
+      ],
+      "commit": "c560ecf",
+      "evidence": {
+        "kind": "count",
+        "cmd": "grep -c 'slug: \"cognee\"\\|slug: \"paseo\"' lib/ab/editions/2026-08a.ts",
+        "op": "eq",
+        "value": 2
+      },
+      "notes": "20260812-075051-ab-20260731-20260812"
+    },
+    {
+      "id": "IMP-0033",
+      "date": "2026-08-13",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "2026-08a rev2 — C2PA 워터마크와 무료티어(Luna 무제한+한국 광고) 승격, npm 웜 보강 강등",
+      "status": "applied",
+      "files": [
+        "lib/ab/editions/2026-08a.ts"
+      ],
+      "commit": "c560ecf",
+      "evidence": {
+        "kind": "count",
+        "cmd": "grep -c 'post: freeTier' lib/ab/editions/2026-08a.ts",
+        "op": "eq",
+        "value": 1
+      },
+      "notes": "20260812-075051-ab-20260731-20260812"
     }
   ]
 }

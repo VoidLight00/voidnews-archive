@@ -60,6 +60,10 @@ export const edition2026_06a: ABEdition = {
         ],
         slug: "claude-code-dynamic-workflows-ultracode",
         tags: ["Claude Code", "에이전트 오케스트레이션", "dynamic workflows"],
+        thumbnail: {
+          src: "/og-cache/claude-code-dynamic-workflows-공개-한-세션에서--0da8068e.jpg",
+          alt: "Claude Code, dynamic workflows 공개 — 한 세션에서 서브에이전트 수백 개 병렬 오케스트레이션",
+        },
       },
       sourceWeek: "2026-w23",
       sourceCompany: "Anthropic",
@@ -268,6 +272,10 @@ export const edition2026_06a: ABEdition = {
         source: "https://openai.com/index/built-to-benefit-everyone-our-plan/",
         slug: "built-to-benefit-everyone-our-plan-53b5518d",
         tags: ["OpenAI", "비즈니스"],
+        thumbnail: {
+          src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+          alt: "Sam Altman·Jakub Pachocki, OpenAI '제3 국면' 선언 — 자동화 AI 연구자·1인 1 AGI 3대 목표",
+        },
       },
       sourceWeek: "2026-w24",
       sourceCompany: "OpenAI",
@@ -430,6 +438,10 @@ export const edition2026_06a: ABEdition = {
       body: "**모델 뒤에 숨은 '시스템 프롬프트'를 들여다보는 참고 자료.**\n\nAI 제품은 사용자 입력 앞에 '시스템 프롬프트'를 붙여 모델의 말투·역할·금지 사항을 규정합니다. 이건 보통 비공개인데, CL4R1T4S는 Claude·GPT·Gemini 등 주요 AI의 시스템 프롬프트 유출본을 한곳에 모은 오픈소스 저장소입니다. Fable 5 시스템 프롬프트도 ANTHROPIC/CLAUDE-FABLE-5.md 로 들어 있습니다.\n\n왜 참고용인가: 공식 발표가 아니라 유출본이라 정확성·최신성·진위가 보장되지 않습니다. 그래서 '추천'이 아니라 '참고'입니다. 프롬프트 엔지니어링을 공부할 때 '잘 만든 제품은 시스템 프롬프트를 어떻게 짜는가'를 보는 용도로만 권합니다.\n\n확인 포인트: 저장소의 갱신 시점, 해당 모델 버전, 그리고 유출본과 실제 제품 동작의 차이입니다.",
       editorial: "Fable 5 hero 카드에 이미 이 유출본 링크를 backup으로 달아 뒀는데, 오픈소스 자체로도 참고할 만해 도구 섹션에 따로 넣었습니다. 비공식 유출이라는 점을 발표에서 분명히 해 주세요.",
       tags: ["프롬프트", "유출", "참고"],
+      thumbnail: {
+        src: "/og-cache/cl4r1t4s-ai-시스템-프롬프트-유출-모음-f7bd4ce0.png",
+        alt: "CL4R1T4S — AI 시스템 프롬프트 유출 모음",
+      },
     }
   ],
 };

@@ -45,7 +45,11 @@ export const edition2026_04c: ABEdition = {
           "루머",
           "anthropic"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/anthropic-claude-jupiter-v1-p-red-team-p-3e4d57e0.jpg",
+          "alt": "Anthropic 'Claude Jupiter v1-p' red-team probe — possible Sonnet 4.8 / next Sonnet-class drop"
+        },
       },
       "sourceWeek": "2026-w18",
       "sourceCompany": "Anthropic / Claude",
@@ -78,7 +82,11 @@ export const edition2026_04c: ABEdition = {
           "공식",
           "anthropic"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/claude-for-creative-work-connectors-8113d388.jpg",
+          "alt": "Anthropic Claude — 9개 크리에이티브 도구 공식 커넥터 출시 (Blender·Adobe·Autodesk Fusion·Ableton·SketchUp 등)"
+        },
       },
       "sourceWeek": "2026-w18",
       "sourceCompany": "Anthropic / Claude",
@@ -124,7 +132,11 @@ export const edition2026_04c: ABEdition = {
           "공식",
           "perplexity"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/perplexity-computer-for-professional-fin-46a0efb0.jpg",
+          "alt": "Perplexity Computer for Professional Finance — 라이선스 데이터 + 35개 금융 워크플로우"
+        },
       },
       "sourceWeek": "2026-w19",
       "sourceCompany": "Perplexity",
@@ -203,7 +215,11 @@ export const edition2026_04c: ABEdition = {
           "루머",
           "google"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/gemini-3-2-flash-a-b-테스트-ajax-hercules-h-0246c064.jpg",
+          "alt": "Gemini 3.2 Flash A/B 테스트 — Ajax/Hercules/Hector/Orpheus 4개 체크포인트 LM Arena 등장"
+        },
       },
       "sourceWeek": "2026-w18",
       "sourceCompany": "Google / DeepMind",
@@ -240,7 +256,11 @@ export const edition2026_04c: ABEdition = {
           "유출",
           "google"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/gemini-omni-비디오-생성-leak-powered-by-omni--a09a6026.jpg",
+          "alt": "Gemini Omni 비디오 생성 leak — 'Powered by Omni' UI 문구 + 내부 코드네임 Toucan"
+        },
       },
       "sourceWeek": "2026-w18",
       "sourceCompany": "Google / DeepMind",
@@ -283,7 +303,11 @@ export const edition2026_04c: ABEdition = {
           "community",
           "anthropic"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+          "alt": "OpenAI GPT-5.5 Instant — ChatGPT 신규 기본 모델로 롤아웃"
+        },
       },
       "sourceWeek": "2026-w19",
       "sourceCompany": "OpenAI",
@@ -392,7 +416,11 @@ export const edition2026_04c: ABEdition = {
           "Goal",
           "검증루프"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/openai-codex-cli-goal-슬래시-커맨드와-자체-검증-루프-4512c871.png",
+          "alt": "OpenAI Codex CLI — /goal 슬래시 커맨드와 자체 검증 루프"
+        },
       },
       "sourceWeek": "2026-w18",
       "sourceCompany": "OpenAI / Codex",
@@ -446,7 +474,11 @@ export const edition2026_04c: ABEdition = {
           "deepseek",
           "nvidia"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/deepseek-v4-preview-오픈소스-공개-1-6t-moe-1m--0c46f167.jpg",
+          "alt": "DeepSeek-V4 Preview 오픈소스 공개 — 1.6T MoE / 1M context, V3.2 대비 27% inference FLOPs"
+        },
       },
       "sourceWeek": "2026-w17",
       "sourceCompany": "DeepSeek",
@@ -480,7 +512,11 @@ export const edition2026_04c: ABEdition = {
           "공식",
           "xai"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/xai-grok-api-voice-cloning-정식-출시-2분-미만-8-4dc8ac0c.webp",
+          "alt": "xAI Grok API — Voice Cloning 정식 출시"
+        },
       },
       "sourceWeek": "2026-w19",
       "sourceCompany": "xAI / Grok",
@@ -518,7 +554,11 @@ export const edition2026_04c: ABEdition = {
           "공식",
           "google"
         ],
-        "featured": true
+        "featured": true,
+        "thumbnail": {
+          "src": "/og-cache/google-ai-studio-nano-banana-2-이미지-제작이-앱-df84fd15.png",
+          "alt": "Google AI Studio — Nano Banana 2로 앱·이미지 제작 워크플로우 강화"
+        },
       },
       "sourceWeek": "2026-w19",
       "sourceCompany": "Google / AI Studio",
@@ -639,7 +679,11 @@ export const edition2026_04c: ABEdition = {
         "작업원칙",
         "에이전트운영"
       ],
-      "tier": "feature"
+      "tier": "feature",
+      "thumbnail": {
+        "src": "/og-cache/andrej-karpathy-skills-코딩-에이전트를-덜-망치게-만드-098f2d32.png",
+        "alt": "Andrej Karpathy Skills — 코딩 에이전트를 덜 망치게 만드는 CLAUDE.md"
+      },
     },
     {
       "title": "RTK — LLM 토큰 사용량을 60~90% 줄이는 Rust CLI proxy",
@@ -657,7 +701,11 @@ export const edition2026_04c: ABEdition = {
         "Rust",
         "오픈소스"
       ],
-      "tier": "feature"
+      "tier": "feature",
+      "thumbnail": {
+        "src": "/og-cache/rtk-llm-토큰-사용량을-60-90-줄이는-rust-cli-proxy-357d6524.png",
+        "alt": "RTK — LLM 토큰 사용량을 60~90% 줄이는 Rust CLI proxy"
+      },
     }
   ]
 };

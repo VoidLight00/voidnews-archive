@@ -16,6 +16,8 @@
 | R1.6 | Luna-first lane은 run 적용 curator registry·Threads·community·vGrok·official matrix를 입력으로 사용하고 정확히 한 shard가 각 registry row를 소유 | `verify_collection_routing.sh --stage preverify` `PASS[lane-ownership]` | voidbrief-conductor / voidbrief-luna-collector |
 | R1.7 | pre-verification 병합은 동일 canonical URL fetch만 합치며 provenance 손실 0 | `PASS[url-merge-lossless]` | deterministic merger |
 | R1.8 | community fetch/parse exit 2는 Luna shard 성공으로 상쇄 금지 | `PASS[community-fail-closed]` | voidbrief-conductor |
+| R1.9 | 새 shadow 정책의 Crawl4AI는 static 2xx JS-shell 공개 HTML에만 1회 실행하고 렌더 결과를 retrieval evidence로 기록 | `PASS[crawl4ai-fallback-policy]` | deterministic fetcher |
+| R1.10 | renderer는 pinned version/config, public HTTPS 재검증, 무쿠키·무profile·무proxy·무download 계약을 지킨다 | collection selftest + preverify exit 0 | deterministic fetcher |
 
 ## R2 — 검증·중복 (Verification & Dedupe)
 
@@ -28,6 +30,9 @@
 | R2.5 | vGrok current-run 인용 N개를 current-run claim↔evidence 검사 N개로 100% 재검증 | `verify_collection_routing.sh --stage postverify` `PASS[grok-current-run]` | voidbrief-source-verifier |
 | R2.6 | verifier의 dedupeDecision·officialEventId·sourceIds가 normalized item에 손실 없이 연결 | `PASS[dedupe-boundary]` | voidbrief-normalizer |
 | R2.7 | ranker는 source/event identity 재병합 금지; trendCluster·presentation bundle만 허용 | `PASS[ranker-identity-boundary]` | voidbrief-ranker |
+| R2.8 | VIP·provisional/final hero·고위험 원자 주장은 선택 검증 ledger와 counter-search 결과를 가진다 | `verify_claim_verification.sh --stage pre-normalize` | voidbrief-claim-researcher / deterministic validator |
+| R2.9 | final hero의 material claim은 validator verified allowlist에만 존재하며 unresolved/refuted는 Gate 1 전에 재작성·강등·제거한다 | `verify_claim_verification.sh --stage post-rank` | voidbrief-conductor / voidbrief-ranker |
+| R2.10 | 단순 공식 release/version/date 사실은 기존 verifier 단일 공식 원천으로 확정 가능하며 high-risk evaluative claim과 임계를 혼동하지 않는다 | claim selection policy selftest | voidbrief-source-verifier |
 
 ## R3 — 커버리지 (Coverage)
 
@@ -97,7 +102,8 @@
 | `check-date-coverage.mjs` | HARD | consolidate/run | 2 |
 | `check_curator_coverage.sh` | HARD | 수집 직후(Phase1) | 2 |
 | `verify_curator_channels.sh` | HARD | 레지스트리 변경 시 | 1 |
-| `verify_collection_routing.sh --stage preverify|postverify` | HARD | Luna-first 수집·검증 경계 | 2 |
+| `verify_collection_routing.sh --stage preverify|postverify|postrank` | HARD | Luna-first 수집·검증·랭킹 경계 | 2 |
+| `verify_claim_verification.sh --stage pre-normalize|post-rank` | HARD | 선택 주장 validator·hero reconciliation | 2 |
 
 신규 `scripts/check-*.mjs` / `verify-*.mjs`는 `run-all-gates.mjs`가 glob으로 자동 합류시킨다(하드코딩 배선 누락 방지, 확장성 축).
 **큐레이터 게이트 2종(`.sh`)은 사이트 빌드가 아니라 run phase용**이라 `run-all-gates`(빌드 prebuild) 자동발견 대상이 아니다. 위치는 `~/.claude/skills/voidnews-briefing-pipeline/references/`, conductor가 Phase1 직후 직접 호출한다(R3.4·conductor 폐루프).

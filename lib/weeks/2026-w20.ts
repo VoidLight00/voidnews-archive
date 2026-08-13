@@ -67,7 +67,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["ClaudeCode", "Goal", "AgentView", "코딩에이전트", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+            alt: "Claude Code Agent View + /goal — 코딩 에이전트가 완료 조건을 따라 움직이는 구조",
+          },
         },
         {
           date: "5/11",
@@ -224,7 +228,11 @@ export const week20: WeeklyData = {
           source: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
           officialUrl: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
           tags: ["OpenAI", "Realtime", "Voice", "API", "공식"],
-          featured: false
+          featured: false,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI Realtime Voice Models — 음성 에이전트용 실시간 모델 3종 공개",
+          },
         },
         {
           date: "5/07",
@@ -256,7 +264,11 @@ export const week20: WeeklyData = {
           source: "https://openai.com/index/running-codex-safely/",
           officialUrl: "https://openai.com/index/running-codex-safely/",
           tags: ["OpenAI", "Codex", "코딩에이전트", "보안운영", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI Running Codex safely — 코딩 에이전트에게 일을 맡길 때 필요한 경계 설계",
+          },
         },
         {
           date: "5/08",
@@ -273,7 +285,11 @@ export const week20: WeeklyData = {
             }
           ],
           tags: ["OpenAI", "GPT-5.5-Cyber", "사이버방어", "접근통제", "공식"],
-          featured: true
+          featured: true,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI GPT-5.5-Cyber — 강력한 사이버 모델을 신뢰 기반 접근으로 제한하는 방식",
+          },
         }
       ]
     },

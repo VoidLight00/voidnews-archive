@@ -38,7 +38,11 @@ export const week18: WeeklyData = {
             "공식",
             "alibaba"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/alibaba-happyhorse-1-0-영상-생성-경쟁이-오디오-립싱크-80647c1c.jpg",
+            "alt": "Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개 (Artificial Analysis Arena 1위 등극)"
+          },
         }
       ]
     },
@@ -69,7 +73,11 @@ export const week18: WeeklyData = {
             "공식",
             "anthropic"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/claude-for-creative-work-connectors-8113d388.jpg",
+            "alt": "Anthropic Claude — 9개 크리에이티브 도구 공식 커넥터 출시 (Blender·Adobe·Autodesk Fusion·Ableton·SketchUp 등)"
+          },
         },
         {
           "date": "4/30",
@@ -119,7 +127,11 @@ export const week18: WeeklyData = {
             "anthropic",
             "community",
             "openai"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-code-git-commit에-opencl-a21d210f.png",
+            "alt": "Anthropic Claude Code — git commit에 'OpenClaw'·'HERMES.md' 단어만 있어도 추가 과금 라우팅 (논란→환불)"
+          },
         },
         {
           "date": "4/30",
@@ -178,7 +190,11 @@ export const week18: WeeklyData = {
             "루머",
             "anthropic"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-jupiter-v1-p-red-team-p-3e4d57e0.jpg",
+            "alt": "Anthropic 'Claude Jupiter v1-p' red-team probe — possible Sonnet 4.8 / next Sonnet-class drop"
+          },
         }
       ]
     },
@@ -208,7 +224,11 @@ export const week18: WeeklyData = {
             "수익화사례",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/demis-hassabis-방한-서울-google-ai-campus-해외-4e88b886.jpg",
+            "alt": "Demis Hassabis 방한 — 서울 Google AI Campus(해외 첫 사례) MOU 체결"
+          },
         },
         {
           "date": "4/29",
@@ -232,7 +252,11 @@ export const week18: WeeklyData = {
             "워크플로우",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/google-gemini-pdf-word-excel-docs-sheets-f8466840.png",
+            "alt": "Google Gemini — PDF/Word/Excel/Docs/Sheets/Slides 직접 생성 기능 출시"
+          },
         },
         {
           "date": "4/29",
@@ -256,7 +280,11 @@ export const week18: WeeklyData = {
             "도구릴리스",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/google-photos-wardrobe-사진-라이브러리에서-자동-디지털-0f305895.png",
+            "alt": "Google Photos Wardrobe — 사진 라이브러리에서 자동 디지털 옷장 + 가상 피팅"
+          },
         },
         {
           "date": "4/30",
@@ -280,7 +308,11 @@ export const week18: WeeklyData = {
             "도구릴리스",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+            "alt": "Google DeepMind AI Co-Clinician — 멀티모달 라이브 비디오/오디오 진단 AI"
+          },
         },
         {
           "date": "5/01",
@@ -304,7 +336,11 @@ export const week18: WeeklyData = {
             "도구릴리스",
             "유출",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/google-cosmo-온디바이스-gemini-nano-기반-프로액티브--27567567.jpg",
+            "alt": "Google COSMO — 온디바이스 Gemini Nano 기반 프로액티브 AI 어시스턴트 앱 유출"
+          },
         },
         {
           "date": "5/02",
@@ -333,7 +369,11 @@ export const week18: WeeklyData = {
             "유출",
             "google"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/gemini-omni-비디오-생성-leak-powered-by-omni--a09a6026.jpg",
+            "alt": "Gemini Omni 비디오 생성 leak — 'Powered by Omni' UI 문구 + 내부 코드네임 Toucan"
+          },
         },
         {
           "date": "5/03",
@@ -366,7 +406,11 @@ export const week18: WeeklyData = {
             "루머",
             "google"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/gemini-3-2-flash-a-b-테스트-ajax-hercules-h-0246c064.jpg",
+            "alt": "Gemini 3.2 Flash A/B 테스트 — Ajax/Hercules/Hector/Orpheus 4개 체크포인트 LM Arena 등장"
+          },
         }
       ]
     },
@@ -401,7 +445,11 @@ export const week18: WeeklyData = {
             "공식",
             "nvidia"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/nvidia-nemotron-3-nano-omni-30b-a3b-오픈-멀-40ece0c1.webp",
+            "alt": "NVIDIA Nemotron 3 Nano Omni — 30B-A3B 오픈 멀티모달 모델 (RTX 5090에서 실행)"
+          },
         }
       ]
     },
@@ -432,7 +480,11 @@ export const week18: WeeklyData = {
             "공식",
             "openai",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/microsoft-openai-독점-종료-agi-조항-폐기-aws-bed-4bbb320b.jpg",
+            "alt": "Microsoft·OpenAI 독점 종료 + AGI 조항 폐기 → AWS Bedrock에 OpenAI 모델 도입"
+          },
         },
         {
           "date": "4/28",
@@ -555,7 +607,11 @@ export const week18: WeeklyData = {
             "비용관리",
             "공식"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/github-copilot-usage-based-billing-ai-코딩-0b6dce68.png",
+            "alt": "GitHub Copilot usage-based billing — AI 코딩 도구가 비용 거버넌스 대상이 되는 전환"
+          },
         }
       ]
     },
@@ -585,7 +641,11 @@ export const week18: WeeklyData = {
             "수익화사례",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/중국-meta의-manus-인수-2b-차단-외국인-투자-금지-결정-9e9de1c3.jpg",
+            "alt": "중국, Meta의 Manus 인수($2B) 차단 — 외국인 투자 금지 결정"
+          },
         },
         {
           "date": "4/28",
@@ -634,7 +694,11 @@ export const week18: WeeklyData = {
             "커뮤니티",
             "community",
             "alibaba"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nulli-qwen-3-기반-동영상-자막-번역-더빙-서비스-f6993075.png",
+            "alt": "Nulli — Qwen 3 기반 동영상 자막 번역·더빙 서비스"
+          },
         },
         {
           "date": "날짜 미확인",
@@ -649,7 +713,11 @@ export const week18: WeeklyData = {
             "AI영상",
             "휴머노이드",
             "커뮤니티"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/휴머노이드-로봇-댄스-영상-ai-생성-가능성이-큰-바이럴-클립-25348bf6.jpg",
+            "alt": "휴머노이드 로봇 댄스 영상 — AI 생성 가능성이 큰 바이럴 클립"
+          },
         },
         {
           "date": "4/30",
@@ -673,7 +741,11 @@ export const week18: WeeklyData = {
             "에이전트자동화",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/stripe-link-ai-에이전트-결제용-디지털-지갑-oauth-spe-34b4a528.jpg",
+            "alt": "Stripe Link — AI 에이전트 결제용 디지털 지갑 (OAuth + spend request 승인)"
+          },
         },
         {
           "date": "5/01",
@@ -697,7 +769,11 @@ export const week18: WeeklyData = {
             "수익화사례",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/meta-ari-assured-robot-intelligence-인수-휴-0809bbe4.jpg",
+            "alt": "Meta, ARI(Assured Robot Intelligence) 인수 — 휴머노이드 로봇 풋 모델 사업 확장"
+          },
         },
         {
           "date": "5/01",
@@ -721,7 +797,11 @@ export const week18: WeeklyData = {
             "에이전트자동화",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-imagine-agent-mode-캔버스-기반-단편-영화-5e049be7.jpg",
+            "alt": "xAI Grok Imagine — Agent Mode (캔버스 기반 단편 영화·이미지·영상 통합 워크스페이스)"
+          },
         },
         {
           "date": "5/02",
@@ -750,7 +830,11 @@ export const week18: WeeklyData = {
             "커뮤니티",
             "community",
             "anthropic"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/mit-media-lab-human-operator-전기근육자극으로-ai-0a313a79.png",
+            "alt": "MIT Media Lab Human Operator — 전기근육자극(EMS)으로 AI가 사람 손 제어 (Hard Mode 해커톤 1위)"
+          },
         },
         {
           "date": "5/02",
@@ -774,7 +858,11 @@ export const week18: WeeklyData = {
             "도구릴리스",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/mistral-medium-3-5-128b-댄스-모델-le-chat-vi-e4fb7f65.jpg",
+            "alt": "Mistral Medium 3.5 — 128B 댄스 모델 + Le Chat Vibe 원격 코딩 에이전트"
+          },
         },
         {
           "date": "5/02",
@@ -798,7 +886,11 @@ export const week18: WeeklyData = {
             "도구릴리스",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-api-voice-cloning-정식-출시-2분-미만-8-4dc8ac0c.webp",
+            "alt": "xAI Grok API — Voice Cloning 정식 출시 (2분 미만, 80+ 보이스 라이브러리, 28언어)"
+          },
         }
       ]
     },

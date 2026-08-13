@@ -103,15 +103,46 @@ async function withTimeout(promise, ms) {
   }
 }
 
+// CCR 인증 키. 하드코딩 "local" 은 2026-07-30 에 401 을 냈다 — 환경변수를 먼저 보고,
+// 없을 때만 로컬 기본값으로 떨어진다. 키 값은 로그·산출물에 절대 남기지 않는다.
+const CCR_API_KEY =
+  process.env.VGROK_API_KEY || process.env.CCR_API_KEY || process.env.ANTHROPIC_API_KEY || "local";
+
+function ccrHeaders() {
+  return {
+    "Content-Type": "application/json",
+    "x-api-key": CCR_API_KEY,
+    Authorization: `Bearer ${CCR_API_KEY}`,
+    "anthropic-version": "2023-06-01",
+  };
+}
+
+// 루트(`GET /`)가 200 이라고 호출이 되는 건 아니다. 2026-07-30 run 은 헬스 200 을 받고
+// 4개 토픽 전부 /v1/messages 401 로 죽었다 — 헬스체크가 거짓 양성이었다.
+// 실제 엔드포인트를 1-token 으로 두드리고, 인증 실패는 따로 구분해 보고한다.
 async function healthCheck() {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), HEALTH_TIMEOUT_MS);
   try {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), HEALTH_TIMEOUT_MS);
-    const res = await fetch(new URL(CCR_URL).origin + "/", { signal: ctrl.signal });
+    const res = await fetch(CCR_URL, {
+      method: "POST",
+      signal: ctrl.signal,
+      headers: ccrHeaders(),
+      body: JSON.stringify({
+        model: CCR_MODEL,
+        max_tokens: 1,
+        messages: [{ role: "user", content: "ping" }],
+      }),
+    });
     clearTimeout(timer);
-    return res.ok || res.status === 404 || res.status === 200;
-  } catch {
-    return false;
+    if (res.ok) return { ok: true };
+    if (res.status === 401 || res.status === 403) {
+      return { ok: false, reason: `ccr-auth-failed:${res.status}` };
+    }
+    return { ok: false, reason: `ccr-health-failed:${res.status}` };
+  } catch (err) {
+    clearTimeout(timer);
+    return { ok: false, reason: `ccr-health-failed:${err?.name || "network"}` };
   }
 }
 
@@ -127,11 +158,7 @@ async function callVgrok(prompt) {
     const res = await fetch(CCR_URL, {
       method: "POST",
       signal: ctrl.signal,
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": "local",
-        "anthropic-version": "2023-06-01",
-      },
+      headers: ccrHeaders(),
       body: JSON.stringify(body),
     });
     clearTimeout(timer);
@@ -231,8 +258,9 @@ async function main() {
     usage: null,
   };
 
-  if (!(await healthCheck())) {
-    result.fallbackReason = "ccr-health-failed";
+  const health = await healthCheck();
+  if (!health.ok) {
+    result.fallbackReason = health.reason || "ccr-health-failed";
     finish(result, args, t0);
     process.exit(1);
   }

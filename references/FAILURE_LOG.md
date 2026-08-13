@@ -83,3 +83,49 @@ QA(`voidbrief-qa-auditor`)나 사용자가 새 결함을 발견하면:
 - 원인: phase별 모델 경계, lane ownership, cache-aware deterministic fetch, policy-pinned resume 계약 부재.
 - 해결: legacy 경로 보존 + Luna URL discovery/Terra verify·normalize/Sol rank·plan shadow 경로, URL-only lossless merge, staged preverify/postverify gate.
 - 담당: `voidbrief-conductor`, `voidbrief-luna-collector`, `voidbrief-source-verifier`. 머신체크: `~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh`.
+
+### VN-SRC-01 — 예약값만 있고 레지스트리 행이 없어 소스가 매 run 조용히 누락 (2026-07-30)
+
+**증상**: 사용자가 지정한 두 수집 소스(텔레그램 AI 레이더 → 옵시디언 `AI레이더/`, Choi 카톡방)가 2026-07b에 이어 2026-07c 초기 레인 설계에서도 빠졌다. 사용자 지적으로 발견.
+
+**원인**: `seed-schema.md`·`source-ledger-schema.md`·`SKILL.md`에 `kakao-room`/`telegram-radar`가 **"예약값"이라는 산문**으로만 존재했고, HARD 커버리지 게이트(`check_curator_coverage.sh`)가 읽는 유일한 SSoT인 `references/curator-channels.json`에는 해당 행이 **없었다**. 게이트는 레지스트리에 있는 채널만 검사하므로, 등록되지 않은 소스는 누락돼도 exit 0이 나온다 — 안전망이 있다고 믿었으나 검사 대상 자체가 없었다.
+
+**담당 에이전트**: `voidbrief-collector` (레인 설계), conductor (게이트 배선)
+
+**수정**: `curator-channels.json`에 `telegram-obsidian-ai-radar`, `kakao-choi-room` 2행 추가(등록 후 `verify_curator_channels.sh` exit 0, channels=85). 이제 두 소스는 매 run `01_curator_coverage.json`에 행이 없으면 커버리지 게이트가 exit 2로 차단한다.
+
+**재발 방지 규칙**: **`discoveredVia` 열거값을 새로 만들 때는 같은 변경에서 `curator-channels.json`에 행을 추가한다.** 레지스트리에 없는 값은 강제되지 않는 산문이다. `seed-schema.md`에 이 규칙을 명시했다.
+
+### VN-GATE-01 — 커버리지 게이트 2종이 같은 산출물에 상충하는 규격을 요구 (2026-07-30)
+
+**증상**: 2026-07c 수집에서 `check_curator_coverage.sh`는 exit 0인데 `check_video_coverage.sh`가 `FAIL[ghost-id]`로 exit 2. 같은 `01_curator_coverage.json`을 두 게이트가 읽는데, 전자는 **모든 플랫폼**(youtube/x/web) 채널 행을 요구하고 후자는 **YouTube 외 행을 전부 ghost**로 판정했다.
+
+**원인**: `check_video_coverage.py:compare()`가 `registry_ids`를 YouTube 채널로만 만들고 `set(rows) - registry_ids`를 ghost로 처리했다. 2026-07b에서는 대부분 채널의 `addedAt`이 run 종료일(07-20) 이후라 커버리지 행이 17개뿐이었고, 그중 비-YouTube 행이 적어 잠복했다.
+
+**수정**: ghost 판정 기준을 **전체 레지스트리 id**로 바꿨다(백업 `.bak.20260730`). ghost의 원래 의도(레지스트리에 없는 조작된 id 검출)는 유지된다. `check_video_coverage_selftest.sh` 6개 픽스처 전부 설계대로 통과(complete=0, 나머지=2) — 무회귀 실증.
+
+**부수 발견 — `promoted:<item-id>` 형식 드리프트**: 수집기들이 `decision`에 근거 id를 덧붙여(`promoted:anthropic-20260724-claude-opus-5`) 게이트의 `valid_decision`(정확히 `promoted` 또는 `skipped:<사유>`)을 21건 위반했다. 병합기가 `promoted`로 정규화하고 id는 `promotedItemIds`에 보존하도록 처리했다. **LANE_BRIEF에 형식을 명시해도 에이전트는 정보를 덧붙인다 — 계약 검사는 수집기가 아니라 병합/게이트 층에서 해야 한다.**
+
+### VN-SRC-02 — 큐레이터 아카이브를 '발견 불가'로 오판해 9일치 누락 (2026-07-31)
+
+**증상**: 2026-07c 수집에서 `baeksang.dev/daily`(한국어 데일리 큐레이션)를 `status: ok`로 기록했으나 `httpNote`에 "per-day archive (07-21~07-29) not discoverable from this page"라고 적고 **최신호(07-30) 하나만** 읽었다. 창 안 10개 이슈 중 9개가 미확인 상태로 통과했다.
+
+**실측 반증**: `/daily/archive` HTTP 200, `/daily/2026-07-21` ~ `/daily/2026-07-30` **전부 HTTP 200**. 발견 불가가 아니라 수집기가 인덱스 페이지만 보고 단정한 것이다. 전수 재수집 결과 고유 story 87건, 외부 원문 링크 107건(기존 수집 24 / 미수집 83).
+
+**왜 치명적이었나**: 미수집 83건 중 `openai.com/index/*` 공식 글 3건(07-23×2, 07-29×1)이 있었다. openai.com은 이 run 내내 Cloudflare 403으로 직접 열거가 막혀 있었고, **백상이 그 도메인을 우회할 유일한 발견 경로였다.** 큐레이터 축 누락이 곧 공식 축 누락으로 번지는 구조다.
+
+**담당 에이전트**: `voidbrief-collector` (web-newsletters 레인)
+
+**재발 방지 규칙**: 큐레이터/뉴스레터 소스는 **인덱스 1페이지가 아니라 날짜 창 전체를 열거**해야 한다. `checked[]`에 `itemsInWindow`만 적지 말고 **확인한 날짜 리스트(daysCovered)** 를 남기고, 창 일수와 개수가 다르면 게이트가 FAIL한다. "발견 불가"로 적을 때는 시도한 URL 패턴과 각각의 HTTP 코드를 함께 남긴다 — 단정은 증거가 아니다.
+
+**산출물**: `_workspace/ab/20260730-ab-20260721-20260730/01d_baeksang_backfill.json`, `01d_baeksang_gap.json`
+
+### VN-GATE-02 — 커버리지 집계가 호스트 단위라 없는 수확을 만들어냄 (2026-07-31)
+
+**증상**: `check_curator_coverage.sh`가 exit 0(85/85, 수확 686건)으로 통과했는데, 그중 **X 37채널이 전부 `itemsFound: 9 / visited-harvested`** 로 기록돼 있었다. 실제로는 37채널 전 채널이 3경로 차단으로 **0건**이었다. 게이트가 "수확했다"고 통과시킨 값이 허구였다.
+
+**원인**: 병합기가 `discoveredVia`를 **호스트 단위**(`x.com`)로 집계한 뒤 `found = max(found, item_hosts[host])`로 채널 행에 부여했다. `x.com`을 언급한 항목 9건이 그 호스트를 공유하는 **37채널 전부에 복제**됐다. `threads.com`·`youtube.com`처럼 다중 채널이 한 호스트를 쓰는 모든 플랫폼에 같은 결함이 있었다.
+
+**수정**: 집계 키를 호스트가 아니라 **채널 URL 접두**로 바꿨다(`via_hits()`). 재병합 결과 X 36채널이 `visited-blocked-http` 0건으로 교정됐고, 전체 수확합이 **686 → 358**로 내려갔다(686이 부풀려진 값이었다). zeroHarvest 25 → 61이 정직한 수치다.
+
+**교훈**: 게이트가 exit 0을 냈다고 값이 참인 건 아니다. **집계 키가 대상보다 거칠면 게이트는 통과하면서 거짓을 통과시킨다.** 커버리지 수치는 그 채널에 고유한 식별자(URL·handle)로만 귀속한다. 이 결함은 신규 게이트(`check_block_staleness`)를 시험하다 X 행의 `itemsFound=9`가 눈에 걸려 발견됐다 — 게이트를 늘리면 기존 게이트의 거짓 통과도 같이 드러난다.

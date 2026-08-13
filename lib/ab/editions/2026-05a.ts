@@ -265,7 +265,11 @@ OpenAI가 실시간 음성 앱을 위한 API 모델 3종을 공개했습니다. 
         source: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
         officialUrl: "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
         tags: ["OpenAI", "Realtime", "Voice", "API", "공식"],
-        featured: true
+        featured: true,
+        thumbnail: {
+          src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+          alt: "OpenAI Realtime Voice Models — 음성 에이전트용 실시간 모델 3종 공개",
+        },
       },
       sourceWeek: "2026-w20",
       sourceCompany: "OpenAI",
@@ -309,7 +313,11 @@ xAI가 Grok API에 Voice Cloning과 Custom Voices를 정식으로 추가했습�
           }
         ],
         tags: ["xAI", "Grok", "VoiceCloning", "음성AI", "공식"],
-        featured: true
+        featured: true,
+        thumbnail: {
+          src: "/og-cache/xai-grok-api-voice-cloning-정식-출시-2분-미만-8-4dc8ac0c.webp",
+          alt: "xAI Grok API Voice Cloning — 목소리도 에이전트 제품의 기본 부품이 됨",
+        },
       },
       sourceWeek: "2026-w19",
       sourceCompany: "xAI / Grok",

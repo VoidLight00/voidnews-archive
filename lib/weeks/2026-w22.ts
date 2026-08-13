@@ -76,6 +76,10 @@ Gartner Magic Quadrant는 \"공식 순위\"가 아니라 두 축(Ability to Exec
           tags: ["Codex", "Enterprise coding agents", "공식"],
           slug: "openai-named-a-leader-in-enterprise-codi-1a8ac248",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI named a Leader in enterprise coding agents by Gartner",
+          },
         },
         {
           date: "5/22",
@@ -105,6 +109,10 @@ Gartner Magic Quadrant는 \"공식 순위\"가 아니라 두 축(Ability to Exec
           tags: ["Codex", "enterprise adoption", "공식"],
           slug: "how-virgin-atlantic-ships-faster-with-co-35f64cca",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "How Virgin Atlantic ships faster with Codex",
+          },
         },
         {
           date: "5/22",
@@ -365,6 +373,10 @@ AR 글래스 시장이 본격화되기 전 단계여서 직접 응용은 제한�
           tags: ["Google DeepMind", "AI Pointer", "공식"],
           slug: "google-deepmind-ai-pointer-40a96ed5",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+            alt: "Google DeepMind AI Pointer",
+          },
         },
       ],
     },
@@ -731,6 +743,10 @@ OpenAI / Anthropic / Google이라는 세 축 위에 Thinking Machines, Safe Supe
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "builderpepc-agent-migrator-ai-coding-session-79da5aaf",
           readMinutes: 1,
+  thumbnail: {
+    src: "/og-cache/builderpepc-agent-migrator-ai-코딩-세션을-도구--79da5aaf.jpg",
+    alt: "builderpepc/agent-migrator — AI 코딩 세션을 도구 간 마이그레이션하는 오픈소스. Claude Code/Codex/Cursor 사이 컨텍스트 이전 시나리오.",
+  },
 },
         {
           date: "5/24",
@@ -1105,6 +1121,10 @@ ASR / LLM 양쪽 모두 \"벤치마크 점수와 실제 production 성능의 괴
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "manaflow-ai-cmux-peter-steinberger-intro-0f69a44c",
           readMinutes: 1,
+  thumbnail: {
+    src: "/og-cache/manaflow-ai-cmux-peter-steinberger가-소개한--0f69a44c.jpg",
+    alt: "manaflow-ai/cmux — Peter Steinberger가 소개한 Codex CLI 워크플로우 분할용 tmux 보조 도구. 본인이 cmux/cmuxr 하네스 사용자라 직",
+  },
 },
         {
           date: "5/23",
@@ -1154,6 +1174,10 @@ ASR / LLM 양쪽 모두 \"벤치마크 점수와 실제 production 성능의 괴
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "ibm-granite-4-1-open-llm-lineup-21a34a9c",
           readMinutes: 1,
+  thumbnail: {
+    src: "/og-cache/ibm-granite-4-1-ibm의-오픈-llm-라인업-4-1-학습-파-21a34a9c.png",
+    alt: "IBM Granite 4.1 — IBM의 오픈 LLM 라인업 4.1 학습 파이프라인 공개.",
+  },
 },
         {
           date: "5/23",
@@ -1228,6 +1252,10 @@ ASR / LLM 양쪽 모두 \"벤치마크 점수와 실제 production 성능의 괴
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "ibm-granite-embedding-multilingual-r2-open-02a6a250",
           readMinutes: 1,
+  thumbnail: {
+    src: "/og-cache/ibm-granite-embedding-multilingual-r2-오픈-02a6a250.png",
+    alt: "IBM Granite Embedding Multilingual R2 — 오픈 다국어 임베딩 모델 R2.",
+  },
 },
         {
           date: "5/23",
@@ -1250,6 +1278,10 @@ ASR / LLM 양쪽 모두 \"벤치마크 점수와 실제 production 성능의 괴
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "paddleocr-3-5-transformers-integration-46b1f9d1",
           readMinutes: 1,
+  thumbnail: {
+    src: "/og-cache/paddleocr-3-5-transformers-paddleocr을-tr-46b1f9d1.jpg",
+    alt: "PaddleOCR 3.5 Transformers — PaddleOCR을 Transformers 백엔드로 실행하는 가이드.",
+  },
 },
         {
           date: "2026-05 (multiple)",

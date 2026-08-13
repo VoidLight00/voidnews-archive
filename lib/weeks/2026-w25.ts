@@ -166,7 +166,11 @@ export const week25: WeeklyData = {
           "tags": [
             "OpenAI",
             "AI News"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI Partner Network 발표 — 엔터프라이즈 도입 가속 파트너 프로그램($150M)"
+          },
         }
       ]
     },
@@ -188,7 +192,11 @@ export const week25: WeeklyData = {
           "tags": [
             "Google",
             "AI News"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+            "alt": "Google DeepMind, 멀티에이전트 AI 안전 연구에 최대 $10M 펀딩 콜"
+          },
         },
         {
           "date": "6/12",
@@ -352,7 +360,11 @@ export const week25: WeeklyData = {
               "label": "보조 출처 1",
               "url": "https://x.ai/news/grok-imagine-video-1-5"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-imagine-video-1-5-정식-출시-ga-imag-7fffe5c6.png",
+            "alt": "xAI, Grok Imagine Video 1.5 정식 출시(GA) — Imagine API·앱 확장"
+          },
         }
       ]
     },

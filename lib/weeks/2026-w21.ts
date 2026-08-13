@@ -34,6 +34,10 @@ export const week21: WeeklyData = {
           tags: ["ChatGPT for Healthcare", "공식"],
           slug: "adventhealth-advances-whole-person-care--54bdd59c",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "AdventHealth, OpenAI 와 전인적 치료 모델 적용 — 9개 주 50여 개 병원에 ChatGPT for Healthcare 도입",
+          },
         },
         {
           date: "5/21",
@@ -85,6 +89,10 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           tags: ["OpenAI Research", "Math", "공식"],
           slug: "an-openai-model-has-disproved-a-central--73dee1f9",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI 모델, 이산 기하의 중심 추측을 반례로 무너뜨림",
+          },
         },
         {
           date: "5/20",
@@ -108,6 +116,10 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           tags: ["Education for Countries", "Global Affairs", "공식"],
           slug: "the-next-phase-of-openai-s-education-for-b2b66ea4",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI Education for Countries 다음 단계 — 국가 단위 ChatGPT EDU 라이선스 확장",
+          },
         },
         {
           date: "5/20",
@@ -131,6 +143,10 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           tags: ["Codex", "GPT-5.5", "enterprise adoption", "공식"],
           slug: "how-ramp-engineers-accelerate-code-revie-dfe54bb2",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "Ramp 엔지니어들이 Codex 로 코드 리뷰를 가속하는 방식",
+          },
         },
         {
           date: "5/20",
@@ -180,6 +196,10 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           tags: ["OpenAI for Singapore", "Global Affairs", "공식"],
           slug: "introducing-openai-for-singapore-39fd4877",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI for Singapore 공개 — 싱가포르 정부와 국가 단위 전략 파트너십",
+          },
         },
         {
           date: "5/19",
@@ -203,6 +223,10 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           tags: ["Safety", "Content provenance", "공식"],
           slug: "advancing-content-provenance-for-a-safer-7ce118d8",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI 콘텐츠 출처(Content Provenance) 정책 강화 — C2PA 메타데이터 강제 부착",
+          },
         },
         {
           date: "5/19",
@@ -252,6 +276,10 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           tags: ["Codex", "Dell", "enterprise deployment", "공식"],
           slug: "openai-and-dell-partner-to-bring-codex-t-9d5c4fff",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI · Dell 파트너십 — Codex 를 하이브리드·온프레미스 엔터프라이즈 환경에 배포",
+          },
         },
         {
           date: "5/16",
@@ -275,6 +303,10 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           tags: ["ChatGPT Plus", "Malta", "Global Affairs", "공식"],
           slug: "openai-and-malta-partner-to-bring-chatgp-e74cfa1e",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "OpenAI · Malta 파트너십 — 몰타 전 시민에게 ChatGPT Plus 제공",
+          },
         },
         {
           date: "5/15",
@@ -298,6 +330,10 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           tags: ["ChatGPT", "Personal finance", "공식"],
           slug: "a-new-personal-finance-experience-in-cha-4f6e31bb",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "ChatGPT 새 개인 재무 경험 공개 — 예산·부채·투자 다단계 플로우",
+          },
         },
         {
           date: "5/15",
@@ -321,6 +357,10 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           tags: ["GPT-5.5", "Databricks", "agents", "공식"],
           slug: "databricks-brings-gpt-5-5-to-enterprise--6719cd72",
           readMinutes: 1,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "Databricks, GPT-5.5 를 엔터프라이즈 에이전트 워크플로우에 통합",
+          },
         },
         {
           date: "5/15",
@@ -426,6 +466,10 @@ Codex의 주간 활성 사용자는 400만을 넘긴 상태이고, OpenAI가 공
           featured: true,
           slug: "codex-in-the-chatgpt-mobile-app-ios-andr-13026e4d",
           readMinutes: 5,
+          thumbnail: {
+            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            alt: "ChatGPT 모바일 앱(iOS·Android)에 Codex 통합 — 폰이 에이전트 리모컨이 되다",
+          },
         },
       ],
     },
@@ -1890,6 +1934,10 @@ ChatGPT·Claude·Cursor가 만들어 내는 UI가 점점 비슷해지는 게 업
           tags: ["오픈소스 공유 후보", "공식"],
           slug: "nutlope-hallmark-anti-ai-slop-design-guide-4fabea9d",
           readMinutes: 1,
+  thumbnail: {
+    src: "/og-cache/nutlope-hallmark-anti-ai-slop-디자인-가이드를-코-4fabea9d.jpg",
+    alt: "Nutlope/hallmark — anti-AI-slop 디자인 가이드를 코드 스킬로 패키지화한 오픈소스. 사용자가 찾던 '오픈소스 공유할 만한' 후보.",
+  },
 },
         {
           date: "5/21",

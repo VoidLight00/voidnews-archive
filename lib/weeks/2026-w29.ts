@@ -34,7 +34,11 @@ export const week29: WeeklyData = {
             "deck": "Sol, Terra, and Luna are expanding in stages across IDEs, CLI, and cloud agents.",
             "summary": "GitHub Copilot is making the three GPT-5.6 models available in stages across IDEs, CLI, cloud agents, and mobile."
           },
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/github-copilot-gpt-5-6-3종-단계적-제공-bd97de80.png",
+            "alt": "GitHub Copilot, GPT-5.6 3종 단계적 제공"
+          },
         },
         {
           "date": "7/10",
@@ -56,7 +60,11 @@ export const week29: WeeklyData = {
             "deck": "It carries work from alert analysis through a fix, revalidation, and a draft PR, while retaining human review.",
             "summary": "In public preview, Copilot analyzes CodeQL and third-party code-scanning alerts, fixes and revalidates them, then creates a draft pull request."
           },
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/github-agentic-autofix-49094e37.jpg",
+            "alt": "GitHub, 코드 스캔 경고를 고치는 에이전트 공개 프리뷰"
+          },
         },
         {
           "date": "7/10",
@@ -76,7 +84,11 @@ export const week29: WeeklyData = {
             "title": "CodeQL 2.26 adds AI system-prompt injection detection",
             "deck": "Static analysis now covers paths that can contaminate system instructions in major GenAI APIs.",
             "summary": "CodeQL expands prompt-injection sinks for OpenAI, Anthropic, and Google GenAI APIs and adds queries for system-prompt contamination."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/codeql-2-26-ai-시스템-프롬프트-인젝션-탐지-3c09fe32.jpg",
+            "alt": "CodeQL 2.26, AI 시스템 프롬프트 인젝션 탐지"
+          },
         },
         {
           "date": "7/14",
@@ -97,7 +109,11 @@ export const week29: WeeklyData = {
             "title": "Run a pre-commit security review in the Copilot app",
             "deck": "/security-review prioritizes high-confidence vulnerabilities and suggests remediation.",
             "summary": "The Copilot app can use /security-review to check pre-commit changes for high-confidence vulnerabilities, with priorities and remediation guidance."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/copilot-앱에서-커밋-전-보안-검토를-실행한다-be2fb653.jpg",
+            "alt": "Copilot 앱에서 커밋 전 보안 검토를 실행한다"
+          },
         },
         {
           "date": "7/14",
@@ -118,7 +134,11 @@ export const week29: WeeklyData = {
             "title": "JetBrains Copilot expands BYOK and Claude agent support",
             "deck": "It previews OpenAI-compatible endpoints and Claude agent providers.",
             "summary": "GitHub Copilot for JetBrains expands OpenAI-compatible BYOK endpoints, Claude agent providers, local sandboxes, and debugger skills."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/jetbrains-copilot-byok와-claude-에이전트-확장-9f4df634.jpg",
+            "alt": "JetBrains Copilot, BYOK와 Claude 에이전트 확장"
+          },
         },
         {
           "date": "7/9",
@@ -139,7 +159,11 @@ export const week29: WeeklyData = {
             "title": "Copilot creates an overview of an unfamiliar repository",
             "deck": "It summarizes purpose, technology, and contribution steps, and can draft a README.",
             "summary": "For an unfamiliar repository, Copilot can summarize its purpose, technologies, and contribution steps, and draft a README if one is missing."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/copilot이-처음-보는-저장소의-개요를-만든다-27ed03b4.jpg",
+            "alt": "Copilot이 처음 보는 저장소의 개요를 만든다"
+          },
         }
       ]
     },
@@ -166,7 +190,11 @@ export const week29: WeeklyData = {
             "deck": "Growing query volume points toward agentic search that connects to purchases and reservations.",
             "summary": "Naver says AI Tab has reached 10 million users and will expand into agentic search that connects searches with purchases and reservations."
           },
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/네이버-ai탭-1천만-사용자-검색에서-실행으로-확장-a4fa0fb9.png",
+            "alt": "네이버 AI탭 1천만 사용자, 검색에서 실행으로 확장"
+          },
         },
         {
           "date": "7/13",
@@ -186,7 +214,11 @@ export const week29: WeeklyData = {
             "title": "Naver presents six AI full-stack research papers at ICML 2026",
             "deck": "Safety, model merging, agents, 3D, and the Seoul World Model appear together.",
             "summary": "At ICML 2026 in Seoul, Naver presented six papers spanning safety, model merging, agent workflows, 3D, and sovereign medical evaluation, alongside the Seoul World Model."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/네이버-icml-2026에서-ai-풀스택-연구-6편-공개-dc1bc509.png",
+            "alt": "네이버, ICML 2026에서 AI 풀스택 연구 6편 공개"
+          },
         }
       ]
     },
@@ -221,7 +253,11 @@ export const week29: WeeklyData = {
             "title": "GPT-5.6 Sol, Terra, and Luna begin rolling out in apps and APIs",
             "deck": "The July 9 staged rollout began across ChatGPT, Codex, and the API.",
             "summary": "OpenAI began a phased rollout across ChatGPT, Codex, and the API on July 9; this is not completed general availability."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-6-hero-openai.webp",
+            "alt": "GPT-5.6 Sol·Terra·Luna, 앱과 API 롤아웃 시작"
+          },
         },
         {
           "date": "7/9",
@@ -242,7 +278,11 @@ export const week29: WeeklyData = {
             "title": "Codex CLI 0.144.0 improves write approvals and MCP authentication",
             "deck": "It adds a write-only approval mode and interactive MCP authentication.",
             "summary": "Codex 0.144.0 adds an approval mode that requests approval only for writes, interactive and host-provided MCP authentication, and high-concurrency usage warnings for Ultra."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/codex-cli-0-144-0-쓰기-승인과-mcp-인증-보강-1d0cf1e6.png",
+            "alt": "Codex CLI 0.144.0, 쓰기 승인과 MCP 인증 보강"
+          },
         }
       ]
     },
@@ -269,7 +309,11 @@ export const week29: WeeklyData = {
             "title": "Thinking Machines releases Inkling, a 975B open-weights model",
             "deck": "All weights are available, but the announcement does not name a specific license.",
             "summary": "The model is released as open weights, but the announcement names no specific license; it is not characterized as open source or freely usable."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/thinking-machines-inkling-93bfddc2.png",
+            "alt": "Thinking Machines, 975B 오픈웨이트 모델 Inkling 공개"
+          },
         }
       ]
     },
@@ -295,7 +339,11 @@ export const week29: WeeklyData = {
             "title": "SKT pilots an AI-RAN lead network for physical AI",
             "deck": "Robotics, logistics, and humanoid services are being piloted in Incheon, Pangyo, and Pyeongtaek.",
             "summary": "SKT is piloting the lead network for patrol robots, autonomous logistics, and humanoid services; this is a demonstration, not broad commercial deployment."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/skt-ai-ran-fe6b0a4f.png",
+            "alt": "SKT, 피지컬 AI용 AI-RAN 선도망 실증"
+          },
         },
         {
           "date": "7/14",
@@ -315,7 +363,11 @@ export const week29: WeeklyData = {
             "title": "SKT expands the A.X K2 industrial-application consortium",
             "deck": "It broadens sovereign foundation-model use across manufacturing, mobility, security, and biotech.",
             "summary": "SKT is expanding A.X K2 across industry, public services, defense, manufacturing, mobility, security, and biotech."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/skt-a-x-k2-산업-적용-컨소시엄-확대-69d2a77f.jpg",
+            "alt": "SKT, A.X K2 산업 적용 컨소시엄 확대"
+          },
         }
       ]
     },
@@ -341,7 +393,11 @@ export const week29: WeeklyData = {
             "title": "Harness Handbook links agent behavior to harness code",
             "deck": "Behavior-centered maps and progressive disclosure help locate planning and implementation points.",
             "summary": "The paper connects agent-harness behavior to code locations; reported results are the authors’ claims."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/harness-handbook-에이전트-동작을-하네스-코드에-연결한다-3bb9d0fa.png",
+            "alt": "Harness Handbook, 에이전트 동작을 하네스 코드에 연결한다"
+          },
         },
         {
           "date": "7/9",
@@ -361,7 +417,11 @@ export const week29: WeeklyData = {
             "title": "A 46-task benchmark measures progress by long-horizon terminal agents",
             "deck": "It scores intermediate progress and partial credit as well as final success.",
             "summary": "The benchmark measures progress and partial credit across 46 long-horizon terminal tasks; reported results are author-reported."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/장기-터미널-에이전트-46개-과제-중간-진척까지-평가-8284a774.png",
+            "alt": "장기 터미널 에이전트 46개 과제, 중간 진척까지 평가"
+          },
         }
       ]
     },
@@ -413,7 +473,11 @@ export const week29: WeeklyData = {
             "title": "Mistral Studio makes prompts and skills governed assets",
             "deck": "It combines versioning, approvals, rollbacks, audit logs, and MCP-delivered skills.",
             "summary": "Mistral Studio brings prompt and skill versions, ownership, approvals, rollbacks, audit logs, and MCP delivery into one governance layer."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/mistral-studio-프롬프트와-스킬을-거버넌스-자산으로-402b4a95.jpg",
+            "alt": "Mistral Studio, 프롬프트와 스킬을 거버넌스 자산으로"
+          },
         }
       ]
     },
@@ -439,7 +503,11 @@ export const week29: WeeklyData = {
             "title": "SKT and SK Biopharm identify two AI-assisted ROR1 candidates",
             "deck": "The companies say early research was reduced to about five months; the bio LLM remains under review.",
             "summary": "The companies announced two ROR1-binding candidate molecules discovered with AI, saying early research was reduced from the usual one to two years to about five months."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/skt-sk바이오팜-ai로-ror1-후보-2종-확보-71ccbc19.png",
+            "alt": "SKT·SK바이오팜, AI로 ROR1 후보 2종 확보"
+          },
         }
       ]
     },
@@ -465,7 +533,11 @@ export const week29: WeeklyData = {
             "title": "UST applies Claude Code to semiconductor and manufacturing validation",
             "deck": "The case study pairs shorter hardware-validation cycles with training for 20,000 employees.",
             "summary": "UST is applying Claude and Claude Code to validation in semiconductors, automotive, manufacturing, telecommunications, and embedded systems, while training 20,000 employees globally."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/ust-claude-code를-반도체-제조-검증에-적용-e6a75647.png",
+            "alt": "UST, Claude Code를 반도체·제조 검증에 적용"
+          },
         },
         {
           "date": "7/14",
@@ -486,7 +558,11 @@ export const week29: WeeklyData = {
             "title": "Claude Code 2.1.210 strengthens worktree isolation and injection defenses",
             "deck": "It blocks isolated-worktree subagents from changing the main repository and improves indirect prompt-injection defenses.",
             "summary": "The release prevents isolated-worktree subagents from modifying the main repository and strengthens defenses against indirect prompt injection."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-210-worktree-격리와-주입-방어-강-e514c912.png",
+            "alt": "Claude Code 2.1.210, worktree 격리와 주입 방어 강화"
+          },
         },
         {
           "date": "7/15",
@@ -507,7 +583,11 @@ export const week29: WeeklyData = {
             "title": "Claude Code 2.1.211 fixes approval spoofing and result-tampering boundaries",
             "deck": "It adds subagent streaming and hardens preview and completion-decision defenses.",
             "summary": "The release adds an option to send subagent text through stream-json and fixes issues involving visual approval-message spoofing, ignored hook asks, and agent-result tampering."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-211-승인-위조와-결과-조작-경계-수정-bc37f280.png",
+            "alt": "Claude Code 2.1.211, 승인 위조와 결과 조작 경계 수정"
+          },
         },
         {
           "date": "7/14",
@@ -527,7 +607,11 @@ export const week29: WeeklyData = {
             "title": "Anthropic launches Claude for US K-12 teachers",
             "deck": "Verified teachers receive a year of free access, and teacher data is excluded from training.",
             "summary": "Anthropic launched Claude for US K-12 teachers for lesson planning, differentiated materials, student-data analysis, and administrative automation."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/anthropic-미국-k-12-교사용-claude-공개-7d7da69e.jpg",
+            "alt": "Anthropic, 미국 K-12 교사용 Claude 공개"
+          },
         },
         {
           "date": "7/9",
@@ -547,7 +631,11 @@ export const week29: WeeklyData = {
             "title": "Claude robotics study finds a gap between high-level plans and direct control",
             "deck": "Across 12 models, the best direct-manipulation completion rate was only 5.5%.",
             "summary": "A study across 12 models, robot embodiments, and control interfaces finds that high-level control has improved, while direct torque control and manipulation remain weak."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude-robotics-0b890857.jpg",
+            "alt": "Claude의 로봇 제어, 고수준 계획과 직접 조작 사이의 간극"
+          },
         },
         {
           "date": "7/15",
@@ -587,7 +675,11 @@ export const week29: WeeklyData = {
             "title": "Claude value expression varied by model and language",
             "deck": "The analysis covers more than 300,000 anonymized conversations but does not establish the cause of the differences.",
             "summary": "An analysis of more than 300,000 anonymized conversations organizes differences in value expression across models and languages into four dimensions."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude의-가치-표현은-모델과-언어에-따라-달랐다-b26b0925.png",
+            "alt": "Claude의 가치 표현은 모델과 언어에 따라 달랐다"
+          },
         },
         {
           "date": "7/14",
@@ -608,7 +700,11 @@ export const week29: WeeklyData = {
             "title": "Claude Code 2.1.208 improves accessibility and long-session stability",
             "deck": "Screen-reader mode, memory work, and dangerous-command defenses arrive together.",
             "summary": "This large release includes screen-reader mode, a process wrapper, memory and performance improvements for large sessions, and stronger dangerous-command detection."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-208-접근성과-장기-세션-안정성-보강-541a6248.png",
+            "alt": "Claude Code 2.1.208, 접근성과 장기 세션 안정성 보강"
+          },
         },
         {
           "date": "7/9",
@@ -628,7 +724,11 @@ export const week29: WeeklyData = {
             "title": "Claude opens a reflection feature for reviewing usage habits",
             "deck": "The beta summarizes one-, three-, six-, and twelve-month patterns and ways of collaborating with AI.",
             "summary": "This beta feature summarizes Claude usage patterns over one, three, six, and twelve months, including AI-collaboration capabilities and rest patterns."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude가-사용-습관을-돌아보는-회고-기능을-열었다-d27a8a79.png",
+            "alt": "Claude가 사용 습관을 돌아보는 회고 기능을 열었다"
+          },
         },
         {
           "date": "7/11",
@@ -649,7 +749,11 @@ export const week29: WeeklyData = {
             "title": "Claude Code 2.1.207 makes auto mode the default and fixes injection boundaries",
             "deck": "It simplifies auto-mode entry for cloud providers and hardens plugin inputs.",
             "summary": "The release removes the auto-mode opt-in for Bedrock, Vertex, and Foundry and strengthens shell-injection boundaries for plugin options."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-207-auto-mode-기본화와-주입-경계-1e5b65e0.png",
+            "alt": "Claude Code 2.1.207, auto mode 기본화와 주입 경계 수정"
+          },
         },
         {
           "date": "7/14",
@@ -710,7 +814,11 @@ export const week29: WeeklyData = {
             "title": "Claude Code 2.1.206 improves worktree and MCP stability",
             "deck": "It fixes confirmation for entering external worktrees and MCP timeout handling.",
             "summary": "The release fixes external-worktree entry confirmation, MCP timeout compliance, and several login, background-session, and model-selection issues."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-206-worktree와-mcp-안정성-개선-73601181.png",
+            "alt": "Claude Code 2.1.206, worktree와 MCP 안정성 개선"
+          },
         },
         {
           "date": "7/14",
@@ -730,7 +838,11 @@ export const week29: WeeklyData = {
             "title": "Anthropic commits C$10 million to Canadian AI research",
             "deck": "Eight institutions receive research funding and access to Claude and the API.",
             "summary": "Anthropic is providing C$10 million and Claude access to eight Canadian research institutions."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/anthropic-캐나다-ai-연구에-1천만-캐나다달러-지원-88215e2e.png",
+            "alt": "Anthropic, 캐나다 AI 연구에 1천만 캐나다달러 지원"
+          },
         }
       ]
     },
@@ -756,7 +868,11 @@ export const week29: WeeklyData = {
             "title": "Naver develops tailored AI learning content for students with disabilities",
             "deck": "It is producing content with the National Institute of Special Education and starts teacher programs in August.",
             "summary": "With the National Institute of Special Education, Naver is developing AI and digital teaching-and-learning content for students with disabilities and will begin teacher AI-use programs in August."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/네이버-장애-학생-맞춤형-ai-교육-콘텐츠-개발-54abda2f.png",
+            "alt": "네이버, 장애 학생 맞춤형 AI 교육 콘텐츠 개발"
+          },
         }
       ]
     },
@@ -782,7 +898,11 @@ export const week29: WeeklyData = {
             "title": "Cursor 3.11 adds Side Chats and full conversation search",
             "deck": "Parallel support chats and searchable agent history support longer coding workflows.",
             "summary": "Cursor added Side Chats for parallel support conversations, full agent-history search, remote and multi-repository selection, and cloud-agent hooks."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/cursor-3-11-side-chats와-전체-대화-검색-추가-f9abf4fb.png",
+            "alt": "Cursor 3.11, Side Chats와 전체 대화 검색 추가"
+          },
         }
       ]
     },
@@ -808,7 +928,11 @@ export const week29: WeeklyData = {
             "title": "Samsung AI Subscription Club introduces Blue Pass specialist care",
             "deck": "It bundles product-specific support from installation through use and after-sales service.",
             "summary": "Samsung Electronics introduced Blue Pass, a specialist-care service for the AI Subscription Club covering installation, use, and after-sales service."
-          }
+          },
+          "thumbnail": {
+            "src": "/og-cache/삼성-ai-구독클럽-블루패스-전문-케어-서비스-소개-4a43070b.jpg",
+            "alt": "삼성 AI 구독클럽, 블루패스 전문 케어 서비스 소개"
+          },
         }
       ]
     }

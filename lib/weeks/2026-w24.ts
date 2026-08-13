@@ -26,7 +26,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "비즈니스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, SEC에 비공개 S-1 초안 제출… 상장 옵션 공식화"
+          },
         },
         {
           "date": "6/8",
@@ -40,7 +44,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "비즈니스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "Sam Altman·Jakub Pachocki, OpenAI '제3 국면' 선언… 자동화 AI 연구자·1인 1 AGI 3대 목표"
+          },
         },
         {
           "date": "6/8",
@@ -54,7 +62,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "연구/정책"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, AI 경제 영향 외부 연구 지원 'Economic Research Exchange' 출범"
+          },
         },
         {
           "date": "6/8",
@@ -68,7 +80,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "모델/제품"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-5-instant-응답-스타일-업데이트와-canvas의-쓰기--c12e2675.png",
+            "alt": "ChatGPT, 대화 내 인터랙티브 차트·전체 화면 작성·메일 직접 발송 추가"
+          },
         },
         {
           "date": "6/4",
@@ -82,7 +98,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "모델/제품"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, 'Dreaming' 기반 차세대 ChatGPT 메모리 합성 시스템 출시"
+          },
         },
         {
           "date": "6/3",
@@ -96,7 +116,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "모델/제품"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, 생명과학 특화 GPT-Rosalind 업데이트 공개… LifeSciBench 도입"
+          },
         },
         {
           "date": "6/3",
@@ -110,7 +134,11 @@ export const week24: WeeklyData = {
           "tags": [
             "OpenAI",
             "연구/정책"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, 프런티어 AI 민주적 거버넌스 청사진 발표… CAISI 강화 3단계 전략"
+          },
         }
       ]
     },
@@ -144,7 +172,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Anthropic",
             "모델/제품"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/claude-fable-5-claude-mythos-5-공개-mythos-11c4ac33.webp",
+            "alt": "Claude Fable 5·Claude Mythos 5 공개… Mythos급 모델 첫 일반 공급"
+          },
         },
         {
           "date": "6/9",
@@ -158,7 +190,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Anthropic",
             "개발자 도구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+            "alt": "Claude Code v2.1.162~v2.1.170 연속 릴리스… Fable 5 지원·--safe-mode·/cd 추가"
+          },
         },
         {
           "date": "6/5",
@@ -186,7 +222,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Anthropic",
             "비즈니스/파트너"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/claude-partner-network에-services-track-p-fd099293.png",
+            "alt": "Claude Partner Network에 Services Track·Partner Hub 도입"
+          },
         }
       ]
     },
@@ -206,7 +246,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Google",
             "모델/제품"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gemini-3-5-live-translate-공개-70개-언어-거의-실-6c291e2c.png",
+            "alt": "Gemini 3.5 Live Translate 공개… 70개+ 언어 거의 실시간 음성 번역"
+          },
         },
         {
           "date": "6/9",
@@ -220,7 +264,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Google DeepMind",
             "연구/교육"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+            "alt": "DeepMind, 시에라리온 RCT로 Gemini Guided Learning 학습 효과 입증"
+          },
         },
         {
           "date": "6/9",
@@ -234,7 +282,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Google DeepMind",
             "로보틱스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
+            "alt": "DeepMind, 유럽 로보틱스 스타트업 15개사 액셀러레이터 가동"
+          },
         },
         {
           "date": "6/8",
@@ -262,7 +314,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Google",
             "개발자 도구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/google-colab-cli-공개-터미널-ai-에이전트에서-gpu-런타-4e1801dc.jpg",
+            "alt": "Google Colab CLI 공개… 터미널·AI 에이전트에서 GPU 런타임 직접 제어"
+          },
         },
         {
           "date": "6/3",
@@ -276,7 +332,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Google DeepMind",
             "오픈 모델"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gemma-4-12b-공개-인코더-없는-통합-멀티모달-오픈-모델-16b2e2d4.png",
+            "alt": "Gemma 4 12B 공개… 인코더 없는 통합 멀티모달 오픈 모델"
+          },
         },
         {
           "date": "6/3",
@@ -310,7 +370,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA / SK hynix",
             "반도체/메모리"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-sk-hynix-다년-기술-파트너십-vera-rubin-je-7afef008.png",
+            "alt": "NVIDIA·SK hynix 다년 기술 파트너십… Vera Rubin·Jetson Thor용 차세대 메모리 공동 개발"
+          },
         },
         {
           "date": "6/7",
@@ -324,7 +388,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA / SK Telecom",
             "AI 인프라"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/sk텔레콤-nvidia-한국에-기가와트급-ai-클라우드-구축-첫-ai-팩-e81ac529.png",
+            "alt": "SK텔레콤·NVIDIA, 한국에 기가와트급 AI 클라우드 구축… 첫 AI 팩토리 2027년 가동"
+          },
         },
         {
           "date": "6/7",
@@ -338,7 +406,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA / NAVER",
             "AI 인프라"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/naver-nvidia-dsx로-소버린-ai-인프라-확장-55mw에서-기-f29a3c01.png",
+            "alt": "NAVER, NVIDIA DSX로 소버린 AI 인프라 확장… 55MW에서 기가와트급으로"
+          },
         },
         {
           "date": "6/7",
@@ -352,7 +424,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA / LG",
             "AI 인프라/로보틱스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-lg그룹-ai-팩토리-구축-가정용-로봇-cloid부터-exa-0f45a45a.png",
+            "alt": "NVIDIA·LG그룹, AI 팩토리 구축… 가정용 로봇 CLoiD부터 EXAONE·800V 전력까지 6개 계열사 협력"
+          },
         },
         {
           "date": "6/7",
@@ -366,7 +442,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA / Doosan",
             "로보틱스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-두산그룹-피지컬-ai-협력-jetson-thor-기반-age-983ca5f5.jpg",
+            "alt": "NVIDIA·두산그룹, 피지컬 AI 협력… Jetson Thor 기반 'Agentic Robot OS'와 AI 팩토리 전력 인프라"
+          },
         },
         {
           "date": "6/7",
@@ -380,7 +460,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA",
             "AI 인프라"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-영국-소버린-ai-현황-공개-gh200-5-400개-isam-11892f53.jpg",
+            "alt": "NVIDIA, 영국 소버린 AI 현황 공개… GH200 5,400개 Isambard-AI와 스타트업 생태계 £20억 투자"
+          },
         },
         {
           "date": "6/4",
@@ -394,7 +478,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA",
             "오픈 모델"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-nemotron-3-ultra-공개-550b-moe-하이브리-d0513437.webp",
+            "alt": "NVIDIA Nemotron 3 Ultra 공개… 550B MoE 하이브리드 Mamba-Transformer 오픈 모델"
+          },
         },
         {
           "date": "6/3",
@@ -408,7 +496,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA",
             "로보틱스/연구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-cvpr-2026서-graspgen-x-lcdrive-nit-4e0fd56f.png",
+            "alt": "NVIDIA, CVPR 2026서 GraspGen-X·LCDrive·NitroGen 공개… 로봇 파지·자율주행·에이전트 학습 연구"
+          },
         },
         {
           "date": "6/3",
@@ -422,7 +514,11 @@ export const week24: WeeklyData = {
           "tags": [
             "NVIDIA",
             "로보틱스/연구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-cvpr서-피지컬-ai-agent-skills-공개-32b--c7348f96.jpg",
+            "alt": "NVIDIA, CVPR서 피지컬 AI Agent Skills 공개… 32B 자율주행 VLA·휴머노이드 GRAIL 데이터셋"
+          },
         }
       ]
     },
@@ -442,7 +538,11 @@ export const week24: WeeklyData = {
           "tags": [
             "xAI",
             "모델/제품"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-이미지-영상-모델-grok-imagine-1-5-preview-a-4a978eec.webp",
+            "alt": "xAI, 이미지→영상 모델 Grok Imagine 1.5 Preview API 공개"
+          },
         }
       ]
     },
@@ -462,7 +562,11 @@ export const week24: WeeklyData = {
           "tags": [
             "AMD",
             "투자/인프라"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/amd-영국에-5년간-최대-20억-투자-zenith-슈퍼컴퓨터-핵융합-a-49175637.jpg",
+            "alt": "AMD, 영국에 5년간 최대 £20억 투자… Zenith 슈퍼컴퓨터·핵융합 AI·광 네트워크 AI 시스템"
+          },
         }
       ]
     },
@@ -482,7 +586,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Cohere",
             "오픈 모델"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/cohere-첫-개발자용-오픈-코딩-모델-north-mini-code-공-385fc388.png",
+            "alt": "Cohere, 첫 개발자용 오픈 코딩 모델 North Mini Code 공개"
+          },
         },
         {
           "date": "6/3",
@@ -496,7 +604,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Cohere",
             "연구/도구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/cohere-labs-연구-시각화-도구-co-plot-공개-d33e470f.png",
+            "alt": "Cohere Labs, 연구 시각화 도구 Co/plot 공개"
+          },
         }
       ]
     },
@@ -516,7 +628,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Hugging Face",
             "로보틱스/MCP"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/hugging-face-reachy-mini에-mcp-원격-도구-지원-추-951093dd.png",
+            "alt": "Hugging Face, Reachy Mini에 MCP 원격 도구 지원 추가… Spaces로 로봇 기능 확장"
+          },
         }
       ]
     },
@@ -536,7 +652,11 @@ export const week24: WeeklyData = {
           "tags": [
             "GitHub",
             "에이전트 도구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/github-copilot-cli-커스텀-에이전트-워크플로우-공식-가이드-a1f4adce.jpg",
+            "alt": "GitHub Copilot CLI 커스텀 에이전트 워크플로우 공식 가이드 공개"
+          },
         },
         {
           "date": "6/5",
@@ -550,7 +670,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Cursor",
             "개발자 도구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/cursor-3-7-릴리스-sdk-커스텀-도구-중첩-서브에이전트-브라우저-d80904df.png",
+            "alt": "Cursor 3.7 릴리스… SDK 커스텀 도구·중첩 서브에이전트·브라우저 Design Mode 강화"
+          },
         },
         {
           "date": "6/5",
@@ -564,7 +688,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Ollama",
             "로컬 런타임"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/ollama-0-30-4-0-30-6-연속-릴리스-gemma-4-qat--2f0a2960.png",
+            "alt": "Ollama 0.30.4~0.30.6 연속 릴리스… Gemma 4 QAT·Nemotron 3 Ultra 로컬 지원"
+          },
         },
         {
           "date": "6/3",
@@ -578,7 +706,11 @@ export const week24: WeeklyData = {
           "tags": [
             "Alphabet",
             "비즈니스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/alphabet-6월-투자자-프레젠테이션-gemini-앱-mau-9억-명-c7ef9309.jpg",
+            "alt": "Alphabet 6월 투자자 프레젠테이션… Gemini 앱 MAU 9억 명·2026년 capex 최대 1,900억 달러"
+          },
         }
       ]
     },

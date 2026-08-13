@@ -41,7 +41,11 @@ export const week19: WeeklyData = {
             "에이전트자동화",
             "공식",
             "anthropic"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-financial-services-agen-8c94bd56.png",
+            "alt": "Anthropic Claude Financial Services Agents — 10개 분석가 워크플로우 템플릿 패키징"
+          },
         },
         {
           "date": "5/06",
@@ -64,7 +68,11 @@ export const week19: WeeklyData = {
             "공식",
             "anthropic"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-limits-and-spacex-compu-f8ea46f3.jpg",
+            "alt": "Anthropic higher limits + SpaceX compute — Claude Code 5시간 한도 2배 확대"
+          },
         },
         {
           "date": "5/06",
@@ -152,7 +160,11 @@ export const week19: WeeklyData = {
             "공식",
             "perplexity"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/perplexity-computer-for-professional-fin-46a0efb0.jpg",
+            "alt": "Perplexity Computer for Professional Finance — 라이선스 데이터 + 35개 금융 워크플로우"
+          },
         }
       ]
     },
@@ -210,7 +222,11 @@ export const week19: WeeklyData = {
             "워크플로우",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/pomelli-catalogs-제품-url-일괄-입력으로-캠페인-ai-포-cf9676f2.jpg",
+            "alt": "Pomelli Catalogs — 제품 URL 일괄 입력으로 캠페인·AI 포토슛 자동 생성"
+          },
         },
         {
           "date": "5/05",
@@ -234,7 +250,11 @@ export const week19: WeeklyData = {
             "워크플로우",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/notebooklm-mind-maps-업데이트-커스텀-프롬프트-이름-변경-22738ec0.jpg",
+            "alt": "NotebookLM Mind Maps 업데이트 — 커스텀 프롬프트, 이름 변경/공유, 부드러운 노드 전환"
+          },
         },
         {
           "date": "5/05",
@@ -264,7 +284,11 @@ export const week19: WeeklyData = {
             "공식",
             "google"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/google-ai-studio-nano-banana-2-이미지-제작이-앱-df84fd15.png",
+            "alt": "Google AI Studio — Nano Banana 2로 앱·이미지 제작 워크플로우 강화"
+          },
         },
         {
           "date": "5/05",
@@ -288,7 +312,11 @@ export const week19: WeeklyData = {
             "도구릴리스",
             "공식",
             "google"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gemma-4-multi-token-prediction-mtp-draft-d5ba33cb.png",
+            "alt": "Gemma 4 Multi-Token Prediction (MTP) drafters — 추론 최대 3배 가속"
+          },
         }
       ]
     },
@@ -329,7 +357,11 @@ export const week19: WeeklyData = {
             "community",
             "anthropic"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI GPT-5.5 Instant — ChatGPT 신규 기본 모델로 롤아웃"
+          },
         },
         {
           "date": "5/06",
@@ -415,7 +447,11 @@ export const week19: WeeklyData = {
             "공식",
             "xai"
           ],
-          "featured": true
+          "featured": true,
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-api-voice-cloning-정식-출시-2분-미만-8-4dc8ac0c.webp",
+            "alt": "xAI Grok API — Voice Cloning 정식 출시"
+          },
         }
       ]
     },
@@ -586,7 +622,11 @@ export const week19: WeeklyData = {
             "도구릴리스",
             "공식",
             "community"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/subquadratic-subq-12m-token-컨텍스트-풀-sub-q-114cb62a.png",
+            "alt": "Subquadratic 'SubQ' — 12M token 컨텍스트, 풀 sub-quadratic sparse attention 첫 frontier 모델"
+          },
         }
       ]
     }

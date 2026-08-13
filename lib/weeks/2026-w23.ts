@@ -26,7 +26,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "Policy / Safety"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, 청소년 AI 안전 국제 표준·전담 기구 제안"
+          },
         },
         {
           "date": "5/29",
@@ -40,7 +44,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "Rosalind / Biosecurity"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI, Rosalind Biodefense 프로그램 공개"
+          },
         },
         {
           "date": "6/1",
@@ -54,7 +62,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "Enterprise / Cloud"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI 프런티어 모델·Codex, AWS에서 정식 제공"
+          },
         },
         {
           "date": "5/29",
@@ -68,7 +80,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "Codex / Agent"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/openai-codex-windows에-computer-use-도입-v2-cb582535.png",
+            "alt": "OpenAI Codex, Windows에 Computer Use 도입 (v26.527)"
+          },
         },
         {
           "date": "5/28",
@@ -82,7 +98,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "ChatGPT / Model"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-5-instant-응답-스타일-업데이트와-canvas의-쓰기--c12e2675.png",
+            "alt": "GPT-5.5 Instant 응답 스타일 업데이트와 Canvas의 쓰기·코드 블록 전환"
+          },
         },
         {
           "date": "5/26",
@@ -96,7 +116,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "AI 연구"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI 추론 모델, 80년 묵은 에르되시 단위거리 추측 반례 제시"
+          },
         },
         {
           "date": "5/26",
@@ -110,7 +134,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OpenAI",
             "AI 평가"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/llm-as-a-judge-평가-편향-점수는-객관적이지-않다-20a1cbfa.png",
+            "alt": "LLM-as-a-judge 평가 편향: 점수는 객관적이지 않다"
+          },
         }
       ]
     },
@@ -130,7 +158,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Anthropic",
             "위협 인텔리전스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-1년치-ai-활용-사이버-위협-mitre-att-ck--6ae2642f.png",
+            "alt": "Anthropic, 1년치 AI 활용 사이버 위협 MITRE ATT&CK 매핑 보고서 공개"
+          },
         },
         {
           "date": "6/2",
@@ -144,7 +176,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Anthropic",
             "보안 이니셔티브"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-project-glasswing-약-150개-조직으로--ef5fb5aa.jpg",
+            "alt": "Anthropic, Project Glasswing 약 150개 조직으로 확대"
+          },
         },
         {
           "date": "6/1",
@@ -158,7 +194,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Anthropic",
             "기업 동향"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-sec에-s-1-초안-비공개-제출-3a733f98.jpg",
+            "alt": "Anthropic, SEC에 S-1 초안 비공개 제출"
+          },
         },
         {
           "date": "5/29",
@@ -172,7 +212,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Anthropic",
             "AI 모델"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-opus-4-8-공식-공개-5f3a9a51.jpg",
+            "alt": "Anthropic, Mythos-class 모델 몇 주 내 확대 공식 예고"
+          },
         },
         {
           "date": "5/28",
@@ -186,7 +230,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Anthropic",
             "모델 출시"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/anthropic-claude-opus-4-8-공식-공개-5f3a9a51.jpg",
+            "alt": "Anthropic, Claude Opus 4.8 공식 공개"
+          },
         },
         {
           "date": "5/28",
@@ -220,7 +268,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Google",
             "생산성/워크플로우"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/workspace-studio-리스트-반복-repeat-for-each--cdbc3885.png",
+            "alt": "Workspace Studio, 리스트 반복(Repeat for each) 플로우 도입"
+          },
         },
         {
           "date": "5/28",
@@ -234,7 +286,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Google",
             "AI 모델/API"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gemini-네이티브-이미지-모델-정식-출시-및-영상-이미지-생성-추가-640d57cc.png",
+            "alt": "Gemini 네이티브 이미지 모델 정식 출시 및 영상→이미지 생성 추가"
+          },
         }
       ]
     },
@@ -254,7 +310,11 @@ export const week23: WeeklyData = {
           "tags": [
             "NVIDIA",
             "agentic-infra"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-microsoft-개인-ai-에이전트용-윈도우-pc-rtx--1d4518d5.png",
+            "alt": "NVIDIA·Microsoft, 개인 AI 에이전트용 윈도우 PC 'RTX Spark' 공개"
+          },
         },
         {
           "date": "5/31",
@@ -268,7 +328,11 @@ export const week23: WeeklyData = {
           "tags": [
             "NVIDIA",
             "datacenter"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-vera-rubin-풀-프로덕션-진입-에이전틱-ai-팩토리--4c3c3af2.jpg",
+            "alt": "NVIDIA Vera Rubin 풀 프로덕션 진입, 에이전틱 AI 팩토리 본격 가동"
+          },
         },
         {
           "date": "5/31",
@@ -282,7 +346,11 @@ export const week23: WeeklyData = {
           "tags": [
             "NVIDIA",
             "datacenter"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-윈도우용-dgx-station-발표-책상-위-1조-파라미터--88dc4ec5.jpg",
+            "alt": "NVIDIA, 윈도우용 DGX Station 발표… 책상 위 1조 파라미터 AI 슈퍼컴퓨터"
+          },
         },
         {
           "date": "5/28",
@@ -296,7 +364,11 @@ export const week23: WeeklyData = {
           "tags": [
             "NVIDIA",
             "Benchmark / GPU Kernel"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/nvidia-sol-execbench-ai-생성-gpu-커널을-광속-한계-513a866b.png",
+            "alt": "NVIDIA SOL-ExecBench, AI 생성 GPU 커널을 '광속 한계' 대비로 평가"
+          },
         }
       ]
     },
@@ -316,7 +388,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Microsoft",
             "신규 제품(프리뷰)"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/microsoft-copilot-health-프리뷰-출시-건강-기록-웨어-9d459f06.png",
+            "alt": "Microsoft, Copilot Health 프리뷰 출시: 건강 기록·웨어러블 통합 AI"
+          },
         },
         {
           "date": "5/28",
@@ -330,7 +406,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Microsoft",
             "제품/UX 개편"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/microsoft-365-copilot-새-디자인-공개-프롬프트-입력창을-8a8be1f2.png",
+            "alt": "Microsoft 365 Copilot 새 디자인 공개: 프롬프트 입력창을 작업 인지형 워크스페이스로 전환"
+          },
         },
         {
           "date": "5/26",
@@ -344,7 +424,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Microsoft",
             "에이전트 플랫폼 업데이트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/copilot-studio-5월-업데이트-컴퓨터-사용-에이전트-정식-출시-436fbe98.jpg",
+            "alt": "Copilot Studio 5월 업데이트: 컴퓨터 사용 에이전트 정식 출시·워크플로 재설계·실시간 음성"
+          },
         },
         {
           "date": "5/26",
@@ -358,7 +442,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Microsoft",
             "AI 거버넌스"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/microsoft-agent-governance-toolkit-위험-행동-2b9d770c.png",
+            "alt": "Microsoft Agent Governance Toolkit: 위험 행동을 실행 단계에서 차단"
+          },
         }
       ]
     },
@@ -398,7 +486,11 @@ export const week23: WeeklyData = {
           "tags": [
             "AMD",
             "chips"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/amd-computex-2026서-am4-10주년-am5-2029년-지원-5bfb7413.jpg",
+            "alt": "AMD, COMPUTEX 2026서 AM4 10주년·AM5 2029년 지원·RDNA 4 게이밍 확대 발표"
+          },
         }
       ]
     },
@@ -418,7 +510,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Mistral",
             "모델 제휴/배포"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/mistral-medium-3-5-copilot-studio-모델-라인업-6e9040f9.jpg",
+            "alt": "Mistral Medium 3.5, Copilot Studio 모델 라인업 합류: EU 인리전 데이터 처리 지원"
+          },
         }
       ]
     },
@@ -464,7 +560,11 @@ export const week23: WeeklyData = {
           "tags": [
             "MiniMax",
             "Open Weight Model / Benchmark"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/minimax-오픈웨이트-프런티어-코딩-모델-m3-공개-swe-bench-3e2916ff.png",
+            "alt": "MiniMax, 오픈웨이트 프런티어 코딩 모델 M3 공개… SWE-Bench Pro 59.0%"
+          },
         }
       ]
     },
@@ -484,7 +584,11 @@ export const week23: WeeklyData = {
           "tags": [
             "IBM Software Innovation Lab / Artificial Analysis",
             "Benchmark / Agent"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/ibm-artificial-analysis-기업-it-에이전트-벤치마크--6c6d47b5.png",
+            "alt": "IBM·Artificial Analysis, 기업 IT 에이전트 벤치마크 ITBench-AA 공개… 프런티어 모델 전원 50% 미만"
+          },
         }
       ]
     },
@@ -504,7 +608,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Hugging Face / Pollen Robotics",
             "robotics"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/reachy-mini-서버-없이-완전-로컬-음성-대화-모드-지원-7cdcfd61.png",
+            "alt": "Reachy Mini, 서버 없이 완전 로컬 음성 대화 모드 지원"
+          },
         },
         {
           "date": "5/26",
@@ -518,7 +626,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Hugging Face",
             "AI 에이전트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/hugging-face-에이전트-용어집-모델-스캐폴드-하네스-구분-37be5f05.png",
+            "alt": "Hugging Face 에이전트 용어집: 모델, 스캐폴드, 하네스 구분"
+          },
         }
       ]
     },
@@ -538,7 +650,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Figure",
             "robotics"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/figure-catalyst-brands와-휴머노이드-물류-배치-계약-체-80a52d3d.jpg",
+            "alt": "Figure, Catalyst Brands와 휴머노이드 물류 배치 계약 체결"
+          },
         }
       ]
     },
@@ -558,7 +674,11 @@ export const week23: WeeklyData = {
           "tags": [
             "iklobato",
             "AI 보안"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/avai-d24a46ee.png",
+            "alt": "avai: 호스트 텔레메트리를 LLM이 분류하는 오픈소스 보안 도구"
+          },
         },
         {
           "date": "5/30",
@@ -572,7 +692,11 @@ export const week23: WeeklyData = {
           "tags": [
             "PingCAP",
             "AI 에이전트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/pingcap-mem9-에이전트-메모리는-저장소가-아니라-판단-시스템-f7f4b8d6.png",
+            "alt": "PingCAP mem9: 에이전트 메모리는 저장소가 아니라 판단 시스템"
+          },
         },
         {
           "date": "5/28",
@@ -586,7 +710,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Michal Malewicz",
             "UI/UX 디자인"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/ui-design-direction-2026-2027-유행어보다-스큐어모-067ef127.png",
+            "alt": "UI Design Direction 2026–2027: 유행어보다 스큐어모피즘의 맥락"
+          },
         },
         {
           "date": "5/27",
@@ -600,7 +728,11 @@ export const week23: WeeklyData = {
           "tags": [
             "PrismML",
             "이미지 생성"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/prismml-bonsai-image-4b-브라우저-webgpu에서-도는-e4582a2d.png",
+            "alt": "PrismML Bonsai Image 4B: 브라우저 WebGPU에서 도는 ternary 이미지 모델"
+          },
         },
         {
           "date": "5/27",
@@ -614,7 +746,11 @@ export const week23: WeeklyData = {
           "tags": [
             "ZeroPointRepo",
             "AI 에이전트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/youtube-mcp-에이전트가-영상-자막을-연구-소스로-호출하는-오픈소-e1c524c3.png",
+            "alt": "YouTube MCP: 에이전트가 영상·자막을 연구 소스로 호출하는 오픈소스"
+          },
         },
         {
           "date": "5/27",
@@ -628,7 +764,11 @@ export const week23: WeeklyData = {
           "tags": [
             "agent-sh",
             "AI 에이전트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/agent-workspace-linux-ai-에이전트-전용-격리-linu-79b812a3.png",
+            "alt": "agent-workspace-linux: AI 에이전트 전용 격리 Linux 데스크톱"
+          },
         },
         {
           "date": "5/27",
@@ -642,7 +782,11 @@ export const week23: WeeklyData = {
           "tags": [
             "OttoRenner",
             "AI 코딩"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gentle-coding-압박-대신-멈출-여지를-줘-ai-루프-환각을-줄-a3088ff0.png",
+            "alt": "Gentle-Coding: 압박 대신 멈출 여지를 줘 AI 루프·환각을 줄이는 PoC"
+          },
         },
         {
           "date": "5/27",
@@ -656,7 +800,11 @@ export const week23: WeeklyData = {
           "tags": [
             "MetaLens",
             "AI 에이전트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/metalens-metabase-대시보드를-점검하는-ai-에이전트-8923b953.png",
+            "alt": "MetaLens: Metabase 대시보드를 점검하는 AI 에이전트"
+          },
         },
         {
           "date": "5/26",
@@ -684,7 +832,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Eugene Yan",
             "AI 활용/워크플로우"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/ai-활용은-프롬프트가-아니라-시스템-eugene-yan-정리-e96d3a6c.jpg",
+            "alt": "AI 활용은 프롬프트가 아니라 시스템: Eugene Yan 정리"
+          },
         },
         {
           "date": "5/26",
@@ -698,7 +850,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Spice",
             "AI 에이전트"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/spice-에이전트-실행-위에-의사결정-층을-분리한-오픈소스-런타임-92008221.png",
+            "alt": "Spice: 에이전트 실행 위에 의사결정 층을 분리한 오픈소스 런타임"
+          },
         },
         {
           "date": "5/26",
@@ -712,7 +868,11 @@ export const week23: WeeklyData = {
           "tags": [
             "Philip Heltweg",
             "AI 코딩"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/ai-코딩-에이전트용-로컬-techdocs-문서를-sqlite-지식-지도-f5655127.png",
+            "alt": "AI 코딩 에이전트용 로컬 Techdocs: 문서를 SQLite 지식 지도로"
+          },
         }
       ]
     }

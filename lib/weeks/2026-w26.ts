@@ -127,7 +127,11 @@ export const week26: WeeklyData = {
               "label": "GitHub",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+            "alt": "Claude Code v2.1.183 — auto 모드에서 파괴적 git·인프라 destroy 명령 차단"
+          },
         },
         {
           "date": "6/22",
@@ -149,7 +153,11 @@ export const week26: WeeklyData = {
               "label": "GitHub",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+            "alt": "Claude Code v2.1.186 — claude mcp login/logout, SSH용 --no-browser 인증 지원"
+          },
         },
         {
           "date": "6/20",
@@ -171,7 +179,11 @@ export const week26: WeeklyData = {
               "label": "GitHub",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+            "alt": "Claude Code v2.1.185 — 스트림 멈춤 안내 문구 개선, 임계 10초→20초"
+          },
         }
       ]
     },
@@ -257,7 +269,11 @@ export const week26: WeeklyData = {
               "label": "Infosecurity Magazine",
               "url": "https://www.infosecurity-magazine.com/news/openai-daybreak-gpt-5-5-cyber/"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI 'Daybreak' 확장 — 조직 보안 도구 묶음, GPT-5.5-Cyber·Codex Security 포함"
+          },
         },
         {
           "date": "6/22",
@@ -280,7 +296,11 @@ export const week26: WeeklyData = {
               "label": "Trail of Bits 블로그",
               "url": "https://blog.trailofbits.com/2026/06/22/introducing-patch-the-planet/"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
+            "alt": "OpenAI 'Patch the Planet' — 오픈소스 유지보수자 보안 지원 이니셔티브 (Trail of Bits 협업)"
+          },
         },
         {
           "date": "6/18",
@@ -670,7 +690,11 @@ export const week26: WeeklyData = {
               "label": "MarkTechPost",
               "url": "https://www.marktechpost.com/2026/06/22/xai-launches-goal-in-grok-build-adding-long-running-autonomous-execution-with-built-in-verification-for-multi-step-coding-tasks/"
             }
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-build에-goal-도입-검증-내장-장시간-자율-실행--b1d5c595.webp",
+            "alt": "xAI, Grok Build에 '/goal' 도입 — 검증 내장 장시간 자율 실행 (multi-step 코딩)"
+          },
         },
         {
           "date": "6/18",
@@ -687,7 +711,11 @@ export const week26: WeeklyData = {
             "xAI",
             "Databricks",
             "Agent"
-          ]
+          ],
+          "thumbnail": {
+            "src": "/og-cache/xai-grok-databricks-agent-bricks에-네이티브-제-9a3988ca.webp",
+            "alt": "xAI Grok, Databricks Agent Bricks에 네이티브 제공 (Data+AI Summit)"
+          },
         }
       ]
     },
