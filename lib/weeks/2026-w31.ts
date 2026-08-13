@@ -534,10 +534,6 @@ export const week31: WeeklyData = {
             deck: "Judge infrastructure by what it enables, not by how big it is.",
             summary: "OpenAI argued that AI infrastructure is valuable not for its scale but for what it enables: more capable intelligence, available to more people, at lower cost. No specific gigawatt capacity or investment figures were confirmed on the page.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "OpenAI, AI 인프라 가치 기준 제시",
-          },
         },
         {
           date: "8/1",
@@ -558,10 +554,6 @@ export const week31: WeeklyData = {
             title: "Ten advances in mathematics and theoretical computer science",
             deck: "Each argument was formalized in Lean, at roughly $2,000 of tokens.",
             summary: "OpenAI announced ten advances across mathematics and theoretical computer science achieved by an internal version of Astra, with each argument formalized in a Lean certificate. OpenAI says the tokens needed would cost roughly $2,000 at Sol API rates. It also launched ChatGPT for Academic Researchers, giving 100,000 scientists and mathematicians free access.",
-          },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "Astra 내부 버전, 수학·이론전산 10개 난제 해결",
           },
         },
       ],
@@ -843,10 +835,6 @@ export const week31: WeeklyData = {
             deck: "A single generation rather than short clips stitched together.",
             summary: "ByteDance Seed introduced Seedance 2.5 on July 31, an audio-video joint generation model built for 30-second storytelling in a single generation, extendable twice for longer pieces. The company says it reads a reference video's intention, framing and cinematic language rather than merely transferring motion, and accepts a wider range of editing requests. All figures are the vendor's own.",
             content: `**What shipped**\nByteDance Seed introduced **Seedance 2.5** on July 31. The official line: "a next-generation audio-video joint generation model, built for 30-second storytelling with precise reference control and powerful editing capabilities."\n\n**Single-pass is the point**\nRather than assembling ten three-second clips, it creates "videos up to 30 seconds in a single generation, with the option to extend twice for richer, more complete storytelling." Motion is "smoother and more consistent," and visuals "more realistic," per the company.\n\nThat approach structurally removes the character, lighting and camera drift that stitching introduces.\n\n**Reference and editing**\nThe model "understands reference videos more precisely — capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation." Editing is described as more reliable across a wider range of audio and visual requests.\n\n**Read the dates carefully**\nThree separate events sit in this window: the ByteDance Seed launch post on July 31, Luma shipping it inside its own product on August 6, and the developer API on August 7 per secondary sources. An integration date is not a launch date.\n\n**What to check**\nThe product page carries specs but no publication date; the date evidence is the official blog index. Verify resolution, pricing and territorial limits separately — MiniMax H3 excluded Korea by licence in this same window.`
-          },
-          thumbnail: {
-            src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
-            alt: "시댄스 2.5, 30초 영상을 오디오까지 한 번에 뽑는다",
           },
         }
       ]

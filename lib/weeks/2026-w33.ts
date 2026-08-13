@@ -91,10 +91,6 @@ export const week33: WeeklyData = {
             deck: "Only vetted individuals and organizations get access.",
             summary: "OpenAI expanded its Daybreak program and introduced GPT-5.6-Cyber, built on GPT-5.6 Sol. Daybreak Blue gives access to frontier general-purpose models; Daybreak Red gives access to purpose-trained cybersecurity models, restricted to approved individuals and organizations. Per OpenAI's own numbers, GPT-5.6-Cyber completes 95.0% of Advanced Cybersecurity requests versus 57.3% for GPT-5.5-Cyber and 1.5% for GPT-5.6 Sol.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "Daybreak 확대와 GPT-5.6-Cyber 공개",
-          },
         },
         {
           date: "8/10",
@@ -112,10 +108,6 @@ export const week33: WeeklyData = {
             title: "Premium seats are coming to ChatGPT Business",
             deck: "Teams can now assign tiered seats.",
             summary: "OpenAI introduced Premium seats for ChatGPT Business at $125 per user per month, or $100 per user per month billed annually, alongside Standard seats at $25/$20. Premium seats provide 5x more usage than Standard seats and remove the five-hour usage limit. Both seat types can be mixed in one workspace.",
-          },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "ChatGPT Business에 Premium 시트 도입",
           },
         },
         {
@@ -135,10 +127,6 @@ export const week33: WeeklyData = {
             deck: "The cyber-specialized models open to defensive partners only.",
             summary: "OpenAI expanded its Daybreak Cyber Partner program so security partners can integrate frontier cyber models into their own products. Named partners include Accenture, IBM, Capgemini, Cognizant, EY, KPMG, PwC, NCC Group, SpecterOps, Palo Alto Networks, CrowdStrike, Cisco, Sophos, Akamai, Fortinet, and Cloudflare.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "프런티어 사이버 모델, 보안 파트너사에 개방",
-          },
         },
         {
           date: "8/11",
@@ -157,10 +145,6 @@ export const week33: WeeklyData = {
             deck: "Ads land on Free and Go plans only, with Korea in the first five countries.",
             summary: "In an August 11, 2026 update, OpenAI said ChatGPT Ads launched in the United Kingdom, Mexico, Brazil, Japan, and South Korea. Ads appear only for logged-in adult users on the Free and Go tiers; Pro, Business, Enterprise, and Education tiers have no ads. OpenAI states ads do not influence ChatGPT's answers and advertisers receive only aggregate performance data. The base page was originally published February 9, 2026.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "ChatGPT 광고, 한국 포함 5개국 출시",
-          },
         },
         {
           date: "8/11",
@@ -178,10 +162,6 @@ export const week33: WeeklyData = {
             title: "Daybreak models are now available on AWS",
             deck: "Approved organizations can now reach the models through Bedrock.",
             summary: "OpenAI announced Daybreak models are available on AWS via the Amazon Bedrock console or the Responses API using the bedrock-mantle endpoint. Enrollment and approval in the Daybreak Access program is required for both Daybreak Blue and Daybreak Red. This follows OpenAI frontier models and Codex becoming generally available on AWS earlier this year.",
-          },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "Daybreak 모델, AWS Bedrock에서 제공",
           },
         },
       ],
@@ -314,7 +294,7 @@ export const week33: WeeklyData = {
             summary: "On August 10, 2026 Meta released Muse Glimmer under a permissive Apache 2.0 license — a ~29.6B parameter dense causal transformer with a Perception Encoder, 131,072+ token context, optimized for always-on local agent workflows on a single consumer GPU. Vendor-reported figures include 3.1x faster decoding on RTX 5090 and 1.8x on M5-Max via DFlash speculative decoding; the model card lists SWE-Bench Verified 76.0, TerminalBench 2.1 51.7, and AIME 2026 94.7.",
           },
           thumbnail: {
-            src: "/og-cache/meta-muse-spark-첫-모델-출시-9fdff4e0.jpg",
+            src: "/og-cache/메타-30b-오픈-에이전틱-모델-muse-glimmer-공개-3f4b51b0.png",
             alt: "메타, 30B 오픈 에이전틱 모델 Muse Glimmer 공개",
           },
         },
@@ -336,10 +316,6 @@ export const week33: WeeklyData = {
             title: "Zuckerberg publishes \"The Future is for Everyone\", arguing for open source AI",
             deck: "His argument: widely distributed open source is the safer system.",
             summary: "On August 10, 2026 Mark Zuckerberg published \"The Future is for Everyone\" on Meta's official site, arguing that open source prevents concentration of AI power, that widely deployed open source systems have proven more secure, and that restricting the current open source ecosystem would be a mistake. It was published alongside the Muse Glimmer open-weights release.",
-          },
-          thumbnail: {
-            src: "/og-cache/meta-muse-spark-첫-모델-출시-9fdff4e0.jpg",
-            alt: "저커버그, 오픈소스 AI 옹호 에세이 공개",
           },
         },
       ],

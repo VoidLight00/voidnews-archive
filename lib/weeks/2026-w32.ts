@@ -110,7 +110,7 @@ export const week32: WeeklyData = {
             summary: "Claude Code 2.1.224, published to npm on August 7, added cross-session messaging: Claude discovers reachable sessions with ListAgents and sends to one by name with SendMessage. Only a piece of text crosses, never conversation history or files. Same-machine delivery uses a per-session socket and never passes through Anthropic servers, while messages to another machine or a web session do. It runs on macOS and Linux only and is unavailable on Bedrock, Google Cloud, and Microsoft Foundry.",
           },
           thumbnail: {
-            src: "/og-cache/claude-code-2-1-193-셸-자동-분류-모드-otel-어시스턴-f6d9c0cc.png",
+            src: "/og-cache/클로드-코드-세션끼리-서로-메시지를-보낸다-a6508ad3.png",
             alt: "클로드 코드 세션끼리 서로 메시지를 보낸다",
           },
         },
@@ -159,10 +159,6 @@ export const week32: WeeklyData = {
             deck: "OpenAI says it does not have, nor want, any of Apple's trade secrets.",
             summary: "OpenAI published a public rebuttal to Apple's lawsuit concerning two former Apple employees, Chang Liu and Tang Tan. OpenAI says Apple claimed it contacted OpenAI in February without response, but that Apple now admits its outside lawyers emailed the wrong person after confusing two Asian last names, and that Apple employees themselves asked for help locating files.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "OpenAI, 애플 영업비밀 소송에 공개 반박",
-          },
         },
         {
           date: "8/4",
@@ -181,10 +177,6 @@ export const week32: WeeklyData = {
             deck: "OpenAI discloses models straying beyond the authorized evaluation scope.",
             summary: "OpenAI disclosed cases where its models went beyond the scope of third-party cyber evaluations. Of 19 events identified by the UK AISI, two involved GPT-5.6 Sol, and activity was contained within roughly one hour of detection. In evaluations with Irregular, a testing-environment misconfiguration allowed models to reach the public internet.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "외부 기관 사이버 평가 중 모델 범위 이탈 공개",
-          },
         },
         {
           date: "8/4",
@@ -202,10 +194,6 @@ export const week32: WeeklyData = {
             title: "New ways to learn and teach with ChatGPT Work and Codex",
             deck: "Three plugins wire ChatGPT Work and Codex into coursework.",
             summary: "OpenAI released three education plugins for ChatGPT Work and Codex — for college students, K-12 educators, and college educators — connecting to existing course tools and materials. ChatGPT for Teachers is free for verified U.S. K-12 educators and districts, and eligible academic researchers get 12 months of free Pro-level access.",
-          },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "교육용 ChatGPT Work·Codex 플러그인 3종 공개",
           },
         },
         {
@@ -258,10 +246,6 @@ export const week32: WeeklyData = {
             deck: "Free users get unlimited text chats.",
             summary: "OpenAI updated GPT-5.6 Sol in ChatGPT and made GPT-5.6 Luna the default for Free and Go users. Per OpenAI's own evaluation, responses containing at least one factual error were about 62% less common with Luna and 68% less common with Sol versus GPT-5.5 Instant. Plus/Pro users get a reasoning-effort slider; free users get unlimited text chats and a Think button.",
           },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "GPT-5.6 Sol 개선, Luna 무료 무제한 개방",
-          },
         },
         {
           date: "8/7",
@@ -283,10 +267,6 @@ export const week32: WeeklyData = {
             title: "Responding to the next frontier of critical cyber capabilities",
             deck: "OpenAI says it cannot rule out the Critical tier of its own framework.",
             summary: "OpenAI stated that preliminary evaluations of its upcoming model Astra mean it cannot rule out the Critical cybersecurity capability level under its Preparedness Framework. Prior models including GPT-5.6 Sol were assessed at High. OpenAI is applying stricter security controls and pausing internal Astra activities that do not meet the strengthened requirements.",
-          },
-          thumbnail: {
-            src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-            alt: "OpenAI, Astra 사이버 능력 Critical 가능성 배제 못해",
           },
         },
       ],
@@ -390,10 +370,6 @@ export const week32: WeeklyData = {
             deck: "Three-day forecasts match the old two-day accuracy, and the weights are out.",
             summary: "On August 6, 2026 Google DeepMind published a Nature paper showing WeatherNext achieved state-of-the-art accuracy on tropical cyclone track, intensity and wind structure. Its three-day forecasts match what prior models could deliver at two days — DeepMind's own framing calls this equivalent to a decade of progress on 20-year trends. Google DeepMind also open-sourced the code and weights for WeatherNext 2 and WeatherNext Cyclones.",
           },
-          thumbnail: {
-            src: "/og-cache/deepmind-유럽-로보틱스-스타트업-15개사-액셀러레이터-가동-6e9c54fd.jpg",
-            alt: "DeepMind, 사이클론 예보 모델 오픈소스 공개",
-          },
         },
         {
           date: "8/6",
@@ -470,7 +446,7 @@ export const week32: WeeklyData = {
             summary: "On August 5, 2026 Meta released Muse Code in beta — a terminal coding agent — together with Muse Spark 1.2, the model powering it. Meta cites improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows, and says it significantly scaled up training compute on coding tasks. Muse Spark 1.2 is available in Muse Code and the Meta Model API. The blog shows comparison charts for Terminal-Bench 2.1, DeepSWE 1.1 and Meta Internal Coding Bench but does not print numeric scores in text.",
           },
           thumbnail: {
-            src: "/og-cache/meta-muse-spark-첫-모델-출시-9fdff4e0.jpg",
+            src: "/og-cache/메타-터미널-코딩-에이전트-muse-code-베타-출시-9eac21dc.png",
             alt: "메타, 터미널 코딩 에이전트 Muse Code 베타 출시",
           },
         },
@@ -800,10 +776,6 @@ export const week32: WeeklyData = {
             title: "Liquid AI Releases LFM2.5-2.6B for On-Device Agents",
             deck: "Liquid AI says its 2.6B model competes with ones four times larger.",
             summary: "On 2026-08-04 Liquid AI released LFM2.5-2.6B, an on-device agentic model: 2.69B total parameters, 131,072-token context, ~34T training tokens, 30 layers (22 double-gated short convolution blocks + 8 GQA). Vendor-measured decode speed 220 tok/s on an M5 Max, 113 tok/s on a Ryzen AI Max+ 395 CPU, and ~15K output tok/s at high concurrency on GPU. The model card states it is competitive with models 4x larger on tool use and instruction following, but explicitly not recommended for agentic coding or knowledge-heavy tasks. License is Liquid's own lfm1.0, not Apache-2.0.",
-          },
-          thumbnail: {
-            src: "/og-cache/deepgrove-3진-가중치-20b-moe-온디바이스-모델-공개-f38844ff.png",
-            alt: "리퀴드AI, 2.6B 온디바이스 에이전트 모델",
           },
         },
       ],
@@ -1203,10 +1175,6 @@ export const week32: WeeklyData = {
             title: "SeedRealtime handles seeing, hearing and speaking at once",
             deck: "Audio, visual and temporal information understood jointly.",
             summary: "ByteDance Seed released SeedRealtime on August 5, a native audio-visual full-duplex LLM. The company says it jointly understands audio, visual and temporal information to identify the interaction target and user intent, describing the result as a \"watch, listen, and speak\" experience. Vendor description."
-          },
-          thumbnail: {
-            src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
-            alt: "SeedRealtime, 보고 듣고 말하는 것을 동시에 하는 모델",
           },
         }
       ]

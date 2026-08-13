@@ -563,7 +563,7 @@
       "date": "2026-08-12",
       "source": "ab-run",
       "category": "ab-data",
-      "request": "AB 2026-08a 회차 생성 — 하이라이트 Top5(사용자 확정) + 오픈소스 픽 2종(cognee, paseo)",
+      "request": "AB 2026-08a 회차 생성 — 하이라이트 Top6(사용자 확정) + 오픈소스 픽 3종(cognee, paseo, watermarks-remover)",
       "status": "applied",
       "files": [
         "lib/ab/editions/2026-08a.ts",
@@ -574,10 +574,10 @@
         "kind": "count",
         "cmd": "grep -c 'rank: ' lib/ab/editions/2026-08a.ts",
         "op": "eq",
-        "value": 5,
+        "value": 6,
         "command": "grep -c 'rank: ' lib/ab/editions/2026-08a.ts"
       },
-      "notes": "20260812-075051-ab-20260731-20260812 · rev3: 사용자 지시로 Top6→Top5(메타·딥시크 제외, 생성형 미디어 축 신설), 기대값 6→5"
+      "notes": "20260812-075051-ab-20260731-20260812 · rev3: 사용자 지시로 Top6→Top5(메타·딥시크 제외, 생성형 미디어 축 신설), 기대값 6→5 · rev4: Grok 4.6 메인 승격으로 Top5→Top6, 기대값 5→6"
     },
     {
       "id": "IMP-0032",
@@ -655,6 +655,27 @@
         "value": 1
       },
       "notes": "20260812-075051-ab-20260731-20260812"
+    },
+    {
+      "id": "IMP-0036",
+      "date": "2026-08-13",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "Grok 4.6 메인 승격(Top6) + Seedance 2.0 등 주제 불일치 폴백 썸네일 25개 제거",
+      "status": "applied",
+      "files": [
+        "lib/ab/editions/2026-08a.ts",
+        "lib/weeks/2026-w3*.ts",
+        "_workspace/thumbnails/fallback-map.json"
+      ],
+      "commit": "b8be138",
+      "evidence": {
+        "kind": "count",
+        "cmd": "grep -c 'seedance-2-0-replicate' lib/ab/editions/2026-08a.ts lib/weeks/2026-w31.ts lib/weeks/2026-w32.ts lib/weeks/2026-w33.ts | awk -F: '{s+=$2} END {print s}'",
+        "op": "eq",
+        "value": 0
+      },
+      "notes": "VN-DESIGN-04"
     }
   ]
 }

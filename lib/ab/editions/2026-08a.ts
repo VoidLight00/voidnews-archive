@@ -69,10 +69,6 @@ const astraCritical = post({
     summary:
       "On August 7 OpenAI said preliminary evaluations of its next model, Astra, were strong enough that it cannot rule out the Critical cybersecurity level of its Preparedness Framework, and paused internal Astra work that does not yet meet hardened security requirements.",
   },
-  thumbnail: {
-    src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-    alt: "오픈AI, 차기 모델의 사이버 최고 위험 등급을 배제할 수 없다고 밝혔다",
-  },
 });
 
 // npm 공급망 웜(8/4)은 이번 회차에서 하이라이트 대신 보강 순위로 내렸다.
@@ -105,10 +101,6 @@ const mediaGen = post({
     summary:
       "ByteDance Seed introduced Seedance 2.5 on July 31, an audio-video joint model built to produce 30 seconds in a single generation, extendable twice. In the same window Luma shipped it inside its product on August 6, released Luma Scenes on August 11, and Higgsfield launched Cinema Studio 4.0 on August 12.",
     content: `**What changed**\nLength has been the hard part of generated video. Ten three-second clips stitched together drift — faces shift, lighting jumps, the camera loses continuity.\n\n**Seedance 2.5**, published by ByteDance Seed on July 31, is built as "a next-generation audio-video joint generation model for 30-second storytelling," producing up to 30 seconds **in a single generation**, extendable twice.\n\nIt "understands reference videos more precisely — capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation." All vendor description.\n\n**The ecosystem followed within ten days**\nAugust 5, SeedRealtime; August 6, Luma shipping Seedance 2.5 in-product; August 7, the developer API per secondary sources; August 11, Luma Scenes for keyframe-first editing; August 12, Higgsfield Cinema Studio 4.0 with lens, camera, lighting, colour and motion control.\n\n**Separate the dates**\nThe July 31 launch and the August 6 Luma integration are distinct events. Reading only the integration news loses the original release.\n\n**Availability is a separate question**\nIn the same window MiniMax H3 released weights under a licence that names South Korea, alongside the US, EU and UK, as excluded territory. A model opening is not the same as your being able to use it.\n\n**What to check**\nIf you hold a video budget, this is a re-estimation point: one pass at thirty seconds differs from ten passes stitched, in both production time and rework. Verify resolution, pricing and territorial limits separately before adopting.`
-  },
-  thumbnail: {
-    src: "/og-cache/bytedance-seedance-2-0-replicate-fal-정식--f52c21c8.png",
-    alt: "30초 영상을 한 번에 뽑는 시대가 이 3주에 열렸습니다",
   },
 });
 
@@ -174,9 +166,35 @@ const freeTier = post({
     summary:
       "On August 6 OpenAI made GPT-5.6 Luna the default for free users and opened unlimited text chats. Five days later it launched ChatGPT ads in the UK, Mexico, Brazil, Japan and South Korea — shown to logged-in adults on exactly those Free and Go tiers.",
   },
+});
+
+const grok46 = post({
+  date: "8/12",
+  platform: "X+Threads",
+  title: "그록 4.6, 종합 지능 지수만 GPT-5.6 Sol과 동률",
+  featured: true,
+  deck: "5주 만에 56점에서 61점. 다만 코딩 벤치는 아직 뒤집니다.",
+  summary:
+    "SpaceXAI가 8월 12일 Grok 4.6을 공개했어요. 긴 작업을 여러 단계에 걸쳐 끌고 가는 능력과 스스로 결과를 점검하는 동작에 초점을 맞췄어요. 자사 공개 표 기준 Artificial Analysis 지능 지수 61점으로 GPT-5.6 Sol Max와 같고 5주 전 Grok 4.5의 56점에서 5점 올랐지만, 같은 표의 DeepSWE와 Terminal-Bench에서는 Sol과 Fable 5가 여전히 앞서요.",
+  content: `**무엇이 나왔나**\n8월 12일 SpaceXAI가 **Grok 4.6**을 공개했습니다. 공식 발표문의 초점은 성능 숫자가 아니라 지속성입니다. "여러 단계에 걸친 복잡한 작업을 끝까지 붙들고 간다"는 표현을 썼고, 긴 작업에서 모델이 다음으로 넘어가기 전에 자기 결과를 점검하는 동작이 더 자주 관측됐다고 밝혔습니다.\n\n**자사 공개 표 (Grok 4.6 High 기준)**\n- AA 지능 지수 **61** — Grok 4.5는 56, GPT-5.6 Sol Max도 **61**, Fable 5 Max는 **62**\n- GDPVal-AA v2 **1753** — 4.5는 1526, Sol Max 1728, Fable 5 Max 1741\n- CursorBench v3.2 **69.9%** — 4.5는 66.7%, Sol Max 67.2%, Fable 5 Max 70.5%\n- DeepSWE v1.1 **65.9%** — 4.5는 54%, Sol Max **73%**, Fable 5 Max **70%**\n- Terminal-Bench v3.0 **26%** — 4.5는 15.7%, Sol Max **34.6%**, Fable 5 Max **34.1%**\n\n**어디까지가 사실인가**\n"GPT-5.6 Sol을 따라잡았다"가 성립하는 건 **AA 지능 지수 한 줄**입니다. 아홉 개 벤치마크를 합산한 종합 점수라 개별 능력을 가리지 못합니다. 같은 표에서 코딩(DeepSWE)과 터미널 작업(Terminal-Bench)은 Sol과 Fable 5가 여전히 앞섭니다. 상승 폭이 큰 건 분명합니다 — 5주 만에 DeepSWE가 54%에서 65.9%로 올랐습니다.\n\n**쓸 수 있는 곳과 값**\nCursor, Grok Build, API에서 바로 쓸 수 있고 OpenRouter·Vercel·Cloudflare에도 올라갔습니다. 100만 토큰당 입력 2달러, 출력 6달러이고 빠른 변형은 두 배입니다. 첫 주에는 Grok Build와 Cursor에서 포함 사용량을 두 배로 줍니다.\n\n**직접 확인할 것**\n종합 지수만 보고 갈아타지 마십시오. 본인이 실제로 시키는 일이 코드 수정이면 DeepSWE·Terminal-Bench 쪽을, 긴 리서치나 문서 작업이면 GDPVal-AA 쪽을 보는 게 맞습니다. 첫 주 무료 사용량이 있으니 같은 과제를 두 모델에 돌려 비교하는 비용이 지금은 거의 없습니다.`,
+  source: "https://x.ai/news/grok-4-6",
+  officialUrl: "https://x.ai/news/grok-4-6",
+  verifiedAt: "2026-08-13",
+  backupUrls: [
+    { label: "Artificial Analysis 독립 집계", url: "https://artificialanalysis.ai/models/grok-4-6" },
+    { label: "The Decoder 보도", url: "https://the-decoder.com/spacexais-grok-4-6-matches-openais-best-model-and-undercuts-it-on-price/" },
+  ],
+  slug: "xai-20260812-grok-4-6-vip",
+  tags: ["xAI", "SpaceXAI", "Grok", "프런티어 모델", "코딩"],
+  en: {
+    title: "Grok 4.6 ties GPT-5.6 Sol on the composite intelligence index",
+    deck: "56 to 61 in five weeks, though coding benchmarks still trail.",
+    summary: "SpaceXAI released Grok 4.6 on August 12, focused on long-running agents and self-verification. Its own published table puts it at 61 on the Artificial Analysis Intelligence Index, level with GPT-5.6 Sol Max and up from Grok 4.5's 56 five weeks earlier. In the same table DeepSWE (65.9%) and Terminal-Bench v3.0 (26%) still trail Sol Max and Fable 5 Max. Pricing is $2 per million input tokens and $6 per million output.",
+    content: ``
+  },
   thumbnail: {
-    src: "/og-cache/gpt-5-3-codex-is-now-the-base-model-for--d3b67286.webp",
-    alt: "무료 사용자에게 무제한을 열고, 닷새 뒤 한국에 광고를 넣었다",
+    src: "/og-cache/그록-4-6-종합-지능-지수에서-gpt-5-6-sol과-동률-692c0339.png",
+    alt: "그록 4.6, 종합 지능 지수만 GPT-5.6 Sol과 동률",
   },
 });
 
@@ -269,6 +287,7 @@ export const edition2026_08a: ABEdition = {
     "무료 티어의 성격이 바뀐다 — 무제한 개방과 한국 광고 출시",
     "표식이 의무가 됐다 — 그리고 9일 뒤 제거 도구가 나왔다",
     "30초 영상이 단일 생성으로 — Seedance 2.5와 그 열흘",
+    "종합 지수는 동률, 개별 능력은 아직 — Grok 4.6",
   ],
 
   highlights: [
@@ -287,6 +306,9 @@ export const edition2026_08a: ABEdition = {
     { rank: 5, tier: "feature", post: mediaGen, sourceWeek: "2026-w31", sourceCompany: "ByteDance Seed",
       editorial: "이번 회차에서 처음 들어가는 축입니다. 그동안 수집 레지스트리에 생성형 미디어 publisher가 0개였습니다.",
       keyQuote: "30초를 한 번의 생성으로 — 이어붙이기가 아닙니다" },
+    { rank: 6, tier: "feature", post: grok46, sourceWeek: "2026-w33", sourceCompany: "SpaceXAI",
+      editorial: "창 마지막 날 발표라 아슬아슬하게 들어왔습니다. \"따라잡았다\"가 어느 지표에서만 참인지 반드시 짚어야 하는 카드입니다.",
+      keyQuote: "동률은 종합 지수 한 줄. 코딩은 Sol 73% vs Grok 65.9%" },
   ],
 
   editorsPicks,
