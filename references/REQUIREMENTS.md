@@ -41,7 +41,7 @@
 | R3.1 | 요구 날짜 범위 종료일 직전 공백 차단 (tail-window) | `check-date-coverage.mjs` exit 2 (HARD) | voidbrief-conductor |
 | R3.2 | 내부 interior 공백(연속 N일) 감지 | `check-date-coverage.mjs --max-interior-gap` | voidbrief-conductor |
 | R3.3 | 필수 publisher 매트릭스 충족 | `01_official_source_matrix_check.json` | voidbrief-collector |
-| R3.4 | **run 종료일까지 활성인 큐레이터 레지스트리 전체 방문(discovery-only) + YouTube 창 안 영상 전수 결정 + 발견사건 공식 1차 출처 승격** | `check_curator_coverage.sh` + `check_video_coverage.sh` + `verify_curator_channels.sh` (HARD) | voidbrief-collector / voidbrief-luna-collector |
+| R3.4 | **run 종료일까지 활성인 큐레이터 레지스트리 전체 상태 기록(discovery-only). `provable` 채널은 창 안 항목 전수 결정, `best-effort`·`blocked-cache`·`disabled` 채널은 별도 집계하며 현재 전수 방문으로 계산 금지. 발견 사건은 공식 1차 출처로 승격** | `~/.claude/skills/voidnews-briefing-pipeline/references/check_curator_visit_evidence.sh` + `check_curator_coverage.sh` + `check_video_coverage.sh` + `verify_curator_channels.sh` (HARD) | voidbrief-collector / voidbrief-luna-collector |
 
 ## R4 — 사이트 산출 (Site Output)
 
@@ -101,9 +101,10 @@
 | `check-collection-provenance.mjs` | HARD | 수집 후/run | 1 |
 | `check-date-coverage.mjs` | HARD | consolidate/run | 2 |
 | `check_curator_coverage.sh` | HARD | 수집 직후(Phase1) | 2 |
+| `check_curator_visit_evidence.sh` | HARD | 수집 직후(Phase1) | 2 |
 | `verify_curator_channels.sh` | HARD | 레지스트리 변경 시 | 1 |
 | `verify_collection_routing.sh --stage preverify|postverify|postrank` | HARD | Luna-first 수집·검증·랭킹 경계 | 2 |
 | `verify_claim_verification.sh --stage pre-normalize|post-rank` | HARD | 선택 주장 validator·hero reconciliation | 2 |
 
 신규 `scripts/check-*.mjs` / `verify-*.mjs`는 `run-all-gates.mjs`가 glob으로 자동 합류시킨다(하드코딩 배선 누락 방지, 확장성 축).
-**큐레이터 게이트 2종(`.sh`)은 사이트 빌드가 아니라 run phase용**이라 `run-all-gates`(빌드 prebuild) 자동발견 대상이 아니다. 위치는 `~/.claude/skills/voidnews-briefing-pipeline/references/`, conductor가 Phase1 직후 직접 호출한다(R3.4·conductor 폐루프).
+**큐레이터 게이트 3종(`.sh`)은 사이트 빌드가 아니라 run phase용**이라 `run-all-gates`(빌드 prebuild) 자동발견 대상이 아니다. 위치는 `~/.claude/skills/voidnews-briefing-pipeline/references/`, conductor가 Phase1 직후 직접 호출한다(R3.4·conductor 폐루프).

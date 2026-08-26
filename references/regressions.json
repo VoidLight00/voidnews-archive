@@ -150,6 +150,20 @@
       "min": 1,
       "owner": "voidbrief-qa-auditor",
       "note": "가로 accent line 게이트가 BUILD_GATES 에서 빠지면 규칙이 산문으로 되돌아간다(VN-DESIGN-02)"
+    },
+    {
+      "id": "VN012",
+      "title": "큐레이터 방문 증거 게이트 배선 제거 방지",
+      "type": "grep_present_min",
+      "globs": [
+        "references/REQUIREMENTS.md"
+      ],
+      "patterns": [
+        "check_curator_visit_evidence.sh"
+      ],
+      "min": 1,
+      "owner": "voidbrief-conductor",
+      "note": "HTTP 200 도달성을 itemsFound로 오인한 VN-GATE-03 재발 방지. run-phase HARD 게이트 경로가 R3.4 계약에서 빠지면 빌드를 차단한다."
     }
   ]
 }

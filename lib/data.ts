@@ -16,6 +16,8 @@ import { week29 } from "./weeks/2026-w29";
 import { week30 } from "./weeks/2026-w30";
 import { week31 } from "./weeks/2026-w31";
 import { week32 } from "./weeks/2026-w32";
+import { week35 } from "./weeks/2026-w35";
+import { week34 } from "./weeks/2026-w34";
 import { week33 } from "./weeks/2026-w33";
 import { week13 } from "./weeks/2026-w13";
 import { week12 } from "./weeks/2026-w12";
@@ -87,6 +89,8 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week35,
+  week34,
   week33,
   week32,
   week31,

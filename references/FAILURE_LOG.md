@@ -140,7 +140,19 @@ QA(`voidbrief-qa-auditor`)나 사용자가 새 결함을 발견하면:
 
 **교훈**: 게이트가 exit 0을 냈다고 값이 참인 건 아니다. **집계 키가 대상보다 거칠면 게이트는 통과하면서 거짓을 통과시킨다.** 커버리지 수치는 그 채널에 고유한 식별자(URL·handle)로만 귀속한다. 이 결함은 신규 게이트(`check_block_staleness`)를 시험하다 X 행의 `itemsFound=9`가 눈에 걸려 발견됐다 — 게이트를 늘리면 기존 게이트의 거짓 통과도 같이 드러난다.
 
-### VN-CI-01 — 하네스 스코프 evidence 가 Vercel 빌드를 막음 (2026-08-13)
+### VN-GATE-03 — HTTP 도달성을 채널 수확으로 오인해 106/106 거짓 통과 (2026-08-24)
+
+**증상**: 2026-08b 수집에서 `check_curator_coverage.sh`가 channels=106/106, itemsFound=366으로 exit 0을 반환했지만 적대적 재감사 결과 실제 창 안 항목과 `promoted|skipped:<사유>`가 결속된 채널은 19개뿐이었다. 웹 49개는 인덱스 HTTP 200 한 번을 `itemsFound=1`로 기록했고, Reddit 7개는 collector 설정에서 disabled인데 coverage에서는 harvested로 기록됐다. X 37개는 정책상 유효한 차단 기록 재사용이었지만 현재 실행 방문 수로 오해될 수 있었다. Voidwiki 127건도 JSON 항목 파싱이 아니라 날짜 문자열 정규식 개수였다.
+
+**원인**: 기존 게이트가 `visited=true`와 `itemsFound>0`만 검사했고, 채널별 수집 방식·전수성 수준·item-level 결정 근거와 `itemsFound`의 파생 관계를 검증하지 않았다. 레지스트리도 RSS·날짜별 아카이브·동적 인덱스·차단 캐시·비활성 소스를 모두 같은 `enabled` 계약으로 취급했다.
+
+**수정**: curator registry v1.5에 `coverageMode`, `coverageSource`, `exhaustiveness` 계약을 추가했다. 신규 HARD 게이트 `check_curator_visit_evidence.py/.sh`는 HTTP 200을 수확으로 인정하지 않고, provable 채널의 항목별 결정·파생 count, best-effort의 불완전성 명시, blocked-cache의 재검증 시각, disabled의 0건 계약을 검사한다. `check_curator_coverage.sh`가 이 게이트를 먼저 호출하도록 배선했다. 8종 selftest로 거짓 수확·disabled Reddit·차단 캐시·RSS·아카이브·동적 인덱스·로컬 grep 오집계를 재현한다.
+
+**재발 방지 규칙**: `itemsFound`는 수집기가 임의로 쓰는 숫자가 아니다. item-level `decision`에서 결정론으로 파생한다. HTTP 성공은 `checked[]` 증거일 뿐이며, `enumerated-index`는 pagination/end-of-list 또는 명시적 `incompleteReason` 없이 완료로 판정할 수 없다. blocked/disabled/best-effort 채널은 현재 전수 방문 수와 분리해서 보고한다.
+
+**담당**: `voidbrief-collector`, `voidbrief-conductor`, `voidbrief-qa-auditor`. 머신체크: `check_curator_visit_evidence_selftest.sh` + `check_curator_coverage.sh` 선행 배선 + regressions VN012.
+
+
 
 **증상**: 로컬 `npm run build` 8/8 게이트 통과 후 push 했는데 Vercel 프로덕션 빌드가
 22초 만에 실패. `verify-improvements.mjs` FAIL exit 2, ledger 6건이 REGRESSED.
