@@ -6,8 +6,29 @@ export const week35: WeeklyData = {
   year: 2026,
   slug: "2026-w35",
   period: "8/24 ~ 8/30",
-  totalPosts: 8,
+  totalPosts: 9,
   companies: [
+    {
+      name: "Z.ai",
+      color: "#2F61D5",
+      posts: [
+        {
+          date: "8/26",
+          platform: "X+Threads",
+          title: "GLM-5.3-Flash 공개, OpenRouter 익명 모델 Ox Alpha의 정체였다",
+          deck: "320B 중 18B만 활성화하고 네이티브 멀티모달·100만 토큰 컨텍스트 제공",
+          summary: "Z.ai GLM-5.3-Flash는 320B total·18B active 구조와 이미지·영상 입력, 1,048,576토큰 컨텍스트를 제공 OpenRouter가 stealth model Ox Alpha의 정체가 GLM-5.3-Flash였다고 공식 FAQ에서 확인 현재 할인 가격은 입력 $0.075/M·출력 $0.25/M·캐시 읽기 $0.015/M 주의: 성능 비교와 10분의 1 가격 주장은 Z.ai 자체 보고.",
+          content: "**Ox Alpha의 정체가 공개됐습니다**\n\nZ.ai는 GLM-5.3-Flash를 320B total·18B active 네이티브 멀티모달 모델로 공개했습니다. OpenRouter 공식 FAQ는 이전 stealth model Ox Alpha가 GLM-5.3-Flash였다고 확인합니다. OpenRouter 사양은 1,048,576토큰 컨텍스트와 최대 131,072토큰 출력입니다.\n\n**직접 확인할 것**\n\nOx Alpha 사용 기록이 있다면 `z-ai/glm-5.3-flash`에서 동일 프롬프트를 다시 실행해 품질·총 토큰·비용을 비교하십시오. GLM-5.2 및 Claude Opus 4.8 비교는 Z.ai 자체 평가입니다.",
+          source: "https://openrouter.ai/z-ai/glm-5.3-flash",
+          officialUrl: "https://openrouter.ai/z-ai/glm-5.3-flash",
+          verifiedAt: "2026-08-26",
+          backupUrls: [{ label: "Z.ai GLM-5 공식 저장소", url: "https://github.com/zai-org/GLM-5" }, { label: "Hugging Face 공식 가중치", url: "https://huggingface.co/zai-org/GLM-5.3-Flash" }],
+          tags: ["AI", "2026-08b", "GLM", "OpenRouter"],
+          slug: "zai-20260826-glm-5-3-flash-ox-alpha",
+          en: { title: "GLM-5.3-Flash launches as the model behind OpenRouter's Ox Alpha", deck: "The native multimodal MoE activates 18B of 320B parameters with a one-million-token context.", summary: "Z.ai released GLM-5.3-Flash on August 26. OpenRouter identifies it as the former stealth model Ox Alpha and lists a 1,048,576-token context at discounted pricing of $0.075/M input and $0.25/M output tokens.", content: "Z.ai released GLM-5.3-Flash on August 26. OpenRouter identifies it as the former stealth model Ox Alpha. Benchmark comparisons remain vendor-reported." },
+        }
+      ],
+    },
     {
       name: "Apple",
       color: "#111111",
