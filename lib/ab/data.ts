@@ -41,6 +41,7 @@ export interface ABEditorPick {
   editorial?: string; // 큐레이터 맥락 (왜 이걸 넣었는지)
   thumbnail?: MediaImage;
   images?: MediaImage[];
+  threadsEmbedUrl?: string; // Threads 공식 iframe embed URL
   tags?: string[];
   tier?: HighlightTier; // 기본 feature
 }

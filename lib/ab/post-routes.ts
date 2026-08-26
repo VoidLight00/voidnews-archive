@@ -41,6 +41,7 @@ function adaptEditorPickToPost(item: ABEditorPick): Post {
     backupUrls: item.guideUrl ? [{ label: item.guideLabel || "가이드 →", url: item.guideUrl }] : undefined,
     thumbnail: item.thumbnail,
     images: item.images,
+    threadsEmbedUrl: item.threadsEmbedUrl,
     tags: item.tags,
     slug: item.slug,
     deck: item.deck,

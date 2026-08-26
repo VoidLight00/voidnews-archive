@@ -178,6 +178,36 @@ const vip6 = post({
   },
 });
 
+const lateNewsWatch: ABEditorPick[] = [
+  {
+    title: "GPT-6 학습 중단설 — 공식 원출처 없는 미확인 주장",
+    slug: "openai-20260827-gpt6-training-stop-unverified",
+    deck: "OpenAI 공식 발표와 식별 가능한 원보도에서 학습 중단 사건을 확인하지 못했습니다.",
+    category: "AI 팩트체크",
+    sourceUrl: "https://openai.com/",
+    sourceLabel: "OpenAI 공식 홈페이지 →",
+    summary: "8월 27일 기준 GPT-6 학습 중단·일시정지·취소를 확인하는 OpenAI 공식 원문이나 추적 가능한 원보도가 발견되지 않았습니다.",
+    body: "공개 Threads 검색, Bing RSS와 일반 검색, OpenAI 공식 홈페이지를 확인했지만 해당 사건의 원출처는 나오지 않았습니다. 공개 자료 부재가 내부 실행의 부재를 증명하지는 않으므로, ‘거짓’이라고 단정하는 대신 ‘미확인 주장’으로 보류합니다.\n\n현재 공개 공식 정보에서 확인되는 최신 계열은 GPT-5.6입니다. GPT-6 이름과 학습 상태는 공식 확인 전까지 카드의 사실 문장으로 사용하지 않습니다.",
+    editorial: "속보를 빨리 싣는 것보다 모델명·사건 정체·원출처를 먼저 고정하는 것이 중요합니다.",
+    tags: ["OpenAI", "GPT-6", "팩트체크", "미확인"],
+    tier: "feature",
+  },
+  {
+    title: "Tiangong Omni — 휴머노이드 400m 45.66초",
+    slug: "physical-ai-20260827-tiangong-omni-400m",
+    deck: "World Humanoid Robot Games 출처 영상으로 확인한 피지컬 AI 달리기 사례입니다.",
+    category: "Physical AI",
+    sourceUrl: "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+    sourceLabel: "원영상 보기 →",
+    summary: "Tiangong Omni가 World Humanoid Robot Games 400m를 45.66초에 완주하고 우승했다는 행사 출처 영상입니다.",
+    body: "영상에는 팔을 높이 들고 몸을 앞으로 기울인 채 곡선을 도는 달리기 모습이 담겼습니다. 기록과 우승 주장은 World Humanoid Robot Games 출처로 표시됐습니다.\n\n다만 원게시물은 원격조종·자율제어·혼합제어 여부를 밝히지 않았습니다. 자세를 로봇이 스스로 발견했다는 관련 재게시물 주장도 공식 개발사 원문으로 확인되지 않아 제외했습니다.",
+    threadsEmbedUrl: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+    editorial: "피지컬 AI 시연은 기록뿐 아니라 제어 방식·재시도·배터리·트랙 조건까지 함께 봐야 합니다.",
+    tags: ["Physical AI", "Tiangong Omni", "휴머노이드", "로봇"],
+    tier: "feature",
+  },
+];
+
 const editorsPicks: ABEditorPick[] = [
   {
     title: "fluent-korean — Claude Code의 한국어 문장 품질을 다듬는 output style",
@@ -230,5 +260,6 @@ export const edition2026_08b: ABEdition = {
     { rank: 5, tier: "feature", post: vip5, sourceWeek: "2026-w34", sourceCompany: "Pika", editorial: "사용자님께서 2026-08-26 직접 선택한 VIP 카드입니다." },
     { rank: 6, tier: "feature", post: vip6, sourceWeek: "2026-w35", sourceCompany: "Apple", editorial: "사용자님께서 2026-08-26 직접 선택한 VIP 카드입니다." }
   ],
+  modelWatch: lateNewsWatch,
   editorsPicks,
 };
