@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/run-all-gates.mjs",
+    "prebuild": "node scripts/normalize-og-cache-names.mjs && node scripts/run-all-gates.mjs",
     "gates": "node scripts/run-all-gates.mjs",
     "build": "next build",
     "postbuild": "node scripts/check-render-leaks.mjs",
