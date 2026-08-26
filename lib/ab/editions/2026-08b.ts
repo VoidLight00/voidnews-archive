@@ -212,7 +212,7 @@ const editorsPicks: ABEditorPick[] = [
 export const edition2026_08b: ABEdition = {
   slug: "2026-08b",
   volume: 11,
-  title: "AI&Beyond — 에이전트 운영에서 로컬 AI 하드웨어까지",
+  title: "GLM-5.3-Flash·Ox Alpha 공개부터 에이전트 보안과 로컬 AI까지",
   theme: "운영 · 보안 · 오픈 모델 · 정책 · 생성형 미디어 · 로컬 AI",
   period: "2026-08-17 ~ 2026-08-26",
   coveredWeeks: [{ slug: "2026-w34", period: "8/17 ~ 8/23" }, { slug: "2026-w35", period: "8/24 ~ 8/30" }],
