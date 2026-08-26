@@ -416,6 +416,78 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             </dl>
           ) : null}
 
+          {post.visualComparisons && post.visualComparisons.length > 0 ? (
+            <section aria-label={activeLang === "ko" ? "모델 시각 결과 비교" : "Visual model comparisons"} style={{ margin: "28px 0" }}>
+              <div style={{ borderTop: "3px double var(--rule)", paddingTop: 20, marginBottom: 16 }}>
+                <span className="mono" style={{ display: "block", color: "var(--accent)", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>
+                  Visual comparison lab
+                </span>
+                <h2 className="serif" style={{ margin: "8px 0 0", fontSize: "clamp(22px, 3.5vw, 30px)", lineHeight: 1.18 }}>
+                  {activeLang === "ko" ? "모델별 결과와 비교 조건을 함께 봅니다" : "Results and comparison conditions"}
+                </h2>
+                <p style={{ margin: "10px 0 0", maxWidth: "68ch", color: "var(--text-soft)", lineHeight: 1.65 }}>
+                  {activeLang === "ko"
+                    ? "선별된 시각 데모에는 selection effect가 있습니다. 같은 프롬프트·시간·도구·시작 자산이 확인되지 않으면 통제 벤치마크가 아니라 시연 비교로 표시합니다."
+                    : "Curated demos have selection effects. Unless prompt, runtime, tools and starting assets are matched, each item is labeled as a showcase rather than a controlled benchmark."}
+                </p>
+              </div>
+              <div style={{ display: "grid", gap: 18 }}>
+                {post.visualComparisons.map((comparison, index) => {
+                  const pending = comparison.comparisonClass === "pending-source";
+                  return (
+                    <article key={`${comparison.sourceUrl}-${index}`} style={{ border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", background: "var(--card)" }}>
+                      {comparison.embedUrl ? (
+                        <div style={{ background: "#000", minHeight: 320 }}>
+                          <iframe
+                            src={comparison.embedUrl}
+                            title={`${comparison.model} · ${comparison.task}`}
+                            loading="lazy"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            style={{ width: "100%", minHeight: 520, border: 0, display: "block", background: "var(--surface)" }}
+                          />
+                        </div>
+                      ) : (
+                        <div style={{ minHeight: 140, display: "grid", placeItems: "center", padding: 24, background: "linear-gradient(135deg, var(--surface-2), var(--card))", color: "var(--muted)", textAlign: "center" }}>
+                          {activeLang === "ko" ? "원영상과 모델 조건을 확인하는 중입니다." : "Original media and model conditions are being verified."}
+                        </div>
+                      )}
+                      <div style={{ padding: "clamp(16px, 3vw, 24px)" }}>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, alignItems: "center" }}>
+                          <span className="mono" style={{ border: `1px solid ${pending ? "var(--muted)" : "var(--accent)"}`, color: pending ? "var(--muted)" : "var(--accent)", borderRadius: 999, padding: "4px 8px", fontSize: 10, fontWeight: 800, letterSpacing: "0.08em" }}>
+                            {comparison.comparisonLabel}
+                          </span>
+                          <span className="mono" style={{ color: "var(--text-soft)", fontSize: 11 }}>{comparison.model}</span>
+                        </div>
+                        <h3 style={{ margin: "12px 0 4px", fontSize: "clamp(18px, 2.8vw, 23px)", lineHeight: 1.25 }}>{comparison.title}</h3>
+                        <p style={{ margin: 0, color: "var(--text-soft)", lineHeight: 1.6 }}>{comparison.task}</p>
+                        <dl style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 10, margin: "18px 0 0" }}>
+                          {[
+                            [activeLang === "ko" ? "프롬프트" : "Prompt", comparison.promptStatus],
+                            [activeLang === "ko" ? "실행 시간" : "Runtime", comparison.runtimeStatus],
+                            [activeLang === "ko" ? "도구·자산" : "Tools and assets", comparison.toolStatus],
+                          ].map(([label, value]) => (
+                            <div key={label} style={{ borderTop: "1px solid var(--border2)", paddingTop: 9 }}>
+                              <dt className="mono" style={{ fontSize: 10, letterSpacing: "0.12em", color: "var(--muted)", textTransform: "uppercase" }}>{label}</dt>
+                              <dd style={{ margin: "5px 0 0", fontSize: 13, lineHeight: 1.55, color: "var(--text)" }}>{value}</dd>
+                            </div>
+                          ))}
+                        </dl>
+                        {comparison.benchmarkNote ? <p style={{ margin: "16px 0 0", lineHeight: 1.65 }}>{comparison.benchmarkNote}</p> : null}
+                        <aside style={{ marginTop: 14, borderTop: "1px solid var(--gold)", padding: "10px 0", background: "color-mix(in srgb, var(--gold) 8%, transparent)", color: "var(--text-soft)", lineHeight: 1.6 }}>
+                          {comparison.caveat}
+                        </aside>
+                        <a href={comparison.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 16, color: "var(--accent)", fontWeight: 800, textDecoration: "none" }}>
+                          {activeLang === "ko" ? "원게시물 열기 →" : "Open original post →"}
+                        </a>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ) : null}
+
           {/* Bilingual language tabs */}
           <div className={styles.langTabs} role="tablist" aria-label="Language">
             <button

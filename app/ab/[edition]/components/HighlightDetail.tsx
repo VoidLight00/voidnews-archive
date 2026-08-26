@@ -127,6 +127,36 @@ export function HighlightDetail({ item }: { item: ABHighlight }) {
         </div>
       )}
 
+      {item.post.visualComparisons && item.post.visualComparisons.length > 0 && (
+        <div style={{ marginTop: 20, display: "grid", gap: 12 }}>
+          <SectionEyebrow label={`시각 비교 랩 ${item.post.visualComparisons.length}개 · 조건과 한계를 함께 표시`} tone="accent" />
+          {item.post.visualComparisons.map((comparison, index) => (
+            <article key={`${comparison.sourceUrl}-${index}`} style={{ border: "1px solid var(--border2)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--surface)" }}>
+              {comparison.embedUrl ? (
+                <iframe
+                  src={comparison.embedUrl}
+                  title={`${comparison.model} · ${comparison.task}`}
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{ width: "100%", minHeight: 500, border: 0, display: "block" }}
+                />
+              ) : null}
+              <div style={{ padding: 14 }}>
+                <span className="mono" style={{ color: comparison.comparisonClass === "pending-source" ? "var(--muted)" : "var(--accent)", fontSize: 10, fontWeight: 800, letterSpacing: "0.1em" }}>
+                  {comparison.comparisonLabel} · {comparison.model}
+                </span>
+                <h4 style={{ margin: "8px 0 4px", fontSize: 17, lineHeight: 1.3 }}>{stripMarkdown(comparison.title)}</h4>
+                <p style={{ margin: 0, color: "var(--text-soft)", fontSize: 13, lineHeight: 1.55 }}>{stripMarkdown(comparison.caveat)}</p>
+                <a href={comparison.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ display: "inline-block", marginTop: 10, color: "var(--accent)", fontSize: 12, fontWeight: 800, textDecoration: "none" }}>
+                  원게시물 →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
       <ImageGallery images={item.post.images} tone="accent" />
       <XPostEmbed url={xStatusUrl} />
 

@@ -43,6 +43,21 @@ export interface CommunityDiscovery {
   itemUrl?: string;
 }
 
+export interface VisualComparisonItem {
+  title: string;
+  model: string;
+  task: string;
+  comparisonClass: "controlled" | "showcase" | "context" | "pending-source";
+  comparisonLabel: string;
+  sourceUrl: string;
+  embedUrl?: string;
+  promptStatus: string;
+  runtimeStatus: string;
+  toolStatus: string;
+  benchmarkNote?: string;
+  caveat: string;
+}
+
 export interface Post {
   date: string;
   platform: "X" | "Threads" | "X+Threads";
@@ -71,6 +86,7 @@ export interface Post {
   videoClips?: { src: string; poster?: string; title?: string; sourceUrl?: string; durationSec?: number }[]; // 여러 영상 갤러리 (카드 내 각각 인라인 재생)
   threadsEmbedUrl?: string;   // Threads 게시물 iframe embed URL
   galleryImages?: { src: string; alt: string; caption?: string }[]; // 본문 중간 inline 이미지
+  visualComparisons?: VisualComparisonItem[]; // 모델별 시각 결과·조건·원게시물 비교 랩
 }
 
 export interface Company {
