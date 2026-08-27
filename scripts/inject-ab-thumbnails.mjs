@@ -9,9 +9,10 @@ import crypto from "node:crypto";
 const REPO = path.resolve(import.meta.dirname, "..");
 const CACHE_DIR = path.join(REPO, "public/og-cache");
 const MANIFEST = path.join(CACHE_DIR, "_manifest.json");
-const TARGETS = [
-  path.join(REPO, "lib/ab/editions/2026-05b.ts"),
-];
+// 대상 파일은 인자로 받는다. 인자가 없으면 최초 대상이던 05b를 유지한다.
+const TARGETS = process.argv.slice(2).length
+  ? process.argv.slice(2).map((a) => path.resolve(REPO, a))
+  : [path.join(REPO, "lib/ab/editions/2026-05b.ts")];
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15";
 const HTML_TIMEOUT_MS = 8000;

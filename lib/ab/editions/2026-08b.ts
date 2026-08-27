@@ -24,6 +24,10 @@ const vip1 = post({
     summary: "Claude Code 2.1.234 displays authenticated GitLab merge-request status, resumes sessions after claude.ai usage limits reset, and rejects Windows NT namespace paths at the pre-approved file boundary.",
     content: "Claude Code 2.1.234 displays authenticated GitLab merge-request status, resumes sessions after claude.ai usage limits reset, and rejects Windows NT namespace paths at the pre-approved file boundary.",
   },
+  thumbnail: {
+    src: "/og-cache/claude-code-gitlab-mr-상태-배지와-사용량-제한-자동-재-bbeb623c.png",
+    alt: "Claude Code, GitLab MR 상태 배지와 사용량 제한 자동 재개 추가",
+  },
 });
 
 const vip2 = post({
@@ -46,6 +50,10 @@ const vip2 = post({
     summary: "Wiz disclosed a Snowflake GitHub Actions flaw where issue titles reached a shell and exposed a path to Jira read credentials. The incident was fixed in June; the research was published August 17.",
     content: "Wiz disclosed a Snowflake GitHub Actions flaw where issue titles reached a shell and exposed a path to Jira read credentials. The incident was fixed in June; the research was published August 17.",
   },
+  thumbnail: {
+    src: "/og-cache/ai가-공동-작성한-ci-변경-snowflake-jira-자격-증명-노출-64d3338b.webp",
+    alt: "AI가 공동 작성한 CI 변경, Snowflake Jira 자격 증명 노출 경로 만들었다",
+  },
 });
 
 const vip3 = post({
@@ -56,10 +64,14 @@ const vip3 = post({
   deck: "320B 중 18B만 활성화하고 100만 토큰 컨텍스트를 제공하는 네이티브 멀티모달 모델",
   summary: "Z.ai GLM-5.3-Flash는 320B total·18B active MoE와 이미지·영상 입력, 1,048,576토큰 컨텍스트를 제공 OpenRouter가 stealth model Ox Alpha의 정체가 GLM-5.3-Flash였다고 공식 FAQ에서 확인 입력 $0.075/M·출력 $0.25/M·캐시 읽기 $0.015/M 주의: 벤치마크·10분의 1 가격 주장은 Z.ai 자체 보고",
   content: "**Ox Alpha의 정체가 공개됐습니다**\n\nZ.ai는 8월 26일 GLM-5.3-Flash를 공개했습니다. 공식 가중치는 총 3,200억 파라미터 가운데 토큰당 180억을 활성화하고, 텍스트·이미지·영상을 입력받는 네이티브 멀티모달 구조와 MIT 라이선스를 사용합니다. OpenRouter는 모델 FAQ에서 이전 stealth model인 Ox Alpha가 GLM-5.3-Flash였다고 명시했습니다.\n\nOpenRouter 제공 사양은 1,048,576토큰 컨텍스트와 최대 131,072토큰 출력입니다. 50% 할인 가격은 100만 토큰당 입력 0.075달러, 출력 0.25달러, 캐시 읽기 0.015달러입니다.\n\n**검증 한계**\n\nGLM-5.2보다 전반적으로 높고 Claude Opus 4.8에 접근한다는 벤치마크 및 10분의 1 가격 주장은 Z.ai 공식 문서의 자체 평가입니다. OpenRouter의 Ox Alpha 확인은 공식 플랫폼 FAQ 근거이지만, Z.ai GitHub와 Hugging Face에는 Ox Alpha 명칭이 없습니다.\n\n**직접 확인할 것**\n\nOpenRouter의 `z-ai/glm-5.3-flash`로 실제 코딩·장기 에이전트 작업을 시험하고, 기존 Ox Alpha 사용 기록이 있다면 같은 프롬프트의 결과와 비용을 비교하십시오.",
+  thumbnail: {
+    src: "/og-cache/glm-5-3-flash-openrouter-official.png",
+    alt: "OpenRouter 공식 모델 페이지의 GLM-5.3-Flash 사양과 가격 화면",
+  },
   source: "https://docs.z.ai/guides/llm/glm-5.3-flash",
   officialUrl: "https://docs.z.ai/guides/llm/glm-5.3-flash",
   verifiedAt: "2026-08-27",
-  backupUrls: [{ label: "OpenRouter 공식 모델 페이지 · Ox Alpha 확인", url: "https://openrouter.ai/z-ai/glm-5.3-flash" }, { label: "Z.ai GLM-5 공식 저장소", url: "https://github.com/zai-org/GLM-5" }, { label: "Hugging Face 공식 가중치", url: "https://huggingface.co/zai-org/GLM-5.3-Flash" }, { label: "Choi GLM-5.3-Flash 벤치마크 스레드", url: "https://www.threads.com/@choi.openai/post/Dcgb7pgDxYv" }, { label: "OddSVG GLM 시각 비교", url: "https://www.threads.com/@transurfer.ai/post/DcghJPLGudB" }],
+  backupUrls: [{ label: "OpenRouter 공식 모델 페이지 · Ox Alpha 확인", url: "https://openrouter.ai/z-ai/glm-5.3-flash" }, { label: "Z.ai GLM-5 공식 저장소", url: "https://github.com/zai-org/GLM-5" }, { label: "Hugging Face 공식 가중치", url: "https://huggingface.co/zai-org/GLM-5.3-Flash" }, { label: "Artificial Analysis 독립 지능 지수 비교", url: "https://artificialanalysis.ai/#intelligence" }, { label: "Choi GLM-5.3-Flash 벤치마크 스레드", url: "https://www.threads.com/@choi.openai/post/Dcgb7pgDxYv" }, { label: "OddSVG GLM 시각 비교", url: "https://www.threads.com/@transurfer.ai/post/DcghJPLGudB" }],
   visualComparisons: [
     {
       title: "GLM-5.3-Flash 공개와 Ox Alpha 정체·비용·벤치마크",
@@ -134,6 +146,10 @@ const vip4 = post({
     summary: "Pika announced Soundtrack, Music, SFX and Speech together on August 18. Performance figures are vendor claims, and Korean-language support was not specified.",
     content: "Pika announced Soundtrack, Music, SFX and Speech together on August 18. Performance figures are vendor claims, and Korean-language support was not specified.",
   },
+  thumbnail: {
+    src: "/og-cache/pika-음악-효과음-음성-영상-사운드-모델-4종-동시-공개-0c5fac65.jpg",
+    alt: "Pika, 음악·효과음·음성·영상 사운드 모델 4종 동시 공개",
+  },
 });
 
 const vip5 = post({
@@ -149,6 +165,10 @@ const vip5 = post({
   verifiedAt: "2026-08-27",
   backupUrls: [{ label: "곡선 주행 영상", url: "https://www.threads.com/@techniahqrobot/post/Dcb9Eljjar4" }, { label: "결승선 우승 영상", url: "https://www.threads.com/@lincoln_robotics_space/post/DcYsY-CCa4D" }, { label: "CGTN 100m 경기 전체 영상", url: "https://youtu.be/B8DyUJagc2M" }],
   threadsEmbedUrl: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+  thumbnail: {
+    src: "/og-cache/tiangong-omni-cgtn-race.jpg",
+    alt: "World Humanoid Robot Games 트랙을 달리는 Tiangong Omni — CGTN 중계 화면",
+  },
   videoUrl: "https://www.youtube.com/embed/B8DyUJagc2M",
   videoCaption: "CGTN 보도 · 같은 대회 100m 경기 전체 영상 (카드 본문의 400m와는 다른 종목입니다)",
   slug: "physical-ai-20260827-tiangong-omni-400m",
@@ -181,6 +201,10 @@ const vip6 = post({
     summary: "Apple announced M6 for Mac mini and M5 Ultra for Mac Studio. Vendor specifications include up to 512 GB unified memory and 1.2 TB/s bandwidth; performance comparisons are Apple tests.",
     content: "Apple announced M6 for Mac mini and M5 Ultra for Mac Studio. Vendor specifications include up to 512 GB unified memory and 1.2 TB/s bandwidth; performance comparisons are Apple tests.",
   },
+  thumbnail: {
+    src: "/og-cache/apple-첫-2nm-m6와-최대-512gb-메모리-m5-ultra-공개-9e0dcfcc.jpg",
+    alt: "Apple, 첫 2nm M6와 최대 512GB 메모리 M5 Ultra 공개",
+  },
 });
 
 const lateNewsWatch: ABEditorPick[] = [
@@ -207,6 +231,10 @@ const lateNewsWatch: ABEditorPick[] = [
     summary: "Tiangong Omni가 World Humanoid Robot Games 400m를 45.66초에 완주하고 우승했다는 행사 출처 영상입니다.",
     body: "영상에는 팔을 높이 들고 몸을 앞으로 기울인 채 곡선을 도는 달리기 모습이 담겼습니다. 기록과 우승 주장은 World Humanoid Robot Games 출처로 표시됐습니다.\n\n다만 원게시물은 원격조종·자율제어·혼합제어 여부를 밝히지 않았습니다. 자세를 로봇이 스스로 발견했다는 관련 재게시물 주장도 공식 개발사 원문으로 확인되지 않아 제외했습니다.",
     threadsEmbedUrl: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+    thumbnail: {
+      src: "/og-cache/tiangong-omni-cgtn-race.jpg",
+      alt: "World Humanoid Robot Games 트랙을 달리는 Tiangong Omni — CGTN 중계 화면",
+    },
     editorial: "피지컬 AI 시연은 기록뿐 아니라 제어 방식·재시도·배터리·트랙 조건까지 함께 봐야 합니다.",
     tags: ["Physical AI", "Tiangong Omni", "휴머노이드", "로봇"],
     tier: "feature",
@@ -226,6 +254,10 @@ const editorsPicks: ABEditorPick[] = [
     editorial: "한국어 사용자에게 직접 유용하고 설치가 간단합니다. 문장 품질을 개선하는 규칙이지 사실 정확도나 내용 검증을 대신하는 도구는 아닙니다.",
     tags: ["Claude Code", "한국어", "output style", "MIT"],
     tier: "feature",
+    thumbnail: {
+      src: "/og-cache/fluent-korean-claude-code의-한국어-문장-품질을-다듬-a514f629.png",
+      alt: "fluent-korean — Claude Code의 한국어 문장 품질을 다듬는 output style",
+    },
   },
   {
     title: "lexicon-harness — 모호한 요청을 검증 가능한 실행 프롬프트로",
@@ -233,6 +265,10 @@ const editorsPicks: ABEditorPick[] = [
     deck: "정확한 용어를 구속하고 EN–KO 지시문과 fail-closed 게이트로 실행까지 잇습니다.",
     category: "프롬프트 하네스",
     sourceUrl: "https://github.com/VoidLight00/lexicon-harness",
+    thumbnail: {
+      src: "/og-cache/lexicon-harness-github-og.png",
+      alt: "lexicon-harness GitHub 저장소 카드",
+    },
     sourceLabel: "GitHub에서 보기 →",
     guideUrl: "https://voidlight00.github.io/lexicon-harness",
     guideLabel: "12분 학습 가이드 →",
