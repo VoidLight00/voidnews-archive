@@ -83,6 +83,7 @@ export interface Post {
   videoUrl?: string;          // YouTube embed URL (예: https://www.youtube.com/embed/xxx)
   videoSrc?: string;          // 로컬 mp4 경로 — <video>로 카드 내 인라인 재생
   videoPoster?: string;       // 영상 썸네일
+  videoCaption?: string;      // 영상 캡션 override — 기본 "공식 영상"이 맞지 않는 보조 영상용
   videoClips?: { src: string; poster?: string; title?: string; sourceUrl?: string; durationSec?: number }[]; // 여러 영상 갤러리 (카드 내 각각 인라인 재생)
   threadsEmbedUrl?: string;   // Threads 게시물 iframe embed URL
   galleryImages?: { src: string; alt: string; caption?: string }[]; // 본문 중간 inline 이미지

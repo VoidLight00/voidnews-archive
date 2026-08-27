@@ -308,7 +308,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                 />
               </div>
               <figcaption>
-                {activeLang === "ko" ? "공식 영상" : "Official video"}
+                {post.videoCaption ?? (activeLang === "ko" ? "공식 영상" : "Official video")}
               </figcaption>
             </figure>
           ) : post.videoSrc ? (
