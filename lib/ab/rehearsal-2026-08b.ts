@@ -8,6 +8,8 @@ export interface RehearsalStep {
   company?: string;
   sourceUrl?: string;
   embedUrl?: string;
+  visual?: { src: string; alt: string; caption: string; sourceLabel?: string };
+  embeds?: { url: string; title: string; label: string; caveat: string }[];
   cues?: string[];
   script: string[];
 }
@@ -38,6 +40,12 @@ export const rehearsal2026_08b: RehearsalStep[] = [
     cardSlug: "claude-code-20260817-v2-1-234",
     company: "Anthropic",
     sourceUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+    visual: {
+      src: "/rehearsal/2026-08b/claude-code-2-1-234-official.png",
+      alt: "Claude Code GitHub release v2.1.234 공식 Open Graph 이미지",
+      caption: "Claude Code v2.1.234 공식 GitHub 릴리스 화면입니다. 이 화면에서 GitLab MR 상태·자동 재개·파일 접근 경계를 설명합니다.",
+      sourceLabel: "GitHub 공식 릴리스",
+    },
     cues: ["자동 재개 ≠ 성공 판정", "실행·검증·배포 상태를 분리"],
     script: [
       "첫 번째는 Claude Code 2.1.234입니다.",
@@ -59,6 +67,12 @@ export const rehearsal2026_08b: RehearsalStep[] = [
     cardSlug: "wiz-20260817-snowflake-cicd",
     company: "Wiz / Snowflake",
     sourceUrl: "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+    visual: {
+      src: "/rehearsal/2026-08b/wiz-snowflake-cicd-official.webp",
+      alt: "Wiz Red Agent Snowflake CI/CD 보안 연구 공식 대표 이미지",
+      caption: "Wiz 공식 연구 이미지입니다. 외부 입력이 셸 명령으로 이어지고 runner 자격 증명에 닿는 실행 경계를 설명할 때 사용합니다.",
+      sourceLabel: "Wiz 공식 연구",
+    },
     cues: ["사건은 6월, 연구 공개는 8월 17일", "Copilot이 취약 코드를 직접 생성했는지는 불명확"],
     script: [
       "두 번째는 Wiz가 공개한 Snowflake CI/CD 보안 연구입니다.",
@@ -80,6 +94,26 @@ export const rehearsal2026_08b: RehearsalStep[] = [
     cardSlug: "zai-20260826-glm-5-3-flash-ox-alpha",
     company: "Z.ai / OpenRouter",
     sourceUrl: "https://openrouter.ai/z-ai/glm-5.3-flash",
+    visual: {
+      src: "/rehearsal/2026-08b/glm-5-3-flash-openrouter-official.png",
+      alt: "OpenRouter GLM-5.3-Flash 공식 모델 대표 이미지",
+      caption: "OpenRouter 공식 모델 이미지입니다. Ox Alpha의 정체, 모델 ID, 컨텍스트와 가격 설명의 기준 화면입니다.",
+      sourceLabel: "OpenRouter 공식 모델 페이지",
+    },
+    embeds: [
+      {
+        url: "https://www.threads.net/@choi.openai/post/Dcgb7pgDxYv/embed",
+        title: "Choi GLM-5.3-Flash 벤치마크 설명",
+        label: "시각 자료 1 · 벤치마크 맥락",
+        caveat: "큐레이터 설명 화면이며 VoidNews가 독립 재측정한 결과는 아닙니다.",
+      },
+      {
+        url: "https://www.threads.net/@transurfer.ai/post/DcghJPLGudB/embed",
+        title: "OddSVG GLM-5.3 시각 결과 비교",
+        label: "시각 자료 2 · OddSVG 영상",
+        caveat: "프롬프트·실행 시간·재시도 조건이 공개되지 않은 시연 비교입니다.",
+      },
+    ],
     cues: ["OddSVG 영상은 시연 비교", "벤치마크는 Z.ai·큐레이터 수치"],
     script: [
       "세 번째는 GLM-5.3-Flash입니다.",
@@ -102,6 +136,12 @@ export const rehearsal2026_08b: RehearsalStep[] = [
     cardSlug: "pika-20260818-audio-suite",
     company: "Pika",
     sourceUrl: "https://pika.art/blog/pika-soundtrack",
+    visual: {
+      src: "/rehearsal/2026-08b/pika-soundtrack-official.jpg",
+      alt: "Pika Soundtrack 공식 발표 대표 이미지",
+      caption: "Pika Soundtrack 공식 발표 이미지입니다. Soundtrack·Music·SFX·Speech 네 제작 레인을 소개하는 화면으로 사용합니다.",
+      sourceLabel: "Pika 공식 블로그",
+    },
     cues: ["Soundtrack · Music · SFX · Speech", "속도·성능은 Pika 자체 측정"],
     script: [
       "네 번째는 Pika의 오디오 모델 네 가지입니다.",
@@ -124,6 +164,14 @@ export const rehearsal2026_08b: RehearsalStep[] = [
     company: "World Humanoid Robot Games",
     sourceUrl: "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
     embedUrl: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+    embeds: [
+      {
+        url: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+        title: "Tiangong Omni 400m 달리기 영상",
+        label: "시각 자료 · 400m 경기 영상",
+        caveat: "45.66초 기록과 주행 장면은 확인했지만 자율·원격·혼합제어 여부는 공개되지 않았습니다.",
+      },
+    ],
     cues: ["영상 재생", "자율·원격·혼합제어 여부 미공개"],
     script: [
       "다섯 번째는 베이징 World Humanoid Robot Games의 400m 달리기 영상입니다.",
@@ -145,6 +193,12 @@ export const rehearsal2026_08b: RehearsalStep[] = [
     cardSlug: "apple-20260825-m6-m5-ultra",
     company: "Apple",
     sourceUrl: "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+    visual: {
+      src: "/rehearsal/2026-08b/apple-m6-m5-ultra-official.jpg",
+      alt: "Apple M6와 M5 Ultra 공식 Newsroom 대표 이미지",
+      caption: "Apple 공식 Newsroom 이미지입니다. M6와 M5 Ultra의 로컬 AI 연산·통합 메모리 차이를 설명하는 기준 화면입니다.",
+      sourceLabel: "Apple Newsroom",
+    },
     cues: ["Apple 자체 성능 수치", "메모리에 올라감 ≠ 빠른 응답"],
     script: [
       "마지막은 Apple의 M6와 M5 Ultra입니다.",

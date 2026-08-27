@@ -106,7 +106,27 @@ export default function PracticeClient({ steps, editionHref }: { steps: Rehearsa
           <h1 className="serif" style={{ margin: "8px 0 0", fontSize: "clamp(28px, 8vw, 46px)", lineHeight: 1.08, letterSpacing: "-.04em" }}>{step.title}</h1>
         </section>
 
-        {step.embedUrl ? (
+        {step.visual ? (
+          <figure style={{ margin: "20px 0 0", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", background: "var(--surface)" }}>
+            <img src={step.visual.src} alt={step.visual.alt} loading="eager" style={{ width: "100%", height: "auto", maxHeight: "min(44vh, 340px)", display: "block", aspectRatio: "1200 / 630", objectFit: "contain", background: "var(--surface-2)" }} />
+            <figcaption style={{ padding: "11px 13px 13px", borderTop: "1px solid var(--border)", color: "var(--muted)", fontSize: 11, lineHeight: 1.55 }}>
+              {step.visual.sourceLabel ? <strong className="mono" style={{ display: "block", marginBottom: 4, color: "var(--accent)", fontSize: 9, letterSpacing: ".1em" }}>{step.visual.sourceLabel}</strong> : null}
+              {step.visual.caption}
+            </figcaption>
+          </figure>
+        ) : null}
+
+        {step.embeds?.map((embed) => (
+          <details key={embed.url} open={step.id === "tiangong"} style={{ marginTop: 18, border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", background: "var(--surface)" }}>
+            <summary style={{ padding: "12px 13px", cursor: "pointer", listStylePosition: "inside", color: "var(--accent)" }}>
+              <strong className="mono" style={{ fontSize: 10, letterSpacing: ".1em" }}>{embed.label}</strong>
+              <span style={{ display: "block", marginTop: 5, paddingLeft: 18, color: "var(--muted)", fontSize: 11, lineHeight: 1.5 }}>{embed.caveat}</span>
+            </summary>
+            <iframe src={embed.url} title={embed.title} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" style={{ width: "100%", minHeight: "min(500px, 72vh)", border: 0, borderTop: "1px solid var(--border)", display: "block" }} />
+          </details>
+        ))}
+
+        {step.embedUrl && !step.embeds?.some((embed) => embed.url === step.embedUrl) ? (
           <section style={{ marginTop: 20, border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", background: "var(--surface)" }}>
             <iframe src={step.embedUrl} title={`${step.title} 영상`} loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" style={{ width: "100%", minHeight: 500, border: 0, display: "block" }} />
           </section>
