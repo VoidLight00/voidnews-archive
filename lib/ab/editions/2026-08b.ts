@@ -11,11 +11,11 @@ const vip1 = post({
   featured: true,
   deck: "GitLab remote와 인증된 glab CLI가 있으면 footer/statusline에 MR !N 상태 표시",
   summary: "GitLab remote와 인증된 glab CLI가 있으면 footer/statusline에 MR !N 상태 표시 claude.ai 사용량 제한 초기화 시 세션 자동 계속 Windows NT namespace 경로를 사전승인 파일 접근 경계에서 거부",
-  content: "**운영 화면에 상태가 들어왔습니다**\n\nClaude Code 2.1.234는 GitLab remote와 인증된 glab CLI가 있으면 footer와 status line에 merge request 번호와 상태를 표시합니다. 사용량 제한이 초기화되면 세션을 자동으로 이어가며, Windows NT namespace 경로를 사전 승인 파일 접근 경계에서 거부합니다.\n\n**직접 확인할 것**\n\n팀이 GitLab을 사용한다면 상태 표시가 실제 인증과 remote 설정을 읽는지 확인하십시오. 자동 재개는 성공 판정이 아니라 사용량 제한 이후의 실행 재개입니다.",
+  content: "**운영 화면에 상태가 들어왔습니다**\n\nClaude Code 2.1.234는 GitLab remote와 인증된 glab CLI가 있으면 footer와 status line에 merge request 번호와 상태를 표시합니다. 사용량 제한이 초기화되면 세션을 자동으로 이어가며, Windows NT namespace 경로를 사전 승인 파일 접근 경계에서 거부합니다.\n\n**같은 문제를 다루는 오픈소스**\n\n사용량 제한으로 멈춘 작업을 다시 잇는 일은 그동안 각자 스크립트로 해결하던 영역이었습니다. 제가 만들어 공개한 nightguardian도 그중 하나입니다. tmux 패널을 지켜보다가 제한이 풀리면 멈춘 Claude Code 세션을 안전하게 재개하는 fail-closed 워치독이고, MIT 라이선스에 셸 스크립트로 되어 있습니다. 이번 업데이트로 같은 기능이 도구 안으로 들어왔으니, 두 방식을 비교하면서 어디까지 도구에 맡기고 어디부터 직접 통제할지 정하시면 됩니다.\n\n**직접 확인할 것**\n\n팀이 GitLab을 사용한다면 상태 표시가 실제 인증과 remote 설정을 읽는지 확인하십시오. 자동 재개는 성공 판정이 아니라 사용량 제한 이후의 실행 재개입니다.",
   source: "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
   officialUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
   verifiedAt: "2026-08-26",
-  backupUrls: [],
+  backupUrls: [{ label: "nightguardian — 같은 문제를 다루는 오픈소스", url: "https://github.com/VoidLight00/nightguardian" }],
   slug: "claude-code-20260817-v2-1-234",
   tags: ["AI", "2026-08b", "Anthropic"],
   en: {
