@@ -101,6 +101,27 @@ export function PickModal({
         {renderRichText(item.body)}
       </p>
 
+      {item.videoUrl && (
+        <figure style={{ margin: "24px 0 0", border: "1px solid var(--border2)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--surface)" }}>
+          <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", background: "#000" }}>
+            <iframe
+              src={item.videoUrl}
+              title={`${item.title} · 영상`}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+            />
+          </div>
+          {item.videoCaption && (
+            <figcaption style={{ padding: "8px 12px", fontSize: 12, lineHeight: 1.5, color: "var(--text-soft)" }}>
+              {item.videoCaption}
+            </figcaption>
+          )}
+        </figure>
+      )}
+
       <ImageGallery images={item.images} tone="gold" />
 
       {item.editorial && (

@@ -42,6 +42,8 @@ export interface ABEditorPick {
   thumbnail?: MediaImage;
   images?: MediaImage[];
   threadsEmbedUrl?: string; // Threads 공식 iframe embed URL
+  videoUrl?: string;        // YouTube embed URL — 모달에서 재생
+  videoCaption?: string;    // 영상 캡션 (출처·조건 명시용)
   tags?: string[];
   tier?: HighlightTier; // 기본 feature
 }

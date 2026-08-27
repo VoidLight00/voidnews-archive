@@ -153,30 +153,6 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               </aside>
             </div>
 
-            {data.slug === "2026-08b" ? (
-              <div style={{ marginTop: 22 }}>
-                <Link
-                  href="/ab/2026-08-27/practice/"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    minHeight: 48,
-                    padding: "0 18px",
-                    borderRadius: 8,
-                    background: "var(--accent)",
-                    color: "var(--ink)",
-                    fontFamily: "var(--mono)",
-                    fontSize: 12,
-                    fontWeight: 850,
-                    letterSpacing: "0.08em",
-                    textDecoration: "none",
-                  }}
-                >
-                  모바일 발표 연습 시작 →
-                </Link>
-              </div>
-            ) : null}
 
             {data.coreFlow && data.coreFlow.length > 0 ? (
               <section className="ab-core-flow" aria-label="이번 호 핵심 흐름">
