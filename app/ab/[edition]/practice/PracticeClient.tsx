@@ -55,6 +55,7 @@ export default function PracticeClient({ steps, editionHref }: { steps: Rehearsa
   }, [index]);
 
   const step = steps[index];
+  const visualSteps = useMemo(() => steps.filter((item) => item.kind === "card"), [steps]);
   const targetBefore = useMemo(() => steps.slice(0, index).reduce((sum, item) => sum + item.durationSec, 0), [steps, index]);
   const totalTarget = useMemo(() => steps.reduce((sum, item) => sum + item.durationSec, 0), [steps]);
   const progress = ((index + Math.min(1, elapsed / step.durationSec)) / steps.length) * 100;
@@ -105,6 +106,33 @@ export default function PracticeClient({ steps, editionHref }: { steps: Rehearsa
           <p className="mono" style={{ margin: 0, color: "var(--muted)", fontSize: 11 }}>{step.company || "AI&Beyond · 2026-08-27"}</p>
           <h1 className="serif" style={{ margin: "8px 0 0", fontSize: "clamp(28px, 8vw, 46px)", lineHeight: 1.08, letterSpacing: "-.04em" }}>{step.title}</h1>
         </section>
+
+        {step.kind === "opening" ? (
+          <section aria-label="최종 6장 시각 자료" style={{ marginTop: 20 }}>
+            <div style={{ display: "flex", alignItems: "end", justifyContent: "space-between", gap: 12, marginBottom: 10 }}>
+              <div>
+                <strong className="mono" style={{ color: "var(--accent)", fontSize: 10, letterSpacing: ".12em" }}>최종 6장 시각 자료</strong>
+                <p style={{ margin: "5px 0 0", color: "var(--muted)", fontSize: 12 }}>이미지를 누르면 해당 카드 대본으로 바로 이동합니다.</p>
+              </div>
+              <span className="mono" style={{ color: "var(--muted)", fontSize: 10 }}>6 CARDS</span>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 9 }}>
+              {visualSteps.map((item) => {
+                const itemIndex = steps.findIndex((candidate) => candidate.id === item.id);
+                return (
+                  <button key={item.id} type="button" onClick={() => setIndex(itemIndex)} style={{ minWidth: 0, padding: 0, border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", background: "var(--surface)", color: "var(--text)", textAlign: "left", cursor: "pointer" }}>
+                    {item.visual ? (
+                      <img src={item.visual.src} alt="" loading="eager" style={{ width: "100%", display: "block", aspectRatio: "1200 / 630", objectFit: "cover", background: "var(--surface-2)" }} />
+                    ) : item.embeds?.length ? (
+                      <div style={{ aspectRatio: "1200 / 630", display: "grid", placeItems: "center", background: "linear-gradient(135deg, var(--surface-2), var(--surface))", color: "var(--accent)", fontSize: 28 }}>▶</div>
+                    ) : null}
+                    <span style={{ display: "block", padding: "8px 9px 9px", fontSize: 11, fontWeight: 800, lineHeight: 1.35 }}>{item.label.replace(/ · .+$/, "")} · {item.company}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
 
         {step.visual ? (
           <figure style={{ margin: "20px 0 0", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden", background: "var(--surface)" }}>
