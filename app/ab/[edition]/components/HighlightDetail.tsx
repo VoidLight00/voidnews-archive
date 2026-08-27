@@ -127,6 +127,44 @@ export function HighlightDetail({ item }: { item: ABHighlight }) {
         </div>
       )}
 
+      {(item.post.videoUrl || item.post.threadsEmbedUrl) && (
+        <div style={{ marginTop: 20, display: "grid", gap: 12 }}>
+          <SectionEyebrow label="카드 영상 · 발표 화면에서 바로 재생" tone="accent" />
+          {item.post.threadsEmbedUrl && (
+            <div style={{ border: "1px solid var(--border2)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--surface)" }}>
+              <iframe
+                src={item.post.threadsEmbedUrl}
+                title={`${item.post.title} · Threads 영상`}
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                style={{ width: "100%", minHeight: 520, border: 0, display: "block" }}
+              />
+            </div>
+          )}
+          {item.post.videoUrl && (
+            <figure style={{ margin: 0, border: "1px solid var(--border2)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--surface)" }}>
+              <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", background: "#000" }}>
+                <iframe
+                  src={item.post.videoUrl}
+                  title={`${item.post.title} · 영상`}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+                />
+              </div>
+              {item.post.videoCaption && (
+                <figcaption style={{ padding: "8px 12px", fontSize: 12, lineHeight: 1.5, color: "var(--text-soft)" }}>
+                  {item.post.videoCaption}
+                </figcaption>
+              )}
+            </figure>
+          )}
+        </div>
+      )}
+
       {item.post.visualComparisons && item.post.visualComparisons.length > 0 && (
         <div style={{ marginTop: 20, display: "grid", gap: 12 }}>
           <SectionEyebrow label={`시각 비교 랩 ${item.post.visualComparisons.length}개 · 조건과 한계를 함께 표시`} tone="accent" />
