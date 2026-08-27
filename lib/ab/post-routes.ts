@@ -42,6 +42,8 @@ function adaptEditorPickToPost(item: ABEditorPick): Post {
     thumbnail: item.thumbnail,
     images: item.images,
     threadsEmbedUrl: item.threadsEmbedUrl,
+    videoUrl: item.videoUrl,
+    videoCaption: item.videoCaption,
     tags: item.tags,
     slug: item.slug,
     deck: item.deck,
