@@ -1,0 +1,178 @@
+export interface RehearsalStep {
+  id: string;
+  kind: "opening" | "card" | "closing";
+  label: string;
+  title: string;
+  durationSec: number;
+  cardSlug?: string;
+  company?: string;
+  sourceUrl?: string;
+  embedUrl?: string;
+  cues?: string[];
+  script: string[];
+}
+
+export const rehearsal2026_08b: RehearsalStep[] = [
+  {
+    id: "opening",
+    kind: "opening",
+    label: "OPENING",
+    title: "여는 말 — 오늘의 여섯 축",
+    durationSec: 90,
+    cues: ["천천히 시작", "운영 → 보안 → 오픈 모델 → 제작 → 피지컬 AI → 로컬 AI"],
+    script: [
+      "안녕하세요. VoidLight입니다.",
+      "오늘은 8월 17일부터 27일까지 확인한 AI 소식 가운데, 최종으로 고른 여섯 장을 함께 보겠습니다.",
+      "이번 열흘의 변화는 에이전트가 대답을 잘하는 기능을 넘어 실제 작업 상태와 권한, 제작 공정과 물리 공간으로 들어오기 시작했다는 점입니다.",
+      "오늘의 흐름은 운영, 보안, 오픈 모델, 생성형 미디어, 피지컬 AI, 그리고 로컬 인프라입니다.",
+      "각 카드마다 공식 출처에서 확인된 사실과 회사가 주장한 수치, 아직 확인하지 못한 조건을 구분해서 말씀드리겠습니다.",
+      "들으시면서 이 변화가 우리 조직에 들어오면 누가 편해지고, 누가 새로 확인해야 하는지 한 가지만 떠올려 보시면 좋겠습니다.",
+    ],
+  },
+  {
+    id: "claude-code",
+    kind: "card",
+    label: "CARD 01 · AGENT OPS",
+    title: "Claude Code가 GitLab의 작업 상태를 보기 시작했습니다",
+    durationSec: 150,
+    cardSlug: "claude-code-20260817-v2-1-234",
+    company: "Anthropic",
+    sourceUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+    cues: ["자동 재개 ≠ 성공 판정", "실행·검증·배포 상태를 분리"],
+    script: [
+      "첫 번째는 Claude Code 2.1.234입니다.",
+      "GitLab remote와 인증된 glab CLI가 있으면 footer와 status line에 merge request 번호와 상태가 나타납니다.",
+      "같은 릴리스에는 사용량 제한이 초기화되면 세션을 자동으로 이어가는 기능과 Windows NT namespace 경로를 파일 접근 경계에서 거부하는 수정도 들어갔습니다.",
+      "이 세 가지를 붙여 보면 장기 에이전트 작업에는 상태 확인, 중단 뒤 회복, 권한 경계가 함께 필요하다는 점이 보입니다.",
+      "여기서 자동으로 이어간다는 것은 작업이 성공했다는 판정이 아닙니다. 사용량 제한 때문에 멈춘 실행을 다시 시작한다는 의미입니다.",
+      "팀에서는 실행이 살아 있는지, 요구한 테스트가 통과했는지, 사람이 배포를 승인했는지를 서로 다른 상태로 관리해야 합니다.",
+      "제가 종료 조건을 적는다면 테스트 통과, 예상한 파일만 변경, 사람이 diff 확인이라는 세 줄로 두겠습니다.",
+      "상태를 보고 일을 이어갈 수 있게 될수록, 그 변경을 어디에서 멈춰 세우고 다시 검증할지가 더 중요해집니다.",
+    ],
+  },
+  {
+    id: "snowflake",
+    kind: "card",
+    label: "CARD 02 · AI SECURITY",
+    title: "AI 공동 작성 CI도 기존 보안 검토를 통과해야 합니다",
+    durationSec: 180,
+    cardSlug: "wiz-20260817-snowflake-cicd",
+    company: "Wiz / Snowflake",
+    sourceUrl: "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+    cues: ["사건은 6월, 연구 공개는 8월 17일", "Copilot이 취약 코드를 직접 생성했는지는 불명확"],
+    script: [
+      "두 번째는 Wiz가 공개한 Snowflake CI/CD 보안 연구입니다.",
+      "취약점 사건과 수정은 6월에 있었고, 8월 17일은 연구 공개일입니다.",
+      "Snowflake의 GitHub Actions 흐름에서 외부 사용자가 작성할 수 있는 이슈 제목이 셸 명령에 직접 들어갔습니다.",
+      "그 결과 인증되지 않은 입력으로 runner에서 명령을 실행할 수 있는 경로가 생겼고, runner는 Jira 읽기 자격 증명에 접근할 수 있었습니다.",
+      "Snowflake는 6월 23일 문제를 수정하고 다음 날 관련 토큰을 교체했습니다. 감사 로그에서는 제3자 접근 증거가 없었다고 전했습니다.",
+      "Copilot이 취약한 코드 한 줄을 직접 생성했다는 사실은 확인되지 않았으므로 AI가 취약점을 만들었다고 과장하면 안 됩니다.",
+      "실무 교훈은 작성 주체와 무관하게 외부 입력의 셸 보간, runner 토큰의 최소 권한, 감사 로그를 별도 게이트로 검토해야 한다는 것입니다.",
+      "AI가 작성했다는 표시는 검토를 강화할 계기는 될 수 있지만, 사람이 썼다는 이유로 검토를 낮추는 근거는 아닙니다.",
+    ],
+  },
+  {
+    id: "glm",
+    kind: "card",
+    label: "CARD 03 · OPEN MODEL",
+    title: "GLM-5.3-Flash, Ox Alpha의 정체가 공개됐습니다",
+    durationSec: 190,
+    cardSlug: "zai-20260826-glm-5-3-flash-ox-alpha",
+    company: "Z.ai / OpenRouter",
+    sourceUrl: "https://openrouter.ai/z-ai/glm-5.3-flash",
+    cues: ["OddSVG 영상은 시연 비교", "벤치마크는 Z.ai·큐레이터 수치"],
+    script: [
+      "세 번째는 GLM-5.3-Flash입니다.",
+      "OpenRouter 공식 모델 페이지는 익명 모델 Ox Alpha가 Z.ai의 GLM-5.3-Flash였다고 명시합니다.",
+      "공식 가중치 기준 총 3,200억 파라미터 가운데 토큰당 180억을 활성화하고, 텍스트와 이미지, 영상을 입력받는 MIT 라이선스 모델입니다.",
+      "OpenRouter 사양은 약 100만 토큰 컨텍스트와 최대 13만 1천 토큰 출력입니다.",
+      "가격이 낮아 보여도 실제 비용은 출력 길이, 재시도와 도구 호출까지 함께 봐야 합니다.",
+      "상세 카드의 첫 화면은 Choi님의 벤치마크 해설이고, 다음 OddSVG 영상은 GLM-5.3과 Flash 결과를 보여주는 시연 비교입니다.",
+      "정확한 프롬프트, 실행 시간, 재시도와 시작 자산이 공개되지 않았으므로 같은 조건의 정면 벤치마크라고 부르지 않겠습니다.",
+      "Terminal-Bench와 DeepSWE 수치도 Z.ai가 공개한 평가이므로 독립 재현 결과와 구분해야 합니다.",
+      "Ox Alpha를 사용해 봤다면 동일 프롬프트를 정식 모델 ID로 다시 실행해 품질, 총 토큰과 비용을 비교하는 것이 가장 좋은 검증입니다.",
+    ],
+  },
+  {
+    id: "pika",
+    kind: "card",
+    label: "CARD 04 · GENERATIVE MEDIA",
+    title: "Pika가 영상에서 오디오 제작 전체로 넓어졌습니다",
+    durationSec: 160,
+    cardSlug: "pika-20260818-audio-suite",
+    company: "Pika",
+    sourceUrl: "https://pika.art/blog/pika-soundtrack",
+    cues: ["Soundtrack · Music · SFX · Speech", "속도·성능은 Pika 자체 측정"],
+    script: [
+      "네 번째는 Pika의 오디오 모델 네 가지입니다.",
+      "Pika는 Soundtrack, Music, SFX, Speech를 함께 공개했습니다.",
+      "Soundtrack은 영상에 맞춘 음향을 만들고, Music은 최대 90초 곡, SFX는 1초에서 20초 효과음, Speech는 참조 음성으로 최대 5분 음성을 생성한다고 설명합니다.",
+      "속도와 성능 숫자는 Pika 자체 측정이고 한국어 지원 범위는 공식 발표에 명시되지 않았습니다.",
+      "중요한 변화는 영상 생성 서비스가 결과 영상 하나에서 음악, 효과음과 음성까지 제작 공정 전체로 넓어졌다는 점입니다.",
+      "실무에서는 상업적 이용 조건, 음성 복제 동의, 후반 편집 가능성을 별도로 확인해야 합니다.",
+      "한 번에 완성되는 데모처럼 보여도 실제 제작에서는 타이밍 수정과 권리 확인이 계속 필요합니다.",
+      "다음 카드는 화면 안에서 만든 결과가 아니라 실제 트랙 위에서 움직이는 피지컬 AI입니다.",
+    ],
+  },
+  {
+    id: "tiangong",
+    kind: "card",
+    label: "CARD 05 · PHYSICAL AI",
+    title: "Tiangong Omni가 400m를 45.66초에 완주했습니다",
+    durationSec: 140,
+    cardSlug: "physical-ai-20260827-tiangong-omni-400m",
+    company: "World Humanoid Robot Games",
+    sourceUrl: "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+    embedUrl: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+    cues: ["영상 재생", "자율·원격·혼합제어 여부 미공개"],
+    script: [
+      "다섯 번째는 베이징 World Humanoid Robot Games의 400m 달리기 영상입니다.",
+      "Tiangong Omni가 45.66초로 완주해 우승했다는 행사 출처 영상입니다.",
+      "지금 영상에서 팔을 얼굴 가까이 높이 들고 몸을 앞으로 기울인 채 곡선을 도는 모습을 보실 수 있습니다.",
+      "재미있는 자세보다 중요한 부분은 곡선에서 연속으로 발을 디디며 운동량과 균형을 계속 보정한다는 점입니다.",
+      "다만 원게시물은 원격조종, 완전 자율, 혼합제어 가운데 어떤 방식인지 밝히지 않았습니다.",
+      "자세를 로봇이 스스로 발견했다는 관련 설명도 공식 개발사 원문으로 확인하지 못했습니다.",
+      "따라서 AI가 스스로 달리기를 배웠다고 말하지 않고, 행사 출처 영상에서 400m 기록과 주행 모습을 확인했다고만 말씀드리겠습니다.",
+      "피지컬 AI 데모는 기록뿐 아니라 제어 방식, 넘어짐과 재시도, 배터리와 트랙 조건을 함께 봐야 합니다.",
+    ],
+  },
+  {
+    id: "apple",
+    kind: "card",
+    label: "CARD 06 · LOCAL AI",
+    title: "Apple M6와 최대 512GB M5 Ultra",
+    durationSec: 160,
+    cardSlug: "apple-20260825-m6-m5-ultra",
+    company: "Apple",
+    sourceUrl: "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+    cues: ["Apple 자체 성능 수치", "메모리에 올라감 ≠ 빠른 응답"],
+    script: [
+      "마지막은 Apple의 M6와 M5 Ultra입니다.",
+      "M6는 Apple의 첫 2나노미터 칩으로 12코어 CPU와 GPU, 듀얼 Neural Engine과 최대 32GB 통합 메모리를 제공합니다.",
+      "M5 Ultra는 최대 80코어 GPU, 32코어 Neural Engine, 최대 512GB 통합 메모리와 초당 1.2테라바이트 대역폭을 제시합니다.",
+      "M6가 M5보다 약 30퍼센트, M5 Ultra가 M3 Ultra보다 최대 4.5배 빠르다는 비교는 Apple 자체 테스트입니다.",
+      "로컬 AI에서는 파라미터 수보다 실제 메모리 점유, 양자화, 컨텍스트 길이, 대역폭과 전력을 함께 봐야 합니다.",
+      "512GB에 큰 모델이 올라간다는 사실과 실시간으로 빠르게 응답한다는 것은 다릅니다.",
+      "첫 카드에서는 에이전트가 작업 상태를 보기 시작했고, 로봇 카드는 AI가 실제 공간에서 연속 동작을 수행하는 장면을 보여줬습니다.",
+      "마지막 카드에서는 그 모델과 에이전트를 어디에서 돌릴지 선택지가 넓어졌습니다.",
+    ],
+  },
+  {
+    id: "closing",
+    kind: "closing",
+    label: "CLOSING",
+    title: "닫는 말 — 자동화가 늘수록 경계를 설계합니다",
+    durationSec: 80,
+    cues: ["세 가지 실무 과제", "마지막 문장 뒤 2초 정지"],
+    script: [
+      "오늘 여섯 장을 한 문장으로 묶으면 이렇습니다.",
+      "에이전트와 모델이 디지털 작업을 넘어 제작과 실제 공간으로 들어올수록 좋은 모델을 고르는 일만으로는 충분하지 않습니다.",
+      "작업 상태와 권한, 사람의 검토 지점, 회사 주장과 독립 확인을 함께 설계해야 합니다.",
+      "실무 과제는 세 가지입니다. 자동으로 이어가도 되는 단계와 사람이 확인할 단계를 적고, CI에서 외부 입력과 토큰 권한이 만나는 지점을 찾고, AI 도입 비용에 사람의 검토와 복구 비용도 함께 적어보십시오.",
+      "도구는 계속 바뀌지만 확인한 사실과 아직 확인하지 못한 조건을 구분하는 태도는 남을 것이라고 생각합니다.",
+      "들어주셔서 감사합니다.",
+    ],
+  },
+];
+
+export const rehearsal2026_08bTotalSec = rehearsal2026_08b.reduce((sum, step) => sum + step.durationSec, 0);

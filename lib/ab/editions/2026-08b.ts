@@ -115,28 +115,6 @@ const vip3 = post({
 const vip4 = post({
   date: "8/18",
   platform: "X+Threads",
-  title: "OpenAI, 한국 연세대 포함 AI 정책 프로젝트 14개 지원",
-  featured: true,
-  deck: "독립 조직 14개 프로젝트 선정",
-  summary: "독립 조직 14개 프로젝트 선정 총 100만 달러 지원금과 최대 100만 달러 API 크레딧 400개 이상 개인·조직이 제안 한국 연세대의 국회 감독 품질 AI 평가 프로젝트 포함 주의: 선정 효과는 향후 검증 필요 게시일 메타 미확정",
-  content: "**한국 프로젝트가 14개 지원 대상에 포함됐습니다**\n\nOpenAI는 독립 조직의 AI 정책 프로젝트 14개를 선정해 현금 100만 달러와 최대 100만 달러의 API 크레딧을 지원한다고 밝혔습니다. 400개가 넘는 제안 가운데 한국 연세대의 국회 감독 품질 AI 평가 프로젝트가 포함됐습니다.\n\n**검증 한계**\n\n공식 본문과 프로젝트 목록은 확인했지만 페이지의 게시일 메타데이터는 확인되지 않았습니다. 8월 18일은 백상 날짜별 아카이브에서 공식 링크가 발견된 날짜입니다. 선정 효과는 향후 결과로 검증해야 합니다.\n\n**직접 확인할 것**\n\n정책 지원 발표와 실제 정책 성과를 구분하고, 한국 프로젝트의 공개 산출물을 후속 추적하십시오.",
-  source: "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
-  officialUrl: "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
-  verifiedAt: "2026-08-26",
-  backupUrls: [],
-  slug: "openai-20260818-policy-grants",
-  tags: ["AI", "2026-08b", "OpenAI"],
-  en: {
-    title: "OpenAI backs 14 policy projects, including Yonsei University",
-    deck: "The programme provides cash grants and API credits.",
-    summary: "OpenAI selected 14 independent policy projects for $1 million in grants and up to $1 million in API credits, including a Yonsei University project on AI evaluation of parliamentary oversight. The publication date remains unverified.",
-    content: "OpenAI selected 14 independent policy projects for $1 million in grants and up to $1 million in API credits, including a Yonsei University project on AI evaluation of parliamentary oversight. The publication date remains unverified.",
-  },
-});
-
-const vip5 = post({
-  date: "8/18",
-  platform: "X+Threads",
   title: "Pika, 음악·효과음·음성·영상 사운드 모델 4종 동시 공개",
   featured: true,
   deck: "Soundtrack은 영상에서 동기화된 음향 장면 생성",
@@ -153,6 +131,29 @@ const vip5 = post({
     deck: "The video platform expands across the full audio layer.",
     summary: "Pika announced Soundtrack, Music, SFX and Speech together on August 18. Performance figures are vendor claims, and Korean-language support was not specified.",
     content: "Pika announced Soundtrack, Music, SFX and Speech together on August 18. Performance figures are vendor claims, and Korean-language support was not specified.",
+  },
+});
+
+const vip5 = post({
+  date: "8/27",
+  platform: "Threads",
+  title: "Tiangong Omni, 휴머노이드 로봇 게임 400m를 45.66초에 완주",
+  featured: true,
+  deck: "팔을 높이 든 독특한 자세로 World Humanoid Robot Games 400m 우승",
+  summary: "Tiangong Omni가 베이징 World Humanoid Robot Games 400m를 45.66초에 완주하고 우승했다는 행사 출처 영상 공개 곡선 구간에서 몸을 앞으로 기울이고 균형을 지속 보정하는 달리기 모습 확인 주의: 원게시물은 제어 방식과 자율 주행 여부를 명시하지 않으며 자세를 로봇이 스스로 발견했다는 주장은 공식 개발사 근거 미확인",
+  content: "**피지컬 AI의 진전은 달리기 자세보다 완주 조건에서 봐야 합니다**\n\nTiangong Omni가 베이징 World Humanoid Robot Games의 400m 경기에서 45.66초로 우승했다는 영상이 공개됐습니다. 영상에서는 팔을 얼굴 가까이 높이 들고 몸을 앞으로 기울인 채 곡선을 도는 독특한 주법을 확인할 수 있습니다.\n\n**검증 한계**\n\n원게시물은 출처를 World Humanoid Robot Games로 적었지만 원격조종·자율제어·혼합제어 가운데 어떤 방식인지 밝히지 않았습니다. 관련 재게시물의 ‘자세를 자율적으로 발견했다’는 설명은 공식 개발사 원문으로 확인되지 않아 카드에서 제외했습니다.\n\n**직접 확인할 것**\n\n피지컬 AI 데모를 평가할 때 기록뿐 아니라 제어 방식, 넘어짐·재시도, 배터리와 트랙 조건을 함께 확인하십시오.",
+  source: "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+  officialUrl: "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+  verifiedAt: "2026-08-27",
+  backupUrls: [{ label: "곡선 주행 영상", url: "https://www.threads.com/@techniahqrobot/post/Dcb9Eljjar4" }, { label: "결승선 우승 영상", url: "https://www.threads.com/@lincoln_robotics_space/post/DcYsY-CCa4D" }],
+  threadsEmbedUrl: "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+  slug: "physical-ai-20260827-tiangong-omni-400m",
+  tags: ["AI", "2026-08b", "Physical AI", "휴머노이드", "로봇"],
+  en: {
+    title: "Tiangong Omni completes the humanoid robot 400 m in 45.66 seconds",
+    deck: "The unusual running form won the World Humanoid Robot Games race.",
+    summary: "A World Humanoid Robot Games-sourced video shows Tiangong Omni winning the 400 m in 45.66 seconds. The source does not specify autonomous, remote or mixed control.",
+    content: "A World Humanoid Robot Games-sourced video shows Tiangong Omni winning the 400 m in 45.66 seconds. The source does not specify autonomous, remote or mixed control.",
   },
 });
 
@@ -243,7 +244,7 @@ export const edition2026_08b: ABEdition = {
   slug: "2026-08b",
   volume: 11,
   title: "GLM-5.3-Flash·Ox Alpha 공개부터 에이전트 보안과 로컬 AI까지",
-  theme: "운영 · 보안 · 오픈 모델 · 정책 · 생성형 미디어 · 로컬 AI",
+  theme: "운영 · 보안 · 오픈 모델 · 생성형 미디어 · 피지컬 AI · 로컬 AI",
   period: "2026-08-17 ~ 2026-08-26",
   coveredWeeks: [{ slug: "2026-w34", period: "8/17 ~ 8/23" }, { slug: "2026-w35", period: "8/24 ~ 8/30" }],
   announceDate: "2026-08-27",
@@ -251,14 +252,14 @@ export const edition2026_08b: ABEdition = {
   sourceCounts: { youtube: 96, x: 0, web: 54, "community-hn": 129, "community-reddit": 0 },
   intro: "8월 하반기에는 에이전트의 기능보다 운영 경계가 더 선명해졌습니다. 세션과 MR 상태를 이어 보고, AI가 공동 작성한 CI를 다시 검증해야 합니다. 편집 마감 뒤에는 OpenRouter 익명 모델 Ox Alpha의 정체가 GLM-5.3-Flash로 확인됐습니다. 생성형 미디어는 음향 제작으로 넓어졌고, 로컬 AI 하드웨어는 512GB 통합 메모리까지 올라갔습니다.",
   closing: "도입 전에 세 가지를 확인하십시오. 공식 날짜와 사건 정체성, 에이전트 권한과 사람 검토 경계, 그리고 벤더 자체 수치와 독립 검증의 차이입니다.",
-  coreFlow: ["에이전트 운영", "CI 보안", "프런티어 오픈 모델", "한국 AI 정책", "생성형 미디어", "로컬 AI 하드웨어"],
+  coreFlow: ["에이전트 운영", "CI 보안", "프런티어 오픈 모델", "생성형 미디어", "피지컬 AI", "로컬 AI 하드웨어"],
   highlights: [
-    { rank: 1, tier: "hero", post: vip1, sourceWeek: "2026-w34", sourceCompany: "Anthropic", editorial: "사용자님께서 2026-08-26 직접 선택한 VIP 카드입니다." },
-    { rank: 2, tier: "feature", post: vip2, sourceWeek: "2026-w34", sourceCompany: "Wiz", editorial: "사용자님께서 2026-08-26 직접 선택한 VIP 카드입니다." },
-    { rank: 3, tier: "feature", post: vip3, sourceWeek: "2026-w35", sourceCompany: "Z.ai / OpenRouter", editorial: "사용자님 요청으로 편집 마감 뒤 확인된 GLM-5.3-Flash 속보를 반영했습니다. OpenRouter 공식 FAQ가 Ox Alpha의 정체라고 확인하며, 성능 비교는 Z.ai 자체 평가로 구분합니다." },
-    { rank: 4, tier: "feature", post: vip4, sourceWeek: "2026-w34", sourceCompany: "OpenAI", editorial: "사용자 선택 VIP. 한국 직접 주제이지만 공식 게시일 메타가 확인되지 않아 발견일 귀속으로 표시합니다." },
-    { rank: 5, tier: "feature", post: vip5, sourceWeek: "2026-w34", sourceCompany: "Pika", editorial: "사용자님께서 2026-08-26 직접 선택한 VIP 카드입니다." },
-    { rank: 6, tier: "feature", post: vip6, sourceWeek: "2026-w35", sourceCompany: "Apple", editorial: "사용자님께서 2026-08-26 직접 선택한 VIP 카드입니다." }
+    { rank: 1, tier: "hero", post: vip1, sourceWeek: "2026-w34", sourceCompany: "Anthropic", editorial: "사용자님께서 직접 선택한 최종 VIP 카드입니다." },
+    { rank: 2, tier: "feature", post: vip2, sourceWeek: "2026-w34", sourceCompany: "Wiz", editorial: "사용자님께서 직접 선택한 최종 VIP 카드입니다." },
+    { rank: 3, tier: "feature", post: vip3, sourceWeek: "2026-w35", sourceCompany: "Z.ai / OpenRouter", editorial: "OpenRouter 공식 FAQ가 Ox Alpha의 정체라고 확인하며, 성능 비교는 Z.ai 자체 평가로 구분합니다." },
+    { rank: 4, tier: "feature", post: vip4, sourceWeek: "2026-w34", sourceCompany: "Pika", editorial: "생성형 미디어의 오디오 제작 확장을 대표하는 최종 VIP 카드입니다." },
+    { rank: 5, tier: "feature", post: vip5, sourceWeek: "2026-w35", sourceCompany: "Physical AI", editorial: "사용자님 요청으로 승격한 영상형 피지컬 AI 카드입니다. 제어 방식은 공개되지 않았습니다." },
+    { rank: 6, tier: "feature", post: vip6, sourceWeek: "2026-w35", sourceCompany: "Apple", editorial: "로컬 AI 하드웨어와 통합 메모리 상한을 다루는 최종 VIP 카드입니다." }
   ],
   modelWatch: lateNewsWatch,
   editorsPicks,
