@@ -5,6 +5,8 @@ import Link from "next/link";
 import { formatSourceCounts, type ABEdition, type ABHighlight, type ABEditorPick, type ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
 import { HighlightArticle, DemoCard, EditorPickCard } from "./components/cards";
+import BrowseGrid from "@/app/components/BrowseGrid";
+import { useLocale } from "@/app/LocaleProvider";
 import { Modal, type ModalContent } from "./components/PickModal";
 
 /* ════════════════════════════════════════════════════════════
@@ -12,6 +14,7 @@ import { Modal, type ModalContent } from "./components/PickModal";
 ═══════════════════════════════════════════════════════════════ */
 
 export default function ABEditionClient({ data }: { data: ABEdition }) {
+  const { locale } = useLocale();
   const [modal, setModal] = useState<ModalContent | null>(null);
   const [expandedRank, setExpandedRank] = useState<number | null>(null);
   const openModal = useCallback((c: ModalContent) => setModal(c), []);
@@ -89,7 +92,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         }
       `}</style>
 
-      <main className="ab-page-shell">
+      <main id="main-content" className="ab-page-shell vn-ab">
         {/* ───── Header ───── */}
         <header className="ab-index-hero">
           <div className="ab-shell-inner" style={{ maxWidth: 1120 }}>
@@ -170,6 +173,16 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </div>
         </header>
 
+        <div className="ab-shell-inner" style={{ maxWidth: 1280 }}>
+          <BrowseGrid title={locale === "ko" ? "이번 호 둘러보기" : "Explore this edition"} description={locale === "ko" ? "읽고 싶은 섹션으로 바로 이동하세요." : "Jump to the section you want to read."}
+            items={[
+              { id: "highlights", label: locale === "ko" ? "핵심 브리핑" : "Highlights", count: highlights.length, href: "#ab-highlights" },
+              ...(data.modelWatch?.length ? [{ id: "models", label: locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
+              ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "실무 도구" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
+            ]}
+          />
+        </div>
+
         {/* ───── Intro ───── */}
         <section
           style={{
@@ -196,7 +209,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         </section>
 
         {/* ───── Highlights ───── */}
-        <section
+        <section id="ab-highlights"
           style={{
             padding: "0 clamp(16px, 3vw, 32px) clamp(28px, 5vw, 40px)",
           }}
@@ -253,7 +266,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         </section>
 
         {data.modelWatch && data.modelWatch.length > 0 && (
-          <section
+          <section id="ab-models"
             style={{
               padding:
                 "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
@@ -300,7 +313,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         )}
 
         {data.editorsPicks && data.editorsPicks.length > 0 && (
-          <section
+          <section id="ab-picks"
             style={{
               padding:
                 "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",

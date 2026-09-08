@@ -15,6 +15,7 @@ import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
 import { useLocale } from "@/app/LocaleProvider";
+import { ImageDisclosure } from "@/app/components/ImageDisclosure";
 import { renderRichText, PostDateLabel, PlatformBadge, LinkBtn, highlightText, getPostLink, type ModalNavigation } from "./shared";
 import { LinkPreview, EmbedPreview, getOfficialTweetUrl } from "./previews";
 
@@ -205,6 +206,7 @@ export function PostModal({
         {post.thumbnail && (
           <figure style={{ margin: "0 0 20px", border: "1px solid var(--border)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--card)" }}>
             <img src={post.thumbnail.src} alt={post.thumbnail.alt} style={{ display: "block", width: "100%", objectFit: "cover" }} />
+            <ImageDisclosure src={post.thumbnail.src} provenance={post.thumbnail.provenance} locale={locale} />
             {post.thumbnail.caption && (
               <figcaption style={{ padding: "10px 12px", fontSize: 12, color: "var(--muted)", borderTop: "1px solid var(--border)", lineHeight: 1.6 }}>
                 {stripMarkdown(post.thumbnail.caption)}
@@ -220,6 +222,7 @@ export function PostModal({
             {post.images.map((image) => (
               <figure key={image.src} style={{ margin: 0, border: "1px solid var(--border)", borderRadius: "var(--radius-xs)", overflow: "hidden", background: "var(--card)" }}>
                 <img src={image.src} alt={image.alt} loading="lazy" style={{ display: "block", width: "100%", objectFit: "cover" }} />
+                <ImageDisclosure src={image.src} locale={locale} />
                 {image.caption && (
                   <figcaption style={{ padding: "10px 12px", fontSize: 12, color: "var(--muted)", borderTop: "1px solid var(--border)", lineHeight: 1.6 }}>
                     {stripMarkdown(image.caption)}

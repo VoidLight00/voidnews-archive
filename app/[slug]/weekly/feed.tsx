@@ -17,6 +17,7 @@ import { displayPost } from "@/lib/i18n";
 import { useLocale } from "@/app/LocaleProvider";
 import { PostDateLabel, parsePostDate, extractDomain } from "./shared";
 import { useOGData, isSafeImageUrl } from "./previews";
+import { ImageDisclosure } from "@/app/components/ImageDisclosure";
 
 export type TopStoryEntry = {
   company: Company;
@@ -34,7 +35,8 @@ export function getPostSortTime(post: Post, defaultYear: number) {
   return parsePostDate(post.date, defaultYear)?.getTime() ?? 0;
 }
 
-export function getPostIssueHref(issueSlug: string, postTitle: string) {
+export function getPostIssueHref(issueSlug: string, postTitle: string, postSlug?: string) {
+  if (postSlug) return `/${issueSlug}/${postSlug}/`;
   const params = new URLSearchParams({ post: postTitle });
   return `/${issueSlug}?${params.toString()}`;
 }
@@ -62,15 +64,17 @@ export function SourceThumbnail({
   variant: "hero" | "card";
   priority?: boolean;
 }) {
+  const { locale } = useLocale();
   const ref = useRef<HTMLDivElement>(null);
-  const explicitImage = getPostPrimaryImage(post);
   const sourceUrl = getPostSourceUrl(post);
   const [visible, setVisible] = useState(priority);
-  const { data, loading } = useOGData(sourceUrl, visible && !explicitImage && !!sourceUrl);
-  const [failedSrc, setFailedSrc] = useState<string | null>(null);
-  const explicitImageSrc = isSafeImageUrl(explicitImage?.src) ? explicitImage?.src : "";
+  const [failedSources, setFailedSources] = useState<string[]>([]);
+  const explicitImage = [post.thumbnail, ...(post.images ?? [])]
+    .find((image) => image && isSafeImageUrl(image.src) && !failedSources.includes(image.src));
+  const explicitImageSrc = explicitImage?.src ?? "";
+  const { data, loading } = useOGData(sourceUrl, visible && !explicitImageSrc && !!sourceUrl);
   const imageSrc = explicitImageSrc || data?.image || "";
-  const visibleImageSrc = imageSrc && failedSrc !== imageSrc ? imageSrc : "";
+  const visibleImageSrc = imageSrc && !failedSources.includes(imageSrc) ? imageSrc : "";
   const imageAlt = explicitImage?.alt || data?.title || `${post.title} 출처 이미지`;
   const domain = sourceUrl ? extractDomain(sourceUrl) : "source";
 
@@ -105,13 +109,14 @@ export function SourceThumbnail({
           loading={priority ? "eager" : "lazy"}
           width={variant === "hero" ? 1440 : 640}
           height={variant === "hero" ? 720 : 400}
-          onError={() => setFailedSrc(visibleImageSrc)}
+          onError={() => setFailedSources((sources) => [...sources, visibleImageSrc])}
         />
       ) : (
         <div className="tc-source-fallback">
-          <span className="mono">{loading ? "Loading source image" : domain}</span>
+          <span className="mono">{loading ? "이미지를 불러오는 중" : "출처 이미지 없음"}</span>
         </div>
       )}
+      <ImageDisclosure src={visibleImageSrc} provenance={visibleImageSrc === explicitImage?.src ? explicitImage.provenance : undefined} locale={locale} overlay />
       <span className="tc-source-domain mono">{domain}</span>
     </div>
   );
@@ -135,9 +140,9 @@ export function TopStoriesSection({
   const { locale } = useLocale();
   if (stories.length === 0) return null;
 
-  const [lead, ...secondary] = stories.slice(0, 3);
+  const lead = stories[0];
   const leadD = displayPost(lead.post, locale);
-  const href = getPostIssueHref(issueSlug, lead.post.title);
+  const href = getPostIssueHref(issueSlug, lead.post.title, lead.post.slug);
 
   return (
     <section className="tc-hero-section rise-in" aria-label="메인 기사">
@@ -151,8 +156,7 @@ export function TopStoriesSection({
         <div className="tc-hero-shade" />
         <div className="tc-hero-content">
           <div className="tc-hero-labels mono">
-            <span>slide 1 of {Math.max(1, stories.slice(0, 3).length)}</span>
-            <span>featured story</span>
+            <span>{locale === "ko" ? "이번 호 대표 기사" : "Featured story"}</span>
           </div>
           <h1 className="tc-hero-title serif">{leadD.title}</h1>
           {leadD.summary && (
@@ -168,18 +172,6 @@ export function TopStoriesSection({
             <span>포스트 보기 →</span>
           </div>
         </div>
-        {secondary.length > 0 && (
-          <div className="tc-hero-dots" aria-hidden>
-            {[lead, ...secondary].map((entry, index) => (
-              <span
-                key={`${entry.company.name}-${entry.post.title}`}
-                style={{
-                  background: index === 0 ? "var(--text-strong)" : "rgba(255,255,255,0.35)",
-                }}
-              />
-            ))}
-          </div>
-        )}
       </a>
     </section>
   );
@@ -203,7 +195,7 @@ export function FeedArticleCard({
   const { company, post } = entry;
   const { locale } = useLocale();
   const d = displayPost(post, locale);
-  const href = getPostIssueHref(issueSlug, post.title);
+  const href = getPostIssueHref(issueSlug, post.title, post.slug);
 
   return (
     <a

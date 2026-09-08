@@ -24,6 +24,10 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "claude-code-20260817-v2-1-234",
+          thumbnail: {
+            src: "/og-cache/claude-code-gitlab-mr-상태-배지와-사용량-제한-자동-재-bbeb623c.png",
+            alt: "Claude Code, GitLab MR 상태 배지와 사용량 제한 자동 재개 추가",
+          },
           en: { title: "Claude Code adds GitLab MR status and automatic usage-limit resume", deck: "GitLab merge-request state now appears in the footer and status line.", summary: "Claude Code 2.1.234 displays authenticated GitLab merge-request status, resumes sessions when claude.ai usage limits reset, and rejects Windows NT namespace paths at the pre-approved file boundary." },
         },
         {
@@ -38,6 +42,11 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "claude-code-20260819-v2-1-236",
+          thumbnail: {
+            src: "/source-images/11884a7f1e94af77c54a72e5501e94a2c7c0a074f2dfde5d7513d992a19f1910.png",
+            alt: "Release v2.1.236 · anthropics/claude-code — source link share preview",
+            provenance: "source-share-preview",
+          },
           en: { title: "Claude Code can notify you once when another session goes idle", deck: "An opt-in, one-shot cross-session notification.", summary: "Claude Code 2.1.236 adds notify_when_idle to SendMessage, notifying the caller once when another local session next becomes idle. It signals idleness, not task success." },
         }
       ],
@@ -58,6 +67,11 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "ollama-20260819-v0-32-15",
+          thumbnail: {
+            src: "/source-images/07cecfce50a8ca6be694f9c5494252a884e1200451763c53adb4274de2a54ce2.png",
+            alt: "Release v0.32.15 · ollama/ollama — source link share preview",
+            provenance: "source-share-preview",
+          },
           en: { title: "Ollama halves time to first token with model metadata caching", deck: "Vendor benchmark falls from about 995 ms to 524 ms.", summary: "Ollama 0.32.15 caches model metadata to reduce time to first token, and fixes Qwen 3.8 parser failures that could stop chat and generate requests." },
         },
         {
@@ -92,6 +106,11 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "openrouter-20260819-stripe",
+          thumbnail: {
+            src: "/source-images/2d1221b20570a4dcfe0cf543257f7ddc700675709b37f212542a03d3626e397e.png",
+            alt: "OpenRouter is Joining Stripe — 공식 발표 페이지 미리보기",
+            caption: "OpenRouter 공식 발표 페이지의 이미지입니다. 본문 이미지·공유 미리보기 일치와 원문 대체 텍스트를 확인했으며, 이미지 육안 검수는 하지 못했습니다.",
+          },
           en: { title: "OpenRouter joins Stripe while keeping its name, product and roadmap", deck: "The multi-model routing company retains its operating identity.", summary: "OpenRouter announced it is joining Stripe while keeping the same name, product and roadmap. Financial terms and ownership details were not disclosed." },
         }
       ],
@@ -112,6 +131,10 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "wiz-20260817-snowflake-cicd",
+          thumbnail: {
+            src: "/og-cache/ai가-공동-작성한-ci-변경-snowflake-jira-자격-증명-노출-64d3338b.webp",
+            alt: "AI가 공동 작성한 CI 변경, Snowflake Jira 자격 증명 노출 경로 만들었다",
+          },
           en: { title: "A CI change exposed a Snowflake Jira credential path", deck: "Issue-title shell interpolation enabled unauthenticated command execution.", summary: "Wiz disclosed a Snowflake GitHub Actions flaw where issue titles reached a shell, exposing a path to Jira read credentials. Snowflake fixed it on June 23 and rotated the token on June 24; the research was published August 17." },
         }
       ],
@@ -194,6 +217,10 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "pika-20260818-audio-suite",
+          thumbnail: {
+            src: "/og-cache/pika-음악-효과음-음성-영상-사운드-모델-4종-동시-공개-0c5fac65.jpg",
+            alt: "Pika, 음악·효과음·음성·영상 사운드 모델 4종 동시 공개",
+          },
           en: { title: "Pika launches four models for music, effects, speech and video sound", deck: "The video platform expands across the full audio layer.", summary: "Pika announced Soundtrack, Music, SFX and Speech together. Vendor claims include up to 90-second music, real-time-class effects generation and five-second voice references; Korean support was not specified." },
         }
       ],
@@ -234,6 +261,11 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "tripo-20260817-image-gen",
+          thumbnail: {
+            src: "/source-images/a0633c313bb5e1a1c2734940e9664997b4580fb7bc3e0855cbebef2958fbeba9.webp",
+            alt: "Tripo Image Gen Update: Turn Concept Images Into Assets Ready for 3D Workflows — source link share preview",
+            provenance: "source-share-preview",
+          },
           en: { title: "Tripo Image Gen adds 30-image 3D batches and nine variations", deck: "Image generation connects directly to 3D asset workflows.", summary: "Tripo updated Image Gen with batch conversion of up to 30 images, nine variations and asset extraction for downstream 3D production." },
         },
         {
@@ -248,6 +280,11 @@ export const week34: WeeklyData = {
           backupUrls: [],
           tags: ["AI", "2026-08b"],
           slug: "tripo-20260819-p2-preview",
+          thumbnail: {
+            src: "/source-images/afd2318c701b7e9733abf609a961dfa6268937b64459ca1b49f1c4b98dbc3aeb.webp",
+            alt: "Tripo P2.0 Preview: A Major Breakthrough for Production-Ready 3D Assets — source link share preview",
+            provenance: "source-share-preview",
+          },
           en: { title: "Tripo P2.0 Preview generates riggable quad meshes", deck: "The 3D bottleneck shifts from appearance to editable topology.", summary: "Tripo previewed P2.0 with native quad topology and Smart Mesh output intended for rigging. It remains a preview rather than general availability." },
         }
       ],

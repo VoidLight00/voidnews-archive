@@ -19,7 +19,7 @@ export const week22: WeeklyData = {
           date: "5/23",
           platform: "X+Threads",
           title: "OpenAI Codex Goal mode generally available",
-          summary: "",
+          summary: "OpenAI가 Codex Goal mode를 일반 출시했다고 발표했습니다. 사용자가 목표를 제시하면 Codex가 계획·실행·자체 검토를 반복하며, 여러 파일과 작업 단계를 스스로 구성하는 기능입니다.",
           content: `OpenAI가 2026년 5월 23일 ChatGPT 릴리스 노트를 통해 Codex의 Goal mode를 일반 출시했습니다. 그동안 enterprise 일부 워크스페이스와 베타 채널에만 열려 있던 기능이 ChatGPT Plus / Business / Enterprise 전 사용자에게 동시에 풀린다는 의미입니다.
 
 핵심 사실:
@@ -52,7 +52,7 @@ export const week22: WeeklyData = {
           date: "5/22",
           platform: "X+Threads",
           title: "OpenAI named a Leader in enterprise coding agents by Gartner",
-          summary: "",
+          summary: "OpenAI가 Gartner의 AI 코딩 도구 평가에서 리더 그룹에 선정됐다고 발표했습니다. 기업용 관리 체계와 모델 선택 폭 등을 평가 이유로 인용했으며, 해당 평가는 단일 성능 순위가 아닌 두 축의 벤더 분류입니다.",
           content: `OpenAI가 2026년 5월 22일 자사 index 페이지를 통해 Gartner 2026 Magic Quadrant for AI Code Assistants에서 \"Leader\" 사분면에 배치됐다고 발표했습니다. 같은 사분면에는 GitHub Copilot, Cursor가 함께 들어갔고, Anthropic Claude Code는 \"Visionaries\" 위치로 평가됐습니다.
 
 핵심 사실:
@@ -85,7 +85,7 @@ Gartner Magic Quadrant는 \"공식 순위\"가 아니라 두 축(Ability to Exec
           date: "5/22",
           platform: "X+Threads",
           title: "How Virgin Atlantic ships faster with Codex",
-          summary: "",
+          summary: "OpenAI가 Virgin Atlantic 엔지니어링팀의 Codex 도입 사례를 공개했습니다. Codex는 작업 계획과 코드 변경 초안을 맡고, 예약·마일리지 같은 핵심 시스템의 변경에는 사람의 검토를 유지하는 방식입니다.",
           content: `OpenAI가 2026년 5월 22일 Virgin Atlantic의 Codex 도입 사례를 공식 index에 공개했습니다. 항공사 IT 조직이 \"실험\"이 아니라 \"표준 개발 도구\"로 Codex를 깐 첫 번째 publicly named 케이스입니다.
 
 도입 윤곽:
@@ -156,7 +156,7 @@ Gartner Magic Quadrant는 \"공식 순위\"가 아니라 두 축(Ability to Exec
           date: "5/22",
           platform: "X+Threads",
           title: "Introducing the Codex app, Skills, and Automations",
-          summary: "",
+          summary: "OpenAI가 Codex 데스크톱 앱과 Skills·Automations를 함께 공개했습니다. Skills는 도구와 작업 지시를 저장해 재사용하고, Automations는 정해진 일정에 맞춰 코드 검토 등 반복 작업을 실행합니다.",
           content: `OpenAI가 2026년 5월 22일 Codex를 ChatGPT 사이드바에서 떼어내 macOS / Windows 데스크톱 앱으로 분리하고, 동시에 \"Skills\"와 \"Automations\" 두 신기능을 함께 공개했습니다. Codex가 단순 \"코드 generation 기능\"에서 자체 워크스페이스를 가진 제품으로 옮겨가는 분기점입니다.
 
 핵심 사실:
@@ -199,7 +199,7 @@ Automations은 cron 표현으로 \"반복적으로 깨어나는 Codex\"를 만�
           date: "5/22",
           platform: "X+Threads",
           title: "OpenAI Codex remote connections (official X post)",
-          summary: "",
+          summary: "OpenAI가 Codex의 외부 서비스 연결 기능 확대를 공지했습니다. 한 세션에서 이슈 확인·코드 변경·변경 요청 생성을 이어가며, 연결별 인증과 권한을 따로 관리하는 방식입니다.",
           content: `OpenAI 공식 X 계정이 2026년 5월 22일 Codex의 \"remote connections\" 기능 확장을 공지했습니다. Codex 세션 안에서 외부 서비스 — GitHub, Linear, Sentry, 자체 API 등 — 를 직접 호출할 수 있는 connector 라인업이 늘었다는 발표입니다.
 
 핵심 변화:
@@ -238,7 +238,7 @@ Automations은 cron 표현으로 \"반복적으로 깨어나는 Codex\"를 만�
           date: "5/23",
           platform: "X+Threads",
           title: "Google Gemini Intelligence on Android",
-          summary: "",
+          summary: "Google이 Android의 Gemini Intelligence를 발표했습니다. 화면 맥락 이해와 요약·다시 쓰기, 알림 정리 등을 기기 내 Gemini Nano와 클라우드 모델을 함께 활용해 처리하며, 베타 단계로 소개됐습니다.",
           content: `Google이 2026년 5월 23일 Android 블로그에서 \"Gemini Intelligence\"를 발표했습니다. 한 줄로 정리하면 \"Apple Intelligence의 Android 대응판\"인데, Google이 OS 레이어에서 Gemini를 1급 시스템 컴포넌트로 끌어올리는 단계입니다.
 
 발표 윤곽:
@@ -275,7 +275,7 @@ Apple Intelligence가 \"Private Cloud Compute\"라는 전용 인프라로 cloud 
           date: "5/23",
           platform: "X+Threads",
           title: "Google AI Mode ads: Gemini-built ad formats in Search",
-          summary: "",
+          summary: "Google이 검색 AI Mode의 답변과 추천 영역에 광고를 도입했습니다. Gemini가 상품 카탈로그와 사이트 콘텐츠로 자연어·카드형 광고를 구성하고, Sponsored 표시와 별도의 성과 지표를 제공합니다.",
           content: `Google이 2026년 5월 23일 Google Marketing Live에서 AI Mode 안에 광고를 정식 도입했습니다. Search의 \"AI 답변\" 화면에 광고를 어떻게 끼워 넣을지를 1년 가까이 실험해 온 끝의 공식 답변입니다.
 
 핵심 변화:
@@ -312,7 +312,7 @@ Apple Intelligence가 \"Private Cloud Compute\"라는 전용 인프라로 cloud 
           date: "5/22",
           platform: "X+Threads",
           title: "Google Gemini in Chrome (YouTube help curation)",
-          summary: "",
+          summary: "Google이 Chrome의 AI 기능을 모은 사용자 안내 페이지를 공개했습니다. 여러 탭의 내용 비교, 입력란의 글 작성·다듬기, 주소 표시줄에서 Gemini에 질문하기, 긴 페이지 요약 기능을 정리한 자료입니다.",
           content: `Google이 2026년 5월 22일 YouTube Help 도메인에 Chrome의 AI 기능을 정리한 \"AI innovations in Chrome\" 큐레이션 페이지를 공개했습니다. Chrome 안의 Gemini 통합 기능을 한 곳에서 설명하는 사용자 안내 페이지이고, Google이 어떤 기능을 \"공식 라인업\"으로 잡고 있는지를 가장 정확하게 확인할 수 있습니다.
 
 페이지에 정리된 기능:
@@ -345,7 +345,7 @@ Apple Intelligence가 \"Private Cloud Compute\"라는 전용 인프라로 cloud 
           date: "5/22",
           platform: "X+Threads",
           title: "Google DeepMind AI Pointer",
-          summary: "",
+          summary: "Google DeepMind가 사람과 AI가 가리키는 대상을 주고받는 AI Pointer 연구 시제품을 공개했습니다. 손가락·시선 방향으로 대상을 추론하고 AI도 좌표와 말로 위치를 안내하며, 일반 출시 제품은 아닙니다.",
           content: `Google DeepMind가 2026년 5월 22일 자체 블로그에서 \"AI Pointer\"라는 새로운 연구 프로토타입을 공개했습니다. 모델이 화면 위의 어떤 객체를 가리키는지, 사람이 어디를 가리키는지를 양방향으로 인식하는 멀티모달 인터랙션 실험입니다.
 
 발표 요지:
@@ -388,7 +388,7 @@ AR 글래스 시장이 본격화되기 전 단계여서 직접 응용은 제한�
           date: "5/23",
           platform: "X+Threads",
           title: "Claude for Creative Work — connectors",
-          summary: "",
+          summary: "Anthropic이 Claude for Creative Work와 창작 도구 연결 기능을 공개했습니다. Adobe·Canva·Figma 등의 작업 자료를 활용해 문구 수정과 영상 자막·메타데이터 작성 등을 돕고, 연결별 라이선스 안내를 제공합니다.",
           content: `Anthropic이 2026년 5월 23일 \"Claude for Creative Work\"를 발표하면서 Adobe · Canva · Figma 등 크리에이티브 도구와의 공식 connector 라인업을 함께 공개했습니다. Claude를 \"코드 도우미\"가 아니라 디자인 / 영상 / 글쓰기 워크플로우의 한 단계로 자리잡게 하려는 시도입니다.
 
 핵심 구성:
@@ -426,7 +426,7 @@ connector를 통한 자산 사용은 라이선스 risk가 항상 따라옵니다
           date: "5/23",
           platform: "X+Threads",
           title: "Anthropic Claude limits and SpaceX compute capacity",
-          summary: "",
+          summary: "Anthropic이 SpaceX와의 인프라 협력을 배경으로 Claude 사용량 한도를 높인다고 발표했습니다. Pro·Team·Enterprise의 메시지와 토큰 한도를 확대하며, 가격 인상 없이 제공한다는 내용입니다.",
           content: `Anthropic이 2026년 5월 23일 \"Higher limits, powered by SpaceX\" 제목의 공지를 통해 Claude의 사용량 제한을 한 단계 상향한다고 발표했습니다. 동시에 그 배경으로 SpaceX와 체결한 데이터센터 / 위성 백홀 인프라 계약을 공개했습니다.
 
 요지:
@@ -511,7 +511,7 @@ Claude Mythos Preview는 Anthropic의 frontier 모델 라인 중에서 \"이 정
           date: "5/23",
           platform: "X+Threads",
           title: "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
-          summary: "NVIDIA introduced a diffusion language model approach for faster text generation through the Hugging Face Blog.",
+          summary: "NVIDIA가 Hugging Face 블로그를 통해 텍스트 생성을 더 빠르게 처리하기 위한 확산 언어 모델 접근법을 소개했습니다.",
           content: `NVIDIA Nemotron-Labs가 2026년 5월 23일 Hugging Face 블로그에 \"Towards Speed-of-Light Text Generation with Diffusion Language Models\" 글을 공개했습니다. 텍스트 생성을 기존 autoregressive 방식이 아니라 diffusion 방식으로 처리해 추론 latency를 한 자릿수 ms 수준까지 떨어뜨리는 연구입니다.
 
 핵심 주장:
@@ -548,7 +548,7 @@ LLM 추론 비용은 token-by-token 직렬성에서 비롯되는 부분이 큽�
           date: "5/23",
           platform: "X+Threads",
           title: "NVIDIA Nemotron 3 Nano Omni long-context multimodal model",
-          summary: "",
+          summary: "NVIDIA가 텍스트·이미지·음성을 함께 처리하는 Nemotron 3 Nano Omni를 공개했습니다. 긴 회의 녹취나 문서·시각 자료를 한 번에 다루는 긴 입력 지원과 단일 GPU 등에서의 실행을 강조했습니다.",
           content: `NVIDIA가 2026년 5월 23일 \"Nemotron 3 Nano Omni\"를 Hugging Face 블로그에 공개했습니다. \"Nano\"라는 이름과 달리 시각·음성·텍스트를 모두 받는 멀티모달 모델로, 동급 \"on-device 친화\" 모델 라인 중 긴 컨텍스트 길이를 강조합니다.
 
 핵심 사양:
@@ -634,7 +634,7 @@ Cursor 공식 changelog에는 이 변경이 명시되지 않았고, 일부 사�
           date: "5/23",
           platform: "X+Threads",
           title: "Vercel AI Gateway production index — agentic workloads & multi-model routing",
-          summary: "",
+          summary: "Vercel이 AI Gateway의 실제 서비스 트래픽을 바탕으로 모델 사용 현황을 공개했습니다. 한 작업에 여러 모델을 조합하고, 비용·응답 속도·품질에 따라 호출 대상을 선택하는 운영 방식을 다룹니다.",
           content: `Vercel이 2026년 5월 23일 \"AI Gateway production index\"를 공개하면서 어떤 모델이 실제 production agentic 워크로드에서 가장 많이 호출되는지를 자체 트래픽 기반으로 정리했습니다. AI Gateway는 OpenAI / Anthropic / Google / Qwen 같은 모델을 단일 API로 묶어 라우팅하는 Vercel 제품입니다.
 
 핵심 데이터 포인트:
@@ -785,7 +785,7 @@ OpenAI / Anthropic / Google이라는 세 축 위에 Thinking Machines, Safe Supe
           date: "5/23",
           platform: "X+Threads",
           title: "OpenAI models, Codex, and Managed Agents on Amazon Bedrock",
-          summary: "",
+          summary: "OpenAI가 자사 모델과 Codex·Managed Agents의 Amazon Bedrock 제공을 발표했습니다. AWS의 인증·청구 체계로 연결하는 경로이며, 도입 전 사용 지역과 데이터 보관 정책을 확인해야 합니다.",
           content: `OpenAI가 2026년 5월 23일 \"OpenAI on AWS\"를 발표하면서 자사 모델 + Codex + Managed Agents를 Amazon Bedrock에서 직접 호출할 수 있도록 했습니다. OpenAI가 Azure에 사실상 독점적이었던 enterprise distribution 채널을 처음으로 다른 hyperscaler에 연 사건입니다.
 
 핵심 포인트:
@@ -818,7 +818,7 @@ OpenAI는 2019년 Microsoft 파트너십 이후 사실상 Azure 위에서만 ent
           date: "5/23",
           platform: "X+Threads",
           title: "PaddleOCR 3.5 Transformers backend",
-          summary: "",
+          summary: "PaddleOCR 3.5에 Hugging Face Transformers 연동이 공개됐습니다. 별도 PaddlePaddle 실행 환경에 의존하던 문자 인식 모델을 Transformers에서 불러오는 방식으로, 기존 모델 운영 환경과의 통합을 단순화합니다.",
           content: `PaddlePaddle 팀이 2026년 5월 23일 Hugging Face 블로그에 PaddleOCR 3.5의 Transformers backend 통합을 공개했습니다. 그동안 PaddlePaddle 프레임워크에 종속돼 있던 OCR 파이프라인을 표준 \`transformers\` 라이브러리에서 직접 호출할 수 있게 됐습니다.
 
 핵심 변화:
@@ -846,7 +846,7 @@ PaddleOCR은 한자 / 한글 / 일본어 같은 동아시아 언어에서 Tesser
           date: "5/23",
           platform: "X+Threads",
           title: "Dharma-AI specialization beats scale OCR benchmark",
-          summary: "",
+          summary: "Dharma-AI가 문자 인식에 특화한 소형 모델이 같은 평가에서 범용 대형 멀티모달 모델보다 높은 정확도를 보였다고 보고했습니다. 비용과 응답 지연도 함께 비교한 자체 평가 결과입니다.",
           content: `Dharma-AI가 2026년 5월 23일 Hugging Face 블로그에 \"Specialization beats scale\" 글을 공개했습니다. OCR 영역에 한정된 소형 specialized 모델이 동일 태스크에서 대형 멀티모달 모델을 벤치마크로 앞섰다는 보고입니다.
 
 핵심 주장:
@@ -874,7 +874,7 @@ frontier 멀티모달 모델이 모든 vision 태스크를 흡수할 거라는 �
           date: "5/23",
           platform: "X+Threads",
           title: "DeepInfra on Hugging Face Inference Providers",
-          summary: "",
+          summary: "Hugging Face가 Inference Providers에 DeepInfra를 추가했습니다. 기존 호출 인터페이스를 유지하면서 모델을 실행할 제공자를 선택할 수 있어, 비용과 응답 속도에 따른 운영 선택지가 늘어납니다.",
           content: `Hugging Face가 2026년 5월 23일 DeepInfra를 자사 Inference Providers 라인업에 정식 추가했습니다. Hugging Face Hub에서 호스팅되는 모델을 호출할 때 backend 선택지가 한 곳 더 늘었습니다.
 
 핵심 변화:
@@ -902,7 +902,7 @@ inference provider 시장이 \"단일 표준\" 없이 다극화되는 흐름이 
           date: "5/23",
           platform: "X+Threads",
           title: "OlmoEarth v1.1 efficient Earth observation AI models",
-          summary: "",
+          summary: "AllenAI가 위성·항공 영상 분석에 특화한 OlmoEarth v1.1을 공개했습니다. 정확도를 유지하면서 모델 크기를 줄이고, 위성 영상의 여러 파장대 입력을 처리하는 효율을 개선했다고 설명했습니다.",
           content: `AllenAI가 2026년 5월 23일 OlmoEarth v1.1을 Hugging Face 블로그에 공개했습니다. 위성 영상 / 항공 이미지 등 Earth observation 데이터에 특화된 오픈 모델 라인의 마이너 업데이트로, 모델 footprint를 줄이면서 정확도를 유지했습니다.
 
 핵심 변화:
@@ -930,7 +930,7 @@ inference provider 시장이 \"단일 표준\" 없이 다극화되는 흐름이 
           date: "5/23",
           platform: "X+Threads",
           title: "Granite Embedding Multilingual R2",
-          summary: "",
+          summary: "IBM이 다국어 검색·분류용 Granite Embedding Multilingual R2를 공개했습니다. 한국어를 포함한 100개 이상 언어를 지원하고, 이전 버전보다 다국어 검색 평가 점수가 개선됐다고 밝혔습니다.",
           content: `IBM이 2026년 5월 23일 Granite Embedding Multilingual R2를 공개했습니다. 100+ 언어를 지원하는 오픈 임베딩 모델 라인의 두 번째 release로, 다국어 RAG / 검색 / 분류 워크로드용입니다.
 
 핵심 변화:
@@ -959,7 +959,7 @@ OpenAI text-embedding-3-large나 Cohere embed-v3가 좋아도 \"데이터를 외
           date: "5/23",
           platform: "X+Threads",
           title: "Hugging Face asynchronous continuous batching",
-          summary: "",
+          summary: "Hugging Face가 Transformers의 비동기 연속 배치 처리 방식을 소개했습니다. 들어오는 추론 요청을 처리 묶음에 계속 합치고 완료된 요청부터 반환해, 동시 요청과 메모리를 효율적으로 관리합니다.",
           content: `Hugging Face가 2026년 5월 23일 \"Asynchronous continuous batching\" 글을 통해 \`transformers\` 추론 코드의 새로운 배치 처리 방식을 공개했습니다. vLLM이 PagedAttention + continuous batching으로 인기를 끈 영역을 표준 \`transformers\`로 일부 흡수하려는 시도입니다.
 
 핵심 변화:
@@ -987,7 +987,7 @@ OpenAI text-embedding-3-large나 Cohere embed-v3가 좋아도 \"데이터를 외
           date: "5/23",
           platform: "X+Threads",
           title: "IBM Granite 4.1 LLMs training pipeline",
-          summary: "",
+          summary: "IBM이 Granite 4.1 언어 모델의 학습 절차를 공개했습니다. 텍스트·코드 모델의 사전학습과 후처리, 데이터 출처·필터링·합성 데이터 구성, 지시 학습과 사람의 피드백을 활용한 학습 방법을 다룹니다.",
           content: `IBM이 2026년 5월 23일 Hugging Face 블로그에 Granite 4.1 LLM 라인업의 학습 파이프라인을 상세 공개했습니다. 모델 가중치뿐 아니라 \"어떻게 만들었는지\"의 절차까지 함께 풀었다는 점이 특징입니다.
 
 핵심 공개 내용:
@@ -1016,7 +1016,7 @@ IBM은 enterprise 시장에서 \"감사 가능한 AI\" 포지셔닝을 강화합
           date: "5/23",
           platform: "X+Threads",
           title: "AWS foundation model training and inference building blocks",
-          summary: "",
+          summary: "AWS가 자체 기반 모델의 학습부터 추론·운영까지 연결하는 참고 구성을 공개했습니다. SageMaker와 Trainium으로 학습하고, S3·Glue로 데이터를 처리하며, Inferentia와 Bedrock 등을 활용하는 흐름입니다.",
           content: `AWS가 2026년 5월 23일 Hugging Face 블로그에 \"Foundation model training and inference building blocks\" 글을 공개했습니다. SageMaker · Trainium · Inferentia · Bedrock을 묶어서 \"어떻게 풀스택으로 자체 foundation 모델을 만들 수 있는지\"를 정리한 reference architecture입니다.
 
 핵심 구성:
@@ -1045,7 +1045,7 @@ IBM은 enterprise 시장에서 \"감사 가능한 AI\" 포지셔닝을 강화합
           date: "5/23",
           platform: "X+Threads",
           title: "vLLM V0 to V1 RL backend correctness",
-          summary: "",
+          summary: "ServiceNow AI팀이 vLLM V0에서 V1으로 전환하며 강화학습 결과의 수치 일관성을 점검한 사례를 공개했습니다. 캐시 구조와 샘플링 연산 순서의 차이를 추적하고, 같은 난수 조건에서 출력 분포를 비교하는 테스트를 도입했습니다.",
           content: `ServiceNow AI 팀이 2026년 5월 23일 Hugging Face 블로그에 \"Correctness before corrections\" 글을 공개했습니다. vLLM의 V0 → V1 마이그레이션 과정에서 강화학습(RL) 학습 backend의 수치 정합성을 어떻게 보장했는지의 엔지니어링 보고서입니다.
 
 핵심 포인트:
@@ -1073,7 +1073,7 @@ vLLM이 RLHF / DPO / 강화학습 워크로드의 사실상 표준이 되면서,
           date: "5/23",
           platform: "X+Threads",
           title: "Open ASR Leaderboard private evaluation sets",
-          summary: "",
+          summary: "Hugging Face가 Open ASR Leaderboard에 비공개 음성 인식 평가 데이터를 도입한다고 발표했습니다. 제출자는 결과만 확인하도록 해, 평가 자료가 학습에 섞이면서 점수가 부풀려지는 문제를 줄이려는 조치입니다.",
           content: `Hugging Face가 2026년 5월 23일 Open ASR Leaderboard에 private evaluation set을 도입한다고 발표했습니다. 음성 인식 벤치마크의 \"학습 데이터에 평가 셋이 새어들어 점수가 인플레이션되는\" 고질적 문제를 해결하려는 시도입니다.
 
 핵심 변화:
@@ -1418,7 +1418,7 @@ tw93/kami(/kami 하네스의 디자인 시스템 베이스)를 본 사이트도 
           date: "5/22",
           platform: "X+Threads",
           title: "GPT Image API: n parameter usage tip",
-          summary: "",
+          summary: "GPT Image API의 n 파라미터는 같은 프롬프트로 여러 이미지 후보를 한 번에 받아 비교하는 데 사용됩니다. 여러 결과 중 하나를 골라 다듬는 작업에 유용하며, 생성 개수에 따른 비용을 확인해야 합니다.",
           content: `OpenAI Images API의 \`n\` 파라미터 사용법이 2026년 5월 22일 개발자 사이에서 다시 화두가 됐습니다. 같은 prompt로 동시에 여러 장의 결과를 받아 비교 / 선택하는 워크플로우를 한 호출 안에 묶을 수 있다는 것을 모르는 사용자가 의외로 많습니다.
 
 핵심 사용법:

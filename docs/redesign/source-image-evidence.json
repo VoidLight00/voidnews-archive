@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-08T13:22:26.092167+00:00",
+  "week": null,
+  "addedCount": 9,
+  "deferredCount": 5,
+  "requestPolicy": {
+    "maxConcurrency": 2,
+    "connectTimeoutSeconds": 5,
+    "readTimeoutSeconds": 12,
+    "auth": false,
+    "proxy": false,
+    "imageMaxBytes": 12000000
+  },
+  "records": [
+    {
+      "sourceUrl": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+      "candidateUrl": "https://openrouter.ai/blog/images/openrouter-stripe.png",
+      "retrievedAt": "2026-09-08T13:21:40.322942+00:00",
+      "finalImageUrl": "https://openrouter.ai/blog/images/openrouter-stripe.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 3200,
+      "height": 1800,
+      "sha256": "2d1221b20570a4dcfe0cf543257f7ddc700675709b37f212542a03d3626e397e",
+      "byteLength": 3273593,
+      "localReviewFile": "/tmp/voidnews-review-2d1221b20570a4dc.png",
+      "status": 200,
+      "pageFetchedAt": "2026-09-08T13:20:35.757331+00:00",
+      "pageTitle": "OpenRouter is Joining Stripe — OpenRouter Blog",
+      "mainHeadline": "OpenRouter is Joining Stripe",
+      "ogImage": "https://openrouter.ai/blog/images/openrouter-stripe.png",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "@id": null,
+          "url": null,
+          "headline": "OpenRouter is Joining Stripe",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://openrouter.ai/blog/images/openrouter-stripe.png",
+            "width": 3200,
+            "height": 1800
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
+          }
+        }
+      ],
+      "mainArticleImage": {
+        "selector": "h1 closest article img (first within that article, not first global article)",
+        "src": "/blog/images/openrouter-stripe.png",
+        "alt": "OpenRouter is Joining Stripe",
+        "articleImageCount": 1
+      },
+      "association": "Main h1 belongs to article containing this candidate; article-specific structured image matches OG. Higgsfield image URL wraps the identical asset in its first-party resize route. Stability main image uses a different asset id from OG, with the same Stable_Audio_Beta_Launch_16x9 filename.",
+      "disposition": "accepted-source-preview",
+      "localPublicPath": "/source-images/2d1221b20570a4dcfe0cf543257f7ddc700675709b37f212542a03d3626e397e.png",
+      "contentEvidence": "OpenRouter is Joining Stripe",
+      "limitations": [
+        "Visual inspection unavailable: Read returned encoded payload rather than a rendered image. No visual content claim is made.",
+        "No browser-rendered layout or editorial first-image claim; HTML association only.",
+        "Reuse license not verified."
+      ]
+    },
+    {
+      "sourceUrl": "https://higgsfield.ai/blog/mcp-for-marketers",
+      "candidateUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/5423b472152f296023d9cbc18343c7cccbe5ea77-5504x3072.webp",
+      "retrievedAt": "2026-09-08T13:21:40.193167+00:00",
+      "finalImageUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/5423b472152f296023d9cbc18343c7cccbe5ea77-5504x3072.webp",
+      "mime": "image/jpeg",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1071,
+      "sha256": "faeb8e052cc31de5bd79db8e2c4584034dabe4f813bf77d8a854d78978dbf31d",
+      "byteLength": 196246,
+      "localReviewFile": "/tmp/voidnews-review-faeb8e052cc31de5.jpg",
+      "status": 200,
+      "pageFetchedAt": "2026-09-08T13:20:36.158991+00:00",
+      "pageTitle": "MCP for Marketers: Creatives Without Leaving the Chat",
+      "mainHeadline": "MCP for Marketers: Creatives Without Leaving the Chat",
+      "ogImage": "https://cdn.sanity.io/images/s479xw3z/production/5423b472152f296023d9cbc18343c7cccbe5ea77-5504x3072.webp",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://higgsfield.ai/blog/mcp-for-marketers#article",
+          "url": null,
+          "headline": "MCP for Marketers: Creatives Without Leaving the Chat",
+          "image": "https://cdn.sanity.io/images/s479xw3z/production/5423b472152f296023d9cbc18343c7cccbe5ea77-5504x3072.webp",
+          "mainEntityOfPage": {
+            "@id": "https://higgsfield.ai/blog/mcp-for-marketers"
+          }
+        }
+      ],
+      "mainArticleImage": {
+        "selector": "h1 closest article img (first within that article, not first global article)",
+        "src": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/5423b472152f296023d9cbc18343c7cccbe5ea77-5504x3072.webp",
+        "alt": "",
+        "articleImageCount": 3
+      },
+      "association": "Main h1 belongs to article containing this candidate; article-specific structured image matches OG. Higgsfield image URL wraps the identical asset in its first-party resize route. Stability main image uses a different asset id from OG, with the same Stable_Audio_Beta_Launch_16x9 filename.",
+      "disposition": "deferred-content-suitability",
+      "localPublicPath": null,
+      "contentEvidence": null,
+      "limitations": [
+        "Visual inspection unavailable: Read returned encoded payload rather than a rendered image. No visual content claim is made.",
+        "No browser-rendered layout or editorial first-image claim; HTML association only.",
+        "Reuse license not verified.",
+        "Main candidate alt is empty. Article association does not establish depicted-content suitability. Related-card descriptive alt is not evidence for this asset."
+      ]
+    },
+    {
+      "sourceUrl": "https://higgsfield.ai/blog/new-marketing-studio-higgsfield",
+      "candidateUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/ce3fee23ad85ff9b7dfb58bd2f4fbdec1d952360-2048x1152.png",
+      "retrievedAt": "2026-09-08T13:21:40.306410+00:00",
+      "finalImageUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/ce3fee23ad85ff9b7dfb58bd2f4fbdec1d952360-2048x1152.png",
+      "mime": "image/jpeg",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "17eb65b5920457aae675b38cf873db0e346a14e808bf29fb4fd7298b2f6bfbd0",
+      "byteLength": 278026,
+      "localReviewFile": "/tmp/voidnews-review-17eb65b5920457aa.jpg",
+      "status": 200,
+      "pageFetchedAt": "2026-09-08T13:20:36.242011+00:00",
+      "pageTitle": "Meet the New Marketing Studio: How It Works and What You Get",
+      "mainHeadline": "Meet the New Marketing Studio: How It Works and What You Get",
+      "ogImage": "https://cdn.sanity.io/images/s479xw3z/production/ce3fee23ad85ff9b7dfb58bd2f4fbdec1d952360-2048x1152.png",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://higgsfield.ai/blog/new-marketing-studio-higgsfield#article",
+          "url": null,
+          "headline": "Meet the New Marketing Studio: How It Works and What You Get",
+          "image": "https://cdn.sanity.io/images/s479xw3z/production/ce3fee23ad85ff9b7dfb58bd2f4fbdec1d952360-2048x1152.png",
+          "mainEntityOfPage": {
+            "@id": "https://higgsfield.ai/blog/new-marketing-studio-higgsfield"
+          }
+        }
+      ],
+      "mainArticleImage": {
+        "selector": "h1 closest article img (first within that article, not first global article)",
+        "src": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/ce3fee23ad85ff9b7dfb58bd2f4fbdec1d952360-2048x1152.png",
+        "alt": "",
+        "articleImageCount": 3
+      },
+      "association": "Main h1 belongs to article containing this candidate; article-specific structured image matches OG. Higgsfield image URL wraps the identical asset in its first-party resize route. Stability main image uses a different asset id from OG, with the same Stable_Audio_Beta_Launch_16x9 filename.",
+      "disposition": "deferred-content-suitability",
+      "localPublicPath": null,
+      "contentEvidence": null,
+      "limitations": [
+        "Visual inspection unavailable: Read returned encoded payload rather than a rendered image. No visual content claim is made.",
+        "No browser-rendered layout or editorial first-image claim; HTML association only.",
+        "Reuse license not verified.",
+        "Main candidate alt is empty. Article association does not establish depicted-content suitability. Related-card descriptive alt is not evidence for this asset."
+      ]
+    },
+    {
+      "sourceUrl": "https://higgsfield.ai/blog/higgsfield-blender-plugin",
+      "candidateUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/ee4e80f86f21216984ac3452adbac05b732cf0d5-1920x1080.jpg",
+      "retrievedAt": "2026-09-08T13:21:40.395589+00:00",
+      "finalImageUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/ee4e80f86f21216984ac3452adbac05b732cf0d5-1920x1080.jpg",
+      "mime": "image/jpeg",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "b702fe7ca89aae4f19a211d522fede76dadbbea7b78594c23d75f4c1ed88f7c0",
+      "byteLength": 131744,
+      "localReviewFile": "/tmp/voidnews-review-b702fe7ca89aae4f.jpg",
+      "status": 200,
+      "pageFetchedAt": "2026-09-08T13:20:36.621255+00:00",
+      "pageTitle": "Higgsfield for Blender: Features, Installation, and MCP Bridge Setup",
+      "mainHeadline": "Higgsfield for Blender: Features, Installation, and MCP Bridge Setup",
+      "ogImage": "https://cdn.sanity.io/images/s479xw3z/production/ee4e80f86f21216984ac3452adbac05b732cf0d5-1920x1080.jpg",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://higgsfield.ai/blog/higgsfield-blender-plugin#article",
+          "url": null,
+          "headline": "Higgsfield for Blender: Features, Installation, and MCP Bridge Setup",
+          "image": "https://cdn.sanity.io/images/s479xw3z/production/ee4e80f86f21216984ac3452adbac05b732cf0d5-1920x1080.jpg",
+          "mainEntityOfPage": {
+            "@id": "https://higgsfield.ai/blog/higgsfield-blender-plugin"
+          }
+        }
+      ],
+      "mainArticleImage": {
+        "selector": "h1 closest article img (first within that article, not first global article)",
+        "src": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/ee4e80f86f21216984ac3452adbac05b732cf0d5-1920x1080.jpg",
+        "alt": "",
+        "articleImageCount": 1
+      },
+      "association": "Main h1 belongs to article containing this candidate; article-specific structured image matches OG. Higgsfield image URL wraps the identical asset in its first-party resize route. Stability main image uses a different asset id from OG, with the same Stable_Audio_Beta_Launch_16x9 filename.",
+      "disposition": "deferred-content-suitability",
+      "localPublicPath": null,
+      "contentEvidence": null,
+      "limitations": [
+        "Visual inspection unavailable: Read returned encoded payload rather than a rendered image. No visual content claim is made.",
+        "No browser-rendered layout or editorial first-image claim; HTML association only.",
+        "Reuse license not verified.",
+        "Main candidate alt is empty. Article association does not establish depicted-content suitability. Related-card descriptive alt is not evidence for this asset."
+      ]
+    },
+    {
+      "sourceUrl": "https://higgsfield.ai/blog/video-relight-color-palette-higgsfield",
+      "candidateUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/0747f54e72bddc387f45ace63607721e98fe359c-2048x1152.png",
+      "retrievedAt": "2026-09-08T13:21:40.426666+00:00",
+      "finalImageUrl": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/0747f54e72bddc387f45ace63607721e98fe359c-2048x1152.png",
+      "mime": "image/jpeg",
+      "format": "JPEG",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "707ffe45c36bb891bc755bcf77a947e18b549044c1d317845bf5d3006e960ba8",
+      "byteLength": 158403,
+      "localReviewFile": "/tmp/voidnews-review-707ffe45c36bb891.jpg",
+      "status": 200,
+      "pageFetchedAt": "2026-09-08T13:20:36.687389+00:00",
+      "pageTitle": "Video Relight and Color Palette: Two Standalone Editing Tools on Higgsfield",
+      "mainHeadline": "Video Relight and Color Palette: Two Standalone Editing Tools on Higgsfield",
+      "ogImage": "https://cdn.sanity.io/images/s479xw3z/production/0747f54e72bddc387f45ace63607721e98fe359c-2048x1152.png",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://higgsfield.ai/blog/video-relight-color-palette-higgsfield#article",
+          "url": null,
+          "headline": "Video Relight and Color Palette: Two Standalone Editing Tools on Higgsfield",
+          "image": "https://cdn.sanity.io/images/s479xw3z/production/0747f54e72bddc387f45ace63607721e98fe359c-2048x1152.png",
+          "mainEntityOfPage": {
+            "@id": "https://higgsfield.ai/blog/video-relight-color-palette-higgsfield"
+          }
+        }
+      ],
+      "mainArticleImage": {
+        "selector": "h1 closest article img (first within that article, not first global article)",
+        "src": "https://higgsfield.ai/cdn-cgi/image/fit=scale-down,format=webp,onerror=redirect,width=1920,quality=85/https://cdn.sanity.io/images/s479xw3z/production/0747f54e72bddc387f45ace63607721e98fe359c-2048x1152.png",
+        "alt": "",
+        "articleImageCount": 1
+      },
+      "association": "Main h1 belongs to article containing this candidate; article-specific structured image matches OG. Higgsfield image URL wraps the identical asset in its first-party resize route. Stability main image uses a different asset id from OG, with the same Stable_Audio_Beta_Launch_16x9 filename.",
+      "disposition": "deferred-content-suitability",
+      "localPublicPath": null,
+      "contentEvidence": null,
+      "limitations": [
+        "Visual inspection unavailable: Read returned encoded payload rather than a rendered image. No visual content claim is made.",
+        "No browser-rendered layout or editorial first-image claim; HTML association only.",
+        "Reuse license not verified.",
+        "Main candidate alt is empty. Article association does not establish depicted-content suitability. Related-card descriptive alt is not evidence for this asset."
+      ]
+    },
+    {
+      "sourceUrl": "https://stability.ai/news-updates/sharing-a-new-way-to-work-with-stable-audio",
+      "candidateUrl": "https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/e960798a-8d34-48bb-9990-54c7cf781852/Stable_Audio_Beta_Launch_16x9.png",
+      "retrievedAt": "2026-09-08T13:21:40.890934+00:00",
+      "finalImageUrl": "https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/e960798a-8d34-48bb-9990-54c7cf781852/Stable_Audio_Beta_Launch_16x9.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 2500,
+      "height": 1406,
+      "sha256": "dcb75b05cc4a5c50c2a9b7b9f56330f2a23851d8d06ca5bd08e4755973911edd",
+      "byteLength": 2077870,
+      "localReviewFile": null,
+      "status": 200,
+      "pageFetchedAt": "2026-09-08T13:20:37.203659+00:00",
+      "pageTitle": "Sharing a new way to work with Stable Audio — Stability AI",
+      "mainHeadline": "Sharing a new way to work with Stable Audio",
+      "ogImage": "http://static1.squarespace.com/static/6213c340453c3f502425776e/t/6a8339bc452f993158f20713/1786984892211/Stable_Audio_Beta_Launch_16x9.png?format=1500w",
+      "structuredArticle": [
+        {
+          "@type": "Article",
+          "@id": null,
+          "url": "https://stability.ai/news-updates/sharing-a-new-way-to-work-with-stable-audio",
+          "headline": "Sharing a new way to work with Stable Audio",
+          "image": "http://static1.squarespace.com/static/6213c340453c3f502425776e/t/6a8339bc452f993158f20713/1786984892211/Stable_Audio_Beta_Launch_16x9.png?format=1500w",
+          "mainEntityOfPage": null
+        }
+      ],
+      "mainArticleImage": {
+        "selector": "h1 closest article img (first within that article, not first global article)",
+        "src": "https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/e960798a-8d34-48bb-9990-54c7cf781852/Stable_Audio_Beta_Launch_16x9.png",
+        "alt": "",
+        "articleImageCount": 5
+      },
+      "association": "Main h1 belongs to article containing this candidate; article-specific structured image matches OG. Higgsfield image URL wraps the identical asset in its first-party resize route. Stability main image uses a different asset id from OG, with the same Stable_Audio_Beta_Launch_16x9 filename.",
+      "disposition": "deferred-content-suitability",
+      "localPublicPath": null,
+      "contentEvidence": null,
+      "limitations": [
+        "Visual inspection unavailable: Read returned encoded payload rather than a rendered image. No visual content claim is made.",
+        "No browser-rendered layout or editorial first-image claim; HTML association only.",
+        "Reuse license not verified.",
+        "Main candidate alt is empty. Article association does not establish depicted-content suitability. Related-card descriptive alt is not evidence for this asset."
+      ],
+      "priorReviewFile": {
+        "path": "/tmp/voidnews-review-b7f31ea646633541.webp",
+        "sha256": "b7f31ea64663354150db59273ed83b89b2b39033920a0aaec6146aff74ddb62a",
+        "mime": "image/webp",
+        "dimensions": [
+          2500,
+          1406
+        ],
+        "limitation": "Current retrieval decoded PNG and has different bytes. Prior WebP not asserted to match current PNG by hash."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "postSlug": "claude-code-20260826-v2-1-246",
+      "dataPath": "companies[4].posts[1]",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "finalSourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "candidateUrl": "https://opengraph.githubassets.com/6eb7cb669db472da0568049c5dd0bcdeca3cfd5c69e67f620ce2dbd387d1b796/anthropics/claude-code/releases/tag/v2.1.246",
+      "finalImageUrl": "https://opengraph.githubassets.com/6eb7cb669db472da0568049c5dd0bcdeca3cfd5c69e67f620ce2dbd387d1b796/anthropics/claude-code/releases/tag/v2.1.246",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.005308+00:00",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 600,
+      "sha256": "04b0260a077913933b99caa7eff544cc8e8458ab83b5f596f589354f480fdb31",
+      "byteLength": 54020,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/9ca0a968639ba4ee.png",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/7b1fa515c92a7efc.html",
+      "pageTitle": "Release v2.1.246 · anthropics/claude-code · GitHub",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://opengraph.githubassets.com/6eb7cb669db472da0568049c5dd0bcdeca3cfd5c69e67f620ce2dbd387d1b796/anthropics/claude-code/releases/tag/v2.1.246",
+      "structuredArticle": [],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Release v2.1.246 · anthropics/claude-code"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        }
+      ],
+      "releaseSpecificPreview": true,
+      "articleImageStructurallySupported": false,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/04b0260a077913933b99caa7eff544cc8e8458ab83b5f596f589354f480fdb31.png",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w35",
+      "postSlug": "gemini-cli-20260826-v0-57-0",
+      "dataPath": "companies[5].posts[2]",
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "finalSourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "candidateUrl": "https://opengraph.githubassets.com/b3b834822567c2938e479a3f72cafadaa2fd7b2083e5d9b374778b8f41f88b5f/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "finalImageUrl": "https://opengraph.githubassets.com/b3b834822567c2938e479a3f72cafadaa2fd7b2083e5d9b374778b8f41f88b5f/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.008310+00:00",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 600,
+      "sha256": "26db4a3e17cb30304d147ad8197ff30a910e14e444e7d9e43806e54f6691896f",
+      "byteLength": 77934,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/558a36545f8138e0.png",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/2776a34d5c8a01b1.html",
+      "pageTitle": "Release Release v0.57.0 · google-gemini/gemini-cli · GitHub",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://opengraph.githubassets.com/b3b834822567c2938e479a3f72cafadaa2fd7b2083e5d9b374778b8f41f88b5f/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "structuredArticle": [],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Release Release v0.57.0 · google-gemini/gemini-cli"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        }
+      ],
+      "releaseSpecificPreview": true,
+      "articleImageStructurallySupported": false,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/26db4a3e17cb30304d147ad8197ff30a910e14e444e7d9e43806e54f6691896f.png",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w35",
+      "postSlug": "github-copilot-cli-20260826-v1-0-81-10",
+      "dataPath": "companies[6].posts[0]",
+      "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "finalSourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "candidateUrl": "https://opengraph.githubassets.com/eed798e0fe5d32f667532e13b3fd42a23276037c9ddc05eccd64db72221e0d30/github/copilot-cli/releases/tag/v1.0.81-10",
+      "finalImageUrl": "https://opengraph.githubassets.com/eed798e0fe5d32f667532e13b3fd42a23276037c9ddc05eccd64db72221e0d30/github/copilot-cli/releases/tag/v1.0.81-10",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.010732+00:00",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 600,
+      "sha256": "4d53aa729c6dcd7826e992f44151f4c4c5e881d52d1e2300108831a2177c54f3",
+      "byteLength": 41906,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/61edd687c3d13db9.png",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/a4d3ce16f08c3bdb.html",
+      "pageTitle": "Release 1.0.81-10 · github/copilot-cli · GitHub",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://opengraph.githubassets.com/eed798e0fe5d32f667532e13b3fd42a23276037c9ddc05eccd64db72221e0d30/github/copilot-cli/releases/tag/v1.0.81-10",
+      "structuredArticle": [],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Release 1.0.81-10 · github/copilot-cli"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        }
+      ],
+      "releaseSpecificPreview": true,
+      "articleImageStructurallySupported": false,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/4d53aa729c6dcd7826e992f44151f4c4c5e881d52d1e2300108831a2177c54f3.png",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w35",
+      "postSlug": "github-copilot-cli-20260826-v1-0-81-11",
+      "dataPath": "companies[6].posts[1]",
+      "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "finalSourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "candidateUrl": "https://opengraph.githubassets.com/2224d767a5247bc89e43eeafec141c252ed76b16f6e5f20c56593596f5b9501b/github/copilot-cli/releases/tag/v1.0.81-11",
+      "finalImageUrl": "https://opengraph.githubassets.com/2224d767a5247bc89e43eeafec141c252ed76b16f6e5f20c56593596f5b9501b/github/copilot-cli/releases/tag/v1.0.81-11",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.012970+00:00",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 600,
+      "sha256": "48d86fd01e783ca4b0aeb3242b92d31a9aa02df5a678787ee4601c4c945a9484",
+      "byteLength": 42254,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/1dee756401ad90f4.png",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/1db783ae4293a9d0.html",
+      "pageTitle": "Release 1.0.81-11 · github/copilot-cli · GitHub",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://opengraph.githubassets.com/2224d767a5247bc89e43eeafec141c252ed76b16f6e5f20c56593596f5b9501b/github/copilot-cli/releases/tag/v1.0.81-11",
+      "structuredArticle": [],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Release 1.0.81-11 · github/copilot-cli"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        }
+      ],
+      "releaseSpecificPreview": true,
+      "articleImageStructurallySupported": false,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/48d86fd01e783ca4b0aeb3242b92d31a9aa02df5a678787ee4601c4c945a9484.png",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w34",
+      "postSlug": "claude-code-20260819-v2-1-236",
+      "dataPath": "companies[0].posts[1]",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+      "finalSourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+      "candidateUrl": "https://opengraph.githubassets.com/7c40a89f0d56b545ebbe04776e602b1851947fb9f1b1686f86bf385c9b502542/anthropics/claude-code/releases/tag/v2.1.236",
+      "finalImageUrl": "https://opengraph.githubassets.com/7c40a89f0d56b545ebbe04776e602b1851947fb9f1b1686f86bf385c9b502542/anthropics/claude-code/releases/tag/v2.1.236",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.015406+00:00",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 600,
+      "sha256": "11884a7f1e94af77c54a72e5501e94a2c7c0a074f2dfde5d7513d992a19f1910",
+      "byteLength": 54860,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/e2758ede705e21f3.png",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/e2ea6ef4c9fbfceb.html",
+      "pageTitle": "Release v2.1.236 · anthropics/claude-code · GitHub",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://opengraph.githubassets.com/7c40a89f0d56b545ebbe04776e602b1851947fb9f1b1686f86bf385c9b502542/anthropics/claude-code/releases/tag/v2.1.236",
+      "structuredArticle": [],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Release v2.1.236 · anthropics/claude-code"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        }
+      ],
+      "releaseSpecificPreview": true,
+      "articleImageStructurallySupported": false,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/11884a7f1e94af77c54a72e5501e94a2c7c0a074f2dfde5d7513d992a19f1910.png",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w34",
+      "postSlug": "ollama-20260819-v0-32-15",
+      "dataPath": "companies[1].posts[0]",
+      "sourceUrl": "https://github.com/ollama/ollama/releases/tag/v0.32.15",
+      "finalSourceUrl": "https://github.com/ollama/ollama/releases/tag/v0.32.15",
+      "candidateUrl": "https://opengraph.githubassets.com/58721696f021cf84242346a19180d46644d3d9c5bb2f4848d8dad955b47d7fdb/ollama/ollama/releases/tag/v0.32.15",
+      "finalImageUrl": "https://opengraph.githubassets.com/58721696f021cf84242346a19180d46644d3d9c5bb2f4848d8dad955b47d7fdb/ollama/ollama/releases/tag/v0.32.15",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.017786+00:00",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1200,
+      "height": 600,
+      "sha256": "07cecfce50a8ca6be694f9c5494252a884e1200451763c53adb4274de2a54ce2",
+      "byteLength": 57221,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/ba2c3940bcf037fd.png",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/edb16a698ce27f1d.html",
+      "pageTitle": "Release v0.32.15 · ollama/ollama · GitHub",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://opengraph.githubassets.com/58721696f021cf84242346a19180d46644d3d9c5bb2f4848d8dad955b47d7fdb/ollama/ollama/releases/tag/v0.32.15",
+      "structuredArticle": [],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Release v0.32.15 · ollama/ollama"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        }
+      ],
+      "releaseSpecificPreview": true,
+      "articleImageStructurallySupported": false,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/07cecfce50a8ca6be694f9c5494252a884e1200451763c53adb4274de2a54ce2.png",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w34",
+      "postSlug": "tripo-20260817-image-gen",
+      "dataPath": "companies[7].posts[0]",
+      "sourceUrl": "https://www.tripo3d.ai/blog/tripo-image-gen-update",
+      "finalSourceUrl": "https://www.tripo3d.ai/blog/tripo-image-gen-update",
+      "candidateUrl": "https://cdn-blog.holymolly.ai/media/production/tripo-image-gen-update-tripo-concept-image-to-3d-asset-workflow.webp",
+      "finalImageUrl": "https://cdn-blog.holymolly.ai/media/production/tripo-image-gen-update-tripo-concept-image-to-3d-asset-workflow.webp",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.044995+00:00",
+      "mime": "image/webp",
+      "format": "WEBP",
+      "width": 720,
+      "height": 405,
+      "sha256": "a0633c313bb5e1a1c2734940e9664997b4580fb7bc3e0855cbebef2958fbeba9",
+      "byteLength": 22992,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/b107234214fb654d.webp",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/e3c9cefc0e2a00a4.html",
+      "pageTitle": "Tripo Image Gen Update: Turn Concept Images Into Assets Ready for 3D Workflows",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://cdn-blog.holymolly.ai/media/production/tripo-image-gen-update-tripo-concept-image-to-3d-asset-workflow.webp",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Tripo Image Gen Update: Turn Concept Images Into Assets Ready for 3D Workflows",
+          "url": "https://www.tripo3d.ai/blog/tripo-image-gen-update",
+          "mainEntityOfPage": "https://www.tripo3d.ai/blog/tripo-image-gen-update",
+          "image": {
+            "@id": "https://www.tripo3d.ai/blog/tripo-image-gen-update#primaryimage",
+            "@type": "ImageObject",
+            "url": "https://cdn-blog.holymolly.ai/media/production/tripo-image-gen-update-tripo-concept-image-to-3d-asset-workflow.webp"
+          }
+        }
+      ],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Tripo Image Gen Update: Turn Concept Images Into Assets Ready for 3D Workflows"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        },
+        {
+          "type": "article-schema-image",
+          "evidence": {
+            "schemaType": "BlogPosting",
+            "headline": "Tripo Image Gen Update: Turn Concept Images Into Assets Ready for 3D Workflows"
+          }
+        }
+      ],
+      "releaseSpecificPreview": null,
+      "articleImageStructurallySupported": true,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/a0633c313bb5e1a1c2734940e9664997b4580fb7bc3e0855cbebef2958fbeba9.webp",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    },
+    {
+      "week": "2026-w34",
+      "postSlug": "tripo-20260819-p2-preview",
+      "dataPath": "companies[7].posts[1]",
+      "sourceUrl": "https://www.tripo3d.ai/blog/tripo-p2-0-preview",
+      "finalSourceUrl": "https://www.tripo3d.ai/blog/tripo-p2-0-preview",
+      "candidateUrl": "https://cdn-blog.holymolly.ai/media/production/tripo-p2-0-preview-tripo-p2-preview-native-quad-mesh-promo.webp",
+      "finalImageUrl": "https://cdn-blog.holymolly.ai/media/production/tripo-p2-0-preview-tripo-p2-preview-native-quad-mesh-promo.webp",
+      "probeGeneratedAt": "2026-09-08T13:27:24.187792+00:00",
+      "validatedAt": "2026-09-08T13:32:26.048004+00:00",
+      "mime": "image/webp",
+      "format": "WEBP",
+      "width": 720,
+      "height": 405,
+      "sha256": "afd2318c701b7e9733abf609a961dfa6268937b64459ca1b49f1c4b98dbc3aeb",
+      "byteLength": 32940,
+      "status": 200,
+      "localReviewFile": "/tmp/voidnews-source-probe-remaining-assets/30f30cdedb782f25.webp",
+      "htmlEvidencePath": "/tmp/voidnews-source-probe-remaining-assets/b63f5422dd2fadc9.html",
+      "pageTitle": "Tripo P2.0 Preview: A Major Breakthrough for Production-Ready 3D Assets",
+      "pageValidation": {
+        "accepted": true,
+        "exactSourcePathAndHost": true,
+        "titleSpecificToSource": true,
+        "errorTitleDetected": false
+      },
+      "ogImage": "https://cdn-blog.holymolly.ai/media/production/tripo-p2-0-preview-tripo-p2-preview-native-quad-mesh-promo.webp",
+      "structuredArticle": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Tripo P2.0 Preview: A Major Breakthrough for Production-Ready 3D Assets",
+          "url": "https://www.tripo3d.ai/blog/tripo-p2-0-preview",
+          "mainEntityOfPage": "https://www.tripo3d.ai/blog/tripo-p2-0-preview",
+          "image": {
+            "@id": "https://www.tripo3d.ai/blog/tripo-p2-0-preview#primaryimage",
+            "@type": "ImageObject",
+            "url": "https://cdn-blog.holymolly.ai/media/production/tripo-p2-0-preview-tripo-p2-preview-native-quad-mesh-promo.webp"
+          }
+        }
+      ],
+      "imageEvidence": {
+        "headProperty": "og:image",
+        "ogTitle": "Tripo P2.0 Preview: A Major Breakthrough for Production-Ready 3D Assets"
+      },
+      "additionalEvidence": [
+        {
+          "type": "twitter-preview",
+          "evidence": {
+            "headName": "twitter:image"
+          }
+        },
+        {
+          "type": "article-schema-image",
+          "evidence": {
+            "schemaType": "BlogPosting",
+            "headline": "Tripo P2.0 Preview: A Major Breakthrough for Production-Ready 3D Assets"
+          }
+        }
+      ],
+      "releaseSpecificPreview": null,
+      "articleImageStructurallySupported": true,
+      "disposition": "accepted-source-preview",
+      "provenance": "source-share-preview",
+      "localPublicPath": "/source-images/afd2318c701b7e9733abf609a961dfa6268937b64459ca1b49f1c4b98dbc3aeb.webp",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "limitations": [
+        "Source link/share preview only; not a verified first article image.",
+        "No visual inspection performed; no depicted-content claim.",
+        "Reuse rights and license not verified."
+      ]
+    }
+  ],
+  "updatedAt": "2026-09-08T13:32:26.051365+00:00",
+  "weeks": [
+    "2026-w34",
+    "2026-w35"
+  ],
+  "remainingPreviewBatch": {
+    "probePath": "/tmp/voidnews-source-probe-remaining-latest.json",
+    "addedCount": 8,
+    "excludedSourceUrl": "https://github.com/ollama/ollama/releases/tag/v0.33.0-rc2",
+    "exclusionReason": "Repository-wide OG asset, not release-specific."
+  }
+}

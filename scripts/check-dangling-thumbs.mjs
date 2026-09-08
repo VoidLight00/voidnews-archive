@@ -20,7 +20,7 @@ function walk(dir) {
   return out;
 }
 
-const refRe = /\/og-cache\/[^"'`\\]+?\.(?:png|jpe?g|webp)/g;
+const refRe = /\/(?:og-cache|source-images)\/[^"'`\\]+?\.(?:png|jpe?g|webp|svg|gif|avif)/g;
 const dangling = [];
 const seen = new Set();
 for (const fp of walk(path.join(ROOT, "lib"))) {
@@ -37,7 +37,7 @@ for (const fp of walk(path.join(ROOT, "lib"))) {
 }
 
 if (dangling.length) {
-  console.error(`[check-dangling-thumbs] ${dangling.length} dangling og-cache ref(s) — public 파일 없음:`);
+  console.error(`[check-dangling-thumbs] ${dangling.length} dangling image ref(s) — public 파일 없음:`);
   for (const d of dangling) console.error(`  ✗ ${d.ref}  (${d.file})`);
   if (!warn) process.exit(2);
 } else {

@@ -8,6 +8,7 @@ import { extractGlossaryHits, type GlossaryEntry } from "@/lib/glossary";
 import { useLocale } from "@/app/LocaleProvider";
 import { isKoreanText } from "@/lib/i18n";
 import styles from "./editorial.module.css";
+import { ImageDisclosure, imageDisclosure } from "@/app/components/ImageDisclosure";
 
 interface PostDetailProps {
   meta: {
@@ -328,7 +329,9 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             <figure className={styles.articleHero}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={post.thumbnail.src} alt={post.thumbnail.alt ?? post.title} />
-              {officialHost ? (
+              {imageDisclosure(post.thumbnail.src, activeLang, post.thumbnail.provenance) ? (
+                <figcaption><ImageDisclosure src={post.thumbnail.src} provenance={post.thumbnail.provenance} locale={activeLang} /></figcaption>
+              ) : officialHost ? (
                 <figcaption>{activeLang === "ko" ? `출처 · ${officialHost}` : `Source · ${officialHost}`}</figcaption>
               ) : null}
             </figure>
@@ -344,6 +347,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                     alt={img.alt ?? post.title}
                     style={{ width: "100%", height: "auto", display: "block", borderRadius: 8, border: "1px solid var(--border, #2a2a2a)" }}
                   />
+                  <ImageDisclosure src={img.src} locale={activeLang} />
                   {img.caption ? (
                     <figcaption style={{ marginTop: 6, fontSize: 12, lineHeight: 1.45, color: "var(--muted, #888)" }}>
                       {img.caption}
@@ -406,7 +410,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
               <div><dt>상태</dt><dd>{post.officialUrl ? "공식 발표" : "보조 검증"}</dd></div>
               <div><dt>범위</dt><dd>{inferReleaseScope(post)}</dd></div>
               <div><dt>출처</dt><dd>{officialHost ? `공식 · ${officialHost}` : "출처 대기"}</dd></div>
-              <div><dt>확인</dt><dd>확인일 2026-05-27</dd></div>
+              <div><dt>{activeLang === "ko" ? "확인" : "Verified"}</dt><dd>{post.verifiedAt ?? (activeLang === "ko" ? "확인일 미기록" : "Verification date not recorded")}</dd></div>
               {post.communityDiscovery ? (
                 <div>
                   <dt>발견</dt>
@@ -520,6 +524,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                 <figure key={i} className={styles.galleryItem}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={g.src} alt={g.alt} loading="lazy" />
+                  <ImageDisclosure src={g.src} locale={activeLang} />
                   {g.caption ? <figcaption>{g.caption}</figcaption> : null}
                 </figure>
               ))}

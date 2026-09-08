@@ -10,6 +10,8 @@
     "postbuild": "node scripts/check-render-leaks.mjs",
     "start": "next start",
     "audit:thumbnails": "node scripts/audit-thumbnails.mjs",
+    "test:archive": "node scripts/test-weekly-browse.mjs && node scripts/test-thumbnail-inventory.mjs",
+    "test:browser": "node scripts/test-browse-ui.mjs && node scripts/test-image-disclosure.mjs",
     "check:slugs": "node scripts/check-slugs.mjs",
     "check:regressions": "node scripts/check-regressions.mjs",
     "check:card-content": "node scripts/check-card-content.mjs",

@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-08T14:54:12.835856+00:00",
+  "candidateCount": 12,
+  "addedCount": 12,
+  "deferredCount": 0,
+  "requestPolicy": {
+    "maxConcurrency": 2,
+    "connectTimeoutSeconds": 5,
+    "totalTimeoutSeconds": 20,
+    "maxImageBytes": 12000000,
+    "ordinaryHTTPS": true,
+    "bypassUsed": false
+  },
+  "limitations": [
+    "Article metadata association only; no first-image or visual-content verification.",
+    "Image reuse rights not verified; no license assertion.",
+    "Existing article content and all non-thumbnail bytes preserved.",
+    "Unselected posts remain outside this bounded 12-candidate batch."
+  ],
+  "weekIntegrity": [
+    {
+      "week": 35,
+      "beforeSha256": "d8bc2224ba94f571e032885fe16b4f4db972e49ef0679bdc8a069eae8ea8c314",
+      "afterSha256": "c5779bcca91681290318ff24ed16b45d8604a984f592ccdc680f2586dc3297be",
+      "nonThumbnailBytesPreserved": true,
+      "addedCount": 2
+    },
+    {
+      "week": 36,
+      "beforeSha256": "c339f9413d2a7048bdc78e92eb67d2c0d82948fb6ae40fa16c692ec77e88bfe7",
+      "afterSha256": "5e07e38964cfab4875e5c1cff207b9df342f1527adb40a4134984dd3f0e8b986",
+      "nonThumbnailBytesPreserved": true,
+      "addedCount": 10
+    }
+  ],
+  "records": [
+    {
+      "week": 36,
+      "postSlug": "google-20260903-gemini-3-8-flash-cyber",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "sourceId": "src-sep02-08-01",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-01.html",
+      "cacheSha256": "81e2b33f0253419748d6a931f8a4fd3e44ffa5d1f1d37a48d17a0841a77b713a",
+      "candidateUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__16-9__light.width-1300.png",
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__16-9__light.width-1300.png",
+      "metadataCheckedAt": "2026-09-08T14:54:10.626319+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "canonicalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "NewsArticle"
+        ],
+        "headline": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+        "ogImage": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__16-9__light.width-1300.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:10.674611+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__16-9__light.width-1300.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1300,
+      "height": 731,
+      "sha256": "bfb7b8c2c1b91408bebe70bfb83831e795018d7ff4158c0b945111212e3fc9af",
+      "byteLength": 857505,
+      "localPublicPath": "/source-images/bfb7b8c2c1b91408bebe70bfb83831e795018d7ff4158c0b945111212e3fc9af.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "weather-next-3-hourly-satellite-forecast",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+      "sourceId": "src-sep02-08-02",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-02.html",
+      "cacheSha256": "4485766a9e9fb17032657ed3533d9662e2736f64c6f5adec780cb2e5e7c81241",
+      "candidateUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/WeatherNext3_Title.width-1300.png",
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/WeatherNext3_Title.width-1300.png",
+      "metadataCheckedAt": "2026-09-08T14:54:10.626973+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "WeatherNext 3: Our most advanced global weather AI model",
+      "canonicalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "NewsArticle"
+        ],
+        "headline": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
+        "ogImage": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/WeatherNext3_Title.width-1300.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:10.674557+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/WeatherNext3_Title.width-1300.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1300,
+      "height": 731,
+      "sha256": "611a25cbfb09d8ecca334c42989e86930a9990e2a8a4f0d6bca3da8a559fd781",
+      "byteLength": 784112,
+      "localPublicPath": "/source-images/611a25cbfb09d8ecca334c42989e86930a9990e2a8a4f0d6bca3da8a559fd781.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "google-20260903-fairwind-program",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "sourceId": "src-sep02-08-03",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-03.html",
+      "cacheSha256": "aa08a15b971e7b3d3fcf1b70dfdb84e82606e3a75a5758130412e000c9981d13",
+      "candidateUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8__fairwind-program__blog__header__1.width-1300.png",
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8__fairwind-program__blog__header__1.width-1300.png",
+      "metadataCheckedAt": "2026-09-08T14:54:10.945012+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Google’s Fairwind Program: Cyber defense tools for trusted partners",
+      "canonicalUrl": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "NewsArticle"
+        ],
+        "headline": "Proactive cyber defense for governments and enterprises",
+        "ogImage": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8__fairwind-program__blog__header__1.width-1300.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:10.965291+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8__fairwind-program__blog__header__1.width-1300.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1300,
+      "height": 731,
+      "sha256": "045a4ef32be355a461b77be4726234df338bf62e669b738155cb948ca1fcf174",
+      "byteLength": 803739,
+      "localPublicPath": "/source-images/045a4ef32be355a461b77be4726234df338bf62e669b738155cb948ca1fcf174.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "cursor-self-hosted-machines",
+      "sourceUrl": "https://cursor.com/changelog/self-hosted-machines",
+      "sourceId": "src-sep02-08-04",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-04.html",
+      "cacheSha256": "1ca70355bc51ef7523d565da28cf4c4cb761a8f3761b6166010261961634c628",
+      "candidateUrl": "https://cursor.com/marketing-static/_next/image?url=https%3A%2F%2Fptht05hbb1ssoooe.public.blob.vercel-storage.com%2Fassets%2Fuploads%2Fremote-machines-QjJ0ZzGDelSdT7v2CXDdh0BQHqjmH0.png&w=1920&q=70",
+      "imageUrl": "https://cursor.com/marketing-static/_next/image?url=https%3A%2F%2Fptht05hbb1ssoooe.public.blob.vercel-storage.com%2Fassets%2Fuploads%2Fremote-machines-QjJ0ZzGDelSdT7v2CXDdh0BQHqjmH0.png&w=1920&q=70",
+      "metadataCheckedAt": "2026-09-08T14:54:11.167430+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Self-hosted machines · Cursor",
+      "canonicalUrl": "https://cursor.com/changelog/self-hosted-machines",
+      "association": {
+        "kind": "exact-headed-article-image",
+        "headline": "Self-hosted machines",
+        "literalSrc": "/marketing-static/_next/image?url=https%3A%2F%2Fptht05hbb1ssoooe.public.blob.vercel-storage.com%2Fassets%2Fuploads%2Fremote-machines-QjJ0ZzGDelSdT7v2CXDdh0BQHqjmH0.png&w=1920&q=70",
+        "sourceAlt": "Run on menu showing Remote Machines with self-hosted options lambda-test, cloud-demo, and jacks-desktop",
+        "articleTypes": [],
+        "ogImage": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/blog/cursor-run-on-remote-machines-loBz4KzTHKq1RvZG4Ka07UpsCIDYwx.png",
+        "ogEqualsCandidate": false
+      },
+      "retrievedAt": "2026-09-08T14:54:11.175407+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://cursor.com/marketing-static/_next/image?url=https%3A%2F%2Fptht05hbb1ssoooe.public.blob.vercel-storage.com%2Fassets%2Fuploads%2Fremote-machines-QjJ0ZzGDelSdT7v2CXDdh0BQHqjmH0.png&w=1920&q=70",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1710,
+      "height": 922,
+      "sha256": "32f442027b274031aba977fcb951445ce8dd0c6b2d2ec742f97243c41f415f2e",
+      "byteLength": 35522,
+      "localPublicPath": "/source-images/32f442027b274031aba977fcb951445ce8dd0c6b2d2ec742f97243c41f415f2e.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "github-20260905-copilot-gpt-6-astra",
+      "sourceUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "sourceId": "src-sep02-08-06",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-06.html",
+      "cacheSha256": "40d4a3ac2f72633b9d789e04785f6d0d29137ecf4e6f35219b18f0ba0095ea93",
+      "candidateUrl": "https://github.blog/wp-content/uploads/2026/09/644377049-65ddd95b-d151-4940-85c1-0b5a8368e3ce.png?resize=2064%2C600",
+      "imageUrl": "https://github.blog/wp-content/uploads/2026/09/644377049-65ddd95b-d151-4940-85c1-0b5a8368e3ce.png?resize=2064%2C600",
+      "metadataCheckedAt": "2026-09-08T14:54:11.276318+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "GPT-6 Astra is generally available in GitHub Copilot - GitHub Changelog",
+      "canonicalUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+      "association": {
+        "kind": "exact-headed-article-image",
+        "headline": "GPT-6 Astra is generally available in GitHub Copilot",
+        "literalSrc": "https://github.blog/wp-content/uploads/2026/09/644377049-65ddd95b-d151-4940-85c1-0b5a8368e3ce.png?resize=2064%2C600",
+        "sourceAlt": "The Copilot model picker showing GPT-6 Astra selected",
+        "articleTypes": [
+          "TechArticle",
+          "BlogPosting"
+        ],
+        "ogImage": "https://github.blog/wp-content/uploads/2026/09/644376748-4bdb51e3-99a4-40e3-9599-8d077c7abb8a.png",
+        "ogEqualsCandidate": false
+      },
+      "retrievedAt": "2026-09-08T14:54:11.284667+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://github.blog/wp-content/uploads/2026/09/644377049-65ddd95b-d151-4940-85c1-0b5a8368e3ce.png?resize=2064%2C600",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 2064,
+      "height": 600,
+      "sha256": "32d7ccc61dfd83616ac2eb194e550bffe61d23553f56a38371439c845ce59142",
+      "byteLength": 209522,
+      "localPublicPath": "/source-images/32d7ccc61dfd83616ac2eb194e550bffe61d23553f56a38371439c845ce59142.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "github-copilot-gemini-3-8-flash",
+      "sourceUrl": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "sourceId": "src-sep02-08-07",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-07.html",
+      "cacheSha256": "86f01ec0e3346def91700e744a30e31ae999564c5b647194447fc5f953538ed1",
+      "candidateUrl": "https://github.blog/wp-content/uploads/2026/09/645250017-d8793c25-09f2-444c-87eb-027f8c2393c1.png?resize=2064%2C600",
+      "imageUrl": "https://github.blog/wp-content/uploads/2026/09/645250017-d8793c25-09f2-444c-87eb-027f8c2393c1.png?resize=2064%2C600",
+      "metadataCheckedAt": "2026-09-08T14:54:11.297529+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Gemini 3.8 Flash is now available in GitHub Copilot - GitHub Changelog",
+      "canonicalUrl": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/",
+      "association": {
+        "kind": "exact-headed-article-image",
+        "headline": "Gemini 3.8 Flash is now available in GitHub Copilot",
+        "literalSrc": "https://github.blog/wp-content/uploads/2026/09/645250017-d8793c25-09f2-444c-87eb-027f8c2393c1.png?resize=2064%2C600",
+        "sourceAlt": "The Copilot model picker showing Gemini 3.8 Flash selected",
+        "articleTypes": [
+          "TechArticle",
+          "BlogPosting"
+        ],
+        "ogImage": "https://github.blog/wp-content/uploads/2026/09/645250580-85e21b02-4948-4391-a61e-8fc50a000845.png",
+        "ogEqualsCandidate": false
+      },
+      "retrievedAt": "2026-09-08T14:54:11.305988+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://github.blog/wp-content/uploads/2026/09/645250017-d8793c25-09f2-444c-87eb-027f8c2393c1.png?resize=2064%2C600",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 2064,
+      "height": 600,
+      "sha256": "facbd0803b0f14cf61fe2e8ac518de6130a4296bdfad1386dc84d67b4cba5baf",
+      "byteLength": 196975,
+      "localPublicPath": "/source-images/facbd0803b0f14cf61fe2e8ac518de6130a4296bdfad1386dc84d67b4cba5baf.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "hugging-face-lfm-grpo-structured-output",
+      "sourceUrl": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "sourceId": "src-sep02-08-11",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-11.html",
+      "cacheSha256": "9fefa28b0348d554a2a613cd4d2cface364d7fbab37a2c4ce2c450c29c0d6f70",
+      "candidateUrl": "https://huggingface.co/blog/assets/grpo-with-trl-ifstruct/thumbnail.png",
+      "imageUrl": "https://huggingface.co/blog/assets/grpo-with-trl-ifstruct/thumbnail.png",
+      "metadataCheckedAt": "2026-09-08T14:54:11.623765+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+      "canonicalUrl": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "Article"
+        ],
+        "headline": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+        "ogImage": "https://huggingface.co/blog/assets/grpo-with-trl-ifstruct/thumbnail.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:11.649834+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://huggingface.co/blog/assets/grpo-with-trl-ifstruct/thumbnail.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1600,
+      "height": 900,
+      "sha256": "13c39d5ad4d20ff8ceac5b1598bdbdf887e90134ffb0c7859e7cf76cb4e9f140",
+      "byteLength": 241101,
+      "localPublicPath": "/source-images/13c39d5ad4d20ff8ceac5b1598bdbdf887e90134ffb0c7859e7cf76cb4e9f140.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "hugging-face-funes-agent-memory",
+      "sourceUrl": "https://huggingface.co/blog/funes",
+      "sourceId": "src-sep02-08-12",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-12.html",
+      "cacheSha256": "2d514add7411d12c6b1cb915ffcb1a309d0496816ce943b2e5280f6eeb16643e",
+      "candidateUrl": "https://huggingface.co/blog/assets/funes/thumbnail.jpg",
+      "imageUrl": "https://huggingface.co/blog/assets/funes/thumbnail.jpg",
+      "metadataCheckedAt": "2026-09-08T14:54:11.956020+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Give Your Coding Agents a Memory You Own",
+      "canonicalUrl": "https://huggingface.co/blog/funes",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "Article"
+        ],
+        "headline": "Give Your Coding Agents a Memory You Own",
+        "ogImage": "https://huggingface.co/blog/assets/funes/thumbnail.jpg"
+      },
+      "retrievedAt": "2026-09-08T14:54:11.977659+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/jpeg",
+      "finalImageUrl": "https://huggingface.co/blog/assets/funes/thumbnail.jpg",
+      "mime": "image/jpeg",
+      "format": "JPEG",
+      "width": 1300,
+      "height": 650,
+      "sha256": "35b684c16cbe472de059d9015c80578bcb1b52d90fb9329369428f693ca952bd",
+      "byteLength": 391271,
+      "localPublicPath": "/source-images/35b684c16cbe472de059d9015c80578bcb1b52d90fb9329369428f693ca952bd.jpg",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "hugging-face-trl-openenv-watercolour",
+      "sourceUrl": "https://huggingface.co/blog/train-to-paint-with-code",
+      "sourceId": "src-sep02-08-13",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-13.html",
+      "cacheSha256": "5de2710e9507586e8e4bdc245197a4d3a7d2daa88d3a8762050b9e4dfef12622",
+      "candidateUrl": "https://huggingface.co/blog/assets/train-to-paint-with-code/thumbnail.png",
+      "imageUrl": "https://huggingface.co/blog/assets/train-to-paint-with-code/thumbnail.png",
+      "metadataCheckedAt": "2026-09-08T14:54:12.277308+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Training a coding model to paint watercolours with TRL and OpenEnv",
+      "canonicalUrl": "https://huggingface.co/blog/train-to-paint-with-code",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "Article"
+        ],
+        "headline": "Training a coding model to paint watercolours with TRL and OpenEnv",
+        "ogImage": "https://huggingface.co/blog/assets/train-to-paint-with-code/thumbnail.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:12.317867+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://huggingface.co/blog/assets/train-to-paint-with-code/thumbnail.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1300,
+      "height": 650,
+      "sha256": "b791992da58991c5b4ddae58fe833ed6ab47133504582f38a9e75cf7ceeeba85",
+      "byteLength": 381465,
+      "localPublicPath": "/source-images/b791992da58991c5b4ddae58fe833ed6ab47133504582f38a9e75cf7ceeeba85.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 36,
+      "postSlug": "nvidia-20260903-hugging-face-acquisition-agreement",
+      "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "sourceId": "src-sep02-08-15",
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-15.html",
+      "cacheSha256": "7aa068e248b4dcf7c106a2c925a0cddab59170e5fe8564952b35ecedb4553e09",
+      "candidateUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/09/hf-nvidia-partner_hf-nvidia-partner-press-1920x1080-2.png",
+      "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/09/hf-nvidia-partner_hf-nvidia-partner-press-1920x1080-2.png",
+      "metadataCheckedAt": "2026-09-08T14:54:12.332135+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "NVIDIA to Acquire Hugging Face | NVIDIA Blog",
+      "canonicalUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "Article"
+        ],
+        "headline": "NVIDIA to Acquire Hugging Face",
+        "ogImage": "https://blogs.nvidia.com/wp-content/uploads/2026/09/hf-nvidia-partner_hf-nvidia-partner-press-1920x1080-2.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:12.338857+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/09/hf-nvidia-partner_hf-nvidia-partner-press-1920x1080-2.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "0eeaedf86ff141dd707987db3fd52e0cfc868600adac9c725beb8ac8d6debcbf",
+      "byteLength": 49895,
+      "localPublicPath": "/source-images/0eeaedf86ff141dd707987db3fd52e0cfc868600adac9c725beb8ac8d6debcbf.png",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 35,
+      "postSlug": "google-20260827-gemini-3-5-transcribe",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "sourceId": null,
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_models_and_research_gemini_models_gemini_3_5_transcribe_.txt",
+      "cacheSha256": "c4ea4124a0cba53b8e7c45bf9ecf7b03a0419b4f3ce3074009373c76d2d0d836",
+      "candidateUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-1300.jpg",
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-1300.jpg",
+      "metadataCheckedAt": "2026-09-08T14:54:12.482933+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Introducing Gemini 3.5 Transcribe",
+      "canonicalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "NewsArticle"
+        ],
+        "headline": "Intelligent transcription with Gemini 3.5 Transcribe",
+        "ogImage": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-1300.jpg"
+      },
+      "retrievedAt": "2026-09-08T14:54:12.507701+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/jpeg",
+      "finalImageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-1300.jpg",
+      "mime": "image/jpeg",
+      "format": "JPEG",
+      "width": 1300,
+      "height": 731,
+      "sha256": "f40908527efdaf60fce431fa1a5f7fac1176f1f1bb77f9a2fa9e419722245153",
+      "byteLength": 48789,
+      "localPublicPath": "/source-images/f40908527efdaf60fce431fa1a5f7fac1176f1f1bb77f9a2fa9e419722245153.jpg",
+      "reusedExistingAsset": false
+    },
+    {
+      "week": 35,
+      "postSlug": "google-20260828-gemini-omni-1-1-flash",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "sourceId": null,
+      "cachePath": "/Users/voidlight/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_technology_developers_tools_build_with_gemini_omni_1_1_flash_.txt",
+      "cacheSha256": "a037019aed64de109b90cd65e9ddf7fccd10b93da3534006946b1a412e04786b",
+      "candidateUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_1-1_Flash_hero.width-1300.png",
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_1-1_Flash_hero.width-1300.png",
+      "metadataCheckedAt": "2026-09-08T14:54:12.615789+00:00",
+      "sourcePageRetrievalDate": "2026-09-08",
+      "sourcePageRetrievalDateBasis": "20260908 cached collection run; exact original fetch timestamp not asserted",
+      "visualInspectionPerformed": false,
+      "firstArticleImageVerified": false,
+      "reuseRightsVerified": false,
+      "provenance": "source-share-preview",
+      "disposition": "accepted-source-preview",
+      "deferredReason": null,
+      "pageTitle": "Build with Gemini Omni 1.1 Flash",
+      "canonicalUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "association": {
+        "kind": "exact-article-schema-and-og",
+        "articleTypes": [
+          "NewsArticle"
+        ],
+        "headline": "Gemini Omni 1.1 Flash lets you build with more control",
+        "ogImage": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_1-1_Flash_hero.width-1300.png"
+      },
+      "retrievedAt": "2026-09-08T14:54:12.642050+00:00",
+      "httpStatus": "200",
+      "declaredMime": "image/png",
+      "finalImageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_1-1_Flash_hero.width-1300.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 1300,
+      "height": 731,
+      "sha256": "71161c684ed9b88cec909e85546617f73eb67a9a0fd54d6bc722a8ebddef9d34",
+      "byteLength": 810854,
+      "localPublicPath": "/source-images/71161c684ed9b88cec909e85546617f73eb67a9a0fd54d6bc722a8ebddef9d34.png",
+      "reusedExistingAsset": false
+    }
+  ],
+  "otherDeferredCandidates": [
+    {
+      "sourceId": "src-sep02-08-08",
+      "reason": "BlogPosting image null; main img is generic featured-v3-new-releases.svg, not article evidence. OG exists separately."
+    },
+    {
+      "sourceId": "src-sep02-08-09",
+      "reason": "BlogPosting image null; main img is generic featured-v3-deprecations.svg. OG exists separately."
+    },
+    {
+      "sourceId": "src-sep02-08-10",
+      "reason": "No Article schema; leading main images are avatars. OG exists; not selected."
+    },
+    {
+      "sourceId": "src-sep02-08-14",
+      "reason": "No Article schema; OG differs from content diagrams. Editorial selection required; outside bound."
+    },
+    {
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+      "reason": "NewsArticle image exists but main alt TBD; not selected under limit12."
+    }
+  ],
+  "validation": {
+    "typecheck": {
+      "command": "./node_modules/.bin/tsc --noEmit --incremental false",
+      "exitCode": 0
+    },
+    "archive": {
+      "command": "npm run test:archive",
+      "exitCode": 0,
+      "verifiedPreviewCount": 20,
+      "method": "Both ledgers: bijective post mapping, unique evidence, exact source/path/size/SHA256, unchanged disclosure assertions."
+    },
+    "thumbnailInventory": {
+      "command": "node scripts/test-thumbnail-inventory.mjs",
+      "exitCode": 0
+    },
+    "dangling": {
+      "command": "node scripts/check-dangling-thumbs.mjs",
+      "exitCode": 0
+    },
+    "diffcheck": {
+      "command": "git diff --check -- scripts/test-weekly-browse.mjs lib/weeks/2026-w35.ts lib/weeks/2026-w36.ts public/source-images docs/redesign/BACKFILL-IMAGE-EVIDENCE.json",
+      "exitCode": 0
+    },
+    "semanticPreservation": {
+      "exitCode": 0,
+      "method": "TypeScript transpilation and assert.deepEqual after removing only newly inserted thumbnails; entire week structure compared against pre-edit snapshots"
+    },
+    "assetHashAndSize": {
+      "exitCode": 0,
+      "verifiedAssets": 12
+    },
+    "build": {
+      "performed": false,
+      "reason": "UI/build owner performs final build after image-file freeze"
+    }
+  },
+  "finalCounts": {
+    "week35": {
+      "posts": 24,
+      "thumbnails": 7,
+      "missingThumbnails": 17
+    },
+    "week36": {
+      "posts": 23,
+      "thumbnails": 10,
+      "missingThumbnails": 13
+    },
+    "week37": {
+      "posts": 5,
+      "thumbnails": 0,
+      "missingThumbnails": 5,
+      "modified": false
+    },
+    "addedThumbnails": 12,
+    "newAssets": 12,
+    "reusedExistingAssets": 0
+  }
+}

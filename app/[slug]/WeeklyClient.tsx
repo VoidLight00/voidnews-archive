@@ -31,6 +31,8 @@ import {
   type FeedStoryEntry, type TopStoryEntry,
 } from "./weekly/feed";
 import { WeekDropdown } from "./weekly/WeekDropdown";
+import BrowseGrid from "@/app/components/BrowseGrid";
+import { getWeeklyBrowseItems } from "@/lib/weekly-browse";
 
 // ── 메인 컴포넌트 ────────────────────────────────
 export default function WeeklyClient({
@@ -50,7 +52,7 @@ export default function WeeklyClient({
   weekList: WeekListItem[];
   nestedRoutePrefix?: string;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
   const [search, setSearch] = useState("");
   const deferredSearch = useDeferredValue(search);
@@ -60,7 +62,7 @@ export default function WeeklyClient({
   const [hideReadFilter, setHideReadFilter] = useState(false);
   const [bookmarks, setBookmarks] = useState<string[]>([]);
   const [readPosts, setReadPosts] = useState<string[]>([]);
-  const [collapsedCompanies, setCollapsedCompanies] = useState<string[]>([]);
+  const [collapsedCompanies, setCollapsedCompanies] = useState<string[]>(() => data.companies.map((company) => company.name));
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [showRecentSearches, setShowRecentSearches] = useState(false);
   const [bookmarksCopied, setBookmarksCopied] = useState(false);
@@ -122,9 +124,17 @@ export default function WeeklyClient({
     const initialPost = params.get("post");
 
     if (initialQuery) setSearch(initialQuery);
-    if (initialPost) pendingPostFromUrlRef.current = initialPost;
+    if (initialPost) {
+      const legacyPost = data.companies.flatMap((company) => company.posts)
+        .find((post) => post.title === initialPost);
+      if (nestedRoutePrefix && legacyPost?.slug) {
+        window.location.replace(`${nestedRoutePrefix}/${legacyPost.slug}/`);
+        return;
+      }
+      pendingPostFromUrlRef.current = initialPost;
+    }
     urlReadyRef.current = true;
-  }, [data.companies]);
+  }, [data.companies, nestedRoutePrefix]);
 
   useEffect(() => {
     try {
@@ -469,7 +479,7 @@ export default function WeeklyClient({
       ...entries.filter((entry) => entry.post.featured),
       ...entries.filter((entry) => !entry.post.featured),
     ]
-      .slice(0, 3)
+      .slice(0, 1)
       .map((entry, index) => ({
         company: entry.company,
         post: entry.post,
@@ -536,7 +546,8 @@ export default function WeeklyClient({
   const scrollToCompany = useCallback((companyName: string) => {
     const section = document.getElementById(getCompanySectionId(companyName));
     if (!section) return;
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    setCollapsedCompanies((current) => current.filter((name) => name !== companyName));
+    section.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
   }, []);
 
   return (
@@ -554,6 +565,8 @@ export default function WeeklyClient({
       )}
 
       <main
+        id="main-content"
+        className="vn-weekly"
         data-card-density={viewDensity}
         style={{
           maxWidth: 1440,
@@ -601,9 +614,18 @@ export default function WeeklyClient({
         />
 
 
-        <div className="tc-progress-row" aria-label="읽기 진행도">
+        <BrowseGrid
+          items={getWeeklyBrowseItems(data)}
+          selected={companyFilter}
+          onSelect={(name) => {
+            setCompanyFilter(name === companyFilter ? "all" : name);
+            setCollapsedCompanies((current) => current.filter((item) => item !== name));
+          }}
+        />
+
+        <div className="tc-progress-row" aria-label={locale === "ko" ? "읽기 진행도" : "Reading progress"}>
           <div className="mono">
-            <span>읽기 진행도</span>
+            <span>{locale === "ko" ? "읽기 진행도" : "Reading progress"}</span>
             <span aria-hidden>//</span>
             <strong>{readFilteredCount} / {totalFiltered}</strong>
           </div>
@@ -611,9 +633,10 @@ export default function WeeklyClient({
         </div>
 
         <div
+          className="vn-filter-bar"
           style={{
-            position: "sticky",
-            top: 64,
+            position: "relative",
+            top: 0,
             zIndex: 40,
             background: "var(--header-bg)",
             padding: "14px 16px",
@@ -639,7 +662,8 @@ export default function WeeklyClient({
                   <span style={{ fontFamily: "var(--mono)", color: "var(--accent)", fontSize: 14, flexShrink: 0 }}>{">"}</span>
                   <input
                     id="search-input"
-                    type="text"
+                    type="search"
+                    aria-label={t("common.search")}
                     placeholder={t("common.search")}
                     value={search}
                     onFocus={() => {
@@ -785,14 +809,18 @@ export default function WeeklyClient({
               </div>
             </div>
 
+            <details className="vn-advanced-filters">
+              <summary>{locale === "ko" ? "상세 필터" : "More filters"} <span>{isFiltering ? (locale === "ko" ? "선택한 조건이 있습니다" : "Filters active") : (locale === "ko" ? "플랫폼 · 북마크 · 읽음 상태" : "Platform · Bookmarks · Read status")}</span></summary>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-              {["all", "X", "Threads"].map((platform) => (
+              {(["all", "X", "Threads", "Web"] as const).map((platform) => (
                 <button
                   key={platform}
                   onClick={() => setPlatformFilter(platform)}
                   className={`chip${platformFilter === platform ? " chip-active" : ""}`}
+                  aria-label={`${t("common.filter.platform")}: ${t(`platform.${platform}`)}`}
+                  aria-pressed={platformFilter === platform}
                 >
-                  {platform === "all" ? "All" : platform}
+                  {platform === "all" ? t("common.filter.all") : platform}
                 </button>
               ))}
 
@@ -907,6 +935,7 @@ export default function WeeklyClient({
                 );
               })}
             </div>
+            </details>
 
             {isFiltering && (
               <p style={{ fontSize: 11, color: "var(--muted)", margin: 0, fontFamily: "var(--mono)", letterSpacing: "0.04em" }}>
@@ -977,7 +1006,7 @@ export default function WeeklyClient({
         ) : (
           <div style={{ padding: "76px 0", borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)" }}>
             <p className="serif" style={{ fontSize: "clamp(20px, 2.4vw, 26px)", color: "var(--text-strong)", marginBottom: 10, letterSpacing: "-0.025em", lineHeight: 1.15 }}>
-              조건에 맞는 포스팅이 없다
+              조건에 맞는 소식이 없습니다
             </p>
             <p className="mono" style={{ fontSize: 11, color: "var(--muted)", letterSpacing: "0.16em", textTransform: "uppercase" }}>
               필터를 조정하세요

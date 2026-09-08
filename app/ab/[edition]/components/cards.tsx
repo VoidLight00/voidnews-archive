@@ -90,6 +90,8 @@ export function HighlightArticle({
       >
         <EditorialImageFrame
           image={image}
+          images={item.post.images}
+          sourceUrl={item.post.officialUrl || item.post.source || item.post.xUrl || item.post.threadsUrl || item.post.backupUrls?.[0]?.url}
           label={item.sourceCompany}
           tone="accent"
           priority={item.tier === "hero"}
@@ -361,7 +363,7 @@ export function EditorPickCard({
         WebkitTapHighlightColor: "transparent",
       }}
     >
-      <EditorialImageFrame image={image} label={item.category} tone="gold" />
+      <EditorialImageFrame image={image} images={item.images} sourceUrl={item.sourceUrl} label={item.category} tone="gold" />
 
       <div className="tc-feed-body">
         <div className="tc-feed-meta mono">

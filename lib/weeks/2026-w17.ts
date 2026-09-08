@@ -12,6 +12,7 @@ export const week17: WeeklyData = {
       "color": "#E87040",
       "posts": [
         {
+          "slug": "20260423-anthropic-claude-code-quality-3-4-4-20-3-6-b688f6a8b62b",
           "date": "4/23",
           "platform": "X",
           "title": "Anthropic Claude Code Quality 포스트모템 — 3월 4일~4월 20일 3개 변경이 6주간 품질 저하 유발",
@@ -40,6 +41,7 @@ export const week17: WeeklyData = {
           },
         },
         {
+          "slug": "20260425-anthropic-project-deal-claude-186-deals-4k-e0e250a8ecf5",
           "date": "4/25",
           "platform": "X",
           "title": "Anthropic Project Deal — Claude가 직원 대신 사내 마켓플레이스에서 협상·매매 (186 deals, $4K+)",
@@ -78,6 +80,7 @@ export const week17: WeeklyData = {
       "color": "#2563EB",
       "posts": [
         {
+          "slug": "20260424-deepseek-v4-preview-1-6t-moe-1m-context-v3-2-27-6ea5dbfd931e",
           "date": "4/24",
           "platform": "X",
           "title": "DeepSeek-V4 Preview 오픈소스 공개 — 1.6T MoE / 1M context, V3.2 대비 27% inference FLOPs",
@@ -134,6 +137,7 @@ export const week17: WeeklyData = {
       "color": "#4285F4",
       "posts": [
         {
+          "slug": "20260424-google-anthropic-40b-10b-30b-cloud-5gw-8fd870274d0a",
           "date": "4/24",
           "platform": "X",
           "title": "Google, Anthropic에 최대 $40B 투자 (현금 $10B + 마일스톤 $30B + Cloud 5GW)",
@@ -169,6 +173,7 @@ export const week17: WeeklyData = {
       "color": "#10A37F",
       "posts": [
         {
+          "slug": "20260423-chatgpt-for-clinicians-healthbench-professional-b07e8bc6e830",
           "date": "4/23",
           "platform": "X",
           "title": "ChatGPT for Clinicians 무료 출시 + HealthBench Professional 벤치마크 공개",
@@ -204,6 +209,7 @@ export const week17: WeeklyData = {
       "color": "#111827",
       "posts": [
         {
+          "slug": "20260423-xai-grok-voice-think-fast-1-0-voice-bench-67-3-g-64b96bf45be8",
           "date": "4/23",
           "platform": "X",
           "title": "xAI Grok Voice Think Fast 1.0 — τ-voice Bench 67.3% (Gemini/GPT Realtime 추월), Starlink 고객지원 적용",
@@ -238,6 +244,7 @@ export const week17: WeeklyData = {
       "color": "#6B7280",
       "posts": [
         {
+          "slug": "20260423-unitree-g1-beijing-lightning-7a5d65c609f8",
           "date": "4/23",
           "platform": "X",
           "title": "Unitree G1 휴머노이드 로봇 — 롤러스케이트·아이스스케이트 시연 / Beijing 하프마라톤 'Lightning' 우승",
@@ -270,6 +277,7 @@ export const week17: WeeklyData = {
           ]
         },
         {
+          "slug": "20260426-kinetix-ai-kai-115-dof-18-000-ffb26091583f",
           "date": "4/26",
           "platform": "X",
           "title": "중국 Kinetix AI — KAI 휴머노이드 로봇 공개 (115 DoF, 18,000 촉각 센서)",

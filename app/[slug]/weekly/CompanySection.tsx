@@ -41,6 +41,8 @@ export function CompanySection({
   return (
     <section id={getCompanySectionId(company.name)} style={{ marginBottom: 48, scrollMarginTop: 150 }}>
       <button
+        aria-expanded={!collapsed}
+        aria-controls={`${getCompanySectionId(company.name)}-posts`}
         onClick={onToggleCollapsed}
         style={{
           display: "flex",
@@ -116,6 +118,7 @@ export function CompanySection({
         </span>
       </button>
 
+      <div id={`${getCompanySectionId(company.name)}-posts`} hidden={collapsed}>
       {!collapsed && (
         <div className="tc-article-grid tc-company-grid">
           {company.posts.map((post, index) => (
@@ -135,6 +138,7 @@ export function CompanySection({
           ))}
         </div>
       )}
+      </div>
     </section>
   );
 }

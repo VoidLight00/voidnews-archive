@@ -60,9 +60,12 @@ export function useOGData(url: string, enabled: boolean) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setData(null);
+    setLoading(false);
     if (!enabled || !url) return;
     let cancelled = false;
-    const cacheKey = `voidnews-og:v3:${url}`;
+    const controller = new AbortController();
+    const cacheKey = `voidnews-og:v4:${url}`;
     const hostname = (() => {
       try {
         return new URL(url).hostname.replace(/^www\./, "");
@@ -83,13 +86,15 @@ export function useOGData(url: string, enabled: boolean) {
     } catch {}
 
     setLoading(true);
-    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true`)
-      .then((r) => r.json())
+    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}`, { signal: controller.signal })
+      .then((r) => {
+        if (!r.ok) throw new Error(`Preview request failed: ${r.status}`);
+        return r.json();
+      })
       .then((d) => {
         if (cancelled) return;
-        const screenshotUrl = d.status === "success" ? d.data.screenshot?.url : undefined;
         const imageUrl = d.status === "success" ? d.data.image?.url : undefined;
-        const safeImage = isSafeImageUrl(screenshotUrl) ? screenshotUrl : isSafeImageUrl(imageUrl) ? imageUrl : undefined;
+        const safeImage = isSafeImageUrl(imageUrl) ? imageUrl : undefined;
         const og: OGData | null =
           d.status === "success"
             ? {
@@ -113,6 +118,7 @@ export function useOGData(url: string, enabled: boolean) {
       })
       .catch(() => {
         if (cancelled) return;
+        setData(null);
         setLoading(false);
         try {
           localStorage.setItem(
@@ -124,6 +130,7 @@ export function useOGData(url: string, enabled: boolean) {
 
     return () => {
       cancelled = true;
+      controller.abort();
     };
   }, [url, enabled]);
 

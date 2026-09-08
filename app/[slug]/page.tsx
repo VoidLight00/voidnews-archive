@@ -7,7 +7,6 @@ import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
 // - w21: editorial 카드 그리드 UI (TestingCatalog 스타일)
 // - w22: 기존 w20 스타일(WeeklyClient) 외관 + 카드 클릭 시 nested route 풀 페이지 이동 (모달 비활성화)
 const EDITORIAL_SLUGS = new Set(["2026-w21"]);
-const NESTED_ROUTE_SLUGS = new Set(["2026-w21", "2026-w22"]);
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -49,7 +48,7 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
     );
   }
 
-  const nestedRoutePrefix = NESTED_ROUTE_SLUGS.has(slug) ? `/${slug}` : undefined;
+  const nestedRoutePrefix = `/${slug}`;
 
   return (
     <WeeklyClient

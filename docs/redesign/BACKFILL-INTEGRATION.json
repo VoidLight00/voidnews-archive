@@ -1,0 +1,2904 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-08T15:00:32.757Z",
+  "purpose": "Final runtime provenance reconciliation, not retroactive validation of earlier snapshots.",
+  "baseline": {
+    "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+    "count": 11
+  },
+  "expectedCounts": {
+    "2026-w35": 24,
+    "2026-w36": 23,
+    "2026-w37": 5,
+    "newBackfill": 41
+  },
+  "hashPolicy": {
+    "algorithm": "sha256",
+    "serialization": "recursive sorted object keys, original array order",
+    "postExcludedFields": [
+      "thumbnail"
+    ],
+    "weekHash": "runtime [{company,post without thumbnail}]",
+    "imageEvidence": "docs/redesign/source-image-evidence.json is separate and deliberately not hashed here; images/video/content fields other than thumbnail remain protected"
+  },
+  "weekContentHashes": {
+    "2026-w35": "ee27d0ead518e0f31bac49b01089a424d1806ba4b899e748c19402d21b8309de",
+    "2026-w36": "13851dbd95163e4d63e380f434ddf108c7fb48427d29d747a23303b372b41648",
+    "2026-w37": "071d2022cec79da8acdae380858f27237032a939ffc07433c6a01fb2ea62df73"
+  },
+  "rows": [
+    {
+      "week": "2026-w37",
+      "company": "Google",
+      "slug": "alphagenome-atlas-variant-impact-map",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas",
+      "sourceId": "src-url-b4f131d2c0032d693234",
+      "legacySourceIds": [
+        "google-atlas"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "c7edffb1f4218f07eb8c98212707cf1a7b5efd46076baf0a264076259a1f9d81",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
+          "pointer": "/candidates/0"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-ledger.json",
+          "pointer": "/sources/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-atlas.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "8c20be558132fb0fef46dc4af077c366b3c2f8cdd416634311f261c581737e13",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-atlas.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "We used the AlphaGenome AI model to pre-calculate the regulatory impact of all 9 billion single-letter genetic changes, resulting in a massive, 1-petabyte dataset.",
+            "This single, easy-to-use score combines predictions for both coding and non-coding regions",
+            "AlphaGenome Atlas is available today through an intuitive website portal that requires zero coding skills"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T14:00:00+00:00",
+        "kstTimestamp": "2026-09-08T23:00:00+09:00",
+        "kstDate": "2026-09-08",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "alphagenome-atlas-variant-impact-map",
+        "identityBasis": "existing-gap-ledger-eventId",
+        "review": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Google",
+      "slug": "google-cathay-pacific-contrail-trial",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights",
+      "sourceId": "src-url-1908c6027b69920ed9da",
+      "legacySourceIds": [
+        "google-contrail"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "4e43052c9dd9ea533bab922e70b99518742bd7a4b650b45250ee2c23f942df30",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
+          "pointer": "/candidates/1"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-ledger.json",
+          "pointer": "/sources/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-contrail.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "21b3cce5b606ebdb21159eaa9718974baf74c9a949875d61eefe642cb2513163",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-contrail.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "We’re partnering with Cathay Pacific , our first commercial airline partner in Asia to test contrail avoidance on ultra-long-haul flights",
+            "We started an operational trial with more than 100 flights targeted across Cathay Pacific's network.",
+            "More than 80 flights followed contrail-avoidance routes, with Google’s satellite imagery analysis estimating that these flights reduced the warming impact of contrails by roughly 40%.",
+            "Now, we're scaling the partnership with Cathay Pacific on a larger second phase of trial flights and partnering with Contrails.org"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-07",
+        "sourceTimestamp": "2026-09-07T08:00:00+00:00",
+        "kstTimestamp": "2026-09-07T17:00:00+09:00",
+        "kstDate": "2026-09-07",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "google-cathay-pacific-contrail-trial",
+        "identityBasis": "existing-gap-ledger-eventId",
+        "review": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Google",
+      "slug": "deepmind-ai-planet-apac-telepix-cohort",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac",
+      "sourceId": "src-url-cd9518f111ea5ff15e0f",
+      "legacySourceIds": [
+        "google-accelerator"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "015c069531a455b12df6a32ab7bd144d5e68519dc424b6f127e65df2fa712137",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
+          "pointer": "/candidates/2"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-ledger.json",
+          "pointer": "/sources/2"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-accelerator.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "153fb01077ff2df1bb5ec5b88839491a504897cc954b2660c5d6f956d9be17c7",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-accelerator.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "we’ve selected 16 organizations for our Google DeepMind Accelerator: AI for the Planet in APAC",
+            "TelePIX (South Korea): Transforming satellite data into actionable intelligence for global mangrove monitoring",
+            "Over the next three months, these organizations will receive access to the latest Google AI stack (including specialized frontier models), tailored support, and mentorship from our experts."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-07",
+        "sourceTimestamp": "2026-09-07T01:00:00+00:00",
+        "kstTimestamp": "2026-09-07T10:00:00+09:00",
+        "kstDate": "2026-09-07",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "deepmind-ai-planet-apac-telepix-cohort",
+        "identityBasis": "existing-gap-ledger-eventId",
+        "review": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Mistral",
+      "slug": "mistral-series-d-samsung-three-billion-euros",
+      "sourceUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "normalizedUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier",
+      "sourceId": "src-url-4d11ed62a144a3f4c2f6",
+      "legacySourceIds": [
+        "src-sep02-08-05",
+        "mistral-series-d"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "d4bdf11aa12bb899b416ed92018d126104197bd823a3f35a0f06a2ed8c137a25",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/4"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/4"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
+          "pointer": "/candidates/3"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-ledger.json",
+          "pointer": "/sources/3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/mistral-series-d.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "3a09a5470a0e5e16e5473f6bb7a118aa76883fb8000edaa9dd5b16b38e6fb18d",
+          "urlAnchor": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/mistral-series-d.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion",
+            "Samsung Electronics led the round, joined by co-leads Scaleup Europe Fund, managed by EQT, and existing investor PSG Equity.",
+            "The round will significantly expand Mistral's frontier research",
+            "it will help Mistral expand infrastructure and accelerate its commercial growth and international footprint."
+          ]
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/mistral-index.txt",
+          "kind": "publication-metadata-extract",
+          "quotes": [
+            "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion. September 8, 2026 By Mistral Company Mistral raises €3B to make sovereign, open-weight AI the technology frontier Mistral today announced that it "
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Valid publisher calendar date; time and timezone unknown. No midnight assumed and no arbitrary day shift. This does not establish exact KST-day membership."
+      },
+      "policy": {
+        "status": "accepted-publisher-date-only",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract",
+        "supersedes": [
+          "sep02-08-05 exact-KST-date hold"
+        ],
+        "confirmation": "Later gap collection accepts official publisher calendar date. Exact KST timestamp remains unknown; no midnight invented."
+      },
+      "event": {
+        "id": "mistral-series-d-samsung-three-billion-euros",
+        "identityBasis": "existing-gap-ledger-eventId",
+        "review": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Multiverse Computing",
+      "slug": "multiverse-boundary-aware-safety-refusal",
+      "sourceUrl": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+      "normalizedUrl": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+      "sourceId": "src-url-5cbcf08e288841ac31de",
+      "legacySourceIds": [
+        "hf-safety"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "28f7985314e816a554b8910baa28e6402f5129e6243d86c300cf124da0f1844a",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
+          "pointer": "/candidates/4"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-ledger.json",
+          "pointer": "/sources/4"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/hf-safety-canonical.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "254cae2d58259029f536ad3046ae7e78acdf4497a499d6148e643ffe87b4dcb0",
+          "urlAnchor": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/hf-safety-canonical.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Our latest paper, Safety for Whom? Boundary-Aware Self-Distillation for Controlled LLM Safety Refusal , studies this narrower problem directly.",
+            "On Qwen3-8B , the escalated-coverage model raises in-distribution political refusal",
+            "adding the benign boundary data reduces over-refusal on the comply-worthy side of the held-out pairs from 32.94% to 4.16%. Refusal on the harmful side drops only from 91.88% to 87.72%.",
+            "This work is part of Multiverse Computing's research"
+          ]
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/hf-blog.html",
+          "kind": "publication-metadata-extract",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T14:23:07.255Z",
+        "kstTimestamp": "2026-09-08T23:23:07.255000+09:00",
+        "kstDate": "2026-09-08",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "multiverse-boundary-aware-safety-refusal",
+        "identityBasis": "existing-gap-ledger-eventId",
+        "review": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Google",
+      "slug": "weather-next-3-hourly-satellite-forecast",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3",
+      "sourceId": "src-url-68697d8b4a8e1c1514e1",
+      "legacySourceIds": [
+        "src-sep02-08-02"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "7c67507a5dd10cfbe2be0644819aeebcd52c739ae44bc5b8509e79db1039e4b9",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/1"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-02.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3",
+          "expectedOriginalSha256": "4485766a9e9fb17032657ed3533d9662e2736f64c6f5adec780cb2e5e7c81241"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-02.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Today, Google DeepMind and Google Research are introducing WeatherNext 3 , the most advanced and accurate global weather model to date, according to independent live evaluations by Brightband. Our model learns directly from real-time observations, enabling it to provide timely and more localized predictions for the weather events that impact people the most. By using raw satellite data to produce a forecast every hour in high resolution, our model makes reliable forecasts accessible across Google products worldwide.",
+            "With WeatherNext 3, we can visualize key surface variables — like temperature and moisture — at a 5-kilometer resolution, other surface variables at 10 kilometers, and atmospheric variables, like wind speed, at 25 kilometers. Overall, this provides a global weather picture roughly five times sharper than our previous model, WeatherNext 2, which produced forecasts on a 25-kilometer grid in 6-hour increments.",
+            "Figure 1: The end-to-end WeatherNext 3 system architecture. The model ingests live 1-hour geostationary satellite mosaics alongside traditional historical analysis to feed a single, flexible Functional Generative Network (FGN) mesh transformer. It outputs dense gridded fields, discrete cyclone tracks, and predicts station-level sparse coordinates natively.",
+            "By ingesting a mosaic of live, global geostationary satellite data, our new model gains a rich, continuously updating view of the atmosphere. This allows the model to generate a new forecast every hour, each one grounded in the most recent satellite observations available, at up to 5-kilometer resolution.",
+            "Our primary goal is to advance weather intelligence to make it universally useful — whether for an emergency responder tracking sudden wind shifts, an air traffic controller planning flight paths, or a farmer managing crops.",
+            "High-resolution forecast data: We’re making global weather predictions, updated hourly and ready to integrate into your workflows with no model setup required. This enables researchers, developers and businesses to query the data in BigQuery and Earth Engine, or bulk-download from Google Cloud Storage."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T15:00:00+00:00",
+        "kstTimestamp": "2026-09-04T00:00:00+09:00",
+        "kstDate": "2026-09-04",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-68697d8b4a8e1c1514e1",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Google",
+      "slug": "google-20260903-gemini-3-8-flash-cyber",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+      "sourceId": "src-url-ef239918f16e14829b0f",
+      "legacySourceIds": [
+        "src-sep02-08-01"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "dc0ce3324565626a6c1dee381c9050c00ad9c49c8740cdb5be287e5994c5af03",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/0"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-01.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+          "expectedOriginalSha256": "81e2b33f0253419748d6a931f8a4fd3e44ffa5d1f1d37a48d17a0841a77b713a"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-01.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Building on the momentum of 3.7 Flash from three weeks ago and marking our third Flash release in only six weeks, today we’re introducing Gemini 3.8, our best reasoning and coding model yet, at the same speed and low cost of 3.7. Gemini 3.8 introduces 2 variants:",
+            "Gemini 3.8 Flash: our most intelligent workhorse model, delivering significant improvements from 3.7 Flash across software engineering, agentic tasks, and critical, multi-step reasoning in specialized domains. It is available at the same introductory price 1 as 3.7 Flash at $0.75 per million input tokens and $3.75 per million output tokens.",
+            "Gemini 3.8 Flash Cyber: our most capable cybersecurity model with frontier-level performance in vulnerability detection and automated patching, available to trusted defenders through our new Fairwind Program .",
+            "3.8 Flash ships with safeguards against misuse in the domains of Chemical, Biological, Radiological, and Nuclear (CBRN) and cyber offense, while enabling beneficial use cases, as per our Frontier Safety Framework . 3.8 Flash Cyber ships with a more permissive set of mitigations for cybersecurity, and as such, is only available to trusted defenders who require a more comprehensive set of cyber capabilities.",
+            "Consumers : 3.8 Flash is available to Google AI Pro and Ultra subscribers across the Gemini app , AI Mode in Google Search and Gemini in Google Sheets .",
+            "Cyber: Through our new Fairwind Program , we’re providing trusted government authorities, as well as critical infrastructure operators and software maintainers with prioritized access to Gemini 3.8 Flash Cyber. Apply for access ."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-02",
+        "sourceTimestamp": "2026-09-02T15:00:00+00:00",
+        "kstTimestamp": "2026-09-03T00:00:00+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-publisher-announcement",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract",
+        "supersedes": [
+          "claim-unresolved"
+        ],
+        "decisionEvidence": {
+          "path": "_workspace/oneway/20260908-ai-backfill/omitted-candidates.json",
+          "pointer": "/subsequentlyIncluded"
+        },
+        "confirmation": "Enriched collection body_quotes_en verified verbatim against hash-bound cached extract. Publisher announcement only; not independent performance validation or acquisition completion."
+      },
+      "event": {
+        "id": "event-url-ef239918f16e14829b0f",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Google",
+      "slug": "google-20260903-fairwind-program",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program",
+      "sourceId": "src-url-445c9f3e3d31d26692ad",
+      "legacySourceIds": [
+        "src-sep02-08-03"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "4b5ded4a2c7aacf8ce36ebc442533533d556ba0f11fb9c6e3222b63f61ddd9be",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/2"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/2"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-03.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program",
+          "expectedOriginalSha256": "aa08a15b971e7b3d3fcf1b70dfdb84e82606e3a75a5758130412e000c9981d13"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-03.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Today, we’re launching our Fairwind Program, a limited access program for governments and trusted partners to use our most advanced cyber defense capabilities.",
+            "Today, we’re launching our Fairwind Program to bring the best of Google’s AI and cyber defense capabilities to a trusted group of Google Cloud customers, government agencies, and cybersecurity partners, to help them proactively solve cyber risks at scale. As a first step, the Fairwind Program will give defenders access to powerful and advanced Gemini models to help them autonomously find and fix vulnerabilities, protecting critical infrastructure, public services, and national security.",
+            "The Fairwind Program offerings bring together our most advanced cyber model, Gemini 3.8 Flash Cyber , with our CodeMender harness, to help defenders find, verify, and fix vulnerabilities at agentic scale. Spotting weaknesses creates awareness and fear; autonomously finding and fixing vulnerabilities delivers security.",
+            "Providing early access to these powerful cyber capabilities gives trusted defenders a vital adaptation window to harden their systems before bad actors have a chance to exploit new capabilities. We’re staging initial access to government and enterprise partners most critical to society’s resilience:",
+            "To ensure these powerful AI capabilities are used responsibly, participating organizations agree to strict operational standards, including limiting access to employees within their internal cybersecurity, incident response, or penetration testing teams and deploying protections like multi-factor authentication.",
+            "While we are prioritizing Gemini 3.8 Flash Cyber access for customers in the Fairwind Program, any Google Cloud customer can proactively secure their code by using CodeMender with publicly available models hosted on Gemini Enterprise Agent Platform, in combination with industry-leading solutions offered through AI Threat Defense ."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-02",
+        "sourceTimestamp": "2026-09-02T15:40:00+00:00",
+        "kstTimestamp": "2026-09-03T00:40:00+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-publisher-announcement",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract",
+        "supersedes": [
+          "claim-unresolved"
+        ],
+        "decisionEvidence": {
+          "path": "_workspace/oneway/20260908-ai-backfill/omitted-candidates.json",
+          "pointer": "/subsequentlyIncluded"
+        },
+        "confirmation": "Enriched collection body_quotes_en verified verbatim against hash-bound cached extract. Publisher announcement only; not independent performance validation or acquisition completion."
+      },
+      "event": {
+        "id": "event-url-445c9f3e3d31d26692ad",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Google",
+      "slug": "google-20260902-agentic-video-understanding",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini",
+      "sourceId": "src-url-5cd085900610be52dabd",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "abc51c5a9eba10551f82e5f5415e0c7b00c81144cdb4ed024c50c9fe3eacbe4d",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/introducing-agentic-video-in-gemini.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "f8c8da23d56c4b1d973fc50e9f8dbfd5bfe90d06e6bb34c1219e66cd62c1dbb3",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini"
+        },
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/introducing-agentic-video-in-gemini.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "The feature is available today for video uploads and YouTube videos via the Gemini API in Google AI Studio and the Gemini Enterprise Agent Platform.",
+            "It uses standard Gemini API token pricing with no additional feature fee."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": "2026-09-01T17:00:00+00:00",
+        "kstTimestamp": "2026-09-02T02:00:00+09:00",
+        "kstDate": "2026-09-02",
+        "note": "Publication timestamp converted to Korea Standard Time."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-5cd085900610be52dabd",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Google",
+      "slug": "gemini-cli-20260902-v0-58-0",
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0",
+      "normalizedUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0",
+      "sourceId": "src-url-f02c1dc08d1409390620",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "5f7cd5004d9b30f9b4c672506769018d65a66a0ee9b68b71c47bef3c77b44a3c",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/2"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/v0.58.0.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "e7eba02271a6453fd3e09bcb17816cd1e2531df38883df4ebebdc1b101fd23a2",
+          "urlAnchor": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0"
+        },
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/v0.58.0.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "fix(sandbox): isolate Docker and container runtime sockets and binaries in macOS Seatbelt",
+            "fix(a2a-server): clear stale cancellation error on new message turns"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": "2026-09-01T20:51:17Z",
+        "kstTimestamp": "2026-09-02T05:51:17+09:00",
+        "kstDate": "2026-09-02",
+        "note": "Publication timestamp converted to Korea Standard Time."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-f02c1dc08d1409390620",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Cursor",
+      "slug": "cursor-self-hosted-machines",
+      "sourceUrl": "https://cursor.com/changelog/self-hosted-machines",
+      "normalizedUrl": "https://cursor.com/changelog/self-hosted-machines",
+      "sourceId": "src-url-97b946860f1917f1a5c6",
+      "legacySourceIds": [
+        "src-sep02-08-04"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "443117b45f510c1b132361df47c991bd81381ae09984fb6d0abf792ff5dc5940",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/3"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-04.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://cursor.com/changelog/self-hosted-machines",
+          "expectedOriginalSha256": "1ca70355bc51ef7523d565da28cf4c4cb761a8f3761b6166010261961634c628"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-04.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Cursor supports self-hosted machines , which let you keep tool execution entirely in your own network.",
+            "Your codebase, build outputs, and secrets all stay on internal machines running in your infrastructure, while the agent handles tool calls locally.",
+            "My Machines connects a single laptop or VM to your account for personal workflows.",
+            "Team pools are named queues of workers for a team or enterprise. Capacity can grow as requests arrive and shrink when workers disconnect, so your self-hosted machines can scale with demand. Pools are not tied to one repository: name the pool, and any available worker can claim the request.",
+            "Self-hosted workers now support computer use on Linux and Mac. With the right desktop packages, an agent can click, type, take screenshots, and drive the browser. You can watch its desktop or take control from Cursor."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-02",
+        "sourceTimestamp": "2026-09-02T00:00:00.000Z",
+        "kstTimestamp": "2026-09-02T09:00:00+09:00",
+        "kstDate": "2026-09-02",
+        "note": "HTML time element encodes UTC midnight; may represent a date-only editorial value, not exact release time."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-97b946860f1917f1a5c6",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-copilot-gemini-3-8-flash",
+      "sourceUrl": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "normalizedUrl": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "sourceId": "src-url-6a5ff55c6918f815d470",
+      "legacySourceIds": [
+        "src-sep02-08-07"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "773f1ca6c17a20f3cbf1b10d1e1c2f03aa5aecee00a6f2aca5586a9d6e68ef54",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/6"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/6"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-07.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+          "expectedOriginalSha256": "86f01ec0e3346def91700e744a30e31ae999564c5b647194447fc5f953538ed1"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-07.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot.",
+            "This model is billed at introductory provider pricing under usage-based billing through December 31, 2026. See pricing for GitHub Copilot models and requests for details.",
+            "Gemini 3.8 Flash will be available to Copilot Pro, Pro+, Max, Business, and Enterprise users.",
+            "Rollout will be gradual. Check back soon if you don’t see it yet.",
+            "Copilot Enterprise and Copilot Business plan administrators can manage access to Gemini 3.8 Flash through the model policy in Copilot settings. Under default model enablement , new models are enabled automatically unless an administrator has turned off the global default or explicitly disables this model."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T11:50:38-07:00",
+        "kstTimestamp": "2026-09-04T03:50:38+09:00",
+        "kstDate": "2026-09-04",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-6a5ff55c6918f815d470",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-copilot-content-exclusions-ga",
+      "sourceUrl": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli",
+      "normalizedUrl": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli",
+      "sourceId": "src-url-9350ba76cc97501c6529",
+      "legacySourceIds": [
+        "src-sep02-08-08"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "9c8872bd43fafec74b0eadbc8a5f0d392de29102f15ee3643848c29184fa8c63",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/7"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/7"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-08.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli",
+          "expectedOriginalSha256": "dd54d36a9ddacd49bfb88a382fe976c4c1575b0716139d871bd3c43995c12c41"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-08.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won’t use excluded files as context, helping you protect sensitive code across agentic workflows.",
+            "This is available for Copilot Business and Copilot Enterprise customers."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-02",
+        "sourceTimestamp": "2026-09-02T11:14:23-07:00",
+        "kstTimestamp": "2026-09-03T03:14:23+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-9350ba76cc97501c6529",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-copilot-model-deprecations-october",
+      "sourceUrl": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
+      "normalizedUrl": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
+      "sourceId": "src-url-7905e02a3e2fcd1df2b9",
+      "legacySourceIds": [
+        "src-sep02-08-09"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "2b551e7ff96c9472a7843f375e7291068584f70f356ce816a9a53c5016a8bde9",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/8"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/8"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-09.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
+          "expectedOriginalSha256": "e5326aa57b88677fa5931a144746552ddb3cfb09ca7e94866cf396191b45dac7"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-09.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026:",
+            "Please update your workflows and integrations to use the supported models before this date. Copilot Enterprise and Copilot Business administrators may need to enable access to the alternative models through their model policies in Copilot settings.",
+            "As an administrator, you can verify availability in your organization or enterprise Copilot model settings and confirm that the policy is enabled for the specific model. Once enabled, users will see the model in the Copilot Chat model selector in supported GitHub Copilot experiences.",
+            "Model | Deprecation date | Suggested alternative | Gemini 3.5 Flash | 2026-10-02 | Gemini 3.8 Flash | Gemini 3.6 Flash | 2026-10-02 | Gemini 3.8 Flash | Kimi K2.7 Code | 2026-10-02 | Kimi K3 | Claude Opus 4.7 | 2026-10-02 | Claude Opus 5"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T12:40:14-07:00",
+        "kstTimestamp": "2026-09-04T04:40:14+09:00",
+        "kstDate": "2026-09-04",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-7905e02a3e2fcd1df2b9",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-20260905-copilot-gpt-6-astra",
+      "sourceUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "normalizedUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "sourceId": "src-url-cf45e2be25e062a0c299",
+      "legacySourceIds": [
+        "src-sep02-08-06"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "d72a7b41a2a20c701f1d45c2ac043b2c6122aaa37f3c4e8865a62c28b99e380d",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/5"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-06.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+          "expectedOriginalSha256": "40d4a3ac2f72633b9d789e04785f6d0d29137ecf4e6f35219b18f0ba0095ea93"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-06.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks.",
+            "This model is billed at provider list pricing under usage-based billing. See pricing for GitHub Copilot models and requests for details.",
+            "GPT-6 Astra is available to Copilot Pro+, Max, Business, and Enterprise users. You can select the model in the model picker in:",
+            "Rollout will be gradual. Check back soon if you don’t see it yet.",
+            "Copilot Enterprise and Copilot Business plan administrators can manage access to GPT-6 Astra through the model policy in Copilot settings. Under default model enablement , new models are enabled automatically unless an administrator has turned off the global default or explicitly disables this model."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-04",
+        "sourceTimestamp": "2026-09-04T11:59:51-07:00",
+        "kstTimestamp": "2026-09-05T03:59:51+09:00",
+        "kstDate": "2026-09-05",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-publisher-announcement",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract",
+        "supersedes": [
+          "claim-unresolved"
+        ],
+        "decisionEvidence": {
+          "path": "_workspace/oneway/20260908-ai-backfill/omitted-candidates.json",
+          "pointer": "/subsequentlyIncluded"
+        },
+        "confirmation": "Enriched collection body_quotes_en verified verbatim against hash-bound cached extract. Publisher announcement only; not independent performance validation or acquisition completion."
+      },
+      "event": {
+        "id": "event-url-cf45e2be25e062a0c299",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-20260831-copilot-vscode-august-roundup",
+      "sourceUrl": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+      "normalizedUrl": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+      "sourceId": "src-url-144fda9a32c74290b707",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "d03ee37772685abb99a8f9f27fba2eab75f697d770ad14f9dd8ff7cdba842013",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/11"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/fragmentWeek36/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+          "kind": "raw-rss",
+          "urlAnchor": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+          "expectedOriginalSha256": "6ce4e3402b0264567bf148887349fc86f50e60f9f95eec04850d4bf4a4054468",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-31",
+        "sourceTimestamp": "2026-08-31T08:39:54+00:00",
+        "kstTimestamp": "2026-08-31T17:39:54+09:00",
+        "kstDate": "2026-08-31",
+        "note": "official RSS pubDate"
+      },
+      "policy": {
+        "status": "accepted-limited-rss-provenance",
+        "fullArticleCached": false,
+        "evidenceScope": "rss-item-plus-collected-research; no durable full article body"
+      },
+      "event": {
+        "id": "event-url-144fda9a32c74290b707",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-20260901-claude-fable-5-1-copilot",
+      "sourceUrl": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+      "normalizedUrl": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+      "sourceId": "src-url-fe2ffe194622a50cb936",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "16740b1a95b44031ebfd4924c9a6194d21ce4b62a15f2d3f2b346d5b331167bf",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/14"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/fragmentWeek36/3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "kind": "raw-rss",
+          "urlAnchor": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+          "expectedOriginalSha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": "2026-09-01T14:29:23+00:00",
+        "kstTimestamp": "2026-09-01T23:29:23+09:00",
+        "kstDate": "2026-09-01",
+        "note": "official RSS pubDate"
+      },
+      "policy": {
+        "status": "accepted-limited-rss-provenance",
+        "fullArticleCached": false,
+        "evidenceScope": "rss-item-plus-collected-research; no durable full article body"
+      },
+      "event": {
+        "id": "event-url-fe2ffe194622a50cb936",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "GitHub",
+      "slug": "github-20260902-copilot-review-approvals",
+      "sourceUrl": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
+      "normalizedUrl": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
+      "sourceId": "src-url-a5af7099832f3f1fdece",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "a4912600209d2e03821d39aecd0b2950d468950044b86af176ecf908575bf985",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/2026-09-01-copilot-code-review-can-now-approve-pull-requests.html",
+          "kind": "raw-article-html",
+          "expectedOriginalSha256": "3967570d861e336a9b16a42be4615aa88874dfc3b5d88d8eb413a04210c98e3d",
+          "urlAnchor": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests"
+        },
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/2026-09-01-copilot-code-review-can-now-approve-pull-requests.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "An approval assessment alone does not count toward merge requirements.",
+            "By default, Copilot will not approve pull requests."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": "2026-09-01T19:25:57+00:00",
+        "kstTimestamp": "2026-09-02T04:25:57+09:00",
+        "kstDate": "2026-09-02",
+        "note": "Publication timestamp converted to Korea Standard Time."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-a5af7099832f3f1fdece",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "H Company",
+      "slug": "h-company-neomme-multimodal-encoder",
+      "sourceUrl": "https://huggingface.co/blog/Hcompany/neomme",
+      "normalizedUrl": "https://huggingface.co/blog/Hcompany/neomme",
+      "sourceId": "src-url-fffbcba03b0b217e4893",
+      "legacySourceIds": [
+        "src-sep02-08-10"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "fa427c5ebebb5b7cee78cf6b867856702f7f1671d43ccc5b60ed1e4457078fc8",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/9"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/9"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-10.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://huggingface.co/blog/Hcompany/neomme",
+          "expectedOriginalSha256": "08f0a3e1e113d16364058700487730f39490856fbb3099b23777a429d535f92b"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-10.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "We introduce NeoMME , a family of 260M and 800M multilingual multimodal encoders. Unlike many generative visual language models, NeoMME does not use a separate pretrained vision tower or a causal language model. A single bidirectional Transformer processes both text tokens and raw image patches, and we train the entire model from scratch with a masked discrete-diffusion objective.",
+            "We fine-tuned NeoMME for visual document retrieval using ColPali's page-image approach. NeoMME -Retriever returns dense and late-interaction embeddings in one forward pass. Both model sizes lie on the ViDoRe v3 Pareto frontier for nDCG@10 and model size. At a matched 2048×2048 image input size on an NVIDIA L40S GPU, the 260M model encodes about 51 pages per second, or about twice ColModernVBERT's throughput. Hierarchical token pooling and asymmetric quantization reduce late-interaction index storage from roughly 1.5 MB to 6 kB per page (255× smaller) while retaining more than 95% of baseline nDCG@10."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T13:13:48.024Z",
+        "kstTimestamp": "2026-09-03T22:13:48.024000+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-fffbcba03b0b217e4893",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Hugging Face",
+      "slug": "hugging-face-lfm-grpo-structured-output",
+      "sourceUrl": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "normalizedUrl": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "sourceId": "src-url-a139f80b159295ada71d",
+      "legacySourceIds": [
+        "src-sep02-08-11"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "24b5ae6caa000c8ab0d07d47d45b2aa48c5257444eb58b39c7f0b74017a35255",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/10"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/10"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-11.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+          "expectedOriginalSha256": "9fefa28b0348d554a2a613cd4d2cface364d7fbab37a2c4ce2c450c29c0d6f70"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-11.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "This guide is a fully public, inexpensive recipe for making a small model substantially better at structured-output compliance. We fine-tune LFM2.5-350M with Group Relative Policy Optimization (GRPO) using the TRL library and evaluate it on the IFStruct benchmark . The full run takes around 500 samples and 100 training steps, small enough for a free-tier Colab or Kaggle GPU, and is available on GitHub . The results show that even a light fine-tuning procedure improves performance from 22.6% to 29.7% on the IFStruct benchmark.",
+            "The IFStruct release blog reports 21.1% for LFM2.5-350M . Our local llama.cpp/BF16 setup measures 22.6%, close to the 21.1% reported in the IFStruct blog. We use this local result as the baseline for the same serving stack comparison.",
+            "A short GRPO run with about 500 samples and 100 steps can lift a small 350M parameter model from 22.6% to 29.7% on IFStruct. The takeaway is that a cheap, task-specific reward signal can make a small model substantially more reliable about form , closing much of the gap to models several times its size."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T00:00:00.742Z",
+        "kstTimestamp": "2026-09-03T09:00:00.742000+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-a139f80b159295ada71d",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Hugging Face",
+      "slug": "hugging-face-funes-agent-memory",
+      "sourceUrl": "https://huggingface.co/blog/funes",
+      "normalizedUrl": "https://huggingface.co/blog/funes",
+      "sourceId": "src-url-cdd1118267ee925c6328",
+      "legacySourceIds": [
+        "src-sep02-08-12"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "9e0b0b32b9cb33b58f66c2495eb598c0493424aedc5d428ee9d8c44d44138972",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/11"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/11"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-12.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://huggingface.co/blog/funes",
+          "expectedOriginalSha256": "2d514add7411d12c6b1cb915ffcb1a309d0496816ce943b2e5280f6eeb16643e"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-12.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "That is what funes provides. It is a durable memory layer for your agents (Claude Code, Codex, pi, and Hermes). It is built from the sessions already on your machine. It works locally and becomes part of your agent's normal workflow with one command. When you want it to, it can also travel to a Hugging Face dataset you own, private by default.",
+            "funes is a single binary. Its default inference backend has no ML runtime dependency, and embedding and reranking happen on your machine . Install it:",
+            "recall returns the original text, not a summary, and shows exactly where it came from (the agent, timestamp, session, and turn). Each result includes a get command that opens the full turn and its surrounding context.",
+            "recall is local by default: No account or Hub repository is required. A hosted model does not process your sessions for indexing; embedding and reranking run on your machine, and your coding agent does the reasoning.",
+            "Underneath, the local memory is a Lance dataset, and the shared memory is a Hugging Face dataset (private by default) you own."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T00:00:00.741Z",
+        "kstTimestamp": "2026-09-03T09:00:00.741000+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-cdd1118267ee925c6328",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Hugging Face",
+      "slug": "hugging-face-trl-openenv-watercolour",
+      "sourceUrl": "https://huggingface.co/blog/train-to-paint-with-code",
+      "normalizedUrl": "https://huggingface.co/blog/train-to-paint-with-code",
+      "sourceId": "src-url-b5500bc6503561c622e2",
+      "legacySourceIds": [
+        "src-sep02-08-13"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "f575789d1731b307536e1b4dd557bf8de7db94972ab47cf39e31844c71f29261",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/12"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/12"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-13.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://huggingface.co/blog/train-to-paint-with-code",
+          "expectedOriginalSha256": "5de2710e9507586e8e4bdc245197a4d3a7d2daa88d3a8762050b9e4dfef12622"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-13.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "The whole pipeline runs on Hugging Face, end to end:",
+            "HPSv3 is an open 7B preference model. Give it an image and a text description, and it returns a score for how much a person would prefer that image. It was trained on a large set of human choices between pairs of images, so its score is an average of many people's taste. The pairwise judge is Qwen3-VL-30B-A3B-Instruct , a general vision model called through HF Inference Providers. The pairwise judge sees the candidate painting next to four references randomly selected from the pool, guided by a written description of what to weigh (bleeds, translucent washes, soft edges), each comparison in both presentation orders, and its score is the share of comparisons the candidate wins. Its only standard is the pool, so its score is my taste, as encoded in those ratings.",
+            "The pool consists of 178 paintings divided into two tiers based on my personal preferences, love and okay . All of them are actually generated by a model. Four open-weight models, called through Inference Providers, wrote p5.brush sketches, each one working from a real, openly licensed photo of a hibiscus from iNaturalist. A vision model gave written feedback on every sketch, over three refinement iterations. Every final render was then rated one at a time, by me, and 178 made the cut.",
+            "Since the reward was partly based on my taste, it is fair to close with my verdict as a viewer. To my eye, judge-led is the run that ends up the most diverse and the most artistically interesting. hps-led paints convincing watercolours, but its best ones share a soft, wet-on-wet look that is almost a style of its own. hps-only converges the hardest, and most of its paintings settle on the same colours. You can judge for yourself in the gallery , which has every painting of every run, sortable by step and by reward.",
+            "term | weight | what it measures | gate | 0.05 | the sketch compiles, paints something, does not cheat | length | 0.05 | a soft push towards longer code snippets | pairwise judge | 0.60 | style, compared against references drawn from a pool | HPSv3 | 0.30 | aesthetic preference on the render"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T00:00:00.740Z",
+        "kstTimestamp": "2026-09-03T09:00:00.740000+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-b5500bc6503561c622e2",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Hugging Face",
+      "slug": "huggingface-20260901-webgpu-kernels",
+      "sourceUrl": "https://huggingface.co/blog/webgpu-kernels",
+      "normalizedUrl": "https://huggingface.co/blog/webgpu-kernels",
+      "sourceId": "src-url-91dad0068ec24e5bcea7",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "197a848a80975cad7bbe653d0769498657a687cfd092b9ad578ab9d605f06317",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/12"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/fragmentWeek36/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+          "kind": "raw-rss",
+          "urlAnchor": "https://huggingface.co/blog/webgpu-kernels",
+          "expectedOriginalSha256": "4aa94fc553c40aab6e43ae11508457aeae4ae9515cb1b4aa3b857ac3d9a9d4f7",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": "2026-09-01T00:00:00+00:00",
+        "kstTimestamp": "2026-09-01T09:00:00+09:00",
+        "kstDate": "2026-09-01",
+        "note": "official RSS pubDate"
+      },
+      "policy": {
+        "status": "accepted-limited-rss-provenance",
+        "fullArticleCached": false,
+        "evidenceScope": "rss-item-plus-collected-research; no durable full article body"
+      },
+      "event": {
+        "id": "event-url-91dad0068ec24e5bcea7",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "IBM Research",
+      "slug": "ibm-confluent-time-series-early-access",
+      "sourceUrl": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+      "normalizedUrl": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+      "sourceId": "src-url-8c10bd00da2e478d246d",
+      "legacySourceIds": [
+        "src-sep02-08-14"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "bfb43e284ecdc3a39a8a132f555b82c2e632f43d9d2a8941dc2d9180c8d5c098",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/13"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/13"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-14.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+          "expectedOriginalSha256": "099f110ca00e6a95671679a135ef422b0e12d05fd7fa4e3d82ca9f7494e1aad4"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-14.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "Foundation models transformed how enterprises unlock value from unstructured data. The bigger prize is streaming data, where the mission-critical decisions live: how much to order, which payment to stop, when the pump will fail, how hard to run the line, what happened the last time it looked like this. IBM and Confluent are now bringing that unlock stream-native, and the models are live in Early Access on Confluent Cloud, running where the data already moves, with Confluent Platform next.",
+            "Now that proof meets real-time context: IBM brings frontier models that understand how signals behave, 44M+ downloads behind them, and Confluent brings the live state of the business and reach to every system that acts. Together they run stream-native, hosted in Confluent Cloud and called from Flink. Access opens on Confluent Cloud on AWS. Confluent Platform follows, bringing the same models and capabilities to on-premises and hybrid environments.",
+            "Zero configuration: Confluent manages model serving, infrastructure, scaling, and runtime operations, so there is no provider credential to manage or glue between data pipelines and the model. Call IBM Granite Time Series models directly from Flink SQL for real-time anomaly detection and forecasting.",
+            "Built-in governance and traceability: Inference pipelines adhere to the same schemas, lineage and access controls as everything else on the platform. Kafka topics are durable and replayable, which supports auditing, troubleshooting, model evaluation, and rerunning inference against historical data.",
+            "Every decision asks the future a different question. A planning cycle needs a range of outcomes, a trading desk the most accurate number from data at every rate, a fleet of a hundred thousand series a cost that stays rational, and a security team the moment a stream stops behaving like itself and what happened last time it did. The portfolio is four complementary time series foundation models, all in Early Access and called through Confluent's existing AI_FORECAST and AI_DETECT_ANOMALIES Flink SQL functions. Switch models with one SQL parameter, no pipeline redesign.",
+            "Available now in Early Access on Confluent Cloud: forecasting and anomaly detection directly on your data streams, with no model training, feature engineering or AI/ML expertise required. Confluent Cloud is the starting point, and Confluent Platform is next, so the same models and capabilities reach on-premises and hybrid estates. The feedback loop is the point: what you find on your own streams teaches the models what to become next."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-02",
+        "sourceTimestamp": "2026-09-02T13:49:14.426Z",
+        "kstTimestamp": "2026-09-02T22:49:14.426000+09:00",
+        "kstDate": "2026-09-02",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-8c10bd00da2e478d246d",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "NVIDIA",
+      "slug": "nvidia-20260903-hugging-face-acquisition-agreement",
+      "sourceUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "normalizedUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face",
+      "sourceId": "src-url-92640b734a56d56cabe4",
+      "legacySourceIds": [
+        "src-sep02-08-15"
+      ],
+      "classification": "new-backfill",
+      "contentSha256": "daf85da0fbd5f21e0cd1bda1be3cee430b2c5b1b2316ccf3af55ae10d83c4809",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+          "pointer": "/candidates/14"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+          "pointer": "/sources/14"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-15.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face",
+          "expectedOriginalSha256": "7aa068e248b4dcf7c106a2c925a0cddab59170e5fe8564952b35ecedb4553e09"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-15.txt",
+          "kind": "normalized-article-extract",
+          "quotes": [
+            "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide.",
+            "Hugging Face will remain an open platform for the entire AI ecosystem. Developers will choose the models they want, the frameworks they want, the clouds and inference service providers they want and the computing platforms they want. NVIDIA compute will not be required to build on or deploy through Hugging Face.",
+            "Hugging Face will continue to support open source and open weight models from across the ecosystem, from every model builder. It will continue to support multi-cloud and multi-accelerator development and deployment, so builders can use the hardware and infrastructure that best fit their work."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T11:56:49+00:00",
+        "kstTimestamp": "2026-09-03T20:56:49+09:00",
+        "kstDate": "2026-09-03",
+        "note": "Publisher datePublished metadata used, not dateModified."
+      },
+      "policy": {
+        "status": "accepted-publisher-announcement",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract",
+        "supersedes": [
+          "claim-unresolved"
+        ],
+        "decisionEvidence": {
+          "path": "_workspace/oneway/20260908-ai-backfill/omitted-candidates.json",
+          "pointer": "/subsequentlyIncluded"
+        },
+        "confirmation": "Enriched collection body_quotes_en verified verbatim against hash-bound cached extract. Publisher announcement only; not independent performance validation or acquisition completion."
+      },
+      "event": {
+        "id": "event-url-92640b734a56d56cabe4",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "OpenAI",
+      "slug": "openai-20260901-codex-v0-152",
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+      "normalizedUrl": "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+      "sourceId": "src-url-3d4e408ad45e65525517",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "c27834e94469b385e60ab11d32e7a6c8f6d4f4f5c2a444f340043da228ccd4b9",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/13"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/fragmentWeek36/2"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "kind": "raw-release-api",
+          "urlAnchor": "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+          "expectedOriginalSha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": "2026-09-01T01:58:32Z",
+        "kstTimestamp": "2026-09-01T10:58:32+09:00",
+        "kstDate": "2026-09-01",
+        "note": "GitHub Releases API published_at"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": false,
+        "evidenceScope": "publisher-release-API-record; not an article HTML cache"
+      },
+      "event": {
+        "id": "event-url-3d4e408ad45e65525517",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Anthropic",
+      "slug": "anthropic-20260831-alignment-security-evaluations",
+      "sourceUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "normalizedUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "sourceId": "src-url-8ed1599eb95bc766b101",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "95c78ccfd984597fbf68d07e60080d6a36ed324dbd499ece6b9910a539fbc9ca",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/improving-alignment-security-efforts.webfetch-evidence.json",
+          "kind": "partial-webfetch-extract",
+          "expectedOriginalSha256": "52ad7d99b922eb5d074ea6832843882c7a6a2c927061647e3588fd849d8c8be3",
+          "quotes": [
+            "internal cyber evaluations are now running again",
+            "blocks the action",
+            "with no internet access",
+            "should state what is in and out of scope"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-08-31",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Date follows the publisher’s displayed 2026-08-31 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted."
+      },
+      "policy": {
+        "status": "accepted-publisher-date-only",
+        "fullArticleCached": false,
+        "evidenceScope": "partial-primary-page-extraction; raw HTTP denied"
+      },
+      "event": {
+        "id": "event-url-8ed1599eb95bc766b101",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w36",
+      "company": "Anthropic",
+      "slug": "anthropic-20260901-enterprise-frontier-safeguards",
+      "sourceUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "normalizedUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "sourceId": "src-url-b085c7f1762bfee8ae1c",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "678958ca08da7cec6ecfc0def948987c0d0291afad271f5e21b4db5f642d18a2",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/6"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/enterprise-frontier-safeguards.webfetch-evidence.json",
+          "kind": "partial-webfetch-extract",
+          "expectedOriginalSha256": "8fdf5ca6658aae06f2e5ecc26f51c974ce8dc40d60b969c4e9639ff7b0db5ad9",
+          "quotes": [
+            "Today we’re announcing Enterprise Frontier Safeguards (EFS).",
+            "EFS will be rolling out to customers in phases, starting later this fall.",
+            "Anthropic doesn’t charge for Enterprise Frontier Safeguards."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Date follows the publisher’s displayed 2026-09-01 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted."
+      },
+      "policy": {
+        "status": "accepted-publisher-date-only",
+        "fullArticleCached": false,
+        "evidenceScope": "partial-primary-page-extraction; raw HTTP denied"
+      },
+      "event": {
+        "id": "event-url-b085c7f1762bfee8ae1c",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "OpenAI Fact Check",
+      "slug": "openai-20260827-gpt6-training-stop-unverified",
+      "sourceUrl": "https://openai.com/",
+      "normalizedUrl": "https://openai.com",
+      "sourceId": "src-url-2387c8857ccde354707e",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "3f439d7d6ab9d4964de523ab1267216aba233a208a1c458db7bea7dd02a25749",
+      "joinReferences": [],
+      "baselineContentSha256": "ee6e44bb9a54ba6466ce8ca32fb9beeacebf5c6b77064ed041a5eb7b3f8078b3",
+      "baselineChangedFields": [
+        "content",
+        "en"
+      ],
+      "baselineRevisionNote": "Current content contains an editorial verification notice added before this reconciliation. Historical baseline preserved; current content hash binds the revision without revalidating the underlying claim.",
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Physical AI",
+      "slug": "physical-ai-20260827-tiangong-omni-400m",
+      "sourceUrl": "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+      "normalizedUrl": "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+      "sourceId": "src-url-f101ce7215cb406a00bf",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "89dec8e64a61d23ac7c9a227f24b7a7f9730e99965ef8305b50dc515fa118b40",
+      "joinReferences": [],
+      "baselineContentSha256": "89dec8e64a61d23ac7c9a227f24b7a7f9730e99965ef8305b50dc515fa118b40",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Z.ai",
+      "slug": "zai-20260826-glm-5-3-flash-ox-alpha",
+      "sourceUrl": "https://openrouter.ai/z-ai/glm-5.3-flash",
+      "normalizedUrl": "https://openrouter.ai/z-ai/glm-5.3-flash",
+      "sourceId": "src-url-d5562fe28d233b2875f8",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "4cb9f8a37ba953e9adc791a9c22e09e0554e03ed013df3b9f687db1ea5d4befe",
+      "joinReferences": [],
+      "baselineContentSha256": "4cb9f8a37ba953e9adc791a9c22e09e0554e03ed013df3b9f687db1ea5d4befe",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Apple",
+      "slug": "apple-20260825-m6-m5-ultra",
+      "sourceUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "normalizedUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute",
+      "sourceId": "src-url-b8a7b6f8afd0a113f8c6",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "876abf72c2bf43f565c1c87c3f74344a3f0254aa5f52b1d9baccb98141b18091",
+      "joinReferences": [],
+      "baselineContentSha256": "876abf72c2bf43f565c1c87c3f74344a3f0254aa5f52b1d9baccb98141b18091",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "slug": "claude-code-20260825-v2-1-245",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.245",
+      "normalizedUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.245",
+      "sourceId": "src-url-d01d94a1b000c188353b",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "766084ae57cddbcf8a7d100cdff8fc129855cd3892c504e3079a63851ad6c660",
+      "joinReferences": [],
+      "baselineContentSha256": "766084ae57cddbcf8a7d100cdff8fc129855cd3892c504e3079a63851ad6c660",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "slug": "claude-code-20260826-v2-1-246",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "normalizedUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "sourceId": "src-url-7b1fa515c92a7efc8547",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "a82e6de35498b2d0df77e844610dc185da592a1e648c4e0fc5a810a365fc5012",
+      "joinReferences": [],
+      "baselineContentSha256": "a82e6de35498b2d0df77e844610dc185da592a1e648c4e0fc5a810a365fc5012",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "slug": "anthropic-20260828-claude-code-v2-1-248-restricted",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+      "normalizedUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+      "sourceId": "src-url-ca3eff0a8509d6f23e5e",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "bf98e7b928c654c2f329d6431c28f0af46672e7b432ba55c017870e81023bccf",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/7"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/7"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "kind": "raw-release-api",
+          "urlAnchor": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+          "expectedOriginalSha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-27",
+        "sourceTimestamp": "2026-08-27T22:12:20Z",
+        "kstTimestamp": "2026-08-28T07:12:20+09:00",
+        "kstDate": "2026-08-28",
+        "note": "GitHub Releases API published_at"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": false,
+        "evidenceScope": "publisher-release-API-record; not an article HTML cache"
+      },
+      "event": {
+        "id": "event-url-ca3eff0a8509d6f23e5e",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "slug": "anthropic-20260829-claude-code-v2-1-251-observability",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+      "normalizedUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+      "sourceId": "src-url-2180229dc69461fd7a9d",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "32696ef80c10e856be0982525d9bbcb343751364e659842230de71c92e26c3b1",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/8"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/8"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "kind": "raw-release-api",
+          "urlAnchor": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+          "expectedOriginalSha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-28",
+        "sourceTimestamp": "2026-08-28T18:19:32Z",
+        "kstTimestamp": "2026-08-29T03:19:32+09:00",
+        "kstDate": "2026-08-29",
+        "note": "GitHub Releases API published_at"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": false,
+        "evidenceScope": "publisher-release-API-record; not an article HTML cache"
+      },
+      "event": {
+        "id": "event-url-2180229dc69461fd7a9d",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "slug": "anthropic-20260827-model-hardware-standard",
+      "sourceUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "normalizedUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "sourceId": "src-url-35305757066a6f711440",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "2bd18e853e485c3b723610bda91c1546075c541e8d058385476724491786f03e",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/model-hardware-standard-research-preview.webfetch-evidence.json",
+          "kind": "partial-webfetch-extract",
+          "expectedOriginalSha256": "395c6233e4e3892045b9bd1a629de25665e7f1e1b71ada8d21e26e79c9ab8dbd",
+          "quotes": [
+            "MHS works with any device that has a programmable interface."
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-08-27",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Date follows the publisher’s displayed 2026-08-27 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted."
+      },
+      "policy": {
+        "status": "accepted-publisher-date-only",
+        "fullArticleCached": false,
+        "evidenceScope": "partial-primary-page-extraction; raw HTTP denied"
+      },
+      "event": {
+        "id": "event-url-35305757066a6f711440",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "slug": "anthropic-20260827-scientist-subscriptions",
+      "sourceUrl": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "normalizedUrl": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "sourceId": "src-url-3368e02f484edc23efd1",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "beceaa6a862eb106ea20396ff0bc8cc7ebc04c11ad72b78a44cfb82ab47bf8fb",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+          "pointer": "/candidates/4"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-boundary-backfill/evidence/expanding-support-for-scientists.webfetch-evidence.json",
+          "kind": "partial-webfetch-extract",
+          "expectedOriginalSha256": "cd0468a58cd1a7edab4dd3d0415cded113f34bcf8e43944238217d715b9efbc9",
+          "quotes": [
+            "complete the verification form here"
+          ]
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-08-27",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Date follows the publisher’s displayed 2026-08-27 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted."
+      },
+      "policy": {
+        "status": "accepted-publisher-date-only",
+        "fullArticleCached": false,
+        "evidenceScope": "partial-primary-page-extraction; raw HTTP denied"
+      },
+      "event": {
+        "id": "event-url-3368e02f484edc23efd1",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "All complete runtime objects were searched, not first-N arrays. Existing generic robotics control, earlier Mythos/OpenAI sandbox incidents, Gemini model launches, and VS Code monthly rollups are distinct events from the specific announcements here."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "Google",
+      "slug": "google-20260825-gemini-macos-dictation",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos",
+      "sourceId": "src-url-d6fbfa1a0a3014022b32",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "6327875457850153335f2b35d7f70f5bc5ad43b621f6acef5daf469e9389fe06",
+      "joinReferences": [],
+      "baselineContentSha256": "6327875457850153335f2b35d7f70f5bc5ad43b621f6acef5daf469e9389fe06",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Google",
+      "slug": "google-20260825-delaware-ai-training",
+      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-delaware/",
+      "normalizedUrl": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-delaware",
+      "sourceId": "src-url-5df209e5186394e44d72",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "5cc274dd0b94fb4dbeff8b92d406bfddf54dda65f3d007619ccddf7c939b9fba",
+      "joinReferences": [],
+      "baselineContentSha256": "5cc274dd0b94fb4dbeff8b92d406bfddf54dda65f3d007619ccddf7c939b9fba",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Google",
+      "slug": "gemini-cli-20260826-v0-57-0",
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "normalizedUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "sourceId": "src-url-2776a34d5c8a01b1c453",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "9a44181d49f7ac8e4ab9beb6c6867e36067f1dbfaa2994859278f5949aeb3ccf",
+      "joinReferences": [],
+      "baselineContentSha256": "9a44181d49f7ac8e4ab9beb6c6867e36067f1dbfaa2994859278f5949aeb3ccf",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "Google",
+      "slug": "google-20260827-gemini-3-5-transcribe",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+      "sourceId": "src-url-7c81afa81614f7d1eee5",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "7ce1b49802b08788bdfc01e319279e44eda7ad0644ef889d2c0da067aef54f8b",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/2"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/2"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_models_and_research_gemini_models_gemini_3_5_transcribe_.txt",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+          "expectedOriginalSha256": "c4ea4124a0cba53b8e7c45bf9ecf7b03a0419b4f3ce3074009373c76d2d0d836",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-26",
+        "sourceTimestamp": "2026-08-26T17:00:00+00:00",
+        "kstTimestamp": "2026-08-27T02:00:00+09:00",
+        "kstDate": "2026-08-27",
+        "note": "official HTML JSON-LD datePublished"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-7c81afa81614f7d1eee5",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "Google",
+      "slug": "google-20260827-gemini-live-productivity",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+      "sourceId": "src-url-6a6b776d837ad8b18ea7",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "221577e50978d2407562d6d9208867662e0fcfdd9db298dad45d95b91ddf7c8a",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/3"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_products_gemini_app_productivity_features_gemini_live_.txt",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+          "expectedOriginalSha256": "2dea84f0d3b57682fc832900192c770aa88f983af19269c68594141a7bed42ec",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-26",
+        "sourceTimestamp": "2026-08-26T17:00:00+00:00",
+        "kstTimestamp": "2026-08-27T02:00:00+09:00",
+        "kstDate": "2026-08-27",
+        "note": "official HTML JSON-LD datePublished"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-6a6b776d837ad8b18ea7",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "Google",
+      "slug": "google-20260828-gemini-omni-1-1-flash",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash",
+      "sourceId": "src-url-6ea4b2dafda1ebb5087f",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "b368447e3196857266a86e1a46fb2d586501669f08b9422e0e28d533649f12d8",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/6"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/6"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_technology_developers_tools_build_with_gemini_omni_1_1_flash_.txt",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash",
+          "expectedOriginalSha256": "a037019aed64de109b90cd65e9ddf7fccd10b93da3534006946b1a412e04786b",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-27",
+        "sourceTimestamp": "2026-08-27T16:00:00+00:00",
+        "kstTimestamp": "2026-08-28T01:00:00+09:00",
+        "kstDate": "2026-08-28",
+        "note": "official HTML JSON-LD datePublished"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-article-plus-normalized-extract"
+      },
+      "event": {
+        "id": "event-url-6ea4b2dafda1ebb5087f",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "GitHub",
+      "slug": "github-copilot-cli-20260826-v1-0-81-10",
+      "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "normalizedUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "sourceId": "src-url-a4d3ce16f08c3bdb31c9",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "7e38d1a553fd0a9abda7162ea6fcc8aa0da0b665c78fda1a1bdbb2156a33e066",
+      "joinReferences": [],
+      "baselineContentSha256": "7e38d1a553fd0a9abda7162ea6fcc8aa0da0b665c78fda1a1bdbb2156a33e066",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "GitHub",
+      "slug": "github-copilot-cli-20260826-v1-0-81-11",
+      "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "normalizedUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "sourceId": "src-url-1db783ae4293a9d07808",
+      "legacySourceIds": [],
+      "classification": "preexisting-baseline",
+      "contentSha256": "aa052ebc5cc94fbf05573b5e0fbb5401925a3d70bbc3a475fc5f59322da9aced",
+      "joinReferences": [],
+      "baselineContentSha256": "aa052ebc5cc94fbf05573b5e0fbb5401925a3d70bbc3a475fc5f59322da9aced",
+      "baselineChangedFields": [],
+      "baselineRevisionNote": null,
+      "policy": {
+        "status": "baseline-not-reverified",
+        "fullArticleCached": null
+      },
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+          "kind": "preexisting-runtime-snapshot"
+        }
+      ],
+      "publication": null,
+      "event": null
+    },
+    {
+      "week": "2026-w35",
+      "company": "GitHub",
+      "slug": "github-20260826-copilot-app-customize-ga",
+      "sourceUrl": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "normalizedUrl": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "sourceId": "src-url-164744e2ac7b30455e31",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "693be4e1799fc64e172c553fe276d1f7215c13aa9137a641b2840286c677448d",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/1"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_4.txt",
+          "kind": "raw-rss",
+          "urlAnchor": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+          "expectedOriginalSha256": "4bed163007a736eb4054c5e00adb8cedc6ce19821985b0cf36bccd93b59da53b",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-25",
+        "sourceTimestamp": "2026-08-25T20:05:26+00:00",
+        "kstTimestamp": "2026-08-26T05:05:26+09:00",
+        "kstDate": "2026-08-26",
+        "note": "official RSS pubDate"
+      },
+      "policy": {
+        "status": "accepted-limited-rss-provenance",
+        "fullArticleCached": false,
+        "evidenceScope": "rss-item-plus-collected-research; no durable full article body"
+      },
+      "event": {
+        "id": "event-url-164744e2ac7b30455e31",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "GitHub",
+      "slug": "github-20260830-copilot-cli-v1-0-82",
+      "sourceUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.82",
+      "normalizedUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.82",
+      "sourceId": "src-url-c427dc6d7421404376da",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "a4a10d3f68e343defa02705c952535ea3461e542a7e7e535d5a66541471b8e99",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/10"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/10"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+          "kind": "raw-release-api",
+          "urlAnchor": "https://github.com/github/copilot-cli/releases/tag/v1.0.82",
+          "expectedOriginalSha256": "2a45f26a11bceb9c851ddbe18fb698b0555d6c8e0d9e253ed9f79cbf0dd415ab",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-29",
+        "sourceTimestamp": "2026-08-29T23:39:31Z",
+        "kstTimestamp": "2026-08-30T08:39:31+09:00",
+        "kstDate": "2026-08-30",
+        "note": "GitHub Releases API published_at"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": false,
+        "evidenceScope": "publisher-release-API-record; not an article HTML cache"
+      },
+      "event": {
+        "id": "event-url-c427dc6d7421404376da",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "IBM",
+      "slug": "ibm-20260826-granite-4-2-training",
+      "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "normalizedUrl": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "sourceId": "src-url-d21068479952e4038366",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "97a754bd44a1d89ba9c67415d314b1cca63648a8f318738e11b48211f0f5724e",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/0"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+          "kind": "raw-rss",
+          "urlAnchor": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+          "expectedOriginalSha256": "4aa94fc553c40aab6e43ae11508457aeae4ae9515cb1b4aa3b857ac3d9a9d4f7",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-25",
+        "sourceTimestamp": "2026-08-25T15:14:14+00:00",
+        "kstTimestamp": "2026-08-26T00:14:14+09:00",
+        "kstDate": "2026-08-26",
+        "note": "official RSS pubDate"
+      },
+      "policy": {
+        "status": "accepted-limited-rss-provenance",
+        "fullArticleCached": false,
+        "evidenceScope": "rss-item-plus-collected-research; no durable full article body"
+      },
+      "event": {
+        "id": "event-url-d21068479952e4038366",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "OpenAI",
+      "slug": "openai-20260827-codex-v0-150",
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+      "normalizedUrl": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+      "sourceId": "src-url-9ba6f4189d8fbd6b6376",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "babbb82e19c57199dc44b9966b953486c151df408d8a913f34c5b3a33785e79e",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/4"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/4"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "kind": "raw-release-api",
+          "urlAnchor": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+          "expectedOriginalSha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-26",
+        "sourceTimestamp": "2026-08-26T19:37:28Z",
+        "kstTimestamp": "2026-08-27T04:37:28+09:00",
+        "kstDate": "2026-08-27",
+        "note": "GitHub Releases API published_at"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": false,
+        "evidenceScope": "publisher-release-API-record; not an article HTML cache"
+      },
+      "event": {
+        "id": "event-url-9ba6f4189d8fbd6b6376",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "OpenAI",
+      "slug": "openai-20260829-codex-v0-151",
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+      "normalizedUrl": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+      "sourceId": "src-url-1f2ada50b57108708987",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "40f1c8a19668ae0400439933f5d02f9217569eef0aba9acb6274d18e2f54faf2",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/9"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/9"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "kind": "raw-release-api",
+          "urlAnchor": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+          "expectedOriginalSha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-29",
+        "sourceTimestamp": "2026-08-29T09:55:39Z",
+        "kstTimestamp": "2026-08-29T18:55:39+09:00",
+        "kstDate": "2026-08-29",
+        "note": "GitHub Releases API published_at"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": false,
+        "evidenceScope": "publisher-release-API-record; not an article HTML cache"
+      },
+      "event": {
+        "id": "event-url-1f2ada50b57108708987",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    },
+    {
+      "week": "2026-w35",
+      "company": "NVIDIA",
+      "slug": "nvidia-20260827-nvlink-fusion-nvhbm",
+      "sourceUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
+      "normalizedUrl": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory",
+      "sourceId": "src-url-52343a012216677e078f",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "333e1e64fdafcd71a5d8df338e93e3d8e93aa8824f693ef939b7aea8190fded5",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+          "pointer": "/candidates/5"
+        },
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+          "pointer": "/insertedWeek35/5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "kind": "raw-rss",
+          "urlAnchor": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory",
+          "expectedOriginalSha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1",
+          "quotes": []
+        }
+      ],
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-08-26",
+        "sourceTimestamp": "2026-08-26T21:05:30+00:00",
+        "kstTimestamp": "2026-08-27T06:05:30+09:00",
+        "kstDate": "2026-08-27",
+        "note": "official RSS pubDate"
+      },
+      "policy": {
+        "status": "accepted-limited-rss-provenance",
+        "fullArticleCached": false,
+        "evidenceScope": "rss-item-plus-collected-research; no durable full article body"
+      },
+      "event": {
+        "id": "event-url-52343a012216677e078f",
+        "identityBasis": "URL-specific announcement; event aliases reviewed separately",
+        "review": "Separate source announcement; exact URL/title checked across complete weekly and AB registries; related product overlap is not itself a duplicate."
+      }
+    }
+  ],
+  "heldSources": [
+    {
+      "legacySourceId": "openai-work",
+      "normalizedUrl": "https://openai.com/index/the-work-now-within-reach",
+      "status": "hold-body-unavailable",
+      "reason": "Publication feed evidence exists but article body unavailable; not accepted."
+    },
+    {
+      "legacySourceId": "openai-journalism",
+      "normalizedUrl": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "status": "hold-body-unavailable",
+      "reason": "Publication feed evidence exists but article body unavailable; not accepted."
+    },
+    {
+      "legacySourceId": "openai-ukraine",
+      "normalizedUrl": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "status": "hold-body-unavailable",
+      "reason": "Publication feed evidence exists but article body unavailable; not accepted."
+    },
+    {
+      "legacySourceId": "openai-alien",
+      "normalizedUrl": "https://openai.com/index/an-alien-mind",
+      "status": "hold-body-unavailable",
+      "reason": "Publication feed evidence exists but article body unavailable; not accepted."
+    },
+    {
+      "legacySourceId": "openai-research",
+      "normalizedUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "status": "hold-body-unavailable",
+      "reason": "Publication feed evidence exists but article body unavailable; not accepted."
+    }
+  ],
+  "eventReview": {
+    "method": "Full registered weekly posts and complete AB objects checked for source URL and exact title duplicates. Explicit related-event distinctions below; semantic equivalence is editorial, not claimed to be mechanically proven.",
+    "distinctions": [
+      "Gemini 3.8 model launch, Fairwind access program, and Copilot model integration are separate product/publication events.",
+      "Copilot VS Code August roundup is a dated roundup, not a new release of all features it mentions.",
+      "Individual Codex, Claude Code and Copilot CLI version tags are separate release events.",
+      "Anthropic Model Hardware Standard differs from generic robotics coverage; alignment operational response differs from earlier sandbox incidents.",
+      "Mistral old held source and later accepted source join to one current article, not two published events."
+    ]
+  },
+  "limitations": [
+    "Historical snapshots and ledgers remain unchanged; their old counts/holds are superseded only by this manifest.",
+    "First-window RSS-only rows have durable feed and collected research, not durable full article text. Gate checks provenance, not every translated editorial assertion.",
+    "Four Anthropic articles have partial WebFetch extracts only; raw source HTTP was denied.",
+    "Five date-only articles retain publisher calendar dates; exact KST-day membership is not established.",
+    "Offline hash/quote verification establishes correspondence to stored evidence, not independent authenticity of the publisher or truth of vendor claims.",
+    "Image acceptance and final build are separate work; no image/build success is claimed here."
+  ],
+  "files": [
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+      "sha256": "dd343fa651fa0cdef6fec033d1a3e5cc4814df8fbd7d25f34bef6a361b7012ea"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
+      "sha256": "74ca35c154bda1b6a9305402c9fe63a7ff72a4152a59485d8431c94552a4a950"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
+      "sha256": "ffe904262b972a91d2399973c77609e5cda27d632b47e68abe1a7e9f4935b505"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-ledger.json",
+      "sha256": "69d2ab1ded4658ce09f8ec0a617daaeb546f71ae25e00d1976f2fbb065c2971c"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
+      "sha256": "cc1584c4795967e7575fd2ba65edaa3bdb7f7286a3b3d4382024f30e8102f565"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
+      "sha256": "6aac650b506636f130cdc6c88a725a48ac6b0fa5ea201919447f463dce0c248f"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-ledger.json",
+      "sha256": "c4a4b6efdd06b0d62f80140500e182c540f7a85e96ecec6784bd3838e8303c73"
+    },
+    {
+      "path": "_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json",
+      "sha256": "dad4fb48656664b41fffe61f09b71dfb7ab95f0dc2429ac6c2dc651c30de164e"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/omitted-candidates.json",
+      "sha256": "5b1424ac14404067acc0042c7f9ea2145ca2074c4a47944a8907767f113b8a9d"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-atlas.html",
+      "sha256": "8c20be558132fb0fef46dc4af077c366b3c2f8cdd416634311f261c581737e13"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-atlas.txt",
+      "sha256": "5902c5a5c19319c7f853380ad6aa4508470f1cc73d30b41a2c5402c286344f01"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-contrail.html",
+      "sha256": "21b3cce5b606ebdb21159eaa9718974baf74c9a949875d61eefe642cb2513163"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-contrail.txt",
+      "sha256": "a8756f50a45e9a08cb71549392439183d906771dfcfd6b2994fb50fa4336ae2e"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-accelerator.html",
+      "sha256": "153fb01077ff2df1bb5ec5b88839491a504897cc954b2660c5d6f956d9be17c7"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-accelerator.txt",
+      "sha256": "f806fc10dcb9e1955b2f952641dbe03e90840ba34867d68bacf4ff4a40769ef1"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/mistral-series-d.html",
+      "sha256": "3a09a5470a0e5e16e5473f6bb7a118aa76883fb8000edaa9dd5b16b38e6fb18d"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/mistral-series-d.txt",
+      "sha256": "d7acabd66b03139f7ac8056ae5ecd006bdb83f87929dead56928a21b974bf5a5"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/mistral-index.txt",
+      "sha256": "59e754e87ca0722b73defbce60425d65f4f6828e9644209cc49dc4bd8144af52"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/hf-safety-canonical.html",
+      "sha256": "254cae2d58259029f536ad3046ae7e78acdf4497a499d6148e643ffe87b4dcb0"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/hf-safety-canonical.txt",
+      "sha256": "12783c774ad504c453273de5686cb8022220c96270255609a6037890aa3f8e5d"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/hf-blog.html",
+      "sha256": "95a94d5beffd07797ac54123524dc4f24f90182bd3076faea67f881f5b0ca1ac"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-02.html",
+      "sha256": "4485766a9e9fb17032657ed3533d9662e2736f64c6f5adec780cb2e5e7c81241"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-02.txt",
+      "sha256": "67e408933136811a789fb6ebb3d26793e937f06318fdb5e6d9ab4036c7a2e128"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-01.html",
+      "sha256": "81e2b33f0253419748d6a931f8a4fd3e44ffa5d1f1d37a48d17a0841a77b713a"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-01.txt",
+      "sha256": "fc6215684e720a059bbf814bc4afc02759d01d1c1ba66fb59e4d42f23d148157"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-03.html",
+      "sha256": "aa08a15b971e7b3d3fcf1b70dfdb84e82606e3a75a5758130412e000c9981d13"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-03.txt",
+      "sha256": "f0193d0da2535d7ddd8aaf4e3e24c717465cbb9388055a7d48bc839ef923e394"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/introducing-agentic-video-in-gemini.html",
+      "sha256": "f8c8da23d56c4b1d973fc50e9f8dbfd5bfe90d06e6bb34c1219e66cd62c1dbb3"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/introducing-agentic-video-in-gemini.txt",
+      "sha256": "119c9436108c6fb758aec6164e8cd22b52a5ff944bd3ed7e089c2e23058e699c"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/v0.58.0.html",
+      "sha256": "e7eba02271a6453fd3e09bcb17816cd1e2531df38883df4ebebdc1b101fd23a2"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/v0.58.0.txt",
+      "sha256": "2bf42a241ee50aa761f1078523efcd9b3d30f00e027b6f16eee14f65d9c20910"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-04.html",
+      "sha256": "1ca70355bc51ef7523d565da28cf4c4cb761a8f3761b6166010261961634c628"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-04.txt",
+      "sha256": "ebfedc5e1af035f53069faaf937a489b3fda8507ce4987a294254944e7304c87"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-07.html",
+      "sha256": "86f01ec0e3346def91700e744a30e31ae999564c5b647194447fc5f953538ed1"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-07.txt",
+      "sha256": "c909ae8e024e2c5f2b8ea89ddc94fa31dbed9c8703e4c6fd1b8e1f9e283710cb"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-08.html",
+      "sha256": "dd54d36a9ddacd49bfb88a382fe976c4c1575b0716139d871bd3c43995c12c41"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-08.txt",
+      "sha256": "6621a262f4b6c261412e28a1f7e1d1ec5649df157d10d5e0e30d0c6d75ec2782"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-09.html",
+      "sha256": "e5326aa57b88677fa5931a144746552ddb3cfb09ca7e94866cf396191b45dac7"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-09.txt",
+      "sha256": "f1c1ee8382dd020e25f12b8772e49126d06431a328d217749014abbcba0d4427"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-06.html",
+      "sha256": "40d4a3ac2f72633b9d789e04785f6d0d29137ecf4e6f35219b18f0ba0095ea93"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-06.txt",
+      "sha256": "84af20775a66d6c60f99c530d4f9cda02c013c9c1bc24afcca8565c12ad9e583"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+      "sha256": "6ce4e3402b0264567bf148887349fc86f50e60f9f95eec04850d4bf4a4054468"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+      "sha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/2026-09-01-copilot-code-review-can-now-approve-pull-requests.html",
+      "sha256": "3967570d861e336a9b16a42be4615aa88874dfc3b5d88d8eb413a04210c98e3d"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/2026-09-01-copilot-code-review-can-now-approve-pull-requests.txt",
+      "sha256": "b22fc00fd26b7ab9cf56b43a5f1314ba4bae45a41c7a39d2cd24dc38d4549eef"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-10.html",
+      "sha256": "08f0a3e1e113d16364058700487730f39490856fbb3099b23777a429d535f92b"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-10.txt",
+      "sha256": "0996657c11d99365c005e4ef263cff3ed14927118576384c419777b4cb7ade66"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-11.html",
+      "sha256": "9fefa28b0348d554a2a613cd4d2cface364d7fbab37a2c4ce2c450c29c0d6f70"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-11.txt",
+      "sha256": "ba9eb3f8b7ce4a0b781c142f1390213ee645699c3eace1180d5760de89f4f597"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-12.html",
+      "sha256": "2d514add7411d12c6b1cb915ffcb1a309d0496816ce943b2e5280f6eeb16643e"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-12.txt",
+      "sha256": "85f17a7b78396a83d9d5b97015eebfaa7e3bf579f4bc9a3f50a045e892979cbf"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-13.html",
+      "sha256": "5de2710e9507586e8e4bdc245197a4d3a7d2daa88d3a8762050b9e4dfef12622"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-13.txt",
+      "sha256": "3e59a3ba11977b8832eaf6618c5cc046d285822cce506a00454189e4ba1c2b52"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+      "sha256": "4aa94fc553c40aab6e43ae11508457aeae4ae9515cb1b4aa3b857ac3d9a9d4f7"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-14.html",
+      "sha256": "099f110ca00e6a95671679a135ef422b0e12d05fd7fa4e3d82ca9f7494e1aad4"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-14.txt",
+      "sha256": "8cde9d663f2810b7f49dc69710bb64fb92e4297cb741c85da73c375756b00a5a"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-15.html",
+      "sha256": "7aa068e248b4dcf7c106a2c925a0cddab59170e5fe8564952b35ecedb4553e09"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill/source-cache/sep02-08-15.txt",
+      "sha256": "3934e27269a87a6f5b56030102c1480c46eeea9db6b86758f39e18cae3075d0b"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+      "sha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/improving-alignment-security-efforts.webfetch-evidence.json",
+      "sha256": "52ad7d99b922eb5d074ea6832843882c7a6a2c927061647e3588fd849d8c8be3"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/enterprise-frontier-safeguards.webfetch-evidence.json",
+      "sha256": "8fdf5ca6658aae06f2e5ecc26f51c974ce8dc40d60b969c4e9639ff7b0db5ad9"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+      "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/model-hardware-standard-research-preview.webfetch-evidence.json",
+      "sha256": "395c6233e4e3892045b9bd1a629de25665e7f1e1b71ada8d21e26e79c9ab8dbd"
+    },
+    {
+      "path": "_workspace/oneway/20260908-boundary-backfill/evidence/expanding-support-for-scientists.webfetch-evidence.json",
+      "sha256": "cd0468a58cd1a7edab4dd3d0415cded113f34bcf8e43944238217d715b9efbc9"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_models_and_research_gemini_models_gemini_3_5_transcribe_.txt",
+      "sha256": "c4ea4124a0cba53b8e7c45bf9ecf7b03a0419b4f3ce3074009373c76d2d0d836"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_products_gemini_app_productivity_features_gemini_live_.txt",
+      "sha256": "2dea84f0d3b57682fc832900192c770aa88f983af19269c68594141a7bed42ec"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___blog_google_innovation_and_ai_technology_developers_tools_build_with_gemini_omni_1_1_flash_.txt",
+      "sha256": "a037019aed64de109b90cd65e9ddf7fccd10b93da3534006946b1a412e04786b"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_4.txt",
+      "sha256": "4bed163007a736eb4054c5e00adb8cedc6ce19821985b0cf36bccd93b59da53b"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+      "sha256": "2a45f26a11bceb9c851ddbe18fb698b0555d6c8e0d9e253ed9f79cbf0dd415ab"
+    },
+    {
+      "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+      "sha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1"
+    }
+  ]
+}

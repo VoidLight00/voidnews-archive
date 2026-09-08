@@ -14,6 +14,7 @@ export const week13: WeeklyData = {
       color: "#E87040",
       posts: [
         {
+          slug: "20260328-ai-anthropic-3-498c0144179d",
           date: "3/28", platform: "X+Threads",
           title: "AI 쓰는 사람들끼리 격차가 벌어지고 있다 — Anthropic 경제 지수 3월 리포트",
           officialUrl: "https://www.anthropic.com/research/economic-index-march-2026-report",
@@ -26,6 +27,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-ai-1196516a39d5",
           date: "3/26 20:41", platform: "Threads",
           title: "한국은 AI를 가장 잘 쓰면서 패배할 수 있다 — 문제는 실력이 아니다",
           summary: "한국의 AI 활용 역설 — 사용률은 높지만 구조적 패배 가능성을 분석한 아티클",
@@ -38,6 +40,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-claude-code-5-b14c28a91bf4",
           date: "3/26 19:56", platform: "Threads",
           title: "Claude Code 고수들의 비밀 5가지 — 당신이 매번 시간 낭비하는 이유",
           summary: "CLAUDE.md 활용법, /resume, 서브에이전트, MCP 핵심 팁 정리",
@@ -51,6 +54,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-93-y-anthropic-beb95a9fe6c7",
           date: "3/26 18:09", platform: "Threads",
           title: "93%가 무조건 Y를 눌렀다 — Anthropic이 자율 모드를 만든 이유",
           summary: "2단계 분류기, 3등급 행동 체계, 승인 피로 해결 메커니즘 완전 분석",
@@ -64,6 +68,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-claude-code-auto-mode-41a2c56faf4f",
           date: "3/26 15:25", platform: "Threads",
           title: "Claude Code, 이제 혼자 결정한다 — Auto Mode 공식 출시",
           officialUrl: "https://x.com/claudeai/status/2036503582166393240",
@@ -77,6 +82,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-obsidian-claude-code-claudian-4cb4c27fe51b",
           date: "3/26 13:26", platform: "X+Threads",
           title: "Obsidian 노트 안에서 Claude Code를 실행한다 — Claudian 플러그인",
           summary: "Obsidian 노트에 Claude Code를 직접 내장 — 노트 작성 중 AI 코딩 에이전트 실행",
@@ -91,6 +97,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-anthropic-ai-53f3af851b5f",
           date: "3/25 19:37", platform: "Threads",
           title: "기획자·생성자·평가자 — Anthropic식 AI 팀 구성의 비밀",
           officialUrl: "https://anthropic.com/engineering/harness-design-for-long-running-application-development",
@@ -100,6 +107,7 @@ export const week13: WeeklyData = {
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWTdz_Gj4cA",
         },
         {
+          slug: "20260325-claude-auto-mode-d44eecfaa2cf",
           date: "3/25 14:25", platform: "X+Threads",
           title: "승인 없이 스스로 판단하는 Claude — Auto Mode 안전 설계 원리",
           officialUrl: "https://x.com/AnthropicAI/status/2036944806317088921",
@@ -113,6 +121,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-anthropic-f21356172e88",
           date: "3/25 07:23", platform: "Threads",
           title: "Anthropic이 공개한 에이전트 팀 운영법 — 장기 앱 개발의 새 공식",
           summary: "장기 실행 앱 개발을 위한 멀티에이전트 하네스 설계 공식 블로그",
@@ -126,6 +135,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-ai-8cdaf1172e43",
           date: "3/25 02:00", platform: "X",
           title: "AI가 잠드는 방법 — 렘수면에서 영감 받은 에이전트 메모리 설계",
           summary: "에이전트가 렘수면처럼 기억을 정리·압축하는 메모리 아키텍처 직접 구현",
@@ -138,6 +148,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260324-claude-10-cdd71b020d68",
           date: "3/24 23:33", platform: "Threads",
           title: "교수처럼 설명, 적수처럼 검증 — Claude로 학습 효율 10배 올리는 법",
           summary: "Claude로 학습 효율을 극대화하는 검증된 프롬프트 10가지 정리",
@@ -145,12 +156,14 @@ export const week13: WeeklyData = {
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWRUSzND55k",
         },
         {
+          slug: "20260324-claude-code-c3beeeacc9a2",
           date: "3/24 15:51", platform: "X+Threads",
           title: "터미널 밖에서 에이전트를 지휘한다 — Claude Code의 텔레그램·디스코드 연동",
           summary: "Claude Code와 메시징 플랫폼 직접 연동 — 채널에서 코딩 에이전트 제어",
           content: "Claude Code Channels가 발표됐습니다.\n\n텔레그램, 디스코드 등 메시징 플랫폼에서 직접 Claude Code 에이전트를 제어할 수 있게 됩니다. 터미널을 열지 않아도 채팅창에서 코드 작업을 지시하고 결과를 받습니다.\n\n에이전트가 백그라운드에서 실행되는 동안 다른 일을 하다가 완료 알림을 받는 비동기 개발 워크플로우가 가능해집니다.",
         },
         {
+          slug: "20260324-computer-use-phone-use-claude-929d2776dd32",
           date: "3/24 15:23", platform: "X+Threads",
           title: "Computer Use 다음은 Phone Use — Claude가 스마트폰을 직접 조작한다",
           summary: "Computer Use에 이은 Phone Use — AI가 스마트폰을 직접 제어하는 에이전트",
@@ -163,6 +176,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260324-claude-macos-474e631dbc84",
           date: "3/24 09:17", platform: "X+Threads",
           title: "Claude가 내 맥을 직접 클릭한다 — macOS 컴퓨터 제어 첫 데모",
           summary: "Claude가 macOS 화면을 직접 보고 클릭·입력하는 컴퓨터 제어 에이전트",
@@ -175,6 +189,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260324-anthropic-e8342c49d40c",
           date: "3/24 07:18", platform: "X+Threads",
           title: "Anthropic이 연구 블로그를 열었다 — 이제 논문도 직접 읽는다",
           officialUrl: "https://x.com/AnthropicAI/status/2036179042081317370",
@@ -187,12 +202,14 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260322-claude-code-a7948912fa88",
           date: "3/22 22:38", platform: "Threads",
           title: "조건을 걸면 스킬이 자동 실행된다 — Claude Code 트리거 자동화",
           summary: "특정 조건에서 자동으로 스킬을 불러오는 트리거 기반 자동화 시스템",
           content: "Claude Code Skills 트리거 시스템이 공개됐습니다.\n\n특정 파일 패턴, 명령어, 상황에서 자동으로 스킬을 불러오는 조건부 자동화입니다. 예를 들어 .py 파일을 수정할 때마다 자동으로 테스트 스킬을 실행하거나, PR을 열 때 코드 리뷰 스킬을 트리거할 수 있습니다.\n\n반복 작업을 Claude Code가 알아서 처리하는 첫 번째 단계입니다.",
         },
         {
+          slug: "20260327-claude-code-50-458b96ea684e",
           date: "3/27",
           platform: "X+Threads",
           title: "당신이 몰랐던 Claude Code 고수들의 50가지 사용법",
@@ -208,6 +225,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-claude-code-mcp-61873ff004e7",
           date: "3/27",
           platform: "X+Threads",
           title: "Claude Code에 외부 도구를 연결하는 법 — MCP 서버 가이드",
@@ -222,6 +240,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-ai-claude-dispatch-41593e7db67e",
           date: "3/27",
           platform: "X+Threads",
           title: "손 안에서 AI 에이전트를 지휘한다 — Claude Dispatch 모바일 제어",
@@ -237,6 +256,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-capybara-mythos-anthropic-bfd9497e65f9",
           date: "3/27",
           platform: "X+Threads",
           title: "코드명 Capybara, 공식명 Mythos — Anthropic의 다음 모델이 유출됐다",
@@ -248,6 +268,7 @@ export const week13: WeeklyData = {
           source: "https://fortune.com/2026/03/27/anthropic-testing-mythos-most-powerful-ai-model-ever-developed/"
         },
         {
+          slug: "20260327-claude-figma-5-ff576a5b5bdc",
           date: "3/27",
           platform: "X+Threads",
           title: "디자이너가 Claude를 쓰는 방법 — Figma부터 브랜드 가이드까지 5가지",
@@ -257,6 +278,7 @@ export const week13: WeeklyData = {
           xUrl: "https://x.com/VoidLight_Hyeon/status/2037332745840652390"
         },
         {
+          slug: "20260327-claude-50-5317ced7fa6d",
           date: "3/27",
           platform: "X+Threads",
           title: "콘텐츠 크리에이터의 Claude 활용 프롬프트 50개 완전 정리",
@@ -273,6 +295,7 @@ export const week13: WeeklyData = {
       color: "#10A37F",
       posts: [
         {
+          slug: "20260325-sora-openai-ai-a5807c811609",
           date: "3/25 05:22", platform: "X+Threads",
           title: "Sora가 사라졌다 — OpenAI AI 영상의 미래는 어디로",
           summary: "Sora 앱/API/ChatGPT 비디오 기능 전면 종료 — 차세대 모델 'Spud' 훈련 완료",
@@ -283,6 +306,7 @@ export const week13: WeeklyData = {
           xUrl: "https://x.com/VoidLight_Hyeon/status/2036538807177322904",
         },
         {
+          slug: "20260324-chatgpt-ai-fc1fff245c61",
           date: "3/24 13:17", platform: "X+Threads",
           title: "ChatGPT에 갤러리가 생겼다 — AI 이미지 히스토리 관리 탭 추가",
           officialUrl: "https://x.com/OpenAI/status/2036183180219392103",
@@ -294,6 +318,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260324-python-openai-astral-aa6ff9cba91a",
           date: "3/24 03:17", platform: "X+Threads",
           title: "Python 생태계를 인수했다 — OpenAI의 Astral 흡수와 그 의미",
           officialUrl: "https://x.com/OpenAINewsroom/status/2034616934671724639",
@@ -305,6 +330,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260323-gpt-5-4-mini-f6a44396588a",
           date: "3/23 21:17", platform: "X+Threads",
           title: "작고 빠른 GPT-5.4 mini — 저비용 추론의 새 선택지",
           officialUrl: "https://x.com/OpenAI/status/2033953592424731072",
@@ -316,10 +342,13 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260321-openai-ai-a9f1eb1064cd",
           date: "3/21 02:58", platform: "X",
           title: "학생은 무료로 — OpenAI AI 코딩 에이전트 교육 프로그램",
-          summary: "학생 대상 무료 AI 코딩 에이전트 — 교육 목적 Codex 접근권 제공",
-          content: "OpenAI Codex for Students 프로그램이 출시됐습니다.\n\n학생 신분으로 교육 이메일(@edu)만 있으면 Codex AI 코딩 에이전트를 무료로 사용할 수 있습니다.\n\nGitHub와 연동해 실제 프로젝트에서 AI 페어 프로그래밍 경험을 쌓을 수 있습니다. 다음 세대 개발자를 초기에 OpenAI 생태계로 끌어들이는 전략적 행보입니다.",
+          deck: "미국·캐나다 인증 대학생 대상 Codex 크레딧 지원 · 지역·인증·유효기간 조건 확인",
+          summary: "미국·캐나다의 인증 대학생은 SheerID 확인을 거쳐 Codex 사용을 위한 $100 상당의 ChatGPT 크레딧 2,500개를 신청할 수 있습니다. API 크레딧은 아니며 지급 후 12개월 동안 유효합니다.",
+          source: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#codex-for-students",
+          content: "**지원 대상과 혜택**\n\n보관된 OpenAI ChatGPT 릴리스 노트의 2026년 3월 20일 항목에 따르면, Codex for Students는 미국·캐나다의 인증 대학생을 대상으로 합니다. 대상 학생은 $100 상당의 ChatGPT 크레딧 2,500개를 신청해 Free·Go·Plus·Pro 요금제에 포함된 한도를 넘어 Codex를 사용할 수 있습니다.\n\n**인증과 사용 조건**\n\n신청자는 chatgpt.com/codex/students에서 로그인한 뒤 대학 이메일을 이용해 SheerID 학생 인증을 완료해야 합니다. 크레딧은 개인 워크스페이스에 자동 지급되며 Codex에서 사용할 수 있습니다. API 크레딧이 아니고 지급일로부터 12개월 후 만료됩니다.\n\n**편집 정정**\n\n기존 설명의 ‘교육 이메일만 있으면 무료’라는 표현은 지역·학생 인증·크레딧 사용 조건을 빠뜨렸습니다. 보관된 공식 릴리스 노트에 근거해 조건을 보완했습니다. 이 기록은 당시 프로그램 안내이며 현재 신청 가능 여부를 새로 확인한 것은 아닙니다.",
         },
       ],
     },
@@ -328,6 +357,7 @@ export const week13: WeeklyData = {
       color: "#4285F4",
       posts: [
         {
+          slug: "20260328-llm-google-turboquant-9cfa971d05ca",
           date: "3/28", platform: "X+Threads",
           title: "LLM의 메모리 병목을 뚫는다 — Google TurboQuant 공개",
           officialUrl: "https://x.com/GoogleResearch/status/2036533564158910740",
@@ -340,6 +370,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-3-ai-lyria-3-pro-ac1df4c052ec",
           date: "3/26 10:57", platform: "Threads",
           title: "3분짜리 프로 음악을 AI가 만든다 — Lyria 3 Pro가 바꾸는 창작의 경계",
           summary: "3분 길이 프로 퀄리티 음악 생성 — Lyria 3 Pro로 음악 창작의 한계 돌파",
@@ -353,6 +384,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-deepmind-d3757492696a",
           date: "3/25 06:49", platform: "Threads",
           title: "뇌와 몸의 결합 — DeepMind 알고리즘이 로봇 몸통을 얻다",
           officialUrl: "https://x.com/demishassabis/status/2036726283464581343",
@@ -365,6 +397,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-gemini-flash-lite-d30e02a2fd76",
           date: "3/25 03:01", platform: "Threads",
           title: "더 작고 더 빠른 Gemini — 모바일에서 달리는 Flash-Lite",
           officialUrl: "https://x.com/GoogleDeepMind/status/2028872381477929185",
@@ -377,6 +410,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260323-ui-google-stitch-6ad7b730c012",
           date: "3/23 13:17", platform: "X",
           title: "말로 UI를 만든다 — Google Stitch에 음성 입력이 추가됐다",
           officialUrl: "https://x.com/stitchbygoogle/status/2034332859058794796",
@@ -388,6 +422,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260321-gemini-ai-studio-34e62e41391d",
           date: "3/21 00:58", platform: "X",
           title: "Gemini 하나로 풀스택을 짠다 — AI Studio 바이브 코딩 데모",
           officialUrl: "https://x.com/GoogleAI/status/2034655173256122580",
@@ -399,6 +434,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-1-stitch-claude-code-8258bca2357f",
           date: "3/27",
           platform: "X+Threads",
           title: "디자인에서 배포까지 1시간 — Stitch + Claude Code 풀스택 조합",
@@ -407,6 +443,7 @@ export const week13: WeeklyData = {
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWXgvKDD4pl"
         },
         {
+          slug: "20260327-notebooklm-claude-ad7cf0e939b0",
           date: "3/27",
           platform: "X+Threads",
           title: "논문 읽고 코드 짜기 — NotebookLM과 Claude의 연구 워크플로우",
@@ -422,6 +459,7 @@ export const week13: WeeklyData = {
       color: "#8B5CF6",
       posts: [
         {
+          slug: "20260326-cursor-49e339dcc342",
           date: "3/26 06:54", platform: "Threads",
           title: "외부로 나가지 않는 Cursor — 프라이빗 클라우드 에이전트 완성",
           summary: "코드와 실행이 프라이빗 네트워크 내에서 완결 — 외부 유출 없는 보안 에이전트",
@@ -434,6 +472,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260324-cursor-instant-grep-1bf565d98a57",
           date: "3/24 22:45", platform: "Threads",
           title: "코드베이스를 실시간으로 검색한다 — Cursor Instant Grep",
           summary: "코드베이스 실시간 검색 내장 엔진 — grep보다 빠른 의미론적 코드 검색",
@@ -441,6 +480,7 @@ export const week13: WeeklyData = {
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWRP2QxD7QI",
         },
         {
+          slug: "20260320-cursor-composer-2-7dc8822756ad",
           date: "3/20 14:51", platform: "X+Threads",
           title: "파일 수백 개를 한 번에 — Cursor Composer 2 대규모 리팩토링",
           officialUrl: "https://x.com/cursor_ai/status/2034668943676244133",
@@ -458,6 +498,7 @@ export const week13: WeeklyData = {
       color: "#9CA3AF",
       posts: [
         {
+          slug: "20260324-elon-xai-terafab-77021c4bcc18",
           date: "3/24 03:20", platform: "X+Threads",
           title: "Elon이 반도체 공장을 짓는다 — xAI Terafab 두 번째 공개",
           officialUrl: "https://x.com/SpaceX/status/2035519125284380672",
@@ -469,6 +510,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260322-ai-xai-terafab-c5ba8e772770",
           date: "3/22 17:07", platform: "X+Threads",
           title: "AI 반도체를 직접 만들겠다 — xAI Terafab 첫 발표",
           officialUrl: "https://x.com/elonmusk/status/2032814398033768737",
@@ -486,6 +528,7 @@ export const week13: WeeklyData = {
       color: "#1877F2",
       posts: [
         {
+          slug: "20260328-ai-meta-tribev2-9ed2535ef605",
           date: "3/28", platform: "X+Threads",
           title: "AI의 뇌를 먼저 해부한다 — Meta TRIBEv2 해석 가능성 도구 공개",
           officialUrl: "https://aidemos.atmeta.com/tribev2/",
@@ -494,6 +537,7 @@ export const week13: WeeklyData = {
           source: "https://aidemos.atmeta.com/tribev2/",
         },
         {
+          slug: "20260326-agi-meta-arm-cpu-4fd3a9091acc",
           date: "3/26 14:58", platform: "Threads",
           title: "AGI를 위한 칩을 함께 만든다 — Meta와 Arm CPU 협력 전면 해부",
           summary: "AGI 워크로드 전용 CPU 공동 개발 — 기존 대비 2배 성능, AI 추론 특화",
@@ -507,6 +551,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-ai-meta-ai-e3e542e6fab0",
           date: "3/25 03:07", platform: "Threads",
           title: "클라우드 AI를 독립시킨다 — Meta의 자체 AI 칩 전략",
           officialUrl: "https://x.com/Meta_Engineers/status/2036494803723043156",
@@ -525,6 +570,7 @@ export const week13: WeeklyData = {
       color: "#EC4899",
       posts: [
         {
+          slug: "20260325-luma-uni-1-a36f767e398a",
           date: "3/25 22:52", platform: "X+Threads",
           title: "생각하면서 그린다 — Luma Uni-1이 바꾼 이미지 생성의 규칙",
           summary: "추론과 이미지 생성을 단일 패스로 처리하는 새로운 멀티모달 아키텍처",
@@ -537,6 +583,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260325-5-2k-midjourney-v8-64972cf6ca0a",
           date: "3/25 18:48", platform: "X+Threads",
           title: "5배 빠르고 2K 해상도 — Midjourney V8이 기준을 다시 썼다",
           officialUrl: "https://x.com/midjourney/status/2034015403542974793",
@@ -549,6 +596,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260320-ai-elevenlabs-62836d795baa",
           date: "3/20 14:52", platform: "X+Threads",
           title: "AI 음악을 팔 수 있게 됐다 — ElevenLabs 음악 마켓플레이스",
           officialUrl: "https://x.com/elevenlabsio/status/1952754097976721737",
@@ -560,6 +608,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-runway-multi-shot-app-0cd659c6ed8a",
           date: "3/27",
           platform: "X+Threads",
           title: "여러 장면을 한 번에 연결한다 — Runway Multi-Shot App 출시",
@@ -580,6 +629,7 @@ export const week13: WeeklyData = {
       color: "#6B7280",
       posts: [
         {
+          slug: "20260325-ai-kanana-o-api-13459974acdd",
           date: "3/25 16:47", platform: "X+Threads",
           title: "한국판 오픈AI가 온다 — 카카오 Kanana-o API 베타 공개",
           officialUrl: "https://api-omni.kanana.ai/",
@@ -594,6 +644,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260324-copilot-figma-99dbe37633ba",
           date: "3/24 22:50", platform: "Threads",
           title: "디자인에서 코드로 바로 — Copilot이 Figma 디자인을 직접 읽는다",
           officialUrl: "https://x.com/figma/status/2036434766661296602",
@@ -606,6 +657,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260326-agi-arc-agi-3-5782856fdd1b",
           date: "3/26 07:17", platform: "X+Threads",
           title: "AGI를 측정하는 새 잣대 — ARC-AGI-3 공개",
           officialUrl: "https://x.com/fchollet/status/2036863769981403497",
@@ -619,6 +671,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260320-gmail-docs-sheets-meet-google-gemini-bfa176174d58",
           date: "3/20 22:58", platform: "X+Threads",
           title: "Gmail, Docs, Sheets, Meet — Google 전 제품에 Gemini가 들어갔다",
           officialUrl: "https://x.com/GoogleWorkspace/status/1879530133003886946",
@@ -630,6 +683,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260320-ai-perplexity-computer-e909a47260dd",
           date: "3/20 14:49", platform: "X+Threads",
           title: "AI가 증상을 분석한다 — Perplexity Computer의 의료 데이터베이스 연동",
           officialUrl: "https://x.com/perplexity_ai/status/2034668608375382346",
@@ -641,6 +695,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-ai-figma-figma-mcp-0f064a4c6520",
           date: "3/27",
           platform: "X+Threads",
           title: "AI가 Figma 캔버스에 직접 그린다 — Figma MCP 첫 데모",
@@ -656,6 +711,7 @@ export const week13: WeeklyData = {
           },
         },
         {
+          slug: "20260327-n8n-mcp-595f21602486",
           date: "3/27",
           platform: "X+Threads",
           title: "말로 자동화를 만든다 — n8n의 MCP 자연어 워크플로우",

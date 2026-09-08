@@ -12,6 +12,7 @@ export const week19: WeeklyData = {
       "color": "#E87040",
       "posts": [
         {
+          "slug": "20260505-anthropic-claude-financial-services-agents-10-4a30b3e514ec",
           "date": "5/05",
           "platform": "X",
           "title": "Anthropic Claude Financial Services Agents — 10개 분석가 워크플로우 템플릿 패키징",
@@ -48,6 +49,7 @@ export const week19: WeeklyData = {
           },
         },
         {
+          "slug": "20260506-anthropic-higher-limits-spacex-compute-claude-co-3866d4e843b9",
           "date": "5/06",
           "platform": "X",
           "title": "Anthropic higher limits + SpaceX compute — Claude Code 5시간 한도 2배 확대",
@@ -75,6 +77,7 @@ export const week19: WeeklyData = {
           },
         },
         {
+          "slug": "20260506-claude-managed-agents-public-beta-multiagent-ses-a4bcf8c87ac0",
           "date": "5/06",
           "platform": "X",
           "title": "Claude Managed Agents public beta — multiagent sessions와 Outcomes가 표준 beta로 이동",
@@ -112,6 +115,7 @@ export const week19: WeeklyData = {
       "color": "#7C3AED",
       "posts": [
         {
+          "slug": "20260504-perplexity-computer-enterprise-updates-computer-d3bdde8c3068",
           "date": "5/04",
           "platform": "X",
           "title": "Perplexity Computer enterprise updates — 기업 데이터와 반복 업무를 연결하는 Computer 흐름",
@@ -129,6 +133,7 @@ export const week19: WeeklyData = {
           "featured": true
         },
         {
+          "slug": "20260505-perplexity-computer-for-professional-finance-35-bfbd668c3b0b",
           "date": "5/05",
           "platform": "X",
           "title": "Perplexity Computer for Professional Finance — 라이선스 데이터 + 35개 금융 워크플로우",
@@ -173,6 +178,7 @@ export const week19: WeeklyData = {
       "color": "#4285F4",
       "posts": [
         {
+          "slug": "20260504-project-mariner-discontinued-24-7-gemini-agent-d0cc266d4f66",
           "date": "5/04",
           "platform": "X",
           "title": "Project Mariner discontinued — 24/7 Gemini Agent로 흡수",
@@ -197,6 +203,7 @@ export const week19: WeeklyData = {
           ]
         },
         {
+          "slug": "20260505-pomelli-catalogs-url-ai-11ce9a547236",
           "date": "5/05",
           "platform": "X",
           "title": "Pomelli Catalogs — 제품 URL 일괄 입력으로 캠페인·AI 포토슛 자동 생성",
@@ -229,6 +236,7 @@ export const week19: WeeklyData = {
           },
         },
         {
+          "slug": "20260505-notebooklm-mind-maps-702b693e2b30",
           "date": "5/05",
           "platform": "X",
           "title": "NotebookLM Mind Maps 업데이트 — 커스텀 프롬프트, 이름 변경/공유, 부드러운 노드 전환",
@@ -257,6 +265,7 @@ export const week19: WeeklyData = {
           },
         },
         {
+          "slug": "20260505-google-ai-studio-nano-banana-2-1a65e7bf084f",
           "date": "5/05",
           "platform": "X",
           "title": "Google AI Studio — Nano Banana 2로 앱·이미지 제작 워크플로우 강화",
@@ -291,6 +300,7 @@ export const week19: WeeklyData = {
           },
         },
         {
+          "slug": "20260505-gemma-4-multi-token-prediction-mtp-drafters-3-a7f340798f16",
           "date": "5/05",
           "platform": "X",
           "title": "Gemma 4 Multi-Token Prediction (MTP) drafters — 추론 최대 3배 가속",
@@ -325,6 +335,7 @@ export const week19: WeeklyData = {
       "color": "#10A37F",
       "posts": [
         {
+          "slug": "20260505-openai-gpt-5-5-instant-chatgpt-f0d6af5aaf2c",
           "date": "5/05",
           "platform": "X",
           "title": "OpenAI GPT-5.5 Instant — ChatGPT 신규 기본 모델로 롤아웃",
@@ -364,6 +375,7 @@ export const week19: WeeklyData = {
           },
         },
         {
+          "slug": "20260506-gpt-5-5-vs-gpt-5-4-vs-opus-4-7-56-a876375ea104",
           "date": "5/06",
           "platform": "X",
           "title": "GPT-5.5 vs GPT-5.4 vs Opus 4.7 — 56개 실제 코딩 태스크 벤치마크",
@@ -424,6 +436,7 @@ export const week19: WeeklyData = {
       "color": "#111827",
       "posts": [
         {
+          "slug": "20260506-xai-grok-api-voice-cloning-2ec41c7d73e7",
           "date": "5/06",
           "platform": "X",
           "title": "xAI Grok API — Voice Cloning 정식 출시",
@@ -460,6 +473,7 @@ export const week19: WeeklyData = {
       "color": "#FF6A00",
       "posts": [
         {
+          "slug": "20260506-alibaba-happyhorse-1-0-ai-387383656c5c",
           "date": "5/06",
           "platform": "X",
           "title": "Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개",
@@ -500,6 +514,7 @@ export const week19: WeeklyData = {
       "color": "#6B7280",
       "posts": [
         {
+          "slug": "20260506-andrej-karpathy-b47c775a024e",
           "date": "5/06",
           "platform": "X",
           "title": "Andrej Karpathy 브리핑 — 코딩에서 위임으로, 앱에서 에이전틱 웹으로",
@@ -559,6 +574,7 @@ export const week19: WeeklyData = {
           "featured": true
         },
         {
+          "slug": "20260504-ai-f6e7f99e2644",
           "date": "5/04",
           "platform": "X",
           "title": "대신콜 — AI 에이전트가 회식·예약 전화 대신해 주는 콜비아 베타",
@@ -573,6 +589,7 @@ export const week19: WeeklyData = {
           ]
         },
         {
+          "slug": "20260504-agentwatch-claude-code-codex-apple-watch-dc5e047b3569",
           "date": "5/04",
           "platform": "X",
           "title": "AgentWatch — Claude Code/Codex 에이전트 모니터링 + Apple Watch 알람 솔루션 (출시 임박)",
@@ -597,6 +614,7 @@ export const week19: WeeklyData = {
           ]
         },
         {
+          "slug": "20260505-subquadratic-subq-12m-token-sub-quadratic-sparse-1c059d3b5f0e",
           "date": "5/05",
           "platform": "X",
           "title": "Subquadratic 'SubQ' — 12M token 컨텍스트, 풀 sub-quadratic sparse attention 첫 frontier 모델",

@@ -18,6 +18,7 @@ export const week16: WeeklyData = {
       color: "#E87040",
       posts: [
         {
+          slug: "20260418-built-with-opus-4-7-claude-code-cerebral-valley-558676380def",
           date: "4/18",
           platform: "X",
           title: "Built with Opus 4.7 — Claude Code 해커톤 (Cerebral Valley)",
@@ -33,6 +34,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260418-claude-design-422-5-github-8978fa5d5820",
           date: "4/18",
           platform: "X",
           title: "Claude Design 시스템 프롬프트 유출 — 422줄·약 5천 단어 GitHub 공개",
@@ -48,6 +50,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260417-claude-design-claude-code-6026e5238fdf",
           date: "4/17",
           platform: "X",
           title: "Claude Design 공개 — 프롬프트로 프로토타입·슬라이드·원페이지 생성 + Claude Code 핸드오프",
@@ -64,6 +67,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260416-claude-opus-4-7-agentic-coding-step-change-xhigh-c1020359666b",
           date: "4/16",
           platform: "X",
           title: "Claude Opus 4.7 정식 출시 — Agentic Coding step-change + xhigh/task budget/1M ctx/2576px 비전",
@@ -80,6 +84,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260414-claude-code-diff-969b23f27098",
           date: "4/14",
           platform: "X",
           title: "Claude Code 데스크탑 앱 재설계 — 멀티 세션 사이드바 + 통합 터미널 + Diff 뷰어",
@@ -96,6 +101,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260414-claude-code-routines-api-github-dc61d3e662b9",
           date: "4/14",
           platform: "X",
           title: "Claude Code Routines — 스케줄·API·GitHub 트리거 클라우드 자동화",
@@ -118,6 +124,7 @@ export const week16: WeeklyData = {
       color: "#10A37F",
       posts: [
         {
+          slug: "20260422-gpt-image-2-0-gpt-image-2-arena-1512-1-f9dc7e45e712",
           date: "4/22",
           platform: "X",
           title: "GPT Image 2.0 (gpt-image-2) 출시 — Arena 1512점 1위 + \"구스 벤치마크\" 통과",
@@ -137,6 +144,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260419-gpt-5-5-spud-polymarket-4-23-92-2026-04-22-eb7939b62936",
           date: "4/19",
           platform: "X",
           title: "GPT-5.5 (코드네임 Spud) 출시 임박 — Polymarket 4/23 92% (2026-04-22 기준)",
@@ -158,6 +166,7 @@ export const week16: WeeklyData = {
       color: "#4285F4",
       posts: [
         {
+          slug: "20260423-google-gemini-enterprise-agent-platform-vertex-a-498186f9b2ce",
           date: "4/23",
           platform: "X",
           title: "Google Gemini Enterprise Agent Platform — Vertex AI 진화판, 200+ 모델 에이전트 빌드/거버넌스 (Cloud Next '26, 4/23)",
@@ -174,6 +183,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260423-google-workspace-intelligence-ai-ask-gemini-in-c-e3ad4f769e0d",
           date: "4/23",
           platform: "X",
           title: "Google Workspace Intelligence — 메일·채팅·파일·프로젝트 AI 맥락 통합 + Ask Gemini in Chat (Cloud Next '26, 4/23)",
@@ -190,6 +200,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260417-gemini-app-for-mac-option-space-45b6914132e9",
           date: "4/17",
           platform: "X",
           title: "Gemini App for Mac 출시 — 네이티브 데스크탑 앱 (Option+Space 단축키)",
@@ -205,6 +216,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260415-gemini-robotics-er-1-6-7d1834da7dee",
           date: "4/15",
           platform: "X",
           title: "Gemini Robotics-ER 1.6 공개 — 계기판 판독 + 공간 추론 대폭 향상",
@@ -220,6 +232,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260414-chrome-skills-gemini-48fb2b3a85f1",
           date: "4/14",
           platform: "X",
           title: "Chrome Skills — Gemini 프롬프트 저장·재사용 슬래시 커맨드",
@@ -242,6 +255,7 @@ export const week16: WeeklyData = {
       color: "#374151",
       posts: [
         {
+          slug: "20260402-cursor-3-composer-2-4-2-ux-275a2228e3d1",
           date: "4/2",
           platform: "X",
           title: "Cursor 3 + Composer 2 (4/2) — 에이전트 우선 UX + 멀티 에이전트",
@@ -263,6 +277,7 @@ export const week16: WeeklyData = {
       color: "#8B5CF6",
       posts: [
         {
+          slug: "20260422-qwen3-6-27b-dense-swe-bench-verified-77-2-262k-a-6a9a35d425e1",
           date: "4/22",
           platform: "X",
           title: "Qwen3.6-27B Dense — SWE-Bench Verified 77.2%, 262K 컨텍스트 (Apache-2.0, 4/22)",
@@ -279,6 +294,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260420-kimi-k2-6-moonshot-1t-moe-agent-swarm-300-sub-ag-d9ec7c679fe2",
           date: "4/20",
           platform: "X",
           title: "Kimi K2.6 (Moonshot) — 1T MoE 멀티모달 + Agent Swarm 300 sub-agents (Modified MIT, 4/20)",
@@ -295,6 +311,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260416-qwen3-6-35b-a3b-apache-2-0-agentic-coding-moe-ffb35879b1b2",
           date: "4/16",
           platform: "X",
           title: "Qwen3.6-35B-A3B 오픈소스 (Apache 2.0) — Agentic Coding MoE",
@@ -311,6 +328,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260415-supergemma4-26b-uncensored-jiunsong-gemma-4-8da5c38e7f33",
           date: "4/15",
           platform: "X",
           title: "SuperGemma4-26B Uncensored — 한국 개발자(Jiunsong)의 Gemma 4 튜닝본",
@@ -327,6 +345,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260407-zhipu-glm-5-1-swe-bench-pro-58-4-opus-4-6-57-3-7-7f35fef48e70",
           date: "4/7",
           platform: "X",
           title: "Zhipu GLM-5.1 — SWE-Bench Pro 58.4 > Opus 4.6 57.3 (754B MoE, Huawei Ascend 지원)",
@@ -348,6 +367,7 @@ export const week16: WeeklyData = {
       color: "#FB7185",
       posts: [
         {
+          slug: "20260416-tencent-hy-world-2-0-1-3d-sota-b4ff12333519",
           date: "4/16",
           platform: "X",
           title: "Tencent HY-World 2.0 — 이미지 1장 → 네비게이터블 3D 월드 (오픈소스 SOTA)",
@@ -363,6 +383,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260415-bytedance-omnishow-human-object-interaction-vide-a078a728fdc7",
           date: "4/15",
           platform: "X",
           title: "ByteDance OmniShow — Human-Object Interaction Video (SOTA, 오픈소스)",
@@ -378,6 +399,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260415-nvidia-lyra-2-0-3d-2a1947edcbba",
           date: "4/15",
           platform: "X",
           title: "NVIDIA Lyra 2.0 — 단일 이미지로 탐험 가능한 3D 월드 생성",
@@ -389,6 +411,7 @@ export const week16: WeeklyData = {
           tags: ["도구릴리스", "3d", "image", "video", "nvidia"],
         },
         {
+          slug: "20260414-recraft-v4-recraft-studio-4-6-93b5c15fbbc1",
           date: "4/14",
           platform: "X",
           title: "Recraft V4 — 최신 이미지 생성 모델 + Recraft Studio (4/6)",
@@ -404,6 +427,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260410-bytedance-seedance-2-0-replicate-fal-26350aa1f264",
           date: "4/10",
           platform: "X",
           title: "ByteDance Seedance 2.0 — Replicate·fal 정식 배포 확대",
@@ -419,6 +443,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260410-figma-make-28ca0bb07602",
           date: "4/10",
           platform: "X",
           title: "Figma Make — 디자인에서 프로토타입까지 프롬프트 기반 전환",
@@ -434,6 +459,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260409-elevenlabs-api-4-7-v2-42-sdk-scoped-analysis-tes-df4dbbb6cca0",
           date: "4/9",
           platform: "X",
           title: "ElevenLabs API 4/7 업데이트 + v2.42 SDK — scoped analysis·test folders·DTMF",
@@ -449,6 +475,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260408-heygen-avatar-v-seedance-2-0-15-a02570cc5421",
           date: "4/8",
           platform: "X",
           title: "HeyGen Avatar V + Seedance 2.0 통합 — 15초 녹음으로 스튜디오 아바타",
@@ -464,6 +491,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260325-suno-v5-5-voices-custom-models-my-taste-3-26-974a67c7dc9b",
           date: "3/25",
           platform: "X",
           title: "Suno v5.5 — Voices·Custom Models·My Taste (3/26, 참고)",
@@ -485,6 +513,7 @@ export const week16: WeeklyData = {
       color: "#6B7280",
       posts: [
         {
+          slug: "20260422-atomic-bot-hermes-agent-1-24-7-mac-windows-web-4-6a339021b387",
           date: "4/22",
           platform: "X",
           title: "Atomic Bot × Hermes Agent — 1분 원클릭 설치로 24/7 자율 에이전트 실행 (Mac·Windows·Web, 4/22)",
@@ -500,6 +529,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260415-browser-use-video-use-claude-code-43ef5664112c",
           date: "4/15",
           platform: "X",
           title: "Browser-Use video-use — Claude Code로 영상 편집 자동화 (오픈소스)",
@@ -516,6 +546,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260415-boj-4-15-4-28-915c43019b19",
           date: "4/15",
           platform: "X",
           title: "백준 온라인 저지(BOJ) 서비스 종료 발표 (4/15 발표, 4/28 종료)",
@@ -527,6 +558,7 @@ export const week16: WeeklyData = {
           tags: ["수익화사례", "text", "korea"],
         },
         {
+          slug: "20260415-codeburn-claude-code-codex-cursor-tui-mit-3-3k-4b3928fc330a",
           date: "4/15",
           platform: "X",
           title: "CodeBurn — Claude Code·Codex·Cursor 토큰/비용 TUI 대시보드 (MIT, 3.3k★)",
@@ -543,6 +575,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260414-browser-use-browser-harness-self-healing-mit-eddc54781ad1",
           date: "4/14",
           platform: "X",
           title: "Browser-Use Browser Harness — Self-Healing 브라우저 하네스 (MIT, 오픈소스)",
@@ -558,6 +591,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260414-nous-research-hermes-agent-v0-10-0-mit-4-16-c86d7c62d47f",
           date: "4/14",
           platform: "X",
           title: "Nous Research Hermes Agent v0.10.0 — 자율 진화 에이전트 (MIT, 4/16 최신 릴리스)",
@@ -573,6 +607,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260412-notion-3-4-part-2-custom-agents-ai-autofill-4-14-4dda5a2d066d",
           date: "4/12",
           platform: "X",
           title: "Notion 3.4 part 2 — Custom Agents + AI Autofill (4/14)",
@@ -588,6 +623,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260405-huggingface-inference-providers-pro-2-200-3bcc89bd3c1d",
           date: "4/5",
           platform: "X",
           title: "HuggingFace Inference Providers — PRO $2/월 크레딧 (200+ 모델)",
@@ -603,6 +639,7 @@ export const week16: WeeklyData = {
           },
         },
         {
+          slug: "20260223-wispr-flow-mac-windows-iphone-android-15e8c8ba4276",
           date: "2/23",
           platform: "X",
           title: "Wispr Flow — Mac/Windows/iPhone 정식 + Android 대기자 모집",

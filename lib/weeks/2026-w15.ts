@@ -18,6 +18,7 @@ export const week15: WeeklyData = {
       color: "#E87040",
       posts: [
         {
+          slug: "20260410-claude-code-claude-skills-16-5f17bba76d58",
           date: "4/10 15:42",
           platform: "X",
           title: "Claude Code .claude/ Skills 16가지 정리",
@@ -32,6 +33,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260410-anthropic-advisor-strategy-opus-advisor-57e5e0f33b4c",
           date: "4/10 03:28",
           platform: "X",
           title: "Anthropic Advisor Strategy (Opus = Advisor)",
@@ -46,6 +48,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260409-claude-mythos-sandbox-escape-1ebc858450a9",
           date: "4/9 00:28",
           platform: "X",
           title: "Claude Mythos sandbox escape 사건",
@@ -66,6 +69,7 @@ export const week15: WeeklyData = {
       color: "#10A37F",
       posts: [
         {
+          slug: "20260410-openai-chatgpt-pro-100-tier-08aa9a969af3",
           date: "4/10 02:36",
           platform: "X",
           title: "OpenAI ChatGPT Pro $100 tier 출시",
@@ -86,6 +90,7 @@ export const week15: WeeklyData = {
       color: "#4285F4",
       posts: [
         {
+          slug: "20260410-gemini-a1738ea9db25",
           date: "4/10 01:04",
           platform: "X",
           title: "Gemini 인터랙티브 시각화 기능 공개",
@@ -100,6 +105,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260410-google-photos-import-for-stitch-085f79b0f999",
           date: "4/10 07:32",
           platform: "X",
           title: "Google Photos import for Stitch 테스트",
@@ -114,6 +120,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260410-google-stitch-style-tuner-4f7b98258a7a",
           date: "4/10 07:32",
           platform: "X",
           title: "Google Stitch Style Tuner 내부 테스트",
@@ -128,6 +135,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260407-google-flash-flood-ai-c1b3daf133c9",
           date: "4/7 00:13",
           platform: "X",
           title: "Google flash flood 예측 AI",
@@ -148,6 +156,7 @@ export const week15: WeeklyData = {
       color: "#1877F2",
       posts: [
         {
+          slug: "20260410-meta-tribe-v2-0e28c41f1daa",
           date: "4/10 00:17",
           platform: "X",
           title: "Meta TRIBE v2 뇌 예측 모델 공개",
@@ -162,6 +171,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260409-meta-muse-spark-20418f473dea",
           date: "4/9 01:36",
           platform: "X",
           title: "Meta Muse Spark 첫 모델 출시",
@@ -182,6 +192,7 @@ export const week15: WeeklyData = {
       color: "#14B8A6",
       posts: [
         {
+          slug: "20260410-rtx-3070-qwen-3-5-9b-hermes-agent-plex-rag-dbc9c9902dbf",
           date: "4/10 13:52",
           platform: "X",
           title: "RTX 3070 + Qwen 3.5 9B Hermes Agent + Plex RAG",
@@ -196,6 +207,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260410-4x-dgx-sparks-qwen3-5-397b-moe-fp8-68bcf9f55700",
           date: "4/10 00:55",
           platform: "X",
           title: "4x DGX Sparks Qwen3.5 397B MoE FP8",
@@ -210,6 +222,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260409-macbook-ai-ssh-20dd9c0e5755",
           date: "4/9 01:43",
           platform: "X",
           title: "MacBook 로컬 AI 노드 SSH 관리",
@@ -224,6 +237,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260408-qwen-3-5-27b-gemma-4-31b-gpu-d3e2a35f3223",
           date: "4/8 11:50",
           platform: "X",
           title: "Qwen 3.5 27B / Gemma 4 31B 단일 GPU 추천",
@@ -238,6 +252,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260408-local-git-repo-agentic-workflow-a609a9daeee5",
           date: "4/8 10:44",
           platform: "X",
           title: "Local Git Repo + Agentic Workflow",
@@ -252,6 +267,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260407-8gb-vram-63dfc9337bfe",
           date: "4/7 18:29",
           platform: "X",
           title: "8GB VRAM 극한 튜닝 실전 팁",
@@ -272,6 +288,7 @@ export const week15: WeeklyData = {
       color: "#EC4899",
       posts: [
         {
+          slug: "20260409-voxtral-tts-mistral-4b-fd3783f4f7ee",
           date: "4/9 16:40",
           platform: "X",
           title: "Voxtral TTS (Mistral 4B)",
@@ -286,6 +303,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260407-netflix-void-2257e71c86da",
           date: "4/7 22:26",
           platform: "X",
           title: "Netflix VOID 영상 객체 삭제 모델",
@@ -306,6 +324,7 @@ export const week15: WeeklyData = {
       color: "#6B7280",
       posts: [
         {
+          slug: "20260409-robotics-top-stories-clone-robotics-20k-android-6b40d77a6544",
           date: "4/9 23:30",
           platform: "X",
           title: "Robotics Top Stories (Clone Robotics $20K android 등)",
@@ -320,6 +339,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260409-lobdell-study-less-study-smart-f8def9d3a016",
           date: "4/9 22:50",
           platform: "X",
           title: "Lobdell “Study Less Study Smart” 실전 적용",
@@ -334,6 +354,7 @@ export const week15: WeeklyData = {
           },
         },
         {
+          slug: "20260407-deepteam-llm-vulnerability-testing-tool-1cf465acb6b8",
           date: "4/7 16:57",
           platform: "X",
           title: "DeepTeam LLM Vulnerability Testing Tool",

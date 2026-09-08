@@ -33,9 +33,9 @@ export async function generateMetadata({
   const meta = getABPost(edition, postSlug);
   if (!meta) return {};
   return {
-    title: `${meta.post.title} — VoidNews AB ${edition}`,
+    title: `${meta.post.title} — VoidNews AB ${meta.editionSlug}`,
     description: meta.post.summary ?? meta.post.deck ?? meta.post.title,
-    alternates: { canonical: `/ab/${edition}/${postSlug}/` },
+    alternates: { canonical: `/ab/${meta.editionSlug}/${postSlug}/` },
     openGraph: {
       title: meta.post.title,
       description: meta.post.summary ?? meta.post.deck ?? "",
@@ -72,7 +72,7 @@ export default async function ABPostPage({
     post: meta.post,
     companyName: sectionLabel,
     companyColor: sectionColor,
-    weekSlug: `ab/${edition}`,
+    weekSlug: `ab/${meta.editionSlug}`,
     weekPeriod: meta.editionPeriod,
     threeLineSummary: meta.threeLineSummary,
   };
@@ -119,7 +119,7 @@ export default async function ABPostPage({
     title: meta.post.title,
     description: meta.post.summary ?? meta.post.deck ?? undefined,
     imageSrc: meta.post.thumbnail?.src,
-    path: `/ab/${edition}/${postSlug}/`,
+    path: `/ab/${meta.editionSlug}/${postSlug}/`,
     datePublished: meta.post.date || meta.editionAnnounceDate,
     yearHint: Number(edition.slice(0, 4)) || undefined,
     section: sectionLabel,
@@ -127,8 +127,8 @@ export default async function ABPostPage({
   const crumbs = breadcrumbLd([
     { name: "VoidNews", path: "/" },
     { name: "AB 발표", path: "/ab/" },
-    { name: edition, path: `/ab/${edition}/` },
-    { name: meta.post.title, path: `/ab/${edition}/${postSlug}/` },
+    { name: edition, path: `/ab/${meta.editionSlug}/` },
+    { name: meta.post.title, path: `/ab/${meta.editionSlug}/${postSlug}/` },
   ]);
 
   return (
@@ -139,7 +139,7 @@ export default async function ABPostPage({
         meta={adaptedMeta}
         prev={adaptedPrev}
         next={adaptedNext}
-        weekSlug={`ab/${edition}`}
+        weekSlug={`ab/${meta.editionSlug}`}
         article={article}
         related={related}
       />

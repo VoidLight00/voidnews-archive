@@ -13,6 +13,7 @@ import {
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
+import { useLocale } from "@/app/LocaleProvider";
 
 export const BOOKMARKS_STORAGE_KEY = "voidnews-bookmarks";
 export const READ_STORAGE_PREFIX = "voidnews-read:";
@@ -196,7 +197,14 @@ export function upsertRecentSearches(entries: string[], query: string) {
 }
 
 export function PostDateLabel({ date, defaultYear }: { date: string; defaultYear: number }) {
-  const parsed = parsePostDate(date, defaultYear);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Static exports can be older than the browser clock. Keep the first render
+  // identical to the build, then apply browser-local time formatting after hydration.
+  const parsed = mounted ? parsePostDate(date, defaultYear) : null;
   const relative = parsed ? formatRelativeTime(parsed) : null;
   const absolute = parsed ? formatAbsoluteDate(parsed) : date;
 
@@ -235,8 +243,10 @@ export type StatsActionMode = "filter" | "scroll";
 
 // ── 플랫폼 배지 ─────────────────────────────────
 export function PlatformBadge({ platform }: { platform: Post["platform"] }) {
+  const { t } = useLocale();
   return (
     <span
+      aria-label={t(`platform.${platform}`)}
       style={{
         background: "transparent",
         color: "var(--muted)",

@@ -16,6 +16,8 @@ import { week29 } from "./weeks/2026-w29";
 import { week30 } from "./weeks/2026-w30";
 import { week31 } from "./weeks/2026-w31";
 import { week32 } from "./weeks/2026-w32";
+import { week37 } from "./weeks/2026-w37";
+import { week36 } from "./weeks/2026-w36";
 import { week35 } from "./weeks/2026-w35";
 import { week34 } from "./weeks/2026-w34";
 import { week33 } from "./weeks/2026-w33";
@@ -26,6 +28,8 @@ export interface MediaImage {
   src: string;
   alt: string;
   caption?: string;
+  /** Explicitly audited source-page share preview; not an editorial first-image claim. */
+  provenance?: "source-share-preview";
 }
 
 // 영문판 필드 — 표시 전용. 북마크·읽음 상태 등 identity 키는 항상 한국어 title을 쓴다.
@@ -60,7 +64,7 @@ export interface VisualComparisonItem {
 
 export interface Post {
   date: string;
-  platform: "X" | "Threads" | "X+Threads";
+  platform: "X" | "Threads" | "X+Threads" | "Web";
   title: string;
   featured?: boolean;
   deck?: string;         // 카드 grid 노출용 sub-headline (title 밑 1줄, 50자 내외)
@@ -106,6 +110,8 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week37,
+  week36,
   week35,
   week34,
   week33,

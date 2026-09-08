@@ -1,0 +1,64 @@
+/* VoidNews: Runway-inspired discovery, existing editorial reading palette. */
+:root { --vn-card-radius: 2px; --vn-browse-radius: 16px; --vn-card-gap: 12px; --vn-grid-gap: 12px; --vn-card-media-ratio: 16 / 9; --vn-hero-ink: #fbf9f4; --vn-hero-ground: #141519; --vn-hero-muted: #d3d1ca; }
+.vn-browse { margin: 36px 0 28px; }
+.vn-section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:18px; }
+.vn-section-heading h2 { font-family:var(--sans); font-size:clamp(21px,2.2vw,28px); font-weight:650; letter-spacing:-.035em; }
+.vn-section-heading p { color:var(--muted); font-size:13px; }
+.vn-browse-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--vn-grid-gap); }
+.vn-browse-card { display:flex; align-items:center; gap:14px; padding:18px; min-height:92px; min-width:0; border:1px solid var(--border); border-radius:var(--vn-browse-radius); background:var(--card); color:var(--text); text-align:left; text-decoration:none; cursor:pointer; transition:background var(--dur-base),transform var(--dur-base); }
+.vn-browse-card:hover { background:var(--surface-2); transform:translateY(-2px); }
+.vn-browse-card[aria-pressed="true"] { background:var(--text-strong); color:var(--bg); border-color:var(--text-strong); }
+.vn-browse-initial { display:grid; place-items:center; width:56px; height:56px; flex-shrink:0; border-radius:10px; background:color-mix(in srgb,currentColor 8%,transparent); font:600 16px var(--sans); }
+.vn-browse-copy { display:grid; gap:4px; min-width:0; }
+.vn-browse-copy strong { font-size:14px; font-weight:650; overflow-wrap:anywhere; }
+.vn-browse-copy>span { font-size:12px; opacity:.78; font-variant-numeric:tabular-nums; }
+.vn-browse-arrow { margin-left:auto; font-size:18px; flex-shrink:0; }
+.vn-advanced-filters summary { cursor:pointer; min-height:36px; font-size:13px; font-weight:600; }
+.vn-advanced-filters summary span { font-size:12px; color:var(--muted); margin-left:12px; font-weight:400; }
+.vn-advanced-filters[open] summary { margin-bottom:14px; }
+.vn-advanced-filters .divider-label { margin:16px 0 10px; }
+.vn-filter-bar input:focus-visible, .vn-filter-bar select:focus-visible { outline:2px solid var(--accent)!important; outline-offset:4px; }
+.vn-filter-bar { backdrop-filter:none!important; border-radius:12px!important; }
+.vn-weekly .tc-hero-card { min-height:420px; border-radius:16px; background:var(--vn-hero-ground); overflow:hidden; }
+.vn-weekly .tc-hero-title { color:var(--vn-hero-ink); font-family:var(--sans); font-weight:650; font-size:clamp(28px,3.5vw,48px); line-height:1.25; max-width:26ch; letter-spacing:-.045em; word-break:keep-all; }
+.vn-weekly .tc-hero-summary { color:var(--vn-hero-muted); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; max-width:64ch; }
+.vn-weekly .tc-hero-labels, .vn-weekly .tc-hero-meta { color:var(--vn-hero-muted); }
+.vn-weekly .tc-hero-shade { background:linear-gradient(90deg,rgba(12,13,16,.96),rgba(12,13,16,.82) 48%,rgba(12,13,16,.35)); }
+.vn-weekly .tc-hero-content { max-width:850px; padding:clamp(24px,4vw,52px); }
+.vn-weekly .tc-source-thumb--card { aspect-ratio:var(--vn-card-media-ratio); }
+.vn-weekly .tc-feed-card { border-radius:var(--vn-card-radius); overflow:hidden; background:var(--card); transition:transform var(--dur-base),background var(--dur-base); }
+.vn-weekly .tc-feed-card:hover { transform:translateY(-2px); background:var(--card-hover); }
+.vn-weekly .tc-feed-title { font-family:var(--sans); font-size:clamp(18px,1.6vw,23px); line-height:1.4; letter-spacing:-.035em; -webkit-line-clamp:3; }
+.vn-weekly .tc-feed-body { padding:22px; gap:12px; }
+.vn-weekly .tc-feed-meta { font-size:11px; letter-spacing:0; }
+.vn-weekly .tc-feed-summary { line-height:1.7; font-size:14px; }
+.vn-weekly .tc-progress-row { margin:20px 0 14px; }
+.vn-weekly section[aria-label="회사 아카이브"]>section { margin-bottom:8px!important; }
+.vn-weekly section[aria-label="회사 아카이브"]>section>button { min-height:80px; padding:20px 4px!important; }
+.vn-weekly section[aria-label="회사 아카이브"]>section>button h2 { font-family:var(--sans); font-size:20px!important; }
+.vn-ab :is(#ab-highlights,#ab-models,#ab-picks) { scroll-margin-top:100px; }
+.vn-skip-link { position:fixed; top:-100px; left:16px; z-index:200; background:var(--card); color:var(--text); padding:12px 18px; }
+.vn-skip-link:focus { top:10px; }
+:where(button,a,summary,select,input):focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+@media(min-width:1000px) { .vn-weekly .tc-article-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--vn-card-gap); } }
+@media(max-width:1199px) { .vn-browse-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:767px) {
+ .vn-section-heading { align-items:flex-start; flex-direction:column; gap:6px; }
+ .vn-browse-grid { grid-template-columns:minmax(0,1fr); gap:var(--vn-grid-gap); }
+ .vn-browse-card { padding:14px 16px; gap:14px; min-height:88px; }
+ .vn-browse-initial { width:56px; height:56px; font-size:16px; }
+ .vn-browse-arrow { display:none; }
+ .vn-browse-copy strong { font-size:13px; }
+ .vn-weekly .tc-hero-card { min-height:430px; }
+ .vn-weekly .tc-hero-title { font-size:28px; }
+ .vn-weekly .tc-hero-content { padding:24px; }
+ .vn-weekly .tc-article-grid { grid-template-columns:minmax(0,1fr); gap:20px; }
+ .vn-advanced-filters summary span { display:block; margin:4px 0; }
+ .site-nav-row { gap:10px!important; }
+ .site-nav-social { gap:8px!important; }
+}
+@media(max-width:359px) { .vn-browse-grid { grid-template-columns:minmax(0,1fr); } }
+@media(prefers-reduced-motion:reduce) {
+ .vn-weekly *, .vn-ab *, .vn-browse * { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+ .vn-browse-card:hover, .vn-weekly .tc-feed-card:hover, .vn-ab .tc-feed-card:hover { transform:none; }
+}

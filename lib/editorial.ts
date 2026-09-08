@@ -1,12 +1,8 @@
-// Editorial route 전용 헬퍼 — w21/w22의 post를 slug로 lookup
-import { getWeek, weeks, type Post, type WeeklyData } from "./data";
+// Weekly article helpers — resolve published posts by slug.
+import { getWeek, weeks, type Post } from "./data";
 
-// w21·w22 editorial nested route (`/2026-wNN/[postSlug]/page.tsx`)
-const EDITORIAL_WEEKS = ["2026-w21", "2026-w22"] as const;
-type EditorialWeekSlug = (typeof EDITORIAL_WEEKS)[number];
-
-export function isEditorialWeek(slug: string): slug is EditorialWeekSlug {
-  return (EDITORIAL_WEEKS as readonly string[]).includes(slug);
+export function isEditorialWeek(slug: string): boolean {
+  return getWeek(slug) !== undefined;
 }
 
 interface EditorialPostMeta {
@@ -41,9 +37,8 @@ export function getEditorialPost(
 
 export function getAllEditorialPostParams(): { slug: string; postSlug: string }[] {
   const out: { slug: string; postSlug: string }[] = [];
-  for (const weekSlug of EDITORIAL_WEEKS) {
-    const week = getWeek(weekSlug);
-    if (!week) continue;
+  for (const week of weeks) {
+    const weekSlug = week.slug;
     for (const company of week.companies) {
       for (const post of company.posts) {
         if (post.slug) out.push({ slug: weekSlug, postSlug: post.slug });

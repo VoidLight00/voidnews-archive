@@ -6,6 +6,7 @@ import LocaleToggle from "./LocaleToggle";
 import { LocaleProvider } from "./LocaleProvider";
 import { getLatestSlug, getWeekList } from "@/lib/data";
 import "./globals.css";
+import "./runway.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://voidnews-archive.vercel.app"),
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen" style={{ background: "var(--bg)" }}>
         <LocaleProvider>
+        <a href="#main-content" className="vn-skip-link">본문으로 바로가기</a>
         {/* Masthead — date stamp + issue label */}
         <div
           style={{

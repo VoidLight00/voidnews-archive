@@ -12,6 +12,7 @@ export const week20: WeeklyData = {
       color: "#E87040",
       posts: [
         {
+          slug: "20260507-anthropic-natural-language-autoencoders-claude-1ee1fa394cd0",
           date: "5/07",
           platform: "X",
           title: "Anthropic Natural Language Autoencoders — Claude의 내부 추론을 자연어로 읽는 연구",
@@ -45,6 +46,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260511-claude-code-agent-view-goal-93ca92fb82e1",
           date: "5/11",
           platform: "X",
           title: "Claude Code Agent View + /goal — 코딩 에이전트가 완료 조건을 따라 움직이는 구조",
@@ -74,6 +76,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260511-claude-platform-on-aws-anthropic-managed-claude-623a4745448d",
           date: "5/11",
           platform: "X",
           title: "Claude Platform on AWS — Anthropic-managed Claude API를 AWS 결제·IAM으로 쓰는 경로",
@@ -99,6 +102,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260512-claude-opus-4-7-fast-mode-preview-5406d163a04e",
           date: "5/12",
           platform: "X",
           title: "Claude Opus 4.7 Fast mode — 같은 모델을 더 빠른 출력 속도로 쓰는 연구 preview",
@@ -130,6 +134,7 @@ export const week20: WeeklyData = {
       color: "#4285F4",
       posts: [
         {
+          slug: "20260512-google-gemini-intelligence-for-android-os-ai-8702cfc82184",
           date: "5/12",
           platform: "X",
           title: "Google Gemini Intelligence for Android — 스마트폰 OS가 AI 실행 레이어가 되는 전환",
@@ -151,6 +156,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260512-googlebook-gemini-intelligence-ai-b6f8d3931cea",
           date: "5/12",
           platform: "X",
           title: "Googlebook — Gemini Intelligence를 전제로 설계한 AI 노트북",
@@ -178,6 +184,7 @@ export const week20: WeeklyData = {
       color: "#4285F4",
       posts: [
         {
+          slug: "20260507-google-health-coach-fitbit-air-ai-4eedbe7b76dd",
           date: "5/07",
           platform: "X",
           title: "Google Health Coach + Fitbit Air — 건강 데이터와 AI 코치가 하나의 앱으로 모이는 흐름",
@@ -193,6 +200,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260508-gemini-3-1-flash-lite-ga-gemini-3-ead83e4bbc33",
           date: "5/08",
           platform: "X",
           title: "Gemini 3.1 Flash-Lite GA — 초저지연·대량 호출용 Gemini 3 모델의 정식 출시",
@@ -220,6 +228,7 @@ export const week20: WeeklyData = {
       color: "#10A37F",
       posts: [
         {
+          slug: "20260507-openai-realtime-voice-models-3-82f0177a4838",
           date: "5/07",
           platform: "X",
           title: "OpenAI Realtime Voice Models — 음성 에이전트용 실시간 모델 3종 공개",
@@ -235,6 +244,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260507-codex-for-chrome-b8a4a037f069",
           date: "5/07",
           platform: "X",
           title: "Codex for Chrome — 로그인된 브라우저 상태를 코딩 에이전트 작업에 연결",
@@ -256,6 +266,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260508-openai-running-codex-safely-697dd33eddce",
           date: "5/08",
           platform: "X",
           title: "OpenAI Running Codex safely — 코딩 에이전트에게 일을 맡길 때 필요한 경계 설계",
@@ -271,6 +282,7 @@ export const week20: WeeklyData = {
           },
         },
         {
+          slug: "20260508-openai-gpt-5-5-cyber-595590a970a5",
           date: "5/08",
           platform: "X",
           title: "OpenAI GPT-5.5-Cyber — 강력한 사이버 모델을 신뢰 기반 접근으로 제한하는 방식",
@@ -298,6 +310,7 @@ export const week20: WeeklyData = {
       color: "#2AABEE",
       posts: [
         {
+          slug: "20260507-telegram-ai-bot-revolution-ai-be3ceaa43d46",
           date: "5/07",
           platform: "X",
           title: "Telegram AI Bot Revolution — 모든 채팅에서 AI 봇을 호출하는 메신저 플랫폼 전략",
@@ -319,6 +332,7 @@ export const week20: WeeklyData = {
       color: "#111827",
       posts: [
         {
+          slug: "20260511-interaction-models-66f4e76fef45",
           date: "5/11",
           platform: "X",
           title: "Interaction Models — 실시간 음성·영상·텍스트 협업을 모델 안으로 넣는 접근",
@@ -340,6 +354,7 @@ export const week20: WeeklyData = {
       color: "#0866FF",
       posts: [
         {
+          slug: "20260512-muse-spark-may-update-meta-ai-9b051c20128e",
           date: "5/12",
           platform: "X",
           title: "Muse Spark May update — Meta AI 앱·안경·마켓플레이스에 들어가는 제품형 모델 확장",

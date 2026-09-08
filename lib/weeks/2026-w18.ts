@@ -12,6 +12,7 @@ export const week18: WeeklyData = {
       "color": "#FF6A00",
       "posts": [
         {
+          "slug": "20260427-alibaba-happyhorse-1-0-ai-artificial-analysis-ar-9ada54ea1c68",
           "date": "4/27",
           "platform": "X",
           "title": "Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개 (Artificial Analysis Arena 1위 등극)",
@@ -51,6 +52,7 @@ export const week18: WeeklyData = {
       "color": "#E87040",
       "posts": [
         {
+          "slug": "20260428-anthropic-claude-9-blender-adobe-autodesk-fusion-6282f12d0b2a",
           "date": "4/28",
           "platform": "X",
           "title": "Anthropic Claude — 9개 크리에이티브 도구 공식 커넥터 출시 (Blender·Adobe·Autodesk Fusion·Ableton·SketchUp 등)",
@@ -80,6 +82,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260430-anthropic-claude-code-git-commit-openclaw-hermes-669f7ed87d88",
           "date": "4/30",
           "platform": "X",
           "title": "Anthropic Claude Code — git commit에 'OpenClaw'·'HERMES.md' 단어만 있어도 추가 과금 라우팅 (논란→환불)",
@@ -134,6 +137,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260430-apple-support-v5-13-claude-md-2-apple-juno-ai-08c8e17f9671",
           "date": "4/30",
           "platform": "X",
           "title": "Apple Support 앱 v5.13 — CLAUDE.md 2개 파일 실수 노출 (Apple 내부 Juno AI 아키텍처 유출)",
@@ -164,6 +168,7 @@ export const week18: WeeklyData = {
           "featured": true
         },
         {
+          "slug": "20260430-anthropic-claude-jupiter-v1-p-red-team-probe-pos-af9bb07860c3",
           "date": "4/30",
           "platform": "X",
           "title": "Anthropic 'Claude Jupiter v1-p' red-team probe — possible Sonnet 4.8 / next Sonnet-class drop",
@@ -203,6 +208,7 @@ export const week18: WeeklyData = {
       "color": "#4285F4",
       "posts": [
         {
+          "slug": "20260427-demis-hassabis-google-ai-campus-mou-6e5fda7603cc",
           "date": "4/27",
           "platform": "X",
           "title": "Demis Hassabis 방한 — 서울 Google AI Campus(해외 첫 사례) MOU 체결",
@@ -231,6 +237,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260429-google-gemini-pdf-word-excel-docs-sheets-slides-651314d8a26b",
           "date": "4/29",
           "platform": "X",
           "title": "Google Gemini — PDF/Word/Excel/Docs/Sheets/Slides 직접 생성 기능 출시",
@@ -259,6 +266,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260429-google-photos-wardrobe-907f3cc82725",
           "date": "4/29",
           "platform": "X",
           "title": "Google Photos Wardrobe — 사진 라이브러리에서 자동 디지털 옷장 + 가상 피팅",
@@ -287,6 +295,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260430-google-deepmind-ai-co-clinician-ai-3d5a7c85b99f",
           "date": "4/30",
           "platform": "X",
           "title": "Google DeepMind AI Co-Clinician — 멀티모달 라이브 비디오/오디오 진단 AI",
@@ -315,6 +324,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260501-google-cosmo-gemini-nano-ai-05e93d3048c2",
           "date": "5/01",
           "platform": "X",
           "title": "Google COSMO — 온디바이스 Gemini Nano 기반 프로액티브 AI 어시스턴트 앱 유출",
@@ -343,6 +353,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260502-gemini-omni-leak-powered-by-omni-ui-toucan-ac531e08755b",
           "date": "5/02",
           "platform": "X",
           "title": "Gemini Omni 비디오 생성 leak — 'Powered by Omni' UI 문구 + 내부 코드네임 Toucan",
@@ -376,6 +387,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260503-gemini-3-2-flash-a-b-ajax-hercules-hector-orpheu-2b2aa0544314",
           "date": "5/03",
           "platform": "X",
           "title": "Gemini 3.2 Flash A/B 테스트 — Ajax/Hercules/Hector/Orpheus 4개 체크포인트 LM Arena 등장",
@@ -419,6 +431,7 @@ export const week18: WeeklyData = {
       "color": "#76B900",
       "posts": [
         {
+          "slug": "20260430-nvidia-nemotron-3-nano-omni-30b-a3b-rtx-5090-ec7ae996d765",
           "date": "4/30",
           "platform": "X",
           "title": "NVIDIA Nemotron 3 Nano Omni — 30B-A3B 오픈 멀티모달 모델 (RTX 5090에서 실행)",
@@ -458,6 +471,7 @@ export const week18: WeeklyData = {
       "color": "#10A37F",
       "posts": [
         {
+          "slug": "20260427-microsoft-openai-agi-aws-bedrock-openai-29a60feb5af7",
           "date": "4/27",
           "platform": "X",
           "title": "Microsoft·OpenAI 독점 종료 + AGI 조항 폐기 → AWS Bedrock에 OpenAI 모델 도입",
@@ -487,6 +501,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260428-gpt-image-2-seedance-2-0-668613f750dd",
           "date": "4/28",
           "platform": "X",
           "title": "GPT-Image-2 + Seedance 2.0 댄스 안무 스토리보드 워크플로우",
@@ -529,6 +544,7 @@ export const week18: WeeklyData = {
           ]
         },
         {
+          "slug": "20260430-openai-codex-auto-review-sandbox-e73072e946c2",
           "date": "4/30",
           "platform": "X",
           "title": "OpenAI Codex Auto-Review 모드 추가 — 별도 에이전트가 sandbox 경계 자동 승인",
@@ -553,6 +569,7 @@ export const week18: WeeklyData = {
           ]
         },
         {
+          "slug": "20260430-openai-codex-cli-goal-ralph-loop-ee5ee59c0f87",
           "date": "4/30",
           "platform": "X",
           "title": "OpenAI Codex CLI — /goal 슬래시 커맨드 (내장형 Ralph Loop, 장기 자율 코딩)",
@@ -583,6 +600,7 @@ export const week18: WeeklyData = {
       "color": "#24292F",
       "posts": [
         {
+          "slug": "20260427-github-copilot-usage-based-billing-ai-4a50c5bfe6d0",
           "date": "4/27",
           "platform": "X",
           "title": "GitHub Copilot usage-based billing — AI 코딩 도구가 비용 거버넌스 대상이 되는 전환",
@@ -620,6 +638,7 @@ export const week18: WeeklyData = {
       "color": "#6B7280",
       "posts": [
         {
+          "slug": "20260427-meta-manus-2b-14c235afa23b",
           "date": "4/27",
           "platform": "X",
           "title": "중국, Meta의 Manus 인수($2B) 차단 — 외국인 투자 금지 결정",
@@ -648,6 +667,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260428-ai-grimace-python-3430fefe86a8",
           "date": "4/28",
           "platform": "X",
           "title": "맥도날드 AI 챗봇(Grimace) — Python 스크립트 작성 사례 바이럴, 진위 미확정",
@@ -676,6 +696,7 @@ export const week18: WeeklyData = {
           ]
         },
         {
+          "slug": "20260428-nulli-qwen-3-3e14f5c54ac3",
           "date": "4/28",
           "platform": "X",
           "title": "Nulli — Qwen 3 기반 동영상 자막 번역·더빙 서비스",
@@ -701,6 +722,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "2026-w18-undated-ai-c30ab8252134",
           "date": "날짜 미확인",
           "platform": "X",
           "title": "휴머노이드 로봇 댄스 영상 — AI 생성 가능성이 큰 바이럴 클립",
@@ -720,6 +742,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260430-stripe-link-ai-oauth-spend-request-cb80be5ec749",
           "date": "4/30",
           "platform": "X",
           "title": "Stripe Link — AI 에이전트 결제용 디지털 지갑 (OAuth + spend request 승인)",
@@ -748,6 +771,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260501-meta-ari-assured-robot-intelligence-41d8b805f63c",
           "date": "5/01",
           "platform": "X",
           "title": "Meta, ARI(Assured Robot Intelligence) 인수 — 휴머노이드 로봇 풋 모델 사업 확장",
@@ -776,6 +800,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260501-xai-grok-imagine-agent-mode-cd3043049849",
           "date": "5/01",
           "platform": "X",
           "title": "xAI Grok Imagine — Agent Mode (캔버스 기반 단편 영화·이미지·영상 통합 워크스페이스)",
@@ -804,6 +829,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260502-mit-media-lab-human-operator-ems-ai-hard-mode-1-05213d23ab01",
           "date": "5/02",
           "platform": "X",
           "title": "MIT Media Lab Human Operator — 전기근육자극(EMS)으로 AI가 사람 손 제어 (Hard Mode 해커톤 1위)",
@@ -837,6 +863,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260502-mistral-medium-3-5-128b-le-chat-vibe-6aa7a155d749",
           "date": "5/02",
           "platform": "X",
           "title": "Mistral Medium 3.5 — 128B 댄스 모델 + Le Chat Vibe 원격 코딩 에이전트",
@@ -865,6 +892,7 @@ export const week18: WeeklyData = {
           },
         },
         {
+          "slug": "20260502-xai-grok-api-voice-cloning-2-80-28-6ba030c9dc71",
           "date": "5/02",
           "platform": "X",
           "title": "xAI Grok API — Voice Cloning 정식 출시 (2분 미만, 80+ 보이스 라이브러리, 28언어)",
@@ -899,6 +927,7 @@ export const week18: WeeklyData = {
       "color": "#A855F7",
       "posts": [
         {
+          "slug": "20260428-open-design-open-claude-design-claude-design-95-9bf258492928",
           "date": "4/28",
           "platform": "X",
           "title": "Open Design (open claude design) — Claude Design 95% 재현 오픈소스 (Tom Huang, 71+ 디자인 시스템 / 30+ 스킬)",

@@ -2,6 +2,16 @@ import crypto from "node:crypto";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import ts from "typescript";
+import { createRequire } from "node:module";
+import fs from "node:fs";
+
+// Evaluate trusted repository modules so spreads and imported records are included.
+const require = createRequire(import.meta.url);
+require.extensions[".ts"] = (module, filename) => {
+  module._compile(ts.transpileModule(fs.readFileSync(filename, "utf8"), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS },
+  }).outputText, filename);
+};
 
 const ROOT = process.cwd();
 const OUTPUT_DIR = path.join(ROOT, "_workspace", "thumbnails");
@@ -151,7 +161,7 @@ function weeklyItem({ filePath, week, company, post, postIndex }) {
     hasImages: Boolean(post.images?.length),
     officialImageStatus: status,
     needsOfficialImageProbe: status === "needs-official-image-probe",
-    giFallbackCandidate: status === "needs-official-image-probe",
+    giFallbackCandidate: false,
     assetTarget: `/generated/weekly/${week.slug}/${companySlug}/${titleSlug}/thumb.webp`,
     dataTarget: path.relative(ROOT, filePath),
     dataPath: `companies[${week.companies.indexOf(company)}].posts[${postIndex}]`,
@@ -183,7 +193,7 @@ function abHighlightItem({ filePath, edition, highlight, index }) {
     hasImages: Boolean(post.images?.length),
     officialImageStatus: status,
     needsOfficialImageProbe: status === "needs-official-image-probe",
-    giFallbackCandidate: status === "needs-official-image-probe",
+    giFallbackCandidate: false,
     assetTarget: `/generated/ab/${edition.slug}/highlight-${String(highlight.rank).padStart(2, "0")}-${titleSlug}/thumb.webp`,
     dataTarget: path.relative(ROOT, filePath),
     dataPath: `highlights[${index}].post`,
@@ -213,7 +223,7 @@ function abEditorPickItem({ filePath, edition, pick, index }) {
     hasImages: Boolean(pick.images?.length),
     officialImageStatus: status,
     needsOfficialImageProbe: status === "needs-official-image-probe",
-    giFallbackCandidate: status === "needs-official-image-probe",
+    giFallbackCandidate: false,
     assetTarget: `/generated/ab/${edition.slug}/editor-pick-${titleSlug}/thumb.webp`,
     dataTarget: path.relative(ROOT, filePath),
     dataPath: `editorsPicks[${index}]`,
@@ -227,8 +237,7 @@ async function collectWeeklyItems() {
   const items = [];
 
   for (const filePath of files) {
-    const source = await readFile(filePath, "utf8");
-    const week = extractExportObject(source, filePath);
+    const week = Object.values(require(filePath)).find((value) => value?.companies && value?.slug);
     if (!week?.companies) continue;
 
     for (const company of week.companies) {
@@ -246,8 +255,7 @@ async function collectAbItems() {
   const items = [];
 
   for (const filePath of files) {
-    const source = await readFile(filePath, "utf8");
-    const edition = extractExportObject(source, filePath);
+    const edition = Object.values(require(filePath)).find((value) => value?.highlights && value?.slug);
     if (!edition?.slug) continue;
 
     for (const [index, highlight] of (edition.highlights || []).entries()) {
@@ -256,6 +264,10 @@ async function collectAbItems() {
 
     for (const [index, pick] of (edition.editorsPicks || []).entries()) {
       items.push(abEditorPickItem({ filePath, edition, pick, index }));
+    }
+    for (const [index, pick] of (edition.modelWatch || []).entries()) {
+      const item = abEditorPickItem({ filePath, edition, pick, index });
+      items.push({ ...item, id: `${item.id}-model-watch`, sourceType: "ab-model-watch", dataPath: `modelWatch[${index}]` });
     }
   }
 
@@ -270,7 +282,7 @@ function summarize(items) {
   return {
     total: items.length,
     needsOfficialImageProbe,
-    giFallbackCandidatesAfterProbe: needsOfficialImageProbe,
+    giFallbackCandidatesAfterProbe: items.filter((item) => item.giFallbackCandidate).length,
     byStatus,
     bySourceType,
   };
@@ -301,7 +313,7 @@ async function main() {
       imagePriority: [
         "existing thumbnail",
         "existing images[0]",
-        "official source first image or safe OG/screenshot",
+        "official source first image when verified; otherwise OG preview (not first-image verification)",
         "/gi generated fallback only after official image absence is confirmed",
         "domain fallback",
       ],
@@ -311,6 +323,10 @@ async function main() {
     items,
   };
 
+  if (process.argv.includes("--summary-only")) {
+    console.log(JSON.stringify(manifest.summary, null, 2));
+    return;
+  }
   await mkdir(OUTPUT_DIR, { recursive: true });
   await writeFile(path.join(OUTPUT_DIR, "thumbnail-manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
   await writeFile(path.join(OUTPUT_DIR, "gi-prompts.md"), renderPrompts(items));

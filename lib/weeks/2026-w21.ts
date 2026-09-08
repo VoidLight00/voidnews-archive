@@ -19,7 +19,7 @@ export const week21: WeeklyData = {
           date: "5/21",
           platform: "X+Threads",
           title: "AdventHealth, OpenAI 와 전인적 치료 모델 적용 — 9개 주 50여 개 병원에 ChatGPT for Healthcare 도입",
-          summary: "",
+          summary: "AdventHealth가 ChatGPT for Healthcare를 임상 보조·운영 자동화·환자 응대에 도입하는 사례를 공개했습니다. 신체·심리·영적 건강을 함께 살피는 전인적 진료를 지원한다는 취지입니다.",
           content: `미국 9개 주에서 50여 개 병원을 운영하는 비영리 의료법인 AdventHealth가 2026년 5월 21일 OpenAI와의 협업을 공식 사례로 공개했습니다. 임상·운영·환자 경험 세 갈래에 ChatGPT for Healthcare를 도입해 "whole-person care(신체·심리·영적 건강을 함께 보는 진료 모델)"를 확장한다는 발표.
 
 - 도입 범위: 의사·간호사용 임상 보조, 운영 자동화, 환자 응대
@@ -43,7 +43,7 @@ export const week21: WeeklyData = {
           date: "5/21",
           platform: "X+Threads",
           title: "Codex Rust CLI v0.133.0 — Goals 신규 작업 단위 도입",
-          summary: "",
+          summary: "Codex Rust CLI 0.133.0에 여러 단계와 승인·도구 호출을 묶는 장기 작업 단위 Goals가 추가됐습니다. 작업 계획과 실행을 분리하고, 실행 중 발생하는 이벤트에 사용자 스크립트를 연결합니다.",
           content: `OpenAI Codex의 Rust CLI 0.133.0이 2026년 5월 21일 GitHub에 태그됐습니다. 같은 주에 풀린 모바일·Hooks GA·Remote SSH 흐름의 마지막 조각으로, CLI 단에서도 "Goals"라는 새 작업 단위가 처음 등장했습니다.
 
 - 신규 단위: Goal — 단일 명령이 아니라 여러 step·승인·도구 호출이 묶인 장기 실행 작업
@@ -71,7 +71,7 @@ Rust CLI를 굳이 모바일/데스크톱과 같은 세션 모델로 묶은 건 
           date: "5/20",
           platform: "X+Threads",
           title: "OpenAI 모델, 이산 기하의 중심 추측을 반례로 무너뜨림",
-          summary: "",
+          summary: "OpenAI가 자체 모델이 이산 기하의 추측을 깨는 반례를 제안하고 검증했다고 발표했습니다. 구체적인 반례와 검증 과정을 제시했으며, 사용한 모델의 명세는 공개하지 않았습니다.",
           content: `OpenAI 연구팀이 2026년 5월 20일 자체 모델이 이산 기하(discrete geometry)의 중심 추측 하나를 반례로 무너뜨렸다고 발표했습니다. 인간 수학자들이 수십 년 검증을 시도해 온 명제에 대해 모델이 직접 반례 구조를 제안·검증했다는 내용.
 
 - 도메인: discrete geometry — 점, 다면체, 볼록 도형의 조합론적 구조
@@ -98,7 +98,7 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           date: "5/20",
           platform: "X+Threads",
           title: "OpenAI Education for Countries 다음 단계 — 국가 단위 ChatGPT EDU 라이선스 확장",
-          summary: "",
+          summary: "OpenAI가 Education for Countries를 국가 단위 교육 협력으로 확대한다고 발표했습니다. 교육부와 공립학교 체계를 대상으로 ChatGPT 교육 라이선스·교사 연수·안전 및 평가 도구를 묶어 제공합니다.",
           content: `OpenAI가 2026년 5월 20일 "Education for Countries" 이니셔티브의 차기 단계를 발표했습니다. 단일 학교가 아니라 국가 단위로 ChatGPT 교육 라이선스·교사 연수·커리큘럼 통합을 묶어 제공하는 정부 협업 트랙입니다.
 
 - 대상: 국가 교육부, 공립 학교 시스템
@@ -125,7 +125,7 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           date: "5/20",
           platform: "X+Threads",
           title: "Ramp 엔지니어들이 Codex 로 코드 리뷰를 가속하는 방식",
-          summary: "",
+          summary: "Ramp가 Codex와 GPT-5.5를 코드 검토 과정에 적용한 사례를 공개했습니다. AI가 변경 내용과 잠재 오류·테스트 누락을 먼저 정리하고, 사람은 업무 로직과 보안을 검토해 최종 반영을 결정합니다.",
           content: `핀테크 회사 Ramp가 2026년 5월 20일 OpenAI Codex와 GPT-5.5를 사내 코드 리뷰 파이프라인에 결합한 사례를 공식 케이스 스터디로 공개했습니다. PR 리뷰의 1차 패스를 Codex가 처리하고, 사람 리뷰어는 비즈니스 로직과 보안 검토에 집중하는 구조.
 
 - 적용 단계: PR 생성 직후 자동 트리거 → diff 요약 + 잠재 회귀 + 테스트 누락 지적
@@ -152,7 +152,7 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           date: "5/20",
           platform: "X+Threads",
           title: "OpenAI Cookbook 신규 챕터 — Macro evals cookbook 머지",
-          summary: "",
+          summary: "OpenAI Cookbook에 다단계 에이전트 작업 전체를 평가하는 Macro evals 챕터가 추가됐습니다. 도구 호출과 외부 시스템 연동까지 살피며, 실행 기록 수집과 기준 데이터 구성·오류 추적 방법을 다룹니다.",
           content: `OpenAI Cookbook 저장소에 2026년 5월 20일 "Macro evals cookbook" 신규 챕터가 머지됐습니다. 단일 프롬프트 단위 평가가 아니라, 에이전트가 여러 step·도구·외부 시스템을 거치는 워크플로우 전체를 평가하는 패턴 모음입니다.
 
 - 다루는 범위: 다단계 에이전트, 도구 호출 시퀀스, 외부 API 회귀, 비결정성 처리
@@ -178,7 +178,7 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           date: "5/19",
           platform: "X+Threads",
           title: "OpenAI for Singapore 공개 — 싱가포르 정부와 국가 단위 전략 파트너십",
-          summary: "",
+          summary: "OpenAI가 싱가포르 정부와 OpenAI for Singapore 전략 파트너십을 발표했습니다. 데이터센터와 연산 자원 확보, 산업 도입, 교육, 정부 디지털화를 함께 추진하는 협력입니다.",
           content: `OpenAI가 2026년 5월 19일 싱가포르 정부와의 전략 파트너십 "OpenAI for Singapore"를 발표했습니다. 데이터센터·산업 도입·교육·정부 디지털화 네 갈래를 한 묶음으로 설계한 국가 단위 계약입니다.
 
 - 인프라: 싱가포르 내 데이터센터·컴퓨트 확보 (사업자 미공개)
@@ -205,7 +205,7 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           date: "5/19",
           platform: "X+Threads",
           title: "OpenAI 콘텐츠 출처(Content Provenance) 정책 강화 — C2PA 메타데이터 강제 부착",
-          summary: "",
+          summary: "OpenAI가 AI 생성물의 출처 확인을 위한 C2PA 메타데이터 정책 강화를 발표했습니다. 이미지·영상·오디오 출력에 출처 정보를 삽입하고 외부 검증 도구와의 호환성을 확대한다는 내용입니다.",
           content: `OpenAI가 2026년 5월 19일 콘텐츠 출처(content provenance) 정책을 한 단계 강화한다고 발표했습니다. 자사 이미지·영상·오디오 출력에 C2PA Content Credentials 메타데이터를 강제 부착하고, 외부 검증 도구와의 호환 라인을 늘립니다.
 
 - 표준: C2PA(Coalition for Content Provenance and Authenticity)
@@ -232,7 +232,7 @@ GPT-5.x 라인이 IMO 수준의 수능형 문제를 푸는 데서 한 발 더 �
           date: "5/19",
           platform: "X+Threads",
           title: "Codex Rust CLI v0.132.0 — Python SDK 인증을 ChatGPT 계정으로 통합",
-          summary: "",
+          summary: "Codex Rust CLI 0.132.0은 Python SDK 인증을 ChatGPT 계정과 연결합니다. CLI와 SDK에서 같은 계정 토큰을 쓰도록 인증 흐름을 통합하는 것이 주요 변경점입니다.",
           content: `Codex Rust CLI 0.132.0이 2026년 5월 19일 GitHub에 태그됐습니다. 0.133.0의 Goals 도입 이전 단계로, 가장 큰 변화는 Python SDK 인증 라인을 ChatGPT 계정과 통합한 부분입니다.
 
 - Python SDK auth: ChatGPT 계정 토큰으로 OpenAI Python SDK 인증 가능
@@ -258,7 +258,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/18",
           platform: "X+Threads",
           title: "OpenAI · Dell 파트너십 — Codex 를 하이브리드·온프레미스 엔터프라이즈 환경에 배포",
-          summary: "",
+          summary: "OpenAI와 Dell이 기업의 하이브리드·온프레미스 환경에 Codex를 배포하는 협력을 발표했습니다. 다만 모델 가중치가 직접 제공되는지와 구체적인 호스팅 구조는 발표에서 명시되지 않았습니다.",
           content: `OpenAI와 Dell이 2026년 5월 18일 Dell Technologies World에서 Codex를 하이브리드·온프레미스 엔터프라이즈 환경에 배포하는 파트너십을 공식화했습니다. 같은 키노트에서 NVIDIA Jensen Huang이 "demand is going parabolic"이라고 표현한 AI factory 흐름의 소프트웨어 짝입니다.
 
 - 배포 옵션: 클라우드 / 하이브리드 / 온프레미스 (Dell 하드웨어 위)
@@ -285,7 +285,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/16",
           platform: "X+Threads",
           title: "OpenAI · Malta 파트너십 — 몰타 전 시민에게 ChatGPT Plus 제공",
-          summary: "",
+          summary: "OpenAI가 몰타 정부와 모든 몰타 시민에게 ChatGPT Plus를 제공하는 협약을 발표했습니다. 정부가 비용을 지원하고 공공 신원 인증 체계와 연결하는 국가 단위 보급 사례입니다.",
           content: `OpenAI가 2026년 5월 16일 몰타 정부와 협약을 맺어 모든 몰타 시민에게 ChatGPT Plus를 제공한다고 발표했습니다. 사실상 한 국가 전체를 ChatGPT Plus 사용자 베이스로 흡수하는 첫 사례.
 
 - 대상: 몰타 시민 약 50만 명 전원
@@ -312,7 +312,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/15",
           platform: "X+Threads",
           title: "ChatGPT 새 개인 재무 경험 공개 — 예산·부채·투자 다단계 플로우",
-          summary: "",
+          summary: "ChatGPT에 사용자가 입력한 자산·지출·목표를 바탕으로 예산과 부채 우선순위·저축 계획을 다루는 개인 재무 기능이 공개됐습니다. 정식 재무 자문은 아니며, 외부 계좌 연결 여부는 공개되지 않았습니다.",
           content: `OpenAI가 2026년 5월 15일 ChatGPT의 개인 재무 경험을 새로 풀었습니다. 단순 챗봇 응답이 아니라 사용자의 자산·지출·목표를 컨텍스트로 둔 채 예산, 부채, 투자 계획을 다단계로 다루는 전용 흐름입니다.
 
 - 입력: 사용자가 직접 등록한 자산·지출·목표 (외부 계좌 연결은 미공개)
@@ -339,7 +339,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/15",
           platform: "X+Threads",
           title: "Databricks, GPT-5.5 를 엔터프라이즈 에이전트 워크플로우에 통합",
-          summary: "",
+          summary: "Databricks가 GPT-5.5를 기업용 에이전트 작업에 통합한다고 발표했습니다. Mosaic AI Agent Framework와 자연어 분석 도구 Genie, Unity Catalog 권한 체계를 연결하는 내용입니다.",
           content: `Databricks가 2026년 5월 15일 OpenAI GPT-5.5를 자사 엔터프라이즈 에이전트 워크플로우에 통합한다고 발표했습니다. Mosaic AI Agent Framework, Genie BI 어시스턴트, Unity Catalog 권한 라인이 GPT-5.5와 직접 연결됩니다.
 
 - 통합 지점: Mosaic AI Agent Framework, Genie (자연어 BI), Unity Catalog 권한
@@ -366,7 +366,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/15",
           platform: "X+Threads",
           title: "영업팀이 Codex 를 쓰는 방식",
-          summary: "",
+          summary: "OpenAI Academy가 영업팀을 위한 Codex 활용 가이드를 공개했습니다. 고객사 데모 구축, 제안요청서 응답, 고객관리 데이터 점검을 다루며, AI가 작성한 코드가 의도에 맞는지는 담당자가 확인하는 방식입니다.",
           content: `OpenAI Academy의 "Codex for Work" 트랙에 2026년 5월 15일 영업팀용 가이드가 추가됐습니다. 엔지니어가 아닌 영업 직군이 Codex를 도구로 쓰는 실제 워크플로우를 정리한 자료.
 
 - 대상: B2B 영업, RevOps, Sales Engineering
@@ -389,7 +389,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/15",
           platform: "X+Threads",
           title: "기업 운영팀(BizOps)이 Codex 를 쓰는 방식",
-          summary: "",
+          summary: "OpenAI Academy의 비즈니스 운영팀용 Codex 가이드는 사내 도구 자동화와 부서 간 데이터 통합, 반복 보고서 생성을 다룹니다. 매주 수동으로 처리하는 작업 한 가지부터 시작하는 접근을 제시합니다.",
           content: `OpenAI Academy "Codex for Work" 트랙의 비즈니스 운영팀(BizOps) 가이드. 2026년 5월 15일 sales·data science 가이드와 함께 공개됐습니다.
 
 - 사용 시나리오: 사내 도구 자동화, 부서간 데이터 통합 스크립트, 반복 보고서 자동 생성
@@ -412,7 +412,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           date: "5/15",
           platform: "X+Threads",
           title: "데이터 사이언스 팀이 Codex 를 쓰는 방식",
-          summary: "",
+          summary: "OpenAI Academy가 데이터 사이언스팀의 Codex 활용법을 정리했습니다. 분석용 노트북 코드 정리와 데이터 검증·실험 결과 요약을 다루고, 탐색용 코드를 운영용 스크립트와 테스트로 옮기는 흐름을 설명합니다.",
           content: `OpenAI Academy의 데이터 사이언스팀용 Codex 가이드. 2026년 5월 15일 공개된 "Codex for Work" 트랙 3종 중 하나.
 
 - 사용 시나리오: notebook 코드 정리, 데이터 검증 스크립트, 실험 결과 자동 요약
@@ -792,7 +792,7 @@ OpenAI는 Codex 모바일·Hooks·HIPAA·SSH로 "코딩 에이전트를 어디�
           date: "5/19",
           platform: "X+Threads",
           title: "NVIDIA · Google Cloud 협업 — Gemma·Nemotron 통합 + AI 빌더 커뮤니티 지원",
-          summary: "",
+          summary: "NVIDIA와 Google Cloud가 Gemma·Nemotron 모델 활용과 개발자 지원을 위한 협력을 발표했습니다. NVIDIA 도구와 Google Cloud의 모델 연계를 확대하고, 교육·해커톤·크레딧·문서를 지원합니다.",
           content: `NVIDIA가 2026년 5월 19일 Google Cloud Developer Community와의 협업을 발표했습니다. Gemma 모델 라인과 Nemotron이 NVIDIA AI platform 위에서 더 매끄럽게 돌고, Google Cloud 위 NVIDIA GPU 인스턴스에 최적화된 빌드 체인이 제공됩니다.
 
 - Gemma: Google의 오픈 모델 라인이 NVIDIA NeMo·TensorRT-LLM에 1급으로 통합
@@ -825,7 +825,7 @@ OpenAI는 Codex 모바일·Hooks·HIPAA·SSH로 "코딩 에이전트를 어디�
           date: "5/21",
           platform: "X+Threads",
           title: "Anthropic, Claude for Small Business 출시 — 소상공인 대상 요금제",
-          summary: "",
+          summary: "Anthropic이 중소 사업장을 위한 Claude for Small Business를 발표했습니다. Claude 모델과 Projects, 팀 공유 메모리·관리자 콘솔을 묶어 제공하며, 구체적인 가격은 지역별로 달라집니다.",
           content: `Anthropic이 2026년 5월 21일 Claude for Small Business 라인을 공식 출시했습니다. 엔터프라이즈 ChatGPT·Claude Team 사이에 비어 있던 중소·소상공인 세그먼트를 직접 겨냥한 패키지입니다.
 
 - 대상: 직원 100명 이하 사업장
@@ -971,7 +971,7 @@ LLM API 회사의 진짜 락인은 모델 성능보다 SDK·도구 라인의 폭
           date: "5/21",
           platform: "X+Threads",
           title: "NVIDIA GTC Taipei @ COMPUTEX — 차세대 AI 인프라 라인업 라이브 업데이트",
-          summary: "",
+          summary: "NVIDIA가 COMPUTEX 기간 GTC Taipei에서 Jetson Thor와 AI Factory 협력 확대를 중심으로 인프라 소식을 공개했습니다. 대만 제조사와의 협업, 휴머노이드·자율주행·산업 비전 시연을 함께 소개했습니다.",
           content: `NVIDIA가 2026년 5월 21일 COMPUTEX 기간 중 열린 GTC Taipei에서 차세대 AI 인프라 라인업을 한 번에 공개했습니다. Jetson Thor, AI factory 파트너 확장, 대만 OEM과의 신규 보드 라인이 핵심.
 
 - Jetson Thor: 엣지·로보틱스용 차세대 SoC (Vera Rubin과 같은 세대 아키텍처)
@@ -998,7 +998,7 @@ NVIDIA의 공급망은 TSMC + 대만 OEM 라인이 뼈대입니다. GTC Taipei�
           date: "5/21",
           platform: "X+Threads",
           title: "통신사 AI Factory 위에 토큰 단위 과금 AI 서비스 구축 가이드 — NVIDIA NIM+NeMo 표준 패턴",
-          summary: "",
+          summary: "NVIDIA가 통신사의 자체 AI 인프라에서 토큰 사용량에 따라 과금하는 서비스를 구축하는 가이드를 공개했습니다. NIM의 모델 제공 기능과 NeMo의 학습·평가 도구를 묶고, 입출력 사용량 측정과 서비스 수준 관리를 다룹니다.",
           content: `NVIDIA Developer Blog가 2026년 5월 21일 통신사가 자체 AI Factory 위에서 token-metered AI 서비스를 운영하는 표준 패턴을 정리해 공개했습니다. NIM 마이크로서비스 + NeMo 라인을 묶어 통신사가 직접 LLM API 사업자가 되는 모델.
 
 - 패턴: 통신사 데이터센터 = AI Factory, 가입자에게 토큰 단위 과금 API 제공
@@ -1058,7 +1058,7 @@ KT·SK텔레콤·LG U+ 모두 자체 AI 데이터센터를 확장 중이고, 토
           date: "5/20",
           platform: "X+Threads",
           title: "NVIDIA Mastering Agentic Techniques — AI 에이전트 커스터마이징 편",
-          summary: "",
+          summary: "NVIDIA의 에이전트 맞춤화 가이드는 NeMo Agent Toolkit과 Nemotron을 바탕으로 역할·도구·정책을 조정하는 방법을 다룹니다. 프롬프트 작성부터 도구 등록, 정책 정의, 평가까지 단계별로 설명합니다.",
           content: `NVIDIA Developer Blog가 2026년 5월 20일 "Mastering Agentic Techniques" 시리즈 중 에이전트 커스터마이징 편을 공개했습니다. NeMo + Nemotron 라인 위에서 에이전트의 역할·도구·정책을 도메인별로 조정하는 단계별 가이드.
 
 - 다루는 단계: 프롬프트 → 도구 등록 → 정책 정의 → 평가
@@ -1085,7 +1085,7 @@ NVIDIA가 한 주에 Mastering Agentic Techniques 3편(Customization·Evaluation
           date: "5/20",
           platform: "X+Threads",
           title: "NVIDIA NeMo Agent Toolkit + AI-Q 에 Deep Research 스킬 추가 가이드 — 폐쇄망 대응",
-          summary: "",
+          summary: "NVIDIA가 NeMo Agent Toolkit과 AI-Q에 심층 조사 기능을 추가하는 방법을 공개했습니다. Nemotron에 검색·사내 자료 연결·출처 추적을 결합해, 근거를 확인할 수 있는 결론을 만드는 구성을 설명합니다.",
           content: `NVIDIA가 2026년 5월 20일 NeMo Agent Toolkit + AI-Q 위에 Deep Research 스킬을 박는 방법을 공식 가이드로 풀었습니다. OpenAI Deep Research·Gemini Deep Research·Claude Computer Use가 이미 만든 시장에 NVIDIA가 인프라 라인으로 진입.
 
 - 구성: Nemotron 모델 + 외부 검색 + 출처 추적 + 다단계 합성
@@ -1112,7 +1112,7 @@ OpenAI Deep Research·Gemini Deep Research는 클라우드 SaaS다. 한국 금�
           date: "5/19",
           platform: "X+Threads",
           title: "NVIDIA-Verified Agent Skills 공개 — AI 에이전트용 검증 라벨·거버넌스 제도",
-          summary: "",
+          summary: "NVIDIA가 외부 개발자의 에이전트 스킬을 검증하는 NVIDIA-Verified Agent Skills 프로그램을 공개했습니다. 도구 호환성·권한 정책·회귀 평가를 확인하고, 검증된 스킬을 구분하는 표식을 제공합니다.",
           content: `NVIDIA가 2026년 5월 19일 NVIDIA-Verified Agent Skills 프로그램을 공개했습니다. 외부 개발자가 만든 에이전트 스킬에 NVIDIA가 직접 호환·안전·성능 검증을 거쳐 "verified" 라벨을 부여하는 제도.
 
 - 검증 항목: NeMo Agent Toolkit 호환, 권한 정책 준수, 회귀 평가 통과
@@ -1139,7 +1139,7 @@ OpenAI Deep Research·Gemini Deep Research는 클라우드 SaaS다. 한국 금�
           date: "5/19",
           platform: "X+Threads",
           title: "NVIDIA Mastering Agentic Techniques — AI 에이전트 평가(Evaluation) 편",
-          summary: "",
+          summary: "NVIDIA가 NeMo Agent Toolkit을 활용한 에이전트 평가 가이드를 공개했습니다. 개별 응답의 정확도뿐 아니라 여러 단계로 이뤄진 작업의 성공률을 살피며, 기준 데이터와 실행 기록을 활용해 오류를 추적합니다.",
           content: `NVIDIA가 2026년 5월 19일 NeMo Agent Toolkit 위에서 에이전트를 평가하는 표준 패턴을 정리해 공개했습니다. 같은 주차 OpenAI Cookbook "Macro evals"와 짝을 이루는 평가 가이드.
 
 - 평가 범위: 단일 step 정확도가 아니라 multi-step workflow 성공률
@@ -1166,7 +1166,7 @@ OpenAI Cookbook의 같은 시기 발표와 합쳐 보면, 빅3 모두 평가 레
           date: "5/18",
           platform: "X+Threads",
           title: "Jensen Huang @ Dell Technologies World — \"Demand Is Going Parabolic\" 수요 비선형 가속 진단",
-          summary: "",
+          summary: "젠슨 황이 Dell Technologies World에서 AI 인프라 수요가 비선형적으로 가속하고 있다고 진단했습니다. 같은 행사에서 Dell AI Factory with NVIDIA 확대와 OpenAI·Dell의 Codex 협력이 함께 소개됐습니다.",
           content: `Jensen Huang이 2026년 5월 18일 Dell Technologies World 키노트에서 "Demand is going parabolic — utterly parabolic"이라고 단언했습니다. Dell AI Factory with NVIDIA 확장과 Vera Rubin NVL72 시스템의 첫 출하, OpenAI-Dell Codex 파트너십이 같은 키노트에서 함께 발표됐습니다.
 
 - 키워드 "parabolic": AI factory 수요가 비선형으로 가속한다는 진단
@@ -1581,7 +1581,7 @@ Grok Build의 Plan Mode, Codex 0.133의 Goals와 같은 결의 결정입니다. 
           date: "5/15",
           platform: "X+Threads",
           title: "Grok 구형 모델 일괄 은퇴 — 2026년 5월 15일 API 폐기",
-          summary: "",
+          summary: "xAI가 2026년 5월 15일 여러 구형 Grok 모델의 API 제공을 종료했습니다. 해당 모델을 직접 호출하던 개발자와 기업은 공식 이전 가이드에서 대상 모델을 확인하고 최신 모델로 전환해야 합니다.",
           content: `xAI가 2026년 5월 15일자로 다수의 구형 Grok 모델을 API에서 일괄 폐기했습니다. xAI API를 직접 호출하던 개발자·기업은 마이그레이션 가이드를 따라 신규 라인으로 옮겨야 합니다.
 
 - 폐기 일자: 2026년 5월 15일
@@ -1848,7 +1848,7 @@ Pro 사용자에게 먼저 푸는 건 두 가지 신호입니다. 첫째, 모델
           date: "5/18",
           platform: "X+Threads",
           title: "Meta, AI 안경(Ray-Ban·Oakley)이 장애인 사용자에게 미치는 영향 정리 — 접근성 사례 모음",
-          summary: "",
+          summary: "Meta가 Ray-Ban Meta·Oakley Meta AI 안경의 장애인 사용자 활용 사례를 소개했습니다. 주변 환경의 음성 설명, 텍스트 읽기, 사물 식별 등 일상에서의 접근성 보조 경험을 사용자 인터뷰와 함께 정리했습니다.",
           content: `Meta가 2026년 5월 18일 AI 안경(Ray-Ban Meta·Oakley Meta) 라인이 시각·청각 장애인 사용자에게 미치는 영향을 정리해 발표했습니다. 단순 마케팅이 아니라 실제 사용자 인터뷰와 도입 시나리오를 묶은 사례 모음.
 
 - 시각 장애: 안경이 주변 환경을 음성으로 설명, 텍스트 읽어주기, 사물 식별
