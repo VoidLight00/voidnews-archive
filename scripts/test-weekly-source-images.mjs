@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { imageKey, sha256, validateWeeklyImages } from './lib/weekly-images.mjs';
+const root = fs.mkdtempSync(path.join(os.tmpdir(), 'weekly-images-test-'));
+try {
+  fs.mkdirSync(path.join(root, 'public'));
+  const item = { week: '2026-w37', title: 'Test article', sourceUrl: 'https://publisher.example/news/story', images: [] };
+  const audit = { key: imageKey(item), status: 'fetch-failed', checkedAt: '2026-09-09T12:00:00Z', reason: 'The source returned HTTP 403; image existence is unknown.', evidence: [{ kind: 'source-fetch', httpStatus: 403 }] };
+  const validate = (entry = item, records = [audit]) => validateWeeklyImages([entry], { version: 1, records }, root);
+  assert.ok(validate(item, []).failures.some(x => x.includes('Unaudited')), 'A stale empty inventory must fail for a currently missing image');
+  assert.equal(validate().failures.length, 0);
+  assert.equal(validate().unresolved.length, 1, 'An access error must remain explicitly unresolved');
+  assert.ok(validate(item, [{ ...audit, status: 'no-meaningful-image-verified' }]).failures.some(x => x.includes('absence')), 'HTTP 403 must never prove image absence');
+  assert.ok(validate(item, [{ ...audit, evidence: [] }]).failures.some(x => x.includes('evidence')));
+  assert.ok(validate(item, [audit, audit]).failures.some(x => x.includes('Duplicate')));
+  assert.ok(validate({ ...item, sourceUrl: 'https://publisher.example/changed' }).failures.some(x => x.includes('Stale')));
+  const bytes = Buffer.from('RIFF0000WEBP');
+  fs.writeFileSync(path.join(root, 'public/source.webp'), bytes);
+  fs.writeFileSync(path.join(root, 'public/wrong.svg'), bytes);
+  assert.ok(validate({ ...item, images: [{ src: '/wrong.svg' }] }, []).failures.some(x => x.includes('mislabeled as SVG')));
+  const available = { ...audit, status: 'available', publicPath: '/source.webp', imageUrl: 'https://publisher.example/top.webp', sha256: sha256(bytes), selectionKind: 'source-first-image' };
+  assert.ok(validate(item, [available]).failures.some(x => x.includes('not attached')));
+  const attached = { ...item, images: [{ src: '/source.webp' }] };
+  assert.equal(validate(attached, [available]).failures.length, 0);
+  fs.writeFileSync(path.join(root, 'public/source.webp'), '<html>429</html>');
+  assert.ok(validate(attached, [available]).failures.some(x => x.includes('Invalid image bytes')));
+  assert.ok(validate(attached, [available]).failures.some(x => x.includes('bytes changed')));
+  fs.unlinkSync(path.join(root, 'public/source.webp'));
+  assert.ok(validate(attached, [available]).failures.some(x => x.includes('Missing image file')));
+  console.log('PASS[weekly-source-images-regressions] 13 assertions: stale inventory, attachment, source drift, absent evidence, forbidden absence inference, invalid bytes, SVG format mismatch, missing files and changed hashes');
+} finally { fs.rmSync(root, { recursive: true, force: true }); }

@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 const inventory = JSON.parse(execFileSync(process.execPath, ['scripts/audit-thumbnails.mjs', '--summary-only'], { encoding: 'utf8' }));
+// Counting records alone cannot establish that their image fields exist.
+execFileSync(process.execPath, ['scripts/check-weekly-source-images.mjs'], { stdio: 'inherit' });
 assert.equal(inventory.total, Object.values(inventory.bySourceType).reduce((a, b) => a + b, 0));
 assert.equal(inventory.total, Object.values(inventory.byStatus).reduce((a, b) => a + b, 0));
 assert.ok(inventory.bySourceType['ab-model-watch'] > 0);

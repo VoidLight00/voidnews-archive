@@ -46,11 +46,25 @@ const evidenceRecords = ['source-image-evidence.json', 'BACKFILL-IMAGE-EVIDENCE.
   .flatMap(name => JSON.parse(fs.readFileSync(new URL(`../docs/redesign/${name}`, import.meta.url), 'utf8')).records)
   .filter(record => record.postSlug && record.disposition === 'accepted-source-preview');
 const previews = posts.filter(post => post.thumbnail?.provenance === 'source-share-preview');
+const currentImageEvidence = JSON.parse(fs.readFileSync(new URL('../references/weekly-source-image-audit.json', import.meta.url), 'utf8')).records.filter(record => record.status === 'available' && record.selectionKind === 'source-share-preview');
+const currentPreviewPairs = currentImageEvidence.map(record => {
+  const week = weeks.find(week => week.slug === record.week);
+  const post = week?.companies.flatMap(company => company.posts).find(post => post.title === record.title);
+  assert.ok(post, `Audited preview post exists: ${record.key}`);
+  assert.equal(post.thumbnail?.provenance, 'source-share-preview');
+  assert.equal(post.officialUrl || post.source || post.xUrl || post.threadsUrl || '', record.sourceUrl);
+  assert.equal(post.thumbnail.src, record.publicPath);
+  const bytes = fs.readFileSync(new URL(`../public${record.publicPath}`, import.meta.url));
+  assert.equal(bytes.length, record.byteSize);
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), record.sha256);
+  return { record, post };
+});
+const legacyPreviews = previews.filter(post => !currentPreviewPairs.some(pair => pair.post === post));
 assert.ok(evidenceRecords.length > 0, 'Preview evidence must not be empty');
 assert.equal(new Set(evidenceRecords.map(record => record.postSlug)).size, evidenceRecords.length, 'Duplicate preview evidence');
-assert.deepEqual(new Set(previews.map(post => post.slug)), new Set(evidenceRecords.map(record => record.postSlug)), 'Preview posts and evidence must correspond in both directions');
-assert.equal(previews.length, evidenceRecords.length, 'Every preview must have exactly one evidence record');
-for (const post of previews) {
+assert.deepEqual(new Set(legacyPreviews.map(post => post.slug)), new Set(evidenceRecords.map(record => record.postSlug)), 'Legacy preview posts and evidence must correspond in both directions');
+assert.equal(previews.length, evidenceRecords.length + currentPreviewPairs.length, 'Every preview must have exactly one legacy or current evidence record');
+for (const post of legacyPreviews) {
   const record = evidenceRecords.find(record => record.postSlug === post.slug);
   assert.equal(record.sourceUrl, post.source);
   assert.equal(record.localPublicPath, post.thumbnail.src);

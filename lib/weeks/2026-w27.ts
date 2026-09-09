@@ -789,7 +789,8 @@ export const week27: WeeklyData = {
               "label": "arXiv 2606.28276 (Submitted 26 Jun 2026)",
               "url": "https://arxiv.org/abs/2606.28276"
             }
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-0f73ba378dd2cf14-1b59479ec19e.png","alt":"Digital twin and cousins of the wooden drawer organizer"},
         },
         {
           "date": "7/1",
@@ -812,7 +813,8 @@ export const week27: WeeklyData = {
               "label": "arXiv 2607.00033 (Jul 2026 announce)",
               "url": "https://arxiv.org/abs/2607.00033"
             }
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-77ec7cd338efa19ar-fb0839ca7af5.png","alt":"Human hand demonstration at a box contact point"},
         }
       ]
     }

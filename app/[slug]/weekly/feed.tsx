@@ -16,7 +16,7 @@ import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
 import { useLocale } from "@/app/LocaleProvider";
 import { PostDateLabel, parsePostDate, extractDomain } from "./shared";
-import { useOGData, isSafeImageUrl } from "./previews";
+import { isSafeImageUrl } from "./previews";
 import { ImageDisclosure } from "@/app/components/ImageDisclosure";
 
 export type TopStoryEntry = {
@@ -65,38 +65,27 @@ export function SourceThumbnail({
   priority?: boolean;
 }) {
   const { locale } = useLocale();
-  const ref = useRef<HTMLDivElement>(null);
   const sourceUrl = getPostSourceUrl(post);
-  const [visible, setVisible] = useState(priority);
   const [failedSources, setFailedSources] = useState<string[]>([]);
+  const imageRef = useRef<HTMLImageElement>(null);
   const explicitImage = [post.thumbnail, ...(post.images ?? [])]
     .find((image) => image && isSafeImageUrl(image.src) && !failedSources.includes(image.src));
   const explicitImageSrc = explicitImage?.src ?? "";
-  const { data, loading } = useOGData(sourceUrl, visible && !explicitImageSrc && !!sourceUrl);
-  const imageSrc = explicitImageSrc || data?.image || "";
+  const imageSrc = explicitImageSrc;
   const visibleImageSrc = imageSrc && !failedSources.includes(imageSrc) ? imageSrc : "";
-  const imageAlt = explicitImage?.alt || data?.title || `${post.title} 출처 이미지`;
+  const imageAlt = explicitImage?.alt || `${post.title} 출처 이미지`;
   const domain = sourceUrl ? extractDomain(sourceUrl) : "source";
 
   useEffect(() => {
-    if (priority || visible) return;
-    const element = ref.current;
-    if (!element) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        setVisible(true);
-        observer.disconnect();
-      },
-      { rootMargin: "420px" }
-    );
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, [priority, visible]);
+    const image = imageRef.current;
+    if (visibleImageSrc && image?.complete && image.naturalWidth === 0) {
+      setFailedSources(sources => sources.includes(visibleImageSrc) ? sources : [...sources, visibleImageSrc]);
+    }
+  }, [visibleImageSrc]);
 
   return (
     <div
-      ref={ref}
+      data-weekly-source-thumbnail
       className={`tc-source-thumb tc-source-thumb--${variant}`}
       style={{
         background: `radial-gradient(circle at 22% 18%, ${companyColor}35 0%, transparent 42%), linear-gradient(135deg, var(--surface-2), var(--card))`,
@@ -104,6 +93,7 @@ export function SourceThumbnail({
     >
       {visibleImageSrc ? (
         <img
+          ref={imageRef}
           src={visibleImageSrc}
           alt={imageAlt}
           loading={priority ? "eager" : "lazy"}
@@ -112,8 +102,10 @@ export function SourceThumbnail({
           onError={() => setFailedSources((sources) => [...sources, visibleImageSrc])}
         />
       ) : (
-        <div className="tc-source-fallback">
-          <span className="mono">{loading ? "이미지를 불러오는 중" : "출처 이미지 없음"}</span>
+        <div className="tc-source-fallback" data-weekly-image-fallback>
+          <span className="mono">{locale === "ko"
+            ? (!sourceUrl ? "원문 출처 확인 필요" : "이미지 미리보기를 제공하지 못했습니다")
+            : (!sourceUrl ? "Source needs review" : "Image preview unavailable")}</span>
         </div>
       )}
       <ImageDisclosure src={visibleImageSrc} provenance={visibleImageSrc === explicitImage?.src ? explicitImage.provenance : undefined} locale={locale} overlay />
@@ -147,6 +139,7 @@ export function TopStoriesSection({
   return (
     <section className="tc-hero-section rise-in" aria-label="메인 기사">
       <a
+        data-weekly-card
         href={href}
         className="tc-hero-card"
         onClick={(event) => handleArticleClick(event, () => onOpenStory(lead.post, lead.company.name))}
@@ -199,6 +192,7 @@ export function FeedArticleCard({
 
   return (
     <a
+      data-weekly-card
       href={href}
       className="tc-feed-card"
       onClick={(event) => handleArticleClick(event, onOpen)}

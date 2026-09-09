@@ -58,6 +58,7 @@ export const week35: WeeklyData = {
             summary: "A World Humanoid Robot Games-sourced video shows Tiangong Omni winning the 400 m in 45.66 seconds. The source does not specify autonomous, remote or mixed control.",
             content: "A World Humanoid Robot Games-sourced video shows Tiangong Omni winning the 400 m in 45.66 seconds. Its unusual raised-arm posture is visible, but the source does not specify autonomous, remote or mixed control, and an independent official source for the claim that the posture was self-discovered was not found.",
           },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-f101ce7215cb406a.jpg","alt":"Tiangong Omni, 휴머노이드 로봇 게임 400m를 45.66초에 완주 공식 출처 이미지"},
         },
       ],
     },
@@ -79,6 +80,7 @@ export const week35: WeeklyData = {
           tags: ["AI", "2026-08b", "GLM", "OpenRouter"],
           slug: "zai-20260826-glm-5-3-flash-ox-alpha",
           en: { title: "GLM-5.3-Flash launches as the model behind OpenRouter's Ox Alpha", deck: "The native multimodal MoE activates 18B of 320B parameters with a one-million-token context.", summary: "Z.ai released GLM-5.3-Flash on August 26. OpenRouter identifies it as the former stealth model Ox Alpha and lists a 1,048,576-token context at discounted pricing of $0.075/M input and $0.25/M output tokens.", content: "Z.ai released GLM-5.3-Flash on August 26. OpenRouter identifies it as the former stealth model Ox Alpha. Benchmark comparisons remain vendor-reported." },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-d5562fe28d233b28.png","alt":"GLM-5.3-Flash 공개, OpenRouter 익명 모델 Ox Alpha의 정체였다 공식 출처 이미지","provenance":"source-share-preview"},
         }
       ],
     },
@@ -123,6 +125,7 @@ export const week35: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "claude-code-20260825-v2-1-245",
           en: { title: "Claude Code fixes startup crashes on glibc 2.44 Linux", deck: "A focused stability release for current Linux distributions.", summary: "Claude Code 2.1.245 fixes startup crashes on distributions shipping glibc 2.44, including Arch Linux, CachyOS and Fedora Rawhide." },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-d01d94a1b000c188.png","alt":"Claude Code, glibc 2.44 리눅스 시작 충돌 수정 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "8/26",
@@ -165,7 +168,8 @@ export const week35: WeeklyData = {
             "deck": "Restricted mode removes command and code execution tools and confines file access to the working directory.",
             "summary": "Claude Code 2.1.248 adds `--restricted`, removes command/code execution tools and default WebFetch, confines file tools to the working directory, rejects `bypassPermissions`, and ignores user, project and local settings.",
             "content": "**A narrower execution surface is now available**\n\n`--restricted` or `CLAUDE_CODE_RESTRICTED=1` removes command/code execution tools and WebFetch unless explicitly named. File tools remain inside the working directory.\n\n**Settings and permission boundaries are fixed together**\n\nThe mode rejects `bypassPermissions` and ignores user, project and local settings files. These claims come from release notes and were not independently reproduced."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-ca3eff0a8509d6f2.png","alt":"Claude Code, 실행 도구를 줄이는 restricted 모드 추가 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "8/29 03:19",
@@ -189,7 +193,8 @@ export const week35: WeeklyData = {
             "deck": "Before/after model-switch hooks and per-session prompt-cache metrics improve operational visibility.",
             "summary": "Claude Code 2.1.251 adds PreModelSwitch and PostModelSwitch hooks, per-session prompt-cache metrics, and spend-limit visibility for supported gateways. It also fixes file tools following a swapped symlink outside the approved location.",
             "content": "**Model switching becomes an automation boundary**\n\nPreModelSwitch and PostModelSwitch hooks can block, confirm or annotate a switch. `/cost` reports per-session cache hit ratio, misses, recached tokens and warm/cold state; supported gateways also expose spend limits.\n\n**The release tightens file access**\n\nIt fixes file tools following a symlink swapped after permission checks to a location outside the approved root. The fix was not independently retested here."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-2180229dc69461fd.png","alt":"Claude Code, 모델 전환 훅과 캐시·지출 관측 기능 추가 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "8/27",
@@ -213,7 +218,8 @@ export const week35: WeeklyData = {
             "AI",
             "2026-w35",
             "Anthropic"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-35305757066a6f71.jpg","alt":"Anthropic, AI가 실험 장비를 제어하는 MHS 연구 미리보기 공개 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "8/27",
@@ -237,7 +243,8 @@ export const week35: WeeklyData = {
             "AI",
             "2026-w35",
             "Anthropic"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-003-93a83f61d263.svg","alt":" Expanding our support for scientists"},
         },
 {
   "date": "8/27 08:06",
@@ -261,7 +268,8 @@ export const week35: WeeklyData = {
     "deck": "Claude Code 2.1.247 adds API cost optimization guidance and output resilience",
     "summary": "Claude Code 2.1.247 adds /claude-api cost-optimize for measured API-spend improvements and a feedback-drafting tool for user review. It reports fixes for large hook or background-task error output wedging conversations, and for unbounded memory growth when an output file cannot be written.",
     "content": "Claude Code 2.1.247 adds /claude-api cost-optimize for measured API-spend improvements and a feedback-drafting tool for user review. It reports fixes for large hook or background-task error output wedging conversations, and for unbounded memory growth when an output file cannot be written.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-b7b96dd0ccd56642.png","alt":"Claude Code 2.1.247, 비용 최적화 안내·오류 출력 복구 개선 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "8/28",
@@ -282,7 +290,8 @@ export const week35: WeeklyData = {
     "2026-w35",
     "Anthropic"
   ],
-  "slug": "anthropic-20260828-product-ad85bab5df24"
+  "slug": "anthropic-20260828-product-ad85bab5df24",
+  thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-007-b3641cfc88a2.svg","alt":"Automated researchers can reliably mitigate alignment failures"},
 },
 {
   "date": "8/27",
@@ -345,7 +354,8 @@ export const week35: WeeklyData = {
     "2026-w35",
     "Anthropic"
   ],
-  "slug": "anthropic-20260826-product-93cc373aa692"
+  "slug": "anthropic-20260826-product-93cc373aa692",
+  thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-011-05f863243c20.svg","alt":"Enabling independent research on how people use Claude"},
 },
 {
   "date": "8/26",
@@ -408,6 +418,7 @@ export const week35: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "google-20260825-gemini-macos-dictation",
           en: { title: "Gemini for macOS adds intelligent dictation", deck: "Speech edits itself into formatted text at the current cursor.", summary: "Gemini intelligent dictation removes fillers, applies spoken corrections and formats text in the active macOS window. Supported languages, regions and privacy handling were not specified." },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-1ba284820fae0495.jpg","alt":"Gemini macOS, 말하면서 고친 내용까지 반영하는 지능형 받아쓰기 공개 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "8/25",
@@ -422,6 +433,7 @@ export const week35: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "google-20260825-delaware-ai-training",
           en: { title: "Google offers free AI and career training across Delaware", deck: "A public-private programme covers prompting, productivity and vibe coding.", summary: "Google, the Delaware Department of Labor and Delaware Libraries offer residents free AI training and Career Certificates. Participant count and total programme size were not disclosed." },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-54e712174f332108.webp","alt":"Delaware residents: Learn job-ready skills online at no cost"},
         },
         {
           date: "8/26",
@@ -493,7 +505,8 @@ export const week35: WeeklyData = {
             "deck": "Spark delegates multi-step tasks while Daily Brief summarizes Gmail and Calendar updates.",
             "summary": "Gemini Live adds Spark and Daily Brief. Spark requires Google AI Pro or higher; Daily Brief requires Google AI Plus or higher. Connected apps must be enabled through Personal Intelligence settings.",
             "content": "**Gemini Live moves from conversation toward execution**\n\nSpark supports delegated multi-step tasks. Daily Brief combines important Gmail and Calendar updates into a spoken digest of the day.\n\n**Plans and connections differ**\n\nSpark requires Google AI Pro or higher, while Daily Brief requires Google AI Plus or higher. Apps used for personalization must be connected in Personal Intelligence settings."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-584c12716aade068.webp","alt":"TBD"},
         },
         {
           "date": "8/28 01:00",
@@ -543,7 +556,8 @@ export const week35: WeeklyData = {
     "2026-w35",
     "Google"
   ],
-  "slug": "google-20260828-product-a53997a76a09"
+  "slug": "google-20260828-product-a53997a76a09",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-4cb29aa98543843d.gif","alt":"Google Drive, Gemini 기반 문서 분류 공개 베타 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "8/27",
@@ -653,7 +667,8 @@ export const week35: WeeklyData = {
             "deck": "MCP servers, plugins, skills and canvases move into one discovery surface.",
             "summary": "The Copilot app Customize tab is generally available with featured entries and browsing by customization type. The post does not specify plan or regional limits.",
             "content": "**Copilot customizations now share one surface**\n\nThe Customize tab brings MCP servers, plugins, skills and canvases together. Users can begin with featured entries or browse by type and category.\n\n**Verification boundary**\n\nThe announcement covers general availability of the discovery surface but does not state plan or regional restrictions."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-164744e2ac7b3045.png","alt":"The Customize tab in the GitHub Copilot app, featuring customizations for Figma, Impeccable Design, and Microsoft Foundry."},
         },
         {
           "date": "8/30 08:39",
@@ -677,7 +692,8 @@ export const week35: WeeklyData = {
             "deck": "Messages no longer disrupt worktree preparation, and authentication failures become specific.",
             "summary": "Copilot CLI 1.0.82 fixes messages disrupting /worktree or /move preparation, expands approval plans with Ctrl+E, and displays specific authentication failures.",
             "content": "**Worktree switching becomes more predictable**\n\nMessages typed while /worktree or /move prepares a worktree no longer break the switch. Ctrl+E expands the complete approval plan, and authentication errors identify failures such as 401 Bad credentials.\n\n**Verification boundary**\n\nThese claims come from GitHub release notes and were not independently reproduced in this review."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-c427dc6d74214043.png","alt":"Copilot CLI 1.0.82, 작업 폴더 전환과 인증 오류 표시 수정 공식 출처 이미지","provenance":"source-share-preview"},
         },
 {
   "date": "8/27 07:08",
@@ -701,7 +717,8 @@ export const week35: WeeklyData = {
     "deck": "Copilot global model policy begins generally available rollout",
     "summary": "GitHub announced phased enforcement of the global model policy for Copilot Business and Enterprise through September 1. Unconfigured existing and new generally available models inherit the global policy, while administrators can set model-specific decisions. Open-weight models and models requiring data retention are disabled by default.",
     "content": "GitHub announced phased enforcement of the global model policy for Copilot Business and Enterprise through September 1. Unconfigured existing and new generally available models inherit the global policy, while administrators can set model-specific decisions. Open-weight models and models requiring data retention are disabled by default.\n\nExplicit administrator decisions to enable or disable individual models remain intact. Delegation to the default policy follows later policy changes rather than fixing an individual model decision.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-686544d2311555ba.jpg","alt":"The Configure models setting window that lists the \"Default availability for released models\" setting, with a popup showing \"Enabled\" and \"Disabled\". Multiple models are listed with their corresponding availability settings."},
 },
 {
   "date": "8/27 10:52",
@@ -725,7 +742,8 @@ export const week35: WeeklyData = {
     "deck": "Copilot enterprise-managed marketplaces gain automatic updates",
     "summary": "GitHub announced per-marketplace automatic updates through enterprise-managed settings. Setting autoUpdate on an extraKnownMarketplaces entry lets supported clients update installed plugins from that marketplace. The marketplace must still satisfy the organization's effective allowlist.",
     "content": "GitHub announced per-marketplace automatic updates through enterprise-managed settings. Setting autoUpdate on an extraKnownMarketplaces entry lets supported clients update installed plugins from that marketplace. The marketplace must still satisfy the organization's effective allowlist.\n\nThe capability is available in the Copilot app, CLI and Visual Studio Code. Enabling automatic updates does not bypass the strictKnownMarketplaces allowlist.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-dd0077e6a007fa5f.jpg","alt":"A GitHub file view of managed-settings.json in the .github-private/copilot repository path. The JSON shows an extraKnownMarketplaces block containing an overridable object with an agent-skills marketplace. The marketplace has a github source pointing to OWNER/REPO, and autoUpdate is set to true."},
 },
 {
   "date": "8/28 07:46",
@@ -749,7 +767,8 @@ export const week35: WeeklyData = {
     "deck": "Copilot code review adds bot and large PRs plus resolution reasons",
     "summary": "GitHub announced Copilot code review support for automatically requested reviews of bot-authored pull requests and very large pull requests. Users can also provide a reason when resolving a review comment. Bot-authored reviews remain subject to organization policies and billing attribution conditions.",
     "content": "GitHub announced Copilot code review support for automatically requested reviews of bot-authored pull requests and very large pull requests. Users can also provide a reason when resolving a review comment. Bot-authored reviews remain subject to organization policies and billing attribution conditions.\n\nGitHub says the previous limit of 300 files or 20,000 lines no longer applies. Resolution reasons include Addressed, Won’t fix and Incorrect.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-61c8f9f0750ba2c9.jpg","alt":"Header image depicting resolution reasons"},
 },
 {
   "date": "8/28 20:37",
@@ -773,7 +792,8 @@ export const week35: WeeklyData = {
     "deck": "GitHub previews Copilot signup and billing changes",
     "summary": "GitHub previewed Copilot policy and billing changes, including plans to start reenabling Business and Enterprise signups for credit-card and PayPal customers from September 1. Account vetting and billing experiences are also changing. This is the dated advance notice, not confirmation that the rollout was completed for every customer.",
     "content": "GitHub previewed Copilot policy and billing changes, including plans to start reenabling Business and Enterprise signups for credit-card and PayPal customers from September 1. Account vetting and billing experiences are also changing. This is the dated advance notice, not confirmation that the rollout was completed for every customer.\n\nNew seats require payment before access. Existing credit-card and PayPal customers are scheduled to receive upfront-billing changes starting October 1. The same notice separately previews a unified web, mobile and cloud-agent experience no earlier than September 28, and a Balanced code-review default starting September 28.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-4a0589cf32d672ba.jpg","alt":"GitHub, Copilot 신규 가입·결제 변경 예고 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "8/29 05:24",
@@ -821,7 +841,8 @@ export const week35: WeeklyData = {
     "deck": "Copilot weekly roundup highlights shared agent sessions in Slack and Teams",
     "summary": "GitHub's August 24 weekly roundup describes shared agent sessions in Slack and Microsoft Teams. Teams can mention @GitHub to investigate, plan, and make code changes while colleagues follow and guide the session. The recorded date is the roundup publication date, not a verified first-release date for the individual feature.",
     "content": "GitHub's August 24 weekly roundup describes shared agent sessions in Slack and Microsoft Teams. Teams can mention @GitHub to investigate, plan, and make code changes while colleagues follow and guide the session. The recorded date is the roundup publication date, not a verified first-release date for the individual feature.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-b5e69634f504b073.png","alt":"Screenshot of GitHub Copilot in Slack"},
 },
       ],
     },
@@ -851,7 +872,8 @@ export const week35: WeeklyData = {
             "deck": "A technical explainer covers the 3B, 8B and 30B dense models and their training pipeline.",
             "summary": "The IBM Granite team described Granite 4.2 models in 3B, 8B and 30B sizes under Apache 2.0. This timestamp is for the explainer, not an independently established first release.",
             "content": "**The training pipeline is documented step by step**\n\nIBM describes Granite 4.2 as decoder-only dense Transformers in 3B, 8B and 30B sizes. The 3B model omits agentic RL, while the 8B and 30B models receive additional software-engineering, terminal and web-search agent training. All are released under Apache 2.0.\n\n**Do not collapse different context figures**\n\nThe architecture table lists 131,072 tokens, while the article separately says the final pre-training phase extends context to 512K. These are not presented here as one serving limit. Benchmarks are vendor-reported."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-020-bd1c1dab5aaa.png","alt":"Granite 4.2 staged RL curriculum"},
         }
       ]
     },
@@ -881,7 +903,8 @@ export const week35: WeeklyData = {
             "deck": "Terminal users can reference and message other Codex tasks, while Interrupt hooks run on stopped turns.",
             "summary": "Codex 0.150 adds `@` references to other tasks, task reading/creation/messaging, and Interrupt hooks for interrupted top-level turns. It also prevents untrusted projects from supplying project-level AGENTS.md instructions.",
             "content": "**Terminal tasks can now connect**\n\n`@` mentions reference other Codex tasks, and agents can read, create or message tasks. Interrupt hooks run commands or MCP handlers when an active top-level turn is interrupted.\n\n**Trust boundaries also changed**\n\nUntrusted projects no longer supply project-level AGENTS.md instructions. Credential redaction and remote MCP authentication were improved. Claims are based on official release notes."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-9ba6f4189d8fbd6b.png","alt":"Codex 0.150, 작업 간 참조·메시지와 Interrupt 훅 추가 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "8/29 18:55",
@@ -905,7 +928,8 @@ export const week35: WeeklyData = {
             "deck": "Extensions can inspect or replace MCP results before the model sees them.",
             "summary": "Codex 0.151 lets extensions inspect or replace MCP results before model delivery and adds a configurable grace period for optional-server discovery. It also preserves sandbox restrictions across directory changes and counts nested subagent tokens toward root budgets.",
             "content": "**MCP results and startup become more configurable**\n\nExtensions can inspect or replace MCP tool results before they reach the model. Optional MCP server discovery receives a configurable grace period.\n\n**Permissions and budgets are reinforced**\n\nChanging directories no longer weakens sandbox restrictions, and nested subagent token usage counts toward root goal budgets. Claims are based on official release notes."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-1f2ada50b5710870.png","alt":"Codex 0.151, MCP 결과 처리 확장과 권한 유지 보강 공식 출처 이미지","provenance":"source-share-preview"},
         },
 {
   "date": "8/27 10:56",
@@ -929,7 +953,8 @@ export const week35: WeeklyData = {
     "deck": "Codex 0.150.1 counts retained images in remote compaction budgets",
     "summary": "Codex 0.150.1 reports that remote compaction now counts retained images toward its token budget by default, trimming older images when needed. The description is limited to the returned release notes.",
     "content": "Codex 0.150.1 reports that remote compaction now counts retained images toward its token budget by default, trimming older images when needed. The description is limited to the returned release notes.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-0577669e18ed3998.png","alt":"Codex 0.150.1, 대화 압축 토큰 예산에 보존 이미지 포함 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "8/29",
@@ -1022,7 +1047,8 @@ export const week35: WeeklyData = {
             "deck": "The custom HBM design is planned for Trainium4 with Amazon Annapurna Labs as the first collaborator.",
             "summary": "NVIDIA announced NVHBM for XPUs and named Amazon Annapurna Labs as the first collaborator. NVIDIA claims up to 30% more bandwidth and 15% lower HBM power than standard HBM4E. Support is planned to begin with Trainium4, not current general availability.",
             "content": "**The memory controller moves into the HBM stack**\n\nNVHBM integrates the controller into the 3D HBM stack rather than the XPU. NVIDIA claims up to 30% greater bandwidth, 15% lower HBM power and up to 25% more XPU compute-die area versus standard HBM4E.\n\n**Initial support is forward-looking**\n\nAmazon Annapurna Labs is the first collaborator, with support planned for Trainium4. Figures are vendor claims and this is not described as current general availability."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-a50e18aa16c5d023.jpg","alt":"NVIDIA, NVLink Fusion용 맞춤형 NVHBM 발표 공식 출처 이미지"},
         },
 {
   "date": "8/27 22:00",
@@ -1046,7 +1072,8 @@ export const week35: WeeklyData = {
     "deck": "GeForce NOW previews expanded DLSS 4.5 controls for fall",
     "summary": "NVIDIA previewed fall controls for GeForce NOW Ultimate users to tune DLSS 4.5 Super Resolution, Dynamic Frame Generation, and Ray Reconstruction. The announcement concerns choices between streaming quality and responsiveness, not confirmation that every option was already live on publication day.",
     "content": "NVIDIA previewed fall controls for GeForce NOW Ultimate users to tune DLSS 4.5 Super Resolution, Dynamic Frame Generation, and Ray Reconstruction. The announcement concerns choices between streaming quality and responsiveness, not confirmation that every option was already live on publication day.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-ca1c781736e147b0.png","alt":"DLSS 4.5 games on GeForce NOW"},
 },
 {
   "date": "8/26 00:30",
@@ -1070,7 +1097,8 @@ export const week35: WeeklyData = {
     "deck": "NVIDIA Gamescom update highlights DLSS 4.5 Ray Reconstruction and ACE",
     "summary": "NVIDIA's Gamescom update says DLSS 4.5 Ray Reconstruction is available with a second-generation transformer model, replacing traditional denoisers with an AI network. It also previews ACE integration in Aniimo for early 2027. These are the AI-graphics components of a broader RTX Spark gaming announcement.",
     "content": "NVIDIA's Gamescom update says DLSS 4.5 Ray Reconstruction is available with a second-generation transformer model, replacing traditional denoisers with an AI network. It also previews ACE integration in Aniimo for early 2027. These are the AI-graphics components of a broader RTX Spark gaming announcement.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-cd140ce3164a9cce.jpg","alt":"NVIDIA Gamescom, DLSS 4.5 광선 재구성·ACE 게임 적용 소개 공식 출처 이미지"},
 },
 {
   "date": "8/26",
@@ -1092,7 +1120,8 @@ export const week35: WeeklyData = {
     "NVIDIA",
     "2026-w35"
   ],
-  "slug": "discovery-official-b9ec799d769b"
+  "slug": "discovery-official-b9ec799d769b",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-b9ec799d769b0f4b.jpg","alt":"AWS and NVIDIA to Deliver 2 Million Additional GPUs and Next-Generation Infrastructure for Agentic and Physical AI"},
 },
       ]
     },
@@ -1122,7 +1151,8 @@ export const week35: WeeklyData = {
         "deck": "Sentence Transformers 6.0 guide covers multi-vector retrieval training",
         "summary": "Hugging Face published a training guide for MultiVectorEncoder in Sentence Transformers 6.0. It covers fine-tuning and training ColBERT-style multi-vector retrieval models, including data, loss functions, and evaluation. Performance comparisons are the author's reported experiments.",
         "content": "Hugging Face published a training guide for MultiVectorEncoder in Sentence Transformers 6.0. It covers fine-tuning and training ColBERT-style multi-vector retrieval models, including data, loss functions, and evaluation. Performance comparisons are the author's reported experiments.\n\nThe publication date follows the official feed. Its midnight timestamp does not independently establish an exact launch time, so hours and minutes are omitted."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-035-a20af575124e.png","alt":"NDCG@10 on MIRIAD versus active parameters: the finetuned mLateOn-medical reaches the top at a fraction of the size of the strongest general-purpose models"},
     },
     {
       "date": "8/28",
@@ -1146,7 +1176,8 @@ export const week35: WeeklyData = {
         "deck": "Open ASR Leaderboard expands to Hindi and Indian English",
         "summary": "Voice Arena and Hugging Face announced Hindi and Indian English evaluation for the Open ASR Leaderboard. The expansion addresses language and speaker differences that may be hidden by aggregate speech-recognition scores.",
         "content": "Voice Arena and Hugging Face announced Hindi and Indian English evaluation for the Open ASR Leaderboard. The expansion addresses language and speaker differences that may be hidden by aggregate speech-recognition scores.\n\nThe publication date follows the official feed. Its midnight timestamp does not independently establish an exact launch time, so hours and minutes are omitted."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-034-1a0a02af1a0d.png","alt":"nine axes of variation in the Monsoon collection"},
     }
   ]
 },
@@ -1173,7 +1204,8 @@ export const week35: WeeklyData = {
         "2026-w35",
         "Cohere"
       ],
-      "slug": "cohere-20260827-product-337669bcf446"
+      "slug": "cohere-20260827-product-337669bcf446",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7cb2da21c69face5.png","alt":"Cohere Parse, 기업 문서를 구조화하는 모델 공개 공식 출처 이미지"},
     }
   ]
 },
@@ -1200,7 +1232,8 @@ export const week35: WeeklyData = {
         "생성형 AI",
         "플랫폼 통합"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-db8126e3b8ea51a3.png","alt":"Higgsfield에 Recraft V4.1·Styles·Utility 추가 공식 출처 이미지"},
     }
   ]
 },
@@ -1227,7 +1260,8 @@ export const week35: WeeklyData = {
         "생성형 AI",
         "음성 모델 출시"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-1d75351e3bb07964.webp","alt":"A hand-drawn outlined sheet of paper overlapping a green watercolour speech bubble marked 3.6"},
     }
   ]
 },
@@ -1264,7 +1298,8 @@ export const week35: WeeklyData = {
           "label": "Kling official complementary workflow guide",
           "url": "https://kling.ai/blog/kling-mcp-cinematic-performance-workflow"
         }
-      ]
+      ],
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-84d346a88fe70902.png","alt":"Claude Code MCP Support: Batch Create Food Promo Videos with Kling"},
     }
   ]
 },
@@ -1291,7 +1326,8 @@ export const week35: WeeklyData = {
         "생성형 AI",
         "모델 품질 개선"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-046-f10c90ab6599.jpg","alt":"Midjourney, V8.2 편집 모델의 이미지 품질 개선 공식 출처 이미지"},
     },
     {
       "date": "8/28 08:32",
@@ -1312,7 +1348,8 @@ export const week35: WeeklyData = {
         "생성형 AI",
         "편집 모델 테스트"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-044-79a483495fb6.jpg","alt":"Midjourney V8.2 이미지 편집 모델, 최대 4장 참고 이미지 지원 공식 출처 이미지"},
     }
   ]
 },
@@ -1349,7 +1386,8 @@ export const week35: WeeklyData = {
         }
       ],
       "officialUrl": "https://news.skhynix.co.kr/groundbreaking-ceremony-in-indiana/",
-      "slug": "industry-20260828-d9eba9290e5a"
+      "slug": "industry-20260828-d9eba9290e5a",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-c08ffecbfef6e79f.jpg","alt":"01 미국 AI 혁신의 새 거점, SK하이닉스 인디애나 팹 첫 삽 뜨다 기타 이미지 story"},
     },
     {
       "date": "8/26 09:00",
@@ -1370,7 +1408,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://news.skhynix.co.kr/dtf-2026/",
-      "slug": "industry-20260826-13e29827c1d0"
+      "slug": "industry-20260826-13e29827c1d0",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-e9ad19a11773e5ac.jpg","alt":"SK하이닉스, ‘DTF 2026’서 AI 인프라에 최적화된 메모리 솔루션 총망라 기타 이미지 TECH&AI 2026"},
     }
   ]
 },
@@ -1445,7 +1484,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://newsroom.amd.com/news/rocm-10-software-ai-native-developer-experiences/",
-      "slug": "industry-20260827-e7f24bbe3ec5"
+      "slug": "industry-20260827-e7f24bbe3ec5",
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-041-60708d2035c5.avif","alt":"ROCm AI AI Driven Development Platform"},
     }
   ]
 },
@@ -1472,7 +1512,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.notion.com/releases/2026-08-28",
-      "slug": "industry-20260828-8e632fc71b5b"
+      "slug": "industry-20260828-8e632fc71b5b",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-79959ba0f7670a85.png","alt":"Notion 에이전트, 문서 직접 수정 대신 변경안 제안 공식 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },
@@ -1499,7 +1540,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.figma.com/blog/measuring-the-impact-of-ai/",
-      "slug": "industry-20260828-c7be1dc640d9"
+      "slug": "industry-20260828-c7be1dc640d9",
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-049-ba589fcc7afd.avif","alt":"Abstract geometric composition with overlapping neon yellow, green, and gray shapes, looping pink and blue lines, and small squares."},
     },
     {
       "date": "8/27 07:00",
@@ -1520,7 +1562,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.figma.com/blog/workflow-lab-moving-between-design-and-code-with-agents/",
-      "slug": "industry-20260826-37c124e9cc34"
+      "slug": "industry-20260826-37c124e9cc34",
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-050-f3ff832af125.avif","alt":"Dark-mode conversations inbox showing a toolbar with select all, unread, delete, and sort controls above a list of messages."},
     },
     {
       "date": "8/26",
@@ -1568,7 +1611,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.atlassian.com/blog/development/agentic-automation-in-practice-putting-standard-engineering-work-on-autopilot",
-      "slug": "industry-20260827-0279a9821513"
+      "slug": "industry-20260827-0279a9821513",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-9cb4ab2429492fc9.png","alt":"Atlassian, 반복 엔지니어링 작업 자동화 사례 소개 공식 출처 이미지"},
     },
     {
       "date": "8/28 07:00",
@@ -1589,7 +1633,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.atlassian.com/blog/ai-at-work/microsoft-teams-teamwork-graph-connector",
-      "slug": "industry-20260827-8daed1119dce"
+      "slug": "industry-20260827-8daed1119dce",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-9dfaa800cfb7a844.jpg","alt":"Teamwork Graph, Microsoft Teams 대화 맥락 연결 공식 출처 이미지"},
     },
     {
       "date": "8/28 03:40",
@@ -1610,7 +1655,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.atlassian.com/blog/ai-at-work/how-one-leader-rebuilt-his-feedback-loop-with-an-ai-agent",
-      "slug": "industry-20260827-a4ff6a015967"
+      "slug": "industry-20260827-a4ff6a015967",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-607083d41705ca45.png","alt":"Atlassian, 리더의 소통을 돕는 AI 에이전트 사례 공식 출처 이미지"},
     },
     {
       "date": "8/27 14:45",
@@ -1631,7 +1677,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.atlassian.com/blog/rovo/agent-autonomy",
-      "slug": "industry-20260826-87ca93fac2b1"
+      "slug": "industry-20260826-87ca93fac2b1",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-30f5825636daaee3.png","alt":"Atlassian, Rovo 자율 작업을 위한 실행 구조 공개 공식 출처 이미지"},
     },
     {
       "date": "8/27 05:29",
@@ -1652,7 +1699,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.atlassian.com/blog/jira/ai-built-prototype-to-production",
-      "slug": "industry-20260826-ae773d942352"
+      "slug": "industry-20260826-ae773d942352",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-f6d12ea024243043.png","alt":"Atlassian, AI로 만든 시제품을 운영 제품으로 바꾼 경험 공개 공식 출처 이미지"},
     },
     {
       "date": "8/27 02:00",
@@ -1673,7 +1721,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.atlassian.com/blog/rovo/rovo-jira-microsoft-365",
-      "slug": "industry-20260826-dcbd6d9a9882"
+      "slug": "industry-20260826-dcbd6d9a9882",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-89decc7aa0e7373e.png","alt":"Rovo, Microsoft 365 Copilot·Teams에서 Jira 작업 연결 공식 출처 이미지"},
     }
   ]
 },
@@ -1700,7 +1749,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.salesforce.com/news/stories/lessons-from-first-year-of-employee-agent/",
-      "slug": "industry-20260827-b0dd8efce075"
+      "slug": "industry-20260827-b0dd8efce075",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7ac4c278cd76bba0.png","alt":"What Salesforce Learned After Using Employee Agent for a Year"},
     },
     {
       "date": "8/27 22:00",
@@ -1721,7 +1771,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.salesforce.com/news/stories/agentic-ai-leaders-survey-on-roi/",
-      "slug": "industry-20260827-e4b83c36c092"
+      "slug": "industry-20260827-e4b83c36c092",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-8ae7e40aa3011710.png","alt":"Agentic AI Study: Preparation Beats Speed for ROI"},
     },
     {
       "date": "8/27 05:05",
@@ -1742,7 +1793,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/",
-      "slug": "industry-20260826-a854bd9a6958"
+      "slug": "industry-20260826-a854bd9a6958",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-0140ac0a1e23b2d5.png","alt":"Salesforce and Anthropic Announce Claudeforce"},
     }
   ]
 },
@@ -1769,7 +1821,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/batch-write-and-discover-records-in-amazon-sagemaker-feature-store/",
-      "slug": "industry-20260828-462587977a0c"
+      "slug": "industry-20260828-462587977a0c",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-a3c9722a85987756.png","alt":"AWS, SageMaker Feature Store 일괄 기록·검색 안내 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/29 01:22",
@@ -1790,7 +1843,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2/",
-      "slug": "industry-20260828-abf29937c8a3"
+      "slug": "industry-20260828-abf29937c8a3",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-ea803b9ee6deab91.png","alt":"Decathlon’s forecasting pipeline on AWS: data prep, AutoGluon fine-tuning, MLflow model registry, and weekly batch inference"},
     },
     {
       "date": "8/29 01:20",
@@ -1811,7 +1865,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
-      "slug": "industry-20260828-8340f6975f66"
+      "slug": "industry-20260828-8340f6975f66",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-1484132ab400f439.png","alt":"Default IC placement concentrating model copies in fewer Availability Zones compared to SchedulingConfig placement spreading copies evenly across two Availability Zones"},
     },
     {
       "date": "8/28 08:04",
@@ -1832,7 +1887,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/",
-      "slug": "industry-20260827-51b21a22e7ac"
+      "slug": "industry-20260827-51b21a22e7ac",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7b6a04d9ab01084f.png","alt":"Architecture diagram of Amazon Quick as MCP client connecting through MCP to the fal.ai MCP server and generation models"},
     },
     {
       "date": "8/28 03:36",
@@ -1853,7 +1909,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-openai-models-on-amazon-bedrock-for-in-country-inferencing-in-india/",
-      "slug": "industry-20260827-da560584139b"
+      "slug": "industry-20260827-da560584139b",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b35d4ed4faf2f81c.png","alt":"Selecting the OpenAI GPT-5.6 Terra model from the Amazon Bedrock Playground console"},
     },
     {
       "date": "8/27 01:36",
@@ -1874,7 +1931,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/",
-      "slug": "industry-20260826-8a95f0b4c85e"
+      "slug": "industry-20260826-8a95f0b4c85e",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-713c17492903870f.png","alt":"Natera’s voice scheduling agent architecture showing Twilio, AgentCore runtime, OpenAI Realtime API, AgentCore memory, Knowledge Bases, and an Amazon MSK pipeline"},
     },
     {
       "date": "8/27 01:31",
@@ -1895,7 +1953,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/",
-      "slug": "industry-20260826-103bf835dabf"
+      "slug": "industry-20260826-103bf835dabf",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-fa7e4d8446ca6d13.png","alt":"AWS, SageMaker SDK v3 스크립트 모드로 자체 모델 실행 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/27 01:24",
@@ -1922,7 +1981,8 @@ export const week35: WeeklyData = {
         }
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/",
-      "slug": "industry-20260826-b5beb49fb5fe"
+      "slug": "industry-20260826-b5beb49fb5fe",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-558e1b2c3f716e6e.png","alt":"AWS, 지도 미세조정용 데이터 준비: 형식·품질 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/27 00:48",
@@ -1943,7 +2003,8 @@ export const week35: WeeklyData = {
         "2026-w35"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
-      "slug": "industry-20260826-74c1b9d6eb3c"
+      "slug": "industry-20260826-74c1b9d6eb3c",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-bdba8e2906c883ba.png","alt":"Two AgentCore orchestration paths share a cross-account Knowledge Base access role: a code-based Strands agent on AgentCore runtime and a declarative AgentCore harness using AgentCore Gateway and AWS Lambda."},
     }
   ]
 },
@@ -1973,7 +2034,8 @@ export const week35: WeeklyData = {
         "deck": "Cursor Cloud Agents no longer require a connected GitHub or other third-party source-control provider to start.",
         "summary": "Cursor Cloud Agents can start without a connected external source-control provider. Cursor prepares an Origin repository in the background, and users can save the result with a chosen name and visibility.",
         "content": "Cursor Cloud Agents can start without a connected external source-control provider. Cursor prepares an Origin repository in the background, and users can save the result with a chosen name and visibility.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-13d1b5dab0dfabb7.png","alt":"Start from scratch in the repo picker"},
     }
   ]
 },
@@ -2003,7 +2065,8 @@ export const week35: WeeklyData = {
         "deck": "LM Studio introduced Auto Review for Bionic.",
         "summary": "LM Studio introduced Auto Review for Bionic. Shell Judge analyzes command syntax, capabilities, and allowed rules; unresolved commands go to a separate Shell Reviewer that classifies risk and user authorization. Unresolved approvals fall back to the user. It is not a guarantee against hostile binaries or malicious tool configuration.",
         "content": "LM Studio introduced Auto Review for Bionic. Shell Judge analyzes command syntax, capabilities, and allowed rules; unresolved commands go to a separate Shell Reviewer that classifies risk and user authorization. Unresolved approvals fall back to the user. It is not a guarantee against hostile binaries or malicious tool configuration.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-4ac7e252dc52d087.png","alt":"Auto Review selected in Bionic's command approval menu"},
     }
   ]
 },
@@ -2033,7 +2096,8 @@ export const week35: WeeklyData = {
         "deck": "Replit made Intelligent Model Routing available to everyone, matching tasks to models for quality, speed, and cost.",
         "summary": "Replit made Intelligent Model Routing available to everyone, matching tasks to models for quality, speed, and cost. Users are notified before escalation from Free Mode to modes that can incur usage costs and can stay in Free Mode. The claimed 65% cost reduction at the same output quality versus the previous Max Mode comes from Replit testing.",
         "content": "Replit made Intelligent Model Routing available to everyone, matching tasks to models for quality, speed, and cost. Users are notified before escalation from Free Mode to modes that can incur usage costs and can stay in Free Mode. The claimed 65% cost reduction at the same output quality versus the previous Max Mode comes from Replit testing.\n\nPublication time is converted to KST."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-10a9ce61faddc3a7.png","alt":"Intelligent Model Routing on Replit — cover image"},
     }
   ]
 },
@@ -2063,7 +2127,8 @@ export const week35: WeeklyData = {
         "deck": "The Vercel dashboard can scaffold an eve agent into a private Git repository and deploy a new Vercel project.",
         "summary": "The Vercel dashboard can scaffold an eve agent into a private Git repository and deploy a new Vercel project. Users can choose AI Gateway models, add web chat or Slack, and connect external services or MCP tools.",
         "content": "The Vercel dashboard can scaffold an eve agent into a private Git repository and deploy a new Vercel project. Users can choose AI Gateway models, add web chat or Slack, and connect external services or MCP tools.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-cd9db5f6a6685f53.png","alt":"Vercel 대시보드에서 eve 에이전트 생성·배포 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/27 23:47",
@@ -2087,7 +2152,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel introduced the official @ai-sdk/harness-cursor adapter.",
         "summary": "Vercel introduced the official @ai-sdk/harness-cursor adapter. It connects to Cursor over ACP through HarnessAgent, allowing applications to retain a common execution interface when switching coding agents.",
         "content": "Vercel introduced the official @ai-sdk/harness-cursor adapter. It connects to Cursor over ACP through HarnessAgent, allowing applications to retain a common execution interface when switching coding agents.\n\nPublication time is converted to KST."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-c93cc4f914bde20b.jpg","alt":"Vercel AI SDK, Cursor를 공통 에이전트 인터페이스로 연결 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/26",
@@ -2111,7 +2177,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel made Security Dashboard generally available on all plans.",
         "summary": "Vercel made Security Dashboard generally available on all plans. It flags configuration issues such as missing 2FA, long-lived credentials, and public previews, with equivalent checks through vercel security check. The announcement does not guarantee automatic remediation or detection of every vulnerability.",
         "content": "Vercel made Security Dashboard generally available on all plans. It flags configuration issues such as missing 2FA, long-lived credentials, and public previews, with equivalent checks through vercel security check. The announcement does not guarantee automatic remediation or detection of every vulnerability.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-084-4813af83c77a.avif","alt":"See a complete list of security misconfigurations in your terminal."},
     },
     {
       "date": "8/26",
@@ -2135,7 +2202,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel now supports response-header and rewrite rules for FastAPI, Django, and Flask applications.",
         "summary": "Vercel now supports response-header and rewrite rules for FastAPI, Django, and Flask applications. Rules are evaluated at the CDN before the application, apply without a new deployment, and can be managed through the dashboard, CLI, or Python SDK.",
         "content": "Vercel now supports response-header and rewrite rules for FastAPI, Django, and Flask applications. Rules are evaluated at the CDN before the application, apply without a new deployment, and can be managed through the dashboard, CLI, or Python SDK.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-4a02737544ef778d.jpg","alt":"Vercel Python 앱, 재배포 없이 경로 규칙 변경 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/28",
@@ -2158,7 +2226,8 @@ export const week35: WeeklyData = {
         "deck": "Hy4 Preview becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. Tencent’s model can be called as tencent/hy4-preview. Vercel describes a one-million-token context model for long coding and document tasks; this article establishes Gateway availability.",
         "content": "Vercel announced this model integration. Tencent’s model can be called as tencent/hy4-preview. Vercel describes a one-million-token context model for long coding and document tasks; this article establishes Gateway availability.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7b1050b0cae2ec45.png","alt":"Vercel AI Gateway, Hy4 Preview 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/27",
@@ -2181,7 +2250,8 @@ export const week35: WeeklyData = {
         "deck": "Ling 3.0 Flash Fin becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. The finance-focused model is free through September 25. The standard ID bills afterward, while the -free ID stops serving to prevent post-promotion charges.",
         "content": "Vercel announced this model integration. The finance-focused model is free through September 25. The standard ID bills afterward, while the -free ID stops serving to prevent post-promotion charges.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-beb7bf914eac130f.png","alt":"Vercel AI Gateway, Ling 3.0 Flash Fin 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/26",
@@ -2204,7 +2274,8 @@ export const week35: WeeklyData = {
         "deck": "Muse Image becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. The meta/muse-image-1.0 ID supports text-to-image generation and editing existing images. This is Vercel distribution availability, not Meta’s original model launch.",
         "content": "Vercel announced this model integration. The meta/muse-image-1.0 ID supports text-to-image generation and editing existing images. This is Vercel distribution availability, not Meta’s original model launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-19b96229beaa9474.png","alt":"Vercel AI Gateway, Muse Image 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/26",
@@ -2227,7 +2298,8 @@ export const week35: WeeklyData = {
         "deck": "Gemini 3.5 Transcribe becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. Separate model IDs support file transcription and live transcription over WebSocket. The article describes automatic detection of over 85 languages, custom vocabulary, and speaker and word timestamps for recordings.",
         "content": "Vercel announced this model integration. Separate model IDs support file transcription and live transcription over WebSocket. The article describes automatic detection of over 85 languages, custom vocabulary, and speaker and word timestamps for recordings.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-86369e6f08c39265.png","alt":"Vercel AI Gateway, Gemini 3.5 Transcribe 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/26",
@@ -2250,7 +2322,8 @@ export const week35: WeeklyData = {
         "deck": "Qwen 3.8 Flash becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. The alibaba/qwen3.8-flash ID exposes text and image input with a one-million-token context window. This is Vercel distribution availability, distinct from Alibaba’s model launch.",
         "content": "Vercel announced this model integration. The alibaba/qwen3.8-flash ID exposes text and image input with a one-million-token context window. This is Vercel distribution availability, distinct from Alibaba’s model launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-acbf0aed19dfbc04.png","alt":"Vercel AI Gateway, Qwen 3.8 Flash 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/26",
@@ -2273,7 +2346,8 @@ export const week35: WeeklyData = {
         "deck": "GLM 5.3 Flash becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. The zai/glm-5.3-flash ID provides a coding model accepting text and images. Vercel documents function calling, structured output, streaming and a one-million-token context window.",
         "content": "Vercel announced this model integration. The zai/glm-5.3-flash ID provides a coding model accepting text and images. Vercel documents function calling, structured output, streaming and a one-million-token context window.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-e5acb14edc805f6d.png","alt":"Vercel AI Gateway, GLM 5.3 Flash 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/30",
@@ -2296,7 +2370,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel discounts MiniMax H3 and H3 Max by 50%",
         "summary": "Vercel announced 50% off MiniMax H3 and H3 Max requests billed through AI Gateway from August 30 to September 13. Existing model IDs remain unchanged, so the promotion applies without code changes.",
         "content": "Vercel announced 50% off MiniMax H3 and H3 Max requests billed through AI Gateway from August 30 to September 13. Existing model IDs remain unchanged, so the promotion applies without code changes.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-e1fb53c4fc1578cb.png","alt":"Vercel, MiniMax H3·H3 Max 영상 생성 50% 할인 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/28",
@@ -2319,7 +2394,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel CLI expands DNS, domain and project controls",
         "summary": "Vercel CLI 59.6.2 and later adds DNS editing, domain renewal, project pause/resume and membership commands. Structured JSON output is supported; billable and destructive actions require explicit confirmation.",
         "content": "Vercel CLI 59.6.2 and later adds DNS editing, domain renewal, project pause/resume and membership commands. Structured JSON output is supported; billable and destructive actions require explicit confirmation.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7ef5aa3207243e23.png","alt":"Vercel CLI, DNS·도메인·프로젝트 관리 확장 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/28",
@@ -2342,7 +2418,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel Chat SDK integrates Claude Managed Agents",
         "summary": "Vercel documented a Chat SDK integration for a Slack research bot using Claude Managed Agents. It maintains a persistent session per thread and streams sourced replies and tool activity. This is a Chat SDK integration, not Anthropic’s original service launch.",
         "content": "**Article type: SDK integration guide**\n\nVercel documented a Chat SDK integration for a Slack research bot using Claude Managed Agents. It maintains a persistent session per thread and streams sourced replies and tool activity. This is a Chat SDK integration, not Anthropic’s original service launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-12897e900a36c00f.png","alt":"Vercel Chat SDK, Claude Managed Agents 연결 지원 공식 출처 이미지"},
     },
     {
       "date": "8/27",
@@ -2365,7 +2442,8 @@ export const week35: WeeklyData = {
         "deck": "Vercel deployment filters support natural-language queries",
         "summary": "Vercel redesigned the Deployments page filters with suggestions, typeahead search and natural-language descriptions that automatically apply matching filters.",
         "content": "Vercel redesigned the Deployments page filters with suggestions, typeahead search and natural-language descriptions that automatically apply matching filters.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7caf9c40d2264490.png","alt":"Vercel 배포 목록, 자연어 필터 검색 추가 공식 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },
@@ -2423,7 +2501,8 @@ export const week35: WeeklyData = {
         "deck": "Microsoft outlines four levers for agent request costs",
         "summary": "Microsoft published guidance on model choice, the serving offer, context reuse and prompt design. It argues for measuring cost per successful outcome rather than token price alone; this is technical guidance rather than a new discount announcement.",
         "content": "**Article type: Technical implementation guide / analysis**\n\nMicrosoft published guidance on model choice, the serving offer, context reuse and prompt design. It argues for measuring cost per successful outcome rather than token price alone; this is technical guidance rather than a new discount announcement.\n\nThe publisher timestamp is converted to KST."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b9ed229089b87aad.jpg","alt":"Person with hand on chin.  Microsoft Foundry. Token rate-limiting and semantic caching. The economics of agent optimization"},
     },
     {
       "date": "8/28 00:00",

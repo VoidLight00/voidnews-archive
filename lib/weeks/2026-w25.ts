@@ -84,7 +84,8 @@ export const week25: WeeklyData = {
               "label": "보조 출처 1",
               "url": "https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan"
             }
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-afaeda8d403f2496-c0ac27660a58.jpg","alt":"Featued image for: Anthropic pauses Claude Agent SDK subscription change on day it was due to take effect"},
         },
         {
           "date": "6/11",
@@ -402,7 +403,7 @@ export const week25: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/og-cache/alibaba-로봇용-임바디드-ai-qwen-robot-suite-첫-공-047ea2d6.svg",
+            "src": "/og-cache/alibaba-로봇용-임바디드-ai-qwen-robot-suite-첫-공-047ea2d6.png",
             "alt": "Alibaba, 로봇용 임바디드 AI 'Qwen Robot Suite' 첫 공개"
           },
         }

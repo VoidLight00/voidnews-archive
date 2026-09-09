@@ -781,7 +781,8 @@ export const week26: WeeklyData = {
               "label": "MarkTechPost",
               "url": "https://www.marktechpost.com/2026/06/18/perplexity-launches-brain/"
             }
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-04c0ed4ee484bc36-1296c87331c2.png","alt":"Image of a globe against a dark background with nodes on it."},
         }
       ]
     },

@@ -541,8 +541,8 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 }
 
 .tc-source-thumb--hero img {
-  opacity: 0.34;
-  mix-blend-mode: screen;
+  opacity: 1;
+  mix-blend-mode: normal;
 }
 
 .tc-source-thumb--card {
@@ -858,7 +858,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   }
 
   .tc-source-thumb--hero img {
-    opacity: 0.24;
+    opacity: 1;
   }
 
   .tc-hero-content {

@@ -447,7 +447,8 @@ export const week29: WeeklyData = {
             "title": "Meta previews Muse Spark 1.1 and the Model API",
             "deck": "A 1M-token context window, MCP, and parallel subagents are connected for agentic work.",
             "summary": "Meta is offering Muse Spark 1.1 for agentic coding, computer use, and multimodal reasoning through Meta AI Thinking mode and a public-preview Model API."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-f8a956094e526a92-64071fc08bf1.png","alt":"Meta, Muse Spark 1.1과 Model API 공개 프리뷰 출처 이미지"},
         }
       ]
     },

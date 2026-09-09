@@ -8,7 +8,7 @@ import sys
 
 POLICY = json.loads((Path(__file__).resolve().parents[2] / 'references/source-image-policy.json').read_text())
 VOID = set('area base br col embed hr img input link meta param source track wbr'.split())
-EXCLUDED = re.compile(r'(?:^|[\s_\-/])(logo|avatar|author-photo|profile|icon|related|recommended|recommendations|advert|advertisement|social|tracking|pixel|placeholder|skeleton)(?:$|[\s_\-/.])', re.I)
+EXCLUDED = re.compile(r'(?:^|[\s_\-/])(logo|avatars?|author|authors|byline|profile|icon|related|recommended|recommendations|advert|advertisement|social|tracking|pixel|placeholder|skeleton)(?:$|[\s_\-/.])', re.I)
 
 class Element:
     def __init__(self, tag, attrs, parent, order):
@@ -75,9 +75,9 @@ def excluded(node):
             return True
         if item.tag == 'header' and not any(p.tag == 'article' for p in list(item.ancestors())[1:]):
             return True
-        if 'hidden' in a or a.get('aria-hidden') == 'true' or re.search(r'(display\s*:\s*none|visibility\s*:\s*hidden)',a.get('style',''),re.I):
+        if 'hidden' in a or re.search(r'(display\s*:\s*none|visibility\s*:\s*hidden)',a.get('style',''),re.I):
             return True
-        if EXCLUDED.search(' '.join(a.get(k,'') or '' for k in ['class','id','alt','src'])):
+        if item.tag not in {'body', 'html', 'document'} and EXCLUDED.search(' '.join(a.get(k,'') or '' for k in ['class','id','alt','src'])):
             return True
     return False
 
@@ -102,7 +102,7 @@ def image_url(node, base):
         candidates.extend(re.findall(r'background(?:-image)?\s*:[^;]*url\([\s\"\']*([^\)\"\']+)', a.get('style','') or '',re.I))
     for value in candidates:
         url = safe_url(value,base)
-        if url and not EXCLUDED.search(urlsplit(url).path) and not re.search(r'\.(mp4|webm|mov|m3u8|mp3|wav)$', urlsplit(url).path, re.I):
+        if url and not EXCLUDED.search(urlsplit(url).path) and not re.search(r'(?:^|[.-])avatars?(?:[.-]|$)', urlsplit(url).hostname or '', re.I) and not re.search(r'\.(mp4|webm|mov|m3u8|mp3|wav)$', urlsplit(url).path, re.I):
             return url
     return None
 
@@ -116,6 +116,8 @@ def select(html, base):
     scope = scopes[0] if scopes else None
     if not scope:
         scope = next((n for n in d.nodes if n.tag == 'main'),None)
+    if not scope:
+        scope = next((n for n in d.nodes if n.tag == 'article' and not excluded(n)),None)
     images = []
     for n in d.nodes:
         if excluded(n) or n.tag not in {'img','source','video','div','figure'}:
@@ -127,9 +129,8 @@ def select(html, base):
         if not scope and (not h1 or n.order < h1.order):
             continue
         url = image_url(n,base)
-        if url:
+        if url and not any(x['image'] == url for x in images):
             images.append({'image':url,'kind':'source-first-image','element':n.tag,'alt':n.attrs.get('alt',''),'selectionPolicy':POLICY['version']})
-            break
     meta = {}
     for n in d.nodes:
         if n.tag == 'meta':

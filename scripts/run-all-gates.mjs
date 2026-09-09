@@ -17,6 +17,7 @@ const SCRIPTS = path.join(ROOT, "scripts");
 const BUILD_GATES = {
   "check-ab-2026-09a.mjs": [],
   "check-source-image-policy.mjs": [],
+  "check-weekly-source-images.mjs": [],
   "check-backfill-integration.mjs": [],
   "check-slugs.mjs": [],
   "check-regressions.mjs": [],

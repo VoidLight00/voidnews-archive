@@ -100,11 +100,12 @@ export const week13: WeeklyData = {
           slug: "20260325-anthropic-ai-53f3af851b5f",
           date: "3/25 19:37", platform: "Threads",
           title: "기획자·생성자·평가자 — Anthropic식 AI 팀 구성의 비밀",
-          officialUrl: "https://anthropic.com/engineering/harness-design-for-long-running-application-development",
+          officialUrl: "https://www.anthropic.com/engineering/harness-design-long-running-apps",
           summary: "생성자/평가자/기획자 3인조 멀티에이전트 아키텍처 완전 분석",
           content: "Claude Code로 앱 하나 통째로 만들 수 있다는 거 아시죠? 근데 대부분 실패합니다.\n\n**이유는 두 가지예요.**\n\n1. 대화창이 길어지면 AI가 대충 마무리하려는 현상 (문맥 불안)\n2. 자기가 만든 코드를 자기가 평가하면 항상 \"잘했어요\" (자기 객관화 실패)\n\n**Anthropic이 이 문제를 구조적으로 해결했습니다.**\n\nAI 한 명이 다 하는 게 아니라 3명이 역할을 나눕니다:\n\n- **기획자** — 짧은 프롬프트를 상세 기획서로 확장\n- **생성자** — 기획서 기반으로 코드 작성  \n- **평가자** — 브라우저 직접 띄워서 버그 찾고 채점\n\n**GAN에서 영감 받은 구조예요.** 만드는 놈과 평가하는 놈을 분리한 겁니다.",
-          source: "https://anthropic.com/engineering/harness-design-for-long-running-application-development",
+          source: "https://www.anthropic.com/engineering/harness-design-long-running-apps",
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWTdz_Gj4cA",
+          thumbnail: {"src":"/source-media/weekly-20260909/older-9fa759b72385cdecr-6ff8941a720f.webp","alt":"기획자·생성자·평가자 — Anthropic식 AI 팀 구성의 비밀 출처 이미지"},
         },
         {
           slug: "20260325-claude-auto-mode-d44eecfaa2cf",
@@ -154,6 +155,7 @@ export const week13: WeeklyData = {
           summary: "Claude로 학습 효율을 극대화하는 검증된 프롬프트 10가지 정리",
           content: "Claude를 교수처럼 쓰는 10가지 프롬프트가 화제입니다.\n\n핵심은 하나예요 — Claude한테 답을 받는 게 아니라, **Claude가 나를 코치하게 만드는 것.**\n\n수동으로 읽기만 하면 머릿속에 안 남아요. Claude가 질문하고, 내가 생각하고, 직접 만들게 하는 구조가 진짜 학습이에요.",
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWRUSzND55k",
+          thumbnail: {"src":"/source-media/weekly-20260909/older-5349e0187ab23197-30ae2425f737.png","alt":"Jasmin (@AI_with_jasmin) on X"},
         },
         {
           slug: "20260324-claude-code-c3beeeacc9a2",
@@ -260,12 +262,13 @@ export const week13: WeeklyData = {
           date: "3/27",
           platform: "X+Threads",
           title: "코드명 Capybara, 공식명 Mythos — Anthropic의 다음 모델이 유출됐다",
-          officialUrl: "https://fortune.com/2026/03/27/anthropic-testing-mythos-most-powerful-ai-model-ever-developed/",
+          officialUrl: "https://www.fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/",
           summary: "Claude Mythos 유출 사건",
           content: "Anthropic의 차세대 모델이 유출됐습니다. 이름은 Claude Mythos. 코드네임은 Capybara.\n\nCMS 설정 실수로 미공개 블로그 초안이 공개 데이터베이스에 그대로 노출됐어요.\n\nFortune이 단독 보도했고, Anthropic이 직접 인정했습니다.\n\n\"우리가 만든 것 중 가장 강력한 모델이다.\"\n\n2026년 가장 큰 AI 유출 사건일 수 있습니다.\n\n뭐가 유출된 건가요?\n\nAnthropic의 콘텐츠 관리 시스템(CMS)에서 미공개 블로그 초안과 관련 자산 약 3,000개가 암호화 없이 공개 검색이 가능한 상태로 방치돼 있었습니다.\n\n캠브리지 대학의 사이버보안 연구자 Alexandre Pauwels와 보안 전문가 Roy Paz가 각각 독립적으로 발견했어요.\n\nFortune이 Anthropic에 알린 후 접근이 차단됐고, Anthropic은 \"CMS 설정의 인적 오류\"라고 인정했습니다. AI 도구 때문은 아니라고 해요.\n\nClaude Mythos가 뭔가요?\n\n유출된 블로그 초안에 따르면, \"Anthropic이 만든 것 중 역대 가장 강력한 AI 모델\"입니다.\n\nCapybara는 이 모델의 제품 티어 이름이에요. 지금까지 Anthropic의 모델 등급은 Haiku(소) → Sonnet(중) → Opus(대)였는데, Capybara는 Opus 위에 올라가는 새로운 최상위 티어입니다. 더 크고, 더 똑똑하고, 더 비쌉니다.\n\nAnthropic 대변인이 Fortune에 직접 말했어요 — \"추론, 코딩, 사이버보안에서 의미 있는 진전을 이룬 범용 모델을 개발 중이다. 역량이 강력한 만큼 출시에 신중을 기하고 있다.\"\n\nOpus 4.6이랑 얼마나 차이가 나나요?\n\n유출된 초안의 표현이에요 — \"우리의 이전 최고 모델인 Claude Opus 4.6과 비교해, Capybara는 소프트웨어 코딩, 학술 추론, 사이버보안 테스트에서 극적으로 높은 점수를 기록한다.\"\n\n특히 사이버보안 능력이 압도적이라고 합니다. \"현존하는 모든 AI 모델 중 사이버 역량에서 가장 앞서 있다.\"\n\n왜 사이버보안이 문제인가요?\n\nAnthropic이 자기 모델을 직접 경고하는 부분이에요.\n\n유출된 초안에 이런 문장이 있습니다 — \"이 모델은 방어자가 따라잡을 수 있는 속도를 훨씬 넘어서 취약점을 공격할 수 있는 모델의 파도가 곧 온다는 것을 예고한다.\"\n\n쉽게 말하면, 해커가 이 모델을 쓰면 보안팀이 막기 전에 취약점을 찾아서 공격할 수 있다는 거예요.\n\nAnthropic은 이 위험을 알고 있어서, 일반 공개가 아니라 사이버 방어 조직한테 먼저 early access를 주는 전략을 잡았습니다. 방어자한테 먼저 준비할 시간을 주겠다는 거죠.\n\n일반 사용자는 언제 쓸 수 있나요?\n\n아직 모릅니다. 유출된 초안에 따르면 운영 비용이 높아서 일반 공개 준비가 안 됐다고 해요. 소수의 early access 고객한테만 테스트 중입니다.\n\n모델 티어가 새로 생긴다는 건, 가격도 새로운 구간이 될 가능성이 높아요. Opus보다 비싸다고 직접 언급돼 있으니까요.\n\n이건 확정된 정보인가요?\n\nFortune이 Anthropic에 직접 확인했고, Anthropic이 모델 존재와 테스트를 인정했습니다.\n\n다만 유출된 건 \"출판을 고려 중이던 초기 초안\"이라는 게 Anthropic의 입장이에요. 최종 제품 사양이나 출시 일정은 바뀔 수 있습니다.\n\n확실한 건 세 가지예요. 모델이 존재한다는 것, Anthropic이 \"step change\"라고 부른다는 것, 그리고 사이버보안 위험 때문에 출시를 신중하게 하고 있다는 것.\n\nAI 모델 경쟁이 \"누가 더 똑똑하냐\"에서 \"누가 더 위험하냐\"로 넘어가고 있습니다.\n\nAnthropic이 자기 모델의 사이버 공격 능력을 직접 경고하면서 방어자한테 먼저 주겠다고 한 건, 이 업계에서 처음 있는 일이에요.\n\n카피바라가 언제 풀리든, 사이버보안의 판이 바뀌는 건 이미 시작됐습니다.\n\n\"아모데이 선생님, 저 토큰 준비됐어요\"\n\nFortune 기사: https://fortune.com/2026/03/27/anthropic-testin",
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWYtg_7D-C3",
           xUrl: "https://x.com/VoidLight_Hyeon/status/2037482156184981756",
-          source: "https://fortune.com/2026/03/27/anthropic-testing-mythos-most-powerful-ai-model-ever-developed/"
+          source: "https://www.fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/",
+          thumbnail: {"src":"/source-media/weekly-20260909/older-dc072ee819ae2c83r-8e5f8c45b18c.jpg","alt":"코드명 Capybara, 공식명 Mythos — Anthropic의 다음 모델이 유출됐다 출처 이미지","provenance":"source-share-preview"},
         },
         {
           slug: "20260327-claude-figma-5-ff576a5b5bdc",
@@ -478,6 +481,8 @@ export const week13: WeeklyData = {
           summary: "코드베이스 실시간 검색 내장 엔진 — grep보다 빠른 의미론적 코드 검색",
           content: "Cursor가 코드베이스 내 실시간 검색 엔진을 내장했습니다.\n\n기존 grep보다 빠른 의미론적 검색으로, 함수명·변수명은 물론 코드의 의도까지 찾아냅니다.\n\n에이전트가 컨텍스트를 수집하는 속도가 체감될 정도로 빨라졌습니다.",
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWRP2QxD7QI",
+          thumbnail: {"src":"/source-media/weekly-20260909/older-13cd4b0bb68a73f3r-a0e1034caa15.png","alt":"코드베이스를 실시간으로 검색한다 — Cursor Instant Grep 출처 이미지"},
+          officialUrl: "https://cursor.com/blog/fast-regex-search",
         },
         {
           slug: "20260320-cursor-composer-2-7dc8822756ad",
@@ -535,6 +540,7 @@ export const week13: WeeklyData = {
           summary: "AI 모델 내부 표현 직접 분석 — 블랙박스 AI를 투명하게 만드는 해석 가능성 연구 도구",
           content: "AI가 내부적으로 어떻게 생각하는지 알 수 없다는 게 AI 안전성의 핵심 문제예요.\n\nMeta가 AI 모델의 내부 표현을 직접 분석하는 TRIBEv2를 공개했습니다.\n\n모델이 어떤 개념을 어떻게 표현하는지, 어떤 정보를 어디에 저장하는지 들여다볼 수 있는 도구예요. 블랙박스였던 AI의 내부를 해부하는 시도입니다.\n\n모델이 편향을 어디서 학습하는지, 왜 틀린 답을 내는지 추적할 수 있게 돼요. 프로덕션 배포 전에 AI 모델의 뇌 상태를 먼저 확인하는 게 일반화될 수 있는 방향이에요.\n\n인터랙티브 데모로 직접 실험해볼 수 있습니다.",
           source: "https://aidemos.atmeta.com/tribev2/",
+          thumbnail: {"src":"/source-media/weekly-20260909/older-tribev2r-4be122e2954f.jpg","alt":"TRIBE v2 video banner"},
         },
         {
           slug: "20260326-agi-meta-arm-cpu-4fd3a9091acc",

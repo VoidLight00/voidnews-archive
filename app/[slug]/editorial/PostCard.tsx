@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Post } from "@/lib/data";
 import styles from "./editorial.module.css";
+import { isSafeImageUrl } from "../weekly/previews";
 
 interface PostCardProps {
   post: Post;
@@ -22,79 +23,41 @@ function formatDateKo(date: string): string {
   return date;
 }
 
-const OG_TTL_MS = 1000 * 60 * 60 * 24 * 30;
-const OG_FAIL_TTL_MS = 1000 * 60 * 60 * 24;
-
-function useFallbackOg(url: string | undefined, enabled: boolean) {
-  const [image, setImage] = useState<string | null>(null);
-  useEffect(() => {
-    if (!enabled || !url) return;
-    let cancelled = false;
-    const key = `voidnews-edit-og:v1:${url}`;
-    try {
-      const raw = typeof window !== "undefined" ? window.localStorage.getItem(key) : null;
-      if (raw) {
-        const parsed = JSON.parse(raw) as { image: string | null; expiresAt: number };
-        if (parsed.expiresAt > Date.now()) {
-          setImage(parsed.image);
-          return;
-        }
-      }
-    } catch {}
-    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true`)
-      .then((r) => r.json())
-      .then((d) => {
-        if (cancelled) return;
-        const img =
-          d.status === "success"
-            ? d.data?.screenshot?.url || d.data?.image?.url || null
-            : null;
-        const safe = typeof img === "string" && img.startsWith("https://") ? img : null;
-        setImage(safe);
-        try {
-          window.localStorage.setItem(
-            key,
-            JSON.stringify({
-              image: safe,
-              expiresAt: Date.now() + (safe ? OG_TTL_MS : OG_FAIL_TTL_MS),
-            })
-          );
-        } catch {}
-      })
-      .catch(() => {});
-    return () => {
-      cancelled = true;
-    };
-  }, [url, enabled]);
-  return image;
-}
-
 export default function PostCard({ post, weekSlug, companyName, companyColor }: PostCardProps) {
+  const [failedSources, setFailedSources] = useState<string[]>([]);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const cover = [post.thumbnail, ...(post.images || [])].find(image => image?.src && isSafeImageUrl(image.src) && !failedSources.includes(image.src));
+  const coverSrc = cover?.src;
+  useEffect(() => {
+    const image = imageRef.current;
+    if (coverSrc && image?.complete && image.naturalWidth === 0) {
+      setFailedSources(sources => sources.includes(coverSrc) ? sources : [...sources, coverSrc]);
+    }
+  }, [coverSrc]);
   if (!post.slug) return null;
   const href = `/${weekSlug}/${post.slug}/`;
   const dateText = formatDateKo(post.date);
   const readText = post.readMinutes ? `${post.readMinutes}분 읽기` : "1분 읽기";
   const pillLabel = companyName.toUpperCase();
-  const staticImg = post.thumbnail?.src || post.images?.[0]?.src || null;
-  const fallback = useFallbackOg(post.officialUrl || post.source, !staticImg);
-  const coverSrc = staticImg ?? fallback;
 
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-weekly-card>
       <Link href={href} className={styles.cardLink} aria-label={post.title} />
-      <Link href={href} className={styles.cover}>
+      <Link href={href} className={styles.cover} data-weekly-source-thumbnail>
         {coverSrc ? (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
+            ref={imageRef}
             src={coverSrc}
-            alt={post.thumbnail?.alt ?? post.title}
+            alt={cover?.alt ?? post.title}
             className={styles.coverImage}
             loading="lazy"
+            onError={() => setFailedSources(sources => [...sources, coverSrc])}
           />
         ) : (
-          <div className={styles.coverPlaceholder}>
+          <div className={styles.coverPlaceholder} data-weekly-image-fallback>
             <span className={styles.coverPlaceholderTag}>{companyName}</span>
-            <span className={styles.coverPlaceholderHint}>이미지 준비 중</span>
+            <span className={styles.coverPlaceholderHint}>이미지 미리보기를 제공하지 못했습니다</span>
           </div>
         )}
         <span

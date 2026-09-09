@@ -156,6 +156,7 @@ export const week34: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "higgsfield-20260817-mcp",
           en: { title: "Higgsfield exposes creative tools through MCP", deck: "Claude, ChatGPT and Cursor can invoke its media workflows.", summary: "Higgsfield published an MCP integration for calling its creative workflows from agent clients. It is an integration release rather than a new underlying model." },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-c35c5ef3f1d5802c-e84d5ff6109f.jpg","alt":"Higgsfield, Claude·ChatGPT·Cursor에서 제작 도구를 부르는 MCP 공개 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "8/18",
@@ -170,6 +171,7 @@ export const week34: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "higgsfield-20260818-marketing-studio",
           en: { title: "Higgsfield rebuilds Marketing Studio around 1,500 templates", deck: "Template-led generation targets repeatable campaign production.", summary: "Higgsfield updated Marketing Studio with more than 1,500 templates, reorganizing media generation around repeatable marketing workflows." },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-8d7483a934b48934-2dfc9559ac4d.png","alt":"Higgsfield Marketing Studio, 1,500개 템플릿 중심으로 개편 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "8/20",
@@ -184,6 +186,7 @@ export const week34: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "higgsfield-20260820-blender",
           en: { title: "Higgsfield connects generated output to editable Blender scenes", deck: "Generated media moves into a production-grade editing environment.", summary: "Higgsfield released a Blender plugin and MCP bridge that carries generated output into editable scenes. This is Blender integration support, not a new base-model launch." },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-f8566f6579f3ea6c-b702fe7ca89a.jpg","alt":"Higgsfield, 생성 결과를 편집 가능한 Blender 장면으로 연결 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "8/20",
@@ -198,6 +201,7 @@ export const week34: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "higgsfield-20260820-video-relight",
           en: { title: "Higgsfield launches video relighting and palette editing", deck: "Competition moves from generation into post-production control.", summary: "Higgsfield introduced standalone tools for redesigning lighting and colour palettes in existing video." },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-d86fd0f662d4b345-5f18ca0a746b.png","alt":"Higgsfield, 기존 영상의 조명·색을 다시 설계하는 편집 도구 출시 출처 이미지","provenance":"source-share-preview"},
         }
       ],
     },
@@ -242,6 +246,7 @@ export const week34: WeeklyData = {
           tags: ["AI", "2026-08b"],
           slug: "stability-20260818-stable-audio-workflow",
           en: { title: "Stability AI extends Stable Audio into DAW workflows", deck: "A beta plugin and revised web app target production editing.", summary: "Stability AI announced an early-beta DAW plugin and updated web workflow for Stable Audio 3.0, moving music generation into an editable production process." },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-a99e7c73be3208be-dcb75b05cc4a.png","alt":"Stability AI, Stable Audio를 DAW 편집 워크플로로 확장 출처 이미지"},
         }
       ],
     },

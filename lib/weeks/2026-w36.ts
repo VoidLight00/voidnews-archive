@@ -115,7 +115,8 @@ export const week36: WeeklyData = {
             "AI",
             "2026-w36",
             "Google"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-5a222bc71ad39c8b.webp","alt":"Text \"Agentic video understanding\" next to the Gemini logo, all on a dark blue background"},
         },
         {
           "date": "9/2 05:51",
@@ -139,7 +140,8 @@ export const week36: WeeklyData = {
             "AI",
             "2026-w36",
             "Google"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-f02c1dc08d140939.png","alt":"Gemini CLI 0.58, macOS 샌드박스의 컨테이너 접근 격리 보강 공식 출처 이미지","provenance":"source-share-preview"},
         },
 {
   "date": "9/05 01:00",
@@ -163,7 +165,8 @@ export const week36: WeeklyData = {
     "deck": "Lyria 3.5 improves music generation in the Gemini app and API",
     "summary": "Google announced Lyria 3.5 in the Gemini app and API. The update improves vocal expression and musical arrangements, while the app adds genre and vocal-style choices, templates, and track-length options.",
     "content": "Google announced Lyria 3.5 in the Gemini app and API. The update improves vocal expression and musical arrangements, while the app adds genre and vocal-style choices, templates, and track-length options.\n\nGoogle says the model is available globally in the web and mobile apps. Developers can access it through the Gemini API and Google AI Studio.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-d0b16425fcb6e943.png","alt":"Lyria 3.5, Gemini 앱·API 음악 생성 개선 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/04 01:00",
@@ -187,7 +190,8 @@ export const week36: WeeklyData = {
     "deck": "Gmail, Docs and Keep launch conversational voice features",
     "summary": "Google announced voice-driven capabilities in Gmail, Docs, and Keep. Users can conversationally find inbox information, draft documents, and organize spoken thoughts into notes. Availability should be checked against account eligibility and rollout conditions.",
     "content": "Google announced voice-driven capabilities in Gmail, Docs, and Keep. Users can conversationally find inbox information, draft documents, and organize spoken thoughts into notes. Availability should be checked against account eligibility and rollout conditions.\n\nGmail Live searches the inbox conversationally. With permission, Docs Live can use Gmail, Drive, Chat and web context in drafts; Keep Live structures spoken ideas into lists and notes. Gmail and Keep target Google AI Plus, Pro and Ultra; Docs targets Pro and Ultra. Business Workspace availability is still forthcoming.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-6054f10fecad81ab.webp","alt":"Text reading: \"Do more with your voice in Workspace\""},
 },
 {
   "date": "9/03",
@@ -208,7 +212,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Google"
   ],
-  "slug": "google-20260903-product-1db5af67a2b5"
+  "slug": "google-20260903-product-1db5af67a2b5",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-132bc410a4f9f258.png","alt":"Gemini Notebook, Workspace 관리자 감사 로그 추가 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02",
@@ -271,7 +276,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Google"
   ],
-  "slug": "google-20260902-product-98b59f325e8d"
+  "slug": "google-20260902-product-98b59f325e8d",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-f80faa0f8edb7914.png","alt":"Workspace Studio, 파일 복사·이동과 답장 단계 추가 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02",
@@ -292,7 +298,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Google"
   ],
-  "slug": "google-20260902-product-14583af54ffe"
+  "slug": "google-20260902-product-14583af54ffe",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-08eab2e3ea5f3c1f.png","alt":"Gemini 맞춤 지시, Drive·Chat·Slides·Sheets·Gmail로 확대 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02",
@@ -313,7 +320,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Google"
   ],
-  "slug": "google-20260902-product-4ca137ea9a71"
+  "slug": "google-20260902-product-4ca137ea9a71",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-b9c617e350be33ef.png","alt":"Google Vids, 문서를 영상 요약으로 전환 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/01",
@@ -376,7 +384,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Google"
   ],
-  "slug": "google-20260901-product-47805c2d655a"
+  "slug": "google-20260901-product-47805c2d655a",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-c18511b966e254b8.png","alt":"Google Meet, Gemini가 공동 발표자 추가 제안 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/01",
@@ -397,7 +406,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Google"
   ],
-  "slug": "google-20260901-product-a525f145581f"
+  "slug": "google-20260901-product-a525f145581f",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-994b8aff1de5b309.gif","alt":"Google Pics, Workspace 이미지 생성·편집 정식 제공 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "8/31",
@@ -497,7 +507,8 @@ export const week36: WeeklyData = {
     "deck": "Cursor announces Grok Bot availability on Android",
     "summary": "A Cursor announcement introduced Grok Bot on Android for assigning tasks, handling approvals and syncing conversations with desktop. It is described as beta and included with eligible Cursor and SuperGrok plans, distinct from the earlier desktop and iOS launch.",
     "content": "A Cursor announcement introduced Grok Bot on Android for assigning tasks, handling approvals and syncing conversations with desktop. It is described as beta and included with eligible Cursor and SuperGrok plans, distinct from the earlier desktop and iOS launch.\n\nThe publisher timestamp is converted to KST."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-fccf03e72206d205.jpg","alt":"Cursor 공지, Grok Bot Android 앱 제공 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/2 03:24",
@@ -520,7 +531,8 @@ export const week36: WeeklyData = {
     "deck": "Cursor adds Fable 5.1 with a data-retention approval requirement",
     "summary": "Cursor announced Fable 5.1 availability. Accounts, teams and organizations with Privacy Mode enabled must approve the model’s data-retention policy in the Cursor Dashboard before use. The 73.4% CursorBench 3.2 result at maximum effort is Cursor’s own evaluation.",
     "content": "Cursor announced Fable 5.1 availability. Accounts, teams and organizations with Privacy Mode enabled must approve the model’s data-retention policy in the Cursor Dashboard before use. The 73.4% CursorBench 3.2 result at maximum effort is Cursor’s own evaluation.\n\nThe publisher timestamp is converted to KST."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-095c8a86ba317c7a.png","alt":"Screenshot 2026-09-01 at 20.24.23"},
 },
       ]
     },
@@ -579,7 +591,8 @@ export const week36: WeeklyData = {
             "deck": "GitHub announced general availability of content exclusions in the Copilot app and CLI.",
             "summary": "GitHub made content exclusions generally available in the Copilot app and CLI for Business and Enterprise customers. Files excluded by enterprise, organization or repository administrators are not used as agent context.",
             "content": "GitHub made content exclusions generally available in the Copilot app and CLI for Business and Enterprise customers. Files excluded by enterprise, organization or repository administrators are not used as agent context."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-9350ba76cc97501c.jpg","alt":"Copilot 앱·CLI, 콘텐츠 제외 정책 정식 지원 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "9/04",
@@ -603,7 +616,8 @@ export const week36: WeeklyData = {
             "deck": "GitHub announced October 2 deprecations for selected Copilot models and identified replacements.",
             "summary": "GitHub scheduled the deprecation of Gemini 3.5 and 3.6 Flash, Kimi K2.7 Code, and Claude Opus 4.7 in Copilot for October 2, 2026. Recommended replacements are Gemini 3.8 Flash, Kimi K3, and Claude Opus 5 respectively. Administrators may need to enable the replacements in model policies.",
             "content": "GitHub scheduled the deprecation of Gemini 3.5 and 3.6 Flash, Kimi K2.7 Code, and Claude Opus 4.7 in Copilot for October 2, 2026. Recommended replacements are Gemini 3.8 Flash, Kimi K3, and Claude Opus 5 respectively. Administrators may need to enable the replacements in model policies."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-7905e02a3e2fcd1d.jpg","alt":"GitHub, 일부 Copilot 모델 10월 2일 지원 종료 예고 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "9/5 03:59",
@@ -653,7 +667,8 @@ export const week36: WeeklyData = {
             "deck": "The roundup covers VS Code 1.132 through 1.135 and features shipped throughout August.",
             "summary": "GitHub recapped Copilot updates shipped across VS Code 1.132 through 1.135, including parallel chats, session sharing, browser annotations and dictation improvements. This is an August roundup, not a simultaneous August 31 release.",
             "content": "**Several August releases are summarized together**\n\nGitHub recaps Copilot changes shipped across VS Code 1.132 through 1.135, including parallel chats, session sharing, browser annotations and dictation improvements.\n\n**Publication and feature dates differ**\n\nAugust 31 is the roundup publication date. The features shipped at different points throughout August and are not described as one same-day release."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-144fda9a32c74290.jpg","alt":"GitHub, VS Code 8월 Copilot 업데이트 묶음 공개 공식 출처 이미지","provenance":"source-share-preview"},
         },
         {
           "date": "9/01 23:29",
@@ -678,7 +693,8 @@ export const week36: WeeklyData = {
             "deck": "The long-horizon coding model is rolling out to Pro+, Max, Business and Enterprise plans.",
             "summary": "GitHub began a gradual Copilot rollout of Claude Fable 5.1 to Pro+, Max, Business and Enterprise. Enterprise administrators must enable model access. Data retention is required by default, with zero-retention access limited to eligible enterprise customers.",
             "content": "**The GitHub Copilot integration is rolling out**\n\nGitHub says Claude Fable 5.1, designed for long-horizon autonomous coding and knowledge work, is rolling out to Pro+, Max, Business and Enterprise. Business and Enterprise administrators control access through model policies.\n\n**Review retention terms**\n\nGitHub states that data retention is required by default for safety classifiers, while zero-retention access is available to certain eligible enterprise customers. This is the GitHub integration timestamp, not necessarily the model's first Anthropic release."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-fe2ffe194622a50c.png","alt":"The Copilot model picker showing Claude Fable 5.1 selected"},
         },
         {
           "date": "9/2 04:25",
@@ -702,7 +718,8 @@ export const week36: WeeklyData = {
             "AI",
             "2026-w36",
             "GitHub"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-0363631ad59a8e79.png","alt":"Header image of Copilot approving a pull request with a comment"},
         },
 {
   "date": "9/01 06:58",
@@ -726,7 +743,8 @@ export const week36: WeeklyData = {
     "deck": "Copilot Team model access follows the billing organization",
     "summary": "GitHub changed model access for users with Copilot seats in multiple organizations so that the organization paying for usage determines access. Previously, a model could be available if any of the user's organizations enabled it; the billing organization's policy now governs access.",
     "content": "GitHub changed model access for users with Copilot seats in multiple organizations so that the organization paying for usage determines access. Previously, a model could be available if any of the user's organizations enabled it; the billing organization's policy now governs access.\n\nThe notice explicitly excludes users whose Copilot access comes entirely through an enterprise or its organizations.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-c509f55c2690faf7.jpg","alt":"Copilot Team, 결제 조직 기준으로 모델 접근 정책 변경 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/03 03:51",
@@ -750,7 +768,8 @@ export const week36: WeeklyData = {
     "deck": "Copilot enterprise settings support team-specific default models",
     "summary": "GitHub announced enterprise-managed defaults for the model used in new Copilot conversations. Team configuration files and an overridable model setting allow different defaults by team. The capability is available for supported Copilot Business and Enterprise clients.",
     "content": "GitHub announced enterprise-managed defaults for the model used in new Copilot conversations. Team configuration files and an overridable model setting allow different defaults by team. The capability is available for supported Copilot Business and Enterprise clients.\n\nAdministrators mark the model key as overridable and connect team configuration through team-mappings.json. Other users inherit the enterprise default.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-d5d9d182f472f35f.jpg","alt":"Copilot 기업·팀별 기본 모델 설정 지원 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/05 00:38",
@@ -774,7 +793,8 @@ export const week36: WeeklyData = {
     "deck": "Copilot CLI 1.0.83 adds multi-model policies, enterprise login and MCP OAuth",
     "summary": "Copilot CLI 1.0.83 lets custom agents try an ordered list of models and enforce that list with a required model policy. It also adds organization-restricted enterprise sign-in and Client ID Metadata Document support for MCP OAuth. Security-sensitive developer-path access defaults should be checked against the release-note conditions.",
     "content": "Copilot CLI 1.0.83 lets custom agents try an ordered list of models and enforce that list with a required model policy. It also adds organization-restricted enterprise sign-in and Client ID Metadata Document support for MCP OAuth. Security-sensitive developer-path access defaults should be checked against the release-note conditions.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-3aa92e901e1e97a9.png","alt":"Copilot CLI 1.0.83, 다중 모델 정책·기업 로그인·MCP OAuth 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02 05:23",
@@ -798,7 +818,8 @@ export const week36: WeeklyData = {
     "deck": "Copilot individual user budgets gain expiration dates",
     "summary": "GitHub announced generally available expiration dates for individual user budgets on Copilot Business and Enterprise. Administrators can choose the next billing cycle or a specific date; after expiration, the user falls back to the next applicable cost-center or universal budget.",
     "content": "GitHub announced generally available expiration dates for individual user budgets on Copilot Business and Enterprise. Administrators can choose the next billing cycle or a specific date; after expiration, the user falls back to the next applicable cost-center or universal budget.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-0d6eb03d66a43240.png","alt":"Budget expiration settings showing three options: never expires, expires at the start of the next billing cycle, and expires on a specific date in UTC"},
 },
 {
   "date": "9/01 21:35",
@@ -822,7 +843,8 @@ export const week36: WeeklyData = {
     "deck": "GitHub CLI 2.99 adds image and video attachments for coding-agent workflows",
     "summary": "GitHub CLI 2.99 adds a repeatable --attach flag for images and videos in issues, pull requests, and comments. The official article explicitly notes that coding agents can submit screenshots and other visual results from the command line. This uploads files; it does not generate images.",
     "content": "GitHub CLI 2.99 adds a repeatable --attach flag for images and videos in issues, pull requests, and comments. The official article explicitly notes that coding agents can submit screenshots and other visual results from the command line. This uploads files; it does not generate images.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-d1373b55461b83e9.png","alt":"Terminal showing gh issue comment with --attach uploading empty-state.png and returning an issue comment URL."},
 },
 {
   "date": "9/01 06:21",
@@ -846,7 +868,8 @@ export const week36: WeeklyData = {
     "deck": "Copilot retires selected Gemini, Claude and Raptor models on September 1",
     "summary": "GitHub announced September 1 deprecations of Gemini 3.1 Pro, Claude Opus 4.5 and 4.6, Sonnet 4.5 and 4.6, and Raptor Mini across most Copilot experiences. Sonnet 4.6 remains available for individual annual subscribers.",
     "content": "GitHub announced September 1 deprecations of Gemini 3.1 Pro, Claude Opus 4.5 and 4.6, Sonnet 4.5 and 4.6, and Raptor Mini across most Copilot experiences. Sonnet 4.6 remains available for individual annual subscribers.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-a90d945af0e55a25.jpg","alt":"Copilot, Gemini 3.1 Pro·구형 Claude 등 9월 1일 지원 종료 공식 출처 이미지","provenance":"source-share-preview"},
 },
       ]
     },
@@ -876,7 +899,8 @@ export const week36: WeeklyData = {
             "deck": "H Company introduced NeoMME, a family of multilingual encoders that jointly process text and images.",
             "summary": "H Company introduced NeoMME, multilingual multimodal encoders with 260M and 800M parameters. A single bidirectional Transformer processes text tokens and image patches. NeoMME-Retriever returns dense and late-interaction embeddings in one forward pass.",
             "content": "H Company introduced NeoMME, multilingual multimodal encoders with 260M and 800M parameters. A single bidirectional Transformer processes text tokens and image patches. NeoMME-Retriever returns dense and late-interaction embeddings in one forward pass."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-109-f00a0bc40de6.webp","alt":"Comparison of dual-tower, VLM, ModernVBERT, and NeoMME input paths"},
         }
       ]
     },
@@ -994,7 +1018,8 @@ export const week36: WeeklyData = {
             "deck": "The Apache-2.0 kernels run through a preview JavaScript package in WebGPU-capable browsers.",
             "summary": "Hugging Face introduced 207 WebGPU kernels and the `@huggingface/kernels` JavaScript loader. The package uses a preview channel and requires WebGPU browser support. The RSS midnight value may be a date-only publishing default, so no time is shown.",
             "content": "**Browser GPUs can load kernels from the Hub**\n\nThe `@huggingface/kernels` package fetches and executes 207 WebGPU kernels from the Hub. The kernels use Apache 2.0, and the example installs `@huggingface/kernels@preview`.\n\n**Do not generalize the benchmark**\n\nThe article began with 1,756 cases on an Apple M4 and retained 809 cases with matching output and reliable timing for comparison with ORT WebGPU. Reported speed should not be generalized across browsers, operating systems, GPUs or drivers."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-110-7bfb75581763.png","alt":"Files in the ai.onnx.Add WebGPU kernel repository"},
         }
       ]
     },
@@ -1024,7 +1049,8 @@ export const week36: WeeklyData = {
             "deck": "An IBM Research article announces Early Access to time-series models on Confluent Cloud.",
             "summary": "IBM and Confluent authors announced Early Access to four complementary time-series models on Confluent Cloud. Forecasting and anomaly detection run through Apache Flink, with inference following existing schemas, lineage and access controls. Confluent Platform support is a future plan, not current availability.",
             "content": "IBM and Confluent authors announced Early Access to four complementary time-series models on Confluent Cloud. Forecasting and anomaly detection run through Apache Flink, with inference following existing schemas, lineage and access controls. Confluent Platform support is a future plan, not current availability."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-116-2574ae78b387.jpg","alt":"01-productivity-accuracy-responsiveness (2)"},
         }
       ]
     },
@@ -1080,7 +1106,8 @@ export const week36: WeeklyData = {
     "deck": "NVIDIA announces PAIR and local-inference optimizations at IFA",
     "summary": "At IFA 2026, NVIDIA announced local-AI tools and optimizations. PAIR routes inference across PCs on a local network, alongside llama.cpp and vLLM optimizations and broader agent support. The up-to-1.9x inference figure is vendor-reported, and RTX Spark Windows PCs are planned for October.",
     "content": "At IFA 2026, NVIDIA announced local-AI tools and optimizations. PAIR routes inference across PCs on a local network, alongside llama.cpp and vLLM optimizations and broader agent support. The up-to-1.9x inference figure is vendor-reported, and RTX Spark Windows PCs are planned for October.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-9509bbf8b01c98fe.jpg","alt":"NVIDIA IFA 로컬 AI, PAIR 라우터·추론 최적화 공식 출처 이미지"},
 },
 {
   "date": "9/02 06:19",
@@ -1104,7 +1131,8 @@ export const week36: WeeklyData = {
     "deck": "NVIDIA and CrowdStrike introduce SafeMind agentic security",
     "summary": "NVIDIA and CrowdStrike introduced the SafeMind agentic cybersecurity system at Fal.Con 2026. They describe a combination of CrowdStrike's models and agentic harnesses with NVIDIA Nemotron-based defensive models in an iterative offense-defense evaluation loop. Security effectiveness is a vendor claim, not an independently verified result.",
     "content": "NVIDIA and CrowdStrike introduced the SafeMind agentic cybersecurity system at Fal.Con 2026. They describe a combination of CrowdStrike's models and agentic harnesses with NVIDIA Nemotron-based defensive models in an iterative offense-defense evaluation loop. Security effectiveness is a vendor claim, not an independently verified result.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-5c23ba73e597b8bc.jpg","alt":"NVIDIA·CrowdStrike, SafeMind 에이전트 보안 공개 공식 출처 이미지"},
 },
 {
   "date": "9/03 22:00",
@@ -1128,7 +1156,8 @@ export const week36: WeeklyData = {
     "deck": "NVIDIA brings NBA 2K27 DLSS 5 neural rendering to GeForce NOW",
     "summary": "NVIDIA announced NBA 2K27 with DLSS 5 3D-Guided Neural Rendering on GeForce NOW. Availability is tied to Ultimate membership in NVIDIA-operated regions and RTX 5080-powered cloud rigs. Lighting and material improvements are vendor-described.",
     "content": "NVIDIA announced NBA 2K27 with DLSS 5 3D-Guided Neural Rendering on GeForce NOW. Availability is tied to Ultimate membership in NVIDIA-operated regions and RTX 5080-powered cloud rigs. Lighting and material improvements are vendor-described.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-fa67f50273e6d77f.jpg","alt":"NVIDIA GeForce NOW NBA2K DLSS 5"},
 },
 {
   "date": "8/31",
@@ -1150,7 +1179,8 @@ export const week36: WeeklyData = {
     "NVIDIA",
     "2026-w36"
   ],
-  "slug": "discovery-official-dccec670d05c"
+  "slug": "discovery-official-dccec670d05c",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-dccec670d05c413c.png","alt":"NVIDIA and MediaTek Deepen Long-Standing Partnership to Build AI Edge to Cloud Computing Platforms"},
 },
       ]
     },
@@ -1181,7 +1211,8 @@ export const week36: WeeklyData = {
             "deck": "Tool-level token limits and stronger compaction retention improve long-running approvals.",
             "summary": "Codex 0.152 adds an `output_token_limit` setting for individual MCP tools and preserves instructions, answers and valid authorizations across compaction. The planning tool is now disabled by default, so existing automation settings should be reviewed.",
             "content": "**Each MCP tool can have its own output budget**\n\nIndividual MCP tools support `output_token_limit` with consistent truncation across resumed sessions. Automatic approval reviews preserve user instructions, answers and valid authorizations across history compaction.\n\n**Security behavior and defaults also changed**\n\nCloud tasks reject untrusted backend URLs and disable redirects. The planning tool is disabled by default and can be enabled with `tools.update_plan.enabled = true`."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/recent-3d4e408ad45e6552.png","alt":"Codex 0.152, MCP 도구별 출력 한도와 승인 맥락 보존 개선 공식 출처 이미지","provenance":"source-share-preview"},
         },
 {
   "date": "9/03 10:37",
@@ -1205,7 +1236,8 @@ export const week36: WeeklyData = {
     "deck": "Codex 0.153 adds remote-marketplace plugin management and session recovery",
     "summary": "Codex 0.153 adds CLI operations to list, install, and remove plugins from remote marketplaces. It also improves Vim-style undo and redo, history display, and recovery that preserves drafts and transcripts after connection loss. Uncertain or queued submissions remain paused for review.",
     "content": "Codex 0.153 adds CLI operations to list, install, and remove plugins from remote marketplaces. It also improves Vim-style undo and redo, history display, and recovery that preserves drafts and transcripts after connection loss. Uncertain or queued submissions remain paused for review.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-a8d513fb104884f5.png","alt":"Codex 0.153, 원격 마켓 플러그인 관리·세션 복원 개선 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/05 08:25",
@@ -1242,7 +1274,8 @@ export const week36: WeeklyData = {
     "deck": "Codex 0.153.1–4 expands Astra support from API configuration to bundled default",
     "summary": "According to the release notes, Codex 0.153.1 enabled Astra through API configuration, 0.153.3 added it to Amazon Bedrock catalogs, and 0.153.4 exposed it in the bundled picker and made it the default when no model is configured. The 0.153.2 Fast-tier multiplier correction changed display text only, not request execution.",
     "content": "According to the release notes, Codex 0.153.1 enabled Astra through API configuration, 0.153.3 added it to Amazon Bedrock catalogs, and 0.153.4 exposed it in the bundled picker and made it the default when no model is configured. The 0.153.2 Fast-tier multiplier correction changed display text only, not request execution.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced.\n\nThe card uses publication of 0.153.4, the latest of the four consolidated patches. Versions 0.153.1 and .2 were published on September 4 in Korea time; .3 and .4 on September 5."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-cf565721454d59f8.png","alt":"Codex 0.153.1~4, Astra API 설정부터 기본 모델 전환까지 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02 07:33",
@@ -1266,7 +1299,8 @@ export const week36: WeeklyData = {
     "deck": "Codex 0.152.1 honors model-provided Node REPL approval policies",
     "summary": "Codex 0.152.1 reports that Guardian approval review now honors Node REPL policies supplied through model metadata. This is a narrowly scoped approval-policy fix documented in release notes, not an independently reproduced test.",
     "content": "Codex 0.152.1 reports that Guardian approval review now honors Node REPL policies supplied through model metadata. This is a narrowly scoped approval-policy fix documented in release notes, not an independently reproduced test.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-f490c97781fc0cfa.png","alt":"Codex 0.152.1, Guardian 승인 검토에 Node REPL 정책 반영 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/03",
@@ -1380,7 +1414,8 @@ export const week36: WeeklyData = {
             "AI",
             "2026-w36",
             "Anthropic"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-125-a34bb09d7720.svg","alt":"Improving our alignment and security efforts"},
         },
         {
           "date": "9/1",
@@ -1404,7 +1439,8 @@ export const week36: WeeklyData = {
             "AI",
             "2026-w36",
             "Anthropic"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-126-5d6d559dfc32.svg","alt":"Developing Enterprise Frontier Safeguards with our customers"},
         },
 {
   "date": "9/03 07:33",
@@ -1428,7 +1464,8 @@ export const week36: WeeklyData = {
     "deck": "Claude Code 2.1.259 adds managed MCP and preserves concurrent-session settings",
     "summary": "Claude Code 2.1.259 adds managedMcpServers for organization-provided HTTP and SSE MCP servers. It also adds an unattended-host option that denies actions requiring a permission prompt and fixes concurrent sessions overwriting one another's configuration. These are release-note claims, not independently reproduced security tests.",
     "content": "Claude Code 2.1.259 adds managedMcpServers for organization-provided HTTP and SSE MCP servers. It also adds an unattended-host option that denies actions requiring a permission prompt and fixes concurrent sessions overwriting one another's configuration. These are release-note claims, not independently reproduced security tests.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-0e371a11c328c372.png","alt":"Claude Code 2.1.259, 기업 MCP·동시 세션 설정 보존 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/04 08:48",
@@ -1452,7 +1489,8 @@ export const week36: WeeklyData = {
     "deck": "Claude Code 2.1.260 adds a diff panel and fixes read-only permission rules",
     "summary": "Claude Code 2.1.260 adds a diff panel beside fullscreen conversations and likely-cause reporting for prompt-cache misses. The release also reports a fix for file permission rules containing parentheses being ignored, which could leave read-only folders writable. The fix is documented in release notes, not independently reproduced here.",
     "content": "Claude Code 2.1.260 adds a diff panel beside fullscreen conversations and likely-cause reporting for prompt-cache misses. The release also reports a fix for file permission rules containing parentheses being ignored, which could leave read-only folders writable. The fix is documented in release notes, not independently reproduced here.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-93601d11e4db33a8.png","alt":"Claude Code 2.1.260, diff 패널·읽기전용 권한 오류 수정 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/05 04:58",
@@ -1476,7 +1514,8 @@ export const week36: WeeklyData = {
     "deck": "Claude Code 2.1.261 adds skill-doctor and improves output limits and resume",
     "summary": "Claude Code 2.1.261 adds /skill-doctor to identify unused skills and their context cost. It also adds configurable inline output limits for commands and background tasks, and reports a fix for resumed sessions losing hook output and context around parallel tool calls.",
     "content": "Claude Code 2.1.261 adds /skill-doctor to identify unused skills and their context cost. It also adds configurable inline output limits for commands and background tasks, and reports a fix for resumed sessions losing hook output and context around parallel tool calls.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-7c76a455bae5923b.png","alt":"Claude Code 2.1.261, skill-doctor·출력 한도·복원 개선 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02 07:33",
@@ -1500,7 +1539,8 @@ export const week36: WeeklyData = {
     "deck": "Claude Code 2.1.258 fixes macOS Monterey startup failures",
     "summary": "Claude Code 2.1.258 reports a fix for macOS 12 Monterey startup failures introduced in 2.1.255. It also fixes remote and scheduled sessions failing with an empty-message error when a resent permission approval cannot be applied.",
     "content": "Claude Code 2.1.258 reports a fix for macOS 12 Monterey startup failures introduced in 2.1.255. It also fixes remote and scheduled sessions failing with an empty-message error when a resent permission approval cannot be applied.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-23cf4e186c350d83.png","alt":"Claude Code 2.1.258, macOS Monterey 시작 오류 수정 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/02 02:53",
@@ -1524,7 +1564,8 @@ export const week36: WeeklyData = {
     "deck": "Claude Code 2.1.257 adds Fable 5.1 and containment-related approval safeguards",
     "summary": "Claude Code 2.1.257 adds Fable 5.1 as the default Fable model. The notes describe stronger auto-mode handling of containment-escape actions and an auto-mode first-read confirmation outside working directories. They also report fixes for stray authentication headers and remote-control consent handling; these are release-note claims rather than reproduced security tests.",
     "content": "Claude Code 2.1.257 adds Fable 5.1 as the default Fable model. The notes describe stronger auto-mode handling of containment-escape actions and an auto-mode first-read confirmation outside working directories. They also report fixes for stray authentication headers and remote-control consent handling; these are release-note claims rather than reproduced security tests.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-7728fa2f91b704b5.png","alt":"Claude Code 2.1.257, Fable 5.1 지원·자동 승인 경계 강화 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/01 04:46",
@@ -1548,7 +1589,8 @@ export const week36: WeeklyData = {
     "deck": "Claude Code 2.1.252 fixes oversized failure-output and remote-session stalls",
     "summary": "Claude Code 2.1.252 reports a fix for very large background-task failure output pushing conversations beyond the API request size limit. It also addresses Bash failures on some Macs, saving always-allow decisions in projects without local settings, and remote-session stalls during degraded connectivity.",
     "content": "Claude Code 2.1.252 reports a fix for very large background-task failure output pushing conversations beyond the API request size limit. It also addresses Bash failures on some Macs, saving always-allow decisions in projects without local settings, and remote-session stalls during degraded connectivity.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-c2db1cf2bc94be3c.png","alt":"Claude Code 2.1.252, 대형 실패 출력으로 인한 대화 한도 초과 수정 공식 출처 이미지","provenance":"source-share-preview"},
 },
 {
   "date": "9/04",
@@ -1569,7 +1611,8 @@ export const week36: WeeklyData = {
     "2026-w36",
     "Anthropic"
   ],
-  "slug": "anthropic-20260904-product-d617b435d05f"
+  "slug": "anthropic-20260904-product-d617b435d05f",
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-e94fc2f0f03f5691.webp","alt":"Formalizing Fermat's Last Theorem "},
 },
 {
   "date": "9/03",
@@ -1662,7 +1705,8 @@ export const week36: WeeklyData = {
         "deck": "Ai2 BenchMIRT audits the abilities measured by individual benchmark items",
         "summary": "Ai2 introduced BenchMIRT to audit LLM benchmarks at the level of individual questions and tasks. It examines how a single score can blend capabilities such as safety and reasoning, estimating which underlying abilities drive item-level performance.",
         "content": "Ai2 introduced BenchMIRT to audit LLM benchmarks at the level of individual questions and tasks. It examines how a single score can blend capabilities such as safety and reasoning, estimating which underlying abilities drive item-level performance.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-137-613ea2114ac5.png","alt":"BenchMIRT blog draft latest - Google Docs-image-1 (3)"},
     }
   ]
 },
@@ -1692,7 +1736,8 @@ export const week36: WeeklyData = {
         "deck": "Microsoft argues for useful output as the measure of AI infrastructure",
         "summary": "Microsoft published an argument that AI infrastructure should be measured by useful outcomes rather than chip or token counts alone. It calls for co-design across memory, networking, power, models, and software to extract more value from existing resources. This is an official perspective article, not a product launch or independent benchmark.",
         "content": "Microsoft published an argument that AI infrastructure should be measured by useful outcomes rather than chip or token counts alone. It calls for co-design across memory, networking, power, models, and software to extract more value from existing resources. This is an official perspective article, not a product launch or independent benchmark.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-9309558a16c8109b.png","alt":"  Three-panel composite image illustrating semiconductor innovation and real-world impact. The left panel shows a close-up of a blue-lit silicon wafer being inspected under a microscope or precision manufacturing tool. The center panel provides an aerial view of people crossing a city crosswalk. The right panel shows a researcher wearing safety glasses and a lab coat while working with electronic equipment in a laboratory setting. The image uses cool blue tones."},
     },
 {
   "date": "9/2",
@@ -1716,7 +1761,8 @@ export const week36: WeeklyData = {
     "deck": "VS Code 1.136 introduced Agent Merge in preview and improvements for managing agent work across workspaces and related chats.",
     "summary": "VS Code 1.136 introduced Agent Merge in preview and improvements for managing agent work across workspaces and related chats. Multi-root workspace support is experimental. September 2 is retained as the publisher release date.",
     "content": "VS Code 1.136 introduced Agent Merge in preview and improvements for managing agent work across workspaces and related chats. Multi-root workspace support is experimental. September 2 is retained as the publisher release date.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-29b6acaec0a8b92d.webp","alt":"Screenshot of the redesigned new-session input in the Agents window with context, permission, worktree, and branch controls."},
 },
 {
   "date": "9/4 03:15",
@@ -1739,7 +1785,8 @@ export const week36: WeeklyData = {
     "deck": "GPT-6 Astra becomes generally available in Microsoft Foundry",
     "summary": "Microsoft announced general availability of GPT-6 Astra for all Microsoft Foundry customers. This is an Azure distribution event with enterprise access and governance controls, not OpenAI’s original model announcement.",
     "content": "Microsoft announced general availability of GPT-6 Astra for all Microsoft Foundry customers. This is an Azure distribution event with enterprise access and governance controls, not OpenAI’s original model announcement.\n\nThe publisher timestamp is converted to KST."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-ee4d2399225c23b0.webp","alt":"GPT-6 Astra is generally available for all customers"},
 },
 {
   "date": "9/3 01:00",
@@ -1762,7 +1809,8 @@ export const week36: WeeklyData = {
     "deck": "Microsoft explains context engineering for agent costs",
     "summary": "Microsoft’s agent-optimization series discusses managing instructions, tools, retrieved documents and conversation history rather than retaining prototype context settings indefinitely. It is technical guidance on evolving agent knowledge and memory, not a new product GA announcement.",
     "content": "**Article type: Technical implementation guide / analysis**\n\nMicrosoft’s agent-optimization series discusses managing instructions, tools, retrieved documents and conversation history rather than retaining prototype context settings indefinitely. It is technical guidance on evolving agent knowledge and memory, not a new product GA announcement.\n\nThe publisher timestamp is converted to KST."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-045bc8f0c428897f.jpg","alt":"Person in the background with text reading Microsoft Foundry. Build agents and optimize workflows. The economics of agent optimization"},
 },
 {
   "date": "9/1 01:00",
@@ -1785,7 +1833,8 @@ export const week36: WeeklyData = {
     "deck": "Microsoft shares its marketing team’s Foundry agent experience",
     "summary": "Microsoft’s marketing team described Foundry agents grounded in business knowledge to reduce repeated information gathering and coordination. This is an internal adoption account reported by the vendor, not an independently verified productivity study.",
     "content": "**Article type: Implementation / architecture case study**\n\nMicrosoft’s marketing team described Foundry agents grounded in business knowledge to reduce repeated information gathering and coordination. This is an internal adoption account reported by the vendor, not an independently verified productivity study.\n\nThe publisher timestamp is converted to KST."
-  }
+  },
+  thumbnail: {"src":"/source-media/weekly-20260909/recent-1a2fe4a7c5e01118.jpg","alt":"People working at computer, abstract network background"},
 },
   ]
 },
@@ -1812,7 +1861,8 @@ export const week36: WeeklyData = {
         "2026-w36",
         "Cohere"
       ],
-      "slug": "cohere-20260903-product-aa2ad2ce52c8"
+      "slug": "cohere-20260903-product-aa2ad2ce52c8",
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-162-4393ec832d72.svg","alt":"Cohere, 에이전트 도구가 실제 어떤 일을 하는지 분석 공식 출처 이미지"},
     }
   ]
 },
@@ -1839,7 +1889,8 @@ export const week36: WeeklyData = {
         "생성형 AI",
         "출시 예정"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-00b8a7be042b5785.jpg","alt":"Luma Agents, 올해 안에 아랍어 전체 인터페이스 제공 계획 공식 출처 이미지"},
     }
   ]
 },
@@ -1866,7 +1917,8 @@ export const week36: WeeklyData = {
         "생성형 AI",
         "제품 작업공간"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-504fc4d7d00168d4.jpg","alt":"Higgsfield 3D Jutsu, 프롬프트를 편집 가능한 3D 장면으로 공식 출처 이미지"},
     },
     {
       "date": "9/01 06:31",
@@ -1887,7 +1939,8 @@ export const week36: WeeklyData = {
         "생성형 AI",
         "제품 기능"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-c588dceb9ac3fff2.png","alt":"Higgsfield Genjutsu, 기존 영상의 움직임을 옮기고 일부 요소를 교체 공식 출처 이미지"},
     }
   ]
 },
@@ -1914,7 +1967,8 @@ export const week36: WeeklyData = {
         "AI 산업",
         "CRO 인사"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-16f39da410502543.webp","alt":"ElevenLabs, 전 OpenAI 기업 영업 책임자 Ashley Kramer를 CRO로 영입 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/04 21:00",
@@ -1935,7 +1989,8 @@ export const week36: WeeklyData = {
         "AI 활용",
         "지원 파트너십"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-a624f09790338f71.webp","alt":"ElevenLabs 음성 지원 프로그램, 브라질 단체 2곳과 협력 확대 공식 출처 이미지"},
     },
     {
       "date": "9/04 20:30",
@@ -1956,7 +2011,8 @@ export const week36: WeeklyData = {
         "AI 활용",
         "고객사 도입"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-4d674a10a12c79ba.webp","alt":"Havells One, 8개 언어로 가전을 제어하는 음성 모드 적용 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/03 21:00",
@@ -1977,7 +2033,8 @@ export const week36: WeeklyData = {
         "AI 활용",
         "운영 사례"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-66e5a3cff9f9a7e1.jpg","alt":"AI SDR workflow enriches leads, discovers fit, then routes them to support, signup, or demo."},
     }
   ]
 },
@@ -2004,7 +2061,8 @@ export const week36: WeeklyData = {
         "AI 활용",
         "제작 사례"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-93bbfe99057f010f.webp","alt":"game industry character workflow"},
     }
   ]
 },
@@ -2031,7 +2089,8 @@ export const week36: WeeklyData = {
         "생성형 AI",
         "조기 접근 모델 공개"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-dcf6d603ab0ccbdf.webp","alt":"World Labs Atlas 공개, 이미지·영상·3D를 하나의 공간 맥락으로 공식 출처 이미지"},
     }
   ]
 },
@@ -2112,7 +2171,8 @@ export const week36: WeeklyData = {
         "생성형 AI",
         "연구 프리뷰"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-0441f5644303dad5.webp","alt":"Runway GWM Worlds 2, 영상·음성이 실시간으로 이어지는 상호작용 세계 공식 출처 이미지"},
     }
   ]
 },
@@ -2139,7 +2199,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://news.sktelecom.com/230220",
-      "slug": "industry-20260902-c687950bfd98"
+      "slug": "industry-20260902-c687950bfd98",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-d5e52a0e82b6751b.jpg","alt":"SKT, 불꽃축제 통신망 설계에 AI 운용 시스템 적용 공식 출처 이미지"},
     },
     {
       "date": "9/02 08:29",
@@ -2160,7 +2221,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://news.sktelecom.com/230146",
-      "slug": "industry-20260902-584c34767e0a"
+      "slug": "industry-20260902-584c34767e0a",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-8f743f633cd3683d.png","alt":"SKT, 생활 속 프롬프트 활용 공모전 사례 소개 공식 출처 이미지"},
     },
     {
       "date": "8/31 08:43",
@@ -2181,7 +2243,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://news.sktelecom.com/230057",
-      "slug": "industry-20260831-067f263559be"
+      "slug": "industry-20260831-067f263559be",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-ade9d6c403bf15b3.jpg","alt":"에이닷 로깅, 메타 AI 글래스 사진 정리 지원 공식 출처 이미지"},
     }
   ]
 },
@@ -2208,7 +2271,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034634",
-      "slug": "industry-20260904-211859c1af13"
+      "slug": "industry-20260904-211859c1af13",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-f198fb10efdbe7f7.jpg","alt":"네이버·브룩필드, AI 팩토리 후속 논의 공식 출처 이미지"},
     },
     {
       "date": "9/03",
@@ -2256,7 +2320,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.figure.ai/news/figure-and-nscale-sign-strategic-partnership",
-      "slug": "industry-20260903-6c72d86a3efa"
+      "slug": "industry-20260903-6c72d86a3efa",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-68ba598f5ceb484c.webp","alt":"Figure·Nscale, 휴머노이드 학습용 대규모 컴퓨팅 계약 공식 출처 이미지"},
     }
   ]
 },
@@ -2283,7 +2348,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/",
-      "slug": "industry-20260904-d6c134330470"
+      "slug": "industry-20260904-d6c134330470",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b8d5ebc86e9a11be.png","alt":"Architecture diagram of the WhatsApp ordering solution across ingress, agent runtimes, AI models, backend APIs, and storage on AWS"},
     },
     {
       "date": "9/05 02:20",
@@ -2304,7 +2370,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/designing-lifecycle-policies-for-agentcore-memory/",
-      "slug": "industry-20260904-9afbac9c1db6"
+      "slug": "industry-20260904-9afbac9c1db6",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-d7cbe8a52a1316d2.png","alt":"Nightly memory lifecycle workflow: Amazon EventBridge triggers a Step Functions state machine running five Lambda functions"},
     },
     {
       "date": "9/05 01:16",
@@ -2325,7 +2392,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/build-a-physical-ai-model-factory-with-nvidia-cosmos-3-on-sagemaker-hyperpod/",
-      "slug": "industry-20260904-35f53d2be49c"
+      "slug": "industry-20260904-35f53d2be49c",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-538d1cb28481919c.png","alt":"Cosmos 3 shared token stream feeding the Reasoner and Generator towers, with the attention mask for the two experts"},
     },
     {
       "date": "9/05 01:12",
@@ -2346,7 +2414,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/run-agent-driven-amazon-sagemaker-hyperpod-operations-with-instantstart/",
-      "slug": "industry-20260904-16e0816d90d3"
+      "slug": "industry-20260904-16e0816d90d3",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-7f92fe65bc862084.png","alt":"AWS, InstantStart로 HyperPod 운영 작업에 에이전트 적용 공식 출처 이미지"},
     },
     {
       "date": "9/05 01:08",
@@ -2367,7 +2436,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/customizing-your-knowledge-base-on-amazon-bedrock-for-large-and-complex-documents-using-amazon-textract/",
-      "slug": "industry-20260904-bfd3c1a428a4"
+      "slug": "industry-20260904-bfd3c1a428a4",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-12abc1a8098b756e.png","alt":"Chatbot response for a utility bill query using the custom knowledge base solution"},
     },
     {
       "date": "9/05 01:06",
@@ -2388,7 +2458,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/how-intuit-built-an-agentic-disaster-recovery-assistant-with-amazon-bedrock/",
-      "slug": "industry-20260904-1c18c9e198c1"
+      "slug": "industry-20260904-1c18c9e198c1",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-96b7b42b27ab523b.png","alt":"Four-layer EWOK Agent architecture showing request flow from an engineer through Amazon Bedrock to a deterministic recovery action in EWOK"},
     },
     {
       "date": "9/04 01:16",
@@ -2409,7 +2480,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/ai-driven-development-lifecycle-using-amazon-bedrock-agentcore/",
-      "slug": "industry-20260903-be8318a3ed9c"
+      "slug": "industry-20260903-be8318a3ed9c",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-85f743ffd3779c0c.png","alt":"An Amazon S3 upload triggers a Lambda function that invokes an AgentCore agent to generate a Mermaid ER diagram"},
     },
     {
       "date": "9/04 01:14",
@@ -2430,7 +2502,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/migrate-agentic-workloads-to-amazon-bedrock-agentcore/",
-      "slug": "industry-20260903-2c4d2687faed"
+      "slug": "industry-20260903-2c4d2687faed",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-476903b617826f00.png","alt":"Comparison matrix titled “Migrating the sample LangGraph agent to AgentCore, stage by stage.” A subtitle states that each stage is measured for what we stopped operating and who plans the next step, and a note beneath it adds that one variable moved at a time: stage 1 moved where the agent ran, stage 2 moved how it planned. A band across the top, marked unchanged at every stage, holds the agent itself: classify, route, escalate, three tools. Four numbered stage columns are grouped under three headings. Where we started holds stage 0, self-hosted LangGraph on compute we ran and patched, marked baseline, reporting ten still ours. What this post builds, labeled with an Amazon Bedrock AgentCore icon, holds two highlighted columns: stage 1, replatform, adopting Runtime, Gateway and Memory, marked walked in this post, reporting five moved and five still ours. And stage 2, rebuild, where the loop becomes model-driven planning, also marked walked in this post, reporting the same five moved and five still ours. Beyond this post holds stage 3, hand the loop over, where AgentCore runs it, marked documented only, reporting six moved and four still ours. A row labeled who planned the next step reads our code at stage 0, our code at stage 1, the model at stage 2, and the model at stage 3. A row labeled what moves at this stage reads: nothing moved yet at stage 0, all ten ours, our router planned. Five moved to AWS at stage 1, the same five still ours, our router still planned. Nothing operational moved at stage 2, the same five still ours, the model took over planning, and stage 2 runs standalone. One more would move at stage 3, dependency updates, not built here. Ten operational burdens then run down the left as rows: VPC, WAF, IAM policies, secrets rotation, OS patching, dependency updates, auto-scaling rules, session isolation, checkpoint storage, and tool auth. Stage 0 shows a filled square on all ten. Stages 1 and 2 are identical to each other: filled circles on OS patching, auto-scaling rules, session isolation, checkpoint storage and tool auth, and filled squares on VPC, WAF, IAM policies, secrets rotation and dependency updates. Stage 3 shows filled circles on six, adding dependency updates, with VPC, WAF, IAM policies and secrets rotation the four squares left. A legend defines the two marks: a filled circle for moved to AgentCore, and a filled square for still ours to operate. A footer reads that the counts are measured from the committed sample, not asserted."},
     },
     {
       "date": "9/04 01:11",
@@ -2451,7 +2524,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/integrating-outlook-with-amazon-quick-for-ai-powered-email-automation/",
-      "slug": "industry-20260903-3e9316334e5d"
+      "slug": "industry-20260903-3e9316334e5d",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-e44cf13a88b8ddfe.png","alt":"Amazon Quick Connectors page with the Microsoft Outlook connector and the Connect option"},
     },
     {
       "date": "9/04 01:10",
@@ -2472,7 +2546,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/set-up-openai-chatgpt-codex-with-litellm-on-amazon-ecs-and-amazon-bedrock/",
-      "slug": "industry-20260903-de7498be7a52"
+      "slug": "industry-20260903-de7498be7a52",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-38ef869156111ce0.png","alt":"Codex request flow through LiteLLM on AWS"},
     },
     {
       "date": "9/04 01:08",
@@ -2493,7 +2568,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-building-agentic-automations-with-amazon-quick-automate/",
-      "slug": "industry-20260903-aad381c421dc"
+      "slug": "industry-20260903-aad381c421dc",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b854aa8ff5f4fd8d.png","alt":"AWS, Quick Automate 에이전트 자동화 설계 지침 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/03 06:22",
@@ -2514,7 +2590,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/accessing-openai-gpt-5-6-models-on-amazon-bedrock-from-australia-with-global-cross-region-inference/",
-      "slug": "industry-20260902-b06b9c6e75bf"
+      "slug": "industry-20260902-b06b9c6e75bf",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b3fd8ab69e8f575b.png","alt":"The CloudWatch Coding Agent Insights dashboard in Asia Pacific (Sydney) showing Codex token usage and request activity."},
     },
     {
       "date": "9/03 03:26",
@@ -2535,7 +2612,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/modernizing-and-scaling-support-operations-with-generative-ai-on-aws/",
-      "slug": "industry-20260902-03f210cec848"
+      "slug": "industry-20260902-03f210cec848",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-8b134edef1d04657.jpg","alt":"High-level architecture of the two-layer support operations solution on AWS"},
     },
     {
       "date": "9/03 03:18",
@@ -2556,7 +2634,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/from-code-to-diagrams-agentic-architecture-documentation-with-amazon-bedrock-agentcore/",
-      "slug": "industry-20260902-22bbd446ddd8"
+      "slug": "industry-20260902-22bbd446ddd8",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-5708a8b25abfcbe3.png","alt":"Architecture diagram showing code flowing from AWS CodeCommit through AWS CodePipeline and AgentCore to diagram generation and Amazon Bedrock Knowledge Bases ingestion"},
     },
     {
       "date": "9/03 03:14",
@@ -2577,7 +2656,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/trinity-agentic-ai-powered-transition-planning-for-students-with-disabilities/",
-      "slug": "industry-20260902-eaf328e3c739"
+      "slug": "industry-20260902-eaf328e3c739",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-679c29f8bd96fa58.png","alt":"AWS, Trinity의 장애 학생 진학·진로 계획 AI 지원 공식 출처 이미지"},
     },
     {
       "date": "9/02 04:12",
@@ -2598,7 +2678,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-1-on-aws/",
-      "slug": "industry-20260901-876e50fd91b6"
+      "slug": "industry-20260901-876e50fd91b6",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-294ac6d01ed0df9f.png","alt":"AWS, AWS에서 Claude Fable 5.1 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/02 01:17",
@@ -2619,7 +2700,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/from-theory-to-delivery-how-atos-upskilled-400-engineers-in-agentic-ai/",
-      "slug": "industry-20260901-2e5e60f6d57b"
+      "slug": "industry-20260901-2e5e60f6d57b",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-50507cf844954d90.png","alt":"Screenshot of the AWS AI League gameplay interface showing a 10x10 dungeon maze grid with the agent starting position, walls, coins, spike traps, challenge tiles, and a treasure chest, alongside a navigation prompt input panel and combat log"},
     },
     {
       "date": "9/02 01:03",
@@ -2640,7 +2722,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/tokenomics-at-scale-how-jamf-built-real-time-spend-enforcement-for-amazon-bedrock/",
-      "slug": "industry-20260901-c0d794c4caea"
+      "slug": "industry-20260901-c0d794c4caea",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-dc38027fbdb63364.png","alt":"Serverless flow for enforcing per-user Amazon Bedrock spend: Bedrock logs to Amazon S3, Athena computes daily spend, and a scheduled Lambda updates IAM policies"},
     },
     {
       "date": "9/02 01:02",
@@ -2661,7 +2744,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/securing-amazon-quick-from-poc-to-production-agents-flows-and-spaces/",
-      "slug": "industry-20260901-3376c3602dd4"
+      "slug": "industry-20260901-3376c3602dd4",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b76c7e39a74f9976.png","alt":"HR Leadership Dashboard showing full workforce metrics including salary, attrition risk, and position-level breakdowns"},
     },
     {
       "date": "9/02 00:50",
@@ -2682,7 +2766,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/how-t54-built-a-trust-layer-with-amazon-bedrock-agentcore-payments/",
-      "slug": "industry-20260901-40487b151b04"
+      "slug": "industry-20260901-40487b151b04",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-3c30961dd089a6bd.png","alt":"x402 payment flow where the agent scores an endpoint and a fail-closed trust gate must approve it before Amazon Bedrock AgentCore payments settles the transaction"},
     },
     {
       "date": "9/02 00:45",
@@ -2703,7 +2788,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/how-boomi-scribe-streamlines-documentation-using-aws/",
-      "slug": "industry-20260901-64916c4a432c"
+      "slug": "industry-20260901-64916c4a432c",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-d0179f2394f8e394.png","alt":"Boomi Scribe AWS architecture using Amazon Bedrock, Amazon SageMaker AI, Amazon S3, Amazon DynamoDB, and AWS Lambda"},
     },
     {
       "date": "9/01 07:47",
@@ -2724,7 +2810,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/connect-an-agentcore-runtime-hosted-mcp-server-to-amazon-quick/",
-      "slug": "industry-20260831-16b163476162"
+      "slug": "industry-20260831-16b163476162",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-ff2c84fea3759abe.png","alt":"Architecture diagram of Amazon Quick connecting through AgentCore Gateway to an MCP server on AgentCore Runtime, with Amazon Cognito and AgentCore Identity for authentication"},
     },
     {
       "date": "9/01 04:18",
@@ -2745,7 +2832,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/manage-agents-tools-and-skills-at-scale-with-aws-agent-registry/",
-      "slug": "industry-20260831-79e5b81ba1bf"
+      "slug": "industry-20260831-79e5b81ba1bf",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-a7280d2026d2eb59.png","alt":"Overview of AWS Agent Registry showing its capabilities and access surfaces"},
     },
     {
       "date": "9/01 04:08",
@@ -2766,7 +2854,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/build-observable-enterprise-agentic-retrieval-using-managed-amazon-bedrock-knowledge-base-with-aws-cloudformation/",
-      "slug": "industry-20260831-3987d589a7ca"
+      "slug": "industry-20260831-3987d589a7ca",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-3d475f3c8db9dea6.png","alt":"AWS, CloudFormation으로 관측 가능한 Bedrock 검색 구성 공식 출처 이미지"},
     },
     {
       "date": "9/01 03:56",
@@ -2787,7 +2876,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://aws.amazon.com/blogs/machine-learning/build-multi-tenant-agentic-chat-applications-on-enterprise-data-with-amazon-bedrock-managed-knowledge-base/",
-      "slug": "industry-20260831-165696a62ba8"
+      "slug": "industry-20260831-165696a62ba8",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-c5864f008a727ef8.png","alt":"Architecture of the multi-tenant document chat solution showing the ingestion and retrieval flows"},
     }
   ]
 },
@@ -2814,7 +2904,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://newsroom.amd.com/news/amd-cisco-humain-expand-saudi-arabia-ai-infrastructure/",
-      "slug": "industry-20260831-61288bda1403"
+      "slug": "industry-20260831-61288bda1403",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-fe9cacd07b0a157b.jpg","alt":"AMD·Cisco·HUMAIN, 사우디 AI 인프라 협력 확대 공식 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },
@@ -2841,7 +2932,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.figma.com/blog/how-coinbase-used-code-connect-to-shrink-token-costs/",
-      "slug": "industry-20260902-f12b6328a51e"
+      "slug": "industry-20260902-f12b6328a51e",
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-196-062a611f6b1f.avif","alt":"An overview of components in Coinbase Design System"},
     },
     {
       "date": "9/01",
@@ -2895,7 +2987,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.atlassian.com/blog/company-news/expanded-usage-based-pricing",
-      "slug": "industry-20260901-a37e16f233dd"
+      "slug": "industry-20260901-a37e16f233dd",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-0a5acc7193703e95.png","alt":"Atlassian, AI 사용량 기반 과금 확대 안내 공식 출처 이미지"},
     },
     {
       "date": "9/01 09:19",
@@ -2916,7 +3009,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.atlassian.com/blog/ai-at-work/want-more-confidence-in-ai-give-it-more-context",
-      "slug": "industry-20260831-1fd39b3d1730"
+      "slug": "industry-20260831-1fd39b3d1730",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-e81606068bf68af7.png","alt":"Atlassian, AI 신뢰와 업무 맥락의 관계 분석 공식 출처 이미지"},
     },
     {
       "date": "8/31 09:00",
@@ -2937,7 +3031,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.atlassian.com/blog/bitbucket/vulnerability-fixes-with-agentic-pipelines",
-      "slug": "industry-20260830-c791eac41339"
+      "slug": "industry-20260830-c791eac41339",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-c5ea3810349b8947.png","alt":"Atlassian, 취약점 수정 PR을 준비하는 에이전트 자동화 공개 공식 출처 이미지"},
     }
   ]
 },
@@ -2964,7 +3059,8 @@ export const week36: WeeklyData = {
         "2026-w36"
       ],
       "officialUrl": "https://www.salesforce.com/news/stories/winter-2027-product-release-announcement/",
-      "slug": "industry-20260831-b43a3814ec3d"
+      "slug": "industry-20260831-b43a3814ec3d",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-191d5b9bc8af1ca3.png","alt":"Salesforce’s Top Innovations in the Winter 2027 Release"},
     }
   ]
 },
@@ -2994,7 +3090,8 @@ export const week36: WeeklyData = {
         "deck": "LangChain moved MCP support into langchain.mcp, built on FastMCP.",
         "summary": "LangChain moved MCP support into langchain.mcp, built on FastMCP. Human-input requests use LangGraph interrupts, while tool catalogs can be cached for the server-advertised lifetime. Python support requires langchain[mcp] 1.4.0 or later and is beta; TypeScript is planned.",
         "content": "LangChain moved MCP support into langchain.mcp, built on FastMCP. Human-input requests use LangGraph interrupts, while tool catalogs can be cached for the server-advertised lifetime. Python support requires langchain[mcp] 1.4.0 or later and is beta; TypeScript is planned.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-188-9853b982eaca.png","alt":"LangChain, MCP 지원을 본체에 통합…중단·질문·캐시 지원 공식 출처 이미지"},
     },
     {
       "date": "9/3",
@@ -3017,7 +3114,8 @@ export const week36: WeeklyData = {
         "deck": "LangChain and Nevermined demonstrate bounded agent payments",
         "summary": "A LangChain partner cookbook demonstrates Nevermined payments with spending and destination limits, purchasing and topping up search credits and tracing service payments in LangSmith. This is an implementation example, not independent proof of payment safety in every environment.",
         "content": "**Article type: Technical implementation guide / analysis**\n\nA LangChain partner cookbook demonstrates Nevermined payments with spending and destination limits, purchasing and topping up search credits and tracing service payments in LangSmith. This is an implementation example, not independent proof of payment safety in every environment.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-189-44cc5dccfd7c.png","alt":"LangChain·Nevermined, 지출 한도가 있는 에이전트 결제 예제 공식 출처 이미지"},
     },
     {
       "date": "9/3",
@@ -3040,7 +3138,8 @@ export const week36: WeeklyData = {
         "deck": "LangChain examines enterprise agent operations in Europe and the Middle East",
         "summary": "LangChain examined agent operations at Schneider Electric, Vodafone and monday.com, emphasizing shared platforms, tracing and evaluation, and bounded subagent tools and permissions. This is a vendor-authored case-study synthesis, not a model launch.",
         "content": "**Article type: Implementation / architecture case study**\n\nLangChain examined agent operations at Schneider Electric, Vodafone and monday.com, emphasizing shared platforms, tracing and evaluation, and bounded subagent tools and permissions. This is a vendor-authored case-study synthesis, not a model launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-190-1ac21463d711.png","alt":"LangChain, 유럽·중동 기업의 에이전트 운영 사례 정리 공식 출처 이미지"},
     }
   ]
 },
@@ -3070,7 +3169,8 @@ export const week36: WeeklyData = {
         "deck": "Vercel added @ai-sdk/harness-fx for its lightweight open-source coding agent.",
         "summary": "Vercel added @ai-sdk/harness-fx for its lightweight open-source coding agent. The adapter connects over ACP and uses the same HarnessAgent interface as other supported agents.",
         "content": "Vercel added @ai-sdk/harness-fx for its lightweight open-source coding agent. The adapter connects over ACP and uses the same HarnessAgent interface as other supported agents.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-75d9044c6cf45863.jpg","alt":"Vercel AI SDK, fx 코딩 에이전트 연결 지원 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "8/31",
@@ -3094,7 +3194,8 @@ export const week36: WeeklyData = {
         "deck": "Vercel AI Gateway now supports spending limits per team user, combining attributed API keys and app tokens.",
         "summary": "Vercel AI Gateway now supports spending limits per team user, combining attributed API keys and app tokens. New requests are rejected at the limit. Existing keys remain team-attributed for compatibility, so attribution must be checked before expecting per-user enforcement.",
         "content": "Vercel AI Gateway now supports spending limits per team user, combining attributed API keys and app tokens. New requests are rejected at the limit. Existing keys remain team-attributed for compatibility, so attribution must be checked before expecting per-user enforcement.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/reviewed-recent-197-8066c0f3cb8b.avif","alt":"Track spend for every user against their budget from one overview."},
     },
     {
       "date": "8/31",
@@ -3118,7 +3219,8 @@ export const week36: WeeklyData = {
         "deck": "Vercel now calculates Sandbox snapshot storage charges from each day’s average usage rather than one average for the full monthly period.",
         "summary": "Vercel now calculates Sandbox snapshot storage charges from each day’s average usage rather than one average for the full monthly period. The rate remains $0.08 per GB-month; the change applies automatically in the next billing period for Pro and Enterprise.",
         "content": "Vercel now calculates Sandbox snapshot storage charges from each day’s average usage rather than one average for the full monthly period. The rate remains $0.08 per GB-month; the change applies automatically in the next billing period for Pro and Enterprise.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-2ec7c53d6e71cf75.png","alt":"Vercel Sandbox, 스냅샷 저장비 계산을 일별 평균으로 변경 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/4",
@@ -3141,7 +3243,8 @@ export const week36: WeeklyData = {
         "deck": "Ling 3.0 Flash Sante becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. The health-focused model is free through October 4. The -free model ID stops serving rather than charging after the offer. Medical positioning is not clinical validation or diagnostic approval.",
         "content": "Vercel announced this model integration. The health-focused model is free through October 4. The -free model ID stops serving rather than charging after the offer. Medical positioning is not clinical validation or diagnostic approval.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-93f4fa35342c18cb.png","alt":"Vercel AI Gateway, Ling 3.0 Flash Sante 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/4",
@@ -3164,7 +3267,8 @@ export const week36: WeeklyData = {
         "deck": "GPT 6 Astra becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. Vercel announced availability through AI Gateway. This is a Vercel distribution update, distinct from OpenAI’s original model launch.",
         "content": "Vercel announced this model integration. Vercel announced availability through AI Gateway. This is a Vercel distribution update, distinct from OpenAI’s original model launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-ad9afdebc11ab9ab.png","alt":"Vercel AI Gateway, GPT 6 Astra 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/2",
@@ -3187,7 +3291,8 @@ export const week36: WeeklyData = {
         "deck": "Muse Spark 1.3 becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. Standard and contributor pricing tiers are available. Contributor uses the same model at a lower price but permits Meta to use inputs and outputs for model training and improvement.",
         "content": "Vercel announced this model integration. Standard and contributor pricing tiers are available. Contributor uses the same model at a lower price but permits Meta to use inputs and outputs for model training and improvement.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-811104bfb9eab33f.png","alt":"Vercel AI Gateway, Muse Spark 1.3 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/2",
@@ -3210,7 +3315,8 @@ export const week36: WeeklyData = {
         "deck": "Gemini 3.8 Flash becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. AI Gateway added the model with text, image, PDF and video input plus tool calling. The article advertises 50% off through December 31; this is a distribution and pricing update, not Google’s original launch.",
         "content": "Vercel announced this model integration. AI Gateway added the model with text, image, PDF and video input plus tool calling. The article advertises 50% off through December 31; this is a distribution and pricing update, not Google’s original launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-e2cd35369054621d.png","alt":"Vercel AI Gateway, Gemini 3.8 Flash 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/1",
@@ -3233,7 +3339,8 @@ export const week36: WeeklyData = {
         "deck": "Qwen 3.8 Max 0902 becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. The dated alibaba/qwen3.8-max-0902 ID pins a model snapshot. Vercel also documents rewrite rules for moving existing requests onto it. Digits in the model ID are not treated as its publication date.",
         "content": "Vercel announced this model integration. The dated alibaba/qwen3.8-max-0902 ID pins a model snapshot. Vercel also documents rewrite rules for moving existing requests onto it. Digits in the model ID are not treated as its publication date.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-11f7043a65716489.png","alt":"Vercel AI Gateway, Qwen 3.8 Max 0902 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/1",
@@ -3256,7 +3363,8 @@ export const week36: WeeklyData = {
         "deck": "Claude Fable 5.1 becomes available through Vercel AI Gateway",
         "summary": "Vercel announced this model integration. Vercel announced AI Gateway availability. The article states Fable 5.1 does not support Zero Data Retention: prompts and completions are retained for 30 days and are not used to train Claude.",
         "content": "Vercel announced this model integration. Vercel announced AI Gateway availability. The article states Fable 5.1 does not support Zero Data Retention: prompts and completions are retained for 30 days and are not used to train Claude.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-8ccd6a2a507d64b7.png","alt":"Vercel AI Gateway, Claude Fable 5.1 제공 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/3 10:00",
@@ -3279,7 +3387,8 @@ export const week36: WeeklyData = {
         "deck": "Vercel adds Basic build machines on Pro and Enterprise",
         "summary": "Vercel added 2-vCPU, 8GB Basic build machines for smaller builds on Pro and Enterprise. New projects still default to Elastic.",
         "content": "Vercel added 2-vCPU, 8GB Basic build machines for smaller builds on Pro and Enterprise. New projects still default to Elastic.\n\nThe publisher timestamp is converted to KST."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-904fefb496442f19.jpg","alt":"Vercel, Pro·Enterprise에 Basic 빌드 머신 추가 공식 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },
@@ -3362,7 +3471,8 @@ export const week36: WeeklyData = {
         "deck": "Arena opens its fall academic research call",
         "summary": "Arena opened its fall call for research on evaluation, ranking, human preferences, safety and alignment. Projects led by tenure-track faculty at U.S. universities can receive up to $50,000, with proposals due October 30. This is a research-program announcement, not new model scores.",
         "content": "**Article type: research funding program announcement**\n\nArena opened its fall call for research on evaluation, ranking, human preferences, safety and alignment. Projects led by tenure-track faculty at U.S. universities can receive up to $50,000, with proposals due October 30. This is a research-program announcement, not new model scores.\n\nThe publisher timestamp is converted to KST."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-b7b43d249881091d.png","alt":"Arena, 가을 학술 연구 지원 공모…과제당 최대 5만 달러 공식 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/2 04:10",
@@ -3385,7 +3495,8 @@ export const week36: WeeklyData = {
         "deck": "Arena announces its first academic research cohort",
         "summary": "Arena announced projects in its first academic research cohort, covering human-preference ranking, multi-turn evaluation, metacognitive monitoring and leaderboard optimization. This reports selections, not completed research results.",
         "content": "**Article type: research funding program announcement**\n\nArena announced projects in its first academic research cohort, covering human-preference ranking, multi-turn evaluation, metacognitive monitoring and leaderboard optimization. This reports selections, not completed research results.\n\nThe publisher timestamp is converted to KST."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-ae6658fd66150692.png","alt":"Arena, 첫 학술 연구 지원 기수 발표 공식 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },
@@ -3442,7 +3553,8 @@ export const week36: WeeklyData = {
         "Samsung",
         "2026-w36"
       ],
-      "slug": "discovery-official-0c2ac9ff74bf"
+      "slug": "discovery-official-0c2ac9ff74bf",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-0c2ac9ff74bfee56.jpg","alt":"New A-70% and 13 Kg Bespoke AI Washers"},
     }
   ]
 },
@@ -3470,7 +3582,8 @@ export const week36: WeeklyData = {
         "Wonderful",
         "2026-w36"
       ],
-      "slug": "discovery-wonderful-series-c"
+      "slug": "discovery-wonderful-series-c",
+      thumbnail: {"src":"/source-media/weekly-20260909/recent-f6acc130483b89f8.png","alt":"Wonderful, 기업 AI 운영 플랫폼 확장에 5억5천만 달러 조달 공식 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },

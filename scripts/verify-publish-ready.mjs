@@ -28,16 +28,21 @@ const fail = [];   // HARD (exit 2)
 const strictFail = []; // exit 3 (strict only)
 const notes = [];
 
-// ---- A. missing.json ----
+// ---- A. Evaluate current Weekly data. Never infer completion from stale missing.json. ----
+if (SCOPE === 'weeks' || SCOPE === 'all') {
+  const weekly = spawnSync(process.execPath, [join(__dirname, 'check-weekly-source-images.mjs')], { cwd: ROOT, encoding: 'utf8' });
+  if (weekly.status !== 0) fail.push(`현재 Weekly 출처 이미지 검사 실패: ${(weekly.stdout + weekly.stderr).trim()}`);
+  else notes.push(weekly.stdout.trim());
+}
+// The legacy AB audit remains separate. It is not evidence about Weekly images.
 const missingPath = join(ROOT, "_workspace", "thumbnails", "missing.json");
-if (existsSync(missingPath)) {
+if (SCOPE !== 'weeks' && existsSync(missingPath)) {
   try {
     const m = JSON.parse(readFileSync(missingPath, "utf-8"));
     const list = Array.isArray(m.missing) ? m.missing : [];
     const scoped = list.filter((x) => {
       if (SCOPE === "ab") return /editions|ab/i.test(x.file || "");
-      if (SCOPE === "weeks") return /w\d|weeks/i.test(x.file || "");
-      return true;
+      return /editions|ab/i.test(x.file || "");
     });
     // 과거 회차의 미해결 썸네일은 baseline 으로 승인해 추적하고, baseline 밖 신규만 차단한다.
     // verify-no-duplicates.mjs 의 legacy-accept 와 같은 회귀 방식이다. 왜: 브랜드가 다른
@@ -69,8 +74,8 @@ if (existsSync(missingPath)) {
   } catch (e) {
     fail.push(`missing.json 파싱 실패: ${e.message}`);
   }
-} else {
-  notes.push("missing.json 없음 — 썸네일 주입이 아직 안 돌았거나 0건");
+} else if (SCOPE !== 'weeks') {
+  notes.push("AB missing.json 없음 — AB 이미지 누락 여부는 이 파일로 확인할 수 없음");
 }
 
 // ---- 문자열 제거(중괄호 안전 스캔용) ----

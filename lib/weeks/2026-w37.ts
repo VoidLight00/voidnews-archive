@@ -34,7 +34,8 @@ export const week37: WeeklyData = {
             "deck": "A petabyte-scale database and AVI score help prioritize genomic research",
             "summary": "Google DeepMind introduced AlphaGenome Atlas, which precomputes predicted effects for 9 billion possible single-nucleotide variants in the human genome. Researchers can query a web portal and use the AVI score to prioritize follow-up work.",
             "content": "Google DeepMind introduced AlphaGenome Atlas, a roughly one-petabyte database of predicted regulatory effects for all 9 billion possible single-nucleotide variants in the human genome, calculated using AlphaGenome.\n\nIts AlphaGenome Variant Impact (AVI) score combines coding and non-coding predictions to help researchers prioritize variants. Google also announced a web portal that requires no coding.\n\nThese are model predictions for research, not experimental confirmation of every variant or regulatory approval for clinical diagnosis. The publisher's datePublished value, September 8, 2026 at 14:00 UTC, is displayed as 23:00 KST."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/latest-01-b71ecf5a.webp","alt":"Wavy pink and lavender pillars with glowing orange columns in the center."},
         },
         {
           "date": "9/7 17:00",
@@ -58,7 +59,8 @@ export const week37: WeeklyData = {
             "deck": "Google estimates lower contrail warming impact across over 80 routed flights",
             "summary": "Google and Cathay Pacific are expanding trials that use AI forecasts to avoid contrail-forming regions. Google estimates roughly 40% less contrail warming impact for more than 80 flights that followed avoidance routes in the early trial.",
             "content": "Google announced an expansion of its contrail-avoidance partnership with Cathay Pacific in Asia-Pacific. The system combines AI predictions, satellite imagery and weather intelligence so flight teams can plan small altitude changes around contrail-forming zones.\n\nThe initial operational trial targeted more than 100 flights; over 80 followed avoidance routes. Google's satellite analysis estimated roughly 40% less warming impact from contrails on those flights. This is a company-reported estimate, not a 40% reduction in total flight emissions or fuel consumption.\n\nThe partners are expanding into a larger second phase and collaborating with Contrails.org. The original publication timestamp is September 7, 2026 at 08:00 UTC, displayed as 17:00 KST."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/latest-02-81aca2d3.webp","alt":"Contrails"},
         },
         {
           "date": "9/7 10:00",
@@ -82,7 +84,8 @@ export const week37: WeeklyData = {
             "deck": "The inaugural APAC cohort receives three months of support and mentorship",
             "summary": "Google announced 16 organizations for its first AI for the Planet accelerator cohort in Asia-Pacific. South Korea's TelePIX joins with a satellite-data project for global mangrove monitoring.",
             "content": "Google announced the 16 organizations selected for the inaugural Google DeepMind Accelerator: AI for the Planet cohort in Asia-Pacific. Startups, nonprofits and research teams address biodiversity, sustainable agriculture, and climate and carbon challenges.\n\nSouth Korea's TelePIX is included for work turning satellite data into intelligence for global mangrove monitoring. Over three months, participants receive access to Google AI tools, tailored technical support and expert mentorship.\n\nThis announces cohort selection and support, not independently verified environmental outcomes for each project. The source publication time of September 7, 2026 at 01:00 UTC is shown as 10:00 KST."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/latest-03-9255d351.webp","alt":"A cluster of iridescent, crystalline cubes intertwined with lush green foliage"},
         }
       ]
     },
@@ -118,7 +121,8 @@ export const week37: WeeklyData = {
             "deck": "The company reports a post-money valuation above €21 billion",
             "summary": "Mistral announced a €3 billion Series D led by Samsung Electronics at a reported post-money valuation exceeding €21 billion. It plans to expand research, model-training compute and infrastructure.",
             "content": "Mistral announced a €3 billion Series D funding round at a company-reported post-money valuation above €21 billion. Samsung Electronics led the round, with the EQT-managed Scaleup Europe Fund and existing investor PSG Equity as co-leads.\n\nMistral says the funding will expand frontier research, model-training compute, infrastructure and international commercial operations. Funding and valuation figures are attributed to Mistral's announcement.\n\nThe date is recorded exactly as September 8, 2026 on Mistral's official news index. No publication time or timezone was exposed, so this is the publisher's calendar date, not a confirmed KST conversion. No time has been invented."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/latest-04-d06cc594.jpg","alt":"Mistral, 삼성전자 주도 30억 유로 시리즈 D 투자 발표 출처 이미지","provenance":"source-share-preview"},
         }
       ]
     },
@@ -148,7 +152,8 @@ export const week37: WeeklyData = {
             "deck": "Safety evaluation must measure both harmful refusals and benign over-refusals",
             "summary": "Multiverse Computing researchers presented work on deployment-specific safety boundaries using political persuasion as a testbed. They argue that harmful-refusal gains alone can conceal a model's growing refusal of legitimate requests.",
             "content": "Multiverse Computing researchers presented their 'Safety for Whom?' study on the organization's blog. It examines how to refuse harmful intent within a topic while continuing to answer legitimate requests about that same topic.\n\nIn Qwen3-8B experiments, the authors measured harmful refusal alongside benign over-refusal. Adding benign boundary-pair data reduced benign over-refusal from 32.94% to 4.16%, while harmful refusal also declined from 91.88% to 87.72%. These are author-reported experimental results, including the trade-off, not independently reproduced measurements.\n\nThis card covers the September 8 research explainer, not a claim that the paper first appeared that day. The official blog index gives publishedAt as September 8, 2026 at 14:23:07.255 UTC; the display uses 23:23 KST."
-          }
+          },
+          thumbnail: {"src":"/source-media/weekly-20260909/latest-05-cc2548bc.png","alt":"Narrow-boundary safety. The topic universe of political prompts contains a smaller subset that the deployment should refuse, while the benign complement should still be answered. The ideal refusal is a sharp step, but a trained model's refusal probability is smoother and can overshoot into benign territory near the boundary."},
         }
       ]
     },
@@ -175,7 +180,8 @@ export const week37: WeeklyData = {
         "2026-w37",
         "Cohere"
       ],
-      "slug": "cohere-20260908-product-d632800e227b"
+      "slug": "cohere-20260908-product-d632800e227b",
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-06-e0a90fa7.avif","alt":"An abstract purple image, with organic graphic design."},
     }
   ]
 },
@@ -202,7 +208,8 @@ export const week37: WeeklyData = {
         "AI 산업",
         "CFO 인사"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-07-dacaf33c.webp","alt":"ElevenLabs, 전 Adyen CFO Ethan Tandowsky 영입 출처 이미지","provenance":"source-share-preview"},
     },
     {
       "date": "9/07 21:00",
@@ -223,7 +230,8 @@ export const week37: WeeklyData = {
         "AI 활용",
         "고객사 도입"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-08-8ee9b21e.webp","alt":"Allegro, 배송 상담 전화에 ElevenAgents 음성 에이전트 도입 출처 이미지","provenance":"source-share-preview"},
     }
   ]
 },
@@ -250,7 +258,8 @@ export const week37: WeeklyData = {
         "생성형 AI",
         "월간 업데이트 정리"
       ],
-      "readMinutes": 1
+      "readMinutes": 1,
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-09-49a06172.webp","alt":"tripo august product updates banner"},
     }
   ]
 },
@@ -280,7 +289,8 @@ export const week37: WeeklyData = {
         "deck": "LangChain documented isolated and fork context modes for Deep Agents subagents.",
         "summary": "LangChain documented isolated and fork context modes for Deep Agents subagents. The default isolated mode receives only its task; fork inherits the supervisor conversation to reduce repeated context gathering. Prompt-cache reuse can reduce cost and latency, but the article does not establish universal gains for every task.",
         "content": "LangChain documented isolated and fork context modes for Deep Agents subagents. The default isolated mode receives only its task; fork inherits the supervisor conversation to reduce repeated context gathering. Prompt-cache reuse can reduce cost and latency, but the article does not establish universal gains for every task.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
-      }
+      },
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-10-38ed6410.png","alt":"Deep Agents, 대화 맥락을 물려받는 fork 하위 에이전트 추가 출처 이미지"},
     }
   ]
 },
@@ -308,7 +318,8 @@ export const week37: WeeklyData = {
         "Samsung",
         "2026-w37"
       ],
-      "slug": "discovery-official-d8d20431e093"
+      "slug": "discovery-official-d8d20431e093",
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-11-484f3264.jpg","alt":"Samsung Electronics today announced major software updates for select refrigerators and laundry appliances."},
     }
   ]
 },
@@ -336,7 +347,8 @@ export const week37: WeeklyData = {
         "Insilico Medicine",
         "2026-w37"
       ],
-      "slug": "discovery-insilico-aging"
+      "slug": "discovery-insilico-aging",
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-12-26403c15.png","alt":"Six proteomic aging clocks comparing changes in predicted biological age across rentosertib dose groups and placebo"},
     }
   ]
 },
@@ -364,7 +376,8 @@ export const week37: WeeklyData = {
         "Arm",
         "2026-w37"
       ],
-      "slug": "discovery-arm-ai-portal"
+      "slug": "discovery-arm-ai-portal",
+      thumbnail: {"src":"/source-media/weekly-20260909/latest-13-f4f23d12.jpg","alt":"Arm AI Portal, 기기별 최적화 AI 모델 탐색·배포 지원 출처 이미지"},
     }
   ]
 },

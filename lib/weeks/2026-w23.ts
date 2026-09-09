@@ -818,7 +818,8 @@ export const week23: WeeklyData = {
           "tags": [
             "ClickHouse",
             "AI 코딩"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-2487660d10609c53-5bc7caa8a2bb.avif","alt":"Screenshot_20260401_072810-1.png"},
         },
         {
           "date": "5/26",

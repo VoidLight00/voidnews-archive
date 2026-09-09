@@ -130,7 +130,8 @@ export const week19: WeeklyData = {
             "Workflows",
             "공식"
           ],
-          "featured": true
+          "featured": true,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-6879fcee19ad7423-633694308aa6.png","alt":"Perplexity Computer enterprise updates — 기업 데이터와 반복 업무를 연결하는 Computer 흐름 출처 이미지"},
         },
         {
           "slug": "20260505-perplexity-computer-for-professional-finance-35-bfbd668c3b0b",
@@ -505,7 +506,8 @@ export const week19: WeeklyData = {
             "HappyHorse",
             "벤치마크"
           ],
-          "featured": true
+          "featured": true,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-e48390f68161734d-b15f2d618070.png","alt":"Alibaba HappyHorse 1.0 — 영상 생성 AI 베타 공개 출처 이미지","provenance":"source-share-preview"},
         }
       ]
     },

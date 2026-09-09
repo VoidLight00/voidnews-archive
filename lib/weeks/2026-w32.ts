@@ -801,6 +801,7 @@ export const week32: WeeklyData = {
             deck: "Liquid AI says its 2.6B model competes with ones four times larger.",
             summary: "On 2026-08-04 Liquid AI released LFM2.5-2.6B, an on-device agentic model: 2.69B total parameters, 131,072-token context, ~34T training tokens, 30 layers (22 double-gated short convolution blocks + 8 GQA). Vendor-measured decode speed 220 tok/s on an M5 Max, 113 tok/s on a Ryzen AI Max+ 395 CPU, and ~15K output tok/s at high concurrency on GPU. The model card states it is competitive with models 4x larger on tool use and instruction following, but explicitly not recommended for agentic coding or knowledge-heavy tasks. License is Liquid's own lfm1.0, not Apache-2.0.",
           },
+          thumbnail: {"src":"/source-media/weekly-20260909/older-76737343b723898c-8291311ed0c4.png","alt":"LFM2.5-2.6B Evaluations"},
         },
       ],
     },

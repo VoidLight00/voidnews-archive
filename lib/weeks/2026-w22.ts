@@ -1340,6 +1340,7 @@ tw93/kami(/kami 하네스의 디자인 시스템 베이스)를 본 사이트도 
           tags: ["실전 팁", "공식"],
           slug: "claude-code-context-management-compact-v-754f9eaa",
           readMinutes: 1,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-c55f37636b749b56-9f240dad7a4b.jpg","alt":"Claude Code context management — /compact vs /clear 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "5/23",
@@ -1368,6 +1369,7 @@ tw93/kami(/kami 하네스의 디자인 시스템 베이스)를 본 사이트도 
           tags: ["실전 팁", "공식"],
           slug: "jensen-huang-cmu-commencement-ai-jobs-me-15724e4b",
           readMinutes: 1,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-fa47c93bbb18deff-db026fe40cbb.jpg","alt":"Jensen Huang CMU commencement — AI jobs message 출처 이미지","provenance":"source-share-preview"},
         },
         {
           date: "5/22",
@@ -1497,6 +1499,7 @@ LLM은 \"좋게\"라는 주관어보다 \"3개 기준에 따라\"라는 측정 �
           tags: ["실전 팁", "공식"],
           slug: "ai-prompt-usage-method-first-prompting-9be18a5f",
           readMinutes: 1,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-00d27ed0cfc6ef40-553692e7bfd4.jpg","alt":"AI prompt usage: method-first prompting 출처 이미지","provenance":"source-share-preview"},
         },
       ],
     },

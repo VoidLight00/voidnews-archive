@@ -11,6 +11,11 @@ result = subprocess.run(['git', 'ls-files', '--cached', '--others', '--exclude-s
 if result.returncode != 0:
     print('FAIL[secrets]: cannot enumerate publication files'); sys.exit(1)
 files = sorted(set(result.stdout.split(b'\0')) - {b''})
+deleted = subprocess.run(['git', 'ls-files', '--deleted', '-z'], cwd=root, capture_output=True)
+if deleted.returncode != 0:
+    print('FAIL[secrets]: cannot enumerate removed publication files'); sys.exit(1)
+deleted_files = set(deleted.stdout.split(b'\0')) - {b''}
+files = [name for name in files if name not in deleted_files]
 if not files:
     print('FAIL[secrets]: empty publication scope'); sys.exit(1)
 pattern = re.compile(rb'(sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----|ghp_[A-Za-z0-9]{30,}|xox[baprs]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{30,})')

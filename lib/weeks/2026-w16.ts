@@ -154,10 +154,7 @@ export const week16: WeeklyData = {
           source: "https://polymarket.com/event/gpt-5pt5-released-by",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/Polymarket/status/2045616553308147936" }, { label: "tokenmix.ai", url: "https://tokenmix.ai/blog/gpt-5-5-release-date-spud" }],
           tags: ["도구릴리스", "text", "image", "audio", "openai", "polymarket"],
-          thumbnail: {
-            src: "/og-cache/gpt-5-5-코드네임-spud-출시-임박-polymarket-4-23--3051eeed.png",
-            alt: "GPT-5.5 (코드네임 Spud) 출시 임박 — Polymarket 4/23 92% (2026-04-22 기준)",
-          },
+
         },
       ],
     },
@@ -405,10 +402,11 @@ export const week16: WeeklyData = {
           title: "NVIDIA Lyra 2.0 — 단일 이미지로 탐험 가능한 3D 월드 생성",
           summary: "\"Lyra 2.0: Explorable Generative 3D Worlds\". long complex environments와 large camera trajectories 지원. arXiv 논문 공개.",
           content: "\"Lyra 2.0: Explorable Generative 3D Worlds\". long complex environments와 large camera trajectories 지원. arXiv 논문 공개.",
-          officialUrl: "https://research.nvidia.com/labs/sil/projects/lyra2/",
-          source: "https://research.nvidia.com/labs/sil/projects/lyra2/",
+          officialUrl: "https://nv-tlabs.github.io/Project-Lyra/",
+          source: "https://nv-tlabs.github.io/Project-Lyra/",
           backupUrls: [{ label: "X 공식 게시글", url: "https://x.com/NVIDIAAIDev/status/2044445645109436672" }, { label: "HuggingFace", url: "https://huggingface.co/nvidia/Lyra-2.0" }, { label: "GitHub", url: "https://github.com/nv-tlabs/lyra" }],
           tags: ["도구릴리스", "3d", "image", "video", "nvidia"],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-6de8f1f20d778d47r-3e37bf024a12.png","alt":"Method overview: long-horizon video generation and 3D reconstruction"},
         },
         {
           slug: "20260414-recraft-v4-recraft-studio-4-6-93b5c15fbbc1",

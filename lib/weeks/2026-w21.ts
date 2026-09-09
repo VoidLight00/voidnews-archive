@@ -384,6 +384,7 @@ API 키 별도 발급·관리 부담이 사라지는 효과가 가장 큽니다.
           tags: ["Codex for Work", "Sales", "공식"],
           slug: "how-sales-teams-use-codex-43467e2c",
           readMinutes: 1,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-0090139282200a1d-ed0cfdb4e744.webp","alt":"Cover image for How sales teams use Codex webinar"},
         },
         {
           date: "5/15",
@@ -1961,6 +1962,7 @@ YC는 SaaS 시대(2010~2020년대) "5인 + AWS + Stripe" 표준을 만든 곳입
           tags: ["실전 팁", "공식"],
           slug: "yc-diana-hu-ai-native-company-structure-85b5079d",
           readMinutes: 1,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-aa0e51ffd48809ce-3cccbc41c97d.jpg","alt":"YC Diana Hu — AI-native company 구성 방식 출처 이미지","provenance":"source-share-preview"},
         },
       ],
     },

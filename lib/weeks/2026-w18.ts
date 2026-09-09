@@ -143,8 +143,8 @@ export const week18: WeeklyData = {
           "title": "Apple Support 앱 v5.13 — CLAUDE.md 2개 파일 실수 노출 (Apple 내부 Juno AI 아키텍처 유출)",
           "summary": "MacRumors의 Aaron Perris가 캡처 — Apple이 Claude Code로 'Juno AI' + Live Agents 듀얼 백엔드를 개발 중임이 공개. Apple-Gemini Siri 협업과 별개로 내부 개발 도구는 Claude를 채택",
           "content": "이게 뭐예요?\nApple Support 앱 v5.13에서 CLAUDE.md 파일 2개가 실수로 노출되며 내부 Juno AI 아키텍처 단서가 공개됐다는 유출입니다. AI 제품 개발 방식과 내부 지침이 밖으로 나온 사례로 볼 수 있습니다.\n\n왜 중요해요?\nApple이 AI를 어떻게 제품 내부에 붙이려 하는지 엿볼 수 있는 카드입니다. 동시에 CLAUDE.md 같은 에이전트 지침 파일이 실제 기업 내부에서도 중요해졌다는 신호이기도 합니다.\n\n확인 포인트\n유출 자료는 맥락이 부족하고 변경될 수 있습니다. 세부 구현을 단정하기보다, '대기업 AI 개발에서도 지침 파일과 에이전트 아키텍처가 핵심 문서가 됐다'는 메시지로 읽는 편이 안전합니다.",
-          "source": "https://xcancel.com/aaronp613/status/2049986504617820551",
-          "officialUrl": "https://xcancel.com/aaronp613/status/2049986504617820551",
+          "source": "https://x.com/aaronp613/status/2049986504617820551",
+          "officialUrl": "https://x.com/aaronp613/status/2049986504617820551",
           "backupUrls": [
             {
               "label": "news.ycombinator.com",
@@ -165,7 +165,8 @@ export const week18: WeeklyData = {
             "anthropic",
             "community"
           ],
-          "featured": true
+          "featured": true,
+          thumbnail: {"src":"/source-media/weekly-20260909/older-41215f583c9b75b7r-7b656082b080.webp","alt":"Apple Support 앱 v5.13 — CLAUDE.md 2개 파일 실수 노출 (Apple 내부 Juno AI 아키텍처 유출) 출처 이미지"},
         },
         {
           "slug": "20260430-anthropic-claude-jupiter-v1-p-red-team-probe-pos-af9bb07860c3",
@@ -566,7 +567,8 @@ export const week18: WeeklyData = {
             "에이전트자동화",
             "공식",
             "openai"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-81074f5f69144ab7-6c136dc66047.png","alt":"Diagram of Codex sandbox permissions, rules approvals, Auto-review approvals, and full-access risk zones."},
         },
         {
           "slug": "20260430-openai-codex-cli-goal-ralph-loop-ee5ee59c0f87",
@@ -693,7 +695,8 @@ export const week18: WeeklyData = {
             "프롬프트디자인",
             "루머",
             "community"
-          ]
+          ],
+          thumbnail: {"src":"/source-media/weekly-20260909/older-3206b76c723692c0-77f2315c81e5.jpg","alt":"맥도날드 AI 챗봇(Grimace) — Python 스크립트 작성 사례 바이럴, 진위 미확정 출처 이미지"},
         },
         {
           "slug": "20260428-nulli-qwen-3-3e14f5c54ac3",
