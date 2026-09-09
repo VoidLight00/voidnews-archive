@@ -66,11 +66,13 @@ function inferReleaseScope(post: Post): string {
   return "공개 발표";
 }
 
-// 인라인 토큰(**bold**, `code`, [label](url))을 React node 로 안전하게 분할
+// 인라인 토큰(**bold**, `code`, [label](url), 평문 URL)을 React node 로 안전하게 분할
 // (dangerouslySetInnerHTML 없이 XSS 위험 제거)
+// 평문 URL 자동 링크는 AB 판본 모달(components/richtext.tsx)과 같은 규칙을 쓴다.
+// 두 화면이 같은 본문을 다르게 보여 주던 문제(상세에서만 주소가 평문) 해소.
 function renderInline(text: string, keyPrefix: string | number) {
   const tokens = text
-    .split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g)
+    .split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\)|https?:\/\/[^\s)\]]+)/g)
     .filter(Boolean);
   return tokens.map((tok, i) => {
     const key = `${keyPrefix}-${i}`;
@@ -83,6 +85,12 @@ function renderInline(text: string, keyPrefix: string | number) {
       return (
         <a key={key} href={link[2]} target="_blank" rel="noreferrer">
           {link[1]}
+        </a>
+      );
+    if (/^https?:\/\/[^\s)\]]+$/.test(tok))
+      return (
+        <a key={key} href={tok} target="_blank" rel="noreferrer" style={{ wordBreak: "break-all" }}>
+          {tok}
         </a>
       );
     return <span key={key}>{tok}</span>;

@@ -1,0 +1,182 @@
+{
+  "note": "2026-09a 이전 회차에 남아 있는 편집 규칙 위반입니다. 게이트는 신규 회차부터 강제하며, 이 목록은 실측 기록으로 남깁니다. 과거 회차 본문을 고치면 이미 게시된 문장이 바뀌므로 별도 승인 후 정비합니다.",
+  "measuredAt": "2026-09-10",
+  "gate": "scripts/check-editorial-tone.mjs",
+  "total": 24,
+  "byEdition": {
+    "2026-04c.ts": {
+      "count": 7,
+      "items": [
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 653,
+          "detail": "서수로 항목을 나열합니다: 첫째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 653,
+          "detail": "서수로 항목을 나열합니다: 둘째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 653,
+          "detail": "서수로 항목을 나열합니다: 셋째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 653,
+          "detail": "서수로 항목을 나열합니다: 넷째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 695,
+          "detail": "서수로 항목을 나열합니다: 첫째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 695,
+          "detail": "서수로 항목을 나열합니다: 둘째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-04c.ts",
+          "line": 695,
+          "detail": "서수로 항목을 나열합니다: 셋째"
+        }
+      ]
+    },
+    "2026-05a.ts": {
+      "count": 3,
+      "items": [
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05a.ts",
+          "line": 605,
+          "detail": "서수로 항목을 나열합니다: 첫째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05a.ts",
+          "line": 605,
+          "detail": "서수로 항목을 나열합니다: 둘째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05a.ts",
+          "line": 605,
+          "detail": "서수로 항목을 나열합니다: 셋째"
+        }
+      ]
+    },
+    "2026-05b.ts": {
+      "count": 5,
+      "items": [
+        {
+          "rule": "video-non-official",
+          "file": "2026-05b.ts",
+          "line": 49,
+          "detail": "영상 moxr8bz0ykU 의 채널이 GadgetMatch · 개인 리뷰 채널 입니다. 공식 채널 영상만 첨부합니다."
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05b.ts",
+          "line": 13,
+          "detail": "서수로 항목을 나열합니다: 첫째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05b.ts",
+          "line": 13,
+          "detail": "서수로 항목을 나열합니다: 둘째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05b.ts",
+          "line": 13,
+          "detail": "서수로 항목을 나열합니다: 셋째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-05b.ts",
+          "line": 13,
+          "detail": "서수로 항목을 나열합니다: 넷째"
+        }
+      ]
+    },
+    "2026-06a.ts": {
+      "count": 3,
+      "items": [
+        {
+          "rule": "ordinal-list",
+          "file": "2026-06a.ts",
+          "line": 10,
+          "detail": "서수로 항목을 나열합니다: 첫째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-06a.ts",
+          "line": 10,
+          "detail": "서수로 항목을 나열합니다: 둘째"
+        },
+        {
+          "rule": "ordinal-list",
+          "file": "2026-06a.ts",
+          "line": 10,
+          "detail": "서수로 항목을 나열합니다: 셋째"
+        }
+      ]
+    },
+    "2026-07a.ts": {
+      "count": 5,
+      "items": [
+        {
+          "rule": "circled-number",
+          "file": "2026-07a.ts",
+          "line": 244,
+          "detail": "원문자로 항목을 나열합니다: ①"
+        },
+        {
+          "rule": "circled-number",
+          "file": "2026-07a.ts",
+          "line": 244,
+          "detail": "원문자로 항목을 나열합니다: ②"
+        },
+        {
+          "rule": "circled-number",
+          "file": "2026-07a.ts",
+          "line": 252,
+          "detail": "원문자로 항목을 나열합니다: ①"
+        },
+        {
+          "rule": "circled-number",
+          "file": "2026-07a.ts",
+          "line": 252,
+          "detail": "원문자로 항목을 나열합니다: ②"
+        },
+        {
+          "rule": "circled-number",
+          "file": "2026-07a.ts",
+          "line": 252,
+          "detail": "원문자로 항목을 나열합니다: ③"
+        }
+      ]
+    },
+    "2026-08a.ts": {
+      "count": 1,
+      "items": [
+        {
+          "rule": "label-heading",
+          "file": "2026-08a.ts",
+          "line": 160,
+          "detail": "소제목이 내용을 말하지 않고 자리만 가리킵니다: 두 발표를 붙여 읽어야 하는 이유"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "policy": "카드 본문과 videoUrl에 넣는 영상은 발표 주체의 공식 채널에서 공개한 것만 허용합니다. 개인 큐레이터·리뷰어 채널은 목차에 주제가 표시되어 있어도 허용하지 않습니다. 사건 자체의 1차 영상 기록이 언론사에만 존재하는 경우에만 press 등급으로 개별 등록하고 사유를 남깁니다.",
+  "verifiedAt": "2026-09-10",
+  "method": "각 영상 id를 YouTube oEmbed로 조회해 author_url을 실측했습니다. 추정으로 등록한 항목은 없습니다.",
+  "channels": {
+    "https://www.youtube.com/@OpenAI": { "name": "OpenAI", "grade": "official" },
+    "https://www.youtube.com/@claude": { "name": "Claude (Anthropic)", "grade": "official" },
+    "https://www.youtube.com/@figureai": { "name": "Figure", "grade": "official" },
+    "https://www.youtube.com/@ycombinator": { "name": "Y Combinator", "grade": "official" },
+    "https://www.youtube.com/@cmu": { "name": "Carnegie Mellon University", "grade": "official" },
+    "https://www.youtube.com/@cgtn": {
+      "name": "CGTN",
+      "grade": "press",
+      "reason": "Tiangong 휴머노이드 100m·400m 경기의 1차 중계 영상이며 대회 주최 측 공식 채널 공개본을 확인하지 못했습니다."
+    },
+    "https://www.youtube.com/@BBCNews": {
+      "name": "BBC News",
+      "grade": "press",
+      "reason": "같은 경기의 교차 확인용 보도 영상입니다."
+    },
+    "https://www.youtube.com/@CNET": {
+      "name": "CNET",
+      "grade": "press",
+      "reason": "Boston Dynamics Atlas 시연의 현장 촬영 영상이며 2026-05b 게시 시점에 등록된 기존 항목입니다."
+    }
+  },
+  "blocked": {
+    "https://www.youtube.com/@mreflow": "Matt Wolfe · 개인 큐레이터",
+    "https://www.youtube.com/@jocoding": "조코딩 JoCoding · 개인 큐레이터",
+    "https://www.youtube.com/@theAIsearch": "AI Search · 개인 큐레이터",
+    "https://www.youtube.com/@JulianGoldieSEO": "Julian Goldie SEO · 개인 리뷰어",
+    "https://www.youtube.com/@gadgetmatch": "GadgetMatch · 개인 리뷰 채널"
+  },
+  "videos": {
+    "3bL6IpdgddQ": "https://www.youtube.com/@OpenAI",
+    "K-fYBO8t3-A": "https://www.youtube.com/@OpenAI",
+    "eW3oTyfeWZ0": "https://www.youtube.com/@claude",
+    "8xEuFQz4E4A": "https://www.youtube.com/@figureai",
+    "EN7frwQIbKc": "https://www.youtube.com/@ycombinator",
+    "uSs7PPAJR20": "https://www.youtube.com/@cmu",
+    "B8DyUJagc2M": "https://www.youtube.com/@cgtn",
+    "zYhyHqLlktg": "https://www.youtube.com/@cgtn",
+    "FGBLzMESBAo": "https://www.youtube.com/@BBCNews",
+    "h-pNWy7v_qc": "https://www.youtube.com/@CNET",
+    "moxr8bz0ykU": "https://www.youtube.com/@gadgetmatch",
+    "GfPZm9yucQo": "https://www.youtube.com/@mreflow",
+    "jjLLO7rU6Pk": "https://www.youtube.com/@jocoding",
+    "ngyFRCNq0Yc": "https://www.youtube.com/@theAIsearch",
+    "xgx_t6WTxYo": "https://www.youtube.com/@JulianGoldieSEO"
+  }
+}

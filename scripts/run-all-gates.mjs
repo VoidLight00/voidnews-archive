@@ -27,7 +27,10 @@ const BUILD_GATES = {
   "check-dangling-thumbs.mjs": [],
   "check-i18n-coverage.mjs": [], // w29+ 신규 주차 en 필드 필수 — 영문판 회귀 차단
   "verify-07a-closure.mjs": [], // 2026-07a GA/KO·EN/manifest/report closure 회귀 차단
-  "check-horizontal-accent.mjs": [], // 컬러 가로 accent line 금지 — 2026-08-13 AB 카드 --gold 3px 재발
+  "check-horizontal-accent.mjs": [],
+  // 공식 채널 영상만 허용 + fluent-korean 편집 규칙. 인자로 회차를 지정해 신규 회차부터 강제한다.
+  // 과거 회차의 미해결 위반은 references/editorial-tone-legacy.json 에 실측으로 기록해 두었다.
+  "check-editorial-tone.mjs": ["2026-09a"], // 컬러 가로 accent line 금지 — 2026-08-13 AB 카드 --gold 3px 재발
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([

@@ -17,12 +17,12 @@ assert.equal(e.slug, '2026-09a');
 assert.equal(e.announceDate, '2026-09-10');
 assert.equal(e.period, '2026-08-27 ~ 2026-09-09');
 assert.equal(e.highlights.length, 6);
-assert.equal(e.editorsPicks.length, 2);
-assert.equal(e.modelWatch.length, 1);
+assert.equal(e.editorsPicks.length, 3);
+assert.equal(e.modelWatch.length, 2);
 const ordered = [/GPT.?6.*Astra/i, /Fable 5\.1/i, /Gemini 3\.8 Flash/i, /Images 2\.5/i, /Atlas/i, /Lyria 3\.5/i];
 const primaryHosts = ['openai.com', 'www.anthropic.com', 'blog.google', 'openai.com', 'www.worldlabs.ai', 'blog.google'];
 const imageByPath = new Map(ledger.images.map(i => [i.publicPath, i]));
-assert.equal(imageByPath.size, 18);
+assert.equal(imageByPath.size, 20);
 const used = new Set();
 const image = value => {
   assert.ok(value?.src && value.alt && value.caption, 'image needs path, alt, caption');
@@ -49,7 +49,8 @@ for (const [index, highlight] of e.highlights.entries()) {
   assert.equal(proof?.officialUrl, p.officialUrl);
   assert.equal(proof?.date, p.date);
   assert.match(p.content, /제안|실습/);
-  assert.match(p.content, /영상 설명란 목차에 해당 주제로 표시된 구간/);
+  // 참고 영상 문구 강제는 2026-09-10 에 제거했습니다. 비공식 큐레이터 영상을 요구하던 검사였고,
+  // 지금은 scripts/check-editorial-tone.mjs 가 공식 채널만 허용하는 방향으로 판정합니다.
   assert.ok(p.en?.title && p.en?.summary, 'English summary');
   assert.ok(!p.videoUrl, 'article image remains above supplementary video links');
   image(p.thumbnail);
@@ -67,7 +68,7 @@ for (const [index, highlight] of e.highlights.entries()) {
 }
 for (const p of e.editorsPicks) {
   assert.ok(p.body.length >= 800);
-  assert.ok(['github.com', 'sparkjs.dev'].includes(new URL(p.sourceUrl).hostname));
+  assert.ok(['github.com', 'sparkjs.dev', 'lite.ego.app'].includes(new URL(p.sourceUrl).hostname));
   assert.ok(p.guideUrl.includes('LICENSE'));
   assert.match(p.body, /권한|접근 범위/);
   image(p.thumbnail);
@@ -93,7 +94,17 @@ for (const proof of ledger.astraPractical.official) {
 assert.match(e.highlights[1].post.content, /소비자 Pro·Max 계정에 동일하게 적용되는 규칙으로 해석하면 안 됩니다/);
 assert.match(e.highlights[4].post.content, /조기 접근|얼리 액세스|early access|일부 파트너/);
 assert.match(e.highlights[5].post.content, /별도 곡을 새로 생성/);
-assert.match(e.modelWatch[0].body, /연구 프리뷰/);
+// modelWatch 는 순서가 아니라 슬러그로 판정한다. 새 항목이 앞에 들어와도 검사가 엉뚱한 카드를 보지 않는다.
+const watchBySlug = new Map(e.modelWatch.map(w => [w.slug, w]));
+assert.match(watchBySlug.get('runway-gwm-worlds-2-watch').body, /연구 프리뷰/);
+const fly = watchBySlug.get('fly-connectome-minecraft');
+assert.ok(fly, 'fly connectome watch card');
+assert.equal(new URL(fly.sourceUrl).hostname, 'research.google');
+assert.match(fly.body, /166,700/);
+assert.match(fly.body, /25,582,938/);
+assert.match(fly.body, /되살렸다는 뜻은 아니라고 명시/, '살아 있는 개체 재현 주장 차단');
+assert.match(fly.body, /실행 파일은 내려받을 수 없습니다/, '현재 배포 상태 명시');
+assert.match(fly.body, /권한|접근 범위/);
 const publicCopy = JSON.stringify(e);
 assert.doesNotMatch(publicCopy, /발표용 제안 시연|리허설|발표 전에 확인|발표 전 확인|브리핑 작성 중|작성한 시연안|The suggested live demonstration has not been executed|unexecuted three-step|preparing this briefing/i, 'visitor-facing copy must not contain presenter or author instructions');
 assert.equal(astra.supplement.tables[0].rows.length, 4);
@@ -109,4 +120,4 @@ assert.match(e.highlights[3].post.content, /생성 모델 버전은 명시되어
 assert.equal(ledger.readerSupplements.imageCases.unversionedThreads, 1);
 assert.equal(ledger.readerSupplements.threads.length, 3);
 assert.doesNotMatch(JSON.stringify(e), /\/Users\/|chatId|authorId|roomId|원문 대화|위키에는|TBD|TODO|lorem ipsum/i);
-console.log(`PASS[ab-2026-09a] 6 ordered guides, 2 tools, 1 research watch, 4 image pairs, 4 task comparisons, reader-first copy, ${used.size} source images and content boundaries`);
+console.log(`PASS[ab-2026-09a] 6 ordered guides, 3 tools, 2 research watches, 4 image pairs, 4 task comparisons, reader-first copy, ${used.size} source images and content boundaries`);

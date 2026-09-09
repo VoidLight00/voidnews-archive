@@ -178,7 +178,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             items={[
               { id: "highlights", label: locale === "ko" ? "핵심 브리핑" : "Highlights", count: highlights.length, href: "#ab-highlights" },
               ...(data.modelWatch?.length ? [{ id: "models", label: locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
-              ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "실무 도구" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
+              ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "도구 추천" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
             ]}
           />
         </div>
@@ -341,7 +341,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     lineHeight: 1.12,
                   }}
                 >
-                  실무에 바로 연결되는 도구와 참고 자료
+                  도움이 될만한 도구들 추천
                 </h2>
                 <p
                   className="deck"
@@ -353,7 +353,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--text-soft)",
                   }}
                 >
-                  발표자가 검토한 도구 중 작업 흐름에 붙이기 쉬운 자료만 따로 정리했습니다.
+                  직접 확인해 본 도구 가운데 지금 바로 써 볼 만한 것만 골랐습니다.
                 </p>
               </div>
               <div className="tc-article-grid ab-edition-grid">

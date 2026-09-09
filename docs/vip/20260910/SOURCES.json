@@ -465,6 +465,34 @@
       "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
       "sourceImageUrl": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/edit-endpoint-showcase/tea-poster-metro-lightbox.png",
       "officialUrl": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md"
+    },
+    {
+      "key": "ego-lite",
+      "sourceUrl": "https://lite.ego.app/",
+      "url": "https://lite.ego.app/og.png",
+      "publicPath": "/og-cache/ab-20260910-ego-lite.png",
+      "sha256": "d5482848ea2e4cc8ce8d076b88fccdc8aad7c85acf547270dc5c13be0a568cd4",
+      "byteSize": 143918,
+      "width": 960,
+      "height": 540,
+      "selectionKind": "source-share-preview",
+      "originalBytesUnedited": true,
+      "alt": "ego (lite) 공식 사이트가 공유용으로 제공하는 에이전트 브라우저 소개 이미지",
+      "caption": "ego (lite) 공식 사이트의 공유 이미지입니다. 본문 상단에는 별도 대표 이미지가 없어 이 이미지를 사용했습니다."
+    },
+    {
+      "key": "fly-connectome",
+      "sourceUrl": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
+      "url": "https://storage.googleapis.com/gweb-research2023-media/images/Male-Fruit-Fly-Brain-Map-hero.width-800.format-jpeg.jpg",
+      "publicPath": "/og-cache/ab-20260910-fly-connectome.jpg",
+      "sha256": "50107d592f072cbd18eb8580ea20435febb5d6754ee4d5e583c382df3a4895d1",
+      "byteSize": 72408,
+      "width": 800,
+      "height": 450,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "수컷 초파리 중추신경계를 뉴런별로 색을 달리해 재구성한 Google Research 공식 글의 상단 이미지",
+      "caption": "뇌와 복부 신경삭이 신경 다발로 이어진 구조를 보여 주는 공식 재구성 이미지입니다. 공식 사이트가 제공하는 800px 파생본을 그대로 사용했습니다."
     }
   ],
   "scope": {

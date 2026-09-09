@@ -25,3 +25,21 @@ This version has breaking changes — APIs, conventions, and file structure may 
 ## Source image selection
 
 For new or refreshed thumbnails, apply `references/source-image-policy.json` through `scripts/lib/source-image.mjs`: use the first meaningful image at the top of the official article, then its OG share image when the article image is unavailable. Exclude navigation, logos, avatars, hidden/tracking images and unrelated article cards. Keep image identity and record source URL and selection kind in the cache manifest. Preserve existing thumbnail choices unless replacement is requested. Run `node scripts/check-source-image-policy.mjs` before publishing.
+
+## 참고 영상은 공식 채널만 (2026-09-10)
+
+카드 본문의 참고 영상은 발표 주체의 공식 채널에서 공개한 영상만 첨부합니다. 큐레이터·리뷰어·개인 유튜브 채널의 해설 영상은 목차에 해당 주제가 표시되어 있더라도 본문에 넣지 않습니다. 공식 영상이 없으면 참고 영상 항목 자체를 넣지 않고 공식 원문 링크만 남깁니다.
+
+공식 채널 명단은 `references/official-video-channels.json`이 정본이며, 게이트가 이 파일만 근거로 판정합니다. 새 채널을 인정하려면 회사 공식 사이트에서 그 채널을 자사 채널로 안내하는 위치를 확인한 뒤 파일에 추가합니다.
+
+## 한국어 본문은 fluent-korean을 따릅니다 (2026-09-10)
+
+공개 본문의 한국어는 사용자 전역 지침 fluent-korean을 기본으로 적용합니다.
+
+- 엠대시(—)는 2026-04a 회차부터 제목과 본문에 이어진 이 사이트의 기존 관례입니다. 신규 회차에서 새로 늘리지는 않되, 게이트는 이 항목을 판정하지 않습니다. 정비한다면 전 회차를 한 번에 다뤄야 표기가 갈리지 않습니다.
+- 소제목은 "이번 변화가 중요한 이유", "어디서 어떻게 시작하나요" 같은 정형 라벨이나 질문형 대신, 내용을 그대로 말하는 완결된 서술문으로 씁니다. 2026-08b 이전 회차의 소제목이 기준입니다.
+- ①②③, 첫째·둘째·셋째로 항목을 나열하지 않습니다. 문단으로 잇거나 실제 목록 구조를 사용합니다.
+- 일반 어휘를 비유로 대체하지 않습니다. "관전 포인트", "~의 흐름" 같은 표현은 그 자리에서 실제로 가리키는 대상을 씁니다.
+- 조사와 어미를 생략하지 않고 서술어로 문장을 끝맺습니다.
+
+게이트는 `scripts/check-editorial-tone.mjs`이며 종료코드로 판정합니다.
