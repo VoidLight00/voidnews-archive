@@ -309,7 +309,7 @@ export const week30: WeeklyData = {
             summary: "Anthropic released Claude Opus 5. It keeps Opus 4.8's $5/$25 per million tokens while making a 1M-token context both the default and the maximum, with 128k max output and thinking on by default. It is available immediately through the API, Bedrock, Google Cloud and Microsoft Foundry, and is the default model for Claude Max."
           },
           thumbnail: {
-            src: "/og-cache/claude-opus-5-출시-1m-컨텍스트를-이전과-같은-가격에-1445d8a4.png",
+            src: "/og-cache/weekly-legacy-dd6595f11ad8971fba18.png",
             alt: "Claude Opus 5 출시 — 1M 컨텍스트를 이전과 같은 가격에",
           },
         },
@@ -687,7 +687,7 @@ export const week30: WeeklyData = {
             summary: "SK announced a letter of intent with NVIDIA worth $500 billion at the K-AI Summit, together with collaborations involving Microsoft, Anthropic and AWS."
           },
           thumbnail: {
-            src: "/og-cache/sk-k-ai-서밋에서-엔비디아와-5-000억-달러-loi-체결-80d5ce7c.png",
+            src: "/og-cache/weekly-legacy-f0aa3228a94690d10c90.png",
             alt: "SK, K-AI 서밋에서 엔비디아와 5,000억 달러 LOI 체결",
           },
         },
@@ -851,7 +851,7 @@ export const week30: WeeklyData = {
             summary: "Google's Gemini 3.6 Flash is now generally available in GitHub Copilot, adding a model tuned for fast high-throughput work to the Copilot model picker."
           },
           thumbnail: {
-            src: "/og-cache/github-copilot에-gemini-3-6-flash-정식-출시-e61249fb.png",
+            src: "/og-cache/weekly-legacy-d59cf95a9de112b7a7bd.png",
             alt: "GitHub Copilot에 Gemini 3.6 Flash 정식 출시",
           },
         }

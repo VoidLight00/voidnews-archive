@@ -28,13 +28,13 @@ export function validateWeeklyImages(items, ledger, root = process.cwd()) {
   }
   const itemKeys = new Set(items.map(imageKey));
   for (const key of records.keys()) if (!itemKeys.has(key)) failures.push(`Stale audit identity: ${key}`);
-  for (const repair of ledger.existingFormatRepairs || []) {
-    if (!items.some(item => item.images.some(image => image.src === repair.newSrc))) failures.push(`Format repair is not attached: ${repair.newSrc}`);
-    if (items.some(item => item.images.some(image => image.src === repair.src))) failures.push(`Old incorrect image extension is still used: ${repair.src}`);
-    try { if (sha256(fs.readFileSync(path.join(root, 'public', repair.newSrc))) !== repair.sha256) failures.push(`Format repair changed original bytes: ${repair.newSrc}`); }
-    catch { failures.push(`Format repair file missing: ${repair.newSrc}`); }
+  for (const repair of [...(ledger.existingFormatRepairs || []), ...(ledger.existingPathRepairs || [])]) {
+    if (!items.some(item => item.images.some(image => image.src === repair.newSrc))) failures.push(`Image repair is not attached: ${repair.newSrc}`);
+    if (items.some(item => item.images.some(image => image.src === repair.src))) failures.push(`Old incorrect image path is still used: ${repair.src}`);
+    try { if (sha256(fs.readFileSync(path.join(root, 'public', repair.newSrc))) !== repair.sha256) failures.push(`Image repair changed original bytes: ${repair.newSrc}`); }
+    catch { failures.push(`Image repair file missing: ${repair.newSrc}`); }
   }
-  const checkedFiles = new Set();
+  const checkedFiles = new Set(), directoryEntries = new Map();
   for (const item of items) {
     const key = imageKey(item), audit = records.get(key);
     for (const image of item.images) {
@@ -44,6 +44,9 @@ export function validateWeeklyImages(items, ledger, root = process.cwd()) {
         if (checkedFiles.has(file)) continue;
         checkedFiles.add(file);
         try {
+          const directory = path.dirname(file);
+          if (!directoryEntries.has(directory)) directoryEntries.set(directory, fs.readdirSync(directory));
+          if (!directoryEntries.get(directory).includes(path.basename(file))) failures.push(`Image filename differs in case or Unicode normalization: ${image.src}`);
           const type = imageContentType(fs.readFileSync(file), file.endsWith('.svg') ? 'image/svg+xml' : 'application/octet-stream');
           if (!type) failures.push(`Invalid image bytes: ${image.src}`);
           if (file.endsWith('.svg') && type !== 'image/svg+xml') failures.push(`Raster image mislabeled as SVG: ${image.src}`);

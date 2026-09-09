@@ -114,7 +114,7 @@ export const week33: WeeklyData = {
             summary: "OpenAI introduced Premium seats for ChatGPT Business at $125 per user per month, or $100 per user per month billed annually, alongside Standard seats at $25/$20. Premium seats provide 5x more usage than Standard seats and remove the five-hour usage limit. Both seat types can be mixed in one workspace.",
           },
           thumbnail: {
-            src: "/og-cache/chatgpt-business에-premium-시트-도입-70ce1451.png",
+            src: "/og-cache/weekly-legacy-0b72db3d483774928f88.png",
             alt: "ChatGPT Business에 Premium 시트 도입",
           },
         },
@@ -136,7 +136,7 @@ export const week33: WeeklyData = {
             summary: "OpenAI expanded its Daybreak Cyber Partner program so security partners can integrate frontier cyber models into their own products. Named partners include Accenture, IBM, Capgemini, Cognizant, EY, KPMG, PwC, NCC Group, SpecterOps, Palo Alto Networks, CrowdStrike, Cisco, Sophos, Akamai, Fortinet, and Cloudflare.",
           },
           thumbnail: {
-            src: "/og-cache/프런티어-사이버-모델-보안-파트너사에-개방-dd3ed843.png",
+            src: "/og-cache/weekly-legacy-d6e3611dabc46a1e966e.png",
             alt: "프런티어 사이버 모델, 보안 파트너사에 개방",
           },
         },
@@ -314,7 +314,7 @@ export const week33: WeeklyData = {
             summary: "On August 10, 2026 Meta released Muse Glimmer under a permissive Apache 2.0 license — a ~29.6B parameter dense causal transformer with a Perception Encoder, 131,072+ token context, optimized for always-on local agent workflows on a single consumer GPU. Vendor-reported figures include 3.1x faster decoding on RTX 5090 and 1.8x on M5-Max via DFlash speculative decoding; the model card lists SWE-Bench Verified 76.0, TerminalBench 2.1 51.7, and AIME 2026 94.7.",
           },
           thumbnail: {
-            src: "/og-cache/메타-30b-오픈-에이전틱-모델-muse-glimmer-공개-3f4b51b0.png",
+            src: "/og-cache/weekly-legacy-931f39f326e7bdc77469.png",
             alt: "메타, 30B 오픈 에이전틱 모델 Muse Glimmer 공개",
           },
         },
@@ -478,7 +478,7 @@ export const week33: WeeklyData = {
             summary: "GitHub is rolling out Microsoft's MAI-Code-1.1-Flash in Copilot. It adds native vision on top of MAI-Code-1-Flash with improvements to coding quality, instruction following, tool use and performance, at a 73% lower list price than its predecessor and a 0.25x premium request multiplier for annual subscribers. It is available across VS Code, Visual Studio, JetBrains IDEs and more.",
           },
           thumbnail: {
-            src: "/og-cache/copilot에-mai-code-1-1-flash-추가-가격-73-인하-41baf278.png",
+            src: "/og-cache/weekly-legacy-1d454e30786c5f845ffc.png",
             alt: "Copilot에 MAI-Code-1.1-Flash 추가, 가격 73% 인하",
           },
         },
@@ -563,7 +563,7 @@ export const week33: WeeklyData = {
             summary: "On August 11, 2026 Mistral made Regional Endpoints generally available, letting customers pin inference processing to Europe or the US, with a Priority Tier in public preview offering custom rate limits and an uptime SLA. Mistral will host third-party open models on its platform starting with Z.ai's GLM-5.2, and targets 1 GW of capacity by 2030 via European Compute Units, with ASML, CMA CGM, Amadeus and Caisse des Dépôts named as coalition partners.",
           },
           thumbnail: {
-            src: "/og-cache/미스트랄-지역-엔드포인트-정식-출시-2030년-1gw-계획-d1598b19.png",
+            src: "/og-cache/weekly-legacy-c027ccb3c5657f227057.png",
             alt: "미스트랄, 지역 엔드포인트 정식 출시·2030년 1GW 계획",
           },
         },
@@ -625,7 +625,7 @@ export const week33: WeeklyData = {
             summary: "On August 10, 2026, NVIDIA announced memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish compute financing platforms mobilizing over $500 billion of third-party capital for AI infrastructure buildout. NVIDIA stated the partnerships remain subject to execution of final agreements.",
           },
           thumbnail: {
-            src: "/og-cache/엔비디아-6개-금융사와-5000억-달러-조달-구조-c4bf2b3b.jpg",
+            src: "/og-cache/weekly-legacy-ab2ebb161a70bcb797d5.jpg",
             alt: "엔비디아, 6개 금융사와 5000억 달러 조달 구조",
           },
         },

@@ -426,7 +426,7 @@ export const week24: WeeklyData = {
             "AI 인프라/로보틱스"
           ],
           "thumbnail": {
-            "src": "/og-cache/nvidia-lg그룹-ai-팩토리-구축-가정용-로봇-cloid부터-exa-0f45a45a.png",
+            "src": "/og-cache/weekly-legacy-0a5a795ded1efcf37cc5.png",
             "alt": "NVIDIA·LG그룹, AI 팩토리 구축… 가정용 로봇 CLoiD부터 EXAONE·800V 전력까지 6개 계열사 협력"
           },
         },
@@ -462,7 +462,7 @@ export const week24: WeeklyData = {
             "AI 인프라"
           ],
           "thumbnail": {
-            "src": "/og-cache/nvidia-영국-소버린-ai-현황-공개-gh200-5-400개-isam-11892f53.jpg",
+            "src": "/og-cache/weekly-legacy-aca503792a659e541d95.jpg",
             "alt": "NVIDIA, 영국 소버린 AI 현황 공개… GH200 5,400개 Isambard-AI와 스타트업 생태계 £20억 투자"
           },
         },
@@ -498,7 +498,7 @@ export const week24: WeeklyData = {
             "로보틱스/연구"
           ],
           "thumbnail": {
-            "src": "/og-cache/nvidia-cvpr-2026서-graspgen-x-lcdrive-nit-4e0fd56f.png",
+            "src": "/og-cache/weekly-legacy-36d56664c40f7fca35f6.png",
             "alt": "NVIDIA, CVPR 2026서 GraspGen-X·LCDrive·NitroGen 공개… 로봇 파지·자율주행·에이전트 학습 연구"
           },
         },
@@ -588,7 +588,7 @@ export const week24: WeeklyData = {
             "오픈 모델"
           ],
           "thumbnail": {
-            "src": "/og-cache/cohere-첫-개발자용-오픈-코딩-모델-north-mini-code-공-385fc388.png",
+            "src": "/og-cache/weekly-legacy-e57205eab20975eb7aae.png",
             "alt": "Cohere, 첫 개발자용 오픈 코딩 모델 North Mini Code 공개"
           },
         },
@@ -630,7 +630,7 @@ export const week24: WeeklyData = {
             "로보틱스/MCP"
           ],
           "thumbnail": {
-            "src": "/og-cache/hugging-face-reachy-mini에-mcp-원격-도구-지원-추-951093dd.png",
+            "src": "/og-cache/weekly-legacy-6e7bc1572008d1292e5a.png",
             "alt": "Hugging Face, Reachy Mini에 MCP 원격 도구 지원 추가… Spaces로 로봇 기능 확장"
           },
         }

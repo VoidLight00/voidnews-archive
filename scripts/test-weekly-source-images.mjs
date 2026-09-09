@@ -20,6 +20,10 @@ try {
   fs.writeFileSync(path.join(root, 'public/source.webp'), bytes);
   fs.writeFileSync(path.join(root, 'public/wrong.svg'), bytes);
   assert.ok(validate({ ...item, images: [{ src: '/wrong.svg' }] }, []).failures.some(x => x.includes('mislabeled as SVG')));
+  fs.writeFileSync(path.join(root, 'public/cafe\u0301.webp'), bytes);
+  assert.ok(validate({ ...item, images: [{ src: '/caf\u00e9.webp' }] }, []).failures.some(x => x.includes('Unicode normalization')), 'A Mac-normalized file lookup must not mask a deployment 404');
+  fs.writeFileSync(path.join(root, 'public/UPPER.webp'), bytes);
+  assert.ok(validate({ ...item, images: [{ src: '/upper.webp' }] }, []).failures.some(x => x.includes('case or Unicode')), 'A case-insensitive filesystem must not mask a deployment 404');
   const available = { ...audit, status: 'available', publicPath: '/source.webp', imageUrl: 'https://publisher.example/top.webp', sha256: sha256(bytes), selectionKind: 'source-first-image' };
   assert.ok(validate(item, [available]).failures.some(x => x.includes('not attached')));
   const attached = { ...item, images: [{ src: '/source.webp' }] };
@@ -29,5 +33,5 @@ try {
   assert.ok(validate(attached, [available]).failures.some(x => x.includes('bytes changed')));
   fs.unlinkSync(path.join(root, 'public/source.webp'));
   assert.ok(validate(attached, [available]).failures.some(x => x.includes('Missing image file')));
-  console.log('PASS[weekly-source-images-regressions] 13 assertions: stale inventory, attachment, source drift, absent evidence, forbidden absence inference, invalid bytes, SVG format mismatch, missing files and changed hashes');
+  console.log('PASS[weekly-source-images-regressions] 15 assertions: stale inventory, attachment, source drift, absent evidence, forbidden absence inference, invalid bytes, SVG format mismatch, filename normalization, case mismatch, missing files and changed hashes');
 } finally { fs.rmSync(root, { recursive: true, force: true }); }

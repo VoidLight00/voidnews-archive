@@ -8419,5 +8419,263 @@
       "sha256": "79ae8dd593e6defdf77fd1e43c36b63b246bbaa7ea1a2ba348a78aa232960328",
       "newSrc": "/og-cache/alibaba-로봇용-임바디드-ai-qwen-robot-suite-첫-공-047ea2d6.png"
     }
+  ],
+  "existingPathRepairs": [
+    {
+      "src": "/og-cache/한국판-오픈ai가-온다-카카오-kanana-o-api-베타-공개-ca095fc3.png",
+      "newSrc": "/og-cache/weekly-legacy-82b86ee5cab97fd66361.png",
+      "sha256": "82b86ee5cab97fd663613ed66175e6b0f780c829eb96228ce06d0b374b07ee54",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.769Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/atomic-bot-hermes-agent-1분-원클릭-설치로-24-7--477d627b.jpg",
+      "newSrc": "/og-cache/weekly-legacy-2b68d87ce1a06eae61fd.jpg",
+      "sha256": "2b68d87ce1a06eae61fdc1590261a5304cda233f31844355b988af22a24f634e",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.770Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/github-copilot-usage-based-billing-ai-코딩-0b6dce68.png",
+      "newSrc": "/og-cache/weekly-legacy-250ca3a34f20ac734c2b.png",
+      "sha256": "250ca3a34f20ac734c2bb33cd3ff0596cc4f44ae5aea322e8eedbac87f247521",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.772Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/stripe-link-ai-에이전트-결제용-디지털-지갑-oauth-spe-34b4a528.jpg",
+      "newSrc": "/og-cache/weekly-legacy-60fca1aee568dfe47b35.jpg",
+      "sha256": "60fca1aee568dfe47b35d0cc6d628aecffccbbb6066746abd326ebdf9c7154eb",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.772Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/nvidia-microsoft-개인-ai-에이전트용-윈도우-pc-rtx--1d4518d5.png",
+      "newSrc": "/og-cache/weekly-legacy-356b4a0ce25010677225.png",
+      "sha256": "356b4a0ce25010677225dfd4b4e3b895919e655b34ba2c8c2bf2f6042cfb9a8d",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.774Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/reachy-mini-서버-없이-완전-로컬-음성-대화-모드-지원-7cdcfd61.png",
+      "newSrc": "/og-cache/weekly-legacy-e9711392cd9ee96d683a.png",
+      "sha256": "e9711392cd9ee96d683a568936c3b3aaf62dea7ea2e19ef67c316bebf3c6d5af",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.776Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/nvidia-lg그룹-ai-팩토리-구축-가정용-로봇-cloid부터-exa-0f45a45a.png",
+      "newSrc": "/og-cache/weekly-legacy-0a5a795ded1efcf37cc5.png",
+      "sha256": "0a5a795ded1efcf37cc578386db98d581e8723dd1c47bf7ec0b1edd46aaf2f71",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.778Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/nvidia-영국-소버린-ai-현황-공개-gh200-5-400개-isam-11892f53.jpg",
+      "newSrc": "/og-cache/weekly-legacy-aca503792a659e541d95.jpg",
+      "sha256": "aca503792a659e541d9503c345d754dac32cabec262ac7d676e53fbeed44e168",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.779Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/nvidia-cvpr-2026서-graspgen-x-lcdrive-nit-4e0fd56f.png",
+      "newSrc": "/og-cache/weekly-legacy-36d56664c40f7fca35f6.png",
+      "sha256": "36d56664c40f7fca35f633c9a587c31e374c47685c25fb5d4d620902d90829dc",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.780Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/cohere-첫-개발자용-오픈-코딩-모델-north-mini-code-공-385fc388.png",
+      "newSrc": "/og-cache/weekly-legacy-e57205eab20975eb7aae.png",
+      "sha256": "e57205eab20975eb7aae9fb37fe00cf79bb7aa65537e560cfab7a58a3e658c10",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.781Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/hugging-face-reachy-mini에-mcp-원격-도구-지원-추-951093dd.png",
+      "newSrc": "/og-cache/weekly-legacy-6e7bc1572008d1292e5a.png",
+      "sha256": "6e7bc1572008d1292e5a22d912bb14d08603bfddf0bb951c6f83fa1d80c82aa9",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.783Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/github-copilot-gpt-5-6-3종-단계적-제공-bd97de80.png",
+      "newSrc": "/og-cache/weekly-legacy-b6f0701f13ea7ddb91e0.png",
+      "sha256": "b6f0701f13ea7ddb91e0f860ad07fc46152f45ef5be25062cb1a2a5074278a3e",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.783Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/claude-opus-5-출시-1m-컨텍스트를-이전과-같은-가격에-1445d8a4.png",
+      "newSrc": "/og-cache/weekly-legacy-dd6595f11ad8971fba18.png",
+      "sha256": "dd6595f11ad8971fba18cd9d725ab5063167be3fc5e4cfdfc4e55fc5230f8a45",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.785Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/sk-k-ai-서밋에서-엔비디아와-5-000억-달러-loi-체결-80d5ce7c.png",
+      "newSrc": "/og-cache/weekly-legacy-f0aa3228a94690d10c90.png",
+      "sha256": "f0aa3228a94690d10c90738a58afb02500ee4cc4def4e1dfc16de86aa9762dac",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.787Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/github-copilot에-gemini-3-6-flash-정식-출시-e61249fb.png",
+      "newSrc": "/og-cache/weekly-legacy-d59cf95a9de112b7a7bd.png",
+      "sha256": "d59cf95a9de112b7a7bd4cd78ff741095b3c7695ba32eb2b12d2ccd72cc60145",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.788Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/github-copilot에-xai-grok-4-5-추가-83b582fa.png",
+      "newSrc": "/og-cache/weekly-legacy-9627c6723c6b4351c1b0.png",
+      "sha256": "9627c6723c6b4351c1b0d92ff2443ff9ca7a8086bc74fc809dd2a19ef1242512",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.789Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/openai-ai-인프라-가치-기준-제시-ef7e135b.png",
+      "newSrc": "/og-cache/weekly-legacy-00d58241b3cf6a505184.png",
+      "sha256": "00d58241b3cf6a505184ec2f02deb5f36c0c370c63d87497b37e1709429863c1",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.791Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/astra-내부-버전-수학-이론전산-10개-난제-해결-e1503b98.png",
+      "newSrc": "/og-cache/weekly-legacy-bd6e6b14587f590a3852.png",
+      "sha256": "bd6e6b14587f590a3852b8e44cd873cf951456113ee3fc44769e163dc48ef787",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.792Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/openai-애플-영업비밀-소송에-공개-반박-39d4fd00.png",
+      "newSrc": "/og-cache/weekly-legacy-6b6abcea11ad5efeb4d3.png",
+      "sha256": "6b6abcea11ad5efeb4d384c40370071148f7e3082c38cdbbcad22a4ff0c89cbb",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.794Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/외부-기관-사이버-평가-중-모델-범위-이탈-공개-899f3cac.png",
+      "newSrc": "/og-cache/weekly-legacy-5a5bfea92215249a8e4d.png",
+      "sha256": "5a5bfea92215249a8e4de0190b267432cc0b696ced982200cbcdd6164cbaeb4d",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.795Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/gpt-5-6-sol-개선-luna-무료-무제한-개방-e1775d8d.png",
+      "newSrc": "/og-cache/weekly-legacy-cb654e12cf3d3bc44cb7.png",
+      "sha256": "cb654e12cf3d3bc44cb7e623543ac37189e0c3963ef4b706a73c52e28e9a28c7",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.797Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/openai-astra-사이버-능력-critical-가능성-배제-못해-93f793ec.png",
+      "newSrc": "/og-cache/weekly-legacy-78112c579019b13b7bf3.png",
+      "sha256": "78112c579019b13b7bf3cba568bac342895f745c04565a5e9fefce5f7f025239",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.799Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/메타-터미널-코딩-에이전트-muse-code-베타-출시-9eac21dc.png",
+      "newSrc": "/og-cache/weekly-legacy-f16f592a8f1c8ef811b1.png",
+      "sha256": "f16f592a8f1c8ef811b1edd7bad66677f395fee101cb6db36749be576d5c76b7",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.801Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/github-copilot에-오픈웨이트-kimi-k3-추가-c0836b67.png",
+      "newSrc": "/og-cache/weekly-legacy-2751aec5a663a7f83566.png",
+      "sha256": "2751aec5a663a7f83566f5606f49c53ed224344327d9a479e5ac67bd810c4349",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.802Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/skt-2분기-ai-데이터센터-매출-92-5-증가-d14e9d27.png",
+      "newSrc": "/og-cache/weekly-legacy-32dd151697071a6f2d63.png",
+      "sha256": "32dd151697071a6f2d63eb71b81a9d64b9095ef312e1be9aeb8d20e48634e507",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.804Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/seedrealtime-보고-듣고-말하는-것을-동시에-하는-모델-9fa87f1f.png",
+      "newSrc": "/og-cache/weekly-legacy-23fcc519c56227cda7ba.png",
+      "sha256": "23fcc519c56227cda7bafb0012e22f5a9ed1a4d6f84626edd150132b0e939390",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.806Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/chatgpt-business에-premium-시트-도입-70ce1451.png",
+      "newSrc": "/og-cache/weekly-legacy-0b72db3d483774928f88.png",
+      "sha256": "0b72db3d483774928f88020566dbc7cccb788cfcfa47469c2fc1415280250004",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.808Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/프런티어-사이버-모델-보안-파트너사에-개방-dd3ed843.png",
+      "newSrc": "/og-cache/weekly-legacy-d6e3611dabc46a1e966e.png",
+      "sha256": "d6e3611dabc46a1e966ee433d3d34b6f4c19554fb9d8ddab6d841e5856de1be0",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.810Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/메타-30b-오픈-에이전틱-모델-muse-glimmer-공개-3f4b51b0.png",
+      "newSrc": "/og-cache/weekly-legacy-931f39f326e7bdc77469.png",
+      "sha256": "931f39f326e7bdc774693d9cc4233998fed1eeb9138bb17de6c36c2fa366d8fc",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.812Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/copilot에-mai-code-1-1-flash-추가-가격-73-인하-41baf278.png",
+      "newSrc": "/og-cache/weekly-legacy-1d454e30786c5f845ffc.png",
+      "sha256": "1d454e30786c5f845ffc3c3ca737dc77efdcb976e6925e0e4e4f3ce832efcf2d",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.813Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/미스트랄-지역-엔드포인트-정식-출시-2030년-1gw-계획-d1598b19.png",
+      "newSrc": "/og-cache/weekly-legacy-c027ccb3c5657f227057.png",
+      "sha256": "c027ccb3c5657f227057d070bfa091c4f69e0747cce17d6f95c214937c2ebd96",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.814Z",
+      "observedHttpStatus": 404
+    },
+    {
+      "src": "/og-cache/엔비디아-6개-금융사와-5000억-달러-조달-구조-c4bf2b3b.jpg",
+      "newSrc": "/og-cache/weekly-legacy-ab2ebb161a70bcb797d5.jpg",
+      "sha256": "ab2ebb161a70bcb797d5988555b2ae6d3865f124e2d307532ea77fdaef2e89e6",
+      "reason": "The deployed server returned HTTP 404 because the saved filename used decomposed Hangul while the URL used composed Hangul. An ASCII filename preserves the original bytes.",
+      "checkedAt": "2026-09-09T11:48:30.815Z",
+      "observedHttpStatus": 404
+    }
   ]
 }

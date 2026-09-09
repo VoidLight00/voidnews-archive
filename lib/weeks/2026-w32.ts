@@ -160,7 +160,7 @@ export const week32: WeeklyData = {
             summary: "OpenAI published a public rebuttal to Apple's lawsuit concerning two former Apple employees, Chang Liu and Tang Tan. OpenAI says Apple claimed it contacted OpenAI in February without response, but that Apple now admits its outside lawyers emailed the wrong person after confusing two Asian last names, and that Apple employees themselves asked for help locating files.",
           },
           thumbnail: {
-            src: "/og-cache/openai-애플-영업비밀-소송에-공개-반박-39d4fd00.png",
+            src: "/og-cache/weekly-legacy-6b6abcea11ad5efeb4d3.png",
             alt: "OpenAI, 애플 영업비밀 소송에 공개 반박",
           },
         },
@@ -182,7 +182,7 @@ export const week32: WeeklyData = {
             summary: "OpenAI disclosed cases where its models went beyond the scope of third-party cyber evaluations. Of 19 events identified by the UK AISI, two involved GPT-5.6 Sol, and activity was contained within roughly one hour of detection. In evaluations with Irregular, a testing-environment misconfiguration allowed models to reach the public internet.",
           },
           thumbnail: {
-            src: "/og-cache/외부-기관-사이버-평가-중-모델-범위-이탈-공개-899f3cac.png",
+            src: "/og-cache/weekly-legacy-5a5bfea92215249a8e4d.png",
             alt: "외부 기관 사이버 평가 중 모델 범위 이탈 공개",
           },
         },
@@ -259,7 +259,7 @@ export const week32: WeeklyData = {
             summary: "OpenAI updated GPT-5.6 Sol in ChatGPT and made GPT-5.6 Luna the default for Free and Go users. Per OpenAI's own evaluation, responses containing at least one factual error were about 62% less common with Luna and 68% less common with Sol versus GPT-5.5 Instant. Plus/Pro users get a reasoning-effort slider; free users get unlimited text chats and a Think button.",
           },
           thumbnail: {
-            src: "/og-cache/gpt-5-6-sol-개선-luna-무료-무제한-개방-e1775d8d.png",
+            src: "/og-cache/weekly-legacy-cb654e12cf3d3bc44cb7.png",
             alt: "GPT-5.6 Sol 개선, Luna 무료 무제한 개방",
           },
         },
@@ -285,7 +285,7 @@ export const week32: WeeklyData = {
             summary: "OpenAI stated that preliminary evaluations of its upcoming model Astra mean it cannot rule out the Critical cybersecurity capability level under its Preparedness Framework. Prior models including GPT-5.6 Sol were assessed at High. OpenAI is applying stricter security controls and pausing internal Astra activities that do not meet the strengthened requirements.",
           },
           thumbnail: {
-            src: "/og-cache/openai-astra-사이버-능력-critical-가능성-배제-못해-93f793ec.png",
+            src: "/og-cache/weekly-legacy-78112c579019b13b7bf3.png",
             alt: "OpenAI, Astra 사이버 능력 Critical 가능성 배제 못해",
           },
         },
@@ -470,7 +470,7 @@ export const week32: WeeklyData = {
             summary: "On August 5, 2026 Meta released Muse Code in beta — a terminal coding agent — together with Muse Spark 1.2, the model powering it. Meta cites improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows, and says it significantly scaled up training compute on coding tasks. Muse Spark 1.2 is available in Muse Code and the Meta Model API. The blog shows comparison charts for Terminal-Bench 2.1, DeepSWE 1.1 and Meta Internal Coding Bench but does not print numeric scores in text.",
           },
           thumbnail: {
-            src: "/og-cache/메타-터미널-코딩-에이전트-muse-code-베타-출시-9eac21dc.png",
+            src: "/og-cache/weekly-legacy-f16f592a8f1c8ef811b1.png",
             alt: "메타, 터미널 코딩 에이전트 Muse Code 베타 출시",
           },
         },
@@ -531,7 +531,7 @@ export const week32: WeeklyData = {
             summary: "GitHub began rolling out the open-weight Kimi K3 to Copilot Pro, Pro+, Max, Business and Enterprise plans across VS Code, Visual Studio, Copilot CLI, github.com, GitHub Mobile, JetBrains, Xcode and Eclipse. It is off by default for Business and Enterprise, hosted by GitHub on Fireworks AI, at $3 per 1M input tokens, $15 per 1M output tokens and $0.30 per 1M cached input tokens.",
           },
           thumbnail: {
-            src: "/og-cache/github-copilot에-오픈웨이트-kimi-k3-추가-c0836b67.png",
+            src: "/og-cache/weekly-legacy-2751aec5a663a7f83566.png",
             alt: "GitHub Copilot에 오픈웨이트 Kimi K3 추가",
           },
         },
@@ -1046,7 +1046,7 @@ export const week32: WeeklyData = {
             summary: "On August 5, SK Telecom reported Q2 2026 consolidated revenue of KRW 4.3591 trillion, operating profit of KRW 566.0 billion (up 67.3% YoY) and net income of KRW 466.0 billion. AI data center revenue reached KRW 136.2 billion, up 92.5% YoY, which the company described as its fastest-growing business. It set a 5GW capacity target by 2029 and declared a Q2 dividend of KRW 830 per share.",
           },
           thumbnail: {
-            src: "/og-cache/skt-2분기-ai-데이터센터-매출-92-5-증가-d14e9d27.png",
+            src: "/og-cache/weekly-legacy-32dd151697071a6f2d63.png",
             alt: "SKT 2분기, AI 데이터센터 매출 92.5% 증가",
           },
         },
@@ -1202,7 +1202,7 @@ export const week32: WeeklyData = {
             summary: "ByteDance Seed released SeedRealtime on August 5, a native audio-visual full-duplex LLM. The company says it jointly understands audio, visual and temporal information to identify the interaction target and user intent, describing the result as a \"watch, listen, and speak\" experience. Vendor description."
           },
           thumbnail: {
-            src: "/og-cache/seedrealtime-보고-듣고-말하는-것을-동시에-하는-모델-9fa87f1f.png",
+            src: "/og-cache/weekly-legacy-23fcc519c56227cda7ba.png",
             alt: "SeedRealtime, 보고 듣고 말하는 것을 동시에 하는 모델",
           },
         }

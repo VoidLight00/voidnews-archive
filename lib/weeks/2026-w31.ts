@@ -199,7 +199,7 @@ export const week31: WeeklyData = {
             summary: "xAI's reasoning model Grok 4.5 is now available in the GitHub Copilot model picker. It supports up to a 500,000-token context, text and image input, and low, medium and high reasoning effort. GitHub says it performed strongly on terminal-based coding work in VS Code and Copilot CLI."
           },
           thumbnail: {
-            src: "/og-cache/github-copilot에-xai-grok-4-5-추가-83b582fa.png",
+            src: "/og-cache/weekly-legacy-9627c6723c6b4351c1b0.png",
             alt: "GitHub Copilot에 xAI Grok 4.5 추가",
           },
         }
@@ -535,7 +535,7 @@ export const week31: WeeklyData = {
             summary: "OpenAI argued that AI infrastructure is valuable not for its scale but for what it enables: more capable intelligence, available to more people, at lower cost. No specific gigawatt capacity or investment figures were confirmed on the page.",
           },
           thumbnail: {
-            src: "/og-cache/openai-ai-인프라-가치-기준-제시-ef7e135b.png",
+            src: "/og-cache/weekly-legacy-00d58241b3cf6a505184.png",
             alt: "OpenAI, AI 인프라 가치 기준 제시",
           },
         },
@@ -560,7 +560,7 @@ export const week31: WeeklyData = {
             summary: "OpenAI announced ten advances across mathematics and theoretical computer science achieved by an internal version of Astra, with each argument formalized in a Lean certificate. OpenAI says the tokens needed would cost roughly $2,000 at Sol API rates. It also launched ChatGPT for Academic Researchers, giving 100,000 scientists and mathematicians free access.",
           },
           thumbnail: {
-            src: "/og-cache/astra-내부-버전-수학-이론전산-10개-난제-해결-e1503b98.png",
+            src: "/og-cache/weekly-legacy-bd6e6b14587f590a3852.png",
             alt: "Astra 내부 버전, 수학·이론전산 10개 난제 해결",
           },
         },

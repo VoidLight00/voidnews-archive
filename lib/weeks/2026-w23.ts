@@ -312,7 +312,7 @@ export const week23: WeeklyData = {
             "agentic-infra"
           ],
           "thumbnail": {
-            "src": "/og-cache/nvidia-microsoft-개인-ai-에이전트용-윈도우-pc-rtx--1d4518d5.png",
+            "src": "/og-cache/weekly-legacy-356b4a0ce25010677225.png",
             "alt": "NVIDIA·Microsoft, 개인 AI 에이전트용 윈도우 PC 'RTX Spark' 공개"
           },
         },
@@ -610,7 +610,7 @@ export const week23: WeeklyData = {
             "robotics"
           ],
           "thumbnail": {
-            "src": "/og-cache/reachy-mini-서버-없이-완전-로컬-음성-대화-모드-지원-7cdcfd61.png",
+            "src": "/og-cache/weekly-legacy-e9711392cd9ee96d683a.png",
             "alt": "Reachy Mini, 서버 없이 완전 로컬 음성 대화 모드 지원"
           },
         },

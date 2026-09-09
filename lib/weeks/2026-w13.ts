@@ -645,7 +645,7 @@ export const week13: WeeklyData = {
           threadsUrl: "https://www.threads.com/@voidlight00/post/DWTLA81j3Vo",
           xUrl: "https://x.com/VoidLight_Hyeon/status/2036711028122386634",
           thumbnail: {
-            src: "/og-cache/한국판-오픈ai가-온다-카카오-kanana-o-api-베타-공개-ca095fc3.png",
+            src: "/og-cache/weekly-legacy-82b86ee5cab97fd66361.png",
             alt: "한국판 오픈AI가 온다 — 카카오 Kanana-o API 베타 공개",
           },
         },

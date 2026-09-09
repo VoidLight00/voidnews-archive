@@ -522,7 +522,7 @@ export const week16: WeeklyData = {
           backupUrls: [{ label: "GitHub", url: "https://github.com/NousResearch/hermes-agent" }],
           tags: ["에이전트자동화", "text", "code", "community"],
           thumbnail: {
-            src: "/og-cache/atomic-bot-hermes-agent-1분-원클릭-설치로-24-7--477d627b.jpg",
+            src: "/og-cache/weekly-legacy-2b68d87ce1a06eae61fd.jpg",
             alt: "Atomic Bot × Hermes Agent — 1분 원클릭 설치로 24/7 자율 에이전트 실행 (Mac·Windows·Web, 4/22)",
           },
         },

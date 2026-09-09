@@ -35,6 +35,13 @@ try {
       results.push(result);
       console.log(`PASS ${JSON.stringify(result)}`);
       if (week === '2026-w37') await page.screenshot({ path: output.replace('.json', '-w37.png'), fullPage: true });
+    } catch (error) {
+      const images = await page.locator('[data-weekly-source-thumbnail] img').evaluateAll(images => images.map(image => ({ src: image.getAttribute('src'), complete: image.complete, width: image.naturalWidth }))).catch(() => []);
+      const visibleSources = new Set(images.map(image => image.src));
+      const missing = posts.filter(post => post.week === week && post.images.length && !visibleSources.has(post.images[0].src)).map(post => ({ title: post.title, src: post.images[0].src }));
+      fs.writeFileSync(output, JSON.stringify({ status: 'FAIL', baseURL, failedWeek: week, error: error.message, missing, incomplete: images.filter(image => !image.complete || !image.width), results }, null, 2));
+      console.error(`FAIL weekly images ${week}: ${JSON.stringify({ missing, incomplete: images.filter(image => !image.complete || !image.width) })}`);
+      throw error;
     } finally { await page.close(); }
   }
   for (const width of [1024, 820, 652, 390, 320]) {

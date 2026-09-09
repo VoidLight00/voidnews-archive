@@ -36,7 +36,7 @@ export const week29: WeeklyData = {
           },
           "featured": true,
           "thumbnail": {
-            "src": "/og-cache/github-copilot-gpt-5-6-3종-단계적-제공-bd97de80.png",
+            "src": "/og-cache/weekly-legacy-b6f0701f13ea7ddb91e0.png",
             "alt": "GitHub Copilot, GPT-5.6 3종 단계적 제공"
           },
         },

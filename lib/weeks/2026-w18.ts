@@ -629,7 +629,7 @@ export const week18: WeeklyData = {
           ],
           "featured": true,
           "thumbnail": {
-            "src": "/og-cache/github-copilot-usage-based-billing-ai-코딩-0b6dce68.png",
+            "src": "/og-cache/weekly-legacy-250ca3a34f20ac734c2b.png",
             "alt": "GitHub Copilot usage-based billing — AI 코딩 도구가 비용 거버넌스 대상이 되는 전환"
           },
         }
@@ -769,7 +769,7 @@ export const week18: WeeklyData = {
             "community"
           ],
           "thumbnail": {
-            "src": "/og-cache/stripe-link-ai-에이전트-결제용-디지털-지갑-oauth-spe-34b4a528.jpg",
+            "src": "/og-cache/weekly-legacy-60fca1aee568dfe47b35.jpg",
             "alt": "Stripe Link — AI 에이전트 결제용 디지털 지갑 (OAuth + spend request 승인)"
           },
         },

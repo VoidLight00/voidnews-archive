@@ -13,3 +13,4 @@
 | 2026-09-09 | VIP-REUSE-01 | 주간 기사의 정상적인 AB 해설 재사용이 중복으로 차단됨 | 동일 사건 재해설을 별도 날짜의 사건만 허용하는 경로로 검사 | 검증된 주간 행과 AB 본문·URL 위치를 해시로 결속하는 재사용 경로 및 26개 검증 사례 추가 | check-backfill-integration.mjs |
 | 2026-09-09 | VN-IMAGE-02 | 공식 글의 영상 파일·제목 장식이 대표 이미지 후보가 됨 | 영상 src와 poster 미구분 및 제목 내부 장식 미제외 | 영상 정지 이미지 우선, 영상 확장자·제목 내부 장식 제외 | check-source-image-policy.mjs |
 | 2026-09-09 | PM-20260909-01 | Weekly 수집 실패를 출처 이미지 부재로 표시 | 오래된 누락 목록과 실제 이미지·화면 검사의 부재 | 현재 기사·근거·파일 해시 결속 및 실패 상태 분리 | check-weekly-source-images.mjs, test-weekly-images-ui.mjs |
+| 2026-09-09 | VN-IMAGE-03 | 로컬에서는 열리던 기존 이미지 32개가 운영 서버에서 404 | 파일명의 한글 정규화 차이를 Mac 파일 조회가 숨김 | 동일 바이트 영문 파일명과 32개 경로 교체, 실제 디렉터리 이름 대조 | test-weekly-source-images.mjs Unicode and case traps |
