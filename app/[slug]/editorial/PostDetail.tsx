@@ -156,10 +156,11 @@ function renderMarkdown(content: string) {
       }
       if (/^\s*\d+\.\s+/.test(l)) {
         flushPara();
+        const start = Number(l.match(/^\s*(\d+)\./)![1]);
         const items: string[] = [];
         while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) { items.push(lines[i].replace(/^\s*\d+\.\s+/, "")); i++; }
         const key = k("ol");
-        nodes.push(<ol key={key}>{items.map((it, ii) => <li key={ii}>{renderInline(it, `${key}-${ii}`)}</li>)}</ol>);
+        nodes.push(<ol key={key} start={start}>{items.map((it, ii) => <li key={ii}>{renderInline(it, `${key}-${ii}`)}</li>)}</ol>);
         continue;
       }
       para.push(l);

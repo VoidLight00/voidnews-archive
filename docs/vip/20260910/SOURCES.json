@@ -3,10 +3,11 @@
   "verifiedAt": "2026-09-09",
   "period": "2026-08-27 ~ 2026-09-09",
   "contentReview": {
-    "CR01": "Private wiki references removed; public official sources retained.",
+    "CR01": "Community experiences are anonymized and labeled as reported, not controlled measurements. No private source paths or identifiers are published.",
     "CR02": "Lyria examples describe separately generated tracks, not multi-turn editing.",
     "CR03": "Fable data retention restricted to applicable organizational contracts.",
-    "CR04": "Existing World API identified as Marble; Atlas early access kept explicit."
+    "CR04": "Existing World API identified as Marble; Atlas early access kept explicit.",
+    "CR05": "Astra practical supplement: current official context-management instructions, context versus input/output limits, and five documented behavior tendencies. No account setting was changed or performance experiment executed."
   },
   "stories": [
     {
@@ -31,7 +32,7 @@
           "url": "https://learn.chatgpt.com/docs/pricing"
         },
         {
-          "label": "실험 설정",
+          "label": "문맥 설정 항목과 지원 계정",
           "url": "https://learn.chatgpt.com/docs/config-file/config-reference"
         },
         {
@@ -41,6 +42,14 @@
         {
           "label": "Playco 게임 제작 공개 사례",
           "url": "https://openai.com/index/playco-game-prototyping-with-astra/"
+        },
+        {
+          "label": "설정 파일 위치와 적용 순서",
+          "url": "https://learn.chatgpt.com/docs/config-file/config-basic"
+        },
+        {
+          "label": "Astra API 문맥·입출력 사양",
+          "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
         }
       ],
       "releaseScope": "Work·Codex / 순차 제공"
@@ -341,5 +350,56 @@
     "toolInstallationsExecuted": false,
     "vendorExamplesLabeled": true,
     "videoLinksBasedOn": "description chapter timestamps; no full viewing or verified transcripts"
+  },
+  "astraPractical": {
+    "verifiedAt": "2026-09-09",
+    "community": {
+      "coverage": "Processed daily and magazine notes dated September 3–9",
+      "sourcesUnchanged": 86,
+      "evidenceItems": 9,
+      "kind": "anonymized reported experiences and general workflow advice",
+      "limits": "No controlled comparison, reproduced context configuration, or firsthand repeated-approval case found."
+    },
+    "official": [
+      {
+        "url": "https://learn.chatgpt.com/docs/models",
+        "claims": [
+          "Opt-in notes and same-task retrieval",
+          "Off by default",
+          "Plus/Pro login; launch exclusions; new task required"
+        ]
+      },
+      {
+        "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+        "claims": [
+          "Configuration key and Pro Lite mention",
+          "Context size versus compaction threshold"
+        ]
+      },
+      {
+        "url": "https://learn.chatgpt.com/docs/config-file/config-basic",
+        "claims": [
+          "User config location and override order",
+          "IDE settings path"
+        ]
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "claims": [
+          "Total context 1050000, max input 922000, max output 128000"
+        ]
+      },
+      {
+        "url": "https://developers.openai.com/api/docs/guides/latest-model",
+        "claims": [
+          "Clarification, instruction sensitivity, style, delegation, testing tendencies"
+        ]
+      }
+    ],
+    "notExecuted": [
+      "Account configuration change",
+      "Long-task memory performance experiment",
+      "Controlled model comparison"
+    ]
   }
 }

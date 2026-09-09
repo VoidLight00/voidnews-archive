@@ -66,6 +66,20 @@ for (const p of e.modelWatch) image(p.thumbnail);
 assert.equal(used.size, imageByPath.size, 'all source media included');
 assert.match(e.highlights[0].post.content, /승인을 반복해서 물을 때/);
 assert.match(e.highlights[0].post.content, /Playco/);
+const astra = e.highlights[0].post;
+assert.match(astra.content, /features\.context_management\.experimental_mode = true/);
+assert.match(astra.content, /기본값은 꺼짐/);
+assert.match(astra.content, /새 작업을 시작/);
+assert.match(astra.content, /최대 입력 92만 2천 토큰/);
+assert.match(astra.content, /최대 출력 12만 8천 토큰/);
+assert.match(astra.content, /같은 조건에서 성능을 비교한 실험은 아니/);
+assert.match(astra.en.content, /922,000/);
+assert.match(astra.en.content, /off by default/);
+assert.equal(ledger.astraPractical?.community.evidenceItems, 9);
+assert.equal(ledger.astraPractical?.notExecuted.length, 3);
+for (const proof of ledger.astraPractical.official) {
+  assert.ok(astra.backupUrls.some(link => link.url === proof.url), 'Astra claims need linked official sources');
+}
 assert.match(e.highlights[1].post.content, /소비자 Pro·Max 계정에 동일하게 적용되는 규칙으로 해석하면 안 됩니다/);
 assert.match(e.highlights[4].post.content, /조기 접근|얼리 액세스|early access|일부 파트너/);
 assert.match(e.highlights[5].post.content, /별도 곡을 새로 생성/);

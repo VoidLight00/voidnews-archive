@@ -25,10 +25,13 @@ export function renderRichText(text: string): ReactNode {
   if (!text) return null;
   // 마크다운 헤딩(## ~ ######) 라인을 굵은 소제목으로 변환 — 원시 마크다운 노출(VN-RENDER-LEAK) 방지
   text = text.replace(/^#{1,6}[ \t]+(.+)$/gm, "**$1**");
-  const parts = text.split(/(==[^=\n]+?==|\*\*[^*\n]+?\*\*|https?:\/\/[^\s)\]]+)/g);
+  const parts = text.split(/(`[^`\n]+`|==[^=\n]+?==|\*\*[^*\n]+?\*\*|https?:\/\/[^\s)\]]+)/g);
 
   return parts.map((part, i) => {
     if (!part) return null;
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return <code key={i} style={{ fontFamily: "var(--mono)", fontSize: "0.9em", overflowWrap: "anywhere" }}>{part.slice(1, -1)}</code>;
+    }
     if (URL_MATCH_REGEX.test(part)) {
       return (
         <a
