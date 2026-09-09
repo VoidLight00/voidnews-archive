@@ -8,6 +8,7 @@ import { extractGlossaryHits, type GlossaryEntry } from "@/lib/glossary";
 import { useLocale } from "@/app/LocaleProvider";
 import { isKoreanText } from "@/lib/i18n";
 import styles from "./editorial.module.css";
+import ArticleSupplement from "./ArticleSupplement";
 import { ImageDisclosure, imageDisclosure } from "@/app/components/ImageDisclosure";
 
 interface PostDetailProps {
@@ -429,15 +430,15 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             <section aria-label={activeLang === "ko" ? "모델 시각 결과 비교" : "Visual model comparisons"} style={{ margin: "28px 0" }}>
               <div style={{ borderTop: "3px double var(--rule)", paddingTop: 20, marginBottom: 16 }}>
                 <span className="mono" style={{ display: "block", color: "var(--accent)", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>
-                  Visual comparison lab
+                  {activeLang === "ko" ? "공개 결과 비교" : "Public examples"}
                 </span>
                 <h2 className="serif" style={{ margin: "8px 0 0", fontSize: "clamp(22px, 3.5vw, 30px)", lineHeight: 1.18 }}>
                   {activeLang === "ko" ? "모델별 결과와 비교 조건을 함께 봅니다" : "Results and comparison conditions"}
                 </h2>
                 <p style={{ margin: "10px 0 0", maxWidth: "68ch", color: "var(--text-soft)", lineHeight: 1.65 }}>
                   {activeLang === "ko"
-                    ? "선별된 시각 데모에는 selection effect가 있습니다. 같은 프롬프트·시간·도구·시작 자산이 확인되지 않으면 통제 벤치마크가 아니라 시연 비교로 표시합니다."
-                    : "Curated demos have selection effects. Unless prompt, runtime, tools and starting assets are matched, each item is labeled as a showcase rather than a controlled benchmark."}
+                    ? "결과와 함께 요청문, 사용 도구, 시작 자료를 확인해 보십시오. 같은 조건의 실험인지 제작자가 고른 공개 예시인지 구분해 볼 수 있습니다."
+                    : "Check the prompt, tools and starting assets alongside each result. The labels distinguish matched experiments from selected public examples."}
                 </p>
               </div>
               <div style={{ display: "grid", gap: 18 }}>
@@ -458,7 +459,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                         </div>
                       ) : (
                         <div style={{ minHeight: 140, display: "grid", placeItems: "center", padding: 24, background: "linear-gradient(135deg, var(--surface-2), var(--card))", color: "var(--muted)", textAlign: "center" }}>
-                          {activeLang === "ko" ? "원영상과 모델 조건을 확인하는 중입니다." : "Original media and model conditions are being verified."}
+                          {activeLang === "ko" ? "연결된 원게시물에서 결과를 확인할 수 있습니다." : "View the result in the linked original post."}
                         </div>
                       )}
                       <div style={{ padding: "clamp(16px, 3vw, 24px)" }}>
@@ -522,6 +523,8 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
           {/* 본문 (탭 선택 언어) */}
           {activeLang === "ko" ? koBody : enBody}
 
+          {post.supplement ? <ArticleSupplement data={post.supplement} locale={activeLang} /> : null}
+
           {/* Gallery — 본문 중간 inline 이미지 */}
           {post.galleryImages && post.galleryImages.length > 0 ? (
             <section className={styles.gallery}>
@@ -558,7 +561,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
           {/* 공식 출처 reference 카드 */}
           {(post.officialUrl || (post.backupUrls && post.backupUrls.length > 0)) ? (
             <section className={styles.referenceBlock}>
-              <h3 className={styles.referenceTitle}>{t("detail.references")}</h3>
+              <h3 className={styles.referenceTitle}>{post.supplement ? (activeLang === "ko" ? "공식 출처와 참고 자료" : "Official sources and further reading") : t("detail.references")}</h3>
               {post.officialUrl ? (
                 <a href={post.officialUrl} target="_blank" rel="noreferrer" className={styles.referenceMain}>
                   <span className={styles.referenceMainLabel}>{t("detail.referenceMain")}</span>

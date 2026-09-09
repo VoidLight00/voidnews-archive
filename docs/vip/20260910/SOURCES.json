@@ -50,6 +50,14 @@
         {
           "label": "Astra API 문맥·입출력 사양",
           "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+        },
+        {
+          "label": "Astra·Fable 공개 제작 비교",
+          "url": "https://www.chaseai.io/blog/gpt-6-astra-vs-claude-fable-5-1"
+        },
+        {
+          "label": "VOIDLIGHT · 생각의 강도 활용 해설",
+          "url": "https://www.threads.com/@voidlight00/post/DdAwEbTE1oV"
         }
       ],
       "releaseScope": "Work·Codex / 순차 제공"
@@ -118,6 +126,18 @@
         {
           "label": "API 요금·모델별 비용",
           "url": "https://developers.openai.com/api/docs/pricing"
+        },
+        {
+          "label": "이미지 편집 참고 예제 · GPT Image 2",
+          "url": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md"
+        },
+        {
+          "label": "VOIDLIGHT · 별자리와 띠 공개 요청문",
+          "url": "https://www.threads.com/@voidlight00/post/DdBpcyFk5Aa"
+        },
+        {
+          "label": "VOIDLIGHT · 창작 결과 이미지",
+          "url": "https://www.threads.com/@voidlight00/post/DdBpdUvk1V2"
         }
       ],
       "releaseScope": "ChatGPT·API / 순차 제공"
@@ -343,6 +363,108 @@
       "originalBytesUnedited": true,
       "alt": "석양의 사막에서 창을 든 인물의 시점으로 보이는 Runway GWM Worlds 2 공식 시연 포스터",
       "caption": "Runway가 공개한 GWM Worlds 2 연구 시연의 정지 포스터입니다."
+    },
+    {
+      "id": "dog-0",
+      "url": "https://images.ctfassets.net/kftzwdyauwt9/6QN2rgYIi2quH4BBy7Wn1a/87db661e397933f1807331dfe077d39f/stuntman-dog-before.png",
+      "alt": "A small cream-colored curly-haired dog stands on a leash among black patio chairs in bright sunlight.",
+      "source": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "ChatGPT Images 2.5",
+      "publicPath": "/ab/2026-09a/cases/stuntman-dog-before.png",
+      "sha256": "005ce2d4ef33828dd337f7a6f9229d0344c64ef241256ddd0b3a2038d43c076d",
+      "byteSize": 3035779,
+      "width": 1294,
+      "height": 1724,
+      "originalBytesUnedited": true,
+      "selectionKind": "source-comparison-pair",
+      "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
+      "sourceImageUrl": "https://images.ctfassets.net/kftzwdyauwt9/6QN2rgYIi2quH4BBy7Wn1a/87db661e397933f1807331dfe077d39f/stuntman-dog-before.png",
+      "officialUrl": "https://openai.com/index/introducing-chatgpt-images-2-5/"
+    },
+    {
+      "id": "dog-1",
+      "url": "https://images.ctfassets.net/kftzwdyauwt9/7tJYeSKnJapYlbS8y46zBD/c652437c478ce86628b34c234a7e7fed/stuntman-dog-after.webp",
+      "alt": "The same cream-colored dog stands on the patio wearing a white stunt suit and helmet decorated with red and blue stripes and stars, with a “STUNTMAN” patch on its chest.",
+      "source": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "model": "ChatGPT Images 2.5",
+      "publicPath": "/ab/2026-09a/cases/stuntman-dog-after.webp",
+      "sha256": "1453a1303b7e72ea91ae6c2e91a941f0d3b2ad700d54e05f283473765f3c3f02",
+      "byteSize": 468826,
+      "width": 1087,
+      "height": 1447,
+      "originalBytesUnedited": true,
+      "selectionKind": "source-comparison-pair",
+      "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
+      "sourceImageUrl": "https://images.ctfassets.net/kftzwdyauwt9/7tJYeSKnJapYlbS8y46zBD/c652437c478ce86628b34c234a7e7fed/stuntman-dog-after.webp",
+      "officialUrl": "https://openai.com/index/introducing-chatgpt-images-2-5/"
+    },
+    {
+      "id": "chess-input",
+      "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/photography/chess-midgame.png",
+      "alt": "해 질 무렵 야외 테이블의 체스판",
+      "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
+      "model": "GPT Image 2",
+      "publicPath": "/ab/2026-09a/cases/chess-midgame.png",
+      "sha256": "1c47574bb18141492be730ae1b5d338623c0143994dbbfacaa93bdf083d68147",
+      "byteSize": 2058174,
+      "width": 1536,
+      "height": 1024,
+      "originalBytesUnedited": true,
+      "selectionKind": "source-comparison-pair",
+      "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
+      "sourceImageUrl": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/photography/chess-midgame.png",
+      "officialUrl": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md"
+    },
+    {
+      "id": "chess-output",
+      "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/edit-endpoint-showcase/edit-chess-winter.png",
+      "alt": "눈 내리는 겨울 야외 테이블의 체스판",
+      "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
+      "model": "GPT Image 2",
+      "publicPath": "/ab/2026-09a/cases/edit-chess-winter.png",
+      "sha256": "3bded1ab82e665402944e90eeed6442f3ce171c3cc209092f38d65f482f7d7a5",
+      "byteSize": 2866973,
+      "width": 1536,
+      "height": 1024,
+      "originalBytesUnedited": true,
+      "selectionKind": "source-comparison-pair",
+      "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
+      "sourceImageUrl": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/edit-endpoint-showcase/edit-chess-winter.png",
+      "officialUrl": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md"
+    },
+    {
+      "id": "poster-input",
+      "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/typography-posters/tea-poster.png",
+      "alt": "찻잎과 찻잔을 배치한 GREEN TEA 광고 포스터",
+      "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
+      "model": "GPT Image 2",
+      "publicPath": "/ab/2026-09a/cases/tea-poster.png",
+      "sha256": "366d0c4b7f293f9c60a6549da981186faca44d88b993b423fb23a92d2a218102",
+      "byteSize": 2911155,
+      "width": 1024,
+      "height": 1536,
+      "originalBytesUnedited": true,
+      "selectionKind": "source-comparison-pair",
+      "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
+      "sourceImageUrl": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/typography-posters/tea-poster.png",
+      "officialUrl": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md"
+    },
+    {
+      "id": "poster-output",
+      "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/edit-endpoint-showcase/tea-poster-metro-lightbox.png",
+      "alt": "GREEN TEA 포스터가 설치된 지하철 광고판",
+      "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
+      "model": "GPT Image 2",
+      "publicPath": "/ab/2026-09a/cases/tea-poster-metro-lightbox.png",
+      "sha256": "de68c6a1776d2d29448f763209bc6fe6a365ac7c6b84d28dd802ca295ba02584",
+      "byteSize": 2639660,
+      "width": 1024,
+      "height": 1536,
+      "originalBytesUnedited": true,
+      "selectionKind": "source-comparison-pair",
+      "selectionReason": "사용자 요청에 따른 원문 입력·출력 쌍. 모델과 변경 목표가 원문에서 확인된 사례.",
+      "sourceImageUrl": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/edit-endpoint-showcase/tea-poster-metro-lightbox.png",
+      "officialUrl": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md"
     }
   ],
   "scope": {
@@ -401,5 +523,30 @@
       "Long-task memory performance experiment",
       "Controlled model comparison"
     ]
+  },
+  "readerSupplements": {
+    "checkedAt": "2026-09-09",
+    "imageCases": {
+      "officialImages25": 2,
+      "communityImage2": 2,
+      "unversionedThreads": 1,
+      "communityModelBasis": "repository classification; per-output execution logs unavailable"
+    },
+    "comparison": {
+      "source": "https://www.chaseai.io/blog/gpt-6-astra-vs-claude-fable-5-1",
+      "publishedAt": "2026-09-05",
+      "cases": 4,
+      "claimScope": "creator evaluation of selected builds",
+      "userProvidedExperience": "prototype with Fable and maintain with Astra; anecdotal, no public original URL"
+    },
+    "threads": [
+      "https://www.threads.com/@voidlight00/post/DdAwEbTE1oV",
+      "https://www.threads.com/@voidlight00/post/DdBpcyFk5Aa",
+      "https://www.threads.com/@voidlight00/post/DdBpdUvk1V2"
+    ],
+    "readerFirst": {
+      "replacements": 46,
+      "presenterInstructionsRemoved": true
+    }
   }
 }

@@ -32,6 +32,40 @@ export interface MediaImage {
   provenance?: "source-share-preview";
 }
 
+export interface LocalizedCopy {
+  ko: string;
+  en: string;
+}
+
+export interface ArticleSupplementData {
+  id: string;
+  title: LocalizedCopy;
+  intro: LocalizedCopy;
+  tables?: {
+    id: string;
+    title: LocalizedCopy;
+    columns: LocalizedCopy[];
+    rows: LocalizedCopy[][];
+    note?: LocalizedCopy;
+    sourceUrl: string;
+    sourceLabel: LocalizedCopy;
+  }[];
+  cases?: {
+    id: string;
+    title: LocalizedCopy;
+    model: string;
+    kind: "official" | "community";
+    sourceUrl: string;
+    sourceLabel: LocalizedCopy;
+    input: MediaImage;
+    output: MediaImage;
+    prompt: LocalizedCopy;
+    promptKind: "source-summary" | "suggested";
+    focus: LocalizedCopy;
+    limit: LocalizedCopy;
+  }[];
+}
+
 // 영문판 필드 — 표시 전용. 북마크·읽음 상태 등 identity 키는 항상 한국어 title을 쓴다.
 // 2026-w29 이후 신규 주차는 title/summary 영문 필수 (scripts/check-i18n-coverage.mjs가 빌드 차단)
 export interface PostEn {
@@ -93,6 +127,7 @@ export interface Post {
   threadsEmbedUrl?: string;   // Threads 게시물 iframe embed URL
   galleryImages?: { src: string; alt: string; caption?: string }[]; // 본문 중간 inline 이미지
   visualComparisons?: VisualComparisonItem[]; // 모델별 시각 결과·조건·원게시물 비교 랩
+  supplement?: ArticleSupplementData;
 }
 
 export interface Company {

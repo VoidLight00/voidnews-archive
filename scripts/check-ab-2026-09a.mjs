@@ -22,7 +22,7 @@ assert.equal(e.modelWatch.length, 1);
 const ordered = [/GPT.?6.*Astra/i, /Fable 5\.1/i, /Gemini 3\.8 Flash/i, /Images 2\.5/i, /Atlas/i, /Lyria 3\.5/i];
 const primaryHosts = ['openai.com', 'www.anthropic.com', 'blog.google', 'openai.com', 'www.worldlabs.ai', 'blog.google'];
 const imageByPath = new Map(ledger.images.map(i => [i.publicPath, i]));
-assert.equal(imageByPath.size, 12);
+assert.equal(imageByPath.size, 18);
 const used = new Set();
 const image = value => {
   assert.ok(value?.src && value.alt && value.caption, 'image needs path, alt, caption');
@@ -49,17 +49,27 @@ for (const [index, highlight] of e.highlights.entries()) {
   assert.equal(proof?.officialUrl, p.officialUrl);
   assert.equal(proof?.date, p.date);
   assert.match(p.content, /제안|실습/);
-  assert.match(p.content, /영상 전체 시청이나 자막 검증을 완료했다는 뜻은 아닙니다/);
+  assert.match(p.content, /영상 설명란 목차에 해당 주제로 표시된 구간/);
   assert.ok(p.en?.title && p.en?.summary, 'English summary');
   assert.ok(!p.videoUrl, 'article image remains above supplementary video links');
   image(p.thumbnail);
   for (const extra of p.galleryImages ?? []) image(extra);
+  for (const example of p.supplement?.cases ?? []) {
+    image(example.input);
+    image(example.output);
+    assert.ok(example.sourceUrl.startsWith('https://'));
+    for (const field of ['title', 'prompt', 'focus', 'limit', 'sourceLabel']) {
+      assert.ok(example[field]?.ko && example[field]?.en, `${example.id}: bilingual ${field}`);
+    }
+    assert.notEqual(example.input.src, example.output.src, 'input and result must be distinct');
+    assert.ok(['source-summary', 'suggested'].includes(example.promptKind));
+  }
 }
 for (const p of e.editorsPicks) {
   assert.ok(p.body.length >= 800);
   assert.ok(['github.com', 'sparkjs.dev'].includes(new URL(p.sourceUrl).hostname));
   assert.ok(p.guideUrl.includes('LICENSE'));
-  assert.match(p.body, /설치와 서비스 연결은 이 브리핑 작성 중 실행하지 않았습니다/);
+  assert.match(p.body, /권한|접근 범위/);
   image(p.thumbnail);
 }
 for (const p of e.modelWatch) image(p.thumbnail);
@@ -84,5 +94,19 @@ assert.match(e.highlights[1].post.content, /소비자 Pro·Max 계정에 동일�
 assert.match(e.highlights[4].post.content, /조기 접근|얼리 액세스|early access|일부 파트너/);
 assert.match(e.highlights[5].post.content, /별도 곡을 새로 생성/);
 assert.match(e.modelWatch[0].body, /연구 프리뷰/);
+const publicCopy = JSON.stringify(e);
+assert.doesNotMatch(publicCopy, /발표용 제안 시연|리허설|발표 전에 확인|발표 전 확인|브리핑 작성 중|작성한 시연안|The suggested live demonstration has not been executed|unexecuted three-step|preparing this briefing/i, 'visitor-facing copy must not contain presenter or author instructions');
+assert.equal(astra.supplement.tables[0].rows.length, 4);
+assert.equal(astra.supplement.tables[0].sourceUrl, 'https://www.chaseai.io/blog/gpt-6-astra-vs-claude-fable-5-1');
+assert.match(astra.supplement.tables[0].note.ko, /전체 모델 순위는 아닙니다/);
+assert.match(astra.content, /모델의 고정 성격으로 단정하지 않습니다/);
+const imageCases = e.highlights[3].post.supplement.cases;
+assert.equal(imageCases.length, 4);
+assert.equal(imageCases.filter(c => c.kind === 'official' && c.model === 'ChatGPT Images 2.5').length, 2);
+assert.equal(imageCases.filter(c => c.kind === 'community' && c.model.startsWith('GPT Image 2 ·')).length, 2);
+for (const c of imageCases.filter(c=>c.kind === 'community')) assert.match(c.limit.ko, /개별 실행 기록.*없으며 Images 2.5 결과로 비교하지 않습니다/);
+assert.match(e.highlights[3].post.content, /생성 모델 버전은 명시되어 있지 않아/);
+assert.equal(ledger.readerSupplements.imageCases.unversionedThreads, 1);
+assert.equal(ledger.readerSupplements.threads.length, 3);
 assert.doesNotMatch(JSON.stringify(e), /\/Users\/|chatId|authorId|roomId|원문 대화|위키에는|TBD|TODO|lorem ipsum/i);
-console.log(`PASS[ab-2026-09a] 6 ordered guides, 2 tools, 1 research watch, ${used.size} source images and content boundaries`);
+console.log(`PASS[ab-2026-09a] 6 ordered guides, 2 tools, 1 research watch, 4 image pairs, 4 task comparisons, reader-first copy, ${used.size} source images and content boundaries`);
