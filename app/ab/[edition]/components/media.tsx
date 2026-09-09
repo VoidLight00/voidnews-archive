@@ -125,7 +125,7 @@ export function EditorialImageFrame({
           <span className="mono" style={{ color, fontWeight: 800 }}>VOIDNEWS</span>
           <span className="mono">{loading
             ? (locale === "ko" ? "이미지를 불러오는 중" : "Loading image")
-            : (locale === "ko" ? "출처 이미지 없음" : "No source image")}</span>
+            : (locale === "ko" ? "이미지 미리보기를 제공하지 못했습니다" : "Image preview unavailable")}</span>
         </div>
       )}
       <ImageDisclosure src={src} locale={locale} overlay />

@@ -28,10 +28,15 @@ try {
   assert.ok(validate(item, [available]).failures.some(x => x.includes('not attached')));
   const attached = { ...item, images: [{ src: '/source.webp' }] };
   assert.equal(validate(attached, [available]).failures.length, 0);
+  assert.ok(validate(attached, []).failures.some(x => x.includes('article-bound source audit')), 'A non-empty thumbnail is not provenance for a new article');
+  const preservedLedger = { version: 1, records: [], existingImageBaseline: { records: [{ key: imageKey(item), images: [{ src: '/source.webp', sha256: sha256(bytes) }] }] } };
+  assert.equal(validateWeeklyImages([attached], preservedLedger, root).failures.length, 0);
+  assert.ok(validate({ ...item, images: [{ src: '/wrong.svg' }, { src: '/source.webp' }] }, [available]).failures.some(x => x.includes('primary thumbnail')), 'The displayed primary image must be the audited image');
   fs.writeFileSync(path.join(root, 'public/source.webp'), '<html>429</html>');
+  assert.ok(validateWeeklyImages([attached], preservedLedger, root).failures.some(x => x.includes('refreshed source audit')), 'Replacing bytes behind an old path requires a new source review');
   assert.ok(validate(attached, [available]).failures.some(x => x.includes('Invalid image bytes')));
   assert.ok(validate(attached, [available]).failures.some(x => x.includes('bytes changed')));
   fs.unlinkSync(path.join(root, 'public/source.webp'));
   assert.ok(validate(attached, [available]).failures.some(x => x.includes('Missing image file')));
-  console.log('PASS[weekly-source-images-regressions] 15 assertions: stale inventory, attachment, source drift, absent evidence, forbidden absence inference, invalid bytes, SVG format mismatch, filename normalization, case mismatch, missing files and changed hashes');
+  console.log('PASS[weekly-source-images-regressions] 19 assertions: new and changed images require source audits; audited primary thumbnail; preserved baseline; stale inventory; source drift; failure versus absence; bytes, path and hash integrity');
 } finally { fs.rmSync(root, { recursive: true, force: true }); }

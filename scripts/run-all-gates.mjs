@@ -37,6 +37,7 @@ const RUN_SCOPED = new Set([
   "check-collection-provenance.mjs", // post-collection, needs --run
   "check-render-leaks.mjs",        // postbuild (scans built HTML)
   "verify-live-thumbnails.mjs",    // live network check (not at build time)
+  "verify-site-release.mjs",       // mandatory after deployment; requires the actual --url and runs the master plus browser checks
   "run-all-gates.mjs",
 ]);
 

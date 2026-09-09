@@ -59,7 +59,8 @@ try {
   await page.reload();
   for (const thumb of await page.locator('.tc-source-thumb').all()) await thumb.scrollIntoViewIfNeeded();
   await page.waitForFunction(() => !document.querySelector('.tc-source-thumb img'));
-  assert.ok(await page.getByText('출처 이미지 없음', { exact: true }).count() > 0);
+  assert.ok(await page.getByText('이미지 미리보기를 제공하지 못했습니다', { exact: true }).count() > 0);
+  assert.equal(await page.getByText('출처 이미지 없음', { exact: true }).count(), 0);
   console.log('PASS failed OG terminates at text fallback');
   await page.evaluate(() => localStorage.clear());
   await page.route('https://api.microlink.io/**', route => route.fulfill({ json: {

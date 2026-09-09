@@ -18,6 +18,8 @@
 | R11 | 신규 썸네일은 원문 상단 이미지 다음 공유용 이미지를 고르고, 장식·숨김·위험 URL과 이미지가 아닌 응답을 제외합니다. | content_gate.sh |
 | R12 | 9월 VIP는 지정 순서의 본편 6개·공개 도구 2개, 공식 이미지 원본, 실제 제공 범위와 제안 시연을 갖춰야 합니다. | check-ab-2026-09a.mjs |
 | R13 | Weekly 이미지 검사는 오래된 누락 목록 대신 현재 데이터를 읽고, 파일 바이트·근거 해시·실제 연결·출처 변경을 검사합니다. 회귀 사례로 검사 실패를 확인합니다. | check-weekly-source-images.mjs, test-weekly-source-images.mjs |
+| R14 | 신규·교체 썸네일은 기사별 출처 조사 없이는 통과하지 않습니다. 기존 이미지 경로의 바이트 교체도 탐지하고, 조사한 이미지가 실제 첫 썸네일인지 확인합니다. | check-weekly-source-images.mjs, test-weekly-source-images.mjs |
+| R15 | 운영 주소에서 본문 이동·언어·필터·모바일·이미지 대체 및 전체 Weekly 이미지 검사를 마쳐야 게시 완료입니다. 실패한 검사는 종료코드와 로그로 남습니다. | verify-site-release.mjs, test-browse-ui.mjs, test-image-disclosure.mjs, test-weekly-images-ui.mjs |
 
 마스터: `bash gates/verify_voidnews.sh .`. `npm run build`는 별도로 실제 프로덕션 빌드와 생성 HTML 누수를 검사합니다.
 배포는 검증 완료된 `.vercel/output`만 전송하며, 로컬 근거 캐시나 환경 파일은 게시하지 않습니다.

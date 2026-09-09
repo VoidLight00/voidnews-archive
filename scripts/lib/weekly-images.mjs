@@ -26,6 +26,11 @@ export function validateWeeklyImages(items, ledger, root = process.cwd()) {
     if (records.has(entry.key)) failures.push(`Duplicate audit record: ${entry.key}`);
     records.set(entry.key, entry);
   }
+  const baseline = new Map();
+  for (const entry of ledger.existingImageBaseline?.records || []) {
+    if (baseline.has(entry.key)) failures.push(`Duplicate existing-image baseline: ${entry.key}`);
+    baseline.set(entry.key, entry);
+  }
   const itemKeys = new Set(items.map(imageKey));
   for (const key of records.keys()) if (!itemKeys.has(key)) failures.push(`Stale audit identity: ${key}`);
   for (const repair of [...(ledger.existingFormatRepairs || []), ...(ledger.existingPathRepairs || [])]) {
@@ -56,12 +61,24 @@ export function validateWeeklyImages(items, ledger, root = process.cwd()) {
     }
     if (!audit) {
       if (!item.images.length) failures.push(`Unaudited missing image: ${key}`);
+      else {
+        const preserved = baseline.get(key);
+        if (!preserved) failures.push(`New image lacks an article-bound source audit: ${key}`);
+        else {
+          const current = item.images.map(image => {
+            if (!image.src.startsWith('/')) return { src: image.src };
+            try { return { src: image.src, sha256: sha256(fs.readFileSync(path.join(root, 'public', image.src))) }; }
+            catch { return { src: image.src, sha256: null }; }
+          });
+          if (JSON.stringify(current) !== JSON.stringify(preserved.images)) failures.push(`Changed image lacks a refreshed source audit: ${key}`);
+        }
+      }
       continue;
     }
     if (!audit.checkedAt || !audit.reason || !Array.isArray(audit.evidence) || !audit.evidence.length) failures.push(`Missing source audit evidence: ${key}`);
     if (audit.status === 'available') {
       available.push(key);
-      if (!item.images.some(image => image.src === audit.publicPath)) failures.push(`Found source image is not attached: ${key}`);
+      if (item.images[0]?.src !== audit.publicPath) failures.push(`Found source image is not attached as the primary thumbnail: ${key}`);
       try { if (sha256(fs.readFileSync(path.join(root, 'public', audit.publicPath))) !== audit.sha256) failures.push(`Source image bytes changed: ${key}`); }
       catch { failures.push(`Audited source image missing: ${key}`); }
       if (!/^https:\/\//.test(audit.imageUrl || '') || !['source-first-image', 'source-share-preview'].includes(audit.selectionKind)) failures.push(`Invalid source image provenance: ${key}`);
