@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // OG image 빌드 타임 prefetch — fetch + AbortController + 강제 6s timeout
 import fs from "node:fs";
+import { selectSourceImage, imageContentType } from "./lib/source-image.mjs";
 import path from "node:path";
 
 const REPO = path.resolve(import.meta.dirname, "..");
@@ -43,32 +44,7 @@ async function safeFetch(url, ms) {
 }
 
 function extractOg(html, baseUrl) {
-  if (!html) return null;
-  const slice = html.slice(0, 200_000); // <head>만 봐도 충분
-  const find = (prop) => {
-    const re = new RegExp(
-      `<meta[^>]+(?:property|name)=["']${prop}["'][^>]+content=["']([^"']+)["']`,
-      "i"
-    );
-    return (slice.match(re) || [])[1] || null;
-  };
-  const findRev = (prop) => {
-    const re = new RegExp(
-      `<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${prop}["']`,
-      "i"
-    );
-    return (slice.match(re) || [])[1] || null;
-  };
-  let image =
-    find("og:image") ||
-    find("og:image:url") ||
-    find("twitter:image") ||
-    findRev("og:image") ||
-    findRev("twitter:image");
-  if (image) {
-    try { image = new URL(image, baseUrl).toString(); } catch {}
-  }
-  return { image, title: find("og:title") || find("twitter:title"), description: find("og:description") };
+  return selectSourceImage(html, baseUrl);
 }
 
 function extractPosts(file) {
@@ -98,6 +74,7 @@ function extractPosts(file) {
 const ext = (url) => {
   try {
     const p = new URL(url).pathname.toLowerCase();
+    if (p.endsWith(".avif")) return "avif";
     if (p.endsWith(".png")) return "png";
     if (p.endsWith(".webp")) return "webp";
     if (p.endsWith(".gif")) return "gif";
@@ -115,7 +92,7 @@ let fetched = 0, skipped = 0, failed = 0, processed = 0;
 async function processOne(p) {
   processed++;
   const existing = manifest[p.slug];
-  if (existing?.file && fs.existsSync(path.join(CACHE_DIR, existing.file))) {
+  if (existing?.selectionPolicy === "source-top-image-v1" && existing?.file && fs.existsSync(path.join(CACHE_DIR, existing.file))) {
     skipped++; return;
   }
   const res = await safeFetch(p.url, HTML_TIMEOUT_MS);
@@ -140,16 +117,18 @@ async function processOne(p) {
     manifest[p.slug] = { url: p.url, image: og.image, file: null, ts: Date.now() };
     failed++; return;
   }
-  const ct = imgRes.headers.get("content-type") || "";
-  if (!ct.startsWith("image/")) {
+  const buf = Buffer.from(await imgRes.arrayBuffer());
+  const ct = imageContentType(buf, imgRes.headers.get("content-type") || "");
+  if (!ct) {
     manifest[p.slug] = { url: p.url, image: og.image, file: null, ts: Date.now() };
     failed++; return;
   }
-  const buf = Buffer.from(await imgRes.arrayBuffer());
   fs.writeFileSync(dest, buf);
   manifest[p.slug] = {
     url: p.url,
     image: og.image,
+    selectionPolicy: og.selectionPolicy,
+    imageKind: og.kind,
     title: og.title || null,
     description: og.description || null,
     file,

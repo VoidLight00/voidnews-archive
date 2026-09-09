@@ -15,6 +15,7 @@ const SCRIPTS = path.join(ROOT, "scripts");
 
 // build-time HARD gates (run on every `next build` via prebuild)
 const BUILD_GATES = {
+  "check-source-image-policy.mjs": [],
   "check-backfill-integration.mjs": [],
   "check-slugs.mjs": [],
   "check-regressions.mjs": [],
@@ -28,6 +29,7 @@ const BUILD_GATES = {
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([
+  "check-vip-preview.mjs",
   "verify-publish-ready.mjs",      // publish-time, needs --scope/--run
   "check-date-coverage.mjs",       // consolidate/run, needs --items/--start/--end
   "check-collection-provenance.mjs", // post-collection, needs --run

@@ -552,11 +552,11 @@
       "commit": "c560ecf",
       "evidence": {
         "kind": "count",
-        "cmd": "grep -c 'resolveOgImage' scripts/inject-thumbnails.mjs",
+        "cmd": "grep -c 'fetchViaProxy' scripts/inject-thumbnails.mjs",
         "op": "eq",
         "value": 2
       },
-      "notes": "20260812-075051-ab-20260731-20260812 — w31/w32/w33 썸네일 96/96"
+      "notes": "20260812-075051-ab-20260731-20260812 — w31/w32/w33 썸네일 96/96; 2026-09-09 source-first selector renamed, retained proxy definition and call verified."
     },
     {
       "id": "IMP-0031",

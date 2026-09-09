@@ -15,6 +15,7 @@
 | R8 | 필수 데이터·검증 문서가 존재해야 합니다. | count_gate.sh |
 | R9 | 모든 요구사항이 실제 검증 수단에 연결되어야 합니다. | req_coverage_gate.sh |
 | R10 | 공식 출처의 문맥·VIP 선정·보도 시점 판단은 원문과 대조합니다. | human |
+| R11 | 신규 썸네일은 원문 상단 이미지 다음 공유용 이미지를 고르고, 장식·숨김·위험 URL과 이미지가 아닌 응답을 제외합니다. | content_gate.sh |
 
 마스터: `bash gates/verify_voidnews.sh .`. `npm run build`는 별도로 실제 프로덕션 빌드와 생성 HTML 누수를 검사합니다.
 배포는 검증 완료된 `.vercel/output`만 전송하며, 로컬 근거 캐시나 환경 파일은 게시하지 않습니다.

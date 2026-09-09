@@ -3,6 +3,7 @@
 // 1) public/og-cache/_manifest.json 에서 URL → file 인덱스를 만들어 1차 매칭
 // 2) 매칭 안 되는 URL은 fetch + OG 추출 + 이미지 다운로드 + 캐시 등록 후 매칭
 import fs from "node:fs";
+import { selectSourceImage, selectSourceImages, imageContentType } from "./lib/source-image.mjs";
 import path from "node:path";
 import crypto from "node:crypto";
 
@@ -26,7 +27,7 @@ const manifest = fs.existsSync(MANIFEST)
 function buildUrlIndex() {
   const idx = new Map();
   for (const [, v] of Object.entries(manifest)) {
-    if (v?.file && v?.url) idx.set(v.url, v.file);
+    if (v?.file && v?.url && v.selectionPolicy === "source-top-image-v1") idx.set(v.url, v.file);
   }
   return idx;
 }
@@ -50,28 +51,7 @@ async function safeFetch(url, ms, asBuffer = false) {
 }
 
 function pickOgImage(html, baseUrl) {
-  if (!html) return null;
-  const head = html.slice(0, 200_000);
-  const m = (prop) =>
-    (head.match(
-      new RegExp(
-        `<meta[^>]+(?:property|name)=["']${prop}["'][^>]+content=["']([^"']+)["']`,
-        "i"
-      )
-    ) || [])[1] ||
-    (head.match(
-      new RegExp(
-        `<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${prop}["']`,
-        "i"
-      )
-    ) || [])[1];
-  let img =
-    m("og:image") || m("og:image:url") || m("twitter:image") || m("twitter:image:src");
-  if (!img) return null;
-  try {
-    img = new URL(img, baseUrl).toString();
-  } catch {}
-  return img;
+  return selectSourceImage(html, baseUrl)?.image || null;
 }
 
 function safeSlug(s) {
@@ -83,6 +63,7 @@ function safeSlug(s) {
 }
 
 function extFromContentType(ct, fallbackUrl) {
+  if (ct?.includes("avif")) return "avif";
   if (ct?.includes("png")) return "png";
   if (ct?.includes("webp")) return "webp";
   if (ct?.includes("jpeg") || ct?.includes("jpg")) return "jpg";
@@ -96,26 +77,25 @@ function extFromContentType(ct, fallbackUrl) {
 
 async function downloadAndCache(pageUrl, title) {
   const html = await safeFetch(pageUrl, HTML_TIMEOUT_MS);
-  if (!html) return null;
-  const imgUrl = pickOgImage(html, pageUrl);
-  if (!imgUrl) return null;
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), IMG_TIMEOUT_MS);
-  let buf, ct;
-  try {
-    const res = await fetch(imgUrl, {
-      headers: { "User-Agent": UA, Accept: "image/*,*/*" },
-      signal: ctrl.signal,
-      redirect: "follow",
-    });
-    clearTimeout(t);
-    if (!res.ok) return null;
-    ct = res.headers.get("content-type") || "";
-    buf = Buffer.from(await res.arrayBuffer());
-  } catch {
-    clearTimeout(t);
-    return null;
+  const candidates = selectSourceImages(html, pageUrl).candidates;
+  let buf, ct, selected;
+  for (const candidate of candidates) {
+    try {
+      const res = await fetch(candidate.image, {
+        headers: { "User-Agent": UA, Accept: "image/*" },
+        signal: AbortSignal.timeout(IMG_TIMEOUT_MS), redirect: "follow",
+      });
+      if (!res.ok) continue;
+      const data = Buffer.from(await res.arrayBuffer());
+      if (!data.length || data.length > 20 * 1024 * 1024) continue;
+      ct = imageContentType(data, res.headers.get("content-type") || "");
+      if (!ct) continue;
+      buf = data; selected = candidate;
+      break;
+    } catch { continue; }
   }
+  if (!selected) return null;
+  const imgUrl = selected.image;
   const hash = crypto.createHash("md5").update(pageUrl).digest("hex").slice(0, 8);
   const ext = extFromContentType(ct, imgUrl);
   const file = `${safeSlug(title || "card")}-${hash}.${ext}`;
@@ -123,6 +103,8 @@ async function downloadAndCache(pageUrl, title) {
   manifest[`${safeSlug(title || "card")}-${hash}`] = {
     url: pageUrl,
     image: imgUrl,
+    selectionPolicy: selected.selectionPolicy,
+    imageKind: selected.kind,
     file,
     ts: Date.now(),
   };

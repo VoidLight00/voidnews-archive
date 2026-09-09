@@ -313,7 +313,7 @@ async function main() {
       imagePriority: [
         "existing thumbnail",
         "existing images[0]",
-        "official source first image when verified; otherwise OG preview (not first-image verification)",
+        "source-top-image-v1: first article image, then OG share preview; navigation/logo/avatar/related images excluded",
         "/gi generated fallback only after official image absence is confirmed",
         "domain fallback",
       ],

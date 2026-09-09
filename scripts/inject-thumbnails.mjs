@@ -12,6 +12,7 @@
 //   node scripts/inject-thumbnails.mjs --only weeks  # weekly 만
 //   node scripts/inject-thumbnails.mjs --dry-run     # 변경 없이 리포트만
 import fs from "node:fs";
+import { selectSourceImage, selectSourceImages, imageContentType } from "./lib/source-image.mjs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
@@ -68,7 +69,7 @@ if (!fs.existsSync(FALLBACK_MAP) && !DRY) {
 function buildUrlIndex() {
   const idx = new Map();
   for (const [, v] of Object.entries(manifest)) {
-    if (v?.file && v?.url) idx.set(v.url, v.file);
+    if (v?.file && v?.url && v.selectionPolicy === "source-top-image-v1") idx.set(v.url, v.file);
   }
   return idx;
 }
@@ -102,28 +103,7 @@ async function safeFetch(url, ms) {
 }
 
 function pickOgImage(html, baseUrl) {
-  if (!html) return null;
-  const head = html.slice(0, 200_000);
-  const m = (prop) =>
-    (head.match(
-      new RegExp(
-        `<meta[^>]+(?:property|name)=["']${prop}["'][^>]+content=["']([^"']+)["']`,
-        "i"
-      )
-    ) || [])[1] ||
-    (head.match(
-      new RegExp(
-        `<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${prop}["']`,
-        "i"
-      )
-    ) || [])[1];
-  let img =
-    m("og:image") || m("og:image:url") || m("twitter:image") || m("twitter:image:src");
-  if (!img) return null;
-  try {
-    img = new URL(img, baseUrl).toString();
-  } catch {}
-  return img;
+  return selectSourceImage(html, baseUrl)?.image || null;
 }
 
 function safeSlug(s) {
@@ -135,6 +115,7 @@ function safeSlug(s) {
 }
 
 function extFromContentType(ct, fallbackUrl) {
+  if (ct?.includes("avif")) return "avif";
   if (ct?.includes("png")) return "png";
   if (ct?.includes("webp")) return "webp";
   if (ct?.includes("jpeg") || ct?.includes("jpg")) return "jpg";
@@ -171,34 +152,34 @@ async function fetchViaProxy(pageUrl) {
 // 차단 도메인은 두 가지로 실패한다: 403 으로 아예 못 받거나, 200 인데 og 태그가 없는
 // 봇 챌린지/JS 셸을 받거나. 후자가 openai.com 이라 "받았으니 됐다"로 끝내면 안 된다.
 // 이미지가 안 잡히면 프록시로 한 번 더 간다.
-async function resolveOgImage(pageUrl) {
+async function resolveSourceImages(pageUrl) {
   const direct = await safeFetch(pageUrl, HTML_TIMEOUT_MS);
-  const fromDirect = pickOgImage(direct, pageUrl);
-  if (fromDirect) return fromDirect;
+  const fromDirect = selectSourceImages(direct, pageUrl).candidates;
+  if (fromDirect.length) return fromDirect;
   const proxied = await fetchViaProxy(pageUrl);
-  return pickOgImage(proxied, pageUrl);
+  return selectSourceImages(proxied, pageUrl).candidates;
 }
 
 async function downloadAndCache(pageUrl, title) {
-  const imgUrl = await resolveOgImage(pageUrl);
-  if (!imgUrl) return null;
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), IMG_TIMEOUT_MS);
-  let buf, ct;
-  try {
-    const res = await fetch(imgUrl, {
-      headers: { "User-Agent": UA, Accept: "image/*,*/*" },
-      signal: ctrl.signal,
-      redirect: "follow",
-    });
-    clearTimeout(t);
-    if (!res.ok) return null;
-    ct = res.headers.get("content-type") || "";
-    buf = Buffer.from(await res.arrayBuffer());
-  } catch {
-    clearTimeout(t);
-    return null;
+  const candidates = await resolveSourceImages(pageUrl);
+  let buf, ct, selected;
+  for (const candidate of candidates) {
+    try {
+      const res = await fetch(candidate.image, {
+        headers: { "User-Agent": UA, Accept: "image/*" },
+        signal: AbortSignal.timeout(IMG_TIMEOUT_MS), redirect: "follow",
+      });
+      if (!res.ok) continue;
+      const data = Buffer.from(await res.arrayBuffer());
+      if (!data.length || data.length > 20 * 1024 * 1024) continue;
+      ct = imageContentType(data, res.headers.get("content-type") || "");
+      if (!ct) continue;
+      buf = data; selected = candidate;
+      break;
+    } catch { continue; }
   }
+  if (!selected) return null;
+  const imgUrl = selected.image;
   const hash = crypto.createHash("md5").update(pageUrl).digest("hex").slice(0, 8);
   const ext = extFromContentType(ct, imgUrl);
   const file = `${safeSlug(title || "card")}-${hash}.${ext}`;
@@ -218,6 +199,8 @@ async function downloadAndCache(pageUrl, title) {
   manifest[`${safeSlug(title || "card")}-${hash}`] = {
     url: pageUrl,
     image: imgUrl,
+    selectionPolicy: selected.selectionPolicy,
+    imageKind: selected.kind,
     file,
     ts: Date.now(),
   };

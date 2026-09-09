@@ -1,0 +1,8 @@
+{
+  "version": "source-top-image-v1",
+  "priority": ["source-first-image", "source-share-preview", "no-image"],
+  "minimumKnownWidth": 240,
+  "minimumKnownHeight": 120,
+  "preserveExistingThumbnails": true,
+  "exclude": ["navigation", "logo", "avatar", "related articles", "advertisement", "tracking pixel", "hidden image"]
+}
