@@ -879,12 +879,14 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   }
 }
 
-@media (max-width: 640px) {
-  .tc-article-grid,
-  .tc-company-grid {
-    grid-template-columns: 1fr;
-  }
+.site-nav-main > a,
+.site-nav-links > a,
+.site-nav-social > a,
+.site-nav-social > button {
+  flex-shrink: 0; white-space: nowrap;
+}
 
+@media (max-width: 820px) {
   .site-nav-row {
     height: auto !important;
     min-height: 64px;
@@ -910,6 +912,17 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   .site-nav-social {
     margin-left: auto;
     gap: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav-main > a > .mono { display: none; }
+}
+
+@media (max-width: 640px) {
+  .tc-article-grid,
+  .tc-company-grid {
+    grid-template-columns: 1fr;
   }
 
   .scroll-hide {

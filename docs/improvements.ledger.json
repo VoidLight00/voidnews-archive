@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-08-13",
+  "updated": "2026-09-09",
   "entries": [
     {
       "id": "IMP-0001",
@@ -717,6 +717,43 @@
         "value": 9
       },
       "notes": "VN-DESIGN-02~06 · VN-SRC-03/04 · VN-CI-01"
+    },
+    {
+      "id": "IMP-0039",
+      "date": "2026-09-09",
+      "source": "ab-run",
+      "category": "quality",
+      "request": "마지막 Claude 세션 재개: 206건 추가분 배포 검증 및 TypeScript 로더 호환성 복구",
+      "status": "applied",
+      "files": [
+        "scripts/check-i18n-coverage.mjs",
+        "scripts/run-all-gates.mjs",
+        "gates/verify_voidnews.sh"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "node scripts/check-i18n-coverage.mjs && node scripts/check-backfill-integration.mjs --self-test"
+      },
+      "notes": "20260909 resume; VIP 6+2는 별도 준비본"
+    },
+    {
+      "id": "IMP-0040",
+      "date": "2026-09-09",
+      "source": "ab-run",
+      "category": "design",
+      "request": "중간 화면 너비에서 VoidNews 상단 메뉴 글자가 쪼개지는 현상 수정",
+      "status": "applied",
+      "files": [
+        "app/globals.css",
+        "scripts/test-browse-ui.mjs"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "node scripts/check-regressions.mjs"
+      },
+      "notes": "20260909 resume. Build-time metadata guard preserves header rules and browser regression assertions; actual 820/768/652px browser execution is recorded separately in RESUME-20260909.md."
     }
   ]
 }

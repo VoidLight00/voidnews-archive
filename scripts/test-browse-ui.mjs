@@ -34,7 +34,7 @@ try {
     }
   }
   for (const route of ['/2026-w35/', '/2026-w36/', '/2026-w37/', '/ab/2026-08b/']) {
-    for (const width of [1440, 1024, 390]) {
+    for (const width of [1440, 1024, 820, 768, 652, 390]) {
       await page.setViewportSize({ width, height: 1000 });
       const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'networkidle' });
       assert.equal(response.status(), 200);
@@ -42,9 +42,22 @@ try {
         width: innerWidth,
         scrollWidth: document.documentElement.scrollWidth,
         columns: getComputedStyle(document.querySelector('.vn-browse-grid')).gridTemplateColumns.split(' ').length,
+        brokenNavLabels: (() => {
+          const walker = document.createTreeWalker(document.querySelector('.site-nav-row'), NodeFilter.SHOW_TEXT);
+          const broken = [];
+          while (walker.nextNode()) {
+            const text = walker.currentNode;
+            if (!text.textContent.trim()) continue;
+            const range = document.createRange();
+            range.selectNodeContents(text);
+            if (range.getClientRects().length > 1) broken.push(text.textContent.trim());
+          }
+          return broken;
+        })(),
       }));
       assert.ok(layout.scrollWidth <= width, `${route}: overflow at ${width}`);
-      assert.equal(layout.columns, width === 1440 ? 4 : width === 1024 ? 3 : 1);
+      assert.equal(layout.columns, width >= 1200 ? 4 : width >= 768 ? 3 : 1);
+      assert.deepEqual(layout.brokenNavLabels, [], `${route}: header labels must not break at ${width}px`);
       console.log(`PASS ${route} ${width}px`);
     }
   }

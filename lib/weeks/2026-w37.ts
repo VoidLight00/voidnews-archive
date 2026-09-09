@@ -6,7 +6,7 @@ export const week37: WeeklyData = {
   "year": 2026,
   "slug": "2026-w37",
   "period": "9/7 ~ 9/13",
-  "totalPosts": 5,
+  "totalPosts": 13,
   "companies": [
     {
       "name": "Google",
@@ -151,6 +151,222 @@ export const week37: WeeklyData = {
           }
         }
       ]
+    },
+{
+  "name": "Cohere",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/08",
+      "platform": "Web",
+      "title": "Cohere, North Mini Code용 메가커널 추론 엔진 공개",
+      "summary": "Cohere는 여러 GPU 연산을 하나의 지속 실행 커널로 묶는 North Mini Code 추론 엔진을 공개했습니다. 본문은 단일 H100의 BF16 조건에서 vLLM 대비 종단간 1.25~1.41배 속도를 보고합니다. 이는 해당 실험 조건의 업체 측 결과입니다.",
+      "content": "Cohere는 여러 GPU 연산을 하나의 지속 실행 커널로 묶는 North Mini Code 추론 엔진을 공개했습니다. 본문은 단일 H100의 BF16 조건에서 vLLM 대비 종단간 1.25~1.41배 속도를 보고합니다. 이는 해당 실험 조건의 업체 측 결과입니다.\n\n엔진은 연속 배치 처리, 페이지 기반 어텐션, 서로 다른 시퀀스 길이를 지원하며 도구 호출이 가능한 OpenAI 호환 엔드포인트를 제공합니다. 모델 자체의 최초 공개가 아니라 이를 제공하는 추론 엔진을 설명한 글입니다.\n\n날짜 안내: 2026-09-08는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Cohere details North Mini Code megakernel serving",
+        "summary": "Cohere describes a serving engine built around a persistent decode megakernel. Its article reports 1.25–1.41× end-to-end speed versus vLLM in BF16 on a single H100; these are provider-reported results under the stated conditions.",
+        "content": "Cohere describes a serving engine built around a persistent decode megakernel. Its article reports 1.25–1.41× end-to-end speed versus vLLM in BF16 on a single H100; these are provider-reported results under the stated conditions.\n\nThe engine supports continuous batching, paged attention and ragged sequence lengths, with tool calling behind an OpenAI-compatible endpoint. This article concerns the serving engine, not the model’s original release.\n\nDate disclosure: 2026-09-08 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+      },
+      "source": "https://cohere.com/blog/megakernels",
+      "officialUrl": "https://cohere.com/blog/megakernels",
+      "verifiedAt": "2026-09-08",
+      "tags": [
+        "AI",
+        "2026-w37",
+        "Cohere"
+      ],
+      "slug": "cohere-20260908-product-d632800e227b"
     }
+  ]
+},
+{
+  "name": "ElevenLabs",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/08 21:00",
+      "platform": "Web",
+      "title": "ElevenLabs, 전 Adyen CFO Ethan Tandowsky 영입",
+      "summary": "ElevenLabs가 전 Adyen 최고재무책임자 Ethan Tandowsky를 CFO로 영입했어요. 회사는 연구·제품·글로벌 확장 투자를 뒷받침할 재무 기반을 구축하는 역할이라고 설명했어요. 신규 음성 모델 출시와는 별개의 경영 소식이에요.",
+      "content": "ElevenLabs가 전 Adyen 최고재무책임자 Ethan Tandowsky를 CFO로 영입했어요. 회사는 연구·제품·글로벌 확장 투자를 뒷받침할 재무 기반을 구축하는 역할이라고 설명했어요. 신규 음성 모델 출시와는 별개의 경영 소식이에요.",
+      "en": {
+        "title": "ElevenLabs appoints former Adyen CFO Ethan Tandowsky",
+        "summary": "ElevenLabs appointed Ethan Tandowsky as CFO to build its financial infrastructure and support investment in research, products and global expansion. This is a leadership appointment, not a model release.",
+        "content": "ElevenLabs appointed Ethan Tandowsky as CFO to build its financial infrastructure and support investment in research, products and global expansion. This is a leadership appointment, not a model release."
+      },
+      "source": "https://elevenlabs.io/blog/cfo",
+      "officialUrl": "https://elevenlabs.io/blog/cfo",
+      "verifiedAt": "2026-09-08",
+      "slug": "elevenlabs-cfo-ethan-tandowsky-fe228e5c",
+      "tags": [
+        "AI 산업",
+        "CFO 인사"
+      ],
+      "readMinutes": 1
+    },
+    {
+      "date": "9/07 21:00",
+      "platform": "Web",
+      "title": "Allegro, 배송 상담 전화에 ElevenAgents 음성 에이전트 도입",
+      "summary": "Allegro가 배송 관련 상담 전화 3개 채널에 ElevenAgents 기반 음성 에이전트를 도입해요. 반복적인 배송 문의를 처리하고 상담원 연결이 필요하면 운송장 번호와 대화 요약을 넘겨요. 2천만 명은 Allegro의 활성 구매자 규모이지 에이전트 실제 이용자 수가 아니에요.",
+      "content": "Allegro가 배송 관련 상담 전화 3개 채널에 ElevenAgents 기반 음성 에이전트를 도입해요. 반복적인 배송 문의를 처리하고 상담원 연결이 필요하면 운송장 번호와 대화 요약을 넘겨요. 2천만 명은 Allegro의 활성 구매자 규모이지 에이전트 실제 이용자 수가 아니에요.",
+      "en": {
+        "title": "Allegro deploys ElevenAgents across delivery support hotlines",
+        "summary": "Allegro is rolling out a voice agent across three delivery hotlines. It handles routine questions and passes tracking details and a conversation summary to human staff when needed. The 20M+ figure describes Allegro active buyers, not measured agent users.",
+        "content": "Allegro is rolling out a voice agent across three delivery hotlines. It handles routine questions and passes tracking details and a conversation summary to human staff when needed. The 20M+ figure describes Allegro active buyers, not measured agent users."
+      },
+      "source": "https://elevenlabs.io/blog/allegro",
+      "officialUrl": "https://elevenlabs.io/blog/allegro",
+      "verifiedAt": "2026-09-08",
+      "slug": "elevenagents-allegro-delivery-deployment-89405656",
+      "tags": [
+        "AI 활용",
+        "고객사 도입"
+      ],
+      "readMinutes": 1
+    }
+  ]
+},
+{
+  "name": "Tripo",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/07 21:04",
+      "platform": "Web",
+      "title": "Tripo 8월 업데이트, P2.0 Preview와 3D 제작 도구 개선 정리",
+      "summary": "9월 7일 게시한 월간 정리에서 다중 시점 입력 기반 P2.0 Preview, 커뮤니티 개편, Blender·Maya·3ds Max·Unreal 연동 개선을 소개했어요. 20개 이상 형식을 읽는 뷰어와 파일 압축 도구도 포함돼요. 개별 기능이 모두 9월 7일 출시된 것은 아니에요.",
+      "content": "9월 7일 게시한 월간 정리에서 다중 시점 입력 기반 P2.0 Preview, 커뮤니티 개편, Blender·Maya·3ds Max·Unreal 연동 개선을 소개했어요. 20개 이상 형식을 읽는 뷰어와 파일 압축 도구도 포함돼요. 개별 기능이 모두 9월 7일 출시된 것은 아니에요.",
+      "en": {
+        "title": "Tripo recaps P2.0 Preview and August workflow improvements",
+        "summary": "The September 7 recap covers native quad generation with P2.0 Preview, community changes, DCC plugin updates, a viewer supporting over 20 formats and a browser file compressor. It summarizes August changes rather than dating every feature launch to September 7.",
+        "content": "The September 7 recap covers native quad generation with P2.0 Preview, community changes, DCC plugin updates, a viewer supporting over 20 formats and a browser file compressor. It summarizes August changes rather than dating every feature launch to September 7."
+      },
+      "source": "https://tripo3d.ai/blog/tripo-august-update",
+      "officialUrl": "https://tripo3d.ai/blog/tripo-august-update",
+      "verifiedAt": "2026-09-08",
+      "slug": "tripo-august-update-ea2570a5",
+      "tags": [
+        "생성형 AI",
+        "월간 업데이트 정리"
+      ],
+      "readMinutes": 1
+    }
+  ]
+},
+{
+  "name": "LangChain",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/8",
+      "platform": "Web",
+      "title": "Deep Agents, 대화 맥락을 물려받는 fork 하위 에이전트 추가",
+      "deck": "LangChain이 Deep Agents 하위 에이전트의 isolated·fork 맥락 모드를 설명했습니다.",
+      "summary": "LangChain이 Deep Agents 하위 에이전트의 isolated·fork 맥락 모드를 설명했습니다. 기본 isolated는 작업 설명만 받고, fork는 상위 에이전트의 대화를 물려받아 중복 자료 수집을 줄입니다. 작성자는 프롬프트 캐시 재사용으로 비용·시간을 줄일 수 있다고 설명하며 모든 작업에서 더 낫다는 보장은 하지 않습니다.",
+      "content": "LangChain이 Deep Agents 하위 에이전트의 isolated·fork 맥락 모드를 설명했습니다. 기본 isolated는 작업 설명만 받고, fork는 상위 에이전트의 대화를 물려받아 중복 자료 수집을 줄입니다. 작성자는 프롬프트 캐시 재사용으로 비용·시간을 줄일 수 있다고 설명하며 모든 작업에서 더 낫다는 보장은 하지 않습니다.\n\n원문에 표시된 게시 날짜를 유지했으며 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://www.langchain.com/blog/organizing-context-in-a-multi-agent-harness",
+      "officialUrl": "https://www.langchain.com/blog/organizing-context-in-a-multi-agent-harness",
+      "verifiedAt": "2026-09-09",
+      "slug": "organizing-context-in-a-multi-agent-harness",
+      "tags": [
+        "AI",
+        "2026-w37",
+        "LangChain",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Deep Agents adds forked subagents that inherit conversation context",
+        "deck": "LangChain documented isolated and fork context modes for Deep Agents subagents.",
+        "summary": "LangChain documented isolated and fork context modes for Deep Agents subagents. The default isolated mode receives only its task; fork inherits the supervisor conversation to reduce repeated context gathering. Prompt-cache reuse can reduce cost and latency, but the article does not establish universal gains for every task.",
+        "content": "LangChain documented isolated and fork context modes for Deep Agents subagents. The default isolated mode receives only its task; fork inherits the supervisor conversation to reduce repeated context gathering. Prompt-cache reuse can reduce cost and latency, but the article does not establish universal gains for every task.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    }
+  ]
+},
+{
+  "name": "Samsung",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/07",
+      "platform": "Web",
+      "title": "삼성, 기존 냉장고·세탁 가전에 Tizen 10.0과 AI 기능 확대",
+      "summary": "삼성은 일부 기존 냉장고·세탁 가전에 9월부터 Tizen 10.0 업데이트를 제공한다고 발표했습니다. 지원 모델에 Bixby와 AI 기능을 확대하며, 일부 카메라 탑재 냉장고에는 Gemini 기반 AI Vision을 적용합니다.",
+      "content": "삼성은 일부 기존 냉장고·세탁 가전에 9월부터 Tizen 10.0 업데이트를 제공한다고 발표했습니다. 지원 모델에 Bixby와 AI 기능을 확대하며, 일부 카메라 탑재 냉장고에는 Gemini 기반 AI Vision을 적용합니다.\n\n발표일은 공식 원문의 날짜이며, 공개되지 않은 시각은 덧붙이지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Samsung expands Tizen 10.0 and AI updates to existing appliances",
+        "summary": "Samsung announced Tizen 10.0 updates beginning in September for selected existing refrigerators and laundry appliances, expanding Bixby and AI experiences. Selected camera-equipped refrigerators receive Gemini-based AI Vision.",
+        "content": "Samsung announced Tizen 10.0 updates beginning in September for selected existing refrigerators and laundry appliances, expanding Bixby and AI experiences. Selected camera-equipped refrigerators receive Gemini-based AI Vision.\n\nThe date follows the official source; no unpublished time is inferred.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      },
+      "source": "https://news.samsung.com/global/samsung-enhances-long-term-value-of-refrigerators-and-laundry-appliances-with-ai-focused-software-updates",
+      "officialUrl": "https://news.samsung.com/global/samsung-enhances-long-term-value-of-refrigerators-and-laundry-appliances-with-ai-focused-software-updates",
+      "verifiedAt": "2026-09-09",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "Samsung",
+        "2026-w37"
+      ],
+      "slug": "discovery-official-d8d20431e093"
+    }
+  ]
+},
+{
+  "name": "Insilico Medicine",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/07",
+      "platform": "Web",
+      "title": "AI 설계 약물 렌토서팁, 생물학적 나이 지표 탐색 결과 발표",
+      "summary": "Insilico는 IPF 환자 42명의 임상 혈액 데이터를 분석한 연구를 발표했습니다. 6종의 단백질 기반 노화 시계가 예측 나이 감소를 보였다는 결과로, 건강한 사람의 회춘이나 수명 연장 입증은 아닙니다.",
+      "content": "Insilico는 IPF 환자 42명의 임상 혈액 데이터를 분석한 연구를 발표했습니다. 6종의 단백질 기반 노화 시계가 예측 나이 감소를 보였다는 결과로, 건강한 사람의 회춘이나 수명 연장 입증은 아닙니다.\n\n원문은 9월 7일 05:00 EST로 표기했습니다. 시간대 표기를 임의 교정하지 않고 게시일만 표시합니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "AI-designed rentosertib study reports exploratory biological-age markers",
+        "summary": "Insilico reported an analysis of clinical blood data from 42 IPF patients. Six proteomic aging clocks indicated reduced predicted biological age; this does not establish rejuvenation or lifespan extension in healthy people.",
+        "content": "Insilico reported an analysis of clinical blood data from 42 IPF patients. Six proteomic aging clocks indicated reduced predicted biological age; this does not establish rejuvenation or lifespan extension in healthy people.\n\nThe source literally states September 7, 05:00 EST. The timezone label is not corrected; only the publication day is displayed.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      },
+      "source": "https://insilico.com/news/rnt0709261-rentosertib-proteomic-aging-clocks",
+      "officialUrl": "https://insilico.com/news/rnt0709261-rentosertib-proteomic-aging-clocks",
+      "verifiedAt": "2026-09-09",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "Insilico Medicine",
+        "2026-w37"
+      ],
+      "slug": "discovery-insilico-aging"
+    }
+  ]
+},
+{
+  "name": "Arm",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "9/08",
+      "platform": "Web",
+      "title": "Arm AI Portal, 기기별 최적화 AI 모델 탐색·배포 지원",
+      "summary": "Arm은 클라우드·엣지·로봇 환경에서 최적화된 AI 모델과 성능 정보·배포 코드를 찾는 AI Portal을 출시했습니다. 자체 모델 최적화 도구는 후속 제공 예정이며, 에이전트용 리소스는 얼리 액세스 단계입니다.",
+      "content": "Arm은 클라우드·엣지·로봇 환경에서 최적화된 AI 모델과 성능 정보·배포 코드를 찾는 AI Portal을 출시했습니다. 자체 모델 최적화 도구는 후속 제공 예정이며, 에이전트용 리소스는 얼리 액세스 단계입니다.\n\n발표일은 공식 원문의 날짜이며, 공개되지 않은 시각은 덧붙이지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Arm AI Portal launches for optimized AI model discovery and deployment",
+        "summary": "Arm launched AI Portal for finding optimized models, performance data and deployment code across cloud, edge and robotics. Bring-your-own-model optimization tooling is planned, while agent-ready resources are in early access.",
+        "content": "Arm launched AI Portal for finding optimized models, performance data and deployment code across cloud, edge and robotics. Bring-your-own-model optimization tooling is planned, while agent-ready resources are in early access.\n\nThe date follows the official source; no unpublished time is inferred.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      },
+      "source": "https://newsroom.arm.com/news/arm-unveils-arm-ai-portal",
+      "officialUrl": "https://newsroom.arm.com/news/arm-unveils-arm-ai-portal",
+      "verifiedAt": "2026-09-09",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "Arm",
+        "2026-w37"
+      ],
+      "slug": "discovery-arm-ai-portal"
+    }
+  ]
+},
   ]
 };

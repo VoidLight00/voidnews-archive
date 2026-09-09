@@ -12,7 +12,9 @@
 // 사용: node scripts/check-i18n-coverage.mjs [--selftest]
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
+import vm from "node:vm";
+import ts from "typescript";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEEKS_DIR = path.join(ROOT, "lib", "weeks");
@@ -120,8 +122,22 @@ async function main() {
     const year = Number(m[1]);
     const week = Number(m[2]);
     const requireEn = year > CUTOFF.year || (year === CUTOFF.year && week >= CUTOFF.week);
-    // Node 24 native type stripping — 주차 파일은 type-only import뿐이라 안전
-    const mod = await import(pathToFileURL(path.join(WEEKS_DIR, f)).href);
+    // Some Node 24 distributions disable native TypeScript loading. Compile the
+    // same type-only weekly modules with the project's pinned build dependency.
+    const filename = path.join(WEEKS_DIR, f);
+    const compiled = ts.transpileModule(fs.readFileSync(filename, "utf8"), {
+      fileName: filename,
+      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+      reportDiagnostics: true,
+    });
+    const errors = compiled.diagnostics?.filter(d => d.category === ts.DiagnosticCategory.Error) ?? [];
+    if (errors.length) throw new Error(`${f}: ${ts.formatDiagnostics(errors, {
+      getCanonicalFileName: name => name,
+      getCurrentDirectory: () => ROOT,
+      getNewLine: () => "\n",
+    })}`);
+    const mod = {};
+    vm.runInNewContext(compiled.outputText, { exports: mod }, { filename, timeout: 5000 });
     const weekData = Object.values(mod).find((v) => v && typeof v === "object" && Array.isArray(v.companies));
     if (!weekData) {
       violations.push(`${f} — WeeklyData export를 찾지 못함`);

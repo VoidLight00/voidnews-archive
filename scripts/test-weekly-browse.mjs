@@ -39,8 +39,7 @@ assert.equal(imageDisclosure(undefined, 'ko', 'source-share-preview'), null);
 assert.match(imageDisclosure('/og-cache/kimi-k3-editorial.svg'), /편집 제작/);
 for (const locale of ['ko', 'en']) {
   const markup = renderToStaticMarkup(createElement(ImageDisclosure, { src: '/source-images/fixture.png', provenance: 'source-share-preview', locale }));
-  assert.match(markup, /data-image-disclosure="source-share-preview"/);
-  assert.ok(markup.includes(locale === 'ko' ? '출처 링크 공유 미리보기 · 기사 첫 이미지 미확인' : 'Source link share preview · First article image not verified'));
+  assert.equal(markup, '', 'Source preview audit metadata must not add a visible label');
 }
 const { createHash } = await import('node:crypto');
 const evidenceRecords = ['source-image-evidence.json', 'BACKFILL-IMAGE-EVIDENCE.json']

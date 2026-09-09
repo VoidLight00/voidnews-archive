@@ -8,11 +8,6 @@ const editorialAssets = new Set([
 
 export function imageDisclosure(src?: string, locale: "ko" | "en" = "ko", provenance?: MediaImage["provenance"]) {
   if (!src) return null;
-  if (provenance === "source-share-preview") {
-    return locale === "ko"
-      ? "출처 링크 공유 미리보기 · 기사 첫 이미지 미확인"
-      : "Source link share preview · First article image not verified";
-  }
   if (!editorialAssets.has(src)) return null;
   return locale === "ko"
     ? "편집 제작 이미지 · 공식 이미지 아님"

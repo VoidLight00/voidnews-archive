@@ -164,6 +164,38 @@
       "min": 1,
       "owner": "voidbrief-conductor",
       "note": "HTTP 200 도달성을 itemsFound로 오인한 VN-GATE-03 재발 방지. run-phase HARD 게이트 경로가 R3.4 계약에서 빠지면 빌드를 차단한다."
+    },
+    {
+      "id": "VN013",
+      "title": "내장 TypeScript 로더 비활성 환경 검증 유지",
+      "type": "grep_present_min",
+      "globs": [
+        "gates/archive_gate.sh"
+      ],
+      "patterns": [
+        "node --no-experimental-strip-types scripts/check-i18n-coverage.mjs"
+      ],
+      "min": 1,
+      "owner": "voidbrief-qa-auditor",
+      "note": "현재 Node 24 배포판에서 발생한 영문판 검사 로더 오류의 재발 방지."
+    },
+    {
+      "id": "VN014",
+      "title": "중간너비 헤더 규칙·브라우저 회귀검사 유지",
+      "type": "grep_present_min",
+      "globs": [
+        "app/globals.css",
+        "scripts/test-browse-ui.mjs"
+      ],
+      "patterns": [
+        ".site-nav-main > a,",
+        "flex-shrink: 0; white-space: nowrap;",
+        "[1440, 1024, 820, 768, 652, 390]",
+        "assert.deepEqual(layout.brokenNavLabels, []"
+      ],
+      "min": 4,
+      "owner": "voidbrief-qa-auditor",
+      "note": "정적 배선 검사이며 실제 브라우저 test:browser 실행을 대체하지 않음."
     }
   ]
 }

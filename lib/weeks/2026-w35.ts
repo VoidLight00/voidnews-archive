@@ -6,7 +6,7 @@ export const week35: WeeklyData = {
   year: 2026,
   slug: "2026-w35",
   period: "8/24 ~ 8/30",
-  totalPosts: 24,
+  totalPosts: 102,
   companies: [
     {
       name: "OpenAI Fact Check",
@@ -238,7 +238,157 @@ export const week35: WeeklyData = {
             "2026-w35",
             "Anthropic"
           ]
-        }
+        },
+{
+  "date": "8/27 08:06",
+  "platform": "Web",
+  "title": "Claude Code 2.1.247, 비용 최적화 안내·오류 출력 복구 개선",
+  "deck": "Claude Code 2.1.247, 비용 최적화 안내·오류 출력 복구 개선",
+  "summary": "Claude Code 2.1.247은 프로젝트의 API 지출을 측정하며 조정하는 /claude-api cost-optimize와 사용자가 검토하는 피드백 초안 도구를 추가했습니다. 훅·백그라운드 작업의 대형 오류 출력이 대화를 막는 문제와, 출력 파일을 쓰지 못할 때 메모리가 계속 늘어나는 문제도 수정했다고 안내했습니다.",
+  "content": "Claude Code 2.1.247은 프로젝트의 API 지출을 측정하며 조정하는 /claude-api cost-optimize와 사용자가 검토하는 피드백 초안 도구를 추가했습니다. 훅·백그라운드 작업의 대형 오류 출력이 대화를 막는 문제와, 출력 파일을 쓰지 못할 때 메모리가 계속 늘어나는 문제도 수정했다고 안내했습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+  "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+  "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "feed-pass2-20260827-b7b96dd0cc",
+  "en": {
+    "title": "Claude Code 2.1.247 adds API cost optimization guidance and output resilience",
+    "deck": "Claude Code 2.1.247 adds API cost optimization guidance and output resilience",
+    "summary": "Claude Code 2.1.247 adds /claude-api cost-optimize for measured API-spend improvements and a feedback-drafting tool for user review. It reports fixes for large hook or background-task error output wedging conversations, and for unbounded memory growth when an output file cannot be written.",
+    "content": "Claude Code 2.1.247 adds /claude-api cost-optimize for measured API-spend improvements and a feedback-drafting tool for user review. It reports fixes for large hook or background-task error output wedging conversations, and for unbounded memory growth when an output file cannot be written.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+  }
+},
+{
+  "date": "8/28",
+  "platform": "Web",
+  "title": "Anthropic, 정렬 실패 완화를 자동 연구하는 실험 공개",
+  "summary": "Anthropic은 Claude가 문헌 조사·방법 제안·학습·평가를 반복하며 10개 정렬 실패 범주를 개선하는 연구를 공개했습니다. 벤치마크 기반 실험 결과이며 실제 서비스 전반의 안전을 보장한다는 뜻은 아닙니다.",
+  "content": "Anthropic은 Claude가 문헌 조사·방법 제안·학습·평가를 반복하며 10개 정렬 실패 범주를 개선하는 연구를 공개했습니다. 벤치마크 기반 실험 결과이며 실제 서비스 전반의 안전을 보장한다는 뜻은 아닙니다.\n\n연구진은 일반 능력을 떨어뜨리는 방법은 제외했으며, 보지 못한 평가와 더 큰 모델에서도 방법이 유지되는지 확인했다고 설명했습니다. 사람 연구자 비교는 사람 쪽에 반복 개선 기회가 없었다는 제한이 있어 단순한 우열로 읽기 어렵습니다.\n\n날짜 안내: 2026-08-28는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Anthropic studies automated mitigation of alignment failures",
+    "summary": "Anthropic reports experiments where Claude iterated through literature, methods, training and evaluation across ten alignment-failure categories. These are benchmark-based research findings, not a guarantee of general deployment safety.",
+    "content": "Anthropic reports experiments where Claude iterated through literature, methods, training and evaluation across ten alignment-failure categories. These are benchmark-based research findings, not a guarantee of general deployment safety.\n\nThe researchers excluded methods that harmed general capabilities and tested transfer to withheld evaluations and larger models. The human comparison did not allow people to iterate, so the article cautions against treating it as a direct contest.\n\nDate disclosure: 2026-08-28 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+  "officialUrl": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "anthropic-20260828-product-ad85bab5df24"
+},
+{
+  "date": "8/27",
+  "platform": "Web",
+  "title": "Claude Console, 개인·서비스 계정 API 키 추가",
+  "summary": "Anthropic은 Claude Console에서 개인 키와 서비스 계정 키를 만들 수 있다고 밝혔습니다. 연결 계정의 권한으로 작동하며 계정이 조직에서 제거되면 키도 중지됩니다. 기존 워크스페이스 키는 레거시 옵션으로 유지됩니다.",
+  "content": "Anthropic은 Claude Console에서 개인 키와 서비스 계정 키를 만들 수 있다고 밝혔습니다. 연결 계정의 권한으로 작동하며 계정이 조직에서 제거되면 키도 중지됩니다. 기존 워크스페이스 키는 레거시 옵션으로 유지됩니다.\n\n날짜 안내: 2026-08-27는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Claude Console adds personal and service-account keys",
+    "summary": "Anthropic says Claude Console now supports personal and service-account API keys. Keys inherit account permissions and stop working when the linked account leaves the organization. Legacy workspace keys remain supported.",
+    "content": "Anthropic says Claude Console now supports personal and service-account API keys. Keys inherit account permissions and stop working when the linked account leaves the organization. Legacy workspace keys remain supported.\n\nDate disclosure: 2026-08-27 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://platform.claude.com/docs/en/release-notes/overview#august-27-2026",
+  "officialUrl": "https://platform.claude.com/docs/en/release-notes/overview#august-27-2026",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "anthropic-20260827-product-5eb793d7c0ff"
+},
+{
+  "date": "8/27",
+  "platform": "Web",
+  "title": "Claude SDK, Files·Skills 베타 인터페이스 전환",
+  "summary": "Anthropic은 지정 SDK 버전부터 client.beta.files와 client.beta.skills가 기존 베타 헤더를 자동으로 보내지 않고 정식 인터페이스와 같은 응답 형태를 사용한다고 안내했습니다. beta.skills.delete는 스킬과 모든 버전을 함께 삭제하므로 기존 연동을 확인해야 합니다.",
+  "content": "Anthropic은 지정 SDK 버전부터 client.beta.files와 client.beta.skills가 기존 베타 헤더를 자동으로 보내지 않고 정식 인터페이스와 같은 응답 형태를 사용한다고 안내했습니다. beta.skills.delete는 스킬과 모든 버전을 함께 삭제하므로 기존 연동을 확인해야 합니다.\n\n명시된 버전은 Python 1.2.0, TypeScript 0.122.0, Go 1.68.0, Java 2.59.0, Ruby 1.67.0, C# 12.44.0입니다. 기존 베타 헤더를 직접 보내는 요청은 계속 베타 응답 형태를 받습니다.\n\n날짜 안내: 2026-08-27는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Claude SDKs transition beta Files and Skills interfaces",
+    "summary": "Anthropic says the listed SDK versions stop automatically sending the old Files and Skills beta headers and return GA response shapes. beta.skills.delete now deletes a Skill and all its versions, making migration review important.",
+    "content": "Anthropic says the listed SDK versions stop automatically sending the old Files and Skills beta headers and return GA response shapes. beta.skills.delete now deletes a Skill and all its versions, making migration review important.\n\nThe listed versions are Python 1.2.0, TypeScript 0.122.0, Go 1.68.0, Java 2.59.0, Ruby 1.67.0 and C# 12.44.0. Requests that explicitly retain the old beta headers continue receiving beta response shapes.\n\nDate disclosure: 2026-08-27 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://platform.claude.com/docs/en/release-notes/overview#august-27-2026",
+  "officialUrl": "https://platform.claude.com/docs/en/release-notes/overview#august-27-2026",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "anthropic-20260827-product-cc5701bcfea6"
+},
+{
+  "date": "8/26",
+  "platform": "Web",
+  "title": "Anthropic, 외부 연구진의 Claude 사용 분석 파일럿 공개",
+  "summary": "Anthropic은 외부 연구기관 세 곳이 개인정보 보호 분석 도구 Anthropic Insights를 통해 실제 Claude 사용을 연구한 파일럿을 공개했습니다. 연구진이 연구를 설계하고 Anthropic이 대신 데이터를 수집했으며, 원문 대화 데이터 공개와는 구별됩니다.",
+  "content": "Anthropic은 외부 연구기관 세 곳이 개인정보 보호 분석 도구 Anthropic Insights를 통해 실제 Claude 사용을 연구한 파일럿을 공개했습니다. 연구진이 연구를 설계하고 Anthropic이 대신 데이터를 수집했으며, 원문 대화 데이터 공개와는 구별됩니다.\n\n협력 기관은 Stanford SALT Lab, Oxford Human Information Processing Lab, METR입니다. 연구별 집계 데이터도 공개했으며, 향후 참여를 원하는 연구자를 위한 관심 등록 양식을 제공했습니다.\n\n날짜 안내: 2026-08-26는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Anthropic reports independent Claude-usage research pilot",
+    "summary": "Anthropic says three outside research groups designed studies using Anthropic Insights. Anthropic collected data on their behalf and the groups conducted independent analyses; this is not a release of raw conversations.",
+    "content": "Anthropic says three outside research groups designed studies using Anthropic Insights. Anthropic collected data on their behalf and the groups conducted independent analyses; this is not a release of raw conversations.\n\nThe partners were Stanford’s SALT Lab, Oxford’s Human Information Processing Lab and METR. Anthropic also released project-level aggregate data and an expression-of-interest form for future research partners.\n\nDate disclosure: 2026-08-26 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://www.anthropic.com/research/enabling-independent-research",
+  "officialUrl": "https://www.anthropic.com/research/enabling-independent-research",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "anthropic-20260826-product-93cc373aa692"
+},
+{
+  "date": "8/26",
+  "platform": "Web",
+  "title": "Claude Admin API, ant CLI와 7개 SDK에 추가",
+  "summary": "Anthropic은 ant CLI와 Python·TypeScript·C#·Go·Java·PHP·Ruby SDK에서 Admin API를 사용할 수 있다고 밝혔습니다. 조직·구성원·워크스페이스·API 키 등의 관리가 포함되며, 사용량·비용 보고와 일부 Enterprise API는 여전히 curl 전용입니다.",
+  "content": "Anthropic은 ant CLI와 Python·TypeScript·C#·Go·Java·PHP·Ruby SDK에서 Admin API를 사용할 수 있다고 밝혔습니다. 조직·구성원·워크스페이스·API 키 등의 관리가 포함되며, 사용량·비용 보고와 일부 Enterprise API는 여전히 curl 전용입니다.\n\n날짜 안내: 2026-08-26는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Claude Admin API arrives in ant CLI and seven SDKs",
+    "summary": "Anthropic says the Admin API is available in ant CLI and seven SDKs for organization, member, workspace, key and related administration. Usage and cost reports and certain Enterprise endpoints remain curl-only.",
+    "content": "Anthropic says the Admin API is available in ant CLI and seven SDKs for organization, member, workspace, key and related administration. Usage and cost reports and certain Enterprise endpoints remain curl-only.\n\nDate disclosure: 2026-08-26 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://platform.claude.com/docs/en/release-notes/overview#august-26-2026",
+  "officialUrl": "https://platform.claude.com/docs/en/release-notes/overview#august-26-2026",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "anthropic-20260826-product-15c226626dcd"
+},
+{
+  "date": "8/26",
+  "platform": "Web",
+  "title": "Claude Compliance API, 정식 세션 지원과 분석 대상 확대",
+  "summary": "Claude Compliance API, 정식 세션 지원과 분석 대상 확대 내용을 공식 릴리스 노트 기준으로 정리했습니다.",
+  "content": "Anthropic은 Cowork와 Claude Code 세션을 조회하는 Compliance API 엔드포인트가 베타를 종료했다고 밝혔습니다.\n\nAnthropic은 Enterprise 조직용 Compliance API가 Claude Science 및 Excel·PowerPoint·Word·Outlook의 Claude 세션 전사를 베타로 반환한다고 밝혔습니다. 기존 Compliance Access Key와 read:compliance_user_data 권한이 필요합니다.\n\n날짜 안내: 2026-08-26는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Claude Compliance API expands session coverage",
+    "summary": "Claude Compliance API expands session coverage. This story groups the same-day official release-note changes.",
+    "content": "Anthropic says Compliance API session endpoints for Cowork and Claude Code are now out of beta.\n\nAnthropic says Enterprise organizations can retrieve Claude Science and Claude for Microsoft 365 session transcripts in beta, using an existing Compliance Access Key and read:compliance_user_data scope.\n\nDate disclosure: 2026-08-26 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://platform.claude.com/docs/en/release-notes/overview#august-26-2026",
+  "officialUrl": "https://platform.claude.com/docs/en/release-notes/overview#august-26-2026",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Anthropic"
+  ],
+  "slug": "anthropic-20260826-product-6be9ccc94033"
+},
       ],
     },
     {
@@ -373,7 +523,70 @@ export const week35: WeeklyData = {
             "summary": "Google added scene extensions, video references, 360p previews and upscaling to 4K. Extensions add 10-second segments up to 40 seconds cumulatively, and reference clips can be up to three seconds.",
             "content": "**Longer context supports extended scenes**\n\nExisting videos can be extended in 10-second increments up to 40 seconds cumulatively. A new scene can reference up to three seconds of video, alongside first/last-frame interpolation.\n\n**Draft and final-output paths differ**\n\nDevelopers can iterate with 360p previews and upscale final output to 4K. Speed and cost comparisons are Google claims and should be tested on the target workload."
           }
-        }
+        },
+{
+  "date": "8/28",
+  "platform": "Web",
+  "title": "Google Drive, Gemini 기반 문서 분류 공개 베타",
+  "summary": "Google은 Gemini가 Drive 파일에 데이터 분류 라벨을 적용하는 기능을 공개 베타로 발표했습니다. 조직의 정보 유출 방지·보존·감사 정책을 지원하며 실제 이용 조건과 관리자 설정은 공식 안내를 확인해야 합니다.",
+  "content": "Google은 Gemini가 Drive 파일에 데이터 분류 라벨을 적용하는 기능을 공개 베타로 발표했습니다. 조직의 정보 유출 방지·보존·감사 정책을 지원하며 실제 이용 조건과 관리자 설정은 공식 안내를 확인해야 합니다.\n\n관리자는 분류 라벨과 지시문, 적용 대상을 지정합니다. 적절한 권한을 가진 파일 소유자·편집자는 자동 라벨을 수락하거나 수정할 수 있고 변경 내용은 감사 로그에 남습니다. 공개 베타 배포 완료 목표는 9월 30일입니다.\n\n날짜 안내: 2026-08-28는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Google Drive opens Gemini-based classification beta",
+    "summary": "Google announces an open beta for Gemini-based classification labels in Drive, supporting organizational data-loss prevention, retention and audit policies. Availability and configuration depend on the documented admin requirements.",
+    "content": "Google announces an open beta for Gemini-based classification labels in Drive, supporting organizational data-loss prevention, retention and audit policies. Availability and configuration depend on the documented admin requirements.\n\nAdministrators choose the label, instructions and audience. File owners and editors with the relevant permissions can accept or modify automatic labels, and audit logs record those actions. Open-beta rollout targets completion by September 30.\n\nDate disclosure: 2026-08-28 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://workspaceupdates.googleblog.com/2026/08/gemini-based-data-classification-in-Google-Drive-is-now-available-in-open-beta.html",
+  "officialUrl": "https://workspaceupdates.googleblog.com/2026/08/gemini-based-data-classification-in-Google-Drive-is-now-available-in-open-beta.html",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Google"
+  ],
+  "slug": "google-20260828-product-a53997a76a09"
+},
+{
+  "date": "8/27",
+  "platform": "Web",
+  "title": "Google Cloud, Gemini Omni 1.1 Flash 공개 프리뷰",
+  "summary": "Google Cloud는 Gemini Omni 1.1 Flash를 공개 프리뷰로 제공한다고 안내했습니다. 영상·이미지·텍스트 작업과 오디오·영상 편집을 대상으로 하며, Gemini API의 정식 제공 상태와 구분해야 합니다.",
+  "content": "Google Cloud는 Gemini Omni 1.1 Flash를 공개 프리뷰로 제공한다고 안내했습니다. 영상·이미지·텍스트 작업과 오디오·영상 편집을 대상으로 하며, Gemini API의 정식 제공 상태와 구분해야 합니다.\n\n날짜 안내: 2026-08-27는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "Google Cloud previews Gemini Omni 1.1 Flash",
+    "summary": "Google Cloud announces public preview availability of Gemini Omni 1.1 Flash for video, image and text tasks including audio/video editing. This preview status must not be conflated with GA in the Gemini API.",
+    "content": "Google Cloud announces public preview availability of Gemini Omni 1.1 Flash for video, image and text tasks including audio/video editing. This preview status must not be conflated with GA in the Gemini API.\n\nDate disclosure: 2026-08-27 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes#August_27_2026",
+  "officialUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes#August_27_2026",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Google"
+  ],
+  "slug": "google-20260827-product-aba668aafcb2"
+},
+{
+  "date": "8/27",
+  "platform": "Web",
+  "title": "CodeMender, Gemini 3.6·3.7 Flash 지원 추가",
+  "summary": "Google은 CodeMender가 Gemini 3.6 Flash와 기본 모델인 3.7 Flash를 지원한다고 밝혔습니다. 장기 세션·셸·상대경로 문제를 수정하고 격리 환경의 검증 옵션을 추가했습니다. 제한 해제 옵션을 일반 환경에 적용하라는 권고는 아닙니다.",
+  "content": "Google은 CodeMender가 Gemini 3.6 Flash와 기본 모델인 3.7 Flash를 지원한다고 밝혔습니다. 장기 세션·셸·상대경로 문제를 수정하고 격리 환경의 검증 옵션을 추가했습니다. 제한 해제 옵션을 일반 환경에 적용하라는 권고는 아닙니다.\n\n날짜 안내: 2026-08-27는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "CodeMender adds Gemini 3.6 and 3.7 Flash support",
+    "summary": "Google adds Gemini 3.6 Flash and default 3.7 Flash support to CodeMender, alongside long-session, shell and path fixes and an isolated-environment verification option. This is not a recommendation to disable safeguards in ordinary environments.",
+    "content": "Google adds Gemini 3.6 Flash and default 3.7 Flash support to CodeMender, alongside long-session, shell and path fixes and an isolated-environment verification option. This is not a recommendation to disable safeguards in ordinary environments.\n\nDate disclosure: 2026-08-27 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes#August_27_2026",
+  "officialUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes#August_27_2026",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "Google"
+  ],
+  "slug": "google-20260827-product-f8e6e492b5c3"
+},
       ],
     },
     {
@@ -465,7 +678,151 @@ export const week35: WeeklyData = {
             "summary": "Copilot CLI 1.0.82 fixes messages disrupting /worktree or /move preparation, expands approval plans with Ctrl+E, and displays specific authentication failures.",
             "content": "**Worktree switching becomes more predictable**\n\nMessages typed while /worktree or /move prepares a worktree no longer break the switch. Ctrl+E expands the complete approval plan, and authentication errors identify failures such as 401 Bad credentials.\n\n**Verification boundary**\n\nThese claims come from GitHub release notes and were not independently reproduced in this review."
           }
-        }
+        },
+{
+  "date": "8/27 07:08",
+  "platform": "Web",
+  "title": "Copilot 글로벌 모델 정책 정식 적용",
+  "deck": "Copilot 글로벌 모델 정책 정식 적용",
+  "summary": "GitHub은 Copilot Business·Enterprise의 글로벌 모델 정책을 9월 1일까지 순차 적용한다고 안내했습니다. 별도 설정이 없는 기존·신규 정식 모델은 글로벌 정책을 따르며, 관리자는 모델별 예외를 정할 수 있습니다. 오픈웨이트 모델과 데이터 보존이 필요한 모델은 기본 비활성입니다.",
+  "content": "GitHub은 Copilot Business·Enterprise의 글로벌 모델 정책을 9월 1일까지 순차 적용한다고 안내했습니다. 별도 설정이 없는 기존·신규 정식 모델은 글로벌 정책을 따르며, 관리자는 모델별 예외를 정할 수 있습니다. 오픈웨이트 모델과 데이터 보존이 필요한 모델은 기본 비활성입니다.\n\n관리자가 명시적으로 켜거나 끈 모델별 선택은 유지됩니다. 기본 정책 위임 상태는 상위 정책이 바뀌면 함께 바뀌므로, 모델 하나를 고정하는 설정과 구별해야 합니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 기능의 실제 활성화 시각과는 다를 수 있습니다.",
+  "source": "https://github.blog/changelog/2026-08-26-global-model-policy-generally-available",
+  "officialUrl": "https://github.blog/changelog/2026-08-26-global-model-policy-generally-available",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "GitHub"
+  ],
+  "slug": "feed-20260827-686544d231",
+  "en": {
+    "title": "Copilot global model policy begins generally available rollout",
+    "deck": "Copilot global model policy begins generally available rollout",
+    "summary": "GitHub announced phased enforcement of the global model policy for Copilot Business and Enterprise through September 1. Unconfigured existing and new generally available models inherit the global policy, while administrators can set model-specific decisions. Open-weight models and models requiring data retention are disabled by default.",
+    "content": "GitHub announced phased enforcement of the global model policy for Copilot Business and Enterprise through September 1. Unconfigured existing and new generally available models inherit the global policy, while administrators can set model-specific decisions. Open-weight models and models requiring data retention are disabled by default.\n\nExplicit administrator decisions to enable or disable individual models remain intact. Delegation to the default policy follows later policy changes rather than fixing an individual model decision.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
+  }
+},
+{
+  "date": "8/27 10:52",
+  "platform": "Web",
+  "title": "Copilot 기업 관리 플러그인 마켓 자동 업데이트",
+  "deck": "Copilot 기업 관리 플러그인 마켓 자동 업데이트",
+  "summary": "GitHub은 기업 관리 설정에서 플러그인 마켓별 자동 업데이트를 지원한다고 발표했습니다. extraKnownMarketplaces 항목에 autoUpdate를 지정하면 지원 클라이언트가 해당 마켓의 설치 플러그인을 갱신합니다. 마켓은 여전히 조직의 허용 목록을 통과해야 합니다.",
+  "content": "GitHub은 기업 관리 설정에서 플러그인 마켓별 자동 업데이트를 지원한다고 발표했습니다. extraKnownMarketplaces 항목에 autoUpdate를 지정하면 지원 클라이언트가 해당 마켓의 설치 플러그인을 갱신합니다. 마켓은 여전히 조직의 허용 목록을 통과해야 합니다.\n\nCopilot 앱·CLI·Visual Studio Code에서 제공되며, 자동 갱신을 켜더라도 strictKnownMarketplaces 허용 목록은 그대로 적용됩니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 기능의 실제 활성화 시각과는 다를 수 있습니다.",
+  "source": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces",
+  "officialUrl": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "GitHub"
+  ],
+  "slug": "feed-20260827-dd0077e6a0",
+  "en": {
+    "title": "Copilot enterprise-managed marketplaces gain automatic updates",
+    "deck": "Copilot enterprise-managed marketplaces gain automatic updates",
+    "summary": "GitHub announced per-marketplace automatic updates through enterprise-managed settings. Setting autoUpdate on an extraKnownMarketplaces entry lets supported clients update installed plugins from that marketplace. The marketplace must still satisfy the organization's effective allowlist.",
+    "content": "GitHub announced per-marketplace automatic updates through enterprise-managed settings. Setting autoUpdate on an extraKnownMarketplaces entry lets supported clients update installed plugins from that marketplace. The marketplace must still satisfy the organization's effective allowlist.\n\nThe capability is available in the Copilot app, CLI and Visual Studio Code. Enabling automatic updates does not bypass the strictKnownMarketplaces allowlist.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
+  }
+},
+{
+  "date": "8/28 07:46",
+  "platform": "Web",
+  "title": "Copilot 코드 리뷰, 봇 PR·대형 PR과 해결 사유 지원",
+  "deck": "Copilot 코드 리뷰, 봇 PR·대형 PR과 해결 사유 지원",
+  "summary": "GitHub은 Copilot 코드 리뷰가 봇 작성 PR의 자동 리뷰와 매우 큰 PR을 지원한다고 발표했습니다. 리뷰 댓글을 해결할 때 사유를 제출하는 기능도 추가됐습니다. 봇 PR 리뷰는 조직 정책과 과금 귀속 조건을 확인해야 합니다.",
+  "content": "GitHub은 Copilot 코드 리뷰가 봇 작성 PR의 자동 리뷰와 매우 큰 PR을 지원한다고 발표했습니다. 리뷰 댓글을 해결할 때 사유를 제출하는 기능도 추가됐습니다. 봇 PR 리뷰는 조직 정책과 과금 귀속 조건을 확인해야 합니다.\n\n기존 300개 파일·2만 줄 제한은 더 이상 적용되지 않는다고 설명합니다. 댓글 해결 사유는 Addressed·Won’t fix·Incorrect 중에서 고를 수 있습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 기능의 실제 활성화 시각과는 다를 수 있습니다.",
+  "source": "https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities",
+  "officialUrl": "https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "GitHub"
+  ],
+  "slug": "feed-20260828-61c8f9f075",
+  "en": {
+    "title": "Copilot code review adds bot and large PRs plus resolution reasons",
+    "deck": "Copilot code review adds bot and large PRs plus resolution reasons",
+    "summary": "GitHub announced Copilot code review support for automatically requested reviews of bot-authored pull requests and very large pull requests. Users can also provide a reason when resolving a review comment. Bot-authored reviews remain subject to organization policies and billing attribution conditions.",
+    "content": "GitHub announced Copilot code review support for automatically requested reviews of bot-authored pull requests and very large pull requests. Users can also provide a reason when resolving a review comment. Bot-authored reviews remain subject to organization policies and billing attribution conditions.\n\nGitHub says the previous limit of 300 files or 20,000 lines no longer applies. Resolution reasons include Addressed, Won’t fix and Incorrect.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
+  }
+},
+{
+  "date": "8/28 20:37",
+  "platform": "Web",
+  "title": "GitHub, Copilot 신규 가입·결제 변경 예고",
+  "deck": "GitHub, Copilot 신규 가입·결제 변경 예고",
+  "summary": "GitHub은 Copilot 정책·결제 변경을 예고하면서 신용카드·PayPal 결제 고객의 Business·Enterprise 신규 가입을 9월 1일부터 다시 활성화하기 시작한다고 안내했습니다. 계정 심사와 결제 방식도 바뀌므로 관리자는 적용 시점과 결제 조건을 확인해야 합니다. 이는 당시의 변경 예고이며 전 고객 적용 완료를 뜻하지 않습니다.",
+  "content": "GitHub은 Copilot 정책·결제 변경을 예고하면서 신용카드·PayPal 결제 고객의 Business·Enterprise 신규 가입을 9월 1일부터 다시 활성화하기 시작한다고 안내했습니다. 계정 심사와 결제 방식도 바뀌므로 관리자는 적용 시점과 결제 조건을 확인해야 합니다. 이는 당시의 변경 예고이며 전 고객 적용 완료를 뜻하지 않습니다.\n\n신규 좌석은 사용 권한을 받기 전에 결제해야 하며, 기존 신용카드·PayPal 고객의 선불 결제 변경은 10월 1일부터 적용할 예정입니다. 공지에는 9월 28일보다 이르지 않은 웹·모바일·클라우드 에이전트 경험 통합과, 9월 28일부터 코드 리뷰 기본 노력을 Balanced로 바꾸는 별도 예고도 담겼습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 기능의 실제 활성화 시각과는 다를 수 있습니다.",
+  "source": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",
+  "officialUrl": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "GitHub"
+  ],
+  "slug": "feed-20260828-4a0589cf32",
+  "en": {
+    "title": "GitHub previews Copilot signup and billing changes",
+    "deck": "GitHub previews Copilot signup and billing changes",
+    "summary": "GitHub previewed Copilot policy and billing changes, including plans to start reenabling Business and Enterprise signups for credit-card and PayPal customers from September 1. Account vetting and billing experiences are also changing. This is the dated advance notice, not confirmation that the rollout was completed for every customer.",
+    "content": "GitHub previewed Copilot policy and billing changes, including plans to start reenabling Business and Enterprise signups for credit-card and PayPal customers from September 1. Account vetting and billing experiences are also changing. This is the dated advance notice, not confirmation that the rollout was completed for every customer.\n\nNew seats require payment before access. Existing credit-card and PayPal customers are scheduled to receive upfront-billing changes starting October 1. The same notice separately previews a unified web, mobile and cloud-agent experience no earlier than September 28, and a Balanced code-review default starting September 28.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
+  }
+},
+{
+  "date": "8/29 05:24",
+  "platform": "Web",
+  "title": "Visual Studio Copilot 8월: 조직 에이전트·추론 제어",
+  "deck": "Visual Studio Copilot 8월: 조직 에이전트·추론 제어",
+  "summary": "GitHub은 Visual Studio 2026의 Copilot 8월 업데이트를 정리했습니다. 조직·엔터프라이즈가 공유 에이전트를 게시하고 IDE의 선택 화면에서 출처와 설명을 볼 수 있으며, 추론 방식·모델 선택·코드 리뷰 제어 개선도 소개했습니다. VS Code 업데이트와는 별도 제품 소식입니다.",
+  "content": "GitHub은 Visual Studio 2026의 Copilot 8월 업데이트를 정리했습니다. 조직·엔터프라이즈가 공유 에이전트를 게시하고 IDE의 선택 화면에서 출처와 설명을 볼 수 있으며, 추론 방식·모델 선택·코드 리뷰 제어 개선도 소개했습니다. VS Code 업데이트와는 별도 제품 소식입니다.\n\n지원 모델은 추론 노력을 Low·Medium·High로 조절할 수 있습니다. Git 에이전트는 PR을 열기 전 미커밋 변경이나 커밋을 검토하고, GitHub·Azure DevOps 저장소에서 결과를 편집기 안에 표시합니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 기능의 실제 활성화 시각과는 다를 수 있습니다.",
+  "source": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2",
+  "officialUrl": "https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "GitHub"
+  ],
+  "slug": "feed-20260829-0cc2c96e67",
+  "en": {
+    "title": "Visual Studio Copilot August update adds shared agents and reasoning controls",
+    "deck": "Visual Studio Copilot August update adds shared agents and reasoning controls",
+    "summary": "GitHub summarized the August Copilot update for Visual Studio 2026. Organizations and enterprises can publish shared custom agents whose descriptions and organizational source appear in the IDE's agent picker. The update also covers reasoning, model selection, and code-review controls. This is distinct from the VS Code update.",
+    "content": "GitHub summarized the August Copilot update for Visual Studio 2026. Organizations and enterprises can publish shared custom agents whose descriptions and organizational source appear in the IDE's agent picker. The update also covers reasoning, model selection, and code-review controls. This is distinct from the VS Code update.\n\nSupported models offer Low, Medium and High thinking effort. The Git agent reviews uncommitted changes or commits before a PR is opened and displays findings inline for GitHub and Azure DevOps repositories.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time; it may differ from actual feature activation."
+  }
+},
+{
+  "date": "8/29 05:13",
+  "platform": "Web",
+  "title": "Copilot 주간 정리, Slack·Teams의 공동 에이전트 세션 소개",
+  "deck": "Copilot 주간 정리, Slack·Teams의 공동 에이전트 세션 소개",
+  "summary": "GitHub의 8월 24일 주간 업데이트 정리는 Slack·Microsoft Teams에서 @GitHub를 불러 문제 조사·계획·코드 변경을 공동 세션으로 진행하는 기능을 소개했습니다. 다른 팀원이 진행 상황을 보고 방향을 조정할 수 있다고 설명합니다. 날짜는 주간 정리 글 게시일이며 개별 기능의 최초 출시일로 단정하지 않습니다.",
+  "content": "GitHub의 8월 24일 주간 업데이트 정리는 Slack·Microsoft Teams에서 @GitHub를 불러 문제 조사·계획·코드 변경을 공동 세션으로 진행하는 기능을 소개했습니다. 다른 팀원이 진행 상황을 보고 방향을 조정할 수 있다고 설명합니다. 날짜는 주간 정리 글 게시일이며 개별 기능의 최초 출시일로 단정하지 않습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+  "source": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+  "officialUrl": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "GitHub"
+  ],
+  "slug": "feed-pass2-20260829-b5e69634f5",
+  "en": {
+    "title": "Copilot weekly roundup highlights shared agent sessions in Slack and Teams",
+    "deck": "Copilot weekly roundup highlights shared agent sessions in Slack and Teams",
+    "summary": "GitHub's August 24 weekly roundup describes shared agent sessions in Slack and Microsoft Teams. Teams can mention @GitHub to investigate, plan, and make code changes while colleagues follow and guide the session. The recorded date is the roundup publication date, not a verified first-release date for the individual feature.",
+    "content": "GitHub's August 24 weekly roundup describes shared agent sessions in Slack and Microsoft Teams. Teams can mention @GitHub to investigate, plan, and make code changes while colleagues follow and guide the session. The recorded date is the roundup publication date, not a verified first-release date for the individual feature.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+  }
+},
       ],
     },
     {
@@ -549,7 +906,94 @@ export const week35: WeeklyData = {
             "summary": "Codex 0.151 lets extensions inspect or replace MCP results before model delivery and adds a configurable grace period for optional-server discovery. It also preserves sandbox restrictions across directory changes and counts nested subagent tokens toward root budgets.",
             "content": "**MCP results and startup become more configurable**\n\nExtensions can inspect or replace MCP tool results before they reach the model. Optional MCP server discovery receives a configurable grace period.\n\n**Permissions and budgets are reinforced**\n\nChanging directories no longer weakens sandbox restrictions, and nested subagent token usage counts toward root goal budgets. Claims are based on official release notes."
           }
-        }
+        },
+{
+  "date": "8/27 10:56",
+  "platform": "Web",
+  "title": "Codex 0.150.1, 대화 압축 토큰 예산에 보존 이미지 포함",
+  "deck": "Codex 0.150.1, 대화 압축 토큰 예산에 보존 이미지 포함",
+  "summary": "Codex 0.150.1은 원격 대화 압축 시 보존된 이미지도 기본 토큰 예산에 포함하도록 수정했습니다. 필요하면 오래된 이미지를 줄여 예산에 맞추는 방식이라고 릴리스 노트가 설명합니다.",
+  "content": "Codex 0.150.1은 원격 대화 압축 시 보존된 이미지도 기본 토큰 예산에 포함하도록 수정했습니다. 필요하면 오래된 이미지를 줄여 예산에 맞추는 방식이라고 릴리스 노트가 설명합니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+  "source": "https://github.com/openai/codex/releases/tag/rust-v0.150.1",
+  "officialUrl": "https://github.com/openai/codex/releases/tag/rust-v0.150.1",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "OpenAI"
+  ],
+  "slug": "feed-pass2-20260827-0577669e18",
+  "en": {
+    "title": "Codex 0.150.1 counts retained images in remote compaction budgets",
+    "deck": "Codex 0.150.1 counts retained images in remote compaction budgets",
+    "summary": "Codex 0.150.1 reports that remote compaction now counts retained images toward its token budget by default, trimming older images when needed. The description is limited to the returned release notes.",
+    "content": "Codex 0.150.1 reports that remote compaction now counts retained images toward its token budget by default, trimming older images when needed. The description is limited to the returned release notes.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+  }
+},
+{
+  "date": "8/29",
+  "platform": "Web",
+  "title": "OpenAI API, mTLS·X.509 워크로드 인증 정식 제공",
+  "summary": "OpenAI는 API용 상호 TLS와 X.509 워크로드 신원 연동이 정식 제공된다고 밝혔습니다. 인증서와 신원 제공자는 플랫폼 콘솔에서 설정하며 조직의 역할·권한으로 접근을 제어합니다.",
+  "content": "OpenAI는 API용 상호 TLS와 X.509 워크로드 신원 연동이 정식 제공된다고 밝혔습니다. 인증서와 신원 제공자는 플랫폼 콘솔에서 설정하며 조직의 역할·권한으로 접근을 제어합니다.\n\n날짜 안내: 2026-08-29는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "OpenAI makes mTLS and X.509 workload identity generally available",
+    "summary": "OpenAI says mutual TLS and X.509 workload identity federation are generally available for its API. Certificates and identity providers can be configured in the Platform console under organization roles and permissions.",
+    "content": "OpenAI says mutual TLS and X.509 workload identity federation are generally available for its API. Certificates and identity providers can be configured in the Platform console under organization roles and permissions.\n\nDate disclosure: 2026-08-29 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://developers.openai.com/api/docs/changelog",
+  "officialUrl": "https://developers.openai.com/api/docs/changelog",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "OpenAI"
+  ],
+  "slug": "openai-20260829-product-d36ec3abc549"
+},
+{
+  "date": "8/26",
+  "platform": "Web",
+  "title": "OpenAI, 기존 전사 모델 종료 예고·Assistants API 종료",
+  "summary": "OpenAI는 Whisper-1 및 명시된 GPT-4o 전사 모델이 2027년 2월 26일 종료될 예정이라고 안내했습니다. 같은 8월 26일 변경 기록에는 Assistants API의 당일 종료와 Responses·Conversations API로의 이전 안내도 포함돼 있습니다.",
+  "content": "OpenAI는 Whisper-1 및 명시된 GPT-4o 전사 모델이 2027년 2월 26일 종료될 예정이라고 안내했습니다. 같은 8월 26일 변경 기록에는 Assistants API의 당일 종료와 Responses·Conversations API로의 이전 안내도 포함돼 있습니다.\n\n종료 예고 대상은 whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe, gpt-4o-transcribe-diarize입니다. 전사 작업의 이전 대상으로 gpt-live-transcribe 또는 gpt-transcribe를 안내했습니다.\n\n날짜 안내: 2026-08-26는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "OpenAI announces transcription retirements and Assistants shutdown",
+    "summary": "OpenAI says Whisper-1 and the listed GPT-4o transcription models will shut down on February 26, 2027. The August 26 changelog also records the Assistants API shutdown that day and directs migration to Responses and Conversations APIs.",
+    "content": "OpenAI says Whisper-1 and the listed GPT-4o transcription models will shut down on February 26, 2027. The August 26 changelog also records the Assistants API shutdown that day and directs migration to Responses and Conversations APIs.\n\nThe transcription shutdown covers whisper-1, gpt-4o-transcribe, gpt-4o-mini-transcribe and gpt-4o-transcribe-diarize. OpenAI directs transcription users to gpt-live-transcribe or gpt-transcribe.\n\nDate disclosure: 2026-08-26 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://developers.openai.com/api/docs/changelog",
+  "officialUrl": "https://developers.openai.com/api/docs/changelog",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "OpenAI"
+  ],
+  "slug": "openai-20260826-product-d881fabefb6f"
+},
+{
+  "date": "8/26",
+  "platform": "Web",
+  "title": "ChatGPT iOS, 작업 검색·추론 강도 조절 추가",
+  "summary": "OpenAI는 iOS 1.2026.230에 연결 호스트의 작업 제목·대화 검색, 추론 강도 조절 표시, 긴 프롬프트용 전체 화면 편집기를 추가했다고 밝혔습니다.",
+  "content": "OpenAI는 iOS 1.2026.230에 연결 호스트의 작업 제목·대화 검색, 추론 강도 조절 표시, 긴 프롬프트용 전체 화면 편집기를 추가했다고 밝혔습니다.\n\n긴 대화는 이전 기록을 필요할 때 불러오도록 개선했습니다. 홈 화면에는 ChatGPT·Work·Codex Remote 바로가기를 설정할 수 있으며, 응답에 선택한 주석에는 선택적으로 의견을 덧붙일 수 있습니다.\n\n날짜 안내: 2026-08-26는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "ChatGPT iOS adds task search and reasoning-effort controls",
+    "summary": "OpenAI says iOS version 1.2026.230 adds search across connected-host task titles and conversations, a reasoning-effort gauge, and a full-screen editor for longer prompts.",
+    "content": "OpenAI says iOS version 1.2026.230 adds search across connected-host task titles and conversations, a reasoning-effort gauge, and a full-screen editor for longer prompts.\n\nOlder history now loads as needed in long threads. Users can configure Home Screen shortcuts for ChatGPT, Work and Codex Remote, and optionally add comments to selected response annotations.\n\nDate disclosure: 2026-08-26 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+  },
+  "source": "https://learn.chatgpt.com/docs/changelog#codex-2026-08-25-mobile",
+  "officialUrl": "https://learn.chatgpt.com/docs/changelog#codex-2026-08-25-mobile",
+  "verifiedAt": "2026-09-08",
+  "tags": [
+    "AI",
+    "2026-w35",
+    "OpenAI"
+  ],
+  "slug": "openai-20260826-product-f4a71b3d05f3"
+},
       ]
     },
     {
@@ -579,8 +1023,1432 @@ export const week35: WeeklyData = {
             "summary": "NVIDIA announced NVHBM for XPUs and named Amazon Annapurna Labs as the first collaborator. NVIDIA claims up to 30% more bandwidth and 15% lower HBM power than standard HBM4E. Support is planned to begin with Trainium4, not current general availability.",
             "content": "**The memory controller moves into the HBM stack**\n\nNVHBM integrates the controller into the 3D HBM stack rather than the XPU. NVIDIA claims up to 30% greater bandwidth, 15% lower HBM power and up to 25% more XPU compute-die area versus standard HBM4E.\n\n**Initial support is forward-looking**\n\nAmazon Annapurna Labs is the first collaborator, with support planned for Trainium4. Figures are vendor claims and this is not described as current general availability."
           }
+        },
+{
+  "date": "8/27 22:00",
+  "platform": "Web",
+  "title": "GeForce NOW, 가을 DLSS 4.5 제어 옵션 확대 예고",
+  "deck": "GeForce NOW, 가을 DLSS 4.5 제어 옵션 확대 예고",
+  "summary": "NVIDIA는 가을에 GeForce NOW Ultimate 이용자가 DLSS 4.5의 초해상도·동적 프레임 생성·광선 재구성 옵션을 조정할 수 있도록 할 예정이라고 안내했습니다. 스트리밍 화질과 응답성의 균형을 선택하는 기능이며, 발표일에 모든 옵션이 이미 제공됐다는 의미는 아닙니다.",
+  "content": "NVIDIA는 가을에 GeForce NOW Ultimate 이용자가 DLSS 4.5의 초해상도·동적 프레임 생성·광선 재구성 옵션을 조정할 수 있도록 할 예정이라고 안내했습니다. 스트리밍 화질과 응답성의 균형을 선택하는 기능이며, 발표일에 모든 옵션이 이미 제공됐다는 의미는 아닙니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+  "source": "https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/",
+  "officialUrl": "https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "NVIDIA"
+  ],
+  "slug": "feed-pass2-20260827-ca1c781736",
+  "en": {
+    "title": "GeForce NOW previews expanded DLSS 4.5 controls for fall",
+    "deck": "GeForce NOW previews expanded DLSS 4.5 controls for fall",
+    "summary": "NVIDIA previewed fall controls for GeForce NOW Ultimate users to tune DLSS 4.5 Super Resolution, Dynamic Frame Generation, and Ray Reconstruction. The announcement concerns choices between streaming quality and responsiveness, not confirmation that every option was already live on publication day.",
+    "content": "NVIDIA previewed fall controls for GeForce NOW Ultimate users to tune DLSS 4.5 Super Resolution, Dynamic Frame Generation, and Ray Reconstruction. The announcement concerns choices between streaming quality and responsiveness, not confirmation that every option was already live on publication day.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+  }
+},
+{
+  "date": "8/26 00:30",
+  "platform": "Web",
+  "title": "NVIDIA Gamescom, DLSS 4.5 광선 재구성·ACE 게임 적용 소개",
+  "deck": "NVIDIA Gamescom, DLSS 4.5 광선 재구성·ACE 게임 적용 소개",
+  "summary": "NVIDIA는 Gamescom 업데이트에서 2세대 트랜스포머 모델을 사용하는 DLSS 4.5 Ray Reconstruction을 제공 중이라고 안내했습니다. AI 신경망으로 광선 추적 영상의 노이즈 제거를 대체하며, Aniimo에는 2027년 초 ACE를 적용할 예정이라고 설명했습니다. RTX Spark 게임 파트너 소식과 함께 발표된 AI 그래픽 항목입니다.",
+  "content": "NVIDIA는 Gamescom 업데이트에서 2세대 트랜스포머 모델을 사용하는 DLSS 4.5 Ray Reconstruction을 제공 중이라고 안내했습니다. AI 신경망으로 광선 추적 영상의 노이즈 제거를 대체하며, Aniimo에는 2027년 초 ACE를 적용할 예정이라고 설명했습니다. RTX Spark 게임 파트너 소식과 함께 발표된 AI 그래픽 항목입니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+  "source": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
+  "officialUrl": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
+  "verifiedAt": "2026-09-08",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "2026-w35",
+    "NVIDIA"
+  ],
+  "slug": "feed-pass2-20260826-cd140ce316",
+  "en": {
+    "title": "NVIDIA Gamescom update highlights DLSS 4.5 Ray Reconstruction and ACE",
+    "deck": "NVIDIA Gamescom update highlights DLSS 4.5 Ray Reconstruction and ACE",
+    "summary": "NVIDIA's Gamescom update says DLSS 4.5 Ray Reconstruction is available with a second-generation transformer model, replacing traditional denoisers with an AI network. It also previews ACE integration in Aniimo for early 2027. These are the AI-graphics components of a broader RTX Spark gaming announcement.",
+    "content": "NVIDIA's Gamescom update says DLSS 4.5 Ray Reconstruction is available with a second-generation transformer model, replacing traditional denoisers with an AI network. It also previews ACE integration in Aniimo for early 2027. These are the AI-graphics components of a broader RTX Spark gaming announcement.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+  }
+},
+{
+  "date": "8/26",
+  "platform": "Web",
+  "title": "AWS·NVIDIA, 2027~2028년 GPU 200만 개 추가 배치 계획",
+  "summary": "AWS와 NVIDIA는 글로벌 인프라에 GPU 200만 개를 추가 배치하는 협력 확대를 발표했습니다. 2027~2028년 계획으로, 이미 설치된 수량이 아닙니다.",
+  "content": "AWS와 NVIDIA는 글로벌 인프라에 GPU 200만 개를 추가 배치하는 협력 확대를 발표했습니다. 2027~2028년 계획으로, 이미 설치된 수량이 아닙니다.\n\n발표일은 공식 원문의 날짜이며, 공개되지 않은 시각은 덧붙이지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+  "en": {
+    "title": "AWS and NVIDIA plan 2 million additional GPUs in 2027–2028",
+    "summary": "AWS and NVIDIA announced plans to deploy two million additional GPUs across AWS infrastructure in 2027–2028. This is planned capacity, not an already-installed total.",
+    "content": "AWS and NVIDIA announced plans to deploy two million additional GPUs across AWS infrastructure in 2027–2028. This is planned capacity, not an already-installed total.\n\nThe date follows the official source; no unpublished time is inferred.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+  },
+  "source": "https://nvidianews.nvidia.com/news/aws-and-nvidia-to-deliver-2-million-additional-gpus-and-next-generation-infrastructure-for-agentic-and-physical-ai",
+  "officialUrl": "https://nvidianews.nvidia.com/news/aws-and-nvidia-to-deliver-2-million-additional-gpus-and-next-generation-infrastructure-for-agentic-and-physical-ai",
+  "verifiedAt": "2026-09-09",
+  "backupUrls": [],
+  "tags": [
+    "AI",
+    "NVIDIA",
+    "2026-w35"
+  ],
+  "slug": "discovery-official-b9ec799d769b"
+},
+      ]
+    },
+{
+  "name": "Hugging Face",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Sentence Transformers 6.0 다중벡터 임베딩 학습 안내",
+      "deck": "Sentence Transformers 6.0 다중벡터 임베딩 학습 안내",
+      "summary": "Hugging Face는 Sentence Transformers 6.0의 MultiVectorEncoder를 활용한 학습 안내를 공개했습니다. ColBERT 방식의 다중벡터 검색 모델을 미세조정하거나 처음부터 학습하는 절차와 데이터·손실함수·평가 구성을 설명합니다. 글의 성능 비교는 작성자 실험 결과입니다.",
+      "content": "Hugging Face는 Sentence Transformers 6.0의 MultiVectorEncoder를 활용한 학습 안내를 공개했습니다. ColBERT 방식의 다중벡터 검색 모델을 미세조정하거나 처음부터 학습하는 절차와 데이터·손실함수·평가 구성을 설명합니다. 글의 성능 비교는 작성자 실험 결과입니다.\n\n게시일은 공식 피드 기준입니다. 피드의 자정 표기는 실제 공개 시각을 확인한 근거가 아니므로 시·분을 표시하지 않았습니다.",
+      "source": "https://huggingface.co/blog/train-multi-vector-encoder",
+      "officialUrl": "https://huggingface.co/blog/train-multi-vector-encoder",
+      "verifiedAt": "2026-09-08",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Hugging Face"
+      ],
+      "slug": "feed-20260826-17177c100c",
+      "en": {
+        "title": "Sentence Transformers 6.0 guide covers multi-vector retrieval training",
+        "deck": "Sentence Transformers 6.0 guide covers multi-vector retrieval training",
+        "summary": "Hugging Face published a training guide for MultiVectorEncoder in Sentence Transformers 6.0. It covers fine-tuning and training ColBERT-style multi-vector retrieval models, including data, loss functions, and evaluation. Performance comparisons are the author's reported experiments.",
+        "content": "Hugging Face published a training guide for MultiVectorEncoder in Sentence Transformers 6.0. It covers fine-tuning and training ColBERT-style multi-vector retrieval models, including data, loss functions, and evaluation. Performance comparisons are the author's reported experiments.\n\nThe publication date follows the official feed. Its midnight timestamp does not independently establish an exact launch time, so hours and minutes are omitted."
+      }
+    },
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "Open ASR Leaderboard, 힌디어·인도 영어 평가 확대",
+      "deck": "Open ASR Leaderboard, 힌디어·인도 영어 평가 확대",
+      "summary": "Voice Arena와 Hugging Face는 Open ASR Leaderboard에 힌디어와 인도 영어 평가를 추가한다고 발표했습니다. 기존 음성 인식 점수만으로 드러나기 어려운 언어·발화자 특성 차이를 평가 범위에 반영하려는 작업입니다.",
+      "content": "Voice Arena와 Hugging Face는 Open ASR Leaderboard에 힌디어와 인도 영어 평가를 추가한다고 발표했습니다. 기존 음성 인식 점수만으로 드러나기 어려운 언어·발화자 특성 차이를 평가 범위에 반영하려는 작업입니다.\n\n게시일은 공식 피드 기준입니다. 피드의 자정 표기는 실제 공개 시각을 확인한 근거가 아니므로 시·분을 표시하지 않았습니다.",
+      "source": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "officialUrl": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "verifiedAt": "2026-09-08",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Hugging Face"
+      ],
+      "slug": "feed-20260828-4d3b17a749",
+      "en": {
+        "title": "Open ASR Leaderboard expands to Hindi and Indian English",
+        "deck": "Open ASR Leaderboard expands to Hindi and Indian English",
+        "summary": "Voice Arena and Hugging Face announced Hindi and Indian English evaluation for the Open ASR Leaderboard. The expansion addresses language and speaker differences that may be hidden by aggregate speech-recognition scores.",
+        "content": "Voice Arena and Hugging Face announced Hindi and Indian English evaluation for the Open ASR Leaderboard. The expansion addresses language and speaker differences that may be hidden by aggregate speech-recognition scores.\n\nThe publication date follows the official feed. Its midnight timestamp does not independently establish an exact launch time, so hours and minutes are omitted."
+      }
+    }
+  ]
+},
+{
+  "name": "Cohere",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "Cohere Parse, 기업 문서를 구조화하는 모델 공개",
+      "summary": "Cohere는 표·양식·이미지 등 문서의 시각 요소를 읽고 구조화된 Markdown과 위치 정보를 반환하는 Parse를 공개했습니다. 9개 주요 언어를 지원하며 API 가격은 1천 페이지당 1.50달러라고 안내했습니다. 성능 우위는 업체 자체 평가 주장입니다.",
+      "content": "Cohere는 표·양식·이미지 등 문서의 시각 요소를 읽고 구조화된 Markdown과 위치 정보를 반환하는 Parse를 공개했습니다. 9개 주요 언어를 지원하며 API 가격은 1천 페이지당 1.50달러라고 안내했습니다. 성능 우위는 업체 자체 평가 주장입니다.\n\n출력에는 시각 요소의 위치를 나타내는 경계 상자가 포함됩니다. Cohere는 Compass와 Model Vault뿐 아니라 자체 인프라 배포 경로도 안내했으며, 표의 비교 점수는 회사가 구성한 평가 범위에 한정됩니다.\n\n날짜 안내: 2026-08-27는 발행자가 표시한 게시 날짜입니다. 게시 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Cohere introduces Parse for enterprise documents",
+        "summary": "Cohere introduces Parse to convert documents containing tables, forms and images into structured Markdown with spatial information. It states support for nine major languages and API pricing of $1.50 per 1,000 pages; performance comparisons are provider claims.",
+        "content": "Cohere introduces Parse to convert documents containing tables, forms and images into structured Markdown with spatial information. It states support for nine major languages and API pricing of $1.50 per 1,000 pages; performance comparisons are provider claims.\n\nOutputs include bounding boxes locating visual elements. Cohere describes Compass, Model Vault and self-hosted deployment options; comparative scores refer to the company’s evaluation scope.\n\nDate disclosure: 2026-08-27 is the publisher-displayed publication date. No publication time or timezone was established, so it has not been converted to Korea time or assigned an invented time."
+      },
+      "source": "https://cohere.com/blog/parse",
+      "officialUrl": "https://cohere.com/blog/parse",
+      "verifiedAt": "2026-09-08",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Cohere"
+      ],
+      "slug": "cohere-20260827-product-337669bcf446"
+    }
+  ]
+},
+{
+  "name": "Higgsfield",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27 04:00",
+      "platform": "Web",
+      "title": "Higgsfield에 Recraft V4.1·Styles·Utility 추가",
+      "summary": "새로운 이미지 구상용 V4.1, 참고 스타일을 맞추는 Styles, 단순하고 통제된 구성용 Utility를 선택할 수 있어요. 이번 소식은 Higgsfield 안에서의 제공 안내이며 Recraft V4 자체의 최초 출시와는 다른 사건이에요.",
+      "content": "새로운 이미지 구상용 V4.1, 참고 스타일을 맞추는 Styles, 단순하고 통제된 구성용 Utility를 선택할 수 있어요. 이번 소식은 Higgsfield 안에서의 제공 안내이며 Recraft V4 자체의 최초 출시와는 다른 사건이에요.",
+      "en": {
+        "title": "Recraft V4.1, Styles and Utility arrive on Higgsfield",
+        "summary": "Higgsfield offers separate Recraft models for creative generation, reference-style matching and controlled compositions. This is availability within Higgsfield, distinct from the original Recraft V4 release.",
+        "content": "Higgsfield offers separate Recraft models for creative generation, reference-style matching and controlled compositions. This is availability within Higgsfield, distinct from the original Recraft V4 release."
+      },
+      "source": "https://higgsfield.ai/blog/recraft-v4-higgsfield",
+      "officialUrl": "https://higgsfield.ai/blog/recraft-v4-higgsfield",
+      "verifiedAt": "2026-09-08",
+      "slug": "recraft-v4-higgsfield-db8126e3",
+      "tags": [
+        "생성형 AI",
+        "플랫폼 통합"
+      ],
+      "readMinutes": 1
+    }
+  ]
+},
+{
+  "name": "Cartesia",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "Cartesia Sonic-3.6, 44개 언어의 자연스러운 음성에 초점",
+      "summary": "Cartesia가 자연스러움과 다국어 발화를 개선한 Sonic-3.6을 공개했어요. 15개 지역의 블라인드 비교에서 선호도가 최대 93%였다는 수치와 순위는 회사가 공개한 평가 설명이며, 이번 조사에서 독립 재현한 결과는 아니에요.",
+      "content": "Cartesia가 자연스러움과 다국어 발화를 개선한 Sonic-3.6을 공개했어요. 15개 지역의 블라인드 비교에서 선호도가 최대 93%였다는 수치와 순위는 회사가 공개한 평가 설명이며, 이번 조사에서 독립 재현한 결과는 아니에요.\n\n표시 날짜는 발행자가 명시한 게시일입니다. 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았어요.",
+      "en": {
+        "title": "Cartesia releases Sonic-3.6 with a focus on multilingual naturalness",
+        "summary": "Sonic-3.6 targets more natural speech across 44 languages. Cartesia reports up to 93% preference in blind comparisons across fifteen locales; these results and leaderboard claims are attributed to the vendor and were not independently reproduced here.",
+        "content": "Sonic-3.6 targets more natural speech across 44 languages. Cartesia reports up to 93% preference in blind comparisons across fifteen locales; these results and leaderboard claims are attributed to the vendor and were not independently reproduced here.\n\nThe displayed date is the publisher date. No publication time or timezone was established, so no Korea-time conversion or invented time is applied."
+      },
+      "source": "https://cartesia.ai/blog/sonic-3.6",
+      "officialUrl": "https://cartesia.ai/blog/sonic-3.6",
+      "verifiedAt": "2026-09-08",
+      "slug": "sonic-36-1d75351e",
+      "tags": [
+        "생성형 AI",
+        "음성 모델 출시"
+      ],
+      "readMinutes": 1
+    }
+  ]
+},
+{
+  "name": "Kling",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27 22:36",
+      "platform": "Web",
+      "title": "Kling, Claude Code·MCP 기반 영상 일괄 제작 가이드 3종 공개",
+      "summary": "8월 27일 공식 가이드 3편은 음식 홍보·패션 상품·연기 장면을 대상으로 참고 자료와 승인된 제작 규칙을 재사용하는 방법을 설명해요. 소수 장면을 먼저 검토한 뒤 변형 영상을 일괄 생성하는 흐름이에요. 가이드 게시일을 Kling MCP 최초 출시일로 간주하지 않았어요.",
+      "content": "8월 27일 공식 가이드 3편은 음식 홍보·패션 상품·연기 장면을 대상으로 참고 자료와 승인된 제작 규칙을 재사용하는 방법을 설명해요. 소수 장면을 먼저 검토한 뒤 변형 영상을 일괄 생성하는 흐름이에요. 가이드 게시일을 Kling MCP 최초 출시일로 간주하지 않았어요.",
+      "en": {
+        "title": "Kling publishes three MCP batch-video workflow guides",
+        "summary": "Three August 27 guides cover food promotions, fashion products and cinematic performances using reusable references and approved creative rules. They recommend testing a few concepts before scaling variations. Their publication date is not treated as the original Kling MCP launch date.",
+        "content": "Three August 27 guides cover food promotions, fashion products and cinematic performances using reusable references and approved creative rules. They recommend testing a few concepts before scaling variations. Their publication date is not treated as the original Kling MCP launch date."
+      },
+      "source": "https://kling.ai/blog/claude-code-kling-mcp-food-promo-workflow",
+      "officialUrl": "https://kling.ai/blog/claude-code-kling-mcp-food-promo-workflow",
+      "verifiedAt": "2026-09-08",
+      "slug": "kling-mcp-20260827-workflow-guides-84d346a8",
+      "tags": [
+        "AI 활용",
+        "공식 활용 가이드 3종"
+      ],
+      "readMinutes": 1,
+      "backupUrls": [
+        {
+          "label": "Kling official complementary workflow guide",
+          "url": "https://kling.ai/blog/claude-kling-mcp-fashion-video-workflow"
+        },
+        {
+          "label": "Kling official complementary workflow guide",
+          "url": "https://kling.ai/blog/kling-mcp-cinematic-performance-workflow"
         }
       ]
     }
+  ]
+},
+{
+  "name": "Midjourney",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/29 09:35",
+      "platform": "Web",
+      "title": "Midjourney, V8.2 편집 모델의 이미지 품질 개선",
+      "summary": "Midjourney가 V8.2 이미지 편집 모델의 품질을 개선했다고 밝혔어요. 이전 24시간 동안 문제가 있었던 이용자에게 다시 시도하고 피드백을 보내 달라고 안내한 후속 업데이트예요.",
+      "content": "Midjourney가 V8.2 이미지 편집 모델의 품질을 개선했다고 밝혔어요. 이전 24시간 동안 문제가 있었던 이용자에게 다시 시도하고 피드백을 보내 달라고 안내한 후속 업데이트예요.",
+      "en": {
+        "title": "Midjourney improves V8.2 edit image quality",
+        "summary": "Midjourney reports an image-quality update for the V8.2 edit model and asks users who experienced problems in the preceding 24 hours to retry and provide feedback.",
+        "content": "Midjourney reports an image-quality update for the V8.2 edit model and asks users who experienced problems in the preceding 24 hours to retry and provide feedback."
+      },
+      "source": "https://updates.midjourney.com/edit-image-quality-update",
+      "officialUrl": "https://updates.midjourney.com/edit-image-quality-update",
+      "verifiedAt": "2026-09-08",
+      "slug": "edit-image-quality-update-83901a5e",
+      "tags": [
+        "생성형 AI",
+        "모델 품질 개선"
+      ],
+      "readMinutes": 1
+    },
+    {
+      "date": "8/28 08:32",
+      "platform": "Web",
+      "title": "Midjourney V8.2 이미지 편집 모델, 최대 4장 참고 이미지 지원",
+      "summary": "자연어 지시로 이미지를 고치고 최대 4장의 참고 이미지를 함께 사용할 수 있어요. 영역 수정·화면 확장과 개인화도 지원하며, 공식 웹사이트와 알파 사이트에서 커뮤니티 테스트를 시작했어요.",
+      "content": "자연어 지시로 이미지를 고치고 최대 4장의 참고 이미지를 함께 사용할 수 있어요. 영역 수정·화면 확장과 개인화도 지원하며, 공식 웹사이트와 알파 사이트에서 커뮤니티 테스트를 시작했어요.",
+      "en": {
+        "title": "Midjourney opens V8.2 image editing for community testing",
+        "summary": "The edit model supports instruction-based changes, up to four image references, inpainting and outpainting, plus personalization. It is being tested on the main and alpha websites, with Discord support through the edit parameter.",
+        "content": "The edit model supports instruction-based changes, up to four image references, inpainting and outpainting, plus personalization. It is being tested on the main and alpha websites, with Discord support through the edit parameter."
+      },
+      "source": "https://updates.midjourney.com/edit-model-for-v8",
+      "officialUrl": "https://updates.midjourney.com/edit-model-for-v8",
+      "verifiedAt": "2026-09-08",
+      "slug": "edit-model-for-v8-928a7aa0",
+      "tags": [
+        "생성형 AI",
+        "편집 모델 테스트"
+      ],
+      "readMinutes": 1
+    }
+  ]
+},
+{
+  "name": "SK",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28 01:00",
+      "platform": "Web",
+      "title": "SK하이닉스, 미국 인디애나 HBM 생산거점 착공",
+      "summary": "SK하이닉스는 미국 인디애나의 AI 메모리 패키징 생산기지 기공식을 발표했습니다. 40억 달러 이상을 투자하고 2029년 하반기 첫 미국 생산 HBM 공급을 계획합니다.",
+      "content": "SK하이닉스는 미국 인디애나의 AI 메모리 패키징 생산기지 기공식을 발표했습니다. 40억 달러 이상을 투자하고 2029년 하반기 첫 미국 생산 HBM 공급을 계획합니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "SK hynix breaks ground on Indiana HBM facility",
+        "summary": "SK hynix announced groundbreaking for its AI-memory packaging facility in Indiana, with investment exceeding $4 billion and initial US-made HBM production planned for the second half of 2029.",
+        "content": "SK hynix announced groundbreaking for its AI-memory packaging facility in Indiana, with investment exceeding $4 billion and initial US-made HBM production planned for the second half of 2029.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://news.skhynix.co.kr/groundbreaking-ceremony-in-indiana/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "SK",
+        "2026-w35"
+      ],
+      "backupUrls": [
+        {
+          "label": "미국 AI 혁신의 새 거점, SK하이닉스 인디애나 팹 첫 삽 뜨다 | SK hynix Newsroom",
+          "url": "https://news.skhynix.co.kr/indiana-groundbreaking-ceremony-sketch/"
+        },
+        {
+          "label": "[VOD] SK하이닉스 미국 인디애나 팹(Indiana Fab) 기공식 | SK hynix Newsroom",
+          "url": "https://news.skhynix.co.kr/indiana-fab-groundbreaking/"
+        }
+      ],
+      "officialUrl": "https://news.skhynix.co.kr/groundbreaking-ceremony-in-indiana/",
+      "slug": "industry-20260828-d9eba9290e5a"
+    },
+    {
+      "date": "8/26 09:00",
+      "platform": "Web",
+      "title": "SK하이닉스, DTF 2026에서 AI 메모리 제품군 소개",
+      "summary": "SK하이닉스가 서울 델 테크놀로지 포럼에서 PC부터 데이터센터까지 아우르는 AI 메모리 제품군을 소개했습니다. 새 모델 출시가 아니라 전시·협력 소식입니다.",
+      "content": "SK하이닉스가 서울 델 테크놀로지 포럼에서 PC부터 데이터센터까지 아우르는 AI 메모리 제품군을 소개했습니다. 새 모델 출시가 아니라 전시·협력 소식입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "SK hynix showcases AI memory at DTF 2026",
+        "summary": "SK hynix described its AI-memory portfolio exhibition at Dell Technologies Forum in Seoul, spanning PCs and data centers. This is an exhibition and partnership update, not a model launch.",
+        "content": "SK hynix described its AI-memory portfolio exhibition at Dell Technologies Forum in Seoul, spanning PCs and data centers. This is an exhibition and partnership update, not a model launch.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://news.skhynix.co.kr/dtf-2026/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "SK",
+        "2026-w35"
+      ],
+      "officialUrl": "https://news.skhynix.co.kr/dtf-2026/",
+      "slug": "industry-20260826-13e29827c1d0"
+    }
+  ]
+},
+{
+  "name": "NAVER",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "팀네이버, ECCV 2026에 비전 AI 논문 23편 채택",
+      "summary": "팀네이버는 ECCV 2026에 논문 23편이 채택됐다고 발표했습니다. 3D 공간 재구성, 이미지·영상 학습, 로봇 주행 시뮬레이션 등의 연구이며 4건은 스포트라이트로 선정됐습니다. 회사 발표 기준의 연구 성과로, 상용 서비스 출시와는 구분해야 합니다.",
+      "content": "팀네이버는 ECCV 2026에 논문 23편이 채택됐다고 발표했습니다. 3D 공간 재구성, 이미지·영상 학습, 로봇 주행 시뮬레이션 등의 연구이며 4건은 스포트라이트로 선정됐습니다. 회사 발표 기준의 연구 성과로, 상용 서비스 출시와는 구분해야 합니다.\n\n날짜 안내: 표시 날짜는 발행자가 명시한 게시일입니다. 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Team NAVER reports 23 papers accepted at ECCV 2026",
+        "summary": "Team NAVER announced that 23 papers were accepted at ECCV 2026, including work on 3D reconstruction, visual learning, and robot-navigation simulation. Four received spotlight selections. These are company-reported research results, not commercial product launches.",
+        "content": "Team NAVER announced that 23 papers were accepted at ECCV 2026, including work on 3D reconstruction, visual learning, and robot-navigation simulation. Four received spotlight selections. These are company-reported research results, not commercial product launches.\n\nDate disclosure: the displayed date is the publisher date. No publication time or timezone was established, so no Korea-time conversion or invented time is applied."
+      },
+      "source": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034616",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "NAVER",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034616",
+      "slug": "industry-20260828-de768d58df8b"
+    },
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "네이버클라우드·LG CNS, 보안 AI 개발 컨소시엄 참여",
+      "summary": "네이버클라우드와 LG CNS는 사이버 보안 특화 AI 모델 개발 사업에 공동 컨소시엄으로 참여한다고 발표했습니다. 9월 3일 최종 선정 발표에 앞선 참가 단계 소식입니다.",
+      "content": "네이버클라우드와 LG CNS는 사이버 보안 특화 AI 모델 개발 사업에 공동 컨소시엄으로 참여한다고 발표했습니다. 9월 3일 최종 선정 발표에 앞선 참가 단계 소식입니다.\n\n날짜 안내: 표시 날짜는 발행자가 명시한 게시일입니다. 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "NAVER Cloud and LG CNS form cybersecurity AI consortium",
+        "summary": "NAVER Cloud and LG CNS announced consortium participation in a cybersecurity AI foundation-model program. This participation-stage announcement precedes the September 3 selection announcement.",
+        "content": "NAVER Cloud and LG CNS announced consortium participation in a cybersecurity AI foundation-model program. This participation-stage announcement precedes the September 3 selection announcement.\n\nDate disclosure: the displayed date is the publisher date. No publication time or timezone was established, so no Korea-time conversion or invented time is applied."
+      },
+      "source": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034614",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "NAVER",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034614",
+      "slug": "industry-20260827-67f712698ec8"
+    }
+  ]
+},
+{
+  "name": "AMD",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28 00:09",
+      "platform": "Web",
+      "title": "AMD ROCm 10, AI 기반 개발 경험 확대",
+      "summary": "AMD는 ROCm 10에서 ROCm.AI의 AI 기반 개발 경험을 AMD 플랫폼으로 확대하는 내용을 소개했습니다. 구체적인 지원 환경은 공식 문서의 조건을 확인해야 합니다.",
+      "content": "AMD는 ROCm 10에서 ROCm.AI의 AI 기반 개발 경험을 AMD 플랫폼으로 확대하는 내용을 소개했습니다. 구체적인 지원 환경은 공식 문서의 조건을 확인해야 합니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "AMD ROCm 10 expands AI-native developer experiences",
+        "summary": "AMD introduced ROCm 10 and described bringing ROCm.AI’s AI-native developer experiences to AMD platforms. Supported environments remain subject to official documentation.",
+        "content": "AMD introduced ROCm 10 and described bringing ROCm.AI’s AI-native developer experiences to AMD platforms. Supported environments remain subject to official documentation.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://newsroom.amd.com/news/rocm-10-software-ai-native-developer-experiences/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AMD",
+        "2026-w35"
+      ],
+      "officialUrl": "https://newsroom.amd.com/news/rocm-10-software-ai-native-developer-experiences/",
+      "slug": "industry-20260827-e7f24bbe3ec5"
+    }
+  ]
+},
+{
+  "name": "Notion",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "Notion 에이전트, 문서 직접 수정 대신 변경안 제안",
+      "summary": "Notion 에이전트에게 수정을 제안해 달라고 요청하면 문서를 바로 바꾸는 대신 변경안을 검토할 수 있습니다. 사용자는 위에서 아래로 제안을 하나씩 승인할 수 있어 문법 교정처럼 문장 단위 검토가 필요한 작업에 적합합니다.",
+      "content": "Notion 에이전트에게 수정을 제안해 달라고 요청하면 문서를 바로 바꾸는 대신 변경안을 검토할 수 있습니다. 사용자는 위에서 아래로 제안을 하나씩 승인할 수 있어 문법 교정처럼 문장 단위 검토가 필요한 작업에 적합합니다.\n\n날짜 안내: 표시 날짜는 발행자가 명시한 게시일입니다. 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Notion agents can suggest edits for review",
+        "summary": "Notion agents can now propose changes instead of applying them directly. Users can review and approve suggestions one by one, supporting line-level workflows such as grammar editing.",
+        "content": "Notion agents can now propose changes instead of applying them directly. Users can review and approve suggestions one by one, supporting line-level workflows such as grammar editing.\n\nDate disclosure: the displayed date is the publisher date. No publication time or timezone was established, so no Korea-time conversion or invented time is applied."
+      },
+      "source": "https://www.notion.com/releases/2026-08-28",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Notion",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.notion.com/releases/2026-08-28",
+      "slug": "industry-20260828-8e632fc71b5b"
+    }
+  ]
+},
+{
+  "name": "Figma",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/29 04:30",
+      "platform": "Web",
+      "title": "Figma, AI가 디자인에 미치는 영향 측정 논의",
+      "summary": "Figma는 디자인 업무에서 AI의 효과를 어떻게 측정할지 다룬 글을 공개했습니다. 제품 출시가 아니라 평가·업무 방식에 관한 분석입니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nFigma는 디자인 업무에서 AI의 효과를 어떻게 측정할지 다룬 글을 공개했습니다. 제품 출시가 아니라 평가·업무 방식에 관한 분석입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Figma examines measuring AI’s impact on design",
+        "summary": "Figma published a discussion of how to measure AI’s impact on design work. It is an evaluation and workflow analysis, not a product launch.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nFigma published a discussion of how to measure AI’s impact on design work. It is an evaluation and workflow analysis, not a product launch.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.figma.com/blog/measuring-the-impact-of-ai/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Figma",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.figma.com/blog/measuring-the-impact-of-ai/",
+      "slug": "industry-20260828-c7be1dc640d9"
+    },
+    {
+      "date": "8/27 07:00",
+      "platform": "Web",
+      "title": "Figma, 에이전트로 디자인·코드 오가는 작업 안내",
+      "summary": "Figma는 에이전트를 활용해 디자인과 코드를 오가는 작업 과정을 소개했습니다. 실습 안내이며 별도 신모델 출시로 보도하지 않습니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nFigma는 에이전트를 활용해 디자인과 코드를 오가는 작업 과정을 소개했습니다. 실습 안내이며 별도 신모델 출시로 보도하지 않습니다. 본문은 가상의 STEM 학습 앱 Radicle을 예시로 사용하므로 실제 고객 성과로 읽으면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Figma demonstrates agent-assisted design-to-code workflows",
+        "summary": "Figma published a workflow guide on moving between design and code with agents. It is a practical tutorial rather than a new model launch.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nFigma published a workflow guide on moving between design and code with agents. It is a practical tutorial rather than a new model launch. The article uses the fictional STEM app Radicle, so the example is not evidence of a real customer outcome.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.figma.com/blog/workflow-lab-moving-between-design-and-code-with-agents/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Figma",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.figma.com/blog/workflow-lab-moving-between-design-and-code-with-agents/",
+      "slug": "industry-20260826-37c124e9cc34"
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Figma 데스크톱, 에이전트 채팅을 별도 창으로 분리",
+      "summary": "Figma 데스크톱은 macOS·Windows에서 에이전트 채팅을 별도 창으로 열어 다른 도구나 탭을 사용해도 계속 볼 수 있게 했습니다.",
+      "content": "Figma 데스크톱은 macOS·Windows에서 에이전트 채팅을 별도 창으로 열어 다른 도구나 탭을 사용해도 계속 볼 수 있게 했습니다.\n\n날짜 안내: 표시 날짜는 발행자가 명시한 게시일입니다. 시각과 시간대가 확인되지 않아 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "en": {
+        "title": "Figma desktop opens agent chat in a separate window",
+        "summary": "Figma desktop on macOS and Windows can open agent chat in a separate window that stays visible while using other tools or tabs.",
+        "content": "Figma desktop on macOS and Windows can open agent chat in a separate window that stays visible while using other tools or tabs.\n\nDate disclosure: the displayed date is the publisher date. No publication time or timezone was established, so no Korea-time conversion or invented time is applied."
+      },
+      "source": "https://www.figma.com/release-notes/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Figma",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.figma.com/release-notes/",
+      "slug": "industry-20260826-ceaca017e366"
+    }
+  ]
+},
+{
+  "name": "Atlassian",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28 10:37",
+      "platform": "Web",
+      "title": "Atlassian, 반복 엔지니어링 작업 자동화 사례 소개",
+      "summary": "Atlassian은 반복적인 보안 수정 등 표준 엔지니어링 작업을 에이전트로 처리하는 사례를 공개했습니다. 제품 신규 출시보다 실제 운영 방식에 초점을 둔 글입니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAtlassian은 반복적인 보안 수정 등 표준 엔지니어링 작업을 에이전트로 처리하는 사례를 공개했습니다. 제품 신규 출시보다 실제 운영 방식에 초점을 둔 글입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Atlassian shares agentic engineering automation practice",
+        "summary": "Atlassian published a practical account of automating repeatable engineering work, including security fixes, with agents. It focuses on operating practice rather than a new launch.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAtlassian published a practical account of automating repeatable engineering work, including security fixes, with agents. It focuses on operating practice rather than a new launch.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.atlassian.com/blog/development/agentic-automation-in-practice-putting-standard-engineering-work-on-autopilot",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Atlassian",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.atlassian.com/blog/development/agentic-automation-in-practice-putting-standard-engineering-work-on-autopilot",
+      "slug": "industry-20260827-0279a9821513"
+    },
+    {
+      "date": "8/28 07:00",
+      "platform": "Web",
+      "title": "Teamwork Graph, Microsoft Teams 대화 맥락 연결",
+      "summary": "Atlassian은 Microsoft Teams의 대화·회의 맥락을 Teamwork Graph에 연결하는 커넥터를 소개했습니다. Rovo를 Teams에서 사용하는 반대 방향의 연동과 구분되는 데이터 연결입니다.",
+      "content": "Atlassian은 Microsoft Teams의 대화·회의 맥락을 Teamwork Graph에 연결하는 커넥터를 소개했습니다. Rovo를 Teams에서 사용하는 반대 방향의 연동과 구분되는 데이터 연결입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Teamwork Graph connects Microsoft Teams context",
+        "summary": "Atlassian introduced a connector bringing Microsoft Teams conversation and meeting context into Teamwork Graph. This data-ingestion direction is distinct from accessing Rovo within Teams.",
+        "content": "Atlassian introduced a connector bringing Microsoft Teams conversation and meeting context into Teamwork Graph. This data-ingestion direction is distinct from accessing Rovo within Teams.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.atlassian.com/blog/ai-at-work/microsoft-teams-teamwork-graph-connector",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Atlassian",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.atlassian.com/blog/ai-at-work/microsoft-teams-teamwork-graph-connector",
+      "slug": "industry-20260827-8daed1119dce"
+    },
+    {
+      "date": "8/28 03:40",
+      "platform": "Web",
+      "title": "Atlassian, 리더의 소통을 돕는 AI 에이전트 사례",
+      "summary": "Atlassian은 조직 리더가 AI 에이전트로 소통과 피드백 흐름을 개선한 내부 사례를 공개했습니다. 회사 내부 사용 사례로, 보편적 성과를 입증하는 실험은 아닙니다.",
+      "content": "**자료 유형: 구현·활용 사례**\n\nAtlassian은 조직 리더가 AI 에이전트로 소통과 피드백 흐름을 개선한 내부 사례를 공개했습니다. 회사 내부 사용 사례로, 보편적 성과를 입증하는 실험은 아닙니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Atlassian shares an AI-assisted leadership feedback case",
+        "summary": "Atlassian shared an internal case of a leader using an AI agent to improve communication and feedback. It is a company case study, not generalizable experimental evidence.",
+        "content": "**Article type: Implementation case study**\n\nAtlassian shared an internal case of a leader using an AI agent to improve communication and feedback. It is a company case study, not generalizable experimental evidence.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.atlassian.com/blog/ai-at-work/how-one-leader-rebuilt-his-feedback-loop-with-an-ai-agent",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Atlassian",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.atlassian.com/blog/ai-at-work/how-one-leader-rebuilt-his-feedback-loop-with-an-ai-agent",
+      "slug": "industry-20260827-a4ff6a015967"
+    },
+    {
+      "date": "8/27 14:45",
+      "platform": "Web",
+      "title": "Atlassian, Rovo 자율 작업을 위한 실행 구조 공개",
+      "summary": "Atlassian이 Rovo가 검색을 넘어 계획·도구 실행·여러 단계의 업무를 처리하도록 만든 실행 구조를 설명했습니다. 기능 구현을 다루는 기술 공개입니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAtlassian이 Rovo가 검색을 넘어 계획·도구 실행·여러 단계의 업무를 처리하도록 만든 실행 구조를 설명했습니다. 기능 구현을 다루는 기술 공개입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Atlassian explains Rovo’s agent harness",
+        "summary": "Atlassian explained the execution architecture supporting Rovo’s transition from search to planning, tool use, and multi-step workflows. This is an engineering disclosure.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAtlassian explained the execution architecture supporting Rovo’s transition from search to planning, tool use, and multi-step workflows. This is an engineering disclosure.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.atlassian.com/blog/rovo/agent-autonomy",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Atlassian",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.atlassian.com/blog/rovo/agent-autonomy",
+      "slug": "industry-20260826-87ca93fac2b1"
+    },
+    {
+      "date": "8/27 05:29",
+      "platform": "Web",
+      "title": "Atlassian, AI로 만든 시제품을 운영 제품으로 바꾼 경험 공개",
+      "summary": "Atlassian은 AI로 만든 시제품을 기업용 운영 제품으로 발전시킨 팀의 경험을 공개했습니다. 실패와 사람 중심 검토로의 전환을 함께 다루며 생산성 수치는 해당 팀의 자체 사례입니다.",
+      "content": "**자료 유형: 구현·활용 사례**\n\nAtlassian은 AI로 만든 시제품을 기업용 운영 제품으로 발전시킨 팀의 경험을 공개했습니다. 실패와 사람 중심 검토로의 전환을 함께 다루며 생산성 수치는 해당 팀의 자체 사례입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Atlassian shares lessons taking AI prototypes to production",
+        "summary": "Atlassian shared a team’s experience taking AI-built prototypes into enterprise production, including failures and a return to human-first review. Productivity figures are self-reported for that team.",
+        "content": "**Article type: Implementation case study**\n\nAtlassian shared a team’s experience taking AI-built prototypes into enterprise production, including failures and a return to human-first review. Productivity figures are self-reported for that team.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.atlassian.com/blog/jira/ai-built-prototype-to-production",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Atlassian",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.atlassian.com/blog/jira/ai-built-prototype-to-production",
+      "slug": "industry-20260826-ae773d942352"
+    },
+    {
+      "date": "8/27 02:00",
+      "platform": "Web",
+      "title": "Rovo, Microsoft 365 Copilot·Teams에서 Jira 작업 연결",
+      "summary": "Atlassian은 Rovo를 Microsoft 365 Copilot과 Teams의 에이전트로 제공한다고 발표했습니다. Teamwork Graph의 업무 맥락을 활용하고, Teams의 Jira Cloud 앱에서 자연어로 작업을 실행하거나 에이전트에 위임하는 흐름을 지원합니다.",
+      "content": "Atlassian은 Rovo를 Microsoft 365 Copilot과 Teams의 에이전트로 제공한다고 발표했습니다. Teamwork Graph의 업무 맥락을 활용하고, Teams의 Jira Cloud 앱에서 자연어로 작업을 실행하거나 에이전트에 위임하는 흐름을 지원합니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Rovo connects Microsoft 365 Copilot and Teams to Jira workflows",
+        "summary": "Atlassian announced Rovo as an agent in Microsoft 365 Copilot and Teams. The integration brings Teamwork Graph context into those workspaces and adds natural-language Jira workflows and agent delegation through the Jira Cloud app for Teams.",
+        "content": "Atlassian announced Rovo as an agent in Microsoft 365 Copilot and Teams. The integration brings Teamwork Graph context into those workspaces and adds natural-language Jira workflows and agent delegation through the Jira Cloud app for Teams.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.atlassian.com/blog/rovo/rovo-jira-microsoft-365",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Atlassian",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.atlassian.com/blog/rovo/rovo-jira-microsoft-365",
+      "slug": "industry-20260826-dcbd6d9a9882"
+    }
+  ]
+},
+{
+  "name": "Salesforce",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28 00:00",
+      "platform": "Web",
+      "title": "Salesforce, Employee Agent 1년 운영 사례 공개",
+      "summary": "Salesforce는 사내 Employee Agent 운영 1년의 경험을 공개했습니다. 직원의 HR 정보 탐색과 셀프서비스 활용 사례이며 성과 수치는 회사 내부 측정입니다.",
+      "content": "**자료 유형: 구현·활용 사례**\n\nSalesforce는 사내 Employee Agent 운영 1년의 경험을 공개했습니다. 직원의 HR 정보 탐색과 셀프서비스 활용 사례이며 성과 수치는 회사 내부 측정입니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Salesforce shares a year of Employee Agent usage",
+        "summary": "Salesforce shared a year of internal Employee Agent experience in HR information retrieval and employee self-service. Performance figures are internally measured.",
+        "content": "**Article type: Implementation case study**\n\nSalesforce shared a year of internal Employee Agent experience in HR information retrieval and employee self-service. Performance figures are internally measured.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.salesforce.com/news/stories/lessons-from-first-year-of-employee-agent/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Salesforce",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.salesforce.com/news/stories/lessons-from-first-year-of-employee-agent/",
+      "slug": "industry-20260827-b0dd8efce075"
+    },
+    {
+      "date": "8/27 22:00",
+      "platform": "Web",
+      "title": "Salesforce, 에이전트 도입 기업의 투자회수 조사 공개",
+      "summary": "Salesforce는 에이전트 AI 리더 2,025명을 조사한 결과를 공개했습니다. 빠른 출시 자체보다 데이터 품질, 좁은 업무 범위, 사람에게 넘기는 절차의 중요성을 강조합니다. 설문 결과이며 인과관계 실험은 아닙니다.",
+      "content": "Salesforce는 에이전트 AI 리더 2,025명을 조사한 결과를 공개했습니다. 빠른 출시 자체보다 데이터 품질, 좁은 업무 범위, 사람에게 넘기는 절차의 중요성을 강조합니다. 설문 결과이며 인과관계 실험은 아닙니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Salesforce publishes agentic AI ROI survey",
+        "summary": "Salesforce published a survey of 2,025 agentic AI leaders, emphasizing data quality, narrow scope, and human escalation over being first to launch. This is survey evidence, not a causal experiment.",
+        "content": "Salesforce published a survey of 2,025 agentic AI leaders, emphasizing data quality, narrow scope, and human escalation over being first to launch. This is survey evidence, not a causal experiment.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.salesforce.com/news/stories/agentic-ai-leaders-survey-on-roi/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Salesforce",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.salesforce.com/news/stories/agentic-ai-leaders-survey-on-roi/",
+      "slug": "industry-20260827-e4b83c36c092"
+    },
+    {
+      "date": "8/27 05:05",
+      "platform": "Web",
+      "title": "Salesforce·Anthropic, Claudeforce 협력 발표",
+      "summary": "Salesforce와 Anthropic은 Claude에서 Salesforce 데이터와 업무를 활용하는 Claudeforce 협력을 발표했습니다. 초기 구성에는 영업용 사전 제작 스킬 37개를 포함한 플러그인이 소개됩니다.",
+      "content": "Salesforce와 Anthropic은 Claude에서 Salesforce 데이터와 업무를 활용하는 Claudeforce 협력을 발표했습니다. 초기 구성에는 영업용 사전 제작 스킬 37개를 포함한 플러그인이 소개됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Salesforce and Anthropic announce Claudeforce",
+        "summary": "Salesforce and Anthropic announced Claudeforce, connecting Claude to Salesforce data and business workflows. The initial offering includes a plugin with 37 prebuilt sales skills.",
+        "content": "Salesforce and Anthropic announced Claudeforce, connecting Claude to Salesforce data and business workflows. The initial offering includes a plugin with 37 prebuilt sales skills.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "Salesforce",
+        "2026-w35"
+      ],
+      "officialUrl": "https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/",
+      "slug": "industry-20260826-a854bd9a6958"
+    }
+  ]
+},
+{
+  "name": "AWS",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/29 04:31",
+      "platform": "Web",
+      "title": "AWS, SageMaker Feature Store 일괄 기록·검색 안내",
+      "summary": "AWS가 SageMaker Feature Store 일괄 기록·검색 안내 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAWS가 SageMaker Feature Store 일괄 기록·검색 안내 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Batch write and discover records in Amazon SageMaker Feature Store",
+        "summary": "AWS published a technical guide or analysis: Batch write and discover records in Amazon SageMaker Feature Store. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAWS published a technical guide or analysis: Batch write and discover records in Amazon SageMaker Feature Store. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/batch-write-and-discover-records-in-amazon-sagemaker-feature-store/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/batch-write-and-discover-records-in-amazon-sagemaker-feature-store/",
+      "slug": "industry-20260828-462587977a0c"
+    },
+    {
+      "date": "8/29 01:22",
+      "platform": "Web",
+      "title": "AWS, Decathlon의 Chronos-2 수요 예측 운영 사례",
+      "summary": "AWS가 Decathlon의 Chronos-2 수요 예측 운영 사례 내용을 공식 블로그에 공개했습니다. 구현·활용 사례이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 구현·활용 사례**\n\nAWS가 Decathlon의 Chronos-2 수요 예측 운영 사례 내용을 공식 블로그에 공개했습니다. 구현·활용 사례이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "How Decathlon runs demand forecasting at scale with Chronos-2",
+        "summary": "AWS published a customer implementation case study: How Decathlon runs demand forecasting at scale with Chronos-2. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Implementation case study**\n\nAWS published a customer implementation case study: How Decathlon runs demand forecasting at scale with Chronos-2. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2/",
+      "slug": "industry-20260828-abf29937c8a3"
+    },
+    {
+      "date": "8/29 01:20",
+      "platform": "Web",
+      "title": "AWS, Salesforce의 SageMaker 다중 가용영역 추론 구성",
+      "summary": "AWS가 Salesforce의 SageMaker 다중 가용영역 추론 구성 내용을 공식 블로그에 공개했습니다. 구현·활용 사례이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 구현·활용 사례**\n\nAWS가 Salesforce의 SageMaker 다중 가용영역 추론 구성 내용을 공식 블로그에 공개했습니다. 구현·활용 사례이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components",
+        "summary": "AWS published a customer implementation case study: Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Implementation case study**\n\nAWS published a customer implementation case study: Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
+      "slug": "industry-20260828-8340f6975f66"
+    },
+    {
+      "date": "8/28 08:04",
+      "platform": "Web",
+      "title": "AWS, Amazon Quick·fal로 에이전트 창작 흐름 구성",
+      "summary": "AWS가 Amazon Quick·fal로 에이전트 창작 흐름 구성 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAWS가 Amazon Quick·fal로 에이전트 창작 흐름 구성 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Build agentic creative workflows with Amazon Quick and fal",
+        "summary": "AWS published a technical guide or analysis: Build agentic creative workflows with Amazon Quick and fal. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAWS published a technical guide or analysis: Build agentic creative workflows with Amazon Quick and fal. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/build-agentic-creative-workflows-with-amazon-quick-and-fal/",
+      "slug": "industry-20260827-51b21a22e7ac"
+    },
+    {
+      "date": "8/28 03:36",
+      "platform": "Web",
+      "title": "AWS, 인도 Bedrock에서 OpenAI 모델의 국내 추론 지원",
+      "summary": "AWS가 인도 Bedrock에서 OpenAI 모델의 국내 추론 지원 내용을 공식 블로그에 공개했습니다. 제품·지역별 제공 소식이며 실제 사용 조건은 공식 문서에서 확인해야 합니다.",
+      "content": "AWS가 인도 Bedrock에서 OpenAI 모델의 국내 추론 지원 내용을 공식 블로그에 공개했습니다. 제품·지역별 제공 소식이며 실제 사용 조건은 공식 문서에서 확인해야 합니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Introducing OpenAI models on Amazon Bedrock for in-country inferencing in India",
+        "summary": "AWS published an official article on introducing OpenAI models on Amazon Bedrock for in-country inferencing in India. This is a product or regional availability update; official service conditions apply.",
+        "content": "AWS published an official article on introducing OpenAI models on Amazon Bedrock for in-country inferencing in India. This is a product or regional availability update; official service conditions apply.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/introducing-openai-models-on-amazon-bedrock-for-in-country-inferencing-in-india/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-openai-models-on-amazon-bedrock-for-in-country-inferencing-in-india/",
+      "slug": "industry-20260827-da560584139b"
+    },
+    {
+      "date": "8/27 01:36",
+      "platform": "Web",
+      "title": "AWS, Natera의 AgentCore 채혈 방문 예약 사례",
+      "summary": "AWS가 Natera의 AgentCore 채혈 방문 예약 사례 내용을 공식 블로그에 공개했습니다. 구현·활용 사례이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 구현·활용 사례**\n\nAWS가 Natera의 AgentCore 채혈 방문 예약 사례 내용을 공식 블로그에 공개했습니다. 구현·활용 사례이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Natera’s intelligent appointment scheduling with Amazon Bedrock AgentCore",
+        "summary": "AWS published a customer implementation case study: Natera’s intelligent appointment scheduling with Amazon Bedrock AgentCore. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Implementation case study**\n\nAWS published a customer implementation case study: Natera’s intelligent appointment scheduling with Amazon Bedrock AgentCore. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/",
+      "slug": "industry-20260826-8a95f0b4c85e"
+    },
+    {
+      "date": "8/27 01:31",
+      "platform": "Web",
+      "title": "AWS, SageMaker SDK v3 스크립트 모드로 자체 모델 실행",
+      "summary": "AWS가 SageMaker SDK v3 스크립트 모드로 자체 모델 실행 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAWS가 SageMaker SDK v3 스크립트 모드로 자체 모델 실행 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Bring your own model with Amazon SageMaker AI: Script mode in SDK v3",
+        "summary": "AWS published a technical guide or analysis: Bring your own model with Amazon SageMaker AI: Script mode in SDK v3. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAWS published a technical guide or analysis: Bring your own model with Amazon SageMaker AI: Script mode in SDK v3. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/",
+      "slug": "industry-20260826-103bf835dabf"
+    },
+    {
+      "date": "8/27 01:24",
+      "platform": "Web",
+      "title": "AWS, 지도 미세조정용 데이터 준비: 형식·품질",
+      "summary": "AWS가 지도 미세조정용 데이터 준비: 형식·품질 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAWS가 지도 미세조정용 데이터 준비: 형식·품질 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Preparing data for supervised fine-tuning Part 1: Formatting and quality",
+        "summary": "AWS published a technical guide or analysis: Preparing data for supervised fine-tuning Part 1: Formatting and quality. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAWS published a technical guide or analysis: Preparing data for supervised fine-tuning Part 1: Formatting and quality. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "backupUrls": [
+        {
+          "label": "Preparing data for supervised fine-tuning Part 2: Advanced data strategies",
+          "url": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-2-advanced-data-strategies/"
+        }
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/",
+      "slug": "industry-20260826-b5beb49fb5fe"
+    },
+    {
+      "date": "8/27 00:48",
+      "platform": "Web",
+      "title": "AWS, AgentCore와 다른 AWS 계정의 지식베이스 연결",
+      "summary": "AWS가 AgentCore와 다른 AWS 계정의 지식베이스 연결 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nAWS가 AgentCore와 다른 AWS 계정의 지식베이스 연결 내용을 공식 블로그에 공개했습니다. 기술 구현 안내·분석이며, 별도 신모델 출시나 독립 성능 검증으로 해석하면 안 됩니다.\n\n날짜 안내: 공식 게시 시각을 한국시간으로 환산했습니다. 기사 게시 시각이며 실제 기능 활성화 시각과는 다를 수 있습니다.",
+      "en": {
+        "title": "Connect Amazon Bedrock AgentCore to cross-account knowledge bases",
+        "summary": "AWS published a technical guide or analysis: Connect Amazon Bedrock AgentCore to cross-account knowledge bases. This article is not a separate model launch or an independently reproduced benchmark.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nAWS published a technical guide or analysis: Connect Amazon Bedrock AgentCore to cross-account knowledge bases. This article is not a separate model launch or an independently reproduced benchmark.\n\nDate disclosure: the official publication timestamp is converted to Korea time. It records article publication, not necessarily feature activation."
+      },
+      "source": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
+      "verifiedAt": "2026-09-09",
+      "tags": [
+        "AI",
+        "AWS",
+        "2026-w35"
+      ],
+      "officialUrl": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
+      "slug": "industry-20260826-74c1b9d6eb3c"
+    }
+  ]
+},
+{
+  "name": "Cursor",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "Cursor Cloud Agents, 저장소 없이 새 작업 시작",
+      "deck": "Cursor가 GitHub 등 외부 코드 저장소를 연결하지 않고도 Cloud Agents 작업을 시작하도록 바꿨습니다.",
+      "summary": "Cursor가 GitHub 등 외부 코드 저장소를 연결하지 않고도 Cloud Agents 작업을 시작하도록 바꿨습니다. 요청을 입력하면 백그라운드에서 Origin 저장소를 준비하며, 결과가 마음에 들면 이름과 공개 범위를 지정해 저장할 수 있습니다.",
+      "content": "Cursor가 GitHub 등 외부 코드 저장소를 연결하지 않고도 Cloud Agents 작업을 시작하도록 바꿨습니다. 요청을 입력하면 백그라운드에서 Origin 저장소를 준비하며, 결과가 마음에 들면 이름과 공개 범위를 지정해 저장할 수 있습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://cursor.com/changelog/start-from-scratch",
+      "officialUrl": "https://cursor.com/changelog/start-from-scratch",
+      "verifiedAt": "2026-09-09",
+      "slug": "start-from-scratch",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Cursor",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Cursor Cloud Agents can start without a repository",
+        "deck": "Cursor Cloud Agents no longer require a connected GitHub or other third-party source-control provider to start.",
+        "summary": "Cursor Cloud Agents can start without a connected external source-control provider. Cursor prepares an Origin repository in the background, and users can save the result with a chosen name and visibility.",
+        "content": "Cursor Cloud Agents can start without a connected external source-control provider. Cursor prepares an Origin repository in the background, and users can save the result with a chosen name and visibility.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    }
+  ]
+},
+{
+  "name": "LM Studio",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "Bionic Auto Review, 명령 분석과 별도 검토자로 실행 승인",
+      "deck": "LM Studio가 Bionic의 Auto Review 명령 승인 방식을 공개했습니다.",
+      "summary": "LM Studio가 Bionic의 Auto Review 명령 승인 방식을 공개했습니다. Shell Judge가 명령 구조·기능·허용 규칙을 분석하고 확정하지 못한 명령은 별도 Shell Reviewer가 위험도와 사용자 승인을 분류합니다. 판단이 부족하면 사람에게 넘기며 악성 실행 파일이나 설정까지 방어하는 보안 보장은 아닙니다.",
+      "content": "LM Studio가 Bionic의 Auto Review 명령 승인 방식을 공개했습니다. Shell Judge가 명령 구조·기능·허용 규칙을 분석하고 확정하지 못한 명령은 별도 Shell Reviewer가 위험도와 사용자 승인을 분류합니다. 판단이 부족하면 사람에게 넘기며 악성 실행 파일이나 설정까지 방어하는 보안 보장은 아닙니다.\n\n원문에 표시된 게시 날짜를 유지했으며 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://lmstudio.ai/blog/how-auto-review-works",
+      "officialUrl": "https://lmstudio.ai/blog/how-auto-review-works",
+      "verifiedAt": "2026-09-09",
+      "slug": "how-auto-review-works",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "LM Studio",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Bionic Auto Review combines deterministic analysis with a reviewer",
+        "deck": "LM Studio introduced Auto Review for Bionic.",
+        "summary": "LM Studio introduced Auto Review for Bionic. Shell Judge analyzes command syntax, capabilities, and allowed rules; unresolved commands go to a separate Shell Reviewer that classifies risk and user authorization. Unresolved approvals fall back to the user. It is not a guarantee against hostile binaries or malicious tool configuration.",
+        "content": "LM Studio introduced Auto Review for Bionic. Shell Judge analyzes command syntax, capabilities, and allowed rules; unresolved commands go to a separate Shell Reviewer that classifies risk and user authorization. Unresolved approvals fall back to the user. It is not a guarantee against hostile binaries or malicious tool configuration.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    }
+  ]
+},
+{
+  "name": "Replit",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27 07:18",
+      "platform": "Web",
+      "title": "Replit, 작업별 모델 자동 선택…유료 전환은 알림 제공",
+      "deck": "Replit이 작업별로 품질·속도·비용을 고려해 모델을 자동 선택하는 Intelligent Model Routing을 전체 사용자에게 제공했습니다.",
+      "summary": "Replit이 작업별로 품질·속도·비용을 고려해 모델을 자동 선택하는 Intelligent Model Routing을 전체 사용자에게 제공했습니다. 무료 모드에서 유료 사용이 발생할 수 있는 모드로 올라갈 때 알리고 무료 모드 유지를 선택할 수 있습니다. 기존 Max Mode 대비 같은 품질에서 비용 65% 감소는 Replit 자체 테스트 결과입니다.",
+      "content": "Replit이 작업별로 품질·속도·비용을 고려해 모델을 자동 선택하는 Intelligent Model Routing을 전체 사용자에게 제공했습니다. 무료 모드에서 유료 사용이 발생할 수 있는 모드로 올라갈 때 알리고 무료 모드 유지를 선택할 수 있습니다. 기존 Max Mode 대비 같은 품질에서 비용 65% 감소는 Replit 자체 테스트 결과입니다.\n\n원문의 게시 시각을 한국시간으로 변환했습니다.",
+      "source": "https://replit.com/blog/intelligent-model-routing",
+      "officialUrl": "https://replit.com/blog/intelligent-model-routing",
+      "verifiedAt": "2026-09-09",
+      "slug": "intelligent-model-routing",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Replit",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Replit introduces task-aware Intelligent Model Routing",
+        "deck": "Replit made Intelligent Model Routing available to everyone, matching tasks to models for quality, speed, and cost.",
+        "summary": "Replit made Intelligent Model Routing available to everyone, matching tasks to models for quality, speed, and cost. Users are notified before escalation from Free Mode to modes that can incur usage costs and can stay in Free Mode. The claimed 65% cost reduction at the same output quality versus the previous Max Mode comes from Replit testing.",
+        "content": "Replit made Intelligent Model Routing available to everyone, matching tasks to models for quality, speed, and cost. Users are notified before escalation from Free Mode to modes that can incur usage costs and can stay in Free Mode. The claimed 65% cost reduction at the same output quality versus the previous Max Mode comes from Replit testing.\n\nPublication time is converted to KST."
+      }
+    }
+  ]
+},
+{
+  "name": "Vercel",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "Vercel 대시보드에서 eve 에이전트 생성·배포",
+      "deck": "Vercel 대시보드에서 eve 에이전트를 만들면 비공개 Git 저장소와 새 Vercel 프로젝트가 생성됩니다.",
+      "summary": "Vercel 대시보드에서 eve 에이전트를 만들면 비공개 Git 저장소와 새 Vercel 프로젝트가 생성됩니다. AI Gateway 모델을 선택하고 웹 채팅·Slack 채널 및 외부 서비스·MCP 도구를 연결할 수 있습니다.",
+      "content": "Vercel 대시보드에서 eve 에이전트를 만들면 비공개 Git 저장소와 새 Vercel 프로젝트가 생성됩니다. AI Gateway 모델을 선택하고 웹 채팅·Slack 채널 및 외부 서비스·MCP 도구를 연결할 수 있습니다.\n\n원문에 표시된 게시 날짜를 유지했으며 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/build-and-deploy-eve-agents-from-the-vercel-dashboard",
+      "officialUrl": "https://vercel.com/changelog/build-and-deploy-eve-agents-from-the-vercel-dashboard",
+      "verifiedAt": "2026-09-09",
+      "slug": "build-and-deploy-eve-agents-from-the-vercel-dashboard",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Build and deploy eve agents from the Vercel dashboard",
+        "deck": "The Vercel dashboard can scaffold an eve agent into a private Git repository and deploy a new Vercel project.",
+        "summary": "The Vercel dashboard can scaffold an eve agent into a private Git repository and deploy a new Vercel project. Users can choose AI Gateway models, add web chat or Slack, and connect external services or MCP tools.",
+        "content": "The Vercel dashboard can scaffold an eve agent into a private Git repository and deploy a new Vercel project. Users can choose AI Gateway models, add web chat or Slack, and connect external services or MCP tools.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/27 23:47",
+      "platform": "Web",
+      "title": "Vercel AI SDK, Cursor를 공통 에이전트 인터페이스로 연결",
+      "deck": "Vercel이 공식 @ai-sdk/harness-cursor 연결 모듈을 공개했습니다.",
+      "summary": "Vercel이 공식 @ai-sdk/harness-cursor 연결 모듈을 공개했습니다. ACP로 Cursor에 연결하고 HarnessAgent를 사용하므로 애플리케이션의 공통 실행 인터페이스를 유지하면서 코딩 에이전트를 바꿀 수 있습니다.",
+      "content": "Vercel이 공식 @ai-sdk/harness-cursor 연결 모듈을 공개했습니다. ACP로 Cursor에 연결하고 HarnessAgent를 사용하므로 애플리케이션의 공통 실행 인터페이스를 유지하면서 코딩 에이전트를 바꿀 수 있습니다.\n\n원문의 게시 시각을 한국시간으로 변환했습니다.",
+      "source": "https://vercel.com/changelog/cursor-ai-sdk-harness-adapter",
+      "officialUrl": "https://vercel.com/changelog/cursor-ai-sdk-harness-adapter",
+      "verifiedAt": "2026-09-09",
+      "slug": "cursor-ai-sdk-harness-adapter",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Vercel AI SDK adds a Cursor harness adapter",
+        "deck": "Vercel introduced the official @ai-sdk/harness-cursor adapter.",
+        "summary": "Vercel introduced the official @ai-sdk/harness-cursor adapter. It connects to Cursor over ACP through HarnessAgent, allowing applications to retain a common execution interface when switching coding agents.",
+        "content": "Vercel introduced the official @ai-sdk/harness-cursor adapter. It connects to Cursor over ACP through HarnessAgent, allowing applications to retain a common execution interface when switching coding agents.\n\nPublication time is converted to KST."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Vercel Security Dashboard, 전체 요금제에 정식 제공",
+      "deck": "Vercel이 모든 요금제에 Security Dashboard를 정식 제공했습니다.",
+      "summary": "Vercel이 모든 요금제에 Security Dashboard를 정식 제공했습니다. 2단계 인증 미설정·장기 자격증명·공개 미리보기 등 설정 문제를 모아 보여주고 vercel security check로 같은 검사를 실행할 수 있습니다. 자동 수정 완료나 모든 취약점 탐지를 보장하는 발표는 아닙니다.",
+      "content": "Vercel이 모든 요금제에 Security Dashboard를 정식 제공했습니다. 2단계 인증 미설정·장기 자격증명·공개 미리보기 등 설정 문제를 모아 보여주고 vercel security check로 같은 검사를 실행할 수 있습니다. 자동 수정 완료나 모든 취약점 탐지를 보장하는 발표는 아닙니다.\n\n원문에 표시된 게시 날짜를 유지했으며 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/vercel-security-dashboard-is-now-generally-available",
+      "officialUrl": "https://vercel.com/changelog/vercel-security-dashboard-is-now-generally-available",
+      "verifiedAt": "2026-09-09",
+      "slug": "vercel-security-dashboard-is-now-generally-available",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Vercel Security Dashboard becomes generally available on all plans",
+        "deck": "Vercel made Security Dashboard generally available on all plans.",
+        "summary": "Vercel made Security Dashboard generally available on all plans. It flags configuration issues such as missing 2FA, long-lived credentials, and public previews, with equivalent checks through vercel security check. The announcement does not guarantee automatic remediation or detection of every vulnerability.",
+        "content": "Vercel made Security Dashboard generally available on all plans. It flags configuration issues such as missing 2FA, long-lived credentials, and public previews, with equivalent checks through vercel security check. The announcement does not guarantee automatic remediation or detection of every vulnerability.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Vercel Python 앱, 재배포 없이 경로 규칙 변경",
+      "deck": "Vercel에서 FastAPI·Django·Flask 앱에 응답 헤더와 경로 재작성 규칙을 설정할 수 있습니다.",
+      "summary": "Vercel에서 FastAPI·Django·Flask 앱에 응답 헤더와 경로 재작성 규칙을 설정할 수 있습니다. CDN이 앱보다 먼저 규칙을 처리해 새 배포 없이 적용하며 대시보드·CLI·Python SDK로 관리할 수 있습니다.",
+      "content": "Vercel에서 FastAPI·Django·Flask 앱에 응답 헤더와 경로 재작성 규칙을 설정할 수 있습니다. CDN이 앱보다 먼저 규칙을 처리해 새 배포 없이 적용하며 대시보드·CLI·Python SDK로 관리할 수 있습니다.\n\n원문에 표시된 게시 날짜를 유지했으며 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/python-projects-now-support-routing-rules",
+      "officialUrl": "https://vercel.com/changelog/python-projects-now-support-routing-rules",
+      "verifiedAt": "2026-09-09",
+      "slug": "python-projects-now-support-routing-rules",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel",
+        "개발 도구"
+      ],
+      "en": {
+        "title": "Vercel Python projects gain deployment-independent routing rules",
+        "deck": "Vercel now supports response-header and rewrite rules for FastAPI, Django, and Flask applications.",
+        "summary": "Vercel now supports response-header and rewrite rules for FastAPI, Django, and Flask applications. Rules are evaluated at the CDN before the application, apply without a new deployment, and can be managed through the dashboard, CLI, or Python SDK.",
+        "content": "Vercel now supports response-header and rewrite rules for FastAPI, Django, and Flask applications. Rules are evaluated at the CDN before the application, apply without a new deployment, and can be managed through the dashboard, CLI, or Python SDK.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "Vercel AI Gateway, Hy4 Preview 제공",
+      "deck": "Vercel AI Gateway, Hy4 Preview 제공",
+      "summary": "Vercel이 Tencent 모델을 tencent/hy4-preview ID로 호출할 수 있습니다. Vercel은 긴 코딩·문서 분석 작업용 100만 토큰 맥락 모델로 소개하며, 이 글은 Gateway 제공 경로 추가를 다룹니다.",
+      "content": "Vercel이 Tencent 모델을 tencent/hy4-preview ID로 호출할 수 있습니다. Vercel은 긴 코딩·문서 분석 작업용 100만 토큰 맥락 모델로 소개하며, 이 글은 Gateway 제공 경로 추가를 다룹니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/hy4-preview-now-available-on-ai-gateway",
+      "officialUrl": "https://vercel.com/changelog/hy4-preview-now-available-on-ai-gateway",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-7b1050b0cae2",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Hy4 Preview becomes available through Vercel AI Gateway",
+        "deck": "Hy4 Preview becomes available through Vercel AI Gateway",
+        "summary": "Vercel announced this model integration. Tencent’s model can be called as tencent/hy4-preview. Vercel describes a one-million-token context model for long coding and document tasks; this article establishes Gateway availability.",
+        "content": "Vercel announced this model integration. Tencent’s model can be called as tencent/hy4-preview. Vercel describes a one-million-token context model for long coding and document tasks; this article establishes Gateway availability.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "Vercel AI Gateway, Ling 3.0 Flash Fin 제공",
+      "deck": "Vercel AI Gateway, Ling 3.0 Flash Fin 제공",
+      "summary": "Vercel이 금융 특화 모델을 9월 25일까지 무료 제공합니다. 일반 ID는 이후 과금되며 -free ID는 서비스가 중단되어 무료 기간 이후 비용 발생을 막는 선택지입니다.",
+      "content": "Vercel이 금융 특화 모델을 9월 25일까지 무료 제공합니다. 일반 ID는 이후 과금되며 -free ID는 서비스가 중단되어 무료 기간 이후 비용 발생을 막는 선택지입니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/ling-3-0-flash-fin-now-available-on-ai-gateway-for-free",
+      "officialUrl": "https://vercel.com/changelog/ling-3-0-flash-fin-now-available-on-ai-gateway-for-free",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-beb7bf914eac",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Ling 3.0 Flash Fin becomes available through Vercel AI Gateway",
+        "deck": "Ling 3.0 Flash Fin becomes available through Vercel AI Gateway",
+        "summary": "Vercel announced this model integration. The finance-focused model is free through September 25. The standard ID bills afterward, while the -free ID stops serving to prevent post-promotion charges.",
+        "content": "Vercel announced this model integration. The finance-focused model is free through September 25. The standard ID bills afterward, while the -free ID stops serving to prevent post-promotion charges.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Vercel AI Gateway, Muse Image 제공",
+      "deck": "Vercel AI Gateway, Muse Image 제공",
+      "summary": "Vercel이 meta/muse-image-1.0으로 텍스트 기반 이미지 생성과 기존 이미지 편집을 지원합니다. 이번 글은 Meta의 최초 모델 발표가 아니라 Vercel에서 이용하는 연결 경로 소식입니다.",
+      "content": "Vercel이 meta/muse-image-1.0으로 텍스트 기반 이미지 생성과 기존 이미지 편집을 지원합니다. 이번 글은 Meta의 최초 모델 발표가 아니라 Vercel에서 이용하는 연결 경로 소식입니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/muse-image-now-available-on-ai-gateway",
+      "officialUrl": "https://vercel.com/changelog/muse-image-now-available-on-ai-gateway",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-19b96229beaa",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Muse Image becomes available through Vercel AI Gateway",
+        "deck": "Muse Image becomes available through Vercel AI Gateway",
+        "summary": "Vercel announced this model integration. The meta/muse-image-1.0 ID supports text-to-image generation and editing existing images. This is Vercel distribution availability, not Meta’s original model launch.",
+        "content": "Vercel announced this model integration. The meta/muse-image-1.0 ID supports text-to-image generation and editing existing images. This is Vercel distribution availability, not Meta’s original model launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Vercel AI Gateway, Gemini 3.5 Transcribe 제공",
+      "deck": "Vercel AI Gateway, Gemini 3.5 Transcribe 제공",
+      "summary": "Vercel이 녹음 파일 전사와 WebSocket 실시간 전사용 모델 ID를 각각 제공합니다. 원문은 85개 이상 언어 자동 감지와 사용자 사전, 녹음 파일의 화자·단어 시각 지원을 설명합니다.",
+      "content": "Vercel이 녹음 파일 전사와 WebSocket 실시간 전사용 모델 ID를 각각 제공합니다. 원문은 85개 이상 언어 자동 감지와 사용자 사전, 녹음 파일의 화자·단어 시각 지원을 설명합니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/gemini-3-5-transcribe-now-available-on-ai-gateway",
+      "officialUrl": "https://vercel.com/changelog/gemini-3-5-transcribe-now-available-on-ai-gateway",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-86369e6f08c3",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Gemini 3.5 Transcribe becomes available through Vercel AI Gateway",
+        "deck": "Gemini 3.5 Transcribe becomes available through Vercel AI Gateway",
+        "summary": "Vercel announced this model integration. Separate model IDs support file transcription and live transcription over WebSocket. The article describes automatic detection of over 85 languages, custom vocabulary, and speaker and word timestamps for recordings.",
+        "content": "Vercel announced this model integration. Separate model IDs support file transcription and live transcription over WebSocket. The article describes automatic detection of over 85 languages, custom vocabulary, and speaker and word timestamps for recordings.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Vercel AI Gateway, Qwen 3.8 Flash 제공",
+      "deck": "Vercel AI Gateway, Qwen 3.8 Flash 제공",
+      "summary": "Vercel이 alibaba/qwen3.8-flash ID로 텍스트·이미지 입력과 100만 토큰 맥락 모델을 제공합니다. Alibaba의 모델 출시와 구분되는 Vercel 제공 경로 추가입니다.",
+      "content": "Vercel이 alibaba/qwen3.8-flash ID로 텍스트·이미지 입력과 100만 토큰 맥락 모델을 제공합니다. Alibaba의 모델 출시와 구분되는 Vercel 제공 경로 추가입니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/qwen-3-8-flash-now-available-on-ai-gateway",
+      "officialUrl": "https://vercel.com/changelog/qwen-3-8-flash-now-available-on-ai-gateway",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-acbf0aed19df",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Qwen 3.8 Flash becomes available through Vercel AI Gateway",
+        "deck": "Qwen 3.8 Flash becomes available through Vercel AI Gateway",
+        "summary": "Vercel announced this model integration. The alibaba/qwen3.8-flash ID exposes text and image input with a one-million-token context window. This is Vercel distribution availability, distinct from Alibaba’s model launch.",
+        "content": "Vercel announced this model integration. The alibaba/qwen3.8-flash ID exposes text and image input with a one-million-token context window. This is Vercel distribution availability, distinct from Alibaba’s model launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Vercel AI Gateway, GLM 5.3 Flash 제공",
+      "deck": "Vercel AI Gateway, GLM 5.3 Flash 제공",
+      "summary": "Vercel이 zai/glm-5.3-flash ID로 텍스트·이미지 입력을 받는 코딩 모델을 제공합니다. 원문은 함수 호출·구조화 출력·스트리밍과 100만 토큰 맥락을 설명합니다.",
+      "content": "Vercel이 zai/glm-5.3-flash ID로 텍스트·이미지 입력을 받는 코딩 모델을 제공합니다. 원문은 함수 호출·구조화 출력·스트리밍과 100만 토큰 맥락을 설명합니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/glm-5-3-flash-now-available-on-ai-gateway",
+      "officialUrl": "https://vercel.com/changelog/glm-5-3-flash-now-available-on-ai-gateway",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-e5acb14edc80",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "GLM 5.3 Flash becomes available through Vercel AI Gateway",
+        "deck": "GLM 5.3 Flash becomes available through Vercel AI Gateway",
+        "summary": "Vercel announced this model integration. The zai/glm-5.3-flash ID provides a coding model accepting text and images. Vercel documents function calling, structured output, streaming and a one-million-token context window.",
+        "content": "Vercel announced this model integration. The zai/glm-5.3-flash ID provides a coding model accepting text and images. Vercel documents function calling, structured output, streaming and a one-million-token context window.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/30",
+      "platform": "Web",
+      "title": "Vercel, MiniMax H3·H3 Max 영상 생성 50% 할인",
+      "deck": "Vercel, MiniMax H3·H3 Max 영상 생성 50% 할인",
+      "summary": "Vercel이 8월 30일부터 9월 13일까지 AI Gateway로 청구되는 MiniMax H3·H3 Max 요청에 50% 할인을 발표했습니다. 기존 모델 ID를 유지해 코드 변경 없이 적용되는 제공사 프로모션입니다.",
+      "content": "Vercel이 8월 30일부터 9월 13일까지 AI Gateway로 청구되는 MiniMax H3·H3 Max 요청에 50% 할인을 발표했습니다. 기존 모델 ID를 유지해 코드 변경 없이 적용되는 제공사 프로모션입니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/minimax-h3-and-h3-max-are-50-off-on-ai-gateway",
+      "officialUrl": "https://vercel.com/changelog/minimax-h3-and-h3-max-are-50-off-on-ai-gateway",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-e1fb53c4fc15",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Vercel discounts MiniMax H3 and H3 Max by 50%",
+        "deck": "Vercel discounts MiniMax H3 and H3 Max by 50%",
+        "summary": "Vercel announced 50% off MiniMax H3 and H3 Max requests billed through AI Gateway from August 30 to September 13. Existing model IDs remain unchanged, so the promotion applies without code changes.",
+        "content": "Vercel announced 50% off MiniMax H3 and H3 Max requests billed through AI Gateway from August 30 to September 13. Existing model IDs remain unchanged, so the promotion applies without code changes.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "Vercel CLI, DNS·도메인·프로젝트 관리 확장",
+      "deck": "Vercel CLI, DNS·도메인·프로젝트 관리 확장",
+      "summary": "Vercel CLI 59.6.2 이상에서 DNS 수정, 도메인 갱신, 프로젝트 중지·재개와 멤버 관리 명령을 제공합니다. 구조화 JSON 출력이 가능하며 과금·파괴적 작업에는 명시 확인을 요구한다고 설명했습니다.",
+      "content": "Vercel CLI 59.6.2 이상에서 DNS 수정, 도메인 갱신, 프로젝트 중지·재개와 멤버 관리 명령을 제공합니다. 구조화 JSON 출력이 가능하며 과금·파괴적 작업에는 명시 확인을 요구한다고 설명했습니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/vercel-cli-expands-commands-for-dns-domains-and-projects",
+      "officialUrl": "https://vercel.com/changelog/vercel-cli-expands-commands-for-dns-domains-and-projects",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-7ef5aa320724",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Vercel CLI expands DNS, domain and project controls",
+        "deck": "Vercel CLI expands DNS, domain and project controls",
+        "summary": "Vercel CLI 59.6.2 and later adds DNS editing, domain renewal, project pause/resume and membership commands. Structured JSON output is supported; billable and destructive actions require explicit confirmation.",
+        "content": "Vercel CLI 59.6.2 and later adds DNS editing, domain renewal, project pause/resume and membership commands. Structured JSON output is supported; billable and destructive actions require explicit confirmation.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/28",
+      "platform": "Web",
+      "title": "Vercel Chat SDK, Claude Managed Agents 연결 지원",
+      "deck": "Vercel Chat SDK, Claude Managed Agents 연결 지원",
+      "summary": "Vercel이 Chat SDK에서 Claude Managed Agents로 Slack 연구 봇을 만드는 연결을 공개했습니다. 대화 스레드마다 지속 세션을 두고 출처를 포함한 답변과 도구 활동을 스트리밍합니다. Anthropic의 서비스 최초 출시와 구분되는 Chat SDK 통합입니다.",
+      "content": "**자료 유형: SDK 연동 구현 안내**\n\nVercel이 Chat SDK에서 Claude Managed Agents로 Slack 연구 봇을 만드는 연결을 공개했습니다. 대화 스레드마다 지속 세션을 두고 출처를 포함한 답변과 도구 활동을 스트리밍합니다. Anthropic의 서비스 최초 출시와 구분되는 Chat SDK 통합입니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/claude-managed-agents-with-chat-sdk",
+      "officialUrl": "https://vercel.com/changelog/claude-managed-agents-with-chat-sdk",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-12897e900a36",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Vercel Chat SDK integrates Claude Managed Agents",
+        "deck": "Vercel Chat SDK integrates Claude Managed Agents",
+        "summary": "Vercel documented a Chat SDK integration for a Slack research bot using Claude Managed Agents. It maintains a persistent session per thread and streams sourced replies and tool activity. This is a Chat SDK integration, not Anthropic’s original service launch.",
+        "content": "**Article type: SDK integration guide**\n\nVercel documented a Chat SDK integration for a Slack research bot using Claude Managed Agents. It maintains a persistent session per thread and streams sourced replies and tool activity. This is a Chat SDK integration, not Anthropic’s original service launch.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    },
+    {
+      "date": "8/27",
+      "platform": "Web",
+      "title": "Vercel 배포 목록, 자연어 필터 검색 추가",
+      "deck": "Vercel 배포 목록, 자연어 필터 검색 추가",
+      "summary": "Vercel이 Deployments 페이지 필터를 개편했습니다. 추천 조건과 입력 중 검색 외에 찾는 배포를 자연어로 설명하면 해당 필터를 자동 적용합니다.",
+      "content": "Vercel이 Deployments 페이지 필터를 개편했습니다. 추천 조건과 입력 중 검색 외에 찾는 배포를 자연어로 설명하면 해당 필터를 자동 적용합니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://vercel.com/changelog/find-deployments-faster-with-redesigned-filters",
+      "officialUrl": "https://vercel.com/changelog/find-deployments-faster-with-redesigned-filters",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-7caf9c40d226",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Vercel"
+      ],
+      "en": {
+        "title": "Vercel deployment filters support natural-language queries",
+        "deck": "Vercel deployment filters support natural-language queries",
+        "summary": "Vercel redesigned the Deployments page filters with suggestions, typeahead search and natural-language descriptions that automatically apply matching filters.",
+        "content": "Vercel redesigned the Deployments page filters with suggestions, typeahead search and natural-language descriptions that automatically apply matching filters.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    }
+  ]
+},
+{
+  "name": "Zed",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/26",
+      "platform": "Web",
+      "title": "Zed 1.17.2, 표 데이터 미리보기와 에이전트 연결 수정",
+      "deck": "Zed 1.17.2, 표 데이터 미리보기와 에이전트 연결 수정",
+      "summary": "Zed 1.17.2가 CSV 등 표 데이터 미리보기·열 정렬·필터링을 추가했습니다. ChatGPT 구독 연결의 맥락 압축 오류와 작업 트리 취소 후 메모리 누수를 수정했습니다. ask_user 도구는 추가됐지만 기본 비활성 상태라고 명시했습니다.",
+      "content": "Zed 1.17.2가 CSV 등 표 데이터 미리보기·열 정렬·필터링을 추가했습니다. ChatGPT 구독 연결의 맥락 압축 오류와 작업 트리 취소 후 메모리 누수를 수정했습니다. ask_user 도구는 추가됐지만 기본 비활성 상태라고 명시했습니다.\n\n원문 게시 날짜를 유지했습니다. 정확한 공개 시각은 확정하지 않았습니다.\n\n표시 날짜는 발행자의 게시일입니다. 시간대가 확정되지 않은 날짜를 한국시간으로 환산하거나 임의의 시각을 넣지 않았습니다.",
+      "source": "https://zed.dev/releases#zed-1.17.2",
+      "officialUrl": "https://zed.dev/releases#zed-1.17.2",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-1f41085da955",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Zed"
+      ],
+      "en": {
+        "title": "Zed 1.17.2 adds tabular previews and agent fixes",
+        "deck": "Zed 1.17.2 adds tabular previews and agent fixes",
+        "summary": "Zed 1.17.2 adds tabular previews with column sorting and filtering. It fixes ChatGPT subscription context-compaction errors and a memory leak after canceled worktree creation. The added ask_user tool is explicitly disabled by default.",
+        "content": "Zed 1.17.2 adds tabular previews with column sorting and filtering. It fixes ChatGPT subscription context-compaction errors and a memory leak after canceled worktree creation. The added ask_user tool is explicitly disabled by default.\n\nPublisher date retained; exact release time is not established.\n\nThe displayed date is the publisher date. No Korea-time conversion or invented publication time is applied to date-only evidence."
+      }
+    }
+  ]
+},
+{
+  "name": "Microsoft",
+  "color": "#6B7280",
+  "posts": [
+    {
+      "date": "8/27 01:00",
+      "platform": "Web",
+      "title": "Microsoft, 에이전트 요청 비용 최적화 네 가지 관점 제시",
+      "deck": "Microsoft, 에이전트 요청 비용 최적화 네 가지 관점 제시",
+      "summary": "Microsoft가 모델 선택, 실행 상품, 재사용할 맥락, 프롬프트 구성을 점검하는 비용 최적화 지침을 공개했습니다. 토큰 단가만이 아니라 작업의 성공 결과당 비용을 봐야 한다는 기술 해설로, 새 할인 상품 발표와 구분합니다.",
+      "content": "**자료 유형: 기술 구현 안내·분석**\n\nMicrosoft가 모델 선택, 실행 상품, 재사용할 맥락, 프롬프트 구성을 점검하는 비용 최적화 지침을 공개했습니다. 토큰 단가만이 아니라 작업의 성공 결과당 비용을 봐야 한다는 기술 해설로, 새 할인 상품 발표와 구분합니다.\n\n원문의 게시 시각을 한국시간으로 변환했습니다.",
+      "source": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost",
+      "officialUrl": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-b9ed229089b8",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Azure"
+      ],
+      "en": {
+        "title": "Microsoft outlines four levers for agent request costs",
+        "deck": "Microsoft outlines four levers for agent request costs",
+        "summary": "Microsoft published guidance on model choice, the serving offer, context reuse and prompt design. It argues for measuring cost per successful outcome rather than token price alone; this is technical guidance rather than a new discount announcement.",
+        "content": "**Article type: Technical implementation guide / analysis**\n\nMicrosoft published guidance on model choice, the serving offer, context reuse and prompt design. It argues for measuring cost per successful outcome rather than token price alone; this is technical guidance rather than a new discount announcement.\n\nThe publisher timestamp is converted to KST."
+      }
+    },
+    {
+      "date": "8/28 00:00",
+      "platform": "Web",
+      "title": "Microsoft, PONS 법률 AI의 데이터 분리 설계 사례 공개",
+      "deck": "Microsoft, PONS 법률 AI의 데이터 분리 설계 사례 공개",
+      "summary": "Microsoft가 PONS 법률 AI 플랫폼의 공개 법률 지식·고객 데이터 분리, 관리형 서비스 활용, 보안·규정 준수 통제 설계를 소개했습니다. EU 호스팅 Azure 환경의 설계 사례이며 법률 자문 정확성이나 규정 인증 완료를 독립 검증한 결과는 아닙니다.",
+      "content": "**자료 유형: 활용·설계 사례**\n\nMicrosoft가 PONS 법률 AI 플랫폼의 공개 법률 지식·고객 데이터 분리, 관리형 서비스 활용, 보안·규정 준수 통제 설계를 소개했습니다. EU 호스팅 Azure 환경의 설계 사례이며 법률 자문 정확성이나 규정 인증 완료를 독립 검증한 결과는 아닙니다.\n\n원문의 게시 시각을 한국시간으로 변환했습니다.",
+      "source": "https://www.microsoft.com/en-us/startups/blog/three-architecture-decisions-behind-ponss-legal-ai-platform-on-microsoft-azure",
+      "officialUrl": "https://www.microsoft.com/en-us/startups/blog/three-architecture-decisions-behind-ponss-legal-ai-platform-on-microsoft-azure",
+      "verifiedAt": "2026-09-09",
+      "slug": "devtools-953a56c3db74",
+      "tags": [
+        "AI",
+        "2026-w35",
+        "Microsoft AI"
+      ],
+      "en": {
+        "title": "Microsoft details PONS’s legal-AI architecture",
+        "deck": "Microsoft details PONS’s legal-AI architecture",
+        "summary": "Microsoft described PONS’s separation of public legal knowledge and customer data, use of managed services, and security and compliance controls on EU-hosted Azure. This is an architecture case study, not independent validation of legal advice or completed compliance certification.",
+        "content": "**Article type: Implementation / architecture case study**\n\nMicrosoft described PONS’s separation of public legal knowledge and customer data, use of managed services, and security and compliance controls on EU-hosted Azure. This is an architecture case study, not independent validation of legal advice or completed compliance certification.\n\nThe publisher timestamp is converted to KST."
+      }
+    }
+  ]
+},
   ],
 };

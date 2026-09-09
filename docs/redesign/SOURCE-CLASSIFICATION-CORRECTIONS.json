@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scope": "Canonical source classification overrides; historical evidence files remain unchanged.",
+  "corrections": [
+    {
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "publisher": "Google",
+      "productNamespaces": ["Fairwind Program", "Gemini 3.8 Flash Cyber", "CodeMender"],
+      "supersedes": {"file": "_workspace/oneway/20260908-ai-backfill/source-ledger.json", "pointer": "/sources/2", "incorrectProductNamespace": "Genie"},
+      "reason": "The linked article describes Fairwind security offerings, not Genie."
+    },
+    {
+      "sourceUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+      "publisher": "GitHub",
+      "productNamespaces": ["GitHub Copilot", "GPT-6 Astra"],
+      "supersedes": {"file": "_workspace/oneway/20260908-ai-backfill/source-ledger.json", "pointer": "/sources/5", "incorrectPublisher": "NVIDIA", "incorrectProductNamespace": "AI infrastructure"},
+      "reason": "The publisher is GitHub and the event is Copilot model availability, not NVIDIA infrastructure."
+    }
+  ],
+  "limitations": ["This records classification corrections only; it does not imply complete source rotation or additional article publication."]
+}

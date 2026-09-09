@@ -1,0 +1,6 @@
+1	README.md
+25	lib/weeks/*.ts
+1	docs/redesign/BACKFILL-INTEGRATION.json
+1	docs/redesign/ROTATION-COVERAGE.md
+1	scripts/test-browse-ui.mjs
+1	scripts/test-image-disclosure.mjs

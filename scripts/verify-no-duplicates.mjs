@@ -3,9 +3,9 @@
 // officialUrl/source. Catches accidental duplicate events across weeks/editions.
 // exit 0 = clean, exit 2 = duplicate official URLs found.
 //
-// Product-identity note: legitimately-separate events have different official
-// URLs, so keying on canonical URL never false-positives the OpenAI-/goal vs
-// Claude-/goal case (see references/product-identity-dedupe.md).
+// Different dated release events can share a source URL. Such exceptions require
+// the full read-only provenance gate plus exact scanned-card coverage below;
+// neither a changelog pathname nor a new legacy-baseline entry authorizes them.
 //
 // Usage:
 //   node scripts/verify-no-duplicates.mjs [--scope ab|weeks|all] [--warn]
@@ -19,6 +19,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { validate, hashObject, content, normalize } from "./check-backfill-integration.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const argv = process.argv.slice(2);
@@ -70,7 +71,7 @@ function addPost(p, where) {
     if (!seen.has(c)) seen.set(c, []);
     const arr = seen.get(c);
     if (!arr.find((x) => x.where === where && x.title === p.title)) {
-      arr.push({ title: p.title, where });
+      arr.push({ title: p.title, where, slug: p.slug, contentSha256: hashObject(content(p)), source: u });
     }
     break; // one canonical key per card (prefer officialUrl)
   }
@@ -116,7 +117,33 @@ let accepted = new Set();
 if (fs.existsSync(BASELINE_FILE)) {
   try { accepted = new Set(JSON.parse(fs.readFileSync(BASELINE_FILE, "utf8")).accepted || []); } catch {}
 }
-const newDups = dups.filter((d) => !accepted.has(d.canon));
+// Lazy, fail-closed: a broken/missing/stale manifest never grants an exception.
+// Reconcile every scanned hit, including unregistered weekly files this gate sees.
+let provenance;
+function evidencedEvents(duplicate) {
+  if (duplicate.kind !== 'weeks') return false;
+  if (provenance === undefined) {
+    try {
+      const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/redesign/BACKFILL-INTEGRATION.json'), 'utf8'));
+      provenance = validate(manifest).status === 'PASS' ? manifest : null;
+    } catch { provenance = null; }
+  }
+  if (!provenance) return false;
+  const rows = [...provenance.rows, ...(provenance.supportingRows || [])];
+  const matched = duplicate.hits.map(hit => rows.filter(row => row.week === hit.where.split('/')[0]
+    && row.slug === hit.slug && row.contentSha256 === hit.contentSha256
+    && row.normalizedUrl === normalize(hit.source)));
+  if (matched.some(matches => matches.length !== 1)) return false;
+  const events = matched.map(matches => matches[0]);
+  const group = events[0].sharedSourceGroup;
+  if (typeof group !== 'string' || !group.trim() || events.some(row => row.sharedSourceGroup !== group || !row.event?.id)) return false;
+  if (new Set(events.map(row => row.event.id)).size !== events.length) return false;
+  const groupRows = rows.filter(row => row.sharedSourceGroup === group);
+  return groupRows.length === events.length && groupRows.every(row => events.includes(row));
+}
+const evidenceAccepted = dups.filter(duplicate => !accepted.has(duplicate.canon) && evidencedEvents(duplicate));
+const newDups = dups.filter(d => !accepted.has(d.canon) && !evidenceAccepted.includes(d));
+if (evidenceAccepted.length) console.log(`[verify-no-duplicates] ${evidenceAccepted.length} shared source group(s) verified by full event provenance`);
 
 if (dups.length) {
   console.error(`[verify-no-duplicates] ${dups.length} specific-article dup(s) total; ${accepted.size} accepted(legacy); ${newDups.length} NEW (scope=${scope})`);

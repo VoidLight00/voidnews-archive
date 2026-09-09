@@ -15,6 +15,7 @@ const SCRIPTS = path.join(ROOT, "scripts");
 
 // build-time HARD gates (run on every `next build` via prebuild)
 const BUILD_GATES = {
+  "check-backfill-integration.mjs": [],
   "check-slugs.mjs": [],
   "check-regressions.mjs": [],
   "check-card-content.mjs": [],
