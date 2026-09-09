@@ -1,0 +1,1112 @@
+{
+  "schemaVersion": 2,
+  "briefingDate": "2026-09-09",
+  "generatedAt": "2026-09-09T18:44:48+09:00",
+  "status": "prepared-local-not-published",
+  "publicationActions": {
+    "commit": false,
+    "push": false,
+    "deploy": false,
+    "externalPublish": false,
+    "scope": "Actions performed by the VIP preparation task only; parent publication is separate."
+  },
+  "writeBoundary": {
+    "ownedDirectory": "docs/vip/20260909/",
+    "filesCreatedOrUpdated": [
+      "docs/vip/20260909/BRIEFING.md",
+      "docs/vip/20260909/evidence.json",
+      "docs/vip/20260909/VERIFICATION.md"
+    ],
+    "htmlDerivative": "/Users/voidlight/projects/voidnews-reports/2026-09-vip-prep/index.html",
+    "restrictedPathsEdited": false,
+    "awaitingApprovalAbRunOverwritten": false
+  },
+  "sourceLedger": {
+    "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+    "schemaVersion": 2,
+    "expectedTotal": 258,
+    "weekCounts": {
+      "2026-w35": 102,
+      "2026-w36": 143,
+      "2026-w37": 13
+    },
+    "reconciliationSource": "_workspace/oneway/20260909-rotation-reconciliation/reconciliation-report.json",
+    "reconciliation": {
+      "approvedRowsFoundInRuntime": 206,
+      "integratedRows": 206,
+      "excludedOutsideKstWindow": 5,
+      "unresolved": []
+    },
+    "interpretation": "258 is the current integration-ledger size, not a claim of 258 independent web verifications in this subtask. This recheck covers six news and two tools only.",
+    "sha256": "ce9354fd34b53cebe980190eff9d963b1a0f478898afaab6877525c9866faae1"
+  },
+  "overlapChecks": {
+    "checkedAt": "2026-09-09T18:44:48+09:00",
+    "method": "Normalized official-event URL against every existing AB edition; manual publisher/product/event comparison against deployed-source edition and provisional selection. Weekly presence is intended source reuse.",
+    "previousVip": {
+      "actualEditionPath": "lib/ab/editions/2026-08b.ts",
+      "sha256": "0787db136a56064346539d4154617b41d283b84fe32ff12e3926fbf646817492",
+      "selectedTopics": [
+        {
+          "rank": 1,
+          "title": "Claude Code, GitLab MR 상태 배지와 사용량 제한 자동 재개 추가",
+          "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
+        },
+        {
+          "rank": 2,
+          "title": "AI가 공동 작성한 CI 변경, Snowflake Jira 자격 증명 노출 경로 만들었다",
+          "officialUrl": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"
+        },
+        {
+          "rank": 3,
+          "title": "GLM-5.3-Flash 공개, OpenRouter 익명 모델 Ox Alpha의 정체였다",
+          "officialUrl": "https://docs.z.ai/guides/llm/glm-5.3-flash"
+        },
+        {
+          "rank": 4,
+          "title": "Pika, 음악·효과음·음성·영상 사운드 모델 4종 동시 공개",
+          "officialUrl": "https://pika.art/blog/pika-soundtrack"
+        },
+        {
+          "rank": 5,
+          "title": "휴머노이드 로봇이 100m를 9.39초에 — 볼트의 9.58초보다 빨랐습니다",
+          "officialUrl": "https://www.globaltimes.cn/page/202608/1368761.shtml"
+        },
+        {
+          "rank": 6,
+          "title": "Apple, 첫 2nm M6와 최대 512GB 메모리 M5 Ultra 공개",
+          "officialUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"
+        }
+      ],
+      "staleCandidateFile": "_workspace/ab/20260824-190815-ab-20260817-20260824/05_vip_card_sorting_candidates.json",
+      "candidateFileMismatch": {
+        "selectedIds": [
+          "claude-code-20260817-v2-1-234",
+          "wiz-20260817-snowflake-cicd",
+          "openai-20260820-asana-codex",
+          "openai-20260818-policy-grants",
+          "pika-20260818-audio-suite",
+          "apple-20260825-m6-m5-ultra"
+        ],
+        "vipSelectedIds": [
+          "apple-20260825-m6-m5-ultra",
+          "claude-code-20260817-v2-1-234",
+          "openai-20260818-policy-grants",
+          "pika-20260818-audio-suite",
+          "wiz-20260817-snowflake-cicd",
+          "zai-20260826-glm-5-3-flash-ox-alpha"
+        ],
+        "note": "Candidate selectedIds and vipSelected do not match each other or current edition. Actual edition is the prior-publication truth for this check."
+      },
+      "decision": "No selected news event repeats the actual previous VIP six."
+    },
+    "existingEditions": {
+      "fileCount": 12,
+      "files": [
+        {
+          "path": "lib/ab/editions/2026-04a.ts",
+          "sha256": "9a5acbabe4848a270f39146dcb1c7a2017d35ab6b118455bbeafb956e4c459d4"
+        },
+        {
+          "path": "lib/ab/editions/2026-04b.ts",
+          "sha256": "4e863681dc2e67704d7b7fc4f28a3dea4394fec7cd4fcfe7023b2ffd88e53ea1"
+        },
+        {
+          "path": "lib/ab/editions/2026-04c.ts",
+          "sha256": "9a0b16172eb4e33ec4649e3831f17388d3b04d5a6277324cc656d0b832043a5e"
+        },
+        {
+          "path": "lib/ab/editions/2026-05a.ts",
+          "sha256": "d457749022e93df33303485a9ba4e03d099b005ccb51634b537664ac49757f9c"
+        },
+        {
+          "path": "lib/ab/editions/2026-05b.ts",
+          "sha256": "9a729eb018691b70c955bbd7b4cbbd91221fc12983e48a47cfd0214ab7376ba8"
+        },
+        {
+          "path": "lib/ab/editions/2026-06a.ts",
+          "sha256": "4697aa97c60010c4f04521e3600407952e551f34c76c5de22ab3c98caa719b64"
+        },
+        {
+          "path": "lib/ab/editions/2026-06b.ts",
+          "sha256": "4949af259b9fdc7082b7ee2723889d6f7bc9b010ec6f7a7197e8484fe577955f"
+        },
+        {
+          "path": "lib/ab/editions/2026-07a.ts",
+          "sha256": "9154fe66b49040fa300016434ec616cf09c069ac5b1913fc6083e134447c7c77"
+        },
+        {
+          "path": "lib/ab/editions/2026-07b.ts",
+          "sha256": "80e96fc2f314d90afa3abb300fc0ea301d8d5dc70fc3380daf09854d1528d770"
+        },
+        {
+          "path": "lib/ab/editions/2026-07c.ts",
+          "sha256": "2d1a91bee8789f0da23f36b3ef69831e7ad38f43ea7eed571923435390cf56b3"
+        },
+        {
+          "path": "lib/ab/editions/2026-08a.ts",
+          "sha256": "be16c86490051c6231c0e52883d6831036e5c3ecfafcc64086881ba93929836f"
+        },
+        {
+          "path": "lib/ab/editions/2026-08b.ts",
+          "sha256": "0787db136a56064346539d4154617b41d283b84fe32ff12e3926fbf646817492"
+        }
+      ],
+      "perNews": [
+        {
+          "newsId": "nvidia-20260903-hugging-face-acquisition-agreement",
+          "existingAbEditionExactUrlMatches": [],
+          "priorVipEventOverlap": false,
+          "weeklyPresenceExpected": "2026-w36"
+        },
+        {
+          "newsId": "mistral-series-d-samsung-three-billion-euros",
+          "existingAbEditionExactUrlMatches": [],
+          "priorVipEventOverlap": false,
+          "weeklyPresenceExpected": "2026-w37"
+        },
+        {
+          "newsId": "alphagenome-atlas-variant-impact-map",
+          "existingAbEditionExactUrlMatches": [],
+          "priorVipEventOverlap": false,
+          "weeklyPresenceExpected": "2026-w37"
+        },
+        {
+          "newsId": "weather-next-3-hourly-satellite-forecast",
+          "existingAbEditionExactUrlMatches": [],
+          "priorVipEventOverlap": false,
+          "weeklyPresenceExpected": "2026-w36"
+        },
+        {
+          "newsId": "anthropic-20260901-enterprise-frontier-safeguards",
+          "existingAbEditionExactUrlMatches": [],
+          "priorVipEventOverlap": false,
+          "weeklyPresenceExpected": "2026-w36"
+        },
+        {
+          "newsId": "github-20260905-copilot-gpt-6-astra",
+          "existingAbEditionExactUrlMatches": [],
+          "priorVipEventOverlap": false,
+          "weeklyPresenceExpected": "2026-w36"
+        }
+      ]
+    },
+    "awaitingApprovalAb": {
+      "manifestPath": "_workspace/ab/20260904-215700-ab-20260827-20260904/RUN_MANIFEST.json",
+      "sha256": "b875d13fa731a51e163aaba4bf586b566ce5e1eb1fcafa3b6d08a26bb186ecd6",
+      "status": "awaiting-approval",
+      "edition": "2026-09a",
+      "selectionStatus": "provisional-awaiting-gate1-user-approval",
+      "top10Ordered": [
+        "google-20260902-gemini-3-8-flash-cyber",
+        "ifm-20260903-k2-horizon",
+        "world-labs-20260901-atlas",
+        "anthropic-20260902-commerce-agents",
+        "google-20260827-gemini-omni-1-1-flash",
+        "support-role-map",
+        "support-open-check",
+        "support-spatial-boundary",
+        "support-vertical-agent",
+        "support-control-surface"
+      ],
+      "decision": "No same-event match with selected six news. Gemini 3.8 Flash/Cyber remains excluded; this manifest was not edited."
+    }
+  },
+  "news": [
+    {
+      "order": 1,
+      "id": "nvidia-20260903-hugging-face-acquisition-agreement",
+      "title": "NVIDIA, Hugging Face 인수 합의 발표",
+      "ledgerSourceId": "src-url-92640b734a56d56cabe4",
+      "ledgerWeek": "2026-w36",
+      "originalUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "publicFetch": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "httpStatus": 200,
+        "accessible": true,
+        "finalUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+        "responseSha256": "7aa068e248b4dcf7c106a2c925a0cddab59170e5fe8564952b35ecedb4553e09",
+        "responseBytes": 109396,
+        "method": "Independent public GET and web open; official article body read"
+      },
+      "dateProvenance": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T11:56:49+00:00",
+        "kstTimestamp": "2026-09-03T20:56:49+09:00",
+        "kstDate": "2026-09-03",
+        "verifiedFrom": "Live article datePublished metadata; modification dates excluded"
+      },
+      "claimDiscipline": [
+        "Acquisition agreement, not completed transaction or regulatory clearance.",
+        "Price, platform scale and openness commitments are attributed to NVIDIA."
+      ],
+      "dedupeDecision": "Six-news selection retains a distinct official event; already archived in Weekly, absent from existing AB editions.",
+      "content": {
+        "theme": "산업 · 모델 유통",
+        "shortTitle": "NVIDIA와 Hugging Face",
+        "date": "9월 3일 20:56 KST",
+        "fact": "NVIDIA는 Hugging Face를 129억 3,030만 달러에 인수하기로 합의했다고 발표했습니다. 오픈 모델과 오픈소스, 여러 클라우드·가속기 지원을 유지하고 NVIDIA 컴퓨팅을 의무화하지 않겠다고 밝혔습니다.",
+        "meaning": "칩 공급 기업과 모델 유통 플랫폼의 결합입니다. 향후 개방성 약속이 실제 운영 정책에 어떻게 반영되는지가 관찰할 지점입니다.",
+        "limit": "인수 합의 발표입니다. 거래 종결이나 규제 승인 완료를 확인한 내용은 아닙니다.",
+        "speaking": "이번 소식은 반도체 기업이 AI 모델의 유통 플랫폼까지 품으려는 움직임입니다. 개방성을 유지하겠다는 발표와, 앞으로 실제 정책이 어떻게 운영되는지를 함께 보시면 됩니다.",
+        "question": "모델을 배포하는 경로를 바꿀 수 있는 여지를 확보하고 있습니까?",
+        "locator": "Article opening; following two paragraphs on platform openness",
+        "claims": [
+          "인수 합의와 발표 금액",
+          "컴퓨팅 선택권과 개방성 유지 방침"
+        ]
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.97,
+      "verificationStatus": "supported-as-publisher-announcement",
+      "needsReview": false,
+      "primaryUrl": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "backupUrls": [],
+      "claimVerification": {
+        "sourceLocator": "Article opening; following two paragraphs on platform openness",
+        "verifiedClaims": [
+          "인수 합의와 발표 금액",
+          "컴퓨팅 선택권과 개방성 유지 방침"
+        ],
+        "bodyAnchorChecks": [
+          {
+            "id": "agreement_amount",
+            "passed": true
+          },
+          {
+            "id": "openness",
+            "passed": true
+          },
+          {
+            "id": "infrastructure_choice",
+            "passed": true
+          }
+        ],
+        "manualRead": true,
+        "performanceIndependentlyReproduced": false,
+        "interpretationLabel": "발표 해석"
+      },
+      "riskFlags": [
+        "vendor-statement-not-independent-outcome"
+      ],
+      "ledgerEvidenceLink": {
+        "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+        "pointer": "/rows/24",
+        "eventId": "event-url-92640b734a56d56cabe4",
+        "officialUrlMatches": true
+      }
+    },
+    {
+      "order": 2,
+      "id": "mistral-series-d-samsung-three-billion-euros",
+      "title": "Mistral, 삼성전자 주도 30억 유로 시리즈 D 발표",
+      "ledgerSourceId": "src-url-4d11ed62a144a3f4c2f6",
+      "ledgerWeek": "2026-w37",
+      "originalUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "publicFetch": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "httpStatus": 200,
+        "accessible": true,
+        "finalUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "responseSha256": "3a09a5470a0e5e16e5473f6bb7a118aa76883fb8000edaa9dd5b16b38e6fb18d",
+        "responseBytes": 273701,
+        "method": "Independent public GET and web open; official article body read"
+      },
+      "dateProvenance": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Publisher calendar date only; no exact KST date or midnight assumption.",
+        "verifiedFrom": "Official news-index card linked to this article",
+        "evidenceUrl": "https://mistral.ai/news/",
+        "evidenceResponseSha256": "a11d99e6fd3f61ac043b0839031fcdb3617e0be610a56b4e8b43bf2025f84350"
+      },
+      "claimDiscipline": [
+        "Funding is stated as raised, not a future financing pledge.",
+        "Amount and valuation attributed to Mistral; detailed ownership not established."
+      ],
+      "dedupeDecision": "Six-news selection retains a distinct official event; already archived in Weekly, absent from existing AB editions.",
+      "content": {
+        "theme": "산업 · 한국과 유럽",
+        "shortTitle": "삼성 주도 Mistral 투자",
+        "date": "9월 8일 · 발행사 표기일",
+        "fact": "Mistral은 삼성전자 주도 시리즈 D에서 30억 유로를 조달했다고 발표했습니다. 공동 주도자는 EQT 운용 Scaleup Europe Fund와 PSG Equity이며, 발표한 투자 후 기업가치는 210억 유로 초과입니다.",
+        "meaning": "한국 하드웨어 기업의 투자가 유럽 모델·인프라 사업과 연결됐습니다. 데이터와 컴퓨팅 통제권을 강조하는 기업용 AI 전략으로 해석할 수 있습니다.",
+        "limit": "금액과 기업가치는 Mistral 발표에 귀속합니다. 세부 지분율은 이 발표에서 확인되지 않습니다. 공식 뉴스 목록의 날짜만 확인돼 정확한 한국시간은 확정하지 않습니다.",
+        "speaking": "삼성전자가 유럽 AI 기업의 대규모 투자를 주도했습니다. 모델 성능뿐 아니라 데이터와 인프라를 누가 통제할 것인지가 기업 AI 경쟁의 중요한 축이 되고 있다는 관점에서 볼 수 있습니다.",
+        "question": "기업용 AI를 고를 때 성능 외에 통제권을 어떤 항목으로 평가합니까?",
+        "locator": "Opening two paragraphs; publication date from matching official news-index card",
+        "claims": [
+          "조달 금액·투자 단계·기업가치",
+          "주도 및 공동 주도 투자자"
+        ]
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.97,
+      "verificationStatus": "supported-as-publisher-announcement",
+      "needsReview": false,
+      "primaryUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "backupUrls": [
+        {
+          "label": "발행일 확인: 공식 뉴스 목록",
+          "url": "https://mistral.ai/news/"
+        }
+      ],
+      "claimVerification": {
+        "sourceLocator": "Opening two paragraphs; publication date from matching official news-index card",
+        "verifiedClaims": [
+          "조달 금액·투자 단계·기업가치",
+          "주도 및 공동 주도 투자자"
+        ],
+        "bodyAnchorChecks": [
+          {
+            "id": "amount_round",
+            "passed": true
+          },
+          {
+            "id": "valuation",
+            "passed": true
+          },
+          {
+            "id": "investors",
+            "passed": true
+          }
+        ],
+        "manualRead": true,
+        "performanceIndependentlyReproduced": false,
+        "interpretationLabel": "발표 해석"
+      },
+      "riskFlags": [
+        "vendor-statement-not-independent-outcome",
+        "publisher-date-only-no-exact-kst"
+      ],
+      "ledgerEvidenceLink": {
+        "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+        "pointer": "/rows/3",
+        "eventId": "mistral-series-d-samsung-three-billion-euros",
+        "officialUrlMatches": true
+      }
+    },
+    {
+      "order": 3,
+      "id": "alphagenome-atlas-variant-impact-map",
+      "title": "Google DeepMind, AlphaGenome Atlas 공개",
+      "ledgerSourceId": "src-url-b4f131d2c0032d693234",
+      "ledgerWeek": "2026-w37",
+      "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+      "publicFetch": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "httpStatus": 200,
+        "accessible": true,
+        "finalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "responseSha256": "8c20be558132fb0fef46dc4af077c366b3c2f8cdd416634311f261c581737e13",
+        "responseBytes": 355463,
+        "method": "Independent public GET and web open; official article body read"
+      },
+      "dateProvenance": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T14:00:00+00:00",
+        "kstTimestamp": "2026-09-08T23:00:00+09:00",
+        "kstDate": "2026-09-08",
+        "verifiedFrom": "Live article datePublished metadata; modification dates excluded"
+      },
+      "claimDiscipline": [
+        "Nine billion variants and roughly one petabyte are publisher-reported scope facts.",
+        "Predictions are not experimental confirmation, causality, clinical validation or diagnostic approval."
+      ],
+      "dedupeDecision": "Six-news selection retains a distinct official event; already archived in Weekly, absent from existing AB editions.",
+      "content": {
+        "theme": "과학 · 생명 연구",
+        "shortTitle": "AlphaGenome Atlas",
+        "date": "9월 8일 23:00 KST",
+        "fact": "Google DeepMind는 인간 유전체의 가능한 단일 염기 변이 약 90억 개에 대한 예측을 담은 약 1페타바이트의 데이터베이스를 공개했습니다. 코딩·비코딩 영역을 함께 평가하는 AVI 점수와 코딩 없이 조회하는 웹 포털을 제공합니다.",
+        "meaning": "연구자가 실험 후보를 정하기 전에 대규모 예측 결과를 조회하는 방식입니다. AI 활용을 대화형 도구 밖의 연구 기반시설로 볼 수 있습니다.",
+        "limit": "모델 예측입니다. 모든 변이를 실험으로 확인했거나 임상적 유효성·진단 승인을 확보했다는 뜻은 아닙니다.",
+        "speaking": "이 사례의 핵심은 질문할 때마다 답을 만드는 대신, 방대한 가능성을 미리 계산해 연구자가 찾게 했다는 점입니다. 유망한 후보를 좁히는 데 쓰는 예측 자료이며 실험 결과와는 구별해야 합니다.",
+        "question": "반복해서 검토하는 후보를 미리 계산해 둘 업무가 있습니까?",
+        "locator": "Opening Atlas/AVI paragraphs; Opening access section",
+        "claims": [
+          "변이 수와 데이터 규모",
+          "AVI 점수와 웹 포털 제공"
+        ]
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.97,
+      "verificationStatus": "supported-as-publisher-announcement",
+      "needsReview": false,
+      "primaryUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+      "backupUrls": [],
+      "claimVerification": {
+        "sourceLocator": "Opening Atlas/AVI paragraphs; Opening access section",
+        "verifiedClaims": [
+          "변이 수와 데이터 규모",
+          "AVI 점수와 웹 포털 제공"
+        ],
+        "bodyAnchorChecks": [
+          {
+            "id": "scope",
+            "passed": true
+          },
+          {
+            "id": "data_size",
+            "passed": true
+          },
+          {
+            "id": "score",
+            "passed": true
+          },
+          {
+            "id": "portal",
+            "passed": true
+          }
+        ],
+        "manualRead": true,
+        "performanceIndependentlyReproduced": false,
+        "interpretationLabel": "발표 해석"
+      },
+      "riskFlags": [
+        "vendor-statement-not-independent-outcome"
+      ],
+      "ledgerEvidenceLink": {
+        "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+        "pointer": "/rows/0",
+        "eventId": "alphagenome-atlas-variant-impact-map",
+        "officialUrlMatches": true
+      }
+    },
+    {
+      "order": 4,
+      "id": "weather-next-3-hourly-satellite-forecast",
+      "title": "Google, WeatherNext 3 공개",
+      "ledgerSourceId": "src-url-68697d8b4a8e1c1514e1",
+      "ledgerWeek": "2026-w36",
+      "originalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+      "publicFetch": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "httpStatus": 200,
+        "accessible": true,
+        "finalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+        "responseSha256": "d6f79ffc82b8f72e669156ae8df8d9b25556f83a77b9f3e361499e88b6cf9a62",
+        "responseBytes": 390664,
+        "method": "Independent public GET and web open; official article body read"
+      },
+      "dateProvenance": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-03",
+        "sourceTimestamp": "2026-09-03T15:00:00+00:00",
+        "kstTimestamp": "2026-09-04T00:00:00+09:00",
+        "kstDate": "2026-09-04",
+        "verifiedFrom": "Live article datePublished metadata; modification dates excluded"
+      },
+      "claimDiscipline": [
+        "Resolution, update frequency and accuracy improvements are stated by Google; evaluation scope matters.",
+        "Official meteorological authorities remain the source for warnings and safety guidance."
+      ],
+      "dedupeDecision": "Six-news selection retains a distinct official event; already archived in Weekly, absent from existing AB editions.",
+      "content": {
+        "theme": "과학 · 운영 데이터",
+        "shortTitle": "WeatherNext 3",
+        "date": "9월 4일 00:00 KST",
+        "fact": "Google은 실시간 정지궤도 위성 관측 등을 반영해 매시간 예측을 생성하는 WeatherNext 3를 발표했습니다. 주요 지표는 5km, 기타 지표는 10km, 대기 변수는 25km 격자이며 Google 제품과 BigQuery·Earth Engine·Cloud Storage로 연결됩니다.",
+        "meaning": "날씨 예측이 소비자 화면과 기업 분석 도구로 함께 들어갑니다. 농업·물류·에너지 등에서는 갱신 간격과 지역별 해상도가 활용성을 좌우합니다.",
+        "limit": "제공 구조는 확인했지만 예측 정확도를 재현 시험하지는 않았습니다. 원문은 Brightband 평가도 인용하며, 이 준비본은 세계 최고 정확도라는 결론을 채택하지 않습니다.",
+        "speaking": "이번 변화는 날씨를 얼마나 자주, 얼마나 세밀하게 갱신하는가에 있습니다. 예측 데이터가 업무 도구로 들어오더라도, 지역과 목적에 맞게 성능을 확인하는 과정은 필요합니다.",
+        "question": "현재 업무의 날씨 데이터는 어느 주기로 갱신됩니까?",
+        "locator": "Rapid weather prediction; real-world data; ecosystem integration sections",
+        "claims": [
+          "매시간 예측과 5·10·25km 해상도",
+          "제품 및 클라우드 데이터 연결"
+        ]
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.97,
+      "verificationStatus": "supported-as-publisher-announcement",
+      "needsReview": false,
+      "primaryUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+      "backupUrls": [],
+      "claimVerification": {
+        "sourceLocator": "Rapid weather prediction; real-world data; ecosystem integration sections",
+        "verifiedClaims": [
+          "매시간 예측과 5·10·25km 해상도",
+          "제품 및 클라우드 데이터 연결"
+        ],
+        "bodyAnchorChecks": [
+          {
+            "id": "frequency",
+            "passed": true
+          },
+          {
+            "id": "resolutions",
+            "passed": true
+          },
+          {
+            "id": "delivery",
+            "passed": true
+          },
+          {
+            "id": "satellite",
+            "passed": true
+          }
+        ],
+        "manualRead": true,
+        "performanceIndependentlyReproduced": false,
+        "interpretationLabel": "발표 해석"
+      },
+      "riskFlags": [
+        "vendor-statement-not-independent-outcome"
+      ],
+      "ledgerEvidenceLink": {
+        "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+        "pointer": "/rows/5",
+        "eventId": "event-url-68697d8b4a8e1c1514e1",
+        "officialUrlMatches": true
+      }
+    },
+    {
+      "order": 5,
+      "id": "anthropic-20260901-enterprise-frontier-safeguards",
+      "title": "Anthropic, Enterprise Frontier Safeguards 예고",
+      "ledgerSourceId": "src-url-b085c7f1762bfee8ae1c",
+      "ledgerWeek": "2026-w36",
+      "originalUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "publicFetch": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "httpStatus": 200,
+        "accessible": true,
+        "finalUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+        "responseSha256": "12b85d36b486a9b33b1d38edc07a57582d1a00aa29d916789d349ff385764980",
+        "responseBytes": 279223,
+        "method": "Independent public GET and web open; official article body read"
+      },
+      "dateProvenance": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-01",
+        "sourceTimestamp": null,
+        "kstTimestamp": null,
+        "kstDate": null,
+        "note": "Publisher calendar date only; publication time and timezone unspecified.",
+        "verifiedFrom": "Visible article date Sep 1, 2026; modification timestamp excluded"
+      },
+      "claimDiscipline": [
+        "Upcoming phased rollout, not broad current availability.",
+        "Detection effectiveness, false positives and false negatives are not independently established by the announcement.",
+        "Customers retain investigation duties and cloud storage/operation/egress costs."
+      ],
+      "dedupeDecision": "Six-news selection retains a distinct official event; already archived in Weekly, absent from existing AB editions.",
+      "content": {
+        "theme": "기업 · 보안과 통제",
+        "shortTitle": "Enterprise Frontier Safeguards",
+        "date": "9월 1일 · 발행사 표기일",
+        "fact": "Anthropic은 고객 소유 클라우드 저장소와 암호화 키, 자동 오용 탐지를 결합하는 Enterprise Frontier Safeguards를 예고했습니다. 각 통제 기능은 선택 사항이며, 여러 세션·계정의 위험 신호를 분석해 고객에게 전달하는 구조입니다.",
+        "meaning": "데이터 통제와 장기간의 위험 감시를 함께 설계하려는 접근입니다. 기업은 경보를 누가 검토하고 대응할지도 정해야 합니다.",
+        "limit": "올가을 중 단계적으로 제공할 예정이며 현재 전면 제공으로 쓰지 않습니다. 고객은 저장소 관련 비용과 경보 후속 대응을 맡고, 탐지 정확도는 독립 검증하지 않았습니다.",
+        "speaking": "기업 AI에서는 데이터를 보호하는 일과 위험한 사용을 찾아내는 일을 함께 해결해야 합니다. 이 설계는 고객이 데이터를 통제하면서 자동 감시를 이용하도록 하고, 실제 경보 판단은 고객 조직에 맡깁니다.",
+        "question": "AI 사용 경보가 오면 누가 조사하고 대응합니까?",
+        "locator": "Opening; On data storage; On automated and human review; How EFS works",
+        "claims": [
+          "고객 소유 저장소·키·자동 검토 선택권",
+          "단계적 제공 예고와 고객 비용·대응 책임"
+        ]
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.97,
+      "verificationStatus": "supported-as-publisher-announcement",
+      "needsReview": false,
+      "primaryUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "backupUrls": [],
+      "claimVerification": {
+        "sourceLocator": "Opening; On data storage; On automated and human review; How EFS works",
+        "verifiedClaims": [
+          "고객 소유 저장소·키·자동 검토 선택권",
+          "단계적 제공 예고와 고객 비용·대응 책임"
+        ],
+        "bodyAnchorChecks": [
+          {
+            "id": "rollout",
+            "passed": true
+          },
+          {
+            "id": "controls",
+            "passed": true
+          },
+          {
+            "id": "cost",
+            "passed": true
+          },
+          {
+            "id": "review",
+            "passed": true
+          }
+        ],
+        "manualRead": true,
+        "performanceIndependentlyReproduced": false,
+        "interpretationLabel": "발표 해석"
+      },
+      "riskFlags": [
+        "vendor-statement-not-independent-outcome",
+        "publisher-date-only-no-exact-kst",
+        "phased-rollout-not-broadly-available"
+      ],
+      "ledgerEvidenceLink": {
+        "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+        "pointer": "/rows/27",
+        "eventId": "event-url-b085c7f1762bfee8ae1c",
+        "officialUrlMatches": true
+      }
+    },
+    {
+      "order": 6,
+      "id": "github-20260905-copilot-gpt-6-astra",
+      "title": "GitHub Copilot, GPT-6 Astra 정식 제공",
+      "ledgerSourceId": "src-url-cf45e2be25e062a0c299",
+      "ledgerWeek": "2026-w36",
+      "originalUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "publicFetch": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "httpStatus": 200,
+        "accessible": true,
+        "finalUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+        "responseSha256": "5b84fb1b7e94585a304051e5bb3283796264e2525e90f9f64ef0ac43a74c011f",
+        "responseBytes": 107201,
+        "method": "Independent public GET and web open; official article body read"
+      },
+      "dateProvenance": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-04",
+        "sourceTimestamp": "2026-09-04T11:59:51-07:00",
+        "kstTimestamp": "2026-09-05T03:59:51+09:00",
+        "kstDate": "2026-09-05",
+        "verifiedFrom": "Live article datePublished metadata; modification dates excluded"
+      },
+      "claimDiscipline": [
+        "Records GitHub Copilot availability, not an independently established OpenAI model launch date.",
+        "Rollout is gradual and billed at provider list pricing under usage-based billing.",
+        "Performance descriptions come from GitHub internal testing."
+      ],
+      "dedupeDecision": "Six-news selection retains a distinct official event; already archived in Weekly, absent from existing AB editions.",
+      "content": {
+        "theme": "개발 · 업무 적용",
+        "shortTitle": "Copilot의 GPT-6 Astra",
+        "date": "9월 5일 03:59 KST",
+        "fact": "GitHub은 GPT-6 Astra를 Copilot Pro+·Max·Business·Enterprise에 순차 제공한다고 발표했습니다. VS Code, Visual Studio, CLI, 코딩 에이전트, 웹·모바일과 여러 IDE에서 선택할 수 있고 조직 관리자가 모델 접근을 관리합니다.",
+        "meaning": "여러 개발 도구에서 같은 모델을 활용할 수 있는 제공 사건입니다. 작업별 허용 범위와 검증 방법을 함께 정하는 것이 운영 과제입니다.",
+        "limit": "대상 요금제라도 즉시 표시되지 않을 수 있습니다. 발표는 사용량 기반 과금을 명시합니다. 성능 우위는 GitHub 내부 평가이며, 이 사건을 OpenAI 자체 모델 출시일로 대체하지 않습니다.",
+        "speaking": "GitHub의 여러 개발 화면에 GPT-6 Astra가 들어옵니다. 장기 작업 성능에 대한 회사 설명과 별개로, 우리 조직에서는 어떤 작업을 맡기고 결과를 무엇으로 확인할지가 실제 도입 기준입니다.",
+        "question": "에이전트에게 맡긴 작업의 완료를 어떤 증거로 판단합니까?",
+        "locator": "Availability in GitHub Copilot; Enabling access; billing paragraph",
+        "claims": [
+          "대상 요금제와 여러 개발 도구에서의 제공",
+          "순차 배포·사용량 과금·관리자 정책"
+        ]
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.97,
+      "verificationStatus": "supported-as-publisher-announcement",
+      "needsReview": false,
+      "primaryUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot/",
+      "backupUrls": [],
+      "claimVerification": {
+        "sourceLocator": "Availability in GitHub Copilot; Enabling access; billing paragraph",
+        "verifiedClaims": [
+          "대상 요금제와 여러 개발 도구에서의 제공",
+          "순차 배포·사용량 과금·관리자 정책"
+        ],
+        "bodyAnchorChecks": [
+          {
+            "id": "plans",
+            "passed": true
+          },
+          {
+            "id": "gradual",
+            "passed": true
+          },
+          {
+            "id": "billing",
+            "passed": true
+          },
+          {
+            "id": "surfaces",
+            "passed": true
+          }
+        ],
+        "manualRead": true,
+        "performanceIndependentlyReproduced": false,
+        "interpretationLabel": "발표 해석"
+      },
+      "riskFlags": [
+        "vendor-statement-not-independent-outcome"
+      ],
+      "ledgerEvidenceLink": {
+        "path": "docs/redesign/BACKFILL-INTEGRATION.json",
+        "pointer": "/rows/14",
+        "eventId": "event-url-cf45e2be25e062a0c299",
+        "officialUrlMatches": true
+      }
+    }
+  ],
+  "openSource": [
+    {
+      "order": 1,
+      "repository": "openai/codex",
+      "repositoryUrl": "https://github.com/openai/codex",
+      "accessibility": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "repositoryHttpStatus": 200,
+        "licenseHttpStatus": 200,
+        "public": true,
+        "repositoryApiHttpStatus": 200,
+        "archived": false
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "name": "Apache License, Version 2.0",
+        "url": "https://github.com/openai/codex/blob/main/LICENSE",
+        "verifiedFromLicenseText": true
+      },
+      "latestStableRelease": {
+        "tag": "rust-v0.153.4",
+        "publishedAt": "2026-09-04T23:25:48Z",
+        "kstTimestamp": "2026-09-05T08:25:48+09:00",
+        "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4",
+        "draft": false,
+        "prerelease": false,
+        "asOf": "2026-09-09T18:44:48+09:00"
+      },
+      "documentedQuickstart": [
+        "npm install -g @openai/codex",
+        "codex"
+      ],
+      "ledgerLinks": [
+        "src-url-3d4e408ad45e65525517",
+        "src-url-a8d513fb104884f5c706",
+        "src-url-cf565721454d59f87ec8"
+      ],
+      "scopeCaveat": "The repository code is Apache-2.0. Connected models, accounts, APIs, service terms and costs are separate.",
+      "content": {
+        "title": "OpenAI Codex CLI",
+        "description": "터미널에서 저장소를 읽고 코딩 작업을 수행하는 에이전트입니다.",
+        "fit": "작은 수정 한 건을 정하고 변경 내용과 테스트 결과를 함께 확인하는 실습에 적합합니다.",
+        "speaking": "두 도구는 공개 코드와 실제 오픈소스 라이선스를 확인했습니다. 먼저 Codex에서 작은 수정과 테스트를 한 묶음으로 맡겨 보시면, 에이전트 결과를 검토하는 연습을 할 수 있습니다.",
+        "quickstart": "npm install -g @openai/codex\ncodex",
+        "extra": "macOS의 공식 대안: brew install --cask codex"
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.99,
+      "verificationStatus": "repository-license-release-readme-verified",
+      "verification": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "identity": {
+          "fullName": "openai/codex",
+          "officialOwner": "openai",
+          "public": true
+        },
+        "fetches": [
+          {
+            "url": "https://api.github.com/repos/openai/codex",
+            "status": 200,
+            "finalUrl": "https://api.github.com/repos/openai/codex",
+            "sha256": "de08849fe608d8ba3c5b365a829cb067dbc645cc81b239680a35b77ecf70702b",
+            "bytes": 5974
+          },
+          {
+            "url": "https://api.github.com/repos/openai/codex/releases/latest",
+            "status": 200,
+            "finalUrl": "https://api.github.com/repos/openai/codex/releases/latest",
+            "sha256": "df48594446dcaf93756e6b6688983ac3b1579c69679396f914c5b82fb14152ca",
+            "bytes": 272965
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/main/LICENSE",
+            "status": 200,
+            "finalUrl": "https://raw.githubusercontent.com/openai/codex/main/LICENSE",
+            "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+            "bytes": 10926
+          },
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/main/README.md",
+            "status": 200,
+            "finalUrl": "https://raw.githubusercontent.com/openai/codex/main/README.md",
+            "sha256": "ba4e1f69ff48386e72a9c5e1edaf76aad64a475c2d51af79ccba6d1128261ba7",
+            "bytes": 3334
+          }
+        ],
+        "releaseApiFields": {
+          "tag_name": "rust-v0.153.4",
+          "published_at": "2026-09-04T23:25:48Z",
+          "html_url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4",
+          "draft": false,
+          "prerelease": false,
+          "target_commitish": "main"
+        },
+        "licenseTextRead": true,
+        "readmeCommandsMatched": true,
+        "installationExecuted": false,
+        "installationReason": "Preparation request; did not install or authenticate clients or modify global tooling.",
+        "runtimeNotClaimed": true
+      }
+    },
+    {
+      "order": 2,
+      "repository": "google-gemini/gemini-cli",
+      "repositoryUrl": "https://github.com/google-gemini/gemini-cli",
+      "accessibility": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "repositoryHttpStatus": 200,
+        "licenseHttpStatus": 200,
+        "public": true,
+        "repositoryApiHttpStatus": 200,
+        "archived": false
+      },
+      "license": {
+        "spdx": "Apache-2.0",
+        "name": "Apache License, Version 2.0",
+        "url": "https://github.com/google-gemini/gemini-cli/blob/main/LICENSE",
+        "verifiedFromLicenseText": true
+      },
+      "latestStableRelease": {
+        "tag": "v0.59.0",
+        "publishedAt": "2026-09-08T21:13:43Z",
+        "kstTimestamp": "2026-09-09T06:13:43+09:00",
+        "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
+        "draft": false,
+        "prerelease": false,
+        "ledgerCutoffNote": "This latest-release status was checked after the 258-row ledger cutoff. The ledger itself contains v0.58.0 and earlier events.",
+        "asOf": "2026-09-09T18:44:48+09:00"
+      },
+      "documentedQuickstart": [
+        "npx @google/gemini-cli",
+        "npm install -g @google/gemini-cli",
+        "gemini"
+      ],
+      "ledgerLinks": [
+        "src-url-f02c1dc08d1409390620",
+        "src-url-2776a34d5c8a01b1c453"
+      ],
+      "scopeCaveat": "The CLI repository code is Apache-2.0. Gemini service accounts, models, usage limits and data terms are separate.",
+      "content": {
+        "title": "Gemini CLI",
+        "description": "Gemini를 터미널에서 사용하는 공개 에이전트입니다.",
+        "fit": "특정 저장소의 구조 설명과 파일 탐색부터 시작하는 실습에 적합합니다.",
+        "speaking": "Gemini CLI는 npx 명령으로 시작할 수 있습니다. 코드 구조를 설명하게 한 뒤 실제 파일과 대조하는 방식으로, AI의 설명을 확인하는 습관까지 함께 실습하실 수 있습니다.",
+        "quickstart": "npx @google/gemini-cli",
+        "extra": "전역 설치: npm install -g @google/gemini-cli → gemini"
+      },
+      "official": true,
+      "checkLevel": 2,
+      "confidence": 0.99,
+      "verificationStatus": "repository-license-release-readme-verified",
+      "verification": {
+        "checkedAt": "2026-09-09T18:44:48+09:00",
+        "identity": {
+          "fullName": "google-gemini/gemini-cli",
+          "officialOwner": "google-gemini",
+          "public": true
+        },
+        "fetches": [
+          {
+            "url": "https://api.github.com/repos/google-gemini/gemini-cli",
+            "status": 200,
+            "finalUrl": "https://api.github.com/repos/google-gemini/gemini-cli",
+            "sha256": "a93294c301104ed6ac71cf0e515c2ac73397250d7c7581ced07049368f69f4d8",
+            "bytes": 7011
+          },
+          {
+            "url": "https://api.github.com/repos/google-gemini/gemini-cli/releases/latest",
+            "status": 200,
+            "finalUrl": "https://api.github.com/repos/google-gemini/gemini-cli/releases/latest",
+            "sha256": "b0ae64949479c4384e745eeb78c67ef090db6edeb9892fc1696a56f2e259dc3c",
+            "bytes": 7359
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/LICENSE",
+            "status": 200,
+            "finalUrl": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/LICENSE",
+            "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+            "bytes": 11357
+          },
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/README.md",
+            "status": 200,
+            "finalUrl": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/README.md",
+            "sha256": "bacf354f3f674d57679ebf7b42dd69311bb9ef14200e18ca703d82aba48bf833",
+            "bytes": 13489
+          }
+        ],
+        "releaseApiFields": {
+          "tag_name": "v0.59.0",
+          "published_at": "2026-09-08T21:13:43Z",
+          "html_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0",
+          "draft": false,
+          "prerelease": false,
+          "target_commitish": "release/v0.59.0"
+        },
+        "licenseTextRead": true,
+        "readmeCommandsMatched": true,
+        "installationExecuted": false,
+        "installationReason": "Preparation request; did not install or authenticate clients or modify global tooling.",
+        "runtimeNotClaimed": true
+      }
+    }
+  ],
+  "remainingUncertainties": [
+    "NVIDIA agreement is not evidence of closed transaction or regulatory clearance.",
+    "Mistral and Anthropic publisher dates have no exact time/timezone.",
+    "Company performance and impact claims were not independently reproduced.",
+    "OSS installation/authentication/model runs were not executed; only documented instructions were verified.",
+    "Gemini CLI v0.59.0 is a current status after the 258-row collection cutoff.",
+    "VIP preparation is not approval of final website selection."
+  ],
+  "priorPreparationGeneratedAt": "2026-09-09T17:37:05+09:00",
+  "selectionApproval": "not-requested-in-this-subtask",
+  "verificationSummary": {
+    "checkedAt": "2026-09-09T18:44:48+09:00",
+    "newsCount": 6,
+    "openSourceCount": 2,
+    "officialNewsBodiesRead": 6,
+    "newsBodyAnchorChecks": 22,
+    "independentPublicFetchCount": 15,
+    "allFetchesHttp200": true,
+    "dateMetadataWithTimezoneCount": 4,
+    "publisherDateOnlyCount": 2,
+    "mistralIndexDateChecked": true,
+    "officialAnnouncementCheckLevel": 2,
+    "heroLevel3Claimed": false,
+    "grokTextReused": false,
+    "scope": "Bounded recheck of prepared artifacts. No collection rerun and no Grok source trust inherited."
+  },
+  "corrections": [
+    {
+      "area": "Mistral",
+      "change": "Removed unspecified closing schedule caveat; source states the financing was raised."
+    },
+    {
+      "area": "Prior VIP",
+      "change": "Replaced stale policy-grant reference with actual 2026-08b humanoid item; recorded selectedIds/vipSelected drift."
+    },
+    {
+      "area": "Anthropic",
+      "change": "Described phased autumn rollout without asserting current broad availability or a precise launch day."
+    },
+    {
+      "area": "WeatherNext",
+      "change": "Avoided independent best-in-world or accuracy claims; explicitly noted no reproduced benchmark."
+    },
+    {
+      "area": "Evidence",
+      "change": "Added live fetch hashes, date locations, body checks, repo license/release README verification and per-event duplicate checks."
+    }
+  ],
+  "qualityChecks": {
+    "completedAt": "2026-09-09T18:50:25+09:00",
+    "artifactGate": {
+      "command": "python3 /tmp/vip_artifact_gate.py",
+      "exitCode": 0,
+      "assertionCount": 84,
+      "result": "news=6; oss=2; body-anchors=22; source-endpoints=15; editions=12"
+    },
+    "renderQa": {
+      "url": "http://127.0.0.1:8879/2026-09-vip-prep/",
+      "checkedAt": "2026-09-09T18:47:54+09:00",
+      "viewports": [
+        {
+          "width": 1440,
+          "bodyScrollWidth": 1440,
+          "news": 6,
+          "oss": 2,
+          "headingOverflows": []
+        },
+        {
+          "width": 960,
+          "bodyScrollWidth": 960,
+          "news": 6,
+          "oss": 2,
+          "headingOverflows": []
+        },
+        {
+          "width": 720,
+          "bodyScrollWidth": 720,
+          "news": 6,
+          "oss": 2,
+          "headingOverflows": []
+        },
+        {
+          "width": 652,
+          "bodyScrollWidth": 652,
+          "news": 6,
+          "oss": 2,
+          "headingOverflows": []
+        },
+        {
+          "width": 390,
+          "bodyScrollWidth": 390,
+          "news": 6,
+          "oss": 2,
+          "headingOverflows": []
+        },
+        {
+          "width": 320,
+          "bodyScrollWidth": 320,
+          "news": 6,
+          "oss": 2,
+          "headingOverflows": []
+        }
+      ],
+      "screenshots": [
+        "/tmp/vip-desktop.png",
+        "/tmp/vip-tools.png",
+        "/tmp/vip-mobile-top.png",
+        "/tmp/vip-mobile-news.png"
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "speakerToggle": {
+        "entered": true,
+        "returned": true,
+        "speakingNotesRemainVisible": true
+      },
+      "evidenceDownload": {
+        "filename": "VIP-evidence-20260909.json",
+        "news": 6,
+        "openSource": 2,
+        "validJson": true
+      },
+      "printStyles": true,
+      "anchorNavigation": true,
+      "browser": "Installed Google Chrome via Playwright chromium channel=chrome",
+      "visuallyInspected": {
+        "desktopTop": true,
+        "desktopTools": true,
+        "mobileTop": true,
+        "mobileWeatherArticle": true,
+        "observed": "Readable Korean text, source links, note panels and code blocks; no clipping or horizontal overflow in inspected views."
+      },
+      "screenshotRetention": "Temporary local QA captures in /tmp; final HTML remains self-contained."
+    },
+    "verticalStripeGate": {
+      "command": "bash /Users/voidlight/.claude/qa-canon/no_vertical_stripe_gate.sh /Users/voidlight/projects/voidnews-reports/2026-09-vip-prep",
+      "exitCode": 0,
+      "violations": 0,
+      "filesScanned": 1
+    },
+    "artifactHashes": {
+      "BRIEFING.md": "9c80c25fe264c2e41c3f8014769004c2ddbaf0fbf8fbacf6182645a1a770421a",
+      "HTML": "eb1cb223c1d1f85c7a8a06c6f760d99f3fd17034e1ffb8c70e50658c71b4ad37"
+    },
+    "fixedDuringQa": [
+      "Used installed Chrome after bundled Playwright browser was unavailable.",
+      "Added an empty inline favicon to remove the local-server favicon 404.",
+      "Kept 07–08 navigation label on one line at mobile widths."
+    ]
+  }
+}
