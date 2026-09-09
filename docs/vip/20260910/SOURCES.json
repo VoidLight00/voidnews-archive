@@ -401,7 +401,7 @@
     {
       "id": "chess-input",
       "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/photography/chess-midgame.png",
-      "alt": "해 질 무렵 야외 테이블의 체스판",
+      "alt": "체스 말과 대국 시계가 놓인 체스판",
       "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
       "model": "GPT Image 2",
       "publicPath": "/ab/2026-09a/cases/chess-midgame.png",
@@ -435,7 +435,7 @@
     {
       "id": "poster-input",
       "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/typography-posters/tea-poster.png",
-      "alt": "찻잎과 찻잔을 배치한 GREEN TEA 광고 포스터",
+      "alt": "한자 제목과 16·19 가격, 차와 과일이 배치된 음료 포스터",
       "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
       "model": "GPT Image 2",
       "publicPath": "/ab/2026-09a/cases/tea-poster.png",
@@ -452,7 +452,7 @@
     {
       "id": "poster-output",
       "url": "https://raw.githubusercontent.com/wuyoscar/GPT-Image2-Skill/7268a1d977c3084527ef349e94bd7e032f06ea2f/docs/edit-endpoint-showcase/tea-poster-metro-lightbox.png",
-      "alt": "GREEN TEA 포스터가 설치된 지하철 광고판",
+      "alt": "음료 포스터를 지하철 광고판에 배치한 결과",
       "source": "https://github.com/wuyoscar/GPT-Image2-Skill/blob/7268a1d977c3084527ef349e94bd7e032f06ea2f/skills/gpt-image/references/gallery-edit-endpoint-showcase.md",
       "model": "GPT Image 2",
       "publicPath": "/ab/2026-09a/cases/tea-poster-metro-lightbox.png",
