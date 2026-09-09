@@ -14,6 +14,7 @@ export type SourceAuditInput = {
   tags?: string[];
   date?: string;
   verifiedAt?: string;
+  releaseScope?: string;
   communityDiscovery?: { platform: "hn" | "reddit"; score: number };
 };
 
@@ -30,6 +31,7 @@ export function hostnameOf(url: string): string {
 }
 
 export function inferReleaseScope(input: SourceAuditInput): string {
+  if (input.releaseScope?.trim()) return input.releaseScope;
   const text = [...(input.tags || []), input.source || "", input.officialUrl || ""].join(" ").toLowerCase();
   if (/preview|research|beta|early/.test(text)) return "Preview / Beta";
   if (/api|developer|docs|github/.test(text)) return "API / 개발자";

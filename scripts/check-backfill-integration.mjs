@@ -276,6 +276,61 @@ export const ledgerOnlyDisclosure = row => row.classification === 'supporting-ru
   && row.policy.datePrecisionDisclosure?.location === 'ledger-only'
   && row.policy.datePrecisionDisclosure?.reason === 'preexisting out-of-scope article; no invented timestamp';
 
+// Same-event curation reuses an already audited weekly row; it never creates a
+// second dated event. Bind the complete editorial object (thumbnail excluded by
+// the existing hash policy), its exact URL occurrences, and the source row bytes.
+export function checkAbReuse(manifest, runtime, check, covered = new Set()) {
+  const reuse = manifest.abReuseRows ?? [];
+  check(Array.isArray(reuse), 'AB reuse rows must be an array');
+  if (!Array.isArray(reuse)) return covered;
+  const fields = new Set(['edition', 'pointer', 'normalizedUrl', 'sourceRowKey', 'sourceWeek', 'sourceSlug',
+    'sourceContentSha256', 'contentSha256', 'urlPointers', 'relationship']);
+  const accepted = new Set(['accepted-publisher-announcement', 'accepted-publisher-date-only',
+    'accepted-limited-rss-provenance', 'accepted-primary-evidence']);
+  for (const row of reuse) {
+    if (!row || typeof row !== 'object' || Array.isArray(row)) { check(false, 'invalid AB reuse row'); continue; }
+    const label = `${row.edition}${row.pointer}`;
+    check(Object.keys(row).every(key => fields.has(key)) && row.relationship === 'curated-reference', `AB reuse invalid relationship/schema: ${label}`);
+    const pointerValid = typeof row.pointer === 'string'
+      && /^\/(?:highlights\/(?:0|[1-9]\d*)\/post|(?:modelWatch|editorsPicks|demoCards)\/(?:0|[1-9]\d*))$/.test(row.pointer);
+    check(pointerValid, `AB reuse invalid object pointer: ${label}`);
+    let normalized;
+    try { normalized = normalize(row.normalizedUrl); } catch { /* rejected below */ }
+    check(nonempty(normalized) && normalized === row.normalizedUrl, `AB reuse noncanonical URL: ${label}`);
+    const sources = manifest.rows.filter(item => rowKey(item) === row.sourceRowKey);
+    check(sources.length === 1, `AB reuse source row correspondence: ${label}`);
+    const source = sources[0];
+    if (source) {
+      check(source.classification === 'new-backfill' && accepted.has(source.policy?.status), `AB reuse source is not an accepted audited row: ${label}`);
+      check(row.sourceWeek === source.week && row.sourceSlug === source.slug
+        && row.sourceRowKey === `${row.sourceWeek}/${row.sourceSlug}`, `AB reuse source week/slug mismatch: ${label}`);
+      check(source.normalizedUrl === normalized && source.sourceId === `src-url-${sha(normalized || '').slice(0, 20)}`, `AB reuse source URL identity mismatch: ${label}`);
+      const originals = (runtime.posts || []).filter(item => item.week === source.week && item.post.slug === source.slug);
+      check(originals.length === 1, `AB reuse weekly runtime correspondence: ${label}`);
+      check(/^[a-f0-9]{64}$/.test(row.sourceContentSha256) && row.sourceContentSha256 === source.contentSha256
+        && originals.length === 1 && hashObject(content(originals[0].post)) === row.sourceContentSha256,
+      `AB reuse source content hash mismatch: ${label}`);
+      check(originals.length === 1 && sourceOf(originals[0].post) === normalized, `AB reuse weekly runtime URL mismatch: ${label}`);
+    }
+    const editions = runtime.editions.filter(edition => edition.slug === row.edition);
+    check(editions.length === 1, `AB reuse edition correspondence: ${label}`);
+    const post = pointerValid && editions.length === 1 ? atPointer(editions[0], row.pointer) : null;
+    const objectValid = post && typeof post === 'object' && !Array.isArray(post) && nonempty(post.title);
+    check(objectValid && /^[a-f0-9]{64}$/.test(row.contentSha256)
+      && hashObject(content(post)) === row.contentSha256, `AB reuse content hash mismatch: ${label}`);
+    if (!objectValid || !normalized) continue;
+    const occurrences = urlOccurrences(post, normalized);
+    check(occurrences.length > 0 && Array.isArray(row.urlPointers)
+      && hashObject([...occurrences].sort()) === hashObject([...row.urlPointers].sort()), `AB reuse URL occurrence mismatch: ${label}`);
+    for (const pointer of occurrences) {
+      const key = `${row.edition}${row.pointer}${pointer}`;
+      check(!covered.has(key), `duplicate AB reuse occurrence: ${key}`);
+      covered.add(key);
+    }
+  }
+  return covered;
+}
+
 export function checkAbSupporting(manifest, runtime, files, check, readText = read) {
   // Preserve the original baseline exemption; shared baseline URLs are audited
   // when they also participate in a newly reconciled source group.
@@ -319,6 +374,7 @@ export function checkAbSupporting(manifest, runtime, files, check, readText = re
       check(!(other.event?.publisherDate === row.event?.publisherDate && collapse(other.event?.section || '').toLowerCase() === collapse(row.event?.section || '').toLowerCase()), `AB duplicate date/feature: ${label}`);
     }
   }
+  checkAbReuse(manifest, runtime, check, covered);
   for (const url of new Set(rows.map(row => row.normalizedUrl))) {
     for (const edition of runtime.editions) {
       for (const pointer of urlOccurrences(edition, url)) check(covered.has(`${edition.slug}${pointer}`), `source already in AB registry without event coverage: ${edition.slug}${pointer}`);
@@ -584,6 +640,47 @@ export async function selfTest() {
   assert(abFailures([{ ...ab, urlPointers: [] }]).length);
   assert(abFailures([{ ...ab, event: rows[0].event }]).length);
   assert(abFailures([ab], { editions: [...abRuntime.editions, { slug: 'unmapped-edition', url }] }).length);
+  const weeklyPost = { slug: 'audited', title: 'Audited feature', source: url, content: 'Verified source summary' };
+  const curatedPost = { slug: 'curated', title: 'Curated feature', source: url, officialUrl: `${url}/`, content: 'Reviewed practical guide' };
+  const audited = { week: '2026-w36', slug: weeklyPost.slug, normalizedUrl: url,
+    sourceId: `src-url-${sha(url).slice(0, 20)}`, contentSha256: hashObject(content(weeklyPost)),
+    classification: 'new-backfill', policy: { status: 'accepted-primary-evidence' } };
+  const curated = { edition: 'curated-edition', pointer: '/highlights/0/post', normalizedUrl: url,
+    sourceRowKey: '2026-w36/audited', sourceWeek: audited.week, sourceSlug: audited.slug,
+    sourceContentSha256: audited.contentSha256, contentSha256: hashObject(content(curatedPost)),
+    urlPointers: ['/source', '/officialUrl'], relationship: 'curated-reference' };
+  const reuseRuntime = { posts: [{ week: audited.week, post: weeklyPost }],
+    editions: [{ slug: curated.edition, highlights: [{ post: curatedPost }] }] };
+  const reuseFailures = (approvals = [curated], registry = reuseRuntime, sourceRows = [audited]) => failuresFor(check =>
+    checkAbSupporting({ rows: sourceRows, abReuseRows: approvals }, registry, files, check));
+  assert.deepEqual(reuseFailures(), []);
+  for (const delta of [
+    { sourceRowKey: '2026-w36/missing' }, { sourceContentSha256: '0'.repeat(64) },
+    { contentSha256: '0'.repeat(64) }, { pointer: '/highlights/1/post' },
+    { pointer: '/highlights/00/post' }, { pointer: '/highlights/0' },
+    { sourceWeek: '2026-w35' }, { sourceSlug: 'another' },
+    { normalizedUrl: 'https://unrelated.test' }, { normalizedUrl: `${url}/` },
+    { relationship: 'new-event' }, { event: { id: 'invented' } },
+    { urlPointers: ['/source'] }, { urlPointers: ['/source', '/officialUrl', '/source'] }
+  ]) assert(reuseFailures([{ ...curated, ...delta }]).length, `AB reuse negative fixture ${JSON.stringify(delta)}`);
+  assert(reuseFailures([]).some(message => message.includes('without event coverage')));
+  assert(reuseFailures([curated, curated]).some(message => message.includes('duplicate AB reuse')));
+  assert(reuseFailures([curated], reuseRuntime, [audited, audited]).length);
+  assert(reuseFailures([curated], reuseRuntime, [{ ...audited, classification: 'preexisting-baseline' }]).length);
+  assert(reuseFailures([curated], reuseRuntime, [{ ...audited, policy: { status: 'needs-review' } }]).length);
+  const alteredWeekly = structuredClone(reuseRuntime); alteredWeekly.posts[0].post.content = 'Unreviewed revision';
+  assert(reuseFailures([curated], alteredWeekly).some(message => message.includes('source content hash')));
+  const alteredAb = structuredClone(reuseRuntime); alteredAb.editions[0].highlights[0].post.content = 'Unreviewed revision';
+  assert(reuseFailures([curated], alteredAb).some(message => message.includes('content hash')));
+  const uncoveredAb = structuredClone(reuseRuntime); uncoveredAb.editions[0].extraUrl = url;
+  assert(reuseFailures([curated], uncoveredAb).some(message => message.includes('without event coverage')));
+  const newLinkAb = structuredClone(reuseRuntime); newLinkAb.editions[0].highlights[0].post.backupUrls = [{ url }];
+  assert(reuseFailures([{ ...curated, contentSha256: hashObject(content(newLinkAb.editions[0].highlights[0].post)) }], newLinkAb)
+    .some(message => message.includes('URL occurrence mismatch')));
+  const sharedCoverage = new Set([`${curated.edition}${curated.pointer}/source`]);
+  assert(failuresFor(check => checkAbReuse({ rows: [audited], abReuseRows: [curated] }, reuseRuntime, check, sharedCoverage))
+    .some(message => message.includes('duplicate AB reuse')));
+  assert(reuseFailures({}).some(message => message.includes('must be an array')));
   const requestRow = { slug: 'request', normalizedUrl: url, event: { evidence: {
     sourceUrl: url, path: 'raw.html', sourceReference: { path: 'request.json', pointer: '/requestLogs/0' }
   } } };
@@ -611,7 +708,7 @@ export async function selfTest() {
   assert(windowFailures(dateOnlyWindow, '8/26 00:00').length);
   assert(windowFailures({ ...dateOnlyWindow, publication: { ...dateOnlyWindow.publication, publisherDate: '2026-08-25' } }, '8/25').length);
   assert.deepEqual(windowFailures({ ...dateOnlyWindow, classification: 'supporting-runtime' }, '1/01'), []);
-  return { status: 'PASS', fixtures: 61 };
+  return { status: 'PASS', fixtures: 87, abReuseFixtures: 26 };
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {

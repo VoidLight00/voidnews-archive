@@ -288,7 +288,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     lineHeight: 1.12,
                   }}
                 >
-                  Top 10 밖에서 추가로 볼 모델
+                  본편과 함께 볼 연구·모델 소식
                 </h2>
                 <p
                   className="deck"
@@ -300,7 +300,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--text-soft)",
                   }}
                 >
-                  회차 마감 직전 확인된 모델을 공식 발표·모델 카드·평가 조건과 함께 보강했습니다. 기존 Top 10 순위에는 합치지 않았습니다.
+                  본편과 연결되는 연구와 모델을 소개합니다. 공식 자료에서 공개 상태와 한계를 함께 확인할 수 있습니다.
                 </p>
               </div>
               <div className="tc-article-grid ab-edition-grid">

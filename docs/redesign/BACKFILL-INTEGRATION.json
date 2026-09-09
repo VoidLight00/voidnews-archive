@@ -18477,5 +18477,65 @@
         }
       }
     }
+  ],
+  "abReuseRows": [
+    {
+      "edition": "2026-09a",
+      "pointer": "/highlights/2/post",
+      "sourceRowKey": "2026-w36/google-20260903-gemini-3-8-flash-cyber",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber",
+      "sourceContentSha256": "dc0ce3324565626a6c1dee381c9050c00ad9c49c8740cdb5be287e5994c5af03",
+      "sourceWeek": "2026-w36",
+      "sourceSlug": "google-20260903-gemini-3-8-flash-cyber",
+      "contentSha256": "d7ecda47c5eba7513accfa42e86d74f6d7c7608d84db59e207cb9831730bc16b",
+      "urlPointers": [
+        "/source",
+        "/officialUrl"
+      ],
+      "relationship": "curated-reference"
+    },
+    {
+      "edition": "2026-09a",
+      "pointer": "/highlights/5/post",
+      "sourceRowKey": "2026-w36/feed-20260905-d0b16425fc",
+      "normalizedUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini",
+      "sourceContentSha256": "9930aac580fd51a8dc6268b71377077ee24ca4556988bdcd88b2def77cf9ea5b",
+      "sourceWeek": "2026-w36",
+      "sourceSlug": "feed-20260905-d0b16425fc",
+      "contentSha256": "cc1658ecac6dd822e43f597d79440926fd6556ebf217bc6f1c9ae444b3ece2f2",
+      "urlPointers": [
+        "/source",
+        "/officialUrl"
+      ],
+      "relationship": "curated-reference"
+    },
+    {
+      "edition": "2026-09a",
+      "pointer": "/highlights/1/post",
+      "sourceRowKey": "2026-w36/feed-pass2-20260902-7728fa2f91",
+      "normalizedUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+      "sourceContentSha256": "9ffaaef54a187d2acfd26812e622a483d5e9258573dea98a1f5a5b39f5b01c93",
+      "sourceWeek": "2026-w36",
+      "sourceSlug": "feed-pass2-20260902-7728fa2f91",
+      "contentSha256": "7bb7e03a39e32200c338e8d882a06ea9b6630fc980ad5182dc4c182567c8a658",
+      "urlPointers": [
+        "/backupUrls/4/url"
+      ],
+      "relationship": "curated-reference"
+    },
+    {
+      "edition": "2026-09a",
+      "pointer": "/modelWatch/0",
+      "sourceRowKey": "2026-w36/runway-gwm-worlds-2-0441f564",
+      "normalizedUrl": "https://runway.com/research/introducing-gwm-worlds-2",
+      "sourceContentSha256": "04c0031162432037cacc1ad82ffcdfa691517c723c7ef20311a523307d7aefc7",
+      "sourceWeek": "2026-w36",
+      "sourceSlug": "runway-gwm-worlds-2-0441f564",
+      "contentSha256": "7cb2448934e4a369552da78056c126fde613e7b11f2610b55cf64f7b5ccaadc7",
+      "urlPointers": [
+        "/sourceUrl"
+      ],
+      "relationship": "curated-reference"
+    }
   ]
 }

@@ -1,0 +1,345 @@
+{
+  "edition": "2026-09a",
+  "verifiedAt": "2026-09-09",
+  "period": "2026-08-27 ~ 2026-09-09",
+  "contentReview": {
+    "CR01": "Private wiki references removed; public official sources retained.",
+    "CR02": "Lyria examples describe separately generated tracks, not multi-turn editing.",
+    "CR03": "Fable data retention restricted to applicable organizational contracts.",
+    "CR04": "Existing World API identified as Marble; Atlas early access kept explicit."
+  },
+  "stories": [
+    {
+      "slug": "gpt-6-astra-practical-workflows",
+      "officialUrl": "https://openai.com/index/gpt-6-astra/",
+      "date": "9/3",
+      "sourceLinks": [
+        {
+          "label": "모델 선택",
+          "url": "https://learn.chatgpt.com/docs/models"
+        },
+        {
+          "label": "브라우저 사용법",
+          "url": "https://learn.chatgpt.com/docs/browser"
+        },
+        {
+          "label": "Computer Use 설정",
+          "url": "https://learn.chatgpt.com/docs/computer-use"
+        },
+        {
+          "label": "한도와 크레딧",
+          "url": "https://learn.chatgpt.com/docs/pricing"
+        },
+        {
+          "label": "실험 설정",
+          "url": "https://learn.chatgpt.com/docs/config-file/config-reference"
+        },
+        {
+          "label": "Astra 공식 적용 가이드",
+          "url": "https://developers.openai.com/api/docs/guides/latest-model"
+        },
+        {
+          "label": "Playco 게임 제작 공개 사례",
+          "url": "https://openai.com/index/playco-game-prototyping-with-astra/"
+        }
+      ],
+      "releaseScope": "Work·Codex / 순차 제공"
+    },
+    {
+      "slug": "claude-fable-5-1-practical-workflows",
+      "officialUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "date": "9/1",
+      "sourceLinks": [
+        {
+          "label": "모델 명세",
+          "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview"
+        },
+        {
+          "label": "작업 지시 가이드",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1"
+        },
+        {
+          "label": "추론·모델 설정",
+          "url": "https://code.claude.com/docs/en/model-config"
+        },
+        {
+          "label": "요금제별 한도",
+          "url": "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
+        },
+        {
+          "label": "Claude Code 2.1.257",
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257"
+        },
+        {
+          "label": "모델별 데이터 보관 적용 범위",
+          "url": "https://support.claude.com/en/articles/15425996-data-retention-practices-for-covered-models"
+        },
+        {
+          "label": "Claude 파일 출처 확인 도구",
+          "url": "https://claude.com/check-files"
+        }
+      ],
+      "releaseScope": "Claude·Code / API"
+    },
+    {
+      "slug": "gemini-3-8-flash-practical-workflows",
+      "officialUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "date": "9/2",
+      "sourceLinks": [
+        {
+          "label": "모델과 입력·설정 명세",
+          "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+        },
+        {
+          "label": "Google AI Studio",
+          "url": "https://aistudio.google.com/"
+        },
+        {
+          "label": "Google Antigravity",
+          "url": "https://antigravity.google/"
+        }
+      ],
+      "releaseScope": "앱·API / 일반 Flash"
+    },
+    {
+      "slug": "chatgpt-images-2-5-editing-workflows",
+      "officialUrl": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "date": "9/8",
+      "sourceLinks": [
+        {
+          "label": "API 요금·모델별 비용",
+          "url": "https://developers.openai.com/api/docs/pricing"
+        }
+      ],
+      "releaseScope": "ChatGPT·API / 순차 제공"
+    },
+    {
+      "slug": "world-labs-atlas-spatial-intelligence",
+      "officialUrl": "https://www.worldlabs.ai/blog/atlas",
+      "date": "9/1",
+      "sourceLinks": [
+        {
+          "label": "현재 Marble 서비스",
+          "url": "https://marble.worldlabs.ai/"
+        },
+        {
+          "label": "현재 Marble 기반 World API 안내",
+          "url": "https://docs.worldlabs.ai/api"
+        },
+        {
+          "label": "World Labs 소개",
+          "url": "https://www.worldlabs.ai/about"
+        }
+      ],
+      "releaseScope": "일부 파트너 조기 접근"
+    },
+    {
+      "slug": "lyria-3-5-gemini-music-workflows",
+      "officialUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+      "date": "9/4",
+      "sourceLinks": [
+        {
+          "label": "Lyria 3.5 공식 청취 예시",
+          "url": "https://deepmind.google/models/lyria/"
+        },
+        {
+          "label": "Gemini에서 음악 만들기",
+          "url": "https://gemini.google.com/"
+        },
+        {
+          "label": "Lyria 음악 생성 API 문서",
+          "url": "https://ai.google.dev/gemini-api/docs/music-generation"
+        }
+      ],
+      "releaseScope": "Gemini 앱 / API"
+    }
+  ],
+  "tools": [
+    {
+      "slug": "openai-notion-knowledge-capture",
+      "officialUrl": "https://github.com/openai/plugins/tree/main/plugins/notion/skills/notion-knowledge-capture",
+      "licenseUrl": "https://github.com/openai/plugins/blob/main/plugins/notion/skills/notion-knowledge-capture/LICENSE.txt"
+    },
+    {
+      "slug": "worldlabs-spark",
+      "officialUrl": "https://sparkjs.dev/",
+      "licenseUrl": "https://github.com/sparkjsdev/spark/blob/main/LICENSE"
+    }
+  ],
+  "images": [
+    {
+      "key": "astra",
+      "sourceUrl": "https://openai.com/index/gpt-6-astra/",
+      "url": "https://images.ctfassets.net/kftzwdyauwt9/6XttKhMddBzO6pT2IY2brG/841e9a215931057aeb578e1aa45f9bb4/career-website-dark-v3.png?w=3840&q=90&fm=webp",
+      "publicPath": "/og-cache/ab-20260910-astra.webp",
+      "sha256": "80137860e2aa321c9578af04632ee6f2a8458617d261b9cb1a93f15164e626cd",
+      "byteSize": 84918,
+      "width": 1831,
+      "height": 859,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "GPT-5.6 Sol과 GPT-6 Astra가 개인 경력 웹사이트 제작 요청에 답하는 방식을 나란히 비교한 OpenAI 공식 화면",
+      "caption": "OpenAI 제공 개인 웹사이트 제작 요청 응답 비교 화면입니다."
+    },
+    {
+      "key": "fable51",
+      "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "url": "https://cdn.sanity.io/images/4zrzovbb/website/4b8acf7ac952566415849134b65025b89a197bf6-1920x1080.jpg",
+      "publicPath": "/og-cache/ab-20260910-fable51.jpg",
+      "sha256": "14a7b5deb3f34c3bd7edefcd9849d2fd91e8d9c7c1278a5d68b22e37d74fba60",
+      "byteSize": 83113,
+      "width": 1920,
+      "height": 1080,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "Claude가 설계한 주황색 단백질 결합체와 회색 표적을 보여 주는 공식 연구 시연 영상의 정지 포스터",
+      "caption": "Anthropic 제공 연구 시연 포스터. 구조는 ESMFold2 예측이며 성능의 독립 검증 이미지가 아닙니다."
+    },
+    {
+      "key": "gemini38",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-8_flash__blog__header__.width-2200.format-webp.webp",
+      "publicPath": "/og-cache/ab-20260910-gemini38.webp",
+      "sha256": "05291101491045d68964a63dc463ec5ab8406b5b45ca1ddfb014453cc1241a24",
+      "byteSize": 50470,
+      "width": 2200,
+      "height": 1237,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "Gemini 3.8 Flash와 3.8 Flash Cyber를 함께 소개하는 Google 공식 기사 대표 이미지",
+      "caption": "Google 공식 본문 상단 이미지"
+    },
+    {
+      "key": "images25",
+      "sourceUrl": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "url": "https://images.ctfassets.net/kftzwdyauwt9/31fyboLGIlu5roN22tlEHK/9be57d84b3b7bbf22e7aa7f74b5af102/baby-portrait-after.webp",
+      "publicPath": "/og-cache/ab-20260910-images25.webp",
+      "sha256": "5f58aa58a7d7be0e1acfb044d7869f2f8477cd8cd0a844b64d516226ad63f549",
+      "byteSize": 217330,
+      "width": 1086,
+      "height": 1448,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "파란 배경의 어린이 인물 사진에서 의상이 아이보리 턱시도와 검은 나비넥타이로 바뀐 ChatGPT Images 2.5 결과 예시",
+      "caption": "OpenAI 제공 Images 2.5 편집 결과 예시. 원본 인물 사진과 비교하는 제공사 시연 자료입니다."
+    },
+    {
+      "key": "images25-input",
+      "sourceUrl": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "url": "https://images.ctfassets.net/kftzwdyauwt9/32SMucJsSrwGCjHrGx4wkb/34dc5553df131fac17423e84177ce002/baby-portrait-before.jpeg",
+      "publicPath": "/ab-media/20260910/images25-input.jpg",
+      "sha256": "d5916b5f85875ab949fa5d401a0c013ef6f8c2bf984d603735443f47f6cd2890",
+      "byteSize": 2244613,
+      "width": 3024,
+      "height": 4032,
+      "selectionKind": null,
+      "originalBytesUnedited": true,
+      "alt": "파란 배경에서 빨간 셔츠를 입은 어린이의 인화된 스튜디오 초상 사진, Images 2.5 편집 예시의 입력 사진",
+      "caption": "OpenAI 제공 입력 사진. ab-20260910-images25 결과와 짝을 이루는 공식 편집 사례입니다."
+    },
+    {
+      "key": "atlas",
+      "sourceUrl": "https://www.worldlabs.ai/blog/atlas",
+      "url": "https://wlt-ai-cdn.art/atlas/assets-827/hero/optimized/v3-banner.webp",
+      "publicPath": "/og-cache/ab-20260910-atlas.webp",
+      "sha256": "354e03b345419bba1de377f3bcf4bac94cc02e2c3bbaba1eba4576aba9fc3eea",
+      "byteSize": 60048,
+      "width": 1920,
+      "height": 1080,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "Atlas가 생성하고 탐색하는 공간을 소개하는 World Labs 공식 기사 상단 영상의 정지 포스터",
+      "caption": "World Labs 공식 Atlas 시연 포스터. 영상 파일은 다운로드하지 않았습니다."
+    },
+    {
+      "key": "atlas-robotics",
+      "sourceUrl": "https://www.worldlabs.ai/blog/atlas",
+      "url": "https://wlt-ai-cdn.art/atlas/assets-827/robotics/poster/atlas-robotics-demo-v3.jpg",
+      "publicPath": "/og-cache/ab-20260910-atlas-robotics.jpg",
+      "sha256": "fb09fe992dcd9320c78bf7254b34ecbb54284e5764ed102f088994fbc71e5fc5",
+      "byteSize": 65242,
+      "width": 1280,
+      "height": 720,
+      "selectionKind": null,
+      "originalBytesUnedited": true,
+      "alt": "실제 장면을 로봇 시뮬레이션으로 연결하는 Atlas 공식 시연 영상의 정지 포스터",
+      "caption": "World Labs 제공 Real-to-Sim 시연 포스터. 실제 로봇 실험의 독립 검증 자료는 아닙니다."
+    },
+    {
+      "key": "atlas-garden",
+      "sourceUrl": "https://www.worldlabs.ai/blog/atlas",
+      "url": "https://wlt-ai-cdn.art/atlas/assets-827/3d-outputs/thumb/1.webp",
+      "publicPath": "/og-cache/ab-20260910-atlas-garden.webp",
+      "sha256": "cc3c66bd7f67c9637b6d3c7cb622844db3ef3817baee49259949e9330573de3f",
+      "byteSize": 22262,
+      "width": 480,
+      "height": 270,
+      "selectionKind": null,
+      "originalBytesUnedited": true,
+      "alt": "이끼 낀 판타지 정원을 새로운 시점과 3D 공간으로 확장하는 Atlas 공식 사례의 썸네일",
+      "caption": "World Labs 제공 Fantasy garden 사례 썸네일. 동영상에서 추출하거나 새로 생성한 이미지가 아닙니다."
+    },
+    {
+      "key": "lyria",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+      "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Lyria_social.max-1440x810.png",
+      "publicPath": "/og-cache/ab-20260910-lyria.png",
+      "sha256": "3b06ddbd12d8d9552e735e83fa99b26fad49fdee44f104ec6feba2dc492aa133",
+      "byteSize": 597610,
+      "width": 1440,
+      "height": 810,
+      "selectionKind": "source-share-preview",
+      "originalBytesUnedited": true,
+      "alt": "Lyria 3.5를 소개하는 Google 공식 기사 공유용 이미지",
+      "caption": "Google 공식 기사 공유용 이미지. 본문에 별도 정적 이미지가 없어 사용했습니다."
+    },
+    {
+      "key": "notion-capture",
+      "sourceUrl": "https://github.com/openai/plugins/tree/main/plugins/notion/skills/notion-knowledge-capture",
+      "url": "https://opengraph.githubassets.com/ab0f2e67b90bf8e16170f0e57eab62da10b19bbef2c80a20c9f09582e1e31e20/openai/plugins",
+      "publicPath": "/og-cache/ab-20260910-notion-capture.png",
+      "sha256": "a9f65b67287def422d4497868350e7cfff87c69284dd90c8df1ff93c1f094402",
+      "byteSize": 38965,
+      "width": 1200,
+      "height": 600,
+      "selectionKind": "source-share-preview",
+      "originalBytesUnedited": true,
+      "alt": "OpenAI plugins 공식 저장소의 GitHub 공유 이미지",
+      "caption": "Notion 지식 정리 스킬이 포함된 OpenAI 공식 저장소의 공유 이미지입니다."
+    },
+    {
+      "key": "spark",
+      "sourceUrl": "https://www.worldlabs.ai/blog/spark-2.0",
+      "url": "https://www.worldlabs.ai/images/mipmap-nanite.png",
+      "publicPath": "/og-cache/ab-20260910-spark.png",
+      "sha256": "b48549a67579e88825c9a97190a75b55bf6c619e433e66715cf6e4e4f0a2b782",
+      "byteSize": 440277,
+      "width": 2085,
+      "height": 864,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "가까운 곳과 먼 곳의 표현을 달리하는 그래픽 기법을 설명한 Spark 공식 글의 비교 그림",
+      "caption": "World Labs의 Spark 2.0 기술 설명 글에 실린 세부 수준 비교 그림입니다."
+    },
+    {
+      "key": "runway",
+      "sourceUrl": "https://runway.com/research/introducing-gwm-worlds-2",
+      "url": "https://d3phaj0sisr2ct.cloudfront.net/site/research/gwm-worlds-2/posters/survivor-player-9s.webp",
+      "publicPath": "/og-cache/ab-20260910-runway.webp",
+      "sha256": "87fc0d57483491342552c3381f3f98a0c8b4af2cff8a38ba2ba9aabcb788c97a",
+      "byteSize": 118424,
+      "width": 1216,
+      "height": 704,
+      "selectionKind": "source-first-image",
+      "originalBytesUnedited": true,
+      "alt": "석양의 사막에서 창을 든 인물의 시점으로 보이는 Runway GWM Worlds 2 공식 시연 포스터",
+      "caption": "Runway가 공개한 GWM Worlds 2 연구 시연의 정지 포스터입니다."
+    }
+  ],
+  "scope": {
+    "modelDemosExecuted": false,
+    "toolInstallationsExecuted": false,
+    "vendorExamplesLabeled": true,
+    "videoLinksBasedOn": "description chapter timestamps; no full viewing or verified transcripts"
+  }
+}

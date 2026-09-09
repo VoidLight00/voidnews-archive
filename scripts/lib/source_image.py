@@ -71,6 +71,8 @@ def excluded(node):
         a = item.attrs
         if item.tag in {'nav','aside','footer','template','noscript'} or a.get('role') in {'navigation','banner','contentinfo'}:
             return True
+        if item is not node and item.tag in {'h1','h2','h3','h4','h5','h6'}:
+            return True
         if item.tag == 'header' and not any(p.tag == 'article' for p in list(item.ancestors())[1:]):
             return True
         if 'hidden' in a or a.get('aria-hidden') == 'true' or re.search(r'(display\s*:\s*none|visibility\s*:\s*hidden)',a.get('style',''),re.I):
@@ -94,12 +96,13 @@ def image_url(node, base):
                 score = float(re.sub(r'[^0-9.]','',bits[-1]) or 1) if len(bits)>1 else 1
                 parts.append((score,bits[0]))
         candidates.extend(value for _,value in sorted(parts,reverse=True))
-    candidates.extend(a.get(k) for k in ['data-src','data-lazy-src','data-original','src','poster'])
+    keys = ['poster', 'data-poster'] if node.tag == 'video' else ['data-src','data-lazy-src','data-original','src']
+    candidates.extend(a.get(k) for k in keys)
     if node.tag not in {'img','source','video'}:
         candidates.extend(re.findall(r'background(?:-image)?\s*:[^;]*url\([\s\"\']*([^\)\"\']+)', a.get('style','') or '',re.I))
     for value in candidates:
         url = safe_url(value,base)
-        if url and not EXCLUDED.search(urlsplit(url).path):
+        if url and not EXCLUDED.search(urlsplit(url).path) and not re.search(r'\.(mp4|webm|mov|m3u8|mp3|wav)$', urlsplit(url).path, re.I):
             return url
     return None
 

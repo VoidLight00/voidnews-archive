@@ -56,6 +56,7 @@ function hostnameOf(url: string): string {
 }
 
 function inferReleaseScope(post: Post): string {
+  if (post.releaseScope?.trim()) return post.releaseScope;
   const text = [...(post.tags || []), post.source || "", post.officialUrl || ""].join(" ").toLowerCase();
   if (/preview|research|beta|early/.test(text)) return "Preview / Beta";
   if (/api|developer|docs|github/.test(text)) return "API / Developer";
@@ -329,10 +330,13 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
             <figure className={styles.articleHero}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={post.thumbnail.src} alt={post.thumbnail.alt ?? post.title} />
-              {imageDisclosure(post.thumbnail.src, activeLang, post.thumbnail.provenance) ? (
-                <figcaption><ImageDisclosure src={post.thumbnail.src} provenance={post.thumbnail.provenance} locale={activeLang} /></figcaption>
-              ) : officialHost ? (
-                <figcaption>{activeLang === "ko" ? `출처 · ${officialHost}` : `Source · ${officialHost}`}</figcaption>
+              {post.thumbnail.caption || imageDisclosure(post.thumbnail.src, activeLang, post.thumbnail.provenance) || officialHost ? (
+                <figcaption>
+                  {activeLang === "ko" && post.thumbnail.caption ? <>{post.thumbnail.caption}<br /></> : null}
+                  {imageDisclosure(post.thumbnail.src, activeLang, post.thumbnail.provenance) ? (
+                    <ImageDisclosure src={post.thumbnail.src} provenance={post.thumbnail.provenance} locale={activeLang} />
+                  ) : officialHost ? (activeLang === "ko" ? `출처 · ${officialHost}` : `Source · ${officialHost}`) : null}
+                </figcaption>
               ) : null}
             </figure>
           ) : null}

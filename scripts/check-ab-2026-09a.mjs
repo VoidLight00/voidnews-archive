@@ -1,0 +1,74 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import crypto from 'node:crypto';
+import ts from 'typescript';
+import assert from 'node:assert/strict';
+
+const root = path.resolve(import.meta.dirname, '..');
+const source = fs.readFileSync(path.join(root, 'lib/ab/editions/2026-09a.ts'), 'utf8');
+const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS }, reportDiagnostics: true });
+assert.ok(!compiled.diagnostics?.some(d => d.category === ts.DiagnosticCategory.Error), 'edition syntax');
+const exports = {};
+vm.runInNewContext(compiled.outputText, { exports }, { timeout: 2000 });
+const e = exports.edition2026_09a;
+const ledger = JSON.parse(fs.readFileSync(path.join(root, 'docs/vip/20260910/SOURCES.json'), 'utf8'));
+assert.equal(e.slug, '2026-09a');
+assert.equal(e.announceDate, '2026-09-10');
+assert.equal(e.period, '2026-08-27 ~ 2026-09-09');
+assert.equal(e.highlights.length, 6);
+assert.equal(e.editorsPicks.length, 2);
+assert.equal(e.modelWatch.length, 1);
+const ordered = [/GPT.?6.*Astra/i, /Fable 5\.1/i, /Gemini 3\.8 Flash/i, /Images 2\.5/i, /Atlas/i, /Lyria 3\.5/i];
+const primaryHosts = ['openai.com', 'www.anthropic.com', 'blog.google', 'openai.com', 'www.worldlabs.ai', 'blog.google'];
+const imageByPath = new Map(ledger.images.map(i => [i.publicPath, i]));
+assert.equal(imageByPath.size, 12);
+const used = new Set();
+const image = value => {
+  assert.ok(value?.src && value.alt && value.caption, 'image needs path, alt, caption');
+  const proof = imageByPath.get(value.src);
+  assert.ok(proof, 'every image must have source evidence');
+  const bytes = fs.readFileSync(path.join(root, 'public', value.src));
+  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), proof.sha256, value.src);
+  assert.equal(bytes.length, proof.byteSize);
+  assert.equal(proof.originalBytesUnedited, true);
+  assert.ok(proof.width >= 240 && proof.height >= 120);
+  if (proof.selectionKind === 'source-share-preview') assert.equal(value.provenance, 'source-share-preview');
+  used.add(value.src);
+};
+for (const [index, highlight] of e.highlights.entries()) {
+  const p = highlight.post;
+  assert.equal(highlight.rank, index + 1);
+  assert.match(p.title, ordered[index]);
+  assert.ok(p.content.length >= 1000, `substantive body: ${p.slug}`);
+  assert.ok((p.content.match(/\*\*[^*]+\*\*/g) ?? []).length >= 4);
+  assert.equal(new URL(p.officialUrl).hostname, primaryHosts[index]);
+  assert.equal(p.source, p.officialUrl);
+  assert.ok(p.releaseScope?.length > 5, 'reviewed availability replaces URL inference');
+  const proof = ledger.stories.find(s => s.slug === p.slug);
+  assert.equal(proof?.officialUrl, p.officialUrl);
+  assert.equal(proof?.date, p.date);
+  assert.match(p.content, /제안|실습/);
+  assert.match(p.content, /영상 전체 시청이나 자막 검증을 완료했다는 뜻은 아닙니다/);
+  assert.ok(p.en?.title && p.en?.summary, 'English summary');
+  assert.ok(!p.videoUrl, 'article image remains above supplementary video links');
+  image(p.thumbnail);
+  for (const extra of p.galleryImages ?? []) image(extra);
+}
+for (const p of e.editorsPicks) {
+  assert.ok(p.body.length >= 800);
+  assert.ok(['github.com', 'sparkjs.dev'].includes(new URL(p.sourceUrl).hostname));
+  assert.ok(p.guideUrl.includes('LICENSE'));
+  assert.match(p.body, /설치와 서비스 연결은 이 브리핑 작성 중 실행하지 않았습니다/);
+  image(p.thumbnail);
+}
+for (const p of e.modelWatch) image(p.thumbnail);
+assert.equal(used.size, imageByPath.size, 'all source media included');
+assert.match(e.highlights[0].post.content, /승인을 반복해서 물을 때/);
+assert.match(e.highlights[0].post.content, /Playco/);
+assert.match(e.highlights[1].post.content, /소비자 Pro·Max 계정에 동일하게 적용되는 규칙으로 해석하면 안 됩니다/);
+assert.match(e.highlights[4].post.content, /조기 접근|얼리 액세스|early access|일부 파트너/);
+assert.match(e.highlights[5].post.content, /별도 곡을 새로 생성/);
+assert.match(e.modelWatch[0].body, /연구 프리뷰/);
+assert.doesNotMatch(JSON.stringify(e), /\/Users\/|chatId|authorId|roomId|원문 대화|위키에는|TBD|TODO|lorem ipsum/i);
+console.log(`PASS[ab-2026-09a] 6 ordered guides, 2 tools, 1 research watch, ${used.size} source images and content boundaries`);

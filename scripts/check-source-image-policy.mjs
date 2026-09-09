@@ -20,6 +20,10 @@ const cases = [
   ['non-https blocked', `${og}<main><h1>Story</h1><img src="javascript:alert(1)"></main>`, '/share.jpg'],
   ['relative entity decoding', `${og}<main><h1>Story</h1><img src="/top.jpg?w=1200&amp;q=80"></main>`, '/top.jpg?w=1200&q=80'],
   ['empty HTML attributes', `${og}<main style><h1>Story</h1><img class style src="/top.jpg"></main>`, '/top.jpg'],
+  ['video hero uses poster not media', `${og}<main><h1>Atlas</h1><video src="/hero.mp4" poster="/hero.jpg"></video></main>`, '/hero.jpg'],
+  ['video without poster is not an image', `${og}<main><h1>Atlas</h1><video src="/hero.mp4"></video><img src="/top.jpg"></main>`, '/top.jpg'],
+  ['decorative heading glyphs excluded', `${og}<main><h1>Images <img src="/letter-glyph.jpg"></h1><img src="/example.jpg"></main>`, '/example.jpg'],
+  ['media URL in image attribute rejected', `${og}<main><h1>Atlas</h1><img src="/hero.mp4"></main>`, '/share.jpg'],
 ];
 for (const [label,html,expected] of cases) assert.equal(selectSourceImage(html,base)?.image,new URL(expected,base).href,label);
 assert.equal(selectSourceImage('<main><h1>Story</h1></main>',base),null);
