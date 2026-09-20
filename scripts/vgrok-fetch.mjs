@@ -13,6 +13,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const CCR_URL = process.env.VGROK_CCR_URL || "http://127.0.0.1:3456/v1/messages";
 const CCR_MODEL = process.env.VGROK_MODEL || "grok-4.3[1m]";
@@ -36,6 +37,7 @@ function parseArgs() {
     else if (a === "--date") out.date = args[++i];
     else if (a === "--out") out.out = args[++i];
     else if (a === "--strict") out.strict = true;
+    else if (a === "--compact") out.compact = true;
   }
   if (!out.topic) {
     console.error("usage: vgrok-fetch --topic '<주제>' [--style 1|2|3] [--lang ko|en] [--compare ...] [--emphasis ...] [--out path]");
@@ -47,7 +49,10 @@ function parseArgs() {
   return out;
 }
 
-function buildPrompt({ topic, style, lang, compare, emphasis, date }) {
+export function outputLimit(compact = false) { return compact ? 1800 : 6000; }
+
+export function buildPrompt({ topic, style, lang, compare, emphasis, date, compact = false }) {
+  if (compact) return `후보 탐색 전용입니다. 주제: ${topic}\n기준일: ${date}\n출력 언어: ${lang === "ko" ? "한국어" : "영어"}\n한국 청자 가중치: 한국 기업/매체/사용자 관점이 의미 있으면 별도 항목으로 다룰 것\n강조: ${emphasis || "없음"}. 비교 대상: ${compare || "없음"}.\n장문 배경·시장 평가·전략 보고서를 작성하지 마세요. 후보별 제목, 발표일(모르면 unknown), 핵심 사실 한 문장, 공식 후보 URL, 미확인 사항만 작성하세요.\n각 사실에 (출처: <도메인>/<경로>, YYYY.M.D) 인용을 붙이고 참고 출처 목록에 절대 HTTPS URL을 쓰세요. 최소 4개 실제 인용이 필요합니다. 출처가 부족하면 지어내지 마세요. 공식성은 후속 검증자가 판정합니다.`;
   return `────────────────────────────────────
 【AI 정보 요약 마스터 템플릿 v3.0 – 출처 검증 최강 버전】
 ────────────────────────────────────
@@ -146,10 +151,10 @@ async function healthCheck() {
   }
 }
 
-async function callVgrok(prompt) {
+async function callVgrok(prompt, compact = false) {
   const body = {
     model: CCR_MODEL,
-    max_tokens: 6000,
+    max_tokens: outputLimit(compact),
     messages: [{ role: "user", content: prompt }],
   };
   const ctrl = new AbortController();
@@ -179,7 +184,7 @@ async function callVgrok(prompt) {
   }
 }
 
-function extractCitations(text) {
+export function extractCitations(text) {
   // (출처: domain/path, YYYY.M.D) — 본문 인라인 인용
   const inlineRe = /\(출처:\s*([^,)]+?)(?:,\s*([\d.]+))?\)/g;
   const inline = [];
@@ -267,7 +272,7 @@ async function main() {
 
   let resp;
   try {
-    resp = await callVgrok(buildPrompt(args));
+    resp = await callVgrok(buildPrompt(args), args.compact);
   } catch (e) {
     result.fallbackReason = `vgrok-call-failed:${String(e).slice(0, 120)}`;
     finish(result, args, t0);
@@ -320,7 +325,9 @@ function finish(result, args, t0) {
   }
 }
 
-main().catch((e) => {
-  console.error("[vgrok-fetch] fatal:", e);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  main().catch((e) => {
+    console.error("[vgrok-fetch] fatal:", e);
+    process.exit(1);
+  });
+}
