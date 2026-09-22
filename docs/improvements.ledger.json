@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-09-09",
+  "updated": "2026-09-22",
   "entries": [
     {
       "id": "IMP-0001",
@@ -754,6 +754,81 @@
         "cmd": "node scripts/check-regressions.mjs"
       },
       "notes": "20260909 resume. Build-time metadata guard preserves header rules and browser regression assertions; actual 820/768/652px browser execution is recorded separately in RESUME-20260909.md."
+    },
+    {
+      "id": "IMP-0041",
+      "date": "2026-09-20",
+      "source": "user-instruction",
+      "category": "workflow",
+      "request": "워크플로우 최소 갱신: 무손실 후보 배정, 원본과 본문 분리, 실측 usage unknown, 모델 입력 감사 결속, 선택 compact, 편집 검사 최신성 계약",
+      "status": "verified",
+      "files": [
+        "scripts/vgrok-fetch.mjs",
+        "scripts/test-vgrok-compact.mjs",
+        "docs/WORKFLOW_RENEWAL_PLAN.md",
+        "docs/WORKFLOW_RENEWAL_LOG.md",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_cache.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/routing_budget.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/merge_luna_shards.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_contract.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_renewal_selftest.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_routing_selftest.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/gates/check_collection_routing.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh",
+        "~/.claude/skills/voidnews-briefing-pipeline/SKILL.md"
+      ],
+      "commit": null,
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh --stage selftest && node scripts/test-vgrok-compact.mjs"
+      },
+      "notes": "로컬 fixture 및 repository close exit 0. 실측 토큰 절감률 unknown. 운영 API/브라우저/배포 미실행, lib/public 미수정. verified는 위 로컬 계약 범위이며 실제 호출 절감을 의미하지 않음."
+    },
+    {
+      "id": "IMP-0042",
+      "date": "2026-09-20",
+      "source": "user-instruction",
+      "category": "workflow",
+      "request": "Fable 재검토 잔여 보강: review UTF8 byte 상한, 신규 bound shadow 공용 실행기, slim stdin 소비 및 공급자 응답 usage 자동 finish 연결",
+      "status": "verified",
+      "files": [
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_runner.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_stage3_selftest.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh",
+        "~/.claude/skills/voidnews-briefing-pipeline/SKILL.md",
+        "docs/WORKFLOW_RENEWAL_STAGE3.md",
+        "docs/WORKFLOW_RENEWAL_LOG.md"
+      ],
+      "commit": null,
+      "evidence": {
+        "kind": "exit0",
+        "cmd": "bash ~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh --stage selftest && node scripts/test-vgrok-compact.mjs"
+      },
+      "notes": "RED exit1 이후 master exit0. 외부 API 아닌 mock provider E2E만 검증. native Agent telemetry/실제 토큰 절감 unknown. legacy resume/공개 데이터/원 평가 유지."
+    },
+    {
+      "id": "IMP-0043",
+      "date": "2026-09-22",
+      "source": "ab-run",
+      "category": "ab-data",
+      "request": "2026-09-09~22 AI 뉴스 공백 수집·검증 후 Weekly 아카이브 반영 (2026-w38 신규 61건, 2026-w39 부분 주차 13건)",
+      "status": "applied",
+      "files": [
+        "lib/weeks/2026-w38.ts",
+        "lib/weeks/2026-w39.ts",
+        "lib/data.ts",
+        "references/weekly-source-image-audit.json"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "node -e \"const fs=require('fs');const ts=require('typescript');require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,f);const {weeks}=require('./lib/data.ts');const n=weeks.filter(w=>['2026-w38','2026-w39'].includes(w.slug)).reduce((a,w)=>a+w.companies.reduce((b,c)=>b+c.posts.length,0),0);process.stdout.write(String(n))\"",
+        "op": "eq",
+        "value": 74
+      },
+      "notes": "20260922-134206-ab-20260909-20260922"
     }
   ]
 }
