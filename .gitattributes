@@ -1,5 +1,4 @@
-# BEGIN backfill-evidence (generated) — hash-bound caches must round-trip byte for byte.
-# Git's text normalisation rewrote CRLF on checkout and broke evidence hashes in the
-# deploy builder while the working tree stayed intact (FAILURE_LOG VN-CI-02).
-_workspace/oneway/** -text -diff
-# END backfill-evidence
+# Hash-bound source caches must round-trip byte for byte. Git's text normalisation
+# rewrote CRLF on checkout and broke evidence hashes in the deploy builder while the
+# working tree stayed intact (FAILURE_LOG VN-CI-02).
+references/backfill-evidence/** -text -diff
