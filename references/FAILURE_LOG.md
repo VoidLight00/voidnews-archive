@@ -262,3 +262,32 @@ og 태그가 아예 없는 페이지(seed.bytedance.com 제품/블로그, meta.c
 - 수정: 헤더를 820px에서 두 행으로 배치하고 라벨을 한 줄로 보존합니다. 작은 휴대폰에서는 보조 Archive 표기만 숨깁니다.
 - 검증: `check-i18n-coverage.mjs`와 `--no-experimental-strip-types` 실행, `test-browse-ui.mjs`의 820/768/652px·텍스트 조각 줄 수 검사를 추가했습니다.
 - 담당: Codex 재개 세션, 2026-09-09.
+
+
+### VN-CI-02 — 배포 빌더에 없는 증거로 prebuild 게이트 2종이 막혔다 (2026-09-22)
+
+- 증상: `npm run build` 는 로컬에서 exit 0 인데 `vercel --prod` 빌드가 exit 1 로 죽었습니다.
+  `FAIL[backfill-integration] ENOENT: .../_workspace/oneway/20260908-backfill-final-manifest/baseline-week35.json`
+  과 `verify-no-duplicates ... 1 NEW [weeks] zed.dev/releases` 두 가지입니다.
+- 원인: `check-backfill-integration.mjs` 는 `docs/redesign/BACKFILL-INTEGRATION.json` 이 가리키는
+  493개·151.4MB 증거 파일을 읽습니다. 그 파일들은 `_workspace/oneway/**` 아래에 있고
+  `.gitignore`(46행)와 `.vercelignore` 가 모두 `_workspace` 를 제외합니다. 빌더에는 존재할 수 없습니다.
+  `verify-no-duplicates.mjs` 는 22행에서 그 게이트의 `validate()` 를 그대로 가져와
+  "full event provenance" 로 공유 출처 그룹 1건을 면제하므로, 증거가 없으면 같은 그룹이
+  신규 중복으로 뒤집혀 함께 실패합니다. 두 실패는 뿌리가 하나입니다.
+- 범위: 내 변경 때문이 아닙니다. 푸시 전 커밋(0df993f)을 git-only 클론으로 체크아웃해
+  `node scripts/run-all-gates.mjs` 를 돌리면 **실패 집합이 완전히 동일**합니다(실측).
+  즉 이 브랜치는 이 세션 이전부터 운영 배포가 불가능한 상태였습니다.
+- 왜 잠복했나: 로컬 작업 트리에는 `_workspace` 가 있어 게이트가 늘 통과합니다.
+  VN-CI-01 과 같은 계열 — "리포 게이트의 evidence 는 리포 상대경로만 쓴다" 를
+  gitignore 된 경로에도 적용해야 한다는 것을 이 사례가 보여줍니다.
+- 남은 선택지(둘 다 경계 변경이라 사용자 결정 필요):
+  1. 증거 코퍼스를 커밋한다 — 151.4MB 라 현실적이지 않습니다.
+  2. 두 게이트를 환경 분기시킨다. 코퍼스가 **통째로 없을 때만** 감사 불가를 명시적으로
+     출력하고 건너뛰되, 코퍼스가 있는 환경에서는 지금 그대로 전면 강제합니다.
+     `verify-no-duplicates` 는 면제된 공유 그룹 id 만 담은 작은 색인을 커밋하면
+     151MB 없이도 CI 에서 같은 판정을 유지할 수 있습니다.
+- 재발 방지: prebuild 에 새 게이트를 배선할 때, 그 게이트가 읽는 모든 경로가
+  git 에 존재하는지 확인합니다. 확인 방법은 추측이 아니라 실측입니다 —
+  `git clone --no-hardlinks <repo> /tmp/x && cd /tmp/x && node scripts/run-all-gates.mjs`.
+- 담당: voidbrief-conductor, run 20260922-134206-ab-20260909-20260922.
