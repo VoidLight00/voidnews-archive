@@ -117,7 +117,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/4ae67c4f126c.png",
-            "alt": "Release Release v0.60.0 · google-gemini/gemini-cli"
+            "alt": "Release Release v0.60.0 · google-gemini/gemini-cli",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Google ships Gemini CLI v0.60.0",
@@ -327,7 +328,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/b5f141a8743c.png",
-            "alt": "Release 26.09 · ankitects/anki"
+            "alt": "Release 26.09 · ankitects/anki",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Anki 26.09 patches two editor file-access vulnerabilities",
@@ -391,7 +393,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/f890a9d215d4.png",
-            "alt": "Release v2.1.278 · anthropics/claude-code"
+            "alt": "Release v2.1.278 · anthropics/claude-code",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Claude Code ships eight straight releases, v2.1.271-278",
@@ -419,7 +422,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/18b3c70b6298.jpg",
-            "alt": " Partnering with Accenture on embedded evaluation"
+            "alt": " Partnering with Accenture on embedded evaluation",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Anthropic partners with Accenture on evaluating frontier AI",
@@ -581,7 +585,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/ab4bdaeac57a.png",
-            "alt": "Release AutoClip Desktop v1.3.0 · zhouxiaoka/autoclip"
+            "alt": "Release AutoClip Desktop v1.3.0 · zhouxiaoka/autoclip",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "AutoClip Desktop 1.3 adds a CLI and MCP server",
@@ -621,7 +626,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/fd7dcc6a7024.png",
-            "alt": "Release v1.16.0 — Stop claiming a location you do not have · jo-inc/camofox-browser"
+            "alt": "Release v1.16.0 — Stop claiming a location you do not have · jo-inc/camofox-browser",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "camofox-browser 1.16 removes a fake default location",
@@ -661,7 +667,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/d349343a09f4.png",
-            "alt": "Release v4.1.19 · cline/cline"
+            "alt": "Release v4.1.19 · cline/cline",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "cline 4.1.19 now warns before silently dropping unreadable images",
@@ -735,7 +742,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/20d094f998e1.png",
-            "alt": "Release colibri 1.12.0 · JustVugg/colibri"
+            "alt": "Release colibri 1.12.0 · JustVugg/colibri",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "colibri 1.12.0 adds Brio mode to score answers without generating text",
@@ -1021,7 +1029,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/0f4bdba77d71.png",
-            "alt": "Release v0.8.8-rc3 · danny-avila/LibreChat"
+            "alt": "Release v0.8.8-rc3 · danny-avila/LibreChat",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "LibreChat's release candidate adds GPT-6 Astra support and an agent API",
@@ -1189,7 +1198,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/e18e794290a9.jpg",
-            "alt": "Alpha Changelog - 9/16/26"
+            "alt": "Alpha Changelog - 9/16/26",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Midjourney adds a Korean interface and editor upgrades",
@@ -1469,7 +1479,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/9bb2319abe9f.png",
-            "alt": "Release v0.34.3 · ollama/ollama"
+            "alt": "Release v0.34.3 · ollama/ollama",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Ollama publishes the v0.34.3-rc1 release candidate",
@@ -1503,7 +1514,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/038d5388eba3.png",
-            "alt": "Release 0.155.1 · openai/codex"
+            "alt": "Release 0.155.1 · openai/codex",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenAI ships Codex CLI v0.155.1",
@@ -1553,7 +1565,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/54dc90386cac.png",
-            "alt": "Release v3.16.2 · openai/openai-python"
+            "alt": "Release v3.16.2 · openai/openai-python",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenAI Python SDK moves from v3.14 to v3.16 in five days",
@@ -1649,7 +1662,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/04eae3b805a4.png",
-            "alt": "Changelog | OpenAI API"
+            "alt": "Changelog | OpenAI API",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenAI adds API key creation governance controls",
@@ -1723,7 +1737,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/cc1900169cb2.png",
-            "alt": "Release v1.13.1 - Hardened CLI, safer archives · Fission-AI/OpenSpec"
+            "alt": "Release v1.13.1 - Hardened CLI, safer archives · Fission-AI/OpenSpec",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenSpec 1.13.1 closes an instruction-injection path in unreviewed clones",
@@ -1763,7 +1778,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/a04a6327f6d2.png",
-            "alt": "Release v1.4.206 · stablyai/orca"
+            "alt": "Release v1.4.206 · stablyai/orca",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "orca 1.4.206 adds cross-machine agent session search",
@@ -1837,7 +1853,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/b7a8ae2c0bc3.png",
-            "alt": "Release RustFS 1.0.0 · rustfs/rustfs"
+            "alt": "Release RustFS 1.0.0 · rustfs/rustfs",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "RustFS reaches a stable 1.0 for its S3-compatible object storage",
@@ -1911,7 +1928,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/b6c6c9bffd41.png",
-            "alt": "Release v6.4.1 · obra/superpowers"
+            "alt": "Release v6.4.1 · obra/superpowers",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "superpowers 6.4.1 adds a session-diagnosis skill and new harness support",
@@ -1951,7 +1969,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/0932148fc59c.png",
-            "alt": "Release v1.0.0 · TencentCloud/Octop"
+            "alt": "Release v1.0.0 · TencentCloud/Octop",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "TencentCloud's Octop reaches its 1.0 multi-agent AI assistant release",
@@ -1991,7 +2010,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/4383e600011e.png",
-            "alt": "Release TradingAgents v0.5.0 · TauricResearch/TradingAgents"
+            "alt": "Release TradingAgents v0.5.0 · TauricResearch/TradingAgents",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "TradingAgents 0.5 blocks future data from leaking into backtests",
@@ -2069,7 +2089,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/6e693b1d6d79.png",
-            "alt": "Changelog - Vercel"
+            "alt": "Changelog - Vercel",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Vercel extends Spend Management to Enterprise Flexible Commitment plans",
@@ -2109,7 +2130,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/ce5bc80f837d.webp",
-            "alt": "Introducing Grok Voice Transcribe 2.0"
+            "alt": "Introducing Grok Voice Transcribe 2.0",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "xAI introduces speech-to-text model Grok Voice Transcribe 2.0",
@@ -2143,7 +2165,8 @@ export const week38: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/4aba0dda70da.webp",
-            "alt": "Memory in Grok Build"
+            "alt": "Memory in Grok Build",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "xAI adds persistent memory to coding tool Grok Build",

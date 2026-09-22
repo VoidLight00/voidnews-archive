@@ -19011,7 +19011,7 @@
     },
     {
       "path": "references/backfill-evidence/20260909-product-media-integration/cache/4e6c8c201d49-70b2939c948cb8cf.html",
-      "sha256": "a9785edef6e58449e11c23b237d5d1bf3461b2816df5f45ad858c535af5bc597",
+      "sha256": "81238a2819d4924073d18f41123c7b0f4cd2c2b927b17f91664cc50e0b97d297",
       "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
@@ -19168,7 +19168,7 @@
     },
     {
       "path": "references/backfill-evidence/20260909-product-rotation/evidence/70b2939c948cb8cf.html",
-      "sha256": "a9785edef6e58449e11c23b237d5d1bf3461b2816df5f45ad858c535af5bc597",
+      "sha256": "81238a2819d4924073d18f41123c7b0f4cd2c2b927b17f91664cc50e0b97d297",
       "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {

@@ -44,28 +44,41 @@ try {
       throw error;
     } finally { await page.close(); }
   }
+  // The responsive pass pinned 13 images, the size 2026-w37 happened to be when it was
+  // written. Derive it from the same data the main loop uses so completing a week does not
+  // require editing the test.
+  const w37WithImage = posts.filter(p => p.week === '2026-w37' && p.images.length).length;
   for (const width of [1024, 820, 652, 390, 320]) {
     const page = await browser.newPage({ viewport: { width, height: 1000 }, reducedMotion: 'reduce' });
     try {
       await page.goto(`${baseURL}/2026-w37/`, { waitUntil: 'networkidle' });
       await page.locator('[data-weekly-source-thumbnail] img').evaluateAll(images => images.forEach(image => { image.loading = 'eager'; }));
-      await page.waitForFunction(() => [...document.querySelectorAll('[data-weekly-source-thumbnail] img')].length === 13 && [...document.querySelectorAll('[data-weekly-source-thumbnail] img')].every(image => image.complete && image.naturalWidth > 0));
+      await page.waitForFunction(count => {
+        const images = [...document.querySelectorAll('[data-weekly-source-thumbnail] img')];
+        return images.length === count && images.every(image => image.complete && image.naturalWidth > 0);
+      }, w37WithImage, { timeout: 45000 });
       const hero = await page.locator('.tc-source-thumb--hero img').evaluate(image => ({ opacity: getComputedStyle(image).opacity, blend: getComputedStyle(image).mixBlendMode }));
       assert.deepEqual(hero, { opacity: '1', blend: 'normal' }, 'The source image must remain visible against the light background');
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-      results.push({ week: '2026-w37', width, loadedImages: 13, heroVisible: true });
+      results.push({ week: '2026-w37', width, loadedImages: w37WithImage, heroVisible: true });
     } finally { await page.close(); }
   }
   const failurePage = await browser.newPage();
   await failurePage.route('**/source-media/**', route => route.abort());
   await failurePage.goto(`${baseURL}/2026-w37/`, { waitUntil: 'networkidle' });
   await failurePage.locator('[data-weekly-source-thumbnail] img').evaluateAll(images => images.forEach(image => { image.loading = 'eager'; }));
-  await failurePage.waitForFunction(() => document.querySelectorAll('[data-weekly-image-fallback]').length === 13);
+  // With /source-media/** blocked, a fallback appears for every post that has no image at
+  // all plus every post whose image lives under that blocked path. Both numbers come from
+  // the data, so completing a week does not require editing the expectation.
+  const w37Posts = posts.filter(post => post.week === '2026-w37');
+  const w37Fallbacks = w37Posts.filter(post => !post.images.length
+    || post.images[0].src.startsWith('/source-media/')).length;
+  await failurePage.waitForFunction(count => document.querySelectorAll('[data-weekly-image-fallback]').length === count, w37Fallbacks, { timeout: 45000 });
   assert.equal(await failurePage.getByText('출처 이미지 없음', { exact: true }).count(), 0);
-  assert.equal(await failurePage.getByText('이미지 미리보기를 제공하지 못했습니다', { exact: true }).count(), 13);
+  assert.equal(await failurePage.getByText('이미지 미리보기를 제공하지 못했습니다', { exact: true }).count(), w37Fallbacks);
   const previewRequests = await failurePage.evaluate(() => performance.getEntriesByType('resource').filter(entry => entry.name.includes('api.microlink.io')).length);
   assert.equal(previewRequests, 0, 'Weekly must not depend on third-party preview requests');
-  results.push({ scenario: 'image-network-failure', accuratelyLabelled: 13, falseAbsenceLabels: 0, thirdPartyPreviewRequests: 0 });
+  results.push({ scenario: 'image-network-failure', accuratelyLabelled: w37Fallbacks, falseAbsenceLabels: 0, thirdPartyPreviewRequests: 0 });
   await failurePage.close();
   const editorialFailurePage = await browser.newPage();
   await editorialFailurePage.route('**/*', route => route.request().resourceType() === 'image' ? route.abort() : route.continue());

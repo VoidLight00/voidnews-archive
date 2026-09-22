@@ -73,7 +73,8 @@ export const week39: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/006c94cfd9bc.png",
-            "alt": "Release v0.37.0 · Comfy-Org/ComfyUI"
+            "alt": "Release v0.37.0 · Comfy-Org/ComfyUI",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "ComfyUI 0.37.0 adds transparent-background support for GPT Image 2",
@@ -313,7 +314,8 @@ export const week39: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/22acbba9f8ad.png",
-            "alt": "Release 0.157.0-alpha.5 · openai/codex"
+            "alt": "Release 0.157.0-alpha.5 · openai/codex",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenAI ships Codex Rust v0.157.0-alpha.5",
@@ -341,7 +343,8 @@ export const week39: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/da5edeefe80b.png",
-            "alt": "Release v3.17.0 · openai/openai-python"
+            "alt": "Release v3.17.0 · openai/openai-python",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenAI Python SDK 3.17.0 adds safety case and webhook features",
@@ -423,7 +426,8 @@ export const week39: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/2b03cd279088.webp",
-            "alt": "Introducing Grok 4.7"
+            "alt": "Introducing Grok 4.7",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "xAI unveils Grok 4.7 for coding and knowledge work",

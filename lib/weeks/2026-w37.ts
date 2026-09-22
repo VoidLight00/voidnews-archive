@@ -512,7 +512,8 @@ export const week37: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/a45954282138.png",
-            "alt": "Release v2.1.270 · anthropics/claude-code"
+            "alt": "Release v2.1.270 · anthropics/claude-code",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Claude Code ships four straight patches, v2.1.267 to v2.1.270",
@@ -1026,7 +1027,8 @@ export const week37: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/905b073b5463.png",
-            "alt": "Release Python SDK 0.154.0 · openai/codex"
+            "alt": "Release Python SDK 0.154.0 · openai/codex",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Codex Python SDK 0.154.0 expands reasoning-effort options",
@@ -1102,7 +1104,8 @@ export const week37: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/d851364542af.png",
-            "alt": "Release v3.13.0 · openai/openai-python"
+            "alt": "Release v3.13.0 · openai/openai-python",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "OpenAI Python SDK moves from v3.10 to v3.13",
@@ -1140,7 +1143,8 @@ export const week37: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/38d795e69ead.png",
-            "alt": "Release 0.154.0 · openai/codex"
+            "alt": "Release 0.154.0 · openai/codex",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Codex CLI 0.154.0 adds voice conversations and worktree support",
@@ -1278,7 +1282,8 @@ export const week37: WeeklyData = {
           ],
           "thumbnail": {
             "src": "/source-media/weekly-20260922/8f88cf1c5c12.png",
-            "alt": "Introducing v6"
+            "alt": "Introducing v6",
+            "provenance": "source-share-preview"
           },
           "en": {
             "title": "Suno launches v6 music model, split into three variants",

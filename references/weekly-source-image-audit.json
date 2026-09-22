@@ -8437,7 +8437,8 @@
       "key": "2026-w38|camofox-browser 1.16, 가짜 위치 정보 기본값 제거|https://github.com/jo-inc/camofox-browser/releases/tag/v1.16.0",
       "week": "2026-w38",
       "title": "camofox-browser 1.16, 가짜 위치 정보 기본값 제거",
-      "sourceUrl": "https://github.com/jo-inc/camofox-browser/releases/tag/v1.16.0"
+      "sourceUrl": "https://github.com/jo-inc/camofox-browser/releases/tag/v1.16.0",
+      "byteSize": 89504
     },
     {
       "status": "available",
@@ -8466,7 +8467,8 @@
       "key": "2026-w38|LangChain, 내부 '페이드 미디어 에이전트' 구조 공개|https://www.langchain.com/blog/paid-media-agent",
       "week": "2026-w38",
       "title": "LangChain, 내부 '페이드 미디어 에이전트' 구조 공개",
-      "sourceUrl": "https://www.langchain.com/blog/paid-media-agent"
+      "sourceUrl": "https://www.langchain.com/blog/paid-media-agent",
+      "byteSize": 583996
     },
     {
       "status": "available",
@@ -8495,7 +8497,8 @@
       "key": "2026-w38|LangChain, 헬스케어 에이전트 확장 사례 공개|https://www.langchain.com/blog/scaling-agents-in-healthcare-life-sciences-lessons-from-madrigal-pharmaceuticals-abridge-and-vizient",
       "week": "2026-w38",
       "title": "LangChain, 헬스케어 에이전트 확장 사례 공개",
-      "sourceUrl": "https://www.langchain.com/blog/scaling-agents-in-healthcare-life-sciences-lessons-from-madrigal-pharmaceuticals-abridge-and-vizient"
+      "sourceUrl": "https://www.langchain.com/blog/scaling-agents-in-healthcare-life-sciences-lessons-from-madrigal-pharmaceuticals-abridge-and-vizient",
+      "byteSize": 562704
     },
     {
       "status": "no-meaningful-image-verified",
@@ -8548,7 +8551,8 @@
       "key": "2026-w38|구글, Gemini CLI v0.60.0 배포|https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0",
       "week": "2026-w38",
       "title": "구글, Gemini CLI v0.60.0 배포",
-      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0"
+      "sourceUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0",
+      "byteSize": 71215
     },
     {
       "status": "available",
@@ -8577,7 +8581,8 @@
       "key": "2026-w38|OpenAI, Fyxer 사례로 신뢰받는 AI 비서 소개|https://openai.com/index/fyxer",
       "week": "2026-w38",
       "title": "OpenAI, Fyxer 사례로 신뢰받는 AI 비서 소개",
-      "sourceUrl": "https://openai.com/index/fyxer"
+      "sourceUrl": "https://openai.com/index/fyxer",
+      "byteSize": 75374
     },
     {
       "status": "available",
@@ -8606,7 +8611,8 @@
       "key": "2026-w38|구글, Gemini Notebook에 학습 도구 추가|https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/",
       "week": "2026-w38",
       "title": "구글, Gemini Notebook에 학습 도구 추가",
-      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/"
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-study-tools-september-2026/",
+      "byteSize": 51320
     },
     {
       "status": "available",
@@ -8635,7 +8641,8 @@
       "key": "2026-w38|TencentCloud Octop, 멀티에이전트 AI 비서 1.0 정식 출시|https://github.com/TencentCloud/Octop/releases/tag/v1.0.0",
       "week": "2026-w38",
       "title": "TencentCloud Octop, 멀티에이전트 AI 비서 1.0 정식 출시",
-      "sourceUrl": "https://github.com/TencentCloud/Octop/releases/tag/v1.0.0"
+      "sourceUrl": "https://github.com/TencentCloud/Octop/releases/tag/v1.0.0",
+      "byteSize": 47250
     },
     {
       "status": "available",
@@ -8664,7 +8671,8 @@
       "key": "2026-w38|Anki 26.09, 에디터 취약점 2건 수정한 보안 업데이트 배포|https://github.com/ankitects/anki/releases/tag/26.09",
       "week": "2026-w38",
       "title": "Anki 26.09, 에디터 취약점 2건 수정한 보안 업데이트 배포",
-      "sourceUrl": "https://github.com/ankitects/anki/releases/tag/26.09"
+      "sourceUrl": "https://github.com/ankitects/anki/releases/tag/26.09",
+      "byteSize": 66863
     },
     {
       "status": "available",
@@ -8693,7 +8701,8 @@
       "key": "2026-w38|NVIDIA 젠슨 황, 드림포스서 세일즈포스와 함께|https://blogs.nvidia.com/blog/jensen-huang-dreamforce/",
       "week": "2026-w38",
       "title": "NVIDIA 젠슨 황, 드림포스서 세일즈포스와 함께",
-      "sourceUrl": "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/"
+      "sourceUrl": "https://blogs.nvidia.com/blog/jensen-huang-dreamforce/",
+      "byteSize": 338364
     },
     {
       "status": "available",
@@ -8722,7 +8731,8 @@
       "key": "2026-w38|TypeSafe AI, 신속 판정 모델 Jev 공개|https://typesafe.ai/blog/introducing-system-one-models-and-jev",
       "week": "2026-w38",
       "title": "TypeSafe AI, 신속 판정 모델 Jev 공개",
-      "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+      "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "byteSize": 29595
     },
     {
       "status": "available",
@@ -8751,7 +8761,8 @@
       "key": "2026-w38|Crusoe·Perplexity, 다년 AI 인프라 파트너십 체결|https://www.crusoe.ai/resources/newsroom/crusoe-perplexity-partnership",
       "week": "2026-w38",
       "title": "Crusoe·Perplexity, 다년 AI 인프라 파트너십 체결",
-      "sourceUrl": "https://www.crusoe.ai/resources/newsroom/crusoe-perplexity-partnership"
+      "sourceUrl": "https://www.crusoe.ai/resources/newsroom/crusoe-perplexity-partnership",
+      "byteSize": 1931013
     },
     {
       "status": "available",
@@ -8780,7 +8791,8 @@
       "key": "2026-w38|Anthropic, Claude Cowork를 채팅과 하나로 통합|https://claude.com/blog/cowork-is-now-claude",
       "week": "2026-w38",
       "title": "Anthropic, Claude Cowork를 채팅과 하나로 통합",
-      "sourceUrl": "https://claude.com/blog/cowork-is-now-claude"
+      "sourceUrl": "https://claude.com/blog/cowork-is-now-claude",
+      "byteSize": 24693
     },
     {
       "status": "available",
@@ -8809,7 +8821,8 @@
       "key": "2026-w38|Meta, AI 강화 구독 서비스 'Meta One' 출시|https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
       "week": "2026-w38",
       "title": "Meta, AI 강화 구독 서비스 'Meta One' 출시",
-      "sourceUrl": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/"
+      "sourceUrl": "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+      "byteSize": 261733
     },
     {
       "status": "available",
@@ -8838,7 +8851,8 @@
       "key": "2026-w38|LibreChat, GPT-6 Astra 지원과 에이전트 API 추가한 RC 배포|https://github.com/danny-avila/LibreChat/releases/tag/v0.8.8-rc3",
       "week": "2026-w38",
       "title": "LibreChat, GPT-6 Astra 지원과 에이전트 API 추가한 RC 배포",
-      "sourceUrl": "https://github.com/danny-avila/LibreChat/releases/tag/v0.8.8-rc3"
+      "sourceUrl": "https://github.com/danny-avila/LibreChat/releases/tag/v0.8.8-rc3",
+      "byteSize": 124969
     },
     {
       "status": "available",
@@ -8867,7 +8881,8 @@
       "key": "2026-w38|구글, 제로 트러스트 AI 에이전트 방어 체계 공개|https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/",
       "week": "2026-w38",
       "title": "구글, 제로 트러스트 AI 에이전트 방어 체계 공개",
-      "sourceUrl": "https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/"
+      "sourceUrl": "https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/",
+      "byteSize": 530732
     },
     {
       "status": "no-meaningful-image-verified",
@@ -8920,7 +8935,8 @@
       "key": "2026-w38|VS Code 1.138, 데브 컨테이너 에이전트 세션 지원|https://code.visualstudio.com/updates/v1_138",
       "week": "2026-w38",
       "title": "VS Code 1.138, 데브 컨테이너 에이전트 세션 지원",
-      "sourceUrl": "https://code.visualstudio.com/updates/v1_138"
+      "sourceUrl": "https://code.visualstudio.com/updates/v1_138",
+      "byteSize": 6196
     },
     {
       "status": "no-meaningful-image-verified",
@@ -8973,7 +8989,8 @@
       "key": "2026-w38|OpenAI, 스폰서 에이전트 등 광고 도구 공개|https://openai.com/index/reimagining-advertising-with-ai",
       "week": "2026-w38",
       "title": "OpenAI, 스폰서 에이전트 등 광고 도구 공개",
-      "sourceUrl": "https://openai.com/index/reimagining-advertising-with-ai"
+      "sourceUrl": "https://openai.com/index/reimagining-advertising-with-ai",
+      "byteSize": 28022
     },
     {
       "status": "available",
@@ -9002,7 +9019,8 @@
       "key": "2026-w38|네이버, 첫 'AI 안전성 보고서' 발간|https://www.navercorp.com/media/pressReleasesDetail?seq=10034662",
       "week": "2026-w38",
       "title": "네이버, 첫 'AI 안전성 보고서' 발간",
-      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034662"
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034662",
+      "byteSize": 1683287
     },
     {
       "status": "available",
@@ -9031,7 +9049,8 @@
       "key": "2026-w38|구글, 에이전트 이상행동 탐지 기능 프라이빗 프리뷰|https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
       "week": "2026-w38",
       "title": "구글, 에이전트 이상행동 탐지 기능 프라이빗 프리뷰",
-      "sourceUrl": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/"
+      "sourceUrl": "https://developers.googleblog.com/agent-anomaly-detection-now-in-private-preview-on-the-gemini-enterprise-agent-platform/",
+      "byteSize": 132312
     },
     {
       "status": "available",
@@ -9060,7 +9079,8 @@
       "key": "2026-w38|Midjourney, 한국어 인터페이스 추가하고 에디터 개선|https://updates.midjourney.com/alpha-changelog-9-16-26/",
       "week": "2026-w38",
       "title": "Midjourney, 한국어 인터페이스 추가하고 에디터 개선",
-      "sourceUrl": "https://updates.midjourney.com/alpha-changelog-9-16-26/"
+      "sourceUrl": "https://updates.midjourney.com/alpha-changelog-9-16-26/",
+      "byteSize": 775110
     },
     {
       "status": "available",
@@ -9089,7 +9109,8 @@
       "key": "2026-w38|Mistral·Mozilla, 파이어폭스에 AI 탑재 협력|https://mistral.ai/news/mistral-x-mozilla",
       "week": "2026-w38",
       "title": "Mistral·Mozilla, 파이어폭스에 AI 탑재 협력",
-      "sourceUrl": "https://mistral.ai/news/mistral-x-mozilla"
+      "sourceUrl": "https://mistral.ai/news/mistral-x-mozilla",
+      "byteSize": 97824
     },
     {
       "status": "available",
@@ -9118,7 +9139,8 @@
       "key": "2026-w38|xAI, 코딩 도구 Grok Build에 메모리 기능 추가|https://x.ai/news/grok-build-memory",
       "week": "2026-w38",
       "title": "xAI, 코딩 도구 Grok Build에 메모리 기능 추가",
-      "sourceUrl": "https://x.ai/news/grok-build-memory"
+      "sourceUrl": "https://x.ai/news/grok-build-memory",
+      "byteSize": 104374
     },
     {
       "status": "available",
@@ -9147,7 +9169,8 @@
       "key": "2026-w38|RustFS, S3 호환 오브젝트 스토리지 정식 1.0 출시|https://github.com/rustfs/rustfs/releases/tag/1.0.0",
       "week": "2026-w38",
       "title": "RustFS, S3 호환 오브젝트 스토리지 정식 1.0 출시",
-      "sourceUrl": "https://github.com/rustfs/rustfs/releases/tag/1.0.0"
+      "sourceUrl": "https://github.com/rustfs/rustfs/releases/tag/1.0.0",
+      "byteSize": 56814
     },
     {
       "status": "no-meaningful-image-verified",
@@ -9200,7 +9223,8 @@
       "key": "2026-w38|OpenAI 경제 리서치, 근로자의 새 업무 활용법 조사|https://openai.com/index/unlocking-new-ways-of-working",
       "week": "2026-w38",
       "title": "OpenAI 경제 리서치, 근로자의 새 업무 활용법 조사",
-      "sourceUrl": "https://openai.com/index/unlocking-new-ways-of-working"
+      "sourceUrl": "https://openai.com/index/unlocking-new-ways-of-working",
+      "byteSize": 17902
     },
     {
       "status": "available",
@@ -9229,7 +9253,8 @@
       "key": "2026-w38|Anthropic, Claude로 생체분자 모델링 속도 개선|https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
       "week": "2026-w38",
       "title": "Anthropic, Claude로 생체분자 모델링 속도 개선",
-      "sourceUrl": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling"
+      "sourceUrl": "https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling",
+      "byteSize": 76536
     },
     {
       "status": "available",
@@ -9258,7 +9283,8 @@
       "key": "2026-w38|cline 4.1.19, 이미지 인식 못 하는 모델에 경고 표시 추가|https://github.com/cline/cline/releases/tag/v4.1.19",
       "week": "2026-w38",
       "title": "cline 4.1.19, 이미지 인식 못 하는 모델에 경고 표시 추가",
-      "sourceUrl": "https://github.com/cline/cline/releases/tag/v4.1.19"
+      "sourceUrl": "https://github.com/cline/cline/releases/tag/v4.1.19",
+      "byteSize": 34820
     },
     {
       "status": "available",
@@ -9287,7 +9313,8 @@
       "key": "2026-w38|LangChain, 생명과학 전용 하네스 'Deep Life Sci' 공개|https://www.langchain.com/blog/agent-harness-life-sciences",
       "week": "2026-w38",
       "title": "LangChain, 생명과학 전용 하네스 'Deep Life Sci' 공개",
-      "sourceUrl": "https://www.langchain.com/blog/agent-harness-life-sciences"
+      "sourceUrl": "https://www.langchain.com/blog/agent-harness-life-sciences",
+      "byteSize": 97800
     },
     {
       "status": "no-meaningful-image-verified",
@@ -9340,7 +9367,8 @@
       "key": "2026-w38|LangChain, Included Health 연합 에이전트 사례 공개|https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
       "week": "2026-w38",
       "title": "LangChain, Included Health 연합 에이전트 사례 공개",
-      "sourceUrl": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph"
+      "sourceUrl": "https://www.langchain.com/blog/how-included-health-built-federated-agents-for-healthcare-navigation-with-deep-agents-and-langgraph",
+      "byteSize": 50275
     },
     {
       "status": "no-meaningful-image-verified",
@@ -9417,7 +9445,8 @@
       "key": "2026-w38|네이버지도, 대화형 '플레이스 에이전트' 출시|https://www.navercorp.com/media/pressReleasesDetail?seq=10034667",
       "week": "2026-w38",
       "title": "네이버지도, 대화형 '플레이스 에이전트' 출시",
-      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034667"
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034667",
+      "byteSize": 789323
     },
     {
       "status": "available",
@@ -9446,7 +9475,8 @@
       "key": "2026-w38|구글, SDK 자동 생성 도구 오픈소스로 공개|https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/",
       "week": "2026-w38",
       "title": "구글, SDK 자동 생성 도구 오픈소스로 공개",
-      "sourceUrl": "https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/"
+      "sourceUrl": "https://developers.googleblog.com/why-client-sdk-generation-belongs-in-the-open/",
+      "byteSize": 242034
     },
     {
       "status": "no-meaningful-image-verified",
@@ -9499,7 +9529,8 @@
       "key": "2026-w38|네이버쇼핑, AI 쇼핑 에이전트에 배송일 추천 추가|https://www.navercorp.com/media/pressReleasesDetail?seq=10034666",
       "week": "2026-w38",
       "title": "네이버쇼핑, AI 쇼핑 에이전트에 배송일 추천 추가",
-      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034666"
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034666",
+      "byteSize": 2387116
     },
     {
       "status": "available",
@@ -9528,7 +9559,8 @@
       "key": "2026-w38|Anthropic·액센츄어, 프런티어 AI 독립 평가 협력|https://www.anthropic.com/news/accenture-embedded-evaluation",
       "week": "2026-w38",
       "title": "Anthropic·액센츄어, 프런티어 AI 독립 평가 협력",
-      "sourceUrl": "https://www.anthropic.com/news/accenture-embedded-evaluation"
+      "sourceUrl": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "byteSize": 30702
     },
     {
       "status": "no-meaningful-image-verified",
@@ -9581,7 +9613,8 @@
       "key": "2026-w38|LangChain, 'Jev' 활용 에이전트 하네스 구축법 공개|https://www.langchain.com/blog/building-a-harness-with-jev",
       "week": "2026-w38",
       "title": "LangChain, 'Jev' 활용 에이전트 하네스 구축법 공개",
-      "sourceUrl": "https://www.langchain.com/blog/building-a-harness-with-jev"
+      "sourceUrl": "https://www.langchain.com/blog/building-a-harness-with-jev",
+      "byteSize": 120525
     },
     {
       "status": "available",
@@ -9610,7 +9643,8 @@
       "key": "2026-w38|Cohere·Aleph Alpha, 초대서양 주권 AI 협약 체결|https://cohere.com/blog/cohere-and-aleph-alpha-sign-agreement",
       "week": "2026-w38",
       "title": "Cohere·Aleph Alpha, 초대서양 주권 AI 협약 체결",
-      "sourceUrl": "https://cohere.com/blog/cohere-and-aleph-alpha-sign-agreement"
+      "sourceUrl": "https://cohere.com/blog/cohere-and-aleph-alpha-sign-agreement",
+      "byteSize": 5821998
     },
     {
       "status": "available",
@@ -9639,7 +9673,8 @@
       "key": "2026-w38|네이버클라우드, 국방 AX 협력 모델 제시|https://www.navercorp.com/media/pressReleasesDetail?seq=10034674",
       "week": "2026-w38",
       "title": "네이버클라우드, 국방 AX 협력 모델 제시",
-      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034674"
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034674",
+      "byteSize": 554046
     },
     {
       "status": "available",
@@ -9668,7 +9703,8 @@
       "key": "2026-w38|OpenSpec 1.13.1, 미검토 저장소 실행 시 보안 취약점 차단|https://github.com/Fission-AI/OpenSpec/releases/tag/v1.13.1",
       "week": "2026-w38",
       "title": "OpenSpec 1.13.1, 미검토 저장소 실행 시 보안 취약점 차단",
-      "sourceUrl": "https://github.com/Fission-AI/OpenSpec/releases/tag/v1.13.1"
+      "sourceUrl": "https://github.com/Fission-AI/OpenSpec/releases/tag/v1.13.1",
+      "byteSize": 61598
     },
     {
       "status": "no-meaningful-image-verified",
@@ -9721,7 +9757,8 @@
       "key": "2026-w38|OpenAI, Codex CLI 0.155.1 배포|https://github.com/openai/codex/releases/tag/rust-v0.155.1",
       "week": "2026-w38",
       "title": "OpenAI, Codex CLI 0.155.1 배포",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.155.1"
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.155.1",
+      "byteSize": 45214
     },
     {
       "status": "available",
@@ -9750,7 +9787,8 @@
       "key": "2026-w38|OpenAI, 파이썬 SDK 3.14~3.16 연속 업데이트|https://github.com/openai/openai-python/releases/tag/v3.16.2",
       "week": "2026-w38",
       "title": "OpenAI, 파이썬 SDK 3.14~3.16 연속 업데이트",
-      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.16.2"
+      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.16.2",
+      "byteSize": 46642
     },
     {
       "status": "available",
@@ -9779,7 +9817,8 @@
       "key": "2026-w38|Vercel, 지출 관리 기능 엔터프라이즈 요금제로 확대|https://vercel.com/changelog",
       "week": "2026-w38",
       "title": "Vercel, 지출 관리 기능 엔터프라이즈 요금제로 확대",
-      "sourceUrl": "https://vercel.com/changelog"
+      "sourceUrl": "https://vercel.com/changelog",
+      "byteSize": 8259
     },
     {
       "status": "available",
@@ -9808,7 +9847,8 @@
       "key": "2026-w38|TradingAgents 0.5, 백테스트 데이터 시점 왜곡 차단|https://github.com/TauricResearch/TradingAgents/releases/tag/v0.5.0",
       "week": "2026-w38",
       "title": "TradingAgents 0.5, 백테스트 데이터 시점 왜곡 차단",
-      "sourceUrl": "https://github.com/TauricResearch/TradingAgents/releases/tag/v0.5.0"
+      "sourceUrl": "https://github.com/TauricResearch/TradingAgents/releases/tag/v0.5.0",
+      "byteSize": 73565
     },
     {
       "status": "available",
@@ -9837,7 +9877,8 @@
       "key": "2026-w38|Claude Code, v2.1.271~278 연속 릴리스|https://github.com/anthropics/claude-code/releases/tag/v2.1.278",
       "week": "2026-w38",
       "title": "Claude Code, v2.1.271~278 연속 릴리스",
-      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.278"
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.278",
+      "byteSize": 51642
     },
     {
       "status": "available",
@@ -9866,7 +9907,8 @@
       "key": "2026-w38|Ollama, v0.34.3 릴리스 후보(rc1) 공개|https://github.com/ollama/ollama/releases/tag/v0.34.3-rc1",
       "week": "2026-w38",
       "title": "Ollama, v0.34.3 릴리스 후보(rc1) 공개",
-      "sourceUrl": "https://github.com/ollama/ollama/releases/tag/v0.34.3-rc1"
+      "sourceUrl": "https://github.com/ollama/ollama/releases/tag/v0.34.3-rc1",
+      "byteSize": 47537
     },
     {
       "status": "available",
@@ -9895,7 +9937,8 @@
       "key": "2026-w38|superpowers 6.4.1, 세션 진단 스킬과 신규 하네스 지원 추가|https://github.com/obra/superpowers/releases/tag/v6.4.1",
       "week": "2026-w38",
       "title": "superpowers 6.4.1, 세션 진단 스킬과 신규 하네스 지원 추가",
-      "sourceUrl": "https://github.com/obra/superpowers/releases/tag/v6.4.1"
+      "sourceUrl": "https://github.com/obra/superpowers/releases/tag/v6.4.1",
+      "byteSize": 102555
     },
     {
       "status": "available",
@@ -9924,7 +9967,8 @@
       "key": "2026-w38|LangChain, 'Jev'를 평가자로 쓰는 방법 공개|https://www.langchain.com/blog/jev-agent-evals-langsmith",
       "week": "2026-w38",
       "title": "LangChain, 'Jev'를 평가자로 쓰는 방법 공개",
-      "sourceUrl": "https://www.langchain.com/blog/jev-agent-evals-langsmith"
+      "sourceUrl": "https://www.langchain.com/blog/jev-agent-evals-langsmith",
+      "byteSize": 255616
     },
     {
       "status": "available",
@@ -9953,7 +9997,8 @@
       "key": "2026-w38|Alibaba Qwen, 통합 이미지 생성·편집 모델 Qwen-Image-2.1 공개|https://github.com/QwenLM/Qwen-Image-2.1",
       "week": "2026-w38",
       "title": "Alibaba Qwen, 통합 이미지 생성·편집 모델 Qwen-Image-2.1 공개",
-      "sourceUrl": "https://github.com/QwenLM/Qwen-Image-2.1"
+      "sourceUrl": "https://github.com/QwenLM/Qwen-Image-2.1",
+      "byteSize": 297346
     },
     {
       "status": "available",
@@ -9982,7 +10027,8 @@
       "key": "2026-w38|AutoClip Desktop 1.3, 로컬 모델과 MCP 서버 지원 추가|https://github.com/zhouxiaoka/autoclip/releases/tag/v1.3.0",
       "week": "2026-w38",
       "title": "AutoClip Desktop 1.3, 로컬 모델과 MCP 서버 지원 추가",
-      "sourceUrl": "https://github.com/zhouxiaoka/autoclip/releases/tag/v1.3.0"
+      "sourceUrl": "https://github.com/zhouxiaoka/autoclip/releases/tag/v1.3.0",
+      "byteSize": 110310
     },
     {
       "status": "available",
@@ -10011,7 +10057,8 @@
       "key": "2026-w38|colibri 1.12.0, 텍스트 생성 없이 답을 채점하는 Brio 모드 추가|https://github.com/JustVugg/colibri/releases/tag/v1.12.0",
       "week": "2026-w38",
       "title": "colibri 1.12.0, 텍스트 생성 없이 답을 채점하는 Brio 모드 추가",
-      "sourceUrl": "https://github.com/JustVugg/colibri/releases/tag/v1.12.0"
+      "sourceUrl": "https://github.com/JustVugg/colibri/releases/tag/v1.12.0",
+      "byteSize": 113982
     },
     {
       "status": "available",
@@ -10040,7 +10087,8 @@
       "key": "2026-w39|ComfyUI 0.37.0, GPT Image 2 투명배경 지원 추가|https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.37.0",
       "week": "2026-w39",
       "title": "ComfyUI 0.37.0, GPT Image 2 투명배경 지원 추가",
-      "sourceUrl": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.37.0"
+      "sourceUrl": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.37.0",
+      "byteSize": 59808
     },
     {
       "status": "no-meaningful-image-verified",
@@ -10093,7 +10141,8 @@
       "key": "2026-w38|orca 1.4.206, 컴퓨터 간 에이전트 세션 검색 기능 추가|https://github.com/stablyai/orca/releases/tag/v1.4.206",
       "week": "2026-w38",
       "title": "orca 1.4.206, 컴퓨터 간 에이전트 세션 검색 기능 추가",
-      "sourceUrl": "https://github.com/stablyai/orca/releases/tag/v1.4.206"
+      "sourceUrl": "https://github.com/stablyai/orca/releases/tag/v1.4.206",
+      "byteSize": 64911
     },
     {
       "status": "available",
@@ -10122,7 +10171,8 @@
       "key": "2026-w39|LangChain, LangSmith Evals에 Jev 모델 통합|https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals",
       "week": "2026-w39",
       "title": "LangChain, LangSmith Evals에 Jev 모델 통합",
-      "sourceUrl": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals"
+      "sourceUrl": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals",
+      "byteSize": 71264
     },
     {
       "status": "available",
@@ -10151,7 +10201,8 @@
       "key": "2026-w38|SK텔레콤, '두 더 굿 AI' 전략으로 사회공헌 11개 사업 공개|https://news.sktelecom.com/231074",
       "week": "2026-w38",
       "title": "SK텔레콤, '두 더 굿 AI' 전략으로 사회공헌 11개 사업 공개",
-      "sourceUrl": "https://news.sktelecom.com/231074"
+      "sourceUrl": "https://news.sktelecom.com/231074",
+      "byteSize": 534280
     },
     {
       "status": "available",
@@ -10180,7 +10231,8 @@
       "key": "2026-w39|Meta, 페타비트급 대서양 해저케이블 'Petal' 공개|https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/",
       "week": "2026-w39",
       "title": "Meta, 페타비트급 대서양 해저케이블 'Petal' 공개",
-      "sourceUrl": "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/"
+      "sourceUrl": "https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/",
+      "byteSize": 2181340
     },
     {
       "status": "available",
@@ -10209,7 +10261,8 @@
       "key": "2026-w39|Multiverse Computing, 물리학 기법으로 LLM 프루닝 연구|https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
       "week": "2026-w39",
       "title": "Multiverse Computing, 물리학 기법으로 LLM 프루닝 연구",
-      "sourceUrl": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an"
+      "sourceUrl": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
+      "byteSize": 55414
     },
     {
       "status": "available",
@@ -10238,7 +10291,8 @@
       "key": "2026-w39|GitHub Copilot에 xAI Grok 4.7 모델 추가|https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
       "week": "2026-w39",
       "title": "GitHub Copilot에 xAI Grok 4.7 모델 추가",
-      "sourceUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot"
+      "sourceUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
+      "byteSize": 207938
     },
     {
       "status": "fetch-failed",
@@ -10313,7 +10367,8 @@
       "key": "2026-w39|NVIDIA, Dynamo-Triton에 TensorRT 멀티 GPU 서빙 통합|https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/",
       "week": "2026-w39",
       "title": "NVIDIA, Dynamo-Triton에 TensorRT 멀티 GPU 서빙 통합",
-      "sourceUrl": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/"
+      "sourceUrl": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/",
+      "byteSize": 110936
     },
     {
       "status": "available",
@@ -10342,7 +10397,8 @@
       "key": "2026-w38|xAI, 음성 인식 모델 Grok Voice Transcribe 2.0 공개|https://x.ai/news/grok-voice-transcribe-2",
       "week": "2026-w38",
       "title": "xAI, 음성 인식 모델 Grok Voice Transcribe 2.0 공개",
-      "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2"
+      "sourceUrl": "https://x.ai/news/grok-voice-transcribe-2",
+      "byteSize": 590370
     },
     {
       "status": "fetch-failed",
@@ -10388,7 +10444,8 @@
       "key": "2026-w39|SK텔레콤, 공공기관 AI 세미나 '그랜데이터 데이' 개최|https://news.sktelecom.com/231105",
       "week": "2026-w39",
       "title": "SK텔레콤, 공공기관 AI 세미나 '그랜데이터 데이' 개최",
-      "sourceUrl": "https://news.sktelecom.com/231105"
+      "sourceUrl": "https://news.sktelecom.com/231105",
+      "byteSize": 902479
     },
     {
       "status": "available",
@@ -10417,7 +10474,8 @@
       "key": "2026-w39|OpenAI Codex Rust 0.157.0-alpha.5 출시|https://github.com/openai/codex/releases/tag/rust-v0.157.0-alpha.5",
       "week": "2026-w39",
       "title": "OpenAI Codex Rust 0.157.0-alpha.5 출시",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.157.0-alpha.5"
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.157.0-alpha.5",
+      "byteSize": 33726
     },
     {
       "status": "available",
@@ -10446,7 +10504,8 @@
       "key": "2026-w39|OpenAI Python SDK 3.17.0, 안전 케이스·웹훅 기능 추가|https://github.com/openai/openai-python/releases/tag/v3.17.0",
       "week": "2026-w39",
       "title": "OpenAI Python SDK 3.17.0, 안전 케이스·웹훅 기능 추가",
-      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.17.0"
+      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.17.0",
+      "byteSize": 46751
     },
     {
       "status": "available",
@@ -10475,7 +10534,8 @@
       "key": "2026-w39|xAI, 코딩·지식 작업용 신형 모델 Grok 4.7 공개|https://x.ai/news/grok-4-7",
       "week": "2026-w39",
       "title": "xAI, 코딩·지식 작업용 신형 모델 Grok 4.7 공개",
-      "sourceUrl": "https://x.ai/news/grok-4-7"
+      "sourceUrl": "https://x.ai/news/grok-4-7",
+      "byteSize": 25742
     },
     {
       "status": "available",
@@ -10504,7 +10564,8 @@
       "key": "2026-w37|Visual Studio Code 1.137 릴리스|https://code.visualstudio.com/updates/v1_137",
       "week": "2026-w37",
       "title": "Visual Studio Code 1.137 릴리스",
-      "sourceUrl": "https://code.visualstudio.com/updates/v1_137"
+      "sourceUrl": "https://code.visualstudio.com/updates/v1_137",
+      "byteSize": 23344
     },
     {
       "status": "no-meaningful-image-verified",
@@ -10557,7 +10618,8 @@
       "key": "2026-w37|랭체인, 에이전트별 자격증명 관리 기능 Connections 공개|https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents",
       "week": "2026-w37",
       "title": "랭체인, 에이전트별 자격증명 관리 기능 Connections 공개",
-      "sourceUrl": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents"
+      "sourceUrl": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents",
+      "byteSize": 51960
     },
     {
       "status": "no-meaningful-image-verified",
@@ -10610,7 +10672,8 @@
       "key": "2026-w37|폴 크리스티아노, OpenAI 재단 이사회 합류|https://openai.com/index/paul-christiano-joins-openai-foundation-board",
       "week": "2026-w37",
       "title": "폴 크리스티아노, OpenAI 재단 이사회 합류",
-      "sourceUrl": "https://openai.com/index/paul-christiano-joins-openai-foundation-board"
+      "sourceUrl": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "byteSize": 13130
     },
     {
       "status": "no-meaningful-image-verified",
@@ -10663,7 +10726,8 @@
       "key": "2026-w37|Codex CLI 0.154.0, 음성 대화·워크트리 지원 추가|https://github.com/openai/codex/releases/tag/rust-v0.154.0",
       "week": "2026-w37",
       "title": "Codex CLI 0.154.0, 음성 대화·워크트리 지원 추가",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.154.0"
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+      "byteSize": 47241
     },
     {
       "status": "fetch-failed",
@@ -10737,7 +10801,8 @@
       "key": "2026-w37|팀네이버, 프랑스와 AI 팩토리 유럽 확장 협력 제안|https://www.navercorp.com/media/pressReleasesDetail?seq=10034644",
       "week": "2026-w37",
       "title": "팀네이버, 프랑스와 AI 팩토리 유럽 확장 협력 제안",
-      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644"
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644",
+      "byteSize": 224085
     },
     {
       "status": "available",
@@ -10766,7 +10831,8 @@
       "key": "2026-w37|Anthropic, 표적 정보·재래식 무기 능력 평가 도구 공개|https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
       "week": "2026-w37",
       "title": "Anthropic, 표적 정보·재래식 무기 능력 평가 도구 공개",
-      "sourceUrl": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities"
+      "sourceUrl": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "byteSize": 55496
     },
     {
       "status": "available",
@@ -10795,7 +10861,8 @@
       "key": "2026-w37|카르테시아, TTS 모델과 목소리는 다른 개념이라고 설명|https://www.cartesia.ai/blog/tts-model-vs-voice",
       "week": "2026-w37",
       "title": "카르테시아, TTS 모델과 목소리는 다른 개념이라고 설명",
-      "sourceUrl": "https://www.cartesia.ai/blog/tts-model-vs-voice"
+      "sourceUrl": "https://www.cartesia.ai/blog/tts-model-vs-voice",
+      "byteSize": 41670
     },
     {
       "status": "available",
@@ -10824,7 +10891,8 @@
       "key": "2026-w37|수노, 음악 생성 모델 v6 공개... 3개 버전으로 세분화|https://suno.com/blog/introducing-v6",
       "week": "2026-w37",
       "title": "수노, 음악 생성 모델 v6 공개... 3개 버전으로 세분화",
-      "sourceUrl": "https://suno.com/blog/introducing-v6"
+      "sourceUrl": "https://suno.com/blog/introducing-v6",
+      "byteSize": 851615
     },
     {
       "status": "available",
@@ -10853,7 +10921,8 @@
       "key": "2026-w37|커서, 대규모 작업 관리하는 코디네이터 에이전트 Projects 출시|https://cursor.com/blog/projects",
       "week": "2026-w37",
       "title": "커서, 대규모 작업 관리하는 코디네이터 에이전트 Projects 출시",
-      "sourceUrl": "https://cursor.com/blog/projects"
+      "sourceUrl": "https://cursor.com/blog/projects",
+      "byteSize": 124744
     },
     {
       "status": "no-meaningful-image-verified",
@@ -10928,7 +10997,8 @@
       "key": "2026-w37|데빈 데스크톱, SSH 원격 에이전트 호스트 연결 기능 추가|https://docs.devin.ai/desktop/changelog#v3-10-23",
       "week": "2026-w37",
       "title": "데빈 데스크톱, SSH 원격 에이전트 호스트 연결 기능 추가",
-      "sourceUrl": "https://docs.devin.ai/desktop/changelog#v3-10-23"
+      "sourceUrl": "https://docs.devin.ai/desktop/changelog#v3-10-23",
+      "byteSize": 64041
     },
     {
       "status": "no-meaningful-image-verified",
@@ -10981,7 +11051,8 @@
       "key": "2026-w37|텐센트 훈위안, 음성 생성·편집 파운데이션 모델 AuK 오픈소스 공개|https://github.com/Tencent-Hunyuan/AuK",
       "week": "2026-w37",
       "title": "텐센트 훈위안, 음성 생성·편집 파운데이션 모델 AuK 오픈소스 공개",
-      "sourceUrl": "https://github.com/Tencent-Hunyuan/AuK"
+      "sourceUrl": "https://github.com/Tencent-Hunyuan/AuK",
+      "byteSize": 2249748
     },
     {
       "status": "fetch-failed",
@@ -11056,7 +11127,8 @@
       "key": "2026-w37|OpenAI, API용 실시간 음성 모델 GPT-Live-1 공개|https://openai.com/index/introducing-gpt-live-1-in-the-api/",
       "week": "2026-w37",
       "title": "OpenAI, API용 실시간 음성 모델 GPT-Live-1 공개",
-      "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+      "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "byteSize": 38198
     },
     {
       "status": "available",
@@ -11085,7 +11157,8 @@
       "key": "2026-w37|OpenAI, 금융기관용 ChatGPT for Financial Services 출시|https://openai.com/index/introducing-chatgpt-financial-services/",
       "week": "2026-w37",
       "title": "OpenAI, 금융기관용 ChatGPT for Financial Services 출시",
-      "sourceUrl": "https://openai.com/index/introducing-chatgpt-financial-services/"
+      "sourceUrl": "https://openai.com/index/introducing-chatgpt-financial-services/",
+      "byteSize": 165576
     },
     {
       "status": "no-meaningful-image-verified",
@@ -11138,7 +11211,8 @@
       "key": "2026-w37|리플릿, 데이터브릭스 통합 정식 출시... 레이크베이스 네이티브 지원|https://replit.com/blog/databricks2026",
       "week": "2026-w37",
       "title": "리플릿, 데이터브릭스 통합 정식 출시... 레이크베이스 네이티브 지원",
-      "sourceUrl": "https://replit.com/blog/databricks2026"
+      "sourceUrl": "https://replit.com/blog/databricks2026",
+      "byteSize": 100736
     },
     {
       "status": "available",
@@ -11167,7 +11241,8 @@
       "key": "2026-w37|Claude Code v2.1.267~270 연속 업데이트, 플러그인 평가 명령 추가|https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
       "week": "2026-w37",
       "title": "Claude Code v2.1.267~270 연속 업데이트, 플러그인 평가 명령 추가",
-      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270"
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+      "byteSize": 50521
     },
     {
       "status": "available",
@@ -11196,7 +11271,8 @@
       "key": "2026-w37|OpenAI Python SDK v3.10~3.13 업데이트, Live API 지원 추가|https://github.com/openai/openai-python/releases/tag/v3.13.0",
       "week": "2026-w37",
       "title": "OpenAI Python SDK v3.10~3.13 업데이트, Live API 지원 추가",
-      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.13.0"
+      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.13.0",
+      "byteSize": 43964
     },
     {
       "status": "available",
@@ -11225,7 +11301,8 @@
       "key": "2026-w37|네이버랩스, 간송미술관 공간지능 VR 투어 공개|https://www.navercorp.com/media/pressReleasesDetail?seq=10034650",
       "week": "2026-w37",
       "title": "네이버랩스, 간송미술관 공간지능 VR 투어 공개",
-      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650"
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650",
+      "byteSize": 778675
     },
     {
       "status": "available",
@@ -11254,7 +11331,8 @@
       "key": "2026-w37|Codex Python SDK 0.154.0, 추론 강도 옵션 확장|https://github.com/openai/codex/releases/tag/python-v0.154.0",
       "week": "2026-w37",
       "title": "Codex Python SDK 0.154.0, 추론 강도 옵션 확장",
-      "sourceUrl": "https://github.com/openai/codex/releases/tag/python-v0.154.0"
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/python-v0.154.0",
+      "byteSize": 65396
     },
     {
       "status": "available",
@@ -11283,7 +11361,8 @@
       "key": "2026-w38|OpenAI, API 키 생성 거버넌스 통제 추가|https://developers.openai.com/api/docs/changelog",
       "week": "2026-w38",
       "title": "OpenAI, API 키 생성 거버넌스 통제 추가",
-      "sourceUrl": "https://developers.openai.com/api/docs/changelog"
+      "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+      "byteSize": 231518
     },
     {
       "status": "no-meaningful-image-verified",
