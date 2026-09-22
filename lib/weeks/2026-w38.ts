@@ -6,7 +6,7 @@ export const week38: WeeklyData = {
   "year": 2026,
   "slug": "2026-w38",
   "period": "9/14 ~ 9/20",
-  "totalPosts": 61,
+  "totalPosts": 63,
   "companies": [
     {
       "name": "Google",
@@ -426,6 +426,30 @@ export const week38: WeeklyData = {
             "deck": "Both plan to invest over $1 billion in evaluation over five years",
             "summary": "Anthropic announced a partnership with Accenture on independent evaluation of frontier AI, with both companies expecting to invest at least $1 billion over five years to build capacity in this area.",
             "content": "Anthropic announced a partnership with Accenture focused on independent evaluation of frontier AI systems.\n\nThe partnership is part of Anthropic's recently stated commitment to embed third-party evaluators in its safety process. Anthropic and Accenture said they each expect to invest at least $1 billion over the next five years to build capacity in this area.\n\nThe announcement conveys the partnership and investment scale; detailed evaluation methodology or timelines are outside its scope."
+          }
+        },
+        {
+          "date": "9/18",
+          "platform": "Web",
+          "title": "Anthropic, 컴플라이언스 API에 크롬 세션 기록 추가",
+          "deck": "엔터프라이즈 베타로 Claude in Chrome 대화도 조회합니다",
+          "summary": "Anthropic의 컴플라이언스 API 로컬 세션 엔드포인트가 이제 Claude in Chrome 세션의 대화 기록도 반환합니다. 기존 컴플라이언스 액세스 키와 권한 범위를 갖춘 Claude Enterprise 조직 대상 베타 기능입니다.",
+          "content": "Anthropic이 컴플라이언스 API 로컬 세션 엔드포인트의 기능을 확장했습니다.\n\n이제 이 엔드포인트는 Claude in Chrome 세션의 대화 기록도 함께 반환합니다. Claude Enterprise 조직이 기존에 갖고 있는 컴플라이언스 액세스 키와 read:compliance_user_data 권한 범위로 이용할 수 있는 베타 기능입니다.\n\n이번 변경은 플랫폼 릴리스 노트에 게시된 기능 업데이트이며, 대상은 Claude Enterprise 조직으로 한정됩니다.",
+          "source": "https://platform.claude.com/docs/en/release-notes/overview",
+          "officialUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "verifiedAt": "2026-09-22",
+          "slug": "anthropic-compliance-api-chrome-transcripts",
+          "tags": [
+            "AI",
+            "2026-w38",
+            "Anthropic",
+            "Security"
+          ],
+          "en": {
+            "title": "Anthropic adds Claude in Chrome transcripts to Compliance API",
+            "deck": "Beta feature for Enterprise orgs with existing compliance access",
+            "summary": "Anthropic's Compliance API local session endpoints now also return transcripts of Claude in Chrome sessions, available in beta to Claude Enterprise organizations with an existing Compliance Access Key and scope.",
+            "content": "Anthropic expanded its Compliance API local session endpoints.\n\nThe endpoints now also return transcripts of Claude in Chrome sessions. This is a beta feature available to Claude Enterprise organizations that already hold a Compliance Access Key with the read:compliance_user_data scope.\n\nThe change is a feature update posted in the platform release notes and is limited to Claude Enterprise organizations."
           }
         },
         {
@@ -1604,6 +1628,34 @@ export const week38: WeeklyData = {
             "deck": "Looks at which AI-enabled tasks become recurring work",
             "summary": "New OpenAI economic research shows how workers use AI beyond their traditional roles and which of those new activities become recurring parts of their work.",
             "content": "OpenAI published new economic research findings.\n\nThe research looked at how workers use AI beyond the scope of their traditional roles, and which of those uses become recurring parts of their work.\n\nThis card conveys the research overview OpenAI presented; detailed methodology and figures are available in the original report."
+          }
+        },
+        {
+          "date": "9/15",
+          "platform": "Web",
+          "title": "OpenAI, API 키 생성 거버넌스 통제 추가",
+          "deck": "조직·프로젝트 단위로 신규 키 발급 범위를 제한합니다",
+          "summary": "OpenAI가 API 변경 로그에 API 키 생성 거버넌스 통제 기능을 추가했다고 밝혔습니다. 관리자는 서비스 계정 키만 허용하거나 사용자 소유 프로젝트 키만 허용하거나 신규 키 생성 자체를 막을 수 있습니다.",
+          "content": "OpenAI 개발자 문서의 API 변경 로그에 조직·프로젝트 단위 API 키 생성 거버넌스 통제 기능이 추가됐습니다.\n\n관리자는 세 가지 방식 중 하나를 선택할 수 있습니다. 서비스 계정 키만 생성을 허용하거나, 사용자 소유 프로젝트 키만 허용하거나, 신규 API 키 생성 자체를 비활성화하는 방식입니다. 기존에 발급된 키는 이 설정의 영향을 받지 않습니다.\n\n이번 업데이트는 조직 차원의 키 관리와 보안 통제를 강화하려는 조치로, 새 기능을 소개하는 변경 로그 항목입니다.",
+          "source": "https://developers.openai.com/api/docs/changelog",
+          "officialUrl": "https://developers.openai.com/api/docs/changelog",
+          "verifiedAt": "2026-09-22",
+          "slug": "openai-api-key-governance-controls",
+          "tags": [
+            "AI",
+            "2026-w38",
+            "OpenAI",
+            "Security"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20260922/04eae3b805a4.png",
+            "alt": "Changelog | OpenAI API"
+          },
+          "en": {
+            "title": "OpenAI adds API key creation governance controls",
+            "deck": "Admins can now limit who is allowed to create new keys",
+            "summary": "OpenAI's API changelog now lists API key creation governance controls at the organization and project level, letting admins allow only service-account keys, allow only user-owned project keys, or disable new key creation entirely.",
+            "content": "OpenAI's developer changelog now includes API key creation governance controls at the organization and project level.\n\nAdministrators can choose one of three modes: allow only service-account key creation, allow only user-owned project keys, or disable all new API key creation. Existing keys are unaffected by this setting.\n\nThis update is aimed at strengthening organization-level key management and security controls, presented as a changelog entry introducing the new feature."
           }
         },
         {

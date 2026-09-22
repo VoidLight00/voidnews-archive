@@ -1,0 +1,12 @@
+Luma AI to Launch Native Arabic-Language Interface for Saudi and Arabic-Speaking Creative Community | Luma
+Luma AI to Launch Native Arabic-Language Interface for Saudi and Arabic-Speaking Creative Community
+The launch will extend Arabic-language support beyond prompting and output to the full Luma Agents interface
+Luma AI today announced that Luma Agents, its unified AI creative platform, will offer a fully native Arabic-language interface later this year, making it the first-of-its-kind creative intelligence platform in Arabic designed for creative communities in Saudi Arabia and the wider MENA region.
+Luma Agents currently supports Arabic-language prompting and generates Arabic-language creative outputs. The new update, announced at LEAP 2026 in Riyadh, will localize the total user experience, including navigation, menus, and workflow tools. Arabic will be the first non-English interface language available on Luma Agents, enabling creators across Saudi Arabia and the wider Arabic-speaking world to work in their native language as they move between ideas and production workflows.
+Expanding Access to Creative AI
+Arabic-language interfaces remain uncommon among AI generation platforms, despite rapid growth in demand for AI-powered content creation across the GCC and wider MENA region.
+By localizing the Luma Agents interface, Luma aims to remove a practical barrier for creative professionals working primarily in Arabic, allowing teams in the region to develop and deliver creative work in a more natural and intuitive way on a platform that speaks to their language. The update is a direct result of Luma’s strategic partnership with HUMAIN, as well as engagement with creatives and enterprises in Saudi Arabia.
+It also forms part of Luma’s broader investment in the country – including the
+establishment of its regional headquarters in Riyadh. “Over the past year, we have been listening to and understanding the needs of the creative community in Saudi Arabia,” said Jason Day, Head of EMEA at Luma AI. “The process of localizing the interface has been guided by the creative community, for the creative community in the Kingdom. Providing Luma Agents in Arabic enables the 400 million Arabic speakers worldwide to be prolific – going from first idea through to the finished outcome without the friction of working in multiple languages.”
+Availability
+The fully localized Arabic-language interface for Luma Agents will begin rolling out later this year. More information will be available at lumalabs.ai.

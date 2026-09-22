@@ -1,0 +1,246 @@
+Higgsfield 3D Jutsu: Build and Animate 3D Scenes from a Prompt
+3D Jutsu is Higgsfield's AI-native 3D workspace. It turns a prompt or a reference into an editable 3D scene with objects, layout, lighting, cameras, and animation, and then into video. An AI agent running on Supercomputer assembles the scene, you refine real scene objects without regenerating everything, and the finished shot renders from the same chat.
+What is 3D Jutsu?
+Blocking is the stage where a scene takes shape before any final rendering: objects get placed, characters get positioned, cameras get framed. Previz turns that rough scene into a moving reference for the final shot. In classic 3D pipelines both stages are done in desktop 3D software; 3D Jutsu moves them into the browser.
+3D Jutsu is how Higgsfield handles scene blocking and previz. It is a standalone workspace within Higgsfield's AI-native creative suite, connecting early scene planning with final video generation. Scenes live in your Higgsfield account under My Scenes.
+How do you start a scene?
+A scene starts from a text prompt. You describe what you want to build, attach references if you have them (your uploads or past Higgsfield generations), and set the parameters:
+Model: the LLM that drives the agent, with Auto as the free default.
+Duration: from 1 to 60 seconds of scene time, 15 seconds by default.
+Aspect ratio: 16:9, 9:16, 1:1, 4:3, 3:4, or 21:9.
+Press Generate and the agent assembles a draft of the scene in an interactive 3D viewport: drag to orbit, scroll to zoom, right-drag to pan.
+What can you build and edit?
+Everything the agent generates lands in the viewport as editable scene data, so you refine real scene objects instead of regenerating the whole scene. The editor covers the same ground a 3D artist expects from a blocking pass:
+What can you build and edit?
+Tool
+What it does
+Scene generation
+A prompt or a reference becomes a full scene: objects, layout, and light placed as editable geometry
+Add object
+Primitives (sphere, cube, pyramid), three light types (sun, point, spot), and cameras added manually
+Asset library
+Curated GLB assets and Mixamo characters drop directly into the active scene
+Scene properties
+Background color, scene resolution, and light intensity controlled from a side panel, with the full object hierarchy visible
+Animation
+A timeline with a playhead; motion comes from a camera trajectory, an animated character, or a GLB file imported with its animation
+Camera work
+Camera presets and trajectory editing frame the shot; Esc leaves a camera view back to the free viewport
+Revision history
+Every editing session saves as a revision; preview a checkpoint or restore it as a new head
+Export
+A finished scene renders as an animated MP4, a static frame, or a GLB file with dimensions and file size set before render
+After generation, the scene stays editable by hand: objects move, rotate, scale, and duplicate, lights swap, cameras reframe. Undo, redo, and revision history apply to every change.
+How does the AI agent work?
+The chat panel inside the workspace takes instructions in plain language, for example "move the car closer to the streetlamp, add a second character across the street". Two behavior modes control how much autonomy it gets: in "generate without asking" the agent runs without confirmation, in "ask before generating" it checks with you before each generation. A separate ask mode answers questions without touching the scene.
+The agent runs on Supercomputer, so you choose which LLM drives it. Auto is the default and free. The selector also carries specific models, including GPT 6 Astra, Claude Fable 5.1, Claude Opus 5, GPT 5.6 Sol, and GLM-5.3 Flash, switchable per chat.
+The same chat sends the result to video generation: when the scene is ready, you request the render directly from the conversation.
+Scenes are built for teamwork. Share invites people by email as an admin, a collaborator, or a viewer, and team access ranges from invited people only to anyone with the link.
+How does the full workflow look?
+Here's how a finished shot comes together. The example: a rapper in a moving subway car, filmed by a robotic-arm camera move.
+Step 1:
+Block the previz. A prompt to the agent builds the scene in grey proxies: the subway car, the character, and the camera path with its framing and timing.
+8 seconds, 16:9. A character stands in a subway car and raps. The character has NO arms and NO hands: none rendered, nothing at the shoulders.
+
+FRAMING: medium close-up throughout: head, shoulders and upper torso only, no legs, no waist. An invisible camera target is placed separately from the head so the head is always in frame as the camera moves.
+
+CAMERA = robo-arm. One continuous, perfectly smooth 360-degree orbit around the character's head and shoulders at chest height, with a slight upward angle: starting front-left, sweeping around behind, continuing around the far side and returning to the front. Constant unhurried speed, near-constant radius that closes slightly on the back half. The camera never stops, never reverses, never zooms, and stays inside the subway car. Nothing passes through the camera and the camera passes through nothing: no walls, no floor, no ceiling, no poles, no seats.
+
+CHARACTER: keeps rapping the whole time, and his head continuously turns to follow the camera through the orbit, face toward the lens the whole way, including a look over the shoulder as the camera passes behind.
+
+Clean sharp digital image, no motion blur smear, no film grain, no vignette, no lens flare, no readable text or logos in the car, no neon, no yellow cast.
+Copy
+Recreate
+Your browser does not support the video.
+Step 2:
+Render the previz. Press Export and the camera timeline renders as a video: the grey blockout becomes a reference clip for the intended camera move and the character's behavior.
+Your browser does not support the video.
+Step 3:
+Generate the references. The character comes from Soul 2.0: a portrait that carries the identity and the wardrobe. The location comes from Soul Cinema: an empty subway car interior. Both are regular Higgsfield generations, ready to drop into the chat.
+Step 4:
+Combine in the same chat. The character and the location drop into the same 3D Jutsu conversation next to the previz render, and one message asks the agent to put them together. The previz provides a reference for the intended camera path, framing, and character behavior, and grey proxies become the real location, wardrobe, and performance.
+SCENE CONTEXT
+
+An 8-second single continuous motion-control shot inside a moving subway car at night: a hooded young rapper stands rooted at the center of the car and delivers four unhurried, meaningful bars straight into the lens while a robotic-arm camera performs one perfectly smooth 360-degree orbit around his head and shoulders, and he FOLLOWS THE CAMERA with his head the whole way, turning to keep his face and eyes on the lens even as it passes behind him, his body planted, his hands carving the flow. Intimate, controlled, cinematic. His rap is the only voice.
+
+ACTIVE REFERENCES
+
+<<<image_1>>>: THE RAPPER. Early twenties, dark skin, striking light-hazel eyes, calm composed face, a small earring. Wardrobe exactly per the reference: an olive-khaki zip hoodie with the hood UP over a leopard-print turtleneck and a dark tee, a charcoal boxy short-sleeve tee layered on top with colorful flower prints, a blue plaid flannel underneath with sleeves showing, an orange leopard-print strap across the chest, a silver pendant on a cord, silver rings, a camo skirt layer over red buffalo-check trousers, black suede boots. His face and full layered outfit stay identical for the whole shot; the hood stays up. Closely matches the reference.
+
+<<<video_1>>>: THE CAMERA PATH AND THE FIGURE'S BEHAVIOR. Reference controls two things: (1) the camera move: a tight head-and-shoulders framing at chest height with a slight upward angle, one continuous smooth 360-degree orbit around a standing figure inside a subway car, beginning front-left, sweeping around behind, continuing around the far side and returning to the front, at a near-constant radius that closes slightly on the back half; (2) the figure's behavior: the body stays fixed in one spot for the entire shot while the HEAD CONTINUOUSLY TURNS TO FOLLOW THE CAMERA, keeping the face toward the lens through the whole orbit, including a look back over the shoulder as the camera passes behind. Nothing else from the previz (its grey materials, proxy geometry or lighting) is inherited.
+
+LOCATION MAP
+
+A generic New York subway car interior at night, in motion: stainless-steel walls, molded plastic bench seats along each side, vertical steel grab poles and overhead rails, fluorescent ceiling panels, scuffed rubber flooring, advertising card slots above the windows holding only blank or blurred cards, the windows black with the tunnel rushing past; periodic tunnel work-lights streaking through. The car is EMPTY except him. He stands in the open center aisle between two poles, feet planted shoulder-width, not holding on, balanced against the car's sway.
+
+FIRST FRAME AND SPATIAL BLOCKING
+
+The first visible frame is already the tight head-and-shoulders on his face; no establishing wide.
+
+Frame map at 0.0s: camera front-left of him at chest height, 1.2 meters away, tilted slightly up. His hooded head at x 40-62%, y 18-70%, face turned to the lens, shoulders spanning x 25-78% at the frame's lower edge; a grab pole passes vertically at x 15%; the far bench and a black window behind him at x 60-100%.
+
+Frame map at 2.0s: the orbit is at his left side; his head has turned left to follow it, face still square to the lens at x 42-60%, his shoulders now in three-quarter, the window streak-lights sliding past behind his hood.
+
+Frame map at 4.0s: directly behind him: his back and the hood at x 35-65%, y 15-75%, but his head is turned hard over his left shoulder, chin on the shoulder line, one eye and the edge of his face catching the lens over the hood's rim; the far aisle and poles receding beyond, the tunnel black in the side windows.
+
+Frame map at 6.0s: his right side: his head has swung around over the right shoulder to meet the camera, face square to the lens again at x 40-58%, the near window's passing lights raking his cheek.
+
+Frame map at 8.0s: back to front: his face centered at x 42-60%, eyes locked on the lens, the last word landing, one hand settling.
+
+FORMAT MODE
+
+ONE SINGLE UNBROKEN SHOT for the entire 8.0 seconds, horizontal 16:9. One continuous motion-control take with absolutely no cuts, no edits, no transitions, no dissolves, no wipes and no flash frames. Real time throughout; no speed ramps, no slow motion, no freeze frames.
+
+OPTICS
+
+47° diagonal field of view held for the entire shot, standard normal lens character, camera 1.2 meters from his face closing to about 1.0 meter behind him and easing back to 1.2 on the return, natural facial proportions, no distortion. Shallow-but-honest focus riding his face continuously as it turns, the car interior soft, the tunnel lights blooming softly in the windows. Exposure holds on the fluorescent interior; the passing tunnel lights streak through without blowing out. Clean lens, no flares.
+
+CAMERA
+
+A ROBOTIC-ARM MOTION-CONTROL move: perfectly smooth, mechanically steady, zero handheld shake, zero jitter. One continuous 360-degree orbit around his head and shoulders at chest height with a slight upward angle, replicating the reference path exactly.
+
+0.0s to 2.0s: from front-left, sweeping smoothly around his left side.
+
+2.0s to 4.0s: continuing around behind him, the radius tightening slightly as it passes the back of his hood.
+
+4.0s to 6.0s: continuing around his right side, the radius easing back out.
+
+6.0s to 8.0s: completing the circle to the front, settling on his face as the final word lands, a full 360 in one constant-speed glide.
+
+The orbit's speed is constant and unhurried; the camera never stops, never reverses, never zooms, never tilts beyond the slight upward angle, and the rig is never visible.
+
+THE PERFORMANCE (critical, mirroring the previz figure)
+
+BODY: rooted. Feet planted shoulder-width in the aisle for the full shot; hips and torso stay facing the car's front, with only a small natural twist of the shoulders when his head is turned furthest; he never steps, never shifts his feet, never walks, never holds a pole.
+
+HEAD: tracks the camera continuously. As the orbit moves, his head turns smoothly to keep his face toward the lens: left, then hard over his left shoulder as the camera passes behind (chin nearly on the shoulder, eyes cut to the lens over the hood's edge), then a smooth swing across to over his right shoulder, then around to the front. The turn is continuous and unhurried, matching the orbit's speed, never snapping, never lagging more than a beat.
+
+EYES: on the lens through the entire orbit whenever any part of his face is visible; the connection never breaks.
+
+HANDS: free and expressive, riding the bars: a loose open-palm roll on the first line, two fingers tapping his own chest on "who I became," one hand lifting to flick the hood's edge over his shoulder as he looks back on the third line, a small flat-palm "settle" gesture pressed down on the last words. Each gesture once, natural, rap-video-loose, never blocking his face.
+
+THE RAP (critical, delivery and text)
+
+He raps slowly and deliberately: relaxed, conversational cadence, every word clear, pauses breathing between lines, no rushing, no mumbling. Clean and meaningful. The four bars, delivered across the eight seconds in sync with his lips:
+
+"Same train every night, but I don't ride the same."
+
+"Every stop I pass is a piece of who I became."
+
+"They see the hood up, think they already know."
+
+"I just keep my head down and let the work show."
+
+His delivery is intimate, almost spoken-word: confident, low, sincere, his eyes never leaving the lens as his head turns to follow it around.
+
+ACTION TIMING
+
+0.0s to 2.0s: LINE ONE. Front-left: rooted in the aisle, hood up, he holds the lens and delivers the first bar low and clear, an open-palm roll of one hand on "ride the same", his head already beginning to turn left with the camera as it sweeps toward his side.
+
+2.0s to 4.0s: LINE TWO. The camera passes his left side and behind him: his head turns with it, further and further, until his chin rides his left shoulder and his eyes hold the lens over the hood's rim, two fingers tapping his chest on "who I became," the tunnel lights streaking past beyond his profile.
+
+4.0s to 6.0s: LINE THREE. Behind and around his right side: his head releases the left shoulder and swings smoothly across to the right, finding the lens again over his right shoulder, a small dry half-smile on "already know," one hand flicking the hood's edge as he looks back, the passing lights raking his cheek.
+
+6.0s to 8.0s: LINE FOUR. Completing to the front: his head comes around to face forward with the camera, eyes steady on the lens; the last bar lands quiet and certain, "let the work show", the flat-palm settle gesture pressing down on the final words, a slow nod, the car rocking once. End on the held look.
+
+PHYSICS
+
+Real subway motion: the car sways gently side to side and rocks over rail joints, his planted body absorbing it through relaxed knees while his feet never move; his layers, hood drawstrings and pendant swing subtly with the sway; the grab poles and overhead rails are fixed and pass through frame with the orbit's true parallax. His head-turn is anatomically real: the neck rotates to its natural limit over each shoulder with a small shoulder twist assisting, never beyond human range, never swiveling unnaturally; the hood shifts and creases naturally with the turns. Hand gestures drive from shoulder through elbow with natural follow-through. Lips, jaw and breath sync to the words; no stiffness, no looping. Nothing floats, nothing teleports.
+
+LIGHTING
+
+Subway-car night interior: cool flat fluorescent ceiling panels as the base key, even on his face with soft shadow under the hood's brow; the black windows throwing intermittent warm-white streaks from passing tunnel lights that rake his cheek and shoulder as the orbit brings each window behind and beside him; the stainless walls reading dull silver. His hazel eyes stay lit and readable at every angle of the turn, including the over-the-shoulder looks. No added effects, no flares. Photoreal capture, high dynamic range, natural cool-toned filmic grade, fine real grain, no stylized filter.
+
+AUDIO
+
+Diegetic plus his voice. The moving-train bed: a steady rolling rumble, rail-joint clacks on a regular rhythm, the whoosh of tunnel air, a faint fluorescent hum, a soft creak of the car body on the sway, and over it his rap: close, dry, intimate, unhurried, every word intelligible, breaths between lines, a soft rustle of the hood as he turns. No music track, no beat, no score; his voice alone against the train. No subtitles.
+
+POSITIVE CONSTRAINTS
+
+He is the only person in the entire clip; the car stays empty of other passengers and no one enters.
+
+He matches <<<image_1>>> in every frame: same face, hazel eyes, hood up, all layers, strap, pendant, rings, camo skirt, check trousers and boots, with zero drift; the hood never comes down.
+
+THE CAMERA PATH MATCHES <<<video_1>>>: one continuous smooth 360-degree robotic orbit around his head and shoulders at chest height with a slight upward angle (front-left, around behind, around the far side, back to front) at constant speed with a slightly tightening radius behind him; perfectly steady with no handheld shake, no jitter, no stops, no reversals, no zooms, no cuts.
+
+THE FIGURE'S BEHAVIOR MATCHES <<<video_1>>>: his body stays fixed in one spot (feet planted, torso facing the car's front with only a small assisting shoulder twist) while his HEAD TURNS CONTINUOUSLY TO FOLLOW THE CAMERA through the entire orbit, including the look back over his left shoulder as the camera passes behind and the swing across to his right shoulder as it comes around; he never walks, steps, shifts his feet, holds a pole, or turns his whole body to face the camera.
+
+His eyes stay on the lens whenever any part of his face is visible, for the whole shot.
+
+His hands gesture freely and naturally with the bars (the palm roll, the chest tap, the hood flick, the settle) each once, never covering his face, never exaggerated.
+
+THE RAP IS THE FOUR WRITTEN BARS, delivered slowly and clearly in sync with his lips across the eight seconds (meaningful, clean, no profanity, no filler, no rushing, no mumbling) and it is the only voice in the clip.
+
+The entire clip is ONE SINGLE CONTINUOUS MOTION-CONTROL SHOT: no cuts, no edits, no transitions, no dissolves, no flash frames anywhere.
+
+No speed ramps, no slow motion, no freeze frames; all motion is real time and anatomically human.
+
+No signage, route letters, station names, ad text, logos or readable text appear anywhere: not on the car walls, the ad slots, the windows or his clothing.
+Copy
+Recreate
+Your browser does not support the video.
+What does it cost?
+3D Jutsu prices agent messages by model. On Auto, the free default, messages cost nothing; picking a specific LLM charges credits per message. The selector carries 30+ LLMs across price ranges, the estimated cost shows before you send, longer chats use more, and the credits are the same balance you use everywhere on Higgsfield.
+Typical message cost by model:
+What does it cost?
+Model
+Approximate cost per message
+Auto
+Free
+DeepSeek V4 Flash
+~0.4 credits
+Seed 2.1 Turbo
+~1 credit
+Gemini 3.5 Flash
+~2 credits
+Gemini 3.1 Pro
+~3 credits
+GPT 5.6 Sol
+~7 credits
+Claude Opus 5
+~8 credits
+Claude Fable 5.1
+~11 credits
+GPT 6 Astra
+~17 credits
+The cost of the engine depends on the model and its version: the selector carries models across price ranges, and any of them can drive the agent.
+When can creators use it?
+A blockout settles composition, framing, and lighting before final generations. Three situations where this fits:
+Previz before committing: compare several camera angles and lighting setups on grey boxes in minutes, then spend credits on the final render of the version that works.
+A pitch due tomorrow: a client review needs something to look at, and a rough blocked scene with a camera move communicates the idea without a production day.
+Planning multi-shot sequences: block the whole scene once, then frame each shot from the same geometry, keeping spatial continuity across the sequence.
+Where does a finished scene go?
+A finished scene has three exits. Video generation runs from the chat, so the scene you block is the scene you render. Export saves it as an animated MP4, a static frame, or a GLB file. And the same scene layer runs in the
+Higgsfield Blender plugin
+: Scene Builder assembles blockouts in an open .blend file, on the same account and the same credits.
+Higgsfield 3D Jutsu: Build and Animate 3D Scenes from a Prompt
+Try 3D Jutsu
+Got any questions left?
+Do I need 3D experience to use 3D Jutsu?
+No. The agent assembles the scene from a text description, and manual editing is limited to moving objects, adding primitives and lights, and framing cameras. Knowing 3D software helps but is not required.
+Is 3D Jutsu a Blender plugin?
+No, it is a standalone browser workspace. Higgsfield's Blender plugin is a separate product that works inside Blender; 3D Jutsu requires no installation.
+Can I import my own 3D files?
+Yes. GLB files import into the scene with their animation intact, and finished scenes export back as GLB, animated MP4, or a static frame.
+How is 3D Jutsu priced?
+Messages on Auto, the default model, are free. Picking a specific LLM charges your regular Higgsfield credits per message, the estimated cost shows before you send, and the price depends on the model.
+Can I work on a scene with my team?
+Yes. Invite people by email as an admin, a collaborator, or a viewer, or open access to anyone with the link. Revision history keeps every version restorable.
+by Higgsfield
+Discover more
+View all
+Guides
+Higgsfield for Blender: Features, Installation, and MCP Bridge Setup
+8 min
+·
+Aug 20, 2026
+Guides
+How to Make a Game Trailer with AI in 2026: Full Workflow + Prompts
+13 min
+·
+Aug 10, 2026
+Editorials
+Higgsfield Meets DaVinci Resolve: Generate B-Roll Right in Your Edit
+10 min
+·
+Jul 28, 2026

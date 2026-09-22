@@ -1,0 +1,90 @@
+[
+  {
+    "index": 68,
+    "id": "industry-inline-1",
+    "title": "Figma, 생성형 플러그인·셰이더의 애니메이션·공유 확대",
+    "source": "https://www.figma.com/release-notes/",
+    "canonical": "https://www.figma.com/release-notes/",
+    "publication": {
+      "publisherDate": "2026-09-01",
+      "raw": null,
+      "precision": "date",
+      "kstDate": null,
+      "displayDate": "9/01",
+      "policy": "Explicit zoned timestamp converted to KST; otherwise publisher date preserved without invented time."
+    },
+    "rawPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f41a3c70a02b740690.raw",
+    "rawSha256": "22447b0084f458655f6d763aa1ed98a718a0fe2e0d3d554234f9505102d59dbc",
+    "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f41a3c70a02b740690.raw",
+    "bodySha256": "22447b0084f458655f6d763aa1ed98a718a0fe2e0d3d554234f9505102d59dbc",
+    "dateEvidence": [
+      "2026-09-01"
+    ],
+    "sameUrlRuntime": [
+      {
+        "path": "/weeks/21/companies/5/posts/5",
+        "title": "Figma Make — 디자인에서 프로토타입까지 프롬프트 기반 전환",
+        "source": "https://www.figma.com/make/"
+      }
+    ],
+    "issues": [],
+    "bodyIntro": "Figma product news and release notes Skip to main content Products What you can do in figma Design and explore Build and ship products Explore all products Figma Design Design and prototype in one place Figma Make Prompt to code anything you can imagine Figma Weave AI workflows for imagery, video, audio, and more Dev Mode Translate designs into code Figma Motion New Animate your designs FigJam Collaborate with a digital whiteboard Figma Slides Co-create presentations Figma Draw Illustrate with advanced vector tools Figma Sites Beta Publish fully responsive websites Figma Buzz Beta Produce on-brand assets at scale Additional product resources AI workflows Release notes Downloads Solutions Use cases Design systems Prototyping UX design Web design Wireframing Online whiteboard Agile Strategic planning Brainstorming Diagramming Product development Web development Design handoff See all solutions Roles Design Engineering Product managers Organizations Enterprise Education Government Community Events Learn best practices at virtual events User groups Join a local Friends of Figma group Customer stories Read about leading product teams Resources Shortcut: The Figma blog Stories about how products take shape—and shape our world Get started Plugins UI kits Icons Widgets Templates Tools Partners See all Learn Best practices Reports & insights Resource library Demos Webinars Help center Figma Support Pricing Log in Contact sales Get started Get started for free Log in Contact sales Get started Get started for free Release Notes Keep up with Figma’s latest product news, or subscribe to",
+    "reviewedAt": "2026-09-09",
+    "previousCollectedVerifiedAt": "2026-09-08",
+    "dateSemantics": "Source publication metadata remains separate from local cached-evidence audit date.",
+    "decision": "confirmed_nonduplicate_add",
+    "eventReview": "September1 generative plugins/shaders animation and publishing update; historical Figma Make entry only links the general release notes.",
+    "eventCandidates": [],
+    "datedSection": {
+      "heading": "Updates to generative plugins and shaders",
+      "date": "Sep 1, 2026",
+      "quote": "Sep 1, 2026 Updates to generative plugins and shaders New release Update Figma AI Figma Community Collaboration Design Copy link Sep 1, 2026 Updates to generative plugins and shaders New release Update Figma AI Figma Community Collaboration Design Copy link At Config, we launched the ability build your own custom generative plugins and shaders by prompting the Figma agent. Now, you can do more with those generative plugins and shaders with animations and interactions, publishing capabilities, and access to the code. Animated and interactive shaders : Prompt the agent to build a custom shader effect or fill that incorporates motion and is reactive to mouse movements. Learn more. Community publishing : Share your generative plugins and shaders with the world by publishing them for others to use on the Figma Community. Learn more about Community publishing for shaders and Community publishing for generative plugins. Publish to organization : Share private generative plugins and shaders with your organization to standardize effects or tool usage. Only available on Organization and Enterprise plans. Learn more. Code viewer : View and download the code for any shader and your own generative plugins, right in Figma. Learn more. MCP updates : View and make changes to your generative plugins and shaders with a third party agent via Figma’s MCP server. Plus, when you copy a Figma frame with shaders applied to an external agent, on implementation the shaders will render correctly in the generated React code. Learn more . Read the blog post",
+      "anchor": null,
+      "anchorReason": "Article/h2 has no id or named anchor; mask id a is graphics markup, not a valid event anchor. No invented fragment."
+    }
+  },
+  {
+    "index": 69,
+    "id": "industry-inline-2",
+    "title": "Figma 데스크톱, 에이전트 채팅을 별도 창으로 분리",
+    "source": "https://www.figma.com/release-notes/",
+    "canonical": "https://www.figma.com/release-notes/",
+    "publication": {
+      "publisherDate": "2026-08-26",
+      "raw": null,
+      "precision": "date",
+      "kstDate": null,
+      "displayDate": "8/26",
+      "policy": "Explicit zoned timestamp converted to KST; otherwise publisher date preserved without invented time."
+    },
+    "rawPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f41a3c70a02b740690.raw",
+    "rawSha256": "22447b0084f458655f6d763aa1ed98a718a0fe2e0d3d554234f9505102d59dbc",
+    "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f41a3c70a02b740690.raw",
+    "bodySha256": "22447b0084f458655f6d763aa1ed98a718a0fe2e0d3d554234f9505102d59dbc",
+    "dateEvidence": [
+      "2026-08-26"
+    ],
+    "sameUrlRuntime": [
+      {
+        "path": "/weeks/21/companies/5/posts/5",
+        "title": "Figma Make — 디자인에서 프로토타입까지 프롬프트 기반 전환",
+        "source": "https://www.figma.com/make/"
+      }
+    ],
+    "issues": [],
+    "bodyIntro": "Figma product news and release notes Skip to main content Products What you can do in figma Design and explore Build and ship products Explore all products Figma Design Design and prototype in one place Figma Make Prompt to code anything you can imagine Figma Weave AI workflows for imagery, video, audio, and more Dev Mode Translate designs into code Figma Motion New Animate your designs FigJam Collaborate with a digital whiteboard Figma Slides Co-create presentations Figma Draw Illustrate with advanced vector tools Figma Sites Beta Publish fully responsive websites Figma Buzz Beta Produce on-brand assets at scale Additional product resources AI workflows Release notes Downloads Solutions Use cases Design systems Prototyping UX design Web design Wireframing Online whiteboard Agile Strategic planning Brainstorming Diagramming Product development Web development Design handoff See all solutions Roles Design Engineering Product managers Organizations Enterprise Education Government Community Events Learn best practices at virtual events User groups Join a local Friends of Figma group Customer stories Read about leading product teams Resources Shortcut: The Figma blog Stories about how products take shape—and shape our world Get started Plugins UI kits Icons Widgets Templates Tools Partners See all Learn Best practices Reports & insights Resource library Demos Webinars Help center Figma Support Pricing Log in Contact sales Get started Get started for free Log in Contact sales Get started Get started for free Release Notes Keep up with Figma’s latest product news, or subscribe to",
+    "reviewedAt": "2026-09-09",
+    "previousCollectedVerifiedAt": "2026-09-08",
+    "dateSemantics": "Source publication metadata remains separate from local cached-evidence audit date.",
+    "decision": "confirmed_nonduplicate_add",
+    "eventReview": "August26 desktop agent-chat separate-window feature; distinct from September1 generative plugins and historical Figma Make.",
+    "eventCandidates": [],
+    "datedSection": {
+      "heading": "Open the agent chat panel in a new window",
+      "date": "Aug 26, 2026",
+      "quote": "Aug 26, 2026 Open the agent chat panel in a new window New release Figma AI Desktop app Assets Design Copy link Aug 26, 2026 Open the agent chat panel in a new window New release Figma AI Desktop app Assets Design Copy link You can now open the agent chat panel into a new window on the Figma desktop app for both macOS and Windows. It stays visible when you work with other tools or switch tabs. Here's what's new: → Open the agent chat panel into its own window → Move it anywhere on your screen → Always keep it visible while you design Download the desktop app here.",
+      "anchor": null,
+      "anchorReason": "Article/h2 has no id or named anchor; mask id a is graphics markup, not a valid event anchor. No invented fragment."
+    }
+  }
+]

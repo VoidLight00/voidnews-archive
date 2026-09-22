@@ -1,0 +1,19 @@
+ 
+ Copilot code review can now review two types of pull requests it didn’t cover before: 
+ 
+ Reviews requested automatically on pull requests authored by bots, including Copilot cloud agent 
+ Very large pull requests 
+ 
+ Additionally, you can now submit the reason for why you’re resolving a particular Copilot code review comment. 
+ 🤖 Expanded capabilities 
+ Pull requests authored by bots 
+ When a pull request is authored by a bot and requested automatically, there’s no Copilot-licensed account to attribute the review to. With the “Allow members without a Copilot license to use Copilot code review in GitHub.com” policy enabled, Copilot code review can now review these pull requests and bill the usage directly to your organization. To learn more, see Copilot code review without a Copilot license . 
+ Copilot cloud agent pull requests 
+ Previously, when Copilot code review was automatically requested due to automatic review settings on pull requests authored by Copilot cloud agent, Copilot code review would fall back to a limited experience. Copilot code review can now give pull requests opened by Copilot cloud agent a full agentic review. 
+ Large pull requests 
+ Copilot code review previously had a 300 file or 20,000 lines of code limit on the size of a pull request it could review. This limitation no longer applies. 
+ ☑️ Comment resolution reasons 
+ You can now specify the reason for resolving a Copilot code review comment by either selecting “Addressed”, “Won’t fix”, or “Incorrect”, after clicking the new dropdown next to the “Resolve conversation” button, located at the bottom of any Copilot code review comment. Selecting one of these options provides valuable feedback to the product team and helps improve the product. 
+ 
+ 
+ The post Copilot code review: Resolution reasons and expanded capabilities appeared first on The GitHub Blog . 

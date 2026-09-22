@@ -1,0 +1,724 @@
+{
+  "schema": "source-ledger-schema.md",
+  "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+  "sources": [
+    {
+      "id": "src-sep02-08-01",
+      "candidateId": "sep02-08-01",
+      "date": "2026-09-03",
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "publisher": "Google",
+      "sourceType": "official-blog",
+      "productNamespace": "Gemini 3.8",
+      "officialEventId": null,
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "Google announced a broadly available Flash variant and a restricted-access Cyber variant.",
+      "excerpt": "Building on the momentum of 3.7 Flash from three weeks ago and marking our third Flash release in only six weeks, today we’re introducing Gemini 3.8, our best reasoning and coding model yet, at the same speed and low cost of 3.7. Gemini 3.8 introduces 2 variants:\n\nGemini 3.8 Flash: our most intelligent workhorse model, delivering significant improvements from 3.7 Flash across software engineering, agentic tasks, and critical, multi-step reasoning in specialized domains. It is available at the same introductory price 1 as 3.7 Flash at $0.75 per million input tokens and $3.75 per million output tokens.\n\nGemini 3.8 Flash Cyber: our most capable cybersecurity model with frontier-level performance in vulnerability detection and automated patching, available to trusted defenders through our new Fairwind Program .\n\n3.8 Flash ships with safeguards against misuse in the domains of Chemical, Biological, Radiological, and Nuclear (CBRN) and cyber offense, while enabling beneficial use cases, as per our Frontier Safety Framework . 3.8 Flash Cyber ships with a more permissive set of mitigations for cybersecurity, and as such, is only available to trusted defenders who require a more comprehensive set of cyber capabilities.\n\nConsumers : 3.8 Flash is available to Google AI Pro and Ultra subscribers across the Gemini app , AI Mode in Google Search and Gemini in Google Sheets .\n\nCyber: Through our new Fairwind Program , we’re providing trusted government authorities, as well as critical infrastructure operators and software maintainers with prioritized access to Gemini 3.8 Flash Cyber. Apply for access .",
+      "claims": [
+        "Google introduced two Gemini 3.8 variants, Flash and Flash Cyber.",
+        "Flash Cyber is available to trusted defenders through the Fairwind Program; it has more permissive cybersecurity mitigations.",
+        "Performance comparisons are claims reported by Google, not independently reproduced in this research."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [
+        "claim-unresolved"
+      ],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-02T15:00:00+00:00",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-02T15:00:00+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-01.html",
+        "normalizedText": "source-cache/sep02-08-01.txt",
+        "rawHtmlSha256": "81e2b33f0253419748d6a931f8a4fd3e44ffa5d1f1d37a48d17a0841a77b713a"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-02",
+      "candidateId": "sep02-08-02",
+      "date": "2026-09-04",
+      "title": "Introducing WeatherNext 3",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+      "publisher": "Google DeepMind and Google Research",
+      "sourceType": "official-blog",
+      "productNamespace": "WeatherNext 3",
+      "officialEventId": "weather-next-3-hourly-satellite-forecast",
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "Google introduced WeatherNext 3 with hourly updates using live satellite observations.",
+      "excerpt": "Today, Google DeepMind and Google Research are introducing WeatherNext 3 , the most advanced and accurate global weather model to date, according to independent live evaluations by Brightband. Our model learns directly from real-time observations, enabling it to provide timely and more localized predictions for the weather events that impact people the most. By using raw satellite data to produce a forecast every hour in high resolution, our model makes reliable forecasts accessible across Google products worldwide.\n\nWith WeatherNext 3, we can visualize key surface variables — like temperature and moisture — at a 5-kilometer resolution, other surface variables at 10 kilometers, and atmospheric variables, like wind speed, at 25 kilometers. Overall, this provides a global weather picture roughly five times sharper than our previous model, WeatherNext 2, which produced forecasts on a 25-kilometer grid in 6-hour increments.\n\nFigure 1: The end-to-end WeatherNext 3 system architecture. The model ingests live 1-hour geostationary satellite mosaics alongside traditional historical analysis to feed a single, flexible Functional Generative Network (FGN) mesh transformer. It outputs dense gridded fields, discrete cyclone tracks, and predicts station-level sparse coordinates natively.\n\nBy ingesting a mosaic of live, global geostationary satellite data, our new model gains a rich, continuously updating view of the atmosphere. This allows the model to generate a new forecast every hour, each one grounded in the most recent satellite observations available, at up to 5-kilometer resolution.\n\nOur primary goal is to advance weather intelligence to make it universally useful — whether for an emergency responder tracking sudden wind shifts, an air traffic controller planning flight paths, or a farmer managing crops.\n\nHigh-resolution forecast data: We’re making global weather predictions, updated hourly and ready to integrate into your workflows with no model setup required. This enables researchers, developers and businesses to query the data in BigQuery and Earth Engine, or bulk-download from Google Cloud Storage.",
+      "claims": [
+        "WeatherNext 3 ingests live hourly geostationary satellite mosaics.",
+        "Key surface variables such as temperature and moisture have 5-kilometer resolution; other variables use coarser grids.",
+        "Google says it is integrating WeatherNext 3 across its ecosystem and provides forecast data through BigQuery, Earth Engine and Cloud Storage."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T15:00:00+00:00",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-04",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-03T15:00:00+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-02.html",
+        "normalizedText": "source-cache/sep02-08-02.txt",
+        "rawHtmlSha256": "4485766a9e9fb17032657ed3533d9662e2736f64c6f5adec780cb2e5e7c81241"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-03",
+      "candidateId": "sep02-08-03",
+      "date": "2026-09-03",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "publisher": "Google DeepMind",
+      "sourceType": "official-blog",
+      "productNamespace": "Genie",
+      "officialEventId": null,
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "Google announced Fairwind, a restricted-access cyber-defense program for selected governments, enterprises and security partners.",
+      "excerpt": "Today, we’re launching our Fairwind Program, a limited access program for governments and trusted partners to use our most advanced cyber defense capabilities.\n\nToday, we’re launching our Fairwind Program to bring the best of Google’s AI and cyber defense capabilities to a trusted group of Google Cloud customers, government agencies, and cybersecurity partners, to help them proactively solve cyber risks at scale. As a first step, the Fairwind Program will give defenders access to powerful and advanced Gemini models to help them autonomously find and fix vulnerabilities, protecting critical infrastructure, public services, and national security.\n\nThe Fairwind Program offerings bring together our most advanced cyber model, Gemini 3.8 Flash Cyber , with our CodeMender harness, to help defenders find, verify, and fix vulnerabilities at agentic scale. Spotting weaknesses creates awareness and fear; autonomously finding and fixing vulnerabilities delivers security.\n\nProviding early access to these powerful cyber capabilities gives trusted defenders a vital adaptation window to harden their systems before bad actors have a chance to exploit new capabilities. We’re staging initial access to government and enterprise partners most critical to society’s resilience:\n\nTo ensure these powerful AI capabilities are used responsibly, participating organizations agree to strict operational standards, including limiting access to employees within their internal cybersecurity, incident response, or penetration testing teams and deploying protections like multi-factor authentication.\n\nWhile we are prioritizing Gemini 3.8 Flash Cyber access for customers in the Fairwind Program, any Google Cloud customer can proactively secure their code by using CodeMender with publicly available models hosted on Gemini Enterprise Agent Platform, in combination with industry-leading solutions offered through AI Threat Defense .",
+      "claims": [
+        "Fairwind combines Gemini 3.8 Flash Cyber with CodeMender.",
+        "It is intended to find, verify and fix software vulnerabilities.",
+        "Participating organizations must restrict access to specified internal security teams and deploy protections such as multi-factor authentication."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [
+        "claim-unresolved"
+      ],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-02T15:40:00+00:00",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-02T15:40:00+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-03.html",
+        "normalizedText": "source-cache/sep02-08-03.txt",
+        "rawHtmlSha256": "aa08a15b971e7b3d3fcf1b70dfdb84e82606e3a75a5758130412e000c9981d13"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-04",
+      "candidateId": "sep02-08-04",
+      "date": "2026-09-02",
+      "title": "Self-hosted machines",
+      "url": "https://cursor.com/changelog/self-hosted-machines",
+      "publisher": "Cursor",
+      "sourceType": "official-blog",
+      "productNamespace": "Self-hosted machines",
+      "officialEventId": "cursor-self-hosted-machines",
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "Cursor introduced self-hosted machines that keep tool execution inside an organization’s network.",
+      "excerpt": "Cursor supports self-hosted machines , which let you keep tool execution entirely in your own network.\n\nYour codebase, build outputs, and secrets all stay on internal machines running in your infrastructure, while the agent handles tool calls locally.\n\nMy Machines connects a single laptop or VM to your account for personal workflows.\n\nTeam pools are named queues of workers for a team or enterprise. Capacity can grow as requests arrive and shrink when workers disconnect, so your self-hosted machines can scale with demand. Pools are not tied to one repository: name the pool, and any available worker can claim the request.\n\nSelf-hosted workers now support computer use on Linux and Mac. With the right desktop packages, an agent can click, type, take screenshots, and drive the browser. You can watch its desktop or take control from Cursor.",
+      "claims": [
+        "Cursor supports personal machine connections and named team worker pools.",
+        "Cursor says codebases, build outputs and secrets remain on internal infrastructure.",
+        "With the necessary desktop packages, self-hosted Linux and Mac workers can click, type, take screenshots and use a browser."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://cursor.com/changelog/self-hosted-machines"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-02T00:00:00.000Z",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-02",
+        "precisionNote": "HTML time element encodes UTC midnight; may represent a date-only editorial value, not exact release time.",
+        "snippets": [
+          "<time class=\"type-base\" datetime=\"2026-09-02T00:00:00.000Z\">Sep 2, 2026</time>"
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-04.html",
+        "normalizedText": "source-cache/sep02-08-04.txt",
+        "rawHtmlSha256": "1ca70355bc51ef7523d565da28cf4c4cb761a8f3761b6166010261961634c628"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-05",
+      "candidateId": "sep02-08-05",
+      "date": null,
+      "title": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "publisher": "Mistral AI",
+      "sourceType": "official-blog",
+      "productNamespace": "Mistral Series D",
+      "officialEventId": null,
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "Mistral announced a €3 billion Series D round. KST date assignment is withheld because publication time and timezone were not exposed.",
+      "excerpt": "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion, the largest equity fundraising round ever completed by a European technology company, three years after the company's launch.\n\nSamsung Electronics led the round, joined by co-leads Scaleup Europe Fund, managed by EQT, and existing investor PSG Equity.",
+      "claims": [
+        "Mistral announced a €3 billion Series D at a post-money valuation exceeding €21 billion.",
+        "Samsung Electronics led, with EQT-managed Scaleup Europe Fund and PSG Equity as co-leads."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 0.5,
+      "riskFlags": [
+        "claim-unresolved"
+      ],
+      "publicationEvidence": {
+        "sourceTimestamp": null,
+        "timezone": null,
+        "kstDate": null,
+        "precisionNote": "Official index date only; no publication timezone, no safe KST assignment.",
+        "snippets": [
+          "Official https://mistral.ai/news index: September 8, 2026; individual page date not exposed."
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-05.html",
+        "normalizedText": "source-cache/sep02-08-05.txt",
+        "rawHtmlSha256": "3a09a5470a0e5e16e5473f6bb7a118aa76883fb8000edaa9dd5b16b38e6fb18d"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-06",
+      "candidateId": "sep02-08-06",
+      "date": "2026-09-05",
+      "title": "GPT-6 Astra is generally available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "publisher": "NVIDIA",
+      "sourceType": "official-blog",
+      "productNamespace": "AI infrastructure",
+      "officialEventId": null,
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "GitHub added GPT-6 Astra to Copilot with a gradual rollout to eligible plans.",
+      "excerpt": "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks.\n\nThis model is billed at provider list pricing under usage-based billing. See pricing for GitHub Copilot models and requests for details.\n\nGPT-6 Astra is available to Copilot Pro+, Max, Business, and Enterprise users. You can select the model in the model picker in:\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\nCopilot Enterprise and Copilot Business plan administrators can manage access to GPT-6 Astra through the model policy in Copilot settings. Under default model enablement , new models are enabled automatically unless an administrator has turned off the global default or explicitly disables this model.",
+      "claims": [
+        "Eligible plans are Copilot Pro+, Max, Business and Enterprise.",
+        "The model is billed at provider list pricing under usage-based billing.",
+        "Business and Enterprise administrators can manage model access; rollout is gradual."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [
+        "claim-unresolved"
+      ],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-04T11:59:51-07:00",
+        "timezone": "UTC-0700",
+        "kstDate": "2026-09-05",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\":\"2026-09-04T11:59:51-07:00\"",
+          "\"datePublished\":\"2026-09-04T18:59:51+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-06.html",
+        "normalizedText": "source-cache/sep02-08-06.txt",
+        "rawHtmlSha256": "40d4a3ac2f72633b9d789e04785f6d0d29137ecf4e6f35219b18f0ba0095ea93"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-07",
+      "candidateId": "sep02-08-07",
+      "date": "2026-09-04",
+      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "publisher": "GitHub",
+      "sourceType": "official-blog",
+      "productNamespace": "GitHub Copilot / Gemini 3.8 Flash",
+      "officialEventId": "github-copilot-gemini-3-8-flash",
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "GitHub announced a gradual rollout of Gemini 3.8 Flash across Copilot clients.",
+      "excerpt": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot.\n\nThis model is billed at introductory provider pricing under usage-based billing through December 31, 2026. See pricing for GitHub Copilot models and requests for details.\n\nGemini 3.8 Flash will be available to Copilot Pro, Pro+, Max, Business, and Enterprise users.\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\nCopilot Enterprise and Copilot Business plan administrators can manage access to Gemini 3.8 Flash through the model policy in Copilot settings. Under default model enablement , new models are enabled automatically unless an administrator has turned off the global default or explicitly disables this model.",
+      "claims": [
+        "Eligible plans are Copilot Pro, Pro+, Max, Business and Enterprise.",
+        "Introductory provider pricing applies through December 31, 2026 under usage-based billing.",
+        "Rollout is gradual and administrator model policies apply."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T11:50:38-07:00",
+        "timezone": "UTC-0700",
+        "kstDate": "2026-09-04",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\":\"2026-09-03T11:50:38-07:00\"",
+          "\"datePublished\":\"2026-09-03T18:50:38+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-07.html",
+        "normalizedText": "source-cache/sep02-08-07.txt",
+        "rawHtmlSha256": "86f01ec0e3346def91700e744a30e31ae999564c5b647194447fc5f953538ed1"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-08",
+      "candidateId": "sep02-08-08",
+      "date": "2026-09-03",
+      "title": "Content exclusions generally available in Copilot app and CLI",
+      "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli",
+      "publisher": "GitHub",
+      "sourceType": "official-blog",
+      "productNamespace": "GitHub Copilot content exclusions",
+      "officialEventId": "github-copilot-content-exclusions-ga",
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "GitHub announced general availability of content exclusions in the Copilot app and CLI.",
+      "excerpt": "The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won’t use excluded files as context, helping you protect sensitive code across agentic workflows.\n\nThis is available for Copilot Business and Copilot Enterprise customers.",
+      "claims": [
+        "The feature is available to Copilot Business and Enterprise customers.",
+        "Enterprise, organization and repository administrators configure exclusion policies.",
+        "The Copilot app and CLI will not use excluded files as context."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-02T11:14:23-07:00",
+        "timezone": "UTC-0700",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\":\"2026-09-02T11:14:23-07:00\"",
+          "\"datePublished\":\"2026-09-02T18:14:23+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-08.html",
+        "normalizedText": "source-cache/sep02-08-08.txt",
+        "rawHtmlSha256": "dd54d36a9ddacd49bfb88a382fe976c4c1575b0716139d871bd3c43995c12c41"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-09",
+      "candidateId": "sep02-08-09",
+      "date": "2026-09-04",
+      "title": "Upcoming deprecation of selected GitHub Copilot models",
+      "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
+      "publisher": "GitHub",
+      "sourceType": "official-blog",
+      "productNamespace": "GitHub Copilot model lifecycle",
+      "officialEventId": "github-copilot-model-deprecations-october",
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "GitHub announced October 2 deprecations for selected Copilot models and identified replacements.",
+      "excerpt": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026:\n\nPlease update your workflows and integrations to use the supported models before this date. Copilot Enterprise and Copilot Business administrators may need to enable access to the alternative models through their model policies in Copilot settings.\n\nAs an administrator, you can verify availability in your organization or enterprise Copilot model settings and confirm that the policy is enabled for the specific model. Once enabled, users will see the model in the Copilot Chat model selector in supported GitHub Copilot experiences.\n\nModel | Deprecation date | Suggested alternative | Gemini 3.5 Flash | 2026-10-02 | Gemini 3.8 Flash | Gemini 3.6 Flash | 2026-10-02 | Gemini 3.8 Flash | Kimi K2.7 Code | 2026-10-02 | Kimi K3 | Claude Opus 4.7 | 2026-10-02 | Claude Opus 5",
+      "claims": [
+        "Gemini 3.5 Flash and 3.6 Flash are scheduled for deprecation on October 2, 2026, with Gemini 3.8 Flash as the suggested replacement.",
+        "Kimi K2.7 Code has the same deprecation date, with Kimi K3 as the suggested replacement.",
+        "Claude Opus 4.7 has the same deprecation date, with Claude Opus 5 as the suggested replacement; administrator access changes may be needed."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T12:40:14-07:00",
+        "timezone": "UTC-0700",
+        "kstDate": "2026-09-04",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\":\"2026-09-03T12:40:14-07:00\"",
+          "\"datePublished\":\"2026-09-03T19:40:14+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-09.html",
+        "normalizedText": "source-cache/sep02-08-09.txt",
+        "rawHtmlSha256": "e5326aa57b88677fa5931a144746552ddb3cfb09ca7e94866cf396191b45dac7"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-10",
+      "candidateId": "sep02-08-10",
+      "date": "2026-09-03",
+      "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+      "url": "https://huggingface.co/blog/Hcompany/neomme",
+      "publisher": "H Company",
+      "sourceType": "official-blog",
+      "productNamespace": "NeoMME",
+      "officialEventId": "h-company-neomme-multimodal-encoder",
+      "official": false,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "H Company introduced NeoMME, a family of multilingual encoders that jointly process text and images.",
+      "excerpt": "We introduce NeoMME , a family of 260M and 800M multilingual multimodal encoders. Unlike many generative visual language models, NeoMME does not use a separate pretrained vision tower or a causal language model. A single bidirectional Transformer processes both text tokens and raw image patches, and we train the entire model from scratch with a masked discrete-diffusion objective.\n\nWe fine-tuned NeoMME for visual document retrieval using ColPali's page-image approach. NeoMME -Retriever returns dense and late-interaction embeddings in one forward pass. Both model sizes lie on the ViDoRe v3 Pareto frontier for nDCG@10 and model size. At a matched 2048×2048 image input size on an NVIDIA L40S GPU, the 260M model encodes about 51 pages per second, or about twice ColModernVBERT's throughput. Hierarchical token pooling and asymmetric quantization reduce late-interaction index storage from roughly 1.5 MB to 6 kB per page (255× smaller) while retaining more than 95% of baseline nDCG@10.",
+      "claims": [
+        "NeoMME has 260M and 800M parameter variants.",
+        "One bidirectional Transformer processes text tokens and raw image patches.",
+        "NeoMME-Retriever returns dense and late-interaction embeddings in one forward pass."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://huggingface.co/blog/Hcompany/neomme"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T13:13:48.024Z",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-03T13:13:48.024Z\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-10.html",
+        "normalizedText": "source-cache/sep02-08-10.txt",
+        "rawHtmlSha256": "08f0a3e1e113d16364058700487730f39490856fbb3099b23777a429d535f92b"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-11",
+      "candidateId": "sep02-08-11",
+      "date": "2026-09-03",
+      "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+      "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "publisher": "Leonie Monigatti, Ben Burtenshaw, Sergio Paniego",
+      "sourceType": "blog",
+      "productNamespace": "LFM2.5-350M / TRL / IFStruct",
+      "officialEventId": "hugging-face-lfm-grpo-structured-output",
+      "official": false,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "A Hugging Face tutorial reports improved structured-output compliance by fine-tuning LFM2.5-350M with TRL and GRPO.",
+      "excerpt": "This guide is a fully public, inexpensive recipe for making a small model substantially better at structured-output compliance. We fine-tune LFM2.5-350M with Group Relative Policy Optimization (GRPO) using the TRL library and evaluate it on the IFStruct benchmark . The full run takes around 500 samples and 100 training steps, small enough for a free-tier Colab or Kaggle GPU, and is available on GitHub . The results show that even a light fine-tuning procedure improves performance from 22.6% to 29.7% on the IFStruct benchmark.\n\nThe IFStruct release blog reports 21.1% for LFM2.5-350M . Our local llama.cpp/BF16 setup measures 22.6%, close to the 21.1% reported in the IFStruct blog. We use this local result as the baseline for the same serving stack comparison.\n\nA short GRPO run with about 500 samples and 100 steps can lift a small 350M parameter model from 22.6% to 29.7% on IFStruct. The takeaway is that a cheap, task-specific reward signal can make a small model substantially more reliable about form , closing much of the gap to models several times its size.",
+      "claims": [
+        "The reported recipe uses about 500 samples and 100 training steps.",
+        "The reported local IFStruct pass rate rises from 22.6% to 29.7%.",
+        "The 7.1 percentage-point difference is specific to the reported evaluation; the local baseline differs from the IFStruct release-blog baseline."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://huggingface.co/blog/grpo-with-trl-ifstruct"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T00:00:00.742Z",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-03T00:00:00.742Z\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-11.html",
+        "normalizedText": "source-cache/sep02-08-11.txt",
+        "rawHtmlSha256": "9fefa28b0348d554a2a613cd4d2cface364d7fbab37a2c4ce2c450c29c0d6f70"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-12",
+      "candidateId": "sep02-08-12",
+      "date": "2026-09-03",
+      "title": "Give Your Coding Agents a Memory You Own",
+      "url": "https://huggingface.co/blog/funes",
+      "publisher": "David Corvoysier",
+      "sourceType": "blog",
+      "productNamespace": "Funes",
+      "officialEventId": "hugging-face-funes-agent-memory",
+      "official": false,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "The Funes author describes locally indexed coding-agent sessions with retrieval of original context.",
+      "excerpt": "That is what funes provides. It is a durable memory layer for your agents (Claude Code, Codex, pi, and Hermes). It is built from the sessions already on your machine. It works locally and becomes part of your agent's normal workflow with one command. When you want it to, it can also travel to a Hugging Face dataset you own, private by default.\n\nfunes is a single binary. Its default inference backend has no ML runtime dependency, and embedding and reranking happen on your machine . Install it:\n\nrecall returns the original text, not a summary, and shows exactly where it came from (the agent, timestamp, session, and turn). Each result includes a get command that opens the full turn and its surrounding context.\n\nrecall is local by default: No account or Hub repository is required. A hosted model does not process your sessions for indexing; embedding and reranking run on your machine, and your coding agent does the reasoning.\n\nUnderneath, the local memory is a Lance dataset, and the shared memory is a Hugging Face dataset (private by default) you own.",
+      "claims": [
+        "Embedding and reranking run on the user’s machine.",
+        "The tool supports Claude Code, Codex, pi and Hermes.",
+        "Shared memory can be stored in a user-owned Hugging Face dataset, private by default; recall returns original text with provenance."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://huggingface.co/blog/funes"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T00:00:00.741Z",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-03T00:00:00.741Z\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-12.html",
+        "normalizedText": "source-cache/sep02-08-12.txt",
+        "rawHtmlSha256": "2d514add7411d12c6b1cb915ffcb1a309d0496816ce943b2e5280f6eeb16643e"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-13",
+      "candidateId": "sep02-08-13",
+      "date": "2026-09-03",
+      "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
+      "url": "https://huggingface.co/blog/train-to-paint-with-code",
+      "publisher": "Sergio Paniego",
+      "sourceType": "blog",
+      "productNamespace": "TRL / OpenEnv watercolour training",
+      "officialEventId": "hugging-face-trl-openenv-watercolour",
+      "official": false,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "The author presents an experiment using TRL and OpenEnv to train a coding model to produce watercolour paintings.",
+      "excerpt": "The whole pipeline runs on Hugging Face, end to end:\n\nHPSv3 is an open 7B preference model. Give it an image and a text description, and it returns a score for how much a person would prefer that image. It was trained on a large set of human choices between pairs of images, so its score is an average of many people's taste. The pairwise judge is Qwen3-VL-30B-A3B-Instruct , a general vision model called through HF Inference Providers. The pairwise judge sees the candidate painting next to four references randomly selected from the pool, guided by a written description of what to weigh (bleeds, translucent washes, soft edges), each comparison in both presentation orders, and its score is the share of comparisons the candidate wins. Its only standard is the pool, so its score is my taste, as encoded in those ratings.\n\nThe pool consists of 178 paintings divided into two tiers based on my personal preferences, love and okay . All of them are actually generated by a model. Four open-weight models, called through Inference Providers, wrote p5.brush sketches, each one working from a real, openly licensed photo of a hibiscus from iNaturalist. A vision model gave written feedback on every sketch, over three refinement iterations. Every final render was then rated one at a time, by me, and 178 made the cut.\n\nSince the reward was partly based on my taste, it is fair to close with my verdict as a viewer. To my eye, judge-led is the run that ends up the most diverse and the most artistically interesting. hps-led paints convincing watercolours, but its best ones share a soft, wet-on-wet look that is almost a style of its own. hps-only converges the hardest, and most of its paintings settle on the same colours. You can judge for yourself in the gallery , which has every painting of every run, sortable by step and by reward.\n\nterm | weight | what it measures | gate | 0.05 | the sketch compiles, paints something, does not cheat | length | 0.05 | a soft push towards longer code snippets | pairwise judge | 0.60 | style, compared against references drawn from a pool | HPSv3 | 0.30 | aesthetic preference on the render",
+      "claims": [
+        "The author says the end-to-end pipeline runs on Hugging Face.",
+        "The reward combines a validity gate, a code-length term, a pairwise judge and HPSv3.",
+        "The 178-painting reference pool has two personal-preference tiers; artistic judgments are explicitly the author’s opinion."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://huggingface.co/blog/train-to-paint-with-code"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T00:00:00.740Z",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-03T00:00:00.740Z\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-13.html",
+        "normalizedText": "source-cache/sep02-08-13.txt",
+        "rawHtmlSha256": "5de2710e9507586e8e4bdc245197a4d3a7d2daa88d3a8762050b9e4dfef12622"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-14",
+      "candidateId": "sep02-08-14",
+      "date": "2026-09-02",
+      "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
+      "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+      "publisher": "IBM Research and Confluent authors",
+      "sourceType": "blog",
+      "productNamespace": "IBM Granite Time Series on Confluent",
+      "officialEventId": "ibm-confluent-time-series-early-access",
+      "official": false,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "An IBM Research article announces Early Access to time-series models on Confluent Cloud.",
+      "excerpt": "Foundation models transformed how enterprises unlock value from unstructured data. The bigger prize is streaming data, where the mission-critical decisions live: how much to order, which payment to stop, when the pump will fail, how hard to run the line, what happened the last time it looked like this. IBM and Confluent are now bringing that unlock stream-native, and the models are live in Early Access on Confluent Cloud, running where the data already moves, with Confluent Platform next.\n\nNow that proof meets real-time context: IBM brings frontier models that understand how signals behave, 44M+ downloads behind them, and Confluent brings the live state of the business and reach to every system that acts. Together they run stream-native, hosted in Confluent Cloud and called from Flink. Access opens on Confluent Cloud on AWS. Confluent Platform follows, bringing the same models and capabilities to on-premises and hybrid environments.\n\nZero configuration: Confluent manages model serving, infrastructure, scaling, and runtime operations, so there is no provider credential to manage or glue between data pipelines and the model. Call IBM Granite Time Series models directly from Flink SQL for real-time anomaly detection and forecasting.\n\nBuilt-in governance and traceability: Inference pipelines adhere to the same schemas, lineage and access controls as everything else on the platform. Kafka topics are durable and replayable, which supports auditing, troubleshooting, model evaluation, and rerunning inference against historical data.\n\nEvery decision asks the future a different question. A planning cycle needs a range of outcomes, a trading desk the most accurate number from data at every rate, a fleet of a hundred thousand series a cost that stays rational, and a security team the moment a stream stops behaving like itself and what happened last time it did. The portfolio is four complementary time series foundation models, all in Early Access and called through Confluent's existing AI_FORECAST and AI_DETECT_ANOMALIES Flink SQL functions. Switch models with one SQL parameter, no pipeline redesign.\n\nAvailable now in Early Access on Confluent Cloud: forecasting and anomaly detection directly on your data streams, with no model training, feature engineering or AI/ML expertise required. Confluent Cloud is the starting point, and Confluent Platform is next, so the same models and capabilities reach on-premises and hybrid estates. The feedback loop is the point: what you find on your own streams teaches the models what to become next.",
+      "claims": [
+        "The models support real-time forecasting and anomaly detection through Apache Flink.",
+        "The portfolio contains four complementary time-series foundation models in Early Access.",
+        "Inference follows the platform’s schemas, lineage and access controls; Confluent Platform support is future-facing, not claimed as already available."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://huggingface.co/blog/ibm-research/real-time-intelligence"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-02T13:49:14.426Z",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-02",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\": \"2026-09-02T13:49:14.426Z\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-14.html",
+        "normalizedText": "source-cache/sep02-08-14.txt",
+        "rawHtmlSha256": "099f110ca00e6a95671679a135ef422b0e12d05fd7fa4e3d82ca9f7494e1aad4"
+      },
+      "claimIds": []
+    },
+    {
+      "id": "src-sep02-08-15",
+      "candidateId": "sep02-08-15",
+      "date": "2026-09-03",
+      "title": "NVIDIA to Acquire Hugging Face",
+      "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+      "publisher": "NVIDIA",
+      "sourceType": "official-blog",
+      "productNamespace": "NVIDIA AI",
+      "officialEventId": null,
+      "official": true,
+      "retrievedAt": "2026-09-08T13:43:29.388251+00:00",
+      "retrievalCutoff": "2026-09-08T13:43:29.388251+00:00",
+      "summary": "NVIDIA announced an agreement to acquire Hugging Face; the announcement does not establish that the transaction has closed.",
+      "excerpt": "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide.\n\nHugging Face will remain an open platform for the entire AI ecosystem. Developers will choose the models they want, the frameworks they want, the clouds and inference service providers they want and the computing platforms they want. NVIDIA compute will not be required to build on or deploy through Hugging Face.\n\nHugging Face will continue to support open source and open weight models from across the ecosystem, from every model builder. It will continue to support multi-cloud and multi-accelerator development and deployment, so builders can use the hardware and infrastructure that best fit their work.",
+      "claims": [
+        "NVIDIA announced an agreement to acquire Hugging Face for $12,930,300,000; the source does not establish closing.",
+        "NVIDIA says Hugging Face will retain open, multi-cloud and multi-accelerator support.",
+        "The announcement says NVIDIA compute will not be required."
+      ],
+      "relatedUrls": [],
+      "discoveredVia": [],
+      "extractedOfficialUrls": [
+        "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+      ],
+      "extractedOfficialXUrls": [],
+      "confidence": 1.0,
+      "riskFlags": [
+        "claim-unresolved"
+      ],
+      "publicationEvidence": {
+        "sourceTimestamp": "2026-09-03T11:56:49+00:00",
+        "timezone": "UTC+0000",
+        "kstDate": "2026-09-03",
+        "precisionNote": "Publisher datePublished metadata used, not dateModified.",
+        "snippets": [
+          "\"datePublished\":\"2026-09-03T11:56:49+00:00\""
+        ]
+      },
+      "snapshot": {
+        "fetchMethod": "static",
+        "fallbackReason": null,
+        "renderer": null,
+        "rawHtml": "source-cache/sep02-08-15.html",
+        "normalizedText": "source-cache/sep02-08-15.txt",
+        "rawHtmlSha256": "7aa068e248b4dcf7c106a2c925a0cddab59170e5fe8564952b35ecedb4553e09"
+      },
+      "claimIds": []
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+Introducing AlphaGenome Atlas
+Skip to main content
+AlphaGenome Atlas: a high-resolution map of human DNA
+Innovation & AI
+Products & platforms
+Company news
+Feed
+Newsletter
+Back
+Innovation & AI
+See all in Innovation & AI
+Models & Research
+Google DeepMind
+Google Research
+Google Labs
+Gemini models
+Quantum computing
+See all
+Products
+Developer tools
+Gemini app
+Gemini Notebook
+See all
+Infrastructure & cloud
+Global network
+Google Cloud
+See all
+Technology
+Safety & Security
+Health
+See all
+Learn more:
+Google DeepMind blog
+Google Research blog
+Google Developers blog
+Google Cloud blog
+Back
+Products & platforms
+See all in Products & platforms
+Products
+Search
+Maps
+Chrome
+Google Health
+Google Workspace
+Learning & Education
+Shopping
+See all
+Platforms
+Android
+Google Play
+Wear OS
+See all
+Devices
+Pixel
+Google Nest
+Fitbit
+Chromebooks
+See all
+Learn more:
+Google Ads & Commerce blog
+Waze blog
+Back
+Company news
+See all in Company news
+Outreach & initiatives
+Creating opportunity
+Safety & security
+Google.org
+Public policy
+Sustainability
+Health
+See all
+Leadership
+Sundar Pichai, CEO
+More authors
+See all
+Inside Google
+Around the globe
+Life at Google
+See all
+Learn more:
+Google Security blog
+Innovation & AI
+Innovation & AI
+See all in Innovation & AI
+Models & Research
+Google DeepMind
+Google Research
+Google Labs
+Gemini models
+Quantum computing
+See all
+Products
+Developer tools
+Gemini app
+Gemini Notebook
+See all
+Infrastructure & cloud
+Global network
+Google Cloud
+See all
+Technology
+Safety & Security
+Health
+See all
+Learn more:
+Google DeepMind blog
+Google Research blog
+Google Developers blog
+Google Cloud blog
+Products & platforms
+Products & platforms
+See all in Products & platforms
+Products
+Search
+Maps
+Chrome
+Google Health
+Google Workspace
+Learning & Education
+Shopping
+See all
+Platforms
+Android
+Google Play
+Wear OS
+See all
+Devices
+Pixel
+Google Nest
+Fitbit
+Chromebooks
+See all
+Learn more:
+Google Ads & Commerce blog
+Waze blog
+Company news
+Company news
+See all in Company news
+Outreach & initiatives
+Creating opportunity
+Safety & security
+Google.org
+Public policy
+Sustainability
+Health
+See all
+Leadership
+Sundar Pichai, CEO
+More authors
+See all
+Inside Google
+Around the globe
+Life at Google
+See all
+Learn more:
+Google Security blog
+Feed
+AlphaGenome Atlas: a high-resolution map of human DNA
+Share
+x.com
+Facebook
+LinkedIn
+Mail
+Copy link
+[]
+Preferences
+Global (English)
+Africa (English)
+Australia (English)
+Brasil (Português)
+Canada (English)
+Canada (Français)
+Česko (Čeština)
+Deutschland (Deutsch)
+España (Español)
+France (Français)
+Greece (Ελληνικά)
+India (English)
+Indonesia (Bahasa Indonesia)
+Ireland (English)
+Italia (Italiano)
+日本 (日本語)
+대한민국 (한국어)
+Latinoamérica (Español)
+Malaysia (Melayu)
+الشرق الأوسط وشمال أفريقيا (اللغة العربية)
+MENA (English)
+Nederlands (Nederland)
+New Zealand (English)
+Polska (Polski)
+Portugal (Português)
+România (Română)
+Sverige (Svenska)
+ประเทศไทย (ไทย)
+Türkiye (Türkçe)
+台灣 (中文)
+Links
+Images
+RSS feed
+x.com
+Facebook
+LinkedIn
+Mail
+Copy link
+Newsletter
+Breadcrumb
+Home
+Innovation & AI
+Models & research
+Google DeepMind
+AlphaGenome Atlas: a high-resolution map of human DNA
+Sep 08, 2026
+|
+x.com
+Facebook
+LinkedIn
+Mail
+Copy link
+AlphaGenome Atlas is the most comprehensive catalogue of how genetic mutations affect molecular biology.
+Pushmeet Kohli
+VP Science, Google DeepMind & Chief Scientist, Google Cloud
+Žiga Avsec
+Genomics Initiative Lead, Google DeepMind
+Share
+x.com
+Facebook
+LinkedIn
+Mail
+Copy link
+The human genome is made of about 3 billion base pairs of DNA — but much of it remains a mystery. Scientists understand the 2% of the human genome that codes for proteins relatively well, but have only limited knowledge of the remaining 98%. Our AlphaGenome model has already shown how single changes in these non-coding DNA regions can disrupt molecular processes like protein production, but the bigger picture remained unclear.
+Today, we're introducing
+AlphaGenome Atlas
+, a database that predicts the effects of every possible single nucleotide variant in the human genome. We used the AlphaGenome AI model to pre-calculate the regulatory impact of all 9 billion single-letter genetic changes, resulting in a massive, 1-petabyte dataset. Our new Atlas helps scientists rapidly query this vast information.
+To help researchers rapidly navigate this, the Atlas introduces the AlphaGenome Variant Impact (AVI) score. This single, easy-to-use score combines predictions for both coding and non-coding regions, allowing researchers to quickly prioritize the most promising avenues for research without sifting through thousands of data points.
+Empowering researchers to solve biological mysteries
+AlphaGenome Atlas is already acting as a powerful augmentation partner for the scientific community, accelerating research in areas like:
+Rare genomic variations:
+At the Broad Institute, Laura Covill and her team used the AVI score to prioritize variants for unsolved rare disease research. The tool highlighted a critical variant in the DNM1 gene, predicting that it created an incorrect splice site. This provided crucial supporting evidence to successfully solve the case.
+Complex traits:
+Identifying rare, non-coding variants linked to complex traits is difficult due to statistical noise. Dr. Gareth Hawkes applied AlphaGenome Atlas to data from 54,000+ UK Biobank participants. By grouping variants based on predicted molecular effects, he uncovered 22% more non-coding genetic associations. Focusing on the top 1% of impactful variants, he identified 19 genetic regions linked to body mass index (BMI), directing the next stage of targeted research.
+Opening access to researchers and biologists worldwide
+AlphaGenome Atlas is available today through an
+intuitive website portal
+that requires zero coding skills, democratizing access for clinical researchers and biologists worldwide. This is part of our ongoing commitment to accelerate genomic discovery and science, for everyone.
+AlphaGenome Atlas provides grounded genomic insights that will accelerate the pace of biological discovery.
+Read more on the
+Google DeepMind blog
+.
+Posted in:
+Google DeepMind
+Related stories
+Google DeepMind
+Backing 16 green AI projects in Asia-Pacific
+By
+          
+            
+            Spencer Low
+          
+            & 
+            Sami Kizilbash
+Google DeepMind
+Introducing WeatherNext 3, our most advanced and accurate global weather AI model
+By
+          
+            
+            The WeatherNext team
+AI
+The latest AI news we announced in August 2026
+By
+          
+            
+            News from Google Team
+Google DeepMind
+Ask a Scientist: How do researchers use AI to predict a cyclone?
+By
+          
+            
+            Hannah Hunt
+Gemini models
+What does “full-stack” AI actually mean?
+By
+          
+            
+            Lindsey Lanquist
+Gemini models
+Omni experts share what excites them most about the model.
+By
+          
+            
+            Lindsey Lanquist
+Privacy
+Terms
+Help
+More of Google
+Google Products
+About the Blog
+Global (English)
+Africa (English)
+Australia (English)
+Brasil (Português)
+Canada (English)
+Canada (Français)
+Česko (Čeština)
+Deutschland (Deutsch)
+España (Español)
+France (Français)
+Greece (Ελληνικά)
+India (English)
+Indonesia (Bahasa Indonesia)
+Ireland (English)
+Italia (Italiano)
+日本 (日本語)
+대한민국 (한국어)
+Latinoamérica (Español)
+Malaysia (Melayu)
+الشرق الأوسط وشمال أفريقيا (اللغة العربية)
+MENA (English)
+Nederlands (Nederland)
+New Zealand (English)
+Polska (Polski)
+Portugal (Português)
+România (Română)
+Sverige (Svenska)
+ประเทศไทย (ไทย)
+Türkiye (Türkçe)
+台灣 (中文)

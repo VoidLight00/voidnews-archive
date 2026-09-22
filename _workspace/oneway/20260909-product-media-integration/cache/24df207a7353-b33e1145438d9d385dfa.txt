@@ -1,0 +1,87 @@
+What's New on Tripo | August
+What's New on Tripo | August
+August was a busy month at Tripo. We shipped a new model, rebuilt key parts of the community experience, and made export workflows smoother.
+Spotlights
+Tripo New Model - P2.0 Preview
+Tripo P2.0 Preview is the industry's first AI model to generate native quad topology from multi-view input. It creates cleaner edge flow and more structured meshes, often in 10 to 40 seconds. It supports up to 50K triangles or 25K quads, covering most hero characters and props in game pipelines. Semantic segmentation also splits meshes along natural boundaries, so clothing, armor, and other parts can be handled separately for rigging or texturing.
+👉 Try P2.0 Preview
+Community Spotlight: Rebuilt Gallery & Instant AI Previews
+Showcase your talent in our upgraded Gallery! Click "Feature My Model," choose your top asset, and use free AI renders to generate stunning previews and descriptions in seconds. Featured models earn 10 credits and get shared to Discord. Plus, stand out with subscriber-exclusive custom avatar frames on your community profile!
+👉 Explore the Gallery & Feature Your Model
+Workflow Upgrades
+DCC Plugin Updates: Blender, Maya, 3ds Max, Unreal
+The round trip between Tripo and your DCC tools got smoother this month. Blender Bridge v1.0.3 stays connected more reliably. Maya and 3ds Max Bridge v1.0.1 give you more control over cache location. Unreal API v1.0.1 has been upgraded to API V3 with a redesigned panel, adding support for H3.1 models and P1.0 quad meshes for game assets.
+3D Tools: Viewer, Compressor, and More
+The 3D Viewer now supports 20+ file formats. We also launched a browser-based File Compressor, so you can shrink models and compare before and after without installing anything.
+👉 Open 3D Viewer
+FBX Exports Are Faster and More Reliable
+If you export FBX regularly, you should notice the difference. Dense meshes with 60K+ faces now parse up to 80% faster. We also fixed black patches on some normal maps and corrected face orientation on export, which means less cleanup after import.
+More Ways to Use Tripo
+Vietnamese Language Support
+The homepage is now available in Vietnamese.
+Discord Account Linking
+You can now connect your Discord account in settings. That makes identity linking across platforms easier, and featured models can auto-post to the Discord showcase.
+Related articles
+Announcement
+Tripo Turns 1: New Plans, Bigger Possibilities, and Our Biggest Sale Yet
+Celebrate Tripo's first anniversary with the new Max plan and limited-time discounts, including up to 75% off selected AI 3D creation plans.
+Tripo Team
+📅 · 2026/05/18
+Announcement
+Introducing Tripo Segmentation v2: Segment a 3D Model With Precision Control
+Tripo Segmentation v2 splits any 3D model into clean, editable parts in under a minute. Three precision tiers, semantic cuts, no mesh editor needed.
+Tripo Team
+📅 · 2026/05/27
+Announcement
+What's New on Tripo | May
+Explore May's biggest release yet: photoreal 8K textures in under 2 minutes, smarter Segmentation v2, the industry-first ZBrush bridge, new Team and Max plans, and our biggest sale ever at up to 75% off through June 30.
+Tripo Team
+📅 · 2026/06/08
+Share the Article
+Copy link
+Generate anything in 3D
+Click below to Join Millions of 3D Creators. Try ultra-high fidelity model generation and best-in-class pbr texture.
+Try It Now
+What's New on Tripo | August
+August was a busy month at Tripo. We shipped a new model, rebuilt key parts of the community experience, and made export workflows smoother.
+Spotlights
+Tripo New Model - P2.0 Preview
+Tripo P2.0 Preview is the industry's first AI model to generate native quad topology from multi-view input. It creates cleaner edge flow and more structured meshes, often in 10 to 40 seconds. It supports up to 50K triangles or 25K quads, covering most hero characters and props in game pipelines. Semantic segmentation also splits meshes along natural boundaries, so clothing, armor, and other parts can be handled separately for rigging or texturing.
+👉 Try P2.0 Preview
+Community Spotlight: Rebuilt Gallery & Instant AI Previews
+Showcase your talent in our upgraded Gallery! Click "Feature My Model," choose your top asset, and use free AI renders to generate stunning previews and descriptions in seconds. Featured models earn 10 credits and get shared to Discord. Plus, stand out with subscriber-exclusive custom avatar frames on your community profile!
+👉 Explore the Gallery & Feature Your Model
+Workflow Upgrades
+DCC Plugin Updates: Blender, Maya, 3ds Max, Unreal
+The round trip between Tripo and your DCC tools got smoother this month. Blender Bridge v1.0.3 stays connected more reliably. Maya and 3ds Max Bridge v1.0.1 give you more control over cache location. Unreal API v1.0.1 has been upgraded to API V3 with a redesigned panel, adding support for H3.1 models and P1.0 quad meshes for game assets.
+3D Tools: Viewer, Compressor, and More
+The 3D Viewer now supports 20+ file formats. We also launched a browser-based File Compressor, so you can shrink models and compare before and after without installing anything.
+👉 Open 3D Viewer
+FBX Exports Are Faster and More Reliable
+If you export FBX regularly, you should notice the difference. Dense meshes with 60K+ faces now parse up to 80% faster. We also fixed black patches on some normal maps and corrected face orientation on export, which means less cleanup after import.
+More Ways to Use Tripo
+Vietnamese Language Support
+The homepage is now available in Vietnamese.
+Discord Account Linking
+You can now connect your Discord account in settings. That makes identity linking across platforms easier, and featured models can auto-post to the Discord showcase.
+Related articles
+Announcement
+Tripo Turns 1: New Plans, Bigger Possibilities, and Our Biggest Sale Yet
+Celebrate Tripo's first anniversary with the new Max plan and limited-time discounts, including up to 75% off selected AI 3D creation plans.
+Tripo Team
+📅 · 2026/05/18
+Announcement
+Introducing Tripo Segmentation v2: Segment a 3D Model With Precision Control
+Tripo Segmentation v2 splits any 3D model into clean, editable parts in under a minute. Three precision tiers, semantic cuts, no mesh editor needed.
+Tripo Team
+📅 · 2026/05/27
+Announcement
+What's New on Tripo | May
+Explore May's biggest release yet: photoreal 8K textures in under 2 minutes, smarter Segmentation v2, the industry-first ZBrush bridge, new Team and Max plans, and our biggest sale ever at up to 75% off through June 30.
+Tripo Team
+📅 · 2026/06/08
+Share the Article
+Copy link
+Generate anything in 3D
+Click below to Join Millions of 3D Creators. Try ultra-high fidelity model generation and best-in-class pbr texture.
+Try It Now

@@ -1,0 +1,17 @@
+{
+  "source_url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+  "retrieved_on": "2026-09-08",
+  "publisher_date": "2026-08-27",
+  "retrieval_method": "WebFetch public primary-page extraction",
+  "raw_https_status": 403,
+  "full_original_body_cache_available": false,
+  "cache_kind": "researcher-preserved extracted facts and short source quotations; not a verbatim complete article",
+  "quotes": [
+    "complete the verification form here"
+  ],
+  "extracted_facts_english": "The scientist team plan offers 10,000 free or discounted seats worldwide for one year. Principal investigators or equivalent leaders at academic or nonprofit research institutions can apply for verification and then add members of their labs.\n\nStandard seats are free, while premium seats offer five times the usage at $15 per month. Anthropic expects to expand beyond the initial 10,000 seats.\n\nSeparately, AI for Science is broadening beyond biological sciences. Projects needing more usage can apply for up to $50,000 in credits per project; any researcher may apply to that credits program.",
+  "date_evidence": "Date follows the publisher’s displayed 2026-08-27 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted.",
+  "limitations": [
+    "Public WebFetch extraction confirms body and displayed date. Short quotation verifies application wording; seat counts and prices are preserved as extracted facts, not invented verbatim quotations. Full original body cache unavailable; direct HTTPS 403."
+  ]
+}

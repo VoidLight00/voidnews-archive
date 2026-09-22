@@ -1,0 +1,17 @@
+{
+  "source_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+  "retrieved_on": "2026-09-08",
+  "publisher_date": "2026-08-27",
+  "retrieval_method": "WebFetch public primary-page extraction",
+  "raw_https_status": 403,
+  "full_original_body_cache_available": false,
+  "cache_kind": "researcher-preserved extracted facts and short source quotations; not a verbatim complete article",
+  "quotes": [
+    "MHS works with any device that has a programmable interface."
+  ],
+  "extracted_facts_english": "Anthropic launched a research preview of the Model Hardware Standard for selected scientific labs and manufacturers. MHS connects devices that have programmable interfaces through common drivers, standardizing state reads and setting writes.\n\nDevice descriptions include physical characteristics, capabilities, adjustable values and safety limits. Agents can coordinate equipment through MCP, command-line tools and code APIs. Repeated or high-speed procedures can be converted into deterministic scripts rather than requiring model reasoning at every step.\n\nInitial examples include Genentech’s protein-assay automation and HHMI Janelia’s microscopy integration. This is a research preview, not an already open-sourced general release.",
+  "date_evidence": "Date follows the publisher’s displayed 2026-08-27 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted.",
+  "limitations": [
+    "Public WebFetch extraction confirms body and displayed date. Direct HTTPS returned 403; no access bypass attempted. Full original HTML/body cache unavailable."
+  ]
+}

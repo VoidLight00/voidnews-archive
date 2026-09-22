@@ -1,0 +1,4 @@
+## Bug Fixes
+- Guardian approval review now honors Node REPL policies provided through model metadata.
+
+**Full Changelog**: https://github.com/openai/codex/compare/rust-v0.152.0...rust-v0.152.1

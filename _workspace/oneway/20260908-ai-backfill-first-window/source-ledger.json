@@ -1,0 +1,222 @@
+{
+  "runId": "20260908-ai-backfill-first-window",
+  "createdAt": "2026-09-08",
+  "input": {
+    "path": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
+    "sha256": "dd343fa651fa0cdef6fec033d1a3e5cc4814df8fbd7d25f34bef6a361b7012ea",
+    "candidateCount": 15
+  },
+  "policy": {
+    "dateBasis": "official publication metadata converted to Asia/Seoul",
+    "dedupeKey": "normalized canonical source URL plus product event",
+    "images": "no image attached unless exact source image is locally verified; evidence-only URLs were not inserted"
+  },
+  "snapshots": [
+    {
+      "source": "/tmp/voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+      "snapshot": "source-cache/voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+      "bytes": 253473,
+      "sha256": "4aa94fc553c40aab6e43ae11508457aeae4ae9515cb1b4aa3b857ac3d9a9d4f7",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-meta-https___github_blog_changelog_feed__paged_4.txt",
+      "snapshot": "source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_4.txt",
+      "bytes": 45599,
+      "sha256": "4bed163007a736eb4054c5e00adb8cedc6ce19821985b0cf36bccd93b59da53b",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-meta-https___blog_google_innovation_and_ai_models_and_research_gemini_models_gemini_3_5_transcribe_.txt",
+      "snapshot": "source-cache/voidnews-meta-https___blog_google_innovation_and_ai_models_and_research_gemini_models_gemini_3_5_transcribe_.txt",
+      "bytes": 403297,
+      "sha256": "c4ea4124a0cba53b8e7c45bf9ecf7b03a0419b4f3ce3074009373c76d2d0d836",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-meta-https___blog_google_innovation_and_ai_products_gemini_app_productivity_features_gemini_live_.txt",
+      "snapshot": "source-cache/voidnews-meta-https___blog_google_innovation_and_ai_products_gemini_app_productivity_features_gemini_live_.txt",
+      "bytes": 382546,
+      "sha256": "2dea84f0d3b57682fc832900192c770aa88f983af19269c68594141a7bed42ec",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+      "snapshot": "source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+      "bytes": 10981245,
+      "sha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+      "snapshot": "source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+      "bytes": 267696,
+      "sha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-meta-https___blog_google_innovation_and_ai_technology_developers_tools_build_with_gemini_omni_1_1_flash_.txt",
+      "snapshot": "source-cache/voidnews-meta-https___blog_google_innovation_and_ai_technology_developers_tools_build_with_gemini_omni_1_1_flash_.txt",
+      "bytes": 420514,
+      "sha256": "a037019aed64de109b90cd65e9ddf7fccd10b93da3534006946b1a412e04786b",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+      "snapshot": "source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+      "bytes": 645936,
+      "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+      "snapshot": "source-cache/voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+      "bytes": 1154512,
+      "sha256": "2a45f26a11bceb9c851ddbe18fb698b0555d6c8e0d9e253ed9f79cbf0dd415ab",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+      "snapshot": "source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+      "bytes": 52508,
+      "sha256": "6ce4e3402b0264567bf148887349fc86f50e60f9f95eec04850d4bf4a4054468",
+      "status": "copied"
+    },
+    {
+      "source": "/tmp/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+      "snapshot": "source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+      "bytes": 40690,
+      "sha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4",
+      "status": "copied"
+    }
+  ],
+  "insertedWeek35": [
+    "https://huggingface.co/blog/ibm-granite/granite-4-2",
+    "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+    "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+    "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+    "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+    "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+    "https://github.com/github/copilot-cli/releases/tag/v1.0.82"
+  ],
+  "fragmentWeek36": [
+    "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+    "https://huggingface.co/blog/webgpu-kernels",
+    "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+    "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot"
+  ],
+  "holds": [
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "title_en": "Previewing the Model Hardware Standard",
+      "displayed_date": "2026-08-27",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    },
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "title_en": "Expanding our support for scientists",
+      "displayed_date": "2026-08-27",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    },
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "title_en": "Improving our alignment and security efforts",
+      "displayed_date": "2026-08-31",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    },
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "title_en": "Developing Enterprise Frontier Safeguards",
+      "displayed_date": "2026-09-01",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    }
+  ],
+  "excluded": [
+    {
+      "source_url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+      "rss_date": "Thu, 27 Aug 2026 13:00:17 +0000",
+      "body_evidence": "Updated August 27, 2026; originally published May 18, 2026",
+      "decision": "Excluded as a new release. Treat only as update to an older article if separately verified."
+    },
+    {
+      "source_url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+      "rss_date": "Wed, 02 Sep 2026 06:00:02 +0000",
+      "decision": "URL says September 1, but RSS publication is September 2 UTC / KST; outside assigned window."
+    },
+    {
+      "source_url": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
+      "rss_date": "Tue, 01 Sep 2026 19:25:57 +0000",
+      "decision": "September 2 KST; hand to next-window researcher."
+    },
+    {
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0",
+      "published_at": "2026-09-01T20:51:17Z",
+      "decision": "September 2 KST; not September 1 despite source UTC date."
+    },
+    {
+      "source_url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "body_displayed_date": "2026-08-25",
+      "rss_date": "Tue, 25 Aug 2026 15:14:14 GMT",
+      "decision": "August 26 KST; this is a timezone shift, not fabricated redating."
+    }
+  ],
+  "boundaryTransfers": [
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+      "title_en": "Introducing agentic video understanding with Gemini",
+      "source_published_at": "2026-09-01T17:00:00+00:00",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Tue, 01 Sep 2026 17:00:00 +0000",
+        "local_evidence": "/tmp/voidnews-research-https___blog_google_rss_.txt"
+      },
+      "published_at_kst": "2026-09-02T02:00:00+09:00",
+      "date_kst": "2026-09-02",
+      "reason": "Confirmed publication belongs to adjacent KST window; article body not researched in this assignment."
+    },
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+      "source_published_at": "2026-09-02T06:00:02+00:00",
+      "published_at_kst": "2026-09-02T15:00:02+09:00",
+      "date_kst": "2026-09-02",
+      "publication_evidence": "Wed, 02 Sep 2026 06:00:02 +0000",
+      "reason": "URL says September 1, but RSS publication is September 2 UTC / KST; outside assigned window."
+    },
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
+      "source_published_at": "2026-09-01T19:25:57+00:00",
+      "published_at_kst": "2026-09-02T04:25:57+09:00",
+      "date_kst": "2026-09-02",
+      "publication_evidence": "Tue, 01 Sep 2026 19:25:57 +0000",
+      "reason": "September 2 KST; hand to next-window researcher."
+    },
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0",
+      "source_published_at": "2026-09-01T20:51:17+00:00",
+      "published_at_kst": "2026-09-02T05:51:17+09:00",
+      "date_kst": "2026-09-02",
+      "publication_evidence": "2026-09-01T20:51:17Z",
+      "reason": "September 2 KST; not September 1 despite source UTC date."
+    }
+  ]
+}

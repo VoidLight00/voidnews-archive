@@ -813,22 +813,24 @@
       "date": "2026-09-22",
       "source": "ab-run",
       "category": "ab-data",
-      "request": "2026-09-09~22 AI 뉴스 공백 수집·검증 후 Weekly 아카이브 반영 (2026-w38 신규 61건, 2026-w39 부분 주차 13건)",
+      "request": "2026-09-09~22 AI 뉴스 공백을 수집·검증해 Weekly 아카이브에 반영 (2026-w37 완성 29건 추가, 2026-w38 신규 63건, 2026-w39 부분 주차 13건)",
       "status": "applied",
       "files": [
+        "lib/weeks/2026-w37.ts",
         "lib/weeks/2026-w38.ts",
         "lib/weeks/2026-w39.ts",
         "lib/data.ts",
-        "references/weekly-source-image-audit.json"
+        "references/weekly-source-image-audit.json",
+        "docs/redesign/BACKFILL-INTEGRATION.json"
       ],
       "commit": "HEAD",
       "evidence": {
         "kind": "count",
-        "cmd": "node -e \"const fs=require('fs');const ts=require('typescript');require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,f);const {weeks}=require('./lib/data.ts');const n=weeks.filter(w=>['2026-w38','2026-w39'].includes(w.slug)).reduce((a,w)=>a+w.companies.reduce((b,c)=>b+c.posts.length,0),0);process.stdout.write(String(n))\"",
+        "cmd": "node -e \"const fs=require('fs');const ts=require('typescript');require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,f);const {weeks}=require('./lib/data.ts');const n=weeks.filter(w=>['2026-w37','2026-w38','2026-w39'].includes(w.slug)).reduce((a,w)=>a+w.companies.reduce((b,c)=>b+c.posts.length,0),0);process.stdout.write(String(n))\"",
         "op": "eq",
-        "value": 74
+        "value": 118
       },
-      "notes": "20260922-134206-ab-20260909-20260922"
+      "notes": "20260922-134206-ab-20260909-20260922. w37 completion rows are hash-bound in BACKFILL-INTEGRATION.json; 118 = 42 + 63 + 13 posts across the three weeks."
     }
   ]
 }

@@ -1,0 +1,23 @@
+ 
+ In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolling out enforcement of the policy through September 1, so it will take effect at different times for different enterprises. Previously unconfigured and new generally available models will inherit the global policy state. Administrators can make durable decisions for individual models at their discretion. Open-weight models and any models that require data retention are disabled by default. 
+ What’s changing 
+ Once the policy takes effect for your organization or enterprise: 
+ 
+ Models you haven’t previously configured will change their state to “Delegate to default policy”, and they’ll begin following your policy setting. If your policy is enabled — which is the default — those models will become available to your users. 
+ “Delegate to default policy” is a live, dynamic state that always tracks your policy. You can change the policy at any time, and all applicable models follow that state change. 
+ We always preserve explicit choices. If you’ve deliberately enabled or disabled a specific model, we do not change that setting. 
+ We exclude open-weight models (e.g., DeepSeek and Kimi K2) and models not covered by GitHub’s data retention agreement (e.g., Fable 5) from default enablement, regardless of your policy. 
+ 
+ After the rollout, each model in your settings shows one of four states: 
+ 
+ Enabled: You’ve explicitly turned the model on. 
+ Disabled: You’ve explicitly turned the model off. 
+ Delegate to enterprise teams/apps or organizations: The model follows a setting inherited from your enterprise team or organization. 
+ Delegate to default policy: The model follows your default enablement policy. 
+ 
+ To learn more, see default model availability . 
+ What’s next 
+ We are looking for your feedback in the community discussion below. We’re evaluating making the global model policy state an explicit decision and removing the “Delegate to default policy” state. This would help ensure that every policy reflects an explicit, intentional choice rather than an inferred one. 
+ Join the discussion within GitHub Community . 
+ 
+ The post Global model policy generally available appeared first on The GitHub Blog . 

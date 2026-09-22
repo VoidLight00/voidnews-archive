@@ -1,0 +1,380 @@
+[
+  {
+    "originalPath": "/tmp/voidnews-product-integration-ready.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/21e9ce3b6a35-voidnews-product-integration-ready.json",
+    "sha256": "21e9ce3b6a355ee50b37b952e7724259450d6928a1d582902b604082bfef14d2",
+    "byteLength": 617110
+  },
+  {
+    "originalPath": "/tmp/voidnews-media-integration-ready.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/7c68f9c379a7-voidnews-media-integration-ready.json",
+    "sha256": "7c68f9c379a7a70fcfc02058674bf1c8f44b79e29c4a8c1bc02161038e25e192",
+    "byteLength": 110871
+  },
+  {
+    "originalPath": "/tmp/voidnews-product-media-runtime-before.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/1cbbb8594ed9-voidnews-product-media-runtime-before.json",
+    "sha256": "1cbbb8594ed99cb16a7548f966fa0e0416c117dcd016ebab5257b31d56b82edf",
+    "byteLength": 2330906
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/9b6082ebc541780b.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/eccf1ffb9349-9b6082ebc541780b.html",
+    "sha256": "eccf1ffb9349589a5e724c64dfb6ba793646ef270beb7e226f169ef9a109eefa",
+    "byteLength": 495665
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/e94fc2f0f03f5691.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/aa9a3138283f-e94fc2f0f03f5691.html",
+    "sha256": "aa9a3138283fd141362df9a0da05dd4dfefadf3d0c8cb601c7b22cd446a1b89e",
+    "byteLength": 195000
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/7069663cfc70f130.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/fce4c49c2581-7069663cfc70f130.html",
+    "sha256": "fce4c49c2581a1bca4567a9ac2e867236f61c2f6063f92a3f4df9b2f5f3cf5ba",
+    "byteLength": 388946
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/49e8d0577a5e1f9d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/c790515d0a5c-49e8d0577a5e1f9d.html",
+    "sha256": "c790515d0a5c377bda0df210f4faf567015ef70587451bcc55009f831e02fbd5",
+    "byteLength": 488098
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/242c2a2fc81a43d4.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/d1898f7094e4-242c2a2fc81a43d4.html",
+    "sha256": "d1898f7094e4dc1a460cac9fee614bd0c328f282ba1dc6ea3a2c29146c213468",
+    "byteLength": 229225
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/a24fd97eb3d00730.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/c94c3ddf3cc2-a24fd97eb3d00730.html",
+    "sha256": "c94c3ddf3cc26be0c9296f0990b92142c17815431018a179611d28bf9258d724",
+    "byteLength": 164197
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/4182359e79e632d3.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/8df8071ee134-4182359e79e632d3.html",
+    "sha256": "8df8071ee1340d1341f06a6f0b10d4febd904d48605f577bced5d1ec3fe2e128",
+    "byteLength": 995240
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/70b2939c948cb8cf.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/4e6c8c201d49-70b2939c948cb8cf.html",
+    "sha256": "4e6c8c201d49fb62154fa20c0a169cf831eb3cd21136e76a72c47738d87b75fa",
+    "byteLength": 805115
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/4c7e1599f30e92c5.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/9b6388edc56b-4c7e1599f30e92c5.html",
+    "sha256": "9b6388edc56b4359e0f872400fd368e092633bd337a849582b307d7902aa5d34",
+    "byteLength": 227907
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/33248eeec30c231d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/4400a64be445-33248eeec30c231d.html",
+    "sha256": "4400a64be445be3772bed769a33a57c5de43cd06ec09ebac3f4c40b2531924a3",
+    "byteLength": 1644736
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/2f0b839a99330089.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/653ec22efa75-2f0b839a99330089.html",
+    "sha256": "653ec22efa75f5b763b76dd42f8da7ea8520b3574cb4b45a0392125b76942be8",
+    "byteLength": 226273
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/a9acbff7bd542e61.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/0c179abc5e3c-a9acbff7bd542e61.html",
+    "sha256": "0c179abc5e3c3447acbfded11b99edc43e3c4d51c0a2800244839ee206b0178d",
+    "byteLength": 168978
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/7cb2da21c69face5.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/a5fbd5065174-7cb2da21c69face5.html",
+    "sha256": "a5fbd50651740edd845f2cc007b59415acadeb1181e8a8a158732b4ddfef491b",
+    "byteLength": 370590
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-rotation/evidence/f4efc55098543f59.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/bf205f2fc57f-f4efc55098543f59.html",
+    "sha256": "bf205f2fc57fd97be2645f5eb39773726db88c68f4469ad4bed220dbdd244e63",
+    "byteLength": 191078
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/00b8a7be042b57858c4f.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/ca9f7c00beda-00b8a7be042b57858c4f.html",
+    "sha256": "ca9f7c00beda7a23643340ac1d9ef92a3866079a783b6853b3528bce8cd95b8d",
+    "byteLength": 93802
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/00b8a7be042b57858c4f.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/cf28666b41a4-00b8a7be042b57858c4f.txt",
+    "sha256": "cf28666b41a47921c9e9a94250bd15ab8afe3e868fba09b0514e498a02088775",
+    "byteLength": 2544
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/f4b91584d834c110990d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/b3762ff2e39a-f4b91584d834c110990d.html",
+    "sha256": "b3762ff2e39a476e1c6c744344fd475844097708ca0e16b6237f9ba29a91a5c0",
+    "byteLength": 582369
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/f4b91584d834c110990d.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/727678381c1f-f4b91584d834c110990d.txt",
+    "sha256": "727678381c1f8d2451080688c318260423afcf12f8560b08062b0696f32ca969",
+    "byteLength": 22244
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/504fc4d7d00168d407b0.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/ac7ab3046f25-504fc4d7d00168d407b0.html",
+    "sha256": "ac7ab3046f2595876143854207c4c2bc7639c75bddf569352e6c6f8e835c2ac1",
+    "byteLength": 584647
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/504fc4d7d00168d407b0.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/aebce04fa41e-504fc4d7d00168d407b0.txt",
+    "sha256": "aebce04fa41e681c0cbd8c53d96f6c120a92689d1d3d12e63524266776ab572d",
+    "byteLength": 22353
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/c588dceb9ac3fff2c7bd.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/30c8c30b7ea6-c588dceb9ac3fff2c7bd.html",
+    "sha256": "30c8c30b7ea6d50c44bb7381e01f70d5d00c91a70cbf620793ff2148d00ea470",
+    "byteLength": 518055
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/c588dceb9ac3fff2c7bd.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/e0edbd49b7bf-c588dceb9ac3fff2c7bd.txt",
+    "sha256": "e0edbd49b7bfd3c9a0f5a1963b5c1e9e85ef94d70a125d8fe85b1994a59eba49",
+    "byteLength": 5618
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/db8126e3b8ea51a3b5e4.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/0e8fb9e2bddc-db8126e3b8ea51a3b5e4.html",
+    "sha256": "0e8fb9e2bddcdb1f092cc22d961089112f83479e5eebb0e8c8bdb5546de516ec",
+    "byteLength": 534593
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/db8126e3b8ea51a3b5e4.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/f5cdead3ab9f-db8126e3b8ea51a3b5e4.txt",
+    "sha256": "f5cdead3ab9f53a145980d8b32d1c36c52385ca7ba38053b8f09e6e407012f82",
+    "byteLength": 6646
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/fe228e5c78d6a907b6f6.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/574a3ab4d9fb-fe228e5c78d6a907b6f6.html",
+    "sha256": "574a3ab4d9fb9984bbfa8ade37d517734978ab534e3ecd73d6759356515ef2d8",
+    "byteLength": 393724
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/fe228e5c78d6a907b6f6.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/477f904faba7-fe228e5c78d6a907b6f6.txt",
+    "sha256": "477f904faba7fb3fd930b2c63528ec18ef849412d75ba24937791eea6c3fa92a",
+    "byteLength": 2878
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/16f39da410502543c281.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/2eb95c34201a-16f39da410502543c281.html",
+    "sha256": "2eb95c34201adef0c695506b3ac45f3dd362549cfe9b3549f64340720cb95a9f",
+    "byteLength": 400342
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/16f39da410502543c281.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/7f1d2922d258-16f39da410502543c281.txt",
+    "sha256": "7f1d2922d258ed15a565bc42e853327ced20acfaf55eb858a36e0bd3dce66f2d",
+    "byteLength": 3377
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/1274d75a9d08a221a12b.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/fbc8a28ce12c-1274d75a9d08a221a12b.html",
+    "sha256": "fbc8a28ce12cecd165a42f3ed5f657b71d51f0d9b116990e1dca9bef42c3a7cf",
+    "byteLength": 300214
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/1274d75a9d08a221a12b.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/18836b84f9c4-1274d75a9d08a221a12b.txt",
+    "sha256": "18836b84f9c42b791d1e69fb5ccbd7a187744369f4da53e727300c5dfd09093b",
+    "byteLength": 7740
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/b33e1145438d9d385dfa.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/1b213109b020-b33e1145438d9d385dfa.html",
+    "sha256": "1b213109b020a564fed6a574b12cee98342d080aa9df16da6a1c6a6bd6ecbd78",
+    "byteLength": 204892
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/b33e1145438d9d385dfa.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/24df207a7353-b33e1145438d9d385dfa.txt",
+    "sha256": "24df207a735394b69b451a233d254f643e779e19107b61e01bfae8dcaad61217",
+    "byteLength": 6732
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/a2ba6f26fdf33d72f9fc.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/741d91b94818-a2ba6f26fdf33d72f9fc.html",
+    "sha256": "741d91b94818679b89f5bf47b1115b9692a4fb531f8372ef254183ef7fc33274",
+    "byteLength": 627352
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/a2ba6f26fdf33d72f9fc.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/2106ba6ed938-a2ba6f26fdf33d72f9fc.txt",
+    "sha256": "2106ba6ed9381744f6421051589c0a557d545868ccfa94cdabdbc03c67d100ba",
+    "byteLength": 25311
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/555b86ad65509938cd6b.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/09640b75f944-555b86ad65509938cd6b.html",
+    "sha256": "09640b75f9445e1bcb7267370865e515a7cff5cb50b56edac388d8343b0abaf2",
+    "byteLength": 203006
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/555b86ad65509938cd6b.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/2f000c60af8d-555b86ad65509938cd6b.txt",
+    "sha256": "2f000c60af8de3ee11f93b469f065d77e364d0fa2217e07281991cdd404213c6",
+    "byteLength": 18388
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/7165feb13446f59f3ae0.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/b9dae5759033-7165feb13446f59f3ae0.html",
+    "sha256": "b9dae5759033bb83c2d74fea9091d1c35ff1276f1df4c46c4c3bcd1a382cd21c",
+    "byteLength": 688930
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/7165feb13446f59f3ae0.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/a1a7fffeed81-7165feb13446f59f3ae0.txt",
+    "sha256": "a1a7fffeed811595c9b1074e9c2ff6ed08ebd48f70ab5081bee58a989fe55df2",
+    "byteLength": 12703
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/894056569b325750f18a.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/4d4e70e44720-894056569b325750f18a.html",
+    "sha256": "4d4e70e44720321f78bae6694229f69224be8aaf8e2a5a664ccfae7a5b0e5af5",
+    "byteLength": 409855
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/894056569b325750f18a.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/91447b0e3521-894056569b325750f18a.txt",
+    "sha256": "91447b0e352123910208bbab54e55152284cb9a993449f9c1a98b36166fd3beb",
+    "byteLength": 2386
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/a624f09790338f71fe87.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/67927cc16c2a-a624f09790338f71fe87.html",
+    "sha256": "67927cc16c2ac2c68ecfcd96b460ca8e9fec712cc49c4498d35bd730d01bb66f",
+    "byteLength": 422479
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/a624f09790338f71fe87.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/1c478b0efa53-a624f09790338f71fe87.txt",
+    "sha256": "1c478b0efa53394ca991b3df6c8c15bc88bbaa25ff4375dfa6ad6ef62cd2a88f",
+    "byteLength": 3554
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/4d674a10a12c79ba49e8.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/cd5c2d75389b-4d674a10a12c79ba49e8.html",
+    "sha256": "cd5c2d75389be26615f2c4db024ce5ab95157112319b0457c43663d0111b388a",
+    "byteLength": 450359
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/4d674a10a12c79ba49e8.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/256c792fe332-4d674a10a12c79ba49e8.txt",
+    "sha256": "256c792fe332814997fcc8d8c89b053c92267fa387b1d1dd8f59075bf348674e",
+    "byteLength": 8512
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/66e5a3cff9f9a7e1d82a.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/f4e577841f9a-66e5a3cff9f9a7e1d82a.html",
+    "sha256": "f4e577841f9a2e80f399bfc0c2a08e2e3798267f79fb93d33ecb548ce4cd1821",
+    "byteLength": 433712
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/66e5a3cff9f9a7e1d82a.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/f8f59f8057c4-66e5a3cff9f9a7e1d82a.txt",
+    "sha256": "f8f59f8057c41051fe186d4cbcf03e74ae960ed3550406691d5123ff20209c1b",
+    "byteLength": 5378
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/7cbf5addba9b622d0e14.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/370b6eb3042e-7cbf5addba9b622d0e14.html",
+    "sha256": "370b6eb3042e78ce52e14d5498b23716b7ccc174e85bec876f62580762a47c5f",
+    "byteLength": 20092
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/7cbf5addba9b622d0e14.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/348954d3eeb8-7cbf5addba9b622d0e14.txt",
+    "sha256": "348954d3eeb8f57ffcce16d2aeb61bcfdc75adbbf8d0d6b1c8537a3ef7cba1b3",
+    "byteLength": 2601
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/dcf81e1598bcc13e4984.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/1f93a36d79fa-dcf81e1598bcc13e4984.html",
+    "sha256": "1f93a36d79fad8bc48b258111eda72d0ae2903255185e320deca4825613dca1b",
+    "byteLength": 17975
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/dcf81e1598bcc13e4984.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/6653b7c3fc98-dcf81e1598bcc13e4984.txt",
+    "sha256": "6653b7c3fc9852174363565530e8838e7006f66cb039a44ffcf0c16ab10796a3",
+    "byteLength": 442
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/63dc50eacb338ac501a2.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/87e148b684a5-63dc50eacb338ac501a2.html",
+    "sha256": "87e148b684a55c7227f49a4d1b9dd385b2793fc6a76880ca122f316bc8f3723e",
+    "byteLength": 21289
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/63dc50eacb338ac501a2.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/57d117cc2359-63dc50eacb338ac501a2.txt",
+    "sha256": "57d117cc235904c40835bdc34a9eef45e48b31341137a8464f67d0f77ec14ada",
+    "byteLength": 1866
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/c09378d375613a9f9ad1.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/739679183e69-c09378d375613a9f9ad1.html",
+    "sha256": "739679183e69bcbd3e95c409d9254ae1651a1baf1e02478ff12a47243fd410a3",
+    "byteLength": 372141
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/c09378d375613a9f9ad1.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/08ea067d0658-c09378d375613a9f9ad1.txt",
+    "sha256": "08ea067d065814e61d5f15509e63ba4c19b7709296f569028db42051e1cd316a",
+    "byteLength": 44052
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/0441f5644303dad5b450.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/37b10f38ae4b-0441f5644303dad5b450.html",
+    "sha256": "37b10f38ae4bc1fa3850eebe373a7c87bfb783e5d8f3e4375d138309fd43ce46",
+    "byteLength": 642246
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/0441f5644303dad5b450.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/0be4141f385c-0441f5644303dad5b450.txt",
+    "sha256": "0be4141f385c2a7641b7b7f0999655553bd71c9a76f9982a09bacbffcd8a9ea2",
+    "byteLength": 17039
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/0f5996cd8ee538ba1b8a.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/8f97ad48800d-0f5996cd8ee538ba1b8a.txt",
+    "sha256": "8f97ad48800dc371e4b5014aac36b6c0b132ea32b2eed0b9edea0364897a9c50",
+    "byteLength": 12006
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/0f5996cd8ee538ba1b8a.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/560953c1321f-0f5996cd8ee538ba1b8a.html",
+    "sha256": "560953c1321fde413489c4d326436832f405e4f39fd22a4f8121a77d69f1176e",
+    "byteLength": 684606
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/7e2d228ec60c38867cfc.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/a7615e361eb8-7e2d228ec60c38867cfc.txt",
+    "sha256": "a7615e361eb8724210eadbe8f54f0d080348b1c4e6e5838b77699e6ca623f16e",
+    "byteLength": 13928
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-media-rotation/source-cache/7e2d228ec60c38867cfc.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-product-media-integration/cache/ebfb38b10e9d-7e2d228ec60c38867cfc.html",
+    "sha256": "ebfb38b10e9db5de73cd25b93b4c64ff2859a0d63d3c2c60aed7bf0e9b3817fa",
+    "byteLength": 695083
+  }
+]

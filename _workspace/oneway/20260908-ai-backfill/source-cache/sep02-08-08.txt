@@ -1,0 +1,5 @@
+The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won’t use excluded files as context, helping you protect sensitive code across agentic workflows.
+
+This is available for Copilot Business and Copilot Enterprise customers.
+
+To learn more, see our docs about content exclusion .

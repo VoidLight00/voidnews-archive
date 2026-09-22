@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="tv-downloadv2:1227265;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	<meta name="description" content="Learn what is new in Visual Studio Code 1.136" />
+<meta name="keywords" content="" />
+<!-- Twitter and Facebook OpenGraph Metadata-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:url" content="https://code.visualstudio.com/updates/v1_136" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Visual Studio Code 1.136" />
+<meta property="og:description" content="Learn what is new in Visual Studio Code 1.136" />
+
+<meta property="og:image" content="https://code.visualstudio.com/assets/updates/1_136/release-highlights.webp" />
+
+
+
+	<link rel="shortcut icon" href="/assets/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+	<title>Visual Studio Code 1.136</title>
+
+	<link rel="stylesheet" href="/dist/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					// Stable closure: the SDK calls this per-event, so it picks up the
+					// real consent state once WcpConsent.init() resolves (siteConsent
+					// is still null when this callback is registered).
+					userConsentDetails: function () {
+						return siteConsent ? siteConsent.getConsent() : undefined;
+					}
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body >
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+		<div class="navbar-fixed-container">
+			<div class="navbar navbar-inverse navbar-fixed-top ">
+				<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+					<div class="container">
+						<div class="nav navbar-header">
+							<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav navbar-left" data-m='{"cN":"top-navbar","aN":"navigation"}'>
+								<li class="nav-dropdown">
+									<a id="nav-features" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Features","aN":"navigation","cT":"toggle"}'>
+										Features <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/features/agents" data-m='{"cN":"Agents","aN":"navigation - Features"}'>Agents</a></li>
+										<li role="none"><a role="menuitem" href="/features/customizations" data-m='{"cN":"Agent Customization","aN":"navigation - Features"}'>Agent Customization</a></li>
+										<li role="none"><a role="menuitem" href="/features/models" data-m='{"cN":"Models &amp; Agent Harnesses","aN":"navigation - Features"}'>Models &amp; Agent Harnesses</a></li>
+										<li role="none"><a role="menuitem" href="/features/enterprise" data-m='{"cN":"Enterprise","aN":"navigation - Features"}'>Enterprise</a></li>
+										<li role="none"><a role="menuitem" href="/features/extensibility" data-m='{"cN":"Extensibility","aN":"navigation - Features"}'>Extensibility</a></li>
+									</ul>
+								</li>
+								<li class="nav-dropdown">
+									<a id="nav-docs" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Docs","aN":"navigation","cT":"toggle"}'>
+										Docs <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="/docs" data-m='{"cN":"Documentation","aN":"navigation - Docs"}'>Documentation</a></li>
+										<li role="none"><a role="menuitem" href="/api" data-m='{"cN":"API","aN":"navigation - Docs"}'>API</a></li>
+										<li role="none"><a role="menuitem" id="nav-faqs" href="/docs/supporting/faq" data-m='{"cN":"FAQ","aN":"navigation - Docs"}'>FAQ</a></li>
+									</ul>
+								</li>
+								<li class="active" ><a id="nav-updates" href="/updates" data-m='{"cN":"Release Notes"}'>Release Notes</a>
+								</li>
+								<li ><a id="nav-blogs" href="/blogs" data-m='{"cN":"Blog"}'>Blog</a></li>
+								<li ><a id="nav-learn" href="/learn" data-m='{"cN":"Learn"}'>Learn</a></li>
+								<li><a id="nav-events" href="https://aka.ms/vscode/live" target="_blank" rel="noopener" data-m='{"cN":"Events"}'>Events<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+								<li class="nav-dropdown">
+									<a id="nav-resources" href="#" class="nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" data-m='{"cN":"Resources","aN":"navigation","cT":"toggle"}'>
+										Resources <span class="nav-dropdown-caret" aria-hidden="true"></span>
+									</a>
+									<ul class="nav-dropdown-menu" role="menu">
+										<li role="none"><a role="menuitem" href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener"
+												id="nav-extensions" data-m='{"cN":"Extensions","aN":"navigation - Resources"}'>Extensions<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+										<li role="none"><a role="menuitem" id="nav-mcp" href="/mcp" target="_blank" rel="noopener" data-m='{"cN":"MCP","aN":"navigation - Resources"}'>MCP<span class="codicon codicon-link-external nav-external-icon" aria-hidden="true"></span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right" role="presentation">
+								<li>
+									<a class="link-button" href="/download" id="nav-download">
+										<span>Download</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar-actions">
+							<div class="search" role="presentation">
+								<div class="nav-search search-control" role="button" tabindex="0" aria-label="Open search dialog">
+									<div class="input-group" role="presentation">
+										<span class="input-group-btn">
+											<span class="btn search-icon-container" aria-hidden="true">
+												<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="" />
+												<img class="search-icon-light" src="/assets/icons/search.svg" alt="" />
+											</span>
+										</span>
+										<span class="search-box form-control" aria-hidden="true" role="presentation"></span>
+										<span class="search-shortcut-placeholder">Search</span>
+										<span class="search-shortcut-overlay"></span>
+									</div>
+								</div>					</div>
+							<button type="button" class="theme-switch" id="theme-toggle">
+								<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+								<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+							</button>
+							<a class="link-button navbar-actions-download" href="/Download">
+								<span>Download</span>
+							</a>
+						</div>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-label="Expand and Collapse Menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>		<div data-announcement-version="2026-09-04-vscode-documentary" data-rotation-interval-seconds="8" class="updates-banner ">
+			<div class="container banner-messages">
+				<p class="message active" data-banner-message aria-hidden="false"><a href="https://aka.ms/the-story-of-vs-code?source=vsc-website-banner" target="_blank" rel="noopener">🎬 Watch The Story of VS Code!</a></p>
+			</div>
+			<button type="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></button>
+		</div>
+		<script>
+			// Restore dismissal and the session's random starting message before first paint.
+			(function () {
+				var banner = document.currentScript.previousElementSibling;
+				if (!banner) {
+					return;
+				}
+		
+				var version = banner.getAttribute('data-announcement-version');
+				try {
+					if (localStorage.getItem('dismissedAnnouncementVersion') === version) {
+						banner.classList.add('js-hidden');
+					}
+				} catch (error) {
+					console.warn('Unable to restore banner dismissal state.', error);
+				}
+		
+				var messages = banner.querySelectorAll('[data-banner-message]');
+				if (messages.length < 2) {
+					return;
+				}
+		
+				var storageKey = 'initialAnnouncementMessage:' + version;
+				var activeIndex;
+				try {
+					var storedIndex = sessionStorage.getItem(storageKey);
+					if (storedIndex !== null) {
+						activeIndex = Number(storedIndex);
+					}
+				} catch (error) {
+					console.warn('Unable to restore the initial banner message.', error);
+				}
+				if (!Number.isInteger(activeIndex) || activeIndex < 0 || activeIndex >= messages.length) {
+					activeIndex = Math.floor(Math.random() * messages.length);
+					try {
+						sessionStorage.setItem(storageKey, String(activeIndex));
+					} catch (error) {
+						console.warn('Unable to remember the initial banner message.', error);
+					}
+				}
+		
+				for (var index = 0; index < messages.length; index++) {
+					var isActive = index === activeIndex;
+					messages[index].classList.toggle('active', isActive);
+					messages[index].setAttribute('aria-hidden', String(!isActive));
+				}
+				banner.setAttribute('data-active-message-index', String(activeIndex));
+			})();
+		</script>
+		<!-- This div wraps around the entire site -->
+		<!-- The body itself should already have a main tag -->
+		<main id="main-content">
+			<div class="body-content docs docs-github-layout release-notes">
+    <div class="docs-layout-wrapper">
+        <!-- Left sidebar - Table of Contents -->
+        <aside class="docs-left-sidebar">
+            <nav id="docs-navbar" aria-label="Updates" class="docs-nav updates-nav visible-md visible-lg">
+            	<h4>Updates</h4>
+            	<ul class="nav">
+            		
+            			<li >
+            				<a href="/updates/v1_137" >Insiders</a>
+            			</li>
+            		
+            			<li class="active">
+            				<a href="/updates/v1_136" aria-label="Current Page: 1.136">1.136</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_135" >1.135</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_134" >1.134</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_133" >1.133</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_132" >1.132</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_131" >1.131</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_130" >1.130</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_129" >1.129</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_128" >1.128</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_127" >1.127</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_126" >1.126</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_125" >1.125</a>
+            			</li>
+            		
+            			<li >
+            				<a href="/updates/v1_124" >1.124</a>
+            			</li>
+            		
+            		<li >
+            			<a href="/updates/archive" class="archive-link" >View All Releases</a>
+            		</li>
+            	</ul>
+            </nav>
+            <nav id="small-nav" aria-label="Updates" class="docs-nav updates-nav hidden-md hidden-lg">
+            	<label class="faux-h4" for="small-nav-dropdown">Updates</label>
+            	<select id="small-nav-dropdown" aria-label="updates">
+            		
+            			<option value="/updates/v1_137" >Insiders</option>
+            		
+            			<option value="/updates/v1_136" selected>1.136</option>
+            		
+            			<option value="/updates/v1_135" >1.135</option>
+            		
+            			<option value="/updates/v1_134" >1.134</option>
+            		
+            			<option value="/updates/v1_133" >1.133</option>
+            		
+            			<option value="/updates/v1_132" >1.132</option>
+            		
+            			<option value="/updates/v1_131" >1.131</option>
+            		
+            			<option value="/updates/v1_130" >1.130</option>
+            		
+            			<option value="/updates/v1_129" >1.129</option>
+            		
+            			<option value="/updates/v1_128" >1.128</option>
+            		
+            			<option value="/updates/v1_127" >1.127</option>
+            		
+            			<option value="/updates/v1_126" >1.126</option>
+            		
+            			<option value="/updates/v1_125" >1.125</option>
+            		
+            			<option value="/updates/v1_124" >1.124</option>
+            		
+            		<option value="/updates/archive" >View All Releases</option>
+            	</select>
+            </nav>        </aside>
+        
+        <!-- Content wrapper contains main content + right sidebar -->
+        <div class="docs-content-wrapper">
+            <!-- Main article content -->
+            <main class="docs-main-content body">
+                <h1>Visual Studio Code 1.136</h1>
+<p>Follow us on <a href="https://www.linkedin.com/showcase/vs-code" class="external-link" target="_blank">LinkedIn</a>, <a href="https://go.microsoft.com/fwlink/?LinkID=533687" class="external-link" target="_blank">X</a>, <a href="https://bsky.app/profile/vscode.dev" class="external-link" target="_blank">Bluesky</a>, <a href="https://www.instagram.com/vscode.ig" class="external-link" target="_blank">Instagram</a></p>
+<hr>
+<p><em>Release date: September 2, 2026</em></p>
+<p><strong>Update 1.136.1</strong>: The update addresses these <a href="https://github.com/microsoft/vscode/pulls?q=is%3Apr+milestone%3A1.136.1+is%3Aclosed+label%3Acandidate" class="external-link" target="_blank">issues</a>.</p>
+<p>Downloads: Windows: <a href="https://update.code.visualstudio.com/1.136.1/win32-x64-user/stable">x64</a> <a href="https://update.code.visualstudio.com/1.136.1/win32-arm64-user/stable">Arm64</a> | Mac: <a href="https://update.code.visualstudio.com/1.136.1/darwin-universal-dmg/stable">Universal</a> <a href="https://update.code.visualstudio.com/1.136.1/darwin-x64-dmg/stable">Intel</a> <a href="https://update.code.visualstudio.com/1.136.1/darwin-arm64-dmg/stable">silicon</a> | Linux: <a href="https://update.code.visualstudio.com/1.136.1/linux-deb-x64/stable">deb</a> <a href="https://update.code.visualstudio.com/1.136.1/linux-rpm-x64/stable">rpm</a> <a href="https://update.code.visualstudio.com/1.136.1/linux-x64/stable">tarball</a> <a href="https://code.visualstudio.com/docs/supporting/faq#_previous-release-versions">Arm</a> <a href="https://update.code.visualstudio.com/1.136.1/linux-snap-x64/stable">snap</a></p>
+<hr>
+<p>Welcome to the 1.136 release of Visual Studio Code. This release helps you finish pull requests with agents and manage agent work across complex workspaces and related chats.</p>
+<ul>
+<li>
+<p><a href="#_agent-merge-preview">Agent Merge (Preview)</a>: Resolve review feedback, failed checks, and merge conflicts until your pull request is ready to merge.</p>
+</li>
+<li>
+<p><a href="#_multi-root-workspaces-in-editor-window-experimental">Multi-root workspaces (Experimental)</a>: Work with Copilot and Claude agent sessions across all folders in a multi-root workspace.</p>
+</li>
+<li>
+<p><a href="#_chat-backgrounds-in-the-agents-window-experimental">Chat backgrounds (Experimental)</a>: Personalize the Agents window with built-in patterns or your own images.</p>
+</li>
+<li>
+<p><a href="#_navigate-related-chats-and-sessions">Chat sessions</a>: Organize related chats in a session hierarchy and quickly see which ones need your attention.</p>
+</li>
+</ul>
+<p>Happy Coding!</p>
+<hr>
+<p>VS Code is rolling out gradually to all users. Use <strong>Check for Updates</strong> in VS Code to get the latest version immediately.</p>
+<p>To try new features as soon as possible, <a href="https://code.visualstudio.com/insiders"><strong>download the nightly Insiders build</strong></a>, which includes the latest updates as soon as they are available.</p>
+<hr>
+<!-- TOC
+<div class="toc-nav-layout">
+  <nav id="toc-nav">
+    <div>In this update</div>
+    <ul>
+      <li><a href="#the-story-of-vs-code-world-premiere">The Story of VS Code: World Premiere</a></li>
+      <li><a href="#agents">Agents</a></li>
+      <li><a href="#chat">Chat</a></li>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#editor-experience">Editor experience</a></li>
+      <li><a href="#code-editing">Code editing</a></li>
+      <li><a href="#integrated-browser">Integrated browser</a></li>
+      <li><a href="#terminal">Terminal</a></li>
+      <li><a href="#deprecated-features-and-settings">Deprecated features and settings</a></li>
+      <li><a href="#thank-you">Thank you</a></li>
+    </ul>
+  </nav>
+  <div class="notes-main">
+Navigation End -->
+<h2 id="_the-story-of-vs-code-world-premiere" data-needslink="_the-story-of-vs-code-world-premiere">The Story of VS Code: World Premiere</h2>
+<p>Discover the story behind VS Code, from its early beginnings to the platform millions of developers use today, and the community that helped shape it along the way.</p>
+<p><strong><a href="https://aka.ms/the-story-of-vs-code" class="external-link" target="_blank">Premiere: September 4 at 8:00 AM PT. Join us!</a></strong></p>
+<p><a href="https://aka.ms/vscode-trailer" class="external-link" target="_blank"><img src="/assets/updates/1_136/the-story-of-vs-code.png" alt="Graphic poster featuring the VS Code logo glowing over a dark background filled with programming code, with the title &quot;The Story of VS Code.&quot;" width="1920" height="1080" loading="lazy"></a></p>
+<h2 id="_agents" data-needslink="_agents">Agents</h2>
+<h3 id="_multi-root-workspaces-in-editor-window-experimental" data-needslink="_multi-root-workspaces-in-editor-window-experimental">Multi-root workspaces in editor window (Experimental)</h3>
+<p><strong>Settings</strong>: <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentHost.copilotAgent.multiRootEnabled">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentHost.copilotAgent.multiRootEnabled
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentHost.claudeAgent.multiRootEnabled">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentHost.claudeAgent.multiRootEnabled
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></p>
+<p>Copilot and Claude agent sessions in the editor window Chat view support <a href="https://code.visualstudio.com/docs/editing/workspaces/multi-root-workspaces">multi-root workspaces</a>.</p>
+<p>This capability is currently scoped to the editor window.</p>
+<p><a href="https://code.visualstudio.com/docs/agent-customization/hooks">Agent hooks</a> remain scoped to a single workspace folder. If hooks are detected in multiple folders, VS Code prompts you to select the primary folder from which to load them.</p>
+<h3 id="_redesigned-new-session-input" data-needslink="_redesigned-new-session-input">Redesigned new-session input</h3>
+<p>Start delegated work with less setup in the redesigned new-session input. The updated experience brings the prompt, model selection, workspace selection, and other session controls together in one layout.</p>
+<p><img src="/assets/updates/1_136/agents-new-session-input.webp" alt="Screenshot of the redesigned new-session input in the Agents window with context, permission, worktree, and branch controls." width="847" height="227" loading="lazy"></p>
+<h3 id="_improved-workspace-resolution" data-needslink="_improved-workspace-resolution">Improved workspace resolution</h3>
+<p>Agents can resolve workspaces by their project name in addition to absolute paths and workspace URIs. Session tools also preserve project URIs and all working directories for multi-root workspaces.</p>
+<p>As a result, you can make requests such as &quot;run this in the vscode workspace&quot; without providing a full path. If multiple workspaces have the same name, the agent reports the possible matches instead of silently choosing one. Remote workspace URIs are supported as well.</p>
+<h3 id="_navigate-related-chats-and-sessions" data-needslink="_navigate-related-chats-and-sessions">Navigate related chats and sessions</h3>
+<p>Keep related agent work organized and move between sessions and chats from the sessions list in the Agents window. Chats appear as children of their parent session, so you can understand which chats belong together without managing a collection of unrelated sessions.</p>
+<p>Each chat row shows its own title, status, and pending approvals, so you can see which chat needs your input. Expand or collapse the hierarchy, and open, rename, move, or delete individual chats directly from the tree.</p>
+<p>When an agent delegates independent work to multiple chats, each created chat gets a meaningful title and appears in this hierarchy.</p>
+<p><video src="/assets/updates/1_136/session-chats-tree.mp4" title="Video showing an agent delegating work to chats that appear in the sessions list hierarchy." autoplay loop controls muted></video></p>
+<p>The new session or chat is placed close to its source, and the receiving request includes a source link such as <strong>Sent by another session</strong> or <strong>Sent from another chat</strong>. Select the link to return to the exact session or chat that initiated it.</p>
+<p><img src="/assets/updates/1_136/session-chat-source.webp" alt="Screenshot showing a delegated request with a Sent from another chat source link." width="2550" height="568" loading="lazy"></p>
+<h3 id="_readable-breadcrumbs-for-session-files" data-needslink="_readable-breadcrumbs-for-session-files">Readable breadcrumbs for session files</h3>
+<p>Files created in the internal session state directory previously showed internal session identifiers in editor breadcrumbs. Breadcrumbs now use stable provider and session labels, making it easier to identify the file location without exposing implementation details.</p>
+<p><img src="/assets/updates/1_136/session-breadcrumbs.webp" alt="Screenshot showing readable session labels in the breadcrumbs for an agent-created file." width="2830" height="266" loading="lazy"></p>
+<h3 id="_chat-backgrounds-in-the-agents-window-experimental" data-needslink="_chat-backgrounds-in-the-agents-window-experimental">Chat backgrounds in the Agents window (Experimental)</h3>
+<p><strong>Settings</strong>: <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentSessions.preferredDarkBackgroundImage">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentSessions.preferredDarkBackgroundImage
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentSessions.preferredLightBackgroundImage">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentSessions.preferredLightBackgroundImage
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentSessions.backgroundImageLayout">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentSessions.backgroundImageLayout
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></p>
+<p>Personalize the Agents window with a decorative chat background: either a theme-aware pattern of built-in VS Code icons or an image of your own.</p>
+<p>Run <strong>Chat: Set Background...</strong> to choose between the <strong>Codicons</strong> pattern and an image from your machine. The five images you used most recently are offered under <strong>Recently Used</strong>, and that list is kept on this machine only.</p>
+<p><img src="/assets/updates/1_136/agents-chat-background-codicons.webp" alt="Screenshot showing the Codicons pattern behind the new session input in the Agents window." width="1140" height="648" loading="lazy"></p>
+<p>When you bring your own image, run <strong>Chat: Change Background Layout...</strong> to place it. Eleven layouts are available: <strong>Repeat</strong>, <strong>Stretch</strong>, <strong>Center</strong>, and each edge and corner. Moving through the list previews each layout in place, so you can judge the result before committing to it. <strong>Chat: Clear Background</strong> returns to the plain surface.</p>
+<p>Dark and light themes keep separate backgrounds. Every dark theme shares <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentSessions.preferredDarkBackgroundImage">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentSessions.preferredDarkBackgroundImage
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> and every light theme shares <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentSessions.preferredLightBackgroundImage">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentSessions.preferredLightBackgroundImage
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, so switching between a dark and a light theme swaps the background along with it. High contrast themes suppress backgrounds entirely, and the three commands are unavailable there.</p>
+<p>Chat content carries its own fill so that it stays readable over whatever sits behind it. Your request remains fully opaque, agent responses fade out through the padding on either side, and wide content such as Markdown tables and terminal output stays fully backed.</p>
+<p><img src="/assets/updates/1_136/agents-chat-background-readability.webp" alt="Screenshot showing an agent response and a Markdown table remaining readable over the Codicons background." width="1140" height="747" loading="lazy"></p>
+<p>Learn more about <a href="https://code.visualstudio.com/docs/chat/chat-overview#_personalize-chat">personalizing chat</a>.</p>
+<h3 id="_agent-session-notifications" data-needslink="_agent-session-notifications">Agent session notifications</h3>
+<p><strong>Settings</strong>: <span class="setting"><span class="setting-dropdown" data-setting-id="chat.notifyWindowOnConfirmation">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.notifyWindowOnConfirmation
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, <span class="setting"><span class="setting-dropdown" data-setting-id="chat.notifyWindowOnResponseReceived">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.notifyWindowOnResponseReceived
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></p>
+<p>VS Code can notify you when an agent session needs your input or finishes its work. This is especially useful when you delegate work across multiple sessions, workspaces, or VS Code windows.</p>
+<p>By default, notifications only appear when the VS Code window is not focused. You can configure notifications separately for sessions that need input and sessions that have received a response. Notifications include a direct link back to the relevant session, so selecting one focuses the correct window and opens the session that needs attention.</p>
+<h3 id="_agent-merge-preview" data-needslink="_agent-merge-preview">Agent Merge (Preview)</h3>
+<p><strong>Setting</strong>: <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentMerge.enabled">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentMerge.enabled
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></p>
+<p>Agent Merge helps you take a pull request across the finish line. It asks an agent to address review feedback, fix failed checks and merge conflicts, and rerun workflows. Agent Merge repeats this process until the pull request is ready to merge.</p>
+<p>To try Agent Merge, enable <span class="setting"><span class="setting-dropdown" data-setting-id="chat.agentMerge.enabled">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      chat.agentMerge.enabled
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>. You can currently enable Agent Merge for a session only from the Agents window. Run <strong>Enable Agent Merge for Active Session</strong> or select the <strong>Agent Merge</strong> button in the title bar. Learn more about <a href="https://code.visualstudio.com/docs/agents/run/agents-window#_finish-a-pull-request-with-agent-merge">using Agent Merge</a>.</p>
+<h3 id="_agent-host" data-needslink="_agent-host">Agent host</h3>
+<p>The agent host lets you connect to the same agent session from multiple VS Code windows. It runs agent harnesses in a dedicated process based on the <a href="https://microsoft.github.io/agent-host-protocol/" class="external-link" target="_blank">Agent Host Protocol</a> (AHP). The agent host's Copilot agent is powered by the <a href="https://www.npmjs.com/package/@github/copilot-sdk" class="external-link" target="_blank">Copilot SDK</a>, which aligns the agent's behavior and functionality with the Copilot CLI, the standalone GitHub Copilot app, and other Copilot products.</p>
+<p>We're actively developing the agent host. The following screenshot shows the <code>Copilot</code> harness selected for an agent host in an editor window:</p>
+<p><img src="/assets/updates/1_136/agent-host-harness-dropdown-editor.webp" alt="Screenshot showing the harness dropdown in the editor window." width="1167" height="450" loading="lazy"></p>
+<p>Learn more in the <a href="https://code.visualstudio.com/docs/agents/concepts/agent-host">agent host documentation</a> and our new <a href="https://code.visualstudio.com/blogs/2026/08/26/agent-host-architecture">agent host blog post</a>, where we share why we built the agent host, what it enables in VS Code, how the architecture and open protocol work, and workflows you can try yourself.</p>
+<p>If you have any feedback or requests, please let us know by <a href="https://github.com/microsoft/vscode/issues" class="external-link" target="_blank">filing an issue</a>.</p>
+<h2 id="_chat" data-needslink="_chat">Chat</h2>
+<h3 id="_enterprise-controls-for-dictation-data" data-needslink="_enterprise-controls-for-dictation-data">Enterprise controls for dictation data</h3>
+<p>Administrators can manage the dictation model and language-model transcript cleanup through enterprise policies.</p>
+<p>The new controls make it possible to require on-device transcription and disable language-model cleanup, so dictation remains available while preventing dictation data from being sent to cloud transcription or a Copilot model. Learn more about <a href="https://code.visualstudio.com/docs/enterprise/ai-settings#control-dictation-data">enterprise controls for dictation data</a>.</p>
+<h2 id="_accessibility" data-needslink="_accessibility">Accessibility</h2>
+<h3 id="_screen-reader-optimized-badge-in-the-agents-window" data-needslink="_screen-reader-optimized-badge-in-the-agents-window">Screen Reader Optimized badge in the Agents window</h3>
+<p>The <strong>Screen Reader Optimized</strong> badge in the Agents window title bar makes the active accessibility mode easier to identify. The badge appears when Screen Reader Optimized mode is enabled. Select the badge to disable this mode.</p>
+<p><img src="/assets/updates/1_136/agents-screen-reader-optimized-badge.webp" alt="Screenshot of the Screen Reader Optimized badge in the Agents window title bar." width="1041" height="217" loading="lazy"></p>
+<h2 id="_editor-experience" data-needslink="_editor-experience">Editor experience</h2>
+<h3 id="_layout-density-for-the-editor-window-experimental" data-needslink="_layout-density-for-the-editor-window-experimental">Layout density for the editor window (Experimental)</h3>
+<p><strong>Settings</strong>: <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.experimental.modernUI">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.experimental.modernUI
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>, <span class="setting"><span class="setting-dropdown" data-setting-id="window.density.layout">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.density.layout
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span></p>
+<p>Fit more content in the editor window with the <strong>Compact</strong> layout density. When <span class="setting"><span class="setting-dropdown" data-setting-id="workbench.experimental.modernUI">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      workbench.experimental.modernUI
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span> is enabled, you can choose between two layout densities:</p>
+<ul>
+<li><strong>Default</strong> layout density is the same as the current editor window layout.</li>
+<li><strong>Compact</strong> layout density removes the spacing between panels and reduces inner panel spacing.</li>
+</ul>
+<p>This setting is available in the <strong>Layout Density</strong> section of the Settings menu and can also be set using <span class="setting"><span class="setting-dropdown" data-setting-id="window.density.layout">
+    <span class="setting-link-main">
+      <span class="codicon codicon-settings-gear dynamic-setting-icon"></span>
+      window.density.layout
+      
+    </span>
+    <button 
+      type="button"
+      class="setting-dropdown-trigger"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      aria-label="Open setting in VS Code">
+        <svg class="setting-dropdown-chevron" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"/>
+        </svg>
+    </button>
+    <span class="setting-dropdown-menu" role="menu" aria-label="Open setting">
+      <span role="menuitem" class="setting-action-item" data-version="stable" tabindex="0">Open in VS Code</span>
+      <span role="menuitem" class="setting-action-item" data-version="insiders" tabindex="-1">Open in VS Code Insiders</span>
+    </span>
+  </span></span>.</p>
+<p><video src="/assets/updates/1_136/compact-layout-setting.mp4" title="Video of the compact layout setting in the editor window." autoplay loop controls muted></video></p>
+<h2 id="_code-editing" data-needslink="_code-editing">Code editing</h2>
+<h3 id="_word-wrapping-improvements" data-needslink="_word-wrapping-improvements">Word wrapping improvements</h3>
+<p>Injected text no longer pushes wrapped lines outside the editor viewport. Word wrapping takes the visual width of color decorators, inlay hint spacing, inline progress indicators, and breakpoint placeholders into account. Please have a look below for the before and after screenshots. On the picture above you can see that rgba is slightly cropped. While on the second picture it isn't.</p>
+<p><img src="/assets/updates/1_136/word-wrapping-before.jpg" alt="Screenshot showing a wrapped CSS line cropped at the edge of the editor viewport." width="1250" height="488" loading="lazy"></p>
+<p><img src="/assets/updates/1_136/word-wrapping-after.jpg" alt="Screenshot showing the wrapped CSS line fitting within the editor viewport." width="1250" height="488" loading="lazy"></p>
+<h2 id="_integrated-browser" data-needslink="_integrated-browser">Integrated browser</h2>
+<h3 id="_spell-check-suggestions" data-needslink="_spell-check-suggestions">Spell check suggestions</h3>
+<p>Right-click a misspelled word in an editable field to select a suggested correction. In sessions that use persistent data storage, you can also select <strong>Add to Dictionary</strong>.</p>
+<p><img src="/assets/updates/1_136/spell-check.webp" alt="Screenshot showing spelling suggestions and Add to Dictionary in the integrated browser context menu." width="692" height="260" loading="lazy"></p>
+<h2 id="_terminal" data-needslink="_terminal">Terminal</h2>
+<h3 id="_reduced-delay-when-running-commands" data-needslink="_reduced-delay-when-running-commands">Reduced delay when running commands</h3>
+<p>Terminal commands executed by extensions no longer incur an unnecessary delay when shell integration is ready under certain timing conditions. Users of the JavaScript debugger who hit this case will no longer experience a five-second delay when starting their programs.</p>
+<h2 id="_deprecated-features-and-settings" data-needslink="_deprecated-features-and-settings">Deprecated features and settings</h2>
+<p>None</p>
+<h2 id="_thank-you" data-needslink="_thank-you">Thank you</h2>
+<p>Contributions to <code>vscode</code>:</p>
+<ul>
+<li><a href="https://github.com/abmahdy" class="external-link" target="_blank">@abmahdy (Ahmed Mahdy)</a>: Bound concurrency of prompt file discovery reads <a href="https://github.com/microsoft/vscode/pull/331855" class="external-link" target="_blank">PR #331855</a></li>
+<li><a href="https://github.com/DanTup" class="external-link" target="_blank">@DanTup (Danny Tuppeny)</a>: Note that InlayHints with the same position are shown in-order <a href="https://github.com/microsoft/vscode/pull/175525" class="external-link" target="_blank">PR #175525</a></li>
+<li><a href="https://github.com/davidbitton" class="external-link" target="_blank">@davidbitton (David B. Bitton)</a>: Add spelling suggestions to the Integrated Browser context menu <a href="https://github.com/microsoft/vscode/pull/333043" class="external-link" target="_blank">PR #333043</a></li>
+<li><a href="https://github.com/JeffreyCA" class="external-link" target="_blank">@JeffreyCA</a>: Update Fig spec for Azure Developer CLI (azd) <a href="https://github.com/microsoft/vscode/pull/331727" class="external-link" target="_blank">PR #331727</a></li>
+<li><a href="https://github.com/juliagongms" class="external-link" target="_blank">@juliagongms (Julia Gong)</a>: nes: apply supportsUnifiedCompletions on the default provider path <a href="https://github.com/microsoft/vscode/pull/332802" class="external-link" target="_blank">PR #332802</a></li>
+<li><a href="https://github.com/koubaki" class="external-link" target="_blank">@koubaki</a>: Update error message in inlineChatIntent.ts <a href="https://github.com/microsoft/vscode/pull/329157" class="external-link" target="_blank">PR #329157</a></li>
+<li><a href="https://github.com/ktsoator" class="external-link" target="_blank">@ktsoator (ktsoator)</a>: Hover: restore scrolling for long content <a href="https://github.com/microsoft/vscode/pull/331439" class="external-link" target="_blank">PR #331439</a></li>
+<li><a href="https://github.com/na2co3-ftw" class="external-link" target="_blank">@na2co3-ftw (na2co3)</a>: Modern UI: Fix CSS specificity for tab action fading <a href="https://github.com/microsoft/vscode/pull/332103" class="external-link" target="_blank">PR #332103</a></li>
+<li><a href="https://github.com/preitinger" class="external-link" target="_blank">@preitinger (Peter Reitinger)</a>: Update snippet.md <a href="https://github.com/microsoft/vscode/pull/231790" class="external-link" target="_blank">PR #231790</a></li>
+<li><a href="https://github.com/remcohaszing" class="external-link" target="_blank">@remcohaszing (Remco Haszing)</a>
+<ul>
+<li>Normalize end of line cursor move operation <a href="https://github.com/microsoft/vscode/pull/296712" class="external-link" target="_blank">PR #296712</a></li>
+<li>Fix out of bounds text selection with line wrapping <a href="https://github.com/microsoft/vscode/pull/262910" class="external-link" target="_blank">PR #262910</a></li>
+<li>Round custom line heights <a href="https://github.com/microsoft/vscode/pull/298421" class="external-link" target="_blank">PR #298421</a></li>
+<li>Expose the score function in Monaco editor <a href="https://github.com/microsoft/vscode/pull/322959" class="external-link" target="_blank">PR #322959</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/SimonSiefke" class="external-link" target="_blank">@SimonSiefke (Simon Siefke)</a>
+<ul>
+<li>fix: memory leak in explorer viewer <a href="https://github.com/microsoft/vscode/pull/332332" class="external-link" target="_blank">PR #332332</a></li>
+<li>fix: memory leak in LSP terminal completions <a href="https://github.com/microsoft/vscode/pull/332173" class="external-link" target="_blank">PR #332173</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/TheNotary" class="external-link" target="_blank">@TheNotary</a>: Update error message for unsupported skill attributes <a href="https://github.com/microsoft/vscode/pull/328318" class="external-link" target="_blank">PR #328318</a></li>
+<li><a href="https://github.com/tisilent" class="external-link" target="_blank">@tisilent (xiejialong)</a>: update label and description. <a href="https://github.com/microsoft/vscode/pull/219949" class="external-link" target="_blank">PR #219949</a></li>
+<li><a href="https://github.com/unsupportedpastels" class="external-link" target="_blank">@unsupportedpastels (Mark S.)</a>: Support reasoning effort in custom agent files <a href="https://github.com/microsoft/vscode/pull/329263" class="external-link" target="_blank">PR #329263</a></li>
+<li><a href="https://github.com/weidehai" class="external-link" target="_blank">@weidehai (io)</a>: error correction instructions <a href="https://github.com/microsoft/vscode/pull/249715" class="external-link" target="_blank">PR #249715</a></li>
+</ul>
+<p>Contributions to <code>vscode-emmet-helper</code>:</p>
+<ul>
+<li><a href="https://github.com/danfiedler-msft" class="external-link" target="_blank">@danfiedler-msft (Dan Fiedler)</a>: Pin GitHub Actions to full-length commit SHAs <a href="https://github.com/microsoft/vscode-emmet-helper/pull/108" class="external-link" target="_blank">PR #108</a></li>
+</ul>
+<p>Contributions to <code>vscode-livepreview</code>:</p>
+<ul>
+<li><a href="https://github.com/danfiedler-msft" class="external-link" target="_blank">@danfiedler-msft (Dan Fiedler)</a>: Pin GitHub Actions to full-length commit SHAs <a href="https://github.com/microsoft/vscode-livepreview/pull/854" class="external-link" target="_blank">PR #854</a></li>
+</ul>
+<p>Contributions to <code>docfind</code>:</p>
+<ul>
+<li><a href="https://github.com/danfiedler-msft" class="external-link" target="_blank">@danfiedler-msft (Dan Fiedler)</a>: Pin GitHub Actions to full-length commit SHAs <a href="https://github.com/microsoft/docfind/pull/62" class="external-link" target="_blank">PR #62</a></li>
+</ul>
+<p>Contributions to <code>node-pty</code>:</p>
+<ul>
+<li><a href="https://github.com/danfiedler-msft" class="external-link" target="_blank">@danfiedler-msft (Dan Fiedler)</a>: Pin GitHub Actions to full-length commit SHAs <a href="https://github.com/microsoft/node-pty/pull/958" class="external-link" target="_blank">PR #958</a></li>
+</ul>
+<h3 id="_issue-tracking" data-needslink="_issue-tracking">Issue tracking</h3>
+<p>Contributions to our issue tracking:</p>
+<ul>
+<li><a href="https://github.com/gjsjohnmurray" class="external-link" target="_blank">@gjsjohnmurray (John Murray)</a></li>
+<li><a href="https://github.com/saroasid-web" class="external-link" target="_blank">@saroasid-web (Saswwo)</a></li>
+<li><a href="https://github.com/zotabee" class="external-link" target="_blank">@zotabee (zotabee)</a></li>
+<li><a href="https://github.com/lppedd" class="external-link" target="_blank">@lppedd (Edoardo Luppi)</a></li>
+<li><a href="https://github.com/sandstrom" class="external-link" target="_blank">@sandstrom (sandstrom)</a></li>
+</ul>
+<hr>
+<p>We really appreciate people trying our new features as soon as they are ready, so check back here often and learn what's new.</p>
+<blockquote><p>If you'd like to read release notes for previous VS Code versions, go to <a href="https://code.visualstudio.com/updates">Updates</a> on <a href="https://code.visualstudio.com">code.visualstudio.com</a>.</p>
+</blockquote><p><a id="scroll-to-top" role="button" title="Scroll to top" aria-label="scroll to top" href="#"><span class="icon"></span></a></p>
+
+                <div class="feedback" data-edit-url="https://vscode.dev/github/microsoft/vscode-docs/blob/main/release-notes/v1_136.md"></div>
+            </main>
+            
+            <!-- Right sidebar - On This Page -->
+            <aside class="docs-right-sidebar hidden-xs">
+                <nav id="docs-subnavbar" aria-label="On Page">
+                    
+                    <h4><span class="sr-only">On this page there are 10 sections</span><span
+                            aria-hidden="true">On this page</span></h4>
+                    <ul class="nav">
+                        
+                        <li><a href="#_the-story-of-vs-code-world-premiere">The Story of VS Code: World Premiere</a></li>
+                        
+                        <li><a href="#_agents">Agents</a></li>
+                        
+                        <li><a href="#_chat">Chat</a></li>
+                        
+                        <li><a href="#_accessibility">Accessibility</a></li>
+                        
+                        <li><a href="#_editor-experience">Editor experience</a></li>
+                        
+                        <li><a href="#_code-editing">Code editing</a></li>
+                        
+                        <li><a href="#_integrated-browser">Integrated browser</a></li>
+                        
+                        <li><a href="#_terminal">Terminal</a></li>
+                        
+                        <li><a href="#_deprecated-features-and-settings">Deprecated features and settings</a></li>
+                        
+                        <li><a href="#_thank-you">Thank you</a></li>
+                        
+                    </ul>
+                    
+                </nav>
+            </aside>
+        </div>
+        
+        <!-- Mobile connect widget -->
+        <div class="docs-mobile-widgets visible-xs">
+            <div class="connect-widget"></div>
+        </div>
+    </div>
+</div>
+		</main>
+	</div>
+
+	<div id="search-popup-overlay" class="search-popup-overlay" role="dialog" aria-modal="true" aria-label="Search">
+		<div class="search-popup-container">
+			<div class="search-popup-header">
+				<form class="search-popup-form">
+					<div class="input-group">
+						<input type="text" name="q" class="search-box form-control" placeholder="Search the website"
+							aria-label="Search text" role="combobox" aria-expanded="false"
+							aria-autocomplete="list" aria-controls="search-results-listbox"
+							aria-activedescendant="" />
+						<span class="input-group-btn">
+							<button tabindex="0" class="btn" type="submit" aria-label="Search">
+								<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+								<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+							</button>
+						</span>
+					</div>
+				</form>
+				<button class="search-popup-close" type="button" aria-label="Close search"><i class="codicon codicon-close" aria-hidden="true"></i></button>
+			</div>
+			<div class="search-popup-results">
+				<ul class="search-popup-results-list" id="search-results-listbox" role="listbox" aria-label="Search results"></ul>
+			</div>
+			<div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="search-popup-status"></div>
+		</div>
+	</div>
+
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/showcase/vs-code"><img src="/assets/icons/linkedin-icon.svg" alt="VS Code on LinkedIn"></a>
+						</li>
+						<li>
+							<a href="https://bsky.app/profile/vscode.dev"><img src="/assets/icons/bluesky-icon.svg" alt="VS Code on Bluesky"></a>
+						</li>
+						<li>
+							<a href="https://www.reddit.com/r/vscode/"><img src="/assets/icons/reddit-icon.svg" alt="Join the VS Code community on Reddit"></a>
+						</li>
+						<li>
+							<a href="https://www.vscodepodcast.com"><img src="/assets/icons/podcast-icon.svg" alt="The VS Code Insiders Podcast"></a>
+						</li>
+						<li>
+							<a href="https://www.tiktok.com/@vscode"><img src="/assets/icons/tiktok-icon.svg" alt="VS Code on TikTok"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+						target="_blank" rel="noopener" title="Get support for VS Code"
+						aria-label="Get support for VS Code (opens in new tab)">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+						target="_blank" rel="noopener" title="View the Microsoft privacy statement"
+						aria-label="Microsoft privacy statement (opens in new tab)">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+						target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+						target="_blank" rel="noopener" title="View the Microsoft Terms of Use"
+						aria-label="Microsoft Terms of Use (opens in new tab)">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+						target="_blank" rel="noopener" title="View the Visual Studio Code license"
+						aria-label="Visual Studio Code license (opens in new tab)">License</a></li>
+				</ul>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li>
+						<svg class="privacy-choices" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43">
+							<title>Your Privacy Choices Opt-Out Icon</title>
+							<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+							<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+							<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+							<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+						</svg>
+						<a id="footer-privacy-choices-link" href="https://aka.ms/YourCaliforniaPrivacyChoices"
+						target="_blank" rel="noopener" title="View Your Privacy Choices"
+						aria-label="Your Privacy Choices (opens in new tab)">Your Privacy Choices</a></li>
+					<li><a id="footer-consumer-health-privacy-link" href="https://go.microsoft.com/fwlink/?linkid=2259814"
+						target="_blank" rel="noopener" title="View the Microsoft Consumer Health Privacy policy"
+						aria-label="Microsoft Consumer Health Privacy policy (opens in new tab)">Consumer Health Privacy</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="module">
+		document.addEventListener('DOMContentLoaded', () => {
+			const copilotDeepLinks = document.querySelectorAll('.copilot-deep-link');
+			if (copilotDeepLinks.length === 0) {
+				return;
+			}
+			if (window.innerWidth < 992) {
+				for (const link of copilotDeepLinks) {
+					link.href = 'https://aka.ms/vscode-activatecopilotfree';
+				}
+			}
+		});
+	</script>
+
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.136",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "AI Code Editor",
+			"description": "Visual Studio Code is a free, open source AI code editor for agent-first development. Build with AI agents, manage multi-agent workflows, and code across any environment.",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/images/product-screenshot.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+
+</html>

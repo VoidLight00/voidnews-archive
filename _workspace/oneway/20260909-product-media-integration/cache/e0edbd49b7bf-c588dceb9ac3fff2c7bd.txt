@@ -1,0 +1,116 @@
+Meet Higgsfield Genjutsu: How It Works and What You Get
+Higgsfield just launched Genjutsu, a new tool that rebuilds part of a clip without a full reshoot. One feature, Motion Transfer, pulls the motion out of any video and builds a new scene around it. The other, Object Swap targets the element you specify while preserving the rest of the original shot. No prompt is needed either way, presets can do the whole job on their own. This guide covers how it works, what it's good for, the full workflow, and pricing.
+What Is Higgsfield Genjutsu and How It Works?
+Genjutsu takes an existing video and rebuilds part of it. For example, it can change the person in the shot, the setting, or an object in the frame. Everything else stays exactly as filmed. What's new here is the ability to target a specific element and change it locally, without regenerating or reshooting the rest of the scene. It works on either real footage or generated video. For a single generation, one input video up to 30 seconds long can be uploaded, along with up to 30 reference photos to guide the change. The result comes back in up to 1080p. A full text prompt isn't required. Depending on the workflow, you can use references or a preset and add a short description when you want a more specific direction.
+This tool has two core features:
+Motion Transfer.
+Uses the motion from an existing video as a reference, then applies that movement to a new character or rebuilt scene.
+Object Swap.
+Replaces the object or element you specify while preserving the rest of the original footage.
+Key Settings
+Key Settings
+Setting
+Detail
+Video input
+1 clip, 4 to 30 seconds
+Reference images
+Up to 30 per generation
+Prompt
+Optional, short description or preset only
+Presets available
+30+
+Output resolution
+Up to 1080p
+Use Cases: What Genjutsu Is Built For
+Use Cases: What Genjutsu Is Built For
+Use Case
+What You Change
+What Stays From the Source
+Style swap
+The visual style, turning an anime-style clip into live-action, or the reverse
+The motion, timing, and camera work
+Wardrobe change
+The outfit, uploading different references to try several looks on the same clip
+The subject's identity, pose, and movement
+Ad variation
+The character, product, or setting for a different market
+The pacing and structure of the original ad
+Content repurposing
+The overall look, turning a raw phone clip into a polished commercial
+The original action and framing
+AI influencer content
+Who's on screen
+The same underlying motion
+Full Workflow: Step-by-Step Guide
+Genjutsu can run mostly off presets, with a short description added when more direction is needed. A full prompt usually isn't necessary either way.
+Step 1: Open Higgsfield Genjutsu and choose a feature.
+Select Motion Transfer or Object Swap based on what you want to change.
+Step 2: Upload your source video.
+Add one video between 4 and 30 seconds long.
+Your browser does not support the video.
+Step 3: Add reference images if needed.
+Upload up to 30 images to define the character, object, outfit, product, location, or style you want Genjutsu to use.
+Step 4: Choose a preset or add a short description.
+Pick one of the available presets for a ready-made transformation, or describe the change yourself. A full prompt is not required.
+Step 5: Generate and review.
+Compare the result with the source footage, then export the version you want to keep.
+Motion Transfer:
+Your browser does not support the video.
+Object Swap:
+Your browser does not support the video.
+Pricing
+Motion Transfer and Object Swap cost the same to generate, priced by length and resolution.
+Pricing
+Length
+Credits
+Approx. Price
+15 sec, 480p
+40
+$2.00
+15 sec, 720p
+104
+$5.20
+15 sec, 1080p
+144
+$7.20
+Pricing verified September 2026. Credit costs may vary by generation settings.
+Who This Is For
+Influencers
+can reuse the same performance across different characters, outfits, locations, or visual styles without filming each version separately.
+Creators
+can repurpose a single piece of footage into multiple finished variations while preserving the movement and timing of the original take.
+Marketers
+can adapt one campaign for different products, audiences, or markets by changing selected elements without recreating the entire video.
+Meet Higgsfield Genjutsu: How It Works and What You Get
+Try Genjutsu
+Got any questions left?
+What is Higgsfield Genjutsu?
+Higgsfield Genjutsu is a tool for transforming selected parts of existing footage, such as a character, object, location, or style, while preserving the original motion and overall shot structure.
+Do I need to write a prompt to use Genjutsu?
+No. A preset alone can drive the entire change, a short description is optional for anything more specific.
+What's the difference between Motion Transfer and Object Swap?
+Motion Transfer uses movement from an existing clip to drive a new character or scene. Object Swap targets a specific element in the original footage, such as a product, prop, or outfit, while preserving the surrounding shot.
+How long a video can I upload to Genjutsu?
+Between 4 and 30 seconds per generation.
+How many reference photos can I use in one generation?
+Up to 30, useful for things like cycling through several outfit or style options on the same clip.
+What resolution does Genjutsu output?
+Up to 1080p.
+by Higgsfield
+Discover more
+View all
+Editorials
+Recraft V4 Is Now on Higgsfield: V4.1, Styles, and Utility Explained
+8 min
+·
+Aug 26, 2026
+Editorials
+Higgsfield Affiliate Program in 2026: Commission, Eligibility, and How It Works
+8 min
+·
+Aug 24, 2026
+Guides
+Higgsfield for Blender: Features, Installation, and MCP Bridge Setup
+8 min
+·
+Aug 20, 2026

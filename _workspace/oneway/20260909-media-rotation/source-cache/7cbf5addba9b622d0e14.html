@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alpha Changelog - 9/2/26</title>
+    <link rel="stylesheet" href="https://updates.midjourney.com/assets/built/screen.css?v=8imNGPPm7K-Pp-9K">
+
+    <link rel="canonical" href="https://updates.midjourney.com/alpha-changelog-9-2-26/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Midjourney">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Alpha Changelog - 9/2/26">
+    <meta property="og:description" content="Thank you for all of your dedicated testing, feedback, and bug reports over the last two weeks! We pushed a huge update to alpha.midjourney.com, stacked on a lot of other changes in the past couple of weeks. Reminder: what we’re trying to do on alpha is to">
+    <meta property="og:url" content="https://updates.midjourney.com/alpha-changelog-9-2-26/">
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
+    <meta property="article:published_time" content="2026-09-03T19:43:14.000Z">
+    <meta property="article:modified_time" content="2026-09-03T19:43:14.000Z">
+    <meta property="article:tag" content="Change Log">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alpha Changelog - 9/2/26">
+    <meta name="twitter:description" content="Thank you for all of your dedicated testing, feedback, and bug reports over the last two weeks! We pushed a huge update to alpha.midjourney.com, stacked on a lot of other changes in the past couple of weeks. Reminder: what we’re trying to do on alpha is to">
+    <meta name="twitter:url" content="https://updates.midjourney.com/alpha-changelog-9-2-26/">
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Caleb">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Change Log">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="840">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Midjourney",
+        "url": "https://updates.midjourney.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://updates.midjourney.com/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Caleb",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://storage.ghost.io/c/95/61/95616ddb-b827-4269-ad22-ff4a6b368a1f/content/images/2024/04/Caleb-Avatar-1.webp",
+            "width": 571,
+            "height": 604
+        },
+        "url": "https://updates.midjourney.com/author/caleb/",
+        "sameAs": []
+    },
+    "headline": "Alpha Changelog - 9/2/26",
+    "url": "https://updates.midjourney.com/alpha-changelog-9-2-26/",
+    "datePublished": "2026-09-03T19:43:14.000Z",
+    "dateModified": "2026-09-03T19:43:14.000Z",
+    "keywords": "Change Log",
+    "description": "Thank you for all of your dedicated testing, feedback, and bug reports over the last two weeks! We pushed a huge update to alpha.midjourney.com, stacked on a lot of other changes in the past couple of weeks. Reminder: what we’re trying to do on alpha is to make the magic of Midjourney accessible to more people, by making it feel easier and more intuitive to control the model, without sacrificing any of the control people have now. Some things are going to be broken, but we’re shipping frequently",
+    "mainEntityOfPage": "https://updates.midjourney.com/alpha-changelog-9-2-26/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 6.62">
+    <link rel="alternate" type="application/rss+xml" title="Midjourney" href="https://updates.midjourney.com/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/sodo-search.min.js" data-key="edff47e8130d0930a262d6f773" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/main.css" data-sodo-search="https://midjourney.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://updates.midjourney.com/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=ShRHxgy4po8zN-Wf"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=WwnU9jw5ancNC8Gc">
+    <script defer src="/public/ghost-stats.min.js?v=vFcCUf6ZQ0Hyhc8h" data-stringify-payload="false" data-datasource="analytics_events" data-storage="localStorage" data-host="https://updates.midjourney.com/.ghost/analytics/api/v1/page_hit"  tb_site_uuid="95616ddb-b827-4269-ad22-ff4a6b368a1f" tb_post_uuid="2fa4cc32-83f7-4381-a2a6-2491c90ac9f1" tb_post_type="post" tb_member_uuid="undefined" tb_member_status="undefined" tb_gift_link=""></script><style>:root {--ghost-accent-color: #f2330d;}</style>
+</head>
+
+<body class='post-template tag-changelog is-head-left-logo'>
+<div class="site">
+
+    <header id="gh-head" class="gh-head gh-outer">
+        <div class="gh-head-inner gh-inner">
+            <div class="gh-head-brand">
+                <div class="gh-head-brand-wrapper">
+                    <a class="gh-head-logo" href="https://updates.midjourney.com">
+                            Midjourney
+                    </a>
+                </div>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://updates.midjourney.com/">Home</a></li>
+    <li class="nav-about"><a href="https://updates.midjourney.com/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="site-content">
+        
+<main class="site-main">
+
+        <article class="single post tag-changelog no-image">
+
+        <header class="single-header gh-canvas">
+            <div class="single-meta">
+                <span class="single-meta-item single-meta-date">
+                    <time datetime="2026-09-03">
+                        Sep 3, 2026
+                    </time>
+                </span>
+                    <span class="single-meta-item single-meta-length">
+                        2 min read
+                    </span>
+                    <span class="single-meta-item single-meta-tag">
+                        <a class="post-tag post-tag-changelog" href="/tag/changelog/">
+                            Change Log
+                        </a>
+                    </span>
+            </div>
+
+            <h1 class="single-title">Alpha Changelog - 9/2/26</h1>
+
+
+        </header>
+
+    <div class="single-content gh-content gh-canvas">
+        <p>Thank you for all of your dedicated testing, feedback, and bug reports over the last two weeks! We pushed a huge update to <a href="http://alpha.midjourney.com/">alpha.midjourney.com</a>, stacked on a lot of other changes in the past couple of weeks. Reminder: what we’re trying to do on alpha is to make the magic of Midjourney accessible to more people, by making it feel easier and more intuitive to control the model, without sacrificing any of the control people have now. Some things are going to be broken, but we’re shipping frequently enough that most things shouldn’t remain broken for long (especially if you tell us about it).</p><p><strong>EDIT-LIGHTBOX</strong> The biggest change is that the new v8.2 edit model is on alpha, with a new editor built directly into the lightbox. Open any image in the lightbox, edit with plain instructions, attach up to 4 reference images, and see all your session edits in one place. If the last time you looked was when we launched last week, we’ve fixed a bunch of bugs and glitches.</p><p><strong>STYLE EXPLORATION</strong> We’re experimenting with a new Change Style feature on the lightbox, which is part of a broader push towards easier ways of exploring style space. I think this is gonna be a hit once we nail it, this is just an early version of it.</p><p><strong>DRAG AND DROP</strong> We’re still working through drag and drop UX. We’re starting to feel better about the current version, but we want it to feel a bit more… jazzy.</p><p><strong>PROMPT BAR &amp; PILLS</strong> Lots of bugs and papercuts have gotten fixed. I know this is a major point of contention, but we’re going to get it there. We’re still thinking about the correct behavior for what is kept vs removed between prompts and sessions, and how people can set defaults.</p><p><strong>POLISH &amp; BUGS</strong> Things should feel a lot faster. A lot of little fixes: overlaps, data issues, weird combination glitches (Niji 7 + inpainting now works correctly, Pinterest extension button no longer shows up on the sidebar – we can’t test all of these, so your feedback is very helpful for finding them). Also better messaging around errors and some errors get fixed by themselves. 🙂</p><p><strong>UP NEXT</strong> Setting default parameters. Previewing an sref with your prompt. Giving more real estate to images. Make the closability of the settings more obvious.<br>Please keep the feedback coming in <a href="https://discord.com/channels/662267976984297473/1029347310787899402">#alpha-ideas-and-bugs</a>!</p><p>Thank you for being part of our community ❤️</p><p>Love,<br>Midjourney</p>
+    </div>
+
+    <div class="gh-canvas">
+    <footer class="single-footer">
+
+        <div class="single-footer-left">
+            <div class="navigation navigation-previous">
+                <a class="navigation-link" href="/edit-image-quality-update/" aria-label="Previous post">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon navigation-icon">
+    <path d="M26.667 14.667v2.667h-16L18 24.667l-1.893 1.893L5.547 16l10.56-10.56L18 7.333l-7.333 7.333h16z"></path>
+</svg>                </a>
+            </div>
+        </div>
+
+        <div class="single-footer-middle">
+            <div class="single-footer-top">
+                <h3 class="single-footer-title">Published by:</h3>
+                <div class="author-list">
+                    <div class="author-image-placeholder u-placeholder square">
+                        <a href="/author/caleb/" title="Caleb">
+                            <img class="author-image u-object-fit" src="https://storage.ghost.io/c/95/61/95616ddb-b827-4269-ad22-ff4a6b368a1f/content/images/size/w150/2024/04/Caleb-Avatar-1.webp" alt="Caleb" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-footer-right">
+            <div class="navigation navigation-next">
+                <a class="navigation-link" href="/collecting-ideas-to-improve-midjourney/" aria-label="Next post">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon navigation-icon">
+    <path d="M5.333 14.667v2.667h16L14 24.667l1.893 1.893L26.453 16 15.893 5.44 14 7.333l7.333 7.333h-16z"></path>
+</svg>                </a>
+            </div>
+        </div>
+
+    </footer>
+    </div>
+
+</article>
+            <section class="related-wrapper gh-canvas">
+        <h3 class="related-title">You might also like...</h3>
+        <div class="related-feed">
+                <article class="feed public post no-image">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-month">
+            Aug
+        </div>
+        <div class="feed-calendar-day">
+            29
+        </div>
+    </div>
+
+    <h2 class="feed-title">Edit Image Quality Update</h2>
+
+    <div class="feed-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon icon-star">
+    <path d="M16 23.027L24.24 28l-2.187-9.373 7.28-6.307-9.587-.827-3.747-8.827-3.747 8.827-9.587.827 7.267 6.307L7.759 28l8.24-4.973z"></path>
+</svg>        <div class="feed-length">
+            1 min read
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon feed-icon">
+    <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+</svg>
+    <a class="u-permalink" href="/edit-image-quality-update/" aria-label="Edit Image Quality Update"></a>
+
+</article>                <article class="feed public post no-image">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-month">
+            Aug
+        </div>
+        <div class="feed-calendar-day">
+            21
+        </div>
+    </div>
+
+    <h2 class="feed-title">Changelog - 8/20/26</h2>
+
+    <div class="feed-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon icon-star">
+    <path d="M16 23.027L24.24 28l-2.187-9.373 7.28-6.307-9.587-.827-3.747-8.827-3.747 8.827-9.587.827 7.267 6.307L7.759 28l8.24-4.973z"></path>
+</svg>        <div class="feed-length">
+            3 min read
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon feed-icon">
+    <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+</svg>
+    <a class="u-permalink" href="/changelog-8-20-26/" aria-label="Changelog - 8/20/26"></a>
+
+</article>                <article class="feed public post no-image">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-month">
+            Jul
+        </div>
+        <div class="feed-calendar-day">
+            23
+        </div>
+    </div>
+
+    <h2 class="feed-title">Midjourney’s First Acquisition</h2>
+
+    <div class="feed-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon icon-star">
+    <path d="M16 23.027L24.24 28l-2.187-9.373 7.28-6.307-9.587-.827-3.747-8.827-3.747 8.827-9.587.827 7.267 6.307L7.759 28l8.24-4.973z"></path>
+</svg>        <div class="feed-length">
+            1 min read
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon feed-icon">
+    <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+</svg>
+    <a class="u-permalink" href="/midjourneys-first-acquisition/" aria-label="Midjourney’s First Acquisition"></a>
+
+</article>                <article class="feed public post no-image">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-month">
+            May
+        </div>
+        <div class="feed-calendar-day">
+            27
+        </div>
+    </div>
+
+    <h2 class="feed-title">Web Updates</h2>
+
+    <div class="feed-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon icon-star">
+    <path d="M16 23.027L24.24 28l-2.187-9.373 7.28-6.307-9.587-.827-3.747-8.827-3.747 8.827-9.587.827 7.267 6.307L7.759 28l8.24-4.973z"></path>
+</svg>        <div class="feed-length">
+            1 min read
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon feed-icon">
+    <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+</svg>
+    <a class="u-permalink" href="/web-updates-5/" aria-label="Web Updates"></a>
+
+</article>                <article class="feed public post no-image">
+
+    <div class="feed-calendar">
+        <div class="feed-calendar-month">
+            Feb
+        </div>
+        <div class="feed-calendar-day">
+            26
+        </div>
+    </div>
+
+    <h2 class="feed-title">An update on Rooms</h2>
+
+    <div class="feed-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon icon-star">
+    <path d="M16 23.027L24.24 28l-2.187-9.373 7.28-6.307-9.587-.827-3.747-8.827-3.747 8.827-9.587.827 7.267 6.307L7.759 28l8.24-4.973z"></path>
+</svg>        <div class="feed-length">
+            1 min read
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="icon feed-icon">
+    <path d="M11.453 22.107L17.56 16l-6.107-6.12L13.333 8l8 8-8 8-1.88-1.893z"></path>
+</svg>
+    <a class="u-permalink" href="/an-update-on-rooms/" aria-label="An update on Rooms"></a>
+
+</article>        </div>
+    </section>
+
+        
+</main>
+    </div>
+
+    <footer class="gh-foot gh-outer">
+        <div class="gh-foot-inner gh-inner">
+            <div class="gh-copyright">
+                Midjourney © 2026
+            </div>
+                <nav class="gh-foot-menu">
+                    <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+                </nav>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src='https://updates.midjourney.com/assets/built/main.min.js?v=jV4I7BpfYASAsGi3'></script>
+
+
+
+</body>
+</html>

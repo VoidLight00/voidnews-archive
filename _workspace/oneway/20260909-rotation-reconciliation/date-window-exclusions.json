@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "decisions": [
+    {
+      "week": "2026-w37",
+      "slug": "industry-20260908-1156c10bc7ea",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-1/",
+      "contentSha256": "a6ede5bcb3df8f188ee9f282c979602ffd5ef98d37798d3c2485a0800096431f",
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T17:03:20.000Z",
+        "kstTimestamp": "2026-09-09T02:03:20.000+09:00",
+        "kstDate": "2026-09-09"
+      },
+      "evidence": {
+        "path": "_workspace/oneway/20260909-industry-rotation/evidence/267f06dd2d6029d15630.raw",
+        "sha256": "cb4d480c6277ed4531424c23fa243d15c9a392f1a87e7eb77f543be83b2a8734",
+        "publishedRaw": "2026-09-08T09:03:20-08:00",
+        "selectors": [
+          "meta[property=\"article:published_time\"]",
+          "time[property=\"datePublished\"]"
+        ]
+      },
+      "decision": "exclude-outside-kst-window",
+      "windowEnd": "2026-09-08",
+      "reason": "Publisher exact datePublished converts to KST September9; preserve raw publication precision and exclude from August26–September8 backfill."
+    },
+    {
+      "week": "2026-w37",
+      "slug": "industry-20260908-41a674eaaa28",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/",
+      "contentSha256": "92bbf36209dafbfee3f5fc653bf298ebda5af6fce17a54d4639d679013a6a7f3",
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T16:23:21.000Z",
+        "kstTimestamp": "2026-09-09T01:23:21.000+09:00",
+        "kstDate": "2026-09-09"
+      },
+      "evidence": {
+        "path": "_workspace/oneway/20260909-industry-rotation/evidence/550284f58c316a043565.raw",
+        "sha256": "067075903d17cee6d1a334e50c43314a9aff69d90b908a376dd1d80735cd385f",
+        "publishedRaw": "2026-09-08T08:23:21-08:00",
+        "selectors": [
+          "meta[property=\"article:published_time\"]",
+          "time[property=\"datePublished\"]"
+        ]
+      },
+      "decision": "exclude-outside-kst-window",
+      "windowEnd": "2026-09-08",
+      "reason": "Publisher exact datePublished converts to KST September9; preserve raw publication precision and exclude from August26–September8 backfill."
+    },
+    {
+      "week": "2026-w37",
+      "slug": "industry-20260908-64bc1af2079c",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/benchmarking-small-llm-inference-on-sagemaker-ai-g7-vs-g5-and-g6/",
+      "contentSha256": "ab571842441a527b18b06ee43ae8ac34a58321662cca4ca6fb0258c16a1d8b92",
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T16:21:57.000Z",
+        "kstTimestamp": "2026-09-09T01:21:57.000+09:00",
+        "kstDate": "2026-09-09"
+      },
+      "evidence": {
+        "path": "_workspace/oneway/20260909-industry-rotation/evidence/482f99062b1b58cff313.raw",
+        "sha256": "b09cfa441a7f771d85bd89af11d406e6b0498d3c4240323f7636dd58283c1b84",
+        "publishedRaw": "2026-09-08T08:21:57-08:00",
+        "selectors": [
+          "meta[property=\"article:published_time\"]",
+          "time[property=\"datePublished\"]"
+        ]
+      },
+      "decision": "exclude-outside-kst-window",
+      "windowEnd": "2026-09-08",
+      "reason": "Publisher exact datePublished converts to KST September9; preserve raw publication precision and exclude from August26–September8 backfill."
+    },
+    {
+      "week": "2026-w37",
+      "slug": "industry-20260908-febe1647876c",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-hpe-zerto-built-an-agentic-troubleshooting-system-with-amazon-bedrock/",
+      "contentSha256": "5dbda9d79f33ba0dc7d4d71a7ea4865e229f732d7e7009bf160d2995e755441f",
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T16:15:23.000Z",
+        "kstTimestamp": "2026-09-09T01:15:23.000+09:00",
+        "kstDate": "2026-09-09"
+      },
+      "evidence": {
+        "path": "_workspace/oneway/20260909-industry-rotation/evidence/ee7155480b8c42c9cea5.raw",
+        "sha256": "72b38da9820fef87da8a4801da3bb38c79b799e1d92f92706697267fddfd6df8",
+        "publishedRaw": "2026-09-08T08:15:23-08:00",
+        "selectors": [
+          "meta[property=\"article:published_time\"]",
+          "time[property=\"datePublished\"]"
+        ]
+      },
+      "decision": "exclude-outside-kst-window",
+      "windowEnd": "2026-09-08",
+      "reason": "Publisher exact datePublished converts to KST September9; preserve raw publication precision and exclude from August26–September8 backfill."
+    },
+    {
+      "week": "2026-w37",
+      "slug": "industry-20260908-6e9169a9e19a",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-didi-built-intelligent-contact-center-qa-with-amazon-bedrock/",
+      "contentSha256": "41f40c455fce7026f7ce69876df94f276eb658bac461ad283ceda6eefd19334f",
+      "publication": {
+        "precision": "timestamp-with-timezone",
+        "publisherDate": "2026-09-08",
+        "sourceTimestamp": "2026-09-08T16:11:11.000Z",
+        "kstTimestamp": "2026-09-09T01:11:11.000+09:00",
+        "kstDate": "2026-09-09"
+      },
+      "evidence": {
+        "path": "_workspace/oneway/20260909-industry-rotation/evidence/f65a7bb90c70b664c755.raw",
+        "sha256": "1023d53c32a307dfae46eb0cfaaab4a67985396bbfb59341f61d7e5ea836d6bf",
+        "publishedRaw": "2026-09-08T08:11:11-08:00",
+        "selectors": [
+          "meta[property=\"article:published_time\"]",
+          "time[property=\"datePublished\"]"
+        ]
+      },
+      "decision": "exclude-outside-kst-window",
+      "windowEnd": "2026-09-08",
+      "reason": "Publisher exact datePublished converts to KST September9; preserve raw publication precision and exclude from August26–September8 backfill."
+    }
+  ]
+}

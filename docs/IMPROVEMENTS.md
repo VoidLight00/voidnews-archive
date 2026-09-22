@@ -48,7 +48,7 @@
 | IMP-0038 | 2026-08-13 | quality | 2026-08a 교훈을 /AB 하네스에 영구 배선 — 게이트 3종·회귀 3종·런타임 문서 2종·헤드리스 수집기 | references/regressions.json<br>scripts/run-all-gates.mjs | ad71385 |
 | IMP-0039 | 2026-09-09 | quality | 마지막 Claude 세션 재개: 206건 추가분 배포 검증 및 TypeScript 로더 호환성 복구 | scripts/check-i18n-coverage.mjs<br>scripts/run-all-gates.mjs<br>gates/verify_voidnews.sh | HEAD |
 | IMP-0040 | 2026-09-09 | design | 중간 화면 너비에서 VoidNews 상단 메뉴 글자가 쪼개지는 현상 수정 | app/globals.css<br>scripts/test-browse-ui.mjs | HEAD |
-| IMP-0043 | 2026-09-22 | ab-data | 2026-09-09~22 AI 뉴스 공백 수집·검증 후 Weekly 아카이브 반영 (2026-w38 신규 61건, 2026-w39 부분 주차 13건) | lib/weeks/2026-w38.ts<br>lib/weeks/2026-w39.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json | HEAD |
+| IMP-0043 | 2026-09-22 | ab-data | 2026-09-09~22 AI 뉴스 공백을 수집·검증해 Weekly 아카이브에 반영 (2026-w37 완성 29건 추가, 2026-w38 신규 63건, 2026-w39 부분 주차 13건) | lib/weeks/2026-w37.ts<br>lib/weeks/2026-w38.ts<br>lib/weeks/2026-w39.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
 
 ## 대기 (pending) (8)
 

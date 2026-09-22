@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Archive: 2026 - GitHub Changelog</title>
+	<atom:link href="https://github.blog/changelog/feed/?paged=4" rel="self" type="application/rss+xml" />
+	<link>https://github.blog/changelog/page/4/</link>
+	<description>Updates, ideas, and inspiration from GitHub to help developers build and design software.</description>
+	<lastBuildDate>Fri, 28 Aug 2026 22:45:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1</generator>
+
+<image>
+	<url>https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32</url>
+	<title>Archive: 2026 - GitHub Changelog</title>
+	<link>https://github.blog/changelog/page/4/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">153214340</site>	<item>
+		<title>Global model policy generally available</title>
+		<link>https://github.blog/changelog/2026-08-26-global-model-policy-generally-available</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Wed, 26 Aug 2026 22:08:38 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-26-global-model-policy-generally-available</guid>
+
+					<description><![CDATA[<p>In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we&#8217;re gradually rolling out enforcement of the&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-26-global-model-policy-generally-available">Global model policy generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we&rsquo;re gradually rolling out enforcement of the policy through September 1, so it will take effect at different times for different enterprises. Previously unconfigured and new generally available models will inherit the global policy state. Administrators can make durable decisions for individual models at their discretion. Open-weight models and any models that require data retention are disabled by default.</p>
+<h2 id="whats-changing" id="whats-changing" ><a class="heading-link" href="#whats-changing">What&rsquo;s changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Once the policy takes effect for your organization or enterprise:</p>
+<ul>
+<li>Models you haven&rsquo;t previously configured will change their state to &ldquo;Delegate to default policy&rdquo;, and they&rsquo;ll begin following your policy setting. If your policy is enabled &mdash; which is the default &mdash; those models will become available to your users. </li>
+<li>&ldquo;Delegate to default policy&rdquo; is a live, dynamic state that always tracks your policy. You can change the policy at any time, and all applicable models follow that state change.</li>
+<li>We always preserve explicit choices. If you&rsquo;ve deliberately enabled or disabled a specific model, we do not change that setting.</li>
+<li>We exclude open-weight models (e.g., DeepSeek and Kimi K2) and models not covered by GitHub&rsquo;s data retention agreement (e.g., Fable 5) from default enablement, regardless of your policy.</li>
+</ul>
+<p>After the rollout, each model in your settings shows one of four states:</p>
+<ul>
+<li><strong>Enabled:</strong> You&rsquo;ve explicitly turned the model on.</li>
+<li><strong>Disabled:</strong> You&rsquo;ve explicitly turned the model off.</li>
+<li><strong>Delegate to enterprise teams/apps or organizations:</strong> The model follows a setting inherited from your enterprise team or organization.</li>
+<li><strong>Delegate to default policy:</strong> The model follows your default enablement policy.</li>
+</ul>
+<p>To learn more, see <a href="https://docs.github.com/enterprise-cloud@latest/copilot/concepts/models/default-availability">default model availability</a>.</p>
+<h2 id="whats-next" id="whats-next" ><a class="heading-link" href="#whats-next">What&rsquo;s next<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>We are looking for your feedback in the community discussion below. We&rsquo;re evaluating making the global model policy state an explicit decision and removing the &ldquo;Delegate to default policy&rdquo; state. This would help ensure that every policy reflects an explicit, intentional choice rather than an inferred one.</p>
+<p>Join the discussion within <a href="https://github.com/orgs/community/discussions/203163">GitHub Community</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-26-global-model-policy-generally-available">Global model policy generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98475</post-id>	</item>
+		<item>
+		<title>GitHub Apps can now access enterprise billing data</title>
+		<link>https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Wed, 26 Aug 2026 12:18:59 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-13-github-apps-can-now-access-enterprise-billing-data</guid>
+
+					<description><![CDATA[<p>Enterprise owners can now grant a GitHub App access to enterprise billing data. When you create or configure a GitHub App, you can select the enterprise billing permission and choose&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data">GitHub Apps can now access enterprise billing data</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Enterprise owners can now grant a GitHub App access to enterprise billing data. When you create or configure a GitHub App, you can select the enterprise billing permission and choose one of two levels: read or read and write.</p>
+<p>Previously, the only way to read usage or manage budgets and cost centers through the API was a personal access token belonging to an enterprise owner or billing manager. That tied your billing automation to one person&rsquo;s token, so it broke when that person changed roles or left.</p>
+<p>Now an app installation access token that carries the enterprise billing permission can call the enterprise billing REST API endpoints. Use it to pull usage data into your finance and BI systems, reconcile invoices, and manage budgets and cost centers, all without relying on an individual&rsquo;s token. As an added benefit, you also get higher rate limits than a personal access token.</p>
+<p>The enterprise billing permission is available on GitHub Enterprise Cloud. To learn more, see <a href="https://docs.github.com/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app">Choosing permissions for a GitHub App</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-26-github-apps-can-now-access-enterprise-billing-data">GitHub Apps can now access enterprise billing data</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[account management]]></category>
+<category domain="changelog-label"><![CDATA[ecosystem &amp; accessibility]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98288</post-id>	</item>
+		<item>
+		<title>Rule insights dashboard generally available</title>
+		<link>https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2026 20:05:35 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available</guid>
+
+					<description><![CDATA[<p>The rule insights dashboard is now generally available at both the repository and organization levels. You get a visual, high-level view of how GitHub evaluates and enforces your GitHub repository&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available">Rule insights dashboard generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>The rule insights dashboard is now generally available at both the repository and organization levels. You get a visual, high-level view of how GitHub evaluates and enforces your GitHub repository rulesets, so you can spot trends and report on governance without stitching data together by hand.</p>
+<h3 id="organization-level-dashboard" id="organization-level-dashboard" ><a class="heading-link" href="#organization-level-dashboard">Organization-level dashboard<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>The organization-level dashboard we shipped in public preview is now generally available. In your organization&rsquo;s <strong>Settings &gt; Repository</strong> tab, you get an aggregated view across every repository, which helps your governance and compliance teams report across the whole organization instead of individually checking each repository. At the organization level, you can:</p>
+<ul>
+<li>Review aggregated rule evaluation metrics for all repositories in your organization.</li>
+<li>Identify your top repositories by bypasses to focus your review where it matters most.</li>
+<li>Filter results by evaluation status, branch, ruleset, and date range to focus on the activity you care about.</li>
+</ul>
+<h3 id="repository-level-dashboard" id="repository-level-dashboard" ><a class="heading-link" href="#repository-level-dashboard">Repository-level dashboard<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>The repository-level dashboard we shipped in public preview is now generally available. In your repository&rsquo;s <strong>Settings &gt; Rules</strong> tab, you can see successes, failures, and bypasses over time, along with the most active bypassers for your rulesets. Each chart links back to the rule insights page with filters prefilled, so you can quickly drill into specific statuses, bypasses, or time ranges.</p>
+<p><img decoding="async" src="https://github.com/user-attachments/assets/9befa788-af48-4a9c-965f-96264697f4de" alt="Rule insights dashboard showing rule suites performance with charts and counts for allowed, failed, and bypassed evaluations."></p>
+<p>Whether you&rsquo;re responding to an incident or auditing bypass activity, the dashboard helps you spot trends at a glance and drill into the details when you need them.</p>
+<h3 id="availability" id="availability" ><a class="heading-link" href="#availability">Availability<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>The rule insights dashboard is generally available at both the repository and organization levels, and you can export the data to CSV at either level for reporting and record keeping. To learn more, see <a href="https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets">our docs about GitHub repository rulesets</a>.</p>
+<p>Join the discussion within <a href="https://github.com/orgs/community/discussions/205972">GitHub Community</a>.</p>
+<p><em>Editor&rsquo;s note (August 27, 2026): Updated the Community link.</em></p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-rule-insights-dashboard-generally-available">Rule insights dashboard generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[platform governance]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98447</post-id>	</item>
+		<item>
+		<title>GitHub Copilot app Customize tab is generally available</title>
+		<link>https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2026 20:05:26 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available</guid>
+
+					<description><![CDATA[<p>GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on. The new Customize tab in the GitHub Copilot app brings MCP&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available">GitHub Copilot app Customize tab is generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>GitHub Copilot is more useful when it works with the tools, knowledge, and workflows your team already relies on.</p>
+<p>The new <strong>Customize</strong> tab in the GitHub Copilot app brings MCP servers, plugins, skills, and canvases together in one place. Explore featured customizations, browse by type, and find new ways to tailor Copilot to how you and your team work.</p>
+<p>With the <strong>Customize</strong> tab, you can:</p>
+<ul>
+<li>Discover more ways to customize Copilot across MCP servers, plugins, skills, and canvases.</li>
+<li>Start with featured customizations selected from each section.</li>
+<li>Find MCP servers faster by exploring trending options and browsing by category.</li>
+</ul>
+<p><img decoding="async" alt="The Customize tab in the GitHub Copilot app, featuring customizations for Figma, Impeccable Design, and Microsoft Foundry." src="https://github.com/user-attachments/assets/78e4cfd5-7eb0-4cd0-82a5-05ffc682c079"></p>
+<h2 id="bring-the-tools-your-team-uses-into-copilot" id="bring-the-tools-your-team-uses-into-copilot" ><a class="heading-link" href="#bring-the-tools-your-team-uses-into-copilot">Bring the tools your team uses into Copilot<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Featured canvases help you move from understanding work to acting on it while keeping the relevant context visible.</p>
+<h3 id="delegate-backlog-work-from-azure-devops" id="delegate-backlog-work-from-azure-devops" ><a class="heading-link" href="#delegate-backlog-work-from-azure-devops">Delegate backlog work from Azure DevOps<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Triage issues, prioritize backlogs, assign follow-ups, and hand work to Copilot to investigate, implement, or prepare for review.</p>
+<h2 id="explore-every-type-of-customization" id="explore-every-type-of-customization" ><a class="heading-link" href="#explore-every-type-of-customization">Explore every type of customization<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>The Featured view brings selected customizations from across the GitHub Copilot app into one place, giving you a simpler starting point when you do not already know which MCP server, plugin, skill, or canvas you need. You can also browse dedicated sections for each type of customization to find options that fit the way you work.</p>
+<h2 id="get-started" id="get-started" ><a class="heading-link" href="#get-started">Get started<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Open the GitHub Copilot app and select <strong>Customize</strong> to explore featured customizations or browse by type.</p>
+<p><a href="https://github.com/features/ai/github-app?utm_source=changelog-customizations&amp;utm_medium=changelog&amp;utm_campaign=weekly-moments-pmm-ghcp-cli-aug-2026">Install the GitHub Copilot app</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available">GitHub Copilot app Customize tab is generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98445</post-id>	</item>
+		<item>
+		<title>Block users directly from security advisories</title>
+		<link>https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2026 18:38:57 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories</guid>
+
+					<description><![CDATA[<p>You can now block a user directly from a security advisory page in public repositories owned by either an organization or a personal account. This brings the streamlined moderation experience&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories">Block users directly from security advisories</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>You can now block a user directly from a security advisory page in public repositories owned by either an organization or a personal account. This brings the streamlined moderation experience available for issues and pull requests to security advisories.</p>
+<p>Security advisories contain user-created content and, like other collaborative surfaces, can attract spam or abuse. Previously, addressing this required navigating to organization settings, personal settings, or the user&rsquo;s profile.</p>
+<p>With this update, you can:</p>
+<ul>
+<li>Block a user from the three-dot menu in a security advisory description or comment without leaving the page.</li>
+<li>Review a clear confirmation of what blocking the user means before taking action.</li>
+<li>Keep the security advisory intact while removing the source of spam or abuse.</li>
+</ul>
+<p>In organization-owned repositories, only organization moderators or administrators can initiate a block. In personal account-owned repositories, the account owner can initiate a block.</p>
+<p>Join the <a href="https://github.com/orgs/community/discussions/205714">Community discussion</a> to share your questions or feedback.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-block-users-directly-from-security-advisories">Block users directly from security advisories</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[collaboration tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98442</post-id>	</item>
+		<item>
+		<title>Push rules in rulesets now support path exceptions</title>
+		<link>https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2026 17:40:15 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions</guid>
+
+					<description><![CDATA[<p>You can now configure push rules more granularly by exempting specific file paths, so a rule applies everywhere in scope except the paths you choose. Path exceptions are in public&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions">Push rules in rulesets now support path exceptions</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>You can now configure push rules more granularly by exempting specific file paths, so a rule applies everywhere in scope except the paths you choose. Path exceptions are in public preview.</p>
+<p>Push rules give you strong control over what enters a repository. Sometimes a rule needs a narrow exception, and until now your options were to relax it for everyone or enforce it outside of GitHub. You can now keep the rule in place and exempt only the paths that need it.</p>
+<h2 id="where-to-find-it" id="where-to-find-it" ><a class="heading-link" href="#where-to-find-it">Where to find it<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>When you configure either supported rule, expand <strong>Allowed exceptions</strong> and add the path patterns the rule should skip. GitHub validates your patterns when you save the ruleset, so you can fix mistakes right away.</p>
+<p>Two push rules support exceptions today:</p>
+<ul>
+<li><strong>Restrict file paths:</strong> Block a file type across the repository while allowing it at a specific path, such as blocking JAR files everywhere except <code>**/gradle/wrapper/*.jar</code>.</li>
+<li><strong>Restrict file size:</strong> Enforce a size limit while exempting paths that already exceed it, so you can adopt the limit without changing those files first.</li>
+</ul>
+<p>For pattern syntax and the full list of push rules, see <a href="https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets">available rules for rulesets</a>.</p>
+<p>Join the <a href="https://github.com/orgs/community/discussions/categories/repositories">community discussion</a> to share feedback.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-25-push-rules-in-rulesets-now-support-path-exceptions">Push rules in rulesets now support path exceptions</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[platform governance]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98437</post-id>	</item>
+		<item>
+		<title>Copilot harness generally available in Copilot for JetBrains</title>
+		<link>https://github.blog/changelog/2026-08-24-copilot-harness-generally-available-in-copilot-for-jetbrains</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 25 Aug 2026 01:00:40 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-24-copilot-harness-generally-available-in-copilot-for-jetbrains</guid>
+
+					<description><![CDATA[<p>This update brings Copilot harness to generally availability. You also get more stable account, model, and MCP experiences. What&#8217;s new Copilot harness generally available Copilot harness is now generally available,&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-24-copilot-harness-generally-available-in-copilot-for-jetbrains">Copilot harness generally available in Copilot for JetBrains</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>This update brings Copilot harness to generally availability. You also get more stable account, model, and MCP experiences.</p>
+<h2 id="whats-new" id="whats-new" ><a class="heading-link" href="#whats-new">What&rsquo;s new<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<h3 id="copilot-harness-generally-available" id="copilot-harness-generally-available" ><a class="heading-link" href="#copilot-harness-generally-available">Copilot harness generally available<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Copilot harness is now generally available, providing faster feature delivery and better code quality.</p>
+<p><img decoding="async" alt="Agent picker drop down selecting Copilot harness" src="https://github.com/user-attachments/assets/12844c53-fbd6-4ca6-9c52-83a6917ea95d"></p>
+<h3 id="built-in-jetbrains-mcp-server-support" id="built-in-jetbrains-mcp-server-support" ><a class="heading-link" href="#built-in-jetbrains-mcp-server-support">Built-in JetBrains MCP server support<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>The built-in JetBrains MCP server support is now in public preview. This makes it easier to expose IDE capabilities through MCP-driven agent workflows without relying only on external server setup.</p>
+<p><img decoding="async" alt="Agent customization page showing the built-in JetBrains MCP server" src="https://github.com/user-attachments/assets/c5ddf512-2561-496b-982e-9566b20d3843"></p>
+<h3 id="better-post-update-release-discovery" id="better-post-update-release-discovery" ><a class="heading-link" href="#better-post-update-release-discovery">Better post-update release discovery<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>After you update the Copilot for JetBrains plugin, a <strong>What&rsquo;s New</strong> tab will open so you can immediately see what changed. This helps you adopt new capabilities faster and reduces guesswork after each upgrade.</p>
+<p><img decoding="async" alt="What's new tab showing latest release notes" src="https://github.com/user-attachments/assets/2fd95040-e23d-4f38-ae9f-f4fa0e5fd3de"></p>
+<h3 id="expanded-copilot-harness-integrations" id="expanded-copilot-harness-integrations" ><a class="heading-link" href="#expanded-copilot-harness-integrations">Expanded Copilot harness integrations<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>You can use Copilot harness <code>/review</code> integrations directly in JetBrains, reducing context switching when you want review guidance during development.</p>
+<h2 id="user-experience-enhancements" id="user-experience-enhancements" ><a class="heading-link" href="#user-experience-enhancements">User experience enhancements<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>This release improves daily interaction quality across model controls, debug workflows, long outputs, and workspace customizations.</p>
+<ul>
+<li><strong>Model management</strong>: Improved search behavior, clarified search actions, and enabled resizable columns in the language model table.</li>
+<li><strong>Debug workflows</strong>: Improved event-time sorting, token-usage filtering, and layout behavior in debug-log exploration.</li>
+<li><strong>Chat ergonomics</strong>: Improved long tool-output scrolling and added shortcuts for send options.</li>
+<li><strong>Multi-root customization discovery</strong>: Improved customization handling by discovering customizations across all folders and honoring client-provided customization locations.</li>
+</ul>
+<h2 id="quality-improvements" id="quality-improvements" ><a class="heading-link" href="#quality-improvements">Quality improvements<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>This release improves reliability for account detection and sign-in flows, MCP schema and tool-state handling, BYOK and model-refresh behavior, and Copilot agent session continuity after resume. It also fixes editor and rendering defects, restores file and folder <code>#</code> references in Copilot, Claude, and Codex chat inputs, and resolves worktree session startup failures for projects opened from WSL.</p>
+<h2 id="try-it-out-and-share-your-feedback" id="try-it-out-and-share-your-feedback" ><a class="heading-link" href="#try-it-out-and-share-your-feedback">Try it out and share your feedback<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Try out the <a href="https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions">latest version of the GitHub Copilot plugin</a> and share your feedback. Your input is invaluable in helping us refine and improve the product. We&rsquo;d love to hear about your experience in the following channels:</p>
+<ul>
+<li>In-product feedback: Use the feedback options within your IDE.</li>
+<li>Feedback repository: Share your thoughts in the <a href="https://github.com/microsoft/copilot-intellij-feedback/issues">GitHub Copilot for JetBrains IDEs issues</a>.</li>
+</ul>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-24-copilot-harness-generally-available-in-copilot-for-jetbrains">Copilot harness generally available in Copilot for JetBrains</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98435</post-id>	</item>
+		<item>
+		<title>Better tools for managing blocked users</title>
+		<link>https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Fri, 21 Aug 2026 17:28:36 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users</guid>
+
+					<description><![CDATA[<p>Managing blocked users is now faster and clearer for personal accounts and organizations. With this update, you can: Search by username, full name, or email. Sort and paginate long lists.&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users">Better tools for managing blocked users</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Managing blocked users is now faster and clearer for personal accounts and organizations. With this update, you can:</p>
+<ul>
+<li>Search by username, full name, or email.</li>
+<li>Sort and paginate long lists.</li>
+<li>Filter by block reason (e.g., <strong>Spam</strong>, <strong>Misconduct</strong>, or <strong>Harassment</strong>).</li>
+<li>Add private notes to preserve moderation context.</li>
+<li>View and edit block settings.</li>
+<li>See who applied an organization block and when it expires.</li>
+</ul>
+<p>The updated experience also clearly separates searching the blocked-user list from blocking a new user, helping you find cases faster and avoid accidental blocks.</p>
+<p>To get started, go to <strong>Settings &rarr; Moderation &rarr; Blocked users</strong> for your personal account or <strong>Organization settings &rarr; Moderation &rarr; Blocked users</strong> for an organization you administer.</p>
+<p>Leave a comment in our <a href="https://github.com/orgs/community/discussions/204870">Community discussion</a> if you have any questions or feedback.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-21-better-tools-for-managing-blocked-users">Better tools for managing blocked users</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[collaboration tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98411</post-id>	</item>
+		<item>
+		<title>The new GitHub Copilot experience in Slack</title>
+		<link>https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Fri, 21 Aug 2026 16:07:15 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack</guid>
+
+					<description><![CDATA[<p>The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with @GitHub to&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack">The new GitHub Copilot experience in Slack</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>The GitHub integration in Slack now brings the agentic capabilities of GitHub Copilot CLI and the GitHub Copilot app into Slack in public preview. You can work with <code>@GitHub</code> to plan changes, investigate problems, and hand off coding tasks from the conversations where your team coordinates work. GitHub is also a launch partner for Slack Code, a new type of channel designed for agents.</p>
+<p>Bringing Copilot into the flow of conversation helps your team turn shared intent into shippable work.</p>
+<h2 id="what-you-can-now-do-with-github" id="what-you-can-now-do-with-github" ><a class="heading-link" href="#what-you-can-now-do-with-github">What you can now do with @GitHub<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Mention <code>@GitHub</code> in a direct message, channel, or thread to start an agent session. Copilot can use the conversation and permitted GitHub context to:</p>
+<ul>
+<li>Answer questions about your code and GitHub activity.</li>
+<li>Triage bug reports, update existing issues, or create and label new issues.</li>
+<li>Investigate failures, implement changes, and validate its work in a secure cloud sandbox.</li>
+<li>Open a pull request and provide a link to the conversation for review.</li>
+</ul>
+<p>GitHub Copilot continues working asynchronously while you&rsquo;re in a meeting, commuting, or focused on something else. You can direct the session from Slack as it works, then continue from the pull request in your terminal, the GitHub Copilot app, or your IDE.</p>
+<h2 id="slack-code-and-github-copilot" id="slack-code-and-github-copilot" ><a class="heading-link" href="#slack-code-and-github-copilot">Slack Code and GitHub Copilot<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>GitHub Copilot can also create a dedicated code channel that keeps the task focused without adding noise to the original conversation.</p>
+<p>Inside the code channel, your team can follow the plan, inspect the diffs, review output previews like HTML artifacts, and iterate with Copilot. Anyone can join the channel from the original thread, add context, redirect the approach, or stop the session.</p>
+<h2 id="the-power-of-multiplayer" id="the-power-of-multiplayer" ><a class="heading-link" href="#the-power-of-multiplayer">The power of multiplayer<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Agent sessions in Slack are shared, so your team can collaborate on the work where the request began instead of one person working privately with an agent.</p>
+<p>Working in the open also makes effective agent workflows easier to learn. Developers can see how their teammates prompt the agent and learn from each other. Issues and pull requests created from the conversation are attributed to the Copilot app identity, and actions remain bounded by existing GitHub permissions and controls.</p>
+<h2 id="availability-and-getting-started" id="availability-and-getting-started" ><a class="heading-link" href="#availability-and-getting-started">Availability and getting started<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>The public preview is available to organizations on GitHub Copilot Business and GitHub Copilot Enterprise plans. Usage counts against your existing Copilot entitlements and can be managed with existing Copilot cloud agent budgets.</p>
+<p>To get started:</p>
+<ol>
+<li>Make sure an administrator has enabled the Copilot cloud agent policy for your organization.</li>
+<li>Install or upgrade the <a href="https://slack.com/marketplace/A01BP7R4KNY-github">GitHub app for Slack</a>.</li>
+<li>Link your GitHub account and mention <code>@GitHub</code> in a conversation.</li>
+</ol>
+<p>Repository administrators can require an additional approval for any pull request attributed to the Copilot app identity before it can merge. Requiring an additional approval keeps a human in the loop before agent-authored work ships. Your team moves fast without losing compliance oversight.</p>
+<p>For setup details and supported workflows, see <a href="https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-slack">how to use Copilot coding agent with Slack</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack">The new GitHub Copilot experience in Slack</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[collaboration tools]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98414</post-id>	</item>
+		<item>
+		<title>Shared agentic work with GitHub Copilot in Microsoft Teams</title>
+		<link>https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Fri, 21 Aug 2026 16:03:36 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams</guid>
+
+					<description><![CDATA[<p>Turn a Microsoft Teams discussion into a collaborative agent session everyone can see and help direct. Mention @GitHub in a channel, thread, or direct message to start a GitHub Copilot&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams">Shared agentic work with GitHub Copilot in Microsoft Teams</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Turn a Microsoft Teams discussion into a collaborative agent session everyone can see and help direct. Mention <code>@GitHub</code> in a channel, thread, or direct message to start a GitHub Copilot cloud agent session. Anyone in the conversation can ask questions, add context, and help plan or steer the work. Participants with write access to the repository can trigger Copilot to make changes.</p>
+<h2 id="turn-meeting-decisions-into-ready-work" id="turn-meeting-decisions-into-ready-work" ><a class="heading-link" href="#turn-meeting-decisions-into-ready-work">Turn meeting decisions into ready work<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>When a meeting produces an action item, hand it to Copilot during a discussion or in the meeting chat before it ends. For example, ask Copilot to investigate a problem while you discuss it in your team&rsquo;s standup and start resolving it before the meeting ends. Everyone can see the agent&rsquo;s investigation and direct it further if needed.</p>
+<p><em>Editor&rsquo;s note (August 21, 2026): Updated the language to align with Teams terminology.</em></p>
+<h2 id="continue-work-across-github-copilot-surfaces" id="continue-work-across-github-copilot-surfaces" ><a class="heading-link" href="#continue-work-across-github-copilot-surfaces">Continue work across GitHub Copilot surfaces<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Start a task from Teams and let Copilot work asynchronously in a secure cloud sandbox. Follow progress in the channel thread, then continue working with the agent-generated artifacts from your terminal, the GitHub Copilot app, or your preferred IDE. For more information, see <a href="https://docs.github.com/copilot/concepts/about-cloud-and-local-sandboxes#cloud-sandboxing">our documentation about cloud sandboxing</a>.</p>
+<h2 id="availability-and-getting-started" id="availability-and-getting-started" ><a class="heading-link" href="#availability-and-getting-started">Availability and getting started<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>The public preview is available with paid GitHub Copilot plans. GitHub Copilot cloud agent sessions started in Microsoft Teams consume AI credits. For organizations, cloud agent AI credit usage is governed by <a href="https://docs.github.com/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises">usage-based billing budgets</a>. Cloud sandbox usage is billed separately and can be controlled with a <a href="https://docs.github.com/billing/concepts/product-billing/cloud-and-local-sandboxes#managing-your-budget-for-cloud-sandboxes">product-level or SKU-level budget</a>.</p>
+<p>To get started:</p>
+<ol>
+<li>For users in an organization or enterprise, make sure an administrator has enabled GitHub Copilot cloud agent and cloud sandboxes. Cloud sandbox policies share the same configuration as cloud agent policies.</li>
+<li>Install the <a href="https://teams.microsoft.com/l/app/836ecc9e-6dca-4696-a2e9-15e252cd3f31">GitHub app for Microsoft Teams</a>.</li>
+<li>In Teams, mention <code>@GitHub</code> and follow the prompts to connect your GitHub account.</li>
+<li>For public channels, configure a default repository if prompted. Direct messages don&rsquo;t use a default repository.</li>
+<li>Mention <code>@GitHub</code>, followed by your task. You can also use <code>@GitHub help</code> to see available commands.</li>
+</ol>
+<h2 id="maintain-compliance-oversight" id="maintain-compliance-oversight" ><a class="heading-link" href="#maintain-compliance-oversight">Maintain compliance oversight<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Repository administrators can now require an additional approval for any pull request attributed to the Microsoft Teams Copilot integration identity before it can merge. If you require two approvals in a repository, with this enabled you will need three for Copilot-created pull requests. Requiring an additional approval keeps a human in the loop before agent-authored work ships. Your team moves fast without losing compliance oversight.</p>
+<p>For setup details, permissions, repository and branch selection, and supported workflows, see <a href="https://docs.github.com/copilot/how-tos/copilot-integrations/integrate-cloud-agent-with-teams">how to integrate GitHub Copilot cloud agent with Microsoft Teams</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams">Shared agentic work with GitHub Copilot in Microsoft Teams</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[collaboration tools]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98417</post-id>	</item>
+	</channel>
+</rss>

@@ -9,9 +9,9 @@
   "expectedCounts": {
     "2026-w35": 102,
     "2026-w36": 143,
-    "2026-w37": 13,
-    "total": 258,
-    "newBackfill": 247
+    "2026-w37": 42,
+    "total": 287,
+    "newBackfill": 276
   },
   "hashPolicy": {
     "algorithm": "sha256",
@@ -25,7 +25,7 @@
   "weekContentHashes": {
     "2026-w35": "ce86f72eed4ac082c8191592f841d7262379ce83e648e62319e475f35face7a6",
     "2026-w36": "d6cf80e6987812265845c1f8d62ba7aa5a52b2066cf667d6c655d2e436b4da4f",
-    "2026-w37": "a4d76bcff4e64b4b0d3899ae797872858d439557ba8ae7073a39c4c048486cae"
+    "2026-w37": "658ddb9f92504b380eda83ddbaa87b3f1a4ab8bca6f79f0ed56e9479a5228417"
   },
   "rows": [
     {
@@ -16030,6 +16030,1211 @@
         "identityBasis": "approved-additions-inventory",
         "review": "Reviewed specific source article, product/version/action/date against current211 and full Weekly/AB; generic term hits are unrelated. Distribution integrations are labeled by their target platform, not original model launches."
       }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "slug": "anthropic-cybersecurity-alignment-assessment",
+      "sourceUrl": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "normalizedUrl": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "sourceId": "src-url-415f8f1af13b2f4b5659",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "16853c663cd04e8b067e74ecff883d06388942ea2d37fde86579920472657d43",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-415f8f1af13b2f4b5659.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-anthropic-cybersecurity-alignment-assessment",
+        "section": "Anthropic, Claude 연루 사이버공격 4건 정렬성 평가 공개",
+        "sourceAnchor": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Hugging Face",
+      "slug": "transformers-v5-17-0-new-models",
+      "sourceUrl": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+      "normalizedUrl": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+      "sourceId": "src-url-c6a70b623b520248d507",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "2ccf0e03b074c094b6c0f490f772d93c7c182b2fac1f7e3b72424af2abcae42c",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-c6a70b623b520248d507.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/huggingface/transformers/releases/tag/v5.17.0"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-transformers-v5-17-0-new-models",
+        "section": "허깅페이스, Transformers 5.17.0에 신규 모델 7종 추가",
+        "sourceAnchor": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "LangChain",
+      "slug": "langchain-connections-managed-credentials",
+      "sourceUrl": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents",
+      "normalizedUrl": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents",
+      "sourceId": "src-url-9412f9ee07ba42c48139",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "773ebe9036c98bd2d9bdf6205fa28e86002033d2ece8dd1f1ad6a0219d8207f3",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/2"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-9412f9ee07ba42c48139.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-langchain-connections-managed-credentials",
+        "section": "랭체인, 에이전트별 자격증명 관리 기능 Connections 공개",
+        "sourceAnchor": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Meshy",
+      "slug": "meshy-game-asset-pipeline-case-study",
+      "sourceUrl": "https://www.meshy.ai/blog/ai-agent-game-asset-pipeline",
+      "normalizedUrl": "https://www.meshy.ai/blog/ai-agent-game-asset-pipeline",
+      "sourceId": "src-url-0d597c65ed80424001bd",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "6f5cd3123072009b125b42a3773303fa2eac76dc113c287013d3cc57363c499b",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0d597c65ed80424001bd.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.meshy.ai/blog/ai-agent-game-asset-pipeline"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-meshy-game-asset-pipeline-case-study",
+        "section": "메시, 3AGameFactory 사례로 이미지→3D 에셋 파이프라인 소개",
+        "sourceAnchor": "https://www.meshy.ai/blog/ai-agent-game-asset-pipeline",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Microsoft",
+      "slug": "vscode-1-137-release",
+      "sourceUrl": "https://code.visualstudio.com/updates/v1_137",
+      "normalizedUrl": "https://code.visualstudio.com/updates/v1_137",
+      "sourceId": "src-url-dcd87a4c52f47f88819d",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "70b355dae6c89d03b8309a4a6ac626a975d645147f26410d112f6950e26a0a6e",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/4"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-dcd87a4c52f47f88819d.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://code.visualstudio.com/updates/v1_137"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-vscode-1-137-release",
+        "section": "Visual Studio Code 1.137 릴리스",
+        "sourceAnchor": "https://code.visualstudio.com/updates/v1_137",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "NAVER",
+      "slug": "naver-ai-factory-france-proposal",
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644",
+      "normalizedUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644",
+      "sourceId": "src-url-78630bdb2baab2cabdd8",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "46b1000f590cf71376e7058e50ea1b70b131878d615954f25b08bd57a54e4a36",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-78630bdb2baab2cabdd8.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-naver-ai-factory-france-proposal",
+        "section": "팀네이버, 프랑스와 AI 팩토리 유럽 확장 협력 제안",
+        "sourceAnchor": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "NVIDIA",
+      "slug": "nvidia-nemotron-imo-gold-recipe",
+      "sourceUrl": "https://arxiv.org/abs/2609.10712",
+      "normalizedUrl": "https://arxiv.org/abs/2609.10712",
+      "sourceId": "src-url-13cafb8278b4024200be",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "401911a3af8ed7d7a9c5ffc3a11305c590162988d032afb9e3cd2a9d758976da",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/6"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-13cafb8278b4024200be.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://arxiv.org/abs/2609.10712"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-nvidia-nemotron-imo-gold-recipe",
+        "section": "엔비디아, IMO 금메달 수준 수학 추론 파이프라인 공개",
+        "sourceAnchor": "https://arxiv.org/abs/2609.10712",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "slug": "codex-cli-0-154-0",
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+      "normalizedUrl": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+      "sourceId": "src-url-2ec7a45fef458a79b70e",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "20495318d3edeb14f9cf7551d8983c8d4ac16e637955a477fb33d26161478734",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/7"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2ec7a45fef458a79b70e.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/openai/codex/releases/tag/rust-v0.154.0"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-codex-cli-0-154-0",
+        "section": "Codex CLI 0.154.0, 음성 대화·워크트리 지원 추가",
+        "sourceAnchor": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "slug": "openai-christiano-foundation-board",
+      "sourceUrl": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "normalizedUrl": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "sourceId": "src-url-3eb3e9557eb7038ef8ad",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "f286be3dfc0710a36d6f64a39cb4a5ffa895aa680a1f06a2f843b46f367da72c",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/8"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-3eb3e9557eb7038ef8ad.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://openai.com/index/paul-christiano-joins-openai-foundation-board"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-openai-christiano-foundation-board",
+        "section": "폴 크리스티아노, OpenAI 재단 이사회 합류",
+        "sourceAnchor": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Shanghai AI Laboratory",
+      "slug": "shanghai-ai-lab-ncp-archpreview",
+      "sourceUrl": "https://arxiv.org/abs/2609.10715",
+      "normalizedUrl": "https://arxiv.org/abs/2609.10715",
+      "sourceId": "src-url-75ee456968c00a6916f6",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "f7d3174de96afb9b153b3485eb80d250f925754555e6be3e18d37c6367100acb",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/9"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-75ee456968c00a6916f6.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://arxiv.org/abs/2609.10715"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-shanghai-ai-lab-ncp-archpreview",
+        "section": "상하이AI연구소 계열 연구팀, 개념 단위 예측 실험 결과 공개",
+        "sourceAnchor": "https://arxiv.org/abs/2609.10715",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Suno",
+      "slug": "suno-v6-music-model-launch",
+      "sourceUrl": "https://suno.com/blog/introducing-v6",
+      "normalizedUrl": "https://suno.com/blog/introducing-v6",
+      "sourceId": "src-url-7d2b583eb0439cb151bd",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "4b546862b5eb7f27e0ed951843fb431eeea6901f7e1623ab02e357fc89238365",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/10"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-7d2b583eb0439cb151bd.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://suno.com/blog/introducing-v6"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-suno-v6-music-model-launch",
+        "section": "수노, 음악 생성 모델 v6 공개... 3개 버전으로 세분화",
+        "sourceAnchor": "https://suno.com/blog/introducing-v6",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Tencent Hunyuan",
+      "slug": "tencent-hunyuan-auk-open-source-speech",
+      "sourceUrl": "https://github.com/Tencent-Hunyuan/AuK",
+      "normalizedUrl": "https://github.com/Tencent-Hunyuan/AuK",
+      "sourceId": "src-url-cc1403cbb312be4ed6bb",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "4760b98a5de4d331b3ba268fa7809dbadd0518af08d22080131408dae3550d40",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/11"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-cc1403cbb312be4ed6bb.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/Tencent-Hunyuan/AuK"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-tencent-hunyuan-auk-open-source-speech",
+        "section": "텐센트 훈위안, 음성 생성·편집 파운데이션 모델 AuK 오픈소스 공개",
+        "sourceAnchor": "https://github.com/Tencent-Hunyuan/AuK",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "vLLM",
+      "slug": "vllm-v0-29-0-release",
+      "sourceUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+      "normalizedUrl": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+      "sourceId": "src-url-448701fe99745f6407d1",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "46c631d0868a9bfef0e5db7140ee13f6934ea4a752e7d8d9afada32e5f8cb67b",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/12"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-448701fe99745f6407d1.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-09"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-vllm-v0-29-0-release",
+        "section": "vLLM, v0.29.0 정기 버전 배포",
+        "sourceAnchor": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+        "publisherDate": "2026-09-09",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "slug": "anthropic-tactical-intelligence-weapons-evaluation",
+      "sourceUrl": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "normalizedUrl": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "sourceId": "src-url-7160cfc6b1914a7ee326",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "fa90235bae88461ff7ab59503c8804016c1e9c070cfa897c90869c107ca70f97",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/13"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-7160cfc6b1914a7ee326.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-anthropic-tactical-intelligence-weapons-evaluation",
+        "section": "Anthropic, 표적 정보·재래식 무기 능력 평가 도구 공개",
+        "sourceAnchor": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "slug": "claude-managed-agents-auto-permission",
+      "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+      "normalizedUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+      "sourceId": "src-url-4182359e79e632d3734e",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "b500971d4969676fd27eca6210d63fd1d9e2c999209ff7d1e98c86ef1ab161f7",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/14"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://platform.claude.com/docs/en/release-notes/overview"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-claude-managed-agents-auto-permission",
+        "section": "Claude Managed Agents permission policies now include",
+        "sourceAnchor": "https://platform.claude.com/docs/en/release-notes/overview",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions.",
+        "evidence": {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html",
+          "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "dateComponents": {
+            "mode": "date-heading",
+            "heading": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(3)",
+              "text": "September 10, 2026"
+            },
+            "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(3)",
+            "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(3) > li:nth-of-type(1)"
+          },
+          "sectionQuote": "Claude Managed Agents permission policies now include auto: the server evaluates each agent or MCP tool call and runs it, denies it, or pauses for your approval.",
+          "quotes": [
+            "agent.tool_use and agent.mcp_tool_use events report how each call was evaluated in an evaluation field alongside evaluated_permission."
+          ]
+        }
+      },
+      "sharedSourceGroup": "shared-4182359e79e632d3"
+    },
+    {
+      "week": "2026-w37",
+      "company": "Cartesia",
+      "slug": "cartesia-tts-model-vs-voice-explainer",
+      "sourceUrl": "https://www.cartesia.ai/blog/tts-model-vs-voice",
+      "normalizedUrl": "https://www.cartesia.ai/blog/tts-model-vs-voice",
+      "sourceId": "src-url-422ba7b00feca1efb3ef",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "7481109534cf446027e49054ac8458b7214cab2da93304f1715066b7ed7e831f",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/15"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-422ba7b00feca1efb3ef.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.cartesia.ai/blog/tts-model-vs-voice"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-cartesia-tts-model-vs-voice-explainer",
+        "section": "카르테시아, TTS 모델과 목소리는 다른 개념이라고 설명",
+        "sourceAnchor": "https://www.cartesia.ai/blog/tts-model-vs-voice",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Cursor",
+      "slug": "cursor-projects-coordinator-agent",
+      "sourceUrl": "https://cursor.com/blog/projects",
+      "normalizedUrl": "https://cursor.com/blog/projects",
+      "sourceId": "src-url-b09bf6f2d73ad55cccaa",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "02dbfc6289cbed55d685b9e0eb2c165ab40dab1b0020a3e28a8a6b725a3ef62d",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/16"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-b09bf6f2d73ad55cccaa.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://cursor.com/blog/projects"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-cursor-projects-coordinator-agent",
+        "section": "커서, 대규모 작업 관리하는 코디네이터 에이전트 Projects 출시",
+        "sourceAnchor": "https://cursor.com/blog/projects",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Devin",
+      "slug": "devin-desktop-remote-agent-hosts",
+      "sourceUrl": "https://docs.devin.ai/desktop/changelog#v3-10-23",
+      "normalizedUrl": "https://docs.devin.ai/desktop/changelog",
+      "sourceId": "src-url-c164595fef1e89e047f7",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "19e2a4f7b6dd0bcb862bd55371982123b7654072cd9d33ee8b4c335bb712bcd0",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/18"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-c164595fef1e89e047f7.html",
+          "kind": "raw-article-html"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-devin-desktop-remote-agent-hosts",
+        "section": "데빈 데스크톱, SSH 원격 에이전트 호스트 연결 기능 추가",
+        "sourceAnchor": null,
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "ElevenLabs",
+      "slug": "elevenlabs-umg-music-partnership",
+      "sourceUrl": "https://elevenlabs.io/blog/umg",
+      "normalizedUrl": "https://elevenlabs.io/blog/umg",
+      "sourceId": "src-url-18213f182208d622aea5",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "d34a1bff6a4df8108f64d8afaa9bb28755f928915103370ccc33b348d34fa21f",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/19"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-18213f182208d622aea5.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://elevenlabs.io/blog/umg"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-elevenlabs-umg-music-partnership",
+        "section": "일레븐랩스, 유니버설뮤직과 다년간 전략적 제휴 체결",
+        "sourceAnchor": "https://elevenlabs.io/blog/umg",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Hume AI",
+      "slug": "hume-voice-replication-leaderboard",
+      "sourceUrl": "https://www.hume.ai/blog/introducing-the-hume-voice-replication-leaderboard",
+      "normalizedUrl": "https://www.hume.ai/blog/introducing-the-hume-voice-replication-leaderboard",
+      "sourceId": "src-url-2dc52cdeee8ef154fa39",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "cd7149797b4941791678ca150d23f8dfd88a5d32eadd1c7776515093a7d3b0e4",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/20"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2dc52cdeee8ef154fa39.html",
+          "kind": "raw-article-html"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-hume-voice-replication-leaderboard",
+        "section": "흄AI, 음성 복제 정확도 비교하는 리더보드 공개",
+        "sourceAnchor": null,
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Meshy",
+      "slug": "meshy-7-1-ultra-4k-launch",
+      "sourceUrl": "https://www.meshy.ai/blog/meshy-7-1-launch",
+      "normalizedUrl": "https://www.meshy.ai/blog/meshy-7-1-launch",
+      "sourceId": "src-url-45c8801a5d72e1b7e1ad",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "70ef95d543c3648eb1861089358f6b61bbb2d3ed49af144fbcbf644f604b8a4f",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/21"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-45c8801a5d72e1b7e1ad.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.meshy.ai/blog/meshy-7-1-launch"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-meshy-7-1-ultra-4k-launch",
+        "section": "메시, 4K 지오메트리 지원하는 7.1 버전 출시",
+        "sourceAnchor": "https://www.meshy.ai/blog/meshy-7-1-launch",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "slug": "chatgpt-for-financial-services",
+      "sourceUrl": "https://openai.com/index/introducing-chatgpt-financial-services/",
+      "normalizedUrl": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "sourceId": "src-url-0bb946f0c421538942e4",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "d8aedf21aec16c6139a7c9517e5d794613e9a4c3f0caf94ab32bcde9fe12ed25",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/22"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0bb946f0c421538942e4.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://openai.com/index/introducing-chatgpt-financial-services/"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-chatgpt-for-financial-services",
+        "section": "OpenAI, 금융기관용 ChatGPT for Financial Services 출시",
+        "sourceAnchor": "https://openai.com/index/introducing-chatgpt-financial-services/",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "slug": "codex-python-sdk-0-154-0",
+      "sourceUrl": "https://github.com/openai/codex/releases/tag/python-v0.154.0",
+      "normalizedUrl": "https://github.com/openai/codex/releases/tag/python-v0.154.0",
+      "sourceId": "src-url-94bf6e711cee1f8943dc",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "774009f63f95828f4840597eefa9113321c955479ce760aef5b86fe714f278d1",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/23"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-94bf6e711cee1f8943dc.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/openai/codex/releases/tag/python-v0.154.0"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-codex-python-sdk-0-154-0",
+        "section": "Codex Python SDK 0.154.0, 추론 강도 옵션 확장",
+        "sourceAnchor": "https://github.com/openai/codex/releases/tag/python-v0.154.0",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "slug": "openai-gpt-live-1",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "normalizedUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "sourceId": "src-url-b8a75fb67d8179220690",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "eeadcee0fb49a59a6b7c7276b89956b6cdb59b8c81dbbe310876039871903755",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/24"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-b8a75fb67d8179220690.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-openai-gpt-live-1",
+        "section": "OpenAI, API용 실시간 음성 모델 GPT-Live-1 공개",
+        "sourceAnchor": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "slug": "openai-python-sdk-3-10-3-13-updates",
+      "sourceUrl": "https://github.com/openai/openai-python/releases/tag/v3.13.0",
+      "normalizedUrl": "https://github.com/openai/openai-python/releases/tag/v3.13.0",
+      "sourceId": "src-url-101bb5c334ba4e50138c",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "09c8df802a58ab16fc9c6ad71dd4854ce027ed45fb415295523aa8ac490273c4",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/25"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-101bb5c334ba4e50138c.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/openai/openai-python/releases/tag/v3.13.0"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-openai-python-sdk-3-10-3-13-updates",
+        "section": "OpenAI Python SDK v3.10~3.13 업데이트, Live API 지원 추가",
+        "sourceAnchor": "https://github.com/openai/openai-python/releases/tag/v3.13.0",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Replit",
+      "slug": "replit-databricks-integration-ga",
+      "sourceUrl": "https://replit.com/blog/databricks2026",
+      "normalizedUrl": "https://replit.com/blog/databricks2026",
+      "sourceId": "src-url-0ebdfc02e6c728562a15",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "fc626aa127d58d67c5dbee9c913295cedac15938b6acfab539e93791f1736794",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/26"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0ebdfc02e6c728562a15.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://replit.com/blog/databricks2026"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-replit-databricks-integration-ga",
+        "section": "리플릿, 데이터브릭스 통합 정식 출시... 레이크베이스 네이티브 지원",
+        "sourceAnchor": "https://replit.com/blog/databricks2026",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Vidu",
+      "slug": "vidu-s2-real-time-video-generation",
+      "sourceUrl": "https://arxiv.org/abs/2609.11638",
+      "normalizedUrl": "https://arxiv.org/abs/2609.11638",
+      "sourceId": "src-url-140756f350a003dd55d0",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "fb3c2f1d4059c5f3518bdbc41b33abaceb5c51b3db6bf32d0a80694fe1030a8b",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/27"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-140756f350a003dd55d0.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://arxiv.org/abs/2609.11638"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-10"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-vidu-s2-real-time-video-generation",
+        "section": "비두, 실시간 상호작용 가능한 영상 생성 모델 S2 공개",
+        "sourceAnchor": "https://arxiv.org/abs/2609.11638",
+        "publisherDate": "2026-09-10",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "NAVER",
+      "slug": "naver-labs-vr-tour-gangsong-museum",
+      "sourceUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650",
+      "normalizedUrl": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650",
+      "sourceId": "src-url-370cac85c1083d81d0c1",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "6cd9cc0c9a6a1b451d4353b799a765e9e7c5b55bf2534a139ff9d265f02e78eb",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/28"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-370cac85c1083d81d0c1.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-11"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-naver-labs-vr-tour-gangsong-museum",
+        "section": "네이버랩스, 간송미술관 공간지능 VR 투어 공개",
+        "sourceAnchor": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650",
+        "publisherDate": "2026-09-11",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
+    },
+    {
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "slug": "claude-code-2-1-267-270-updates",
+      "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+      "normalizedUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+      "sourceId": "src-url-2a68cabb6c20de64eba5",
+      "legacySourceIds": [],
+      "classification": "new-backfill",
+      "contentSha256": "01186311d0375f723e08f9b6a2d83a38900bb1e0b79cb78f19768dfc98149c5f",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/29"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2a68cabb6c20de64eba5.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-12"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source"
+      },
+      "event": {
+        "id": "w37-completion-claude-code-2-1-267-270-updates",
+        "section": "Claude Code v2.1.267~270 연속 업데이트, 플러그인 평가 명령 추가",
+        "sourceAnchor": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+        "publisherDate": "2026-09-12",
+        "identityBasis": "approved-additions-inventory",
+        "review": "Verified in AB run 20260922-134206-ab-20260909-20260922: the publication date was read from the publisher's own page, feed or release metadata, the officialUrl is first-party, and the card was checked against the full Weekly and AB registries for product-identity collisions."
+      }
     }
   ],
   "heldSources": [
@@ -16080,7 +17285,8 @@
     "Four Anthropic articles have partial WebFetch extracts only; raw source HTTP was denied.",
     "Five date-only articles retain publisher calendar dates; exact KST-day membership is not established.",
     "Offline hash/quote verification establishes correspondence to stored evidence, not independent authenticity of the publisher or truth of vendor claims.",
-    "Image acceptance and final build are separate work; no image/build success is claimed here."
+    "Image acceptance and final build are separate work; no image/build success is claimed here.",
+    "Evidence caches committed for CI carry redaction placeholders where a third-party browser API key, a JWT or a local home path appeared; see files[].redaction."
   ],
   "files": [
     {
@@ -16129,11 +17335,13 @@
     },
     {
       "path": "_workspace/oneway/20260908-ai-backfill-first-window/source-ledger.json",
-      "sha256": "74ca35c154bda1b6a9305402c9fe63a7ff72a4152a59485d8431c94552a4a950"
+      "sha256": "215b197f2331621c5f3a801c67190dcc9143d6b924150a9cfff7c2f1d763f355",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260908-ai-backfill-first-window/voidnews-backfill-20260826-0901.json",
-      "sha256": "dd343fa651fa0cdef6fec033d1a3e5cc4814df8fbd7d25f34bef6a361b7012ea"
+      "sha256": "ae1fee0d1803a89926f2205931b215f4270fd95de14c73fdd8aed156d52d2b49",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260908-ai-backfill-gap-resolution/collect-gap-resolution.json",
@@ -16193,7 +17401,8 @@
     },
     {
       "path": "_workspace/oneway/20260908-ai-backfill/collect-backfill.json",
-      "sha256": "ffe904262b972a91d2399973c77609e5cda27d632b47e68abe1a7e9f4935b505"
+      "sha256": "b74e758f8133a1d876eb55473e0e530352839ff7ab4c727c5db401841f63bf73",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260908-ai-backfill/omitted-candidates.json",
@@ -16361,7 +17570,8 @@
     },
     {
       "path": "_workspace/oneway/20260908-boundary-backfill/evidence/voidnews-boundary-resolved.json",
-      "sha256": "cc1584c4795967e7575fd2ba65edaa3bdb7f7286a3b3d4382024f30e8102f565"
+      "sha256": "1f239fae461468d661a7353ff40f9f712624b3ffa7cbabb48d3e06eb20f3fb66",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-devtools-discovery-integration/cache/01a25ecff626-bc344a9de0aada73.html",
@@ -17801,7 +19011,8 @@
     },
     {
       "path": "_workspace/oneway/20260909-product-media-integration/cache/4e6c8c201d49-70b2939c948cb8cf.html",
-      "sha256": "4e6c8c201d49fb62154fa20c0a169cf831eb3cd21136e76a72c47738d87b75fa"
+      "sha256": "a9785edef6e58449e11c23b237d5d1bf3461b2816df5f45ad858c535af5bc597",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-product-media-integration/cache/574a3ab4d9fb-fe228e5c78d6a907b6f6.html",
@@ -17957,7 +19168,8 @@
     },
     {
       "path": "_workspace/oneway/20260909-product-rotation/evidence/70b2939c948cb8cf.html",
-      "sha256": "4e6c8c201d49fb62154fa20c0a169cf831eb3cd21136e76a72c47738d87b75fa"
+      "sha256": "a9785edef6e58449e11c23b237d5d1bf3461b2816df5f45ad858c535af5bc597",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-product-rotation/evidence/7cb2da21c69face5.html",
@@ -17981,55 +19193,68 @@
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/0bee0f9293b9f01a-voidnews-devtools-discovery-additions-manifest.json",
-      "sha256": "0bee0f9293b9f01a31ffaff0d750ecf0c3f931ff83e676a1cde0933367b5ac82"
+      "sha256": "647ebccf35bd8c684f0d276a6812d2309683dd882aa139835f1b4fd8f1dc6c10",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/0c7a159000c581e8-voidnews-industry-additions-manifest.json",
-      "sha256": "0c7a159000c581e8fd4e77cd7f4ee9ffd1a6f81b6fad233bda178520a13e34d2"
+      "sha256": "3fbc45fe0b43600e9e0da351ed0c9afb55d49c920c20005b4c850aad6f5d6674",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/0f044ce8de281cd9-same-url-event-ledger.json",
-      "sha256": "0f044ce8de281cd9aa689513dcd6c807de2f259b12ee25d5fae3a378aa8cc3e5"
+      "sha256": "76ef719b3a02061dbb77a54c98579e438ab8ecfbe977eed19d0851bf3e06d3f4",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/1dbee923c9c5dc66-cache-manifest.json",
-      "sha256": "1dbee923c9c5dc66238fc514b5a2465ea314e511790203faeb7b592eba466b2b"
+      "sha256": "1d2af975fca362908120fe114bef8b664c82d3a4bbb4ead02b8ec1e36bf4fe8a",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/1e70b5966c6ce10c-cache-manifest.json",
-      "sha256": "1e70b5966c6ce10c982e86a136f60354a7e6babb0d114d2fc85b0104d6d48b4e"
+      "sha256": "905c1092dd8f8a76ead1ca8d9f2df514b47a7b7a0bd996b3df43238e8b5985f6",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/4068fb14b93d9b62-decision-ledger.json",
-      "sha256": "4068fb14b93d9b6238603149df13d557fc1b443d3f296a61f58684c79c4c9c87"
+      "sha256": "90b46725361073f33294bba2131c26b913cbbc43ddb9b30f1b8225bc5f57512d",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/5550c1cbce0433a1-voidnews-product-media-additions-manifest.json",
-      "sha256": "5550c1cbce0433a15586e3fce0455a7e1e6bf9c1692bdfc88c3210ed39a618e4"
+      "sha256": "fb8a7d7896d83a2841a1edee317c0b343713146ee03f048f62e6b4f45801f19a",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/83886cc9c1bb42b6-same-url-event-ledger.json",
-      "sha256": "83886cc9c1bb42b64ead2a085b0ddc03c084276eb01b16231c73e9721c34f6e4"
+      "sha256": "344a440357b0495da8aba4b7f1f73da91afa60370eb3d146fee7ad30d1a16af5",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/a28bb56e83d2803f-voidnews-devtools-rotation.json",
-      "sha256": "a28bb56e83d2803fa6ea3e656605d96457362f3b6d8440bb38d40dc4a87839f3"
+      "sha256": "599fa9cc2a93d8ecaf25e7fccfb0e4d9c5e1028ee064ec6f64dcc66e5ce427b8",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/b2a73daea994bde3-voidnews-feed-additions-manifest.json",
-      "sha256": "b2a73daea994bde391ab83bdc2c164ebe4706257dafe7ea5b90abb8e5a3fade3"
+      "sha256": "3f08185353965ab4f7c67d38eb8fb6328755759771426c39726997f678ff4e0b",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/c69a6630ef97ac7b-same-url-event-ledger.json",
-      "sha256": "c69a6630ef97ac7bee41ceb1e44f057284d179bda81f822b01871716a1f2acbc"
+      "sha256": "2141628498a90725bbc6933f3d29290348a9ebfabdfaba713e0c56f50cbd54f9",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/d6bbcb1bf0fe00cb-remaining-queue.json",
-      "sha256": "d6bbcb1bf0fe00cb2f9342c8ed637a31813a644e2ce83fbbd828838b4a929c14"
+      "sha256": "4d11f54f5e4a2b4a348d600e104f471ffa8472b0e0c6f36351e7bc79a5c79daa",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/db992594cd2ba463-cache-manifest.json",
-      "sha256": "db992594cd2ba463d8f676607ce766125a327712cb409e2866146446f8b48459"
+      "sha256": "131193b2b362bd15699be7d7456e5c8b8c7840266ac51d75517b849c89c2da61",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/e03b31e14ce5ef69-ab-sonnet-price-reference.json",
@@ -18037,11 +19262,13 @@
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/f061fcf70ee6325f-voidnews-feed-second-additions-manifest.json",
-      "sha256": "f061fcf70ee6325fa7e0fab1c89c669e06b8a732ace3d83531fc505535d4d426"
+      "sha256": "f2d74d8890abefa81d0fc8b1199badc0488447dc17a1ef0fe7c432572880e4eb",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/approved-inputs/f2bae841327f5d7d-cache-manifest.json",
-      "sha256": "f2bae841327f5d7d060add897dd8e795b0fc027b7c798f673d7256a8d84cc004"
+      "sha256": "12005622f881edb5db42f25483bfecb62a1d7af9ced8eba9c0757ee618f3ba49",
+      "redaction": "third-party browser API keys, a JWT and local home paths were replaced with fixed placeholders before this public repository committed the cache; sha256 is the post-redaction hash. Article text, URLs and dated sections are untouched."
     },
     {
       "path": "_workspace/oneway/20260909-rotation-reconciliation/date-window-exclusions.json",
@@ -18054,6 +19281,134 @@
     {
       "path": "docs/redesign/SOURCE-CLASSIFICATION-CORRECTIONS.json",
       "sha256": "45dac005faeefca0574360a724a53286b70a7a8f9b25bf6fd1469495ced84469"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+      "sha256": "6e762df543cbfcfa5ef31eb6e6d54506d3dd1849dd37f581256bb559047a6f3e"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-415f8f1af13b2f4b5659.html",
+      "sha256": "d5156a876529c05a3e8dc88b0b1b94596ece88bce995285d9744bc286dc29f03"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-c6a70b623b520248d507.html",
+      "sha256": "3c96fc76469e5dd30b7f5ddff804b29dc8fdc078ce20684f02913304fc8853fe"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-9412f9ee07ba42c48139.html",
+      "sha256": "8a65f771c7cbff1a5a8b6c94a1fbc6c55ad7be7c071dddfe1f40a4fb4c97740f"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0d597c65ed80424001bd.html",
+      "sha256": "e501150e99315d98695d1b184123e39cd459dd9a108e2c550158adc8202b041e"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-dcd87a4c52f47f88819d.html",
+      "sha256": "0059398f69b684b196cf31a67e0ca52598d0d327d16689cc7074f4fb4e66e22f"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-78630bdb2baab2cabdd8.html",
+      "sha256": "8a6f7afdbce5f9f86fcef55a651e6bdada1e5c3bd6bd132ea7c663b34c17b08f"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-13cafb8278b4024200be.html",
+      "sha256": "77210d62e2344b53ce1aaa450e1355853f75b41b1bf91ef736d59d5079045070"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2ec7a45fef458a79b70e.html",
+      "sha256": "2e7c55e8b8132b6991f8a79d5de41f82b5603cfd671ff8cb9af42151679a5614"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-3eb3e9557eb7038ef8ad.html",
+      "sha256": "eb82434989fa840c12b5f449d6b5b6eaf1e93402ffba4c055c4da157ab87b975"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-75ee456968c00a6916f6.html",
+      "sha256": "8236e071c3c6d390e0209760755e5ec098b2b0a25307e45dd724edbf667c28a2"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-7d2b583eb0439cb151bd.html",
+      "sha256": "aba430b3826984502f382c24f8c26a8ca3bdf4b3122877b0694a6a203c0d103c"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-cc1403cbb312be4ed6bb.html",
+      "sha256": "383bd1d4f6efdfbade2a8414ebfcd20e81e66ce6815d1ef18b266aad21bb4adb"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-448701fe99745f6407d1.html",
+      "sha256": "46d1fa3f1e382328efb82261e43bc58618bd902c61304ddbc283e6853d46a4c7"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-7160cfc6b1914a7ee326.html",
+      "sha256": "0ed920667757f278640af3c4e8cec28a177e213ce949dbc4b428592add7599f1"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html",
+      "sha256": "164363902a084a7eec0878258de3f0bf6cfca2f1455ef239a7ada9ed33eededf"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-422ba7b00feca1efb3ef.html",
+      "sha256": "fe31063dc9bc88f54df851e5c7f38d74ede366d1e0fb9074fac00f6559b57400"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-b09bf6f2d73ad55cccaa.html",
+      "sha256": "a14d1326e8a37d34b59af101bbe81ae6637020c8f4e3dd7a57fdae3bb1d6e8f4"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-8f8555b73e1b42928d84.html",
+      "sha256": "bcffc00d0744287c90d173e266369215d3bc95c1fde3f80d6892a9011af3c5c1"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-c164595fef1e89e047f7.html",
+      "sha256": "9a5dd65d84332445b8dbdec55bf8d1d7d159cc5ed892d2ba7ff393f90200c438"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-18213f182208d622aea5.html",
+      "sha256": "65ab468877815d3065a0c66d63ad77b2eceef0519f2f5e3830856143a874c856"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2dc52cdeee8ef154fa39.html",
+      "sha256": "f828e8021e1e6f8848738a84c95b2a382f8dc7849396c10577c5362f123cf912"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-45c8801a5d72e1b7e1ad.html",
+      "sha256": "c9f86dd593d8c4baf1fbdfae4f8cb8576cd8516242a274351e22d68e5a3e4169"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0bb946f0c421538942e4.html",
+      "sha256": "fd171cef618c3038c72d9b78925204c1c027fa128514c10723845f780fe96e25"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-94bf6e711cee1f8943dc.html",
+      "sha256": "d7c3899b54bbb893ab354ced7dbdffae6d370354dba75d6b087bb71cbaebeac0"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-b8a75fb67d8179220690.html",
+      "sha256": "8713fab4ee64f8a484660dd5d5edf8ad91b19e573395395ec72397985912ecb7"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-101bb5c334ba4e50138c.html",
+      "sha256": "795f04dc189cb259c694adea651730e2ddefebc9687aafadc66859591052d4c6"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0ebdfc02e6c728562a15.html",
+      "sha256": "305999fe96a9860a4c311f4ae235d6b197a4c17e38cc2318d275162a9ab5894d"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-140756f350a003dd55d0.html",
+      "sha256": "d837b86f1143912f55d14a0e6b0d303ab9cd8f8115781af16eae3a4defc1fe2c"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-370cac85c1083d81d0c1.html",
+      "sha256": "4674d83cd96e93b4c8cdf9332e3fe946eedaba21d4f58df6db27cd93acf02dc7"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2a68cabb6c20de64eba5.html",
+      "sha256": "c13690f9e129f7a247add63b69a35761e55a3275e0070b562fbf43476cc94930"
+    },
+    {
+      "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+      "sha256": "95ec65ee27a8a5595e2648afc7b63ecd49ef5b2b5b6e3417baf33bc43cb11009"
     }
   ],
   "abSupportingRows": [
@@ -18476,6 +19831,130 @@
           }
         }
       }
+    },
+    {
+      "week": "2026-w38",
+      "company": "Anthropic",
+      "slug": "anthropic-compliance-api-chrome-transcripts",
+      "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+      "normalizedUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+      "sourceId": "src-url-4182359e79e632d3734e",
+      "legacySourceIds": [],
+      "classification": "supporting-runtime",
+      "contentSha256": "245bfc6ed7e6929e82d0de6ebd7156d7377730ea7b5f74489e25f83da1f66d98",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/30"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://platform.claude.com/docs/en/release-notes/overview"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-18"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source",
+        "datePrecisionDisclosure": {
+          "location": "ledger-only",
+          "reason": "preexisting out-of-scope article; no invented timestamp"
+        }
+      },
+      "sharedSourceGroup": "shared-4182359e79e632d3",
+      "event": {
+        "id": "w38-shared-anthropic-compliance-api-chrome-transcripts",
+        "publisherDate": "2026-09-18",
+        "section": "The Compliance API local session endpoints now also return transcripts of Claude in Chrome sessions",
+        "evidence": {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html",
+          "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "sectionQuote": "The Compliance API local session endpoints now also return transcripts of Claude in Chrome sessions (product_surface value claude_in_chrome), in beta for Claude Enterprise organizations",
+          "quotes": [
+            "with your existing Compliance Access Key and the read:compliance_user_data scope."
+          ],
+          "dateComponents": {
+            "mode": "date-heading",
+            "heading": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1)",
+              "text": "September 18, 2026"
+            },
+            "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+            "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)"
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-w38",
+      "company": "OpenAI",
+      "slug": "openai-api-key-governance-controls",
+      "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+      "normalizedUrl": "https://developers.openai.com/api/docs/changelog",
+      "sourceId": "src-url-49e8d0577a5e1f9d20fd",
+      "legacySourceIds": [],
+      "classification": "supporting-runtime",
+      "contentSha256": "90eb95100722a9dfd98855b630cfc8fd0235078fbc20409c509d1f5a9e91928c",
+      "joinReferences": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/approved-additions.json",
+          "pointer": "/rows/31"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://developers.openai.com/api/docs/changelog"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-15"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source",
+        "datePrecisionDisclosure": {
+          "location": "ledger-only",
+          "reason": "preexisting out-of-scope article; no invented timestamp"
+        }
+      },
+      "sharedSourceGroup": "shared-49e8d0577a5e1f9d",
+      "event": {
+        "id": "w38-shared-openai-api-key-governance-controls",
+        "publisherDate": "2026-09-15",
+        "section": "Added API key creation governance controls at the organization and project levels.",
+        "evidence": {
+          "path": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+          "sectionQuote": "Added API key creation governance controls at the organization and project levels.",
+          "quotes": [
+            "Organization restrictions take precedence over project settings, and existing API keys are unaffected."
+          ],
+          "dateComponents": {
+            "mode": "month-day",
+            "heading": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1)",
+              "text": "September, 2026"
+            },
+            "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1)",
+            "day": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+              "text": "Sep 15"
+            }
+          }
+        }
+      }
     }
   ],
   "abReuseRows": [
@@ -18537,5 +20016,9 @@
       ],
       "relationship": "curated-reference"
     }
-  ]
+  ],
+  "backfillWindow": {
+    "start": "2026-08-26",
+    "end": "2026-09-13"
+  }
 }

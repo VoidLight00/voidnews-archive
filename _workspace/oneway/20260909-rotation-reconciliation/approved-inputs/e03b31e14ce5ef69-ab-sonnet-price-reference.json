@@ -1,0 +1,38 @@
+{
+  "edition": "2026-07a",
+  "pointer": "/highlights/0/post",
+  "post": {
+    "date": "6/30",
+    "platform": "X+Threads",
+    "title": "Anthropic, Claude Sonnet 5 공개 — Free·Pro 기본 모델, 네이티브 1M 컨텍스트",
+    "featured": true,
+    "deck": "Opus 4.8에 근접한 성능을 저비용으로, Claude Code 기본 모델로 채택",
+    "summary": "Anthropic이 Claude Sonnet 5를 공개했다. Opus 4.8에 근접한 성능을 더 낮은 비용으로 제공하며 네이티브 1M 토큰 컨텍스트를 지원한다. Claude Code의 기본 모델로 채택됐고, 8월 10일에는 기존 $2/$10(Mtok) 도입 가격을 영구 가격으로 확정해 9월 1일 예정이던 $3/$15 인상을 취소했다.",
+    "content": "**이게 뭐예요?**\nAnthropic이 새 프런티어 모델 Claude Sonnet 5를 공개했다. Claude 앱의 Free·Pro 기본 모델이자, Claude Code의 기본 모델로 바로 채택됐다.\n\n**무엇이 달라졌나?**\n- 최상위 모델 Opus 4.8에 근접한 성능을, 훨씬 낮은 비용으로 제공\n- 네이티브 1M(100만) 토큰 컨텍스트 — 책 한 권 분량을 한 번에 읽고 다룸\n- 8월 31일까지 $2/$10(100만 토큰당 입력/출력) 프로모션 가격\n\n**비개발자용 한 줄**\n'제일 똑똑한 모델(Opus)에 준하는 걸, 이제 기본값으로 더 싸게 쓴다'는 뜻이다. 따로 상위 모델을 고르지 않아도 Claude 앱·Claude Code를 켜면 기본이 이미 이 수준이다.\n\n**왜 중요한가**\n그동안은 '좋은 모델을 골라 쓰는' 게 실력이었다. 기본 모델이 충분히 좋아지면, 경쟁의 축이 '어떤 모델을 쓰냐'에서 '그 모델로 무엇을 시키느냐(워크플로·에이전트 설계)'로 옮겨 간다. 이번 2주 전체 흐름('성능이 싸졌다')의 출발점이다.\n\n출처: anthropic.com",
+    "source": "https://www.anthropic.com/news/claude-sonnet-5",
+    "officialUrl": "https://www.anthropic.com/news/claude-sonnet-5",
+    "slug": "anthropic-20260630-claude-sonnet-5",
+    "tags": [
+      "Anthropic",
+      "프런티어 모델"
+    ],
+    "backupUrls": [
+      {
+        "label": "Claude Platform 릴리스 노트 (가격 영구화 08-10)",
+        "url": "https://platform.claude.com/docs/en/release-notes/overview"
+      },
+      {
+        "label": "공식 문서 (모델 개요)",
+        "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      {
+        "label": "TechCrunch",
+        "url": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/"
+      }
+    ],
+    "thumbnail": {
+      "src": "/og-cache/anthropic-claude-sonnet-5-공개-free-pro-기본-9b2ad380.jpg",
+      "alt": "Anthropic, Claude Sonnet 5 공개 — Free·Pro 기본 모델, 네이티브 1M 컨텍스트"
+    }
+  }
+}

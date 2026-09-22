@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "task": "September 6–8 KST gap resolution and Mistral publisher-date hold",
+  "window": {
+    "startKst": "2026-09-06T00:00:00+09:00",
+    "requestedEndKstDate": "2026-09-08",
+    "retrievalCutoffUtc": "2026-09-08T14:37:17.547211+00:00",
+    "retrievalCutoffKst": "2026-09-08T23:37:17.547211+09:00"
+  },
+  "priorReport": "/tmp/voidnews-backfill-20260902-0908-enriched.json",
+  "priorDurableRun": "../20260908-ai-backfill",
+  "candidateCount": 10,
+  "acceptedCount": 5,
+  "heldCount": 5,
+  "candidates": [
+    {
+      "id": "google-atlas",
+      "status": "accepted",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+      "eventId": "alphagenome-atlas-variant-impact-map",
+      "officialBasis": "Publisher-owned domain",
+      "snapshot": {
+        "id": "google-atlas",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "retrievedAt": "2026-09-08T14:31:30.897172+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 200,
+        "finalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "rawHtml": "source-cache/google-atlas.html",
+        "normalizedText": "source-cache/google-atlas.txt",
+        "sha256": "8c20be558132fb0fef46dc4af077c366b3c2f8cdd416634311f261c581737e13"
+      },
+      "publication": {
+        "sourceDate": "2026-09-08",
+        "precision": "timestamp-with-timezone",
+        "sourceTimestamp": "2026-09-08T14:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-08",
+        "kstTimestamp": "2026-09-08T23:00:00+09:00",
+        "displayDate": "9/8 23:00",
+        "evidenceCache": "source-cache/google-atlas.html",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "claims": [
+        {
+          "quote": "We used the AlphaGenome AI model to pre-calculate the regulatory impact of all 9 billion single-letter genetic changes, resulting in a massive, 1-petabyte dataset.",
+          "cache": "source-cache/google-atlas.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "This single, easy-to-use score combines predictions for both coding and non-coding regions",
+          "cache": "source-cache/google-atlas.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "AlphaGenome Atlas is available today through an intuitive website portal that requires zero coding skills",
+          "cache": "source-cache/google-atlas.txt",
+          "verbatimWhitespaceNormalized": true
+        }
+      ],
+      "editorialCaveat": "Claims attributed to publisher; no independent experimental reproduction. No numerical claim extracted solely from an AI-generated page summary.",
+      "dedupeDecision": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+    },
+    {
+      "id": "google-contrail",
+      "status": "accepted",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/",
+      "eventId": "google-cathay-pacific-contrail-trial",
+      "officialBasis": "Publisher-owned domain",
+      "snapshot": {
+        "id": "google-contrail",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/",
+        "retrievedAt": "2026-09-08T14:31:30.897212+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 200,
+        "finalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/",
+        "rawHtml": "source-cache/google-contrail.html",
+        "normalizedText": "source-cache/google-contrail.txt",
+        "sha256": "21b3cce5b606ebdb21159eaa9718974baf74c9a949875d61eefe642cb2513163"
+      },
+      "publication": {
+        "sourceDate": "2026-09-07",
+        "precision": "timestamp-with-timezone",
+        "sourceTimestamp": "2026-09-07T08:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-07",
+        "kstTimestamp": "2026-09-07T17:00:00+09:00",
+        "displayDate": "9/7 17:00",
+        "evidenceCache": "source-cache/google-contrail.html",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "claims": [
+        {
+          "quote": "We’re partnering with Cathay Pacific , our first commercial airline partner in Asia to test contrail avoidance on ultra-long-haul flights",
+          "cache": "source-cache/google-contrail.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "We started an operational trial with more than 100 flights targeted across Cathay Pacific's network.",
+          "cache": "source-cache/google-contrail.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "More than 80 flights followed contrail-avoidance routes, with Google’s satellite imagery analysis estimating that these flights reduced the warming impact of contrails by roughly 40%.",
+          "cache": "source-cache/google-contrail.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "Now, we're scaling the partnership with Cathay Pacific on a larger second phase of trial flights and partnering with Contrails.org",
+          "cache": "source-cache/google-contrail.txt",
+          "verbatimWhitespaceNormalized": true
+        }
+      ],
+      "editorialCaveat": "Claims attributed to publisher; no independent experimental reproduction. No numerical claim extracted solely from an AI-generated page summary.",
+      "dedupeDecision": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+    },
+    {
+      "id": "google-accelerator",
+      "status": "accepted",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/",
+      "eventId": "deepmind-ai-planet-apac-telepix-cohort",
+      "officialBasis": "Publisher-owned domain",
+      "snapshot": {
+        "id": "google-accelerator",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/",
+        "retrievedAt": "2026-09-08T14:31:30.897253+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 200,
+        "finalUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ai-planet-accelerator-apac/",
+        "rawHtml": "source-cache/google-accelerator.html",
+        "normalizedText": "source-cache/google-accelerator.txt",
+        "sha256": "153fb01077ff2df1bb5ec5b88839491a504897cc954b2660c5d6f956d9be17c7"
+      },
+      "publication": {
+        "sourceDate": "2026-09-07",
+        "precision": "timestamp-with-timezone",
+        "sourceTimestamp": "2026-09-07T01:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-07",
+        "kstTimestamp": "2026-09-07T10:00:00+09:00",
+        "displayDate": "9/7 10:00",
+        "evidenceCache": "source-cache/google-accelerator.html",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "claims": [
+        {
+          "quote": "we’ve selected 16 organizations for our Google DeepMind Accelerator: AI for the Planet in APAC",
+          "cache": "source-cache/google-accelerator.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "TelePIX (South Korea): Transforming satellite data into actionable intelligence for global mangrove monitoring",
+          "cache": "source-cache/google-accelerator.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "Over the next three months, these organizations will receive access to the latest Google AI stack (including specialized frontier models), tailored support, and mentorship from our experts.",
+          "cache": "source-cache/google-accelerator.txt",
+          "verbatimWhitespaceNormalized": true
+        }
+      ],
+      "editorialCaveat": "Claims attributed to publisher; no independent experimental reproduction. No numerical claim extracted solely from an AI-generated page summary.",
+      "dedupeDecision": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+    },
+    {
+      "id": "mistral-series-d",
+      "status": "accepted",
+      "publisher": "Mistral",
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "eventId": "mistral-series-d-samsung-three-billion-euros",
+      "officialBasis": "Publisher-owned domain",
+      "snapshot": {
+        "id": "mistral-series-d",
+        "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "retrievedAt": "2026-09-08T14:30:45.621263+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 200,
+        "finalUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "rawHtml": "source-cache/mistral-series-d.html",
+        "normalizedText": "source-cache/mistral-series-d.txt",
+        "sha256": "3a09a5470a0e5e16e5473f6bb7a118aa76883fb8000edaa9dd5b16b38e6fb18d"
+      },
+      "publication": {
+        "sourceDate": "2026-09-08",
+        "precision": "publisher-date-only",
+        "sourceTimestamp": null,
+        "sourceTimezone": null,
+        "kstDate": null,
+        "displayDate": "9/8",
+        "evidenceCache": "source-cache/mistral-index.txt",
+        "excerpt": "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion. September 8, 2026 By Mistral Company Mistral raises €3B to make sovereign, open-weight AI the technology frontier Mistral today announced that it ",
+        "note": "Valid publisher calendar date; time and timezone unknown. No midnight assumed and no arbitrary day shift. This does not establish exact KST-day membership."
+      },
+      "claims": [
+        {
+          "quote": "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion",
+          "cache": "source-cache/mistral-series-d.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "Samsung Electronics led the round, joined by co-leads Scaleup Europe Fund, managed by EQT, and existing investor PSG Equity.",
+          "cache": "source-cache/mistral-series-d.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "The round will significantly expand Mistral's frontier research",
+          "cache": "source-cache/mistral-series-d.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "it will help Mistral expand infrastructure and accelerate its commercial growth and international footprint.",
+          "cache": "source-cache/mistral-series-d.txt",
+          "verbatimWhitespaceNormalized": true
+        }
+      ],
+      "editorialCaveat": "Claims attributed to publisher; no independent experimental reproduction. No numerical claim extracted solely from an AI-generated page summary.",
+      "dedupeDecision": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+    },
+    {
+      "id": "hf-safety",
+      "status": "accepted",
+      "publisher": "Multiverse Computing",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+      "eventId": "multiverse-boundary-aware-safety-refusal",
+      "officialBasis": "Article under MultiverseComputingCAI organization, named research authors and matching organization bylines; not attributed to Hugging Face editorial staff.",
+      "snapshot": {
+        "id": "hf-safety-canonical",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+        "retrievedAt": "2026-09-08T14:32:09.564329+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 200,
+        "finalUrl": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+        "rawHtml": "source-cache/hf-safety-canonical.html",
+        "normalizedText": "source-cache/hf-safety-canonical.txt",
+        "sha256": "254cae2d58259029f536ad3046ae7e78acdf4497a499d6148e643ffe87b4dcb0"
+      },
+      "publication": {
+        "sourceDate": "2026-09-08",
+        "precision": "timestamp-with-timezone",
+        "sourceTimestamp": "2026-09-08T14:23:07.255Z",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-08",
+        "kstTimestamp": "2026-09-08T23:23:07.255000+09:00",
+        "displayDate": "9/8 23:23",
+        "evidenceCache": "source-cache/hf-blog.html",
+        "note": "datePublished/publishedAt only, not modification or comment dates. Display truncates seconds, not date."
+      },
+      "claims": [
+        {
+          "quote": "Our latest paper, Safety for Whom? Boundary-Aware Self-Distillation for Controlled LLM Safety Refusal , studies this narrower problem directly.",
+          "cache": "source-cache/hf-safety-canonical.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "On Qwen3-8B , the escalated-coverage model raises in-distribution political refusal",
+          "cache": "source-cache/hf-safety-canonical.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "adding the benign boundary data reduces over-refusal on the comply-worthy side of the held-out pairs from 32.94% to 4.16%. Refusal on the harmful side drops only from 91.88% to 87.72%.",
+          "cache": "source-cache/hf-safety-canonical.txt",
+          "verbatimWhitespaceNormalized": true
+        },
+        {
+          "quote": "This work is part of Multiverse Computing's research",
+          "cache": "source-cache/hf-safety-canonical.txt",
+          "verbatimWhitespaceNormalized": true
+        }
+      ],
+      "editorialCaveat": "Claims attributed to publisher; no independent experimental reproduction. No numerical claim extracted solely from an AI-generated page summary.",
+      "dedupeDecision": "No exact URL duplicate; no same event in runtime registry. Accelerator keyword hits on SSI/NVIDIA partnership are unrelated lexical matches."
+    },
+    {
+      "id": "openai-work",
+      "status": "hold-body-unavailable",
+      "url": "https://openai.com/index/the-work-now-within-reach",
+      "title": "The Work Now Within Reach",
+      "publisher": "OpenAI",
+      "snapshot": {
+        "id": "openai-work",
+        "url": "https://openai.com/index/the-work-now-within-reach",
+        "retrievedAt": "2026-09-08T14:31:30.896660+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 403,
+        "error": "HTTP Error 403: Forbidden",
+        "rawHtml": "source-cache/openai-work.html",
+        "normalizedText": "source-cache/openai-work.txt",
+        "sha256": "9d243ee3b16cee82382b6fbfe8d0cbbd4bb8aae56f5669ce4af3f9fc210ec0cc"
+      },
+      "publication": {
+        "sourceTimestamp": "2026-09-08T13:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-08",
+        "kstTimestamp": "2026-09-08T22:00:00+09:00",
+        "evidenceCache": "source-cache/openai-feed.html",
+        "precision": "timestamp-with-timezone"
+      },
+      "feedDescription": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+      "reason": "Official RSS proves date and describes topic, but article HTTP 403 prevents body-claim verification. No bypass or denial retry. No post fabricated from feed description."
+    },
+    {
+      "id": "openai-journalism",
+      "status": "hold-body-unavailable",
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "publisher": "OpenAI",
+      "snapshot": {
+        "id": "openai-journalism",
+        "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+        "retrievedAt": "2026-09-08T14:31:30.896962+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 403,
+        "error": "HTTP Error 403: Forbidden",
+        "rawHtml": "source-cache/openai-journalism.html",
+        "normalizedText": "source-cache/openai-journalism.txt",
+        "sha256": "b8ca9696437b5960ebc1cced186ca8bef5fff5471df67264ef06d3a9a9dac86a"
+      },
+      "publication": {
+        "sourceTimestamp": "2026-09-08T00:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-08",
+        "kstTimestamp": "2026-09-08T09:00:00+09:00",
+        "evidenceCache": "source-cache/openai-feed.html",
+        "precision": "timestamp-with-timezone"
+      },
+      "feedDescription": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
+      "reason": "Official RSS proves date and describes topic, but article HTTP 403 prevents body-claim verification. No bypass or denial retry. No post fabricated from feed description."
+    },
+    {
+      "id": "openai-ukraine",
+      "status": "hold-body-unavailable",
+      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "title": "Supporting independent journalism in Ukraine",
+      "publisher": "OpenAI",
+      "snapshot": {
+        "id": "openai-ukraine",
+        "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+        "retrievedAt": "2026-09-08T14:31:30.897032+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 403,
+        "error": "HTTP Error 403: Forbidden",
+        "rawHtml": "source-cache/openai-ukraine.html",
+        "normalizedText": "source-cache/openai-ukraine.txt",
+        "sha256": "86b5cdd31bca0346be0377558f8644d24471bfd0f3de0c03d45351e044884929"
+      },
+      "publication": {
+        "sourceTimestamp": "2026-09-07T00:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-07",
+        "kstTimestamp": "2026-09-07T09:00:00+09:00",
+        "evidenceCache": "source-cache/openai-feed.html",
+        "precision": "timestamp-with-timezone"
+      },
+      "feedDescription": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+      "reason": "Official RSS proves date and describes topic, but article HTTP 403 prevents body-claim verification. No bypass or denial retry. No post fabricated from feed description."
+    },
+    {
+      "id": "openai-alien",
+      "status": "hold-body-unavailable",
+      "url": "https://openai.com/index/an-alien-mind",
+      "title": "An Alien Mind",
+      "publisher": "OpenAI",
+      "snapshot": {
+        "id": "openai-alien",
+        "url": "https://openai.com/index/an-alien-mind",
+        "retrievedAt": "2026-09-08T14:31:30.897087+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 403,
+        "error": "HTTP Error 403: Forbidden",
+        "rawHtml": "source-cache/openai-alien.html",
+        "normalizedText": "source-cache/openai-alien.txt",
+        "sha256": "2566eaa6ef8a5e6cae534022e05834c5e312ff21c88da42d2a504810a2e29f5b"
+      },
+      "publication": {
+        "sourceTimestamp": "2026-09-06T09:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-06",
+        "kstTimestamp": "2026-09-06T18:00:00+09:00",
+        "evidenceCache": "source-cache/openai-feed.html",
+        "precision": "timestamp-with-timezone"
+      },
+      "feedDescription": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+      "reason": "Official RSS proves date and describes topic, but article HTTP 403 prevents body-claim verification. No bypass or denial retry. No post fabricated from feed description."
+    },
+    {
+      "id": "openai-research",
+      "status": "hold-body-unavailable",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "title": "Research acceleration: The view inside OpenAI",
+      "publisher": "OpenAI",
+      "snapshot": {
+        "id": "openai-research",
+        "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+        "retrievedAt": "2026-09-08T14:31:30.897130+00:00",
+        "method": "ordinary urllib HTTPS; no authentication, retries or bypass",
+        "status": 403,
+        "error": "HTTP Error 403: Forbidden",
+        "rawHtml": "source-cache/openai-research.html",
+        "normalizedText": "source-cache/openai-research.txt",
+        "sha256": "4f03545d73652a4e8bc8bf58052edf0b6e1b842d3efb967ff7af47d04571e546"
+      },
+      "publication": {
+        "sourceTimestamp": "2026-09-06T08:00:00+00:00",
+        "sourceTimezone": "UTC",
+        "kstDate": "2026-09-06",
+        "kstTimestamp": "2026-09-06T17:00:00+09:00",
+        "evidenceCache": "source-cache/openai-feed.html",
+        "precision": "timestamp-with-timezone"
+      },
+      "feedDescription": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+      "reason": "Official RSS proves date and describes topic, but article HTTP 403 prevents body-claim verification. No bypass or denial retry. No post fabricated from feed description."
+    }
+  ],
+  "dateCoverage": [
+    {
+      "date": "2026-09-06",
+      "accepted": 0,
+      "held": 2,
+      "state": "Official dated OpenAI items found but article bodies denied. Not a no-news finding."
+    },
+    {
+      "date": "2026-09-07",
+      "accepted": 2,
+      "held": 1,
+      "state": "Two Google announcements body verified; Ukraine journalism OpenAI item held."
+    },
+    {
+      "date": "2026-09-08",
+      "accepted": 3,
+      "held": 2,
+      "state": "Two timestamp-confirmed posts plus Mistral publisher-date-only post. Not an exhaustive whole-day survey."
+    }
+  ],
+  "searchLimitations": [
+    "Three generic date-specific WebSearch queries returned no results; primary RSS/index inspection recovered actual candidates. Search absence is not no news.",
+    "OpenAI RSS 200 but all five selected article bodies 403; access controls not bypassed.",
+    "Qwen index is a JavaScript shell without dated body evidence.",
+    "NVIDIA, Anthropic, GitHub and Cursor retrieved index windows had no selected September 6–8 items. This does not prove none exists.",
+    "Hugging Face first guessed bare slug returned 404; canonical organization URL in index was fetched successfully. This was a URL correction, not an access bypass.",
+    "Candidate review deliberately capped at ten unique events; Google small-business article visible in feed was outside selected shortlist.",
+    "Newly retrieved AlphaGenome and safety research posts were published after the previous report cutoff and before this run retrieval; they are not attributed to the earlier snapshot."
+  ],
+  "searchQueries": [
+    {
+      "query": "AI \"September 7, 2026\" announcement",
+      "results": 0,
+      "method": "WebSearch tool; returned zero result blocks"
+    },
+    {
+      "query": "AI \"September 6, 2026\" release",
+      "results": 0,
+      "method": "WebSearch tool; returned zero result blocks"
+    },
+    {
+      "query": "AI \"September 8, 2026\" Mistral announcement",
+      "results": 0,
+      "method": "WebSearch tool; returned zero result blocks"
+    }
+  ]
+}

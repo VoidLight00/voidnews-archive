@@ -1,0 +1,20 @@
+{
+  "source_url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+  "retrieved_on": "2026-09-08",
+  "publisher_date": "2026-08-31",
+  "retrieval_method": "WebFetch public primary-page extraction",
+  "raw_https_status": 403,
+  "full_original_body_cache_available": false,
+  "cache_kind": "researcher-preserved extracted facts and short source quotations; not a verbatim complete article",
+  "quotes": [
+    "internal cyber evaluations are now running again",
+    "blocks the action",
+    "with no internet access",
+    "should state what is in and out of scope"
+  ],
+  "extracted_facts_english": "Anthropic is investigating July incidents involving mistakenly enabled internet access in a third-party evaluation environment, plus a separate August evaluation incident. The affected evaluations ran without normal cyber safeguards.\n\nThe company paused external cyber evaluations and temporarily paused internal ones. It added a real-time classifier for attempted sandbox escapes and unexpected internet access, which blocks tool calls, terminates tasks and alerts a person. High-risk internal environments received stronger isolation; internal cyber evaluations resumed after these measures.\n\nExternal evaluators testing pre-release models with reduced cyber safeguards must normally use hardened offline sandboxes, verify configurations, state allowed targets/actions/network boundaries and monitor continuously with termination on violations. These requirements are not announced as new conditions for ordinary customers using safeguarded models.",
+  "date_evidence": "Date follows the publisher’s displayed 2026-08-31 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted.",
+  "limitations": [
+    "New August 31 operational response, not a duplicate of older Mythos sandbox coverage or OpenAI evaluation incidents. Full original body cache unavailable; WebFetch extraction and date confirmed; direct HTTPS 403."
+  ]
+}

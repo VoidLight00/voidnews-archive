@@ -384,12 +384,25 @@ export function checkAbSupporting(manifest, runtime, files, check, readText = re
 
 // This backfill's explicit publication window is not the whole registered week.
 // Exact instants use the Korean calendar; date-only evidence keeps publisher day.
-export function checkPublicationWindow(row, post, check) {
+// The window belongs to the manifest, not to this file. It stayed hard-coded while the
+// manifest covered one backfill; extending the reconciliation to a later range then meant
+// editing the checker, which is the wrong place for a data boundary. The original bounds
+// remain the default, so a manifest that does not declare a window behaves exactly as before.
+export const DEFAULT_BACKFILL_WINDOW = { start: '2026-08-26', end: '2026-09-08' };
+export function backfillWindow(manifest = {}, check = () => {}) {
+  const window = manifest.backfillWindow || DEFAULT_BACKFILL_WINDOW;
+  check(validDay(window.start) && validDay(window.end) && window.start <= window.end,
+    `invalid backfillWindow ${JSON.stringify(window)}`);
+  return window;
+}
+
+export function checkPublicationWindow(row, post, check, window = DEFAULT_BACKFILL_WINDOW) {
   if (row.classification !== 'new-backfill') return;
   const publication = row.publication || {};
   const exact = publication.precision === 'timestamp-with-timezone';
   const day = exact ? publication.kstDate : publication.publisherDate;
-  check(validDay(day) && day >= '2026-08-26' && day <= '2026-09-08', `${row.slug}: publication outside backfill window 2026-08-26..2026-09-08`);
+  check(validDay(day) && day >= window.start && day <= window.end,
+    `${row.slug}: publication outside backfill window ${window.start}..${window.end}`);
   const display = typeof post.date === 'string' ? post.date.match(/^(\d{1,2})\/(\d{1,2})(?:\s+(\d{1,2}):(\d{2}))?$/) : null;
   check(Boolean(display) && validDay(day) && Number(display[1]) === Number(day.slice(5, 7))
     && Number(display[2]) === Number(day.slice(8, 10)), `${row.slug}: display date differs from publication day`);
@@ -406,6 +419,7 @@ export function validate(manifest, runtime = loadRuntime()) {
   const failures = [];
   const check = (ok, message) => { if (!ok) failures.push(message); };
   const expected = expectedCounts(manifest, check);
+  const window = backfillWindow(manifest, check);
   const current = runtime.posts.filter(row => row.week in expected.weeks);
   const files = new Map(manifest.files.map(file => [file.path, file]));
   check(files.size === manifest.files.length, 'duplicate evidence paths');
@@ -481,7 +495,7 @@ export function validate(manifest, runtime = loadRuntime()) {
       if (evidence.expectedOriginalSha256) check(sha(text) === evidence.expectedOriginalSha256, `${row.slug}: original snapshot hash mismatch`);
     }
     const date = row.publication;
-    checkPublicationWindow(row, post, check);
+    checkPublicationWindow(row, post, check, window);
     check(validDay(date.publisherDate), `${row.slug}: invalid publisher date`);
     check(['publisher-date-only', 'timestamp-with-timezone'].includes(date.precision), `${row.slug}: unsupported date precision`);
     if (date.precision === 'publisher-date-only') {

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Archive: 2026 - GitHub Changelog</title>
+	<atom:link href="https://github.blog/changelog/feed/?paged=3" rel="self" type="application/rss+xml" />
+	<link>https://github.blog/changelog/page/3/</link>
+	<description>Updates, ideas, and inspiration from GitHub to help developers build and design software.</description>
+	<lastBuildDate>Mon, 31 Aug 2026 19:28:13 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1</generator>
+
+<image>
+	<url>https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32</url>
+	<title>Archive: 2026 - GitHub Changelog</title>
+	<link>https://github.blog/changelog/page/3/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">153214340</site>	<item>
+		<title>GitHub Copilot in VS Code, August 2026 releases</title>
+		<link>https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Mon, 31 Aug 2026 08:39:54 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases</guid>
+
+					<description><![CDATA[<p>This changelog covers VS Code v1.132 through v1.135, shipped throughout August 2026. These releases make it easier to organize agent sessions, review changes, and navigate long conversations. Agent Host, the&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases">GitHub Copilot in VS Code, August 2026 releases</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>This changelog covers VS Code <a href="https://aka.ms/VSCode/Release">v1.132 through v1.135</a>, shipped throughout August 2026.</p>
+<p>These releases make it easier to organize agent sessions, review changes, and navigate long conversations. Agent Host, the integrated browser, and dictation also get updates to support more ways of working in VS Code.</p>
+<h2 id="agent-sessions-and-workflows" id="agent-sessions-and-workflows" ><a class="heading-link" href="#agent-sessions-and-workflows">Agent sessions and workflows<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>The Agents window adds more ways to organize related chats, follow agent activity, and move between prompts and their file changes.</p>
+<ul>
+<li><strong>Arrange chats side by side:</strong> Keep multiple chats visible in horizontal or vertical groups to compare results or follow your agent&rsquo;s work, with the layout restored when you return to the session.</li>
+<li><strong>Open a side-conversation:</strong> Type <code>/btw</code> to open a side chat that shares the primary chat&rsquo;s context and prompt cache while it continues running.</li>
+<li><strong>Navigate the chat conversation:</strong> Use the prompt timeline control from the transcript gutter to easily navigate to specific prompts in chat and review the related file changes.</li>
+<li><strong>Install portable agent plugins:</strong> Install agent customizations from plugins that follow the Agent Plugins 1.0 standard across VS Code and other compatible agent clients.</li>
+<li><strong>Open the Agents window without GitHub sign-in:</strong> Enable the experimental setting to open the Agents window without GitHub sign-in when Claude is configured with an API key.</li>
+<li><strong>Switch model providers in Claude sessions:</strong> Choose between models from your Anthropic subscription and Copilot subscription at any time.</li>
+<li><strong>Continue external agent sessions:</strong> View and continue recent Copilot or Claude agent sessions created in other applications from the Sessions list in VS Code.</li>
+<li><strong>Connect windows to the same session:</strong> Use the Agent Host to connect to the same agent session from multiple VS Code windows.</li>
+<li><strong>Get a second opinion:</strong> Try the experimental <code>/rubber-duck</code> command in a Copilot Agent Host session to ask a complementary model to surface missed details and edge cases.</li>
+<li><strong>Review session details next to chat:</strong> Use the default single-pane layout to open session details and editors in one side pane, with diffs that adapt to the available width.</li>
+</ul>
+<p>See it in action in our <a href="https://www.youtube.com/watch?v=k91ejc3G1YM">Agent Host introduction YouTube video</a>.</p>
+
+		<div class="mod-vh position-relative" style="height: 0; padding-bottom: calc((9 / 16)*100%);">
+			<iframe loading="lazy" class="position-absolute top-0 left-0 width-full height-full" src="https://www.youtube.com/embed/k91ejc3G1YM?version=3&#038;rel=1&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;fs=1&#038;hl=en-US&#038;autohide=2&#038;wmode=transparent" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+		</div>
+<h2 id="chat-and-review" id="chat-and-review" ><a class="heading-link" href="#chat-and-review">Chat and review<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Chat updates make it easier to find information in long conversations and review changes in agent-generated content.</p>
+<ul>
+<li><strong>Find text across a conversation:</strong> Avoid endless scrolling to find a search term with text search across the complete chat transcript with options for case matching, whole words, and regular expressions.</li>
+<li><strong>Keep the current prompt visible:</strong> Don&rsquo;t lose track of which prompt a response belongs to with chat sticky scroll, which keeps the current prompt pinned while you scroll through a long conversation.</li>
+<li><strong>Review rendered Markdown diffs:</strong> Combine viewing diffs and editing Markdown in a single experience with the experimental hybrid Markdown editor.</li>
+<li><strong>Switch editor types from the breadcrumb bar:</strong> Switch between regular and diff editors from the breadcrumb bar in the Agents window.</li>
+<li><strong>Resize terminal output in chat:</strong> Expanded terminal output in Chat now reflows as you resize the view, making it easier to read at different widths.</li>
+<li><strong>View token usage by model:</strong> Hover over the response footer to see input, cached input, and output token usage for each model in a chat turn.</li>
+</ul>
+<p><video loop controls autoplay muted width="100%" src="https://github.com/user-attachments/assets/c0806aa5-5cbd-4bc9-b442-9e9de8dffa3e"></video></p>
+<h2 id="integrated-browser" id="integrated-browser" ><a class="heading-link" href="#integrated-browser">Integrated browser<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>The integrated browser makes it easier to give agents feedback on web pages and see local HTML changes as you work.</p>
+<ul>
+<li><strong>Comment on web page elements:</strong> Select and annotate several HTML elements on a page to provide targeted UI feedback, which the agent can then address in batch.</li>
+<li><strong>Reload HTML files automatically:</strong> See saved changes and agent edits immediately as local HTML files automatically reload when they change on disk.</li>
+<li><strong>Open HTML files in the browser by default:</strong> If you often preview local HTML files instead of editing them, you can now set the integrated browser as their default editor by configuring the editor associations setting.</li>
+</ul>
+<p><video loop controls autoplay muted width="100%" src="https://github.com/user-attachments/assets/77221f51-b5e3-4aea-82af-a206aea11739"></video></p>
+<h2 id="dictation" id="dictation" ><a class="heading-link" href="#dictation">Dictation<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Built-in dictation now supports multiple languages, project-specific instructions, and shell-aware cleanup for terminal commands.</p>
+<ul>
+<li><strong>Dictate in multiple languages:</strong> Dictate in multiple languages with an on-device model. Choose your language or let VS Code automatically detect it.</li>
+<li><strong>Customize transcript cleanup:</strong> Add user-level or workspace-level instructions so dictation follows your project terminology and formatting preferences.</li>
+<li><strong>Improve dictation for terminal commands:</strong> Shell-aware cleanup preserves command syntax instead of inserting spoken punctuation literally.</li>
+</ul>
+<p><video loop controls autoplay muted width="100%" src="https://github.com/user-attachments/assets/9c154f4b-5bda-4abe-8a87-b8c1c5765562"></video></p>
+<p>Browse the full release notes for <a href="https://aka.ms/VSCode/Release">VS Code 1.132, 1.133, 1.134 and 1.135</a> to explore everything that&rsquo;s new.</p>
+<p>Download the latest version of <a href="https://code.visualstudio.com">VS Code</a> and, as always, happy coding!</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases">GitHub Copilot in VS Code, August 2026 releases</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98559</post-id>	</item>
+		<item>
+		<title>GitHub Copilot in Visual Studio — August update</title>
+		<link>https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Fri, 28 Aug 2026 20:24:20 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2</guid>
+
+					<description><![CDATA[<p>August 2026 brought more control over how GitHub Copilot reasons, which models you use, how teams share specialized agents, and when you ask for a code review. Highlights Here&#8217;s what&#8217;s&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2">GitHub Copilot in Visual Studio — August update</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>August 2026 brought more control over how GitHub Copilot reasons, which models you use, how teams share specialized agents, and when you ask for a code review.</p>
+<h2 id="highlights" id="highlights" ><a class="heading-link" href="#highlights">Highlights<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Here&rsquo;s what&rsquo;s new with GitHub Copilot in Visual Studio 2026. Check the Insiders channel for the latest:</p>
+<ul>
+<li><strong>Organization-level custom agents</strong>: GitHub organization and enterprise owners can publish custom agents for use across repositories in their organization. Visual Studio automatically detects these agents and shows both their descriptions and organization source in the agent picker. This functionality requires a GitHub organization.</li>
+<li><strong>Access your Copilot usage</strong>: Open the context window from the Copilot prompt box, then select <strong>View all Copilot usage</strong> to see your full plan details. Refined notifications also make it clearer when you are approaching a limit and what options are available.</li>
+<li><strong>Adjust model thinking effort to match your task</strong>: Supported models now offer <strong>Low</strong>, <strong>Medium</strong>, and <strong>High</strong> thinking effort controls. Use lower effort for straightforward work or higher effort for complex debugging, algorithms, and architecture decisions. This enables you to balance reasoning depth with token usage.</li>
+<li><strong>Better model control</strong>: Pin favorite models, collapse models you use less often, and select <strong>Manage models</strong> for a detailed view. The management view includes model capabilities, context window sizes, cost information, and controls for Copilot and custom models.</li>
+<li><strong>Review changes and commits with the Git agent</strong>: Ask the Git agent to review uncommitted changes or commits before you open a pull request. Findings appear inline in the editor with a navigable list in <strong>Git Changes</strong>. You can continue the Copilot Chat conversation to understand or address each suggestion. Reviews work with GitHub and Azure DevOps repositories.</li>
+</ul>
+<p>This update is available to users on all <a href="https://docs.github.com/copilot/get-started/plans">GitHub Copilot plans</a>, including Copilot Free, Student, Pro, Pro+, Max, Business, and Enterprise.</p>
+<p>To learn more about what&rsquo;s new, check out the <a href="https://devblogs.microsoft.com/visualstudio/visual-studio-august-update-work-smarter-across-models-and-branches">Visual Studio blog</a> and <a href="https://learn.microsoft.com/visualstudio/releases/2026/release-notes">release notes</a>.</p>
+<h2 id="whats-next-for-copilot-in-visual-studio" id="whats-next-for-copilot-in-visual-studio" ><a class="heading-link" href="#whats-next-for-copilot-in-visual-studio">What&rsquo;s next for Copilot in Visual Studio<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Stay up to date on the latest Copilot features by following the <a href="https://devblogs.microsoft.com/visualstudio">Visual Studio blog</a>, where you&rsquo;ll find roadmap updates and opportunities to share feedback.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-28-github-copilot-in-visual-studio-august-update-2">GitHub Copilot in Visual Studio — August update</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98541</post-id>	</item>
+		<item>
+		<title>GitHub Copilot weekly releases — August 24</title>
+		<link>https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Fri, 28 Aug 2026 20:13:22 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24</guid>
+
+					<description><![CDATA[<p>This week&#8217;s updates give you more control over how Copilot runs, from team sessions in Slack and Teams to customization across the app, CLI, and your IDE. GitHub Copilot in&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24">GitHub Copilot weekly releases — August 24</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>This week&rsquo;s updates give you more control over how Copilot runs, from team sessions in Slack and Teams to customization across the app, CLI, and your IDE.</p>
+<h3 id="github-copilot-in-slack-and-microsoft-teams" id="github-copilot-in-slack-and-microsoft-teams" ><a class="heading-link" href="#github-copilot-in-slack-and-microsoft-teams">GitHub Copilot in Slack and Microsoft Teams<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>Turn team conversations into shared agent sessions. Mention @GitHub to investigate problems, plan work, and make changes your team can follow and guide together.</li>
+</ul>
+<p><img decoding="async" alt="Screenshot of GitHub Copilot in Slack" src="https://github.com/user-attachments/assets/a051e30f-c310-433d-8f4e-97b383f7c8d9"></p>
+<h3 id="github-copilot-app" id="github-copilot-app" ><a class="heading-link" href="#github-copilot-app">GitHub Copilot app<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>The <strong>Customize</strong> tab is now generally available, bringing MCP servers, plugins, skills, and canvases together in one place.</li>
+<li>Turn Azure DevOps issues and pull requests into Copilot sessions from the <strong>Customize</strong> tab.</li>
+<li>Work in your Linux environment with experimental support for Windows Subsystem for Linux (WSL).</li>
+<li>Split and move any tab to keep related work side by side.</li>
+<li>Send any browser preview straight to your external browser from the tab&rsquo;s context menu.</li>
+</ul>
+<p>Try the <a href="https://github.com/features/ai/github-app?utm_source=app-download&amp;utm_medium=changelog&amp;utm_campaign=weekly-copilot-launches-aug-2026">Copilot app</a>.</p>
+<h3 id="github-copilot-cli" id="github-copilot-cli" ><a class="heading-link" href="#github-copilot-cli">GitHub Copilot CLI<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>Start every new session with your preferred execution and permission modes using <code>defaultMode</code> and <code>defaultPermissionMode</code>.</li>
+<li>Manage plugins, MCP servers, and skills more easily with new experiences in <code>/plugin</code>, <code>/mcp</code>, and <code>/skills</code>.</li>
+<li>Pick up where you left off by restoring sessions that did not exit cleanly, including sessions interrupted mid-turn.</li>
+<li>Get significantly faster performance now that Copilot CLI runs on a native Rust runtime, while its terminal interface remains built in TypeScript.</li>
+</ul>
+<p>Install the <a href="https://github.com/features/copilot/cli?utm_source=cli-install&amp;utm_medium=changelog&amp;utm_campaign=weekly-copilot-launches-aug-2026">Copilot CLI</a>.</p>
+<h3 id="github-copilot-for-jetbrains" id="github-copilot-for-jetbrains" ><a class="heading-link" href="#github-copilot-for-jetbrains">GitHub Copilot for JetBrains<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>Apply consistent enterprise controls for Copilot in JetBrains, including plugins, MCP servers, telemetry, and agent permission modes.</li>
+</ul>
+<h3 id="vs-code-1-135-release-updates" id="vs-code-1-135-release-updates" ><a class="heading-link" href="#vs-code-1-135-release-updates">VS Code 1.135 release updates<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>Continue recent Copilot or Claude agent sessions from other applications in VS Code.</li>
+<li>Get a second opinion from a complementary model to surface missed details and edge cases.</li>
+<li>Stay focused on your work with a new single-pane Agents layout, simpler session controls, and session details that are easier to find.</li>
+<li>See detailed chat usage by model for every chat turn.</li>
+</ul>
+<p>Explore everything that&rsquo;s new with VS Code 1.135 in the full <a href="https://aka.ms/VSCode/135">release notes</a>.</p>
+<h3 id="github-copilot-for-visual-studio" id="github-copilot-for-visual-studio" ><a class="heading-link" href="#github-copilot-for-visual-studio">GitHub Copilot for Visual Studio<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>Pin favorite models, hide unused ones, compare capabilities and costs, and adjust reasoning effort for each task.</li>
+<li>Share custom agents across your organization to standardize workflows and improve discovery.</li>
+<li>View Copilot plan consumption and manage premium model usage before reaching limits.</li>
+<li>Review uncommitted changes or individual commits with the Git agent before opening a pull request.</li>
+</ul>
+<p><img decoding="async" alt="Screenshot of Visual Studio and Git" src="https://github.com/user-attachments/assets/4e5b6770-fe88-417b-be61-a86bbf3d8bdd"></p>
+<p>Install the latest version of <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a> with GitHub Copilot.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24">GitHub Copilot weekly releases — August 24</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98540</post-id>	</item>
+		<item>
+		<title>Upcoming changes to GitHub Copilot policies and billing</title>
+		<link>https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Fri, 28 Aug 2026 11:37:19 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-27-upcoming-changes-to-github-copilot-policies-and-billing</guid>
+
+					<description><![CDATA[<p>To provide a strong, consistent Copilot experience, we&#8217;re making three separate, upcoming changes to Copilot policies and billing. Please review the upcoming updates to understand what may impact you. Reopening&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing">Upcoming changes to GitHub Copilot policies and billing</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>To provide a strong, consistent Copilot experience, we&rsquo;re making three separate, upcoming changes to Copilot policies and billing. Please review the upcoming updates to understand what may impact you.</p>
+<h2 id="reopening-copilot-business-and-enterprise-signups-with-billing-updates" id="reopening-copilot-business-and-enterprise-signups-with-billing-updates" ><a class="heading-link" href="#reopening-copilot-business-and-enterprise-signups-with-billing-updates">Reopening Copilot Business and Enterprise signups with billing updates<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Starting September 1, 2026, GitHub will start reenabling sign-ups for new Copilot Business and Copilot Enterprise customers paying by credit card or PayPal. To improve availability and reliability of Copilot services, we&rsquo;re strengthening account vetting and updating billing experiences for customers who pay by credit card or PayPal.</p>
+<h3 id="whats-changing" id="whats-changing" ><a class="heading-link" href="#whats-changing">What&rsquo;s changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>All new Copilot Business or Copilot Enterprise seat assignments will require payment for each seat before users gain Copilot access.</li>
+<li>At the start of the next billing cycle, all Copilot Business and Copilot Enterprise seats assigned will incur an upfront charge. This will apply to existing Copilot Business and Copilot Enterprise customers with a credit card or paypal payment method starting October 1, 2026.</li>
+<li>If you exceed your included usage, additional payment may be required for you and your users to continue using Copilot.</li>
+<li>Included usage may be prorated across the month to align with the seat cost proration. </li>
+</ul>
+<h3 id="whats-not-changing" id="whats-not-changing" ><a class="heading-link" href="#whats-not-changing">What&rsquo;s not changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>Copilot Business and Copilot Enterprise prices are <strong>not</strong> changing.</li>
+<li>Revoking a seat does not result in a prorated refund. The removal will be reflected in your next monthly billing cycle.</li>
+<li>All seats added in the middle of a billing cycle will continue to be prorated from date of assignment to end of bill cycle. </li>
+<li>Additional usage exceeding included allowances will remain available for purchase.</li>
+<li>Spend controls, usage tracking, and the option to purchase additional AI credits will remain available.</li>
+</ul>
+<p>Existing Copilot Business and Copilot Enterprise customers can expect these billing updates to take effect starting October 1, 2026.</p>
+<p>Fully canceling Copilot and returning later may trigger updated account vetting and billing behaviors.</p>
+<p>For more information, read our <a href="https://docs.github.com/copilot/get-started/quickstart">Copilot Quick Start documentation</a>.</p>
+<h2 id="copilot-cloud-agent-copilot-chat-on-github-com-and-copilot-chat-in-github-mobile-are-converging-to-a-single-experience-and-policy" id="copilot-cloud-agent-copilot-chat-on-github-com-and-copilot-chat-in-github-mobile-are-converging-to-a-single-experience-and-policy" ><a class="heading-link" href="#copilot-cloud-agent-copilot-chat-on-github-com-and-copilot-chat-in-github-mobile-are-converging-to-a-single-experience-and-policy">Copilot cloud agent, Copilot Chat on github.com, and Copilot Chat in GitHub Mobile are converging to a single experience and policy<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>No earlier than September 28th, 2026, GitHub will relaunch Copilot Chat on github.com, Copilot Chat in GitHub Mobile, and GitHub Copilot cloud agent as a single, unified Copilot experience.</p>
+<h3 id="whats-changing" id="whats-changing" ><a class="heading-link" href="#whats-changing">What&rsquo;s changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<ul>
+<li>The separate policies for these experiences will be replaced by a single policy. </li>
+<li>This unified Copilot experience will be enabled by default after launch.  </li>
+<li>Cloud agent will leverage Sandbox to provide a faster cloud experience. </li>
+<li>Copilot on github.com will fully migrate to the agent sessions experience, previously used only by Copilot cloud agent. As a result, chat data will be retained for the life of the account instead of 28 days, aligning with our existing Copilot cloud agent experience.</li>
+</ul>
+<h3 id="stay-opted-in" id="stay-opted-in" ><a class="heading-link" href="#stay-opted-in">Stay opted in<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>No changes are required to keep Copilot available on github.com and GitHub Mobile. However, if you opt out of the unified experience, you or your teams will lose access to Copilot on github.com and GitHub Mobile after the new experience launches.</p>
+<p>Business and enterprise administrators should review the policy before September 28th, 2026 and confirm that it reflects how they want to manage Copilot access for their teams.</p>
+<p>To update the policy:</p>
+<ol>
+<li>Go to Copilot settings on github.com.</li>
+<li>Select <strong>Copilot cloud agent (coming soon)</strong>.</li>
+<li>Set the policy option.</li>
+</ol>
+<h2 id="copilot-code-review-default-is-changing-to-balanced-effort-level" id="copilot-code-review-default-is-changing-to-balanced-effort-level" ><a class="heading-link" href="#copilot-code-review-default-is-changing-to-balanced-effort-level">Copilot code review default is changing to Balanced effort level<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Following the release of Copilot code review effort levels, the default review effort level for GitHub Copilot code review is changing from <strong>Lite</strong> to <strong>Balanced</strong>.</p>
+<h3 id="how-review-effort-level-defaults-work" id="how-review-effort-level-defaults-work" ><a class="heading-link" href="#how-review-effort-level-defaults-work">How review effort level defaults work<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>You can set a default review effort level at the organization and repository levels:</p>
+<ul>
+<li>The organization default applies to all repositories owned by the organization that haven&rsquo;t selected their own review effort level.</li>
+<li>The repository default applies to all automatically requested reviews within the repository. For manually requested reviews, you can select which effort level is used from the &ldquo;Reviewers&rdquo; bar in the pull request.</li>
+</ul>
+<h3 id="balanced-is-becoming-the-default-effort-level" id="balanced-is-becoming-the-default-effort-level" ><a class="heading-link" href="#balanced-is-becoming-the-default-effort-level">Balanced is becoming the default effort level<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>For existing and new repositories and organizations using Copilot code review, the review effort value of <strong>Default</strong> uses <strong>Balanced</strong> starting September 28th, 2026.</p>
+<p>If you&rsquo;d prefer to keep <strong>Lite</strong> as your default experience, change your review effort level away from <strong>Default</strong> and explicitly select <strong>Lite</strong> in your repository or organization settings before September 28th, 2026. We&rsquo;ll respect that selection and won&rsquo;t switch your default to <strong>Balanced</strong>.</p>
+<p>Review the <a href="https://docs.github.com/copilot/concepts/agents/code-review#review-effort-level">Copilot code review documentation</a> to understand how this may affect your usage.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing">Upcoming changes to GitHub Copilot policies and billing</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98523</post-id>	</item>
+		<item>
+		<title>Better label management on issues is generally available</title>
+		<link>https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2026 23:33:22 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available</guid>
+
+					<description><![CDATA[<p>We&#8217;re making it easier to keep labels organized and find the right one, especially in repositories with long and growing label lists. Suggested Labels You can now find the right&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available">Better label management on issues is generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>We&rsquo;re making it easier to keep labels organized and find the right one, especially in repositories with long and growing label lists.</p>
+<h2 id="suggested-labels" id="suggested-labels" ><a class="heading-link" href="#suggested-labels">Suggested Labels<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p><img fetchpriority="high" decoding="async" width="2400" height="1260" alt="Image" src="https://github.com/user-attachments/assets/1e021a34-63b0-4f5a-803e-97939c9f51b3"></p>
+<p>You can now find the right label faster with suggestions based on what a repository has been using recently. You can also see Recent labels based on your own usage, making it easier to label issues without searching through the full list.</p>
+<h2 id="archive-labels" id="archive-labels" ><a class="heading-link" href="#archive-labels">Archive Labels<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p><video loop controls autoplay muted width="100%" src="https://github.com/user-attachments/assets/eb6bec92-a8b2-4e47-8476-1b6c642873e3"><br>
+</video></p>
+<p>You can now archive labels you no longer use without losing their history on existing issues. This keeps the label picker focused on active labels, making it faster and easier to find the right one. You can unarchive a label at any time from the repository Labels page.</p>
+<p>Join the discussion within <a href="https://github.com/orgs/community/discussions/206021">GitHub Community</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-label-archiving-is-generally-available">Better label management on issues is generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[projects &amp; issues]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98531</post-id>	</item>
+		<item>
+		<title>Copilot code review: Resolution reasons and expanded capabilities</title>
+		<link>https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2026 22:46:04 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities</guid>
+
+					<description><![CDATA[<p>Copilot code review can now review two types of pull requests it didn&#8217;t cover before: Reviews requested automatically on pull requests authored by bots, including Copilot cloud agent Very large&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities">Copilot code review: Resolution reasons and expanded capabilities</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Copilot code review can now review two types of pull requests it didn&rsquo;t cover before:</p>
+<ul>
+<li>Reviews requested automatically on pull requests authored by bots, including Copilot cloud agent</li>
+<li>Very large pull requests</li>
+</ul>
+<p>Additionally, you can now submit the reason for why you&rsquo;re resolving a particular Copilot code review comment.</p>
+<h2 id="%f0%9f%a4%96-expanded-capabilities" id="%f0%9f%a4%96-expanded-capabilities" ><a class="heading-link" href="#%f0%9f%a4%96-expanded-capabilities">&#129302; Expanded capabilities<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<h3 id="pull-requests-authored-by-bots" id="pull-requests-authored-by-bots" ><a class="heading-link" href="#pull-requests-authored-by-bots">Pull requests authored by bots<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>When a pull request is authored by a bot and requested automatically, there&rsquo;s no Copilot-licensed account to attribute the review to. With the &ldquo;Allow members without a Copilot license to use Copilot code review in GitHub.com&rdquo; policy enabled, Copilot code review can now review these pull requests and bill the usage directly to your organization. To learn more, see <a href="https://docs.github.com/copilot/concepts/agents/code-review#copilot-code-review-without-a-copilot-license">Copilot code review without a Copilot license</a>.</p>
+<h3 id="copilot-cloud-agent-pull-requests" id="copilot-cloud-agent-pull-requests" ><a class="heading-link" href="#copilot-cloud-agent-pull-requests">Copilot cloud agent pull requests<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Previously, when Copilot code review was automatically requested due to automatic review settings on pull requests authored by Copilot cloud agent, Copilot code review would fall back to a limited experience. Copilot code review can now give pull requests opened by Copilot cloud agent a full agentic review.</p>
+<h3 id="large-pull-requests" id="large-pull-requests" ><a class="heading-link" href="#large-pull-requests">Large pull requests<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Copilot code review previously had a 300 file or 20,000 lines of code limit on the size of a pull request it could review. This limitation no longer applies.</p>
+<h2 id="%e2%98%91%ef%b8%8f-comment-resolution-reasons" id="%e2%98%91%ef%b8%8f-comment-resolution-reasons" ><a class="heading-link" href="#%e2%98%91%ef%b8%8f-comment-resolution-reasons">&#9745;&#65039; Comment resolution reasons<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>You can now specify the reason for resolving a Copilot code review comment by either selecting &ldquo;Addressed&rdquo;, &ldquo;Won&rsquo;t fix&rdquo;, or &ldquo;Incorrect&rdquo;, after clicking the new dropdown next to the &ldquo;Resolve conversation&rdquo; button, located at the bottom of any Copilot code review comment. Selecting one of these options provides valuable feedback to the product team and helps improve the product.</p>
+<p><img decoding="async" alt="screenshot of resolution reasons Addressed, Won't fix, and Incorrect" src="https://github.com/user-attachments/assets/cf1701c4-1565-4aff-b802-575d080718c3"></p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-copilot-code-review-resolution-reasons-and-expanded-capabilities">Copilot code review: Resolution reasons and expanded capabilities</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98527</post-id>	</item>
+		<item>
+		<title>GitHub Classroom deprecated</title>
+		<link>https://github.blog/changelog/2026-08-27-github-classroom-deprecated</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2026 22:42:40 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-27-github-classroom-deprecated</guid>
+
+					<description><![CDATA[<p>As of August 28, 2026, GitHub Classroom is now deprecated in favor of our selected partner solutions. The GitHub Classroom website, APIs, and related services have now been decommissioned. However,&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-github-classroom-deprecated">GitHub Classroom deprecated</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>As of August 28, 2026, GitHub Classroom is now deprecated in favor of our selected partner solutions. The GitHub Classroom website, APIs, and related services have now been decommissioned. However, any GitHub user accounts, repositories, and organizations created to work with Classroom are not affected. Some GitHub Classroom data (e.g., classroom and assignment names, tests defined outside of repositories, and LTI integrated rosters) will be permanently deleted in accordance with GitHub&rsquo;s data retention policies.</p>
+<p>This completes the transition process we announced on May 26.</p>
+<p>For more information about this transition and recommended partner solutions, please refer to the <a href="https://gh.io/classroom-sunset">GitHub Educator Community Discussion</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-github-classroom-deprecated">GitHub Classroom deprecated</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Retired]]></category>
+<category domain="changelog-label"><![CDATA[community engagement]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98526</post-id>	</item>
+		<item>
+		<title>Actions retention will cover checks, workflow runs, and statuses</title>
+		<link>https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2026 21:50:39 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses</guid>
+
+					<description><![CDATA[<p>Starting October 1, 2026, checks, workflow runs, and statuses will be governed by the same Actions retention setting that already controls how long artifacts and logs are kept, with a&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses">Actions retention will cover checks, workflow runs, and statuses</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Starting October 1, 2026, checks, workflow runs, and statuses will be governed by the same Actions retention setting that already controls how long artifacts and logs are kept, with a default of 90 days. Until now, checks, workflow runs, and statuses were retained for 400+ days regardless of your retention configuration. After this change, they will automatically be cleaned up once they pass the artifact and log retention period configured for your repository, organization, or enterprise.</p>
+<p>This change reduces the amount of stale data stored across GitHub Actions, helping keep checks, workflow runs, and statuses fast and reliable for everyone.</p>
+<h2 id="whats-changing" id="whats-changing" ><a class="heading-link" href="#whats-changing">What&rsquo;s changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<ul>
+<li><strong>Checks, workflow runs, and statuses will follow your Actions retention setting.</strong> They will be cleaned up once they exceed your configured <a href="https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-artifact-and-log-retention-period-for-a-repository">artifact and log retention period</a>, instead of sticking around for 400+ days.</li>
+<li><strong>The retention setting now has a broader scope.</strong> The setting label in the UI will be updated to read &ldquo;Check, workflow run, status, artifact and log retention&rdquo; to reflect that it now governs all five.</li>
+<li><strong>Retention caps still apply.</strong> A repository can raise its retention only up to the cap configured at the organization and enterprise level. For public repositories, the maximum retention for checks, workflow runs, and statuses is 90 days, matching the existing limit for artifacts and logs.</li>
+<li><strong>The change is not retroactive.</strong> Adjusting your retention setting will not restore data that was previously evicted due to a retention policy. This matches how artifact and log retention behaves today.</li>
+</ul>
+<h2 id="billing-and-storage-implications" id="billing-and-storage-implications" ><a class="heading-link" href="#billing-and-storage-implications">Billing and storage implications<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Artifacts and logs count toward your <a href="https://docs.github.com/billing/concepts/product-billing/github-actions#how-storage-billing-works">billable GitHub Actions storage</a>. Because this change cleans up data once it passes your retention period, repositories that previously kept artifacts and logs around longer than their configured setting may see a reduction in billable Actions storage usage.</p>
+<p>Keep this in mind when you review your retention setting:</p>
+<ul>
+<li>Lowering your retention period removes artifacts and logs sooner, which can reduce your Actions storage costs.</li>
+<li>Raising your retention period keeps artifacts and logs available longer, which may increase your billable Actions storage. Checks, workflow run, and statuses metadata are not billed for storage, but the artifacts and logs associated with them are.</li>
+</ul>
+<h2 id="what-you-need-to-do" id="what-you-need-to-do" ><a class="heading-link" href="#what-you-need-to-do">What you need to do<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>For most repositories, no action is required. Starting on October 1, checks, workflow runs, and statuses will be cleaned up according to the retention setting you already have configured.</p>
+<p>To prepare:</p>
+<ul>
+<li><strong>Review your Actions retention setting</strong> for your repository, organization, or enterprise before October 1, 2026. Confirm it reflects how long you need checks, workflow runs, and statuses to remain available.</li>
+<li><strong>Increase the retention period if you need a longer window</strong>, up to the maximum allowed by your organization and enterprise caps (90 days for public repositories). Note that a longer retention period keeps artifacts and logs longer and may increase your billable Actions storage.</li>
+<li><strong>Export or archive anything you need to keep</strong> beyond your configured retention period, since older checks, workflow runs, and statuses will be automatically removed once this change takes effect.</li>
+</ul>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses">Actions retention will cover checks, workflow runs, and statuses</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Retired]]></category>
+<category domain="changelog-label"><![CDATA[actions]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98515</post-id>	</item>
+		<item>
+		<title>Close all open contributions authored by a blocked user</title>
+		<link>https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2026 16:30:52 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user</guid>
+
+					<description><![CDATA[<p>You can now automatically close all open issues, discussions, and pull requests authored by a user when you block them from your personal account or organization. To use this option,&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user">Close all open contributions authored by a blocked user</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>You can now automatically close all open issues, discussions, and pull requests authored by a user when you block them from your personal account or organization.</p>
+<p>To use this option, select <strong>Close content authored by this user</strong> in the block dialog. You&rsquo;ll see it whenever you block a user, including from an issue or pull request comment, or from <strong>Settings</strong> &rarr; <strong>Moderation</strong> &rarr; <strong>Blocked users</strong>.</p>
+<p>We&rsquo;d love to hear your feedback. Leave your questions or thoughts in our <a href="https://github.com/orgs/community/discussions/205207">Community discussion</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-27-close-all-open-contributions-authored-by-a-blocked-user">Close all open contributions authored by a blocked user</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[collaboration tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98507</post-id>	</item>
+		<item>
+		<title>Enterprise-managed settings now support autoUpdate for plugin marketplaces</title>
+		<link>https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Thu, 27 Aug 2026 01:52:19 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces</guid>
+
+					<description><![CDATA[<p>You can now opt individual plugin marketplaces into automatic updates by setting autoUpdate: true on an extraKnownMarketplaces entry in enterprise managed settings. Supported clients automatically check the marketplace and update&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces">Enterprise-managed settings now support autoUpdate for plugin marketplaces</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>You can now opt individual plugin marketplaces into automatic updates by setting <code>autoUpdate: true</code> on an <code>extraKnownMarketplaces</code> entry in enterprise managed settings.</p>
+<p>Supported clients automatically check the marketplace and update installed plugins sourced from it, reducing manual maintenance for organization customizations. The marketplace must still be permitted by the effective <code>strictKnownMarketplaces</code> allowlist.</p>
+<p>This capability is generally available with Copilot Business and Copilot Enterprise in the GitHub Copilot app, Copilot CLI, and Visual Studio Code.</p>
+<p>Learn more in <a href="https://docs.github.com/enterprise-cloud@latest/copilot/reference/enterprise-administrators/enterprise-managed-settings">our docs about enterprise managed settings</a>, or join the discussion in the <a href="https://github.com/orgs/community/discussions/199139">GitHub Community</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces">Enterprise-managed settings now support autoUpdate for plugin marketplaces</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[client apps]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98496</post-id>	</item>
+	</channel>
+</rss>

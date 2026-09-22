@@ -1,0 +1,1165 @@
+[
+  {
+    "source": "/tmp/voidnews-industry-cache/0140ac0a1e23b2d5d014.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/0140ac0a1e23b2d5d014.adjudication.txt",
+    "sha256": "f7d96879784a15bc9770711a823599c2d65d30fbe0141933601dbebf69cbf809",
+    "bytes": 10149,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/0140ac0a1e23b2d5d014.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/0140ac0a1e23b2d5d014.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/0140ac0a1e23b2d5d014.raw",
+    "sha256": "53dd703d6d6438b705f71fb241c678d3b0faac768ca88e26c55a99689380c645",
+    "bytes": 174548,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/0140ac0a1e23b2d5d014.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/0a5acc7193703e95f9cd.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/0a5acc7193703e95f9cd.adjudication.txt",
+    "sha256": "ed6a67f635608940ea1272857c9e38a9710aa3693f99d404bbf47776738ad37d",
+    "bytes": 6772,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/0a5acc7193703e95f9cd.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/0a5acc7193703e95f9cd.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/0a5acc7193703e95f9cd.raw",
+    "sha256": "930e586e3b4f029ed11904ed6f29b323818e8e898f6cc10ad9d3b5490b35c5fc",
+    "bytes": 202327,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/0a5acc7193703e95f9cd.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/12abc1a8098b756ecd37.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/12abc1a8098b756ecd37.adjudication.txt",
+    "sha256": "1d138a556d32c11c81bfdd091f015bf9a079e21a213603827d9f99f0ed70dceb",
+    "bytes": 10982,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/12abc1a8098b756ecd37.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/12abc1a8098b756ecd37.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/12abc1a8098b756ecd37.raw",
+    "sha256": "e56d510100411d2cb65ea4d33dc8575de2ee2791e915faabcf7093976df79794",
+    "bytes": 1276457,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/12abc1a8098b756ecd37.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/1484132ab400f4399f4d.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/1484132ab400f4399f4d.adjudication.txt",
+    "sha256": "73607aefc39c625ba9eb30b2cc350699f5e86578ca6ac4aa93308fc906e90d0c",
+    "bytes": 15142,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/1484132ab400f4399f4d.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/1484132ab400f4399f4d.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/1484132ab400f4399f4d.raw",
+    "sha256": "309c1adae25e3a96b9fe2913ac7583e47ccf43c399fdf34335e1d2a5efa70697",
+    "bytes": 1286432,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/1484132ab400f4399f4d.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/191d5b9bc8af1ca3baca.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/191d5b9bc8af1ca3baca.adjudication.txt",
+    "sha256": "a17485b23c7ed00fb2ad0788f3a51b4e2c51e1b400b24c5c3f6937b9e2de6297",
+    "bytes": 12001,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/191d5b9bc8af1ca3baca.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/191d5b9bc8af1ca3baca.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/191d5b9bc8af1ca3baca.raw",
+    "sha256": "a3ceca7774ba5df07121a9a18cad8f954b56a1ef5663e67185613296c2997a10",
+    "bytes": 173712,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/191d5b9bc8af1ca3baca.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/267f06dd2d6029d15630.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/267f06dd2d6029d15630.adjudication.txt",
+    "sha256": "5d80875730985df869ec093149b26db06e657d98a5797d3488230893fd95f7f4",
+    "bytes": 18191,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/267f06dd2d6029d15630.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/267f06dd2d6029d15630.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/267f06dd2d6029d15630.raw",
+    "sha256": "cb4d480c6277ed4531424c23fa243d15c9a392f1a87e7eb77f543be83b2a8734",
+    "bytes": 1288703,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/267f06dd2d6029d15630.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/294ac6d01ed0df9f5c64.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/294ac6d01ed0df9f5c64.adjudication.txt",
+    "sha256": "4c08ee345b42b8de7d4fe4535635aa44ebe95eb43a366329676e0e62c703d033",
+    "bytes": 6673,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/294ac6d01ed0df9f5c64.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/294ac6d01ed0df9f5c64.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/294ac6d01ed0df9f5c64.raw",
+    "sha256": "3fea4983b0ef6b169ed9dd8f877f74d81ca4ede1a10048e2d7d8285757f7fc76",
+    "bytes": 1271026,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/294ac6d01ed0df9f5c64.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/30f5825636daaee331e6.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/30f5825636daaee331e6.adjudication.txt",
+    "sha256": "1cdfd2199d891a384ae04dcb2505225a77b5f56581ee14bd431bb6ec98e544a0",
+    "bytes": 14260,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/30f5825636daaee331e6.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/30f5825636daaee331e6.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/30f5825636daaee331e6.raw",
+    "sha256": "1804fdb4c80fbfadf762f4a2a0bdf18666260f01c4215c1172cdff7d4ebde068",
+    "bytes": 222077,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/30f5825636daaee331e6.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/38ef869156111ce01955.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/38ef869156111ce01955.adjudication.txt",
+    "sha256": "0532854a32a403a84210a8e63427607b90c6569aa13d09ded3fd88ff71b674e0",
+    "bytes": 25236,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/38ef869156111ce01955.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/38ef869156111ce01955.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/38ef869156111ce01955.raw",
+    "sha256": "f97da3d5e67b7b830b4b3ae1b350a5d5ea082e6bdbdf214a082ff2ea92649a86",
+    "bytes": 1296090,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/38ef869156111ce01955.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/3c30961dd089a6bd62f9.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/3c30961dd089a6bd62f9.adjudication.txt",
+    "sha256": "38c6b23c5e179e1f209ca4466510c0aa21ac948d345b6f6af6b8ae045d6b3f16",
+    "bytes": 13096,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/3c30961dd089a6bd62f9.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/3c30961dd089a6bd62f9.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/3c30961dd089a6bd62f9.raw",
+    "sha256": "d2b6b3cd0182e0d5acccffcebb3d894ba9ee5ef7539040b985987b8770c23657",
+    "bytes": 1279997,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/3c30961dd089a6bd62f9.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/3d475f3c8db9dea6adf7.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/3d475f3c8db9dea6adf7.adjudication.txt",
+    "sha256": "bc15d50cd8871eb57e9e4cacd50cc782dc1050d69fe32aa22878a793c6614298",
+    "bytes": 20075,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/3d475f3c8db9dea6adf7.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/3d475f3c8db9dea6adf7.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/3d475f3c8db9dea6adf7.raw",
+    "sha256": "f0e0b3087aa76870cb26563fb93a7b19f188d9f0a04ead927a2e6d3569bbd224",
+    "bytes": 1295174,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/3d475f3c8db9dea6adf7.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/4603d4e5e5dbb6a3ec59.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/4603d4e5e5dbb6a3ec59.adjudication.txt",
+    "sha256": "f23af4c31f3e12a4b3b749592b36ecdbebe99754a11251aa9a6fab0b3da52a68",
+    "bytes": 5448,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/4603d4e5e5dbb6a3ec59.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/4603d4e5e5dbb6a3ec59.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/4603d4e5e5dbb6a3ec59.raw",
+    "sha256": "498f39332564615c734f01369604cfbb4c871dac226348de6e38f07e5ae385de",
+    "bytes": 128645,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/4603d4e5e5dbb6a3ec59.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/476903b617826f004c53.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/476903b617826f004c53.adjudication.txt",
+    "sha256": "04a1607f674abb5b339b4b91455f0fa3ca77d66a4f5005384d1ab97e37530996",
+    "bytes": 26973,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/476903b617826f004c53.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/476903b617826f004c53.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/476903b617826f004c53.raw",
+    "sha256": "eb9a96fceba8e16276cc0d48261dab373d33835700dd5163bc6c61cd37b0d6cd",
+    "bytes": 1307984,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/476903b617826f004c53.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/482f99062b1b58cff313.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/482f99062b1b58cff313.adjudication.txt",
+    "sha256": "fc787c23dd4d56756b9c804edbf40143b8e9fe4b16dbd8d14c1ba4081851b9a5",
+    "bytes": 21150,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/482f99062b1b58cff313.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/482f99062b1b58cff313.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/482f99062b1b58cff313.raw",
+    "sha256": "b09cfa441a7f771d85bd89af11d406e6b0498d3c4240323f7636dd58283c1b84",
+    "bytes": 1293383,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/482f99062b1b58cff313.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/50507cf844954d90f12c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/50507cf844954d90f12c.adjudication.txt",
+    "sha256": "e3d0c046eb32acffd662079055e13a439447b3f38c1025ff5d95b221019c814a",
+    "bytes": 15327,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/50507cf844954d90f12c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/50507cf844954d90f12c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/50507cf844954d90f12c.raw",
+    "sha256": "ef3d3b033bd9b4953f874ab40415cbc8238bc88a2b1587661a384fc253ac05dd",
+    "bytes": 1286044,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/50507cf844954d90f12c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/538d1cb28481919c0b0d.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/538d1cb28481919c0b0d.adjudication.txt",
+    "sha256": "d99d1d255e8e81ad5f311553976ccc781847449a1b6d94acc1b26a0a9c9c4850",
+    "bytes": 49353,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/538d1cb28481919c0b0d.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/538d1cb28481919c0b0d.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/538d1cb28481919c0b0d.raw",
+    "sha256": "72260cfd82e78f7542cbea8b4b951792fa88a7cd8ceb8949f4e41e49ab7d1122",
+    "bytes": 1323879,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/538d1cb28481919c0b0d.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/550284f58c316a043565.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/550284f58c316a043565.adjudication.txt",
+    "sha256": "61a8d46ff41a54b2a729dea18f37299e4d51be8248659759199fa0b26b8b6394",
+    "bytes": 29356,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/550284f58c316a043565.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/550284f58c316a043565.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/550284f58c316a043565.raw",
+    "sha256": "067075903d17cee6d1a334e50c43314a9aff69d90b908a376dd1d80735cd385f",
+    "bytes": 1305342,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/550284f58c316a043565.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/558e1b2c3f716e6e183f.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/558e1b2c3f716e6e183f.adjudication.txt",
+    "sha256": "954e71583163ab797d60378f71748573b32dba00d47376a78e418426dcf77fa5",
+    "bytes": 18317,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/558e1b2c3f716e6e183f.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/558e1b2c3f716e6e183f.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/558e1b2c3f716e6e183f.raw",
+    "sha256": "2c2fdf2f9e858f32be06847b0d79764918586840e83559a4dab9922856543119",
+    "bytes": 1282540,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/558e1b2c3f716e6e183f.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/5708a8b25abfcbe316c9.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/5708a8b25abfcbe316c9.adjudication.txt",
+    "sha256": "0165994123788a688f0e094bf13fd063b2cf54d0b8e92598d887820719d6ca59",
+    "bytes": 32460,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/5708a8b25abfcbe316c9.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/5708a8b25abfcbe316c9.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/5708a8b25abfcbe316c9.raw",
+    "sha256": "1851063c03e26b758d6c64ebf1ba590ad81230d1fbe2dd1a79535461f8ad55bc",
+    "bytes": 1301300,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/5708a8b25abfcbe316c9.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/607083d41705ca4547d4.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/607083d41705ca4547d4.adjudication.txt",
+    "sha256": "724749974342a9c1e74a10abfbec30d249d6dbb39fb6400d7d567538b82daac1",
+    "bytes": 10135,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/607083d41705ca4547d4.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/607083d41705ca4547d4.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/607083d41705ca4547d4.raw",
+    "sha256": "6426d752502d565290ffd9afa07e45c6d52bb94739d53d22eb1a7d12fa46fad0",
+    "bytes": 202256,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/607083d41705ca4547d4.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/679c29f8bd96fa58963c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/679c29f8bd96fa58963c.adjudication.txt",
+    "sha256": "0a1cafa74b3ac1655a8eed8b6de4b7e81cf86d9242353b6deac41b009815f37f",
+    "bytes": 12185,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/679c29f8bd96fa58963c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/679c29f8bd96fa58963c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/679c29f8bd96fa58963c.raw",
+    "sha256": "03f3cc6aa8764291cf089f813c3e12d637a6fd4db7649e1d8cb9bd23cdc915c5",
+    "bytes": 1275813,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/679c29f8bd96fa58963c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/68ba598f5ceb484c6bec.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/68ba598f5ceb484c6bec.adjudication.txt",
+    "sha256": "631aa52ca4f312e4aad8f408af5ab91dd3d3db4ea378bc6ee0e772417fd2b31e",
+    "bytes": 2647,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/68ba598f5ceb484c6bec.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/68ba598f5ceb484c6bec.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/68ba598f5ceb484c6bec.raw",
+    "sha256": "4b514cfb6713d1c7eadd89de609472aa2d6873dd10b6cb2d9f66753be4ae044a",
+    "bytes": 36293,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/68ba598f5ceb484c6bec.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/713c17492903870f4f94.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/713c17492903870f4f94.adjudication.txt",
+    "sha256": "4ee1eac80bce7abfad702c913e8fc1d95492647294b8c292fc18ce7a00062293",
+    "bytes": 27436,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/713c17492903870f4f94.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/713c17492903870f4f94.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/713c17492903870f4f94.raw",
+    "sha256": "68eb3fb66c2e44158cf38d3ebcd2be675c6f59407f64105682bfc3936682bb96",
+    "bytes": 1292795,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/713c17492903870f4f94.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/71d44279f08aef89603d.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/71d44279f08aef89603d.adjudication.txt",
+    "sha256": "64bbb46c6e05ab77f4936faccf8c4eca24317cff753b56b2224b80fa0c18d234",
+    "bytes": 8205,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/71d44279f08aef89603d.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/71d44279f08aef89603d.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/71d44279f08aef89603d.raw",
+    "sha256": "04c4bf0edbd9e9106b2849bf2f6cf6b23bf243a293f59909b0d77bd764c1522b",
+    "bytes": 132188,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/71d44279f08aef89603d.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/79959ba0f7670a85ae54.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/79959ba0f7670a85ae54.adjudication.txt",
+    "sha256": "416e3bf808089c7501d304b1d1c8ae754e3274a745e4f00a867f55b95ceb1df5",
+    "bytes": 638,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/79959ba0f7670a85ae54.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/79959ba0f7670a85ae54.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/79959ba0f7670a85ae54.raw",
+    "sha256": "1f3df61fa1c966118e3c662182eba6eb7b0fe88ee069d61af1d1f6bfabcf1897",
+    "bytes": 133625,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/79959ba0f7670a85ae54.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/7ac4c278cd76bba07bbe.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/7ac4c278cd76bba07bbe.adjudication.txt",
+    "sha256": "0634dc48181d4c75fd14f10d26d1d52ef90c44fe0ffd119c7363db9ae6e8f1d7",
+    "bytes": 7914,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/7ac4c278cd76bba07bbe.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/7ac4c278cd76bba07bbe.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/7ac4c278cd76bba07bbe.raw",
+    "sha256": "6095816931636c3b521c1395a5339b797823bad3255409534355baf01aca66e9",
+    "bytes": 169980,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/7ac4c278cd76bba07bbe.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/7b6a04d9ab01084fc961.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/7b6a04d9ab01084fc961.adjudication.txt",
+    "sha256": "6cf4bc8a746e4afe39a2c75c1a3ba22f33b59536f0f4d93bac659c94776d8018",
+    "bytes": 15039,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/7b6a04d9ab01084fc961.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/7b6a04d9ab01084fc961.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/7b6a04d9ab01084fc961.raw",
+    "sha256": "67030017fe5a981166ea23b1721df89aa5f804aa58e6670cf76f6968d7fe9a56",
+    "bytes": 1286807,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/7b6a04d9ab01084fc961.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/7f92fe65bc862084334c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/7f92fe65bc862084334c.adjudication.txt",
+    "sha256": "a647f20ffafc63ae914458591346a91a56dc73a873c8899f189e17d8effbe2f3",
+    "bytes": 34061,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/7f92fe65bc862084334c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/7f92fe65bc862084334c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/7f92fe65bc862084334c.raw",
+    "sha256": "404cc02619442c7852075a4381dae441b2003fa43f51411723249dd8e2c77b85",
+    "bytes": 1305883,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/7f92fe65bc862084334c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/85f41a3c70a02b740690.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/85f41a3c70a02b740690.raw",
+    "sha256": "22447b0084f458655f6d763aa1ed98a718a0fe2e0d3d554234f9505102d59dbc",
+    "bytes": 1807897,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f41a3c70a02b740690.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/85f743ffd3779c0cda47.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/85f743ffd3779c0cda47.adjudication.txt",
+    "sha256": "0d5136fb6a1fdd04dc8f47e04f4f7dc31694317c3660835b71b6ce79df68496e",
+    "bytes": 19484,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f743ffd3779c0cda47.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/85f743ffd3779c0cda47.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/85f743ffd3779c0cda47.raw",
+    "sha256": "55a86127314e6cdfdeaaeba7365c6b06a0687726cd4fd182333b84c4d8cbe9c0",
+    "bytes": 1286545,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/85f743ffd3779c0cda47.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/89decc7aa0e7373e9d0f.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/89decc7aa0e7373e9d0f.adjudication.txt",
+    "sha256": "8ca4142893d9f606bf4dbb53b37011bccb6822c0a016c6eaa18bc3c5e05451a0",
+    "bytes": 7107,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/89decc7aa0e7373e9d0f.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/89decc7aa0e7373e9d0f.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/89decc7aa0e7373e9d0f.raw",
+    "sha256": "7d240cef912c54be91629978a42ce8189a548917eccf193cec931db697e00002",
+    "bytes": 194363,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/89decc7aa0e7373e9d0f.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/8ae7e40aa301171006fa.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/8ae7e40aa301171006fa.adjudication.txt",
+    "sha256": "6a3c6ab48af3d0b9f22baa0b35fda431572237ef04e43cf29985fd0c5f8d8997",
+    "bytes": 8800,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/8ae7e40aa301171006fa.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/8ae7e40aa301171006fa.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/8ae7e40aa301171006fa.raw",
+    "sha256": "8f3245c8e5d88a2d11eb73d1f0c5948a2a2d12a0f57f35e1d4a38f841197c61c",
+    "bytes": 180569,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/8ae7e40aa301171006fa.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/8b134edef1d04657fa44.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/8b134edef1d04657fa44.adjudication.txt",
+    "sha256": "745fd02b6237bed394c052f738451e28c58f029eed817fc8c07771cc633a5001",
+    "bytes": 29326,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/8b134edef1d04657fa44.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/8b134edef1d04657fa44.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/8b134edef1d04657fa44.raw",
+    "sha256": "9acc2642543730bcbade744a80710643db414b71c1fe76f1e24fe10510a6e3a6",
+    "bytes": 1301025,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/8b134edef1d04657fa44.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/8f743f633cd3683d0fee.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/8f743f633cd3683d0fee.adjudication.txt",
+    "sha256": "2a65c8738b29e478619390c64e2ed40afe6cc8fe08cfaa1535dd57fb9027d6d9",
+    "bytes": 8894,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/8f743f633cd3683d0fee.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/8f743f633cd3683d0fee.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/8f743f633cd3683d0fee.raw",
+    "sha256": "afaf85f708fb778eb81dc9b352352fc4f330f18b5611dc262cb236c968a38ae4",
+    "bytes": 124276,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/8f743f633cd3683d0fee.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/96b7b42b27ab523bbe3c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/96b7b42b27ab523bbe3c.adjudication.txt",
+    "sha256": "87c84b92212402d36fb767935293a52a2c70f986b69fd1cecb59d19ccb77328b",
+    "bytes": 28282,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/96b7b42b27ab523bbe3c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/96b7b42b27ab523bbe3c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/96b7b42b27ab523bbe3c.raw",
+    "sha256": "63c5f2d9894b2ee971bd42d3e616448701b214f7894ccc76e8363c915cec2c98",
+    "bytes": 1301143,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/96b7b42b27ab523bbe3c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/9cb4ab2429492fc94401.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/9cb4ab2429492fc94401.adjudication.txt",
+    "sha256": "dc1edf42a980a1159dcbd03aca273859c76d21efab75423951e32aea4e1b34e4",
+    "bytes": 13710,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/9cb4ab2429492fc94401.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/9cb4ab2429492fc94401.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/9cb4ab2429492fc94401.raw",
+    "sha256": "650c9243ed1b19310dcf8fe1c89aa198dd15e3a00c886aef077aa2d73c038eed",
+    "bytes": 214076,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/9cb4ab2429492fc94401.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/9dfaa800cfb7a844ed1e.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/9dfaa800cfb7a844ed1e.adjudication.txt",
+    "sha256": "dc3c24a356c891ce46756543a0cb566b6f6cea79fe40dd2c068548fef6cbad5e",
+    "bytes": 10434,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/9dfaa800cfb7a844ed1e.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/9dfaa800cfb7a844ed1e.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/9dfaa800cfb7a844ed1e.raw",
+    "sha256": "20eac48fd50c65a73cff770e487bfeb26c783d689225245c7a09a71544a33ba8",
+    "bytes": 200793,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/9dfaa800cfb7a844ed1e.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/a3c9722a85987756713c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/a3c9722a85987756713c.adjudication.txt",
+    "sha256": "00501a9dbd88ae604c2f5d1a39f8ed705f29509cbc9a840b19207a3480a7edfd",
+    "bytes": 19454,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/a3c9722a85987756713c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/a3c9722a85987756713c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/a3c9722a85987756713c.raw",
+    "sha256": "43d0e7616d28ea981224eae61a5b71d548ade07f4641a8ebb21fc027fa3db595",
+    "bytes": 1290581,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/a3c9722a85987756713c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/a7280d2026d2eb591818.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/a7280d2026d2eb591818.adjudication.txt",
+    "sha256": "6a7eee37587c5a80d2aecd370f5f626b5a3b2fb6287a0b6482a0cf5d9c6e095e",
+    "bytes": 34008,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/a7280d2026d2eb591818.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/a7280d2026d2eb591818.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/a7280d2026d2eb591818.raw",
+    "sha256": "5c04f1d9056c09752f0f6842d29839fe0e816d609232ce172926f939fab2ad37",
+    "bytes": 1304053,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/a7280d2026d2eb591818.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ade9d6c403bf15b3d9b1.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ade9d6c403bf15b3d9b1.adjudication.txt",
+    "sha256": "8237219e202929befcb82698e34df8956a9633ea3bc7b6ae4654767e07f7489f",
+    "bytes": 5656,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ade9d6c403bf15b3d9b1.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ade9d6c403bf15b3d9b1.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ade9d6c403bf15b3d9b1.raw",
+    "sha256": "d6007c3a075fff2a06b8c88c89b3871ba9bc3f7254b0360f128981f862c6e4e4",
+    "bytes": 107384,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ade9d6c403bf15b3d9b1.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b35d4ed4faf2f81c119c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b35d4ed4faf2f81c119c.adjudication.txt",
+    "sha256": "b817c3775ad8bbb826248725d92128eb49fa0aaf67720b026097a167c1c542e2",
+    "bytes": 21294,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b35d4ed4faf2f81c119c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b35d4ed4faf2f81c119c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b35d4ed4faf2f81c119c.raw",
+    "sha256": "0d58111462995e2ae880b35223634669962726f4bdff964f4a7290b9f7def6a3",
+    "bytes": 1290260,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b35d4ed4faf2f81c119c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b3fd8ab69e8f575b49e6.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b3fd8ab69e8f575b49e6.adjudication.txt",
+    "sha256": "4ee5018ebc34096dba89de712d628f066ff64867cf2222489e8b6d4e42eac5a3",
+    "bytes": 14951,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b3fd8ab69e8f575b49e6.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b3fd8ab69e8f575b49e6.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b3fd8ab69e8f575b49e6.raw",
+    "sha256": "34359fbfde3be67642b916da29057662fc70ed37ca90de0f1e3742e510216b5e",
+    "bytes": 1285444,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b3fd8ab69e8f575b49e6.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b76c7e39a74f99768cf3.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b76c7e39a74f99768cf3.adjudication.txt",
+    "sha256": "f57feafda45e0d4fce959be1944f6e34f535f2ccb309fbf51ad89db984bdd804",
+    "bytes": 24477,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b76c7e39a74f99768cf3.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b76c7e39a74f99768cf3.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b76c7e39a74f99768cf3.raw",
+    "sha256": "b4de267206c0adcef9519cdc6894ad0a5bbc2f3c0dde0574a478c2330e828f60",
+    "bytes": 1305230,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b76c7e39a74f99768cf3.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b854aa8ff5f4fd8d9412.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b854aa8ff5f4fd8d9412.adjudication.txt",
+    "sha256": "44c313e8c168e47718a0b59015b9e39403de17c8242969c9823687cc196ab72b",
+    "bytes": 15929,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b854aa8ff5f4fd8d9412.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b854aa8ff5f4fd8d9412.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b854aa8ff5f4fd8d9412.raw",
+    "sha256": "b963afd8508fa54bd56a1ea8beb34717590defcc25c380e29dce678382e4006b",
+    "bytes": 1277160,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b854aa8ff5f4fd8d9412.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b8d5ebc86e9a11bea645.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b8d5ebc86e9a11bea645.adjudication.txt",
+    "sha256": "dfa0855dc4531dbbb57781db5e537b65abed1ff9af064d89022a8a76e15449b3",
+    "bytes": 24761,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b8d5ebc86e9a11bea645.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b8d5ebc86e9a11bea645.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/b8d5ebc86e9a11bea645.raw",
+    "sha256": "b034438722dcd0adeb9e390b9e33cb83bf68fae579c6d56d595a02168d052a80",
+    "bytes": 1294536,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/b8d5ebc86e9a11bea645.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bdaba6e5a9eb3a958472.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/bdaba6e5a9eb3a958472.adjudication.txt",
+    "sha256": "52f426666a7bb1a5318864518ffe34c2f3a6ff9a773de88856bde4588f17595b",
+    "bytes": 3616,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/bdaba6e5a9eb3a958472.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bdaba6e5a9eb3a958472.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/bdaba6e5a9eb3a958472.raw",
+    "sha256": "11eb3a7bcf25f7904f8c7bf2c3fd506262e124c5a8c1c91746c191a552a6f219",
+    "bytes": 100398,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/bdaba6e5a9eb3a958472.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bdb99b1ee7b4e082e9e6.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/bdb99b1ee7b4e082e9e6.adjudication.txt",
+    "sha256": "dc2e82121e8cb570e78f60865a80cfaace7286ad731af8f0a45acec818eeab10",
+    "bytes": 4854,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/bdb99b1ee7b4e082e9e6.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bdb99b1ee7b4e082e9e6.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/bdb99b1ee7b4e082e9e6.raw",
+    "sha256": "2b1c954e7632f4eee83fe350fa94abf1ff1c4884752e852e817782fe2ebeb1dd",
+    "bytes": 105794,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/bdb99b1ee7b4e082e9e6.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bdba8e2906c883babe2e.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/bdba8e2906c883babe2e.adjudication.txt",
+    "sha256": "cde3bd2d635d3c2f2de2c081e11e2f754d07c97c91794bde9b1a0fa179d756f5",
+    "bytes": 11994,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/bdba8e2906c883babe2e.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bdba8e2906c883babe2e.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/bdba8e2906c883babe2e.raw",
+    "sha256": "cafae0ff88ac12058c4ae2552380ed6c2b238aa246f8800a0a6d3c60d9d54f1e",
+    "bytes": 1282026,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/bdba8e2906c883babe2e.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/c08ffecbfef6e79f3baf.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/c08ffecbfef6e79f3baf.adjudication.txt",
+    "sha256": "7f8bd39f5478cf1f4a792c18558370bcacb8c05c75bc2a7f2df7657b061ca66d",
+    "bytes": 10422,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/c08ffecbfef6e79f3baf.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/c08ffecbfef6e79f3baf.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/c08ffecbfef6e79f3baf.raw",
+    "sha256": "4a1231e8363382f56f0ebb72a3ef5301c5fd495564ac38ad97e1dad5928b018c",
+    "bytes": 173981,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/c08ffecbfef6e79f3baf.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/c5864f008a727ef88d53.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/c5864f008a727ef88d53.adjudication.txt",
+    "sha256": "a66aa26519c401edbd1990fc1d6ff8dd54a514fe5600984ee37341dfa484fed0",
+    "bytes": 18888,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/c5864f008a727ef88d53.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/c5864f008a727ef88d53.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/c5864f008a727ef88d53.raw",
+    "sha256": "ded330a0f270f3b5b2d44975de7cd31903d0209e4ff44a94b33465dcecdb8a85",
+    "bytes": 1285850,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/c5864f008a727ef88d53.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/c5ea3810349b89472413.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/c5ea3810349b89472413.adjudication.txt",
+    "sha256": "1ebb8a08fdcc593c70640f6c34721ef193a25d2ce718ac1d347567097732a5a1",
+    "bytes": 11417,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/c5ea3810349b89472413.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/c5ea3810349b89472413.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/c5ea3810349b89472413.raw",
+    "sha256": "095ec0f96dbf67a1e2a1104d77fe5dd3ab5a0c9aaca33e6fd0bbdf4066557a4f",
+    "bytes": 201880,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/c5ea3810349b89472413.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d0179f2394f8e394fd99.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d0179f2394f8e394fd99.adjudication.txt",
+    "sha256": "32ba173af01f07a0d599ef84bc09dfe4476598e111a02dcea215880d5f74c342",
+    "bytes": 17484,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d0179f2394f8e394fd99.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d0179f2394f8e394fd99.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d0179f2394f8e394fd99.raw",
+    "sha256": "311107d9271828600520741f6c0e2eca0a576edf404f029b2d11c4c5dd42a23f",
+    "bytes": 1286243,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d0179f2394f8e394fd99.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d08cd0b5efe8a4652468.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d08cd0b5efe8a4652468.adjudication.txt",
+    "sha256": "c423510231c5b255cddec5d14e362c34b33d665c836a725a0de6fb86a5d27c4b",
+    "bytes": 13382,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d08cd0b5efe8a4652468.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d08cd0b5efe8a4652468.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d08cd0b5efe8a4652468.raw",
+    "sha256": "39329ada6c4d69cd78ed1fffb018f6e8e94d2931de3181674bc37d368311b6f3",
+    "bytes": 104711,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d08cd0b5efe8a4652468.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d5e52a0e82b6751b05b8.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d5e52a0e82b6751b05b8.adjudication.txt",
+    "sha256": "967bbeaa06455e465399ab3b9174ae65f0ac77b0bea6cb841c823879ac681013",
+    "bytes": 4560,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d5e52a0e82b6751b05b8.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d5e52a0e82b6751b05b8.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d5e52a0e82b6751b05b8.raw",
+    "sha256": "a24999825a3ec1fee716ee314c6899796a10b8d9bdfa5788dce0feefa7778d0a",
+    "bytes": 103391,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d5e52a0e82b6751b05b8.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d7cbe8a52a1316d2cc6c.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d7cbe8a52a1316d2cc6c.adjudication.txt",
+    "sha256": "0f6dcf902ac1f8c3bc4183cda612be3d1aa41f367075333e75457847481759b9",
+    "bytes": 27217,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d7cbe8a52a1316d2cc6c.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/d7cbe8a52a1316d2cc6c.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/d7cbe8a52a1316d2cc6c.raw",
+    "sha256": "af8c1c9b685fdc6cb082b9a6a1af4ac5feb2cadcf2d8ec9b655094b007c1ff4b",
+    "bytes": 1295553,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/d7cbe8a52a1316d2cc6c.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/da459d543a1fa129171a.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/da459d543a1fa129171a.adjudication.txt",
+    "sha256": "2a0ad50fffaec4599720292c9e34878c982f45b0f2d012efbdd4bae707685c31",
+    "bytes": 15425,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/da459d543a1fa129171a.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/da459d543a1fa129171a.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/da459d543a1fa129171a.raw",
+    "sha256": "e8908427f530ed93f41de3633c98f6bd7df0301ea6d9c39e45689803dcc7b169",
+    "bytes": 184062,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/da459d543a1fa129171a.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/dc38027fbdb63364f204.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/dc38027fbdb63364f204.adjudication.txt",
+    "sha256": "b63493cfab777c7b097b241bc90cce7ddbb0ffed87a3c7df78d55a726f4169b9",
+    "bytes": 11109,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/dc38027fbdb63364f204.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/dc38027fbdb63364f204.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/dc38027fbdb63364f204.raw",
+    "sha256": "7bf0d06f7e82af8982a7667f653e39c7f419ac789d8b7278432f19864cfe0ac9",
+    "bytes": 1278645,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/dc38027fbdb63364f204.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e4277334302e62546b0e.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e4277334302e62546b0e.adjudication.txt",
+    "sha256": "ec4fd36aa9a64c7e268fba556ff5f9957b114e38ebfdcec20f03fa95494af2b4",
+    "bytes": 10065,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e4277334302e62546b0e.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e4277334302e62546b0e.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e4277334302e62546b0e.raw",
+    "sha256": "83cf7aa042670542d17e8f2f6db2f6052d61bd52a8d887c94785c819e6320ad3",
+    "bytes": 1640665,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e4277334302e62546b0e.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e44cf13a88b8ddfe6f8b.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e44cf13a88b8ddfe6f8b.adjudication.txt",
+    "sha256": "582bc2a0df00663e3bff981b6cf3e2d7afa31662fd08d2edec1e4e169f2ffe03",
+    "bytes": 9289,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e44cf13a88b8ddfe6f8b.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e44cf13a88b8ddfe6f8b.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e44cf13a88b8ddfe6f8b.raw",
+    "sha256": "727a71b07eac40ce86aa7c6487d78e2227097e96709d158353fcef1e35d40935",
+    "bytes": 1273045,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e44cf13a88b8ddfe6f8b.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e81606068bf68af73c16.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e81606068bf68af73c16.adjudication.txt",
+    "sha256": "a1592c67ef2ab0f00e2e49012540864228c99e2e8fda74c16a877f06e1fc122f",
+    "bytes": 9153,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e81606068bf68af73c16.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e81606068bf68af73c16.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e81606068bf68af73c16.raw",
+    "sha256": "5fe8cf2b3cf4972644436bc829069081a0f68fa25fec957aa543b7c90e59d6c4",
+    "bytes": 206186,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e81606068bf68af73c16.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e9ad19a11773e5acbd4b.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e9ad19a11773e5acbd4b.adjudication.txt",
+    "sha256": "c51926e5d9f7d315a982b0e3e1b44e90a4cd9aa9f84ae6aec05130c48c56f291",
+    "bytes": 11850,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e9ad19a11773e5acbd4b.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/e9ad19a11773e5acbd4b.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/e9ad19a11773e5acbd4b.raw",
+    "sha256": "e1c65fd16b03f7909bccdc0c14cc238df7db312ee87c63a1c952af1e0adbab28",
+    "bytes": 196118,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/e9ad19a11773e5acbd4b.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ea803b9ee6deab914a77.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ea803b9ee6deab914a77.adjudication.txt",
+    "sha256": "f9158de4a0110f8a765110ff77f014fac1dd7a6ccdaaf5ca6afbd59262d249a7",
+    "bytes": 15894,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ea803b9ee6deab914a77.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ea803b9ee6deab914a77.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ea803b9ee6deab914a77.raw",
+    "sha256": "f07c77e6064ceae30ef22e49268683977302cf0482c6bda80fdd947a0a6ad2da",
+    "bytes": 1287185,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ea803b9ee6deab914a77.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ed8a54f62c347ed2c819.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ed8a54f62c347ed2c819.adjudication.txt",
+    "sha256": "1ce7ec5640d588c356a42a97c229efd64686b2febf7c8992b6c4309fe8517934",
+    "bytes": 10147,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ed8a54f62c347ed2c819.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ed8a54f62c347ed2c819.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ed8a54f62c347ed2c819.raw",
+    "sha256": "62793f1688c97e9bd103b8e125257367154e9ce82486af74ff86d95e6d0ae2b5",
+    "bytes": 1656276,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ed8a54f62c347ed2c819.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ee7155480b8c42c9cea5.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ee7155480b8c42c9cea5.adjudication.txt",
+    "sha256": "e7fd09186807a03728f721b1705e86544651ef44947ed28e8e18b401e5d97dc1",
+    "bytes": 16167,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ee7155480b8c42c9cea5.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ee7155480b8c42c9cea5.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ee7155480b8c42c9cea5.raw",
+    "sha256": "72b38da9820fef87da8a4801da3bb38c79b799e1d92f92706697267fddfd6df8",
+    "bytes": 1284381,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ee7155480b8c42c9cea5.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f198fb10efdbe7f7c96f.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f198fb10efdbe7f7c96f.adjudication.txt",
+    "sha256": "ad37c1f7dd7645069c8d742b6ad9161fdea8235e4f4ab1348fb9a8d1cec40d77",
+    "bytes": 3163,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f198fb10efdbe7f7c96f.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f198fb10efdbe7f7c96f.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f198fb10efdbe7f7c96f.raw",
+    "sha256": "ac15035a43334da73f340a44025b6a6d59cbe414657f27d19dbfe846bd3e98d1",
+    "bytes": 104498,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f198fb10efdbe7f7c96f.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f65a7bb90c70b664c755.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f65a7bb90c70b664c755.adjudication.txt",
+    "sha256": "aeccb9bf1e337ebbb9c298ca9f8c315c56ab82ca0ffea406256c365cf98feb73",
+    "bytes": 19542,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f65a7bb90c70b664c755.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f65a7bb90c70b664c755.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f65a7bb90c70b664c755.raw",
+    "sha256": "1023d53c32a307dfae46eb0cfaaab4a67985396bbfb59341f61d7e5ea836d6bf",
+    "bytes": 1284775,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f65a7bb90c70b664c755.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f6d12ea024243043dc87.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f6d12ea024243043dc87.adjudication.txt",
+    "sha256": "c15e5ad6189ae08f4f313f6ab47d6aeababda14a17f25046cbea7877561db74d",
+    "bytes": 15777,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f6d12ea024243043dc87.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f6d12ea024243043dc87.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f6d12ea024243043dc87.raw",
+    "sha256": "cce08f81262f4efe27f699c9e8107ff33fa798516b3b36f4dd0551cfbf7cbeff",
+    "bytes": 211567,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f6d12ea024243043dc87.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f74713a94ce6c93a5cd5.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f74713a94ce6c93a5cd5.adjudication.txt",
+    "sha256": "dc885808f65b20d8883d2a149595ccab0760e216c4ad1ad15263a08c185d84a9",
+    "bytes": 8817,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f74713a94ce6c93a5cd5.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/f74713a94ce6c93a5cd5.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/f74713a94ce6c93a5cd5.raw",
+    "sha256": "cac0622d07f5f40d96a9239a38db4ae0a13e6d557c0b3019e64cd1c897f72cf2",
+    "bytes": 1637784,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/f74713a94ce6c93a5cd5.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/fa7e4d8446ca6d13fc6e.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/fa7e4d8446ca6d13fc6e.adjudication.txt",
+    "sha256": "05a83e178d982acbbd120c07ec590bf732efd6d4a4eaa2f168057c6f7c26ef59",
+    "bytes": 26000,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/fa7e4d8446ca6d13fc6e.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/fa7e4d8446ca6d13fc6e.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/fa7e4d8446ca6d13fc6e.raw",
+    "sha256": "b6fe44d3f6c4d6c1aea3e587bb617a3a1a3a87beb860decb35a46ea0b1ce51f0",
+    "bytes": 1296812,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/fa7e4d8446ca6d13fc6e.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/fe9cacd07b0a157b9a61.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/fe9cacd07b0a157b9a61.adjudication.txt",
+    "sha256": "4456d88323856e5c3b2ef7705c0b1d46f69c0e7ce76a16c0df0f4fa9277576ec",
+    "bytes": 18278,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/fe9cacd07b0a157b9a61.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/fe9cacd07b0a157b9a61.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/fe9cacd07b0a157b9a61.raw",
+    "sha256": "6e645d909e603a24641fabcfdd2200d8cab09148e6e368246724b5f624f062bf",
+    "bytes": 113414,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/fe9cacd07b0a157b9a61.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ff2c84fea3759abe0fa7.adjudication.txt",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ff2c84fea3759abe0fa7.adjudication.txt",
+    "sha256": "c8e69d42f470032dc280ba68cfb39dc847f7e3552bb79426f90b5fb2e544fe90",
+    "bytes": 18226,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ff2c84fea3759abe0fa7.adjudication.txt",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/ff2c84fea3759abe0fa7.raw",
+    "staged": "/tmp/voidnews-industry-integration-staging/20260909-industry-rotation/evidence/ff2c84fea3759abe0fa7.raw",
+    "sha256": "719c6d86e8468f39d82809063ba3f98aea54d75565b38254692386092c085466",
+    "bytes": 1292249,
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-rotation/evidence/ff2c84fea3759abe0fa7.raw",
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/b546394e8410be3f136a.raw",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-integration/supplementary/b546394e8410be3f136a.raw",
+    "sha256": "63e6873abb01db35a62d5bc6da5e86637bb1fe7cb26e03fcc9730a98e43b457c",
+    "bytes": 198757,
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/85b07a0a289900a6c409.raw",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-integration/supplementary/85b07a0a289900a6c409.raw",
+    "sha256": "98da56a25bda37bfed620968f9a28591d35c127c0303e46526e45117ad7708f7",
+    "bytes": 139147,
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/12e4833e9373b6954b65.raw",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-integration/supplementary/12e4833e9373b6954b65.raw",
+    "sha256": "c574d32d826918e5d7aa057c3b64b1f317af4d0cc4220381a7f8cb96180d1038",
+    "bytes": 1288387,
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/bf60ba9cac428e3cba4c.raw",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-integration/supplementary/bf60ba9cac428e3cba4c.raw",
+    "sha256": "5f16af76c27ff7e16570763dbd8fdb24e380849c8b96e8eeadc49ecc32947d4b",
+    "bytes": 1282395,
+    "verified": true
+  },
+  {
+    "source": "/tmp/voidnews-industry-cache/3823d928e635abc7208f.raw",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-industry-integration/supplementary/3823d928e635abc7208f.raw",
+    "sha256": "ce7e3abf0fbb77a58723e86162290c154b549f1313260e5b8ddf8a393632b192",
+    "bytes": 1696315,
+    "verified": true
+  }
+]

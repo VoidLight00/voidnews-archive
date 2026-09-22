@@ -1,0 +1,1181 @@
+{
+  "status": "implemented_verified_pending_main_provenance_integration",
+  "addedCount": 15,
+  "byWeek": {
+    "2026-w36": 10,
+    "2026-w35": 5
+  },
+  "workspace": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass",
+  "rows": [
+    {
+      "index": 0,
+      "queueIndex": 1,
+      "week": "2026-w36",
+      "company": "GitHub",
+      "post": {
+        "date": "9/02 05:23",
+        "platform": "Web",
+        "title": "Copilot 개인별 예산에 자동 만료일 설정",
+        "deck": "Copilot 개인별 예산에 자동 만료일 설정",
+        "summary": "GitHub은 Copilot Business·Enterprise의 개인별 예산에 만료일을 지정하는 기능을 정식 제공한다고 발표했습니다. 다음 결제 주기 시작일이나 특정 날짜를 고를 수 있으며, 만료되면 해당 사용자는 다음으로 적용되는 비용센터·전체 예산을 따릅니다.",
+        "content": "GitHub은 Copilot Business·Enterprise의 개인별 예산에 만료일을 지정하는 기능을 정식 제공한다고 발표했습니다. 다음 결제 주기 시작일이나 특정 날짜를 고를 수 있으며, 만료되면 해당 사용자는 다음으로 적용되는 비용센터·전체 예산을 따릅니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets",
+        "officialUrl": "https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "GitHub"
+        ],
+        "slug": "feed-pass2-20260902-0d6eb03d66",
+        "en": {
+          "title": "Copilot individual user budgets gain expiration dates",
+          "deck": "Copilot individual user budgets gain expiration dates",
+          "summary": "GitHub announced generally available expiration dates for individual user budgets on Copilot Business and Enterprise. Administrators can choose the next billing cycle or a specific date; after expiration, the user falls back to the next applicable cost-center or universal budget.",
+          "content": "GitHub announced generally available expiration dates for individual user budgets on Copilot Business and Enterprise. Administrators can choose the next billing cycle or a specific date; after expiration, the user falls back to the next applicable cost-center or universal budget.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 0,
+        "queueIndex": 1,
+        "title": "Copilot 개인별 예산에 자동 만료일 설정",
+        "publicationDates": [
+          {
+            "url": "https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets",
+            "sourceDateRaw": "Tue, 01 Sep 2026 20:23:13 +0000",
+            "publishedAtKst": "2026-09-02T05:23:13+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-00.txt",
+        "bodySha256": "da328cca962acbb0d368a0abc44e2920e16809ac2cd666e57201e26d95281153",
+        "exactUrlHits": [],
+        "eventPattern": "expires_at|budget.{0,20}expiration|예산.{0,20}만료",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/0c9c70f1bc01-voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "sha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4",
+          "byteLength": 40690
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-001.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/cf507bd1cff3-voidnews-feed-second-body-001.txt",
+          "sha256": "cf507bd1cff3e7356c923096fc7aa1e3d739d5581de8f20d9a8b6ccb690e785e",
+          "byteLength": 1084
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 1,
+      "queueIndex": 3,
+      "week": "2026-w36",
+      "company": "GitHub",
+      "post": {
+        "date": "9/01 21:35",
+        "platform": "Web",
+        "title": "GitHub CLI 2.99, 코딩 에이전트도 이슈·PR에 이미지와 영상 첨부",
+        "deck": "GitHub CLI 2.99, 코딩 에이전트도 이슈·PR에 이미지와 영상 첨부",
+        "summary": "GitHub CLI 2.99는 이슈·PR·댓글에 이미지와 영상을 첨부하는 --attach 옵션을 추가했습니다. 공식 글은 코딩 에이전트도 스크린샷 등 결과물을 명령줄에서 함께 제출할 수 있다고 설명합니다. 파일 전송 기능이지 이미지 생성 기능은 아닙니다.",
+        "content": "GitHub CLI 2.99는 이슈·PR·댓글에 이미지와 영상을 첨부하는 --attach 옵션을 추가했습니다. 공식 글은 코딩 에이전트도 스크린샷 등 결과물을 명령줄에서 함께 제출할 수 있다고 설명합니다. 파일 전송 기능이지 이미지 생성 기능은 아닙니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments",
+        "officialUrl": "https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "GitHub"
+        ],
+        "slug": "feed-pass2-20260901-d1373b5546",
+        "en": {
+          "title": "GitHub CLI 2.99 adds image and video attachments for coding-agent workflows",
+          "deck": "GitHub CLI 2.99 adds image and video attachments for coding-agent workflows",
+          "summary": "GitHub CLI 2.99 adds a repeatable --attach flag for images and videos in issues, pull requests, and comments. The official article explicitly notes that coding agents can submit screenshots and other visual results from the command line. This uploads files; it does not generate images.",
+          "content": "GitHub CLI 2.99 adds a repeatable --attach flag for images and videos in issues, pull requests, and comments. The official article explicitly notes that coding agents can submit screenshots and other visual results from the command line. This uploads files; it does not generate images.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 1,
+        "queueIndex": 3,
+        "title": "GitHub CLI 2.99, 코딩 에이전트도 이슈·PR에 이미지와 영상 첨부",
+        "publicationDates": [
+          {
+            "url": "https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments",
+            "sourceDateRaw": "Tue, 01 Sep 2026 12:35:59 +0000",
+            "publishedAtKst": "2026-09-01T21:35:59+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-01.txt",
+        "bodySha256": "ffbb775de12688e585ff6134665de4f64da8fe4385eb38f2a711136607d5fc56",
+        "exactUrlHits": [],
+        "eventPattern": "github.{0,10}2\\.99|--attach|명령줄.{0,25}(이미지|영상).{0,10}첨부",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/0c9c70f1bc01-voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "sha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4",
+          "byteLength": 40690
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-003.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/7613be3dc038-voidnews-feed-second-body-003.txt",
+          "sha256": "7613be3dc0382215a8f47b830392307a102d7a1e62e1992151f6ba93196b7a53",
+          "byteLength": 2730
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 2,
+      "queueIndex": 4,
+      "week": "2026-w36",
+      "company": "GitHub",
+      "post": {
+        "date": "9/01 06:21",
+        "platform": "Web",
+        "title": "Copilot, Gemini 3.1 Pro·구형 Claude 등 9월 1일 지원 종료",
+        "deck": "Copilot, Gemini 3.1 Pro·구형 Claude 등 9월 1일 지원 종료",
+        "summary": "GitHub은 9월 1일 Gemini 3.1 Pro, Claude Opus 4.5·4.6, Sonnet 4.5·4.6, Raptor Mini 지원을 대부분의 Copilot 환경에서 종료했다고 안내했습니다. 개인 연간 요금제의 Sonnet 4.6은 예외로 남습니다.",
+        "content": "GitHub은 9월 1일 Gemini 3.1 Pro, Claude Opus 4.5·4.6, Sonnet 4.5·4.6, Raptor Mini 지원을 대부분의 Copilot 환경에서 종료했다고 안내했습니다. 개인 연간 요금제의 Sonnet 4.6은 예외로 남습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated",
+        "officialUrl": "https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "GitHub"
+        ],
+        "slug": "feed-pass2-20260901-a90d945af0",
+        "en": {
+          "title": "Copilot retires selected Gemini, Claude and Raptor models on September 1",
+          "deck": "Copilot retires selected Gemini, Claude and Raptor models on September 1",
+          "summary": "GitHub announced September 1 deprecations of Gemini 3.1 Pro, Claude Opus 4.5 and 4.6, Sonnet 4.5 and 4.6, and Raptor Mini across most Copilot experiences. Sonnet 4.6 remains available for individual annual subscribers.",
+          "content": "GitHub announced September 1 deprecations of Gemini 3.1 Pro, Claude Opus 4.5 and 4.6, Sonnet 4.5 and 4.6, and Raptor Mini across most Copilot experiences. Sonnet 4.6 remains available for individual annual subscribers.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 2,
+        "queueIndex": 4,
+        "title": "Copilot, Gemini 3.1 Pro·구형 Claude 등 9월 1일 지원 종료",
+        "publicationDates": [
+          {
+            "url": "https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated",
+            "sourceDateRaw": "Mon, 31 Aug 2026 21:21:40 +0000",
+            "publishedAtKst": "2026-09-01T06:21:40+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-02.txt",
+        "bodySha256": "f498be4d0e8c1989913b2b1c1b9a7815880b283c6485832a1e380bb0b0fbd67a",
+        "exactUrlHits": [],
+        "eventPattern": "selected.github.copilot.models.deprecated|raptor.mini|2026-09-01.{0,15}deprecated",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "September 1 retired-model list differs from existing October 2 deprecation notice.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/0c9c70f1bc01-voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+          "sha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4",
+          "byteLength": 40690
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-004.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/026b37398718-voidnews-feed-second-body-004.txt",
+          "sha256": "026b37398718d45458b8c228da68c670fe5c3043844fa27a003c3dcd315bff77",
+          "byteLength": 1604
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 3,
+      "queueIndex": 5,
+      "week": "2026-w35",
+      "company": "GitHub",
+      "post": {
+        "date": "8/29 05:13",
+        "platform": "Web",
+        "title": "Copilot 주간 정리, Slack·Teams의 공동 에이전트 세션 소개",
+        "deck": "Copilot 주간 정리, Slack·Teams의 공동 에이전트 세션 소개",
+        "summary": "GitHub의 8월 24일 주간 업데이트 정리는 Slack·Microsoft Teams에서 @GitHub를 불러 문제 조사·계획·코드 변경을 공동 세션으로 진행하는 기능을 소개했습니다. 다른 팀원이 진행 상황을 보고 방향을 조정할 수 있다고 설명합니다. 날짜는 주간 정리 글 게시일이며 개별 기능의 최초 출시일로 단정하지 않습니다.",
+        "content": "GitHub의 8월 24일 주간 업데이트 정리는 Slack·Microsoft Teams에서 @GitHub를 불러 문제 조사·계획·코드 변경을 공동 세션으로 진행하는 기능을 소개했습니다. 다른 팀원이 진행 상황을 보고 방향을 조정할 수 있다고 설명합니다. 날짜는 주간 정리 글 게시일이며 개별 기능의 최초 출시일로 단정하지 않습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+        "officialUrl": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w35",
+          "GitHub"
+        ],
+        "slug": "feed-pass2-20260829-b5e69634f5",
+        "en": {
+          "title": "Copilot weekly roundup highlights shared agent sessions in Slack and Teams",
+          "deck": "Copilot weekly roundup highlights shared agent sessions in Slack and Teams",
+          "summary": "GitHub's August 24 weekly roundup describes shared agent sessions in Slack and Microsoft Teams. Teams can mention @GitHub to investigate, plan, and make code changes while colleagues follow and guide the session. The recorded date is the roundup publication date, not a verified first-release date for the individual feature.",
+          "content": "GitHub's August 24 weekly roundup describes shared agent sessions in Slack and Microsoft Teams. Teams can mention @GitHub to investigate, plan, and make code changes while colleagues follow and guide the session. The recorded date is the roundup publication date, not a verified first-release date for the individual feature.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "validation": {
+        "index": 3,
+        "queueIndex": 5,
+        "title": "Copilot 주간 정리, Slack·Teams의 공동 에이전트 세션 소개",
+        "publicationDates": [
+          {
+            "url": "https://github.blog/changelog/2026-08-28-github-copilot-weekly-releases-august-24",
+            "sourceDateRaw": "Fri, 28 Aug 2026 20:13:22 +0000",
+            "publishedAtKst": "2026-08-29T05:13:22+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-03.txt",
+        "bodySha256": "dc5b4d2670e63f73b21a38f76ede191c81f41597366f722f86a46d8d7e7c1894",
+        "exactUrlHits": [],
+        "eventPattern": "copilot.{0,80}(slack|teams)|github.{0,50}공동 세션",
+        "eventHits": [
+          {
+            "path": "/weeks/5/companies/5/posts/1",
+            "title": "Copilot 코드 리뷰 강도 조절 정식 출시"
+          },
+          {
+            "path": "/weeks/5/companies/5/posts/1/en",
+            "title": "Copilot code review effort levels are generally available"
+          },
+          {
+            "path": "/weeks/13/companies/9/posts/1",
+            "title": "Microsoft Scout 공개… Copilot 다음 단계 '상시구동 자율 에이전트(Autopilots)'"
+          }
+        ],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "Only residual Slack/Teams shared-agent sessions are covered. Existing Customize and Visual Studio coverage in the same roundup are intentionally omitted. This ready row is not held queue_index83.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/6ce4e3402b02-voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+          "sha256": "6ce4e3402b0264567bf148887349fc86f50e60f9f95eec04850d4bf4a4054468",
+          "byteLength": 52508
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-005.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/c5abc5024cad-voidnews-feed-second-body-005.txt",
+          "sha256": "c5abc5024cadc3bd530dd3e67aa10f3605115ea50bdbcb5ca0878ed51c78c812",
+          "byteLength": 2609
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 4,
+      "queueIndex": 15,
+      "week": "2026-w36",
+      "company": "Anthropic",
+      "post": {
+        "date": "9/02 07:33",
+        "platform": "Web",
+        "title": "Claude Code 2.1.258, macOS Monterey 시작 오류 수정",
+        "deck": "Claude Code 2.1.258, macOS Monterey 시작 오류 수정",
+        "summary": "Claude Code 2.1.258은 2.1.255에서 발생한 macOS 12 Monterey 시작 오류를 수정했다고 안내했습니다. 재전송된 승인 응답을 적용하지 못했을 때 원격·예약 세션이 빈 메시지 오류로 실패하는 문제도 수정 목록에 포함됩니다.",
+        "content": "Claude Code 2.1.258은 2.1.255에서 발생한 macOS 12 Monterey 시작 오류를 수정했다고 안내했습니다. 재전송된 승인 응답을 적용하지 못했을 때 원격·예약 세션이 빈 메시지 오류로 실패하는 문제도 수정 목록에 포함됩니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258",
+        "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "Anthropic"
+        ],
+        "slug": "feed-pass2-20260902-23cf4e186c",
+        "en": {
+          "title": "Claude Code 2.1.258 fixes macOS Monterey startup failures",
+          "deck": "Claude Code 2.1.258 fixes macOS Monterey startup failures",
+          "summary": "Claude Code 2.1.258 reports a fix for macOS 12 Monterey startup failures introduced in 2.1.255. It also fixes remote and scheduled sessions failing with an empty-message error when a resent permission approval cannot be applied.",
+          "content": "Claude Code 2.1.258 reports a fix for macOS 12 Monterey startup failures introduced in 2.1.255. It also fixes remote and scheduled sessions failing with an empty-message error when a resent permission approval cannot be applied.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 4,
+        "queueIndex": 15,
+        "title": "Claude Code 2.1.258, macOS Monterey 시작 오류 수정",
+        "publicationDates": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.258",
+            "sourceDateRaw": "2026-09-01T22:33:20Z",
+            "publishedAtKst": "2026-09-02T07:33:20+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-04.txt",
+        "bodySha256": "a55ddfc195eee8bc51ab8c1a4aed9a9f44dc3d9a4e5be5973970d7e62b671c81",
+        "exactUrlHits": [],
+        "eventPattern": "2\\.1\\.258|Monterey",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/d919651e5884-voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+          "byteLength": 645936
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-015.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/a55ddfc195ee-voidnews-feed-second-body-015.txt",
+          "sha256": "a55ddfc195eee8bc51ab8c1a4aed9a9f44dc3d9a4e5be5973970d7e62b671c81",
+          "byteLength": 268
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 5,
+      "queueIndex": 16,
+      "week": "2026-w36",
+      "company": "Anthropic",
+      "post": {
+        "date": "9/02 02:53",
+        "platform": "Web",
+        "title": "Claude Code 2.1.257, Fable 5.1 지원·자동 승인 경계 강화",
+        "deck": "Claude Code 2.1.257, Fable 5.1 지원·자동 승인 경계 강화",
+        "summary": "Claude Code 2.1.257은 Fable 5.1을 기본 Fable 모델로 추가했다고 안내했습니다. 자동 모드에서 격리 경계를 벗어나는 작업의 승인을 강화하고, 자동 모드에서 작업 폴더 밖 첫 파일 읽기에 확인 절차를 추가했습니다. 잘못 전달되는 인증 헤더와 원격 연결 동의 처리 등 수정도 포함되며, 효과는 릴리스 노트 기준입니다.",
+        "content": "Claude Code 2.1.257은 Fable 5.1을 기본 Fable 모델로 추가했다고 안내했습니다. 자동 모드에서 격리 경계를 벗어나는 작업의 승인을 강화하고, 자동 모드에서 작업 폴더 밖 첫 파일 읽기에 확인 절차를 추가했습니다. 잘못 전달되는 인증 헤더와 원격 연결 동의 처리 등 수정도 포함되며, 효과는 릴리스 노트 기준입니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+        "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "Anthropic"
+        ],
+        "slug": "feed-pass2-20260902-7728fa2f91",
+        "en": {
+          "title": "Claude Code 2.1.257 adds Fable 5.1 and containment-related approval safeguards",
+          "deck": "Claude Code 2.1.257 adds Fable 5.1 and containment-related approval safeguards",
+          "summary": "Claude Code 2.1.257 adds Fable 5.1 as the default Fable model. The notes describe stronger auto-mode handling of containment-escape actions and an auto-mode first-read confirmation outside working directories. They also report fixes for stray authentication headers and remote-control consent handling; these are release-note claims rather than reproduced security tests.",
+          "content": "Claude Code 2.1.257 adds Fable 5.1 as the default Fable model. The notes describe stronger auto-mode handling of containment-escape actions and an auto-mode first-read confirmation outside working directories. They also report fixes for stray authentication headers and remote-control consent handling; these are release-note claims rather than reproduced security tests.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 5,
+        "queueIndex": 16,
+        "title": "Claude Code 2.1.257, Fable 5.1 지원·자동 승인 경계 강화",
+        "publicationDates": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+            "sourceDateRaw": "2026-09-01T17:53:52Z",
+            "publishedAtKst": "2026-09-02T02:53:52+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-05.txt",
+        "bodySha256": "6e2804fae9f265b73b4b988496c2d59bff2707f2fbee6d68c0081b26b5aea3bc",
+        "exactUrlHits": [],
+        "eventPattern": "2\\.1\\.257|CLAUDE_CODE_SUBAGENT_MODEL_FORCE",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "Claude Code integration/approval boundary event is distinct from Fable 5.1 availability in GitHub Copilot.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/d919651e5884-voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+          "byteLength": 645936
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-016.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/2714c1c2436e-voidnews-feed-second-body-016.txt",
+          "sha256": "2714c1c2436e8eb5e4e7f00ee0549aa16920fbb3f10591bc1cefe82c8308fe9d",
+          "byteLength": 16279
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 6,
+      "queueIndex": 17,
+      "week": "2026-w36",
+      "company": "Anthropic",
+      "post": {
+        "date": "9/01 04:46",
+        "platform": "Web",
+        "title": "Claude Code 2.1.252, 대형 실패 출력으로 인한 대화 한도 초과 수정",
+        "deck": "Claude Code 2.1.252, 대형 실패 출력으로 인한 대화 한도 초과 수정",
+        "summary": "Claude Code 2.1.252는 백그라운드 작업의 매우 큰 실패 출력 때문에 대화가 API 요청 크기 한도를 넘는 오류를 수정했습니다. 일부 Mac의 Bash 실행 오류와 설정 파일이 아직 없는 프로젝트의 항상 허용 저장 오류, 연결 저하 시 원격 세션 지연도 수정했다고 안내했습니다.",
+        "content": "Claude Code 2.1.252는 백그라운드 작업의 매우 큰 실패 출력 때문에 대화가 API 요청 크기 한도를 넘는 오류를 수정했습니다. 일부 Mac의 Bash 실행 오류와 설정 파일이 아직 없는 프로젝트의 항상 허용 저장 오류, 연결 저하 시 원격 세션 지연도 수정했다고 안내했습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+        "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "Anthropic"
+        ],
+        "slug": "feed-pass2-20260901-c2db1cf2bc",
+        "en": {
+          "title": "Claude Code 2.1.252 fixes oversized failure-output and remote-session stalls",
+          "deck": "Claude Code 2.1.252 fixes oversized failure-output and remote-session stalls",
+          "summary": "Claude Code 2.1.252 reports a fix for very large background-task failure output pushing conversations beyond the API request size limit. It also addresses Bash failures on some Macs, saving always-allow decisions in projects without local settings, and remote-session stalls during degraded connectivity.",
+          "content": "Claude Code 2.1.252 reports a fix for very large background-task failure output pushing conversations beyond the API request size limit. It also addresses Bash failures on some Macs, saving always-allow decisions in projects without local settings, and remote-session stalls during degraded connectivity.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 6,
+        "queueIndex": 17,
+        "title": "Claude Code 2.1.252, 대형 실패 출력으로 인한 대화 한도 초과 수정",
+        "publicationDates": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+            "sourceDateRaw": "2026-08-31T19:46:55Z",
+            "publishedAtKst": "2026-09-01T04:46:55+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-06.txt",
+        "bodySha256": "9c1f3b90bdb94e7e670e98716b941e179ffd20b36d27d11a40835221a8317ebf",
+        "exactUrlHits": [],
+        "eventPattern": "2\\.1\\.252|task output swap refused",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/d919651e5884-voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+          "byteLength": 645936
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-017.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/9c1f3b90bdb9-voidnews-feed-second-body-017.txt",
+          "sha256": "9c1f3b90bdb94e7e670e98716b941e179ffd20b36d27d11a40835221a8317ebf",
+          "byteLength": 537
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 7,
+      "queueIndex": 19,
+      "week": "2026-w35",
+      "company": "Anthropic",
+      "post": {
+        "date": "8/27 08:06",
+        "platform": "Web",
+        "title": "Claude Code 2.1.247, 비용 최적화 안내·오류 출력 복구 개선",
+        "deck": "Claude Code 2.1.247, 비용 최적화 안내·오류 출력 복구 개선",
+        "summary": "Claude Code 2.1.247은 프로젝트의 API 지출을 측정하며 조정하는 /claude-api cost-optimize와 사용자가 검토하는 피드백 초안 도구를 추가했습니다. 훅·백그라운드 작업의 대형 오류 출력이 대화를 막는 문제와, 출력 파일을 쓰지 못할 때 메모리가 계속 늘어나는 문제도 수정했다고 안내했습니다.",
+        "content": "Claude Code 2.1.247은 프로젝트의 API 지출을 측정하며 조정하는 /claude-api cost-optimize와 사용자가 검토하는 피드백 초안 도구를 추가했습니다. 훅·백그라운드 작업의 대형 오류 출력이 대화를 막는 문제와, 출력 파일을 쓰지 못할 때 메모리가 계속 늘어나는 문제도 수정했다고 안내했습니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+        "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w35",
+          "Anthropic"
+        ],
+        "slug": "feed-pass2-20260827-b7b96dd0cc",
+        "en": {
+          "title": "Claude Code 2.1.247 adds API cost optimization guidance and output resilience",
+          "deck": "Claude Code 2.1.247 adds API cost optimization guidance and output resilience",
+          "summary": "Claude Code 2.1.247 adds /claude-api cost-optimize for measured API-spend improvements and a feedback-drafting tool for user review. It reports fixes for large hook or background-task error output wedging conversations, and for unbounded memory growth when an output file cannot be written.",
+          "content": "Claude Code 2.1.247 adds /claude-api cost-optimize for measured API-spend improvements and a feedback-drafting tool for user review. It reports fixes for large hook or background-task error output wedging conversations, and for unbounded memory growth when an output file cannot be written.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "validation": {
+        "index": 7,
+        "queueIndex": 19,
+        "title": "Claude Code 2.1.247, 비용 최적화 안내·오류 출력 복구 개선",
+        "publicationDates": [
+          {
+            "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+            "sourceDateRaw": "2026-08-26T23:06:39Z",
+            "publishedAtKst": "2026-08-27T08:06:39+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-07.txt",
+        "bodySha256": "80ea29779588797fe529da8142ea8b3971a2bf4184ec978a48bef8760a659afd",
+        "exactUrlHits": [],
+        "eventPattern": "2\\.1\\.247|cost-optimize|SendFeedback",
+        "eventHits": [
+          {
+            "path": "/weeks/9/companies/0/posts/0",
+            "title": "OpenAI, GPT-5.6 Sol·Terra·Luna 일반 공개 — API 모델 문서 등재"
+          },
+          {
+            "path": "/weeks/9/companies/0/posts/0/en",
+            "title": "OpenAI makes GPT-5.6 Sol, Terra, and Luna generally available"
+          }
+        ],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "Historical cost-optimized OpenAI model text is not the Claude Code cost-optimize command.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/d919651e5884-voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+          "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+          "byteLength": 645936
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-019.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/945848ff0733-voidnews-feed-second-body-019.txt",
+          "sha256": "945848ff0733cb57c520be4f94b74a4f7632559810c646fd8cb9848065be4a32",
+          "byteLength": 5522
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 8,
+      "queueIndex": 36,
+      "week": "2026-w36",
+      "company": "OpenAI",
+      "post": {
+        "date": "9/05 08:25",
+        "platform": "Web",
+        "title": "Codex 0.153.1~4, Astra API 설정부터 기본 모델 전환까지",
+        "deck": "Codex 0.153.1~4, Astra API 설정부터 기본 모델 전환까지",
+        "summary": "Codex 릴리스 노트에 따르면 0.153.1은 Astra를 API 설정으로 지원했고, 0.153.3은 Amazon Bedrock 모델 목록에 추가했습니다. 0.153.4에서는 기본 제공 모델 선택기에 표시하고 명시적 설정이 없을 때 기본값으로 지정했습니다. 0.153.2의 Fast 배율 수정은 표시 문구 변경일 뿐 요청 실행 방식 변경은 아닙니다.",
+        "content": "Codex 릴리스 노트에 따르면 0.153.1은 Astra를 API 설정으로 지원했고, 0.153.3은 Amazon Bedrock 모델 목록에 추가했습니다. 0.153.4에서는 기본 제공 모델 선택기에 표시하고 명시적 설정이 없을 때 기본값으로 지정했습니다. 0.153.2의 Fast 배율 수정은 표시 문구 변경일 뿐 요청 실행 방식 변경은 아닙니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.\n\n카드 시각은 통합한 네 개 패치 중 마지막 버전인 0.153.4 게시 시각입니다. 0.153.1·2는 한국시간 9월 4일, 0.153.3·4는 9월 5일에 게시됐습니다.",
+        "source": "https://github.com/openai/codex/releases/tag/rust-v0.153.4",
+        "officialUrl": "https://github.com/openai/codex/releases/tag/rust-v0.153.4",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [
+          {
+            "label": "rust-v0.153.3",
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.3"
+          },
+          {
+            "label": "rust-v0.153.2",
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.2"
+          },
+          {
+            "label": "rust-v0.153.1",
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.1"
+          }
+        ],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "OpenAI"
+        ],
+        "slug": "feed-pass2-20260905-cf56572145",
+        "en": {
+          "title": "Codex 0.153.1–4 expands Astra support from API configuration to bundled default",
+          "deck": "Codex 0.153.1–4 expands Astra support from API configuration to bundled default",
+          "summary": "According to the release notes, Codex 0.153.1 enabled Astra through API configuration, 0.153.3 added it to Amazon Bedrock catalogs, and 0.153.4 exposed it in the bundled picker and made it the default when no model is configured. The 0.153.2 Fast-tier multiplier correction changed display text only, not request execution.",
+          "content": "According to the release notes, Codex 0.153.1 enabled Astra through API configuration, 0.153.3 added it to Amazon Bedrock catalogs, and 0.153.4 exposed it in the bundled picker and made it the default when no model is configured. The 0.153.2 Fast-tier multiplier correction changed display text only, not request execution.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced.\n\nThe card uses publication of 0.153.4, the latest of the four consolidated patches. Versions 0.153.1 and .2 were published on September 4 in Korea time; .3 and .4 on September 5."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 8,
+        "queueIndex": 36,
+        "title": "Codex 0.153.1~4, Astra API 설정부터 기본 모델 전환까지",
+        "publicationDates": [
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.4",
+            "sourceDateRaw": "2026-09-04T23:25:48Z",
+            "publishedAtKst": "2026-09-05T08:25:48+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.3",
+            "sourceDateRaw": "2026-09-04T19:01:32Z",
+            "publishedAtKst": "2026-09-05T04:01:32+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.2",
+            "sourceDateRaw": "2026-09-03T23:53:12Z",
+            "publishedAtKst": "2026-09-04T08:53:12+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          },
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.1",
+            "sourceDateRaw": "2026-09-03T21:02:56Z",
+            "publishedAtKst": "2026-09-04T06:02:56+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-08.txt",
+        "bodySha256": "6070d6a108eebae26ceb1424c8797649b092f7c8477563ad5f786fb9567f0f01",
+        "exactUrlHits": [],
+        "eventPattern": "0\\.153\\.[1-4]|astra.{0,30}bundled.default",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "Consolidates four stable patch releases into one Astra-in-Codex rollout; distinct from existing Codex0.153 plugin release and GPT6 Astra in Copilot.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/22295a60262a-voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "sha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+          "byteLength": 10981245
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-036.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/a1194b956491-voidnews-feed-second-body-036.txt",
+          "sha256": "a1194b9564911e6739cd8c5045220af094db275bc931e6ba3bc4b9d55caeba52",
+          "byteLength": 534
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-037.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/43667145b787-voidnews-feed-second-body-037.txt",
+          "sha256": "43667145b787f5418e841fcf89223a27a4f42886c1ede237ccd854b833ca670c",
+          "byteLength": 542
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-038.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/2578123f0380-voidnews-feed-second-body-038.txt",
+          "sha256": "2578123f038057d26f940380b30dc4f3366fd2768e850556607f9dfd8d4fb568",
+          "byteLength": 367
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-039.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/464cb9c14ba9-voidnews-feed-second-body-039.txt",
+          "sha256": "464cb9c14ba9df13c72cfb7a2eb713e52c5a0d7d7ea9ac14357898025efb38d7",
+          "byteLength": 322
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 9,
+      "queueIndex": 46,
+      "week": "2026-w36",
+      "company": "OpenAI",
+      "post": {
+        "date": "9/02 07:33",
+        "platform": "Web",
+        "title": "Codex 0.152.1, Guardian 승인 검토에 Node REPL 정책 반영",
+        "deck": "Codex 0.152.1, Guardian 승인 검토에 Node REPL 정책 반영",
+        "summary": "Codex 0.152.1은 Guardian 승인 검토가 모델 메타데이터로 전달된 Node REPL 정책을 따르도록 수정했다고 안내했습니다. 짧은 보안·승인 정책 수정 항목이며 실제 동작을 재현 시험한 결과는 아닙니다.",
+        "content": "Codex 0.152.1은 Guardian 승인 검토가 모델 메타데이터로 전달된 Node REPL 정책을 따르도록 수정했다고 안내했습니다. 짧은 보안·승인 정책 수정 항목이며 실제 동작을 재현 시험한 결과는 아닙니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.com/openai/codex/releases/tag/rust-v0.152.1",
+        "officialUrl": "https://github.com/openai/codex/releases/tag/rust-v0.152.1",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "OpenAI"
+        ],
+        "slug": "feed-pass2-20260902-f490c97781",
+        "en": {
+          "title": "Codex 0.152.1 honors model-provided Node REPL approval policies",
+          "deck": "Codex 0.152.1 honors model-provided Node REPL approval policies",
+          "summary": "Codex 0.152.1 reports that Guardian approval review now honors Node REPL policies supplied through model metadata. This is a narrowly scoped approval-policy fix documented in release notes, not an independently reproduced test.",
+          "content": "Codex 0.152.1 reports that Guardian approval review now honors Node REPL policies supplied through model metadata. This is a narrowly scoped approval-policy fix documented in release notes, not an independently reproduced test.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 9,
+        "queueIndex": 46,
+        "title": "Codex 0.152.1, Guardian 승인 검토에 Node REPL 정책 반영",
+        "publicationDates": [
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.152.1",
+            "sourceDateRaw": "2026-09-01T22:33:02Z",
+            "publishedAtKst": "2026-09-02T07:33:02+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-09.txt",
+        "bodySha256": "d905e4684973cbcb9c9c58d6eefaa44f42bbc6d2eef058a36f91281869a98054",
+        "exactUrlHits": [],
+        "eventPattern": "0\\.152\\.1|Guardian.{0,30}Node REPL",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/22295a60262a-voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "sha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+          "byteLength": 10981245
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-046.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/d905e4684973-voidnews-feed-second-body-046.txt",
+          "sha256": "d905e4684973cbcb9c9c58d6eefaa44f42bbc6d2eef058a36f91281869a98054",
+          "byteLength": 194
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 10,
+      "queueIndex": 63,
+      "week": "2026-w35",
+      "company": "OpenAI",
+      "post": {
+        "date": "8/27 10:56",
+        "platform": "Web",
+        "title": "Codex 0.150.1, 대화 압축 토큰 예산에 보존 이미지 포함",
+        "deck": "Codex 0.150.1, 대화 압축 토큰 예산에 보존 이미지 포함",
+        "summary": "Codex 0.150.1은 원격 대화 압축 시 보존된 이미지도 기본 토큰 예산에 포함하도록 수정했습니다. 필요하면 오래된 이미지를 줄여 예산에 맞추는 방식이라고 릴리스 노트가 설명합니다.",
+        "content": "Codex 0.150.1은 원격 대화 압축 시 보존된 이미지도 기본 토큰 예산에 포함하도록 수정했습니다. 필요하면 오래된 이미지를 줄여 예산에 맞추는 방식이라고 릴리스 노트가 설명합니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://github.com/openai/codex/releases/tag/rust-v0.150.1",
+        "officialUrl": "https://github.com/openai/codex/releases/tag/rust-v0.150.1",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w35",
+          "OpenAI"
+        ],
+        "slug": "feed-pass2-20260827-0577669e18",
+        "en": {
+          "title": "Codex 0.150.1 counts retained images in remote compaction budgets",
+          "deck": "Codex 0.150.1 counts retained images in remote compaction budgets",
+          "summary": "Codex 0.150.1 reports that remote compaction now counts retained images toward its token budget by default, trimming older images when needed. The description is limited to the returned release notes.",
+          "content": "Codex 0.150.1 reports that remote compaction now counts retained images toward its token budget by default, trimming older images when needed. The description is limited to the returned release notes.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "validation": {
+        "index": 10,
+        "queueIndex": 63,
+        "title": "Codex 0.150.1, 대화 압축 토큰 예산에 보존 이미지 포함",
+        "publicationDates": [
+          {
+            "url": "https://github.com/openai/codex/releases/tag/rust-v0.150.1",
+            "sourceDateRaw": "2026-08-27T01:56:54Z",
+            "publishedAtKst": "2026-08-27T10:56:54+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-10.txt",
+        "bodySha256": "cb06eca98c043c93eb0621e4d0adf6604abacc5d6daddaf80642549ecfad2c5c",
+        "exactUrlHits": [],
+        "eventPattern": "0\\.150\\.1|retained.images.{0,30}token.budget",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/22295a60262a-voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+          "sha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+          "byteLength": 10981245
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-063.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/cb06eca98c04-voidnews-feed-second-body-063.txt",
+          "sha256": "cb06eca98c043c93eb0621e4d0adf6604abacc5d6daddaf80642549ecfad2c5c",
+          "byteLength": 315
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 11,
+      "queueIndex": 71,
+      "week": "2026-w36",
+      "company": "NVIDIA",
+      "post": {
+        "date": "9/03 22:00",
+        "platform": "Web",
+        "title": "NVIDIA, NBA 2K27의 DLSS 5 신경망 렌더링 클라우드 제공 안내",
+        "deck": "NVIDIA, NBA 2K27의 DLSS 5 신경망 렌더링 클라우드 제공 안내",
+        "summary": "NVIDIA는 NBA 2K27에 DLSS 5의 3D 기반 신경망 렌더링을 적용해 GeForce NOW로 제공한다고 안내했습니다. 지원 지역의 Ultimate 이용자가 RTX 5080 기반 클라우드 장비에서 이용하는 조건이며, 조명·재질 개선 설명은 제작사 발표입니다.",
+        "content": "NVIDIA는 NBA 2K27에 DLSS 5의 3D 기반 신경망 렌더링을 적용해 GeForce NOW로 제공한다고 안내했습니다. 지원 지역의 Ultimate 이용자가 RTX 5080 기반 클라우드 장비에서 이용하는 조건이며, 조명·재질 개선 설명은 제작사 발표입니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://blogs.nvidia.com/blog/geforce-now-thursday-september-2026-games-list/",
+        "officialUrl": "https://blogs.nvidia.com/blog/geforce-now-thursday-september-2026-games-list/",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "NVIDIA"
+        ],
+        "slug": "feed-pass2-20260903-fa67f50273",
+        "en": {
+          "title": "NVIDIA brings NBA 2K27 DLSS 5 neural rendering to GeForce NOW",
+          "deck": "NVIDIA brings NBA 2K27 DLSS 5 neural rendering to GeForce NOW",
+          "summary": "NVIDIA announced NBA 2K27 with DLSS 5 3D-Guided Neural Rendering on GeForce NOW. Availability is tied to Ultimate membership in NVIDIA-operated regions and RTX 5080-powered cloud rigs. Lighting and material improvements are vendor-described.",
+          "content": "NVIDIA announced NBA 2K27 with DLSS 5 3D-Guided Neural Rendering on GeForce NOW. Availability is tied to Ultimate membership in NVIDIA-operated regions and RTX 5080-powered cloud rigs. Lighting and material improvements are vendor-described.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 11,
+        "queueIndex": 71,
+        "title": "NVIDIA, NBA 2K27의 DLSS 5 신경망 렌더링 클라우드 제공 안내",
+        "publicationDates": [
+          {
+            "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-september-2026-games-list/",
+            "sourceDateRaw": "Thu, 03 Sep 2026 13:00:35 +0000",
+            "publishedAtKst": "2026-09-03T22:00:35+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-11.txt",
+        "bodySha256": "b56c5997770941ca2701750a656dbf0b800f0d7004b15b140a4bf9c228fb7a0f",
+        "exactUrlHits": [],
+        "eventPattern": "NBA.2K27|3D.Guided.Neural.Rendering",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "NBA2K27 DLSS5 cloud support is distinct from DLSS4.5 graphics/controls events.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/5f104cf8dc02-voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "sha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1",
+          "byteLength": 267696
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-071.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/44fe296621b9-voidnews-feed-second-body-071.txt",
+          "sha256": "44fe296621b94e45032048cb5ca966fd145530e4613389c48f90ed2451376f88",
+          "byteLength": 6012
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 12,
+      "queueIndex": 72,
+      "week": "2026-w35",
+      "company": "NVIDIA",
+      "post": {
+        "date": "8/27 22:00",
+        "platform": "Web",
+        "title": "GeForce NOW, 가을 DLSS 4.5 제어 옵션 확대 예고",
+        "deck": "GeForce NOW, 가을 DLSS 4.5 제어 옵션 확대 예고",
+        "summary": "NVIDIA는 가을에 GeForce NOW Ultimate 이용자가 DLSS 4.5의 초해상도·동적 프레임 생성·광선 재구성 옵션을 조정할 수 있도록 할 예정이라고 안내했습니다. 스트리밍 화질과 응답성의 균형을 선택하는 기능이며, 발표일에 모든 옵션이 이미 제공됐다는 의미는 아닙니다.",
+        "content": "NVIDIA는 가을에 GeForce NOW Ultimate 이용자가 DLSS 4.5의 초해상도·동적 프레임 생성·광선 재구성 옵션을 조정할 수 있도록 할 예정이라고 안내했습니다. 스트리밍 화질과 응답성의 균형을 선택하는 기능이며, 발표일에 모든 옵션이 이미 제공됐다는 의미는 아닙니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/",
+        "officialUrl": "https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w35",
+          "NVIDIA"
+        ],
+        "slug": "feed-pass2-20260827-ca1c781736",
+        "en": {
+          "title": "GeForce NOW previews expanded DLSS 4.5 controls for fall",
+          "deck": "GeForce NOW previews expanded DLSS 4.5 controls for fall",
+          "summary": "NVIDIA previewed fall controls for GeForce NOW Ultimate users to tune DLSS 4.5 Super Resolution, Dynamic Frame Generation, and Ray Reconstruction. The announcement concerns choices between streaming quality and responsiveness, not confirmation that every option was already live on publication day.",
+          "content": "NVIDIA previewed fall controls for GeForce NOW Ultimate users to tune DLSS 4.5 Super Resolution, Dynamic Frame Generation, and Ray Reconstruction. The announcement concerns choices between streaming quality and responsiveness, not confirmation that every option was already live on publication day.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "validation": {
+        "index": 12,
+        "queueIndex": 72,
+        "title": "GeForce NOW, 가을 DLSS 4.5 제어 옵션 확대 예고",
+        "publicationDates": [
+          {
+            "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/",
+            "sourceDateRaw": "Thu, 27 Aug 2026 13:00:33 +0000",
+            "publishedAtKst": "2026-08-27T22:00:33+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-12.txt",
+        "bodySha256": "0bd83754891c8cc16dc3446798c9f8bda558d7c5504324be880a38c9abc39b29",
+        "exactUrlHits": [],
+        "eventPattern": "DLSS.{0,15}4\\.5|DLSS.{0,15}제어",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "Focus is GeForce NOW fall cloud controls, not local DLSS4.5 Ray Reconstruction release; related Gamescom roundup repeats this but that candidate only covers Ray Reconstruction/ACE.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/5f104cf8dc02-voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "sha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1",
+          "byteLength": 267696
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-072.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/1fc5a29143fc-voidnews-feed-second-body-072.txt",
+          "sha256": "1fc5a29143fc96c8c271c280ee49c22846c996aa79350cdd8a9680b155d884f5",
+          "byteLength": 10412
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 13,
+      "queueIndex": 73,
+      "week": "2026-w35",
+      "company": "NVIDIA",
+      "post": {
+        "date": "8/26 00:30",
+        "platform": "Web",
+        "title": "NVIDIA Gamescom, DLSS 4.5 광선 재구성·ACE 게임 적용 소개",
+        "deck": "NVIDIA Gamescom, DLSS 4.5 광선 재구성·ACE 게임 적용 소개",
+        "summary": "NVIDIA는 Gamescom 업데이트에서 2세대 트랜스포머 모델을 사용하는 DLSS 4.5 Ray Reconstruction을 제공 중이라고 안내했습니다. AI 신경망으로 광선 추적 영상의 노이즈 제거를 대체하며, Aniimo에는 2027년 초 ACE를 적용할 예정이라고 설명했습니다. RTX Spark 게임 파트너 소식과 함께 발표된 AI 그래픽 항목입니다.",
+        "content": "NVIDIA는 Gamescom 업데이트에서 2세대 트랜스포머 모델을 사용하는 DLSS 4.5 Ray Reconstruction을 제공 중이라고 안내했습니다. AI 신경망으로 광선 추적 영상의 노이즈 제거를 대체하며, Aniimo에는 2027년 초 ACE를 적용할 예정이라고 설명했습니다. RTX Spark 게임 파트너 소식과 함께 발표된 AI 그래픽 항목입니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
+        "officialUrl": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w35",
+          "NVIDIA"
+        ],
+        "slug": "feed-pass2-20260826-cd140ce316",
+        "en": {
+          "title": "NVIDIA Gamescom update highlights DLSS 4.5 Ray Reconstruction and ACE",
+          "deck": "NVIDIA Gamescom update highlights DLSS 4.5 Ray Reconstruction and ACE",
+          "summary": "NVIDIA's Gamescom update says DLSS 4.5 Ray Reconstruction is available with a second-generation transformer model, replacing traditional denoisers with an AI network. It also previews ACE integration in Aniimo for early 2027. These are the AI-graphics components of a broader RTX Spark gaming announcement.",
+          "content": "NVIDIA's Gamescom update says DLSS 4.5 Ray Reconstruction is available with a second-generation transformer model, replacing traditional denoisers with an AI network. It also previews ACE integration in Aniimo for early 2027. These are the AI-graphics components of a broader RTX Spark gaming announcement.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "validation": {
+        "index": 13,
+        "queueIndex": 73,
+        "title": "NVIDIA Gamescom, DLSS 4.5 광선 재구성·ACE 게임 적용 소개",
+        "publicationDates": [
+          {
+            "url": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
+            "sourceDateRaw": "Tue, 25 Aug 2026 15:30:48 +0000",
+            "publishedAtKst": "2026-08-26T00:30:48+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-13.txt",
+        "bodySha256": "a59d5a4a9666e19b03ace82187baa89cae0aedfe24c77e1272c22bf35df916c0",
+        "exactUrlHits": [],
+        "eventPattern": "Ray.Reconstruction|레이.{0,5}재구성|Aniimo",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "Focus is DLSS4.5 Ray Reconstruction availability and Aniimo ACE preview; omit shared GeForce NOW controls and previously covered RTX Spark hardware.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/5f104cf8dc02-voidnews-research-https___blogs_nvidia_com_feed_.txt",
+          "sha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1",
+          "byteLength": 267696
+        },
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-073.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/512f4412ecea-voidnews-feed-second-body-073.txt",
+          "sha256": "512f4412ecea30a0a7101b40c57a6d2a04a4127a20c4fdcaa1a7300b6080c0b8",
+          "byteLength": 3245
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    },
+    {
+      "index": 14,
+      "queueIndex": 121,
+      "week": "2026-w36",
+      "company": "Microsoft",
+      "post": {
+        "date": "9/02 15:00",
+        "platform": "Web",
+        "title": "Microsoft, AI 인프라 규모보다 유용한 산출 효율 강조",
+        "deck": "Microsoft, AI 인프라 규모보다 유용한 산출 효율 강조",
+        "summary": "Microsoft는 AI 인프라를 칩·토큰 수뿐 아니라 실제로 만들어내는 유용한 결과로 평가해야 한다는 글을 공개했습니다. 메모리·네트워크·전력과 모델·소프트웨어를 함께 설계해 같은 자원에서 더 많은 결과를 얻자는 주장입니다. 신규 제품 출시나 독립 성능 검증이 아닌 공식 관점 글입니다.",
+        "content": "Microsoft는 AI 인프라를 칩·토큰 수뿐 아니라 실제로 만들어내는 유용한 결과로 평가해야 한다는 글을 공개했습니다. 메모리·네트워크·전력과 모델·소프트웨어를 함께 설계해 같은 자원에서 더 많은 결과를 얻자는 주장입니다. 신규 제품 출시나 독립 성능 검증이 아닌 공식 관점 글입니다.\n\n표시 시각은 공식 피드 또는 릴리스의 게시 시각을 한국시간으로 환산한 값이며, 실제 기능 활성화 시각과 다를 수 있습니다. 기능·성능·보안 설명은 출처가 발표한 내용이며 독립 실행 검증은 아닙니다.",
+        "source": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+        "officialUrl": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+        "verifiedAt": "2026-09-08",
+        "backupUrls": [],
+        "tags": [
+          "AI",
+          "2026-w36",
+          "Microsoft"
+        ],
+        "slug": "feed-pass2-20260902-9309558a16",
+        "en": {
+          "title": "Microsoft argues for useful output as the measure of AI infrastructure",
+          "deck": "Microsoft argues for useful output as the measure of AI infrastructure",
+          "summary": "Microsoft published an argument that AI infrastructure should be measured by useful outcomes rather than chip or token counts alone. It calls for co-design across memory, networking, power, models, and software to extract more value from existing resources. This is an official perspective article, not a product launch or independent benchmark.",
+          "content": "Microsoft published an argument that AI infrastructure should be measured by useful outcomes rather than chip or token counts alone. It calls for co-design across memory, networking, power, models, and software to extract more value from existing resources. This is an official perspective article, not a product launch or independent benchmark.\n\nThe displayed time converts the official feed or release publication timestamp to Korea time and may differ from actual activation. Feature, performance and security descriptions are source-reported, not independently reproduced."
+        }
+      },
+      "targetPath": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts",
+      "validation": {
+        "index": 14,
+        "queueIndex": 121,
+        "title": "Microsoft, AI 인프라 규모보다 유용한 산출 효율 강조",
+        "publicationDates": [
+          {
+            "url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+            "sourceDateRaw": "Wed, 02 Sep 2026 06:00:02 +0000",
+            "publishedAtKst": "2026-09-02T15:00:02+09:00",
+            "datePrecision": "second",
+            "canonicalBasis": "publisher RSS item link / GitHub API html_url"
+          }
+        ],
+        "bodyPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/body-14.txt",
+        "bodySha256": "ef78a0235fe83f90b59ba240dce397c0d69dc7b2031b50540e54d6b2b91999e2",
+        "exactUrlHits": [],
+        "eventPattern": "yield.imperative|유용한 산출|useful.yield",
+        "eventHits": [],
+        "decision": "confirmed_nonduplicate_add",
+        "eventReview": "No candidate-specific event-pattern hits; related product mentions alone not treated as duplicates.",
+        "sourceSectionAnchor": null,
+        "anchorReason": "Distinct article or version-specific release URL; no shared changelog reuse or invented fragment."
+      },
+      "evidence": [
+        {
+          "originalPath": "/tmp/voidnews-feed-second-body-121.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/de41c3e75a6f-voidnews-feed-second-body-121.txt",
+          "sha256": "de41c3e75a6f9534268488fdf9dd88ac0d09bba9dd0564c7a40501deb2381bc7",
+          "byteLength": 11679
+        },
+        {
+          "originalPath": "/tmp/voidnews-research-https___blogs_microsoft_com_feed_.txt",
+          "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/cache/d37489fd4b51-voidnews-research-https___blogs_microsoft_com_feed_.txt",
+          "sha256": "d37489fd4b518fbcc02f76b9d7502ff167de0085e1813158e76df6f75e67eb46",
+          "byteLength": 141402
+        }
+      ],
+      "imageStatus": "No candidate image fabricated; existing images untouched."
+    }
+  ],
+  "inventoryDecisions": 129,
+  "inventoryCounts": {
+    "excluded_non_ai": 15,
+    "confirmed_nonduplicate_add": 15,
+    "excluded_routine_no_claim": 42,
+    "queue_substantive_prerelease": 6,
+    "merged_same_event": 17,
+    "queue_partial_event_overlap": 2,
+    "queue_body_missing": 11,
+    "queue_recap_event_split": 1,
+    "queue_summary_only_access_restricted": 20
+  },
+  "heldDispositionCounts": {
+    "queue_substantive_prerelease": 6,
+    "queue_partial_event_overlap": 2,
+    "queue_recap_event_split": 1
+  },
+  "priorSummaryOnlyOpenAI6": "Preserved in first-pass ledger; none promoted.",
+  "provenanceIntegration": {
+    "status": "PENDING_MAIN_INTEGRATION",
+    "instruction": "Preserve original52 mappings and prior19 additions; integrate these15 separately. Existing hardcoded provenance gates are unchanged."
+  },
+  "preservation": {
+    "status": "PASS",
+    "preservedOriginalPosts": 71,
+    "additions": 15,
+    "totalTargetPosts": 86,
+    "byWeek": [
+      {
+        "week": "2026-w37",
+        "total": 5
+      },
+      {
+        "week": "2026-w36",
+        "total": 45
+      },
+      {
+        "week": "2026-w35",
+        "total": 36
+      }
+    ],
+    "allOriginalFieldsIncludingThumbnailsUnchanged": true
+  },
+  "verification": {
+    "tscNoEmitExit": 0,
+    "testArchiveExit": 0,
+    "duplicatesExit": 0,
+    "build": "Not run; final provenance integration belongs to main. No full-build PASS claimed.",
+    "logPaths": [
+      "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/tsc.log",
+      "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/test-archive.log",
+      "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/duplicates.log",
+      "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions-second-pass/preservation-check.json"
+    ]
+  },
+  "weeklyOwnership": "SURRENDERED: main may edit weekly35/36/37",
+  "filesEdited": [
+    "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+    "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w36.ts"
+  ],
+  "week37Unchanged": true
+}

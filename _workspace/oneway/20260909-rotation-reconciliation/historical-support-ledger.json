@@ -1,0 +1,198 @@
+[
+  {
+    "week": "2026-w29",
+    "slug": "anthropic-platform-20260715-mid-conversation-system",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+    "publication": {
+      "precision": "publisher-date-only",
+      "publisherDate": "2026-07-15"
+    },
+    "event": {
+      "id": "anthropic-platform-20260715-mid-conversation-system",
+      "publisherDate": "2026-07-15",
+      "section": "Mid-conversation system messages",
+      "evidence": {
+        "path": "_workspace/oneway/20260909-product-media-integration/cache/8df8071ee134-4182359e79e632d3.html",
+        "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+        "sectionQuote": "Mid-conversation system messages",
+        "quotes": [
+          "Mid-conversation system messages"
+        ],
+        "dateComponents": {
+          "mode": "date-heading",
+          "heading": {
+            "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(17)",
+            "text": "July 15, 2026"
+          },
+          "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(19)",
+          "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(19) > li:nth-of-type(1) > a:nth-of-type(1)"
+        }
+      }
+    },
+    "decision": "existing-runtime dated feature matched to preserved raw DOM; not a new addition"
+  },
+  {
+    "week": "2026-w29",
+    "slug": "anthropic-platform-20260714-admin-api-users",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+    "publication": {
+      "precision": "publisher-date-only",
+      "publisherDate": "2026-07-14"
+    },
+    "event": {
+      "id": "anthropic-platform-20260714-admin-api-users",
+      "publisherDate": "2026-07-14",
+      "section": "You can now manage the people",
+      "evidence": {
+        "path": "_workspace/oneway/20260909-product-media-integration/cache/8df8071ee134-4182359e79e632d3.html",
+        "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+        "sectionQuote": "You can now manage the people in your Claude Enterprise (claude.ai) organization with the Admin API, in beta for all Claude Enterprise organizations: list members and look them up by email address, change a member's role, remove members, send and withdraw invites, manage groups and their membership, and read custom roles. Group and custom-role requests require the anthropic-beta: ce-user-management-2026-07-13 beta header; member and invite requests take no beta header. An Admin API key with the read:org_audit scope can also call every user-management GET endpoint. See User management.",
+        "quotes": [
+          "You can now manage the people in your Claude Enterprise (claude.ai) organization with the Admin API, in beta for all Claude Enterprise organizations: list members and look them up by email address, change a member's role, remove members, send and withdraw invites, manage groups and their membership, and read custom roles. Group and custom-role requests require the anthropic-beta: ce-user-management-2026-07-13 beta header; member and invite requests take no beta header. An Admin API key with the read:org_audit scope can also call every user-management GET endpoint. See User management."
+        ],
+        "dateComponents": {
+          "mode": "date-heading",
+          "heading": {
+            "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(18)",
+            "text": "July 14, 2026"
+          },
+          "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(20)",
+          "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(20) > li:nth-of-type(1)"
+        }
+      }
+    },
+    "decision": "existing-runtime dated feature matched to preserved raw DOM; not a new addition"
+  },
+  {
+    "week": "2026-w29",
+    "slug": "anthropic-platform-20260710-dreams-fable-sonnet",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+    "publication": {
+      "precision": "publisher-date-only",
+      "publisherDate": "2026-07-10"
+    },
+    "event": {
+      "id": "anthropic-platform-20260710-dreams-fable-sonnet",
+      "publisherDate": "2026-07-10",
+      "section": "Dreams (research preview)",
+      "evidence": {
+        "path": "_workspace/oneway/20260909-product-media-integration/cache/8df8071ee134-4182359e79e632d3.html",
+        "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+        "sectionQuote": "Dreams (research preview) now supports Claude Fable 5 and Claude Sonnet 5. See Supported models.",
+        "quotes": [
+          "Dreams (research preview) now supports Claude Fable 5 and Claude Sonnet 5. See Supported models."
+        ],
+        "dateComponents": {
+          "mode": "date-heading",
+          "heading": {
+            "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(19)",
+            "text": "July 10, 2026"
+          },
+          "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(21)",
+          "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(21) > li:nth-of-type(1)"
+        }
+      }
+    },
+    "decision": "existing-runtime dated feature matched to preserved raw DOM; not a new addition"
+  },
+  {
+    "week": "2026-w23",
+    "slug": "overview-55e88204",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+    "publication": {
+      "precision": "publisher-date-only",
+      "publisherDate": "2026-05-28"
+    },
+    "event": {
+      "id": "overview-55e88204",
+      "publisherDate": "2026-05-28",
+      "section": "We've launched mid-conversation system messages",
+      "evidence": {
+        "path": "_workspace/oneway/20260909-product-media-integration/cache/8df8071ee134-4182359e79e632d3.html",
+        "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+        "sectionQuote": "We've launched mid-conversation system messages. On Claude Opus 4.8, you can send role: \"system\" messages after a user turn (subject to placement rules) in the messages array, preserving prompt cache hits when instructions change during a long-running session. No beta header is required.",
+        "quotes": [
+          "We've launched mid-conversation system messages. On Claude Opus 4.8, you can send role: \"system\" messages after a user turn (subject to placement rules) in the messages array, preserving prompt cache hits when instructions change during a long-running session. No beta header is required."
+        ],
+        "dateComponents": {
+          "mode": "date-heading",
+          "heading": {
+            "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(36)",
+            "text": "May 28, 2026"
+          },
+          "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(38)",
+          "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(38) > li:nth-of-type(2)"
+        }
+      }
+    },
+    "decision": "existing-runtime dated feature matched to preserved raw DOM; not a new addition"
+  },
+  {
+    "week": "2026-w19",
+    "slug": "20260506-claude-managed-agents-public-beta-multiagent-ses-a4bcf8c87ac0",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+    "publication": {
+      "precision": "publisher-date-only",
+      "publisherDate": "2026-05-06"
+    },
+    "event": {
+      "id": "20260506-claude-managed-agents-public-beta-multiagent-ses-a4bcf8c87ac0",
+      "publisherDate": "2026-05-06",
+      "section": "Multiagent orchestration and Outcomes",
+      "evidence": {
+        "path": "_workspace/oneway/20260909-product-media-integration/cache/8df8071ee134-4182359e79e632d3.html",
+        "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+        "sectionQuote": "Multiagent orchestration and Outcomes are now in public beta under the standard managed-agents-2026-04-01 beta header.",
+        "quotes": [
+          "Multiagent orchestration and Outcomes are now in public beta under the standard managed-agents-2026-04-01 beta header."
+        ],
+        "dateComponents": {
+          "mode": "date-heading",
+          "heading": {
+            "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(43)",
+            "text": "May 6, 2026"
+          },
+          "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(45)",
+          "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(45) > li:nth-of-type(1)"
+        }
+      }
+    },
+    "decision": "existing-runtime dated feature matched to preserved raw DOM; not a new addition"
+  },
+  {
+    "week": "2026-w31",
+    "slug": "openai-20260731-gpt-54-and-gpt-54-mini-retire-from-codex-on",
+    "sourceUrl": "https://learn.chatgpt.com/docs/changelog",
+    "publication": {
+      "precision": "publisher-date-only",
+      "publisherDate": "2026-07-31"
+    },
+    "event": {
+      "id": "openai-20260731-gpt-54-and-gpt-54-mini-retire-from-codex-on",
+      "publisherDate": "2026-07-31",
+      "section": "GPT-5.4 and GPT-5.4 mini retire",
+      "evidence": {
+        "path": "_workspace/oneway/20260909-product-media-integration/cache/4400a64be445-33248eeec30c231d.html",
+        "sourceUrl": "https://learn.chatgpt.com/docs/changelog",
+        "sectionQuote": "GPT-5.4 and GPT-5.4 mini retire from Codex on August 31",
+        "quotes": [
+          "GPT-5.4 and GPT-5.4 mini retire from Codex on August 31"
+        ],
+        "dateComponents": {
+          "mode": "entry-time",
+          "heading": {
+            "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1)",
+            "text": "GPT-5.4 and GPT-5.4 mini retire from Codex on August 31"
+          },
+          "day": {
+            "selector": "#codex-2026-07-31 time",
+            "text": "2026-07-31"
+          },
+          "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > section:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(1) > span:nth-of-type(1)"
+        }
+      }
+    },
+    "decision": "existing-runtime dated feature matched to preserved raw DOM; not a new addition"
+  }
+]

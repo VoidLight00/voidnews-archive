@@ -1,0 +1,19 @@
+{
+  "source_url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+  "retrieved_on": "2026-09-08",
+  "publisher_date": "2026-09-01",
+  "retrieval_method": "WebFetch public primary-page extraction",
+  "raw_https_status": 403,
+  "full_original_body_cache_available": false,
+  "cache_kind": "researcher-preserved extracted facts and short source quotations; not a verbatim complete article",
+  "quotes": [
+    "Today we’re announcing Enterprise Frontier Safeguards (EFS).",
+    "EFS will be rolling out to customers in phases, starting later this fall.",
+    "Anthropic doesn’t charge for Enterprise Frontier Safeguards."
+  ],
+  "extracted_facts_english": "Anthropic says it developed Enterprise Frontier Safeguards with input from more than 100 organizations. It analyzes serious misuse patterns across sessions and accounts while allowing customers to retain activity data in their own cloud accounts using their own keys and access controls.\n\nCustomer-owned storage, customer-managed encryption keys and fully automated review are independent opt-in controls. Customers investigate and respond to signals from automated analysis. The controls do not change model behavior, API pricing or rate limits.\n\nAnthropic does not charge for EFS itself, but customers using their own cloud storage pay their provider’s storage, read, write and transfer charges. EFS was announced as an upcoming offering with phased rollout later in fall 2026, not an already broadly available product.",
+  "date_evidence": "Date follows the publisher’s displayed 2026-09-01 calendar date. Publication time and timezone are unspecified; no exact KST conversion is asserted.",
+  "limitations": [
+    "Full original body cache unavailable. Public WebFetch extraction confirms announcement/body/date; direct HTTPS 403, no bypass."
+  ]
+}

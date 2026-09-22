@@ -1,0 +1,43 @@
+Alpha Changelog - 9/2/26
+Thank you for all of your dedicated testing, feedback, and bug reports over the last two weeks! We pushed a huge update to
+alpha.midjourney.com
+, stacked on a lot of other changes in the past couple of weeks. Reminder: what we’re trying to do on alpha is to make the magic of Midjourney accessible to more people, by making it feel easier and more intuitive to control the model, without sacrificing any of the control people have now. Some things are going to be broken, but we’re shipping frequently enough that most things shouldn’t remain broken for long (especially if you tell us about it).
+EDIT-LIGHTBOX
+The biggest change is that the new v8.2 edit model is on alpha, with a new editor built directly into the lightbox. Open any image in the lightbox, edit with plain instructions, attach up to 4 reference images, and see all your session edits in one place. If the last time you looked was when we launched last week, we’ve fixed a bunch of bugs and glitches.
+STYLE EXPLORATION
+We’re experimenting with a new Change Style feature on the lightbox, which is part of a broader push towards easier ways of exploring style space. I think this is gonna be a hit once we nail it, this is just an early version of it.
+DRAG AND DROP
+We’re still working through drag and drop UX. We’re starting to feel better about the current version, but we want it to feel a bit more… jazzy.
+PROMPT BAR & PILLS
+Lots of bugs and papercuts have gotten fixed. I know this is a major point of contention, but we’re going to get it there. We’re still thinking about the correct behavior for what is kept vs removed between prompts and sessions, and how people can set defaults.
+POLISH & BUGS
+Things should feel a lot faster. A lot of little fixes: overlaps, data issues, weird combination glitches (Niji 7 + inpainting now works correctly, Pinterest extension button no longer shows up on the sidebar – we can’t test all of these, so your feedback is very helpful for finding them). Also better messaging around errors and some errors get fixed by themselves. 🙂
+UP NEXT
+Setting default parameters. Previewing an sref with your prompt. Giving more real estate to images. Make the closability of the settings more obvious.
+Please keep the feedback coming in
+#alpha-ideas-and-bugs
+!
+Thank you for being part of our community ❤️
+Love,
+Midjourney
+You might also like...
+Aug
+29
+Edit Image Quality Update
+1 min read
+Aug
+21
+Changelog - 8/20/26
+3 min read
+Jul
+23
+Midjourney’s First Acquisition
+1 min read
+May
+27
+Web Updates
+1 min read
+Feb
+26
+An update on Rooms
+1 min read

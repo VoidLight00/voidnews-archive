@@ -1,0 +1,391 @@
+{
+  "purpose": "Approved additions inventory for the 2026-w37 completion (2026-09-09..2026-09-13), produced by AB run 20260922-134206-ab-20260909-20260922.",
+  "runId": "20260922-134206-ab-20260909-20260922",
+  "rows": [
+    {
+      "slug": "anthropic-cybersecurity-alignment-assessment",
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "title": "Anthropic, Claude 연루 사이버공격 4건 정렬성 평가 공개",
+      "publisherDate": "2026-09-09",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "sourceIds": [
+        "anthropic-20260909-cybersecurity-alignment"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-415f8f1af13b2f4b5659.html"
+    },
+    {
+      "slug": "transformers-v5-17-0-new-models",
+      "week": "2026-w37",
+      "company": "Hugging Face",
+      "title": "허깅페이스, Transformers 5.17.0에 신규 모델 7종 추가",
+      "publisherDate": "2026-09-09",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+      "sourceIds": [
+        "huggingface-transformers-20260909-v5170"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-c6a70b623b520248d507.html"
+    },
+    {
+      "slug": "langchain-connections-managed-credentials",
+      "week": "2026-w37",
+      "company": "LangChain",
+      "title": "랭체인, 에이전트별 자격증명 관리 기능 Connections 공개",
+      "publisherDate": "2026-09-09",
+      "url": "https://www.langchain.com/blog/connections-managed-credentials-and-per-caller-identity-for-managed-deep-agents",
+      "sourceIds": [
+        "langchain-20260909-connections"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-9412f9ee07ba42c48139.html"
+    },
+    {
+      "slug": "meshy-game-asset-pipeline-case-study",
+      "week": "2026-w37",
+      "company": "Meshy",
+      "title": "메시, 3AGameFactory 사례로 이미지→3D 에셋 파이프라인 소개",
+      "publisherDate": "2026-09-09",
+      "url": "https://www.meshy.ai/blog/ai-agent-game-asset-pipeline",
+      "sourceIds": [
+        "meshy-20260909-game-assets"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0d597c65ed80424001bd.html"
+    },
+    {
+      "slug": "vscode-1-137-release",
+      "week": "2026-w37",
+      "company": "Microsoft",
+      "title": "Visual Studio Code 1.137 릴리스",
+      "publisherDate": "2026-09-09",
+      "url": "https://code.visualstudio.com/updates/v1_137",
+      "sourceIds": [
+        "microsoft-20260909-vscode-1.137"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-dcd87a4c52f47f88819d.html"
+    },
+    {
+      "slug": "naver-ai-factory-france-proposal",
+      "week": "2026-w37",
+      "company": "NAVER",
+      "title": "팀네이버, 프랑스와 AI 팩토리 유럽 확장 협력 제안",
+      "publisherDate": "2026-09-09",
+      "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034644",
+      "sourceIds": [
+        "naver-20260910-ai-factory-france"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-78630bdb2baab2cabdd8.html"
+    },
+    {
+      "slug": "nvidia-nemotron-imo-gold-recipe",
+      "week": "2026-w37",
+      "company": "NVIDIA",
+      "title": "엔비디아, IMO 금메달 수준 수학 추론 파이프라인 공개",
+      "publisherDate": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10712",
+      "sourceIds": [
+        "huggingface-20260911-olympiad-math"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-13cafb8278b4024200be.html"
+    },
+    {
+      "slug": "codex-cli-0-154-0",
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "title": "Codex CLI 0.154.0, 음성 대화·워크트리 지원 추가",
+      "publisherDate": "2026-09-09",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0",
+      "sourceIds": [
+        "openai-20260909-codex-0-154-0"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2ec7a45fef458a79b70e.html"
+    },
+    {
+      "slug": "openai-christiano-foundation-board",
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "title": "폴 크리스티아노, OpenAI 재단 이사회 합류",
+      "publisherDate": "2026-09-09",
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "sourceIds": [
+        "openai-20260909-christiano-foundation-board"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-3eb3e9557eb7038ef8ad.html"
+    },
+    {
+      "slug": "shanghai-ai-lab-ncp-archpreview",
+      "week": "2026-w37",
+      "company": "Shanghai AI Laboratory",
+      "title": "상하이AI연구소 계열 연구팀, 개념 단위 예측 실험 결과 공개",
+      "publisherDate": "2026-09-09",
+      "url": "https://arxiv.org/abs/2609.10715",
+      "sourceIds": [
+        "huggingface-20260911-ncp-archpreview"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-75ee456968c00a6916f6.html"
+    },
+    {
+      "slug": "suno-v6-music-model-launch",
+      "week": "2026-w37",
+      "company": "Suno",
+      "title": "수노, 음악 생성 모델 v6 공개... 3개 버전으로 세분화",
+      "publisherDate": "2026-09-09",
+      "url": "https://suno.com/blog/introducing-v6",
+      "sourceIds": [
+        "suno-20260909-introducing-v6"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-7d2b583eb0439cb151bd.html"
+    },
+    {
+      "slug": "tencent-hunyuan-auk-open-source-speech",
+      "week": "2026-w37",
+      "company": "Tencent Hunyuan",
+      "title": "텐센트 훈위안, 음성 생성·편집 파운데이션 모델 AuK 오픈소스 공개",
+      "publisherDate": "2026-09-09",
+      "url": "https://github.com/Tencent-Hunyuan/AuK",
+      "sourceIds": [
+        "tencent-hunyuan-20260909-auk"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-cc1403cbb312be4ed6bb.html"
+    },
+    {
+      "slug": "vllm-v0-29-0-release",
+      "week": "2026-w37",
+      "company": "vLLM",
+      "title": "vLLM, v0.29.0 정기 버전 배포",
+      "publisherDate": "2026-09-09",
+      "url": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+      "sourceIds": [
+        "vllm-20260909-v0290"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-448701fe99745f6407d1.html"
+    },
+    {
+      "slug": "anthropic-tactical-intelligence-weapons-evaluation",
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "title": "Anthropic, 표적 정보·재래식 무기 능력 평가 도구 공개",
+      "publisherDate": "2026-09-10",
+      "url": "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities",
+      "sourceIds": [
+        "anthropic-20260910-tactical-intelligence"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-7160cfc6b1914a7ee326.html"
+    },
+    {
+      "slug": "claude-managed-agents-auto-permission",
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "title": "Claude Managed Agents 권한 정책에 auto 모드 추가",
+      "publisherDate": "2026-09-10",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "sourceIds": [
+        "anthropic-20260910-managed-agents-auto-permission"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html"
+    },
+    {
+      "slug": "cartesia-tts-model-vs-voice-explainer",
+      "week": "2026-w37",
+      "company": "Cartesia",
+      "title": "카르테시아, TTS 모델과 목소리는 다른 개념이라고 설명",
+      "publisherDate": "2026-09-10",
+      "url": "https://www.cartesia.ai/blog/tts-model-vs-voice",
+      "sourceIds": [
+        "cartesia-20260910-tts-voice"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-422ba7b00feca1efb3ef.html"
+    },
+    {
+      "slug": "cursor-projects-coordinator-agent",
+      "week": "2026-w37",
+      "company": "Cursor",
+      "title": "커서, 대규모 작업 관리하는 코디네이터 에이전트 Projects 출시",
+      "publisherDate": "2026-09-10",
+      "url": "https://cursor.com/blog/projects",
+      "sourceIds": [
+        "cursor-20260912-projects",
+        "cursor-20260910-projects"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-b09bf6f2d73ad55cccaa.html"
+    },
+    {
+      "slug": "deepseek-v4-1-flash",
+      "week": "2026-w37",
+      "company": "DeepSeek",
+      "title": "DeepSeek V4.1 Flash 출시, 신규 아키텍처 최소형 모델",
+      "publisherDate": "2026-09-10",
+      "url": "https://api-docs.deepseek.com/updates/",
+      "sourceIds": [
+        "deepseek-20260910-v41-flash"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-8f8555b73e1b42928d84.html"
+    },
+    {
+      "slug": "devin-desktop-remote-agent-hosts",
+      "week": "2026-w37",
+      "company": "Devin",
+      "title": "데빈 데스크톱, SSH 원격 에이전트 호스트 연결 기능 추가",
+      "publisherDate": "2026-09-10",
+      "url": "https://docs.devin.ai/desktop/changelog#v3-10-23",
+      "sourceIds": [
+        "devin-20260910-remote-agents"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-c164595fef1e89e047f7.html"
+    },
+    {
+      "slug": "elevenlabs-umg-music-partnership",
+      "week": "2026-w37",
+      "company": "ElevenLabs",
+      "title": "일레븐랩스, 유니버설뮤직과 다년간 전략적 제휴 체결",
+      "publisherDate": "2026-09-10",
+      "url": "https://elevenlabs.io/blog/umg",
+      "sourceIds": [
+        "elevenlabs-20260910-umg-partnership"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-18213f182208d622aea5.html"
+    },
+    {
+      "slug": "hume-voice-replication-leaderboard",
+      "week": "2026-w37",
+      "company": "Hume AI",
+      "title": "흄AI, 음성 복제 정확도 비교하는 리더보드 공개",
+      "publisherDate": "2026-09-10",
+      "url": "https://www.hume.ai/blog/introducing-the-hume-voice-replication-leaderboard",
+      "sourceIds": [
+        "hume-20260910-voice-replication"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2dc52cdeee8ef154fa39.html"
+    },
+    {
+      "slug": "meshy-7-1-ultra-4k-launch",
+      "week": "2026-w37",
+      "company": "Meshy",
+      "title": "메시, 4K 지오메트리 지원하는 7.1 버전 출시",
+      "publisherDate": "2026-09-10",
+      "url": "https://www.meshy.ai/blog/meshy-7-1-launch",
+      "sourceIds": [
+        "meshy-20260910-7-1-launch"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-45c8801a5d72e1b7e1ad.html"
+    },
+    {
+      "slug": "chatgpt-for-financial-services",
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "title": "OpenAI, 금융기관용 ChatGPT for Financial Services 출시",
+      "publisherDate": "2026-09-10",
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services/",
+      "sourceIds": [
+        "openai-20260911-chatgpt-financial-services"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0bb946f0c421538942e4.html"
+    },
+    {
+      "slug": "codex-python-sdk-0-154-0",
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "title": "Codex Python SDK 0.154.0, 추론 강도 옵션 확장",
+      "publisherDate": "2026-09-10",
+      "url": "https://github.com/openai/codex/releases/tag/python-v0.154.0",
+      "sourceIds": [
+        "openai-20260910-codex-python-0-154-0"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-94bf6e711cee1f8943dc.html"
+    },
+    {
+      "slug": "openai-gpt-live-1",
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "title": "OpenAI, API용 실시간 음성 모델 GPT-Live-1 공개",
+      "publisherDate": "2026-09-10",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "sourceIds": [
+        "openai-20260910-gpt-live-1"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-b8a75fb67d8179220690.html"
+    },
+    {
+      "slug": "openai-python-sdk-3-10-3-13-updates",
+      "week": "2026-w37",
+      "company": "OpenAI",
+      "title": "OpenAI Python SDK v3.10~3.13 업데이트, Live API 지원 추가",
+      "publisherDate": "2026-09-10",
+      "url": "https://github.com/openai/openai-python/releases/tag/v3.13.0",
+      "sourceIds": [
+        "openai-20260909-python-3-10-0",
+        "openai-20260909-python-3-11-0",
+        "openai-20260910-python-3-12-0",
+        "openai-20260910-python-3-13-0"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-101bb5c334ba4e50138c.html"
+    },
+    {
+      "slug": "replit-databricks-integration-ga",
+      "week": "2026-w37",
+      "company": "Replit",
+      "title": "리플릿, 데이터브릭스 통합 정식 출시... 레이크베이스 네이티브 지원",
+      "publisherDate": "2026-09-10",
+      "url": "https://replit.com/blog/databricks2026",
+      "sourceIds": [
+        "replit-20260910-databricks"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-0ebdfc02e6c728562a15.html"
+    },
+    {
+      "slug": "vidu-s2-real-time-video-generation",
+      "week": "2026-w37",
+      "company": "Vidu",
+      "title": "비두, 실시간 상호작용 가능한 영상 생성 모델 S2 공개",
+      "publisherDate": "2026-09-10",
+      "url": "https://arxiv.org/abs/2609.11638",
+      "sourceIds": [
+        "huggingface-20260915-vidu-s2"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-140756f350a003dd55d0.html"
+    },
+    {
+      "slug": "naver-labs-vr-tour-gangsong-museum",
+      "week": "2026-w37",
+      "company": "NAVER",
+      "title": "네이버랩스, 간송미술관 공간지능 VR 투어 공개",
+      "publisherDate": "2026-09-11",
+      "url": "https://www.navercorp.com/media/pressReleasesDetail?seq=10034650",
+      "sourceIds": [
+        "naver-20260911-naver-labs-vr-tour"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-370cac85c1083d81d0c1.html"
+    },
+    {
+      "slug": "claude-code-2-1-267-270-updates",
+      "week": "2026-w37",
+      "company": "Anthropic",
+      "title": "Claude Code v2.1.267~270 연속 업데이트, 플러그인 평가 명령 추가",
+      "publisherDate": "2026-09-12",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+      "sourceIds": [
+        "anthropic-20260909-claude-code-2-1-267",
+        "anthropic-20260910-claude-code-2-1-268",
+        "anthropic-20260911-claude-code-2-1-269",
+        "anthropic-20260912-claude-code-2-1-270"
+      ],
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-2a68cabb6c20de64eba5.html"
+    },
+    {
+      "slug": "anthropic-compliance-api-chrome-transcripts",
+      "week": "2026-w38",
+      "company": "Anthropic",
+      "title": "Anthropic, 컴플라이언스 API에 크롬 세션 기록 추가",
+      "publisherDate": "2026-09-18",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-4182359e79e632d3734e.html"
+    },
+    {
+      "slug": "openai-api-key-governance-controls",
+      "week": "2026-w38",
+      "company": "OpenAI",
+      "title": "OpenAI, API 키 생성 거버넌스 통제 추가",
+      "publisherDate": "2026-09-15",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "cache": "_workspace/oneway/20260922-w37-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html"
+    }
+  ]
+}

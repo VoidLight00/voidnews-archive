@@ -1,0 +1,7 @@
+{
+  "omitted": [{"id":"sep02-08-05","status":"unverified","reason":"No timezone-supported KST publication date; source exposes date only"}],
+  "subsequentlyIncluded": ["sep02-08-01", "sep02-08-03", "sep02-08-06", "sep02-08-15"],
+  "verificationScope": "01,06,15 independently refetched and article body verified; 03 supported by cached source body quotations. Publisher announcements, not independent performance or transaction-completion verification.",
+  "noWeek37Created": true,
+  "registryNote": "week36 registered by main after merging four first-window records; total 18. Earlier validation-results represent the initial 10-record snapshot, not final integrated validation."
+}

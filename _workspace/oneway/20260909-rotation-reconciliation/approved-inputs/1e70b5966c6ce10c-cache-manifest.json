@@ -1,0 +1,590 @@
+[
+  {
+    "originalPath": "/tmp/voidnews-devtools-adjudicated.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/7da957cb8cf7-voidnews-devtools-adjudicated.json",
+    "sha256": "7da957cb8cf777d284c3d07388d99d930a6dbe6bf617662b641b7fb66c57c60b",
+    "bytes": 1379083
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-integration-ready.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/b524f431d180-voidnews-discovery-integration-ready.json",
+    "sha256": "b524f431d1800a555e64ba57befdb18195c05b061b0fe16bd7ee7cfce1546f08",
+    "bytes": 158029
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-discovery-runtime-before.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/6b9712213aae-voidnews-devtools-discovery-runtime-before.json",
+    "sha256": "6b9712213aae6c41e171506a91c373139d2180231becf441ae7dae2ca610b8fd",
+    "bytes": 2617131
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/13d1b5dab0dfabb7.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/8a38265d01e6-13d1b5dab0dfabb7.html",
+    "sha256": "8a38265d01e6d8677cfb8eb83cdf89d55dd44d5bdbd2760dee960f825a1cf960",
+    "bytes": 131646
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/13d1b5dab0dfabb7.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/30b7ef473e37-13d1b5dab0dfabb7.txt",
+    "sha256": "30b7ef473e37899ae52e05ceaf08a293937a2dbe2d6ea8ebbaa6743f1917aa28",
+    "bytes": 2460
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/5b9d60084bc37024.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/84267839c833-5b9d60084bc37024.html",
+    "sha256": "84267839c8337eeb3d4274589857f8014f46af2d1810232a54b918e95fff4dc8",
+    "bytes": 174847
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/5b9d60084bc37024.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/d6ea610d1c93-5b9d60084bc37024.txt",
+    "sha256": "d6ea610d1c93a6ff4eca281de68dfd34ff65c1a4a1297186e26a839644d300a7",
+    "bytes": 8598
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/4ac7e252dc52d087.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/87ad06331c53-4ac7e252dc52d087.html",
+    "sha256": "87ad06331c5369031f27eae68353138d2cf94c94c36e12b1415ea6d7d20476ea",
+    "bytes": 364392
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/4ac7e252dc52d087.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/961493a219e5-4ac7e252dc52d087.txt",
+    "sha256": "961493a219e57b4f3cc4b134bc8494782dcef0404fe5e6b3b750377d1c76cfbd",
+    "bytes": 22034
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/10a9ce61faddc3a7.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/28833220ec53-10a9ce61faddc3a7.html",
+    "sha256": "28833220ec530a66e2544c41b40536acdcef9b236462f3eed1729cfd42421224",
+    "bytes": 150339
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/10a9ce61faddc3a7.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/50ec8ed8a769-10a9ce61faddc3a7.txt",
+    "sha256": "50ec8ed8a7695b5ac9d0ba44d03f9e75e5f00bae7f0c7341a49766f4b1c94ed2",
+    "bytes": 4296
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/75d9044c6cf45863.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/03924a8e2106-75d9044c6cf45863.html",
+    "sha256": "03924a8e21060af570f7d08f3742547f80b57a76ef4c5245fce51b2e9b9bd13e",
+    "bytes": 372431
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/75d9044c6cf45863.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/28d04210a373-75d9044c6cf45863.txt",
+    "sha256": "28d04210a37380a0c458aa042723945f554087415cd2d466cf098c1d1029e71e",
+    "bytes": 1598
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/5bdea6cb815fb90f.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/d92086d6173c-5bdea6cb815fb90f.html",
+    "sha256": "d92086d6173cfc842c31520e986fbce611fd85c09f5941289ab7e8f189a5b77d",
+    "bytes": 430000
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/5bdea6cb815fb90f.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/6817093be39c-5bdea6cb815fb90f.txt",
+    "sha256": "6817093be39caa6e4ece80a3f1051c42da767ba0daa23a47f8c3c2195b2d0b4c",
+    "bytes": 3658
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/2ec7c53d6e71cf75.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/5aa634a3b54b-2ec7c53d6e71cf75.html",
+    "sha256": "5aa634a3b54be745bb386c881d9da0800cd3cd320c700e6ba55a9ea809d78adc",
+    "bytes": 371020
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/2ec7c53d6e71cf75.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/16c3212ed285-2ec7c53d6e71cf75.txt",
+    "sha256": "16c3212ed2851178284e97d8c07acac4013c83c9bf59527df0165a01f187acf3",
+    "bytes": 1505
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/cd9db5f6a6685f53.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/3627bea3ab45-cd9db5f6a6685f53.html",
+    "sha256": "3627bea3ab455a729fb0ba7b5517a8b0ce6686f4b2aa028d3d28c6ebc4058810",
+    "bytes": 388798
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/cd9db5f6a6685f53.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/f278db3bf3a6-cd9db5f6a6685f53.txt",
+    "sha256": "f278db3bf3a6b0cacfdf57a283efbdae5b2d824c467930426c3c19878ed50eb9",
+    "bytes": 1656
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/c93cc4f914bde20b.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/897cf645c7ed-c93cc4f914bde20b.html",
+    "sha256": "897cf645c7ed93f59f408682124eb4ccdbd7628c8b7493e1c3f1d77703ffc172",
+    "bytes": 374000
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/c93cc4f914bde20b.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/c6442cfb6eee-c93cc4f914bde20b.txt",
+    "sha256": "c6442cfb6eee70e8bd27aa14c1fbe6bc2dd3aa2ba4aa58629a332033b1b208bd",
+    "bytes": 1664
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/cac5014b4e88975e.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/514e76a126f9-cac5014b4e88975e.html",
+    "sha256": "514e76a126f9d43bdb0d5055ccc3cb4a31f857d7e75cec384fd13209473dd611",
+    "bytes": 432399
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/cac5014b4e88975e.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/66891a63cb6b-cac5014b4e88975e.txt",
+    "sha256": "66891a63cb6bc9b28d18cce68223a07f6e799c93be43a83b1bdf0ae2980e58d6",
+    "bytes": 2835
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/4a02737544ef778d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/3826f72bcd59-4a02737544ef778d.html",
+    "sha256": "3826f72bcd595d331f25d10ffd59e1d312743cebdcd7412fc14d71488b2759de",
+    "bytes": 458085
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/4a02737544ef778d.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/cc0bc3ba70fb-4a02737544ef778d.txt",
+    "sha256": "cc0bc3ba70fbbcf1c2e1d4c74efc05efb3dccb56ff60d6dec75d1fe9fc1680a5",
+    "bytes": 3387
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/b3d2576e2dbda990.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/33cc0a519ef3-b3d2576e2dbda990.html",
+    "sha256": "33cc0a519ef30d2c8cb95c164368c8f9d1b6c456a46124b8f7d18d3a0ee17a4a",
+    "bytes": 169245
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/b3d2576e2dbda990.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/5075456c1c52-b3d2576e2dbda990.txt",
+    "sha256": "5075456c1c52e7221e309adac6063541d77b99a3d435f3c4e99cff4b84615cf4",
+    "bytes": 9181
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/8bb1125fbe598465.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/cd82dd62f8eb-8bb1125fbe598465.html",
+    "sha256": "cd82dd62f8ebb119012d37a7990eb04cf9f03cbe05fd7efcf402bef76609d6e6",
+    "bytes": 67755
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/dd0d75ab3ae02838.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/e15cc7f20056-dd0d75ab3ae02838.html",
+    "sha256": "e15cc7f200568c4faedca2a1ae17b67bce3718f1c45b7ebc3beea56c1ba460ec",
+    "bytes": 1817232
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/dd0d75ab3ae02838.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/e15cc7f20056-dd0d75ab3ae02838.html",
+    "sha256": "e15cc7f200568c4faedca2a1ae17b67bce3718f1c45b7ebc3beea56c1ba460ec",
+    "bytes": 1817232
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/93f4fa35342c18cb.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/20ae09983e9a-93f4fa35342c18cb.html",
+    "sha256": "20ae09983e9aa03ff0654fd16bef38a91d6c6156b9812a66ae679532686b9483",
+    "bytes": 422844
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/93f4fa35342c18cb.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/f295726fffca-93f4fa35342c18cb.txt",
+    "sha256": "f295726fffcaa84e593e284b4130b0edfa8b1806b08ac394c1d5b3d450626f8f",
+    "bytes": 3157
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/ad9afdebc11ab9ab.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/bf3c85eff18e-ad9afdebc11ab9ab.html",
+    "sha256": "bf3c85eff18e44e46c71ed6825fce284528dd2cc5c79eb44da870922b38a8629",
+    "bytes": 391155
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/ad9afdebc11ab9ab.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/7abc49288c9c-ad9afdebc11ab9ab.txt",
+    "sha256": "7abc49288c9c89867bfcba61f884b6818903284b2649981616d61b7187668f88",
+    "bytes": 2086
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/811104bfb9eab33f.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/a78ffa25371f-811104bfb9eab33f.html",
+    "sha256": "a78ffa25371ff063d331242a1d2eaea1fbd697fddf8678809c4d7e7975468313",
+    "bytes": 424250
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/811104bfb9eab33f.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/27a032660d3c-811104bfb9eab33f.txt",
+    "sha256": "27a032660d3c63d09512f7dbfe989a0025f2417c870c87542e5b5cb0c441343b",
+    "bytes": 2360
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/e2cd35369054621d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/759beae13861-e2cd35369054621d.html",
+    "sha256": "759beae13861ef1bbe2568884aa0a5ed43e71abf2bdc07131063b52c87f7367b",
+    "bytes": 400136
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/e2cd35369054621d.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/1d3ec01211ac-e2cd35369054621d.txt",
+    "sha256": "1d3ec01211ac300a77942bccd93e043a1e9a42c720088c8f834943af302abe20",
+    "bytes": 2194
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/11f7043a65716489.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/fda986c99110-11f7043a65716489.html",
+    "sha256": "fda986c991102fe6826bcf91d8be408c690c2a6116bd2abd2ced154143cf4b68",
+    "bytes": 405448
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/11f7043a65716489.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/9dafd6956d96-11f7043a65716489.txt",
+    "sha256": "9dafd6956d966b396958c4b7636ba8df77c54263e78ff6d002d3e95828f92afb",
+    "bytes": 2282
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/8ccd6a2a507d64b7.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/ce7ca02d5610-8ccd6a2a507d64b7.html",
+    "sha256": "ce7ca02d56106cee9410f3cec94002cbb7e529f6ec3d6d70fd8c3be2a3a76237",
+    "bytes": 398613
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/8ccd6a2a507d64b7.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/1b2f4f75dea4-8ccd6a2a507d64b7.txt",
+    "sha256": "1b2f4f75dea46fc854361c898a843dc7021172e99b7b5925a2de8bd6b601d020",
+    "bytes": 2722
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/7b1050b0cae2ec45.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/464b85ce3dbb-7b1050b0cae2ec45.html",
+    "sha256": "464b85ce3dbb70a5517e153ff889e9d0abec0bbaa9fd554380adf73571c18c4e",
+    "bytes": 388826
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/7b1050b0cae2ec45.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/6be31e5712fc-7b1050b0cae2ec45.txt",
+    "sha256": "6be31e5712fc653c1eaabd83a58d1deea41624625d1b6fef6eb561af12ff49ad",
+    "bytes": 2100
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/beb7bf914eac130f.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/5025a649929d-beb7bf914eac130f.html",
+    "sha256": "5025a649929d25cf25ee1f3c31a7073660da7f496623a1d891b7b16b42dc2a1e",
+    "bytes": 386709
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/beb7bf914eac130f.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/95a560d88fac-beb7bf914eac130f.txt",
+    "sha256": "95a560d88facb7427710b19fe804f0bdf30e95d35ff20aa1e4d3ae8d5bb783a6",
+    "bytes": 2153
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/19b96229beaa9474.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/e846987f7bae-19b96229beaa9474.html",
+    "sha256": "e846987f7bae99b895c6ac2f284a75ba1d5526a2615e1adf206147743722d386",
+    "bytes": 406310
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/19b96229beaa9474.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/23b5849d8819-19b96229beaa9474.txt",
+    "sha256": "23b5849d8819082a8d4f6b063dd42513306106863bff64b91d599b078104e2eb",
+    "bytes": 2556
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/86369e6f08c39265.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/2f6d19d9862c-86369e6f08c39265.html",
+    "sha256": "2f6d19d9862c6521c980cf87cebea938780f6fe427fc1bd5ba2c7be0c2926bb2",
+    "bytes": 416139
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/86369e6f08c39265.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/2fe992b89fb6-86369e6f08c39265.txt",
+    "sha256": "2fe992b89fb63ef8334f7a7c54e89c7c02b6938373665196c6694febf8f42cb5",
+    "bytes": 2961
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/acbf0aed19dfbc04.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/d5d2d9e3cd28-acbf0aed19dfbc04.html",
+    "sha256": "d5d2d9e3cd28dca47479dd3852f4bb76c458055b592a1c9282f7920d564db28c",
+    "bytes": 384394
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/acbf0aed19dfbc04.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/1707aaf0959d-acbf0aed19dfbc04.txt",
+    "sha256": "1707aaf0959d5b33abb89ab6b26e2833e0c522ccea070790022053580d9a3bb7",
+    "bytes": 2021
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/e5acb14edc805f6d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/24846a8c2510-e5acb14edc805f6d.html",
+    "sha256": "24846a8c25104dfba25738ed51824bf3cbf5a688b689afc027209300a1bf1b98",
+    "bytes": 392202
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/e5acb14edc805f6d.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/872755b7099f-e5acb14edc805f6d.txt",
+    "sha256": "872755b7099f06549d1bbb95601ec8bd1d084faeb7a3dc0f9aa6e483641425bc",
+    "bytes": 2122
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/904fefb496442f19.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/ca225bb479d5-904fefb496442f19.html",
+    "sha256": "ca225bb479d510bd4b91beabfa6ff346e20d764e855b173e4a0f0ae43119456f",
+    "bytes": 386252
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/904fefb496442f19.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/bc5c5123bb55-904fefb496442f19.txt",
+    "sha256": "bc5c5123bb55ff09321c7313ea28333ca90f7de4d44e5105efa34cc02d8cf75b",
+    "bytes": 1716
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/8e0797e2d81ffaaa.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/fd134aef50d2-8e0797e2d81ffaaa.html",
+    "sha256": "fd134aef50d25eb5723709ce1278e381d1ba6ca29bd21702e96ffb95d9aa6aa4",
+    "bytes": 382836
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/8e0797e2d81ffaaa.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/461ddfc39285-8e0797e2d81ffaaa.txt",
+    "sha256": "461ddfc39285060ef76fb3ae393ecd386c2daffdc586172a5c46e71cf342c0fe",
+    "bytes": 2047
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/e1fb53c4fc1578cb.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/2ad294844e33-e1fb53c4fc1578cb.html",
+    "sha256": "2ad294844e336b4464f0f02257384d375ca2070cd9c5e87d3ad9a9297361d445",
+    "bytes": 392129
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/e1fb53c4fc1578cb.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/c3b3f93e9127-e1fb53c4fc1578cb.txt",
+    "sha256": "c3b3f93e912722331a5ffc3e1c8964fe600cdab5914b839e5301248e598112c0",
+    "bytes": 2227
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/7ef5aa3207243e23.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/743bef7c0648-7ef5aa3207243e23.html",
+    "sha256": "743bef7c064856cbe5bcce4ac79f368b5d5fe0e3a5bef69adc9f023d003bc37d",
+    "bytes": 415032
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/7ef5aa3207243e23.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/89cfdcb05a34-7ef5aa3207243e23.txt",
+    "sha256": "89cfdcb05a34635acabd8e844ebc90325a14017fc61028d5dc9c2fb07a06926f",
+    "bytes": 2852
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/12897e900a36c00f.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/f131a2312858-12897e900a36c00f.html",
+    "sha256": "f131a2312858b777f761e4097d49df69f70e8a19607f4dc1cb1b726112b889cd",
+    "bytes": 389450
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/12897e900a36c00f.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/292111531635-12897e900a36c00f.txt",
+    "sha256": "292111531635f2c534f542b93f9d05f22bc3fb3d685daa9da65ffe35b5d22363",
+    "bytes": 1909
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/7caf9c40d2264490.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/ad067711538f-7caf9c40d2264490.html",
+    "sha256": "ad067711538fc3110cd835fcecd7cfcc78c6749f0daf8c8d996f7ec293cca757",
+    "bytes": 372575
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/7caf9c40d2264490.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/60fa9fd0adfe-7caf9c40d2264490.txt",
+    "sha256": "60fa9fd0adfed332865736023dd84de67aa37e67f5b21c1a1894df76186c69d1",
+    "bytes": 1207
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/da38a0a8e3455f5f.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/c79088ceba88-da38a0a8e3455f5f.html",
+    "sha256": "c79088ceba88e3d6d5773af81bf0c84b497dc151b8b7349649a8b6c8339e76a2",
+    "bytes": 311491
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/da38a0a8e3455f5f.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/3d97b17cca1c-da38a0a8e3455f5f.txt",
+    "sha256": "3d97b17cca1cf663a35d5e16fd3b5dec50883f36eb5f319404ffb9dec2433749",
+    "bytes": 11413
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/0c40b696dcffc0d5.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/fb222f2449e7-0c40b696dcffc0d5.html",
+    "sha256": "fb222f2449e737a777c1e5ad7c42d526a64fa4a7dc7b2e66ac02c317e1cfd0ab",
+    "bytes": 25485
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/fb48a63bb108ae7e.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/ef1b71ea0bde-fb48a63bb108ae7e.html",
+    "sha256": "ef1b71ea0bdef7ffd4759e12bd4f51e1678d78ccfc5752b5c4271d14569197c3",
+    "bytes": 26770
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/dd0d75ab3ae02838.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/e15cc7f20056-dd0d75ab3ae02838.html",
+    "sha256": "e15cc7f200568c4faedca2a1ae17b67bce3718f1c45b7ebc3beea56c1ba460ec",
+    "bytes": 1817232
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/dd0d75ab3ae02838.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/e15cc7f20056-dd0d75ab3ae02838.html",
+    "sha256": "e15cc7f200568c4faedca2a1ae17b67bce3718f1c45b7ebc3beea56c1ba460ec",
+    "bytes": 1817232
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/a42a13969aa8dd09.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/c49c938a700c-a42a13969aa8dd09.html",
+    "sha256": "c49c938a700c2d724fac27d38ef1c6a88e45c8ddbe7df8f2318d47df817c2443",
+    "bytes": 179942
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/a42a13969aa8dd09.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/62f332c6305b-a42a13969aa8dd09.txt",
+    "sha256": "62f332c6305b00cc28043b826f63d015fbf753977b6876def1ee3f034a183559",
+    "bytes": 16468
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/a40b0782a69ab874.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/5188c5ceb61f-a40b0782a69ab874.html",
+    "sha256": "5188c5ceb61f4613aafffbbad866d92f440a4b591a41e7d6164ddb576ac543a8",
+    "bytes": 183189
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/a40b0782a69ab874.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/ea04ddbffb47-a40b0782a69ab874.txt",
+    "sha256": "ea04ddbffb472df5e738a45228e3ba008e85f5e64a462fb36e6aab6a7c28211e",
+    "bytes": 23722
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/567188de284c26a2.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/335d1a23da5d-567188de284c26a2.html",
+    "sha256": "335d1a23da5d4aa6a6fbd0ba00f6444ef5c37d15d2c56865ed531244f65518db",
+    "bytes": 317987
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/567188de284c26a2.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/9400d888e9df-567188de284c26a2.txt",
+    "sha256": "9400d888e9df8d5e2cea442c06eb74733076dc29ab9b60fdb5b9e47e8d884314",
+    "bytes": 16038
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/fec227fb075a491e.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/fa1e2e455d4b-fec227fb075a491e.html",
+    "sha256": "fa1e2e455d4b07ac96a6aefc211c6c73eebd42022f36d06eca5635081dcb4a37",
+    "bytes": 313856
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/fec227fb075a491e.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/b751cbe78dfb-fec227fb075a491e.txt",
+    "sha256": "b751cbe78dfb82545e4d185441c615eacd8dba954e44299020c9762c96a0ca27",
+    "bytes": 13684
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/bc344a9de0aada73.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/01a25ecff626-bc344a9de0aada73.html",
+    "sha256": "01a25ecff6267d800df026285dc2eec535e22f83b417fae00ac7140577fb16ee",
+    "bytes": 319235
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/bc344a9de0aada73.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/d421c8e676fa-bc344a9de0aada73.txt",
+    "sha256": "d421c8e676fafe1dce458d57733c4ef428dcc2c0e510dc68cbd68c8bb620b3a3",
+    "bytes": 16919
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/d17f4d6663b940b5.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/882736214864-d17f4d6663b940b5.html",
+    "sha256": "8827362148641a3eb6b8e3033ab787ec1c4cae4c061224c899c560707a7f36d0",
+    "bytes": 284647
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/d17f4d6663b940b5.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/815562ca0c90-d17f4d6663b940b5.txt",
+    "sha256": "815562ca0c90dbb2e10c7a3b01ecafd471423375428d5692e2a34239910dab51",
+    "bytes": 13678
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/b7b43d249881091d.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/b6d3cce7626c-b7b43d249881091d.html",
+    "sha256": "b6d3cce7626c2750852bc02397f69bcea5e15d7456b80af6fe61f552ba393fb3",
+    "bytes": 168260
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/b7b43d249881091d.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/7de6cfb607b1-b7b43d249881091d.txt",
+    "sha256": "7de6cfb607b1f57f74f2be8f893e508f419c8046a41903ad0fd95bada241fb36",
+    "bytes": 4503
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/ae6658fd66150692.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/cd1afa73194c-ae6658fd66150692.html",
+    "sha256": "cd1afa73194cbb51384ed65fe3d156efaa10e0fd10bd613ca8e998a16be5202f",
+    "bytes": 179381
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/ae6658fd66150692.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/c10e027607ab-ae6658fd66150692.txt",
+    "sha256": "c10e027607ab6cac840a6fb480c1e97b293b426adfcc90406ef1bbc815a54961",
+    "bytes": 5198
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/38d0a235a1eb0299.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/f4fe9dfde5a8-38d0a235a1eb0299.html",
+    "sha256": "f4fe9dfde5a8337a479400195edbcba109a3ba6bc3d0dc106534649662359617",
+    "bytes": 87629
+  },
+  {
+    "originalPath": "/tmp/voidnews-devtools-rotation-cache/38d0a235a1eb0299.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/483ccbeff8f8-38d0a235a1eb0299.txt",
+    "sha256": "483ccbeff8f861b04279c9573cb293585ba507fa9c85048632345a838abca79e",
+    "bytes": 11250
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/d8d20431e09373de3945.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/860103da42d9-d8d20431e09373de3945.body",
+    "sha256": "860103da42d9d3bd65cc17fa362d12fe317906d2953c35d1a239de8f87e70c1a",
+    "bytes": 147171
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/0c2ac9ff74bfee565713.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/2f890709e8fc-0c2ac9ff74bfee565713.body",
+    "sha256": "2f890709e8fce14b7068218578697eef5203d27f07b3e88e757061afd196cf00",
+    "bytes": 150957
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/dccec670d05c413c1581.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/711c66381397-dccec670d05c413c1581.body",
+    "sha256": "711c6638139789e202f93e6f252670bc6b239e2fdae4618e18f3267d0cfdf999",
+    "bytes": 82832
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/b9ec799d769b0f4ba49d.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/fae8d7d6ecad-b9ec799d769b0f4ba49d.body",
+    "sha256": "fae8d7d6ecad6d48b11b0d7fee3bbcfcd7a5d7ac2d4dbfb3e1d5f643c1c4be63",
+    "bytes": 83984
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/f6acc130483b89f81bc0.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/cb96d458379e-f6acc130483b89f81bc0.body",
+    "sha256": "cb96d458379eeacce736bb73abbfbcd98fd37b7b41ff9d1b64b1d4e1681fe83c",
+    "bytes": 426990
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/4639e2eddfc9658fa6d3.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/fb8a1b60f5bc-4639e2eddfc9658fa6d3.body",
+    "sha256": "fb8a1b60f5bc85532a2b5e9eab2fab694aaa60beb5ce6d0dba54c6ead2cb1d64",
+    "bytes": 56358
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/c11c7f0778852d8af4ab.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/01f8656ce32c-c11c7f0778852d8af4ab.body",
+    "sha256": "01f8656ce32c702c46bb90927fb145d8d76db4b11a8847ee7c0f39d22aadf22c",
+    "bytes": 121510
+  },
+  {
+    "originalPath": "/tmp/voidnews-discovery-source-cache/67d2b90d000dcb669a66.body",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-devtools-discovery-integration/cache/48b6e42ae1f6-67d2b90d000dcb669a66.body",
+    "sha256": "48b6e42ae1f62ea29919087ae78bb4bde59d05da53a11f6a32cd69dc31e20953",
+    "bytes": 622741
+  }
+]

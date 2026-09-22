@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Archive: 2026 - GitHub Changelog</title>
+	<atom:link href="https://github.blog/changelog/feed/?paged=2" rel="self" type="application/rss+xml" />
+	<link>https://github.blog/changelog/page/2/</link>
+	<description>Updates, ideas, and inspiration from GitHub to help developers build and design software.</description>
+	<lastBuildDate>Wed, 02 Sep 2026 21:39:55 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1</generator>
+
+<image>
+	<url>https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32</url>
+	<title>Archive: 2026 - GitHub Changelog</title>
+	<link>https://github.blog/changelog/page/2/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">153214340</site>	<item>
+		<title>Enterprise-managed settings support any default model</title>
+		<link>https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Wed, 02 Sep 2026 18:51:12 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model</guid>
+
+					<description><![CDATA[<p>You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model">Enterprise-managed settings support any default model</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p><img decoding="async" src="https://github.com/user-attachments/assets/70173fe2-94ea-442e-a1f4-04e35e366b41" alt='The managed.json file showing an update to the default model where the current model key is replaced with "Kimi 3"'><br>
+You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.</p>
+<p>You can also customize the default by enterprise team, assigning a different default model based on team membership. Set the <code>model</code> key as <code>overridable</code> and update team configuration files in <code>team-mappings.json</code> so that enterprise teams can choose their own preferred default model. All other users inherit your enterprise default. Model defaults in managed settings are generally available with Copilot Business and Copilot Enterprise in the GitHub Copilot app, Copilot CLI, and Visual Studio Code.</p>
+<p>Learn more in <a href="https://docs.github.com/enterprise-cloud@latest/copilot/reference/enterprise-administrators/enterprise-managed-settings#model">our docs about enterprise managed settings</a>, or join the discussion in the <a href="https://github.com/orgs/community/discussions/199139">GitHub Community</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model">Enterprise-managed settings support any default model</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[client apps]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98633</post-id>	</item>
+		<item>
+		<title>Content exclusions generally available in Copilot app and CLI</title>
+		<link>https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Wed, 02 Sep 2026 18:14:23 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli</guid>
+
+					<description><![CDATA[<p>The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won&#8217;t use excluded files as context, helping you protect sensitive&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli">Content exclusions generally available in Copilot app and CLI</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won&rsquo;t use excluded files as context, helping you protect sensitive code across agentic workflows.</p>
+<p>This is available for Copilot Business and Copilot Enterprise customers.</p>
+<p>To learn more, see <a href="https://docs.github.com/copilot/concepts/context/content-exclusion">our docs about content exclusion</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli">Content exclusions generally available in Copilot app and CLI</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98630</post-id>	</item>
+		<item>
+		<title>Enterprise Live Migrations from GHES to ghe.com generally available</title>
+		<link>https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 22:24:27 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available</guid>
+
+					<description><![CDATA[<p>Enterprise Live Migrations (ELM) is now generally available, enabling near-zero-downtime repository migrations from GitHub Enterprise Server (GHES) to GitHub Enterprise Cloud with Data Residency (GHEC DR), so you can move&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available">Enterprise Live Migrations from GHES to ghe.com generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Enterprise Live Migrations (ELM) is now generally available, enabling near-zero-downtime repository migrations from GitHub Enterprise Server (GHES) to GitHub Enterprise Cloud with Data Residency (GHEC DR), so you can move even your largest, most active repositories while the contributions keep flowing.</p>
+<p>Key features of ELM to consider when selecting a tool for your next repository migration are:</p>
+<ul>
+<li><strong>Cutover in minutes, not days:</strong> ELM continuously syncs data from source to target, so developers keep working in their repositories throughout the migration. When you&rsquo;re ready, the cutover only requires the time to drain remaining in-flight changes. This is especially valuable for business-critical repositories contributed to by geographically dispersed teams where there is no convenient downtime window to fit a migration into.
+</li>
+<li>
+<p><strong>Built for the largest monorepos:</strong> ELM was purpose-built to handle the repositories that push existing tooling to its limits (i.e., massive monorepos with deep git history, large volumes of issues and pull requests, and constant activity around the clock). Resource-level progress tracking surfaces failures before cutover, so you can make an informed decision about when to proceed.</p>
+</li>
+<li>
+<p><strong>Use ELM alongside GitHub Enterprise Importer (GEI):</strong> ELM complements GEI, giving you flexibility to choose the right tool for each repository based on its size, shape, and activity. Use GEI for straightforward migrations where brief downtime is acceptable, and ELM for the repositories that need a zero-disruption approach. Run them concurrently as part of the same migration strategy.</p>
+</li>
+<li>
+<p><strong>Manage migrations with the <code>gh elm</code> extension:</strong> Install the GitHub CLI extension to configure credentials and manage the ELM lifecycle &mdash; from creating and monitoring a migration to initiating cutover &mdash; through the GHES REST API. Human-readable output helps you track progress, while JSON output supports scripting and automation.</p>
+</li>
+</ul>
+<p><img decoding="async" src="https://github.com/user-attachments/assets/96706636-433a-4857-bed2-b6863e5e25dc" alt="gh elm CLI extension help command ouput"></p>
+<p>ELM runs as a service on your GHES appliance, driven by the <code>gh elm</code> CLI. ELM supports migrations from GHES versions 3.17.18+, 3.18.12+, 3.19.9+, 3.20.3+, 3.21.3+, and 3.22.0+. This release ships with the most recent GHES patch releases, with plans to expand to additional migration paths.</p>
+<p>To get started, check out the <a href="https://docs.github.com/migrations/elm/about-live-migrations">Enterprise Live Migrations documentation</a>.</p>
+<p><img decoding="async" src="https://github.com/user-attachments/assets/baa2f899-462c-4739-a995-546437f9dfd0" alt="social"></p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available">Enterprise Live Migrations from GHES to ghe.com generally available</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98610</post-id>	</item>
+		<item>
+		<title>Set an expiration date for individual user budgets</title>
+		<link>https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 20:23:13 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets</guid>
+
+					<description><![CDATA[<p>You can now set an optional expiration date on an individual user budget, and GitHub removes the budget on that date. This capability is generally available. The user then falls&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets">Set an expiration date for individual user budgets</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>You can now set an optional expiration date on an individual user budget, and GitHub removes the budget on that date. This capability is generally available. The user then falls back to the next budget that applies to them (i.e., their cost center per-user budget or otherwise your universal budget).</p>
+<p>Previously, you had to remove every temporary budget override by hand, creating recurring cleanup work at enterprise scale.</p>
+<p>When you create or edit an individual user budget, you can choose:</p>
+<ul>
+<li>No expiration, which is the default and matches current behavior.</li>
+<li>Expiration at the start of the next billing cycle.</li>
+<li>Expiration on a specific date.</li>
+</ul>
+<p><img decoding="async" src="https://github.com/user-attachments/assets/76fa6330-e256-44df-b375-9d5210872992" alt="Budget expiration settings showing three options: never expires, expires at the start of the next billing cycle, and expires on a specific date in UTC"></p>
+<p>You can change or clear an expiration date at any time.</p>
+<p>Set an expiration date in your billing settings, or use the <code>expires_at</code> field in the Budgets REST API when you create or update a budget.</p>
+<p>Expiration dates are available for the GitHub Copilot Business and Copilot Enterprise plans.</p>
+<p>Learn more about <a href="https://docs.github.com/enterprise-cloud@latest/billing/how-tos/set-up-budgets">setting up budgets</a> and the <a href="https://docs.github.com/enterprise-cloud@latest/rest/billing/budgets">Budgets REST API</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets">Set an expiration date for individual user budgets</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98603</post-id>	</item>
+		<item>
+		<title>Copilot code review can now approve pull requests</title>
+		<link>https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 19:25:57 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests</guid>
+
+					<description><![CDATA[<p>Copilot now tells you when a pull request is ready to approve, and admins can authorize it to sign off on approval. The ability for Copilot to approve is off&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests">Copilot code review can now approve pull requests</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Copilot now tells you when a pull request is ready to approve, and admins can authorize it to sign off on approval. The ability for Copilot to approve is off by default and configurable at the enterprise, organization, and repository level. The approval assessments will now appear as a part of the overview comment in every Copilot review. This feature is available in public preview to GitHub Copilot Pro, Pro+, Max, Business, and Enterprise plans.</p>
+<p><video width="100%" loop controls autoplay muted src="https://github.com/user-attachments/assets/351026c5-07a4-4bb7-ab29-66a6f200a04f"></video></p>
+<h3 id="%e2%9c%85-approval-assessments" id="%e2%9c%85-approval-assessments" ><a class="heading-link" href="#%e2%9c%85-approval-assessments">&#9989; Approval assessments<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Every Copilot code review now includes an approval assessment in the overview comment. The assessment signals whether Copilot considers the pull request ready to approve, giving you an at-a-glance read on its judgment alongside its detailed comments.</p>
+<blockquote><p>
+  An approval assessment alone does not count toward merge requirements. Copilot&rsquo;s determination is surfaced so you can decide how to act on it.
+</p></blockquote>
+<h3 id="%e2%9a%99%ef%b8%8f-turning-on-approvals" id="%e2%9a%99%ef%b8%8f-turning-on-approvals" ><a class="heading-link" href="#%e2%9a%99%ef%b8%8f-turning-on-approvals">&#9881;&#65039; Turning on approvals<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>By default, Copilot will not approve pull requests. When enabled, Copilot can submit an approval that counts toward the repository&rsquo;s required-approvals rule. If new commits are pushed after Copilot approves, its approval is dismissed just like a human reviewer&rsquo;s, and you can request a new review from Copilot to get a fresh approval.</p>
+<p>Admins control this behavior at three levels:</p>
+<ul>
+<li><strong>Enterprise:</strong> Admins can leave approvals off for the whole enterprise or let organizations decide.</li>
+<li><strong>Organization:</strong> Admins can turn approvals on org-wide, let repository admins decide, enable it for specific repositories, or turn it off org-wide.</li>
+<li><strong>Repository:</strong> Admins can turn approvals on or off, and choose which file paths Copilot is allowed to approve.</li>
+</ul>
+<p>To learn more about configuring approvals for your enterprise, organization, or repository, see the <a href="https://docs.github.com/copilot/how-tos/copilot-on-github/set-up-copilot/configure-code-review#customizing-copilot-code-review-1">Copilot code review documentation</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests">Copilot code review can now approve pull requests</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98598</post-id>	</item>
+		<item>
+		<title>Block users from discussion comments in personal repositories</title>
+		<link>https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 16:30:01 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories</guid>
+
+					<description><![CDATA[<p>You can now block or unblock users directly from discussion comments in repositories owned by personal GitHub accounts, extending the in-context blocking controls already available for issue and pull request&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories">Block users from discussion comments in personal repositories</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>You can now block or unblock users directly from discussion comments in repositories owned by personal GitHub accounts, extending the in-context blocking controls already available for issue and pull request comments.</p>
+<p>To block or unblock a user from a discussion comment:</p>
+<ol>
+<li>Open the <strong>More</strong> menu on their comment.</li>
+<li>Select <strong>Block user</strong> or <strong>Unblock user</strong>.</li>
+<li>Optionally add a private note explaining why you&rsquo;re blocking the user.</li>
+<li>Confirm your selection.</li>
+</ol>
+<p>If you have any questions or feedback, join the discussion in our <a href="https://github.com/orgs/community/discussions/204556">community discussion</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories">Block users from discussion comments in personal repositories</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[collaboration tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98577</post-id>	</item>
+		<item>
+		<title>Claude Fable 5.1 is generally available in GitHub Copilot</title>
+		<link>https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 14:29:23 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot</guid>
+
+					<description><![CDATA[<p>Claude Fable 5.1 from Anthropic is now available in GitHub Copilot. The latest model in Anthropic&#8217;s Mythos class, Claude Fable 5.1 is designed for long-horizon, autonomous coding and knowledge-work tasks.&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot">Claude Fable 5.1 is generally available in GitHub Copilot</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Claude Fable 5.1 from Anthropic is now available in GitHub Copilot. The latest model in Anthropic&rsquo;s Mythos class, Claude Fable 5.1 is designed for long-horizon, autonomous coding and knowledge-work tasks.</p>
+<p>In our internal testing, Claude Fable 5.1 demonstrated strong performance on substantial, long-running coding tasks, including deep codebase research, feature development, and complex agentic workflows.</p>
+<p>Unlike other Claude models in GitHub Copilot, Claude Fable 5.1 requires data retention by default to operate Anthropic&rsquo;s safety classifiers. Zero data retention access is available for certain eligible enterprise customers. Continue reading for more details.</p>
+<p>This model is billed at provider list pricing under usage-based billing. See <a href="https://docs.github.com/copilot/reference/copilot-billing/models-and-pricing">pricing for GitHub Copilot models and requests</a> for details.</p>
+<p><video loop controls autoplay muted width="100%" src="https://github.com/user-attachments/assets/ddcd24b0-67da-460b-8d4d-2f109c81e3d2"><br>
+</video></p>
+<h3 id="availability-in-github-copilot" id="availability-in-github-copilot" ><a class="heading-link" href="#availability-in-github-copilot">Availability in GitHub Copilot<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Claude Fable 5.1 is available to Copilot Pro+, Max, Business, and Enterprise users. You can select the model in the model picker in:</p>
+<ul>
+<li>Visual Studio Code</li>
+<li>Visual Studio</li>
+<li>Copilot CLI</li>
+<li>GitHub Copilot coding agent</li>
+<li>GitHub Copilot app</li>
+<li>github.com</li>
+<li>GitHub Mobile on iOS and Android</li>
+<li>JetBrains IDEs</li>
+<li>Xcode</li>
+<li>Eclipse</li>
+</ul>
+<p>Rollout will be gradual. Check back soon if you don&rsquo;t see it yet.</p>
+<h3 id="enabling-access" id="enabling-access" ><a class="heading-link" href="#enabling-access">Enabling access<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Copilot Enterprise and Copilot Business plan administrators must enable the Claude Fable 5.1 policy in Copilot settings. The policy is off by default.</p>
+<p><strong>Claude Fable 5.1 requires data retention by default.</strong> When Claude Fable 5.1 is used, Anthropic retains data, including prompts and outputs, to operate safety classifiers that detect harmful use. Retained data is not used to train Anthropic&rsquo;s models. Other Claude models, except for Fable 5 and Fable 5.1, continue to operate under zero Data Retention (ZDR).</p>
+<p>To learn more, see <a href="https://support.claude.com/articles/15425996-data-retention-practices-for-mythos-class-models">Anthropic&rsquo;s data retention practices for Mythos-class models</a>. Enabling the Claude Fable 5.1 policy constitutes acknowledgment of this requirement. Leaving it off keeps Claude Fable 5.1 unavailable to your organization.</p>
+<h3 id="zero-data-retention-access-for-eligible-enterprises" id="zero-data-retention-access-for-eligible-enterprises" ><a class="heading-link" href="#zero-data-retention-access-for-eligible-enterprises">Zero data retention access for eligible enterprises<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Eligible customers can use Claude Fable 5.1 as well as Claude Fable 5 with zero data retention through the end of the calendar year under a time-bound exemption while Anthropic rolls out <a href="https://www.anthropic.com/news/enterprise-frontier-safeguards">Enterprise Frontier Safeguards (EFS)</a>. After that point, continued use of the models will require EFS, which will enable automated safety monitoring while also giving eligible customers more options for how their data is retained. This includes the option to use storage and encryption keys under their own control. Between now and then we will be working with Anthropic to provide feedback on EFS.</p>
+<p>If your enterprise is approved for access, Claude Fable 5.1 and Fable 5 requests will be routed to zero data retention endpoints when the model is enabled. To learn whether your organization qualifies, contact your GitHub account team. GitHub Support cannot determine eligibility or enable access.</p>
+<p>Approval will not automatically enable the models. After approval, a Copilot Enterprise or Copilot Business administrator must still enable Claude Fable 5.1 and Claude Fable 5 policy in Copilot settings.</p>
+<h3 id="learn-more" id="learn-more" ><a class="heading-link" href="#learn-more">Learn more<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>To explore all models available in GitHub Copilot, see our <a href="https://docs.github.com/copilot/reference/ai-models/supported-models">documentation on supported models</a> and get started with Copilot.</p>
+<h3 id="share-your-feedback" id="share-your-feedback" ><a class="heading-link" href="#share-your-feedback">Share your feedback<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>Join the <a href="https://github.com/orgs/community/discussions/categories/copilot-conversations">GitHub Community</a> to share your feedback.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot">Claude Fable 5.1 is generally available in GitHub Copilot</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98574</post-id>	</item>
+		<item>
+		<title>GitHub CLI: Media in issues, pull requests, and comments</title>
+		<link>https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 12:35:59 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-31-github-cli-media-in-issues-pull-requests-and-comments</guid>
+
+					<description><![CDATA[<p>GitHub CLI now has a repeatable --attach flag that uploads a local image or video and references it inline in an issue, pull request, or comment body. This is now&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments">GitHub CLI: Media in issues, pull requests, and comments</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>GitHub CLI now has a repeatable <code>--attach</code> flag that uploads a local image or video and references it inline in an issue, pull request, or comment body.</p>
+<p>This is now generally available to all users on GitHub across all plans. You just need to update <code>gh</code> to v2.99.0.</p>
+<h2 id="why-this-matters" id="why-this-matters" ><a class="heading-link" href="#why-this-matters">Why this matters?<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Some things are easier to show than to describe (i.e., a UI bug, a rendered result, an error on screen). Previously, <code>gh</code> only wrote text, so adding an image or video to an issue or pull request meant stopping to open the browser, drag the file into the comment box, and copy the result back. Now, <code>gh</code> can attach images and videos directly from the command line.</p>
+<p><code>--attach</code> puts the image in the same command that writes Markdown. File the bug, and the screenshot lands with it, so the issue shows the actual problem the first time. Open the pull request with a before and after, and the reviewer sees the change instead of pulling the branch to check. Your coding agents get this too, so they can show a result rather than describe it.</p>
+<h2 id="capabilities" id="capabilities" ><a class="heading-link" href="#capabilities">Capabilities<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<ul>
+<li><strong>Attach from commands that write Markdown text:</strong> <code>--attach</code> is repeatable and works on <code>gh issue create</code>, <code>gh issue edit</code>, <code>gh issue comment</code>, <code>gh pr create</code>, <code>gh pr edit</code>, and <code>gh pr comment</code>.</li>
+<li><strong>Keep your Markdown as written:</strong> A local path already referenced in the body is rewritten in place, so <code>![alt](./login.png)</code> keeps its alt text and becomes the uploaded asset. Anything attached but never referenced is appended at the end.</li>
+<li><strong>Post images and video:</strong> PNG, JPEG, GIF, WebP, SVG, MP4, MOV, and WebM are all supported.</li>
+<li><strong>Describe what you attach:</strong> Alt text follows the path after <code>#</code>, as in <code>--attach './login.png#The login error state'</code>. Omit it and <code>gh</code> falls back to the filename.</li>
+</ul>
+<h2 id="security-and-access-controls" id="security-and-access-controls" ><a class="heading-link" href="#security-and-access-controls">Security and access controls<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Uploads authenticate with the common token types <code>gh</code> already uses, either the OAuth token from <code>gh auth login</code> or a classic personal access token. Write access to the repository you are attaching to is required for image uploading.</p>
+<p><code>--attach</code> is generally available to all users on GitHub across all plans, with no preview period. Size limits match the web upload flow: 10 MB for images and GIFs, 10 MB for video on Free plans, and 100 MB for video on paid plans. GitHub Enterprise Server is not supported in this release.</p>
+<h2 id="getting-started" id="getting-started" ><a class="heading-link" href="#getting-started">Getting started<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Update <code>gh</code> to v2.99.0, then run <code>gh issue comment  --attach ./screenshot.png</code>. <code>--attach</code> works the same way on <code>gh issue</code> and <code>gh pr</code> create, edit, and comment. Run <code>gh help</code> for the full flag reference.</p>
+<p><img decoding="async" src="https://github.com/user-attachments/assets/3a488bc4-be46-4f25-b6ba-814b283ff17c" alt="Terminal showing gh issue comment with --attach uploading empty-state.png and returning an issue comment URL."></p>
+<p><a href="https://github.com/orgs/community/discussions/205787">Join the discussion</a> on the GitHub Community and <a href="https://docs.github.com/en/github-cli/github-cli/attaching-files-with-github-cli">read the docs</a> to learn more about attaching files from the command line.</p>
+<p><em>Editor&rsquo;s note (September 1, 2026): Updated the doc link.</em></p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments">GitHub CLI: Media in issues, pull requests, and comments</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Release]]></category>
+<category domain="changelog-label"><![CDATA[client apps]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98569</post-id>	</item>
+		<item>
+		<title>Copilot model access update for GitHub Team plans</title>
+		<link>https://github.blog/changelog/2026-08-31-copilot-model-access-update-for-github-team-plans</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Mon, 31 Aug 2026 21:58:46 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-31-copilot-model-access-update-for-github-team-plans</guid>
+
+					<description><![CDATA[<p>We have updated how model access is determined for Copilot users who hold seats in more than one organization. To keep billing and governance in sync, your model access is&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-31-copilot-model-access-update-for-github-team-plans">Copilot model access update for GitHub Team plans</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>We have updated how model access is determined for Copilot users who hold seats in more than one organization. To keep billing and governance in sync, your model access is now determined only by the organization paying for your usage.</p>
+<h2 id="whats-changing" id="whats-changing" ><a class="heading-link" href="#whats-changing">What&rsquo;s changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>Before this change, if you had Copilot seats in more than one organization, you could use a model as long as any of your organizations enabled it. With this update, your billing organization decides model access. You can find this organization under &ldquo;Usage billed to&rdquo; in the <a href="https://github.com/settings/copilot/features">Copilot features page</a>. For more information about how policies apply, read the <a href="https://docs.github.com/enterprise-cloud@latest/copilot/concepts/policies#what-about-users-with-multiple-licenses">GitHub Copilot policy documentation</a>.</p>
+<h2 id="what-isnt-changing" id="what-isnt-changing" ><a class="heading-link" href="#what-isnt-changing">What isn&rsquo;t changing<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h2>
+<p>If your Copilot access comes entirely through an enterprise or its organizations, your model access will not be impacted by this update.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-31-copilot-model-access-update-for-github-team-plans">Copilot model access update for GitHub Team plans</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Improvement]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<category domain="changelog-label"><![CDATA[enterprise management tools]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98565</post-id>	</item>
+		<item>
+		<title>Selected GitHub Copilot models deprecated</title>
+		<link>https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated</link>
+		
+		<dc:creator><![CDATA[Allison]]></dc:creator>
+		<pubDate>Mon, 31 Aug 2026 21:21:40 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated</guid>
+
+					<description><![CDATA[<p>As of today, September 1, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Note&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated">Selected GitHub Copilot models deprecated</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>As of today, September 1, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Note that Claude Sonnet 4.6 is still available to individual GitHub Copilot subscribers on annual plans.</p>
+<div data-target="content-table-wrap.container" class="content-table-wrap"><content-table-wrap><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Deprecation date</th>
+<th>Suggested alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gemini 3.1 Pro</td>
+<td>2026-09-01</td>
+<td>Gemini 3.7 Flash</td>
+</tr>
+<tr>
+<td>Claude Opus 4.5</td>
+<td>2026-09-01</td>
+<td>Claude Opus 4.7, Claude Opus 4.8, or Claude Opus 5</td>
+</tr>
+<tr>
+<td>Claude Opus 4.6</td>
+<td>2026-09-01</td>
+<td>Claude Opus 4.7, Claude Opus 4.8, or Claude Opus 5</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.5</td>
+<td>2026-09-01</td>
+<td>Claude Sonnet 5</td>
+</tr>
+<tr>
+<td>Claude Sonnet 4.6</td>
+<td>2026-09-01</td>
+<td>Claude Sonnet 5</td>
+</tr>
+<tr>
+<td>Raptor Mini</td>
+<td>2026-09-01</td>
+<td>MAI-Code-1.1-Flash</td>
+</tr>
+</tbody>
+</table></content-table-wrap></div>
+<p>Please update your workflows and integrations to use supported models. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you&rsquo;ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the deprecated models.</p>
+<p>GitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance.</p>
+<h3 id="share-your-feedback" id="share-your-feedback" ><a class="heading-link" href="#share-your-feedback">Share your feedback<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>To learn more about the models available in Copilot, see <a href="https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels">our documentation on models</a> and get started with Copilot today.</p>
+<p>Join the <a href="https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels">GitHub Community</a> to share your feedback.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-08-31-selected-github-copilot-models-deprecated">Selected GitHub Copilot models deprecated</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<category domain="changelog-type"><![CDATA[Retired]]></category>
+<category domain="changelog-label"><![CDATA[copilot]]></category>
+<post-id xmlns="com-wordpress:feed-additions:1">98563</post-id>	</item>
+	</channel>
+</rss>

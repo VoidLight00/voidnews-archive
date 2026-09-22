@@ -1,0 +1,170 @@
+[
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/0c9c70f1bc01-voidnews-meta-https___github_blog_changelog_feed__paged_2.txt",
+    "sha256": "0c9c70f1bc014da10e0fcaafc5438c192a660f2b203c392dbf11bf70441610f4",
+    "byteLength": 40690
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/6ce4e3402b02-voidnews-meta-https___github_blog_changelog_feed__paged_3.txt",
+    "sha256": "6ce4e3402b0264567bf148887349fc86f50e60f9f95eec04850d4bf4a4054468",
+    "byteLength": 52508
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-meta-https___github_blog_changelog_feed__paged_4.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/4bed163007a7-voidnews-meta-https___github_blog_changelog_feed__paged_4.txt",
+    "sha256": "4bed163007a736eb4054c5e00adb8cedc6ce19821985b0cf36bccd93b59da53b",
+    "byteLength": 45599
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/d919651e5884-voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+    "sha256": "d919651e5884cc307f475d5bee3ddb359ef36bcc8c314d258b1ef1b156e1d11c",
+    "byteLength": 645936
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/2a45f26a11bc-voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+    "sha256": "2a45f26a11bceb9c851ddbe18fb698b0555d6c8e0d9e253ed9f79cbf0dd415ab",
+    "byteLength": 1154512
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/22295a60262a-voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+    "sha256": "22295a60262a98b6567b80fca4203b381695cdd7222c88b83efcaeae57e38545",
+    "byteLength": 10981245
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___blogs_nvidia_com_feed_.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/5f104cf8dc02-voidnews-research-https___blogs_nvidia_com_feed_.txt",
+    "sha256": "5f104cf8dc02a9d803aa124926bdfaf441abbfa7fad3ebdcc8277ca67cc575e1",
+    "byteLength": 267696
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-first-window/source-cache/voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/4aa94fc553c4-voidnews-research-https___huggingface_co_blog_feed_xml.txt",
+    "sha256": "4aa94fc553c40aab6e43ae11508457aeae4ae9515cb1b4aa3b857ac3d9a9d4f7",
+    "byteLength": 253473
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/google-feed.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/4b69d6d77a91-google-feed.html",
+    "sha256": "4b69d6d77a91cd7231f5230e3d02dd2f3bac6b4653715324821cea5e989bf594",
+    "byteLength": 31052
+  },
+  {
+    "originalPath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260908-ai-backfill-gap-resolution/source-cache/openai-feed.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/58fc80d783e7-openai-feed.html",
+    "sha256": "58fc80d783e7b2791aa8c9b9b4681cf27c6570ab2aeadbacd02e0736b8e50189",
+    "byteLength": 714548
+  },
+  {
+    "originalPath": "/tmp/voidnews-additions-runtime-before.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/e93d37a7e2e7-voidnews-additions-runtime-before.json",
+    "sha256": "e93d37a7e2e76acf2fd293f7ddadf86c2f1acb59a951c6454fde1ab7392e0f65",
+    "byteLength": 2233223
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-all-parsed.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/5edab31997a2-voidnews-feed-all-parsed.json",
+    "sha256": "5edab31997a249c135c1c4a60e7cfeaab198a4844c11851d274e3ba6ecfc1fe2",
+    "byteLength": 760139
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-asr-global-south-body.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/9d562027d2eb-voidnews-feed-asr-global-south-body.txt",
+    "sha256": "9d562027d2ebcfcf940d00f2afb5a92a98df1fc3c8ef9aa1d26af64101bb26f2",
+    "byteLength": 18926
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-asr-global-south.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/e113abb20cb7-voidnews-feed-asr-global-south.html",
+    "sha256": "e113abb20cb7a899ebeb3bcac73dc2add8aa76afc1ba69b34d4ca1afc854f4c0",
+    "byteLength": 275636
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-benchmirt-body.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/33b2a44d6d38-voidnews-feed-benchmirt-body.txt",
+    "sha256": "33b2a44d6d3839fd87c0d05f3046281d7163c02936213f934760bc5f04c69990",
+    "byteLength": 9797
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-benchmirt.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/eb0b5d32deae-voidnews-feed-benchmirt.html",
+    "sha256": "eb0b5d32deaed8bdbe17bc223ab95a57fa2ce61d6e15a8a107ccc27264604c2f",
+    "byteLength": 131769
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-handoff.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/b0dae8f8272a-voidnews-feed-handoff.json",
+    "sha256": "b0dae8f8272abb64c87400d998105f956e140d95ebdb8780fa5db07f57934e8e",
+    "byteLength": 315224
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-lyria-body.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/7f73afef01a7-voidnews-feed-lyria-body.txt",
+    "sha256": "7f73afef01a7ac97df63d4285999584da940a3cf5535e3f5b1cb2584ecd4772f",
+    "byteLength": 998
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-lyria.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/c8d25b349efb-voidnews-feed-lyria.html",
+    "sha256": "c8d25b349efb0d042bb69902bbc23e69c40d4d566ab8f5b743d918ba112705e9",
+    "byteLength": 389146
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-multi-vector-body.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/665f14bc1813-voidnews-feed-multi-vector-body.txt",
+    "sha256": "665f14bc1813b54198ff7c7dd938b90af314fc442ad8e77d581f76e99bcba21b",
+    "byteLength": 40009
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-multi-vector.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/b86a9948244a-voidnews-feed-multi-vector.html",
+    "sha256": "b86a9948244ae4b8f1917bf94627c257b0f84bfa211dcf00c735975a7b0d0288",
+    "byteLength": 345256
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-omissions.json",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/0c4ad6fbd03e-voidnews-feed-omissions.json",
+    "sha256": "0c4ad6fbd03ea11ed444c2141860efe1e0578f292196cec4df7674095fe28a95",
+    "byteLength": 91967
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-workspace-voice-body.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/f22f0d3eba3c-voidnews-feed-workspace-voice-body.txt",
+    "sha256": "f22f0d3eba3cc56a34a968953069ab465eb1f3e7af61d94155c70c99a6b60561",
+    "byteLength": 4896
+  },
+  {
+    "originalPath": "/tmp/voidnews-feed-workspace-voice.html",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/921654edb499-voidnews-feed-workspace-voice.html",
+    "sha256": "921654edb4999896709217cd3ad3648be3dad727e6fb81968f46e77f976a364e",
+    "byteLength": 378463
+  },
+  {
+    "originalPath": "/tmp/voidnews-meta-https___blog_google_rss__page_2.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/dca7d8cc47a7-voidnews-meta-https___blog_google_rss__page_2.txt",
+    "sha256": "dca7d8cc47a749ad5f13a011bd79c65691bca5f556d4b3baaabe43b3bf091f81",
+    "byteLength": 31055
+  },
+  {
+    "originalPath": "/tmp/voidnews-research-https___api_github_com_repos_google_gemini_gemini_cli_releases_per_page_40.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/00e247d49d5c-voidnews-research-https___api_github_com_repos_google_gemini_gemini_cli_releases_per_page_40.txt",
+    "sha256": "00e247d49d5c8e30bfe217a09e237c4768bc7584448c5d5a7d5345aceef228a1",
+    "byteLength": 308012
+  },
+  {
+    "originalPath": "/tmp/voidnews-research-https___blogs_microsoft_com_feed_.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/d37489fd4b51-voidnews-research-https___blogs_microsoft_com_feed_.txt",
+    "sha256": "d37489fd4b518fbcc02f76b9d7502ff167de0085e1813158e76df6f75e67eb46",
+    "byteLength": 141402
+  },
+  {
+    "originalPath": "/tmp/voidnews-research-https___github_blog_changelog_feed_.txt",
+    "durablePath": "/Users/REDACTED/projects/voidnews-archive/_workspace/oneway/20260909-feed-omissions/cache/33ca050104b2-voidnews-research-https___github_blog_changelog_feed_.txt",
+    "sha256": "33ca050104b28deea287d71dce6d8707ff0a0b2d3e47b748fd0f5524f0e4c390",
+    "byteLength": 41537
+  }
+]

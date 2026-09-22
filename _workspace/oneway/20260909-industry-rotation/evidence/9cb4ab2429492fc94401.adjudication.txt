@@ -1,0 +1,85 @@
+Agentic automation in practice: putting standard engineering work on autopilot - Inside Atlassian Skip to content Agentic automation in practice: putting standard engineering work on autopilot August 27, 2026 Published In Development The problem worth solving Every engineering team carries work that is important but not interesting. It follows a predictable sequence of steps and demands an engineer’s attention: finding time in the sprint, understanding what changed, making the fix, verifying it, closing the ticket; without demanding their creativity or judgement. Security vulnerabilities are the clearest example. They arrive continuously, each with a due date, each following the same playbook. The cost isn’t any single ticket, it’s the accumulated interruption tax: the context-switching, the sprint-slotting, the post-deploy bookkeeping, multiplied across every ticket, every team, every quarter. How it works The system has three parts: a dispatcher that finds work, a coding agent that does it, and a closer that finishes the loop. The implementation uses standard Atlassian platform capabilities. If your team has Bitbucket Cloud with Agentic Pipelines enabled, you can build your own version of this today: Bitbucket Agentic Pipelines define AI agents as steps in bitbucket-pipelines.yml, triggered on a schedule, by an event, or programmatically. Rovo Dev is the AI coding runtime that powers each agent. It reads and writes code, runs builds, and interacts with Atlassian products. Atlassian MCP tools give agents scoped, permissioned access to Jira, Bitbucket, and Confluence APIs. The platform: Bitbucket Agentic Pipelines + Rovo Dev + Atlassian MCP Bitbucket Agentic Pipelines lets us define each agent as a versioned pipeline step. Each step invokes Rovo Dev non-interactively, while prompts, configuration, and reusable skills live in the repository alongside the application code. Everything lives in the repository and can be reviewed like code: the pipeline definition wires agents into Bitbucket, .rovodev prompts provide their instructions, pipeline-config.yml sets their model and tool access, and skills capture the codebase-specific knowledge they use. For example, a simplified repository might look like this: my-service/
+├── bitbucket-pipelines.yml       # Agent definitions and pipeline
+├── .rovodev/
+│   ├── vuln-autopatch.md         # Finds and dispatches eligible work
+│   ├── vuln-codingagent.md       # Applies a fix and opens a PR
+│   ├── vuln-autotransition.md    # Closes the loop after deployment
+│   ├── pipeline-config.yml       # Model, MCP, and tool permissions
+│   └── skills/
+│       └── fix-vulnerability/    # Reusable codebase knowledge
+│           └── SKILL.md
+└── src/                          # Application code The companion pipeline-config.yml makes the agent’s operating boundaries explicit: it selects the model, points to the Atlassian MCP configuration, allowlists the exact tools the agent can call, and exposes the context passed into each run. See the configuration reference for available options. # .rovodev/pipeline-config.yml (excerpt)
+
+agent:
+  modelId: claude-sonnet-4-6
+
+mcp:
+  mcpConfigPath: .rovodev/pipeline-mcp.json
+  allowedMcpServers:
+    - url: https://mcp.atlassian.com/v1/native/mcp
+
+toolPermissions:
+  tools:
+    searchJiraIssuesUsingJql: allow
+    getJiraIssue: allow
+    transitionJiraIssue: allow
+    createPullRequest: allow
+    getPullRequests: allow The bitbucket-pipelines.yml then invokes the configured agent as a pipeline step: # bitbucket-pipelines.yml (excerpt)
+
+definitions:
+  agents:
+    vuln-autopatch:
+      prompt: ".rovodev/vuln-autopatch.md"
+      config:
+        path: .rovodev/pipeline-config.yml
+
+pipelines:
+  custom:
+    vuln-autopatch:
+      - step:
+          name: Apply fix and open PR
+          auth:
+            system:
+              scopes:
+                - read:repository:bitbucket
+                - write:repository:bitbucket
+                - write:pullrequest:bitbucket
+          script:
+            - agent: vuln-autopatch The Dispatcher Jira Automation rule that triggers the Dispatcher on a schedule. The dispatcher is an agent, not just a rule that forwards work. A scheduled automation starts it, and its instructions guide it through four decisions before any coding agent is invoked: Fetch: find eligible work items within the configured time window. Classify: distinguish work the system can handle automatically from work that needs human judgement. Deduplicate and batch: combine items that share the same underlying change, so one coding-agent run can address them together. Dispatch: start a coding-agent run for each batch and pass along the relevant context. These decisions are encoded in the dispatcher’s repository prompt, .rovodev/vuln-autopatch.md, rather than hidden in a separate orchestration service: # Dispatcher instructions (excerpt)
+
+1. Fetch eligible work items.
+2. Classify items that can be automated.
+3. Deduplicate and batch items with the same underlying fix.
+4. Dispatch one coding-agent run per batch.
+5. Report the outcome for every item. The result is a transparent run: every item is either dispatched, grouped with related work, or explicitly left for manual handling. The vuln-autopatch Bitbucket pipeline run triggered by the Dispatcher. The Coding Agent The coding agent receives the work items selected by the dispatcher and carries out the fix. Its prompt is intentionally thin: the codebase-specific domain knowledge lives in the skill — one source of truth, usable by the pipeline and engineers alike; while the prompt just reads context, invokes it, and reports back. Those instructions live in .rovodev/vuln-codingagent.md. The prompt is a small harness rather than a second source of domain knowledge; the fix-vulnerability skill contains the codebase-specific guidance for making and verifying the change. # .rovodev/vuln-codingagent.md (excerpt)
+
+1. Read the work items passed by the dispatcher.
+2. Invoke the fix-vulnerability skill.
+3. Report the outcome and pull request link. Because the skill is the reusable unit, an engineer can invoke it directly in a Rovo Dev session and use the same guidance outside the pipeline. The skill: encoding codebase knowledge in a prompt The skill is where the interesting work happened. It’s a structured instruction set that encodes how vulnerabilities are fixed in this specific codebase, not in general terms, but precisely: where dependencies live, what the different fix patterns look like, and what each edge case requires. Under the hood, the skill walks a real decision tree, the same one an engineer would. # .rovodev/skills/fix-vulnerability/SKILL.md (excerpt)
+
+---
+name: fix-vulnerability
+description: Fix a security vulnerability in this codebase
+---
+
+Where does the vulnerability live?
+│
+├── In an application dependency?
+│   ├── One you directly declared?  →  Bump the version.
+│   ├── Upgrading the platform baseline fixes it?  →  Bump the baseline. Done.
+│   ├── A transitive dep — pulled in by something else?
+│   │   ├── Can upgrading the parent bring in the safe version?  →  Bump the parent. Cleanest fix.
+│   │   ├── The platform locks it with a strict constraint?  →  Declare explicitly AND force the override.
+│   │   └── Not locked?  →  Declare the safe version explicitly. It wins naturally.
+│   └── In an isolated sub-component?  →  Override it there directly.
+│
+├── In the base container image?  →  Bump the image tag.
+│
+└── In a sidecar container?
+    ├── Version is pinned?  →  Find the safe version, update the pin.
+    └── Version is platform-managed?  →  Not our fix to make. Close and flag it.
+
+After applying the fix:
+1. Confirm the dependency resolves to the patched version
+2. Run the build to confirm nothing is broken
+3. Open a pull request — titled, described, and linked to the vulnerability ticket - ready for human review. No green build, no PR. Each branch has its own fix strategy and verification steps. The agent doesn’t guess, it follows institutional knowledge that has been codified into the skill and improved over real runs. The vuln-codingagent Bitbucket pipeline run for an automated vulnerability fix. Bitbucket pull request opened by the coding agent. The Closer The Closer is triggered after a deployment and answers the question that matters: is the fix actually live? Its prompt, .rovodev/vuln-autotransition.md, guides it to find eligible work, verify that the corresponding change was merged, and confirm that the deployed build includes it before transitioning the item to its final state. If it cannot establish that evidence, it leaves the item open rather than claiming success. The workflow is idempotent by design, so re-running it is safe and does not create duplicate actions or close items twice. The vuln-autotransition Bitbucket pipeline run after a successful deployment. What changes for engineers Before After Get notified a ticket exists and is approaching its SLA You get a PR. Find space in the sprint to pick it up You review it. Read the ticket and understand what needs to change You merge it. Track down the culprit package, make the change, run tests, open a PR, and come back after deploy to close the ticket The rest is handled automatically. The dispatcher runs daily, before working hours. By the time the team starts their day, fixes are already waiting in pull requests for a decision. If a fix can’t be automated – the build fails, or the change needs judgement; the coding agent says so and stops rather than forcing a broken PR through. Results Fully autonomous. Zero engineer effort beyond PR review. From May to July 2026, 120+ security vulnerabilities resolved , 55+ automated PRs merged. 95% first-run merge rate – no rework, no failed tests. Automated vulnerability remediation at scale – issues are continuously identified, prioritized, and addressed as part of the engineering workflow. Engineers stop being the execution layer for predictable work and become what they should be – the decision layer. The backlog drains continuously instead of accumulating. Getting it right The prompts are the system. They encode institutional knowledge in a form that’s versioned, reviewable, and improvable. Invest here first, everything else is infrastructure. Store them in the repository alongside the code they operate on. Don’t expect generic prompts to understand your world. A prompt that works for one codebase won’t work for another. Specialize for your frameworks, conventions, and dependency patterns. Iterate on real runs, not theory. A prompt that works once isn’t done. It needs failure logs and continuous tightening to become reliable. Track your first-run merge rate and keep improving until it compounds. Verify before you ship. The agent runs the full build and test suite before opening a PR. No passing tests, no PR. This single rule is what makes the system trustworthy. Design for re-runs from day one. A daily pipeline that isn’t idempotent is dangerous. Use existing system state – tickets, labels, PRs – as the source of truth so re-running is always safe. Use a dedicated service account. PRs opened by the agent should be attributed to a bot, not a personal identity. This removes ownership ambiguity, makes automated work instantly recognisable in your PR feed, and keeps machine-generated changes cleanly separated from human contribution history. What comes next Security vulnerability remediation is one instance of something larger. Any work your team does repeatedly on a schedule, following the same steps, with a clear definition of done, is a candidate for this kind of automation. The question isn’t whether it’s possible. It’s which workflow you put on autopilot first. Try Rovo Dev About This Article Nikhil Fadnis Principal Software Engineer Share on Facebook (Opens in new window) Facebook Share on X (Opens in new window) X Share on LinkedIn (Opens in new window) LinkedIn Share on Mail (Opens in new window) Mail Subscribe for more Inside Atlassian Get insights like this in your inbox Sign up now Dismiss Subscribe to our newsletter Research and insights on how teams can deliver results with AI. Email Address Sign up Thank you! Your time is valuable. We promise to send only what’s actually worth reading. Related content Article in Archives GreenHopper Tip of the Month: How Atlassian uses GreenHopper The Tip of the Month, brought to you by Atlassian University, is a monthly series to help master Atlassian tools. Products are more fun to use when you know all the tricks. To build great products, we use the same exact products we offer to you.  Lets take a sneak peak at how the Interactive […] Article in Archives Evaluating Jira Agile – Scrum masters This article is part of a blog series! Part Title 1 Evaluating Jira Agile – Product owners 2 Evaluating Jira Agile – Scrum masters 3 Evaluating Jira Agile – Team Members 4 Evaluating Jira Agile – Everyone   This is the second part of our blog series on how Jira Agile optimizes the key players […] Article in Development Bitbucket How we made vulnerability fixes review-ready with Agentic Pipelines Routine vulnerability fixes are rarely difficult in isolation. The interruption that they cause is the problem: pick up the ticket, trace the dependency, update the package or image, regenerate files, run the checks, open the pull request, then return after deployment to close the loop. That repeated handoff was a good candidate for automation with […]

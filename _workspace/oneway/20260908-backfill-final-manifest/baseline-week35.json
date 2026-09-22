@@ -1,0 +1,276 @@
+{
+  "origin": "git HEAD:lib/weeks/2026-w35.ts",
+  "commit": "958106db82c592f7e10bd8748090f2e99edea6b8",
+  "originalSourceSha256": "38300229cc32796ada9edea8197d3147faf25fe0167063f563f618b39c97e51a",
+  "posts": [
+    {
+      "date": "8/27",
+      "platform": "X+Threads",
+      "title": "‘GPT-6 학습 중단’ 주장은 아직 공식 원출처에서 확인되지 않았다",
+      "deck": "OpenAI 공식 발표·공개 Threads·검색 인덱스에서 GPT-6 학습 중단 사건의 근거를 찾지 못함",
+      "summary": "GPT-6라는 모델명과 학습 중단·일시정지·취소 사건은 OpenAI 공식 발표에서 확인되지 않음 공개 Threads 검색과 Bing RSS 검색에서도 원보도·관계자 원문이 발견되지 않음 현재 OpenAI 공식 홈페이지에서 확인되는 최신 계열은 GPT-5.6 주의: 부재 증거는 사건이 절대 없다는 증명이 아니며, 원출처가 나오기 전까지 미확인 주장으로 보류.",
+      "content": "**GPT-6 학습 중단을 사실로 확정할 근거가 없습니다**\n\n8월 27일 기준 OpenAI 공식 홈페이지, 공개 Threads 검색, Bing RSS와 일반 검색에서 `GPT-6`라는 모델의 학습 중단·일시정지·취소를 발표한 원문을 찾지 못했습니다. 검색 결과는 GPT-4·GPT-5·GPT-5.6 일반 정보로 돌아갔고, 해당 사건을 보도한 신뢰 가능한 원기사도 확인되지 않았습니다.\n\n**검증 한계**\n\n공개 자료에서 찾지 못했다는 사실이 내부 학습 실행의 부재를 증명하지는 않습니다. 다만 원출처 없이 ‘GPT-6 학습이 중단됐다’고 카드 제목에 확정적으로 쓰는 것은 오보 위험이 큽니다.\n\n**직접 확인할 것**\n\nOpenAI 공식 발표, 공식 관계자의 식별 가능한 원문, 또는 복수의 신뢰 가능한 보도가 나올 때까지 미확인 주장으로 보류하십시오.",
+      "source": "https://openai.com/",
+      "officialUrl": "https://openai.com/",
+      "verifiedAt": "2026-08-27",
+      "backupUrls": [
+        {
+          "label": "OpenAI 한국어 공식 홈페이지",
+          "url": "https://openai.com/ko-KR/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "2026-08b",
+        "OpenAI",
+        "팩트체크",
+        "미확인"
+      ],
+      "slug": "openai-20260827-gpt6-training-stop-unverified",
+      "en": {
+        "title": "The claim that GPT-6 training stopped remains unverified",
+        "deck": "No official OpenAI source or identifiable original report was found.",
+        "summary": "As of August 27, no OpenAI announcement or traceable original report confirms a GPT-6 training stop, pause or cancellation. The claim remains unverified pending a primary source.",
+        "content": "As of August 27, no OpenAI announcement or traceable original report confirms a GPT-6 training stop, pause or cancellation. Failure to find a public source does not prove no internal run exists, but the claim should not be presented as fact without primary evidence."
+      }
+    },
+    {
+      "date": "8/27",
+      "platform": "Threads",
+      "title": "Tiangong Omni, 휴머노이드 로봇 게임 400m를 45.66초에 완주",
+      "deck": "팔을 높이 든 독특한 자세로 World Humanoid Robot Games 400m 우승",
+      "summary": "Tiangong Omni가 베이징 World Humanoid Robot Games 400m를 45.66초에 완주하고 우승했다는 행사 출처 영상 공개 곡선 구간에서 몸을 앞으로 기울이고 균형을 지속 보정하는 달리기 모습 확인 주의: 원게시물은 제어 방식과 자율 주행 여부를 명시하지 않으며, 자세를 로봇이 스스로 발견했다는 주장은 공식 개발사 근거 미확인.",
+      "content": "**피지컬 AI의 진전은 달리기 자세보다 완주 조건에서 봐야 합니다**\n\nTiangong Omni가 베이징 World Humanoid Robot Games의 400m 경기에서 45.66초로 우승했다는 영상이 공개됐습니다. 영상에서는 팔을 얼굴 가까이 높이 들고 몸을 앞으로 기울인 채 곡선을 도는 독특한 주법을 확인할 수 있습니다.\n\n**검증 한계**\n\n원게시물은 출처를 World Humanoid Robot Games로 적었지만 원격조종·자율제어·혼합제어 가운데 어떤 방식인지 밝히지 않았습니다. 관련 재게시물의 ‘자세를 자율적으로 발견했다’는 설명은 공식 개발사 원문으로 확인되지 않아 카드에서 제외했습니다.\n\n**직접 확인할 것**\n\n피지컬 AI 데모를 평가할 때 기록뿐 아니라 제어 방식, 넘어짐·재시도, 배터리, 트랙 조건과 동일 하드웨어 여부를 함께 확인하십시오.",
+      "source": "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+      "officialUrl": "https://www.threads.com/@uncover.robotics/post/DcgoEiLkvGU",
+      "verifiedAt": "2026-08-27",
+      "backupUrls": [
+        {
+          "label": "곡선 주행 영상",
+          "url": "https://www.threads.com/@techniahqrobot/post/Dcb9Eljjar4"
+        },
+        {
+          "label": "결승선 우승 영상",
+          "url": "https://www.threads.com/@lincoln_robotics_space/post/DcYsY-CCa4D"
+        }
+      ],
+      "threadsEmbedUrl": "https://www.threads.net/@uncover.robotics/post/DcgoEiLkvGU/embed",
+      "tags": [
+        "AI",
+        "2026-08b",
+        "Physical AI",
+        "휴머노이드",
+        "로봇"
+      ],
+      "slug": "physical-ai-20260827-tiangong-omni-400m",
+      "en": {
+        "title": "Tiangong Omni completes the humanoid robot 400 m in 45.66 seconds",
+        "deck": "The unusual running form won the World Humanoid Robot Games race.",
+        "summary": "A World Humanoid Robot Games-sourced video shows Tiangong Omni winning the 400 m in 45.66 seconds. The source does not specify autonomous, remote or mixed control.",
+        "content": "A World Humanoid Robot Games-sourced video shows Tiangong Omni winning the 400 m in 45.66 seconds. Its unusual raised-arm posture is visible, but the source does not specify autonomous, remote or mixed control, and an independent official source for the claim that the posture was self-discovered was not found."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "X+Threads",
+      "title": "GLM-5.3-Flash 공개, OpenRouter 익명 모델 Ox Alpha의 정체였다",
+      "deck": "320B 중 18B만 활성화하고 네이티브 멀티모달·100만 토큰 컨텍스트 제공",
+      "summary": "Z.ai GLM-5.3-Flash는 320B total·18B active 구조와 이미지·영상 입력, 1,048,576토큰 컨텍스트를 제공 OpenRouter가 stealth model Ox Alpha의 정체가 GLM-5.3-Flash였다고 공식 FAQ에서 확인 현재 할인 가격은 입력 $0.075/M·출력 $0.25/M·캐시 읽기 $0.015/M 주의: 성능 비교와 10분의 1 가격 주장은 Z.ai 자체 보고.",
+      "content": "**Ox Alpha의 정체가 공개됐습니다**\n\nZ.ai는 GLM-5.3-Flash를 320B total·18B active 네이티브 멀티모달 모델로 공개했습니다. OpenRouter 공식 FAQ는 이전 stealth model Ox Alpha가 GLM-5.3-Flash였다고 확인합니다. OpenRouter 사양은 1,048,576토큰 컨텍스트와 최대 131,072토큰 출력입니다.\n\n**직접 확인할 것**\n\nOx Alpha 사용 기록이 있다면 `z-ai/glm-5.3-flash`에서 동일 프롬프트를 다시 실행해 품질·총 토큰·비용을 비교하십시오. GLM-5.2 및 Claude Opus 4.8 비교는 Z.ai 자체 평가입니다.",
+      "source": "https://openrouter.ai/z-ai/glm-5.3-flash",
+      "officialUrl": "https://openrouter.ai/z-ai/glm-5.3-flash",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [
+        {
+          "label": "Z.ai GLM-5 공식 저장소",
+          "url": "https://github.com/zai-org/GLM-5"
+        },
+        {
+          "label": "Hugging Face 공식 가중치",
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+        }
+      ],
+      "tags": [
+        "AI",
+        "2026-08b",
+        "GLM",
+        "OpenRouter"
+      ],
+      "slug": "zai-20260826-glm-5-3-flash-ox-alpha",
+      "en": {
+        "title": "GLM-5.3-Flash launches as the model behind OpenRouter's Ox Alpha",
+        "deck": "The native multimodal MoE activates 18B of 320B parameters with a one-million-token context.",
+        "summary": "Z.ai released GLM-5.3-Flash on August 26. OpenRouter identifies it as the former stealth model Ox Alpha and lists a 1,048,576-token context at discounted pricing of $0.075/M input and $0.25/M output tokens.",
+        "content": "Z.ai released GLM-5.3-Flash on August 26. OpenRouter identifies it as the former stealth model Ox Alpha. Benchmark comparisons remain vendor-reported."
+      }
+    },
+    {
+      "date": "8/25",
+      "platform": "X+Threads",
+      "title": "Apple, 첫 2nm M6와 최대 512GB 메모리 M5 Ultra 공개",
+      "deck": "M6는 Apple 첫 2nm 칩으로 12코어 CPU·12코어 GPU·듀얼 16코어 Neural Engine·최대 32GB 통합 메모리를 제공",
+      "summary": "M6는 Apple 첫 2nm 칩으로 12코어 CPU·12코어 GPU·듀얼 16코어 Neural Engine·최대 32GB 통합 메모리를 제공 M5 Ultra는 최대 80코어 GPU·32코어 Neural Engine·최대 512GB 통합 메모리·1.2TB/s 대역폭 제공 Apple 자체 테스트로 M6 AI GPU 연산은 M5 대비 약 30%, M5 Ultra는 M3 Ultra 대비 최대 4.5배 향상 주장 새 Mac mini와 Mac Studio에 각각 탑재 주의: 성능 수치는 Apple 자체 테스트; 가격·판매 개시일은 공식 본문에서 미확인.",
+      "source": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "officialUrl": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "apple-20260825-m6-m5-ultra",
+      "en": {
+        "title": "Apple unveils its first 2 nm M6 and an M5 Ultra with up to 512 GB",
+        "deck": "Local AI hardware expands in the Mac mini and Mac Studio.",
+        "summary": "Apple announced M6 for Mac mini and M5 Ultra for Mac Studio. Vendor specifications include up to 512 GB unified memory and 1.2 TB/s bandwidth on M5 Ultra; performance figures are Apple tests."
+      }
+    },
+    {
+      "date": "8/25",
+      "platform": "X+Threads",
+      "title": "Claude Code, glibc 2.44 리눅스 시작 충돌 수정",
+      "deck": "Arch Linux·CachyOS·Fedora Rawhide처럼 glibc 2.44를 제공하는 리눅스 배포판에서 시작 시 충돌하던 문제 수정",
+      "summary": "Arch Linux·CachyOS·Fedora Rawhide처럼 glibc 2.44를 제공하는 리눅스 배포판에서 시작 시 충돌하던 문제 수정 주의: 단일 버그 수정 릴리스.",
+      "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.245",
+      "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.245",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "claude-code-20260825-v2-1-245",
+      "en": {
+        "title": "Claude Code fixes startup crashes on glibc 2.44 Linux",
+        "deck": "A focused stability release for current Linux distributions.",
+        "summary": "Claude Code 2.1.245 fixes startup crashes on distributions shipping glibc 2.44, including Arch Linux, CachyOS and Fedora Rawhide."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "X+Threads",
+      "title": "Claude Code, Auto mode 규칙 편집과 MCP 중단 오류·자격 증명 전송 경계 수정",
+      "deck": "/permissions에 Auto mode 분류 규칙 조회·편집 탭 추가",
+      "summary": "/permissions에 Auto mode 분류 규칙 조회·편집 탭 추가 headless/remote에서 incoming message로 중단된 MCP 호출을 성공이 아니라 interrupted error로 보고 제3자 ANTHROPIC_BASE_URL API 키가 Anthropic telemetry·metrics로 전송되던 문제 수정 malformed Bash 명령의 dangling && 또는 ||는 항상 승인 요구 background session·plugin·fullscreen·memory 관련 다수 안정성 수정 주의: 대규모 유지보수 릴리스이며 모든 수정의 독립 영향은 별도.",
+      "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "officialUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "claude-code-20260826-v2-1-246",
+      "en": {
+        "title": "Claude Code adds Auto mode rule editing and tightens MCP and credential boundaries",
+        "deck": "A large maintenance release focuses on agent-operation safety.",
+        "summary": "Claude Code 2.1.246 adds an Auto mode rules tab, reports interrupted MCP calls explicitly, prevents third-party gateway credentials reaching Anthropic telemetry, and hardens malformed Bash approvals."
+      }
+    },
+    {
+      "date": "8/25",
+      "platform": "X+Threads",
+      "title": "Gemini macOS, 말하면서 고친 내용까지 반영하는 지능형 받아쓰기 공개",
+      "deck": "macOS 어느 창에서나 자연어 음성을 현재 커서 위치의 정돈된 텍스트로 입력",
+      "summary": "macOS 어느 창에서나 자연어 음성을 현재 커서 위치의 정돈된 텍스트로 입력 추임새 제거·문장 중간 수정 반영·서식화를 수행 음성으로 작성·편집·요약 가능 주의: 지원 언어·지역·개인정보 처리 방식이 공식 본문에 미명시.",
+      "source": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
+      "officialUrl": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "google-20260825-gemini-macos-dictation",
+      "en": {
+        "title": "Gemini for macOS adds intelligent dictation",
+        "deck": "Speech edits itself into formatted text at the current cursor.",
+        "summary": "Gemini intelligent dictation removes fillers, applies spoken corrections and formats text in the active macOS window. Supported languages, regions and privacy handling were not specified."
+      }
+    },
+    {
+      "date": "8/25",
+      "platform": "X+Threads",
+      "title": "Google, 델라웨어 주민에게 AI·직업 교육 무료 제공",
+      "deck": "Google·델라웨어주 노동부·델라웨어 도서관 협력",
+      "summary": "Google·델라웨어주 노동부·델라웨어 도서관 협력 주민에게 AI 활용·프롬프트·업무 생산성·바이브 코딩 교육과 Google Career Certificates 무료 라이선스 제공 온라인 자기주도형 과정은 일반적으로 3~6개월 소요 주의: 참여 인원과 총 사업 규모 미공개; 경력 성과 수치는 Google 자체 보고.",
+      "source": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-delaware/",
+      "officialUrl": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-delaware/",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "google-20260825-delaware-ai-training",
+      "en": {
+        "title": "Google offers free AI and career training across Delaware",
+        "deck": "A public-private programme covers prompting, productivity and vibe coding.",
+        "summary": "Google, the Delaware Department of Labor and Delaware Libraries offer residents free AI training and Career Certificates. Participant count and total programme size were not disclosed."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "X+Threads",
+      "title": "Gemini CLI 0.57, 용량 오류 자동 재시도와 취소 시 멀티턴 롤백 추가",
+      "deck": "capacity error에 context-aware silent retry와 availability TTL 적용",
+      "summary": "capacity error에 context-aware silent retry와 availability TTL 적용 취소·중단 시 전체 multi-turn request rollback git 환경 정규화와 workspace state mismatch 수정 eval failure summary용 tool call formatter 추가 주의: 릴리스 노트에 다수 내부 테스트·문서 수정 포함.",
+      "source": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "officialUrl": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "gemini-cli-20260826-v0-57-0",
+      "en": {
+        "title": "Gemini CLI 0.57 adds capacity retries and multi-turn rollback",
+        "deck": "Cancellation and workspace consistency become more predictable.",
+        "summary": "Gemini CLI 0.57 adds context-aware retries for capacity errors, rolls back an entire multi-turn request on cancellation, and fixes Git and workspace-state mismatches."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "X+Threads",
+      "title": "Copilot CLI, 플러그인 대시보드를 전체 공개하고 작업 중 모델을 자동 전환",
+      "deck": "플러그인 대시보드를 전체 사용자에게 공개하고 /plugin·/mcp·/skills에서 접근",
+      "summary": "플러그인 대시보드를 전체 사용자에게 공개하고 /plugin·/mcp·/skills에서 접근 Auto mode가 대화 중 작업 변화에 맞춰 모델 선택을 조정 상류 새 버전이 있는 플러그인과 marketplace를 표시하고 Update 제공 repository plugin extension 활성화 경쟁으로 startup이 무한 Loading/Resuming에 빠지던 문제 수정 주의: 기능과 수정이 한 릴리스에 묶인 벤더 릴리스 노트.",
+      "source": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "officialUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "github-copilot-cli-20260826-v1-0-81-10",
+      "en": {
+        "title": "Copilot CLI opens its plugin dashboard and adapts models during a task",
+        "deck": "Plugins, MCP and skills move into a unified operating surface.",
+        "summary": "Copilot CLI 1.0.81-10 makes the plugin dashboard generally available, lets Auto mode adapt model selection as a conversation evolves, and adds update signals for installed plugins."
+      }
+    },
+    {
+      "date": "8/26",
+      "platform": "X+Threads",
+      "title": "Copilot CLI, 기업 정책으로 막힌 MCP를 pending 대신 blocked로 표시",
+      "deck": "기업 정책으로 차단된 MCP 서버가 /mcp에서 무한 pending으로 보이던 문제 수정",
+      "summary": "기업 정책으로 차단된 MCP 서버가 /mcp에서 무한 pending으로 보이던 문제 수정 차단 서버를 blocked 상태로 명시 주의: 단일 운영·가시성 버그 수정.",
+      "source": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "officialUrl": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "verifiedAt": "2026-08-26",
+      "backupUrls": [],
+      "tags": [
+        "AI",
+        "2026-08b"
+      ],
+      "slug": "github-copilot-cli-20260826-v1-0-81-11",
+      "en": {
+        "title": "Copilot CLI shows enterprise-blocked MCP servers as blocked",
+        "deck": "Policy enforcement no longer looks like an endless pending state.",
+        "summary": "Copilot CLI 1.0.81-11 fixes the MCP dashboard so an enterprise-policy block is displayed as blocked instead of spinning as pending forever."
+      }
+    }
+  ]
+}

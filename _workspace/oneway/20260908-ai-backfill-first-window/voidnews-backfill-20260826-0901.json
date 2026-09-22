@@ -1,0 +1,877 @@
+{
+  "window": {
+    "start": "2026-08-26T00:00:00+09:00",
+    "end_exclusive": "2026-09-02T00:00:00+09:00",
+    "timezone": "Asia/Seoul"
+  },
+  "research_reporting_date": "2026-09-08",
+  "method": "Official articles + public RSS + public GitHub Releases API. No authenticated access or denied-access bypass. Date eligibility uses publication metadata converted to KST, not URLs, archive dates, model environment, or current article modification date.",
+  "repository_files_read": [
+    "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+    "/Users/REDACTED/projects/voidnews-archive/lib/ab/editions/2026-08b.ts",
+    "/Users/REDACTED/projects/voidnews-archive/CLAUDE.md"
+  ],
+  "candidate_count": 15,
+  "candidates": [
+    {
+      "status": "new",
+      "company": "IBM",
+      "title": {
+        "ko": "IBM, Granite 4.2의 학습 구조와 공개 모델 3종 설명",
+        "en": "IBM details how Granite 4.2 models are built"
+      },
+      "source_url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "canonical_url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "source_published_at": "2026-08-25T15:14:14+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Tue, 25 Aug 2026 15:14:14 GMT",
+        "local_evidence": "/tmp/voidnews-research-https___huggingface_co_blog_feed_xml.txt"
+      },
+      "source_display_date": "2026-08-25",
+      "date_kst": "2026-08-26",
+      "published_at_kst": "2026-08-26T00:14:14+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "technical-publication",
+      "summary": {
+        "ko": "IBM Granite 팀이 3B·8B·30B 모델의 학습 구조와 Apache 2.0 공개 조건을 설명했습니다.",
+        "en": "The IBM Granite team details training and Apache-2.0 licensing for 3B, 8B and 30B models."
+      },
+      "body_notes": {
+        "ko": [
+          "새 출시 시각을 뜻하는 것이 아니라 기술 설명 글의 게시 시각입니다.",
+          "본문 표의 131K와 장문맥 학습 설명의 512K는 같은 배포 사양으로 단정하지 마세요.",
+          "성능 수치는 제작사 자체 보고입니다."
+        ],
+        "en": [
+          "This is the publication of a technical explainer, not independently established model release time.",
+          "The 131K architecture table and 512K training statement must not be collapsed into one serving limit.",
+          "Benchmarks are vendor-reported."
+        ]
+      },
+      "evidence_snippets": [
+        "released in three sizes: 3B, 8B, and 30B",
+        "All Granite 4.2 models are released under the Apache 2.0 license."
+      ],
+      "image_evidence": {
+        "url": "https://cdn-uploads.huggingface.co/production/uploads/65cc2c288ebd392213e58899/TuxEn5hma0bQf3-z_Ab6c.png",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "GitHub",
+      "title": {
+        "ko": "Copilot 앱, MCP·플러그인·스킬을 모은 Customize 탭 정식 공개",
+        "en": "GitHub Copilot app Customize tab becomes generally available"
+      },
+      "source_url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "canonical_url": "https://github.blog/changelog/2026-08-25-github-copilot-app-customize-tab-is-generally-available",
+      "source_published_at": "2026-08-25T20:05:26+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Tue, 25 Aug 2026 20:05:26 +0000",
+        "local_evidence": "/tmp/voidnews-meta-https___github_blog_changelog_feed__paged_4.txt"
+      },
+      "source_display_date": "2026-08-25",
+      "date_kst": "2026-08-26",
+      "published_at_kst": "2026-08-26T05:05:26+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "Copilot 앱의 Customize 탭에서 MCP 서버·플러그인·스킬·캔버스를 한곳에서 찾을 수 있습니다.",
+        "en": "The Customize tab brings discovery of MCP servers, plugins, skills and canvases into one place."
+      },
+      "body_notes": {
+        "ko": [
+          "추천 항목과 유형별 탐색을 제공합니다.",
+          "요금제·지역별 제한은 해당 글에 명시되지 않았습니다."
+        ],
+        "en": [
+          "Offers featured entries and browsing by customization type.",
+          "The post does not specify plan or regional limits."
+        ]
+      },
+      "evidence_snippets": [
+        "MCP servers, plugins, skills, and canvases",
+        "Start with featured customizations"
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "Google",
+      "title": {
+        "ko": "Google, 85개 이상 언어를 다루는 Gemini 3.5 Transcribe 공개",
+        "en": "Google introduces Gemini 3.5 Transcribe"
+      },
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "canonical_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
+      "source_published_at": "2026-08-26T17:00:00+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official HTML JSON-LD datePublished",
+        "snippet": "\"datePublished\": \"2026-08-26T17:00:00+00:00\"",
+        "local_evidence": "/tmp/voidnews-meta-https___blog_google_innovation_and_ai_models_and_research_gemini_models_gemini_3_5_transcribe_.txt"
+      },
+      "source_display_date": "2026-08-26",
+      "date_kst": "2026-08-27",
+      "published_at_kst": "2026-08-27T02:00:00+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "Google이 실시간·녹음 음성 전사 모델을 공개 미리보기로 선보였습니다. 언어 감지와 화자 구분을 지원합니다.",
+        "en": "Google introduced a public-preview transcription model with streaming and recorded-audio support, language detection and speaker labeling."
+      },
+      "body_notes": {
+        "ko": [
+          "Live API와 Interactions API 경로를 구분합니다.",
+          "3명을 넘는 화자 지원은 실험 단계입니다.",
+          "소비자용 macOS 지원은 영어이며 Android 지원 국가·언어는 제한됩니다."
+        ],
+        "en": [
+          "Streaming uses Live API; recorded audio uses Interactions API.",
+          "More than three speakers is experimental.",
+          "Consumer macOS support is English; Android availability is limited by country and language."
+        ]
+      },
+      "evidence_snippets": [
+        "Today, we’re introducing Gemini 3.5 Transcribe",
+        "Automatically detects and transcribes over 85 languages"
+      ],
+      "image_evidence": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_3-5_transcribe.width-1300.jpg",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "Google",
+      "title": {
+        "ko": "Gemini Live, 여러 단계 작업과 Gmail·일정 브리핑 지원 확대",
+        "en": "Gemini Live expands multi-step tasks and daily briefings"
+      },
+      "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+      "canonical_url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live",
+      "source_published_at": "2026-08-26T17:00:00+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official HTML JSON-LD datePublished",
+        "snippet": "\"datePublished\": \"2026-08-26T17:00:00+00:00\"",
+        "local_evidence": "/tmp/voidnews-meta-https___blog_google_innovation_and_ai_products_gemini_app_productivity_features_gemini_live_.txt"
+      },
+      "source_display_date": "2026-08-26",
+      "date_kst": "2026-08-27",
+      "published_at_kst": "2026-08-27T02:00:00+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "Gemini Live에 Spark 작업 실행과 Gmail·Calendar 기반 Daily Brief 등 생산성 기능이 추가됩니다.",
+        "en": "Gemini Live adds productivity features including Spark tasks and Gmail/Calendar-based Daily Brief."
+      },
+      "body_notes": {
+        "ko": [
+          "Spark는 Google AI Pro 이상, Daily Brief는 Plus 이상이 필요합니다.",
+          "개인화에 쓰는 앱은 Personal Intelligence 설정에서 연결해야 합니다."
+        ],
+        "en": [
+          "Spark requires Google AI Pro or higher; Daily Brief requires Plus or higher.",
+          "Connected apps must be enabled in Personal Intelligence settings."
+        ]
+      },
+      "evidence_snippets": [
+        "Today we're rolling out a major productivity upgrade to Gemini Live",
+        "Spark is available with a Google AI Pro subscription or higher."
+      ],
+      "image_evidence": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/STATIC_HEADER_V2.width-1300.png",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "openai",
+      "title": {
+        "ko": "Codex 0.150, 작업 간 참조·메시지와 중단 훅 추가",
+        "en": "Codex 0.150 adds task references, messaging and interrupt hooks"
+      },
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+      "canonical_url": "https://github.com/openai/codex/releases/tag/rust-v0.150.0",
+      "source_published_at": "2026-08-26T19:37:28Z",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "GitHub Releases API published_at",
+        "snippet": "2026-08-26T19:37:28Z",
+        "local_evidence": "/tmp/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+        "api_url": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.150.0"
+      },
+      "source_display_date": "2026-08-26",
+      "date_kst": "2026-08-27",
+      "published_at_kst": "2026-08-27T04:37:28+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "터미널에서 다른 Codex 작업을 참조하거나 메시지를 보낼 수 있으며 중단 시 실행되는 훅이 추가됐습니다.",
+        "en": "Terminal users can reference and message other Codex tasks; Interrupt hooks run when active turns are interrupted."
+      },
+      "body_notes": {
+        "ko": [
+          "신뢰하지 않는 프로젝트의 AGENTS.md를 읽지 않도록 수정했습니다.",
+          "자격 증명 가림 처리와 원격 MCP 인증도 개선했습니다."
+        ],
+        "en": [
+          "Untrusted projects no longer supply project-level AGENTS.md instructions.",
+          "Credential redaction and remote MCP authentication were improved."
+        ]
+      },
+      "evidence_snippets": [
+        "Reference other Codex tasks with `@` mentions",
+        "New `Interrupt` hooks"
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "NVIDIA",
+      "title": {
+        "ko": "NVIDIA, NVLink Fusion용 맞춤형 고대역폭 메모리 NVHBM 발표",
+        "en": "NVIDIA expands NVLink Fusion with custom NVHBM memory"
+      },
+      "source_url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
+      "canonical_url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory",
+      "source_published_at": "2026-08-26T21:05:30+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Wed, 26 Aug 2026 21:05:30 +0000",
+        "local_evidence": "/tmp/voidnews-research-https___blogs_nvidia_com_feed_.txt"
+      },
+      "source_display_date": "2026-08-26",
+      "date_kst": "2026-08-27",
+      "published_at_kst": "2026-08-27T06:05:30+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "NVIDIA가 XPU용 NVHBM을 발표하고 첫 협력사로 Amazon Annapurna Labs를 소개했습니다.",
+        "en": "NVIDIA announced NVHBM for XPUs, with Amazon Annapurna Labs as its first collaborator."
+      },
+      "body_notes": {
+        "ko": [
+          "HBM4E 대비 대역폭 최대 30% 증가·HBM 전력 15% 감소는 NVIDIA 제시 수치입니다.",
+          "Trainium4에서 지원을 시작할 계획이며 현재 일반 판매로 해석하면 안 됩니다."
+        ],
+        "en": [
+          "Up to 30% higher bandwidth and 15% lower HBM power versus HBM4E are NVIDIA claims.",
+          "Support begins with Trainium4; do not describe this as current general availability."
+        ]
+      },
+      "evidence_snippets": [
+        "up to 30% greater memory bandwidth",
+        "15% lower HBM power consumption"
+      ],
+      "image_evidence": {
+        "url": "https://blogs.nvidia.com/wp-content/uploads/2026/08/gpu-architecture-corp-blog-nvhbm-1280x680-5547600.jpg",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "Google",
+      "title": {
+        "ko": "Gemini Omni 1.1 Flash, 영상 연장·참조 입력·4K 업스케일 지원",
+        "en": "Gemini Omni 1.1 Flash adds video extensions and reference controls"
+      },
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "canonical_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash",
+      "source_published_at": "2026-08-27T16:00:00+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official HTML JSON-LD datePublished",
+        "snippet": "\"datePublished\": \"2026-08-27T16:00:00+00:00\"",
+        "local_evidence": "/tmp/voidnews-meta-https___blog_google_innovation_and_ai_technology_developers_tools_build_with_gemini_omni_1_1_flash_.txt"
+      },
+      "source_display_date": "2026-08-27",
+      "date_kst": "2026-08-28",
+      "published_at_kst": "2026-08-28T01:00:00+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "Google이 영상 제작 API에 장면 연장과 참조 영상, 360p 초안 제작, 최대 4K 업스케일 기능을 추가했습니다.",
+        "en": "Google added scene extensions, video references, 360p drafts and upscaling up to 4K to its generative-video API."
+      },
+      "body_notes": {
+        "ko": [
+          "10초 단위로 최대 누적 40초까지 연장합니다.",
+          "참조 영상은 최대 3초입니다.",
+          "속도·비용 비교는 Google 자체 주장입니다."
+        ],
+        "en": [
+          "Extensions add 10-second segments up to 40 seconds cumulatively.",
+          "Video references support up to three seconds.",
+          "Speed and cost comparisons are Google claims."
+        ]
+      },
+      "evidence_snippets": [
+        "Today, we’re introducing Gemini Omni 1.1 Flash",
+        "Reference up to three seconds of video"
+      ],
+      "image_evidence": {
+        "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Omni_1-1_Flash_hero.width-1300.png",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "anthropics",
+      "title": {
+        "ko": "Claude Code, 실행 도구를 줄이는 restricted 모드 추가",
+        "en": "Claude Code adds a restricted execution mode"
+      },
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+      "canonical_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+      "source_published_at": "2026-08-27T22:12:20Z",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "GitHub Releases API published_at",
+        "snippet": "2026-08-27T22:12:20Z",
+        "local_evidence": "/tmp/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+        "api_url": "https://api.github.com/repos/anthropics/claude-code/releases/tags/v2.1.248"
+      },
+      "source_display_date": "2026-08-27",
+      "date_kst": "2026-08-28",
+      "published_at_kst": "2026-08-28T07:12:20+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "restricted 모드가 명령·코드 실행 도구를 제거하고 파일 도구를 작업 폴더 안으로 제한합니다.",
+        "en": "Restricted mode removes command/code execution tools and confines file tools to the working directory."
+      },
+      "body_notes": {
+        "ko": [
+          "권한 우회 모드를 거부하고 사용자·프로젝트·로컬 설정을 무시합니다.",
+          "일부 클라우드 제공자 환경의 같은 기기 세션 간 메시지도 추가됐습니다."
+        ],
+        "en": [
+          "Refuses permission-bypass mode and ignores user, project and local settings.",
+          "Adds same-machine cross-session messaging for additional cloud-provider configurations."
+        ]
+      },
+      "evidence_snippets": [
+        "Added `--restricted`",
+        "refuses `bypassPermissions`",
+        "Added cross-session messaging"
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "anthropics",
+      "title": {
+        "ko": "Claude Code, 모델 전환 훅과 캐시·지출 관측 기능 추가",
+        "en": "Claude Code adds model-switch hooks and cache/spend visibility"
+      },
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+      "canonical_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+      "source_published_at": "2026-08-28T18:19:32Z",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "GitHub Releases API published_at",
+        "snippet": "2026-08-28T18:19:32Z",
+        "local_evidence": "/tmp/voidnews-research-https___api_github_com_repos_anthropics_claude_code_releases_per_page_30.txt",
+        "api_url": "https://api.github.com/repos/anthropics/claude-code/releases/tags/v2.1.251"
+      },
+      "source_display_date": "2026-08-28",
+      "date_kst": "2026-08-29",
+      "published_at_kst": "2026-08-29T03:19:32+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "모델 변경 전후 훅과 세션별 프롬프트 캐시 표시가 추가됐으며 파일 접근 경계 관련 오류도 수정됐습니다.",
+        "en": "The release adds before/after model-switch hooks and per-session prompt-cache metrics, alongside file-permission fixes."
+      },
+      "body_notes": {
+        "ko": [
+          "심볼릭 링크 교체로 승인 위치 밖을 읽거나 쓰던 문제를 수정했습니다.",
+          "벤더 릴리스 노트이며 이번 조사에서 수정 효과를 재실행 검증하지 않았습니다."
+        ],
+        "en": [
+          "Fixes file tools following a swapped symlink outside the approved location.",
+          "Vendor release notes; the fixes were not independently retested."
+        ]
+      },
+      "evidence_snippets": [
+        "Added `PreModelSwitch` and `PostModelSwitch` hook events",
+        "Added a per-session prompt-cache line to `/cost`"
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "openai",
+      "title": {
+        "ko": "Codex 0.151, MCP 결과 처리 확장과 권한 유지 보강",
+        "en": "Codex 0.151 adds MCP result interception and permission fixes"
+      },
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+      "canonical_url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+      "source_published_at": "2026-08-29T09:55:39Z",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "GitHub Releases API published_at",
+        "snippet": "2026-08-29T09:55:39Z",
+        "local_evidence": "/tmp/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+        "api_url": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.151.0"
+      },
+      "source_display_date": "2026-08-29",
+      "date_kst": "2026-08-29",
+      "published_at_kst": "2026-08-29T18:55:39+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "확장 기능이 모델에 전달되기 전 MCP 결과를 검사·대체할 수 있으며 선택적 서버 탐색 대기 시간을 설정할 수 있습니다.",
+        "en": "Extensions can inspect or replace MCP results before the model sees them, with configurable optional-server discovery grace periods."
+      },
+      "body_notes": {
+        "ko": [
+          "작업 폴더 변경 시 격리 제한이 약해지지 않도록 수정했습니다.",
+          "하위 에이전트 토큰 사용량을 최상위 작업 예산에 합산합니다."
+        ],
+        "en": [
+          "Changing directories no longer weakens sandbox restrictions.",
+          "Nested subagent token usage counts toward root goal budgets."
+        ]
+      },
+      "evidence_snippets": [
+        "Extensions can now inspect or replace MCP tool results",
+        "Counted nested subagent token usage toward root goal budgets."
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "github",
+      "title": {
+        "ko": "Copilot CLI 1.0.82, 작업 폴더 전환과 인증 오류 표시 수정",
+        "en": "Copilot CLI 1.0.82 fixes worktree switching and authentication errors"
+      },
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.82",
+      "canonical_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.82",
+      "source_published_at": "2026-08-29T23:39:31Z",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "GitHub Releases API published_at",
+        "snippet": "2026-08-29T23:39:31Z",
+        "local_evidence": "/tmp/voidnews-research-https___api_github_com_repos_github_copilot_cli_releases_per_page_30.txt",
+        "api_url": "https://api.github.com/repos/github/copilot-cli/releases/tags/v1.0.82"
+      },
+      "source_display_date": "2026-08-29",
+      "date_kst": "2026-08-30",
+      "published_at_kst": "2026-08-30T08:39:31+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "작업 폴더를 준비하는 중 입력한 메시지가 전환을 깨뜨리던 문제를 수정하고 구체적인 인증 실패 원인을 표시합니다.",
+        "en": "The release fixes messages disrupting worktree preparation and displays specific authentication failures."
+      },
+      "body_notes": {
+        "ko": [
+          "Ctrl+E로 승인 카드의 전체 계획을 다시 펼칠 수 있습니다.",
+          "작은 안정성 릴리스이므로 주요 모델 소식보다 우선순위는 낮습니다."
+        ],
+        "en": [
+          "Ctrl+E expands the full plan in the approval card.",
+          "A small stability release, lower priority than model announcements."
+        ]
+      },
+      "evidence_snippets": [
+        "Ctrl+E expands the plan approval card",
+        "Show the specific authentication failure"
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "GitHub",
+      "title": {
+        "ko": "GitHub, VS Code 8월 Copilot 업데이트 묶음 공개",
+        "en": "GitHub recaps August Copilot updates in VS Code"
+      },
+      "source_url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+      "canonical_url": "https://github.blog/changelog/2026-08-31-github-copilot-in-vs-code-august-2026-releases",
+      "source_published_at": "2026-08-31T08:39:54+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Mon, 31 Aug 2026 08:39:54 +0000",
+        "local_evidence": "/tmp/voidnews-meta-https___github_blog_changelog_feed__paged_3.txt"
+      },
+      "source_display_date": "2026-08-31",
+      "date_kst": "2026-08-31",
+      "published_at_kst": "2026-08-31T17:39:54+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "monthly-roundup",
+      "summary": {
+        "ko": "GitHub이 VS Code 1.132~1.135의 병렬 대화·세션 공유·브라우저 주석·받아쓰기 개선을 정리했습니다.",
+        "en": "GitHub recapped VS Code 1.132–1.135 improvements to parallel chats, session sharing, browser annotations and dictation."
+      },
+      "body_notes": {
+        "ko": [
+          "8월 여러 시점에 출시된 기능의 월간 정리입니다. 8월 31일 일괄 출시로 표현하면 안 됩니다."
+        ],
+        "en": [
+          "A monthly recap of features shipped throughout August, not a simultaneous August 31 release."
+        ]
+      },
+      "evidence_snippets": [
+        "This changelog covers VS Code v1.132 through v1.135",
+        "shipped throughout August 2026."
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "Hugging Face",
+      "title": {
+        "ko": "Hugging Face, 로컬 AI용 WebGPU 커널 207개와 로더 공개",
+        "en": "Hugging Face introduces 207 WebGPU kernels and a JavaScript loader"
+      },
+      "source_url": "https://huggingface.co/blog/webgpu-kernels",
+      "canonical_url": "https://huggingface.co/blog/webgpu-kernels",
+      "source_published_at": "2026-09-01T00:00:00+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Tue, 01 Sep 2026 00:00:00 GMT",
+        "local_evidence": "/tmp/voidnews-research-https___huggingface_co_blog_feed_xml.txt"
+      },
+      "source_display_date": "2026-09-01",
+      "date_kst": "2026-09-01",
+      "published_at_kst": "2026-09-01T09:00:00+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "Hugging Face가 브라우저의 GPU를 활용하는 커널 모음과 JavaScript 로더를 공개했습니다.",
+        "en": "Hugging Face introduced a collection of browser-GPU kernels and a JavaScript loader."
+      },
+      "body_notes": {
+        "ko": [
+          "커널 저장소는 개별 버전 관리와 Apache 2.0 라이선스를 제공합니다.",
+          "설치는 preview 채널이며 WebGPU 지원 브라우저가 필요합니다.",
+          "Apple M4의 선택된 809개 비교 사례에서 보고한 속도를 모든 하드웨어에 일반화하면 안 됩니다.",
+          "RSS의 자정 값은 날짜 기반 게시 시스템의 기본 시각일 수 있습니다."
+        ],
+        "en": [
+          "Repositories are individually versioned under Apache 2.0.",
+          "The package uses the preview channel and requires WebGPU support.",
+          "Reported speed on 809 selected Apple M4 cases is not universal hardware performance.",
+          "The RSS midnight time may be a date-based publishing-system default."
+        ]
+      },
+      "evidence_snippets": [
+        "207 WebGPU kernels",
+        "2.57x faster by geometric mean"
+      ],
+      "image_evidence": {
+        "url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/webgpu-kernels/ai-onnx-add.png",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "openai",
+      "title": {
+        "ko": "Codex 0.152, MCP 도구별 출력 한도와 승인 맥락 보존 개선",
+        "en": "Codex 0.152 adds per-tool MCP output limits and preserves approval context"
+      },
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+      "canonical_url": "https://github.com/openai/codex/releases/tag/rust-v0.152.0",
+      "source_published_at": "2026-09-01T01:58:32Z",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "GitHub Releases API published_at",
+        "snippet": "2026-09-01T01:58:32Z",
+        "local_evidence": "/tmp/voidnews-research-https___api_github_com_repos_openai_codex_releases_per_page_40.txt",
+        "api_url": "https://api.github.com/repos/openai/codex/releases/tags/rust-v0.152.0"
+      },
+      "source_display_date": "2026-09-01",
+      "date_kst": "2026-09-01",
+      "published_at_kst": "2026-09-01T10:58:32+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "MCP 도구별 출력 토큰 한도를 설정할 수 있고 대화 압축 뒤에도 승인 검토에 필요한 지시와 허가를 보존하도록 개선됐습니다.",
+        "en": "Codex adds per-tool MCP output limits and improves preservation of instructions and authorizations across compaction."
+      },
+      "body_notes": {
+        "ko": [
+          "클라우드 작업 요청은 신뢰하지 않는 백엔드 URL을 거부하고 리다이렉트를 끕니다.",
+          "planning 도구는 기본 비활성으로 바뀌므로 기존 자동화 설정을 확인하셔야 합니다."
+        ],
+        "en": [
+          "Cloud tasks reject untrusted backend URLs and disable redirects.",
+          "The planning tool is disabled by default; check existing automation settings."
+        ]
+      },
+      "evidence_snippets": [
+        "Individual MCP tools support an `output_token_limit` setting",
+        "Automatic approval reviews preserve user instructions, answers, and valid authorizations"
+      ],
+      "image_evidence": null,
+      "duplicate_match": null
+    },
+    {
+      "status": "new",
+      "company": "GitHub / Anthropic",
+      "title": {
+        "ko": "Claude Fable 5.1, GitHub Copilot에 순차 제공",
+        "en": "Claude Fable 5.1 rolls out in GitHub Copilot"
+      },
+      "source_url": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+      "canonical_url": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+      "source_published_at": "2026-09-01T14:29:23+00:00",
+      "source_timezone": "UTC",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Tue, 01 Sep 2026 14:29:23 +0000",
+        "local_evidence": "/tmp/voidnews-meta-https___github_blog_changelog_feed__paged_2.txt"
+      },
+      "source_display_date": "2026-09-01",
+      "date_kst": "2026-09-01",
+      "published_at_kst": "2026-09-01T23:29:23+09:00",
+      "reporting_date": "2026-09-08",
+      "event_type": "release",
+      "summary": {
+        "ko": "GitHub이 긴 자율 코딩 작업용 Claude Fable 5.1을 Copilot에 제공하기 시작했습니다.",
+        "en": "GitHub began rolling out Claude Fable 5.1 in Copilot for long-horizon autonomous coding."
+      },
+      "body_notes": {
+        "ko": [
+          "Pro+·Max·Business·Enterprise에서 순차 제공되며 기업 관리자는 정책을 활성화해야 합니다.",
+          "데이터 보존이 기본이며 적격 기업에만 무보존 접근이 제공됩니다.",
+          "이는 GitHub 통합 발표 시각입니다. Anthropic 모델 자체의 최초 출시 시각을 뜻하지 않습니다."
+        ],
+        "en": [
+          "Gradual rollout for Pro+, Max, Business and Enterprise; enterprise administrators must enable the policy.",
+          "Retention is enabled by default; eligible enterprises can obtain zero-retention access.",
+          "This timestamp belongs to the GitHub integration announcement, not necessarily the first Anthropic model release."
+        ]
+      },
+      "evidence_snippets": [
+        "now available in GitHub Copilot.",
+        "long-horizon, autonomous coding",
+        "Rollout will be gradual."
+      ],
+      "image_evidence": {
+        "url": "https://github.blog/wp-content/uploads/2026/09/642706662-2469e893-fb55-48bf-9d56-04c5e54fbb44.png?resize=2064%2C600",
+        "kind": "official article image; not downloaded; rights not independently cleared"
+      },
+      "duplicate_match": null
+    }
+  ],
+  "existing_duplicates": [
+    {
+      "status": "existing",
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+      "published_at": "2026-08-25T22:31:52Z",
+      "date_kst": "2026-08-26",
+      "existing_file": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "action": "do not insert"
+    },
+    {
+      "status": "existing",
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.245",
+      "published_at": "2026-08-25T05:13:24Z",
+      "date_kst": "2026-08-25",
+      "existing_file": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "action": "do not insert"
+    },
+    {
+      "status": "existing",
+      "source_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+      "published_at": "2026-08-17T20:20:58Z",
+      "date_kst": "2026-08-18",
+      "existing_file": "/Users/REDACTED/projects/voidnews-archive/lib/ab/editions/2026-08b.ts",
+      "action": "do not insert"
+    },
+    {
+      "status": "existing",
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+      "published_at": "2026-08-26T01:32:27Z",
+      "date_kst": "2026-08-26",
+      "existing_file": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "action": "do not insert"
+    },
+    {
+      "status": "existing",
+      "source_url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-10",
+      "published_at": "2026-08-25T21:15:43Z",
+      "date_kst": "2026-08-26",
+      "existing_file": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "action": "do not insert"
+    },
+    {
+      "status": "existing",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "published_at": "2026-08-25T18:37:14Z",
+      "date_kst": "2026-08-26",
+      "existing_file": "/Users/REDACTED/projects/voidnews-archive/lib/weeks/2026-w35.ts",
+      "action": "do not insert"
+    }
+  ],
+  "unverified_date_holds": [
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "title_en": "Previewing the Model Hardware Standard",
+      "displayed_date": "2026-08-27",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    },
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/expanding-support-for-scientists",
+      "title_en": "Expanding our support for scientists",
+      "displayed_date": "2026-08-27",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    },
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+      "title_en": "Improving our alignment and security efforts",
+      "displayed_date": "2026-08-31",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    },
+    {
+      "status": "unverified",
+      "verification_scope": "exact publication timestamp/timezone only; body and displayed date read via WebFetch",
+      "source_url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "title_en": "Developing Enterprise Frontier Safeguards",
+      "displayed_date": "2026-09-01",
+      "date_kst": null,
+      "reason": "Official article supplies date only in WebFetch. Direct public HTTP returned 403; stopped without bypass. Cannot assign exact KST day."
+    }
+  ],
+  "discrepancies": [
+    {
+      "source_url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+      "rss_date": "Thu, 27 Aug 2026 13:00:17 +0000",
+      "body_evidence": "Updated August 27, 2026; originally published May 18, 2026",
+      "decision": "Excluded as a new release. Treat only as update to an older article if separately verified."
+    },
+    {
+      "source_url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+      "rss_date": "Wed, 02 Sep 2026 06:00:02 +0000",
+      "decision": "URL says September 1, but RSS publication is September 2 UTC / KST; outside assigned window."
+    },
+    {
+      "source_url": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
+      "rss_date": "Tue, 01 Sep 2026 19:25:57 +0000",
+      "decision": "September 2 KST; hand to next-window researcher."
+    },
+    {
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0",
+      "published_at": "2026-09-01T20:51:17Z",
+      "decision": "September 2 KST; not September 1 despite source UTC date."
+    },
+    {
+      "source_url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "body_displayed_date": "2026-08-25",
+      "rss_date": "Tue, 25 Aug 2026 15:14:14 GMT",
+      "decision": "August 26 KST; this is a timezone shift, not fabricated redating."
+    }
+  ],
+  "coverage_notes": {
+    "OpenAI": "OpenAI news index HTTP 403; no bypass. Official public Codex releases verified.",
+    "Anthropic": "Official article text available through WebFetch, date-only precision; exact GitHub releases independently retrieved.",
+    "Google": "Official article JSON-LD timestamps retrieved; feed only lists latest 20 and ignores page=2. Gemini 3.7 Flash dated Aug13, Gemma milestone Aug20, WeatherNext2 Aug6 excluded.",
+    "Microsoft_GitHub": "Microsoft corporate feed has no in-window entries. GitHub changelog feed pages 1–4 and official Copilot CLI releases inspected.",
+    "Meta": "Official AI blog HTTP200 but no usable dated entries extracted; no confirmed discovery, not evidence of no updates.",
+    "NVIDIA": "Official RSS and article content inspected; Vera original-vs-update discrepancy separated.",
+    "Open_models": "Hugging Face official feed and IBM Granite author/team explainer inspected. Mistral official news dated Aug24 then Sep8: no in-window discovery.",
+    "Creative_tools": "Runway official news retrieved but no dated in-window entries confirmed. Google Omni provides confirmed creative-video update.",
+    "search_limit": "WebSearch returned no results for exact August 2026 domain/date queries; empty indexes did not count as absence evidence."
+  },
+  "dates_without_confirmed_discoveries": [],
+  "date_coverage": {
+    "2026-08-26": 2,
+    "2026-08-27": 4,
+    "2026-08-28": 2,
+    "2026-08-29": 2,
+    "2026-08-30": 1,
+    "2026-08-31": 1,
+    "2026-09-01": 3
+  },
+  "caveats": [
+    "15 candidates include one explicitly labeled monthly roundup on August 31, not a new same-day feature release.",
+    "Source snapshots in /tmp are research evidence, not repository edits.",
+    "Image URLs are evidence only; no files downloaded or licensing clearance claimed.",
+    "GitHub release note facts are vendor reports, not independently executed software tests."
+  ],
+  "boundary_transfers": [
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+      "title_en": "Introducing agentic video understanding with Gemini",
+      "source_published_at": "2026-09-01T17:00:00+00:00",
+      "publication_evidence": {
+        "kind": "official RSS pubDate",
+        "snippet": "Tue, 01 Sep 2026 17:00:00 +0000",
+        "local_evidence": "/tmp/voidnews-research-https___blog_google_rss_.txt"
+      },
+      "published_at_kst": "2026-09-02T02:00:00+09:00",
+      "date_kst": "2026-09-02",
+      "reason": "Confirmed publication belongs to adjacent KST window; article body not researched in this assignment."
+    },
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://blogs.microsoft.com/blog/2026/09/01/the-yield-imperative-turning-ai-infrastructure-into-useful-intelligence/",
+      "source_published_at": "2026-09-02T06:00:02+00:00",
+      "published_at_kst": "2026-09-02T15:00:02+09:00",
+      "date_kst": "2026-09-02",
+      "publication_evidence": "Wed, 02 Sep 2026 06:00:02 +0000",
+      "reason": "URL says September 1, but RSS publication is September 2 UTC / KST; outside assigned window."
+    },
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests",
+      "source_published_at": "2026-09-01T19:25:57+00:00",
+      "published_at_kst": "2026-09-02T04:25:57+09:00",
+      "date_kst": "2026-09-02",
+      "publication_evidence": "Tue, 01 Sep 2026 19:25:57 +0000",
+      "reason": "September 2 KST; hand to next-window researcher."
+    },
+    {
+      "status": "boundary-transfer",
+      "source_url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.58.0",
+      "source_published_at": "2026-09-01T20:51:17+00:00",
+      "published_at_kst": "2026-09-02T05:51:17+09:00",
+      "date_kst": "2026-09-02",
+      "publication_evidence": "2026-09-01T20:51:17Z",
+      "reason": "September 2 KST; not September 1 despite source UTC date."
+    }
+  ],
+  "boundary_transfer_notes": [
+    "Anthropic September 1 articles remain in unverified_date_holds: exact timestamp/timezone unavailable. Adjacent researcher may enrich these URLs before assigning KST day.",
+    "Anthropic model landing page https://www.anthropic.com/claude-fable-and-mythos-5-1 shows September 2026 only; official news index shows September 1. No precise timestamp observed. GitHub integration announcement is independently timed September 1 23:29:23 KST."
+  ]
+}
