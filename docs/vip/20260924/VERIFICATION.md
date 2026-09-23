@@ -54,7 +54,13 @@ openai.com은 스크립트 요청을 403으로 막아 브라우저로 연 페이
 | `npm run verify:site -- --url http://localhost:3917` | exit 0 · 필수 검사 5종 |
 | 2026-09b 실제 화면(1440·390px) | 이미지 9/9 로드, 가로 넘침 없음, 콘솔 오류 0 |
 
-운영 주소 검사 결과는 배포 후 이 문서에 이어서 기록합니다.
+## 운영 배포
+
+- 커밋 `f06eb1d` · 브랜치 `feature/runway-renewal-20260908-150208` 푸시
+- Vercel 운영 배포 `dpl_3VmhstgrNwua5YzUzBe7819jjC6Y` · READY · `https://voidnews-archive.vercel.app` 연결
+- `npm run verify:site -- --url https://voidnews-archive.vercel.app`: exit 0 · 필수 검사 5종(master, browse-and-mobile, image-disclosure-and-failure, ab-reader-and-supplements, all-weekly-images)
+- 운영 주소 `/ab/2026-09b`, `/ab/2026-09-24`, 카드 상세 페이지 HTTP 200
+- 운영 화면(1440·390px): 이미지 9/9 로드, 가로 넘침 없음, 콘솔 오류 0
 
 ## 남은 확인 범위
 
