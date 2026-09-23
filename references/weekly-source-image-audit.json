@@ -11102,33 +11102,36 @@
   },
   {
    "status": "available",
-   "checkedAt": "2026-09-22T07:13:38.622Z",
-   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Reimagining advertising with AI — Card cover).",
+   "checkedAt": "2026-09-23T07:53:06.050682+00:00",
+   "reason": "기사 상단 영상(Yelp 전화 예약 시연)의 정지 이미지입니다. 2026-09-23 재조사에서 이전 선택이 본문 아래 '관련 글' 카드(Reimagining advertising with AI)였음을 확인하고 교체했습니다.",
    "evidence": [
     {
      "kind": "source-fetch",
      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
      "httpStatus": 200,
-     "sha256": "c0ba58e019ad0a47da9410df4a5bd9f3ec776210d6785fd531d855c1239f56f6"
-    },
-    {
-     "kind": "image-fetch",
-     "url": "https://images.ctfassets.net/kftzwdyauwt9/fHwkKLVG8WFHvuUPqMXtz/1c49ba0859fe1e1e21f5d64f692490f5/reimagining-advertising-with-ai-cover.png?w=3840&q=90&fm=webp",
-     "httpStatus": 200,
-     "sha256": "b1389c13562ee35121b4c4cb865b2b50e6113dcd071bfb46bbda5952b0f48aa1",
-     "contentType": "image/webp"
+     "sha256": "96bd628d6cbd651c5b96b3d309e613cd192be719b5c082d64b41982c6e62df09",
+     "method": "aside browser page.content() (openai.com blocks scripted requests)"
     }
    ],
-   "imageUrl": "https://images.ctfassets.net/kftzwdyauwt9/fHwkKLVG8WFHvuUPqMXtz/1c49ba0859fe1e1e21f5d64f692490f5/reimagining-advertising-with-ai-cover.png?w=3840&q=90&fm=webp",
-   "publicPath": "/source-media/weekly-20260922/b1389c13562e.webp",
-   "sha256": "b1389c13562ee35121b4c4cb865b2b50e6113dcd071bfb46bbda5952b0f48aa1",
+   "imageUrl": "https://images.ctfassets.net/kftzwdyauwt9/4pev9Sr5bjEQDcbULrh5aL/f8b43237b9a60f12efd3e52f673b3f37/kix.8tjb53hxn2fb.png",
+   "publicPath": "/source-media/weekly-20260923/7b76636661a0.png",
+   "sha256": "7b76636661a023d8e46f9c40bbabfcb58865017e98b0c2bc248e70696ea67541",
    "selectionKind": "source-first-image",
    "selectionPolicy": "source-top-image-v1",
    "key": "2026-w37|OpenAI, API용 실시간 음성 모델 GPT-Live-1 공개|https://openai.com/index/introducing-gpt-live-1-in-the-api/",
    "week": "2026-w37",
    "title": "OpenAI, API용 실시간 음성 모델 GPT-Live-1 공개",
    "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
-   "byteSize": 38198
+   "byteSize": 171676,
+   "width": 1646,
+   "height": 924,
+   "originalBytesUnedited": true,
+   "supersedes": {
+    "imageUrl": "https://images.ctfassets.net/kftzwdyauwt9/fHwkKLVG8WFHvuUPqMXtz/1c49ba0859fe1e1e21f5d64f692490f5/reimagining-advertising-with-ai-cover.png?w=3840&q=90&fm=webp",
+    "publicPath": "/source-media/weekly-20260922/b1389c13562e.webp",
+    "sha256": "b1389c13562ee35121b4c4cb865b2b50e6113dcd071bfb46bbda5952b0f48aa1",
+    "finding": "related-article card, not the article image"
+   }
   },
   {
    "status": "available",

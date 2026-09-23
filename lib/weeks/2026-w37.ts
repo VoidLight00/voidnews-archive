@@ -1061,8 +1061,8 @@ export const week37: WeeklyData = {
             }
           ],
           "thumbnail": {
-            "src": "/source-media/weekly-20260922/b1389c13562e.webp",
-            "alt": "Reimagining advertising with AI — Card cover"
+            "src": "/source-media/weekly-20260923/7b76636661a0.png",
+            "alt": "전화 통화 화면을 표현한 두 개의 말풍선으로, 위쪽은 식당이 'Hi, thanks for calling Stella Lago. How can I help you?'라고 응답하고 아래쪽은 손님이 '토요일 저녁 7시에 4명 예약'을 요청하는 장면이며 하단에 Yelp 로고가 있습니다."
           },
           "en": {
             "title": "OpenAI introduces GPT-Live-1, a real-time voice model for the API",
