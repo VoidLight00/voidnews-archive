@@ -363,7 +363,7 @@ export function EditorPickCard({
         WebkitTapHighlightColor: "transparent",
       }}
     >
-      <EditorialImageFrame image={image} images={item.images} sourceUrl={item.sourceUrl} label={item.category} tone="gold" />
+      <EditorialImageFrame image={image} images={item.images} sourceUrl={item.unofficial ? "" : item.sourceUrl} label={item.category} tone="gold" />
 
       <div className="tc-feed-body">
         <div className="tc-feed-meta mono">
@@ -404,7 +404,7 @@ export function EditorPickCard({
 
         <p className="tc-feed-summary">{stripMarkdown(item.summary)}</p>
 
-        <SourceAuditStrip input={{ officialUrl: item.sourceUrl, source: item.sourceUrl, tags: item.tags }} tone="gold" />
+        <SourceAuditStrip input={{ officialUrl: item.unofficial ? undefined : item.sourceUrl, source: item.sourceUrl, tags: item.tags, releaseScope: item.releaseScope, unofficial: item.unofficial }} tone="gold" />
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
           <TagList tags={item.tags} limit={5} />

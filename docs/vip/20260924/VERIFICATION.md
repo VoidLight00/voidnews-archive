@@ -1,6 +1,6 @@
 # VIP 브리핑 검증 기록 · 2026-09-24 회차
 
-**판정: 공개 페이지 `/ab/2026-09b` 게시 전 검증 완료. 메인 6개 · 추가로 보면 좋을 뉴스 1개 · 공개 도구 2개.**
+**판정: 공개 페이지 `/ab/2026-09b` 게시 전 검증 완료. 메인 6개 · 추가로 보면 좋을 뉴스 2개 · 공개 도구 2개.**
 
 ## 산출물
 
@@ -20,6 +20,7 @@
 | Grok 4.7 | x.ai 발표 글, docs.x.ai 모델 문서, GitHub Changelog, Artificial Analysis | 9/21 · 발행처 표기일 |
 | Qwen-Image-2.1 | GitHub README·LICENSE, Hugging Face 모델 카드·데모 | 9/20 · README 표기일 |
 | Claude Cowork | claude.com 발표 글, 도움말 문서 | 9/16 · 발행처 표기일 |
+| Opus 5.5 시스템 프롬프트 추출본 | 정리 저장소 README, 원본 파일 커밋 기록(gh api), Anthropic 공식 공개본 문서 | 9/23 03:12 KST (원본 커밋 2026-09-22T18:12:04Z) |
 | Graft | GitHub README·LICENSE·TELEMETRY, npm 레지스트리 | 0.19.0 배포 2026-09-22 |
 | AuK | GitHub README·LICENSE·COOKBOOK, Hugging Face 모델·데모, 인코더 LICENSE | 공개 2026-09-09 |
 
@@ -31,6 +32,11 @@ openai.com은 스크립트 요청을 403으로 막아 브라우저로 연 페이
 - AuK: 코드·가중치는 MIT이지만 실행에 필요한 인코더 Qwen2.5-Omni-3B는 Qwen Research License(비상업)입니다. 카드 본문에 명시했습니다. 한국어 지원은 공식 문서에 없어서 "적혀 있지 않다"고 썼습니다.
 - Grok 4.7: "두 배 빠르고 절반 가격"의 비교 대상(GPT-5.6 Sol, Fable 5.1)과 Grok 4.6과 같은 가격임을 밝혔습니다.
 - GPT-6 Sol·Luna: ChatGPT Work와 Codex에서 제공되며 일반 채팅 화면에는 아직 없다는 점을 반영했습니다(정규화 초안의 "ChatGPT에서 사용 가능"을 교정).
+
+## 비공식 자료 표시
+
+- 시스템 프롬프트 추출본 카드는 `unofficial: true`로 표시해 사실 칸이 '비공식 자료 · 비공식 · github.com'으로 나옵니다. 상세 페이지에서도 원문을 공식 발표가 아닌 참고 링크로 보여 줍니다.
+- 썸네일은 쓰지 않았습니다. 정리 저장소 README에는 이미지가 없고, 저장소 공유 이미지에는 작성자 얼굴 사진이 들어 있으며, Anthropic 문서의 공유 이미지는 요청 시 HTTP 404였습니다(접속 실패로 기록, 이미지 부재로 단정하지 않음).
 
 ## 이미지
 

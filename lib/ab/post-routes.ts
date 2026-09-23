@@ -37,8 +37,12 @@ function adaptEditorPickToPost(item: ABEditorPick): Post {
     summary: item.summary,
     content: item.body,
     source: item.sourceUrl,
-    officialUrl: item.sourceUrl,
-    backupUrls: item.guideUrl ? [{ label: item.guideLabel || "가이드 →", url: item.guideUrl }] : undefined,
+    // 비공식 자료는 '공식 발표'로 표시되지 않도록 원문을 참고 링크로만 둔다.
+    officialUrl: item.unofficial ? undefined : item.sourceUrl,
+    backupUrls: [
+      ...(item.unofficial ? [{ label: item.sourceLabel || "원문", url: item.sourceUrl }] : []),
+      ...(item.guideUrl ? [{ label: item.guideLabel || "가이드 →", url: item.guideUrl }] : []),
+    ],
     thumbnail: item.thumbnail,
     images: item.images,
     threadsEmbedUrl: item.threadsEmbedUrl,

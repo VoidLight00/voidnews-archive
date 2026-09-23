@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 import ts from 'typescript';
 import assert from 'node:assert/strict';
 
-// 2026-09b VIP: 본편 6 · 추가로 보면 좋을 뉴스 1 · 공개 도구 2.
+// 2026-09b VIP: 본편 6 · 추가로 보면 좋을 뉴스 2 · 공개 도구 2.
 // 순서·출처 이미지 해시·주장 경계(자체 발표 수치, 비상업 라이선스, 도구 접근 범위)를 종료코드로 강제한다.
 const root = path.resolve(import.meta.dirname, '..');
 const source = fs.readFileSync(path.join(root, 'lib/ab/editions/2026-09b.ts'), 'utf8');
@@ -19,7 +19,7 @@ assert.equal(e.slug, '2026-09b');
 assert.equal(e.announceDate, '2026-09-24');
 assert.equal(e.period, '2026-09-10 ~ 2026-09-23');
 assert.equal(e.highlights.length, 6);
-assert.equal(e.modelWatch.length, 1);
+assert.equal(e.modelWatch.length, 2);
 assert.equal(e.editorsPicks.length, 2);
 assert.equal(e.modelWatchSection?.title, '추가로 보면 좋을 뉴스');
 
@@ -84,6 +84,18 @@ const cowork = e.modelWatch[0];
 assert.equal(new URL(cowork.sourceUrl).hostname, 'claude.com');
 assert.ok(cowork.body.length >= 400);
 image(cowork.thumbnail);
+// 시스템 프롬프트 추출본: 비공식 자료임을 밝히고 Anthropic 공식 공개본과 구분해야 한다.
+const leak = e.modelWatch[1];
+assert.match(leak.title, /시스템 프롬프트/);
+assert.equal(leak.unofficial, true, 'leak card must not be labelled as an official announcement');
+assert.equal(new URL(leak.guideUrl).hostname, 'platform.claude.com', 'official published prompt must be linked');
+assert.match(leak.body, /공식 문서가 아니/);
+assert.match(leak.body, /공식 입장은 확인되지 않았/);
+assert.match(leak.body, /API에는 적용되지 않/);
+assert.match(leak.body + leak.summary, /비공식/);
+assert.ok(!leak.thumbnail, 'author avatar share images are not thumbnails; no usable article image was found');
+const leakProof = ledger.stories.find(s => s.slug === leak.slug);
+assert.ok(leakProof?.imageAudit?.reason, 'missing image needs a recorded reason');
 
 const toolHosts = ['github.com', 'github.com'];
 for (const [i, p] of e.editorsPicks.entries()) {
@@ -102,4 +114,4 @@ assert.equal(used.size, imageByPath.size, 'every ledger image is used and vice v
 const publicCopy = JSON.stringify(e);
 assert.doesNotMatch(publicCopy, /발표용 제안 시연|리허설|발표 전에 확인|발표 전 확인|브리핑 작성 중|작성한 시연안|preparing this briefing|vendor-claim|caveat|gate1/i, 'visitor-facing copy only');
 assert.doesNotMatch(publicCopy, /\/Users\/|chatId|authorId|roomId|톡괴비|카톡방|TBD|TODO|lorem ipsum/i);
-console.log(`PASS[ab-2026-09b] 6 ordered stories, 1 sub story, 2 MIT tools, ${used.size} source images, claim boundaries`);
+console.log(`PASS[ab-2026-09b] 6 ordered stories, 2 sub stories, 2 MIT tools, ${used.size} source images, claim boundaries`);

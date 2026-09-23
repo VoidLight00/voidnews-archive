@@ -46,6 +46,9 @@ export interface ABEditorPick {
   videoCaption?: string;    // 영상 캡션 (출처·조건 명시용)
   tags?: string[];
   tier?: HighlightTier; // 기본 feature
+  releaseScope?: string; // 카드 사실 칸의 범위 문구. 없으면 태그·주소로 추정
+  /** 회사 공식 발표가 아닌 자료(추출본 등). 상태를 '비공식 자료'로 표시하고 공유 이미지 자동 조회를 끈다 */
+  unofficial?: boolean;
 }
 
 export interface ABDemoCard {

@@ -1,6 +1,6 @@
 {
  "edition": "2026-09b",
- "verifiedAt": "2026-09-23T05:28:58+00:00",
+ "verifiedAt": "2026-09-23T06:19:29+00:00",
  "period": "2026-09-10 ~ 2026-09-22",
  "stories": [
   {
@@ -268,6 +268,38 @@
    "date": "9/16",
    "section": "sub",
    "publishedDateEvidence": "Page metadata on the article: \"Category Product announcements Product Claude apps Claude Cowork Date September 16, 2026 Reading time 5 min\""
+  },
+  {
+   "slug": "claude-opus-5-5-system-prompt-extract",
+   "officialUrl": "https://github.com/cbrunner/opus-5.5-system-prompt-components",
+   "fetch": {
+    "method": "curl -sL (browser UA) + gh api readme",
+    "httpStatus": 200,
+    "sha256": "00bec26baf32600964c89a75aacaf70344f141a4ada04583b08be3f13bd09673",
+    "rawPath": "raw/sysprompt_readme.md",
+    "fetchedAt": "2026-09-23"
+   },
+   "sourceLinks": [
+    {
+     "label": "추출본 정리 저장소",
+     "url": "https://github.com/cbrunner/opus-5.5-system-prompt-components"
+    },
+    {
+     "label": "원본 추출 파일(CL4R1T4S)",
+     "url": "https://github.com/elder-plinius/CL4R1T4S/blob/main/ANTHROPIC/CLAUDE-OPUS-5.5.md"
+    },
+    {
+     "label": "Anthropic 공식 공개본",
+     "url": "https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5-5"
+    }
+   ],
+   "date": "9/23 03:12",
+   "section": "sub",
+   "publishedDateEvidence": "gh api commits?path=ANTHROPIC/CLAUDE-OPUS-5.5.md on elder-plinius/CL4R1T4S: 'Create CLAUDE-OPUS-5.5.md' 2026-09-22T18:12:04Z (KST 2026-09-23 03:12); cbrunner repo created 2026-09-22T19:10:37Z",
+   "imageAudit": {
+    "status": "no-usable-image",
+    "reason": "정리 저장소 README에 이미지가 없고, 저장소 공유 이미지에는 작성자 얼굴 사진이 들어 있어 정책상 사용하지 않음. Anthropic 공식 문서 og:image는 2026-09-23 요청 시 HTTP 404(접속 실패, 이미지 부재로 단정하지 않음)."
+   }
   }
  ],
  "tools": [

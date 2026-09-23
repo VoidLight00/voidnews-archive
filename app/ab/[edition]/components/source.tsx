@@ -15,6 +15,7 @@ export type SourceAuditInput = {
   date?: string;
   verifiedAt?: string;
   releaseScope?: string;
+  unofficial?: boolean;
   communityDiscovery?: { platform: "hn" | "reddit"; score: number };
 };
 
@@ -44,9 +45,9 @@ export function buildSourceAudit(input: SourceAuditInput) {
   const primaryUrl = input.officialUrl || input.source || input.backupUrls?.[0]?.url;
   const host = primaryUrl ? hostnameOf(primaryUrl) : "출처 대기";
   return {
-    status: input.officialUrl ? "공식 발표" : "보조 검증",
+    status: input.unofficial ? "비공식 자료" : input.officialUrl ? "공식 발표" : "보조 검증",
     scope: inferReleaseScope(input),
-    source: input.officialUrl ? `공식 · ${host}` : `확인 · ${host}`,
+    source: input.unofficial ? `비공식 · ${host}` : input.officialUrl ? `공식 · ${host}` : `확인 · ${host}`,
     checked: input.verifiedAt ? `확인일 ${input.verifiedAt}` : null,
   };
 }
