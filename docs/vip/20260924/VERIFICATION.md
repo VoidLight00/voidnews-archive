@@ -68,6 +68,13 @@ openai.com은 스크립트 요청을 403으로 막아 브라우저로 연 페이
 - 운영 주소 `/ab/2026-09b`, `/ab/2026-09-24`, 카드 상세 페이지 HTTP 200
 - 운영 화면(1440·390px): 이미지 9/9 로드, 가로 넘침 없음, 콘솔 오류 0
 
+## 2차 배포 (시스템 프롬프트 추출본 카드 추가)
+
+- 커밋 `7e1ac4f` 푸시, Vercel 운영 배포 `dpl_AReGHUupn6SatkZK9uXR6c2fUeKj` · READY
+- 게시 전: `npm run build`, `check-ab-2026-09b`, `verify-publish-ready`, `verify_voidnews.sh`, `close.sh`(GREEN) 모두 exit 0
+- `npm run verify:site -- --url https://voidnews-archive.vercel.app`: exit 0 · 필수 검사 5종
+- 운영 화면(1440·390px) 추가 뉴스 섹션: 카드 2장, 새 카드 상태 '비공식 자료', 깨진 이미지 0, 가로 넘침 없음, 상세 페이지 HTTP 200
+
 ## 남은 확인 범위
 
 - 운영 중인 w37 GPT-Live-1 카드의 썸네일이 다른 기사 표지입니다. 백필 원장 결속 때문에 이번 게시에서 교체하지 않았습니다.
