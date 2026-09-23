@@ -86,3 +86,10 @@ openai.com은 스크립트 요청을 403으로 막아 브라우저로 연 페이
 - w37 GPT-Live-1 카드: 본문 아래 관련 글 카드(광고 기사 표지)였던 썸네일을 기사 상단 Yelp 전화 예약 시연 이미지로 교체했습니다. 이미지 조사 기록에 이전 선택을 `supersedes`로 남겼습니다. 백필 원장 해시는 썸네일을 제외하므로 w37 결속은 유지됩니다.
 - w38 Qwen-Image-2.1 카드: "오픈소스로 공개"를 "가중치를 공개"로 바꾸고, 비상업 연구용 라이선스 조건을 한국어·영문 본문에 추가했습니다.
 - 위 '남은 확인 범위'의 두 항목은 이 정비로 해결됐습니다.
+
+## 3차 배포 (후속 정비 반영)
+
+- 커밋 `d76dbb4` 푸시, Vercel 운영 배포 `dpl_7pqdydrEL1EPzPCgnSTmPvh3haw9` · READY
+- 게시 전: `npm run build`, `check-ab-2026-09b`, `verify-publish-ready`, `verify_voidnews.sh`, `close.sh`(GREEN) 모두 exit 0
+- `npm run verify:site -- --url https://voidnews-archive.vercel.app`: exit 0 · 필수 검사 5종
+- 운영 화면(1440·390px) `_workspace/release/vip09b/check-fixes.mjs` exit 0: GPT-Live-1 상세 이미지 `7b76636661a0.png` 로드, 이전 이미지 없음, 가로 넘침 없음 · Qwen 상세 '가중치를 공개'·'비상업적 이용만' 표시, '오픈소스로 공개했습니다' 없음 · 콘솔 오류 0
