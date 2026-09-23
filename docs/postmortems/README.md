@@ -4,5 +4,6 @@
 
 | ID | 날짜 | 제목 | severity | status |
 |---|---|---|---|---|
+| [PM-20260923-01](PM-20260923-01-speaker-script-source-order.md) | 2026-09-23 | 발표 대본이 공식 원문 순서와 벤치마크 설명 없이 작성돼 매 회차 실제 발표와 어긋남 | P2 | resolved |
 | [PM-20260909-01](PM-20260909-01-weekly-source-image-false-absence.md) | 2026-09-09 | 수집 실패를 출처 이미지 부재로 표시한 Weekly | P1 | resolved |
 | [PM-20260827-01](PM-20260827-01-tcc-vault-write-block.md) | 2026-08-27 | 옵시디언 정본 대본을 tmux 세션에서 읽지도 쓰지도 못한 이유 | P2 | resolved |
