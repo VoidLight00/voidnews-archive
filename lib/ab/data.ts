@@ -87,6 +87,8 @@ export interface ABEdition {
 
   /** Top 10 밖에서 추가로 추적하는 모델 카드 */
   modelWatch?: ABEditorPick[];
+  /** modelWatch 섹션 문구 — 모델이 아닌 서브 뉴스를 담는 회차만 지정. 없으면 기존 "연구·모델 소식" 문구 */
+  modelWatchSection?: { kicker: string; title: string; deck: string; navLabel: { ko: string; en: string } };
 
   // 큐레이터가 직접 엄선한 도구·자료 (VIP 트윗 아님)
   editorsPicks?: ABEditorPick[];
@@ -95,6 +97,7 @@ export interface ABEdition {
   demoCards?: ABDemoCard[];
 }
 
+import { edition2026_09b } from "./editions/2026-09b";
 import { edition2026_09a } from "./editions/2026-09a";
 import { edition2026_04a } from "./editions/2026-04a";
 import { edition2026_04b } from "./editions/2026-04b";
@@ -109,7 +112,7 @@ import { edition2026_07c } from "./editions/2026-07c";
 import { edition2026_08b } from "./editions/2026-08b";
 import { edition2026_08a } from "./editions/2026-08a";
 
-export const editions: ABEdition[] = [edition2026_09a, edition2026_08b, edition2026_08a, edition2026_07c, edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
+export const editions: ABEdition[] = [edition2026_09b, edition2026_09a, edition2026_08b, edition2026_08a, edition2026_07c, edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
 // 날짜 URL은 announceDate가 기본이라 과거 회차 데이터 수정 없이 전 회차가 날짜로 접근된다.
 function dateSlugOf(edition: ABEdition): string {

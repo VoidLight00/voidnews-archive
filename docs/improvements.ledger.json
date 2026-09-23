@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "entries": [
     {
       "id": "IMP-0001",
@@ -828,9 +828,31 @@
         "kind": "count",
         "cmd": "node -e \"const fs=require('fs');const ts=require('typescript');require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,f);const {weeks}=require('./lib/data.ts');const n=weeks.filter(w=>['2026-w37','2026-w38','2026-w39'].includes(w.slug)).reduce((a,w)=>a+w.companies.reduce((b,c)=>b+c.posts.length,0),0);process.stdout.write(String(n))\"",
         "op": "eq",
-        "value": 118
+        "value": 120
       },
-      "notes": "20260922-134206-ab-20260909-20260922. w37 completion rows are hash-bound in BACKFILL-INTEGRATION.json; 118 = 42 + 63 + 13 posts across the three weeks."
+      "notes": "20260922-134206-ab-20260909-20260922. w37 completion rows are hash-bound in BACKFILL-INTEGRATION.json; 118 = 42 + 63 + 13 posts across the three weeks. · 2026-09-23: w39에 미국 시간 9/22 발표 2건(Claude Opus 5.5, GPT-6 Sol·Luna)을 더해 120 = 42 + 63 + 15. 고정값은 느슨하게 바꾸지 않고 정확한 새 합계로 갱신했습니다(IMP-0044)."
+    },
+    {
+      "id": "IMP-0044",
+      "date": "2026-09-23",
+      "source": "user-instruction",
+      "category": "ab-data",
+      "request": "2026-09b VIP 준비본: 본편 6개(Opus 5.5·GPT-6 Sol·Luna 별도 카드, GPT-Live-1, Jev, Grok 4.7, Qwen-Image-2.1), 추가로 보면 좋을 뉴스 1개(Cowork), 공개 도구 2개(Graft, AuK)를 공식 원문·이미지 해시로 결속",
+      "status": "applied",
+      "files": [
+        "lib/ab/editions/2026-09b.ts",
+        "docs/vip/20260924/SOURCES.json",
+        "scripts/check-ab-2026-09b.mjs",
+        "lib/weeks/2026-w39.ts"
+      ],
+      "commit": "HEAD",
+      "evidence": {
+        "kind": "count",
+        "cmd": "node scripts/check-ab-2026-09b.mjs >/dev/null 2>&1 && echo 1 || echo 0",
+        "op": "eq",
+        "value": 1
+      },
+      "notes": "20260923-ab-r2-20260909-20260923/vip. 1MB 초과 원본 2건은 공식 변환본(Sol·Luna WebP)과 저장소 공유 이미지(AuK)로 대체"
     }
   ]
 }

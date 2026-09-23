@@ -16,3 +16,5 @@
 | 2026-09-09 | VN-IMAGE-03 | 로컬에서는 열리던 기존 이미지 32개가 운영 서버에서 404 | 파일명의 한글 정규화 차이를 Mac 파일 조회가 숨김 | 동일 바이트 영문 파일명과 32개 경로 교체, 실제 디렉터리 이름 대조 | test-weekly-source-images.mjs Unicode and case traps |
 | 2026-09-09 | VN-ASTRA-01 | 설정 예시 뒤 순서가 다시 시작하고 화면에서 목록 번호가 보이지 않음 | Markdown 시작 번호 미보존과 기본 스타일의 목록 기호 제거 | 시작 번호 보존, 본문 숫자·글머리 표시, 긴 설정 문구 줄바꿈 | Astra 실제 화면에서 1·2·3·4 순서와 computed list style 검사 |
 | 2026-09-09 | VN-READER-01 | 공개 본문에 발표자 준비 지시와 작성 중 고지가 노출됨 | 독자용 설명과 발표 준비 기록의 분리 부족 | 46곳 방문자 중심 교정, 모델별 입력·결과 자료 분리 | check-ab-2026-09a.mjs 문구·모델 검사 및 실제 화면 검사 |
+| 2026-09-23 | VN-IMAGE-04 | openai.com 기사에서 선택기가 관련 기사 카드(“… — Card cover/Card image/Art card”)를 첫 이미지로 고름. 운영 중인 w37 GPT-Live-1 카드가 다른 기사(광고 관련) 표지를 쓰고 있음 | source_image.py 가 본문 밖 추천 글 카드를 기사 상단 이미지와 구분하지 못함 | 2026-09b 9장은 후보를 직접 대조해 선택. w37 카드 교체는 백필 원장 결속 때문에 별도 승인 후 진행 | check-ab-2026-09b.mjs 가 Card image/cover/Art card 후보를 차단(AB 한정). 선택기 자체 수정은 미완 |
+| 2026-09-23 | VN-IMAGE-05 | 원본 이미지 2장(1.34MB·2.25MB)이 og-cache 1MB 한도(IMP-0002/0037)를 넘어 빌드 차단 | 원본 바이트 보존 규칙과 용량 한도가 충돌 | 공식 이미지 서버의 WebP 변환본, 저장소 공유 이미지로 대체하고 사유를 SOURCES.json 에 기록 | verify-improvements.mjs (find public/og-cache -size +1M = 0) |

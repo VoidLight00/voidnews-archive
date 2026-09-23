@@ -20015,6 +20015,35 @@
         "/sourceUrl"
       ],
       "relationship": "curated-reference"
+    },
+    {
+      "edition": "2026-09b",
+      "pointer": "/highlights/2/post",
+      "sourceRowKey": "2026-w37/openai-gpt-live-1",
+      "normalizedUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "sourceContentSha256": "eeadcee0fb49a59a6b7c7276b89956b6cdb59b8c81dbbe310876039871903755",
+      "sourceWeek": "2026-w37",
+      "sourceSlug": "openai-gpt-live-1",
+      "contentSha256": "dc042bd0ade3b68027bf287f5525f779caeb61052d3bb5e2b2487b1311af1a06",
+      "urlPointers": [
+        "/source",
+        "/officialUrl"
+      ],
+      "relationship": "curated-reference"
+    },
+    {
+      "edition": "2026-09b",
+      "pointer": "/editorsPicks/1",
+      "sourceRowKey": "2026-w37/tencent-hunyuan-auk-open-source-speech",
+      "normalizedUrl": "https://github.com/Tencent-Hunyuan/AuK",
+      "sourceContentSha256": "4760b98a5de4d331b3ba268fa7809dbadd0518af08d22080131408dae3550d40",
+      "sourceWeek": "2026-w37",
+      "sourceSlug": "tencent-hunyuan-auk-open-source-speech",
+      "contentSha256": "20dbaf7d818a31ff373552da53360007e4ea5b6783669f6e9523c9c0e4abd0f5",
+      "urlPointers": [
+        "/sourceUrl"
+      ],
+      "relationship": "curated-reference"
     }
   ],
   "backfillWindow": {

@@ -1,0 +1,511 @@
+{
+ "edition": "2026-09b",
+ "verifiedAt": "2026-09-23T05:28:58+00:00",
+ "period": "2026-09-10 ~ 2026-09-22",
+ "stories": [
+  {
+   "slug": "claude-opus-5-5-price-and-access",
+   "officialUrl": "https://www.anthropic.com/claude-opus-5-5",
+   "fetch": {
+    "method": "curl -sL -A \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15\"",
+    "httpStatus": 200,
+    "sha256": "706e4cae50ec0362a04f6214f170d0ea10997b6ccf814081a7c68cf490de74e5",
+    "rawPath": "raw/opus55.html",
+    "fetchedAt": "2026-09-23T05:10:22Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "Anthropic announcement (main)",
+     "url": "https://www.anthropic.com/claude-opus-5-5"
+    },
+    {
+     "label": "Anthropic news alias (redirects/canonicalizes to the same page)",
+     "url": "https://www.anthropic.com/news/claude-opus-5-5"
+    },
+    {
+     "label": "Claude docs: pricing",
+     "url": "https://docs.claude.com/en/docs/about-claude/pricing"
+    },
+    {
+     "label": "Claude docs: models overview",
+     "url": "https://docs.claude.com/en/docs/about-claude/models/overview"
+    },
+    {
+     "label": "Claude Platform docs: pricing (redirects within platform.claude.com)",
+     "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    {
+     "label": "Claude Platform docs: models overview (redirects within platform.claude.com)",
+     "url": "https://platform.claude.com/docs/en/models/overview"
+    },
+    {
+     "label": "Independent: Artificial Analysis model page",
+     "url": "https://artificialanalysis.ai/models/claude-opus-5-5"
+    }
+   ],
+   "date": "9/22",
+   "section": "highlight",
+   "publishedDateEvidence": "Visible date badge on the announcement page reads \"September 22, 2026\" (no time/timezone shown, so not converted to KST). Supporting: page's embedded Sanity CMS metadata field \"_updatedAt\":\"2026-09-22T16:27:50Z\" (UTC)."
+  },
+  {
+   "slug": "gpt-6-sol-luna-price-and-access",
+   "officialUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+   "fetch": {
+    "method": "pre-saved HTML (openai.com blocks scripted curl with 403; file supplied by task, not fetched by this agent)",
+    "httpStatus": null,
+    "sha256": "ce3aad10d2b9ae94f2abab460612f97d140158b5cbd3be18b7df023c7010b409",
+    "rawPath": "raw/openai-sol-luna.html",
+    "fetchedAt": "2026-09-23T05:14:01Z",
+    "note": "openai.com returns 403 to scripted curl requests per task instructions; this file was pre-saved and only read, not re-fetched, by this agent. sha256 recorded is of the pre-saved file as found."
+   },
+   "sourceLinks": [
+    {
+     "label": "OpenAI announcement",
+     "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
+    {
+     "label": "OpenAI GPT-6 Astra page (referenced in-article)",
+     "url": "https://openai.com/index/gpt-6-astra/"
+    },
+    {
+     "label": "OpenAI developer docs: GPT-6 Sol model page",
+     "url": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+    },
+    {
+     "label": "OpenAI developer docs: GPT-6 Luna model page",
+     "url": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    },
+    {
+     "label": "GitHub Changelog: Copilot rollout",
+     "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/"
+    }
+   ],
+   "date": "9/23 06:00",
+   "section": "highlight",
+   "publishedDateEvidence": "Page's embedded article schema includes <time dateTime=\"2026-09-22T21:00:00Z\">Sep 22, 2026</time> and a JSON field \"publicationDateText\":\"September 22, 2026\". 2026-09-22T21:00:00Z converted to KST (UTC+9) = 2026-09-23T06:00:00+09:00."
+  },
+  {
+   "slug": "gpt-live-1-voice-api",
+   "officialUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+   "fetch": {
+    "method": "pre-saved HTML (openai.com blocks scripted curl with 403; file supplied by task as a Korean-locale (ko-KR) rendering, not re-fetched by this agent)",
+    "httpStatus": "blocked-403 (confirmed by this agent re-testing the canonical English URL directly: HTTP 403)",
+    "sha256": "96bd628d6cbd651c5b96b3d309e613cd192be719b5c082d64b41982c6e62df09",
+    "rawPath": "raw/openai-gpt-live-1.html",
+    "fetchedAt": "2026-09-23T05:20:00Z",
+    "note": "og:url in the saved file is https://openai.com/ko-KR/index/introducing-gpt-live-1-in-the-api/ (Korean locale variant); officialUrl above uses the canonical English path per task instructions."
+   },
+   "sourceLinks": [
+    {
+     "label": "OpenAI announcement (canonical, English)",
+     "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+    },
+    {
+     "label": "OpenAI developer docs: Realtime/Live guide (linked in-article for pricing)",
+     "url": "https://developers.openai.com/api/docs/guides/live"
+    },
+    {
+     "label": "OpenAI developer docs: GPT-Live-1 model page",
+     "url": "https://developers.openai.com/api/docs/models/gpt-live-1"
+    }
+   ],
+   "date": "9/10",
+   "section": "highlight",
+   "publishedDateEvidence": "Page's embedded article JSON field \"publicationDateText\":\"2026년 9월 10일\" (September 10, 2026). No machine-readable <time dateTime> with a timezone was found for this specific article in the scrape (the only dateTime-tagged timestamps found on the page belong to unrelated recirculation/related-article cards, e.g. the Sol/Luna article dated 2026-09-22), so the date is kept as a date-only value, not converted to a KST time."
+  },
+  {
+   "slug": "jev-agent-output-judge",
+   "officialUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+   "fetch": {
+    "method": "curl -sL -A Safari-UA",
+    "httpStatus": 200,
+    "sha256": "19a428f4d388bb5f218cdb950f11d28d67677e887c01a753010258c621c5cb27",
+    "rawPath": "raw/jev.html",
+    "fetchedAt": "2026-09-23T05:09:31Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "TypeSafe AI blog: Introducing System One Models & Jev",
+     "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+    },
+    {
+     "label": "TypeSafe AI docs",
+     "url": "https://docs.typesafe.ai/"
+    },
+    {
+     "label": "TypeSafe AI console (sign in / early access)",
+     "url": "https://console.typesafe.ai/"
+    },
+    {
+     "label": "LangChain blog: Jev-as-a-Judge for Agent Evals",
+     "url": "https://www.langchain.com/blog/jev-agent-evals-langsmith"
+    },
+    {
+     "label": "LangChain blog: Jev is now available in LangSmith Evals",
+     "url": "https://www.langchain.com/blog/jev-is-now-available-in-langsmith-evals"
+    },
+    {
+     "label": "LangChain webinar: Building a harness with Jev",
+     "url": "https://events.langchain.com/webinar/building-a-harness-with-jev/"
+    }
+   ],
+   "date": "9/15",
+   "section": "highlight",
+   "publishedDateEvidence": "Visible byline on typesafe.ai blog page: \"Sep 15, 2026\" (shown twice, no <time>/datetime attribute and no timezone stated, so treated as date-only, not KST-qualified)."
+  },
+  {
+   "slug": "grok-4-7-and-copilot",
+   "officialUrl": "https://x.ai/news/grok-4-7",
+   "fetch": {
+    "method": "curl -sL -A Safari-UA",
+    "httpStatus": 200,
+    "sha256": "35c9964f178c2049ae0adab9be4817e530d316aaa0f606c8c0395cc1c09d7091",
+    "rawPath": "raw/grok47.html",
+    "fetchedAt": "2026-09-23T05:12:51Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "x.ai news: Introducing Grok 4.7",
+     "url": "https://x.ai/news/grok-4-7"
+    },
+    {
+     "label": "GitHub Blog changelog: Grok 4.7 now available in GitHub Copilot",
+     "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot"
+    },
+    {
+     "label": "docs.x.ai: Grok 4.7 model page (Models & Pricing)",
+     "url": "https://docs.x.ai/docs/models/grok-4-7"
+    },
+    {
+     "label": "docs.x.ai: Pricing",
+     "url": "https://docs.x.ai/docs/pricing"
+    },
+    {
+     "label": "x.ai/build (Grok Build, CTA link from the news post)",
+     "url": "https://x.ai/build"
+    },
+    {
+     "label": "x.ai/api (API console entry point)",
+     "url": "https://x.ai/api"
+    },
+    {
+     "label": "Artificial Analysis: Grok 4.7 model analysis (independent)",
+     "url": "https://artificialanalysis.ai/models/grok-4-7"
+    }
+   ],
+   "date": "9/21",
+   "section": "highlight",
+   "publishedDateEvidence": "Page shows <time dateTime=\"2026-09-21\">Sep 21, 2026</time> above the headline on x.ai/news/grok-4-7; no timezone in the datetime attribute, so treated as date-only (not KST-qualified)."
+  },
+  {
+   "slug": "qwen-image-2-1-weights",
+   "officialUrl": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "fetch": {
+    "method": "curl -sL -A Safari-UA (github.com repo page); README fetched separately via raw.githubusercontent.com",
+    "httpStatus": 200,
+    "sha256": "421941c894cccfed6d7bad23f349da3e45234f27631b4f7cac60bd355c0bb4af",
+    "rawPath": "raw/qwen_gh.html",
+    "fetchedAt": "2026-09-23T05:15:48Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "GitHub repository",
+     "url": "https://github.com/QwenLM/Qwen-Image-2.1"
+    },
+    {
+     "label": "README.md (raw)",
+     "url": "https://raw.githubusercontent.com/QwenLM/Qwen-Image-2.1/main/README.md"
+    },
+    {
+     "label": "LICENSE (raw)",
+     "url": "https://raw.githubusercontent.com/QwenLM/Qwen-Image-2.1/main/LICENSE"
+    },
+    {
+     "label": "Qwen official blog post",
+     "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+    },
+    {
+     "label": "Hugging Face model card",
+     "url": "https://huggingface.co/Qwen/Qwen-Image-2.1"
+    },
+    {
+     "label": "Hugging Face Space demo",
+     "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-2.1"
+    },
+    {
+     "label": "ModelScope model page",
+     "url": "https://modelscope.cn/models/Qwen/Qwen-Image-2.1"
+    },
+    {
+     "label": "ComfyUI-compatible weights (Comfy-Org)",
+     "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1"
+    }
+   ],
+   "date": "9/20",
+   "section": "highlight",
+   "publishedDateEvidence": "README.md '## News' section, first entry: \"2026.09.20: We released Qwen-Image-2.1! ...\". The LICENSE file also states \"Qwen RESEARCH LICENSE AGREEMENT Release Date: September 20, 2026\". No timezone given in either source (date-only, not KST-qualified). The qwen.ai blog page (https://qwen.ai/blog?id=qwen-image-2.1) is fully client-rendered (raw HTML has no body content beyond the string \"Qwen\"), so its date could not be independently verified from static HTML."
+  },
+  {
+   "slug": "claude-cowork-in-chat",
+   "officialUrl": "https://claude.com/blog/cowork-is-now-claude",
+   "fetch": {
+    "method": "curl -sL -A \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15\"",
+    "httpStatus": 200,
+    "sha256": "e95b811581d1c8a34ad8ca06f754c3fa2eb48c112ae00e7339419481af1e5c81",
+    "rawPath": "_workspace/ab/20260923-ab-r2-20260909-20260923/vip/raw/cowork.html",
+    "fetchedAt": "2026-09-23T05:08:38Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "Anthropic blog: Claude Cowork and chat are now one Claude",
+     "url": "https://claude.com/blog/cowork-is-now-claude"
+    },
+    {
+     "label": "Help Center: full list of capabilities",
+     "url": "https://support.claude.com/en/articles/16761823"
+    }
+   ],
+   "date": "9/16",
+   "section": "sub",
+   "publishedDateEvidence": "Page metadata on the article: \"Category Product announcements Product Claude apps Claude Cowork Date September 16, 2026 Reading time 5 min\""
+  }
+ ],
+ "tools": [
+  {
+   "slug": "graft-coding-agent-context",
+   "officialUrl": "https://github.com/trailhq/Graft",
+   "fetch": {
+    "method": "gh api repos/trailhq/Graft ; gh api repos/trailhq/Graft/readme ; gh api repos/trailhq/Graft/license ; gh api repos/trailhq/Graft/contents/package.json ; gh api repos/trailhq/Graft/contents/TELEMETRY.md ; npm view @nanonets/graft version time license repository.url",
+    "httpStatus": 200,
+    "sha256": "readme.md content sha (git blob sha, per GitHub Contents API): 9bf534fe9e89cb6b3c99c7f72802406ef56c5ad0 — full API responses saved as raw files, see rawPath list",
+    "rawPath": "_workspace/ab/20260923-ab-r2-20260909-20260923/vip/raw/graft_repo.json, raw/graft_readme.md, raw/graft_readme_meta.json, raw/graft_LICENSE.txt, raw/graft_license_meta.json, raw/graft_package.json, raw/graft_TELEMETRY.md, raw/graft_npm_view.txt",
+    "fetchedAt": "2026-09-23T05:20:00Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "GitHub repo trailhq/Graft",
+     "url": "https://github.com/trailhq/Graft"
+    },
+    {
+     "label": "npm registry API — @nanonets/graft",
+     "url": "https://registry.npmjs.org/@nanonets/graft"
+    },
+    {
+     "label": "npm package page (browser UA blocked curl with 403; package confirmed live via registry API and npm view)",
+     "url": "https://www.npmjs.com/package/@nanonets/graft"
+    },
+    {
+     "label": "Trail (trailhq.com) product page",
+     "url": "https://trailhq.com/graft"
+    },
+    {
+     "label": "Old repo path (redirects, same repo id 1288325627)",
+     "url": "https://github.com/NanoNets/context-graph-engine"
+    }
+   ],
+   "license": "MIT (LICENSE file, copyright \"Context Graph Engine contributors\", 2026).",
+   "install": [
+    "npm install -g @nanonets/graft",
+    "graft init",
+    "npx @nanonets/graft init",
+    "graft init --dry-run",
+    "graft init --agents claude",
+    "graft build [dir]",
+    "graft build --deep",
+    "graft ask \"<task>\" [dir]",
+    "graft mcp [dir]"
+   ]
+  },
+  {
+   "slug": "auk-open-speech-model",
+   "officialUrl": "https://github.com/Tencent-Hunyuan/AuK",
+   "fetch": {
+    "method": "gh api repos/Tencent-Hunyuan/AuK ; gh api repos/Tencent-Hunyuan/AuK/readme ; gh api repos/Tencent-Hunyuan/AuK/license ; gh api repos/Tencent-Hunyuan/AuK/contents/docs/COOKBOOK.md ; curl -sL -A <UA> for HF model/space pages and arXiv abstract",
+    "httpStatus": 200,
+    "sha256": "README git blob sha (gh api contents metadata): see raw/auk_readme_meta.json; raw HTML/MD files individually sha256-able under rawPath",
+    "rawPath": "_workspace/ab/20260923-ab-r2-20260909-20260923/vip/raw/auk_repo.json, raw/auk_readme.md, raw/auk_readme_meta.json, raw/auk_LICENSE.txt, raw/auk_license_meta.json, raw/auk_COOKBOOK.md, raw/auk_cookbook_meta.json, raw/auk_huggingface_co_tencent_AuK.html, raw/auk_huggingface_co_tencent_AuK-Flash.html, raw/auk_huggingface_co_spaces_tencent_AuK.html, raw/auk_arxiv.html",
+    "fetchedAt": "2026-09-23T05:35:00Z"
+   },
+   "sourceLinks": [
+    {
+     "label": "GitHub repo Tencent-Hunyuan/AuK",
+     "url": "https://github.com/Tencent-Hunyuan/AuK"
+    },
+    {
+     "label": "HuggingFace Space (demo)",
+     "url": "https://huggingface.co/spaces/tencent/AuK"
+    },
+    {
+     "label": "HuggingFace model — AuK (base)",
+     "url": "https://huggingface.co/tencent/AuK"
+    },
+    {
+     "label": "HuggingFace model — AuK-Flash",
+     "url": "https://huggingface.co/tencent/AuK-Flash"
+    },
+    {
+     "label": "arXiv paper 2609.08936",
+     "url": "https://arxiv.org/abs/2609.08936"
+    },
+    {
+     "label": "Project website",
+     "url": "https://auk-project.github.io/"
+    },
+    {
+     "label": "ModelScope Space (demo)",
+     "url": "https://modelscope.cn/studios/Tencent-Hunyuan/AuK"
+    }
+   ],
+   "license": "MIT (Tencent-authored preamble + standard MIT terms in LICENSE; GitHub's auto-detector labels it 'Other/NOASSERTION' due to the preamble, but HuggingFace tags it plainly as 'mit').",
+   "install": [
+    "git clone https://github.com/Tencent-Hunyuan/AuK",
+    "cd AuK",
+    "uv venv --python 3.10",
+    "source .venv/bin/activate",
+    "uv pip install -e .",
+    "uv pip install -e \".[gradio]\"",
+    "uv pip install -e \".[comfyui]\"",
+    "uv pip install -e \".[train]\"",
+    "uv pip install -e \".[gradio,train]\"",
+    "conda create -n auk python=3.10 -y",
+    "conda activate auk",
+    "pip install -e .",
+    "pip install -U \"huggingface_hub[cli]\"",
+    "hf download tencent/AuK --local-dir ./ckpts/AuK",
+    "hf download tencent/AuK-Flash --local-dir ./ckpts/AuK-Flash",
+    "hf download Qwen/Qwen2.5-Omni-3B --local-dir ./ckpts/Qwen2.5-Omni-3B",
+    "pip install -U modelscope",
+    "modelscope download --model Tencent-Hunyuan/AuK --local_dir ./ckpts/AuK"
+   ]
+  }
+ ],
+ "images": [
+  {
+   "key": "opus55",
+   "sourceUrl": "https://www.anthropic.com/claude-opus-5-5",
+   "url": "https://www-cdn.anthropic.com/images/4zrzovbb/website/f4d37a1d1f582f53f4e89440062b649b6273a093-1200x630.jpg",
+   "publicPath": "/og-cache/ab-20260924-opus55.jpg",
+   "sha256": "517100de355acfc6251e8e9c2b8f34869e65dd31f5b95ffe8bc48b873b7cca2a",
+   "byteSize": 88082,
+   "width": 1200,
+   "height": 630,
+   "selectionKind": "source-share-preview",
+   "originalBytesUnedited": true,
+   "alt": "지평선 위로 푸른 하늘과 주황빛 노을이 번지는 사진 가운데에 'Claude Opus 5.5'가 쓰여 있고, 양옆에 노란 종이의 스케치와 붉은 암석 질감 사진이 이어 붙은 이미지",
+   "caption": "Anthropic이 Claude Opus 5.5 발표 글에 사용한 공식 공유 이미지입니다. 본문 상단에는 별도 대표 이미지가 없어 이 이미지를 사용했습니다."
+  },
+  {
+   "key": "sol-luna",
+   "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+   "url": "https://images.ctfassets.net/kftzwdyauwt9/7fvmMcBIvMTXxVJh7NEMt1/48a75e624699bb1e218366c1d3522048/gpt-6-sol-luna-seo.png?w=1600&h=900&fit=fill&fm=webp&q=90",
+   "publicPath": "/og-cache/ab-20260924-sol-luna.webp",
+   "sha256": "db2ed4916ca288145892d0e1df6a48e73bc3452a2026689ac398afe784e0e6ff",
+   "byteSize": 43296,
+   "width": 1600,
+   "height": 900,
+   "selectionKind": "source-share-preview",
+   "originalBytesUnedited": true,
+   "alt": "별이 흩어진 검은 우주를 배경으로 왼쪽 위에 밝은 태양, 오른쪽 아래에 초승달이 있고 가운데에 'GPT-6 Sol and Luna'가 흰 글씨로 적힌 이미지",
+   "caption": "OpenAI가 GPT-6 Sol·Luna 발표 글에 사용한 공식 공유 이미지로, OpenAI 이미지 서버가 제공하는 1600px 변환본입니다. 본문 상단에는 별도 이미지 파일이 없어 이 이미지를 사용했습니다."
+  },
+  {
+   "key": "gpt-live-1",
+   "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+   "url": "https://images.ctfassets.net/kftzwdyauwt9/4pev9Sr5bjEQDcbULrh5aL/f8b43237b9a60f12efd3e52f673b3f37/kix.8tjb53hxn2fb.png",
+   "publicPath": "/og-cache/ab-20260924-gpt-live-1.png",
+   "sha256": "7b76636661a023d8e46f9c40bbabfcb58865017e98b0c2bc248e70696ea67541",
+   "byteSize": 171676,
+   "width": 1646,
+   "height": 924,
+   "selectionKind": "source-first-image",
+   "originalBytesUnedited": true,
+   "alt": "전화 통화 화면을 표현한 두 개의 말풍선으로, 위쪽은 식당이 'Hi, thanks for calling Stella Lago. How can I help you?'라고 응답하고 아래쪽은 손님이 '토요일 저녁 7시에 4명 예약'을 요청하는 장면이며 하단에 Yelp 로고가 있습니다.",
+   "caption": "OpenAI가 GPT-Live-1 발표 글 상단에 실은 Yelp 전화 예약 시연 영상의 정지 화면입니다."
+  },
+  {
+   "key": "jev",
+   "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+   "url": "https://framerusercontent.com/images/z4Uu1YpJeEZPBSMTCMI0CN2PX0.png?width=1672&height=918",
+   "publicPath": "/og-cache/ab-20260924-jev.png",
+   "sha256": "939d9097497001e682fa81a440db0382af523a50778fcc9f4201d806b23d7e8e",
+   "byteSize": 29595,
+   "width": 1672,
+   "height": 918,
+   "selectionKind": "source-first-image",
+   "originalBytesUnedited": true,
+   "alt": "가로축은 워크플로당 비용(로그 눈금), 세로축은 정확도인 산점도입니다. Jev는 가장 왼쪽의 낮은 비용 위치에 정확도 약 68%로 표시되고, OpenAI·Anthropic·Fireworks 모델은 더 높은 비용 쪽에 흩어져 있습니다.",
+   "caption": "TypeSafe AI가 발표 글 본문에 실은 네 가지 워크플로 평균 정확도와 비용 비교 차트입니다. 회사가 직접 측정한 결과입니다."
+  },
+  {
+   "key": "grok47",
+   "sourceUrl": "https://x.ai/news/grok-4-7",
+   "url": "https://x.ai/images/news/grok-4-7-og.webp",
+   "publicPath": "/og-cache/ab-20260924-grok47.webp",
+   "sha256": "2b03cd279088e0dd65a8f11c0b0b03ba7058252e9da3e9fd48a50163f7aa7fee",
+   "byteSize": 25742,
+   "width": 1024,
+   "height": 537,
+   "selectionKind": "source-share-preview",
+   "originalBytesUnedited": true,
+   "alt": "짙은 남색과 회색이 섞인 그러데이션 배경 가운데에 흰 글씨로 'Grok 4.7'이 적힌 이미지",
+   "caption": "xAI가 Grok 4.7 발표 글의 공유 이미지로 사용한 공식 이미지입니다. 본문 상단에는 별도 사진이 없어 이 이미지를 사용했습니다."
+  },
+  {
+   "key": "qwen-image",
+   "sourceUrl": "https://github.com/QwenLM/Qwen-Image-2.1",
+   "url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-Image/image2.1/images/example-01.png",
+   "publicPath": "/og-cache/ab-20260924-qwen-image.png",
+   "sha256": "5fa1b8c62a68dbd761e5e6699964c6bac032be9639f682b5c6057e513323faa7",
+   "byteSize": 297346,
+   "width": 3333,
+   "height": 1052,
+   "selectionKind": "source-first-image",
+   "originalBytesUnedited": true,
+   "alt": "검은 배경의 막대그래프로, 위쪽은 이미지 생성 모델들의 총점을, 아래쪽은 매개변수 수를 비교합니다. Qwen Image 2.1은 60.28점으로 일곱 번째에 강조되어 있고 매개변수는 7B로 표시됩니다. 앞선 여섯 모델은 매개변수가 공개되지 않았다는 자물쇠 표시가 붙어 있습니다.",
+   "caption": "Qwen 팀이 저장소 README 상단에 실은 자체 비교 차트입니다. 평가 기준과 점수는 Qwen이 공개한 값입니다."
+  },
+  {
+   "key": "cowork",
+   "sourceUrl": "https://claude.com/blog/cowork-is-now-claude",
+   "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6aaaa060d1aec4a549c537ef_Object-Easel.svg",
+   "publicPath": "/og-cache/ab-20260924-cowork.svg",
+   "sha256": "332f1b9a77f522cb49c354a00706be0a65e19533ec7c85ca61c8e8ecbcc917ef",
+   "byteSize": 24693,
+   "width": 1000,
+   "height": 1000,
+   "selectionKind": "source-first-image",
+   "originalBytesUnedited": true,
+   "alt": "크림색 배경에 이젤 위 캔버스를 손그림 선으로 그린 Anthropic 일러스트",
+   "caption": "Anthropic이 Cowork 통합 발표 글 상단에 실은 일러스트입니다."
+  },
+  {
+   "key": "graft",
+   "sourceUrl": "https://github.com/trailhq/Graft",
+   "url": "https://raw.githubusercontent.com/trailhq/Graft/main/assets/graft-terminal.png",
+   "publicPath": "/og-cache/ab-20260924-graft.png",
+   "sha256": "3bcab95ac10d85175ddd30895731d093377dbd6ff2115e864272b410b6928786",
+   "byteSize": 134674,
+   "width": 2060,
+   "height": 910,
+   "selectionKind": "source-first-image",
+   "originalBytesUnedited": true,
+   "alt": "터미널에서 npm install -g @nanonets/graft와 graft init을 실행한 뒤 claude를 열면 'Graft is active' 안내와 함께 하단 상태 표시줄에 402 nodes / 977 edges, 79% enriched, synced가 표시되는 화면",
+   "caption": "Graft 저장소 README에 실린 설치 후 Claude Code 연결 화면입니다."
+  },
+  {
+   "key": "auk",
+   "sourceUrl": "https://github.com/Tencent-Hunyuan/AuK",
+   "url": "https://opengraph.githubassets.com/2d9d4fe4fecba1027c0a804b6a3f947896a80423a075c3cdec4cae8469525340/Tencent-Hunyuan/AuK",
+   "publicPath": "/og-cache/ab-20260924-auk.png",
+   "sha256": "7f7cb24aba78b5379f04a998f413c02aa288a8861946f8736b673d74a1cd74eb",
+   "byteSize": 55690,
+   "width": 1200,
+   "height": 600,
+   "selectionKind": "source-share-preview",
+   "originalBytesUnedited": true,
+   "alt": "흰 배경에 'Tencent-Hunyuan/AuK' 저장소 이름과 'AuK: An Open-Source Foundational Model for Speech Generation and Editing' 설명, 기여자·이슈·별·포크 수, 파란 원형 로고가 표시된 GitHub 저장소 공유 이미지",
+   "caption": "GitHub가 AuK 저장소에 제공하는 공유 이미지입니다. README 첫 이미지인 벤치마크 차트는 파일 용량이 커서 이 이미지를 사용했습니다."
+  }
+ ],
+ "scope": "공식 원문과 저장소 문서 확인 수준입니다. 성능 수치의 독립 재현, 도구 설치·실행은 하지 않았습니다."
+}

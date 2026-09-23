@@ -1,12 +1,12 @@
 import type { WeeklyData } from "../data";
 
-// Partial week: 2026-09-22까지 수집한 구간만 담았습니다. 9/23~27은 다음 수집에서 채웁니다. 표시 시각은 한국시간(KST)입니다.
+// Partial week: 2026-09-22까지 수집한 구간에 미국 시간 9/22 발표 2건(한국시간 9/22~9/23 06:00)을 더했습니다. 나머지 9/23~27은 다음 수집에서 채웁니다. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
 export const week39: WeeklyData = {
   "week": 39,
   "year": 2026,
   "slug": "2026-w39",
   "period": "9/21 ~ 9/27",
-  "totalPosts": 13,
+  "totalPosts": 15,
   "companies": [
     {
       "name": "Google",
@@ -296,6 +296,49 @@ export const week39: WeeklyData = {
       "color": "#10A37F",
       "posts": [
         {
+          "date": "9/23 06:00",
+          "platform": "Web",
+          "title": "OpenAI, GPT-6 Sol·Luna 출시 — API 가격 절반",
+          "deck": "Astra급 신뢰도를 더 빠르고 싼 두 모델로 나눴습니다",
+          "summary": "OpenAI가 GPT-6 Astra의 기술을 가져온 중간·경량 모델 GPT-6 Sol과 GPT-6 Luna를 출시했습니다. API 가격은 Sol 입력·출력 100만 토큰당 2달러·10달러, Luna 0.1달러·0.5달러로 GPT-5.6 세대보다 절반 이하이며, ChatGPT·Codex·GitHub Copilot에 같은 날 들어갔습니다.",
+          "content": "OpenAI가 한국시간 9월 23일 오전 6시(미국 시간 9월 22일) GPT-6 Sol과 GPT-6 Luna를 출시했습니다. 플래그십 GPT-6 Astra의 강점을 더 빠르고 저렴한 모델로 옮긴 두 모델입니다.\n\nAPI 가격(100만 토큰당)은 GPT-6 Sol이 입력 2달러·출력 10달러, GPT-6 Luna가 입력 0.1달러·출력 0.5달러입니다. OpenAI는 이전 세대인 GPT-5.6 Sol·Luna보다 50% 낮은 가격이라고 밝혔습니다. 두 모델의 컨텍스트 창은 105만 토큰입니다.\n\nOpenAI는 GPT-6 Sol의 실수가 이전 모델의 절반 정도로 줄어 Astra에 가까운 신뢰도에 이르렀다고 설명했습니다. 자사 내부 평가 수치입니다.\n\nPlus·Pro·Business·Enterprise·Edu 사용자는 ChatGPT Work와 Codex에서 두 모델을 쓸 수 있고, Free·Go 사용자는 데스크톱 앱에서 GPT-6 Luna를 쓸 수 있습니다. 일반 채팅 화면에는 아직 들어가지 않았습니다. GitHub Copilot에도 같은 날 순차 배포가 시작됐습니다.",
+          "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "officialUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+          "verifiedAt": "2026-09-23",
+          "slug": "gpt-6-sol-luna",
+          "tags": [
+            "AI",
+            "2026-w39",
+            "OpenAI",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "OpenAI 모델 문서 (GPT-6 Sol)",
+              "url": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+            },
+            {
+              "label": "OpenAI 모델 문서 (GPT-6 Luna)",
+              "url": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+            },
+            {
+              "label": "GitHub Changelog — Copilot 배포",
+              "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20260923/db2ed4916ca2.webp",
+            "alt": "별이 흩어진 검은 우주를 배경으로 왼쪽 위에 밝은 태양, 오른쪽 아래에 초승달이 있고 가운데에 'GPT-6 Sol and Luna'가 흰 글씨로 적힌 이미지",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "OpenAI launches GPT-6 Sol and Luna at half the API price",
+            "deck": "Astra-level reliability split into two faster, cheaper models",
+            "summary": "OpenAI launched GPT-6 Sol and GPT-6 Luna, mid-size and lightweight models built on GPT-6 Astra's advances. API pricing is $2/$10 per million input/output tokens for Sol and $0.10/$0.50 for Luna, at least half the GPT-5.6 generation, and both reached ChatGPT, Codex and GitHub Copilot the same day.",
+            "content": "OpenAI released GPT-6 Sol and GPT-6 Luna on September 22 (US time; 06:00 on September 23 in Korea). The two models carry the strengths of the flagship GPT-6 Astra into faster, cheaper options.\n\nAPI pricing per million tokens is $2 input and $10 output for GPT-6 Sol and $0.10 input and $0.50 output for GPT-6 Luna, which OpenAI says is 50% below GPT-5.6 Sol and Luna. Both have a 1.05M-token context window.\n\nOpenAI says GPT-6 Sol makes about half as many mistakes as its predecessor, approaching Astra-level reliability, based on its own internal evaluations.\n\nPlus, Pro, Business, Enterprise and Edu users can use both models in ChatGPT Work and Codex, while Free and Go users can use GPT-6 Luna in the desktop app. They are not yet available in regular chat. GitHub also began rolling them out in Copilot the same day."
+          }
+        },
+        {
           "date": "9/22 13:26",
           "platform": "Web",
           "title": "OpenAI Codex Rust 0.157.0-alpha.5 출시",
@@ -478,6 +521,51 @@ export const week39: WeeklyData = {
             "deck": "Released Pro and Flash weights alongside the technical report, training environments, and RL code",
             "summary": "Xiaomi open-sourced the Pro and Flash versions of its MiMo-V2.6 language model, releasing weights alongside the technical report, training environments, and reinforcement-learning code.",
             "content": "Xiaomi open-sourced the Pro and Flash versions of its self-developed MiMo-V2.6 language model. Alongside the model weights, it released the technical report, the training environments used for reinforcement learning, and the RL code itself.\n\nPro is aimed at higher performance, while Flash is a lighter, faster variant. Both models are hosted on Hugging Face under the XiaomiMiMo organization, and their model cards carry an 'RL' designation indicating they went through a reinforcement-learning stage.\n\nBy releasing the training environments and RL code alongside the models, Xiaomi has made it possible for other researchers and developers to reproduce or build on the models using the same procedure."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Anthropic",
+      "color": "#E87040",
+      "posts": [
+        {
+          "date": "9/22",
+          "platform": "Web",
+          "title": "Anthropic, Claude Opus 5.5 출시",
+          "deck": "Fable 5.1급 성능을 Opus 5보다 싼 값에 냅니다",
+          "summary": "Anthropic이 5.5 계열 첫 모델 Claude Opus 5.5를 출시했습니다. 입력 100만 토큰당 4달러, 출력 20달러로 Opus 5보다 토큰 가격이 20% 낮고, 자사 벤치마크에서 에이전트 코딩·컴퓨터 사용 등 여러 항목이 Fable 5.1을 앞섰다고 밝혔습니다.",
+          "content": "Anthropic이 2026년 9월 22일 Claude Opus 5.5를 출시했습니다. 5.5 계열의 첫 모델이며, Sonnet 5.5와 Haiku 5.5는 몇 주 안에 뒤따른다고 예고했습니다.\n\n가격은 입력 100만 토큰당 4달러, 출력 20달러로 Opus 5 대비 20% 낮습니다. Anthropic은 일반적인 작업 기준 실행 비용이 Opus 5보다 40% 적고 출력 속도는 30% 빨라졌다고 설명했습니다.\n\nAnthropic이 공개한 벤치마크에서 Opus 5.5는 Terminal-Bench 4.0 66.4%(Fable 5.1 55.8%, Opus 5 52.3%), CursorBench 4.0 57.8%(Fable 5.1 51.8%), OSWorld 2.0 81.8%(Fable 5.1 80.7%)를 기록했습니다. 모두 자사 발표 수치입니다.\n\nClaude 앱, Claude Code, API와 AWS·Google Cloud·Microsoft Azure에서 바로 쓸 수 있습니다. 사이버보안·생물학 분야 안전장치는 Fable 5.1과 비슷한 수준으로 적용됐습니다.",
+          "source": "https://www.anthropic.com/claude-opus-5-5",
+          "officialUrl": "https://www.anthropic.com/claude-opus-5-5",
+          "verifiedAt": "2026-09-23",
+          "slug": "claude-opus-5-5",
+          "tags": [
+            "AI",
+            "2026-w39",
+            "Anthropic",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "Artificial Analysis 독립 평가",
+              "url": "https://artificialanalysis.ai/models/claude-opus-5-5"
+            },
+            {
+              "label": "TechCrunch 보도",
+              "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20260923/517100de355a.jpg",
+            "alt": "지평선 위로 푸른 하늘과 주황빛 노을이 번지는 사진 가운데에 'Claude Opus 5.5'가 쓰여 있고, 양옆에 노란 종이의 스케치와 붉은 암석 질감 사진이 이어 붙은 이미지",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Anthropic releases Claude Opus 5.5",
+            "deck": "Fable 5.1-level performance at a lower price than Opus 5",
+            "summary": "Anthropic released Claude Opus 5.5, the first model in its 5.5 family. Priced at $4/$20 per million input/output tokens, 20% below Opus 5, it beat Fable 5.1 on several of Anthropic's own benchmarks including agentic coding and computer use.",
+            "content": "Anthropic released Claude Opus 5.5 on September 22, 2026, the first model in its 5.5 family, with Sonnet 5.5 and Haiku 5.5 promised in the coming weeks.\n\nPricing is $4 per million input tokens and $20 per million output tokens, 20% below Opus 5. Anthropic says typical workloads cost 40% less to run than on Opus 5 and output is 30% faster.\n\nOn Anthropic's published benchmarks, Opus 5.5 scored 66.4% on Terminal-Bench 4.0 (Fable 5.1 55.8%, Opus 5 52.3%), 57.8% on CursorBench 4.0 (Fable 5.1 51.8%) and 81.8% on OSWorld 2.0 (Fable 5.1 80.7%). All figures are vendor-reported.\n\nIt is available in the Claude apps, Claude Code, the API, and on AWS, Google Cloud and Microsoft Azure, with cybersecurity and biology safeguards similar to Fable 5.1."
           }
         }
       ]

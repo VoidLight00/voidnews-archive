@@ -177,7 +177,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           <BrowseGrid title={locale === "ko" ? "이번 호 둘러보기" : "Explore this edition"} description={locale === "ko" ? "읽고 싶은 섹션으로 바로 이동하세요." : "Jump to the section you want to read."}
             items={[
               { id: "highlights", label: locale === "ko" ? "핵심 브리핑" : "Highlights", count: highlights.length, href: "#ab-highlights" },
-              ...(data.modelWatch?.length ? [{ id: "models", label: locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
+              ...(data.modelWatch?.length ? [{ id: "models", label: data.modelWatchSection ? data.modelWatchSection.navLabel[locale === "ko" ? "ko" : "en"] : locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
               ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "도구 추천" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
             ]}
           />
@@ -275,7 +275,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             <div style={{ maxWidth: 1280, margin: "0 auto" }}>
               <div style={{ marginBottom: 22 }}>
                 <span className="kicker" style={{ color: "var(--accent)" }}>
-                  Model watch
+                  {data.modelWatchSection?.kicker ?? "Model watch"}
                 </span>
                 <h2
                   className="serif"
@@ -288,7 +288,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     lineHeight: 1.12,
                   }}
                 >
-                  본편과 함께 볼 연구·모델 소식
+                  {data.modelWatchSection?.title ?? "본편과 함께 볼 연구·모델 소식"}
                 </h2>
                 <p
                   className="deck"
@@ -300,7 +300,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     color: "var(--text-soft)",
                   }}
                 >
-                  본편과 연결되는 연구와 모델을 소개합니다. 공식 자료에서 공개 상태와 한계를 함께 확인할 수 있습니다.
+                  {data.modelWatchSection?.deck ?? "본편과 연결되는 연구와 모델을 소개합니다. 공식 자료에서 공개 상태와 한계를 함께 확인할 수 있습니다."}
                 </p>
               </div>
               <div className="tc-article-grid ab-edition-grid">

@@ -16,6 +16,7 @@ const SCRIPTS = path.join(ROOT, "scripts");
 // build-time HARD gates (run on every `next build` via prebuild)
 const BUILD_GATES = {
   "check-ab-2026-09a.mjs": [],
+  "check-ab-2026-09b.mjs": [],
   "check-source-image-policy.mjs": [],
   "check-weekly-source-images.mjs": [],
   "check-backfill-integration.mjs": [],
@@ -30,7 +31,7 @@ const BUILD_GATES = {
   "check-horizontal-accent.mjs": [],
   // 공식 채널 영상만 허용 + fluent-korean 편집 규칙. 인자로 회차를 지정해 신규 회차부터 강제한다.
   // 과거 회차의 미해결 위반은 references/editorial-tone-legacy.json 에 실측으로 기록해 두었다.
-  "check-editorial-tone.mjs": ["2026-09a"], // 컬러 가로 accent line 금지 — 2026-08-13 AB 카드 --gold 3px 재발
+  "check-editorial-tone.mjs": ["2026-09a", "2026-09b"], // 컬러 가로 accent line 금지 — 2026-08-13 AB 카드 --gold 3px 재발
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([

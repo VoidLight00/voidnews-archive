@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-09-22 · 총 43건
+> 마지막 갱신: 2026-09-23 · 총 44건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -20,7 +20,7 @@
 | IMP-0041 | 2026-09-20 | workflow | 워크플로우 최소 갱신: 무손실 후보 배정, 원본과 본문 분리, 실측 usage unknown, 모델 입력 감사 결속, 선택 compact, 편집 검사 최신성 계약 | scripts/vgrok-fetch.mjs<br>scripts/test-vgrok-compact.mjs<br>docs/WORKFLOW_RENEWAL_PLAN.md<br>docs/WORKFLOW_RENEWAL_LOG.md<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_cache.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/routing_budget.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/merge_luna_shards.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_contract.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_renewal_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_routing_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/check_collection_routing.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh<br>~/.claude/skills/voidnews-briefing-pipeline/SKILL.md | — |
 | IMP-0042 | 2026-09-20 | workflow | Fable 재검토 잔여 보강: review UTF8 byte 상한, 신규 bound shadow 공용 실행기, slim stdin 소비 및 공급자 응답 usage 자동 finish 연결 | ~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_runner.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_stage3_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh<br>~/.claude/skills/voidnews-briefing-pipeline/SKILL.md<br>docs/WORKFLOW_RENEWAL_STAGE3.md<br>docs/WORKFLOW_RENEWAL_LOG.md | — |
 
-## 적용됨 (applied) (25)
+## 적용됨 (applied) (26)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
@@ -49,6 +49,7 @@
 | IMP-0039 | 2026-09-09 | quality | 마지막 Claude 세션 재개: 206건 추가분 배포 검증 및 TypeScript 로더 호환성 복구 | scripts/check-i18n-coverage.mjs<br>scripts/run-all-gates.mjs<br>gates/verify_voidnews.sh | HEAD |
 | IMP-0040 | 2026-09-09 | design | 중간 화면 너비에서 VoidNews 상단 메뉴 글자가 쪼개지는 현상 수정 | app/globals.css<br>scripts/test-browse-ui.mjs | HEAD |
 | IMP-0043 | 2026-09-22 | ab-data | 2026-09-09~22 AI 뉴스 공백을 수집·검증해 Weekly 아카이브에 반영 (2026-w37 완성 29건 추가, 2026-w38 신규 63건, 2026-w39 부분 주차 13건) | lib/weeks/2026-w37.ts<br>lib/weeks/2026-w38.ts<br>lib/weeks/2026-w39.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
+| IMP-0044 | 2026-09-23 | ab-data | 2026-09b VIP 준비본: 본편 6개(Opus 5.5·GPT-6 Sol·Luna 별도 카드, GPT-Live-1, Jev, Grok 4.7, Qwen-Image-2.1), 추가로 보면 좋을 뉴스 1개(Cowork), 공개 도구 2개(Graft, AuK)를 공식 원문·이미지 해시로 결속 | lib/ab/editions/2026-09b.ts<br>docs/vip/20260924/SOURCES.json<br>scripts/check-ab-2026-09b.mjs<br>lib/weeks/2026-w39.ts | HEAD |
 
 ## 대기 (pending) (8)
 
