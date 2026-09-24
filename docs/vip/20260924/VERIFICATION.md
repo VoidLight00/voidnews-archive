@@ -93,3 +93,12 @@ openai.com은 스크립트 요청을 403으로 막아 브라우저로 연 페이
 - 게시 전: `npm run build`, `check-ab-2026-09b`, `verify-publish-ready`, `verify_voidnews.sh`, `close.sh`(GREEN) 모두 exit 0
 - `npm run verify:site -- --url https://voidnews-archive.vercel.app`: exit 0 · 필수 검사 5종
 - 운영 화면(1440·390px) `_workspace/release/vip09b/check-fixes.mjs` exit 0: GPT-Live-1 상세 이미지 `7b76636661a0.png` 로드, 이전 이미지 없음, 가로 넘침 없음 · Qwen 상세 '가중치를 공개'·'비상업적 이용만' 표시, '오픈소스로 공개했습니다' 없음 · 콘솔 오류 0
+
+## 4차 배포 (9/24 발표 당일 요청)
+
+- 커밋 `7aa8d52` 푸시, Vercel 운영 배포 `dpl_8ZWkzvLCbgQ5zisTqd51gXFz3rDD` · READY
+- 변경: Jev 카드 상세에 공개 프로젝트 5개(jev-ultrafast, fast-jev-compaction, json-render, typesafe-mcp, jev-mcp) 링크와 설명 단락 추가. 저장소 존재·라이선스(MIT 4, Apache-2.0 1)는 `gh api`로 확인. AB 공통 제목 "핵심 흐름을 발표 순서대로 읽습니다"를 "핵심 흐름 발표 순서"로 변경
+- 게시 전: `npm run build`, `check-ab-2026-09b`(Jev 링크·경계 문구 확인 추가), `verify-publish-ready`, `verify_voidnews.sh` 모두 exit 0
+- `npm run verify:site -- --url https://voidnews-archive.vercel.app`: exit 0 · 필수 검사 5종
+- 운영 화면(1440·390px) `_workspace/release/vip09b/check-jev.mjs` exit 0: 링크 5/5, 새 단락 표시, 새 제목 표시·이전 제목 없음, 가로 넘침·오류 없음
+- 발표 대본에는 이 내용을 넣지 않았습니다(다른 세션이 관리하는 한국어 원문 캡처 파이프라인과 화면 수가 어긋나 되돌림).
