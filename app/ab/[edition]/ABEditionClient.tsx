@@ -236,7 +236,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   lineHeight: 1.1,
                 }}
               >
-                핵심 흐름을 발표 순서대로 읽습니다
+                핵심 흐름 발표 순서
               </h2>
               <p
                 className="deck"

@@ -74,6 +74,13 @@ assert.match(sol.content, /OpenAI의 설명|OpenAI 발표 수치|OpenAI가 밝�
 assert.match(live.content, /전화|SIP/);
 assert.match(jev.content, /판정|채점/);
 assert.match(jev.content, /TypeSafe AI의 설명|TypeSafe AI가 밝힌|회사 발표/);
+// 사용자 추가 요청(2026-09-24): Jev 생태계 공개 프로젝트 5개와 이용 조건 경계
+for (const repo of ['browser-use/jev-ultrafast', 'tamaratran/fast-jev-compaction', 'vercel-labs/json-render', 'itsmostafa/typesafe-mcp', 'jkudish/jev-mcp']) {
+  assert.ok(jev.backupUrls.some(link => link.url === `https://github.com/${repo}`), `Jev card must link ${repo}`);
+}
+assert.match(jev.content, /정식 배포 전의 실험 기능/);
+assert.match(jev.content, /TypeSafe API 키/);
+assert.match(jev.en.content, /experimental, unreleased/);
 assert.match(grok.content, /xAI의 설명|xAI가 밝힌|xAI 발표/);
 assert.match(grok.content, /Copilot/);
 assert.match(qwen.content, /비상업/);
