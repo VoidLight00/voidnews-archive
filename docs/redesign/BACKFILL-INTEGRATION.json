@@ -19409,6 +19409,14 @@
     {
       "path": "references/backfill-evidence/20260922-w37-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
       "sha256": "95ec65ee27a8a5595e2648afc7b63ecd49ef5b2b5b6e3417baf33bc43cb11009"
+    },
+    {
+      "path": "references/backfill-evidence/20261006-w39-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+      "sha256": "f99b8eb98c2bd853222714ffc73a1deae8b49be5dbeafbe80781b344beed0fad"
+    },
+    {
+      "path": "references/backfill-evidence/20261006-w39-completion/approved-additions.json",
+      "sha256": "0c55fc435ba13632d08957c0978835d9af08249033c2cb0500322029d1820dd2"
     }
   ],
   "abSupportingRows": [
@@ -19951,6 +19959,70 @@
             "day": {
               "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
               "text": "Sep 15"
+            }
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-w39",
+      "company": "OpenAI",
+      "slug": "openai-gpt-6-image-encoding-fix",
+      "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+      "normalizedUrl": "https://developers.openai.com/api/docs/changelog",
+      "sourceId": "src-url-49e8d0577a5e1f9d20fd",
+      "legacySourceIds": [],
+      "classification": "supporting-runtime",
+      "contentSha256": "a50d581437f27dd7c30a23115f24c8b6817f5e5f13d8fbab43677896c863eb0b",
+      "joinReferences": [
+        {
+          "path": "references/backfill-evidence/20261006-w39-completion/approved-additions.json",
+          "pointer": "/rows/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "references/backfill-evidence/20261006-w39-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://developers.openai.com/api/docs/changelog"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-09-25"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source",
+        "datePrecisionDisclosure": {
+          "location": "ledger-only",
+          "reason": "rolling changelog prints a calendar day only; no invented timestamp"
+        }
+      },
+      "sharedSourceGroup": "shared-49e8d0577a5e1f9d",
+      "event": {
+        "id": "w39-shared-openai-gpt-6-image-encoding-fix",
+        "publisherDate": "2026-09-25",
+        "section": "Fixed a bug in image encoding that degraded image understanding in GPT-6 Sol and GPT-6 Luna.",
+        "evidence": {
+          "path": "references/backfill-evidence/20261006-w39-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+          "sectionQuote": "Fixed a bug in image encoding that degraded image understanding in GPT-6 Sol and GPT-6 Luna.",
+          "quotes": [
+            "If your use cases involve image inputs, we recommend rerunning your evaluations and retrying workflows affected by the issue."
+          ],
+          "dateComponents": {
+            "mode": "month-day",
+            "heading": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > h3:nth-of-type(1)",
+              "text": "September, 2026"
+            },
+            "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4)",
+            "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1)",
+            "day": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+              "text": "Sep 25"
             }
           }
         }

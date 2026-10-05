@@ -1,0 +1,15 @@
+{
+  "purpose": "Approved additions inventory for the 2026-10a weekly deployment: cards whose source is a shared rolling page.",
+  "runId": "20261006-065837-ab-20260924-20261006",
+  "rows": [
+    {
+      "slug": "openai-gpt-6-image-encoding-fix",
+      "week": "2026-w39",
+      "company": "OpenAI",
+      "title": "OpenAI, GPT-6 Sol·Luna 이미지 인코딩 버그 수정",
+      "publisherDate": "2026-09-25",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "cache": "references/backfill-evidence/20261006-w39-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html"
+    }
+  ]
+}

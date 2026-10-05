@@ -1,6 +1,6 @@
 {
  "version": 1,
- "checkedAt": "2026-09-22T07:13:38.622Z",
+ "checkedAt": "2026-10-05T23:25:58.778Z",
  "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
  "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
  "counts": {
@@ -8,7 +8,7 @@
   "source-unresolved": 15,
   "no-meaningful-image-verified": 55,
   "fetch-failed": 9,
-  "records": 424
+  "records": 524
  },
  "records": [
   {
@@ -11442,6 +11442,2940 @@
    "selectionKind": "source-share-preview",
    "originalBytesUnedited": true,
    "key": "2026-w39|OpenAI, GPT-6 Sol·Luna 출시 — API 가격 절반|https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "GitHub, Copilot 정식 기능에 전역 기본 정책 도입",
+   "sourceUrl": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Copilot Features and clients page showing a Default policy for new features set to Enabled and a banner informing users that Starting October 22, eligible unconfigured Copilot features will gradually be set to this default policy).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/",
+     "httpStatus": 200,
+     "sha256": "856f70fcb119dded3c54fc44891d6a7596ef421934c804c614cbf36b6b592602"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/uploads/2026/09/658378650-a3c75a41-fbb4-447a-a93a-0f0f19b9aaf2.jpeg?w=1600",
+     "httpStatus": 200,
+     "sha256": "bbe21ccd1f3104e10fc20d04c9502d109ef4cc1599adedd9fa90d97474f4fe04",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/uploads/2026/09/658378650-a3c75a41-fbb4-447a-a93a-0f0f19b9aaf2.jpeg?w=1600",
+   "publicPath": "/source-media/weekly-20261006/bbe21ccd1f31.jpg",
+   "sha256": "bbe21ccd1f3104e10fc20d04c9502d109ef4cc1599adedd9fa90d97474f4fe04",
+   "byteSize": 125424,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|GitHub, Copilot 정식 기능에 전역 기본 정책 도입|https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Anthropic, 직원 201명을 대신한 Claude 에이전트 거래 실험 공개",
+   "sourceUrl": "https://www.anthropic.com/research/project-swap",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Two-panel illustration: on a dark background, five colored bars resembling books on a shelf; on dotted paper, two columns of dots joined by crisscrossing colored lines, like a matching diagram pairing people with books.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/research/project-swap",
+     "httpStatus": 200,
+     "sha256": "cfce23228a85c02188999784eb80b580321aefb74b5a51a8c0df984231af2dbd"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F81ec096e35d1d259eb3f47aef4edd2c25f8e3c5e-1920x1080.jpg&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "b5245cff2bada9dcddcaf655de7b7d9a372fd56be9a5d13387990d86b321208d",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F81ec096e35d1d259eb3f47aef4edd2c25f8e3c5e-1920x1080.jpg&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/b5245cff2bad.webp",
+   "sha256": "b5245cff2bada9dcddcaf655de7b7d9a372fd56be9a5d13387990d86b321208d",
+   "byteSize": 90614,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Anthropic, 직원 201명을 대신한 Claude 에이전트 거래 실험 공개|https://www.anthropic.com/research/project-swap"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Google, Gemini 3.8 Live Avatar를 Enterprise에 제공",
+   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: an image with the phrase \"Gemini 3.8 Live with Live Avatar\").",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/",
+     "httpStatus": 200,
+     "sha256": "d555c620737c97507b2ac0cfeaac3c351aad357769aab26466125354ffa930aa"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Slide_16_9_-_37.width-2200.format-webp.webp",
+     "httpStatus": 200,
+     "sha256": "bdfb2cdf08819d03baad69d8748d4cef553131f1fa369620a191bef6dd5036f4",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Slide_16_9_-_37.width-2200.format-webp.webp",
+   "publicPath": "/source-media/weekly-20261006/bdfb2cdf0881.webp",
+   "sha256": "bdfb2cdf08819d03baad69d8748d4cef553131f1fa369620a191bef6dd5036f4",
+   "byteSize": 37542,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Google, Gemini 3.8 Live Avatar를 Enterprise에 제공|https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Google, 우주 TPU 시험 Suncatcher 발사 전 설명 공개",
+   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
+     "httpStatus": 200,
+     "sha256": "769e6df47dfa9e19db36a4c0c1924996ece99081788fe8bb76a39ff9a9dcfdea"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Project_Suncatcher_social.width-1300.png",
+     "httpStatus": 200,
+     "sha256": "0c0043e6e5ff9025e1630786cb1d731522266a4e51c37681ae5a0503d5c36e19",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Project_Suncatcher_social.width-1300.png",
+   "publicPath": "/source-media/weekly-20261006/0c0043e6e5ff.png",
+   "sha256": "0c0043e6e5ff9025e1630786cb1d731522266a4e51c37681ae5a0503d5c36e19",
+   "byteSize": 367190,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Google, 우주 TPU 시험 Suncatcher 발사 전 설명 공개|https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Sakana AI, Jürgen Schmidhuber를 최고 과학 자문으로 영입",
+   "sourceUrl": "https://sakana.ai/schmidhuber/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://sakana.ai/schmidhuber/",
+     "httpStatus": 200,
+     "sha256": "706a1c6f93d8b2fcda965a1e8f94b95589d5d66295180be2ac150dc30c30d827"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://sakana.ai/assets/schmidhuber/hero.jpg",
+     "httpStatus": 200,
+     "sha256": "05c06ac1b671daec6bff72f98bfcdb1c35c95a0a8d62efcdee169d107cc84364",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://sakana.ai/assets/schmidhuber/hero.jpg",
+   "publicPath": "/source-media/weekly-20261006/05c06ac1b671.jpg",
+   "sha256": "05c06ac1b671daec6bff72f98bfcdb1c35c95a0a8d62efcdee169d107cc84364",
+   "byteSize": 220426,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Sakana AI, Jürgen Schmidhuber를 최고 과학 자문으로 영입|https://sakana.ai/schmidhuber/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "UpGuard, 읽을 수 있는 Supabase 데이터베이스 16,326개 보고",
+   "sourceUrl": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps",
+     "httpStatus": 200,
+     "sha256": "aac50e678c1e193a10f6cef3fe4e4dbcdcc1a210a7ca3f5be89d2444bc3446e9"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.prod.website-files.com/5efc3ccdb72aaa7480ec8179/6ab59c63418187657927ead6_Generic-2%20(1).png",
+     "httpStatus": 200,
+     "sha256": "eddac786ae2db0fb03d71a39d8aa7fe40eaa44f8b84008a1fee278e46081dc77",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://cdn.prod.website-files.com/5efc3ccdb72aaa7480ec8179/6ab59c63418187657927ead6_Generic-2%20(1).png",
+   "publicPath": "/source-media/weekly-20261006/eddac786ae2d.png",
+   "sha256": "eddac786ae2db0fb03d71a39d8aa7fe40eaa44f8b84008a1fee278e46081dc77",
+   "byteSize": 12466,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|UpGuard, 읽을 수 있는 Supabase 데이터베이스 16,326개 보고|https://www.upguard.com/blog/everything-everywhere-systemic-data-exposure-in-supabase-apps"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Meta, Connect 2026에서 Muse의 AI 안경 탑재 계획 발표",
+   "sourceUrl": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Mark Zuckerberg on stage at Connect 2026).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+     "httpStatus": 200,
+     "sha256": "5d5629a0d8e25c497c242b2d21e953c3a1164ebcb6beb1382ee4c0df5a9ef843"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://about.fb.com/wp-content/uploads/2026/09/The-Biggest-News-From-Connect-2026_Header-1.jpg?w=1920",
+     "httpStatus": 200,
+     "sha256": "4dc566e8ba9e91369a532b93312dc58fae3f49d3f972d781af98e81527b9a8bc",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://about.fb.com/wp-content/uploads/2026/09/The-Biggest-News-From-Connect-2026_Header-1.jpg?w=1920",
+   "publicPath": "/source-media/weekly-20261006/4dc566e8ba9e.jpg",
+   "sha256": "4dc566e8ba9e91369a532b93312dc58fae3f49d3f972d781af98e81527b9a8bc",
+   "byteSize": 336089,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Meta, Connect 2026에서 Muse의 AI 안경 탑재 계획 발표|https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Liquid AI, LFM2.5-VL-3B용 DSpark 초안 모델 공개",
+   "sourceUrl": "https://www.liquid.ai/blog/lfm2-5-vl-dspark",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: LFM2.5-VL-DSpark: Accelerating vision-language models on edge and beyond).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.liquid.ai/blog/lfm2-5-vl-dspark",
+     "httpStatus": 200,
+     "sha256": "9dd162940650e878a5a26ac7cce6cd66a63d4629a3b0543ef7f9b34913053029"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.liquid.ai/_next/image?url=https%3A%2F%2Faypchzzf9pftwuto.public.blob.vercel-storage.com%2FDSpark-Vision-Hero-4-oZshFjGHCdXh8hn2nvHqopWfY94S8W.gif&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "93e67c32c6e614c7cb6c0d1d74be64042acfe7590f1bfb0d3771bce605a25372",
+     "contentType": "image/gif"
+    }
+   ],
+   "imageUrl": "https://www.liquid.ai/_next/image?url=https%3A%2F%2Faypchzzf9pftwuto.public.blob.vercel-storage.com%2FDSpark-Vision-Hero-4-oZshFjGHCdXh8hn2nvHqopWfY94S8W.gif&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/93e67c32c6e6.gif",
+   "sha256": "93e67c32c6e614c7cb6c0d1d74be64042acfe7590f1bfb0d3771bce605a25372",
+   "byteSize": 1118627,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Liquid AI, LFM2.5-VL-3B용 DSpark 초안 모델 공개|https://www.liquid.ai/blog/lfm2-5-vl-dspark"
+  },
+  {
+   "key": "2026-w39|호주 총리, OpenAI 에이전트의 정부 포털 무단 접근 주장|https://www.pm.gov.au/media/press-conference-new-york",
+   "week": "2026-w39",
+   "title": "호주 총리, OpenAI 에이전트의 정부 포털 무단 접근 주장",
+   "sourceUrl": "https://www.pm.gov.au/media/press-conference-new-york",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.pm.gov.au/media/press-conference-new-york",
+     "httpStatus": 200,
+     "sha256": "426b2453a711d50e0bd04619409c3f23e8fdc7e1a7651009e8af9255e35fba3f"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://www.pm.gov.au/media/press-conference-new-york",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "key": "2026-w39|OpenAI, 학습 중 에이전트가 DNS로 외부 챗봇에 접근했다고 보고|https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+   "week": "2026-w39",
+   "title": "OpenAI, 학습 중 에이전트가 DNS로 외부 챗봇에 접근했다고 보고",
+   "sourceUrl": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+     "httpStatus": 200,
+     "sha256": "ed00ade83afc538b3782fbb63e5705aa7846f12941b775a1ae99b5284e219e64"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "key": "2026-w39|Anthropic 사이트 기고, Fable 5.1로 9루프 진폭 계산한 사례|https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+   "week": "2026-w39",
+   "title": "Anthropic 사이트 기고, Fable 5.1로 9루프 진폭 계산한 사례",
+   "sourceUrl": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+     "httpStatus": 200,
+     "sha256": "d196dd2b3ce887a327e405c7ef1c18f2b9069c12da9f947a093e63f40210bbb3"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w39",
+   "title": "Pika, API Club 회원 사례 3건을 처음 소개",
+   "sourceUrl": "https://pika.art/blog/api-member-spotlights",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: “Pika API Club gives us room to keep creating until we get the shot we want. We can refine our prompts, try more takes, and choose the best result for the story.” — Peter Vu, thevumedia).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://pika.art/blog/api-member-spotlights",
+     "httpStatus": 200,
+     "sha256": "54e1526b7751b92a155455e53dfab20d22558f59d2c524db8d8ae280f303f1af"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.notion.so/image/attachment%3A1d8d1822-60d5-4d39-b2e2-875b16e0a22a%3AQUOTE__Peter_Vu_(thevumedia).png?table=block&id=3e423e1d-26f4-8056-bee4-da7783f01d2c&cache=v2",
+     "httpStatus": 200,
+     "sha256": "ac58b06d460a07aba64a7ef94c64151a7cca0425963c33d1be99f9d680870b61",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://www.notion.so/image/attachment%3A1d8d1822-60d5-4d39-b2e2-875b16e0a22a%3AQUOTE__Peter_Vu_(thevumedia).png?table=block&id=3e423e1d-26f4-8056-bee4-da7783f01d2c&cache=v2",
+   "publicPath": "/source-media/weekly-20261006/ac58b06d460a.png",
+   "sha256": "ac58b06d460a07aba64a7ef94c64151a7cca0425963c33d1be99f9d680870b61",
+   "byteSize": 228559,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Pika, API Club 회원 사례 3건을 처음 소개|https://pika.art/blog/api-member-spotlights"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Midjourney, 라이브 스타일 미리보기와 편집 모델 개선, 한국어 확대",
+   "sourceUrl": "https://updates.midjourney.com/alpha-changelog-9-23-26/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://updates.midjourney.com/alpha-changelog-9-23-26/",
+     "httpStatus": 200,
+     "sha256": "a145eaca0ca2b6ea34f55ba6e22061b6716154d5492fcfb190a28380312f5c40"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://static.ghost.org/v5.0.0/images/publication-cover.jpg",
+     "httpStatus": 200,
+     "sha256": "e18e794290a96cbcb5749763b7093759268434e04adb6022cd5b3c75fb657052",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://static.ghost.org/v5.0.0/images/publication-cover.jpg",
+   "publicPath": "/source-media/weekly-20261006/e18e794290a9.jpg",
+   "sha256": "e18e794290a96cbcb5749763b7093759268434e04adb6022cd5b3c75fb657052",
+   "byteSize": 775110,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Midjourney, 라이브 스타일 미리보기와 편집 모델 개선, 한국어 확대|https://updates.midjourney.com/alpha-changelog-9-23-26/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "OpenAI, GPT-6 Sol·Luna 이미지 인코딩 버그 수정",
+   "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://developers.openai.com/api/docs/changelog",
+     "httpStatus": 200,
+     "sha256": "f99b8eb98c2bd853222714ffc73a1deae8b49be5dbeafbe80781b344beed0fad"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://developers.openai.com/og/api/docs/changelog.png",
+     "httpStatus": 200,
+     "sha256": "04eae3b805a45deac71741ff9a48a373595bc7c7756194fa76d58f0c3d21d23b",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://developers.openai.com/og/api/docs/changelog.png",
+   "publicPath": "/source-media/weekly-20261006/04eae3b805a4.png",
+   "sha256": "04eae3b805a45deac71741ff9a48a373595bc7c7756194fa76d58f0c3d21d23b",
+   "byteSize": 231518,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|OpenAI, GPT-6 Sol·Luna 이미지 인코딩 버그 수정|https://developers.openai.com/api/docs/changelog"
+  },
+  {
+   "week": "2026-w39",
+   "title": "백악관, 미중 super intelligence 대화 신설 합의 밝혀",
+   "sourceUrl": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+     "httpStatus": 200,
+     "sha256": "d6c3fddbaf8c83bac56276d2482e66428acc9418663dc78f7eaf92ae83aa1b61"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg",
+     "httpStatus": 200,
+     "sha256": "42331c75fca940b9566c28aaa7b8a1d2085e8b7c7a24ee7aeda4781131aa029b",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Social-Share-Card.jpg",
+   "publicPath": "/source-media/weekly-20261006/42331c75fca9.jpg",
+   "sha256": "42331c75fca940b9566c28aaa7b8a1d2085e8b7c7a24ee7aeda4781131aa029b",
+   "byteSize": 111433,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|백악관, 미중 super intelligence 대화 신설 합의 밝혀|https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "AMD, 페이페이 리가 이끄는 World Labs 인수 계약 체결",
+   "sourceUrl": "https://newsroom.amd.com/news/amd-acquire-world-labs/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://newsroom.amd.com/news/amd-acquire-world-labs/",
+     "httpStatus": 200,
+     "sha256": "17d14c5ced7aa712504b0c073fe87b1e8c57b4eac93dc758d2ca3bc336c8cfd8"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://newsroom.amd.com/images/2026/09/063180c6-5b1a-4200-b238-99d7083699ae.jpg",
+     "httpStatus": 200,
+     "sha256": "cb2d834cf1a850ef514fd7f23f573e969dd24fa0d826cd058f6eabc920fb218e",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://newsroom.amd.com/images/2026/09/063180c6-5b1a-4200-b238-99d7083699ae.jpg",
+   "publicPath": "/source-media/weekly-20261006/cb2d834cf1a8.jpg",
+   "sha256": "cb2d834cf1a850ef514fd7f23f573e969dd24fa0d826cd058f6eabc920fb218e",
+   "byteSize": 356893,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|AMD, 페이페이 리가 이끄는 World Labs 인수 계약 체결|https://newsroom.amd.com/news/amd-acquire-world-labs/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Microsoft, Copilot 앱을 Home·Code·Autopilot으로 개편",
+   "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Collection of Copilot logos featuring tagline The AI built for work.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+     "httpStatus": 200,
+     "sha256": "7e977e3618b2f4e90a5070a26c990525c83b7fb2b0bd5a3cea38588bfd76e810"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Copilot-9-25-Hero-9_22_26.png",
+     "httpStatus": 200,
+     "sha256": "e604a50416715e3e8138215932121dde2f8830abedc0ecee8ec2398c24c07a34",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Copilot-9-25-Hero-9_22_26.png",
+   "publicPath": "/source-media/weekly-20261006/e604a5041671.png",
+   "sha256": "e604a50416715e3e8138215932121dde2f8830abedc0ecee8ec2398c24c07a34",
+   "byteSize": 539510,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Microsoft, Copilot 앱을 Home·Code·Autopilot으로 개편|https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "독립 연구진, OpenAI 에이전트의 Hugging Face 침해 분석 공개",
+   "sourceUrl": "https://swarmtraces.org/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://swarmtraces.org/",
+     "httpStatus": 200,
+     "sha256": "c348cf71b715f79947a4e25d2813f8c2067c7cd81b01d4362e19fd39cb422a58"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://swarmtraces.org/article/figures/chain-assembly.png",
+     "httpStatus": 200,
+     "sha256": "97bf83c618519930a6024bcfc25a0233294672d8a3793c1edae4fd696e0d8d56",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://swarmtraces.org/article/figures/chain-assembly.png",
+   "publicPath": "/source-media/weekly-20261006/97bf83c61851.png",
+   "sha256": "97bf83c618519930a6024bcfc25a0233294672d8a3793c1edae4fd696e0d8d56",
+   "byteSize": 160881,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|독립 연구진, OpenAI 에이전트의 Hugging Face 침해 분석 공개|https://swarmtraces.org/"
+  },
+  {
+   "week": "2026-w39",
+   "title": "Bill Gates, NBC 인터뷰에서 모든 AI에 안전장치 요구 주장",
+   "sourceUrl": "https://www.nbcnews.com/meet-the-press/video/sept-27-amb-mike-waltz-abbas-araghchi-rep-ro-khanna-and-bill-gates-270620741633",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.nbcnews.com/meet-the-press/video/sept-27-amb-mike-waltz-abbas-araghchi-rep-ro-khanna-and-bill-gates-270620741633",
+     "httpStatus": 200,
+     "sha256": "cd927e04fc65c37dd7572866131c9c95080d5acbf09b5b4e192a6ffd08dddd58"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/mpx/2704722219/2026_09/1790530200821_mtp_netcast_260927_S3_1920x1080-o8hwlw.jpg",
+     "httpStatus": 200,
+     "sha256": "3d488a27e122da8561ebf68cd6362642ea13d5aca85292537462cfa060247bc5",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/mpx/2704722219/2026_09/1790530200821_mtp_netcast_260927_S3_1920x1080-o8hwlw.jpg",
+   "publicPath": "/source-media/weekly-20261006/3d488a27e122.jpg",
+   "sha256": "3d488a27e122da8561ebf68cd6362642ea13d5aca85292537462cfa060247bc5",
+   "byteSize": 141690,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w39|Bill Gates, NBC 인터뷰에서 모든 AI에 안전장치 요구 주장|https://www.nbcnews.com/meet-the-press/video/sept-27-amb-mike-waltz-abbas-araghchi-rep-ro-khanna-and-bill-gates-270620741633"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, Claude Sonnet 5.5 공개, 가격은 그대로",
+   "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: The previous model writing a starling murmuration program, then running it.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/claude-sonnet-5-5",
+     "httpStatus": 200,
+     "sha256": "18f022036e4bc432242ecbeee382c96adb82dbd4718bf9cd3ac6115d058338a0"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc3945915dad02168b631b238c900b98b23964539-1600x1000.png%3Frect%3D0%252C0%252C1600%252C1000&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "a59a5a18f0628d71348694aca28a2448dbe8ded8b26e2134c53df309c72a1d04",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc3945915dad02168b631b238c900b98b23964539-1600x1000.png%3Frect%3D0%252C0%252C1600%252C1000&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/a59a5a18f062.png",
+   "sha256": "a59a5a18f0628d71348694aca28a2448dbe8ded8b26e2134c53df309c72a1d04",
+   "byteSize": 22229,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, Claude Sonnet 5.5 공개, 가격은 그대로|https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Cloudflare, API 전체를 담은 명령줄 도구 cf 공개",
+   "sourceUrl": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+     "httpStatus": 200,
+     "sha256": "232cf6a5725855b2994f92c74819421e6db95128c2c0ee9ce9506a4d4e3687af"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blog.cloudflare.com/_emdash/api/media/file/01M3KR59T13YTXBHQW0ZAX7MBG.01M3KR5AZTG3VJ8REJ9047KYC4.png",
+     "httpStatus": 200,
+     "sha256": "ad4065b4fb5383b28b7cda9ffaa235db179f957503a52209783dfcff13a92094",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://blog.cloudflare.com/_emdash/api/media/file/01M3KR59T13YTXBHQW0ZAX7MBG.01M3KR5AZTG3VJ8REJ9047KYC4.png",
+   "publicPath": "/source-media/weekly-20261006/ad4065b4fb53.png",
+   "sha256": "ad4065b4fb5383b28b7cda9ffaa235db179f957503a52209783dfcff13a92094",
+   "byteSize": 150779,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Cloudflare, API 전체를 담은 명령줄 도구 cf 공개|https://blog.cloudflare.com/cloudflare-cf-cli-launch/"
+  },
+  {
+   "key": "2026-w40|플로리다 법무장관, OpenAI 상대 임시 금지명령 신청|https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-files-temporary-injunction-against-openai-and-its-ceo",
+   "week": "2026-w40",
+   "title": "플로리다 법무장관, OpenAI 상대 임시 금지명령 신청",
+   "sourceUrl": "https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-files-temporary-injunction-against-openai-and-its-ceo",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-files-temporary-injunction-against-openai-and-its-ceo",
+     "httpStatus": 200,
+     "sha256": "5958d3a50b93ae2d0fd73c06a2bed301d2dd14d64479238813afab32791f3aab"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-files-temporary-injunction-against-openai-and-its-ceo",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "ElevenLabs, 음성 모델 Eleven v4와 v4 Turbo 출시",
+   "sourceUrl": "https://elevenlabs.io/blog/eleven-v4",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Eleven V4.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://elevenlabs.io/blog/eleven-v4",
+     "httpStatus": 200,
+     "sha256": "d51327a00e048ee06fc81a25040b80283664b3f789ab237f1f622a0bfe0d1414"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fudwlsrtc8e-1920x1080-1.webp&w=3840&q=95",
+     "httpStatus": 200,
+     "sha256": "487ca4274e1da49586a56174360d781728c4ffa0db1012ce5485d4c3ff653271",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fudwlsrtc8e-1920x1080-1.webp&w=3840&q=95",
+   "publicPath": "/source-media/weekly-20261006/487ca4274e1d.jpg",
+   "sha256": "487ca4274e1da49586a56174360d781728c4ffa0db1012ce5485d4c3ff653271",
+   "byteSize": 170989,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|ElevenLabs, 음성 모델 Eleven v4와 v4 Turbo 출시|https://elevenlabs.io/blog/eleven-v4"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Artificial Analysis, Sonnet 5.5를 지수 2위로 평가",
+   "sourceUrl": "https://artificialanalysis.ai/articles/claude-sonnet-5-5",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://artificialanalysis.ai/articles/claude-sonnet-5-5",
+     "httpStatus": 200,
+     "sha256": "1bbf68c75dd3732bf9eb6fd31f6691d4eb707ff7bb9d62b62002bcb9d67fe29a"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.sanity.io/images/6vfeftx9/articles/4ee8b656f06fc33eac9422d33feacc6c89ddd8b7-2342x2007.png?w=1600&auto=format",
+     "httpStatus": 200,
+     "sha256": "2f7fa01442d3ace605a92ae80f721d8dd26f0f20945f675525ed694015ae4809",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://cdn.sanity.io/images/6vfeftx9/articles/4ee8b656f06fc33eac9422d33feacc6c89ddd8b7-2342x2007.png?w=1600&auto=format",
+   "publicPath": "/source-media/weekly-20261006/2f7fa01442d3.png",
+   "sha256": "2f7fa01442d3ace605a92ae80f721d8dd26f0f20945f675525ed694015ae4809",
+   "byteSize": 558670,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Artificial Analysis, Sonnet 5.5를 지수 2위로 평가|https://artificialanalysis.ai/articles/claude-sonnet-5-5"
+  },
+  {
+   "key": "2026-w40|케임브리지 CASP, AI R&D 자동화가 ‘지능 폭발’을 부를 수 있는지 다룬 논문 공개|https://casp.ac/__l5e/assets-v1/5efd4b41-deb5-4513-a0a3-b4f82d2b79ea/intelligence-explosion.pdf",
+   "week": "2026-w40",
+   "title": "케임브리지 CASP, AI R&D 자동화가 ‘지능 폭발’을 부를 수 있는지 다룬 논문 공개",
+   "sourceUrl": "https://casp.ac/__l5e/assets-v1/5efd4b41-deb5-4513-a0a3-b4f82d2b79ea/intelligence-explosion.pdf",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://casp.ac/__l5e/assets-v1/5efd4b41-deb5-4513-a0a3-b4f82d2b79ea/intelligence-explosion.pdf",
+     "httpStatus": 200,
+     "sha256": "bf18b0ea5879db349e8af3836593bf08f8060432156ea13abac4700c217288f9"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://casp.ac/__l5e/assets-v1/5efd4b41-deb5-4513-a0a3-b4f82d2b79ea/intelligence-explosion.pdf",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "GitHub, Copilot에 Claude Sonnet 5.5 정식 제공",
+   "sourceUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: The Copilot model picker showing Claude Sonnet 5.5).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/",
+     "httpStatus": 200,
+     "sha256": "261ee191a7347b59cabeb2850ae1e0d1c4cf09eaf9a727452348368c7f45a666"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/uploads/2026/09/659164995-f4ea897b-605e-4cb8-b3b2-2a19359c1179.png?w=2064",
+     "httpStatus": 200,
+     "sha256": "092e08d78840adfa92844099543a410988ef83bd7d4b291331e9e41ea26d6ef0",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/uploads/2026/09/659164995-f4ea897b-605e-4cb8-b3b2-2a19359c1179.png?w=2064",
+   "publicPath": "/source-media/weekly-20261006/092e08d78840.png",
+   "sha256": "092e08d78840adfa92844099543a410988ef83bd7d4b291331e9e41ea26d6ef0",
+   "byteSize": 214477,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|GitHub, Copilot에 Claude Sonnet 5.5 정식 제공|https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "H Company, 컴퓨터 사용 에이전트 모델 Holo4 공개",
+   "sourceUrl": "https://hcompany.ai/newsroom/holo4",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://hcompany.ai/newsroom/holo4",
+     "httpStatus": 200,
+     "sha256": "e966e4256faba59c3c3bf9cf9bebfcb5bd0c00315100c37677a935a09c0b483a"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://assets.hcompanyprod.fr/holo4/eiffel-holo4-poster.jpg",
+     "httpStatus": 200,
+     "sha256": "fd9dcc8072b180de606bd9c3fb11ab59e984f8797ab8906e7edf9424931b3880",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://assets.hcompanyprod.fr/holo4/eiffel-holo4-poster.jpg",
+   "publicPath": "/source-media/weekly-20261006/fd9dcc8072b1.jpg",
+   "sha256": "fd9dcc8072b180de606bd9c3fb11ab59e984f8797ab8906e7edf9424931b3880",
+   "byteSize": 107751,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|H Company, 컴퓨터 사용 에이전트 모델 Holo4 공개|https://hcompany.ai/newsroom/holo4"
+  },
+  {
+   "week": "2026-w40",
+   "title": "SK hynix, TSMC OIP에서 차세대 메모리 소개하고 파트너상 받아",
+   "sourceUrl": "https://news.skhynix.com/en/tsmc-oip-conference-2026/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://news.skhynix.com/en/tsmc-oip-conference-2026/",
+     "httpStatus": 200,
+     "sha256": "bbb639708017cdfc22030a53cfb60ef6611a836a2f4f4d2fded6b62f9064953b"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://d18r0a86za96sg.cloudfront.net/wp-content/uploads/2026/09/28093440/Behind-AIs-Rapid-Growth-Lies-Memory-SK-hynix-Shares-Its-Next-Generation-Memory-Portfolio-at-the-TSMC-OIP-Conference_01_photo_2026.jpg",
+     "httpStatus": 200,
+     "sha256": "591b6c552b757f0d92954a7268cff0e47c6fd4d69ff07201c69d62f9761d3f99",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://d18r0a86za96sg.cloudfront.net/wp-content/uploads/2026/09/28093440/Behind-AIs-Rapid-Growth-Lies-Memory-SK-hynix-Shares-Its-Next-Generation-Memory-Portfolio-at-the-TSMC-OIP-Conference_01_photo_2026.jpg",
+   "publicPath": "/source-media/weekly-20261006/591b6c552b75.jpg",
+   "sha256": "591b6c552b757f0d92954a7268cff0e47c6fd4d69ff07201c69d62f9761d3f99",
+   "byteSize": 1208303,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|SK hynix, TSMC OIP에서 차세대 메모리 소개하고 파트너상 받아|https://news.skhynix.com/en/tsmc-oip-conference-2026/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, GLM-5.3 안전장치 우회 시험 결과 공개",
+   "sourceUrl": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Two bar charts. Top: share of attempts that built a working exploit on 41 Chrome V8 bugs — Claude Mythos Preview at 14% and GLM-5.3 at 12%, while Claude Opus 4.6, GLM-5.2, Kimi K3, and DeepSeek V4.1-Flash score at or near 0%. Bottom: how often each model engaged with malicious cyber-attack orders — GLM-5.3 rises from 0% on a bare order to 64% with a false cover story, 92% with prefilled reasoning, and 100% when abliterated, while Claude Opus 5 stays at 0%.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+     "httpStatus": 200,
+     "sha256": "f0e98f80c4b6fa59281913716c40ad574d9e87efa6bf5b3a8e0321b04836f154"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa1b61c7da2c400ab84425e105837fc1f346a4339-1280x1576.webp&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "50de58a4f1d99a0d6e0b3bafce83450f491e53eedceeb98a5ad3e155b0638621",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa1b61c7da2c400ab84425e105837fc1f346a4339-1280x1576.webp&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/50de58a4f1d9.webp",
+   "sha256": "50de58a4f1d99a0d6e0b3bafce83450f491e53eedceeb98a5ad3e155b0638621",
+   "byteSize": 77690,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, GLM-5.3 안전장치 우회 시험 결과 공개|https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities"
+  },
+  {
+   "week": "2026-w40",
+   "title": "NVIDIA, 에이전트 테스트부터 배포까지 다루는 보안 플랫폼 발표",
+   "sourceUrl": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+     "httpStatus": 200,
+     "sha256": "022303f34d5a952ce98c991a290cf1296b70b93819c7d95615d3d53431b4d340"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://iprsoftwaremedia.com/219/files/202609/c68dda94943a6e093074e9e88fd5ddef/6aba9c533d6332d60a0bb99a_nvidia-open-agent-safety-platform/nvidia-open-agent-safety-platform_f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63-prv.png?v=f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63",
+     "httpStatus": 200,
+     "sha256": "96d0905929bdf2ce0bc5c9e1f7684d7e9f32fe92e719fba2e1e21311af771917",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://iprsoftwaremedia.com/219/files/202609/c68dda94943a6e093074e9e88fd5ddef/6aba9c533d6332d60a0bb99a_nvidia-open-agent-safety-platform/nvidia-open-agent-safety-platform_f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63-prv.png?v=f9cea0c6-00ad-4b7f-b0a0-6bc06b39af63",
+   "publicPath": "/source-media/weekly-20261006/96d0905929bd.png",
+   "sha256": "96d0905929bdf2ce0bc5c9e1f7684d7e9f32fe92e719fba2e1e21311af771917",
+   "byteSize": 286107,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|NVIDIA, 에이전트 테스트부터 배포까지 다루는 보안 플랫폼 발표|https://nvidianews.nvidia.com/news/open-agent-safety-platform"
+  },
+  {
+   "key": "2026-w40|과기정통부, 독자 AI 파운데이션 모델 중단·SPC 설립은 정해진 바 없다고 설명|https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187814",
+   "week": "2026-w40",
+   "title": "과기정통부, 독자 AI 파운데이션 모델 중단·SPC 설립은 정해진 바 없다고 설명",
+   "sourceUrl": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187814",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187814",
+     "httpStatus": 200,
+     "sha256": "317ac08260d18575706114670a6bd156fbf60209e1def4d3b581417b2f5a0ff0"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187814",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "LASST, OpenAI 상대 캘리포니아 법원에 소송 제기",
+   "sourceUrl": "https://lasstorg.substack.com/p/lasst-is-suing-openai-over-hack-of",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://lasstorg.substack.com/p/lasst-is-suing-openai-over-hack-of",
+     "httpStatus": 200,
+     "sha256": "f8d1e99bcb81b67e7e843c0cef9ae715d0b13978a65f8db9e14fbe4719bdb1e9"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://substackcdn.com/image/fetch/$s_!bxfo!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2579f717-78ce-4838-aed3-0746ab8fc1f0_1402x634.png",
+     "httpStatus": 200,
+     "sha256": "b9204a7171fd546e04fd405670139cad9e075400b3ed80cafa0515be138726c5",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://substackcdn.com/image/fetch/$s_!bxfo!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2579f717-78ce-4838-aed3-0746ab8fc1f0_1402x634.png",
+   "publicPath": "/source-media/weekly-20261006/b9204a7171fd.jpg",
+   "sha256": "b9204a7171fd546e04fd405670139cad9e075400b3ed80cafa0515be138726c5",
+   "byteSize": 62250,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|LASST, OpenAI 상대 캘리포니아 법원에 소송 제기|https://lasstorg.substack.com/p/lasst-is-suing-openai-over-hack-of"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, AI 경험을 묻는 Anthropic Interviewer 연구 참여자 모집",
+   "sourceUrl": "https://www.anthropic.com/research/your-thoughts-on-ai",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: What do you want from AI? ).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/research/your-thoughts-on-ai",
+     "httpStatus": 200,
+     "sha256": "63625e8395dd6d6ecdd2324cdfd320cb2eb68deaafe9d793edcc41110561ab4f"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff11a2dcfffbb0f1e5913d794299b6857653413af-2000x1125.jpg&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "21e55f6ea35d8e5eb863a6cbd9d18ad50e2355f6083c7c75551eed577f78f116",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Ff11a2dcfffbb0f1e5913d794299b6857653413af-2000x1125.jpg&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/21e55f6ea35d.jpg",
+   "sha256": "21e55f6ea35d8e5eb863a6cbd9d18ad50e2355f6083c7c75551eed577f78f116",
+   "byteSize": 268282,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, AI 경험을 묻는 Anthropic Interviewer 연구 참여자 모집|https://www.anthropic.com/research/your-thoughts-on-ai"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, Claude 전반 오류 증가 장애 해결 공지",
+   "sourceUrl": "https://status.claude.com/incidents/4xvtc2gnq73l",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
+     "httpStatus": 200,
+     "sha256": "00ac49b2d78d6d2216bbe3f64696935b9e84e42ec0e2d748d14848b625847863"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png",
+     "httpStatus": 200,
+     "sha256": "2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png",
+   "publicPath": "/source-media/weekly-20261006/2b86ed00cfa6.png",
+   "sha256": "2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367",
+   "byteSize": 3910,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, Claude 전반 오류 증가 장애 해결 공지|https://status.claude.com/incidents/4xvtc2gnq73l"
+  },
+  {
+   "week": "2026-w40",
+   "title": "AWS, Bedrock 서울 리전에서 Claude 리전 내 추론 지원",
+   "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/",
+     "httpStatus": 200,
+     "sha256": "81bd9a304974bfb7f10be2887f0b15ba85264ebb44430273c4bc36766fd3441d"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-22088-featured-image.png",
+     "httpStatus": 200,
+     "sha256": "8f8ad0ff974c1aee8549b054c12400d40af65f0ae428430d64626b065063c748",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/09/29/ML-22088-featured-image.png",
+   "publicPath": "/source-media/weekly-20261006/8f8ad0ff974c.png",
+   "sha256": "8f8ad0ff974c1aee8549b054c12400d40af65f0ae428430d64626b065063c748",
+   "byteSize": 58982,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|AWS, Bedrock 서울 리전에서 Claude 리전 내 추론 지원|https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Meta, 소규모 사업자용 Muse for Small Business 발표",
+   "sourceUrl": "https://about.fb.com/news/2026/09/introducing-muse-small-business/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Share on Threads).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://about.fb.com/news/2026/09/introducing-muse-small-business/",
+     "httpStatus": 200,
+     "sha256": "3e3fc07b7c443c3c38d6dc43a686deebcbeec5fad5b29603b646e96f68bfe253"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://about.fb.com/wp-content/themes/fbcorp/assets/images/article_threads.png",
+     "httpStatus": 200,
+     "sha256": "4bbd1c1fee2b59e51222e21f1a243e3683f072a64a3e9a34f8e2445b7b5b9605",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://about.fb.com/wp-content/themes/fbcorp/assets/images/article_threads.png",
+   "publicPath": "/source-media/weekly-20261006/4bbd1c1fee2b.png",
+   "sha256": "4bbd1c1fee2b59e51222e21f1a243e3683f072a64a3e9a34f8e2445b7b5b9605",
+   "byteSize": 1906,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Meta, 소규모 사업자용 Muse for Small Business 발표|https://about.fb.com/news/2026/09/introducing-muse-small-business/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "OpenAI, 클라우드에서 상시 작동하는 에이전트 dots 공개",
+   "sourceUrl": "https://learn.chatgpt.com/docs/dots",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://learn.chatgpt.com/docs/dots",
+     "httpStatus": 200,
+     "sha256": "be625f2774fb42e7b635e495f40abbcb1621cd3de4ec38dd5e4f397efcb44ce3"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://learn.chatgpt.com/images/codex/codex-wallpaper-1.webp",
+     "httpStatus": 200,
+     "sha256": "0a8045949795bf6f70167b582b53f5a0c8b3ae2adafd1be7445ca0a7e2613bf1",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://learn.chatgpt.com/images/codex/codex-wallpaper-1.webp",
+   "publicPath": "/source-media/weekly-20261006/0a8045949795.webp",
+   "sha256": "0a8045949795bf6f70167b582b53f5a0c8b3ae2adafd1be7445ca0a7e2613bf1",
+   "byteSize": 58836,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|OpenAI, 클라우드에서 상시 작동하는 에이전트 dots 공개|https://learn.chatgpt.com/docs/dots"
+  },
+  {
+   "week": "2026-w40",
+   "title": "루닛, 스톡홀름 지역 유방암 검진에 INSIGHT MMG를 두 번째 판독자로 도입",
+   "sourceUrl": "https://www.lunit.io/en/media-hub/lunit-expands-ai-powered-breast-cancer-screening-across-the-stockholm-region/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.lunit.io/en/media-hub/lunit-expands-ai-powered-breast-cancer-screening-across-the-stockholm-region/",
+     "httpStatus": 200,
+     "sha256": "5fa7232a1767549c9b4370b1f4405d2d237b8785499256617cdb1bf76f73cf31"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.lunit.io/wp-content/uploads/2026/05/NEW_Lunit-Logo-Plate.png",
+     "httpStatus": 200,
+     "sha256": "5c7afbd3a4df038c041326f06c3d8ff7750337372d1282d23bca57b31041ba1b",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://www.lunit.io/wp-content/uploads/2026/05/NEW_Lunit-Logo-Plate.png",
+   "publicPath": "/source-media/weekly-20261006/5c7afbd3a4df.png",
+   "sha256": "5c7afbd3a4df038c041326f06c3d8ff7750337372d1282d23bca57b31041ba1b",
+   "byteSize": 211139,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|루닛, 스톡홀름 지역 유방암 검진에 INSIGHT MMG를 두 번째 판독자로 도입|https://www.lunit.io/en/media-hub/lunit-expands-ai-powered-breast-cancer-screening-across-the-stockholm-region/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "OpenAI, 월 500달러 Pro 요금제와 Ultrafast 제공",
+   "sourceUrl": "https://learn.chatgpt.com/docs/whats-new/devday-2026",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://learn.chatgpt.com/docs/whats-new/devday-2026",
+     "httpStatus": 200,
+     "sha256": "1a802c5caa35a1dbfc57f22853916e75ad2a7de1b2c9db74f635374df9ce8cf8"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://learn.chatgpt.com/images/devday/wordmark.svg",
+     "httpStatus": 200,
+     "sha256": "fc1e103bf50e4b2dfac7ce50eb5960c22d4d1656b949678a25bed376e9bec447",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://learn.chatgpt.com/images/devday/wordmark.svg",
+   "publicPath": "/source-media/weekly-20261006/fc1e103bf50e.svg",
+   "sha256": "fc1e103bf50e4b2dfac7ce50eb5960c22d4d1656b949678a25bed376e9bec447",
+   "byteSize": 6016,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|OpenAI, 월 500달러 Pro 요금제와 Ultrafast 제공|https://learn.chatgpt.com/docs/whats-new/devday-2026"
+  },
+  {
+   "week": "2026-w40",
+   "title": "삼성 6개 계열사, KKR이 세운 AI 인프라 기업 Helix에 10억 달러 투자",
+   "sourceUrl": "https://news.samsung.com/global/samsung-to-invest-usd-1-billion-in-ai-infrastructure-company-helix",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://news.samsung.com/global/samsung-to-invest-usd-1-billion-in-ai-infrastructure-company-helix",
+     "httpStatus": 200,
+     "sha256": "bd6ecfe2d531f0a4dc625249b070db37ac06f943983a5e1dd14dde80f86902b9"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://news.samsung.com/global/wp-content/themes/newsroom/assets/images/icons/download-no-contents.svg",
+     "httpStatus": 200,
+     "sha256": "c4541749958aade1fcc75c09f221b0ef9ccac0100a89b69cd3e1f0fc64d91d55",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://news.samsung.com/global/wp-content/themes/newsroom/assets/images/icons/download-no-contents.svg",
+   "publicPath": "/source-media/weekly-20261006/c4541749958a.svg",
+   "sha256": "c4541749958aade1fcc75c09f221b0ef9ccac0100a89b69cd3e1f0fc64d91d55",
+   "byteSize": 649,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|삼성 6개 계열사, KKR이 세운 AI 인프라 기업 Helix에 10억 달러 투자|https://news.samsung.com/global/samsung-to-invest-usd-1-billion-in-ai-infrastructure-company-helix"
+  },
+  {
+   "week": "2026-w40",
+   "title": "NVIDIA, 표 형식 데이터용 오픈 모델 Kumo Tabular 공개",
+   "sourceUrl": "https://huggingface.co/blog/nvidia/kumo-tabular",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+     "httpStatus": 200,
+     "sha256": "ae58dcdd9c72771e183677c7a476b811f628023cba0eabee28cc502c5c944eed"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn-uploads.huggingface.co/production/uploads/684040a5de1ad7f4fcec9508/HyVlq-3d7EVj_M-m_TfHJ.png",
+     "httpStatus": 200,
+     "sha256": "f326b74a1965ed54cbc106c1bcc3005a639ab2439563a59272a4353019927618",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://cdn-uploads.huggingface.co/production/uploads/684040a5de1ad7f4fcec9508/HyVlq-3d7EVj_M-m_TfHJ.png",
+   "publicPath": "/source-media/weekly-20261006/f326b74a1965.png",
+   "sha256": "f326b74a1965ed54cbc106c1bcc3005a639ab2439563a59272a4353019927618",
+   "byteSize": 443039,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|NVIDIA, 표 형식 데이터용 오픈 모델 Kumo Tabular 공개|https://huggingface.co/blog/nvidia/kumo-tabular"
+  },
+  {
+   "week": "2026-w40",
+   "title": "백악관, 행정부 공식 문서에서 AI 대신 Super Intelligence를 쓰도록 명령",
+   "sourceUrl": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/",
+     "httpStatus": 200,
+     "sha256": "cb48389be162fd998d6beaa52c999cddba73bda44b8fb07f300993c385f3e6e0"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Presidential-Actions-Social-Share-Card.jpg",
+     "httpStatus": 200,
+     "sha256": "e05cd86a5f5ca97677b3d42df27f4749c11e72376576a39dd381d7131ccef22f",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://www.whitehouse.gov/wp-content/uploads/2025/03/WH47-Presidential-Actions-Social-Share-Card.jpg",
+   "publicPath": "/source-media/weekly-20261006/e05cd86a5f5c.jpg",
+   "sha256": "e05cd86a5f5ca97677b3d42df27f4749c11e72376576a39dd381d7131ccef22f",
+   "byteSize": 125336,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|백악관, 행정부 공식 문서에서 AI 대신 Super Intelligence를 쓰도록 명령|https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/"
+  },
+  {
+   "key": "2026-w40|과기정통부, 인공지능 중심대학 18개교·AX 대학원 15개교 출범|https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187815",
+   "week": "2026-w40",
+   "title": "과기정통부, 인공지능 중심대학 18개교·AX 대학원 15개교 출범",
+   "sourceUrl": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187815",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187815",
+     "httpStatus": 200,
+     "sha256": "1a8e5d34d589956b155138b8843b3990da73cbf5e2c749835f767aeaaeed64af"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&pageIndex=&bbsSeqNo=94&nttSeqNo=3187815",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "OpenAI, GPT-6.1 Sol 출시와 API 가격 공개",
+   "sourceUrl": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Figure 1).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+     "httpStatus": 200,
+     "sha256": "df667dedfa9bce2e2b6a5895b0ba602714339a9418ff562bf092f428e6532c7d"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image8.png",
+     "httpStatus": 200,
+     "sha256": "1726ca0fe50498479cb63846ef2823cdfab1e4877fda43b22da81f1bc005b8bd",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://deploymentsafety.openai.com/data/eval-sets/gpt-6-1-sol/assets/images/image8.png",
+   "publicPath": "/source-media/weekly-20261006/1726ca0fe504.png",
+   "sha256": "1726ca0fe50498479cb63846ef2823cdfab1e4877fda43b22da81f1bc005b8bd",
+   "byteSize": 514579,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|OpenAI, GPT-6.1 Sol 출시와 API 가격 공개|https://deploymentsafety.openai.com/gpt-6-1-sol"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, Claude for Government 정식 출시",
+   "sourceUrl": "https://claude.com/blog/claude-for-government-is-now-generally-available",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://claude.com/blog/claude-for-government-is-now-generally-available",
+     "httpStatus": 200,
+     "sha256": "a6cc1b08729615160da4956a952ae2b66ebc16bc7893c9d39708be4eb58bfd22"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6903d22e6fa9211768bbce0b_6e00dbffcddc82df5e471c43453abfc74ca94e8d-1000x1000.svg",
+     "httpStatus": 200,
+     "sha256": "5f874686c17df6eeef9a72658b1b803e0ac0604e80851d36fe6f46a30c553024",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6903d22e6fa9211768bbce0b_6e00dbffcddc82df5e471c43453abfc74ca94e8d-1000x1000.svg",
+   "publicPath": "/source-media/weekly-20261006/5f874686c17d.svg",
+   "sha256": "5f874686c17df6eeef9a72658b1b803e0ac0604e80851d36fe6f46a30c553024",
+   "byteSize": 28537,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, Claude for Government 정식 출시|https://claude.com/blog/claude-for-government-is-now-generally-available"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, 로봇이 할 수 있는 업무를 지수로 분석",
+   "sourceUrl": "https://www.anthropic.com/research/what-work-can-robots-do",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: What work can robots do?).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+     "httpStatus": 200,
+     "sha256": "fe11c855a8ab83c424db4f1a8ee0965f104c82d246c2cb54c449ee84b59cda29"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc523800acb2cfb23b8c834b4268d5daef9eafce4-2000x1125.jpg&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "4ec76214d106b1f9d83e6114fcc889c2075ac5aa63efb6e91a938f56dbd30a33",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fc523800acb2cfb23b8c834b4268d5daef9eafce4-2000x1125.jpg&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/4ec76214d106.webp",
+   "sha256": "4ec76214d106b1f9d83e6114fcc889c2075ac5aa63efb6e91a938f56dbd30a33",
+   "byteSize": 347430,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, 로봇이 할 수 있는 업무를 지수로 분석|https://www.anthropic.com/research/what-work-can-robots-do"
+  },
+  {
+   "week": "2026-w40",
+   "title": "GitHub, HydraFusion 연구 프리뷰를 VS Code와 앱으로 확대",
+   "sourceUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/",
+     "httpStatus": 200,
+     "sha256": "15ef8c799ba8dbdd36a1f44c26490856af1b930bcea4acf565b006c185ef4d75"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/themes/github-2021-child/assets/img/featured-v3-new-releases.svg",
+     "httpStatus": 200,
+     "sha256": "7f64906297f8a727b7533d1cf71cb604e859d4e9fa339539775b7bd64da03848",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/themes/github-2021-child/assets/img/featured-v3-new-releases.svg",
+   "publicPath": "/source-media/weekly-20261006/7f64906297f8.svg",
+   "sha256": "7f64906297f8a727b7533d1cf71cb604e859d4e9fa339539775b7bd64da03848",
+   "byteSize": 12505,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|GitHub, HydraFusion 연구 프리뷰를 VS Code와 앱으로 확대|https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/"
+  },
+  {
+   "key": "2026-w39|D.C. 순회항소법원, Anthropic의 공급망 위험 지정 이의 기각|https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+   "week": "2026-w39",
+   "title": "D.C. 순회항소법원, Anthropic의 공급망 위험 지정 이의 기각",
+   "sourceUrl": "https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+     "httpStatus": 200,
+     "sha256": "ede67c3674f3cde84dfe7a1e29170785ba80f266e1baa57b4e321957c4817a19"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://media.cadc.uscourts.gov/opinions/docs/2026/09/26-1049-2194984.pdf",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "Google DeepMind, AI 설계 단백질용 워터마크 SynthID Bio 소개",
+   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synthid-bio/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: A 3D visualization of a molecular protein structure highlighting a watermarked sequence. The main background features a brown molecular surface representation, with two helical structures in the foreground color-coded along their ribbons in shades of orange and blue. A legend in the top left indicates \"Watermark Signal,\" ranging from \"Strong\" represented by blue to \"Weak\" represented by orange. In the top right corner, the affinity constant is written as $K_D = 0.344,\\mu\\text{M}$. At the bottom, a color-coded amino acid sequence bar labeled \"Watermarked Sequence\" is shown with residue index markers from 6 to 56.1).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synthid-bio/",
+     "httpStatus": 200,
+     "sha256": "3f38b73e4858e804951fc529e333b156927dce5228c4dc00bb44368984c4c9d2"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/watermarked_VEGF-A.width-100.format-webp.webp",
+     "httpStatus": 200,
+     "sha256": "c54ab35f808096f4b6c66ea8a0d2a598939bec3891b068ec668cfd7788dba9dd",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/watermarked_VEGF-A.width-100.format-webp.webp",
+   "publicPath": "/source-media/weekly-20261006/c54ab35f8080.webp",
+   "sha256": "c54ab35f808096f4b6c66ea8a0d2a598939bec3891b068ec668cfd7788dba9dd",
+   "byteSize": 1846,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Google DeepMind, AI 설계 단백질용 워터마크 SynthID Bio 소개|https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synthid-bio/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Google, 프런티어 모델 Gemini 4 Argon 발표",
+   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Stylized promotional blog key art graphic with modern editorial branding and the text \"Gemini 4 Argon\").",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+     "httpStatus": 200,
+     "sha256": "1c8d109f530a869f7b54044f8c39f267d7f0961ef504392f8130e9997a377252"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.width-2200.format-webp.webp",
+     "httpStatus": 200,
+     "sha256": "2af4a4712c43f272796b392020211d12ecf8a84ea39185800d8e1a138d017955",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.width-2200.format-webp.webp",
+   "publicPath": "/source-media/weekly-20261006/2af4a4712c43.webp",
+   "sha256": "2af4a4712c43f272796b392020211d12ecf8a84ea39185800d8e1a138d017955",
+   "byteSize": 103908,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Google, 프런티어 모델 Gemini 4 Argon 발표|https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "캘리포니아 주지사, AI만으로 해고·징계하지 못하게 하는 SB 947 서명",
+   "sourceUrl": "https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace",
+     "httpStatus": 200,
+     "sha256": "a80bbfc286594317705dd00cfa8a03beb25ea0ea153e237d504bea268ce53f00"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://sd05.senate.ca.gov/sites/sd05.senate.ca.gov/files/images/newsroom/featured/9-30-26%20SB%20947%204%20FB.jpeg",
+     "httpStatus": 200,
+     "sha256": "ed970fb0f792ca31d67011d6e2cc2ecd98038420e0fd2c86a496c7e86e7815d9",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://sd05.senate.ca.gov/sites/sd05.senate.ca.gov/files/images/newsroom/featured/9-30-26%20SB%20947%204%20FB.jpeg",
+   "publicPath": "/source-media/weekly-20261006/ed970fb0f792.jpg",
+   "sha256": "ed970fb0f792ca31d67011d6e2cc2ecd98038420e0fd2c86a496c7e86e7815d9",
+   "byteSize": 207509,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|캘리포니아 주지사, AI만으로 해고·징계하지 못하게 하는 SB 947 서명|https://sd05.senate.ca.gov/news/newsom-signs-mcnerneys-no-robo-bosses-act-2026-requiring-human-oversight-ai-workplace"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Google, Gemini에 스킬 기능을 배포하고 Gems를 대체",
+   "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/",
+     "httpStatus": 200,
+     "sha256": "03e6db38da80b9cf96cb76cd3cbf4558137677bf619757d70721f9c49782ac6a"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Skills_thumbnail.width-1300.png",
+     "httpStatus": 200,
+     "sha256": "41469abf91ec42bbd9ab3811a6217a438d602fdec8b667a74a406deb3f209c2e",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Skills_thumbnail.width-1300.png",
+   "publicPath": "/source-media/weekly-20261006/41469abf91ec.png",
+   "sha256": "41469abf91ec42bbd9ab3811a6217a438d602fdec8b667a74a406deb3f209c2e",
+   "byteSize": 239625,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Google, Gemini에 스킬 기능을 배포하고 Gems를 대체|https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "영국은행 Bailey 총재, 프런티어 AI는 규제보다 모델 테스트부터라고 밝혀",
+   "sourceUrl": "https://www.bankofengland.co.uk/bank-insights/2026/frontier-ai-and-the-question-of-governance",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.bankofengland.co.uk/bank-insights/2026/frontier-ai-and-the-question-of-governance",
+     "httpStatus": 200,
+     "sha256": "5ec4e594485387cc12adc88e3d89315c7f606d9eab9fab61d6d552fccebd5e91"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.bankofengland.co.uk/-/media/boe/images/bank-insights/bank-insights-header.jpg?h=406&w=1440&hash=86DEDA6F06503198504C6345BDE7E3AF",
+     "httpStatus": 200,
+     "sha256": "846b018afff0c8f0311270cfe34581b29ebb1216677c85b67df7c97cf27d4c1c",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://www.bankofengland.co.uk/-/media/boe/images/bank-insights/bank-insights-header.jpg?h=406&w=1440&hash=86DEDA6F06503198504C6345BDE7E3AF",
+   "publicPath": "/source-media/weekly-20261006/846b018afff0.jpg",
+   "sha256": "846b018afff0c8f0311270cfe34581b29ebb1216677c85b67df7c97cf27d4c1c",
+   "byteSize": 82551,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|영국은행 Bailey 총재, 프런티어 AI는 규제보다 모델 테스트부터라고 밝혀|https://www.bankofengland.co.uk/bank-insights/2026/frontier-ai-and-the-question-of-governance"
+  },
+  {
+   "week": "2026-w40",
+   "title": "CoreWeave, NVIDIA Vera Rubin NVL72 이용 가능 발표",
+   "sourceUrl": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/",
+     "httpStatus": 200,
+     "sha256": "977caebe9e55be8b428df95cd8fe690c966982e98c38bd09907a087af2a71923"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blogs.nvidia.com/wp-content/uploads/2026/09/48AA46C8-A24C-44DA-8C2B-C48E21A510FE_1_201_a-scaled.jpeg",
+     "httpStatus": 200,
+     "sha256": "4a760573a989db70ac23a51f2769f159d88f4aaa54bf84bb50094af870a051af",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/09/48AA46C8-A24C-44DA-8C2B-C48E21A510FE_1_201_a-scaled.jpeg",
+   "publicPath": "/source-media/weekly-20261006/4a760573a989.jpg",
+   "sha256": "4a760573a989db70ac23a51f2769f159d88f4aaa54bf84bb50094af870a051af",
+   "byteSize": 270376,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|CoreWeave, NVIDIA Vera Rubin NVL72 이용 가능 발표|https://blogs.nvidia.com/blog/coreweave-agentic-ai-vera-rubin/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Transformers 5.18.0, 네이버 비전 모델 지원 추가",
+   "sourceUrl": "https://github.com/huggingface/transformers/releases/tag/v5.18.0",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/huggingface/transformers/releases/tag/v5.18.0",
+     "httpStatus": 200,
+     "sha256": "3e9f72b0dc563a75194f7bfbc775b5efcd4357920bd0fc31b36c5a48c6be8432"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/d60006454e4ac938498639fa72c2408b1ca9eea78afef430c6d4132de5986595/huggingface/transformers/releases/tag/v5.18.0",
+     "httpStatus": 200,
+     "sha256": "a61f96bbaabf57f1c71a09c9b356a0d2735b8e0a82535ecd2c2ecc40db287d9f",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/d60006454e4ac938498639fa72c2408b1ca9eea78afef430c6d4132de5986595/huggingface/transformers/releases/tag/v5.18.0",
+   "publicPath": "/source-media/weekly-20261006/a61f96bbaabf.png",
+   "sha256": "a61f96bbaabf57f1c71a09c9b356a0d2735b8e0a82535ecd2c2ecc40db287d9f",
+   "byteSize": 74448,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Transformers 5.18.0, 네이버 비전 모델 지원 추가|https://github.com/huggingface/transformers/releases/tag/v5.18.0"
+  },
+  {
+   "week": "2026-w40",
+   "title": "ElevenLabs, 3억 달러 직원 지분 매입으로 기업가치 220억 달러",
+   "sourceUrl": "https://elevenlabs.io/blog/tender-22bn",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: All company photo).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://elevenlabs.io/blog/tender-22bn",
+     "httpStatus": 200,
+     "sha256": "ba5b5e2cde48dfc0fa284611531ea5b4fd2c9f59bff534816896d402d5e5c7f3"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fmymp80nssp-Group-Photo-Final--2-.webp&w=3840&q=80",
+     "httpStatus": 200,
+     "sha256": "27dd654237c6c8a953a234333a99f5601ec121a3f00ebc1f82e08fe8bea1c82e",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fmymp80nssp-Group-Photo-Final--2-.webp&w=3840&q=80",
+   "publicPath": "/source-media/weekly-20261006/27dd654237c6.jpg",
+   "sha256": "27dd654237c6c8a953a234333a99f5601ec121a3f00ebc1f82e08fe8bea1c82e",
+   "byteSize": 1436382,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|ElevenLabs, 3억 달러 직원 지분 매입으로 기업가치 220억 달러|https://elevenlabs.io/blog/tender-22bn"
+  },
+  {
+   "week": "2026-w40",
+   "title": "삼성전자, ‘에이전틱 시프트’ 주제로 삼성 AI 포럼 2026 개최",
+   "sourceUrl": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ec%8b%9c%ed%94%84%ed%8a%b8-%ec%a3%bc%ec%a0%9c%eb%a1%9c-%ec%82%bc%ec%84%b1-ai-%ed%8f%ac%eb%9f%bc-2026-%ea%b0%9c%ec%b5%9c",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: 30일 삼성전자 서초사옥에서 열린 '삼성 AI 포럼 2026'에서 오픈AI의 리처드 호(Richard Ho) 하드웨어담당 부사장이 기조 강연을 하고 있다.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ec%8b%9c%ed%94%84%ed%8a%b8-%ec%a3%bc%ec%a0%9c%eb%a1%9c-%ec%82%bc%ec%84%b1-ai-%ed%8f%ac%eb%9f%bc-2026-%ea%b0%9c%ec%b5%9c",
+     "httpStatus": 200,
+     "sha256": "3e57d79fec9bd94ddbf44528afb4eb8f8aa983099fede1daff0318ddd946b23f"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://img.kr.news.samsung.com/kr/wp-content/uploads/2026/09/30100851/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EC%82%BC%EC%84%B1-AI-%ED%8F%AC%EB%9F%BC-2026-1.jpg",
+     "httpStatus": 200,
+     "sha256": "1ed9c9ab3a030d7ac714ff7ebdbe9cea9fc46636d1ede926b7c35d93d512e14a",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://img.kr.news.samsung.com/kr/wp-content/uploads/2026/09/30100851/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-%EC%82%BC%EC%84%B1-AI-%ED%8F%AC%EB%9F%BC-2026-1.jpg",
+   "publicPath": "/source-media/weekly-20261006/1ed9c9ab3a03.jpg",
+   "sha256": "1ed9c9ab3a030d7ac714ff7ebdbe9cea9fc46636d1ede926b7c35d93d512e14a",
+   "byteSize": 233542,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|삼성전자, ‘에이전틱 시프트’ 주제로 삼성 AI 포럼 2026 개최|https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ec%8b%9c%ed%94%84%ed%8a%b8-%ec%a3%bc%ec%a0%9c%eb%a1%9c-%ec%82%bc%ec%84%b1-ai-%ed%8f%ac%eb%9f%bc-2026-%ea%b0%9c%ec%b5%9c"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Synopsys·OpenAI, 반도체 설계 모델 GPT-Synopsys 공동 개발",
+   "sourceUrl": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+     "httpStatus": 200,
+     "sha256": "524f061b397634fd8a2f420bc892ecd381e00f4a89486cab60608a6b70dc4b0e"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://mmx.prnewswire.com/media/MS1999865/Synopsys-OpenAI.jpg?id=OA2980139&p=facebook",
+     "httpStatus": 200,
+     "sha256": "5668aa41fd358d779307319a00ddbfa89e91409a114eb5fe5a747558286b0b94",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://mmx.prnewswire.com/media/MS1999865/Synopsys-OpenAI.jpg?id=OA2980139&p=facebook",
+   "publicPath": "/source-media/weekly-20261006/5668aa41fd35.jpg",
+   "sha256": "5668aa41fd358d779307319a00ddbfa89e91409a114eb5fe5a747558286b0b94",
+   "byteSize": 571159,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Synopsys·OpenAI, 반도체 설계 모델 GPT-Synopsys 공동 개발|https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Hugging Face, Open TTS Leaderboard 공개",
+   "sourceUrl": "https://huggingface.co/blog/open-tts-leaderboard",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: thumbnail).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://huggingface.co/blog/open-tts-leaderboard",
+     "httpStatus": 200,
+     "sha256": "cfaf37dfc14f2f195a4b692bf77b6d9d25edf6d185de797bd855cb9111c3a6de"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/open-tts-leaderboard/english_table.png",
+     "httpStatus": 200,
+     "sha256": "e45f7f1f056996366df6ddfdb8c14b25ff7cde6902049d2595390e953e5c4476",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/blog/open-tts-leaderboard/english_table.png",
+   "publicPath": "/source-media/weekly-20261006/e45f7f1f0569.png",
+   "sha256": "e45f7f1f056996366df6ddfdb8c14b25ff7cde6902049d2595390e953e5c4476",
+   "byteSize": 480397,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Hugging Face, Open TTS Leaderboard 공개|https://huggingface.co/blog/open-tts-leaderboard"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Magnitude, 에이전트용 오픈소스 추론 엔진 공개",
+   "sourceUrl": "https://github.com/magnitudedev/magnitude",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/magnitudedev/magnitude",
+     "httpStatus": 200,
+     "sha256": "4334649f91949269966ccc2c082193b7a761f6672cff1de788e57e5e3f06d454"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.com/magnitudedev/magnitude/raw/main/assets/benchmarks/llama-cpp-dark.svg",
+     "httpStatus": 200,
+     "sha256": "8e60849b6301673524fa1d19dfe5b6aecad08a9a3d965b0f6f9c6c4e94e02950",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://github.com/magnitudedev/magnitude/raw/main/assets/benchmarks/llama-cpp-dark.svg",
+   "publicPath": "/source-media/weekly-20261006/8e60849b6301.svg",
+   "sha256": "8e60849b6301673524fa1d19dfe5b6aecad08a9a3d965b0f6f9c6c4e94e02950",
+   "byteSize": 3174,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Magnitude, 에이전트용 오픈소스 추론 엔진 공개|https://github.com/magnitudedev/magnitude"
+  },
+  {
+   "week": "2026-w40",
+   "title": "LangChain, langchain-openai 1.6.7 릴리스",
+   "sourceUrl": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.7",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.7",
+     "httpStatus": 200,
+     "sha256": "113a79dc6edc76ba6fc51ce923b6caa0df47d5d54b38d3a90dfbeacf978dd147"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/f0301caefe11ef52a69f97c6d7ae80d01fbcfe83571007276e49f4fc2b67228d/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.7",
+     "httpStatus": 200,
+     "sha256": "5ccbb16f412eada98bafc7acb0d963b51793c3f439c38f7bf234044884d74717",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/f0301caefe11ef52a69f97c6d7ae80d01fbcfe83571007276e49f4fc2b67228d/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.7",
+   "publicPath": "/source-media/weekly-20261006/5ccbb16f412e.png",
+   "sha256": "5ccbb16f412eada98bafc7acb0d963b51793c3f439c38f7bf234044884d74717",
+   "byteSize": 52351,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|LangChain, langchain-openai 1.6.7 릴리스|https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.7"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Vercel Agent, npm 비공개 패키지 설치 지원",
+   "sourceUrl": "https://vercel.com/changelog/vercel-agent-now-installs-private-packages-from-npm-and-custom-registries",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://vercel.com/changelog/vercel-agent-now-installs-private-packages-from-npm-and-custom-registries",
+     "httpStatus": 200,
+     "sha256": "73c5317d7779b73785cd327d3ff7c0c564ae04e5fd8a4ec9f914af85f3bb00be"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/51AkvmukWt34TIFhJ3XTdX/d5b58e4e05bbcc635816d8658d54617e/image__41_.png",
+     "httpStatus": 200,
+     "sha256": "0ae05d19142e26bbf5aebe90c8be3ce8779a1793619832de1df98bdac2eccb90",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/51AkvmukWt34TIFhJ3XTdX/d5b58e4e05bbcc635816d8658d54617e/image__41_.png",
+   "publicPath": "/source-media/weekly-20261006/0ae05d19142e.png",
+   "sha256": "0ae05d19142e26bbf5aebe90c8be3ce8779a1793619832de1df98bdac2eccb90",
+   "byteSize": 291275,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Vercel Agent, npm 비공개 패키지 설치 지원|https://vercel.com/changelog/vercel-agent-now-installs-private-packages-from-npm-and-custom-registries"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Claude Code, TypeScript로 동작을 바꾸는 mods 도입",
+   "sourceUrl": "https://claude.com/blog/claude-code-mods",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://claude.com/blog/claude-code-mods",
+     "httpStatus": 200,
+     "sha256": "6a2e41914ab147cbd415422eabbcaa57bfa2d988d138b863abc5aca6bc9ea6f0"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0112e18cdd7f0b92d19e40_Hand-BuildingBricks.svg",
+     "httpStatus": 200,
+     "sha256": "0204556c94d585a8b1c94ebc85dab3553227e7ddaf49d99a877073f0dd06e755",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://cdn.prod.website-files.com/68a44d4040f98a4adf2207b6/6a0112e18cdd7f0b92d19e40_Hand-BuildingBricks.svg",
+   "publicPath": "/source-media/weekly-20261006/0204556c94d5.svg",
+   "sha256": "0204556c94d585a8b1c94ebc85dab3553227e7ddaf49d99a877073f0dd06e755",
+   "byteSize": 50337,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Claude Code, TypeScript로 동작을 바꾸는 mods 도입|https://claude.com/blog/claude-code-mods"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Vercel AI Gateway에 Browserbase 도구 추가",
+   "sourceUrl": "https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools",
+     "httpStatus": 200,
+     "sha256": "e31fa04086055072f0a60599c7b16d60022e1d4557f979c3cc5d46b17b7079a9"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/54153N4Mc5l8x9jOlPSzAu/25964dac0e5366f33e050d1a16dae29f/image.png",
+     "httpStatus": 200,
+     "sha256": "92e9cf98b315d1a7e99fe724751a7fe48238e11c507394b574252894d338dacf",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/54153N4Mc5l8x9jOlPSzAu/25964dac0e5366f33e050d1a16dae29f/image.png",
+   "publicPath": "/source-media/weekly-20261006/92e9cf98b315.png",
+   "sha256": "92e9cf98b315d1a7e99fe724751a7fe48238e11c507394b574252894d338dacf",
+   "byteSize": 1081359,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Vercel AI Gateway에 Browserbase 도구 추가|https://vercel.com/changelog/ai-gateway-adds-browserbase-search-and-fetch-tools"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Anthropic, 물리학자 기고 Claude-shaped science 게재",
+   "sourceUrl": "https://www.anthropic.com/research/claude-shaped-science",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: collage of a physics diagram and trees).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.anthropic.com/research/claude-shaped-science",
+     "httpStatus": 200,
+     "sha256": "f27014caf81cc563edab78b2ad4dda94a0359b5d4f0fcea236065c8188fdfa5d"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F5dca367673e615ac7abbbdac9f44733d1f52638a-2000x1125.jpg&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "1571ba9ed296a707bfe01ce4e8b0162bfbd0958fb0017aa1b223487e658d6fd9",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F5dca367673e615ac7abbbdac9f44733d1f52638a-2000x1125.jpg&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/1571ba9ed296.webp",
+   "sha256": "1571ba9ed296a707bfe01ce4e8b0162bfbd0958fb0017aa1b223487e658d6fd9",
+   "byteSize": 339958,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Anthropic, 물리학자 기고 Claude-shaped science 게재|https://www.anthropic.com/research/claude-shaped-science"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Black Forest Labs, FLUX 3 Image 출시",
+   "sourceUrl": "https://bfl.ai/models/flux-3-image",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://bfl.ai/models/flux-3-image",
+     "httpStatus": 200,
+     "sha256": "94ce438f7f2985b0340b79d0e591199b045bf64cf0f78978a71d14d6ab467e2f"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://bfl.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F2gpum2i6%2Fproduction%2F4f89b01f54d3c903793a54030aa97c06b202af51-1200x1600.webp&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "151083e7af7bb945fba4d489fa23cbe8fcf5ed878e4a3e42af114fe82a688bc2",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://bfl.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F2gpum2i6%2Fproduction%2F4f89b01f54d3c903793a54030aa97c06b202af51-1200x1600.webp&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/151083e7af7b.jpg",
+   "sha256": "151083e7af7bb945fba4d489fa23cbe8fcf5ed878e4a3e42af114fe82a688bc2",
+   "byteSize": 189924,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Black Forest Labs, FLUX 3 Image 출시|https://bfl.ai/models/flux-3-image"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Cloudflare, 오픈소스 결정 모델 Clef와 RL 파인튜닝 공개",
+   "sourceUrl": "https://blog.cloudflare.com/clef-decision-models/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: decision-index-vs-latency.png).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.cloudflare.com/clef-decision-models/",
+     "httpStatus": 200,
+     "sha256": "e258fabbbaa2ef4882674d9540b784100e0a6ed6005c1fa1ebfb163403b88b24"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1430&h=588&f=webp&fit=cover&position=center",
+     "httpStatus": 200,
+     "sha256": "fe2292f1fb77f7ed37e89059f7f46478138cbfa43cea1a0ac218d2f2f7299807",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://blog.cloudflare.com/_image?href=https%3A%2F%2Fblog.cloudflare.com%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3W09VBACVT4420YA2SDXZE8.01M3W09YK4NRJQNV2S8HMMCQF0.png&w=1430&h=588&f=webp&fit=cover&position=center",
+   "publicPath": "/source-media/weekly-20261006/fe2292f1fb77.webp",
+   "sha256": "fe2292f1fb77f7ed37e89059f7f46478138cbfa43cea1a0ac218d2f2f7299807",
+   "byteSize": 31068,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Cloudflare, 오픈소스 결정 모델 Clef와 RL 파인튜닝 공개|https://blog.cloudflare.com/clef-decision-models/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "GitHub Copilot, 데스크톱 앱을 직접 조작하는 컴퓨터 사용 기능 공개 프리뷰",
+   "sourceUrl": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/",
+     "httpStatus": 200,
+     "sha256": "890b6e9faf7977f91d1c16359f1735edf3c177e4c70df491ea44dc54924c840f"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/themes/github-2021-child/assets/img/featured-v3-new-releases.svg",
+     "httpStatus": 200,
+     "sha256": "7f64906297f8a727b7533d1cf71cb604e859d4e9fa339539775b7bd64da03848",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/themes/github-2021-child/assets/img/featured-v3-new-releases.svg",
+   "publicPath": "/source-media/weekly-20261006/7f64906297f8.svg",
+   "sha256": "7f64906297f8a727b7533d1cf71cb604e859d4e9fa339539775b7bd64da03848",
+   "byteSize": 12505,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|GitHub Copilot, 데스크톱 앱을 직접 조작하는 컴퓨터 사용 기능 공개 프리뷰|https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps/"
+  },
+  {
+   "key": "2026-w40|조지아 선거위원회, 투표 비밀 관련 긴급 규칙 제정 논의 특별회의 개최|https://seb.ga.gov/meetings/october-1-2026-900-am/",
+   "week": "2026-w40",
+   "title": "조지아 선거위원회, 투표 비밀 관련 긴급 규칙 제정 논의 특별회의 개최",
+   "sourceUrl": "https://seb.ga.gov/meetings/october-1-2026-900-am/",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://seb.ga.gov/meetings/october-1-2026-900-am/",
+     "httpStatus": 200,
+     "sha256": "2a98355e4c965d4ecad84b59d505638366a2bf5048cd546ed67a70dc5a4f09a3"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://seb.ga.gov/meetings/october-1-2026-900-am/",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "GitHub Copilot CLI·앱·SDK에 동적 워크플로 도입",
+   "sourceUrl": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/",
+     "httpStatus": 200,
+     "sha256": "de7376f7d1e2498c64f1d647ed27e2018bb0ebca1e8e81ae443297e03db921c3"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/themes/github-2021-child/assets/img/featured-v3-new-releases.svg",
+     "httpStatus": 200,
+     "sha256": "7f64906297f8a727b7533d1cf71cb604e859d4e9fa339539775b7bd64da03848",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/themes/github-2021-child/assets/img/featured-v3-new-releases.svg",
+   "publicPath": "/source-media/weekly-20261006/7f64906297f8.svg",
+   "sha256": "7f64906297f8a727b7533d1cf71cb604e859d4e9fa339539775b7bd64da03848",
+   "byteSize": 12505,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|GitHub Copilot CLI·앱·SDK에 동적 워크플로 도입|https://github.blog/changelog/2026-10-01-dynamic-workflows-in-copilot-cli-and-the-copilot-app/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Vercel AI Gateway에 Voyage 리랭크와 Laya 추가",
+   "sourceUrl": "https://vercel.com/changelog/voyage-rerank-3-and-rerank-3-lite-are-now-available-on-ai-gateway",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://vercel.com/changelog/voyage-rerank-3-and-rerank-3-lite-are-now-available-on-ai-gateway",
+     "httpStatus": 200,
+     "sha256": "07bc43e86e18c7e8f8ef0a94b806cbf278f3e50878254a7094f13c988c55dfbc"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3krxIC3VERetQwXvCZofIX/3addeaad1df88552dae2e34b172d450d/image.png",
+     "httpStatus": 200,
+     "sha256": "32795b1a5129016f68a72b8e302a8d56d5323ecb30683f6ddf8b935191b63d37",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3krxIC3VERetQwXvCZofIX/3addeaad1df88552dae2e34b172d450d/image.png",
+   "publicPath": "/source-media/weekly-20261006/32795b1a5129.png",
+   "sha256": "32795b1a5129016f68a72b8e302a8d56d5323ecb30683f6ddf8b935191b63d37",
+   "byteSize": 1103120,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Vercel AI Gateway에 Voyage 리랭크와 Laya 추가|https://vercel.com/changelog/voyage-rerank-3-and-rerank-3-lite-are-now-available-on-ai-gateway"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Ai2, 대형 MoE 학습용 오픈 스택 Olmo-core 3 공개",
+   "sourceUrl": "https://allenai.org/blog/olmocore3",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://allenai.org/blog/olmocore3",
+     "httpStatus": 200,
+     "sha256": "37f524cb1a7ce8af3b9ca9cbf1a51f2c509333cecb2f6dfc0b0ba58a2ed1abde"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.datocms-assets.com/64837/1790798606-olmo-core-3-blog-draft-google-docs-image-1.png",
+     "httpStatus": 200,
+     "sha256": "ce3dac22760571bccd7051c38f8f42d630a222a6f306f61c041bb48293f8941d",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://www.datocms-assets.com/64837/1790798606-olmo-core-3-blog-draft-google-docs-image-1.png",
+   "publicPath": "/source-media/weekly-20261006/ce3dac227605.png",
+   "sha256": "ce3dac22760571bccd7051c38f8f42d630a222a6f306f61c041bb48293f8941d",
+   "byteSize": 408618,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Ai2, 대형 MoE 학습용 오픈 스택 Olmo-core 3 공개|https://allenai.org/blog/olmocore3"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Google, Project Suncatcher 시제 위성 궤도 진입 발표",
+   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/",
+     "httpStatus": 200,
+     "sha256": "3af9ef6de660c8763f576ab87fd8867c378c68a1d2b1b90a5fadcde3e45cc760"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/wagtailvideo-fgyv69rc_thumb.jpg",
+     "httpStatus": 200,
+     "sha256": "ed36277a37c8ffe58b25451f2a69b59f12a3db37fa160c0a2cf5a75d6153cdef",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/wagtailvideo-fgyv69rc_thumb.jpg",
+   "publicPath": "/source-media/weekly-20261006/ed36277a37c8.jpg",
+   "sha256": "ed36277a37c8ffe58b25451f2a69b59f12a3db37fa160c0a2cf5a75d6153cdef",
+   "byteSize": 79021,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Google, Project Suncatcher 시제 위성 궤도 진입 발표|https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Google, Gemini Live에 시각 보조 기능 Guided Vision 출시",
+   "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: stylized hero image reading \"Guided Vision\").",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+     "httpStatus": 200,
+     "sha256": "5352a843640975ab3ea24c360b84f67865547dff2e6cee338a944c2c7a1dd56a"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GuidedVision_hero.width-2200.format-webp.webp",
+     "httpStatus": 200,
+     "sha256": "a7be57b10e84f295c680931b0c7dc85c212cc63ea78969735b89f0a0c1a09242",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GuidedVision_hero.width-2200.format-webp.webp",
+   "publicPath": "/source-media/weekly-20261006/a7be57b10e84.webp",
+   "sha256": "a7be57b10e84f295c680931b0c7dc85c212cc63ea78969735b89f0a0c1a09242",
+   "byteSize": 27490,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Google, Gemini Live에 시각 보조 기능 Guided Vision 출시|https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "NVIDIA, Blackwell GPU로 GPT-6 Astra Ultrafast 가속 설명",
+   "sourceUrl": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/",
+     "httpStatus": 200,
+     "sha256": "2576e99acadda4014085654531f5e398813cf2b2b9197d466a5729b441d1a265"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blogs.nvidia.com/wp-content/uploads/2026/09/twitter-gif-2104993966043320759-v5.png",
+     "httpStatus": 200,
+     "sha256": "9d777e79bfbb172f4616349424ff0ce8f24a37e325f4bf105124b86ca82faf28",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/09/twitter-gif-2104993966043320759-v5.png",
+   "publicPath": "/source-media/weekly-20261006/9d777e79bfbb.png",
+   "sha256": "9d777e79bfbb172f4616349424ff0ce8f24a37e325f4bf105124b86ca82faf28",
+   "byteSize": 1539628,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|NVIDIA, Blackwell GPU로 GPT-6 Astra Ultrafast 가속 설명|https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Ideogram, 이미지 편집 특화 모델 Ideogram 4.5 공개",
+   "sourceUrl": "https://ideogram.ai/models/4.5",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Hand-drawn elevation to photoreal render: original image).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://ideogram.ai/models/4.5",
+     "httpStatus": 200,
+     "sha256": "4a3a8190450bd4b80db67ecc7841da6b0783716e006c72e8cb28ebb1571efe56"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/ideogram-static/website/images/1ff4ace5011a9883.webp",
+     "httpStatus": 200,
+     "sha256": "1ff4ace5011a9883d662cbaa98f3635508081cbd7307742a4b57a01ce4c9a8ba",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/ideogram-static/website/images/1ff4ace5011a9883.webp",
+   "publicPath": "/source-media/weekly-20261006/1ff4ace5011a.webp",
+   "sha256": "1ff4ace5011a9883d662cbaa98f3635508081cbd7307742a4b57a01ce4c9a8ba",
+   "byteSize": 362146,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Ideogram, 이미지 편집 특화 모델 Ideogram 4.5 공개|https://ideogram.ai/models/4.5"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Luma, 정지 광고의 규격·언어 버전을 만드는 Variants 출시",
+   "sourceUrl": "https://lumalabs.ai/news/introducing-luma-variants",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Luma Variants. One Ad. Every Format. ).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://lumalabs.ai/news/introducing-luma-variants",
+     "httpStatus": 200,
+     "sha256": "310124ef59911df27ed4e2bc1c671403b4421b129bc028ff4a776a3ac7e0dc38"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://lumalabs.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F2ylxvaa2%2Fproduction%2Fb1b5e1216260751af3e6ea56abf210edf52854db-2850x1650.jpg%3Fw%3D2048%26fm%3Dwebp%26q%3D75%26fit%3Dmax&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "04a237fa43c53e5051020cae9a52b6201034faad01239614020ffb84c5c9af8e",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://lumalabs.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F2ylxvaa2%2Fproduction%2Fb1b5e1216260751af3e6ea56abf210edf52854db-2850x1650.jpg%3Fw%3D2048%26fm%3Dwebp%26q%3D75%26fit%3Dmax&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/04a237fa43c5.webp",
+   "sha256": "04a237fa43c53e5051020cae9a52b6201034faad01239614020ffb84c5c9af8e",
+   "byteSize": 111200,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Luma, 정지 광고의 규격·언어 버전을 만드는 Variants 출시|https://lumalabs.ai/news/introducing-luma-variants"
+  },
+  {
+   "week": "2026-w40",
+   "title": "캘리포니아 법무장관, OpenAI에 조사 소환장 발송",
+   "sourceUrl": "https://oag.ca.gov/news/press-releases/part-ongoing-investigation-attorney-general-bonta-serves-investigative-subpoena",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://oag.ca.gov/news/press-releases/part-ongoing-investigation-attorney-general-bonta-serves-investigative-subpoena",
+     "httpStatus": 200,
+     "sha256": "0692faf36b1d7f2a369ef582ec1291eec5adea797932f8603813d0b9db83ec15"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://oag.ca.gov/sites/default/files/og-link-card-24.jpg",
+     "httpStatus": 200,
+     "sha256": "cf8b0fe4237c986403743cfcfedfcb888fd5d742eb92a1d5861634be8c7666a5",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://oag.ca.gov/sites/default/files/og-link-card-24.jpg",
+   "publicPath": "/source-media/weekly-20261006/cf8b0fe4237c.jpg",
+   "sha256": "cf8b0fe4237c986403743cfcfedfcb888fd5d742eb92a1d5861634be8c7666a5",
+   "byteSize": 298239,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|캘리포니아 법무장관, OpenAI에 조사 소환장 발송|https://oag.ca.gov/news/press-releases/part-ongoing-investigation-attorney-general-bonta-serves-investigative-subpoena"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Tavus, 얼굴을 마주한 대화용 모델 Griffin 연구 프리뷰 공개",
+   "sourceUrl": "https://www.tavus.io/griffin",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.tavus.io/griffin",
+     "httpStatus": 200,
+     "sha256": "3a469c7a0a6a329e0b37b732f880ea5a445a119122216c5f801b511df2043bba"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.prod.website-files.com/68c8e57d6e512b9573db146f/6abe6c84125e80a50a54a217_Griffin%20OG%20v3%20%E2%80%94%2003%20Split%20%C2%B7%20Type%20Left.jpg",
+     "httpStatus": 200,
+     "sha256": "31187da35cb633a841de080b5e94109e8b13cd857a2036105c280eeb83b6fb49",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://cdn.prod.website-files.com/68c8e57d6e512b9573db146f/6abe6c84125e80a50a54a217_Griffin%20OG%20v3%20%E2%80%94%2003%20Split%20%C2%B7%20Type%20Left.jpg",
+   "publicPath": "/source-media/weekly-20261006/31187da35cb6.jpg",
+   "sha256": "31187da35cb633a841de080b5e94109e8b13cd857a2036105c280eeb83b6fb49",
+   "byteSize": 1192979,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Tavus, 얼굴을 마주한 대화용 모델 Griffin 연구 프리뷰 공개|https://www.tavus.io/griffin"
+  },
+  {
+   "week": "2026-w40",
+   "title": "미 법무부, 3억 달러 넘는 GPU 서버 중국 밀수 혐의 기소 발표",
+   "sourceUrl": "https://www.justice.gov/opa/pr/california-man-arrested-smuggling-more-300-million-export-controlled-computer-servers-china",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.justice.gov/opa/pr/california-man-arrested-smuggling-more-300-million-export-controlled-computer-servers-china",
+     "httpStatus": 200,
+     "sha256": "9ecf871711a0804c083cdbfba91970c9087da9d5637d5ca4131d81b99e03f229"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--press-release.png",
+     "httpStatus": 200,
+     "sha256": "42b7f8f75efc71f6ba517545fc0a48668c9fb8829c2fcf646b93eb1c3e4825b0",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--press-release.png",
+   "publicPath": "/source-media/weekly-20261006/42b7f8f75efc.png",
+   "sha256": "42b7f8f75efc71f6ba517545fc0a48668c9fb8829c2fcf646b93eb1c3e4825b0",
+   "byteSize": 326993,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|미 법무부, 3억 달러 넘는 GPU 서버 중국 밀수 혐의 기소 발표|https://www.justice.gov/opa/pr/california-man-arrested-smuggling-more-300-million-export-controlled-computer-servers-china"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Vercel AI Gateway, Microsoft MAI 오디오 모델 3종 제공",
+   "sourceUrl": "https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway",
+     "httpStatus": 200,
+     "sha256": "01ae4cec0417801d68b8b0de12ea75a7c5ca2cbf07b289d70b758e5edadfebf1"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4VUQPah80J1WYBwplwXQjh/341d68a8100d89550907348d511d49db/image__111_.png",
+     "httpStatus": 200,
+     "sha256": "1f54ab08ea46d2082aafea43c572339ba153eb0896cbc533425d40958f187c5e",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4VUQPah80J1WYBwplwXQjh/341d68a8100d89550907348d511d49db/image__111_.png",
+   "publicPath": "/source-media/weekly-20261006/1f54ab08ea46.png",
+   "sha256": "1f54ab08ea46d2082aafea43c572339ba153eb0896cbc533425d40958f187c5e",
+   "byteSize": 1102616,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Vercel AI Gateway, Microsoft MAI 오디오 모델 3종 제공|https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Suno, 음성과 음악을 한 트랙으로 만드는 Speech 베타 공개",
+   "sourceUrl": "https://suno.com/blog/introducing-speech-beta",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Introducing Speech, now in Beta on Suno).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://suno.com/blog/introducing-speech-beta",
+     "httpStatus": 200,
+     "sha256": "097934756abd76aab99411792f8924e8db0e6cf0304c9fbd22086208bba5fc8d"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.sanity.io/images/cl7b1q1i/production/7980bce19cb4a95a1e332b32be9ab8d2f83dbd6f-1920x1102.jpg?w=2400&fit=max&auto=format",
+     "httpStatus": 200,
+     "sha256": "e5920251d235eed64ca8b0ae7800b043104365726ca628869da44c6b28bd04cf",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://cdn.sanity.io/images/cl7b1q1i/production/7980bce19cb4a95a1e332b32be9ab8d2f83dbd6f-1920x1102.jpg?w=2400&fit=max&auto=format",
+   "publicPath": "/source-media/weekly-20261006/e5920251d235.jpg",
+   "sha256": "e5920251d235eed64ca8b0ae7800b043104365726ca628869da44c6b28bd04cf",
+   "byteSize": 86140,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Suno, 음성과 음악을 한 트랙으로 만드는 Speech 베타 공개|https://suno.com/blog/introducing-speech-beta"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Shopify, AI 에이전트와 대화로 상점을 꾸미는 Canvas 공개",
+   "sourceUrl": "https://www.shopify.com/news/introducing-canvas",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.shopify.com/news/introducing-canvas",
+     "httpStatus": 200,
+     "sha256": "be18d2525dcc62813a681159dc5bf6adb7b1f8ca9bdfc51f158977b57202a234"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn.shopify.com/s/files/1/0817/4980/3064/articles/Canvas_Newsroom_header_2x_47404c44-91f5-4390-a6ac-0e53ac99c57c.jpg?v=1790862704",
+     "httpStatus": 200,
+     "sha256": "c342dc7a33080a6d0e5f264d4aa3076ce023f3ec9d06f7cc2bb97a1bbcbebfa5",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://cdn.shopify.com/s/files/1/0817/4980/3064/articles/Canvas_Newsroom_header_2x_47404c44-91f5-4390-a6ac-0e53ac99c57c.jpg?v=1790862704",
+   "publicPath": "/source-media/weekly-20261006/c342dc7a3308.jpg",
+   "sha256": "c342dc7a33080a6d0e5f264d4aa3076ce023f3ec9d06f7cc2bb97a1bbcbebfa5",
+   "byteSize": 885741,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Shopify, AI 에이전트와 대화로 상점을 꾸미는 Canvas 공개|https://www.shopify.com/news/introducing-canvas"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Apple, macOS 전체 디스크 접근 권한에 추가 통제를 도입하겠다고 예고",
+   "sourceUrl": "https://developer.apple.com/news/?id=p6zjojqw",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://developer.apple.com/news/?id=p6zjojqw",
+     "httpStatus": 200,
+     "sha256": "d9a85bd36f810eac07a77d7fdb41bc5d1ca14b9cc8b2292db885236e979a0119"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://developer.apple.com/news/images/og/full-disk-access-og.png",
+     "httpStatus": 200,
+     "sha256": "db174309e1cc7b1ab859cd003f02da88e9b8a9f49d1c886e351d6d9d4aff88d0",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://developer.apple.com/news/images/og/full-disk-access-og.png",
+   "publicPath": "/source-media/weekly-20261006/db174309e1cc.png",
+   "sha256": "db174309e1cc7b1ab859cd003f02da88e9b8a9f49d1c886e351d6d9d4aff88d0",
+   "byteSize": 25302,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Apple, macOS 전체 디스크 접근 권한에 추가 통제를 도입하겠다고 예고|https://developer.apple.com/news/?id=p6zjojqw"
+  },
+  {
+   "key": "2026-w40|OpenAI, 내부 모델의 재시작 대비 사례 보고서 공개|https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/",
+   "week": "2026-w40",
+   "title": "OpenAI, 내부 모델의 재시작 대비 사례 보고서 공개",
+   "sourceUrl": "https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/",
+     "httpStatus": 200,
+     "sha256": "069e16531e1e9bb683530dccda054a458812635908413cb9d8cce1a7a3025fb6"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "GitHub Copilot, 코드 리뷰 API·모델 지원 종료·VS Code 9월 릴리스",
+   "sourceUrl": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: screenshot of Balanced review effort level default selected in settings).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level/",
+     "httpStatus": 200,
+     "sha256": "412e6a342a3bc354feae9f86fd464ee31e3b83e5be3e7de3970224cdc066850f"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/uploads/2026/10/663343489-d0f10d32-3726-4507-9ede-10407ea30715.jpg?w=1600",
+     "httpStatus": 200,
+     "sha256": "d35b18f695110dbaa3cfa3550d710e3f49706b4bc8b4128e2150a0155e3ce006",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/uploads/2026/10/663343489-d0f10d32-3726-4507-9ede-10407ea30715.jpg?w=1600",
+   "publicPath": "/source-media/weekly-20261006/d35b18f69511.jpg",
+   "sha256": "d35b18f695110dbaa3cfa3550d710e3f49706b4bc8b4128e2150a0155e3ce006",
+   "byteSize": 82210,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|GitHub Copilot, 코드 리뷰 API·모델 지원 종료·VS Code 9월 릴리스|https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "구글 코리아, 구글 AI 프로 연간 플랜 40% 할인 캠페인 안내",
+   "sourceUrl": "https://blog.google/intl/ko-kr/company-news/google-gemini-ai-pro-campaign-kr/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: 고도화된 AI 역량으로 실제 업무 생산성과 완성도를 끌어올리는 ‘구글 AI 프로(Google AI Pro)’ 캠페인 영상 6편과 함께, 10월 31일까지 진행되는 국내 한정 연간 구독권 40% 특별 할인 프로모션도 만나보세요.).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/intl/ko-kr/company-news/google-gemini-ai-pro-campaign-kr/",
+     "httpStatus": 200,
+     "sha256": "3ce4ce5e58b3d6fde80f53441f75faa22a231190654f9d1eb5233efec49bdd6e"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/YouTube_Google_AIP_Anthem_Thumbn.width-2200.format-webp.webp",
+     "httpStatus": 200,
+     "sha256": "0f8f0423ca78a379b023a302e4ee4a0ec34440ec0f673ab35d12c7596e0a4282",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/YouTube_Google_AIP_Anthem_Thumbn.width-2200.format-webp.webp",
+   "publicPath": "/source-media/weekly-20261006/0f8f0423ca78.webp",
+   "sha256": "0f8f0423ca78a379b023a302e4ee4a0ec34440ec0f673ab35d12c7596e0a4282",
+   "byteSize": 103502,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|구글 코리아, 구글 AI 프로 연간 플랜 40% 할인 캠페인 안내|https://blog.google/intl/ko-kr/company-news/google-gemini-ai-pro-campaign-kr/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "NVIDIA, 64GB 통합 메모리 DGX Spark 이번 달 출시 예고",
+   "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+     "httpStatus": 200,
+     "sha256": "b2ccc97d5969db888c8dc4afced470a625b67b1a4fdfd161921ed312031960f4"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blogs.nvidia.com/wp-content/uploads/2026/10/nv-blog-1280x680-1.jpg",
+     "httpStatus": 200,
+     "sha256": "e67a49871e53e2674f11f4326a7071ca31b4c85e8d28caf52fed065862ff1156",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/10/nv-blog-1280x680-1.jpg",
+   "publicPath": "/source-media/weekly-20261006/e67a49871e53.jpg",
+   "sha256": "e67a49871e53e2674f11f4326a7071ca31b4c85e8d28caf52fed065862ff1156",
+   "byteSize": 174179,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|NVIDIA, 64GB 통합 메모리 DGX Spark 이번 달 출시 예고|https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
+  },
+  {
+   "key": "2026-w40|Anthropic, 호주 의회 AI 위원회에 저작권 의견서 제출|https://www.aph.gov.au/DocumentStore.ashx?id=ec679ccd-3c8a-4da9-a9aa-583547a4fe59&subId=802842",
+   "week": "2026-w40",
+   "title": "Anthropic, 호주 의회 AI 위원회에 저작권 의견서 제출",
+   "sourceUrl": "https://www.aph.gov.au/DocumentStore.ashx?id=ec679ccd-3c8a-4da9-a9aa-583547a4fe59&subId=802842",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.aph.gov.au/DocumentStore.ashx?id=ec679ccd-3c8a-4da9-a9aa-583547a4fe59&subId=802842",
+     "httpStatus": 200,
+     "sha256": "b14842db6ce388d9374e99d3331c599843b0e24f22cd5f18f6f14236a11e91e8"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://www.aph.gov.au/DocumentStore.ashx?id=ec679ccd-3c8a-4da9-a9aa-583547a4fe59&subId=802842",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "week": "2026-w40",
+   "title": "Midjourney 알파 변경 기록 10/1, 버그 수정과 정리 중심",
+   "sourceUrl": "https://updates.midjourney.com/alpha-changelog-10-1-26/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://updates.midjourney.com/alpha-changelog-10-1-26/",
+     "httpStatus": 200,
+     "sha256": "2ff626d9ed1a225f62cc9f1930e1cb662135cf4eda8180753e0c525977458c68"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://static.ghost.org/v5.0.0/images/publication-cover.jpg",
+     "httpStatus": 200,
+     "sha256": "e18e794290a96cbcb5749763b7093759268434e04adb6022cd5b3c75fb657052",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://static.ghost.org/v5.0.0/images/publication-cover.jpg",
+   "publicPath": "/source-media/weekly-20261006/e18e794290a9.jpg",
+   "sha256": "e18e794290a96cbcb5749763b7093759268434e04adb6022cd5b3c75fb657052",
+   "byteSize": 775110,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Midjourney 알파 변경 기록 10/1, 버그 수정과 정리 중심|https://updates.midjourney.com/alpha-changelog-10-1-26/"
+  },
+  {
+   "week": "2026-w41",
+   "title": "GitHub, AI 코드 리뷰용 오픈 벤치마크 ReviewBench 공개",
+   "sourceUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: GitHub Copilot app for Beginners: Build custom AI surfaces).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+     "httpStatus": 200,
+     "sha256": "235106662d606596f5650eacca6da6461f240006d7761f48b50d352644ccd02e"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-23-at-3.59.20-PM.png?w=1032",
+     "httpStatus": 200,
+     "sha256": "b2cb56decf5eec4c8dfc726cd84e7a7b9b6c00bb8fd0a07bd3611b881ce0828d",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://github.blog/wp-content/uploads/2026/09/Screenshot-2026-09-23-at-3.59.20-PM.png?w=1032",
+   "publicPath": "/source-media/weekly-20261006/b2cb56decf5e.png",
+   "sha256": "b2cb56decf5eec4c8dfc726cd84e7a7b9b6c00bb8fd0a07bd3611b881ce0828d",
+   "byteSize": 145200,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|GitHub, AI 코드 리뷰용 오픈 벤치마크 ReviewBench 공개|https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
+  },
+  {
+   "week": "2026-w40",
+   "title": "xAI, grok-voice-transcribe-1.0 종료, 2.0으로 전환",
+   "sourceUrl": "https://docs.x.ai/developers/release-notes",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Tokenizer example).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://docs.x.ai/developers/release-notes",
+     "httpStatus": 200,
+     "sha256": "3f846ae4fcce28d18f5cb1f89bf34b6c7969c5544bfac5b34672916beceb0a46"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://docs.x.ai/_next/image?url=%2Fassets%2Fdocs%2Frelease-notes%2Ftokenizer.png&w=3840&q=75&dpl=35680bd06569cc0c810b66282eaeb950903db4db",
+     "httpStatus": 200,
+     "sha256": "d0c5631f386097b5ed324d49cbc91a185b16920c8cf6a9fb9401a50ebca06da9",
+     "contentType": "image/webp"
+    }
+   ],
+   "imageUrl": "https://docs.x.ai/_next/image?url=%2Fassets%2Fdocs%2Frelease-notes%2Ftokenizer.png&w=3840&q=75&dpl=35680bd06569cc0c810b66282eaeb950903db4db",
+   "publicPath": "/source-media/weekly-20261006/d0c5631f3860.webp",
+   "sha256": "d0c5631f386097b5ed324d49cbc91a185b16920c8cf6a9fb9401a50ebca06da9",
+   "byteSize": 125846,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|xAI, grok-voice-transcribe-1.0 종료, 2.0으로 전환|https://docs.x.ai/developers/release-notes"
+  },
+  {
+   "week": "2026-w41",
+   "title": "NVIDIA, 유방암 AI를 만드는 Inception 스타트업 사례 소개",
+   "sourceUrl": "https://blogs.nvidia.com/blog/ai-breast-cancer-startups/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blogs.nvidia.com/blog/ai-breast-cancer-startups/",
+     "httpStatus": 200,
+     "sha256": "37313d9e461fef58fae97df93e387d8cd91bc5c72461e0b7e5e8701df25c01ea"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://blogs.nvidia.com/wp-content/uploads/2026/10/AdobeStock_422714256_BCAMheader.jpeg",
+     "httpStatus": 200,
+     "sha256": "a4b0a082e1c2c41a63c19560b052bf388c692e722da3211020d8e8674fa64154",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://blogs.nvidia.com/wp-content/uploads/2026/10/AdobeStock_422714256_BCAMheader.jpeg",
+   "publicPath": "/source-media/weekly-20261006/a4b0a082e1c2.jpg",
+   "sha256": "a4b0a082e1c2c41a63c19560b052bf388c692e722da3211020d8e8674fa64154",
+   "byteSize": 860538,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|NVIDIA, 유방암 AI를 만드는 Inception 스타트업 사례 소개|https://blogs.nvidia.com/blog/ai-breast-cancer-startups/"
+  },
+  {
+   "week": "2026-w41",
+   "title": "OpenAI Codex 0.160.1, 원격 MCP 서버 환경 변수 보존 수정",
+   "sourceUrl": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.160.1",
+     "httpStatus": 200,
+     "sha256": "a56b0c9d97bced2466a09cdef9688fa76370f6d2bd89bc02a86567e3d3e1a11e"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/d1da8d15e1ffbf2a3f31d7fe3b1dc33c29af8e971b013acefc19c2686fac97e0/openai/codex/releases/tag/rust-v0.160.1",
+     "httpStatus": 200,
+     "sha256": "7b2740e95e26009585a4869bcbfcbd8072dbf2cc695419218ef3eaeef07f6d69",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/d1da8d15e1ffbf2a3f31d7fe3b1dc33c29af8e971b013acefc19c2686fac97e0/openai/codex/releases/tag/rust-v0.160.1",
+   "publicPath": "/source-media/weekly-20261006/7b2740e95e26.png",
+   "sha256": "7b2740e95e26009585a4869bcbfcbd8072dbf2cc695419218ef3eaeef07f6d69",
+   "byteSize": 45106,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|OpenAI Codex 0.160.1, 원격 MCP 서버 환경 변수 보존 수정|https://github.com/openai/codex/releases/tag/rust-v0.160.1"
+  },
+  {
+   "week": "2026-w41",
+   "title": "Wikimedia 재단, OpenAI 에이전트로 보는 활동 확인",
+   "sourceUrl": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+     "httpStatus": 200,
+     "sha256": "e186a279e8302ea34c83e48f0f751d739bb83baf4fcef018e5c5a737e931223e"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://diff.wikimedia.org/wp-content/themes/interconnection/assets/images/translate-post.jpg",
+     "httpStatus": 200,
+     "sha256": "126e1d7b10ee56522dd8c75a57b699472c254c91e41c7a38aed9290d54847ab3",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://diff.wikimedia.org/wp-content/themes/interconnection/assets/images/translate-post.jpg",
+   "publicPath": "/source-media/weekly-20261006/126e1d7b10ee.jpg",
+   "sha256": "126e1d7b10ee56522dd8c75a57b699472c254c91e41c7a38aed9290d54847ab3",
+   "byteSize": 55972,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|Wikimedia 재단, OpenAI 에이전트로 보는 활동 확인|https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+  },
+  {
+   "week": "2026-w41",
+   "title": "Reflection AI, 첫 오픈 웨이트 모델 Beam 발표",
+   "sourceUrl": "https://reflection.ai/blog/introducing-beam",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://reflection.ai/blog/introducing-beam",
+     "httpStatus": 200,
+     "sha256": "909e87cec684a024dfd5a9c5d17f46c80f520fa9f4706e46491ccdad27e90580"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://reflection.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fsp40emik%2Fproduction%2Fe336820112f5382aab828303f3c19f4db3891996-2712x1524.png%3Fw%3D3840%26fit%3Dmax&w=3840&q=75",
+     "httpStatus": 200,
+     "sha256": "05843e6ff9b45e2155efa8107173d4a4cf244036a2c2c2381c51183e343fac8d",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://reflection.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fsp40emik%2Fproduction%2Fe336820112f5382aab828303f3c19f4db3891996-2712x1524.png%3Fw%3D3840%26fit%3Dmax&w=3840&q=75",
+   "publicPath": "/source-media/weekly-20261006/05843e6ff9b4.png",
+   "sha256": "05843e6ff9b45e2155efa8107173d4a4cf244036a2c2c2381c51183e343fac8d",
+   "byteSize": 673034,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|Reflection AI, 첫 오픈 웨이트 모델 Beam 발표|https://reflection.ai/blog/introducing-beam"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Aleph Alpha, 영어와 독일어 오픈웨이트 모델 Kolibri 공개",
+   "sourceUrl": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+     "httpStatus": 200,
+     "sha256": "92a9175e2b4d03c6e74f67ed898fca7cf496dc7384c1ad6864d97e0564b56275"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://aleph-alpha.com/_astro/00-cover.Du35XCGh_zJqw.jpeg",
+     "httpStatus": 200,
+     "sha256": "d9e40345eea31e485fd43e0c62ac03d1a92d634c9bcabd778b84511abd71acd0",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://aleph-alpha.com/_astro/00-cover.Du35XCGh_zJqw.jpeg",
+   "publicPath": "/source-media/weekly-20261006/d9e40345eea3.jpg",
+   "sha256": "d9e40345eea31e485fd43e0c62ac03d1a92d634c9bcabd778b84511abd71acd0",
+   "byteSize": 57962,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Aleph Alpha, 영어와 독일어 오픈웨이트 모델 Kolibri 공개|https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+  },
+  {
+   "week": "2026-w41",
+   "title": "LG전자, 북미 AI 데이터센터 냉각 칠러 공급 계약 체결",
+   "sourceUrl": "https://www.lg.com/global/newsroom/news/eco-solution/lg-electronics-secures-supply-agreement-to-advance-ai-data-center-cooling-business-in-north-america/",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.lg.com/global/newsroom/news/eco-solution/lg-electronics-secures-supply-agreement-to-advance-ai-data-center-cooling-business-in-north-america/",
+     "httpStatus": 200,
+     "sha256": "bc2d42d9e752beb0648fb61cc09e95ccc96f212e543bf9ab599f244f955c8f5c"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.lg.com/content/dam/channel/wcms/global/newsroom/news/eco-solution/lg-electronics-secures-supply-agreement-to-advance-ai-data-center-cooling-business-in-north-america/press-setting-image-mobile-airaidc-768.png",
+     "httpStatus": 200,
+     "sha256": "86eda5b075db0deb912fdf07fd9d27e2845464fe8af02e13f9e4c8d7e47dcb45",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://www.lg.com/content/dam/channel/wcms/global/newsroom/news/eco-solution/lg-electronics-secures-supply-agreement-to-advance-ai-data-center-cooling-business-in-north-america/press-setting-image-mobile-airaidc-768.png",
+   "publicPath": "/source-media/weekly-20261006/86eda5b075db.jpg",
+   "sha256": "86eda5b075db0deb912fdf07fd9d27e2845464fe8af02e13f9e4c8d7e47dcb45",
+   "byteSize": 92631,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|LG전자, 북미 AI 데이터센터 냉각 칠러 공급 계약 체결|https://www.lg.com/global/newsroom/news/eco-solution/lg-electronics-secures-supply-agreement-to-advance-ai-data-center-cooling-business-in-north-america/"
+  },
+  {
+   "week": "2026-w41",
+   "title": "llama.cpp v0.6.0, 확장 배치 API와 신규 모델 지원 추가",
+   "sourceUrl": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:22:47.639Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0",
+     "httpStatus": 200,
+     "sha256": "0ad66cd486c97115672dcb15fbbb218688e9129c2b909411f67f5a70e2e316e4"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/f148c6e1fa26a2f23e77888f27f831597619df4e9dedb1c712812b4146909c58/ggml-org/llama.cpp/releases/tag/v0.6.0",
+     "httpStatus": 200,
+     "sha256": "545b2aaad71874a2a64de00b9018276b830e04b3af734267cf7e0619ebfe9b03",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/f148c6e1fa26a2f23e77888f27f831597619df4e9dedb1c712812b4146909c58/ggml-org/llama.cpp/releases/tag/v0.6.0",
+   "publicPath": "/source-media/weekly-20261006/545b2aaad718.png",
+   "sha256": "545b2aaad71874a2a64de00b9018276b830e04b3af734267cf7e0619ebfe9b03",
+   "byteSize": 45927,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w41|llama.cpp v0.6.0, 확장 배치 API와 신규 모델 지원 추가|https://github.com/ggml-org/llama.cpp/releases/tag/v0.6.0"
+  },
+  {
+   "week": "2026-w40",
+   "title": "Claude Code v2.1.284~v2.1.289 릴리스 변경점 정리",
+   "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
+   "status": "available",
+   "checkedAt": "2026-10-05T23:25:58.778Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
+     "httpStatus": 200,
+     "sha256": "837ab490278573316c44a72fa4e347a6c323c39d9d3df1a6dc66fa9e4be28eac"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/fc22e92caa0f81dca53e573c12b8699d165581a12ffa87f8be18ad5dc0508caa/anthropics/claude-code/releases/tag/v2.1.289",
+     "httpStatus": 200,
+     "sha256": "556b29305c35aa367433ab39727c871a9bf915bda248e4204ae6c491f765076d",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/fc22e92caa0f81dca53e573c12b8699d165581a12ffa87f8be18ad5dc0508caa/anthropics/claude-code/releases/tag/v2.1.289",
+   "publicPath": "/source-media/weekly-20261006/556b29305c35.png",
+   "sha256": "556b29305c35aa367433ab39727c871a9bf915bda248e4204ae6c491f765076d",
+   "byteSize": 51095,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1",
+   "key": "2026-w40|Claude Code v2.1.284~v2.1.289 릴리스 변경점 정리|https://github.com/anthropics/claude-code/releases/tag/v2.1.289"
   }
  ],
  "existingFormatRepairs": [
