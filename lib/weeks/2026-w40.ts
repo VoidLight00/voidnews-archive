@@ -6,7 +6,7 @@ export const week40: WeeklyData = {
   "year": 2026,
   "slug": "2026-w40",
   "period": "9/28 ~ 10/4",
-  "totalPosts": 74,
+  "totalPosts": 88,
   "companies": [
     {
       "name": "Google",
@@ -222,6 +222,45 @@ export const week40: WeeklyData = {
       "name": "Ai2",
       "color": "#6B7280",
       "posts": [
+        {
+          "date": "10/2",
+          "platform": "Web",
+          "title": "Ai2, 보고서 작성 모델 AstaBrief 8B와 학습 데이터 공개",
+          "deck": "Asta의 빠른 보고서 모드를 맡는 모델을 함께 풀었어요",
+          "summary": "Ai2가 연구 질문과 검색한 문헌 발췌를 인용이 달린 보고서로 바꿔 주는 8B 모델 AstaBrief를 학습 데이터와 함께 오픈소스로 공개했어요. Ai2는 빠른 모드가 보고서 한 건에 평균 51.1초로, Thinking 모드의 약 3.5배 속도라고 밝혔어요.",
+          "content": "Ai2가 연구 질문과 검색한 문헌 발췌를 받아 인용이 달린 보고서를 써 주는 AstaBrief 8B를 오픈소스로 공개했어요. 이 모델은 Asta의 보고서 생성 기능에서 Claude 기반 Thinking 모드와 나란히 쓰는 빠른 모드로 이미 제공되고 있고, Ai2는 모델과 학습 데이터를 함께 공개한다고 밝혔어요.\n\nAi2가 직접 잰 값에 따르면 빠른 모드는 보고서 한 건에 평균 51.1초가 걸리고, Thinking 모드는 178.5초가 걸려요. Ai2는 이를 약 3.5배 빠르다고 설명해요. 블로그는 학습과 평가의 대부분이 2025년에 끝났다고도 적었어요.\n\nHugging Face의 AstaBrief_8B 저장소는 Apache-2.0 라이선스로 공개돼 있고, 학습 데이터(DPO mix) 저장소도 블로그에 연결돼 있어요.",
+          "source": "https://allenai.org/blog/astabrief",
+          "officialUrl": "https://allenai.org/blog/astabrief",
+          "verifiedAt": "2026-10-06",
+          "slug": "ai2-astabrief-8b-open-source",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "Ai2",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "Hugging Face allenai/AstaBrief_8B",
+              "url": "https://huggingface.co/allenai/AstaBrief_8B"
+            },
+            {
+              "label": "학습 데이터(DPO mix) 저장소",
+              "url": "https://huggingface.co/datasets/allenai/AstaBrief_DPO_Mix"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/1a7a9bb97523.png",
+            "alt": "Open-sourcing AstaBrief, the fast report-generation model in Asta  | Ai2",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Ai2 Open-Sources AstaBrief 8B, a Report-Writing Model, With Its Training Data",
+            "deck": "The model behind Asta's fast report mode is now open",
+            "summary": "Ai2 open-sourced AstaBrief 8B, a model that turns a research question and retrieved literature excerpts into a cited report, together with its training data. Ai2 says Fast mode averages 51.1 seconds per report, about 3.5 times faster than Thinking mode.",
+            "content": "Ai2 open-sourced AstaBrief 8B, a model that takes a research question and retrieved literature excerpts and writes a cited report. The model is already available in Asta's Generate a report feature as Fast mode alongside the Claude-powered Thinking mode, and Ai2 says it is also open-sourcing the model and the training data.\n\nAccording to Ai2's own measurements, Fast mode averages 51.1 seconds per report, compared with 178.5 seconds for Thinking mode. Ai2 describes this as about 3.5 times faster. The blog also notes that most training and evaluation was completed in 2025.\n\nThe AstaBrief_8B repository on Hugging Face is published under the Apache-2.0 license, and the training-data repository (the DPO mix) is linked from the blog."
+          }
+        },
         {
           "date": "10/1",
           "platform": "Web",
@@ -2015,6 +2054,90 @@ export const week40: WeeklyData = {
           }
         },
         {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "NVIDIA·워털루대, 픽셀 공간 통합 모델 PixelUMM 발표",
+          "deck": "VAE도 비전 인코더도 없이 이미지와 영상을 이해하고 생성해요",
+          "summary": "NVIDIA와 워털루대학교 연구진이 VAE와 비전 인코더 없이 디코더 전용 모델 하나로 이미지와 영상의 이해와 생성을 처리하는 PixelUMM을 소개했어요. 코드와 체크포인트는 프로젝트 페이지에서 연결돼요.",
+          "content": "NVIDIA와 워털루대학교 연구진이 이미지와 영상의 이해와 생성을 하나로 합친 모델 PixelUMM을 프로젝트 페이지와 arXiv 논문으로 소개했어요. 저자들은 이 모델이 디코더 전용 트랜스포머 하나로 원시 픽셀을 읽고 쓰며, VAE도 비전 인코더도 쓰지 않는다고 밝혔어요. 이미지는 16x16 패치로, 영상은 4프레임 튜브로 나뉘어 들어가요.\n\n백본은 Qwen3-8B이고, 이해를 맡는 전문가와 생성을 맡는 전문가를 따로 둔다고 해요. 논문 초록은 이미지와 영상의 이해 및 생성 과제 전반에서 경쟁력 있는 성능을 낸다고 주장하지만, 구체적인 벤치마크 수치는 이 글에서 다루지 않아요. 프로젝트 페이지는 공개된 체크포인트가 선형 출력 헤드를 쓴다고 적고 있고, 코드와 체크포인트는 프로젝트 페이지에서 연결돼요.",
+          "source": "https://nv-tlabs.github.io/PixelUMM/",
+          "officialUrl": "https://nv-tlabs.github.io/PixelUMM/",
+          "verifiedAt": "2026-10-06",
+          "slug": "nvidia-pixelumm-pixel-space-unified-model",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "NVIDIA",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2609.38597 (v1, 2026-09-29)",
+              "url": "https://arxiv.org/abs/2609.38597"
+            },
+            {
+              "label": "GitHub nv-tlabs/PixelUMM",
+              "url": "https://github.com/nv-tlabs/PixelUMM"
+            },
+            {
+              "label": "Hugging Face nvidia/PixelUMM",
+              "url": "https://huggingface.co/nvidia/PixelUMM"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/ec249b6512ae.jpg",
+            "alt": "NVIDIA·워털루대, 픽셀 공간 통합 모델 PixelUMM 발표"
+          },
+          "en": {
+            "title": "NVIDIA and Waterloo Present PixelUMM, a Unified Model in Pixel Space",
+            "deck": "It understands and generates images and video without a VAE or vision encoder",
+            "summary": "NVIDIA and University of Waterloo researchers introduced PixelUMM, a single decoder-only model that handles image and video understanding and generation without a VAE or a vision encoder. Code and a checkpoint are linked from the project page.",
+            "content": "NVIDIA and University of Waterloo researchers introduced PixelUMM, a model that unifies image and video understanding and generation, through a project page and an arXiv paper. The authors say it reads and writes raw pixels with a single decoder-only Transformer, with no VAE and no vision encoder. Images become 16x16 patches and videos become 4-frame tubes.\n\nThe backbone is Qwen3-8B, with separate experts for understanding and for generation. The abstract says the model achieves competitive performance across image and video understanding and generation tasks, but this article does not cover specific benchmark numbers. The project page says the released checkpoint uses linear output heads, and links to the code and the checkpoint."
+          }
+        },
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "NVIDIA Research, 4K 영상 한 단계 정제 SoL-Refiner 공개",
+          "deck": "저해상도 영상 생성 결과를 한 번의 디노이징으로 4K로 키워요",
+          "summary": "NVIDIA Research가 여러 영상 생성기의 저해상도 결과를 한 번의 디노이징 단계로 4K 영상으로 바꾸는 SoL-Refiner를 소개했어요. 저자들은 3단계 LTX-2.3 Refiner보다 지연 시간이 줄었다고 밝혔고, 코드와 가중치도 올렸어요.",
+          "content": "NVIDIA Research가 여러 영상 생성기가 내놓은 저해상도 결과를 4K 영상으로 바꾸는 한 단계 정제 모델 SoL-Refiner를 프로젝트 페이지와 arXiv 논문으로 소개했어요. 저자들은 목표 해상도에서 디노이징 단계를 한 번만 거치면 된다고 설명하고, 고해상도 연속 학습, 프레임 기반 강화학습 후처리, 한 단계 분포 매칭 증류로 학습했다고 밝혔어요.\n\n논문 초록은 3840x2176 해상도에서 3단계 LTX-2.3 Refiner보다 논문이 보고한 두 지표가 모두 나아졌고, 2K 지연 시간 설정에서 정제 지연이 8.91배 빨라졌다고 적고 있어요. 프로젝트 페이지는 MiniMax H3 파이프라인을 NVIDIA GB200에서 돌렸을 때 152.3초가 5.64초로 줄어 27.03배 빨라졌다고 보고해요. 이 수치는 모두 저자들이 직접 측정한 값이에요.\n\n코드는 NVlabs/Sana 저장소의 sol-engine 브랜치에 있고, 한 단계 가중치는 Hugging Face에 올라와 있어요.",
+          "source": "https://nvlabs.github.io/Sana/Sol-Refiner/",
+          "officialUrl": "https://nvlabs.github.io/Sana/Sol-Refiner/",
+          "verifiedAt": "2026-10-06",
+          "slug": "nvidia-sol-refiner-one-step-4k-video",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "NVIDIA",
+            "Media"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2609.37969 (v1, 2026-09-29)",
+              "url": "https://arxiv.org/abs/2609.37969"
+            },
+            {
+              "label": "GitHub NVlabs/Sana sol-engine 브랜치의 SoL-Refiner 코드",
+              "url": "https://github.com/NVlabs/Sana/tree/sol-engine/models/sol-refiner"
+            },
+            {
+              "label": "Hugging Face 한 단계 가중치",
+              "url": "https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.3-One-Step"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/5db4a041ad7c.jpg",
+            "alt": "SoL-Refiner: Speed-of-Light One-Step Refinement for High-Resolution Video"
+          },
+          "en": {
+            "title": "NVIDIA Research Releases SoL-Refiner, a One-Step 4K Video Refiner",
+            "deck": "It lifts low-resolution video outputs to 4K in a single denoising step",
+            "summary": "NVIDIA Research introduced SoL-Refiner, a one-step video refiner that turns low-resolution outputs of different video generators into 4K video. The authors report lower latency than the three-step LTX-2.3 Refiner, and code and weights are released.",
+            "content": "NVIDIA Research introduced SoL-Refiner, a one-step refinement model that turns low-resolution outputs of diverse video generators into 4K video, through a project page and an arXiv paper. The authors explain that it needs a single denoising step at the target resolution, and they say it was trained with high-resolution continual training, frame-based RL post-training and one-step distribution-matching distillation.\n\nThe arXiv abstract says that at 3840x2176 the model improves both metrics reported in the paper over the three-step LTX-2.3 Refiner, with an 8.91x refinement-latency speedup in the authors' 2K latency setting. The project page separately reports that a MiniMax H3 pipeline on an NVIDIA GB200 drops from 152.3 s to 5.64 s, a 27.03x speedup. All of these figures are the authors' own measurements.\n\nThe code is on the sol-engine branch of the NVlabs/Sana repository, and the one-step weights are on Hugging Face."
+          }
+        },
+        {
           "date": "9/28",
           "platform": "Web",
           "title": "NVIDIA, 에이전트 테스트부터 배포까지 다루는 보안 플랫폼 발표",
@@ -2847,6 +2970,466 @@ export const week40: WeeklyData = {
             "deck": "In a reply to a Chosun Ilbo report, it says it recognizes the need to concentrate funding",
             "summary": "South Korea's Ministry of Science and ICT said nothing has yet been decided about halting the sovereign AI foundation model project or setting up an SPC for frontier-model development. It was replying to a Chosun Ilbo report of September 28. The ministry also said the government deeply recognizes the need to concentrate funding on top-tier AI model development.",
             "content": "In an explanatory press document, the Ministry of Science and ICT said that nothing has yet been decided about halting the sovereign AI foundation model project or setting up an SPC for top-tier AI model development. The document prints a distribution date of Monday, September 28, 2026, and the ministry's board lists it under September 29.\n\nThe document responds to a Chosun Ilbo report of September 28, which said the government was considering halting the project and setting up an SPC. The ministry said the government deeply recognizes the need for concentrated funding to develop top-tier AI models, but that whether to halt the project or set up an SPC has not yet been decided. The document ends by asking the press to report with care.\n\nNewsis reported that three teams, SK Telecom, Upstage and LG AI Research, are competing in the project. That detail comes from the Newsis report. Yonhap also reported the ministry's explanation the same day.\n\nWhat the ministry stated is limited to two points: no decision has been made on halting the project or setting up an SPC, and it recognizes the need to concentrate funding."
+          }
+        }
+      ]
+    },
+    {
+      "name": "BAAI",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "BAAI, 스스로 해법을 고쳐 가는 27B 에이전트 모델 AREX-2",
+          "deck": "제안, 측정, 성찰, 수정을 여러 라운드 반복하도록 학습했어요",
+          "summary": "베이징 인공지능 연구원(BAAI)이 27B 파라미터 오픈 웨이트 에이전트 모델 AREX-2를 공개했어요. Qwen3.8-27B를 기반으로 Apache-2.0 라이선스를 쓰고, 테스트 시점에 여러 라운드에 걸쳐 해법을 개선하도록 학습됐어요.",
+          "content": "베이징 인공지능 연구원(BAAI)이 27B 파라미터의 장기 과제용 에이전트 모델 AREX-2를 Hugging Face에 올렸어요. 모델 카드에 따르면 AREX-2는 테스트 시점에 여러 라운드를 거치며 해법을 제안하고, 측정하고, 성찰하고, 수정하면서 결과를 개선하도록 학습된 모델이에요.\n\n모델 카드는 라이선스가 Apache-2.0이고, 기반 모델은 Qwen/Qwen3.8-27B이며, 컨텍스트 길이는 262,144토큰이라고 적고 있어요. 저자들이 같은 날 올린 arXiv 초록에 따르면 AREX-2는 검증 가능한 피드백이 있는 머신러닝 과제와 알고리즘 프로그래밍 과제로 학습했고, 이렇게 익힌 능력이 딥 리서치에도 이어진다고 해요. 벤치마크 점수는 이 글에서 옮기지 않아요.\n\nHugging Face 저장소는 2026년 9월 29일에 만들어졌고, 가중치도 같은 날 올라왔어요. 이후 커밋은 모델 카드 수정이에요.",
+          "source": "https://huggingface.co/BAAI/AREX-2",
+          "officialUrl": "https://huggingface.co/BAAI/AREX-2",
+          "verifiedAt": "2026-10-06",
+          "slug": "baai-arex-2-self-improving-agent",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "BAAI",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2609.38288 (v1, 2026-09-29)",
+              "url": "https://arxiv.org/abs/2609.38288"
+            },
+            {
+              "label": "모델 카드에 연결된 코드 저장소",
+              "url": "https://github.com/VectorSpaceLab/AREX-2"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/6ba33fd758a3.png",
+            "alt": "BAAI/AREX-2 · Hugging Face",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "BAAI Releases AREX-2, a 27B Agent Model That Revises Its Own Solutions",
+            "deck": "Trained to propose, measure, reflect and revise over many rounds",
+            "summary": "The Beijing Academy of Artificial Intelligence (BAAI) released AREX-2, a 27B open-weight agent model. It is built on Qwen3.8-27B under the Apache-2.0 license and is trained to improve its solutions over multiple test-time rounds.",
+            "content": "The Beijing Academy of Artificial Intelligence (BAAI) posted AREX-2, a 27B-parameter long-horizon agent model, on Hugging Face. According to the model card, AREX-2 is trained to improve a solution over multiple test-time rounds by proposing, measuring, reflecting and revising.\n\nThe model card lists the Apache-2.0 license, Qwen/Qwen3.8-27B as the base model, and a context length of 262,144 tokens. The authors' arXiv abstract, submitted the same day, says the model is trained on machine-learning and algorithmic-programming tasks with verifiable feedback, and that the skill transfers to deep research. This article does not repeat the benchmark scores.\n\nThe Hugging Face repository was created on September 29, 2026, and the weights were uploaded the same day. Later commits are model-card edits."
+          }
+        }
+      ]
+    },
+    {
+      "name": "ByteDance",
+      "color": "#325AB4",
+      "posts": [
+        {
+          "date": "10/1",
+          "platform": "Web",
+          "title": "ByteDance·텍사스A&M, 적대적 증류 방식 DMAD 발표",
+          "deck": "한 단계 이미지와 4단계 영상 생성을 위한 증류법이에요",
+          "summary": "ByteDance와 텍사스A&M대학교 연구진이 분포 매칭을 판별기 분류 문제로 바꾼 소수 단계 증류법 DMAD를 소개했어요. 저자들은 한 단계 이미지와 4단계 영상 및 오디오 영상 생성 결과를 보고했고, 코드와 모델, 데모를 연결했어요.",
+          "content": "ByteDance와 텍사스A&M대학교 연구진이 소수 단계 증류법 DMAD(Distribution Matching as Adversarial Distillation)를 프로젝트 페이지와 arXiv 논문으로 소개했어요. 저자들은 DMAD가 분포 매칭을 적대적 증류로 바꿔 한 단계 이미지와 4단계 영상, 오디오 영상 생성에 쓸 수 있게 한다고 밝혔어요. 보조 점수 모델을 따로 학습하는 대신 공유 백본 위에 판별기 헤드 두 개를 학습하는 방식이에요.\n\n저자들이 보고한 수치는 다음과 같아요.\n\n- ImageNet 64x64 한 단계 생성의 FID는 1.04예요.\n- COCO-10K 기준 4단계 SDXL의 FID는 14.47이에요.\n- 4단계 Wan2.1-T2V-14B의 VBench 총점은 85.15예요.\n- MiniMax-H3-33B에서 rCM 대비 사람 선호도는 84.6%예요.\n\n이 수치는 모두 프로젝트 페이지와 arXiv 초록에 실린 저자 보고값이에요. 코드와 모델, 데모는 프로젝트 페이지에서 연결돼요.",
+          "source": "https://yzmblog.github.io/projects/DMAD/",
+          "officialUrl": "https://yzmblog.github.io/projects/DMAD/",
+          "verifiedAt": "2026-10-06",
+          "slug": "bytedance-dmad-adversarial-distillation",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "ByteDance",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2610.02188 (v1, 2026-10-01)",
+              "url": "https://arxiv.org/abs/2610.02188"
+            },
+            {
+              "label": "GitHub 저장소 (저자 계정)",
+              "url": "https://github.com/Yzmblog/DMAD"
+            },
+            {
+              "label": "Hugging Face 모델 저장소",
+              "url": "https://huggingface.co/ZhengmingYu/DMAD"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/6e5b47b36cf5.png",
+            "alt": "ByteDance·텍사스A&M, 적대적 증류 방식 DMAD 발표"
+          },
+          "en": {
+            "title": "ByteDance and Texas A&M Present DMAD, an Adversarial Distillation Method",
+            "deck": "A distillation method for one-step images and four-step video",
+            "summary": "ByteDance and Texas A&M University researchers introduced DMAD, a few-step distillation method that recasts distribution matching as discriminator classification. The authors report results for one-step images and four-step video and audio-video generation, with code, models and a demo linked.",
+            "content": "ByteDance and Texas A&M University researchers introduced DMAD (Distribution Matching as Adversarial Distillation), a few-step distillation method, through a project page and an arXiv paper. The authors say DMAD turns distribution matching into adversarial distillation for one-step images and four-step video and audio-video generation. Instead of fitting an auxiliary score model, it trains two discriminator heads on a shared backbone.\n\nThe authors report the following figures.\n\n- The FID for one-step generation on ImageNet 64x64 is 1.04.\n- The FID for four-step SDXL on COCO-10K is 14.47.\n- The VBench total for four-step Wan2.1-T2V-14B is 85.15.\n- On MiniMax-H3-33B, the human preference rate over rCM is 84.6 percent.\n\nAll of these are author-reported values that appear on the project page and in the arXiv abstract. Code, models and a demo are linked from the project page."
+          }
+        },
+        {
+          "date": "9/28",
+          "platform": "Web",
+          "title": "ByteDance·UC 샌디에이고, 영상 증류 기법 PDMD 발표",
+          "deck": "한 줄짜리 투영으로 영상 증류의 학습 오차를 걸러낸다고 해요",
+          "summary": "ByteDance와 UC 샌디에이고 연구진이 영상 확산 모델용 증류 기법 PDMD를 소개했어요. 분포 매칭 증류(DMD)의 업데이트에 투영 한 줄을 더해 학생 모델의 학습 오차를 걸러낸다고 저자들은 밝혔어요. 코드와 가중치는 프로젝트 페이지에서 연결돼요.",
+          "content": "ByteDance와 UC 샌디에이고 연구진이 영상 확산 모델용 증류 기법 PDMD(Projected Distribution Matching Distillation)를 프로젝트 페이지와 arXiv 논문으로 소개했어요.\n\n저자들은 PDMD가 학생 모델의 학습 오차를 걸러내는 한 줄짜리 투영으로 확산 증류를 개선한다고 설명했어요. 분포 매칭 증류(DMD)의 업데이트 중에서 학생 모델과 비평 모델의 끝점 잔차에 평행한 성분을 제거하는 방식이고, 보조 손실이나 추가 네트워크, 추가 모델 호출은 필요 없다고 해요.\n\n프로젝트 페이지 표에 따르면 Wan2.1에서 4 NFE로 얻은 VBench 총점은 83.73이고, 같은 조건의 DMD보다 1.03 높아요. MiniMax-H3에서는 VideoGen-Eval 시각 총점이 83.17이에요. 두 수치는 모두 저자들이 직접 보고한 값이에요. 코드와 모델은 프로젝트 페이지에서 연결돼요.",
+          "source": "https://pdmd2026.github.io/",
+          "officialUrl": "https://pdmd2026.github.io/",
+          "verifiedAt": "2026-10-06",
+          "slug": "bytedance-pdmd-video-distillation",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "ByteDance",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2609.35768 (v1, 2026-09-28)",
+              "url": "https://arxiv.org/abs/2609.35768"
+            },
+            {
+              "label": "GitHub 저장소 (저자 계정)",
+              "url": "https://github.com/ZeamoxWang/pdmd"
+            },
+            {
+              "label": "Hugging Face pdmd2026/pdmd_4NFE_full",
+              "url": "https://huggingface.co/pdmd2026/pdmd_4NFE_full"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/a127d6511475.jpg",
+            "alt": "PDMD — Projected Distribution Matching Distillation"
+          },
+          "en": {
+            "title": "ByteDance and UC San Diego Researchers Present PDMD, a Video Distillation Method",
+            "deck": "The authors say a one-line projection filters the student's training error",
+            "summary": "Researchers at ByteDance and UC San Diego introduced PDMD, a distillation method for video diffusion models. The authors say a one-line projection added to the Distribution Matching Distillation (DMD) update filters the student's training error. Code and weights are linked from the project page.",
+            "content": "Researchers at ByteDance and UC San Diego introduced PDMD (Projected Distribution Matching Distillation), a distillation method for video diffusion models, through a project page and an arXiv paper.\n\nThe authors explain that PDMD improves diffusion distillation with a one-line projection that filters the student's training error. The method removes the component of the Distribution Matching Distillation (DMD) update that is parallel to the endpoint residual between the student and the critic. According to the authors, it needs no auxiliary loss, no extra network and no extra model pass.\n\nThe table on the project page lists a VBench total of 83.73 at 4 NFE on Wan2.1, which is 1.03 above matched DMD. On MiniMax-H3 the VideoGen-Eval visual total is 83.17. Both figures are reported by the authors themselves. Code and models are linked from the project page."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cactus Compute",
+      "color": "#22C55E",
+      "posts": [
+        {
+          "date": "10/2",
+          "platform": "Web",
+          "title": "Cactus Compute, 16.9MB 음성 인식 모델 Whistle 공개",
+          "deck": "CPU만으로 일곱 개 언어를 받아 적는 온디바이스 모델이에요",
+          "summary": "Cactus Compute가 파일 하나 16.9MB로 CPU에서 돌아가는 온디바이스 음성 인식 모델 Whistle을 공개했어요. 영어를 포함한 7개 언어를 받아 적고, 회사는 Needle 모델과 같은 C++ 엔진을 쓴다고 밝혔어요.",
+          "content": "Cactus Compute가 모바일, 웨어러블, 로봇, 스마트홈, 차량, 마이크로컨트롤러용 음성 인식 모델 Whistle을 공개했어요. 회사는 Whistle이 16.9MB짜리 파일 하나이고, 의존성 없이 CPU에서 실행된다고 밝혔어요. 영어, 독일어, 프랑스어, 스페인어, 이탈리아어, 네덜란드어, 폴란드어를 받아 적어요.\n\n게시물은 Apple M4 Pro CPU에서 10초 분량 오디오의 첫 토큰이 11.1밀리초에 나온다고 보고해요. Whisper base, Moonshine tiny v2와의 비교는 회사가 직접 한 벤치마크라서 여기서는 옮기지 않아요.\n\nWhistle은 회사의 Needle 모델과 같은 C++ 엔진 위에서 돌아가요. 두 모델을 나란히 올려 쓰면 오디오 클립 하나를 바로 도구 호출로 바꿀 수 있다고 회사는 설명해요. 모델은 Hugging Face에서 받을 수 있어요.",
+          "source": "https://cactuscompute.com/blog/whistle",
+          "officialUrl": "https://cactuscompute.com/blog/whistle",
+          "verifiedAt": "2026-10-06",
+          "slug": "cactus-compute-whistle-on-device-speech",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "Cactus Compute",
+            "Voice"
+          ],
+          "backupUrls": [
+            {
+              "label": "Hugging Face Cactus-Compute/whistle",
+              "url": "https://huggingface.co/Cactus-Compute/whistle"
+            },
+            {
+              "label": "GitHub cactus-compute/needle (엔진)",
+              "url": "https://github.com/cactus-compute/needle"
+            }
+          ],
+          "en": {
+            "title": "Cactus Compute Releases Whistle, a 16.9 MB Speech Recognition Model",
+            "deck": "An on-device model that transcribes seven languages on CPU alone",
+            "summary": "Cactus Compute released Whistle, an on-device speech recognition model packed into one 16.9 MB file that runs on CPU in seven languages. The company says it shares one C++ engine with its Needle model.",
+            "content": "Cactus Compute released Whistle, a speech recognition model for mobiles, wearables, robots, smart home, automotive and microcontrollers. The company says Whistle is one 16.9 MB file and runs on the CPU with no dependencies. It transcribes English, German, French, Spanish, Italian, Dutch and Polish.\n\nThe post reports a time to first token of 11.1 ms for ten seconds of audio on an Apple M4 Pro CPU. The comparisons with Whisper base and Moonshine tiny v2 are the company's own benchmarks, so this article does not repeat them.\n\nWhistle runs on the same C++ engine as the company's Needle model. The company explains that when the two models are loaded side by side, one audio clip can be turned straight into tool calls. The model is available on Hugging Face."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Carnegie Mellon University",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "카네기멜런대, 점 프롬프트 3D 분할 모델 Point2Part 발표",
+          "deck": "부품마다 점 하나를 찍으면 겹침 없이 전체를 나눠요",
+          "summary": "카네기멜런대학교 연구진이 부품마다 점 프롬프트 하나로 3D 형상을 서로 겹치지 않는 부품들로 나누는 모델 Point2Part를 소개했어요. 저자들은 이미지에서 부품 생성, 메시에서 부품 생성, 부품 분할을 한 모델이 처리한다고 밝혔어요.",
+          "content": "카네기멜런대학교 연구진이 3D 형상을 부품 단위로 나누는 프롬프트형 모델 Point2Part를 프로젝트 페이지와 arXiv 논문으로 소개했어요. 저자들은 3D 부품 분해를 형상 전체에 대한 공동 분할 문제로 정의했고, 이렇게 하면 부품들이 구성상 서로 겹치지 않으면서 전체를 빠짐없이 채운다고 설명했어요.\n\n사용자는 원하는 부품마다 점 프롬프트 하나를 지정해요. 하나의 모델이 이미지에서 부품 생성, 메시에서 부품 생성, 부품 분할을 모두 처리한다고 저자들은 밝혔어요. 프로젝트 페이지에는 벤치마크 표가 있지만 저자들이 직접 보고한 값이라 여기서는 옮기지 않아요. 코드 저장소는 프로젝트 페이지에서 연결돼요.",
+          "source": "https://henrytsui000.github.io/Point2Part/",
+          "officialUrl": "https://henrytsui000.github.io/Point2Part/",
+          "verifiedAt": "2026-10-06",
+          "slug": "cmu-point2part-3d-partitioning",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "Carnegie Mellon University",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2609.38180 (v1, 2026-09-29)",
+              "url": "https://arxiv.org/abs/2609.38180"
+            },
+            {
+              "label": "프로젝트 페이지에 연결된 코드 저장소",
+              "url": "https://github.com/henrytsui000/Point2Part"
+            }
+          ],
+          "en": {
+            "title": "Carnegie Mellon Presents Point2Part, a Point-Prompted 3D Partitioning Model",
+            "deck": "One point per part splits a shape without overlap",
+            "summary": "Carnegie Mellon University researchers introduced Point2Part, a model that splits a 3D shape into non-overlapping parts using one point prompt per part. The authors say a single model handles image-to-part, mesh-to-part and part segmentation.",
+            "content": "Carnegie Mellon University researchers introduced Point2Part, a promptable model that splits a 3D shape into parts, through a project page and an arXiv paper. The authors formulate 3D part decomposition as a joint partitioning of the entire shape, and they explain that the parts are exclusive and exhaustive by construction.\n\nUsers specify each desired part with one point prompt. The authors say one model handles image-to-part generation, mesh-to-part generation and part segmentation. The project page includes benchmark tables, but the values are author-reported, so this article does not repeat them. The code repository is linked from the project page."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Comfy Org",
+      "color": "#7C3AED",
+      "posts": [
+        {
+          "date": "10/1",
+          "platform": "Web",
+          "title": "Comfy Org, 워크플로우를 짜 주는 Comfy Agent 베타 공개",
+          "deck": "Comfy Cloud에서 바로 쓰고 Desktop은 몇 주 뒤에 들어와요",
+          "summary": "Comfy Org가 ComfyUI 안에서 워크플로우를 계획하고 만들고 실행하는 Comfy Agent를 베타로 내놓았어요. Comfy Cloud에서는 모두가 쓸 수 있고, Comfy Desktop에는 몇 주 안에 들어온다고 밝혔어요.",
+          "content": "Comfy Org가 ComfyUI 안에서 일하는 Comfy Agent를 소개했어요. 회사 블로그에 따르면 Comfy Agent는 지금 Comfy Cloud에서 모든 사용자에게 열려 있고, Comfy Desktop에는 몇 주 안에 들어와요.\n\n회사는 원하는 결과를 말로 설명하면 Comfy Agent가 워크플로우를 계획하고, 만들고, 실행하고, 눈앞에서 다듬어 간다고 설명해요. 채팅은 최대 5개를 동시에 열 수 있어요. 무료로 써 볼 수 있고, 이미 가지고 있는 Comfy Credits를 사용해요. 현재는 베타 단계라고 회사가 밝혔어요.",
+          "source": "https://blog.comfy.org/p/comfy-agent-the-first-agent-for-craft",
+          "officialUrl": "https://blog.comfy.org/p/comfy-agent-the-first-agent-for-craft",
+          "verifiedAt": "2026-10-06",
+          "slug": "comfy-org-comfy-agent-beta",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "Comfy Org",
+            "Agents"
+          ],
+          "backupUrls": [
+            {
+              "label": "Comfy 블로그 RSS 피드",
+              "url": "https://blog.comfy.org/feed"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/8a8494ad0d33.jpg",
+            "alt": "Comfy Agent: the first agent for craft",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Comfy Org Launches Comfy Agent in Beta to Build Workflows",
+            "deck": "Available now in Comfy Cloud, with Desktop support due in a few weeks",
+            "summary": "Comfy Org launched Comfy Agent, an in-app assistant that plans, builds and runs ComfyUI workflows from a text request. It is in beta on Comfy Cloud, with Comfy Desktop support due in a few weeks.",
+            "content": "Comfy Org introduced Comfy Agent, an agent that works inside ComfyUI. According to the company blog, Comfy Agent is now available to everyone in Comfy Cloud and will arrive in Comfy Desktop in a few weeks.\n\nThe company says you describe what you want and Comfy Agent plans, builds, runs and iterates on workflows right in front of you. Up to 5 chats can run in parallel. It is free to try and uses the Comfy Credits you already have. The company says it is currently in beta."
+          }
+        }
+      ]
+    },
+    {
+      "name": "CopilotKit",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "CopilotKit, 상시 AI 에이전트 템플릿 OpenDots 공개",
+          "deck": "문자, 음성 통화, Slack을 오가는 알파 단계 오픈소스 템플릿이에요",
+          "summary": "CopilotKit이 문자, 음성 통화, Slack에서 일하는 상시 AI 에이전트를 만드는 알파 단계 오픈소스 템플릿 OpenDots를 공개했어요. 호스팅 제품은 아니고, 대화에는 CopilotKit Intelligence가 필요하다고 밝혔어요.",
+          "content": "CopilotKit이 GitHub에 오픈소스 템플릿 OpenDots를 올렸어요. README는 이를 각자 자기 컴퓨터를 가진 지속형 AI 에이전트를 만들기 위한 오픈소스 템플릿이라고 소개하고, 웹과 모바일에서 쓸 수 있다고 적고 있어요. 문자, 통화, Slack을 오가며 일하는 상시 AI 동료를 내세운 프로젝트예요.\n\n호스팅되는 제품이 아니라 템플릿이에요. 저장소를 복제해서 에이전트(Dots)를 정의하고, 서비스를 연결하고, 화면과 도구를 사용자 환경에 맞게 고쳐 쓰는 출발점이라고 설명해요. 알파 단계이고 MIT 라이선스이며, CopilotKit과 AG-UI로 만들었다고 해요. 대화를 하려면 CopilotKit Intelligence가 필요하고, 호스팅 서비스, 로컬 Docker 평가, 라이선스를 받은 자체 호스팅 배포 중에서 고를 수 있어요.\n\nCopilotKit 제품 페이지는 OpenDots를 OpenBot, OpenMuse와 함께 제품 목록에 올렸어요. 개인 개발자의 Open Dots 프로젝트와는 이름만 비슷한 별개의 저장소예요.",
+          "source": "https://github.com/CopilotKit/OpenDots",
+          "officialUrl": "https://github.com/CopilotKit/OpenDots",
+          "verifiedAt": "2026-10-06",
+          "slug": "copilotkit-opendots-agent-template",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "CopilotKit",
+            "Agents"
+          ],
+          "backupUrls": [
+            {
+              "label": "CopilotKit OpenDots 제품 페이지",
+              "url": "https://www.copilotkit.ai/opendots"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/a09a5169fe53.png",
+            "alt": "GitHub - CopilotKit/OpenDots: Your always-on AI coworkers that move between text, calls, and Slack.",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "CopilotKit Releases OpenDots, an Always-On AI Agent Template",
+            "deck": "An alpha open-source template for agents that move between text, calls and Slack",
+            "summary": "CopilotKit released OpenDots, an alpha open-source template for always-on AI agents that work over text, voice calls and Slack. It is not a hosted product, and CopilotKit says conversations require CopilotKit Intelligence.",
+            "content": "CopilotKit posted OpenDots, an open-source template, on GitHub. The README describes it as an open-source template for persistent AI agents, each with its own computer, available on Web and Mobile. The project presents always-on AI coworkers that move between text, calls and Slack.\n\nOpenDots is a template, not a hosted product. The README describes it as a starting point: clone it, define your Dots, connect your services, and adapt the interface and tools to your needs. It is marked Alpha, licensed under MIT, and built with CopilotKit and AG-UI. Conversations require CopilotKit Intelligence, which is offered as a hosted service, a local Docker evaluation or a licensed self-hosted deployment.\n\nThe CopilotKit product page lists OpenDots next to OpenBot and OpenMuse. It is a separate repository from the individual developer's Open Dots project and only shares a similar name."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fermion Research",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "Fermion Research, 164MB 영어 음성 인식 모델 Phonon-2 공개",
+          "deck": "NVIDIA Parakeet을 압축해 만든 작은 오픈 음성 인식 모델이에요",
+          "summary": "Fermion Research가 NVIDIA의 Parakeet TDT 0.6B v3를 약 2.1비트 수준으로 압축한 164MB 영어 음성 인식 모델 Phonon-2를 공개했어요. 회사는 900MB 미만 오픈 모델 중 가장 정확하다고 밝혔어요.",
+          "content": "Fermion Research가 NVIDIA의 Parakeet TDT 0.6B v3를 압축해 만든 영어 음성 인식 모델 Phonon-2를 공개했어요. 회사는 이 모델이 900MB 미만 오픈 음성 인식 모델 중 가장 정확하다고 밝혔고, 파일 크기는 164MB예요. 라이선스는 CC-BY-4.0이에요.\n\n회사 발표에 따르면 Open ASR Leaderboard의 영어 데이터셋 7개에서 평균 단어 오류율이 5.21%이고, Apple M5 MacBook Air(MLX)에서 실시간의 174배 속도로 돌아가요. 이 수치는 모두 회사가 직접 잰 값이에요. 같은 페이지의 표에서 원본 교사 모델(2,508MB)의 평균 단어 오류율은 4.96%로 Phonon-2보다 낮게 나와 있어요.\n\n회사는 인코더 가중치를 하나당 약 2.1비트 수준으로 압축했다고 설명해요. 모델은 Hugging Face에서도 받을 수 있어요.",
+          "source": "https://www.fermionresearch.com/research/phonon-2/",
+          "officialUrl": "https://www.fermionresearch.com/research/phonon-2/",
+          "verifiedAt": "2026-10-06",
+          "slug": "fermion-phonon-2-compact-speech-recognition",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "Fermion Research",
+            "Voice"
+          ],
+          "backupUrls": [
+            {
+              "label": "Hugging Face FermionResearch/Phonon-2",
+              "url": "https://huggingface.co/FermionResearch/Phonon-2"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/a542edbf4f62.jpg",
+            "alt": "A field of warm mineral light gathering into a single bright band"
+          },
+          "en": {
+            "title": "Fermion Research Releases Phonon-2, a 164 MB English Speech Recognition Model",
+            "deck": "A small open speech model compressed from NVIDIA's Parakeet",
+            "summary": "Fermion Research released Phonon-2, a 164 MB English speech recognition model compressed from NVIDIA's Parakeet TDT 0.6B v3 to about 2.1 bits per encoder weight. The company says it is the most accurate open model under 900 MB.",
+            "content": "Fermion Research released Phonon-2, an English speech recognition model compressed from NVIDIA's Parakeet TDT 0.6B v3. The company says it is the most accurate open speech recognition model under 900 MB. The file is 164 MB, and the license is CC-BY-4.0.\n\nAccording to the company, Phonon-2 averages a 5.21% word error rate across the seven English sets of the Open ASR Leaderboard and runs at 174 times realtime on an Apple M5 MacBook Air with MLX. These figures are the company's own measurements. The table on the same page shows the 2,508 MB teacher model at a 4.96% average word error rate, which is lower than Phonon-2.\n\nThe company says it compressed the encoder to about 2.1 bits per weight. The model is also available on Hugging Face."
+          }
+        }
+      ]
+    },
+    {
+      "name": "IQuest",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/28",
+          "platform": "Web",
+          "title": "IQuest, 에이전트 코딩용 MoE 모델 IQuest-Q1 공개",
+          "deck": "총 약 320B 파라미터에 컨텍스트 길이 524,288토큰이에요",
+          "summary": "IQuest가 에이전트 코딩과 CLI 도구 사용을 겨냥한 MoE 언어 모델 IQuest-Q1을 GitHub와 Hugging Face에 올렸어요. README는 총 약 320B, 활성 약 15B 파라미터에 524k 토큰 컨텍스트라고 설명하고, 아직 초기 단계라고 밝혔어요.",
+          "content": "IQuest가 에이전트 코딩, 추론, 다단계 도구 사용을 위해 만든 전문가 혼합(MoE) 모델 IQuest-Q1을 GitHub와 Hugging Face에 올렸어요. IQuest 측이 밝힌 README에는 총 약 320B 파라미터 가운데 토큰마다 약 15B가 활성화되는 것으로 추정한다고 적혀 있고, 사양 표에 나온 컨텍스트 길이는 524,288토큰이에요.\n\nREADME는 IQuest-Q1이 아직 초기 단계이고 상당한 한계가 있다고도 밝혔어요. 벤치마크 결과는 차트 이미지로만 실려 있어서 이 글에서는 수치를 옮기지 않아요. Hugging Face 모델 저장소의 라이선스 항목은 other로 표시돼 있어요.\n\nGitHub 저장소는 2026년 9월 28일에 만들어졌고, 같은 날 초기 버전을 제출하는 커밋이 올라왔어요. 이후 10월 5일까지의 커밋은 배포 관련 업데이트예요. GitHub 릴리스 항목은 비어 있어요.",
+          "source": "https://github.com/IQuestLab/IQuest-Q1",
+          "officialUrl": "https://github.com/IQuestLab/IQuest-Q1",
+          "verifiedAt": "2026-10-06",
+          "slug": "iquest-q1-agentic-coding-moe",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "IQuest",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "Hugging Face 모델 저장소",
+              "url": "https://huggingface.co/IQuestLab/IQuest-Q1"
+            },
+            {
+              "label": "IQuest 리서치 페이지",
+              "url": "https://iquestlab.github.io/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/78500a6021ec.svg",
+            "alt": "GitHub: IQuest-Q1"
+          },
+          "en": {
+            "title": "IQuest Releases IQuest-Q1, an MoE Model for Agentic Coding",
+            "deck": "About 320B total parameters and a 524,288-token context length",
+            "summary": "IQuest posted IQuest-Q1, an MoE language model aimed at agentic coding and CLI tool use, on GitHub and Hugging Face. The README describes about 320B total and 15B active parameters with a 524k-token context window, and says the model is at an early stage.",
+            "content": "IQuest posted IQuest-Q1, a Mixture-of-Experts (MoE) model built for agentic coding, reasoning and multi-step tool use, on GitHub and Hugging Face. The README, published by IQuest, says the model has approximately 320B total parameters and an estimated 15B parameters activated per token. The spec table lists a context length of 524,288 tokens.\n\nThe README also says IQuest-Q1 remains at an early stage with substantial limitations. The benchmark results appear only as chart images, so this article does not repeat any figures. The license field on the Hugging Face model repository is shown as other.\n\nThe GitHub repository was created on September 28, 2026, and a commit submitting the initial version was pushed the same day. Commits through October 5 are deployment updates. The GitHub releases list is empty."
+          }
+        }
+      ]
+    },
+    {
+      "name": "University of Tübingen",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "튀빙겐대, 텍스트로 사람과 물체의 상호작용을 만드는 PAMI",
+          "deck": "신체 부위 앵커가 물체의 움직임을 정하고 접촉을 다듬어요",
+          "summary": "튀빙겐대학교와 막스플랑크 정보학 연구소 연구진이 텍스트에서 사람과 물체의 상호작용을 생성하는 PAMI를 소개했어요. 신체 부위 앵커가 물체 움직임을 정하고, 접촉 정제기가 접촉 형상을 다듬어요. 저자들은 InterAct 벤치마크에서 접촉 재현율이 높아졌다고 밝혔어요.",
+          "content": "튀빙겐대학교와 막스플랑크 정보학 연구소 연구진이 텍스트 조건으로 전신 사람과 물체의 상호작용을 생성하는 PAMI를 프로젝트 페이지와 arXiv 논문으로 소개했어요. 저자들은 신체 부위 앵커가 물체의 움직임에 투표하고, 표면을 감지하는 하이브리드 정제기가 접촉 형상을 정리하는 구조라고 설명했어요. 이 정제기는 거친 단계에서 세밀한 단계로 접촉을 다듬는 구조예요.\n\n저자들은 InterAct 벤치마크에서 기존 최고 방법보다 접촉 재현율이 14.5% 높았다고 밝혔어요. 이 수치는 저자들의 주장이고 독립적으로 재현된 결과는 아니에요. 코드 저장소는 프로젝트 페이지에서 연결돼요.",
+          "source": "https://coral79.github.io/pami/",
+          "officialUrl": "https://coral79.github.io/pami/",
+          "verifiedAt": "2026-10-06",
+          "slug": "tubingen-pami-human-object-interaction",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "University of Tübingen",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "arXiv 2609.38466 (v1, 2026-09-29)",
+              "url": "https://arxiv.org/abs/2609.38466"
+            },
+            {
+              "label": "프로젝트 페이지에 연결된 코드 저장소",
+              "url": "https://github.com/Coral79/PAMI-Code"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/33aa155e87ca.png",
+            "alt": "Method Overview"
+          },
+          "en": {
+            "title": "University of Tübingen Presents PAMI for Text-to-Human-Object Interaction",
+            "deck": "Body-part anchors set the object's motion and a refiner polishes contact",
+            "summary": "Researchers at the University of Tübingen and the Max Planck Institute for Informatics introduced PAMI, which generates human-object interactions from text. Body-part anchors drive the object's motion and a contact refiner polishes the geometry. The authors report higher contact recall on the InterAct benchmark.",
+            "content": "Researchers at the University of Tübingen and the Max Planck Institute for Informatics introduced PAMI, a model that generates text-conditioned full-body human-object interactions, through a project page and an arXiv paper. The authors explain that body-part anchors vote for the object's motion and a hybrid surface-sensing refiner resolves the contact geometry. The refiner works from coarse to fine.\n\nOn the InterAct benchmark, the authors report 14.5% higher contact recall than the previous state of the art. This is the authors' claim and has not been independently reproduced. The code repository is linked from the project page."
+          }
+        }
+      ]
+    },
+    {
+      "name": "독립 개발자",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "9/29",
+          "platform": "Web",
+          "title": "독립 개발자, 오픈소스 에이전트 작업공간 Open Dots 공개",
+          "deck": "승인 단계를 둔 자체 호스팅 에이전트이고, 초기 프로토타입이에요",
+          "summary": "개인 개발자가 GitHub 저장소를 Open Dots라는 자체 호스팅 AI 에이전트 작업공간으로 바꿨어요. 채팅, 승인 프롬프트, 커넥터와 선택형 컴퓨터 런타임을 갖췄고, README는 초기 프로토타입이며 어떤 모델 제공사와도 제휴하지 않았다고 밝혔어요.",
+          "content": "개인 개발자가 GitHub 저장소를 Open Dots라는 오픈소스 개인 AI 에이전트 작업공간으로 바꿨어요. README는 Open Dots를 채팅, 도구 사용, 승인, 커넥터, 컴퓨터 작업을 위한 자체 호스팅형 작업공간이라고 소개해요. 모델과의 대화, 통제된 작업 게이트웨이, 승인 프롬프트, 선택형 브라우저 런타임을 로컬 우선 앱 하나로 묶었다고 설명하고, Docker와 Playwright 기반의 컴퓨터 런타임은 선택 사항이에요.\n\n회사가 내놓은 제품이 아니라 개인 개발자의 프로젝트예요. README는 기능이 동등한 대체품이 아니라 초기 프로토타입이라고 밝혔고, OpenAI, xAI를 비롯한 어떤 모델 제공사와도 제휴하거나 보증받지 않았다고 적었어요. 라이선스는 MIT예요.\n\n이 저장소는 이전에 Generative Media Skills라는 다른 프로젝트였어요. Open Dots 코드는 2026년 9월 29일 커밋에서 처음 나타나고, 릴리스와 태그는 없어요. CopilotKit이 공개한 OpenDots와는 이름만 비슷한 별개의 프로젝트예요.",
+          "source": "https://github.com/Anil-matcha/Open-Dots",
+          "officialUrl": "https://github.com/Anil-matcha/Open-Dots",
+          "verifiedAt": "2026-10-06",
+          "slug": "open-dots-personal-agent-workspace",
+          "tags": [
+            "AI",
+            "2026-w40",
+            "독립 개발자",
+            "Agents"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261006/9e29a757e793.png",
+            "alt": "GitHub - Anil-matcha/open-dots: Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-licensed; includes chat, connectors, approvals, and optional computer use. Early prototype.",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Independent Developer Releases Open Dots, an Open-Source Agent Workspace",
+            "deck": "A self-hosted agent with approval steps, described as an early prototype",
+            "summary": "An individual developer turned a GitHub repository into Open Dots, a self-hosted AI agent workspace. It offers chat, approval prompts, connectors and an optional computer runtime, and the README calls it an early prototype that is not affiliated with any model provider.",
+            "content": "An individual developer turned a GitHub repository into Open Dots, an open-source personal AI agent workspace. The README describes Open Dots as a self-hosted workspace for chat, tool use, approvals, connectors and computer tasks. It says the project brings model conversations, a governed action gateway, approval prompts and an optional browser runtime into one local-first app, and the Docker and Playwright based computer runtime is optional.\n\nThis is a project by an individual developer, not a company release. The README calls it an early prototype rather than a feature-equivalent replacement, and says it is not affiliated with or endorsed by OpenAI, xAI or any other model provider. The license is MIT.\n\nThe repository used to hold a different project called Generative Media Skills. The Open Dots code first appears in a commit on September 29, 2026, and there are no releases or tags. It is a separate project from CopilotKit's OpenDots and only shares a similar name."
           }
         }
       ]

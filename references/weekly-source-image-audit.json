@@ -1,6 +1,6 @@
 {
  "version": 1,
- "checkedAt": "2026-10-05T23:25:58.778Z",
+ "checkedAt": "2026-10-06T00:53:26.158Z",
  "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
  "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
  "counts": {
@@ -8,7 +8,7 @@
   "source-unresolved": 15,
   "no-meaningful-image-verified": 55,
   "fetch-failed": 9,
-  "records": 524
+  "records": 541
  },
  "records": [
   {
@@ -14376,6 +14376,504 @@
    "selectionKind": "source-share-preview",
    "selectionPolicy": "source-top-image-v1",
    "key": "2026-w40|Claude Code v2.1.284~v2.1.289 릴리스 변경점 정리|https://github.com/anthropics/claude-code/releases/tag/v2.1.289"
+  },
+  {
+   "key": "2026-w39|InSpatio, 이미지·파노라마 입력을 받는 월드 모델 1.5 공개|https://inspatio.github.io/inspatio-world-1.5/",
+   "week": "2026-w39",
+   "title": "InSpatio, 이미지·파노라마 입력을 받는 월드 모델 1.5 공개",
+   "sourceUrl": "https://inspatio.github.io/inspatio-world-1.5/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://inspatio.github.io/inspatio-world-1.5/",
+     "httpStatus": 200,
+     "sha256": "fd28e9130909a8bdb1becd414c3e97c2f139eb53e1a459a867031e56e6d539e1"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://inspatio.github.io/inspatio-world-1.5/static/images/scene_corridor-poster-1s.jpg",
+     "httpStatus": 200,
+     "sha256": "8f7e3f987cfdedd1b73aefc7b19b9f3a4837a4a0996d9ddd1228299083e07143",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://inspatio.github.io/inspatio-world-1.5/static/images/scene_corridor-poster-1s.jpg",
+   "publicPath": "/source-media/weekly-20261006/8f7e3f987cfd.jpg",
+   "sha256": "8f7e3f987cfdedd1b73aefc7b19b9f3a4837a4a0996d9ddd1228299083e07143",
+   "byteSize": 98446,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|카네기멜런대, 점 프롬프트 3D 분할 모델 Point2Part 발표|https://henrytsui000.github.io/Point2Part/",
+   "week": "2026-w40",
+   "title": "카네기멜런대, 점 프롬프트 3D 분할 모델 Point2Part 발표",
+   "sourceUrl": "https://henrytsui000.github.io/Point2Part/",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://henrytsui000.github.io/Point2Part/",
+     "httpStatus": 200,
+     "sha256": "eafd4243de816d78f6dd812e520684a3fffc18a57e7b4a779e97cfb9271b788f"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://henrytsui000.github.io/Point2Part/",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "key": "2026-w40|ByteDance·UC 샌디에이고, 영상 증류 기법 PDMD 발표|https://pdmd2026.github.io/",
+   "week": "2026-w40",
+   "title": "ByteDance·UC 샌디에이고, 영상 증류 기법 PDMD 발표",
+   "sourceUrl": "https://pdmd2026.github.io/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://pdmd2026.github.io/",
+     "httpStatus": 200,
+     "sha256": "351be66e4a4a441e556a5e195f05542751d7add066536125472c0a33b6cca361"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://pdmd2026.github.io/posters/film.jpg?v=70",
+     "httpStatus": 200,
+     "sha256": "a127d651147536a18d4c9a1649f48dbbfc9686646b948a58ae6044af845b6193",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://pdmd2026.github.io/posters/film.jpg?v=70",
+   "publicPath": "/source-media/weekly-20261006/a127d6511475.jpg",
+   "sha256": "a127d651147536a18d4c9a1649f48dbbfc9686646b948a58ae6044af845b6193",
+   "byteSize": 81235,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w39|Tsinghua 연구진, 발바닥 촉각으로 착지를 조절하는 TactileStep 발표|https://tactilestep.github.io/",
+   "week": "2026-w39",
+   "title": "Tsinghua 연구진, 발바닥 촉각으로 착지를 조절하는 TactileStep 발표",
+   "sourceUrl": "https://tactilestep.github.io/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://tactilestep.github.io/",
+     "httpStatus": 200,
+     "sha256": "3c002ed89a4c0222ef1b05d423d807566d466f8aff1be56bdc6e4aa1cca413ca"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://tactilestep.github.io/images/posters/tactilestep-hero.jpg",
+     "httpStatus": 200,
+     "sha256": "4f810824665f1c9c1b00ab6df78783844233f34d4bc1c7442fcfc589eb23c17f",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://tactilestep.github.io/images/posters/tactilestep-hero.jpg",
+   "publicPath": "/source-media/weekly-20261006/4f810824665f.jpg",
+   "sha256": "4f810824665f1c9c1b00ab6df78783844233f34d4bc1c7442fcfc589eb23c17f",
+   "byteSize": 585047,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|Fermion Research, 164MB 영어 음성 인식 모델 Phonon-2 공개|https://www.fermionresearch.com/research/phonon-2/",
+   "week": "2026-w40",
+   "title": "Fermion Research, 164MB 영어 음성 인식 모델 Phonon-2 공개",
+   "sourceUrl": "https://www.fermionresearch.com/research/phonon-2/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: A field of warm mineral light gathering into a single bright band).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://www.fermionresearch.com/research/phonon-2/",
+     "httpStatus": 200,
+     "sha256": "e89cc057982a9d09ba55ab8d8083958b99b28bf08b73862c4b66fc4c6b6987c8"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.fermionresearch.com/images/launch/phonon-hero.jpg",
+     "httpStatus": 200,
+     "sha256": "a542edbf4f6258b5d30c1f83af0437fb803c01fcb990a19e9cde91c443ddbc18",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://www.fermionresearch.com/images/launch/phonon-hero.jpg",
+   "publicPath": "/source-media/weekly-20261006/a542edbf4f62.jpg",
+   "sha256": "a542edbf4f6258b5d30c1f83af0437fb803c01fcb990a19e9cde91c443ddbc18",
+   "byteSize": 365396,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|IQuest, 에이전트 코딩용 MoE 모델 IQuest-Q1 공개|https://github.com/IQuestLab/IQuest-Q1",
+   "week": "2026-w40",
+   "title": "IQuest, 에이전트 코딩용 MoE 모델 IQuest-Q1 공개",
+   "sourceUrl": "https://github.com/IQuestLab/IQuest-Q1",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: GitHub: IQuest-Q1).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/IQuestLab/IQuest-Q1",
+     "httpStatus": 200,
+     "sha256": "718c916b3330fee813c84cbe29a6a32f82ebf78ce0ee99b40928d9bb2dce194e"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://camo.githubusercontent.com/d8bca018e24f046df626ee68e4a9c2f2a29e4e42aba9ba56fbf70cbf601a3cda/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d4951756573742d2d51312d3138313731373f7374796c653d666c61742d737175617265266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465",
+     "httpStatus": 200,
+     "sha256": "78500a6021ec5dee40244f9fcf2b50bff321c34a9a24d87c64226fe0893140a3",
+     "contentType": "image/svg+xml"
+    }
+   ],
+   "imageUrl": "https://camo.githubusercontent.com/d8bca018e24f046df626ee68e4a9c2f2a29e4e42aba9ba56fbf70cbf601a3cda/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4769744875622d4951756573742d2d51312d3138313731373f7374796c653d666c61742d737175617265266c6f676f3d676974687562266c6f676f436f6c6f723d7768697465",
+   "publicPath": "/source-media/weekly-20261006/78500a6021ec.svg",
+   "sha256": "78500a6021ec5dee40244f9fcf2b50bff321c34a9a24d87c64226fe0893140a3",
+   "byteSize": 1762,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|BAAI, 스스로 해법을 고쳐 가는 27B 에이전트 모델 AREX-2|https://huggingface.co/BAAI/AREX-2",
+   "week": "2026-w40",
+   "title": "BAAI, 스스로 해법을 고쳐 가는 27B 에이전트 모델 AREX-2",
+   "sourceUrl": "https://huggingface.co/BAAI/AREX-2",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://huggingface.co/BAAI/AREX-2",
+     "httpStatus": 200,
+     "sha256": "6920dd13dac8fce29bf938f3baff06c6075125d018863e8af1b3dfedb1ff8817"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/BAAI/AREX-2.png",
+     "httpStatus": 200,
+     "sha256": "6ba33fd758a32581e8bf438d7d252def998f2438be99ade5db8da832f1f134de",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/BAAI/AREX-2.png",
+   "publicPath": "/source-media/weekly-20261006/6ba33fd758a3.png",
+   "sha256": "6ba33fd758a32581e8bf438d7d252def998f2438be99ade5db8da832f1f134de",
+   "byteSize": 408477,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|CopilotKit, 상시 AI 에이전트 템플릿 OpenDots 공개|https://github.com/CopilotKit/OpenDots",
+   "week": "2026-w40",
+   "title": "CopilotKit, 상시 AI 에이전트 템플릿 OpenDots 공개",
+   "sourceUrl": "https://github.com/CopilotKit/OpenDots",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/CopilotKit/OpenDots",
+     "httpStatus": 200,
+     "sha256": "32207cf33628479404dd5c92249526386f176247b20a86f4e8103cf9f910542a"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/6d65c7ad69d048ad20c2b315b0847fb544ec5dff879fb9660a9fb7e5ec77dec4/CopilotKit/OpenDots",
+     "httpStatus": 200,
+     "sha256": "a09a5169fe534a811b742f07ef7d603e76c7a063b9693d56640e6b2a83be260a",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/6d65c7ad69d048ad20c2b315b0847fb544ec5dff879fb9660a9fb7e5ec77dec4/CopilotKit/OpenDots",
+   "publicPath": "/source-media/weekly-20261006/a09a5169fe53.png",
+   "sha256": "a09a5169fe534a811b742f07ef7d603e76c7a063b9693d56640e6b2a83be260a",
+   "byteSize": 66352,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|NVIDIA·워털루대, 픽셀 공간 통합 모델 PixelUMM 발표|https://nv-tlabs.github.io/PixelUMM/",
+   "week": "2026-w40",
+   "title": "NVIDIA·워털루대, 픽셀 공간 통합 모델 PixelUMM 발표",
+   "sourceUrl": "https://nv-tlabs.github.io/PixelUMM/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://nv-tlabs.github.io/PixelUMM/",
+     "httpStatus": 200,
+     "sha256": "4d8cc7887ee42dadc9cdb8dca9282b2ece08b485968a390500119442e7607816"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://nv-tlabs.github.io/PixelUMM/media/overview.jpg?v=30s-e",
+     "httpStatus": 200,
+     "sha256": "ec249b6512ae477b6b98065460ccbb8f0ee784baa5d24c64c90461aabec03c5b",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://nv-tlabs.github.io/PixelUMM/media/overview.jpg?v=30s-e",
+   "publicPath": "/source-media/weekly-20261006/ec249b6512ae.jpg",
+   "sha256": "ec249b6512ae477b6b98065460ccbb8f0ee784baa5d24c64c90461aabec03c5b",
+   "byteSize": 196334,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|튀빙겐대, 텍스트로 사람과 물체의 상호작용을 만드는 PAMI|https://coral79.github.io/pami/",
+   "week": "2026-w40",
+   "title": "튀빙겐대, 텍스트로 사람과 물체의 상호작용을 만드는 PAMI",
+   "sourceUrl": "https://coral79.github.io/pami/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Method Overview).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://coral79.github.io/pami/",
+     "httpStatus": 200,
+     "sha256": "7cadf90e5e89c6e729154164f42d47fc4c16219d534f0ff4c85bbc68895e8c04"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://coral79.github.io/pami/images/method.png",
+     "httpStatus": 200,
+     "sha256": "33aa155e87cabf466fc0e6eb336bafc60c9547bea11be05df1eb0c5897789cd1",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://coral79.github.io/pami/images/method.png",
+   "publicPath": "/source-media/weekly-20261006/33aa155e87ca.png",
+   "sha256": "33aa155e87cabf466fc0e6eb336bafc60c9547bea11be05df1eb0c5897789cd1",
+   "byteSize": 1029532,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|독립 개발자, 오픈소스 에이전트 작업공간 Open Dots 공개|https://github.com/Anil-matcha/Open-Dots",
+   "week": "2026-w40",
+   "title": "독립 개발자, 오픈소스 에이전트 작업공간 Open Dots 공개",
+   "sourceUrl": "https://github.com/Anil-matcha/Open-Dots",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://github.com/Anil-matcha/Open-Dots",
+     "httpStatus": 200,
+     "sha256": "2013112c489bc2b49c55a3dd49a62c62a498a8176387d0aa9df299ce57af2d25"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://opengraph.githubassets.com/d59bce54df0746b328b8aa07101ff45118d61948be0939d10beb0aec9d6c00ff/Anil-matcha/open-dots",
+     "httpStatus": 200,
+     "sha256": "9e29a757e793b3c768282a95b4c6e6cf1c73f6ed396ddedfed761346ba2b1cc6",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://opengraph.githubassets.com/d59bce54df0746b328b8aa07101ff45118d61948be0939d10beb0aec9d6c00ff/Anil-matcha/open-dots",
+   "publicPath": "/source-media/weekly-20261006/9e29a757e793.png",
+   "sha256": "9e29a757e793b3c768282a95b4c6e6cf1c73f6ed396ddedfed761346ba2b1cc6",
+   "byteSize": 136912,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|Cactus Compute, 16.9MB 음성 인식 모델 Whistle 공개|https://cactuscompute.com/blog/whistle",
+   "week": "2026-w40",
+   "title": "Cactus Compute, 16.9MB 음성 인식 모델 Whistle 공개",
+   "sourceUrl": "https://cactuscompute.com/blog/whistle",
+   "status": "no-meaningful-image-verified",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "HTTP 200 정상 원문에서 해당 기사 본문을 확인했습니다. 기사 이미지와 공유 이미지가 없으며 사이트 공통 장식 이미지는 제외했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://cactuscompute.com/blog/whistle",
+     "httpStatus": 200,
+     "sha256": "c93c1351ac962e20dd78eaf8094a13e7f03e67bddbb2abdeffbcd4e213e0b3b8"
+    },
+    {
+     "kind": "source-review",
+     "url": "https://cactuscompute.com/blog/whistle",
+     "httpStatus": 200,
+     "reviewedArticle": true,
+     "note": "정상 응답한 원문 본문을 검토했습니다. 기사 상단 이미지와 공유용 미리보기 이미지가 모두 없었습니다. 내비게이션·로고·프로필 사진·다른 기사 그림은 정책상 제외했습니다."
+    }
+   ]
+  },
+  {
+   "key": "2026-w40|Comfy Org, 워크플로우를 짜 주는 Comfy Agent 베타 공개|https://blog.comfy.org/p/comfy-agent-the-first-agent-for-craft",
+   "week": "2026-w40",
+   "title": "Comfy Org, 워크플로우를 짜 주는 Comfy Agent 베타 공개",
+   "sourceUrl": "https://blog.comfy.org/p/comfy-agent-the-first-agent-for-craft",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.comfy.org/p/comfy-agent-the-first-agent-for-craft",
+     "httpStatus": 200,
+     "sha256": "318284cdd17ad4f5596e2deb2880bc14c9308eabfe423e9620c180ef56369c97"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://substackcdn.com/image/fetch/$s_!4Pkw!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e65e4bc-80a0-4c69-b435-f3ee8d3088cd_2692x1432.png",
+     "httpStatus": 200,
+     "sha256": "8a8494ad0d338bd0d7aa4b01d6bc14661efea63a6dbbf0b515faeae67f66ab6e",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://substackcdn.com/image/fetch/$s_!4Pkw!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e65e4bc-80a0-4c69-b435-f3ee8d3088cd_2692x1432.png",
+   "publicPath": "/source-media/weekly-20261006/8a8494ad0d33.jpg",
+   "sha256": "8a8494ad0d338bd0d7aa4b01d6bc14661efea63a6dbbf0b515faeae67f66ab6e",
+   "byteSize": 47084,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|ByteDance·텍사스A&M, 적대적 증류 방식 DMAD 발표|https://yzmblog.github.io/projects/DMAD/",
+   "week": "2026-w40",
+   "title": "ByteDance·텍사스A&M, 적대적 증류 방식 DMAD 발표",
+   "sourceUrl": "https://yzmblog.github.io/projects/DMAD/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://yzmblog.github.io/projects/DMAD/",
+     "httpStatus": 200,
+     "sha256": "eb34ea76a792e04da91cccddfee4f629a5641837460b92c1750a512a24eb381d"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://yzmblog.github.io/projects/DMAD/assets/demo-trailer-first-frame.png",
+     "httpStatus": 200,
+     "sha256": "6e5b47b36cf5b4d585d30da49b730e3f07703b2d4cb7e5eff26705fa695307ae",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://yzmblog.github.io/projects/DMAD/assets/demo-trailer-first-frame.png",
+   "publicPath": "/source-media/weekly-20261006/6e5b47b36cf5.png",
+   "sha256": "6e5b47b36cf5b4d585d30da49b730e3f07703b2d4cb7e5eff26705fa695307ae",
+   "byteSize": 1023190,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|NVIDIA Research, 4K 영상 한 단계 정제 SoL-Refiner 공개|https://nvlabs.github.io/Sana/Sol-Refiner/",
+   "week": "2026-w40",
+   "title": "NVIDIA Research, 4K 영상 한 단계 정제 SoL-Refiner 공개",
+   "sourceUrl": "https://nvlabs.github.io/Sana/Sol-Refiner/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://nvlabs.github.io/Sana/Sol-Refiner/",
+     "httpStatus": 200,
+     "sha256": "cf3db6b25b91c9f9a929b7a1ea3dca58e8b7c6a8d1a3826e4eea3240b58c6ee7"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://huggingface.co/datasets/Efficient-Large-Model/Sana-assets/resolve/main/Sol-Refiner/posters/h3-super-acceleration.jpg",
+     "httpStatus": 200,
+     "sha256": "5db4a041ad7c855ddebd74d3ba031cb36780a9519ca33c25a32a4154359a7290",
+     "contentType": "image/jpeg"
+    }
+   ],
+   "imageUrl": "https://huggingface.co/datasets/Efficient-Large-Model/Sana-assets/resolve/main/Sol-Refiner/posters/h3-super-acceleration.jpg",
+   "publicPath": "/source-media/weekly-20261006/5db4a041ad7c.jpg",
+   "sha256": "5db4a041ad7c855ddebd74d3ba031cb36780a9519ca33c25a32a4154359a7290",
+   "byteSize": 125474,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w40|Ai2, 보고서 작성 모델 AstaBrief 8B와 학습 데이터 공개|https://allenai.org/blog/astabrief",
+   "week": "2026-w40",
+   "title": "Ai2, 보고서 작성 모델 AstaBrief 8B와 학습 데이터 공개",
+   "sourceUrl": "https://allenai.org/blog/astabrief",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://allenai.org/blog/astabrief",
+     "httpStatus": 200,
+     "sha256": "1548def7420b7a27ccc23e69ca4da2d85af76c353299592884820838099dbfa1"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://www.datocms-assets.com/64837/1790891256-asta-report-generation-model-blog-astabrief-google-docs-image-1.png",
+     "httpStatus": 200,
+     "sha256": "1a7a9bb975234779e98c218657ae258677d53916581a64bd5359498d7eacbf80",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://www.datocms-assets.com/64837/1790891256-asta-report-generation-model-blog-astabrief-google-docs-image-1.png",
+   "publicPath": "/source-media/weekly-20261006/1a7a9bb97523.png",
+   "sha256": "1a7a9bb975234779e98c218657ae258677d53916581a64bd5359498d7eacbf80",
+   "byteSize": 370933,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1"
+  },
+  {
+   "key": "2026-w39|Tsinghua 등 연구진, 휴머노이드 배드민턴 랠리 시스템 발표|https://sunlight02.github.io/humanoid-badminton/",
+   "week": "2026-w39",
+   "title": "Tsinghua 등 연구진, 휴머노이드 배드민턴 랠리 시스템 발표",
+   "sourceUrl": "https://sunlight02.github.io/humanoid-badminton/",
+   "status": "available",
+   "checkedAt": "2026-10-06T00:53:26.158Z",
+   "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Overview of the humanoid badminton learning framework).",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://sunlight02.github.io/humanoid-badminton/",
+     "httpStatus": 200,
+     "sha256": "18f2d0cea330ed5d0d2ae30f78ad8df3cebc416e351b7d821314907dceaa0403"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://sunlight02.github.io/humanoid-badminton/static/images/pipeline.png",
+     "httpStatus": 200,
+     "sha256": "7fe574e8d67ffe001ab54630b46c71ff88fa61bb69e6672301587ac363674738",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://sunlight02.github.io/humanoid-badminton/static/images/pipeline.png",
+   "publicPath": "/source-media/weekly-20261006/7fe574e8d67f.png",
+   "sha256": "7fe574e8d67ffe001ab54630b46c71ff88fa61bb69e6672301587ac363674738",
+   "byteSize": 30009843,
+   "selectionKind": "source-first-image",
+   "selectionPolicy": "source-top-image-v1"
   }
  ],
  "existingFormatRepairs": [

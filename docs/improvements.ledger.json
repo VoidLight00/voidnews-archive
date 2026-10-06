@@ -828,9 +828,9 @@
         "kind": "count",
         "cmd": "node -e \"const fs=require('fs');const ts=require('typescript');require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,f);const {weeks}=require('./lib/data.ts');const n=weeks.filter(w=>['2026-w37','2026-w38','2026-w39'].includes(w.slug)).reduce((a,w)=>a+w.companies.reduce((b,c)=>b+c.posts.length,0),0);process.stdout.write(String(n))\"",
         "op": "eq",
-        "value": 139
+        "value": 142
       },
-      "notes": "20260922-134206-ab-20260909-20260922. w37 completion rows are hash-bound in BACKFILL-INTEGRATION.json; 118 = 42 + 63 + 13 posts across the three weeks. · 2026-09-23: w39에 미국 시간 9/22 발표 2건(Claude Opus 5.5, GPT-6 Sol·Luna)을 더해 120 = 42 + 63 + 15. 고정값은 느슨하게 바꾸지 않고 정확한 새 합계로 갱신했습니다(IMP-0044). · 2026-10-06: w39에 9/24~27 소식 19건을 더해 139 = 42 + 63 + 34. 고정값은 느슨하게 바꾸지 않고 정확한 새 합계로 갱신했습니다(IMP-0045)."
+      "notes": "20260922-134206-ab-20260909-20260922. w37 completion rows are hash-bound in BACKFILL-INTEGRATION.json; 118 = 42 + 63 + 13 posts across the three weeks. · 2026-09-23: w39에 미국 시간 9/22 발표 2건(Claude Opus 5.5, GPT-6 Sol·Luna)을 더해 120 = 42 + 63 + 15. 고정값은 느슨하게 바꾸지 않고 정확한 새 합계로 갱신했습니다(IMP-0044). · 2026-10-06: w39에 9/24~27 소식 19건을 더해 139 = 42 + 63 + 34. 고정값은 느슨하게 바꾸지 않고 정확한 새 합계로 갱신했습니다(IMP-0045). · 2026-10-06(2차): AI Search 영상 설명문 링크 전수 누락을 바로잡아 w39에 3건을 더해 142 = 42 + 63 + 37(IMP-0045)."
     },
     {
       "id": "IMP-0044",
@@ -859,7 +859,7 @@
       "date": "2026-10-05",
       "source": "user-instruction",
       "category": "ab-data",
-      "request": "2026-09-24~10-06 AI 뉴스를 Weekly에 전체 반영(2026-w39 완성 19건 추가, 2026-w40 신규 74건, 2026-w41 부분 주차 7건). VIP 선정은 Weekly 배포 뒤 사용자가 하기로 해 AB 회차 파일은 쓰지 않음",
+      "request": "2026-09-24~10-06 AI 뉴스를 Weekly에 전체 반영(2026-w39 완성 19건 추가, 2026-w40 신규 74건, 2026-w41 부분 주차 7건). VIP 선정은 Weekly 배포 뒤 사용자가 하기로 해 AB 회차 파일은 쓰지 않음 + 필수 채널(AI Search) 영상 설명문 링크 전수 반영(연구·오픈소스 17건 추가: w39 +3, w40 +14)",
       "status": "applied",
       "files": [
         "lib/weeks/2026-w39.ts",
@@ -871,9 +871,10 @@
       ],
       "commit": "HEAD",
       "evidence": {
-        "kind": "manual"
+        "kind": "manual",
+        "value": 95
       },
-      "notes": "20261006-065837-ab-20260924-20261006. 출처 이미지 89장(원문 상단 53·공유 이미지 36), 의미 있는 이미지 없음 11건은 근거와 함께 기록. 공유 changelog 카드 1건은 BACKFILL-INTEGRATION supportingRows에 결속"
+      "notes": "20261006-065837-ab-20260924-20261006. 출처 이미지 89장(원문 상단 53·공유 이미지 36), 의미 있는 이미지 없음 11건은 근거와 함께 기록. 공유 changelog 카드 1건은 BACKFILL-INTEGRATION supportingRows에 결속 · 2차 반영 후 w40+w41 = 95. 게이트 check_description_links.sh 신설."
     }
   ]
 }

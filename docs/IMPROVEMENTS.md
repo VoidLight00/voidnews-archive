@@ -50,7 +50,7 @@
 | IMP-0040 | 2026-09-09 | design | 중간 화면 너비에서 VoidNews 상단 메뉴 글자가 쪼개지는 현상 수정 | app/globals.css<br>scripts/test-browse-ui.mjs | HEAD |
 | IMP-0043 | 2026-09-22 | ab-data | 2026-09-09~22 AI 뉴스 공백을 수집·검증해 Weekly 아카이브에 반영 (2026-w37 완성 29건 추가, 2026-w38 신규 63건, 2026-w39 부분 주차 13건) | lib/weeks/2026-w37.ts<br>lib/weeks/2026-w38.ts<br>lib/weeks/2026-w39.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
 | IMP-0044 | 2026-09-23 | ab-data | 2026-09b VIP 준비본: 본편 6개(Opus 5.5·GPT-6 Sol·Luna 별도 카드, GPT-Live-1, Jev, Grok 4.7, Qwen-Image-2.1), 추가로 보면 좋을 뉴스 1개(Cowork), 공개 도구 2개(Graft, AuK)를 공식 원문·이미지 해시로 결속 | lib/ab/editions/2026-09b.ts<br>docs/vip/20260924/SOURCES.json<br>scripts/check-ab-2026-09b.mjs<br>lib/weeks/2026-w39.ts | HEAD |
-| IMP-0045 | 2026-10-05 | ab-data | 2026-09-24~10-06 AI 뉴스를 Weekly에 전체 반영(2026-w39 완성 19건 추가, 2026-w40 신규 74건, 2026-w41 부분 주차 7건). VIP 선정은 Weekly 배포 뒤 사용자가 하기로 해 AB 회차 파일은 쓰지 않음 | lib/weeks/2026-w39.ts<br>lib/weeks/2026-w40.ts<br>lib/weeks/2026-w41.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
+| IMP-0045 | 2026-10-05 | ab-data | 2026-09-24~10-06 AI 뉴스를 Weekly에 전체 반영(2026-w39 완성 19건 추가, 2026-w40 신규 74건, 2026-w41 부분 주차 7건). VIP 선정은 Weekly 배포 뒤 사용자가 하기로 해 AB 회차 파일은 쓰지 않음 + 필수 채널(AI Search) 영상 설명문 링크 전수 반영(연구·오픈소스 17건 추가: w39 +3, w40 +14) | lib/weeks/2026-w39.ts<br>lib/weeks/2026-w40.ts<br>lib/weeks/2026-w41.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
 
 ## 대기 (pending) (8)
 
