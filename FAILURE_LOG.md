@@ -20,3 +20,4 @@
 | 2026-09-23 | VN-IMAGE-05 | 원본 이미지 2장(1.34MB·2.25MB)이 og-cache 1MB 한도(IMP-0002/0037)를 넘어 빌드 차단 | 원본 바이트 보존 규칙과 용량 한도가 충돌 | 공식 이미지 서버의 WebP 변환본, 저장소 공유 이미지로 대체하고 사유를 SOURCES.json 에 기록 | verify-improvements.mjs (find public/og-cache -size +1M = 0) |
 | 2026-09-23 | PM-20260923-01 | 발표 대본이 공식 원문 순서·벤치마크 설명 없이 작성돼 매 회차 실제 발표와 어긋남 | 발표자가 보는 공식 원문 순서라는 기준 데이터와 그것을 강제하는 게이트가 없었음 | 원문 순서 추출 후 대본 재작성, 공용 빌드·검증 도구로 이전 | ~/.claude/skills/voidnews-briefing-pipeline/gates/verify_speaker_script.py, scripts/source_walk.py |
 | 2026-09-23 | VN-IMAGE-04 후속 | w37 GPT-Live-1 운영 카드의 잘못된 썸네일 교체 | 관련 글 카드를 기사 이미지로 선택한 선택기 결함 | 기사 상단 이미지로 교체, 조사 기록에 supersedes 보존 | check-weekly-source-images.mjs (선택기 자체 수정은 미완) |
+| 2026-10-06 | PM-20261006-01 | 발표 대본이 게이트를 통과하고도 무대에서 읽히지 않고 펜·화면이 실제와 어긋남 | 게이트가 가독성을 검사하지 않았고 펜·화면을 실제 사용 환경(Aside·터치)에서 시험하지 않음 | S8 게이트와 stage_view.py(한 화면씩 큰 글자, 포인터 펜, 찾을 글자, 실제 화면 1장) 신설 | ~/.claude/skills/voidnews-briefing-pipeline/scripts/stage_view.py verify |
