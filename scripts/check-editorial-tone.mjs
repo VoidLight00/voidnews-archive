@@ -9,22 +9,36 @@
  *    엠대시(—)는 2026-04a 부터 이어진 이 사이트의 제목·본문 관례이므로
  *    이 게이트에서 판정하지 않습니다. 정비하려면 전 회차를 한 번에 다뤄야 합니다.
  *
+ * 3. 레거시 래칫 (2026-10-18 신설, FAILURE_LOG VN-TONE-01).
+ *    그 전까지 이 게이트는 run-all-gates.mjs 가 넘기는 하드코딩 회차 목록
+ *    ["2026-09a","2026-09b","2026-10a"] 만 검사했고, references/editorial-tone-legacy.json
+ *    은 기록만 되고 아무도 읽지 않았다. 그래서 전 회차 24건(ordinal-list 17 · circled-number 5
+ *    · video-non-official 1 · label-heading 1)이 매 빌드 통과했고, 과거 회차에 새 위반이
+ *    생겨도 영원히 보이지 않았다. 이제 **항상 전 회차를 검사**하고 legacy 에 기록된 건만
+ *    면제한다. 고쳐서 사라진 legacy 항목은 실패시켜 원장이 실제와 어긋나지 않게 한다(래칫).
+ *
  * 사용: node scripts/check-editorial-tone.mjs [editions...]
- *       인자가 없으면 lib/ab/editions/ 전체를 검사합니다.
+ *       인자가 없으면 lib/ab/editions/ 전체를 검사합니다(게이트 기본값).
+ *       --update-legacy  현재 측정값으로 legacy 원장을 다시 씁니다(명시적 의도가 있을 때만).
  */
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const EDITION_DIR = "lib/ab/editions";
 const REGISTRY = "references/official-video-channels.json";
+const LEGACY = "references/editorial-tone-legacy.json";
 
 const registry = JSON.parse(readFileSync(REGISTRY, "utf8"));
 const videoChannel = registry.videos ?? {};
 const channels = registry.channels ?? {};
 const blocked = registry.blocked ?? {};
 
-const targets = process.argv.slice(2).length
-  ? process.argv.slice(2).map((n) => (n.endsWith(".ts") ? n : join(EDITION_DIR, `${n}.ts`)))
+const argv = process.argv.slice(2).filter((a) => a !== "--warn");
+const UPDATE_LEGACY = argv.includes("--update-legacy");
+const explicit = argv.filter((a) => !a.startsWith("--"));
+
+const targets = explicit.length
+  ? explicit.map((n) => (n.endsWith(".ts") ? n : join(EDITION_DIR, `${n}.ts`)))
   : readdirSync(EDITION_DIR).filter((f) => f.endsWith(".ts")).map((f) => join(EDITION_DIR, f));
 
 /** 라벨형 소제목: 내용을 말하지 않고 자리만 가리키는 정형 문구 */
@@ -98,12 +112,79 @@ for (const file of targets) {
 // ── 레지스트리 위생: 쓰이지 않는 등록 항목 ────────────────────
 const stale = Object.keys(videoChannel).filter((id) => !seenVideos.has(id));
 
-for (const f of findings) console.error(`FAIL[${f.rule}] ${f.file}:${f.line} ${f.detail}`);
+// ── 레거시 래칫 ───────────────────────────────────────────────
+// 줄 번호는 본문을 고치면 밀리므로 키에 넣지 않는다. (파일, 규칙, 상세)의 개수로 센다.
+const key = (f) => `${f.file}\u0000${f.rule}\u0000${f.detail}`;
+
+if (UPDATE_LEGACY) {
+  const byEdition = {};
+  for (const f of findings) {
+    (byEdition[f.file] ??= { count: 0, items: [] }).items.push({ rule: f.rule, file: f.file, line: f.line, detail: f.detail });
+    byEdition[f.file].count += 1;
+  }
+  const prev = existsSync(LEGACY) ? JSON.parse(readFileSync(LEGACY, "utf8")) : {};
+  writeFileSync(LEGACY, JSON.stringify({
+    note: prev.note ?? "과거 회차에 남아 있는 편집 규칙 위반입니다. 게이트는 전 회차를 검사하고 이 목록만 면제합니다. 과거 본문을 고치면 이미 게시된 문장이 바뀌므로 별도 승인 후 정비합니다.",
+    measuredAt: new Date().toISOString().slice(0, 10),
+    gate: "scripts/check-editorial-tone.mjs",
+    total: findings.length,
+    byEdition,
+  }, null, 2) + "\n");
+  console.log(`[check-editorial-tone] legacy 원장 갱신: ${findings.length}건`);
+  process.exit(0);
+}
+
+const budget = new Map();
+let legacyTotal = 0;
+if (existsSync(LEGACY)) {
+  const legacy = JSON.parse(readFileSync(LEGACY, "utf8"));
+  for (const ed of Object.values(legacy.byEdition ?? {})) {
+    for (const it of ed.items ?? []) {
+      const k = `${it.file}\u0000${it.rule}\u0000${it.detail}`;
+      budget.set(k, (budget.get(k) ?? 0) + 1);
+      legacyTotal += 1;
+    }
+  }
+}
+
+const live = [];
+const consumed = new Map();
+for (const f of findings) {
+  const k = key(f);
+  const left = budget.get(k) ?? 0;
+  if (left > 0) {
+    budget.set(k, left - 1);
+    consumed.set(k, (consumed.get(k) ?? 0) + 1);
+  } else {
+    live.push(f);
+  }
+}
+// 래칫: 남은 예산 = 고쳐졌거나 사라진 legacy 항목. 원장이 실제보다 큰 상태를 막는다.
+const unmatched = [...budget.entries()].filter(([, n]) => n > 0);
+
+for (const f of live) console.error(`FAIL[${f.rule}] ${f.file}:${f.line} ${f.detail}`);
 if (stale.length) console.log(`참고: 레지스트리에만 있고 본문에 없는 영상 ${stale.length}개 — ${stale.join(", ")}`);
 
-if (findings.length) {
-  const byRule = findings.reduce((a, f) => ((a[f.rule] = (a[f.rule] ?? 0) + 1), a), {});
-  console.error(`\n검사 ${targets.length}개 파일, 위반 ${findings.length}건: ${JSON.stringify(byRule)}`);
-  process.exit(1);
+let bad = false;
+if (live.length) {
+  const byRule = live.reduce((a, f) => ((a[f.rule] = (a[f.rule] ?? 0) + 1), a), {});
+  console.error(`\n[check-editorial-tone] 신규 위반 ${live.length}건: ${JSON.stringify(byRule)}`);
+  bad = true;
 }
-console.log(`PASS 검사 ${targets.length}개 파일, 영상 ${seenVideos.size}개 전부 등록된 공식·언론 채널입니다.`);
+if (unmatched.length) {
+  const n = unmatched.reduce((a, [, c]) => a + c, 0);
+  console.error(`\n[check-editorial-tone] FAIL[legacy-ratchet] 원장에 있으나 본문에서 사라진 항목 ${n}건 — 고쳤다면 원장에서 빼십시오.`);
+  for (const [k, c] of unmatched.slice(0, 10)) {
+    const [file, rule, detail] = k.split("\u0000");
+    console.error(`  ${file} «${rule}» ${detail} (x${c})`);
+  }
+  console.error(`  일괄 갱신: node scripts/check-editorial-tone.mjs --update-legacy`);
+  bad = true;
+}
+if (bad) process.exit(1);
+
+const exempt = [...consumed.values()].reduce((a, b) => a + b, 0);
+console.log(
+  `PASS 검사 ${targets.length}개 파일 · 신규 위반 0 · 레거시 면제 ${exempt}/${legacyTotal}건 · ` +
+  `영상 ${seenVideos.size}개 전부 등록된 공식·언론 채널입니다.`
+);

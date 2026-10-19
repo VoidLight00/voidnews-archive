@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-10-05 · 총 45건
+> 마지막 갱신: 2026-10-18 · 총 47건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -20,10 +20,11 @@
 | IMP-0041 | 2026-09-20 | workflow | 워크플로우 최소 갱신: 무손실 후보 배정, 원본과 본문 분리, 실측 usage unknown, 모델 입력 감사 결속, 선택 compact, 편집 검사 최신성 계약 | scripts/vgrok-fetch.mjs<br>scripts/test-vgrok-compact.mjs<br>docs/WORKFLOW_RENEWAL_PLAN.md<br>docs/WORKFLOW_RENEWAL_LOG.md<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_cache.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/routing_budget.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/merge_luna_shards.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_contract.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_renewal_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_routing_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/check_collection_routing.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh<br>~/.claude/skills/voidnews-briefing-pipeline/SKILL.md | — |
 | IMP-0042 | 2026-09-20 | workflow | Fable 재검토 잔여 보강: review UTF8 byte 상한, 신규 bound shadow 공용 실행기, slim stdin 소비 및 공급자 응답 usage 자동 finish 연결 | ~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_runner.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_stage3_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh<br>~/.claude/skills/voidnews-briefing-pipeline/SKILL.md<br>docs/WORKFLOW_RENEWAL_STAGE3.md<br>docs/WORKFLOW_RENEWAL_LOG.md | — |
 
-## 적용됨 (applied) (27)
+## 적용됨 (applied) (30)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
+| IMP-0010 | 2026-07-07 | infra | AB run → lib/weeks 정방향 자동 생성기 부재 (격주 수동 반영) | scripts/emit-weeks.mjs<br>scripts/check-emit-weeks.selftest.mjs<br>scripts/emit_ab_edition.py<br>scripts/emit_ab_edition_selftest.py | — |
 | IMP-0015 | 2026-07-07 | content | dangling 썸네일 6건(ibm-granite 등) — HEAD에도 없는 기존 broken 참조. 재수집 또는 참조 제거 | lib/weeks/2026-w22.ts<br>lib/weeks/2026-w21.ts<br>scripts/check-dangling-thumbs.mjs | — |
 | IMP-0016 | 2026-07-07 | ab-data | AB 2026-07a 2주 수집을 오늘(07-07)까지 확장 + AI Search 큐레이터 영상 promote-to-official, 중복 제거 | _workspace/ab/20260703-142555-ab-20260625-20260708/ | — |
 | IMP-0017 | 2026-07-06 | ab-data | AI Search 유튜브 영상(qtzzN8w2TvU) promote-to-official — 채널은 이미 레지스트리 등록됨, 영상 18 공식링크 마이닝→6 승격/6 교차검증/그외 radar·병합 | _workspace/ab/20260703-142555-ab-20260625-20260708/01c_curator_video_ingest.json | — |
@@ -51,13 +52,14 @@
 | IMP-0043 | 2026-09-22 | ab-data | 2026-09-09~22 AI 뉴스 공백을 수집·검증해 Weekly 아카이브에 반영 (2026-w37 완성 29건 추가, 2026-w38 신규 63건, 2026-w39 부분 주차 13건) | lib/weeks/2026-w37.ts<br>lib/weeks/2026-w38.ts<br>lib/weeks/2026-w39.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
 | IMP-0044 | 2026-09-23 | ab-data | 2026-09b VIP 준비본: 본편 6개(Opus 5.5·GPT-6 Sol·Luna 별도 카드, GPT-Live-1, Jev, Grok 4.7, Qwen-Image-2.1), 추가로 보면 좋을 뉴스 1개(Cowork), 공개 도구 2개(Graft, AuK)를 공식 원문·이미지 해시로 결속 | lib/ab/editions/2026-09b.ts<br>docs/vip/20260924/SOURCES.json<br>scripts/check-ab-2026-09b.mjs<br>lib/weeks/2026-w39.ts | HEAD |
 | IMP-0045 | 2026-10-05 | ab-data | 2026-09-24~10-06 AI 뉴스를 Weekly에 전체 반영(2026-w39 완성 19건 추가, 2026-w40 신규 74건, 2026-w41 부분 주차 7건). VIP 선정은 Weekly 배포 뒤 사용자가 하기로 해 AB 회차 파일은 쓰지 않음 + 필수 채널(AI Search) 영상 설명문 링크 전수 반영(연구·오픈소스 17건 추가: w39 +3, w40 +14) | lib/weeks/2026-w39.ts<br>lib/weeks/2026-w40.ts<br>lib/weeks/2026-w41.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
+| IMP-0049 | 2026-10-18 | infra | AB 자동화 감사 0~7단계: fail-open 게이트 수리, run-local 스크립트 키트 승격, pending 나이 집계, 주간·회차 생성기, 사본 차단·정리 도구, 맥미니 일일 결정론 수확(launchd 07:10) | scripts/emit-weeks.mjs<br>scripts/emit_ab_edition.py<br>scripts/prune_workspace.py<br>scripts/ledger.mjs<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/daily_harvest.py | — |
+| IMP-0050 | 2026-10-18 | ab-ranking | Horizon(Thysrael/Horizon) 구조 분석(RFC 게이트 통과·RE 엔진 미지원) 후 Phase 4 랭커를 rank_rubric.py(프로필 고정 루브릭·발췌·2패스·중복 묶기·상위 30 opus 재평가)로 교체. 적용 전후 블라인드 테스트: 맞대결 11:0, 비용 약 12분의 1 | ~/.claude/skills/voidnews-briefing-pipeline/scripts/rank_rubric.py<br>~/.claude/skills/voidnews-briefing-pipeline/references/rank-profiles.json<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/curate_top10.py | — |
 
-## 대기 (pending) (8)
+## 대기 (pending) (7)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
 | IMP-0009 | 2026-07-07 | feature | 전역 검색 부재 — 449 포스트 전체 검색(빌드타임 인덱스 + UI). 데이터는 lib/data.ts에 이미 정적 | — | — |
-| IMP-0010 | 2026-07-07 | infra | AB run → lib/weeks 정방향 자동 생성기 부재 (격주 수동 반영) | — | — |
 | IMP-0011 | 2026-07-07 | infra | 죽은 코드 제거: lib/supabase.ts·supabase-server.ts(importer 0), 미사용 의존성 2, tailwind 유틸 실사용 0 | — | — |
 | IMP-0012 | 2026-07-07 | feature | 딥링크 레지스트리 w21·w22 하드코딩 → w23~w26 확장. 단 w23~w26 slug 필드 0개(주입 선행 필요) | lib/editorial.ts | — |
 | IMP-0013 | 2026-07-07 | feature | i18n 실효화 — LocaleToggle 적용처 PostDetail 1곳뿐, nav·툴바 하드코딩 | — | — |

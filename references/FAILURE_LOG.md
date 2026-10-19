@@ -291,3 +291,26 @@ og 태그가 아예 없는 페이지(seed.bytedance.com 제품/블로그, meta.c
   git 에 존재하는지 확인합니다. 확인 방법은 추측이 아니라 실측입니다 —
   `git clone --no-hardlinks <repo> /tmp/x && cd /tmp/x && node scripts/run-all-gates.mjs`.
 - 담당: voidbrief-conductor, run 20260922-134206-ab-20260909-20260922.
+
+### VN-GATE-04 · VN-TONE-01 · VN-SYNC-01 · VN-LEDGER-01 — 빌드 게이트가 실패할 수 없거나 보지 않던 것 (2026-10-18~19)
+
+상세 증상·원인·실측은 키트 `~/.claude/skills/voidnews-briefing-pipeline/FAILURE_LOG.md` 같은 ID 행에 있다. 여기에는 이 리포의 빌드 표면에 남은 변경과 증명 명령만 적는다.
+
+- **VN-GATE-04** `scripts/check-regressions.mjs`: spec 부재·빈 `checks`·최상위 키 오타·알 수 없는 type·glob 0파일이 전부 exit 0 이었다. 지금은 R1~R5 fail-closed, 의도된 부재는 `allowMissing:true` 선언만 허용. 증명 `node scripts/check-regressions.selftest.mjs` (BUILD_GATES 등록).
+- **VN-TONE-01** `scripts/check-editorial-tone.mjs`: 면제가 호출 인자(하드코딩 회차 배열)였고 `references/editorial-tone-legacy.json` 은 읽히지 않았다. 지금은 원장 래칫 — 전 회차 검사, 기록된 24건만 면제, 고쳐진 항목이 원장에 남으면 `FAIL[legacy-ratchet]`.
+- **VN-SYNC-01** `scripts/check-git-sync.sh`: 호출자 0개, 근거를 못 구하는 네 갈래가 exit 0. 지금은 `FAIL[git-sync:*]`, Vercel 미설정 트리만 `--allow-unconfigured` 로 명시 SKIP. npm `check:git-sync`.
+- **VN-LEDGER-01** `scripts/ledger.mjs verify`: applied/verified 만 실측하고 pending 을 버려, IMP-0010(격주 수동 반영)이 104일 동안 어떤 빌드 출력에도 나오지 않았다. 지금은 2차 집계로 30일 넘은 pending 을 `WARN[ledger:stale-pending]` 로, evidence 없는 applied/verified 를 요약 줄에 표시한다. 빌드는 막지 않는다. 증명 `node scripts/check-ledger-open.selftest.mjs` (BUILD_GATES 등록, 원장은 임시 트리 사본으로만 시험).
+- **재발 방지 규칙**: 게이트의 PASS 줄에는 실제로 잰 개수를 찍는다. 입력이 없거나 손상되면 "건너뜀(통과)"이 아니라 사유 토큰과 함께 비영 종료한다. 자체시험은 종료코드만이 아니라 사유 토큰까지 대조한다(크래시가 "기대한 실패"로 위장된다).
+
+### VN-EMIT-01 — run-local 생성기의 `--check` 가 검사하지 않고 파일을 덮어씀 (2026-10-19)
+
+- 증상: run 폴더마다 복사되던 `emit_weeks.mjs` 는 사용법에 `[--check]` 를 적었지만 인자를 읽지 않았다. 10a 반영 직전 커밋(`aa2047a^`) 트리에서 `--check` 로 돌리면 `lib/weeks` 를 덮어쓰고(w41 파일을 새로 만들고) exit 0 이었다. `emit_ab_edition.py` 는 회차 내용과 코드가 한 파일이라 회차마다 새로 썼다.
+- 원인: 생성기가 리포가 아니라 run 폴더에 있어서 회차마다 WEEKS 표·verifiedAt·라인업을 손으로 고쳐 복사했다(IMP-0010, 104일 pending). 검사 모드는 문서에만 있었다.
+- 수정: `scripts/emit-weeks.mjs`(주차·기간·verifiedAt 도출, 진짜 `--check` = 무쓰기 비교), `scripts/emit_ab_edition.py`(내용은 `<run>/edition-spec.json`, `--check` 지원). 10a 재현: weeks 데이터 동일(w39 는 사람이 쓴 머리 주석 한 문장만 다름), 회차 파일·`lib/ab/data.ts` 바이트 동일.
+- 증명: `node scripts/check-emit-weeks.selftest.mjs`(BUILD_GATES, 7함정: 무쓰기·멱등·미반영 적발·머리 주석·변형 생성기 drift), `python3 scripts/emit_ab_edition_selftest.py`(7함정). IMP-0010 → applied, evidence exit0.
+
+### VN-RELEASE-01 — 배포 검증 영수증이 상한 없이 쌓임 (2026-10-19)
+
+- 증상: `_workspace/release` 2.8GB·52,842파일. `verify-site-release.mjs:19` 가 호출마다 타임스탬프 폴더를 만들고 각 검사의 stdout/stderr 전문을 쓴다(영수증당 약 13MB, PASS 21·FAIL 6·RUNNING 1). 9/20 배포 검증용 로컬 clone `ship-20260920/snapshot` 이 3.3GB.
+- 수정: 지우는 코드는 넣지 않았다. `scripts/prune_workspace.py` 가 계획 파일(대상별 크기·sha256)을 만들고, `--apply <plan>` 은 실행 직전 다시 대조해 다르면 exit 2 로 거부하며 지우지 않고 휴지통으로 옮긴다. 대상은 PASS 영수증 최신 5개 밖·발표 산출물에 바이트 동일 사본이 있는 캡처·`--include` 명시 경로뿐이고 FAIL·RUNNING 영수증과 유일본 이미지·스크립트는 보존한다. `verify-site-release.mjs` 는 PASS 영수증이 5개를 넘으면 `WARN[site-release:retention]` 만 출력한다.
+- 증명: `python3 scripts/prune_workspace_selftest.py` exit 0 (6함정: 보존 규칙·계획 무이동·계획 뒤 변경 시 거부·휴지통 이동·`_workspace` 밖 거부). 2026-10-19 계획: 1,085건 3.6GB(영수증 16건 181MB, 캡처 1,068건 118MB, snapshot 3.3GB) — 실행은 사용자 승인 대기.

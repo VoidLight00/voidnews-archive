@@ -56,3 +56,9 @@ result.status = 'PASS';
 result.completedAt = new Date().toISOString();
 save();
 console.log(`PASS[site-release] All mandatory checks passed against ${baseURL}; evidence: ${path.join(run, 'result.json')}`);
+// 보존 경고(2026-10-19): 호출마다 약 13MB 영수증 폴더가 생기고 상한이 없어 _workspace/release 가 2.8GB 가 됐다.
+// 여기서는 지우지 않는다. 정리는 계획·대조·휴지통 이동을 하는 prune_workspace.py 가 맡는다.
+const passCount = fs.readdirSync(path.dirname(run)).filter((d) => /^\d{4}-\d{2}-\d{2}T/.test(d)).filter((d) => {
+  try { return JSON.parse(fs.readFileSync(path.join(path.dirname(run), d, 'result.json'), 'utf8')).status === 'PASS'; } catch { return false; }
+}).length;
+if (passCount > 5) console.log(`WARN[site-release:retention] PASS 영수증 ${passCount}개 (보존 기준 5). 정리 계획: python3 scripts/prune_workspace.py`);

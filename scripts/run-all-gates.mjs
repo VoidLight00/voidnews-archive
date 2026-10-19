@@ -22,16 +22,24 @@ const BUILD_GATES = {
   "check-backfill-integration.mjs": [],
   "check-slugs.mjs": [],
   "check-regressions.mjs": [],
+  // 회귀 검사기가 '측정 없이 통과'하지 않는지 매 빌드 증명한다(손상 명세 5종 함정).
+  // 2026-10-18 실측에서 그 5종이 전부 exit 0 이었다 — FAILURE_LOG VN-GATE-04.
+  "check-regressions.selftest.mjs": [],
   "check-card-content.mjs": [],
   "verify-no-duplicates.mjs": ["--scope", "all"],
   "verify-improvements.mjs": [],
+  "check-ledger-open.selftest.mjs": [], // pending 2차 집계(나이·evidence 없는 applied)가 계속 보이는지
+  "check-emit-weeks.selftest.mjs": [], // IMP-0010 주간 생성기: --check 무쓰기·멱등·drift 감시
   "check-dangling-thumbs.mjs": [],
   "check-i18n-coverage.mjs": [], // w29+ 신규 주차 en 필드 필수 — 영문판 회귀 차단
   "verify-07a-closure.mjs": [], // 2026-07a GA/KO·EN/manifest/report closure 회귀 차단
   "check-horizontal-accent.mjs": [],
-  // 공식 채널 영상만 허용 + fluent-korean 편집 규칙. 인자로 회차를 지정해 신규 회차부터 강제한다.
-  // 과거 회차의 미해결 위반은 references/editorial-tone-legacy.json 에 실측으로 기록해 두었다.
-  "check-editorial-tone.mjs": ["2026-09a", "2026-09b"], // 컬러 가로 accent line 금지 — 2026-08-13 AB 카드 --gold 3px 재발
+  // 공식 채널 영상만 허용 + fluent-korean 편집 규칙.
+  // 인자 없음 = 전 회차 검사. 면제는 references/editorial-tone-legacy.json 에 기록된 건만이며,
+  // 고쳐져 사라진 legacy 항목은 래칫이 실패시킨다(FAILURE_LOG VN-TONE-01).
+  // 2026-10-18 이전에는 여기 회차 목록이 하드코딩돼 있어서 ① 회차마다 손으로 한 줄 추가해야 했고
+  // ② 그 목록 밖 과거 회차의 위반 24건이 매 빌드 조용히 통과했다.
+  "check-editorial-tone.mjs": [],
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([

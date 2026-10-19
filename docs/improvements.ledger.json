@@ -1,7 +1,7 @@
 {
   "schema": "voidnews-improvements-ledger/v1",
   "purpose": "voidnews 관련 사용자 지시·개선·수정 이력의 단일 진실. applied/verified 항목은 evidence 체크를 달아 verify가 실측한다(선언≠증거). MD는 render로 자동 생성.",
-  "updated": "2026-10-05",
+  "updated": "2026-10-18",
   "entries": [
     {
       "id": "IMP-0001",
@@ -182,13 +182,19 @@
       "source": "audit",
       "category": "infra",
       "request": "AB run → lib/weeks 정방향 자동 생성기 부재 (격주 수동 반영)",
-      "status": "pending",
-      "files": [],
+      "status": "applied",
+      "files": [
+        "scripts/emit-weeks.mjs",
+        "scripts/check-emit-weeks.selftest.mjs",
+        "scripts/emit_ab_edition.py",
+        "scripts/emit_ab_edition_selftest.py"
+      ],
       "commit": null,
       "evidence": {
-        "kind": "manual"
+        "kind": "exit0",
+        "cmd": "node scripts/check-emit-weeks.selftest.mjs"
       },
-      "notes": "FA-04. scripts/consolidate는 추출 방향만."
+      "notes": "FA-04. scripts/consolidate는 추출 방향만. | 2026-10-19 해소: run 폴더마다 새로 쓰던 emit_weeks.mjs·emit_ab_edition.py 를 리포 scripts/ 로 승격. 주차·기간·verifiedAt 은 03_normalized_items.json 에서 도출, 회차 내용은 run 폴더 edition-spec.json. --check 는 쓰지 않고 비교만 한다(옛 사본은 --check 를 무시하고 덮어썼다). 10a 재현: weeks 데이터 동일, 회차 파일·data.ts 바이트 동일."
     },
     {
       "id": "IMP-0011",
@@ -875,6 +881,50 @@
         "value": 95
       },
       "notes": "20261006-065837-ab-20260924-20261006. 출처 이미지 89장(원문 상단 53·공유 이미지 36), 의미 있는 이미지 없음 11건은 근거와 함께 기록. 공유 changelog 카드 1건은 BACKFILL-INTEGRATION supportingRows에 결속 · 2차 반영 후 w40+w41 = 95. 게이트 check_description_links.sh 신설."
+    },
+    {
+      "id": "IMP-0049",
+      "date": "2026-10-18",
+      "source": "user-instruction",
+      "category": "infra",
+      "request": "AB 자동화 감사 0~7단계: fail-open 게이트 수리, run-local 스크립트 키트 승격, pending 나이 집계, 주간·회차 생성기, 사본 차단·정리 도구, 맥미니 일일 결정론 수확(launchd 07:10)",
+      "status": "applied",
+      "files": [
+        "scripts/emit-weeks.mjs",
+        "scripts/emit_ab_edition.py",
+        "scripts/prune_workspace.py",
+        "scripts/ledger.mjs",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/daily_harvest.py"
+      ],
+      "commit": null,
+      "evidence": {
+        "kind": "count",
+        "cmd": "ls ~/.claude/skills/voidnews-briefing-pipeline/scripts/daily_harvest.py ~/.claude/skills/voidnews-briefing-pipeline/scripts/merge_shards.py ~/.claude/skills/voidnews-briefing-pipeline/scripts/assemble_verified.py ~/.claude/skills/voidnews-briefing-pipeline/scripts/ab_status.py ~/.claude/skills/voidnews-briefing-pipeline/gates/check_run_local_copies.py ~/.claude/skills/voidnews-briefing-pipeline/gates/run_selftests.sh 2>/dev/null | wc -l",
+        "op": "eq",
+        "value": 6
+      },
+      "notes": "P72 → P80 복구 세션 2026-10-19. 키트 자체시험: bash ~/.claude/skills/voidnews-briefing-pipeline/gates/run_selftests.sh"
+    },
+    {
+      "id": "IMP-0050",
+      "date": "2026-10-18",
+      "source": "user-instruction",
+      "category": "ab-ranking",
+      "request": "Horizon(Thysrael/Horizon) 구조 분석(RFC 게이트 통과·RE 엔진 미지원) 후 Phase 4 랭커를 rank_rubric.py(프로필 고정 루브릭·발췌·2패스·중복 묶기·상위 30 opus 재평가)로 교체. 적용 전후 블라인드 테스트: 맞대결 11:0, 비용 약 12분의 1",
+      "status": "applied",
+      "files": [
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/rank_rubric.py",
+        "~/.claude/skills/voidnews-briefing-pipeline/references/rank-profiles.json",
+        "~/.claude/skills/voidnews-briefing-pipeline/scripts/curate_top10.py"
+      ],
+      "commit": null,
+      "evidence": {
+        "kind": "count",
+        "cmd": "ls ~/.claude/skills/voidnews-briefing-pipeline/scripts/rank_rubric.py ~/.claude/skills/voidnews-briefing-pipeline/scripts/rank_rubric_selftest.py ~/.claude/skills/voidnews-briefing-pipeline/references/rank-profiles.json 2>/dev/null | wc -l",
+        "op": "eq",
+        "value": 3
+      },
+      "notes": "보고서 https://claude.ai/artifact/5PnvvdhfSHQ1v8Spi3VBXn · 실험 _workspace/ab/20261019-horizon-blind/report/data.json"
     }
   ]
 }

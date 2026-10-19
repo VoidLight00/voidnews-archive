@@ -115,7 +115,27 @@ function cmdVerify(warn) {
   }
   const tail = skipped ? `, ${skipped} skipped(하네스 스코프 — 스킬 미설치 환경)` : "";
   console.log(`[ledger] verified ${checked.length - skipped} applied/verified entries, ${failed} regressed${tail}`);
+  reportOpen(d);
   if (failed && !warn) process.exit(2);
+}
+
+// 2차 집계(2026-10-19): 위 필터는 pending·in_progress 를 버린다. 그래서 IMP-0010(격주 수동 반영)이
+// 102일 동안 어떤 빌드 출력에도 나오지 않았다. 버려지던 항목의 나이를 재서 보이게 한다.
+// 빌드는 막지 않는다 — 무관한 배포를 오래된 할 일이 막으면 안 된다. ponytail: 30일 고정, 필요하면 원장에 예산 필드.
+const STALE_DAYS = 30;
+function reportOpen(d) {
+  const today = new Date(process.env.LEDGER_TODAY || new Date().toLocaleDateString("sv-SE")); // 현지 날짜(UTC 면 하루 밀린다)
+  const open = d.entries
+    .filter((e) => ["pending", "in_progress"].includes(e.status))
+    .map((e) => ({ e, days: Math.floor((today - new Date(e.date)) / 864e5) }))
+    .sort((a, b) => b.days - a.days);
+  const stale = open.filter((o) => o.days > STALE_DAYS);
+  for (const { e, days } of stale) {
+    console.log(`  ⚠ WARN[ledger:stale-pending] ${e.id} ${days}일 [${e.status}] ${e.request.slice(0, 60)}`);
+  }
+  const unmeasured = d.entries.filter((e) => ["applied", "verified"].includes(e.status) && (!e.evidence || e.evidence.kind === "manual"));
+  const oldest = open[0] ? `${open[0].e.id} ${open[0].days}일` : "—";
+  console.log(`[ledger] open ${open.length} (oldest ${oldest}, >${STALE_DAYS}일 ${stale.length}건) · applied/verified 중 evidence 없음 ${unmeasured.length}건${unmeasured.length ? ` (${unmeasured.map((e) => e.id).join(",")})` : ""}`);
 }
 
 function cmdRender() {

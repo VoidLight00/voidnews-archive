@@ -21,7 +21,8 @@
     "verify:publish-ready": "node scripts/verify-publish-ready.mjs",
     "verify:no-duplicates": "node scripts/verify-no-duplicates.mjs --scope all",
     "check:date-coverage": "node scripts/check-date-coverage.mjs",
-    "consolidate": "node scripts/consolidate-runs.mjs"
+    "consolidate": "node scripts/consolidate-runs.mjs",
+    "check:git-sync": "bash scripts/check-git-sync.sh"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.2",

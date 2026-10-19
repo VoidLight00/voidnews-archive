@@ -117,7 +117,9 @@
         "\"code.claude.com/docs\""
       ],
       "owner": "voidbrief-site-writer",
-      "note": "도메인 단위 폴백은 같은 도메인의 다른 사건에 같은 그림을 붙인다(VN-DESIGN-04). 경로 단위로만 매핑한다"
+      "note": "도메인 단위 폴백은 같은 도메인의 다른 사건에 같은 그림을 붙인다(VN-DESIGN-04). 경로 단위로만 매핑한다",
+      "allowMissing": true,
+      "allowMissingWhy": "_workspace/thumbnails/fallback-map.json 은 gitignore 대상이라 CI 패리티 트리에서 정상적으로 부재한다"
     },
     {
       "id": "VN010",
