@@ -1,0 +1,24 @@
+{
+  "purpose": "Approved additions: Weekly cards whose source is a shared rolling page.",
+  "runId": "20261019-164733-ab-20261007-20261019",
+  "rows": [
+    {
+      "slug": "gpt-live-api-prompt-to-voice",
+      "week": "2026-w42",
+      "company": "OpenAI",
+      "title": "GPT-Live API, 텍스트 설명으로 만드는 맞춤 목소리 제공",
+      "publisherDate": "2026-10-16",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "cache": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html"
+    },
+    {
+      "slug": "claude-sonnet-5-5-cache-read-price-cut",
+      "week": "2026-w41",
+      "company": "Anthropic",
+      "title": "Claude Sonnet 5.5 프롬프트 캐시 읽기 가격 인하",
+      "publisherDate": "2026-10-07",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview#october-7-2026",
+      "cache": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-4182359e79e632d3734e.html"
+    }
+  ]
+}

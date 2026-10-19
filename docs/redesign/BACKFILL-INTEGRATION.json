@@ -19417,6 +19417,18 @@
     {
       "path": "references/backfill-evidence/20261006-w39-completion/approved-additions.json",
       "sha256": "0c55fc435ba13632d08957c0978835d9af08249033c2cb0500322029d1820dd2"
+    },
+    {
+      "path": "references/backfill-evidence/20261019-w41-w42-completion/approved-additions.json",
+      "sha256": "da9e978b37c39e2a1540828af52b968c755f1a27087eb0313c5212baa0e86ff2"
+    },
+    {
+      "path": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+      "sha256": "faecaedbfbdce74d9aec6171b2e5f9381967f64a6ed41742840c8b94fa542fd5"
+    },
+    {
+      "path": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-4182359e79e632d3734e.html",
+      "sha256": "f58efa8021b02eef60253ef40039c2a64a36d297aa2af4c4d8b23d23d13d8d7d"
     }
   ],
   "abSupportingRows": [
@@ -20024,6 +20036,130 @@
               "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
               "text": "Sep 25"
             }
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-w42",
+      "company": "OpenAI",
+      "slug": "gpt-live-api-prompt-to-voice",
+      "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+      "normalizedUrl": "https://developers.openai.com/api/docs/changelog",
+      "sourceId": "src-url-49e8d0577a5e1f9d20fd",
+      "legacySourceIds": [],
+      "classification": "supporting-runtime",
+      "contentSha256": "a936c71ca1c7c35fa249e23abf604c4dc6bf0077afd05e408b523599fac8b409",
+      "joinReferences": [
+        {
+          "path": "references/backfill-evidence/20261019-w41-w42-completion/approved-additions.json",
+          "pointer": "/rows/0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://developers.openai.com/api/docs/changelog"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-10-16"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source",
+        "datePrecisionDisclosure": {
+          "location": "ledger-only",
+          "reason": "rolling page prints a calendar day only; no invented timestamp"
+        }
+      },
+      "sharedSourceGroup": "shared-49e8d0577a5e1f9d",
+      "event": {
+        "id": "w42-shared-gpt-live-api-prompt-to-voice",
+        "publisherDate": "2026-10-16",
+        "section": "Released prompt-to-voice for all API customers.",
+        "evidence": {
+          "path": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-49e8d0577a5e1f9d20fd.html",
+          "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+          "sectionQuote": "Released prompt-to-voice for all API customers.",
+          "quotes": [
+            "Added nine natural voices for GPT-Live: Nuri, Juni, and Flitz (German); Brise and Sillage (French); Nira (Hindi); Harema and Shida (Japanese); and Noeul (Korean)."
+          ],
+          "dateComponents": {
+            "mode": "month-day",
+            "heading": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > h3:nth-of-type(1)",
+              "text": "October, 2026"
+            },
+            "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+            "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1)",
+            "day": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) > main:nth-of-type(1) > astro-island:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+              "text": "Oct 16"
+            }
+          }
+        }
+      }
+    },
+    {
+      "week": "2026-w41",
+      "company": "Anthropic",
+      "slug": "claude-sonnet-5-5-cache-read-price-cut",
+      "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview#october-7-2026",
+      "normalizedUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+      "sourceId": "src-url-4182359e79e632d3734e",
+      "legacySourceIds": [],
+      "classification": "supporting-runtime",
+      "contentSha256": "5f2f0f69565a2641653900912f55049a36d0ac1e6c16e64fbb24b1e31bfb020e",
+      "joinReferences": [
+        {
+          "path": "references/backfill-evidence/20261019-w41-w42-completion/approved-additions.json",
+          "pointer": "/rows/1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-4182359e79e632d3734e.html",
+          "kind": "raw-article-html",
+          "urlAnchor": "https://platform.claude.com/docs/en/release-notes/overview"
+        }
+      ],
+      "publication": {
+        "precision": "publisher-date-only",
+        "publisherDate": "2026-10-07"
+      },
+      "policy": {
+        "status": "accepted-primary-evidence",
+        "fullArticleCached": true,
+        "evidenceScope": "cached-primary-source",
+        "datePrecisionDisclosure": {
+          "location": "ledger-only",
+          "reason": "rolling page prints a calendar day only; no invented timestamp"
+        }
+      },
+      "sharedSourceGroup": "shared-4182359e79e632d3",
+      "event": {
+        "id": "w41-shared-claude-sonnet-5-5-cache-read-price-cut",
+        "publisherDate": "2026-10-07",
+        "section": "We've lowered the price of prompt cache reads on Claude Sonnet 5.5 from $0.20 USD to $0.10 USD per million tokens",
+        "evidence": {
+          "path": "references/backfill-evidence/20261019-w41-w42-completion/source-cache/src-url-4182359e79e632d3734e.html",
+          "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+          "sectionQuote": "We've lowered the price of prompt cache reads on Claude Sonnet 5.5 from $0.20 USD to $0.10 USD per million tokens",
+          "quotes": [
+            "Cache writes and all other prices are unchanged."
+          ],
+          "dateComponents": {
+            "mode": "date-heading",
+            "heading": {
+              "selector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > h3:nth-of-type(5)",
+              "text": "October 7, 2026"
+            },
+            "entrySelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(6)",
+            "sectionSelector": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(6) > li:nth-of-type(1)"
           }
         }
       }
