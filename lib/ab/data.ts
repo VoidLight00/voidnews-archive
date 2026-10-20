@@ -23,6 +23,9 @@ export interface ABHighlight {
 
   // 핵심 인용 (카드 상단 강조)
   keyQuote?: string;
+
+  /** 원문에 기사 이미지가 없는 카드에서 출처 공유 이미지(사이트 공통 로고 등)를 자동으로 불러오지 않는다 */
+  noSourcePreview?: boolean;
 }
 
 export interface ABEditorPick {

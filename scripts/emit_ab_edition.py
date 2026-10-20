@@ -70,8 +70,12 @@ def build(spec: dict) -> tuple[str, str, list[str]]:
     ed["highlights"], ed["modelWatch"] = [], []
     for rank, h in enumerate(spec["highlights"], 1):
         week, company, p = find(h["slug"])
+        if h.get("releaseScope"):  # 주소 속 단어로 추정한 범위가 틀릴 때 회차 spec 에서 바로잡는다
+            p = {**p, "releaseScope": h["releaseScope"]}
         ed["highlights"].append({"rank": rank, "tier": h["tier"], "post": p, "sourceWeek": week,
                                  "sourceCompany": company, "editorial": h["editorial"]})
+        if h.get("noSourcePreview"):
+            ed["highlights"][-1]["noSourcePreview"] = True
     for m in spec["modelWatch"]:
         _week, _company, p = find(m["slug"])
         if "thumbnail" not in p:

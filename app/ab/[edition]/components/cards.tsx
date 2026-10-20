@@ -91,7 +91,7 @@ export function HighlightArticle({
         <EditorialImageFrame
           image={image}
           images={item.post.images}
-          sourceUrl={item.post.officialUrl || item.post.source || item.post.xUrl || item.post.threadsUrl || item.post.backupUrls?.[0]?.url}
+          sourceUrl={item.noSourcePreview ? "" : item.post.officialUrl || item.post.source || item.post.xUrl || item.post.threadsUrl || item.post.backupUrls?.[0]?.url}
           label={item.sourceCompany}
           tone="accent"
           priority={item.tier === "hero"}

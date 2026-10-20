@@ -730,6 +730,11 @@ export const week42: WeeklyData = {
               "url": "https://arstechnica.com/ai/2026/10/gemini-4-argon-begins-rolling-out-in-gemini-app-and-antigravity-but-only-if-you-pay/"
             }
           ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/23646e4eaecc.png",
+            "alt": "Gemini 4 Argon: Built to solve your hardest problems",
+            "provenance": "source-share-preview"
+          },
           "en": {
             "title": "Google releases Gemini 4 Argon across the API and the Gemini app at once",
             "deck": "The $2 per million input tokens introductory price runs until November 30",

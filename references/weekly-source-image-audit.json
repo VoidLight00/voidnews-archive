@@ -1,13 +1,13 @@
 {
  "version": 1,
- "checkedAt": "2026-10-20T08:47:39.384Z",
+ "checkedAt": "2026-10-20T14:25:56.002Z",
  "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
  "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
  "counts": {
-  "available": 709,
+  "available": 710,
   "source-unresolved": 15,
   "no-meaningful-image-verified": 166,
-  "fetch-failed": 36,
+  "fetch-failed": 35,
   "records": 926
  },
  "records": [
@@ -18902,28 +18902,6 @@
    "selectionPolicy": "source-top-image-v1"
   },
   {
-   "key": "2026-w42|Google, Gemini 4 Argon을 API와 Gemini 앱에 동시 공개|https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-   "week": "2026-w42",
-   "title": "Google, Gemini 4 Argon을 API와 Gemini 앱에 동시 공개",
-   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-   "status": "fetch-failed",
-   "checkedAt": "2026-10-19T13:58:03.158Z",
-   "reason": "원문에서 기사 이미지를 찾았으나 이미지 파일 내려받기가 실패했습니다 (HTTP 0). 이미지 부재가 아닙니다.",
-   "evidence": [
-    {
-     "kind": "source-fetch",
-     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-     "httpStatus": 200,
-     "sha256": "e0063a6c339550c64dfd623432b25300af00c06b294f6fe3432b3977aff256ea"
-    },
-    {
-     "kind": "image-fetch",
-     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-argon__blog-header__2784x1566.width-1300.png",
-     "httpStatus": 0
-    }
-   ]
-  },
-  {
    "key": "2026-w42|Liquid AI, 온디바이스 에이전트용 LFM2.5-24B-A2B 오픈 웨이트 공개|https://www.liquid.ai/blog/lfm2-5-24b-a2b",
    "week": "2026-w42",
    "title": "Liquid AI, 온디바이스 에이전트용 LFM2.5-24B-A2B 오픈 웨이트 공개",
@@ -26536,6 +26514,36 @@
      "note": "선택기가 고른 그림은 사이트 공통 로고·배너·기본 공유 이미지 또는 프로필 사진이었습니다. 기사 고유 이미지는 없었습니다."
     }
    ]
+  },
+  {
+   "key": "2026-w42|Google, Gemini 4 Argon을 API와 Gemini 앱에 동시 공개|https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+   "week": "2026-w42",
+   "title": "Google, Gemini 4 Argon을 API와 Gemini 앱에 동시 공개",
+   "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+   "status": "available",
+   "checkedAt": "2026-10-20T14:25:56.002Z",
+   "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+   "evidence": [
+    {
+     "kind": "source-fetch",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+     "httpStatus": 200,
+     "sha256": "21859f7ef51dfa1bd010c31d48eea90a54e8484a2e077f9dde442d8b9dea25cf"
+    },
+    {
+     "kind": "image-fetch",
+     "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-argon__blog-header__2784x1566.width-1300.png",
+     "httpStatus": 200,
+     "sha256": "23646e4eaecc376cd723fef7275e02d2d8023e3324366fb39e3a9edceee81aed",
+     "contentType": "image/png"
+    }
+   ],
+   "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-argon__blog-header__2784x1566.width-1300.png",
+   "publicPath": "/source-media/weekly-20261020/23646e4eaecc.png",
+   "sha256": "23646e4eaecc376cd723fef7275e02d2d8023e3324366fb39e3a9edceee81aed",
+   "byteSize": 1162156,
+   "selectionKind": "source-share-preview",
+   "selectionPolicy": "source-top-image-v1"
   }
  ],
  "existingFormatRepairs": [
