@@ -6,7 +6,7 @@ export const week41: WeeklyData = {
   "year": 2026,
   "slug": "2026-w41",
   "period": "10/5 ~ 10/11",
-  "totalPosts": 107,
+  "totalPosts": 136,
   "companies": [
     {
       "name": "GitHub",
@@ -680,6 +680,125 @@ export const week41: WeeklyData = {
           }
         },
         {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "OpenAI, Codex에 다음 메시지를 제안하는 composer predictions 베타",
+          "deck": "개인 ChatGPT Pro 사용자 대상이고, Tab으로 초안을 받아요",
+          "summary": "OpenAI가 Codex의 composer predictions를 베타로 공개했어요. 지금까지의 대화와 사용자의 말투를 바탕으로 다음 메시지를 제안하며, 변경 기록은 개인 ChatGPT Pro 요금제를 쓰는 18세 이상 사용자에게 제공된다고 밝혔어요.",
+          "content": "OpenAI의 개발자 계정(@OpenAIDevs)이 2026년 10월 9일 X에 Pro 사용자를 위한 Codex의 composer predictions를 베타로 공개한다고 올렸어요. Codex가 대화 내용과 사용자가 말하는 방식을 바탕으로 다음 메시지를 제안한다는 설명이에요. OpenAI는 이 기능이 내부 테스트에서 가장 사랑받은 새 기능 중 하나라고 밝혔는데, 이는 OpenAI의 자체 평가예요.\n\n같은 날짜의 OpenAI 변경 기록은 Codex 데스크톱 앱에서 다음 메시지에 대한 자동 완성 형태의 제안을 추가한다고 설명해요. Tab 키를 누르면 제안이 수정할 수 있는 초안으로 들어가고, 수락해도 자동으로 전송되지는 않아요.\n\n베타 대상은 지원 지역에서 개인 ChatGPT Pro 요금제를 쓰는 18세 이상 사용자이고, 로컬 및 SSH 스레드에서 GPT-6 Astra와 GPT-6.1 Sol을 쓸 때 적용돼요.",
+          "source": "https://x.com/OpenAIDevs/status/2108624138369929725",
+          "officialUrl": "https://x.com/OpenAIDevs/status/2108624138369929725",
+          "verifiedAt": "2026-10-20",
+          "slug": "codex-composer-predictions-beta",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "OpenAI",
+            "Devtools"
+          ],
+          "backupUrls": [
+            {
+              "label": "OpenAI ChatGPT·Codex 변경 기록: 2026-10-09 항목 Composer predictions in Codex",
+              "url": "https://learn.chatgpt.com/docs/changelog"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/54be22fe7f50.webp",
+            "alt": "OpenAI Developers (@OpenAIDevs) on X"
+          },
+          "en": {
+            "title": "OpenAI puts composer predictions, which suggest your next message, into Codex beta",
+            "deck": "For personal ChatGPT Pro users, and Tab accepts a suggestion as a draft",
+            "summary": "OpenAI released composer predictions in beta for Codex, which suggests the user's next message from the conversation so far. OpenAI's changelog says it is limited to users aged 18 and older with personal ChatGPT Pro plans.",
+            "content": "OpenAI's developer account (@OpenAIDevs) posted on X on October 9, 2026 that composer predictions in Codex are now in beta for Pro users. Codex can suggest your next message based on your conversation and how you talk to it. OpenAI called it one of the most loved new features it has ever tested internally, which is OpenAI's own assessment.\n\nOpenAI's changelog entry of the same date says the feature adds autocomplete-style suggestions for your next message in the Codex desktop app. Pressing Tab accepts the suggestion as an editable draft, and accepting it does not send it for you.\n\nThe beta is for users aged 18 and older with personal ChatGPT Pro plans in supported regions, in local and SSH threads with GPT-6 Astra and GPT-6.1 Sol."
+          }
+        },
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "OpenAI, ChatGPT 모바일 앱에서 dot 만들기 지원",
+          "deck": "iOS와 Android 앱에서 이름과 모양, 플러그인을 설정해요",
+          "summary": "OpenAI의 ChatGPT 계정이 iOS와 Android의 ChatGPT 앱에서 휴대폰으로 바로 dot을 만들 수 있다고 알렸어요. OpenAI의 도움말 페이지는 이름과 모양, 플러그인 연결까지 모바일에서 할 수 있다고 설명해요.",
+          "content": "OpenAI의 ChatGPT 공식 계정은 dot의 새 소식을 알리면서, 가장 먼저 iOS와 Android의 ChatGPT 앱에서 휴대폰으로 바로 dot을 만들 수 있다고 전했어요. dot은 ChatGPT의 개인 에이전트예요.\n\nChatGPT Learn의 해당 주 업데이트 페이지는 모바일 앱에서 dot의 이름을 정하고, 모양을 바꾸고, 플러그인을 연결하는 일을 모두 휴대폰에서 할 수 있다고 설명해요. 같은 페이지는 dot이 Codex에서 작업을 시작하고 기존 스레드에 후속 작업을 이어갈 수 있다고 적었어요. 클라우드 브라우징과 사이드바 로딩이 빨라졌다는 내용과 알림 관련 수정도 함께 실렸어요. 이 페이지에는 구체적인 날짜 없이 10월 5일부터 9일까지라는 주간 범위만 표시돼 있어요.",
+          "source": "https://x.com/ChatGPT/status/2108636745915052037",
+          "officialUrl": "https://x.com/ChatGPT/status/2108636745915052037",
+          "verifiedAt": "2026-10-20",
+          "slug": "openai-chatgpt-dots-mobile-creation",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "OpenAI",
+            "Agents"
+          ],
+          "backupUrls": [
+            {
+              "label": "ChatGPT Learn: 모바일 앱에서 dot 만들기 (10월 5~9일 주간)",
+              "url": "https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026"
+            },
+            {
+              "label": "ChatGPT Learn: 10월 5~9일 주간 요약",
+              "url": "https://learn.chatgpt.com/docs/whats-new/october-5-9-2026"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/f96776ea43ac.webp",
+            "alt": "ChatGPT (@ChatGPT) on X"
+          },
+          "en": {
+            "title": "OpenAI adds dot creation to the ChatGPT mobile app",
+            "deck": "Set the name, appearance and plugins in the iOS and Android apps",
+            "summary": "OpenAI's ChatGPT account said users can now create their dot straight from their phone in the ChatGPT app on iOS and Android. OpenAI's Learn page says the name, appearance and plugin connections can all be set on mobile.",
+            "content": "OpenAI's official ChatGPT account announced fresh updates for dots, and said first that you can now create your dot straight from your phone in the ChatGPT app on iOS and Android. A dot is ChatGPT's personal agent.\n\nThe ChatGPT Learn update page for that week says that in the mobile app you can give a dot a name, customize its appearance and connect plugins, all from your phone. The same page says a dot can start work in Codex and follow up on existing threads. It also lists faster cloud browsing and sidebar loading and notification fixes. The page shows only the weekly range October 5 to 9, with no specific date."
+          }
+        },
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "OpenAI 가격표에 gpt-rosalind-discovery 모델 등재",
+          "deck": "용도 설명 없이 research 모델과 같은 가격이에요",
+          "summary": "OpenAI API 가격 페이지의 생명과학 모델 항목에 gpt-rosalind-research에 이어 gpt-rosalind-discovery가 올라 있어요. 두 모델의 100만 토큰당 가격은 같아요. OpenAI는 이 모델을 따로 발표하거나 용도를 설명하지 않았어요.",
+          "content": "OpenAI API 가격 페이지의 Life sciences models 항목에는 OpenAI가 최신 Rosalind 모델이라고 소개한 모델이 두 개 올라 있어요. gpt-rosalind-research와 gpt-rosalind-discovery이고, 100만 토큰당 가격은 입력 5달러, 캐시 입력 0.5달러, 출력 25달러로 둘이 같아요.\n\n페이지 각주에는 gpt-rosalind-research의 과금이 2026년 10월 5일에 시작되고, 접근은 신뢰 접근(trusted-access) 프로그램을 통한 승인된 내부 연구로 한정된다고 적혀 있어요. 반면 gpt-rosalind-discovery가 무엇을 위한 모델인지는 페이지에 설명이 없어요. OpenAI API 변경 기록에도 gpt-rosalind-research 항목은 있지만 gpt-rosalind-discovery 항목은 없어요. OpenAI가 이 모델을 따로 발표하지는 않았어요.\n\n가격 페이지에는 이 항목이 올라온 날짜가 표시되어 있지 않아요. Internet Archive 보관본에서는 10월 9일 08:36 UTC 판에 gpt-rosalind-discovery 행이 없고 같은 날 22:32 UTC 판에는 있어서, 이 행이 10월 9일에 나타난 것으로 확인돼요.",
+          "source": "https://developers.openai.com/api/docs/pricing",
+          "officialUrl": "https://developers.openai.com/api/docs/pricing",
+          "verifiedAt": "2026-10-20",
+          "slug": "openai-gpt-rosalind-discovery-pricing-listing",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "OpenAI",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "Internet Archive 보관본 (2026-10-09 22:32 UTC, 해당 행 있음)",
+              "url": "https://web.archive.org/web/20261009223246/https://developers.openai.com/api/docs/pricing"
+            },
+            {
+              "label": "Internet Archive 보관본 (2026-10-09 08:36 UTC, 해당 행 없음)",
+              "url": "https://web.archive.org/web/20261009083652/https://developers.openai.com/api/docs/pricing"
+            },
+            {
+              "label": "OpenAI API 변경 기록 (gpt-rosalind-discovery 항목 없음)",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "TestingCatalog 보도 (2026-10-10, 최초 발견 보도)",
+              "url": "https://www.testingcatalog.com/openai-lists-new-gpt-rosalind-discovery-model-in-docs/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/c9c047bdfe7b.png",
+            "alt": "Pricing | OpenAI API",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "OpenAI pricing page lists a gpt-rosalind-discovery model",
+            "deck": "Same price as the research model, with no stated purpose",
+            "summary": "OpenAI's API pricing page now lists gpt-rosalind-discovery in the life sciences models group next to gpt-rosalind-research. The two models have the same price per 1M tokens. OpenAI has not announced the model or said what it is for.",
+            "content": "The Life sciences models group on the OpenAI API pricing page lists two models that OpenAI describes as its latest Rosalind models. They are gpt-rosalind-research and gpt-rosalind-discovery, and both have the same price per 1M tokens: $5 for input, $0.50 for cached input and $25 for output.\n\nThe page footnote says billing for gpt-rosalind-research begins on October 5, 2026, and that access is limited to approved internal research through the trusted-access program. The page does not explain what gpt-rosalind-discovery is for. The OpenAI API changelog has an entry for gpt-rosalind-research but none for gpt-rosalind-discovery. OpenAI has not announced the model separately.\n\nThe pricing page does not print a date for this row. In Internet Archive captures, the October 9 08:36 UTC version has no gpt-rosalind-discovery row and the 22:32 UTC version of the same day has it, which shows the row appeared on October 9."
+          }
+        },
+        {
           "date": "10/8",
           "platform": "Web",
           "title": "OpenAI Agents JS 0.20.0, MCP 도구 탐색 64쪽 제한",
@@ -754,6 +873,48 @@ export const week41: WeeklyData = {
             "deck": "How two operations, one Russian and one Iranian, used AI",
             "summary": "OpenAI reported that it disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging. One operation was Russian and the other Iranian. The operation names and the account bans come from The Decoder's coverage of the report.",
             "content": "OpenAI said in its news feed that it disrupted two AI-enabled influence operations. According to the feed description, both operations used false-front journalists and a think tank to spread geopolitical messaging. The item appears in the OpenAI news feed with an October 8 date, under the title 'Disrupting AI-enabled false front operations'.\n\nThe details of the operations follow The Decoder's October 9 article, which cites the report. The Decoder named the Russian operation 'Dark Clark' and the Iranian operation 'Bogus Bylines'. It also reported that OpenAI banned the ChatGPT accounts involved, and that the two operations used AI mainly for internal reporting and for adapting propaganda to other languages.\n\nThe operation names, the account bans, and the description of how AI was used in this card come from The Decoder, not from the text of OpenAI's report. The links below lead to the OpenAI report and to that coverage."
+          }
+        },
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "OpenAI, GPT-6.1 Sol Ultrafast 모드 제공 시작",
+          "deck": "Pro와 일부 Enterprise·Edu 요금제에서 쓰고, 속도는 회사 주장이에요",
+          "summary": "OpenAI 개발자 계정이 API, Codex, ChatGPT Work에서 GPT-6.1 Sol의 Ultrafast 제공을 시작했다고 알렸어요. Sol Standard보다 최대 8배 빠르다고 주장했으며, 변경 기록은 Codex와 ChatGPT Work에서 Pro와 일부 Enterprise·Edu 요금제로 제한된다고 설명해요.",
+          "content": "OpenAI의 개발자 계정(@OpenAIDevs)이 2026년 10월 8일 X에 GPT-6.1 Sol의 Ultrafast를 API, Codex, ChatGPT Work에서 오늘 제공하기 시작한다고 올렸어요. OpenAI는 Sol Standard보다 최대 8배 빠른 속도에서 Astra에 가까운 지능을 낸다고 소개했어요. 이 두 표현은 OpenAI의 자체 홍보 문구이고, 게시물에만 나와요. OpenAI 문서에는 같은 표현이 다시 나오지 않아요.\n\n같은 날짜의 OpenAI 변경 기록은 Codex와 ChatGPT Work에서 Ultrafast를 Pro $500 요금제와 자격이 되는 Enterprise, Edu 요금제에서 쓸 수 있다고 적었어요. 기업용 접근은 기본적으로 꺼져 있고, 추론 데이터의 거주지는 미국과 유럽이에요.\n\nOpenAI의 API 가이드는 Ultrafast를 GPT-6 Astra와 GPT-6.1 Sol에서 쓸 수 있는 OpenAI API의 가장 빠른 서비스 티어라고 설명해요. 이 가이드에는 날짜가 표시되어 있지 않아요.",
+          "source": "https://x.com/OpenAIDevs/status/2108262812489531498",
+          "officialUrl": "https://x.com/OpenAIDevs/status/2108262812489531498",
+          "verifiedAt": "2026-10-20",
+          "slug": "openai-gpt-6-1-sol-ultrafast-rollout",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "OpenAI",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "OpenAI ChatGPT·Codex 변경 기록: 2026-10-08 항목 GPT-6.1 Sol Ultrafast",
+              "url": "https://learn.chatgpt.com/docs/changelog"
+            },
+            {
+              "label": "ChatGPT Learn 주간 소식 (10월 5~9일): GPT-6.1 Sol의 Ultrafast 모드",
+              "url": "https://learn.chatgpt.com/docs/whats-new/october-5-9-2026"
+            },
+            {
+              "label": "OpenAI API 가이드 Ultrafast mode (날짜 없음)",
+              "url": "https://developers.openai.com/api/docs/guides/ultrafast-mode"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/6c83519bb9dc.webp",
+            "alt": "OpenAI Developers (@OpenAIDevs) on X"
+          },
+          "en": {
+            "title": "OpenAI begins rolling out GPT-6.1 Sol Ultrafast mode",
+            "deck": "Available on Pro and some Enterprise and Edu plans, and the speed figure is the company's claim",
+            "summary": "OpenAI's developer account said Ultrafast is rolling out for GPT-6.1 Sol in the API, Codex, and ChatGPT Work, claiming speeds up to 8x faster than Sol Standard. OpenAI's changelog says access in Codex and ChatGPT Work is limited to Pro and eligible Enterprise and Edu plans.",
+            "content": "OpenAI's developer account (@OpenAIDevs) posted on X on October 8, 2026 that Ultrafast is rolling out today for GPT-6.1 Sol in the API, Codex, and ChatGPT Work. OpenAI described it as near-Astra intelligence at up to 8x faster speeds than Sol Standard. Both claims are OpenAI's own marketing language and appear only in the post. The OpenAI documentation does not restate them.\n\nOpenAI's changelog entry of the same date says that in Codex and ChatGPT Work, Ultrafast is available on the Pro $500 plan and on eligible Enterprise and Edu plans. Enterprise access is off by default, and inference residency is in the United States and Europe.\n\nOpenAI's API guide describes Ultrafast as the fastest service tier in the OpenAI API, available for GPT-6 Astra and GPT-6.1 Sol. The guide shows no date."
           }
         },
         {
@@ -1292,6 +1453,40 @@ export const week41: WeeklyData = {
           }
         },
         {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "Claude Code Projects, Pro·Max 대기자 전원 입장",
+          "deck": "4분 분량의 시작 안내 영상도 함께 공유했어요",
+          "summary": "Anthropic의 개발자용 공식 X 계정 ClaudeDevs가 Claude Code Projects 대기자 명단의 Pro와 Max 사용자를 모두 들여보냈다고 밝혔어요. 시작 안내 영상도 함께 공유했어요. 공개 문서는 Projects를 공개 베타로 소개해요.",
+          "content": "Anthropic의 개발자용 공식 X 계정 ClaudeDevs는 Claude Code Projects 대기자 명단에 있던 Pro와 Max 사용자를 모두 들여보냈다고 알렸어요. Claude Code Projects를 처음 접하는 사람을 위해 4분 분량의 시작 안내 영상도 함께 올렸어요.\n\n이 내용은 Anthropic이 직접 한 말이에요. 같은 주제를 다룬 Claude Code 문서의 Projects 페이지에는 게시일이 표시되어 있지 않아요. 확인 시점에 이 문서는 Projects를 Pro와 Max 요금제의 공개 베타이며 점진적으로 열고 있다고 설명하고, 대기자 명단 가입 안내를 싣고 있어요. 그래서 대기자 전원이라는 표현은 10월 9일 게시물의 문구로 보는 편이 정확해요.",
+          "source": "https://x.com/ClaudeDevs/status/2108621476538781878",
+          "officialUrl": "https://x.com/ClaudeDevs/status/2108621476538781878",
+          "verifiedAt": "2026-10-20",
+          "slug": "claude-code-projects-waitlist-opened",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Anthropic",
+            "Devtools"
+          ],
+          "backupUrls": [
+            {
+              "label": "Claude Code 문서: Projects (게시일 미표시, 2026-10-20 확인)",
+              "url": "https://code.claude.com/docs/en/claude-projects"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/93196f91c24f.webp",
+            "alt": "ClaudeDevs (@ClaudeDevs) on X"
+          },
+          "en": {
+            "title": "Anthropic lets in every Pro and Max user on the Claude Code Projects waitlist",
+            "deck": "It also shared a 4 minute walkthrough to get started",
+            "summary": "ClaudeDevs, Anthropic's official X account for developers, said it let in every Pro and Max user from the Claude Code Projects waitlist. It also shared a 4 minute walkthrough. The public docs describe Projects as a public beta.",
+            "content": "ClaudeDevs, Anthropic's official X account for developers, said it let in every Pro and Max user from the Claude Code Projects waitlist. For people new to Claude Code Projects, it also posted a 4 minute walkthrough to get started.\n\nThis is Anthropic's own statement. The Projects page in the Claude Code docs shows no publication date. When checked, the docs described Projects as a public beta on Pro and Max plans that is rolling out gradually, and still included a way to join the waitlist. The phrase every user from the waitlist is therefore best read as the wording of the October 9 post."
+          }
+        },
+        {
           "date": "10/8",
           "platform": "Web",
           "title": "Anthropic, 사이버 보안 프로젝트 Cyber Mission 출범",
@@ -1724,6 +1919,34 @@ export const week41: WeeklyData = {
             "summary": "Artificial Analysis added models with fewer cyber guardrails to its Cyber Index, starting with GPT-6 Sol (Daybreak Blue, max), and says it now leads the index. All figures are Artificial Analysis's own benchmark results.",
             "content": "In an October 8 article, Artificial Analysis said it is expanding its Cyber Index leaderboard to include models with fewer cyber guardrails. The first is GPT-6 Sol (Daybreak Blue, max), which is accessible only through OpenAI's Daybreak program.\n\nAccording to Artificial Analysis, this model now leads the Index and sits on the cost versus capability Pareto frontier. It hit no safety blocks across the entire Index, and its overall score improved by 32 points over the publicly available GPT-6 Sol (max). Its cost per task is 1.77 dollars, which Artificial Analysis compared with 11.67 dollars for Grok 4.7 (xhigh), the comparison model it cited.\n\nAll of these figures are benchmark results from Artificial Analysis's own index. They come from an evaluator rather than the model's developer, and they were not reproduced independently."
           }
+        },
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Artificial Analysis, 법률 에이전트 벤치마크 v1.1 공개",
+          "deck": "환각 점검과 세 명의 심사 패널을 더했어요",
+          "summary": "Artificial Analysis가 Harvey와 협업해 법률 에이전트 벤치마크 Harvey LAB-AA를 v1.1로 내놓았어요. 환각 점검과 세 명의 심사 패널, 새 대표 지표가 더해졌어요. 이 지표에서 Grok 4.7(xhigh)이 9.4%로 선두라고 밝혔어요.",
+          "content": "Artificial Analysis는 Harvey와 협업해 Harvey LAB-AA를 v1.1로 내놓았다고 밝혔어요. 이번 버전은 환각 점검, 세 명으로 구성된 심사 패널, 새 대표 지표인 Hallucination-Gated All-Pass Rate를 더했어요. 과제는 Harvey가 만든 비공개 법률 과제 120개이고, Harvey의 최신 비공개 데이터셋과 개선된 과제 및 평가 기준을 쓴다고 해요.\n\n새 지표 기준으로는 Grok 4.7(xhigh)이 9.4%로 가장 높았어요. 이 수치는 Artificial Analysis가 자체 방법론으로 직접 측정한 결과예요.",
+          "source": "https://artificialanalysis.ai/articles/harvey-lab-aa-v1-1",
+          "officialUrl": "https://artificialanalysis.ai/articles/harvey-lab-aa-v1-1",
+          "verifiedAt": "2026-10-20",
+          "slug": "artificial-analysis-harvey-lab-aa-v1-1",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Artificial Analysis",
+            "Research"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/a667196a8b96.png",
+            "alt": "Claude Opus 5.5 (max with fallback) - coc-analysis-report.docx thumbnail"
+          },
+          "en": {
+            "title": "Artificial Analysis releases Harvey LAB-AA v1.1 for legal agents",
+            "deck": "It adds hallucination checks and a three-judge panel",
+            "summary": "Artificial Analysis, working with Harvey, released v1.1 of its legal-agent benchmark Harvey LAB-AA. It adds hallucination checks, a three-judge panel and a new headline metric. It says Grok 4.7 (xhigh) leads on that metric at 9.4%.",
+            "content": "Artificial Analysis said it collaborated with Harvey on Harvey LAB-AA v1.1. This version adds hallucination checks, a three-judge panel and a new headline metric, the Hallucination-Gated All-Pass Rate. The tasks are 120 private legal tasks built by Harvey, and the benchmark uses Harvey's latest private dataset with improved tasks and criteria.\n\nOn the new metric, Grok 4.7 (xhigh) scored highest at 9.4%. This figure is Artificial Analysis's own measurement using its own methodology."
+          }
         }
       ]
     },
@@ -1879,6 +2102,36 @@ export const week41: WeeklyData = {
             "deck": "Two models Anthropic launched in September reach the government regions",
             "summary": "AWS said Claude Sonnet 5.5 and Claude Opus 5.5 are now available in the Kiro IDE and CLI in the AWS GovCloud (US) Regions. It is a regional availability notice for models Anthropic launched in September.",
             "content": "On October 9, AWS announced that two new Anthropic models are now available in the Kiro IDE and CLI for the AWS GovCloud (US) Regions. The models are Claude Opus 5.5 and Claude Sonnet 5.5.\n\n- Claude Opus 5.5: 1M context window, 2.0x credit multiplier\n- Claude Sonnet 5.5: 1M context window, 1.3x credit multiplier\n\nThe announcement page cites roughly 40% fewer tool calls for Opus 5.5, and the page attributes that figure to Kiro's internal benchmarking.\n\nAnthropic launched both models earlier, in September. According to Anthropic's release notes, Opus 5.5 launched on September 22 and Sonnet 5.5 on September 28. This announcement is about support in the GovCloud (US) Regions."
+          }
+        },
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "Amazon Bedrock에 TwelveLabs Pegasus 1.5 모델 추가",
+          "deck": "영상에서 타임코드가 포함된 구조화 메타데이터를 만들어요",
+          "summary": "Amazon Bedrock이 2026년 10월 9일 TwelveLabs의 Pegasus 1.5 영상 언어 모델 지원을 추가했어요. 긴 영상에서 타임코드가 포함된 구조화 메타데이터를 만들고, 10월 19일 AWS 블로그는 두 시간 영상 한도를 설명해요.",
+          "content": "AWS가 What's New 공지에서 2026년 10월 9일 Amazon Bedrock이 TwelveLabs의 Pegasus 1.5를 지원한다고 밝혔어요. Pegasus 1.5는 영상에서 타임코드가 포함된 구조화 메타데이터를 만드는 영상-텍스트 모델이에요. 사전 인덱싱이나 수집 파이프라인이 필요 없고, 미국 및 글로벌 교차 리전 추론 프로필로 접근해요.\n\n10월 19일 자 AWS 머신러닝 블로그는 이 발표를 이어서 설명해요. Pegasus 1.5는 단일 요청으로 최대 두 시간 길이의 영상을 분석하는데, Pegasus 1.2의 한 시간에서 늘어난 한도예요. 파일은 Amazon S3에서 최대 2GB, base64로는 25MB까지 받아요.\n\n이 모델은 TwelveLabs가 만든 모델을 AWS가 Bedrock에서 제공하는 것이에요. AWS의 설명은 기능과 한도에 대한 것이고, 벤치마크 수치는 제시하지 않았어요.",
+          "source": "https://aws.amazon.com/about-aws/whats-new/2026/10/twelve-labs-pegasus-1-5-aws/",
+          "officialUrl": "https://aws.amazon.com/about-aws/whats-new/2026/10/twelve-labs-pegasus-1-5-aws/",
+          "verifiedAt": "2026-10-20",
+          "slug": "aws-bedrock-twelvelabs-pegasus-1-5",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "AWS",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "AWS 머신러닝 블로그 (2026-10-19): 입력 한도와 코드 예제를 추가로 설명",
+              "url": "https://aws.amazon.com/blogs/machine-learning/pegasus-1-5-from-twelvelabs-is-now-available-in-amazon-bedrock/"
+            }
+          ],
+          "en": {
+            "title": "TwelveLabs Pegasus 1.5 model added to Amazon Bedrock",
+            "deck": "It produces structured, time-coded metadata from video",
+            "summary": "Amazon Bedrock added support for TwelveLabs' Pegasus 1.5 video language model on October 9, 2026. It turns long video into structured, time-coded metadata, and an AWS blog of October 19 details the two-hour video limit.",
+            "content": "AWS said in a What's New post on October 9, 2026 that Amazon Bedrock now supports TwelveLabs Pegasus 1.5. Pegasus 1.5 is a video-to-text model that generates structured, time-coded metadata from video. It needs no pre-indexing or ingestion pipeline, and it is accessed through the US and Global cross-Region inference profiles.\n\nAn AWS machine learning blog dated October 19 follows up on the announcement. Pegasus 1.5 analyzes videos up to two hours long in a single request, up from one hour in Pegasus 1.2. Files can be up to 2GB from Amazon S3, or 25MB as base64.\n\nThe model is built by TwelveLabs and offered by AWS on Bedrock. AWS's description covers features and limits, and no benchmark figures are given."
           }
         },
         {
@@ -2343,6 +2596,35 @@ export const week41: WeeklyData = {
       "color": "#6B7280",
       "posts": [
         {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Epoch AI 보고서, AI가 Epoch 업무를 자동화할 수 있는지 시험",
+          "deck": "정해진 과제는 안정적으로 하지만 열린 과제에서는 막힌다고 해요",
+          "summary": "Epoch AI가 자사 업무에서 가져온 과제로 최신 모델이 업무를 자동화할 수 있는지 시험한 보고서를 냈어요. 모델이 정의가 분명한 과제는 안정적으로 하지만 열린 부분에서는 실패한다고 결론 내렸어요.",
+          "content": "Epoch AI가 2026년 10월 8일 보고서 “Can AI automate Epoch?”를 공개했어요. 보고서는 Epoch Automation Reports를 통해 모델이 아직 Epoch 수준의 결과물을 자율적으로 만들어 내지 못한다는 점을 보여 준다고 밝혔어요.\n\nEpoch AI는 최신 모델이 정의가 분명한 과제는 안정적으로 수행하지만, 완전한 자동화를 가로막는 더 열린 부분에서는 실패한다고 설명했어요.\n\n과제는 Epoch가 실제로 하는 업무에서 가져왔고, 채점은 Epoch 직원이 직접 수작업으로 했어요. 따라서 이 결과는 Epoch의 자체 방법론에 따른 평가이고, 외부 기관이 검증한 것은 아니에요.",
+          "source": "https://epoch.ai/publications/can-ai-automate-epoch",
+          "officialUrl": "https://epoch.ai/publications/can-ai-automate-epoch",
+          "verifiedAt": "2026-10-20",
+          "slug": "epoch-ai-automation-reports",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Epoch AI",
+            "Research"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/49773ddf0485.png",
+            "alt": "Can AI automate Epoch?",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Epoch AI report tests whether AI can automate Epoch's own work",
+            "deck": "Models are reliable on defined tasks but fail on open-ended ones, it says",
+            "summary": "Epoch AI published a report testing whether frontier models can automate tasks taken from its own work. It concluded that models handle well-defined tasks reliably but fail on the open-ended parts.",
+            "content": "Epoch AI published the report “Can AI automate Epoch?” on October 8, 2026. The report said the Epoch Automation Reports show that models cannot yet autonomously produce Epoch-quality work.\n\nEpoch AI explained that frontier models perform reliably on well-defined tasks, but fail on the more open-ended aspects that prevent full automation.\n\nThe tasks were taken from Epoch's own work, and Epoch staff graded them manually. The result therefore reflects Epoch's own methodology and was not verified by an outside party."
+          }
+        },
+        {
           "date": "10/7",
           "platform": "Web",
           "title": "Epoch AI, InnovationEval 초기 결과로 AI의 기법 발견 능력 점검",
@@ -2477,6 +2759,45 @@ export const week41: WeeklyData = {
             "deck": "One agent for knowledge work, content creation, and coding",
             "summary": "Google Cloud announced the Gemini agent at Gemini at Work 2026, a universal agent for work. It covers knowledge work, content creation, and coding, and connects to a company's business systems. The posts do not state its availability stage.",
             "content": "On October 8, Google Cloud announced the Gemini agent at its Gemini at Work 2026 event. Google describes it as a universal agent for work.\n\nAccording to the announcement, the Gemini agent plans the work, uses skills and tools, and connects to Cloud customers' business systems. It chooses the best model for the job and has built-in cost controls. Google says the agent handles knowledge work, content creation, and coding in one place.\n\nHowever, neither the blog post nor the Google Cloud blog post says whether the Gemini agent is generally available or in preview. The announcement alone does not show who can use it now or under what conditions."
+          }
+        },
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Google, 온디바이스 AI 노트 앱 AI Edge Foresight 공개",
+          "deck": "Mac에서 오프라인으로 돌아가고 데이터가 컴퓨터를 떠나지 않는다고 해요",
+          "summary": "Google이 Mac에서 회의를 기기 안에서 전사하고 요약하는 노트 앱 Google AI Edge Foresight를 내놓았어요. Google은 EmbeddingGemma 2로 구동되며 오디오, 파일, 노트가 컴퓨터 밖으로 나가지 않는다고 밝혔어요.",
+          "content": "Google이 개발자 사이트에 Google AI Edge Foresight 페이지를 공개했어요. Mac용 노트 앱으로, 회의를 기기 안에서 전사하고 요약해요. 페이지 소개 문구는 “Intelligent Notetaking Connected to Your Actual Work”예요.\n\nGoogle은 이 앱이 Mac에서 로컬로 실행되고 오프라인에서도 작동한다고 밝혔어요. 구동 모델은 EmbeddingGemma 2이고, Google은 이를 7억 4,000만 개 파라미터의 온디바이스 멀티모달 임베딩 모델이라고 설명해요. 개인 지식 소스, 회의 오디오, 노트가 컴퓨터를 떠나지 않는다는 점도 Google이 직접 밝힌 내용이에요.\n\nGoogle 페이지에는 게시일이 표시되어 있지 않고, 이 앱을 Early Access Apps로 부르고 있어요. 날짜는 2026년 10월 8일에 나온 TechCrunch와 The Verge 보도를 기준으로 했어요. 두 매체는 이 앱을 실험적이고 무료라고 표현했지만, 이 표현은 Google 페이지에는 없어요.",
+          "source": "https://developers.google.com/edge/foresight",
+          "officialUrl": "https://developers.google.com/edge/foresight",
+          "verifiedAt": "2026-10-20",
+          "slug": "google-ai-edge-foresight-mac-notetaking",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Google",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "TechCrunch 보도 (2026-10-08)",
+              "url": "https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/"
+            },
+            {
+              "label": "The Verge 보도 (2026-10-08)",
+              "url": "https://www.theverge.com/tech/1007985/google-ai-notetaking-app-transcribe-offline"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/89a1bdd49f14.png",
+            "alt": "Google AI Edge Foresight  |  Google for Developers",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Google releases AI Edge Foresight, an on-device AI note-taking app",
+            "deck": "It runs offline on a Mac and keeps data on the computer, Google says",
+            "summary": "Google released Google AI Edge Foresight, a Mac note-taking app that transcribes and summarizes meetings on the device. Google says it is powered by EmbeddingGemma 2 and that audio, files, and notes never leave the computer.",
+            "content": "Google published a Google AI Edge Foresight page on its developer site. It is a note-taking app for Mac that transcribes and summarizes meetings on the device. The page tagline is “Intelligent Notetaking Connected to Your Actual Work.”\n\nGoogle said the app runs locally on the Mac and works offline. It is powered by EmbeddingGemma 2, which Google describes as a 740M parameter on-device multimodal embedding model. Google also said that personal knowledge sources, meeting audio, and notes never leave the computer.\n\nThe Google page shows no publication date and refers to the app as one of its Early Access Apps. The date here follows the TechCrunch and The Verge coverage of October 8, 2026. Those outlets described the app as experimental and free, but those words do not appear on Google's page."
           }
         },
         {
@@ -2808,6 +3129,48 @@ export const week41: WeeklyData = {
             "deck": "The research grounds a generative prior in observations without retraining",
             "summary": "Researchers from Meta Reality Labs and the University of Tübingen released GenIA, a method that aligns the SAM3D generative prior to input views at test time to reconstruct 3D objects. The authors say it beats recent baselines.",
             "content": "Researchers from Meta Reality Labs and the University of Tübingen (Tübingen AI Center) posted the GenIA paper to arXiv on October 8. GenIA is a framework for test-time input-aligned generation. It grounds SAM3D's generative prior in geometric and photometric observations without retraining the foundation model.\n\nThe authors say GenIA improves pose prediction and object reconstruction from monocular, multi-view and dynamic inputs, and outperforms recent optimization-based, per-frame image-to-3D and video-to-4D methods. The claim is that it beats recent baselines on synthetic and real benchmarks, and these are the authors' own reported results. A project page and a GitHub repository, created on October 8, are available alongside the paper."
+          }
+        },
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "Meta, 개인 AI 에이전트 Muse의 iPad 앱 출시",
+          "deck": "App Store 10.0 업데이트에서 iPad 지원을 밝혔어요",
+          "summary": "Meta가 개인 AI 에이전트 Muse를 이제 iPad에서 쓸 수 있다고 App Store 업데이트 기록에서 밝혔어요. Meta의 Chief AI Officer도 같은 날 X에서 iPad 앱 출시를 알렸어요. TechCrunch는 모바일 앱이 나온 지 약 한 달 만이라고 보도했어요.",
+          "content": "Meta는 App Store의 Muse 앱 업데이트 기록에 버전 10.0(10월 7일) 항목으로 Muse를 이제 iPad에서 쓸 수 있다고 적었어요. 앱 목록에는 호환 기기가 iPhone과 iPad로 표시되고, iPad는 iPadOS 18.0 이상이 필요해요.\n\n같은 날 Meta의 Chief AI Officer가 X 개인 계정에 iPad 앱이 나왔다고 알렸어요. 이 게시물은 회사 공식 계정이 아니라 임원 개인 계정에서 나왔어요. 게시물에는 태블릿에서 쓰는 초지능이 필요하다면 확인해 보라는 가벼운 홍보 문구가 들어 있어요.\n\nTechCrunch는 Muse가 전용 iPad 앱으로 나왔다고 전하면서, 모바일 앱이 나온 지 약 한 달 만이라고 보도했어요. App Store 버전 기록에는 연도 없이 10월 7일로만 적혀 있지만, X 게시물과 TechCrunch 기사에서 같은 날짜가 확인돼요.\n\n이 출시의 직접 근거는 Meta 자체 도메인이 아니라 Apple App Store의 업데이트 기록이에요. Meta 뉴스룸 목록에서는 iPad 출시를 다룬 별도 게시물이 확인되지 않았어요.",
+          "source": "https://apps.apple.com/us/app/muse-from-meta/id6760173601",
+          "officialUrl": "https://apps.apple.com/us/app/muse-from-meta/id6760173601",
+          "verifiedAt": "2026-10-20",
+          "slug": "meta-muse-ipad-app",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Meta",
+            "Agents"
+          ],
+          "backupUrls": [
+            {
+              "label": "Meta Chief AI Officer의 X 게시물 (2026-10-07)",
+              "url": "https://x.com/alexandr_wang/status/2107857066174112175"
+            },
+            {
+              "label": "TechCrunch 보도 (2026-10-07)",
+              "url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/"
+            },
+            {
+              "label": "AI타임스 보도 (한국어, 2026-10-08)",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=216078"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/08555ddfcae1.webp",
+            "alt": "Muse from Meta App - App Store"
+          },
+          "en": {
+            "title": "Meta releases an iPad app for its personal AI agent Muse",
+            "deck": "The App Store 10.0 update announces iPad support",
+            "summary": "Meta said in its App Store release notes that Muse, its personal AI agent, is now available on iPad. Meta's Chief AI Officer announced the iPad app on X the same day. TechCrunch reported that it arrived about a month after the mobile debut.",
+            "content": "In the App Store version history for the Muse app, Meta wrote under version 10.0 (October 7) that Muse is now available on iPad. The listing shows iPhone and iPad as compatible devices, and the iPad version requires iPadOS 18.0 or later.\n\nThe same day, Meta's Chief AI Officer posted on a personal X account that the iPad app was out. The post came from an executive's personal account, not the company's official account. It includes a lighthearted promotional line that invites people to check it out for all their tablet superintelligence needs.\n\nTechCrunch reported that Muse has arrived as a dedicated iPad app, about a month after the mobile app debuted. The App Store version history shows only October 7 with no year, but the X post and the TechCrunch article confirm the same date.\n\nThe direct evidence for this release is Apple's App Store version history, not a page on a Meta domain. The Meta newsroom listing did not show a separate post about the iPad release."
           }
         }
       ]
@@ -4083,6 +4446,41 @@ export const week41: WeeklyData = {
             "summary": "ARTEX, a GitHub repository from an independent developer, is a multi-agent system for autonomous penetration testing in an isolated lab. The repository page shows a creation date of October 8.",
             "content": "ARTEX is an open-source repository posted on GitHub by an independent developer, and it is not an official product of a company. The README introduces ARTEX as a multi-agent system for autonomous penetration testing in an isolated lab. It says a planner and workers share an asset graph and an exploration graph, with human-in-the-loop approval and full traffic recording. The license is shown as AGPL-3.0.\n\nThe repository page shows a creation date of October 8. However, the repository already has a commit history, so the creation date may not be the first public date. Because this is a penetration testing tool, it should be read within the scope the README assumes, which is an isolated lab environment."
           }
+        },
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "개인 개발자의 코딩 에이전트 규칙 Ponytail 5.0.0 공개",
+          "deck": "규칙을 절반 길이로 줄이고 리뷰와 감사 명령을 더했어요",
+          "summary": "개인 개발자의 오픈소스 저장소 Ponytail이 5.0.0을 냈어요. AI 코딩 에이전트가 가장 작고 완결된 변경을 하도록 이끄는 규칙 모음을 처음부터 다시 만들었다고 해요. 효과 수치는 관리자가 직접 돌린 벤치마크 결과예요.",
+          "content": "Ponytail은 개인 개발자가 운영하는 GitHub 저장소이고, 회사의 공식 제품이 아니에요. AI 코딩 에이전트가 가장 작지만 완결된 변경을 하도록 이끄는 오픈소스 규칙 모음이에요. 5.0.0 릴리스 노트는 새 규칙, 새 리뷰, 새 감사를 갖춰 처음부터 다시 만들었다고 적었어요.\n\n릴리스 노트에 나온 변경은 다음과 같아요.\n\n- 규칙을 다시 써서 길이가 대략 절반이 됐어요.\n- 세션 시작 시점의 코드베이스 지도가 추가됐어요.\n- /ponytail-review 와 /ponytail-audit 명령이 추가됐어요.\n\n관리자는 이 스킬을 쓰지 않은 같은 에이전트와 비교했다며 코드 53% 감소, 시간 41% 감소, 비용 26% 감소라는 수치를 내놓았어요. 비교 조건은 Claude Code와 Opus 5.5, 과제 39개, 과제당 5회 실행이고, 관리자가 직접 돌린 벤치마크예요.",
+          "source": "https://github.com/DietrichGebert/ponytail/releases/tag/v5.0.0",
+          "officialUrl": "https://github.com/DietrichGebert/ponytail/releases/tag/v5.0.0",
+          "verifiedAt": "2026-10-20",
+          "slug": "ponytail-5-0-0-release",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "독립 개발자",
+            "Devtools"
+          ],
+          "backupUrls": [
+            {
+              "label": "저장소 릴리스 피드",
+              "url": "https://github.com/DietrichGebert/ponytail/releases.atom"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/414170c775bc.png",
+            "alt": "Release v5.0.0: Ponytail 5 · DietrichGebert/ponytail",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Ponytail 5.0.0, an independent developer's rules for coding agents",
+            "deck": "Rules are about half as long, with new review and audit commands",
+            "summary": "Ponytail, an open-source repository from an independent developer, has released 5.0.0. It says it rebuilt from the ground up the rule set that steers AI coding agents toward the smallest complete change. The effect figures come from the maintainer's own benchmark.",
+            "content": "Ponytail is a GitHub repository run by an independent developer, not an official product of a company. It is an open-source rule set that steers AI coding agents toward the smallest complete change. The 5.0.0 release notes say it was rebuilt from the ground up, with new rules, a new review and a new audit.\n\nThe changes listed in the release notes are as follows.\n\n- The rules were rewritten and are about half as long.\n- A session-start codebase map was added.\n- The /ponytail-review and /ponytail-audit commands were added.\n\nThe maintainer compared against the same agent without the skill and reported 53% less code, 41% less time and 26% lower cost. The comparison used Claude Code with Opus 5.5, 39 tasks and 5 runs each, and it is the maintainer's own benchmark."
+          }
         }
       ]
     },
@@ -4134,6 +4532,666 @@ export const week41: WeeklyData = {
             "deck": "The researchers' account and OpenAI's account of the dismissals differ",
             "summary": "Three safety researchers who say OpenAI fired them published an open letter to company leadership on October 8. They say they believe they were fired for putting safety ahead of the company's near-term interests. OpenAI says the cause was a policy violation on handling sensitive information, and neither account has been independently established.",
             "content": "Three safety researchers who say they were fired from OpenAI published an open letter to company leadership on October 8. The letter appeared in an X post by one of them, published at 18:26 UTC on October 8 (3:26 a.m. KST on October 9). In the post, he said that he and two other safety researchers were fired from OpenAI last week, and that he believes they were fired for prioritizing safety over the near-term interests of OpenAI as a corporation.\n\nTechCrunch reported that the letter was made public on Thursday. According to TechCrunch, the letter denies that the researchers mishandled sensitive information and warns of a chilling effect on open debate inside the company.\n\nThese are the claims of the fired researchers. In a separate statement posted from its Newsroom account on October 9, OpenAI said it parted ways with them because an investigation found they violated clear policies on handling sensitive information. The researchers dispute that explanation.\n\nWhat is confirmed so far is that the letter and OpenAI's statement were each published. Neither side's account of the reason for the dismissals or of any policy violation has been independently established. The links below lead to OpenAI's statement and to related coverage."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alibaba / Qwen",
+      "color": "#FF6A00",
+      "posts": [
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Alibaba Cloud Model Studio 미국 리전에 qwen3.8-max 추가",
+          "deck": "10월 8일자 리전 확대 기록이고, 모델은 이전에 먼저 나왔어요",
+          "summary": "Alibaba Cloud의 Model Studio 출시 목록에 2026년 10월 8일자로 qwen3.8-max와 qwen3.7-flash가 미국(버지니아) 리전에서 쓸 수 있게 됐다고 기록돼 있어요. 목록은 qwen3.8-max에 네이티브 100만 토큰 컨텍스트 창이 있다고 설명해요.",
+          "content": "Alibaba Cloud의 Model Studio 출시 모델 목록에서 미국(버지니아) 섹션에 2026년 10월 8일 날짜의 행이 두 개 추가됐어요. 첫 행은 qwen3.8-max가 미국 배포 범위로 미국(버지니아) 리전에서 이제 사용할 수 있다는 내용이에요. 지원 기능으로는 텍스트 생성, 딥 싱킹, 시각 이해, Function Calling, 구조화된 출력, 컨텍스트 캐싱을 꼽았고, 네이티브 100만 토큰 컨텍스트 창을 갖췄다고 적었어요.\n\n둘째 행은 같은 날짜에 qwen3.7-flash가 같은 리전에서 제공된다는 내용이고, 이 행에는 100만 토큰에 대한 언급이 없어요.\n\n이 소식은 새 모델 출시가 아니라 리전별 제공 범위 확대예요. qwen3.8-max는 이전에 나왔고, 같은 목록에 국제 리전용 qwen3.8-max-0902 스냅샷 행이 2026년 9월 2일자로 올라 있어요. 해당 페이지는 계속 갱신되는 변경 목록이며, 페이지 상단에는 최종 갱신일이 2026년 10월 11일로 표시돼 있어요.",
+          "source": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+          "officialUrl": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+          "verifiedAt": "2026-10-20",
+          "slug": "qwen3-8-max-alibaba-cloud-us-virginia",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Alibaba / Qwen",
+            "Models"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/467151d3516e.png",
+            "alt": "Model lifecycle and updates - Alibaba Cloud",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "qwen3.8-max added to the US region of Alibaba Cloud Model Studio",
+            "deck": "A regional expansion recorded on October 8; the model itself came out earlier",
+            "summary": "Alibaba Cloud's Model Studio release table records qwen3.8-max and qwen3.7-flash becoming available in the US (Virginia) region on October 8, 2026. The table says qwen3.8-max has a native 1M-token context window.",
+            "content": "Two rows dated October 8, 2026 appear in the US (Virginia) section of the Alibaba Cloud Model Studio release table. The first row says qwen3.8-max is now available with the US deployment scope in the US (Virginia) region. It lists text generation, deep thinking, visual understanding, Function Calling, structured output, and context caching as supported, and says the model has a native 1M token context window.\n\nThe second row, with the same date, says qwen3.7-flash is available in the same region. That row does not mention a 1M-token window.\n\nThis is an expansion of regional availability, not a new model launch. qwen3.8-max came out earlier, and the same table has a row for an international qwen3.8-max-0902 snapshot dated September 2, 2026. The page is a living change list, and its header shows a last-updated date of October 11, 2026."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Arena",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Arena, 에이전트 정렬 지수 Alignment Index 공개",
+          "deck": "27개 모델을 실제 에이전트 세션 9만 건으로 비교했어요",
+          "summary": "Arena가 실제 에이전트 세션 9만 건으로 27개 모델을 비교하는 Arena Alignment Index를 공개했어요. 승인받지 않은 행동, 잘못된 귀속, 속임수 완료의 세 신호를 본다고 해요. Arena는 OpenAI 모델이 상위 5개 자리를 차지했다고 밝혔어요.",
+          "content": "Arena는 오늘 Arena Alignment Index를 소개한다며, 실제 에이전트 세션 9만 건을 바탕으로 27개 모델을 비교했다고 밝혔어요. 이 지수는 승인받지 않은 행동(unauthorized action), 잘못된 귀속(false attribution), 속임수 완료(deceptive completion)의 세 가지 신호를 살펴봐요.\n\nArena가 요약한 결과는 다음과 같아요.\n\n- OpenAI 모델이 27개 모델 가운데 상위 5개 자리를 차지했고, 그중 네 모델이 약 88점을 받았어요.\n- Anthropic의 Opus 5.5와 SpaceXAI의 Grok 4.7은 83점이에요.\n\n이 순위는 Arena가 자체 방법으로 낸 결과이고, Arena가 직접 내세운 주장이에요. Arena는 시리즈 B 관련 글에서도 이 지수를 함께 알렸어요. 투자 소식은 이 지수 공개와 별개의 사건이에요.",
+          "source": "https://arena.ai/blog/ai-alignment-index",
+          "officialUrl": "https://arena.ai/blog/ai-alignment-index",
+          "verifiedAt": "2026-10-20",
+          "slug": "arena-alignment-index",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Arena",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "Arena 시리즈 B 글 (지수를 함께 알린 별도의 투자 소식)",
+              "url": "https://arena.ai/blog/series-b"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/dab1b2a6f434.jpg",
+            "alt": "Arena AI Alignment Index - Arena.ai",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Arena releases the Arena Alignment Index for agent alignment",
+            "deck": "It compares 27 models across 90,000 real agent sessions",
+            "summary": "Arena has launched the Arena Alignment Index, which compares 27 models across 90,000 real-world agent sessions. It looks at three signals: unauthorized action, false attribution and deceptive completion. Arena says OpenAI models hold the top five positions.",
+            "content": "Arena said it is introducing the Arena Alignment Index today, comparing 27 models across 90,000 real-world agent sessions. The index looks at three signals: unauthorized action, false attribution and deceptive completion.\n\nArena summarized the results as follows.\n\n- OpenAI models hold the top five positions out of 27 models, with four of them scoring about 88 points.\n- Anthropic's Opus 5.5 and SpaceXAI's Grok 4.7 score 83.\n\nThis ranking is Arena's own result from its own method, and the claims are Arena's. Arena also announced the index alongside its Series B post. The funding news is a separate event from the release of this index."
+          }
+        },
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Arena, 기업가치 31억 달러에 시리즈 B 2억 달러 유치",
+          "deck": "Lightspeed와 Khosla Ventures가 공동 주도했어요",
+          "summary": "Arena가 기업가치 31억 달러에 2억 달러 규모의 시리즈 B 투자를 발표했어요. Lightspeed Venture Partners와 Khosla Ventures가 공동 주도했고, 같은 날 Alignment Index도 공개했어요.",
+          "content": "Arena(LMArena)가 2026년 10월 8일 블로그에서 기업가치 31억 달러에 2억 달러 규모의 시리즈 B를 발표했어요. 회사는 이 투자로 현실 세계의 AI 평가를 발전시키겠다고 밝혔어요.\n\n투자는 Lightspeed Venture Partners와 Khosla Ventures가 공동으로 주도했어요. Salesforce Ventures, 01 Advisors, Dell Technologies Capital, Acrew Capital, Endeavor Catalyst도 참여했어요.\n\n회사는 연환산 매출이 1억 달러를 넘었다고도 밝혔는데, 이 수치는 회사의 주장이에요. Arena는 같은 날 Alignment Index도 공개했고, 이 발표는 별도 소식으로 다뤄요.",
+          "source": "https://arena.ai/blog/series-b",
+          "officialUrl": "https://arena.ai/blog/series-b",
+          "verifiedAt": "2026-10-20",
+          "slug": "arena-series-b-200m-3-1b-valuation",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Arena",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "Arena Alignment Index 글 (같은 날 공개된 별도 발표)",
+              "url": "https://arena.ai/blog/ai-alignment-index"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/c7230a1ca3a5.png",
+            "alt": "Arena Raises $200M Series B at $3.1B Valuation - Arena.ai",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Arena raises a $200 million Series B at a $3.1 billion valuation",
+            "deck": "Co-led by Lightspeed and Khosla Ventures",
+            "summary": "Arena announced a $200 million Series B at a $3.1 billion valuation, co-led by Lightspeed Venture Partners and Khosla Ventures. It also launched its Alignment Index the same day.",
+            "content": "Arena (LMArena) announced a $200 million Series B at a $3.1 billion valuation in a blog post on October 8, 2026. The company said the funding will advance real-world AI evaluation.\n\nThe round was co-led by Lightspeed Venture Partners and Khosla Ventures. Salesforce Ventures, 01 Advisors, Dell Technologies Capital, Acrew Capital, and Endeavor Catalyst also participated.\n\nThe company also said it has exceeded $100 million in annualized revenue, which is the company's own claim. Arena launched its Alignment Index the same day, and that announcement is covered as a separate event."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Exa",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "Exa, 검색 에이전트 벤치마크 ATLAS 공개",
+          "deck": "기존 벤치마크의 상당수 과제가 암기됐다고 주장해요",
+          "summary": "Exa가 깊고 넓은 리서치 과제 547개로 이뤄진 검색 에이전트 벤치마크 ATLAS를 공개했어요. 암기된 답을 피하도록 설계했다고 설명했어요. Exa는 세 벤치마크의 과제 48~61%가 암기돼 있는 반면 ATLAS는 9%라고 밝혔어요.",
+          "content": "Exa는 블로그에서 ATLAS를 소개했어요. ATLAS는 깊게 파고드는 리서치와 폭넓게 찾는 리서치 과제 547개로 이뤄진 에이전트 검색 벤치마크이고, 암기된 답에 기대지 않도록 설계했다고 해요.\n\nExa는 BrowseComp, WideSearch, DeepSearchQA에서 거의 절반 이상의 과제가 암기되어 있다고 주장했어요. 글의 Table 1에는 이 세 벤치마크가 48%, 59%, 61%, ATLAS가 9%로 적혀 있어요. 측정에는 GPT-6 Astra, GPT-5.6 Sol, Claude Opus 5를 썼어요. 이 수치는 모두 Exa가 자체 측정한 결과예요.",
+          "source": "https://exa.ai/blog/atlas-benchmark",
+          "officialUrl": "https://exa.ai/blog/atlas-benchmark",
+          "verifiedAt": "2026-10-20",
+          "slug": "exa-atlas-search-benchmark",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Exa",
+            "Research"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/fd2e559de0c1.png",
+            "alt": "ATLAS row F1 against median cost per task (log scale) for Exa Agent, Opus 5.5, GPT-6 Astra and Perplexity"
+          },
+          "en": {
+            "title": "Exa releases ATLAS, a benchmark for search agents",
+            "deck": "Exa claims many tasks in existing benchmarks are memorized",
+            "summary": "Exa has released ATLAS, an agentic search benchmark of 547 deep and wide research tasks. It says it designed the benchmark to avoid memorized answers. Exa says 48% to 61% of tasks in three benchmarks are memorized, versus 9% for ATLAS.",
+            "content": "Exa introduced ATLAS on its blog. ATLAS is an agentic search benchmark of 547 deep and wide research tasks, and Exa says it was designed so that it does not rely on memorized answers.\n\nExa claims that nearly 50% or more of the tasks in BrowseComp, WideSearch and DeepSearchQA are memorized. Table 1 in the post lists 48%, 59% and 61% for those three benchmarks and 9% for ATLAS. The measurements used GPT-6 Astra, GPT-5.6 Sol and Claude Opus 5. All of these numbers are Exa's own measurements."
+          }
+        }
+      ]
+    },
+    {
+      "name": "HeyGen",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "HeyGen, 새 음성 모델 HeyGen Voice 공개",
+          "deck": "Artificial Analysis TTS 순위 1위라고 밝혔어요",
+          "summary": "HeyGen이 새 음성 모델 HeyGen Voice가 Artificial Analysis TTS 순위표 1위에 올랐고 HeyGen과 API에서 쓸 수 있다고 밝혔어요. API는 10월 31일까지 100만 자당 15달러로 반값이에요. 다만 확인된 1위는 한 순위표 기준이에요.",
+          "content": "HeyGen은 X에서 새 음성 모델 HeyGen Voice가 Artificial Analysis TTS 순위표 1위에 올랐고, 블라인드 테스트에서 주요 모델을 모두 앞섰다고 밝혔어요. 모델은 HeyGen 서비스와 API에서 쓸 수 있어요. API 사용자에게는 10월 31일까지 50% 할인이 자동으로 적용되어 100만 자당 30달러가 15달러가 된다고 해요.\n\nArtificial Analysis의 Controlled Voice 순위표에서 HeyGen Voice는 1위(Elo 1198)이고, 출시일은 2026년 10월 9일, API 가격은 100만 자당 30달러로 표시돼요. 다만 이 1위가 Artificial Analysis의 모든 음성 순위표에 해당하는 것은 아니에요. 확인한 시점의 다른 순위표는 이래요.\n\n- 영어(en-US) 하위 순위표에서는 1203점으로 2위이고, 1위는 Qwen-Audio-3.1-TTS-Plus(1217점)예요.\n- 제공사별 Speech Arena에서는 HeyGen Voice에 Elo 점수가 없고, ElevenLabs Eleven v4 Turbo가 1330점으로 앞서 있어요.\n\n블라인드 테스트에서 주요 모델을 모두 이겼다는 표현은 HeyGen의 주장이에요. 확인된 1위는 Controlled Voice 순위표에 한정돼요.",
+          "source": "https://x.com/HeyGen/status/2108608631696740793",
+          "officialUrl": "https://x.com/HeyGen/status/2108608631696740793",
+          "verifiedAt": "2026-10-20",
+          "slug": "heygen-voice-tops-aa-tts-leaderboard",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "HeyGen",
+            "Voice"
+          ],
+          "backupUrls": [
+            {
+              "label": "HeyGen Voice 제품 페이지",
+              "url": "https://www.heygen.com/heygen-voice"
+            },
+            {
+              "label": "Artificial Analysis Controlled Voice 순위표 (2026-10-20 확인)",
+              "url": "https://artificialanalysis.ai/text-to-speech/leaderboard/controlled-voice"
+            },
+            {
+              "label": "Artificial Analysis HeyGen Speech 모델군 페이지",
+              "url": "https://artificialanalysis.ai/text-to-speech/model-families/heygen-speech"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/d10cdb6a157c.webp",
+            "alt": "HeyGen (@HeyGen) on X"
+          },
+          "en": {
+            "title": "HeyGen releases its new voice model, HeyGen Voice",
+            "deck": "HeyGen says it ranks first on the Artificial Analysis TTS board",
+            "summary": "HeyGen said its new voice model, HeyGen Voice, topped the Artificial Analysis TTS leaderboard and is available in HeyGen and the API. API users get half price through October 31, at $15 per million characters. The confirmed first place applies to one leaderboard.",
+            "content": "HeyGen said on X that its new voice model, HeyGen Voice, topped the Artificial Analysis TTS leaderboard and beat every major model in blind tests. The model is available in HeyGen and through the API. API users get 50% off through October 31, applied automatically, so $30 per million characters becomes $15.\n\nOn the Artificial Analysis Controlled Voice leaderboard, HeyGen Voice ranks first (Elo 1198), with a release date of October 9, 2026 and an API price of $30 per million characters. However, this first place does not apply to every Artificial Analysis speech leaderboard. The other boards at the time of checking show the following.\n\n- On the English (en-US) sub-board, it ranks second with 1203, behind Qwen-Audio-3.1-TTS-Plus with 1217.\n- On the provider Speech Arena, HeyGen Voice has no Elo score, and ElevenLabs Eleven v4 Turbo leads with 1330.\n\nThe statement that it beat every major model in blind tests is HeyGen's claim. The confirmed first place is limited to the Controlled Voice leaderboard."
+          }
+        }
+      ]
+    },
+    {
+      "name": "JetBrains",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "JetBrains, 코딩 에이전트용 오픈 모델 Mellum2.1 공개",
+          "deck": "활성 파라미터 25억 개의 12B MoE, Apache 2.0이에요",
+          "summary": "JetBrains가 6월에 공개한 12B 전문가 혼합(MoE) 모델의 다음 버전 Mellum2.1을 Apache 2.0 라이선스로 공개했어요. 구조는 Mellum2와 같고 개선은 사후 학습에서 나왔다고 밝혔어요. 비교 평가는 JetBrains가 직접 진행한 결과예요.",
+          "content": "JetBrains는 블로그에서 오늘 Mellum2.1을 공개한다고 밝혔어요. 6월에 오픈소스로 낸 120억 개 파라미터 전문가 혼합(MoE) 모델의 다음 버전이고, 활성 파라미터는 25억 개이며 라이선스는 Apache 2.0이에요.\n\nJetBrains는 구조가 버전 2와 달라지지 않았다고 설명했어요. 성능 개선은 사후 학습(post-training)에서 나왔다고 하는데, 실제 환경에서 강화 학습으로 모델을 다듬었고 수천 개 환경에서 샌드박스 실행을 수백만 번 돌렸다고 해요.\n\n비교 대상은 Mellum2, Qwen3.5-9B, Gemma 4 E4B예요. 이 비교는 JetBrains가 직접 진행한 평가 결과예요. 글 제목은 코딩 에이전트를 위한 빠른 오픈 모델이라는 점을 내세우고 있어요.",
+          "source": "https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/",
+          "officialUrl": "https://blog.jetbrains.com/ai/2026/10/mellum2-1-gets-to-work-a-fast-open-model-for-coding-agents/",
+          "verifiedAt": "2026-10-20",
+          "slug": "jetbrains-mellum2-1-open-model",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "JetBrains",
+            "Open Source"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/ec39ac45c0ed.png",
+            "alt": "Mellum2.1 compared with Mellum2, Qwen3.5-9B, and Gemma 4 E4B"
+          },
+          "en": {
+            "title": "JetBrains releases Mellum2.1, an open model for coding agents",
+            "deck": "A 12B MoE with 2.5B active parameters under Apache 2.0",
+            "summary": "JetBrains has released Mellum2.1, the next version of the 12B mixture-of-experts model it open-sourced in June, under the Apache 2.0 license. It says the architecture is unchanged from Mellum2 and the gains come from post-training. The comparison is JetBrains' own evaluation.",
+            "content": "JetBrains said on its blog that it is releasing Mellum2.1 today. It is the next version of the 12B mixture-of-experts (MoE) model that JetBrains open-sourced in June, with 2.5B active parameters under the Apache 2.0 license.\n\nJetBrains explained that the architecture has not changed since version 2. It credits the gains to post-training: it refined the model with reinforcement learning in real environments, running millions of sandboxed runs across thousands of environments.\n\nThe models it compares against are Mellum2, Qwen3.5-9B and Gemma 4 E4B. This comparison is JetBrains' own evaluation. The post's title presents the model as a fast open model for coding agents."
+          }
+        }
+      ]
+    },
+    {
+      "name": "LlamaIndex",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "LlamaIndex, 문서 모델 통합 API OpenDocRouter 출시",
+          "deck": "문서를 마크다운으로 바꾸는 모델을 한 곳에서 불러 써요",
+          "summary": "LlamaIndex가 문서를 마크다운으로 바꾸는 파싱 플랫폼 OpenDocRouter를 출시했어요. 최신 오픈소스 모델과 프런티어 모델을 API 하나로 쓸 수 있다고 밝혔어요. 모델마다 버전이 붙은 레시피로 실행하고 ParseBench로 품질과 비용을 측정한다고 설명했어요.",
+          "content": "LlamaIndex는 블로그에서 오늘 OpenDocRouter를 출시한다고 밝혔어요. OpenDocRouter는 최신 오픈소스 모델과 프런티어 모델을 이용해 문서를 마크다운으로 바꾸는 플랫폼이고, 모델마다 따로 연동하지 않아도 API 하나로 접근할 수 있어요.\n\n출시 시점에 지원하는 모델은 프런티어 모델 5종과 오픈소스 모델 5종이에요. 프런티어 모델은 Claude Opus 5.5, Gemini 3 Flash, Gemini 3.8 Flash, GPT-5.6 Terra, GPT-6 Luna예요. 새로 가입한 계정에는 5달러 크레딧이 주어진다고 해요.\n\nLlamaIndex는 OCR 모델이 매주 새로 나온다고 설명하면서, 그 작업을 공유하는 방법으로 OpenDocRouter를 내놓았다고 밝혔어요. 각 모델은 버전이 붙은 레시피로 실행하고, ParseBench로 품질과 비용을 측정한다고 해요. 별도 제품 사이트 하단에는 LlamaIndex가 만들었다는 표시가 있어요.",
+          "source": "https://www.llamaindex.ai/blog/introducing-opendocrouter",
+          "officialUrl": "https://www.llamaindex.ai/blog/introducing-opendocrouter",
+          "verifiedAt": "2026-10-20",
+          "slug": "llamaindex-opendocrouter-launch",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "LlamaIndex",
+            "Devtools"
+          ],
+          "backupUrls": [
+            {
+              "label": "OpenDocRouter 제품 사이트 (하단에 LlamaIndex 제작 표시)",
+              "url": "https://www.opendocrouter.ai/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/8bf036d0b323.png",
+            "alt": "Introducing OpenDocRouter: every document model under one API"
+          },
+          "en": {
+            "title": "LlamaIndex launches OpenDocRouter, one API for document models",
+            "deck": "Call document-to-markdown models from a single place",
+            "summary": "LlamaIndex has launched OpenDocRouter, a parsing platform that turns documents into markdown. It says the latest open-source and frontier models are available through one API. It explains that each model runs a versioned recipe and is measured on quality and cost with ParseBench.",
+            "content": "LlamaIndex said on its blog that it is launching OpenDocRouter today. OpenDocRouter is a platform that converts documents to markdown using the latest open-source and frontier models, and it gives access through one API without a separate integration for each model.\n\nAt launch it supports 5 frontier models and 5 open-source models. The frontier models are Claude Opus 5.5, Gemini 3 Flash, Gemini 3.8 Flash, GPT-5.6 Terra and GPT-6 Luna. New accounts reportedly receive $5 in credits.\n\nLlamaIndex explained that new OCR models keep arriving every week, and said it is releasing OpenDocRouter as a way to share that work. It says each model runs a versioned recipe and is measured on quality and cost with ParseBench. The footer of the separate product site says it was made by LlamaIndex."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Nous Research",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "Nous Research, 9,000만 달러 투자 유치 발표",
+          "deck": "NVIDIA, Microsoft의 M12, Samsung 등이 투자자로 올랐어요",
+          "summary": "Nous Research가 자사 사이트에서 9,000만 달러를 조달했다고 밝혔어요. NVIDIA, Microsoft의 M12, Samsung 등을 투자자로 꼽았지만 주도 투자자와 기업가치, 라운드 이름은 공개하지 않았어요. 이 회사는 오픈소스 Hermes 에이전트를 만들어요.",
+          "content": "Nous Research는 A Note on Our Fundraise라는 글에서 사람들을 위해 일하는 AI를 만들기 위해 9,000만 달러를 조달했다고 밝혔어요.\n\n글에 이름이 오른 투자자는 NVIDIA, Microsoft의 M12, Samsung, Robot Ventures, Union Square Ventures, Y Combinator, Menlo Ventures이고, 이 밖에도 더 있다고 적혀 있어요. 회사는 이들을 기술 업계에서 손꼽히는 투자자들이라고 소개했어요. Samsung은 여러 투자자 가운데 한 곳으로 이름만 올라 있어요.\n\n글에는 주도 투자자, 기업가치, 투자 라운드 이름이 나와 있지 않아요. 회사가 공개한 정보는 조달 금액과 투자자 명단뿐이에요.\n\nNous Research는 오픈소스 Hermes 에이전트를 만드는 회사예요. 회사 사이트에는 GitHub 조직과 Hermes 에이전트 페이지로 가는 링크가 걸려 있어요. 글 본문에는 날짜가 2026년 10월로만 표시되어 있고, 페이지 메타데이터에는 10월 7일 게시로 기록되어 있어요.",
+          "source": "https://nousresearch.com/a-note-on-our-fundraise",
+          "officialUrl": "https://nousresearch.com/a-note-on-our-fundraise",
+          "verifiedAt": "2026-10-20",
+          "slug": "nous-research-90m-fundraise",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Nous Research",
+            "Agents"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/51d28d1cc849.webp",
+            "alt": "A Note on Our Fundraise"
+          },
+          "en": {
+            "title": "Nous Research announces a $90 million fundraise",
+            "deck": "NVIDIA, Microsoft's M12 and Samsung are among the investors named",
+            "summary": "Nous Research said on its own site that it raised $90 million. It named investors including NVIDIA, Microsoft's M12 and Samsung, but did not disclose a lead investor, a valuation or a round name. The company makes the open-source Hermes agent.",
+            "content": "In a post titled A Note on Our Fundraise, Nous Research said it raised $90 million to create AI that serves the people.\n\nThe investors named in the post are NVIDIA, Microsoft's M12, Samsung, Robot Ventures, Union Square Ventures, Y Combinator and Menlo Ventures, and the post says there are others as well. The company described them as some of the strongest investors in technology. Samsung appears only as one name among many investors.\n\nThe post gives no lead investor, valuation or round name. The only details the company disclosed are the amount raised and the list of investors.\n\nNous Research is the maker of the open-source Hermes agent. The company site links to its GitHub organization and to the Hermes agent page. The body of the post shows only October 2026 as the date, and the page metadata records publication on October 7."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Scale AI",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "Scale Labs, 직관적 시각 추론 벤치마크 HSS 공개",
+          "deck": "사람 참가자 93.1%, 최고 모델은 53.6%라고 밝혔어요",
+          "summary": "Scale Labs가 멀티모달 모델의 직관적 시각 추론을 재는 벤치마크 Humanity's Sixth Sense(HSS)를 논문으로 공개했어요. Scale은 사람 참가자의 정확도가 93.1%인 반면 가장 성능이 좋은 모델 GPT-6-astra는 최대 추론 강도에서도 53.6%에 그쳤다고 밝혔어요.",
+          "content": "Scale Labs는 Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models라는 논문 페이지에서 HSS를 소개했어요. HSS는 직관적 시각 추론을 평가하는 벤치마크이고, 페이지는 이 논문의 분류를 멀티모달로 표시하고 있어요.\n\nScale은 최신 멀티모달 대형 언어 모델이 직관적 시각 추론에서 사람의 성능에 못 미친다고 설명하면서, 이 격차를 메우기 위해 HSS를 내놓았다고 밝혔어요. 구체적인 수치는 다음과 같아요.\n\n- 사람 참가자의 정확도는 93.1%예요.\n- 가장 성능이 좋은 모델인 GPT-6-astra는 최대 추론 강도에서도 53.6%에 그쳤어요.\n\n이 수치는 Scale이 자체 평가로 낸 결과예요. 논문 페이지에는 2026년 10월 7일 날짜가 표시되어 있어요.",
+          "source": "https://labs.scale.com/papers/humanitys-sixth-sense",
+          "officialUrl": "https://labs.scale.com/papers/humanitys-sixth-sense",
+          "verifiedAt": "2026-10-20",
+          "slug": "scale-labs-humanitys-sixth-sense-benchmark",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Scale AI",
+            "Research"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/f8a64b15ddc7.png",
+            "alt": "Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models",
+            "provenance": "source-share-preview"
+          },
+          "en": {
+            "title": "Scale Labs releases HSS, a benchmark for intuitive visual reasoning",
+            "deck": "Scale says participants reach 93.1% while the best model scores 53.6%",
+            "summary": "Scale Labs published a paper on Humanity's Sixth Sense (HSS), a benchmark for intuitive visual reasoning in multimodal models. Scale says human participants reach 93.1% accuracy, while the strongest model, GPT-6-astra, reaches only 53.6% even at maximum reasoning effort.",
+            "content": "Scale Labs introduced HSS on the paper page for Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models. HSS is a benchmark for intuitive visual reasoning, and the page lists the paper under the Multimodal category.\n\nScale says frontier multimodal large language models fall short of human performance in intuitive visual reasoning, and says it introduced HSS to bridge this gap. The figures are as follows.\n\n- Human participants reach 93.1% accuracy.\n- The strongest model, GPT-6-astra, reaches only 53.6% even at maximum reasoning effort.\n\nThese numbers come from Scale's own evaluation. The paper page shows the date October 7, 2026."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tencent",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "Tencent, 멀티모달 파싱 모델 Youtu-Parsing-Omni 공개",
+          "deck": "문서·이미지·오디오·영상을 구조화된 JSON으로 바꾸고, 라이선스는 별도예요",
+          "summary": "Tencent가 문서, 이미지, 차트, 오디오, 영상을 구조화된 JSON으로 바꾸는 5B 옴니모달 파싱 모델 Youtu-Parsing-Omni를 Hugging Face에 올렸어요. 라이선스는 일반적인 오픈소스가 아닌 youtu-parsing 맞춤 라이선스예요.",
+          "content": "Tencent가 공식 Hugging Face 조직에 Youtu-Parsing-Omni 모델 저장소를 올렸어요. 모델 카드는 문서, 이미지, 차트, 기하 도형, 오디오, 영상을 구조화된 JSON으로 파싱하는 하나의 모델이라고 소개하고, 이 모델을 작은 규모(5B)의 옴니모달 파싱 모델이라고 설명해요.\n\n날짜는 Hugging Face의 저장소 기록을 근거로 했어요. 저장소는 2026년 10월 9일에 만들어졌고, 같은 날 가중치와 원격 코드를 올리는 커밋이 있어요. GitHub의 TencentCloudADP/youtu-parsing 저장소 README에도 Youtu-Parsing-Omni가 소개되어 있어요.\n\n라이선스는 youtu-parsing이라는 이름의 맞춤 라이선스이고 Hugging Face에는 other로 표시돼요. 일반적인 오픈소스 라이선스가 아니어서 사용 조건은 라이선스 본문을 따로 확인해야 해요. 기술 보고서에 대해서는 모델 카드가 일관되지 않아요. 빠른 링크에는 Technical Report (coming soon)이라고 되어 있는데, 소식란에는 기술 보고서를 공개했다고 적혀 있어요.",
+          "source": "https://huggingface.co/tencent/Youtu-Parsing-Omni",
+          "officialUrl": "https://huggingface.co/tencent/Youtu-Parsing-Omni",
+          "verifiedAt": "2026-10-20",
+          "slug": "tencent-youtu-parsing-omni",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Tencent",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "README에서 Youtu-Parsing-Omni를 안내하는 GitHub 저장소",
+              "url": "https://github.com/TencentCloudADP/youtu-parsing"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/3b07e4e480c3.png",
+            "alt": "Two-tower omni-modal parser vs. Youtu-Parsing-Omni"
+          },
+          "en": {
+            "title": "Tencent releases Youtu-Parsing-Omni, a multimodal parsing model",
+            "deck": "It turns documents, images, audio, and video into structured JSON, under a custom license",
+            "summary": "Tencent published Youtu-Parsing-Omni on Hugging Face, a 5B omni-modal parsing model that turns documents, images, charts, audio, and video into structured JSON. The license is a custom youtu-parsing license, not a standard open-source one.",
+            "content": "Tencent published a Youtu-Parsing-Omni model repository in its official Hugging Face organization. The model card introduces one model that parses documents, images, charts, geometry, audio, and video into structured JSON, and describes it as a compact (5B) omni-modal parsing model.\n\nThe date is based on Hugging Face repository records. The repository was created on October 9, 2026, and a commit uploading the weights and remote code followed the same day. The README of the TencentCloudADP/youtu-parsing repository on GitHub also lists Youtu-Parsing-Omni.\n\nThe license is a custom license named youtu-parsing, shown as other on Hugging Face. It is not a standard open-source license, so the usage terms need to be read in the license text itself. The model card is inconsistent about the technical report. The quick links say Technical Report (coming soon), while the news line says the technical report was released."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Unity",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "Unity, 코드 없이 게임을 만드는 AI 도구 Unity Spark 소개",
+          "deck": "대기자 명단만 열려 있고 클로즈드 베타는 곧 시작한다고 해요",
+          "summary": "Unity가 코드를 쓰지 않고 게임을 만들고, 다듬고, 배포하고, 즐길 수 있는 AI 게임 제작 도구 Unity Spark를 소개했어요. 현재는 대기자 명단만 받고 있고, 클로즈드 베타는 곧 시작한다고 안내했어요.",
+          "content": "Unity의 게임 부문 공식 X 계정(@unitygames)이 2026년 10월 7일 Unity Spark를 소개했어요. 게시물은 게임을 만들고, 다른 사람들과 함께 다듬고, 배포하고, 직접 플레이하는 새로운 방법이라고 설명하며 코드를 한 줄도 쓰지 않아도 된다고 밝혔어요. 홍보 문구는 “Prompt it. Perfect it. Publish it.”이에요.\n\nUnity 사이트의 Unity Spark 페이지는 이 제품을 Unity의 AI 게임 제작 도구라고 소개해요. 요약하면 사용자가 프롬프트로 게임을 만들고 웹 편집기에서 다듬은 뒤 배포하는 방식이에요. 페이지에는 날짜가 표시되어 있지 않고, 지금은 대기자 명단 가입만 가능해요.\n\n게시물은 “Closed beta coming soon.”으로 끝나요. 그래서 발표 시점에는 아직 일반 사용자가 쓸 수 있는 단계가 아니에요.",
+          "source": "https://x.com/unitygames/status/2107805373918835075",
+          "officialUrl": "https://x.com/unitygames/status/2107805373918835075",
+          "verifiedAt": "2026-10-20",
+          "slug": "unity-spark-ai-game-maker",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Unity",
+            "Devtools"
+          ],
+          "backupUrls": [
+            {
+              "label": "Unity Spark 제품 페이지 (날짜 없음, 클로즈드 베타 예정, 대기자 명단)",
+              "url": "https://unity.com/spark"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/57aec7314238.webp",
+            "alt": "Unity for Games (@unitygames) on X"
+          },
+          "en": {
+            "title": "Unity introduces Unity Spark, an AI tool for making games without code",
+            "deck": "Only a waitlist is open, and the closed beta is described as coming soon",
+            "summary": "Unity introduced Unity Spark, an AI game maker for creating, refining, publishing, and playing a game without writing code. Only a waitlist is open now, and Unity says the closed beta is coming soon.",
+            "content": "The official Unity for Games account on X (@unitygames) introduced Unity Spark on October 7, 2026. The post describes it as a new way to create a game, iterate on it with others, publish it, and play it, all without writing a line of code. The slogan is “Prompt it. Perfect it. Publish it.”\n\nThe Unity Spark page on Unity's site describes the product as an AI game maker from Unity. In short, users prompt a game, refine it in a web editor, and publish it. The page carries no date, and for now only joining a waitlist is possible.\n\nThe post ends with “Closed beta coming soon.” So at the time of the announcement, the tool was not yet available to general users."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vals AI",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "Vals AI, 코딩 에이전트 팀 구성의 효과를 비교",
+          "deck": "팀은 비용이 1.8~5.1배, 유의미한 점수 차는 한 경우뿐이에요",
+          "summary": "Vals AI가 GPT 6 Sol과 Claude Opus 5.5를 Vibe Code Bench에서 단일 에이전트와 팀으로 나눠 평가했어요. 팀은 비용이 1.8배에서 5.1배 들었고, 점수 차이가 통계적으로 유의미한 경우는 Sol의 중간 추론 강도뿐이라고 밝혔어요.",
+          "content": "Vals AI는 블로그 글에서 GPT 6 Sol과 Claude Opus 5.5를 Vibe Code Bench에서 단일 에이전트와 팀으로 각각 돌렸다고 밝혔어요. 추론 강도는 중간과 최대 두 가지였어요.\n\n결과로 Vals AI는 팀이 단일 에이전트보다 비용이 1.8배에서 5.1배 더 들었다고 밝혔어요. 점수 차이가 통계적으로 유의미했던 경우는 Sol을 중간 추론 강도로 돌렸을 때 하나뿐이었어요.\n\n두 모델은 서로 다른 하네스에서 실행됐기 때문에, 모델 간 비교에는 모델과 하네스의 차이가 섞여 있다고 Vals AI는 설명했어요. 이 글은 Vals AI가 자사 벤치마크로 직접 진행한 평가이고, 모델 출시 소식과는 별개의 평가 글이에요.",
+          "source": "https://www.vals.ai/blogs/multi-agent-vibe-code-bench",
+          "officialUrl": "https://www.vals.ai/blogs/multi-agent-vibe-code-bench",
+          "verifiedAt": "2026-10-20",
+          "slug": "vals-ai-agent-teams-vibe-code-bench",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "Vals AI",
+            "Research"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/1b023e8fc3bf.svg",
+            "alt": "Do Agent Teams Pay Off? A Case Study on Vibe Code Bench"
+          },
+          "en": {
+            "title": "Vals AI compares coding agent teams with single agents",
+            "deck": "Teams cost 1.8 to 5.1 times more, with one significant score gain",
+            "summary": "Vals AI evaluated GPT 6 Sol and Claude Opus 5.5 on Vibe Code Bench as single agents and as teams. It says teams cost 1.8 to 5.1 times as much, and the score difference was statistically significant only for Sol at medium effort.",
+            "content": "In a blog post, Vals AI said it ran GPT 6 Sol and Claude Opus 5.5 on Vibe Code Bench as single agents and as teams, at two reasoning effort levels, medium and max.\n\nVals AI reported that teams cost 1.8 to 5.1 times as much as single agents. The only case where the score difference was statistically significant was Sol at medium effort.\n\nVals AI also explained that the two models ran through different harnesses, so cross-model comparisons mix model and harness differences. The post is an evaluation that Vals AI ran itself on its own benchmark, and it is separate from any model release announcement."
+          }
+        }
+      ]
+    },
+    {
+      "name": "xAI",
+      "color": "#111111",
+      "posts": [
+        {
+          "date": "10/10",
+          "platform": "Web",
+          "title": "Musk, 신용카드 사진을 올리면 Grok Bot이 주문한다고 소개",
+          "deck": "개인 계정의 설명이고, 커뮤니티 노트는 개인정보 위험을 지적해요",
+          "summary": "Elon Musk가 X에서 신용카드 사진을 채팅에 올리면 Grok Bot이 최저가를 찾아 주문한다고 소개했어요. 게시물에는 개인정보와 자격 증명 저장 위험을 지적하는 커뮤니티 노트가 붙어 있어요.",
+          "content": "Elon Musk가 2026년 10월 10일 X에 물건을 살 때는 신용카드 사진을 찍어 채팅에 올리기만 하면 된다고 썼어요. 그러면 Grok @Bot이 인터넷을 뒤져 원하는 물건의 가장 좋은 조건을 찾아 주문한다는 설명이에요. 게시물에는 확인 시점에 810만 회의 조회수가 표시되어 있었어요.\n\n이 내용은 Musk가 자신의 개인 계정에서 한 기능 설명이에요. 이 기능을 설명하는 공식 제품 페이지는 찾지 못했어요.\n\n게시물에는 커뮤니티 노트가 붙어 있어요. 노트는 xAI가 사용자에게 프롬프트에 개인정보를 넣지 말라고 명시적으로 경고하는데 신용카드 사진에는 그런 정보가 있을 수 있다고 지적해요. 또 Grok Bot의 약관에 사용자 데이터와 자격 증명이 클라우드 환경에 저장될 수 있고, 금융 거래에는 사람의 검토가 필요하다고 적혀 있다고 주장해요. 이 노트는 독자들이 쓴 글이고, 약관 원문과 대조해 확인한 내용은 아니에요.",
+          "source": "https://x.com/elonmusk/status/2109027407185277123",
+          "officialUrl": "https://x.com/elonmusk/status/2109027407185277123",
+          "verifiedAt": "2026-10-20",
+          "slug": "grok-bot-credit-card-photo-shopping",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "xAI",
+            "Agents"
+          ],
+          "en": {
+            "title": "Musk says users can have Grok Bot order items from a credit card photo",
+            "deck": "A description from a personal account, and a Community Note flags data risks",
+            "summary": "Elon Musk said on X that users can drop a photo of a credit card into the chat and Grok Bot will find the best deal and place the order. A Community Note on the post flags personal-data and credential-storage risks.",
+            "content": "Elon Musk wrote on X on October 10, 2026 that to buy something you can just take a picture of your credit card and drop it in the chat. Grok @Bot will then scour the Internet for the best deal on the item you want and order it. The post showed 8.1 million views at the time of the check.\n\nThis is Musk's description of a feature from his personal account. No official product page describing this feature was found.\n\nA Community Note is attached to the post. The note points out that xAI explicitly warns users not to include personal information in prompts, while credit card photos may contain such information. It also claims that Grok Bot's terms state that user data and credentials may be stored in its cloud environment and that financial transactions require human review. The note was written by readers and was not checked against the terms themselves."
+          }
+        },
+        {
+          "date": "10/9",
+          "platform": "Web",
+          "title": "xAI Grok Bot, 자체 이메일 주소 기능 공지",
+          "deck": "서비스 가입, 업체 연락, 일정 조율에 쓴다고 해요",
+          "summary": "Grok Bot 제품 계정이 Grok Bot에 자체 이메일이 생겼다고 알렸어요. 서비스 가입, 업체 연락, 일정 조율에 쓸 수 있다고 하지만 제공 범위나 시점은 밝히지 않았어요.",
+          "content": "조직 인증을 받은 Grok Bot 계정이 2026년 10월 9일 X에 “Grok Bot now has its own email.”이라고 올렸어요. 이어서 Bot이 이 이메일로 서비스에 가입하고, 사용자를 대신해 업체에 연락하고, 누군가와 일정을 잡을 수 있다고 설명했어요. 계정 소개에는 “AI teammates that you can give real work to”라는 문구와 x.ai/bot 링크가 있어요.\n\n이 내용은 제품 계정이 올린 기능 설명이에요. 게시물은 제공 범위와 시점을 밝히지 않았고, 이 기능은 제품 페이지에서는 확인하지 못했어요.",
+          "source": "https://x.com/bot/status/2108609764766908772",
+          "officialUrl": "https://x.com/bot/status/2108609764766908772",
+          "verifiedAt": "2026-10-20",
+          "slug": "grok-bot-own-email",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "xAI",
+            "Agents"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/43287866394c.webp",
+            "alt": "Grok Bot (@bot) on X"
+          },
+          "en": {
+            "title": "xAI's Grok Bot announces its own email address",
+            "deck": "It is said to be for signing up to services, contacting businesses, and scheduling",
+            "summary": "The Grok Bot product account said Grok Bot now has its own email. It can be used to sign up for services, contact businesses, and schedule time, but the post gives no scope or timing.",
+            "content": "The organization-verified Grok Bot account posted “Grok Bot now has its own email.” on X on October 9, 2026. It went on to say that Bot can use the email to sign up for services, contact businesses for you, or schedule time with someone. The account bio reads “AI teammates that you can give real work to” and links to x.ai/bot.\n\nThis is a feature description posted by the product account. The post does not state the scope or timing of availability, and the feature could not be confirmed on a product page."
+          }
+        },
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "xAI Grok Bot, X 검색·읽기·모니터링 기능 추가",
+          "deck": "한 문장 공지로, 한도와 요금제별 제공 범위는 알려지지 않았어요",
+          "summary": "SpaceXAI의 Grok Bot 계정이 X에서 Grok Bot이 이제 X를 검색하고 읽고 모니터링할 수 있다고 알렸어요. 게시물은 한 문장과 영상으로 이루어져 있고, 한도나 제공 범위에 대한 설명은 없어요.",
+          "content": "SpaceXAI의 Grok Bot 공식 계정(@bot)이 2026년 10월 7일 X에 “Grok Bot can now search, read, and monitor X.”라는 글을 올렸어요. Grok Bot이 이제 X를 검색하고, 읽고, 모니터링할 수 있다는 뜻이에요. 게시물에는 영상이 함께 붙어 있고, 확인 시점의 조회수는 580만 회로 표시되어 있었어요.\n\nSpaceXAI가 밝힌 내용은 이 한 문장이 전부예요. 게시물은 기능의 기술적 세부 사항, 사용 한도, 요금제별 제공 범위를 설명하지 않아요. 계정 소개에는 “AI teammates that you can give real work to”라는 문구와 x.ai/bot 링크가 있고, x.ai/bot 제품 페이지 하단에는 “© 2026 SpaceXAI LLC”가 표시되어 있어요.",
+          "source": "https://x.com/bot/status/2107949161878606089",
+          "officialUrl": "https://x.com/bot/status/2107949161878606089",
+          "verifiedAt": "2026-10-20",
+          "slug": "grok-bot-search-read-monitor-x",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "xAI",
+            "Agents"
+          ],
+          "backupUrls": [
+            {
+              "label": "Grok Bot 계정(@bot) 프로필",
+              "url": "https://x.com/bot"
+            },
+            {
+              "label": "x.ai의 Grok Bot 제품 페이지",
+              "url": "https://x.ai/bot"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/75c749e40115.webp",
+            "alt": "Grok Bot (@bot) on X"
+          },
+          "en": {
+            "title": "xAI's Grok Bot can now search, read, and monitor X",
+            "deck": "A one-sentence announcement, with no limits or plan availability given",
+            "summary": "The Grok Bot account of SpaceXAI announced on X that Grok Bot can now search, read, and monitor X. The post is a single sentence with a video and does not explain limits or availability.",
+            "content": "The official Grok Bot account (@bot) from SpaceXAI posted “Grok Bot can now search, read, and monitor X.” on X on October 7, 2026. The post says Grok Bot can now search, read, and monitor X. A video is attached, and the post showed 5.8 million views at the time of the check.\n\nThat one sentence is everything SpaceXAI said. The post does not explain technical details of the feature, usage limits, or availability by plan. The account bio reads “AI teammates that you can give real work to” and links to x.ai/bot, and the footer of the x.ai/bot product page shows “© 2026 SpaceXAI LLC”."
+          }
+        },
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "Musk, Grok Bot에 Claude Opus 5.5 등 외부 모델 쓰겠다고 밝혀",
+          "deck": "개인 계정의 의사 표명이고, 작업별 배분 방식은 밝히지 않았어요",
+          "summary": "Elon Musk가 X에서 앞으로 SpaceX가 Grok @Bot에 작업별로 가장 좋은 백엔드 모델을 쓰겠다고 밝혔어요. Claude Opus 5.5, Midjourney, Suno를 예로 들었지만 어떤 작업을 어디에 맡길지는 설명하지 않았어요.",
+          "content": "Elon Musk가 2026년 10월 7일 자신의 X 계정에 “Grok @Bot에 관한 중요한 공지”라며 글을 올렸어요. 앞으로 SpaceX가 주어진 작업마다 가장 좋은 백엔드 모델을 쓰겠다는 내용이고, Claude Opus 5.5, Midjourney, Suno와 그 밖의 주요 API를 예로 들었어요. 그는 가장 좋은 결과를 낼 가능성이 높은 것을 쓰겠다고 덧붙였어요.\n\n이 게시물은 Musk의 개인 계정에서 나온 의사 표명이에요. 어떤 작업을 어떤 모델에 맡기는지는 적혀 있지 않고, Anthropic, Midjourney, Suno 쪽 입장은 확인하지 못했어요. The Next Web도 같은 인용을 보도하면서 Musk가 작업별 배분을 설명하지 않았다고 전했어요. 게시물에는 확인 시점에 7,970만 회의 조회수가 표시되어 있었어요.",
+          "source": "https://x.com/elonmusk/status/2107724314451878104",
+          "officialUrl": "https://x.com/elonmusk/status/2107724314451878104",
+          "verifiedAt": "2026-10-20",
+          "slug": "musk-grok-bot-multiple-backend-models",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "xAI",
+            "Models"
+          ],
+          "backupUrls": [
+            {
+              "label": "The Next Web 보도 (2026-10-07), 날짜와 인용 확인",
+              "url": "https://thenextweb.com/news/grok-bot-claude-opus-midjourney-suno-musk"
+            }
+          ],
+          "en": {
+            "title": "Musk says Grok Bot will use outside models such as Claude Opus 5.5",
+            "deck": "A statement of intent from a personal account, with no task routing given",
+            "summary": "Elon Musk said on X that SpaceX will use the best back-end model for each task on Grok @Bot. He named Claude Opus 5.5, Midjourney, and Suno as examples but did not say which tasks go to which model.",
+            "content": "Elon Musk posted on his X account on October 7, 2026, under the heading “Important note regarding Grok @Bot”. He wrote that going forward SpaceX will use the best back end model for any given task, and named Claude Opus 5.5, MidJourney, Suno, and other leading APIs as examples. He added that it would be whatever is most likely to give the best outcome.\n\nThe post is a statement of intent from Musk's personal account. It does not say which tasks go to which model, and the positions of Anthropic, Midjourney, and Suno were not checked. The Next Web reported the same quote and noted that Musk gave no detail on how tasks would be divided. The post showed 79.7 million views at the time of the check."
+          }
+        }
+      ]
+    },
+    {
+      "name": "ZJU-REAL",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/8",
+          "platform": "Web",
+          "title": "SpaceCast-Bench, 예측형 공간 추론을 평가하는 벤치마크 논문",
+          "deck": "최고 모델 58.0%, 사람 87.2%라고 저자들이 밝혔어요",
+          "summary": "연구진이 비전-언어 모델의 예측형 공간 추론을 평가하는 벤치마크 SpaceCast-Bench를 arXiv에 올렸어요. 182개 실제 장면에서 만든 3,862개 문항이고, 저자들은 21개 모델 중 최고가 58.0%, 사람은 87.2%라고 밝혔어요.",
+          "content": "연구진이 2026년 10월 8일 arXiv에 SpaceCast-Bench 논문의 첫 버전을 올렸어요. 비전-언어 모델이 장면을 보고 앞으로 어떻게 바뀔지 예측하는 공간 추론 능력을 평가하는 벤치마크예요. 저자들은 이 능력을 직접, 진단적으로 평가하는 첫 벤치마크라고 주장하는데, 이는 저자들의 표현이에요.\n\n벤치마크는 관찰, 변환, 추론 구조를 바탕으로 만들었고, 182개 실제 장면에서 가져온 3,862개 문항이 16개 과제 유형에 걸쳐 있어요. 저자들은 21개 모델을 평가한 결과 가장 강한 모델이 58.0%에 그쳤고 사람은 87.2%였다고 밝혔어요.\n\n프로젝트 페이지(zjureal.com)와 ZJU-REAL의 GitHub 저장소가 논문 주석에 링크되어 있어요. arXiv 페이지에는 v1이 10월 8일, v2가 10월 16일로 표시되어 있고, 카드 날짜는 v1을 기준으로 했어요.",
+          "source": "https://arxiv.org/abs/2610.12402",
+          "officialUrl": "https://arxiv.org/abs/2610.12402",
+          "verifiedAt": "2026-10-20",
+          "slug": "spacecast-bench-predictive-spatial-reasoning",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "ZJU-REAL",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "프로젝트 페이지 (arXiv 주석에 링크)",
+              "url": "https://zjureal.com/SpaceCast-Bench"
+            },
+            {
+              "label": "코드 저장소 (arXiv 주석에 링크)",
+              "url": "https://github.com/ZJU-REAL/SpaceCast-Bench"
+            }
+          ],
+          "en": {
+            "title": "SpaceCast-Bench paper evaluates predictive spatial reasoning",
+            "deck": "The authors report 58.0% for the best model and 87.2% for humans",
+            "summary": "Researchers posted SpaceCast-Bench on arXiv, a benchmark for predictive spatial reasoning in vision-language models. It has 3,862 questions from 182 real-world scenes, and the authors say the best of 21 models scores 58.0% against 87.2% for humans.",
+            "content": "Researchers posted the first version of the SpaceCast-Bench paper on arXiv on October 8, 2026. It is a benchmark for the spatial reasoning ability of vision-language models to predict how a scene will change. The authors claim it is the first benchmark to evaluate this capability directly and diagnostically, which is the authors' own wording.\n\nThe benchmark is built around an observe-transform-infer framework, and its 3,862 questions from 182 real-world scenes span 16 task types. The authors said that after evaluating 21 models, the strongest model reached only 58.0%, against 87.2% for humans.\n\nA project page (zjureal.com) and a GitHub repository under ZJU-REAL are linked in the paper comments. The arXiv page shows v1 on October 8 and v2 on October 16, and the card date follows v1."
+          }
+        }
+      ]
+    },
+    {
+      "name": "독립 연구자",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/7",
+          "platform": "Web",
+          "title": "독립 연구자, Claude Code·Codex로 TESS 자료 속 행성 후보 분석",
+          "deck": "후보는 확인 전이고, AI 사용 내역은 본인이 밝힌 내용이에요",
+          "summary": "한 독립 연구자가 X 스레드에서 NASA TESS 자료 속에 아무도 몰랐던 행성이 있는 것 같다고 주장했어요. 분석 74건과 1,000개가 넘는 스크립트를 Claude Code와 Codex로 만들었다고 밝혔지만, 후보는 아직 확인되지 않았어요.",
+          "content": "한 독립 연구자가 2026년 10월 7일 X 스레드에서 “아무도 존재를 몰랐던 행성을 찾은 것 같다”고 썼어요. 그 행성이 NASA 망원경 자료 안에 7년 동안 숨어 있었다는 설명이고, 스레드 끝에서 직접 그 행성으로 날아가 볼 수 있다고 소개했어요.\n\n작성자는 스레드의 6번째 게시물에서 Claude Code와 Codex로 개별 분석 74건과 1,000개가 넘는 스크립트를 만들었다고 밝혔어요. AI 도구 사용 내역은 본인이 직접 밝힌 내용이고, 첫 게시물이 아니라 스레드 중간에 나와요. 같은 발견을 정리한 글은 9월 25일에 Zenodo에 등록된 기록이 있어요.\n\n핵심 주장은 아직 후보 단계예요. 작성자도 “아직 아무것도 이를 확인해 주지 않는다”고 적었어요. MIT의 TESS 책임자 재량 관측 대상 목록에서는 이 연구자가 책임자로 등록된 프로그램이 확인돼요. 그 항목에는 가까운 K형 왜성 TIC 4206066에서 행성 후보가 있다는 설명과 함께 2분 간격 관측이 올라 있어요. 다만 이 목록이 행성의 존재를 확인해 주는 것은 아니에요. 작성자는 TESS 팀이 11월 후속 관측을 승인했다고 설명했어요.",
+          "source": "https://x.com/p_rabtsevich/status/2107803696058822742",
+          "officialUrl": "https://x.com/p_rabtsevich/status/2107803696058822742",
+          "verifiedAt": "2026-10-20",
+          "slug": "tess-planet-candidate-claude-code-codex",
+          "tags": [
+            "AI",
+            "2026-w41",
+            "독립 연구자",
+            "Research"
+          ],
+          "backupUrls": [
+            {
+              "label": "MIT TESS 책임자 재량 관측 대상 목록",
+              "url": "https://tess.mit.edu/science/ddt/"
+            },
+            {
+              "label": "작성자의 Zenodo 프리프린트 (기록 생성일 2026-09-25)",
+              "url": "https://doi.org/10.5281/zenodo.22967456"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261020/6d87ddccbaff.webp",
+            "alt": "Pavel Rabtsevich (@p_rabtsevich) on X"
+          },
+          "en": {
+            "title": "Independent researcher says Claude Code and Codex helped analyze TESS data for a planet candidate",
+            "deck": "The candidate is unconfirmed, and the AI use is self-reported",
+            "summary": "An independent researcher claimed in an X thread that a planet nobody knew existed may be hiding in NASA TESS data. He said he built 74 analyses and over 1,000 scripts with Claude Code and Codex, but the candidate is not confirmed.",
+            "content": "An independent researcher wrote in an X thread on October 7, 2026, “I think I found a planet nobody knew existed.” The thread says the planet had been hiding in NASA telescope data for seven years, and at the end it invites readers to fly to it themselves.\n\nIn the 6th post of the thread, the author said he ran 74 separate analyses and over 1,000 scripts, built with Claude Code and Codex. The AI tool use is self-reported, and it appears in the middle of the thread rather than in the first post. A write-up of the same finding has a record on Zenodo created on September 25.\n\nThe main claim is still at the candidate stage. The author himself wrote that none of this confirms it yet. The MIT TESS Director's Discretionary Targets list shows a program registered under this researcher. Its entry describes two-minute cadence observations for TIC 4206066, a nearby K-dwarf with a planet candidate. That list does not confirm that the planet exists. The author said the TESS team approved a follow-up observation for November."
           }
         }
       ]
