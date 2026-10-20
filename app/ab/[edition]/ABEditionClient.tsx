@@ -143,7 +143,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 </div>
                 <div>
                   <span className="ab-panel-label">Cards</span>
-                  <strong>{data.highlights.length} highlights</strong>
+                  <strong>{data.highlights.length ? `${data.highlights.length} highlights` : `${data.editorsPicks?.length ?? 0} picks`}</strong>
                 </div>
                 {data.sourceCounts && (
                   <div>
@@ -176,7 +176,8 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         <div className="ab-shell-inner" style={{ maxWidth: 1280 }}>
           <BrowseGrid title={locale === "ko" ? "이번 호 둘러보기" : "Explore this edition"} description={locale === "ko" ? "읽고 싶은 섹션으로 바로 이동하세요." : "Jump to the section you want to read."}
             items={[
-              { id: "highlights", label: locale === "ko" ? "핵심 브리핑" : "Highlights", count: highlights.length, href: "#ab-highlights" },
+              // 본편 카드보다 도구 추천을 먼저 공개한 회차(2026-10b)는 빈 핵심 브리핑 칸을 보이지 않는다
+              ...(highlights.length ? [{ id: "highlights", label: locale === "ko" ? "핵심 브리핑" : "Highlights", count: highlights.length, href: "#ab-highlights" }] : []),
               ...(data.modelWatch?.length ? [{ id: "models", label: data.modelWatchSection ? data.modelWatchSection.navLabel[locale === "ko" ? "ko" : "en"] : locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
               ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "도구 추천" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
             ]}
@@ -209,7 +210,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         </section>
 
         {/* ───── Highlights ───── */}
-        <section id="ab-highlights"
+        <section id="ab-highlights" hidden={highlights.length === 0}
           style={{
             padding: "0 clamp(16px, 3vw, 32px) clamp(28px, 5vw, 40px)",
           }}

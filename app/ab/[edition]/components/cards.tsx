@@ -363,7 +363,7 @@ export function EditorPickCard({
         WebkitTapHighlightColor: "transparent",
       }}
     >
-      <EditorialImageFrame image={image} images={item.images} sourceUrl={item.unofficial ? "" : item.sourceUrl} label={item.category} tone="gold" />
+      <EditorialImageFrame image={image} images={item.images} sourceUrl={item.unofficial || item.noSourcePreview ? "" : item.sourceUrl} label={item.category} tone="gold" />
 
       <div className="tc-feed-body">
         <div className="tc-feed-meta mono">

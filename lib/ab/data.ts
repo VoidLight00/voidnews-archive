@@ -49,6 +49,8 @@ export interface ABEditorPick {
   releaseScope?: string; // 카드 사실 칸의 범위 문구. 없으면 태그·주소로 추정
   /** 회사 공식 발표가 아닌 자료(추출본 등). 상태를 '비공식 자료'로 표시하고 공유 이미지 자동 조회를 끈다 */
   unofficial?: boolean;
+  /** 썸네일을 정책상 비운 카드(프로필 사진·글자뿐인 표지 등)에서 출처 공유 이미지를 자동으로 불러오지 않는다 */
+  noSourcePreview?: boolean;
 }
 
 export interface ABDemoCard {
@@ -100,6 +102,7 @@ export interface ABEdition {
   demoCards?: ABDemoCard[];
 }
 
+import { edition2026_10b } from "./editions/2026-10b";
 import { edition2026_09b } from "./editions/2026-09b";
 import { edition2026_09a } from "./editions/2026-09a";
 import { edition2026_04a } from "./editions/2026-04a";
@@ -115,7 +118,7 @@ import { edition2026_07c } from "./editions/2026-07c";
 import { edition2026_08b } from "./editions/2026-08b";
 import { edition2026_08a } from "./editions/2026-08a";
 
-export const editions: ABEdition[] = [edition2026_09b, edition2026_09a, edition2026_08b, edition2026_08a, edition2026_07c, edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
+export const editions: ABEdition[] = [edition2026_10b, edition2026_09b, edition2026_09a, edition2026_08b, edition2026_08a, edition2026_07c, edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
 // 날짜 URL은 announceDate가 기본이라 과거 회차 데이터 수정 없이 전 회차가 날짜로 접근된다.
 function dateSlugOf(edition: ABEdition): string {
@@ -158,5 +161,6 @@ export function getEditionList() {
     announceDate: e.announceDate,
     nextEditionDate: e.nextEditionDate,
     highlightCount: e.highlights.length,
+    pickCount: e.editorsPicks?.length ?? 0,
   }));
 }

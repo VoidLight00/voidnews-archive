@@ -3605,5 +3605,23 @@
     "image": "https://www.apple.com/newsroom/images/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/tile/Apple-M6-and-M5-Ultra-hero-260825-lp.jpg.og.jpg?202608260059",
     "file": "apple-첫-2nm-m6와-최대-512gb-메모리-m5-ultra-공개-9e0dcfcc.jpg",
     "ts": 1787822356290
+  },
+  "ab-20261022-rea-reverse-engineer-agents-159972ba": {
+    "url": "https://github.com/morluto/rea",
+    "image": "https://repository-images.githubusercontent.com/1209966933/1a3fef9a-be4b-41f4-8830-a94c0e8288cc",
+    "file": "ab-20261022-rea-reverse-engineer-agents.png",
+    "ts": 1792498427021,
+    "selectionPolicy": "source-top-image-v1",
+    "selectionKind": "source-share-preview",
+    "note": "README 첫 이미지는 shields.io 배지라 제외했습니다(AGENTS.md 2항). 저장소 주인이 지정한 공유 이미지입니다."
+  },
+  "ab-20261022-diagram-design-editorial-diagrams-28e75a54": {
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "image": "https://github.com/cathrynlavery/diagram-design/raw/main/docs/hero/demo.gif",
+    "file": "ab-20261022-diagram-design-editorial-diagrams.webp",
+    "ts": 1792498617330,
+    "selectionPolicy": "source-top-image-v1",
+    "selectionKind": "source-first-image",
+    "note": "README 첫 이미지(시연 GIF, 2.85MB)의 103번째 장면(전후 비교)을 WebP 정지 이미지로 저장했습니다. og-cache 1MB 기준(IMP-0002·IMP-0037)."
   }
 }
