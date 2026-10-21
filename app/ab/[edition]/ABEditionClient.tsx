@@ -24,6 +24,62 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
   }, []);
 
   const highlights = [...data.highlights].sort((a, b) => a.rank - b.rank);
+  // 도구 추천이 본편인 회차(2026-10b): 도구 칸을 소식 카드보다 먼저 보여 주고, 소식 카드는 보조 칸으로 이름을 바꾼다
+  const picksFirst = data.leadSection === "picks";
+  const reorderNav = <T extends { id: string }>(items: T[]) => (picksFirst ? [...items.filter((x) => x.id === "picks"), ...items.filter((x) => x.id !== "picks")] : items);
+
+  const picksSection = data.editorsPicks && data.editorsPicks.length > 0 ? (
+    <section id="ab-picks"
+      style={{
+        padding:
+          "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
+      }}
+    >
+      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+        <div
+          style={{
+            borderTop: "3px double var(--rule)",
+            paddingTop: 28,
+            marginBottom: 22,
+          }}
+        >
+          <span className="kicker" style={{ color: "var(--gold)" }}>
+            Editor&apos;s toolkit
+          </span>
+          <h2
+            className="serif"
+            style={{
+              marginTop: 10,
+              fontSize: "clamp(22px, 3.2vw, 28px)",
+              fontWeight: 700,
+              letterSpacing: "-0.025em",
+              color: "var(--text-strong)",
+              lineHeight: 1.12,
+            }}
+          >
+            도움이 될만한 도구들 추천
+          </h2>
+          <p
+            className="deck"
+            style={{
+              marginTop: 8,
+              fontSize: 14,
+              lineHeight: 1.55,
+              maxWidth: "60ch",
+              color: "var(--text-soft)",
+            }}
+          >
+            직접 확인해 본 도구 가운데 지금 바로 써 볼 만한 것만 골랐습니다.
+          </p>
+        </div>
+        <div className="tc-article-grid ab-edition-grid">
+          {data.editorsPicks.map((pick, i) => (
+            <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : null;
 
   return (
     <>
@@ -143,7 +199,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 </div>
                 <div>
                   <span className="ab-panel-label">Cards</span>
-                  <strong>{data.highlights.length ? `${data.highlights.length} highlights` : `${data.editorsPicks?.length ?? 0} picks`}</strong>
+                  <strong>{picksFirst ? `${data.editorsPicks?.length ?? 0} picks · ${data.highlights.length} news` : data.highlights.length ? `${data.highlights.length} highlights` : `${data.editorsPicks?.length ?? 0} picks`}</strong>
                 </div>
                 {data.sourceCounts && (
                   <div>
@@ -175,12 +231,12 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
 
         <div className="ab-shell-inner" style={{ maxWidth: 1280 }}>
           <BrowseGrid title={locale === "ko" ? "이번 호 둘러보기" : "Explore this edition"} description={locale === "ko" ? "읽고 싶은 섹션으로 바로 이동하세요." : "Jump to the section you want to read."}
-            items={[
+            items={reorderNav([
               // 본편 카드보다 도구 추천을 먼저 공개한 회차(2026-10b)는 빈 핵심 브리핑 칸을 보이지 않는다
-              ...(highlights.length ? [{ id: "highlights", label: locale === "ko" ? "핵심 브리핑" : "Highlights", count: highlights.length, href: "#ab-highlights" }] : []),
+              ...(highlights.length ? [{ id: "highlights", label: locale === "ko" ? (picksFirst ? "AI 소식" : "핵심 브리핑") : (picksFirst ? "AI news" : "Highlights"), count: highlights.length, href: "#ab-highlights" }] : []),
               ...(data.modelWatch?.length ? [{ id: "models", label: data.modelWatchSection ? data.modelWatchSection.navLabel[locale === "ko" ? "ko" : "en"] : locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
               ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "도구 추천" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
-            ]}
+            ])}
           />
         </div>
 
@@ -209,6 +265,8 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </div>
         </section>
 
+        {picksFirst && picksSection}
+
         {/* ───── Highlights ───── */}
         <section id="ab-highlights" hidden={highlights.length === 0}
           style={{
@@ -224,7 +282,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               }}
             >
               <span className="kicker" style={{ color: "var(--accent)" }}>
-                핵심 브리핑 카드
+                {picksFirst ? "함께 볼 AI 소식" : "핵심 브리핑 카드"}
               </span>
               <h2
                 className="serif"
@@ -237,7 +295,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                   lineHeight: 1.1,
                 }}
               >
-                핵심 흐름 발표 순서
+                {picksFirst ? "이번 2주의 AI 소식" : "핵심 흐름 발표 순서"}
               </h2>
               <p
                 className="deck"
@@ -313,58 +371,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           </section>
         )}
 
-        {data.editorsPicks && data.editorsPicks.length > 0 && (
-          <section id="ab-picks"
-            style={{
-              padding:
-                "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
-            }}
-          >
-            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-              <div
-                style={{
-                  borderTop: "3px double var(--rule)",
-                  paddingTop: 28,
-                  marginBottom: 22,
-                }}
-              >
-                <span className="kicker" style={{ color: "var(--gold)" }}>
-                  Editor&apos;s toolkit
-                </span>
-                <h2
-                  className="serif"
-                  style={{
-                    marginTop: 10,
-                    fontSize: "clamp(22px, 3.2vw, 28px)",
-                    fontWeight: 700,
-                    letterSpacing: "-0.025em",
-                    color: "var(--text-strong)",
-                    lineHeight: 1.12,
-                  }}
-                >
-                  도움이 될만한 도구들 추천
-                </h2>
-                <p
-                  className="deck"
-                  style={{
-                    marginTop: 8,
-                    fontSize: 14,
-                    lineHeight: 1.55,
-                    maxWidth: "60ch",
-                    color: "var(--text-soft)",
-                  }}
-                >
-                  직접 확인해 본 도구 가운데 지금 바로 써 볼 만한 것만 골랐습니다.
-                </p>
-              </div>
-              <div className="tc-article-grid ab-edition-grid">
-                {data.editorsPicks.map((pick, i) => (
-                  <EditorPickCard key={i} item={pick} onOpen={openModal} editionSlug={data.slug} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+        {!picksFirst && picksSection}
 
         {data.demoCards && data.demoCards.length > 0 && (
           <section

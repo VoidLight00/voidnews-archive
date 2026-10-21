@@ -3623,5 +3623,14 @@
     "selectionPolicy": "source-top-image-v1",
     "selectionKind": "source-first-image",
     "note": "README 첫 이미지(시연 GIF, 2.85MB)의 103번째 장면(전후 비교)을 WebP 정지 이미지로 저장했습니다. og-cache 1MB 기준(IMP-0002·IMP-0037)."
+  },
+  "ab-20261022-voicestudio-local-voice-studio-9660013e": {
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "image": "https://repository-images.githubusercontent.com/1206390571/fd6851a0-4e36-4541-a76c-2ad84935d0bc",
+    "file": "ab-20261022-voicestudio-local-voice-studio.png",
+    "ts": 1792565493427,
+    "selectionPolicy": "source-top-image-v1",
+    "selectionKind": "source-share-preview",
+    "note": "README 첫 이미지는 로고와 배지라 제외했습니다(AGENTS.md 2항). 저장소 주인이 지정한 공유 이미지이며 앱 첫 화면입니다."
   }
 }

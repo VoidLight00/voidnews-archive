@@ -99,7 +99,7 @@ export default function ABIndexPage() {
                         <span aria-hidden style={{ margin: "0 8px", color: "var(--dim)" }}>
                           ·
                         </span>
-                        {featured.highlightCount ? `핵심 카드 ${featured.highlightCount}개` : `도구 추천 ${featured.pickCount}개`}
+                        {featured.leadSection === "picks" ? `도구 추천 ${featured.pickCount}개 · AI 소식 ${featured.highlightCount}개` : featured.highlightCount ? `핵심 카드 ${featured.highlightCount}개` : `도구 추천 ${featured.pickCount}개`}
                       </p>
                     </div>
                     <span className="ab-arrow-link" style={{ color: "var(--accent)" }}>
@@ -127,7 +127,7 @@ export default function ABIndexPage() {
                             <span aria-hidden style={{ margin: "0 6px", color: "var(--dim)" }}>
                               ·
                             </span>
-                            {edition.highlightCount ? `${edition.highlightCount} cards` : `${edition.pickCount} picks`}
+                            {edition.leadSection === "picks" ? `${edition.pickCount} picks · ${edition.highlightCount} news` : edition.highlightCount ? `${edition.highlightCount} cards` : `${edition.pickCount} picks`}
                           </span>
                         </Link>
                       </li>

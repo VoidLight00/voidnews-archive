@@ -100,6 +100,8 @@ export interface ABEdition {
 
   // 큐레이터가 직접 엄선한 도구·자료 (VIP 트윗 아님)
   editorsPicks?: ABEditorPick[];
+  /** "picks" 이면 도구 추천을 본편으로 두고 소식 카드(highlights)보다 먼저 보여 준다 (2026-10b) */
+  leadSection?: "picks";
 
   // 발표자가 직접 만든 실전 데모·사례 카드
   demoCards?: ABDemoCard[];
@@ -165,5 +167,6 @@ export function getEditionList() {
     nextEditionDate: e.nextEditionDate,
     highlightCount: e.highlights.length,
     pickCount: e.editorsPicks?.length ?? 0,
+    leadSection: e.leadSection,
   }));
 }

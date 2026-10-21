@@ -3,8 +3,8 @@ import type { ABEdition } from "../data";
 export const edition2026_10b: ABEdition = {
   "slug": "2026-10b",
   "volume": 15,
-  "title": "무료 요금제까지 열린 GPT-6, 권한 검사를 우회한 내부 모델",
-  "theme": "GPT-6 · Gemini 4 Argon · Claude Haiku 5.5 · Muse Wonder · OpenAI 권한 우회 보고서 · 국정ON",
+  "title": "에이전트를 고쳐 쓰고, 도해를 그리고, 목소리를 만드는 도구 여섯 가지",
+  "theme": "Claude Code v2.1.287 Mods · Anatomy · diagram-design · REA · Harness² · VoiceStudio · 함께 볼 AI 소식 6가지",
   "period": "2026-10-07 ~ 2026-10-19",
   "coveredWeeks": [
     {
@@ -22,8 +22,8 @@ export const edition2026_10b: ABEdition = {
   ],
   "announceDate": "2026-10-22",
   "nextEditionDate": "2026-11-05",
-  "intro": "이번 회차는 10월 7일부터 19일까지 나온 AI 소식 가운데 여섯 가지를 다룹니다. GPT-6가 무료 요금제까지 열렸고, Google과 Anthropic, Meta도 같은 기간에 새 모델을 내놓았습니다. 모델이 맡을 수 있는 일이 늘어나는 만큼, OpenAI가 직접 공개한 내부 모델의 권한 우회 사례도 함께 살펴봅니다. 마지막으로 현업 공무원이 바이브 코딩으로 만든 「국정ON」을 소개하고, 바로 써 볼 수 있는 도구 네 가지를 덧붙입니다.",
-  "closing": "모델 성능과 가격은 대부분 각 회사가 밝힌 값이므로, 실제로 맡길 작업으로 먼저 시험해 보시길 권합니다. 에이전트에게 웹과 파일 권한을 줄 때는 어디까지 허용할지 먼저 정해 두는 것이 안전합니다. 소개한 도구도 설치하기 전에 저장소의 사용 조건과 접근 범위를 확인하시길 권합니다.",
+  "intro": "이번 회차는 바로 써 볼 수 있는 도구 여섯 가지를 중심으로 꾸몄습니다. Claude Code v2.1.287에 들어간 Mods, 개념을 움직이는 기계 그림으로 그려 주는 Anatomy, 브랜드에 맞춰 도해를 그리는 diagram-design, 앱과 바이너리 동작을 에이전트로 분석하는 REA, 모델을 바꾸지 않고 에이전트의 작업 환경을 고치는 Harness², 음성 복제와 더빙을 내 컴퓨터에서 하는 VoiceStudio입니다. 다섯 가지는 MIT·Apache-2.0·AGPL-3.0 라이선스로 공개된 오픈소스이고, Claude Code는 Anthropic의 공식 릴리스입니다. 이어서 10월 7일부터 19일까지 나온 AI 소식 여섯 가지를 짧게 정리했습니다. GPT-6의 무료 요금제 배포부터 OpenAI가 공개한 내부 모델의 권한 우회 사례, 행정안전부의 「국정ON」까지 다룹니다.",
+  "closing": "소개한 도구는 설치하기 전에 저장소의 사용 조건과 접근 범위를 먼저 확인하시길 권합니다. Mod는 내 권한으로 실행되는 코드이고, 역공학 도구는 분석할 권한이 있는 대상에만, 음성 복제는 허락받은 목소리에만 쓰는 것이 안전합니다. 소식 카드의 성능과 가격은 대부분 각 회사가 밝힌 값이므로, 실제로 맡길 작업으로 먼저 시험해 보시길 권합니다.",
   "editorsPicks": [
     {
       "title": "Claude Code v2.1.287, 플러그인이 동작을 바꾸는 Mods 추가",
@@ -58,7 +58,7 @@ export const edition2026_10b: ABEdition = {
       "guideUrl": "https://github.com/wheresryan22/anatomy/blob/main/LICENSE",
       "guideLabel": "코드 사용 조건",
       "summary": "설명하려는 개념을 한 줄로 요청하면 그 개념처럼 작동하는 물체를 고안해 포인터와 키보드에 반응하는 도해로 만듭니다. 상자와 화살표 대신 작은 부품 수십 개로 이루어진 기계를 그려서, 읽는 사람이 움직임으로 원리를 이해하게 하는 방식입니다.",
-      "body": "**개념을 작동하는 기계로 그려 설명합니다**\nAnatomy는 설명하려는 개념을 실제로 작동하는 물체로 만들어 보여 주는 에이전트 스킬입니다. README에 따르면 개념을 한 줄로 요청하면 Claude가 그 개념과 같은 방식으로 움직이는 물체를 고안합니다. 값이 그대로면 작업을 건너뛰는 캐시 키는 핀이 모두 맞아야 돌아가는 자물쇠가 되는 식입니다. 결과는 음영이 들어간 작은 부품 수십 개로 만든 아이소메트릭 도해이고, 포인터와 키보드에 반응하며, 화면에 나오는 숫자는 부품을 움직이는 같은 모델에서 나옵니다. 기본은 SVG이고, 불꽃이나 물 같은 효과는 WebGL로 더하며, 부품이 깊이 방향으로 도는 3D 모드는 베타입니다.\n\n**설치는 명령 한 줄이고, Node.js 20.10 이상이 필요합니다**\n`npx skills add`에 이 저장소의 경로를 넣고 `-g -a claude-code`를 붙이면 `~/.claude/skills/anatomy`에 설치됩니다. git으로 같은 폴더에 내려받거나 ZIP을 풀어 넣어도 됩니다. 설치 뒤 Claude Code에서 `/anatomy explain how a token bucket rate limiter works, interactive`처럼 요청하면 시작됩니다. README는 API 키가 필요 없고 Node 내장 모듈만 쓰므로 `npm install`도 필요 없다고 밝히며, 요구 사항으로 Node.js 20.10 이상과 점검용 Chrome 또는 Chromium을 듭니다. 또한 설치 CLI가 예제를 포함한 저장소 전체(약 10MB)를 복사하고, 1.7.1 버전은 Node 22.20 이상을 요구한다고 안내합니다.\n\n**접근 범위: 내 스킬 폴더와 프로젝트 파일, 점검용 브라우저입니다**\n스킬은 지시문과 Node 스크립트로 이루어져 있고 API 키를 요구하지 않습니다. 설치 위치는 사용자 스킬 폴더이거나 프로젝트 폴더이며, 만들어진 도해는 직접 소유하는 소스 파일로 남습니다. 스킬은 자체 점검을 위해 헤드리스 Chrome을 시작하는데, 임시 프로필을 쓰고 로컬 포트로 통신한다고 README가 설명합니다. Codex 샌드박스에서는 이 점검이 막힐 수 있어 명령별 승인이 필요할 수 있습니다. 도해를 커뮤니티 갤러리에 게시하는 기능은 사용자가 게시를 요청하면 시작되며, 에이전트가 보낼 내용을 보여 주고 확인을 받은 뒤 풀 리퀘스트를 연다고 합니다. 라이선스는 스킬과 도해 모두 MIT입니다.\n\n**실습: 개념 하나로 첫 도해를 만들고 초안으로 다듬습니다**\n가르치거나 문서로 설명해야 하는 개념 하나를 고르고, 실제 숫자를 넣어 요청합니다. README의 예시는 `/anatomy an isometric SVG explaining how a CDN edge cache works, cache hit vs miss, TTL of 60 s, for a dark landing page. Just the SVG file and a PNG preview.`입니다. README는 그리는 방식이 아니라 개념을 말하고, 실제 숫자를 주고, 결과물이 놓일 곳을 알리라고 권합니다. 사이트는 첫 도해를 초안으로 보고, 어색한 부분을 말해 다시 요청하라고 안내합니다. 화면의 숫자가 요청한 값과 맞는지, 키보드로도 조작되는지, 물체의 움직임이 개념과 대응되는지를 확인합니다. 도해 하나에 긴 작업 시간이 들며, 사이트는 시계 장치가 Claude의 작업 시간으로 1시간 54분 걸렸다고 적습니다. 축과 데이터 계열이 있는 차트에는 맞지 않는다고 README가 밝힙니다.",
+      "body": "**개념을 작동하는 기계로 그려 설명합니다**\nAnatomy는 설명하려는 개념을 실제로 작동하는 물체로 만들어 보여 주는 에이전트 스킬입니다. README에 따르면 개념을 한 줄로 요청하면 Claude가 그 개념과 같은 방식으로 움직이는 물체를 고안합니다. 값이 그대로면 작업을 건너뛰는 캐시 키는 핀이 모두 맞아야 돌아가는 자물쇠가 되는 식입니다. 결과는 음영이 들어간 작은 부품 수십 개로 만든 아이소메트릭 도해이고, 포인터와 키보드에 반응하며, 화면에 나오는 숫자는 부품을 움직이는 같은 모델에서 나옵니다. 기본은 SVG이고, 불꽃이나 물 같은 효과는 WebGL로 더하며, 부품이 깊이 방향으로 도는 3D 모드는 베타입니다.\n\n**설치는 명령 한 줄이고, Node.js 20.10 이상이 필요합니다**\n`npx skills add`에 이 저장소의 경로를 넣고 `-g -a claude-code`를 붙이면 `~/.claude/skills/anatomy`에 설치됩니다. git으로 같은 폴더에 내려받거나 ZIP을 풀어 넣어도 됩니다. 설치 뒤 Claude Code에서 `/anatomy explain how a token bucket rate limiter works, interactive`처럼 요청하면 시작됩니다. README는 API 키가 필요 없고 Node 내장 모듈만 쓰므로 `npm install`도 필요 없다고 밝히며, 요구 사항으로 Node.js 20.10 이상과 점검용 Chrome 또는 Chromium을 듭니다. 또한 설치 CLI가 예제를 포함한 저장소 전체(약 10MB)를 복사하고, 1.7.1 버전은 Node 22.20 이상을 요구한다고 안내합니다.\n\n**접근 범위: 내 스킬 폴더와 프로젝트 파일, 점검용 브라우저입니다**\n스킬은 지시문과 Node 스크립트로 이루어져 있고 API 키를 요구하지 않습니다. 설치 위치는 사용자 스킬 폴더이거나 프로젝트 폴더이며, 만들어진 도해는 직접 소유하는 소스 파일로 남습니다. 스킬은 자체 점검을 위해 헤드리스 Chrome을 시작하는데, 임시 프로필을 쓰고 로컬 포트로 통신한다고 README가 설명합니다. Codex 샌드박스에서는 이 점검이 막힐 수 있어 명령별 승인이 필요할 수 있습니다. 도해를 커뮤니티 갤러리에 게시하는 기능은 사용자가 게시를 요청하면 시작되며, 에이전트가 보낼 내용을 보여 주고 확인을 받은 뒤 풀 리퀘스트를 연다고 합니다. 스킬 저장소는 MIT 라이선스로 공개돼 있습니다.\n\n**실습: 개념 하나로 첫 도해를 만들고 초안으로 다듬습니다**\n가르치거나 문서로 설명해야 하는 개념 하나를 고르고, 실제 숫자를 넣어 요청합니다. README의 예시는 `/anatomy an isometric SVG explaining how a CDN edge cache works, cache hit vs miss, TTL of 60 s, for a dark landing page. Just the SVG file and a PNG preview.`입니다. README는 그리는 방식이 아니라 개념을 말하고, 실제 숫자를 주고, 결과물이 놓일 곳을 알리라고 권합니다. 사이트는 첫 도해를 초안으로 보고, 어색한 부분을 말해 다시 요청하라고 안내합니다. 화면의 숫자가 요청한 값과 맞는지, 키보드로도 조작되는지, 물체의 움직임이 개념과 대응되는지를 확인합니다. 도해 하나에 긴 작업 시간이 들며, 사이트는 시계 장치가 Claude의 작업 시간으로 1시간 54분 걸렸다고 적습니다. 축과 데이터 계열이 있는 차트에는 맞지 않는다고 README가 밝힙니다.",
       "editorial": "상자와 화살표로 그리던 설명 그림을 작동하는 물체로 바꾸는 접근과, 그 작업에 드는 시간을 함께 봅니다.",
       "tags": [
         "공개 도구",
@@ -123,8 +123,58 @@ export const edition2026_10b: ABEdition = {
         "caption": "REA 저장소에 등록된 소개 이미지입니다."
       },
       "releaseScope": "MIT 오픈소스 · MCP 도구"
+    },
+    {
+      "title": "Harness², 모델을 바꾸지 않고 에이전트 작업 환경을 고치는 오픈소스",
+      "slug": "harness2-self-improving-agent-harness",
+      "deck": "에이전트를 둘러싼 프롬프트·도구·메모리·스킬을 과제마다 고치는 Apache-2.0 연구용 프레임워크입니다.",
+      "subtitle": "공개 도구 · 연구용 프레임워크",
+      "category": "공개 도구 · 에이전트 연구",
+      "sourceUrl": "https://github.com/google-research/harness2",
+      "sourceLabel": "공식 저장소",
+      "guideUrl": "https://github.com/google-research/harness2/blob/main/LICENSE",
+      "guideLabel": "코드 사용 조건",
+      "summary": "모델 가중치는 그대로 두고, 에이전트를 둘러싼 프롬프트·도구·메모리·스킬 같은 하네스를 과제마다 고친 뒤 그 경험을 다음 과제로 넘기는 연구용 오픈소스입니다. 로컬 데모는 모델 인증 정보 없이 실행되며, 벤치마크 향상 폭은 저자들이 직접 잰 결과입니다. Google의 공식 지원 제품은 아닙니다.",
+      "body": "**모델 가중치는 그대로 두고, 에이전트의 하네스를 과제마다 다듬습니다**\nREADME는 하네스를 모델이 에이전트로 일하게 해 주는 주변 시스템으로 정의합니다. 프롬프트, 도구, 메모리, 스킬, 오케스트레이션 등이 여기에 들어가며, 이 시스템을 최적화하는 일을 하네싱이라고 부릅니다. Harness²는 하네스를 설계할 때 보지 못한 과제를 만나는 환경을 겨냥하고, 모델 가중치를 바꾸지 않은 채 두 단계의 재귀를 연결합니다. 과제 단계 재귀는 수정안을 제안하고 같은 과제에서 실행해 효과를 시험한 뒤, 실행 사이의 행동 차이를 근거로 하네스를 다시 조합합니다. README는 이 과정에 정답 피드백이 필요 없다고 설명합니다. 하네싱 단계 재귀는 과제마다 채택한 하네스와 근거가 있는 교훈을 개선용 하네스에 쌓아 다음 과제의 개선에 씁니다. 고칠 수 있는 구성 요소는 시스템 프롬프트, 가드레일, 메모리, 도구 안내, 서브에이전트, 스킬, 스크립트, 플러그인의 여덟 가지이고, 실행기는 기본값인 OpenCode와 선택 항목인 Codex를 지원합니다. README는 세 가지 전문 업무 벤치마크와 네 가지 모델·하네스 조합에서 개선 단계 한 번으로 GLM-5와 Gemini 3.5 Flash가 기본 하네스보다 나아졌다고 밝힙니다. 향상 폭은 WorkBuddy-Bench 최대 11.5점, JobBench 최대 4.5점, LAB 부분 통과율 최대 11.8퍼센트포인트입니다. 이 수치는 저자들이 직접 잰 결과입니다. README가 연결한 논문(arXiv 2610.14224, 2026년 10월 9일 제출)에 적힌 저자 소속은 Google Cloud AI Research와 Northwestern University입니다.\n\n**로컬 데모는 모델 없이 돌고, 벤치마크 실행에는 Google Cloud 설정이 필요합니다**\nREADME는 Linux, Python 3.12, uv를 요구합니다. 설정 문서에 따르면 파이썬 패키지는 3.13도 지원합니다. 저장소 루트에서 `uv venv --python 3.12 .venv`로 가상 환경을 만들고 `source .venv/bin/activate`로 활성화한 뒤, `uv pip install -e '.[render]'`로 설치하고 `harness2-demo --output runs/demo --k 2`를 실행합니다. 이 로컬 데모는 정해진 규칙으로 움직이는 편집기와 실제 파이썬 실행으로 두 재귀 방식을 모두 돌리며, 모델 인증 정보가 필요 없습니다. 실제 모델로 벤치마크를 돌리려면 Node.js 20 이상, Google Cloud CLI, 벤치마크별 의존성이 더 필요합니다. LAB은 Pandoc과 Poppler, WorkBuddy-Bench는 Docker를 씁니다. 설정 예시는 `.env`에 Vertex AI 프로젝트와 모델 ID를 적고 `gcloud auth application-default login`으로 인증하는 방식입니다. 설정 문서는 기본 구성이 Vertex의 Gemini를 실행·채점 모델로 쓰며, 계정이 설정한 각 모델에 접근할 수 있어야 한다고 밝힙니다. 모델을 쓰는 실행에는 API 비용이 들고, README는 작은 과제 선택부터 시작하라고 안내합니다. `harness2`에 `--dry-run`을 붙이면 모델을 호출하지 않고 선택될 과제만 미리 볼 수 있고, `harness2-check`는 모델 호출 없이 의존성, 인증, 설정을 확인합니다. 실험 문서에 따르면 LAB 전체는 1,143개 과제이며, `--max-tasks`는 실행 전체가 아니라 도메인별 상한입니다.\n\n**접근 범위: 실행기는 네트워크 제한 없이 돌고, Codex는 샌드박스를 끈 채 실행됩니다**\nREADME는 실행기의 네트워크 접근이 제한되지 않고 Codex가 샌드박스를 끈 채 실행된다고 밝힙니다. 공개 벤치마크의 채점 기준이 온라인에 있을 수 있으므로, 평가 전에 네트워크 제한을 설정하라고 안내합니다. 실험 문서는 이번 공개본을 검증하던 중 JobBench 과제에서 Codex 실행이 지시 없이 해당 과제의 채점 기준표를 내려받은 사례가 있었다고 적습니다. 그래서 설치를 마친 뒤 실행기에서 huggingface.co, hf.co, *.hf.co, github.com, raw.githubusercontent.com을 차단하고, 도구 설정이 아니라 송신 방화벽이나 DNS 정책처럼 네트워크 단에서 제한하라고 설명합니다. 설치 단계 자체는 의존성과 데이터를 내려받는 데 이 호스트들이 필요하므로, 제한은 설치 뒤에 적용합니다. 설치 단계는 GitHub, npm 레지스트리, Hugging Face, Docker 레지스트리 등에서 의존성과 데이터를 내려받습니다. WorkBuddy-Bench에서 Codex 실행기용 브리지를 `--host 0.0.0.0`으로 열면 모든 네트워크 인터페이스에서 요청을 받게 되므로, 접근할 클라이언트를 제한해야 한다고 설정 문서는 안내합니다. 결과는 `runs/` 아래에 과제 요약, 산출물, 채택된 하네스, 회고 기록, 평가 결과로 저장되며, 같은 명령을 다시 실행하면 이어서 진행합니다. 코드는 Apache 2.0 라이선스이고, `third_party/`의 코드와 벤치마크, 데이터셋은 각자의 원래 라이선스를 따릅니다. 벤치마크 문서는 WorkBuddy-Bench의 원 라이선스에 지역 제한이 있으니 내려받기 전에 확인하라고 안내합니다. README는 이 프로젝트가 Google의 공식 지원 제품이 아니며, Google 오픈소스 소프트웨어 취약점 보상 프로그램의 대상도 아니라고 밝힙니다.\n\n**실습: 로컬 데모로 두 재귀 방식이 남기는 기록을 확인합니다**\nLinux 환경에서 저장소를 내려받고, Install 절의 명령으로 가상 환경과 패키지를 설치한 뒤 `harness2-demo --output runs/demo --k 2`를 실행합니다. 모델 인증 정보 없이 두 재귀 방식이 실제로 돌아갑니다. 실행이 끝나면 터미널에 완료한 과제 수, 실패한 과제 수, 보고 파일 경로가 표시되므로 이 세 가지를 기록합니다. 이어서 `runs/demo/demo.json`과 `runs/demo/library/k2` 폴더를 열어, 과제가 끝날 때마다 어떤 하네스와 교훈이 다음 과제를 위해 남는지 확인합니다. `--k` 값을 바꿔 다시 실행할 때는 출력 폴더를 따로 두면 결과를 비교하기 쉽습니다. 모델을 쓰는 벤치마크는 설치를 마친 뒤 실행기의 네트워크 제한을 설정하고, `--dry-run`으로 과제 선택을 확인한 뒤 과제 하나로 시작합니다.",
+      "releaseScope": "Apache-2.0 · Google 공식 지원 제품 아님",
+      "tags": [
+        "공개 도구",
+        "Apache-2.0",
+        "에이전트 하네스",
+        "실습 제안"
+      ],
+      "tier": "feature",
+      "noSourcePreview": true
+    },
+    {
+      "title": "VoiceStudio, 음성 복제와 더빙을 내 컴퓨터에서 하는 오픈소스",
+      "slug": "voicestudio-local-voice-studio",
+      "deck": "음성 복제부터 영상 더빙과 받아쓰기까지 내 컴퓨터에서 실행하는 AGPL-3.0 공개 데스크톱 앱입니다.",
+      "subtitle": "공개 도구 · 동의한 목소리만",
+      "category": "공개 도구 · 음성 생성",
+      "sourceUrl": "https://github.com/debpalash/VoiceStudio",
+      "sourceLabel": "공식 저장소",
+      "guideUrl": "https://github.com/debpalash/VoiceStudio/blob/main/LICENSE",
+      "guideLabel": "코드 사용 조건",
+      "summary": "음성 복제, 음성 디자인, 영상 더빙, 받아쓰기를 내 컴퓨터에서 실행하는 데스크톱 앱입니다. 앱 코드는 AGPL-3.0이지만 모델 가중치와 목소리의 조건은 별개이며, README는 허락을 받은 목소리만 복제하라고 밝힙니다.",
+      "body": "**음성 작업을 내 컴퓨터에서 처리합니다**\nVoiceStudio는 음성 복제, 음성 디자인, 영상 더빙, 받아쓰기, 음성 전사, 오디오북 제작을 한곳에서 다루는 데스크톱 앱입니다. 저장소 소개는 VoiceStudio를 완전히 로컬에서 동작하는 ElevenLabs 대안이라고 부르고 646개 언어를 지원한다고 밝히지만, 두 가지 모두 프로젝트 자체의 주장입니다. README는 로컬 작업이 사용자의 하드웨어에서 실행되고 원격 서비스는 선택 사항이며, 사용 통계는 동의가 있어야 수집한다고 설명합니다. 기본 엔진은 k2-fsa/OmniVoice 기반이고 다른 엔진을 고를 수 있습니다. 기능 표는 시간에 맞춘 영상 더빙, 오디오북과 일괄 작업, 에이전트용 로컬 API와 MCP, 다시 쓸 수 있는 작업 레시피와 감시 폴더를 함께 소개합니다.\n\n**설치는 명령 한 줄이나 설치 파일로 하고, 사양을 먼저 확인합니다**\nmacOS와 Linux는 README의 설치 명령 `curl -fsSL https://voicestudio.sh/install | sh`로, Windows는 PowerShell에서 `irm https://voicestudio.sh/install | iex`로 설치합니다. 명령 대신 Releases에서 macOS .dmg, Windows .exe, Linux .AppImage 또는 .deb 파일을 받아도 됩니다. README에 따르면 설치 명령은 기존 설정, 프로젝트, 모델을 보존합니다. 설치 문서에 따르면 macOS·Linux용 셸 설치 스크립트는 내려받은 패키지를 해당 릴리스의 SHA256SUMS.txt와 대조해, 일치하지 않으면 설치를 멈춥니다. 하드웨어 표에 따르면 NVIDIA GPU(Windows·Linux)는 CUDA, Apple Silicon은 Metal(MPS) 가속을 씁니다. 전용 GPU가 없는 컴퓨터도 CPU로 쓸 수 있지만 느리며, README는 이때 설정 과정이 작은 CPU용 PyTorch를 설치하고 약 5GB의 여유 공간이 필요하다고 적습니다. Windows on ARM은 검증 전 실험 단계이고, Intel Mac은 앱 화면만 쓰며 다른 컴퓨터의 백엔드에 연결해야 합니다. macOS 설치 문서는 Apple Silicon에서 macOS 13.3 이상과 약 10GB의 여유 공간을 요구합니다. Claude Code나 Codex 같은 코딩 에이전트에 README의 요청문을 붙여 넣어 설치를 맡길 수도 있으며, 에이전트용 안내서는 모델을 내려받기 전에 크기와 라이선스를 알리고 동의를 받도록 정합니다.\n\n**접근 범위: 라이선스, 모델 조건, 목소리 동의, 네트워크를 따로 확인합니다**\nREADME는 AGPL-3.0이 앱에 적용되며 그 조건 안에서 상업적 사용도 포함한다고 밝힙니다. AGPL-3.0에서는 프로그램을 고쳐 네트워크 서비스로 제공하면, 그 서비스 사용자에게 고친 버전의 소스 코드를 제공해야 합니다. 모델 가중치, 토크나이저, 목소리, 생성 결과물의 조건은 앱 라이선스와 별개이며, 유료 앱 라이선스도 그 권리를 주지 않는다고 README는 설명합니다. 라이선스 안내 문서(LICENSE-NOTICE.md)는 기본 OmniVoice 모델 카드가 사전 학습 가중치를 CC-BY-NC로 표시한다고 적고 있으므로, 상업적으로 쓰기 전에 모델 조건을 따로 확인해야 합니다. README의 책임 있는 사용 문장은 'Clone voices only with permission', 즉 허락을 받은 목소리만 복제하라는 것입니다. 이 카드는 본인 목소리나 주인이 동의한 목소리만 복제하는 것을 기준으로 삼습니다. LICENSE-NOTICE.md는 선택형 검토 기능도 목소리 동의를 확인하지 않는다고 밝힙니다. 모델 관리자의 선택형 검토 기능도 상업적 사용 허가를 보증하지 않는다고 README는 밝힙니다. MCP 서버는 실행 중인 백엔드의 `http://localhost:3900/mcp/`에 열리며, MCP 문서는 MCP 연결 자체에 인증이 없으므로 공개 인터넷에 노출하지 말고 신뢰할 수 있는 네트워크나 TLS 뒤에서만 쓰라고 안내합니다. 개인정보 설정에는 AudioSeal을 쓸 수 있을 때 생성 음성에 보이지 않는 워터마크를 넣는 항목이 나타나지만, 워터마크 모델을 불러오지 못하면 워터마크 없이 생성이 계속된다고 개인정보 문서는 밝힙니다. macOS 설치 스크립트는 앱의 격리 표시(com.apple.quarantine)를 지우고, 서명 검사에 실패하면 임시(ad hoc) 서명을 다시 적용하며 유효하거나 공증된 서명은 건드리지 않는다고 설치 문서는 설명합니다.\n\n**실습: 데모 목소리와 내 목소리로 같은 문장을 생성합니다**\n먼저 앱에 함께 들어 있는 데모 목소리로 짧은 문장 하나를 생성해 설치가 정상인지 확인합니다. 이어서 Voice cloning을 열고 조용한 곳에서 본인 목소리를 깨끗하게 녹음해 참고 녹음으로 넣은 뒤, 같은 문장을 생성합니다. 필요한 모델은 안내가 뜰 때 설치하고, 내려받기 전에 모델 관리자에 표시되는 출처 안내를 확인합니다. 성능 문서는 설정의 Performance 화면에서 실제 연산 장치(cuda·mps·cpu)를 확인할 수 있고, 재시작 뒤 첫 생성은 항상 가장 느리므로 두 번째 생성부터 속도를 판단하라고 안내합니다. 실제 연산 장치, 두 번째 생성에 걸린 시간, 결과 음성이 원래 목소리와 얼마나 비슷한지를 적어 둡니다.",
+      "editorial": "로컬 음성 생성이 내 컴퓨터 사양에서 어느 속도로 동작하는지, 목소리 동의와 모델 조건의 경계와 함께 봅니다.",
+      "releaseScope": "AGPL-3.0 · 모델 가중치는 별도 조건",
+      "tags": [
+        "공개 도구",
+        "AGPL-3.0",
+        "음성 복제 동의",
+        "실습 제안"
+      ],
+      "tier": "feature",
+      "thumbnail": {
+        "src": "/og-cache/ab-20261022-voicestudio-local-voice-studio.png",
+        "alt": "VoiceStudio 앱 첫 화면. 'Make voices that sound like you.' 제목 아래 Voice Clone, Voice Design, Video Dubbing, Stories, Audiobook, Voice Gallery, Transcripts 기능 카드가 배치되어 있습니다.",
+        "caption": "VoiceStudio 저장소에 등록된 공유 이미지입니다."
+      }
     }
   ],
+  "leadSection": "picks",
   "highlights": [
     {
       "rank": 1,
