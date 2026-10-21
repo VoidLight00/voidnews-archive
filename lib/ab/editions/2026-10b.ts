@@ -4,7 +4,7 @@ export const edition2026_10b: ABEdition = {
   "slug": "2026-10b",
   "volume": 15,
   "title": "에이전트를 고쳐 쓰고, 도해를 그리고, 목소리를 만드는 도구 여섯 가지",
-  "theme": "Claude Code v2.1.287 Mods · Anatomy · diagram-design · REA · Harness² · VoiceStudio · 함께 볼 AI 소식 6가지",
+  "theme": "함께 볼 AI 소식 6가지 · Claude Code v2.1.287 Mods · Anatomy · diagram-design · REA · Harness² · VoiceStudio",
   "period": "2026-10-07 ~ 2026-10-19",
   "coveredWeeks": [
     {
@@ -22,7 +22,7 @@ export const edition2026_10b: ABEdition = {
   ],
   "announceDate": "2026-10-22",
   "nextEditionDate": "2026-11-05",
-  "intro": "이번 회차는 바로 써 볼 수 있는 도구 여섯 가지를 중심으로 꾸몄습니다. Claude Code v2.1.287에 들어간 Mods, 개념을 움직이는 기계 그림으로 그려 주는 Anatomy, 브랜드에 맞춰 도해를 그리는 diagram-design, 앱과 바이너리 동작을 에이전트로 분석하는 REA, 모델을 바꾸지 않고 에이전트의 작업 환경을 고치는 Harness², 음성 복제와 더빙을 내 컴퓨터에서 하는 VoiceStudio입니다. 다섯 가지는 MIT·Apache-2.0·AGPL-3.0 라이선스로 공개된 오픈소스이고, Claude Code는 Anthropic의 공식 릴리스입니다. 이어서 10월 7일부터 19일까지 나온 AI 소식 여섯 가지를 짧게 정리했습니다. GPT-6의 무료 요금제 배포부터 OpenAI가 공개한 내부 모델의 권한 우회 사례, 행정안전부의 「국정ON」까지 다룹니다.",
+  "intro": "이번 회차는 10월 7일부터 19일까지 나온 AI 소식 여섯 가지로 시작합니다. GPT-6의 무료 요금제 배포부터 OpenAI가 공개한 내부 모델의 권한 우회 사례, 행정안전부의 「국정ON」까지 짧게 정리했습니다. 이어서 바로 써 볼 수 있는 도구 여섯 가지를 자세히 소개합니다. Claude Code v2.1.287에 들어간 Mods, 개념을 움직이는 기계 그림으로 그려 주는 Anatomy, 브랜드에 맞춰 도해를 그리는 diagram-design, 앱과 바이너리 동작을 에이전트로 분석하는 REA, 모델을 바꾸지 않고 에이전트의 작업 환경을 고치는 Harness², 음성 복제와 더빙을 내 컴퓨터에서 하는 VoiceStudio입니다. 다섯 가지는 MIT·Apache-2.0·AGPL-3.0 라이선스로 공개된 오픈소스이고, Claude Code는 Anthropic의 공식 릴리스입니다.",
   "closing": "소개한 도구는 설치하기 전에 저장소의 사용 조건과 접근 범위를 먼저 확인하시길 권합니다. Mod는 내 권한으로 실행되는 코드이고, 역공학 도구는 분석할 권한이 있는 대상에만, 음성 복제는 허락받은 목소리에만 쓰는 것이 안전합니다. 소식 카드의 성능과 가격은 대부분 각 회사가 밝힌 값이므로, 실제로 맡길 작업으로 먼저 시험해 보시길 권합니다.",
   "editorsPicks": [
     {
@@ -186,7 +186,6 @@ export const edition2026_10b: ABEdition = {
       }
     }
   ],
-  "leadSection": "picks",
   "demoCards": [
     {
       "title": "TermWeave, 에이전트 터미널을 한 화면에서 나눠 쓰는 오픈소스",

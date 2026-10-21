@@ -45,6 +45,9 @@ def canon(url: str) -> str:
 
 def build(spec: dict) -> tuple[str, str, list[str]]:
     ed = dict(spec["edition"])
+    # 사용자 고정 규칙(2026-10-22): AB 페이지는 항상 AI 소식이 맨 처음이다. 도구 추천을 앞세우는 leadSection 은 받지 않는다.
+    if ed.get("leadSection"):
+        raise SystemExit(f"FAIL[emit-ab-edition:news-first] leadSection={ed['leadSection']!r} — AI 소식(highlights)이 항상 맨 처음이어야 합니다")
     posts: dict[str, tuple[str, str, dict]] = {}  # slug -> (week, company, post)
     for wk in ed["coveredWeeks"]:
         for c in load_week(wk["slug"])["companies"]:
