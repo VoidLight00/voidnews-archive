@@ -235,6 +235,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               // 본편 카드보다 도구 추천을 먼저 공개한 회차(2026-10b)는 빈 핵심 브리핑 칸을 보이지 않는다
               ...(highlights.length ? [{ id: "highlights", label: locale === "ko" ? (picksFirst ? "AI 소식" : "핵심 브리핑") : (picksFirst ? "AI news" : "Highlights"), count: highlights.length, href: "#ab-highlights" }] : []),
               ...(data.modelWatch?.length ? [{ id: "models", label: data.modelWatchSection ? data.modelWatchSection.navLabel[locale === "ko" ? "ko" : "en"] : locale === "ko" ? "모델 소식" : "Model watch", count: data.modelWatch.length, href: "#ab-models" }] : []),
+              ...(data.demoCards?.length && data.demoSection ? [{ id: "demos", label: data.demoSection.navLabel[locale === "ko" ? "ko" : "en"], count: data.demoCards.length, href: "#ab-demos" }] : []),
               ...(data.editorsPicks?.length ? [{ id: "picks", label: locale === "ko" ? "도구 추천" : "Editor's picks", count: data.editorsPicks.length, href: "#ab-picks" }] : []),
             ])}
           />
@@ -374,7 +375,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
         {!picksFirst && picksSection}
 
         {data.demoCards && data.demoCards.length > 0 && (
-          <section
+          <section id="ab-demos"
             style={{
               padding:
                 "clamp(32px, 5vw, 48px) clamp(16px, 3vw, 32px) clamp(24px, 4vw, 32px)",
@@ -389,7 +390,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                 }}
               >
                 <span className="kicker" style={{ color: "var(--gold)" }}>
-                  Demo showcase
+                  {data.demoSection?.kicker ?? "Demo showcase"}
                 </span>
                 <h2
                   className="serif"
@@ -402,7 +403,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
                     lineHeight: 1.12,
                   }}
                 >
-                  실전 데모 — 영상으로 바로 보기
+                  {data.demoSection?.title ?? "실전 데모 — 영상으로 바로 보기"}
                 </h2>
               </div>
               <div style={{ display: "grid", gap: 20 }}>

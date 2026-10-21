@@ -3632,5 +3632,59 @@
     "selectionPolicy": "source-top-image-v1",
     "selectionKind": "source-share-preview",
     "note": "README 첫 이미지는 로고와 배지라 제외했습니다(AGENTS.md 2항). 저장소 주인이 지정한 공유 이미지이며 앱 첫 화면입니다."
+  },
+  "ab-20261022-claude-code-v2-1-287-mods-page-3fb94406": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+    "image": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+    "file": "ab-20261022-claude-code-v2-1-287-mods-page.png",
+    "ts": 1792567882892,
+    "selectionPolicy": "user-directed-page-capture-2026-10-21",
+    "selectionKind": "source-page-capture",
+    "note": "원문에 기사 고유 이미지가 없어(로고·배지·기여자 사진·사이트 공통 이미지만 있음) 사용자 지시(2026-10-21)에 따라 공식 원문 화면을 실제 Chrome 1200x675로 촬영했습니다."
+  },
+  "ab-20261022-anatomy-isometric-figure-skill-page-20660c63": {
+    "url": "https://github.com/wheresryan22/anatomy",
+    "image": "https://github.com/wheresryan22/anatomy",
+    "file": "ab-20261022-anatomy-isometric-figure-skill-page.png",
+    "ts": 1792567882892,
+    "selectionPolicy": "user-directed-page-capture-2026-10-21",
+    "selectionKind": "source-page-capture",
+    "note": "원문에 기사 고유 이미지가 없어(로고·배지·기여자 사진·사이트 공통 이미지만 있음) 사용자 지시(2026-10-21)에 따라 공식 원문 화면을 실제 Chrome 1200x675로 촬영했습니다."
+  },
+  "ab-20261022-harness2-self-improving-agent-harness-page-c71876af": {
+    "url": "https://github.com/google-research/harness2",
+    "image": "https://github.com/google-research/harness2",
+    "file": "ab-20261022-harness2-self-improving-agent-harness-page.png",
+    "ts": 1792567882892,
+    "selectionPolicy": "user-directed-page-capture-2026-10-21",
+    "selectionKind": "source-page-capture",
+    "note": "원문에 기사 고유 이미지가 없어(로고·배지·기여자 사진·사이트 공통 이미지만 있음) 사용자 지시(2026-10-21)에 따라 공식 원문 화면을 실제 Chrome 1200x675로 촬영했습니다."
+  },
+  "ab-20261022-openai-misalignment-report-government-site-page-adca07ae": {
+    "url": "https://alignment.openai.com/misalignment-reports/retrieving-server-secrets-and-bypassing-authorization-on-a-government-statistics-website/",
+    "image": "https://alignment.openai.com/misalignment-reports/retrieving-server-secrets-and-bypassing-authorization-on-a-government-statistics-website/",
+    "file": "ab-20261022-openai-misalignment-report-government-site-page.png",
+    "ts": 1792567882892,
+    "selectionPolicy": "user-directed-page-capture-2026-10-21",
+    "selectionKind": "source-page-capture",
+    "note": "원문에 기사 고유 이미지가 없어(로고·배지·기여자 사진·사이트 공통 이미지만 있음) 사용자 지시(2026-10-21)에 따라 공식 원문 화면을 실제 Chrome 1200x675로 촬영했습니다."
+  },
+  "ab-20261022-mois-gukjeong-on-vibe-coding-page-bb8a2c6a": {
+    "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785660",
+    "image": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156785660",
+    "file": "ab-20261022-mois-gukjeong-on-vibe-coding-page.png",
+    "ts": 1792567882892,
+    "selectionPolicy": "user-directed-page-capture-2026-10-21",
+    "selectionKind": "source-page-capture",
+    "note": "원문에 기사 고유 이미지가 없어(로고·배지·기여자 사진·사이트 공통 이미지만 있음) 사용자 지시(2026-10-21)에 따라 공식 원문 화면을 실제 Chrome 1200x675로 촬영했습니다."
+  },
+  "ab-20261022-termweave-terminal-workspace-eb77adf3": {
+    "url": "https://github.com/VoidLight00/termweave",
+    "image": "https://github.com/VoidLight00/termweave/raw/main/assets/hero.png",
+    "file": "ab-20261022-termweave-terminal-workspace.png",
+    "ts": 1792567882892,
+    "selectionPolicy": "source-top-image-v1",
+    "selectionKind": "source-first-image",
+    "note": "README 첫 이미지(앱 실제 화면, 예시 프로젝트로 만든 데모 세션)입니다."
   }
 }

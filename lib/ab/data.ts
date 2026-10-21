@@ -70,6 +70,8 @@ export interface ABDemoCard {
   tags?: string[];
   videoSrc?: string;     // 로컬 mp4 경로 (예: /threads-assets/.../demos.mp4) — <video>로 직접 재생
   videoPoster?: string;  // 영상 썸네일 (poster)
+  /** 영상이 없는 데모 카드의 대표 이미지(저장소 README 첫 화면 등) */
+  thumbnail?: MediaImage;
 }
 
 export type ABSource = "youtube" | "x" | "web" | "community-hn" | "community-reddit";
@@ -105,6 +107,8 @@ export interface ABEdition {
 
   // 발표자가 직접 만든 실전 데모·사례 카드
   demoCards?: ABDemoCard[];
+  /** demoCards 칸 문구 — 영상 데모가 아닌 회차만 지정. 없으면 기존 "실전 데모 — 영상으로 바로 보기" */
+  demoSection?: { kicker: string; title: string; navLabel: { ko: string; en: string } };
 }
 
 import { edition2026_10b } from "./editions/2026-10b";

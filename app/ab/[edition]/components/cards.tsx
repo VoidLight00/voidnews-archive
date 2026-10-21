@@ -221,6 +221,25 @@ export function DemoCard({ item }: { item: ABDemoCard }) {
         </p>
       )}
 
+      {item.thumbnail && !item.videoSrc && (
+        <img
+          src={item.thumbnail.src}
+          alt={item.thumbnail.alt}
+          loading="lazy"
+          style={{
+            marginTop: 18,
+            width: "100%",
+            height: "auto",
+            maxHeight: 520,
+            objectFit: "contain",
+            borderRadius: "var(--radius-xs)",
+            border: "1px solid var(--border2)",
+            background: "var(--surface)",
+            display: "block",
+          }}
+        />
+      )}
+
       {item.videoSrc && (
         <video
           controls

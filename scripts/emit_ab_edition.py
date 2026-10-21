@@ -72,6 +72,8 @@ def build(spec: dict) -> tuple[str, str, list[str]]:
         week, company, p = find(h["slug"])
         if h.get("releaseScope"):  # 주소 속 단어로 추정한 범위가 틀릴 때 회차 spec 에서 바로잡는다
             p = {**p, "releaseScope": h["releaseScope"]}
+        if h.get("thumbnail"):  # 원문에 기사 이미지가 없어 공식 페이지 화면을 촬영한 회차 전용 썸네일(Weekly 카드는 그대로)
+            p = {**p, "thumbnail": h["thumbnail"]}
         ed["highlights"].append({"rank": rank, "tier": h["tier"], "post": p, "sourceWeek": week,
                                  "sourceCompany": company, "editorial": h["editorial"]})
         if h.get("noSourcePreview"):

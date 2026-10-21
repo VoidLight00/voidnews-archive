@@ -67,6 +67,7 @@ function adaptDemoCardToPost(item: ABDemoCard): Post {
     tags: item.tags,
     slug: item.slug,
     deck: item.deck,
+    thumbnail: item.thumbnail,
   };
 }
 
