@@ -6,7 +6,7 @@ export const week43: WeeklyData = {
   "year": 2026,
   "slug": "2026-w43",
   "period": "10/19 ~ 10/25",
-  "totalPosts": 32,
+  "totalPosts": 33,
   "companies": [
     {
       "name": "Google",
@@ -1130,6 +1130,40 @@ export const week43: WeeklyData = {
             "deck": "An AI service that monitors Assembly and Cabinet broadcasts by keyword",
             "summary": "Korea's interior ministry presented 국정ON, an AI-based government monitoring service that a working civil servant built with generative-AI conversational coding. It alerts users when chosen keywords come up in National Assembly and Cabinet live broadcasts.",
             "content": "Korea's interior ministry (MOIS) presented, as a case study on October 19, 'AI-based government monitoring service 국정ON', which a working civil servant built directly with generative-AI conversational coding (vibe coding). The ministry describes it as a case where a public servant solved an inconvenience from their own work with AI.\n\nAccording to the ministry, 국정ON alerts users through KakaoTalk when keywords they have chosen come up in live broadcasts of the National Assembly and Cabinet. It organizes remarks by topic, compares them with the official minutes, and produces topic reports. The service runs at kjon.aigov.go.kr with support from the 'AI Government Lab'.\n\nThe ministry presented it as a case of changing a repetitive monitoring task into checking only at the moments it is needed. The press release is a ministry case study and gives no user numbers or accuracy figures."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Exa",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/19",
+          "platform": "Web",
+          "title": "Exa, Exa 3.0 공개하고 저가형 검색 유형 Exa Lite 추가",
+          "deck": "API로 바로 쓸 수 있으며, 요청 1,000건당 Lite는 4달러, Auto는 7달러입니다",
+          "summary": "Exa가 검색 품질을 지금까지 가장 크게 개선했다고 밝힌 Exa 3.0과 새 검색 유형 Exa Lite를 공개했습니다. Exa는 BrowseComp 91.8%, DSQA 88.2% 등 시험한 모든 벤치마크에서 1위라고 밝혔지만, 이는 Exa가 직접 발표한 수치입니다. API로 제공되며 요청 1,000건당 Lite는 4달러, Auto는 7달러입니다.",
+          "content": "Exa는 10월 19일 공식 블로그에서 Exa 3.0을 공개하고, 지금까지 내놓은 것 가운데 검색 품질을 가장 크게 개선한 버전이라고 설명했습니다.\n\nExa는 시험한 모든 벤치마크에서 Exa 3.0이 1위를 차지했다고 밝혔습니다. 글의 벤치마크 그림에 실린 점수는 BrowseComp 91.8%, DSQA 88.2%, WideSearch 56.1%, ATLAS 42.0%, WebCode 75.5%, FinSearchComp 68.0%, Company FindAll 15.4, People FindAll 7.6입니다. 그림 주석에 따르면 이 점수는 Exa 3.0 Auto의 결과이며, Perplexity, Brave, Parallel을 포함한 모든 업체를 GPT-6 Luna 에이전트를 쓰는 동일한 검색 환경에서 실행했습니다. 모두 Exa가 직접 발표한 수치이며, 글에는 독립적인 외부 평가 기관이 언급되어 있지 않습니다.\n\nExa는 더 큰 임베딩 모델 학습, Dynamic Highlights 정식 출시, 상품·지역 업체·항공편·날씨 등 문서 수십억 건의 색인 추가를 개선 요인으로 들었습니다. Dynamic Highlights는 추가 요금 없이 제공되며, Exa는 이 기능이 페이지 전체 텍스트보다 토큰을 95% 적게 쓴다고 밝혔습니다. 이 수치 역시 Exa의 자체 주장입니다.\n\n새 검색 유형 Exa Lite는 Exa Auto와 같은 색인을 쓰며, 비용에 민감한 애플리케이션을 위해 더 낮은 가격에 제공됩니다. Exa 3.0은 발표 당일부터 API로 제공되며, 요청 1,000건당 Exa Lite는 4달러, Exa Auto는 7달러입니다.",
+          "source": "https://exa.ai/blog/exa-3",
+          "officialUrl": "https://exa.ai/blog/exa-3",
+          "verifiedAt": "2026-10-22",
+          "slug": "exa-3-0-search-launch",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "Exa",
+            "Devtools"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261022/69d9b18c6f7b.png",
+            "alt": "Exa 3.0 leads Perplexity, Brave, and Parallel on all eight benchmarks. Exa scores 91.8% on BrowseComp, 88.2% on DSQA, 56.1% on WideSearch, 42.0% on ATLAS, 75.5% on WebCode, 68.0% on FinSearchComp, 15.4 on Company FindAll, and 7.6 on People FindAll."
+          },
+          "en": {
+            "title": "Exa releases Exa 3.0 and adds Exa Lite, a lower-cost search type",
+            "deck": "Available through the API at $4 per 1,000 requests for Lite and $7 for Auto",
+            "summary": "Exa released Exa 3.0, which it calls its largest improvement to search quality yet, along with a new search type, Exa Lite. Exa says it ranks first on every benchmark it tested, including 91.8% on BrowseComp and 88.2% on DSQA, but these are Exa's own figures. It is available through the API at $4 per 1,000 requests for Lite and $7 for Auto.",
+            "content": "Exa released Exa 3.0 on its official blog on October 19 and described it as the largest improvement to search quality it has ever released.\n\nExa says Exa 3.0 ranks first on every benchmark it tested. The scores in the post's benchmark chart are BrowseComp 91.8%, DSQA 88.2%, WideSearch 56.1%, ATLAS 42.0%, WebCode 75.5%, FinSearchComp 68.0%, Company FindAll 15.4 and People FindAll 7.6. According to the chart's footnote, these are results for Exa 3.0 Auto, and all providers, including Perplexity, Brave and Parallel, ran in the same agentic search harness with a GPT-6 Luna agent. All of these numbers are Exa's own results, and the post does not name an independent evaluator.\n\nExa credits a larger embedding model, the general availability of Dynamic Highlights, and billions of documents added to its index across data such as products, local businesses, flights and weather. Dynamic Highlights comes at no additional charge, and Exa says it uses 95% fewer tokens than full page text. This figure is also Exa's own claim.\n\nThe new Exa Lite search type runs on the same index as Exa Auto and is offered at a lower price for cost-sensitive applications. Exa 3.0 is available through the API from the day of the announcement, at $4 per 1,000 requests for Exa Lite and $7 per 1,000 requests for Exa Auto."
           }
         }
       ]
