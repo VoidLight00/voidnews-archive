@@ -1,12 +1,12 @@
 import type { WeeklyData } from "../data";
 
-// Partial week: 2026-10-19까지 수집한 구간만 담았습니다. 10/20~25은 다음 수집에서 채웁니다. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
+// Partial week: 2026-10-22까지 수집한 구간만 담았습니다. 10/23~25은 다음 수집에서 채웁니다. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
 export const week43: WeeklyData = {
   "week": 43,
   "year": 2026,
   "slug": "2026-w43",
   "period": "10/19 ~ 10/25",
-  "totalPosts": 33,
+  "totalPosts": 37,
   "companies": [
     {
       "name": "Google",
@@ -222,6 +222,62 @@ export const week43: WeeklyData = {
       "color": "#6B7280",
       "posts": [
         {
+          "date": "10/21",
+          "platform": "Web",
+          "title": "ElevenLabs, 실시간 음성 번역 모델 공개",
+          "deck": "ElevenAPI 기업 고객 대상 알파로 공개됐으며, 90개 넘는 언어를 지원해요.",
+          "summary": "ElevenLabs가 실시간 음성 번역 모델 Eleven Realtime Translation을 공개했어요. 대화 참여자가 각자 자신의 언어로 말하고 상대방의 말을 자신의 언어로 들을 수 있으며, 현재 ElevenAPI 기업 고객에게 알파로 제공해요.",
+          "content": "ElevenLabs가 Eleven Realtime Translation을 공개했어요. 대화가 진행되는 동안 각자 자신의 언어로 말하고, 상대방의 말을 자연스럽고 표현력 있는 음성으로 번역해 들을 수 있어요. 현재 ElevenAPI 기업 고객에게 알파로 제공해요.\n\n기본 음성 모델은 실시간 용도에 최적화된 Eleven v4 Turbo예요. 90개 넘는 언어와 자동 언어 감지를 지원하며, 17,500개 넘는 라이브러리 음성 중 하나를 선택하거나 Instant 또는 Professional Voice Clone으로 자신의 음성을 만들 수 있어요. 선택한 음성은 전체 세션 동안 일관되게 유지돼요.\n\n통신사의 통화 기능, 상담원과 고객 사이의 통역, 실시간 행사 번역에 적용할 수 있어요. 팀은 복잡한 청구·보상 상담에서 번역 품질을 우선하거나, 빠른 대화에서 지연을 최소화하도록 번역 시작 시점을 조정할 수 있어요. Deutsche Telekom은 이미 이 기술을 활용해 Magenta AI Call Assistant의 새로운 통화 기능을 개발하고 있어요.",
+          "source": "https://elevenlabs.io/blog/realtime-translation",
+          "officialUrl": "https://elevenlabs.io/blog/realtime-translation",
+          "verifiedAt": "2026-10-22",
+          "slug": "elevenlabs-realtime-translation-alpha",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "ElevenLabs",
+            "Models"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261022/44707a2f5935.webp",
+            "alt": "Eleven Realtime Translation: our live voice translation model"
+          },
+          "en": {
+            "title": "ElevenLabs launches live voice translation model",
+            "deck": "Available in alpha for ElevenAPI enterprise customers, with support for more than 90 languages.",
+            "summary": "ElevenLabs has launched Eleven Realtime Translation, its live voice translation model. Participants can speak in their own language and hear the other person in theirs, with alpha access currently available to ElevenAPI enterprise customers.",
+            "content": "ElevenLabs has launched Eleven Realtime Translation. While a conversation is happening, each participant can speak in their own language and hear the other person translated into theirs in a natural, expressive voice. It is available in alpha for ElevenAPI enterprise customers.\n\nThe default speech model is Eleven v4 Turbo, optimized for realtime applications. It supports more than 90 languages with automatic language detection. Users can choose from more than 17,500 library voices or build their own Instant or Professional Voice Clone. The selected voice stays consistent throughout the session.\n\nUse cases include telecom calling features, translation between contact center agents and callers, and live events. Teams can tune when translation starts to prioritize quality for complex billing or claims calls, or minimize latency for faster exchanges. Deutsche Telekom is already using the technology to develop new calling features for its Magenta AI Call Assistant."
+          }
+        },
+        {
+          "date": "10/20",
+          "platform": "Web",
+          "title": "ElevenLabs, 음성 에이전트 모델 2종 공개했어요",
+          "deck": "Eleven Realtime은 일상 대화용 Mini와 복잡한 작업용 Max로 나뉘어요.",
+          "summary": "ElevenLabs가 음성을 입력받아 음성으로 응답하는 Eleven Realtime v1 Mini와 Max를 공개했어요. 음성 인식과 발화 순서 조정, 음성 합성 등을 개별 구성하는 부담을 줄인 모델로, 두 모델 모두 90개가 넘는 언어를 지원해요.",
+          "content": "ElevenLabs가 Eleven Realtime v1 Mini와 Max를 공개했어요. Mini는 저비용의 자연스러운 대화용으로, Max는 고객 지원이나 여러 단계의 절차를 따르는 복잡한 작업용으로 소개했어요. 두 모델 모두 90개가 넘는 언어를 지원하고, ElevenLabs 라이브러리의 17,000개가 넘는 음성을 사용할 수 있어요.\n\nArtificial Analysis가 독립적으로 평가한 Big Bench Audio는 음성으로 추론 질문 1,000개를 제시하고 음성 답변을 채점해요. 이 평가에서 Max의 정답률은 98.8%, Mini는 75.9%였어요. 말을 시작하기까지 걸린 평균 시간은 Max가 0.57초, Mini가 0.62초였어요.\n\nElevenAgents에서 모델을 선택하거나 Realtime API로 연결할 수 있어요. API는 OpenAI Realtime 규격을 따르며 기존 OpenAI SDK를 그대로 사용할 수 있지만, WebSocket 연결만 지원하므로 WebRTC 기반 연동은 먼저 변경해야 해요. API는 ElevenAgents와 별도로 작동하므로 채널이나 지식 베이스 같은 플랫폼 기능이 필요하면 ElevenAgents를 사용해야 해요.",
+          "source": "https://elevenlabs.io/blog/realtime",
+          "officialUrl": "https://elevenlabs.io/blog/realtime",
+          "verifiedAt": "2026-10-22",
+          "slug": "elevenlabs-eleven-realtime-mini-max",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "ElevenLabs",
+            "Models"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261022/312978c03b08.webp",
+            "alt": "Introducing Eleven Realtime: a simpler way to build natural voice agents"
+          },
+          "en": {
+            "title": "ElevenLabs introduces Eleven Realtime Mini and Max",
+            "deck": "Mini targets low-cost natural conversations, while Max is designed for complex tasks.",
+            "summary": "ElevenLabs introduced Eleven Realtime v1 Mini and Max, speech-to-speech models that reduce the need to configure individual voice-agent components. Both support more than 90 languages.",
+            "content": "ElevenLabs introduced Eleven Realtime v1 Mini and Max. Mini is designed for natural conversations at low cost, while Max targets complex tasks such as customer support and multi-step workflows. Both support more than 90 languages and can use any of the 17,000+ voices in the ElevenLabs library.\n\nArtificial Analysis independently evaluated the models on Big Bench Audio, which presents 1,000 reasoning questions by voice and scores the spoken answers. Max achieved 98.8% accuracy, while Mini achieved 75.9%. Average time to start speaking was 0.57 seconds for Max and 0.62 seconds for Mini.\n\nDevelopers can select a model in ElevenAgents or connect through the Realtime API. The API follows OpenAI Realtime specifications and works with OpenAI's existing SDK, but supports WebSocket only, so WebRTC integrations must migrate first. The API runs separately from ElevenAgents; developers who need platform features such as channels or a knowledge base should use ElevenAgents."
+          }
+        },
+        {
           "date": "10/19",
           "platform": "Web",
           "title": "ElevenLabs, Chroma Awards 시즌 2 출품 접수 시작",
@@ -345,6 +401,34 @@ export const week43: WeeklyData = {
       "name": "Hugging Face",
       "color": "#FF9D00",
       "posts": [
+        {
+          "date": "10/20",
+          "platform": "Web",
+          "title": "허깅페이스, TorchTPU로 TPU 직접 지원해요",
+          "deck": "Transformers·Diffusers·Kernels를 TPU에서 직접 실행할 수 있게 됐어요.",
+          "summary": "허깅페이스가 TorchTPU를 통한 PyTorch 기반 라이브러리의 TPU 직접 지원을 발표했어요. Transformers와 Diffusers로 모델을 실행할 때는 더 이상 Optimum TPU가 필요하지 않아요.",
+          "content": "허깅페이스가 PyTorch에 TPU 실행 장치를 추가하는 TorchTPU를 소개했어요. 기존에는 torch_xla를 거치거나 JAX를 배워야 했지만, 이제 일반적인 PyTorch 코드로 Transformers·Diffusers·Kernels를 TPU에서 직접 실행할 수 있어요.\n\nTransformers에서는 device_map=\"tpu\"로 모델을 불러오고, Diffusers에서는 pipe.to(\"tpu\")로 파이프라인을 옮길 수 있어요. torch.compile을 통한 성능 개선과 분산 학습도 지원해요. TPU v6e-8에서 배치 크기 64로 측정했을 때, Hub 커널은 기본 구현보다 Qwen3-30B-A3B의 디코딩 처리량이 21.5배, Gemma 4 26B-A4B는 12.8배 높았어요.\n\n지원 검증은 진행 중이에요. TPU에서 실행되는 테스트의 96.5%가 통과했으며, 허깅페이스가 TorchTPU 저장소에 보고한 문제 34건 가운데 19건이 수정됐어요.",
+          "source": "https://huggingface.co/blog/hf-torchtpu",
+          "officialUrl": "https://huggingface.co/blog/hf-torchtpu",
+          "verifiedAt": "2026-10-22",
+          "slug": "hugging-face-torchtpu-native-pytorch-tpu-support",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "Hugging Face",
+            "Developer Tools"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261022/b6098094de4a.jpg",
+            "alt": "A capybara wearing a wizard hat, reading a book by candlelight, oil painting"
+          },
+          "en": {
+            "title": "Hugging Face announces native TPU support with TorchTPU",
+            "deck": "Transformers, Diffusers, and Kernels can now run natively on TPUs.",
+            "summary": "Hugging Face announced native TPU support for its PyTorch-based libraries through TorchTPU. Optimum TPU is no longer required to run models with Transformers and Diffusers.",
+            "content": "Hugging Face introduced TorchTPU, which adds TPU as a backend to PyTorch. Instead of going through torch_xla or learning JAX, developers can use regular PyTorch code to run Transformers, Diffusers, and Kernels natively on TPUs.\n\nTransformers loads models with device_map=\"tpu\", while Diffusers moves pipelines with pipe.to(\"tpu\"). TorchTPU also supports torch.compile for better performance and distributed training. On a TPU v6e-8 at batch size 64, the Hub kernel delivered 21.5× the decoding throughput of the default implementation for Qwen3-30B-A3B and 12.8× for Gemma 4 26B-A4B.\n\nValidation is still in progress. Of the tests that run on TPU, 96.5% pass. Hugging Face has reported 34 issues to the TorchTPU repository, and 19 have already been fixed."
+          }
+        },
         {
           "date": "10/19",
           "platform": "Web",
@@ -1164,6 +1248,40 @@ export const week43: WeeklyData = {
             "deck": "Available through the API at $4 per 1,000 requests for Lite and $7 for Auto",
             "summary": "Exa released Exa 3.0, which it calls its largest improvement to search quality yet, along with a new search type, Exa Lite. Exa says it ranks first on every benchmark it tested, including 91.8% on BrowseComp and 88.2% on DSQA, but these are Exa's own figures. It is available through the API at $4 per 1,000 requests for Lite and $7 for Auto.",
             "content": "Exa released Exa 3.0 on its official blog on October 19 and described it as the largest improvement to search quality it has ever released.\n\nExa says Exa 3.0 ranks first on every benchmark it tested. The scores in the post's benchmark chart are BrowseComp 91.8%, DSQA 88.2%, WideSearch 56.1%, ATLAS 42.0%, WebCode 75.5%, FinSearchComp 68.0%, Company FindAll 15.4 and People FindAll 7.6. According to the chart's footnote, these are results for Exa 3.0 Auto, and all providers, including Perplexity, Brave and Parallel, ran in the same agentic search harness with a GPT-6 Luna agent. All of these numbers are Exa's own results, and the post does not name an independent evaluator.\n\nExa credits a larger embedding model, the general availability of Dynamic Highlights, and billions of documents added to its index across data such as products, local businesses, flights and weather. Dynamic Highlights comes at no additional charge, and Exa says it uses 95% fewer tokens than full page text. This figure is also Exa's own claim.\n\nThe new Exa Lite search type runs on the same index as Exa Auto and is offered at a lower price for cost-sensitive applications. Exa 3.0 is available through the API from the day of the announcement, at $4 per 1,000 requests for Exa Lite and $7 per 1,000 requests for Exa Auto."
+          }
+        }
+      ]
+    },
+    {
+      "name": "IBM",
+      "color": "#0F62FE",
+      "posts": [
+        {
+          "date": "10/21",
+          "platform": "Web",
+          "title": "IBM, Granite Speech 전사·번역·화자 구분 개선",
+          "deck": "새 음성 모델과 기존 모델 업데이트로 전사 정확도, 처리 속도, 발화자 표시를 개선했어요.",
+          "summary": "IBM이 Granite Speech 5.0 2B를 새로 공개하고 Turbo CTC와 4.1 2B Plus를 업데이트했어요. 다국어 전사·번역, 기기 내 전사, 여러 사람이 말하는 녹음에 맞춰 각 모델의 기능과 성능을 개선했어요.",
+          "content": "IBM이 공개한 Granite Speech 5.0 2B는 다국어 전사·번역을 지원하며, 최대 2,000개 용어를 지정해 해당 용어가 결과에 반영되도록 유도할 수 있어요. 2026년 10월 21일 기준 Open ASR Leaderboard의 공개 영어 단문 평가 세트에서 평균 단어 오류율 5.06%로 오픈 웨이트 음성 인식 모델 중 2위를 기록했어요.\n\n업데이트된 470M 매개변수 Turbo CTC는 기존 영어 전용에서 7개 언어 전사로 지원을 넓히고, 구두점과 대문자를 기본 출력에 포함해요. Open ASR Leaderboard의 영어 단문 공개 평가 세트 9개에서 동일한 정확도를 유지하면서 처리 속도가 출시 당시 약 12,600 RTFx에서 19,870 RTFx로 약 1.6배 높아졌어요.\n\n4.1 2B Plus는 화자 구분과 타임스탬프를 개선했어요. 이전 버전 대비 장문 평가 세트의 단어 오류율은 24%, 용어 20개를 지정한 평가에서 해당 용어의 오류율은 45% 줄었어요. 세 모델 모두 Apache 2.0 라이선스로 공개됐으며 Transformers에서 기본 지원해요.",
+          "source": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+          "officialUrl": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+          "verifiedAt": "2026-10-22",
+          "slug": "ibm-granite-speech-transcription-translation-updates",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "IBM",
+            "Models"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261022/41cddf75ef21.png",
+            "alt": "granite-speech-5.0-2b average English WER compared with top open-weight ASR models"
+          },
+          "en": {
+            "title": "IBM updates Granite Speech transcription and translation",
+            "deck": "A new speech model and two updates improve transcription accuracy, processing speed, and speaker attribution.",
+            "summary": "IBM introduced Granite Speech 5.0 2B and updated Turbo CTC and 4.1 2B Plus. The models target multilingual transcription and translation, on-device transcription, and recordings with multiple speakers.",
+            "content": "IBM's new Granite Speech 5.0 2B supports multilingual transcription and translation, with keyword lists of up to 2,000 terms to steer output toward specified vocabulary. As of October 21, 2026, it ranked second among open-weight ASR models with an average word error rate of 5.06% across the Open ASR Leaderboard's public English short-form test sets.\n\nThe updated 470M-parameter Turbo CTC expands from English-only transcription to seven languages and includes native punctuation and capitalization. On the Open ASR Leaderboard's nine public English short-form test sets, it maintained the same accuracy while increasing throughput from roughly 12,600 RTFx at launch to 19,870 RTFx, about 1.6 times faster.\n\nThe updated 4.1 2B Plus improves speaker attribution and timestamps. Compared with the previous release, word error rate fell 24% on long-form test sets, while errors on biased keywords fell 45% with 20-term keyword lists. All three models are released under Apache 2.0 with native Transformers support."
           }
         }
       ]
