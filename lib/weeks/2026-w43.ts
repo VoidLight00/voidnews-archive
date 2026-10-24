@@ -1,12 +1,12 @@
 import type { WeeklyData } from "../data";
 
-// Partial week: 2026-10-22까지 수집한 구간만 담았습니다. 10/23~25은 다음 수집에서 채웁니다. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
+// 2026-10-19~25 전 구간. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
 export const week43: WeeklyData = {
   "week": 43,
   "year": 2026,
   "slug": "2026-w43",
   "period": "10/19 ~ 10/25",
-  "totalPosts": 37,
+  "totalPosts": 40,
   "companies": [
     {
       "name": "Google",
@@ -52,6 +52,34 @@ export const week43: WeeklyData = {
       "name": "Anthropic",
       "color": "#E87040",
       "posts": [
+        {
+          "date": "10/21",
+          "platform": "Web",
+          "title": "Anthropic, 선제 대응 에이전트 Claude Duet 프리뷰 공개",
+          "deck": "미국 Pro·Max 구독자 대상 대기자 명단으로 연구 프리뷰를 시작했어요.",
+          "summary": "Anthropic이 백그라운드에서 업무를 처리하는 에이전트 Claude Duet의 연구 프리뷰를 공개했어요. 미국 Pro·Max 구독자가 대기자 명단을 통해 이용할 수 있어요.",
+          "content": "Anthropic은 주의가 필요한 업무를 먼저 알려 주고, 맡긴 작업을 백그라운드에서 수행하며, 사용자를 대신해 행동하기 전에 먼저 묻는 에이전트 Claude Duet의 연구 프리뷰를 공개했어요. 미국 Claude Pro·Max 구독자가 대기자 명단을 통해 이용할 수 있고, 해당 요금제에 포함되어 기존 사용 한도를 함께 쓰는 방식이에요. iOS, Android, 웹에서 독립 앱으로 제공되며 프리뷰 기간에는 기존 Claude 앱과 분리되어 있어요.\n\nClaude Opus 5.5를 기반으로 만들어졌고, 업무가 많은 전문직과 소상공인을 대상으로 해요. 연결된 앱을 바탕으로 아침 브리핑을 보내고, 몇 시간마다 계정을 확인해서 주의가 필요하다고 판단하면 메시지를 보내요. 일정 조율, 대시보드, 재무·매출 예측, 프로토타입, 웹 앱 같은 작업을 맡길 수 있고, 하나의 텍스트·음성 스레드에서 짧은 요청부터 일주일짜리 프로젝트까지 처리해요. 사용자 기기가 꺼져 있어도 자체 브라우저가 있는 가상 머신에서 작업이 이어져요.\n\n기존 Claude 계정의 메모리, 스킬, 연결 앱을 그대로 가져오고 Claude Marketplace의 6,000개 넘는 커넥터와 플러그인을 쓸 수 있어요. Stripe Link나 Shopify Shop Pay로 업무용 구매도 할 수 있지만, 메시지 발송, 결제, 문서 서명, 삭제 전에는 제안한 행동을 보여 주고 승인을 기다려요. 증권 거래와 계좌 간 이체는 금지되어 있어요. 스레드를 잘못 해석하거나 긴급도를 잘못 매길 수 있고, 개인 용무 기능은 아직 덜 갖춰졌으며 사용자가 에이전트의 브라우저를 볼 수 없다는 한계도 밝혔어요.",
+          "source": "https://www.testingcatalog.com/claude-duet",
+          "officialUrl": "https://www.testingcatalog.com/claude-duet",
+          "verifiedAt": "2026-10-25",
+          "slug": "anthropic-claude-duet-research-preview",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "Anthropic",
+            "Products"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261025/c45d5a0a3045.webp",
+            "alt": "Claude Duet"
+          },
+          "en": {
+            "title": "Anthropic opens Claude Duet proactive agent preview",
+            "deck": "A research preview starts by waitlist for US Pro and Max subscribers.",
+            "summary": "Anthropic has opened a research preview of Claude Duet, an agent that works in the background. US Pro and Max subscribers can join through a waitlist.",
+            "content": "Anthropic has opened a research preview of Claude Duet, a proactive agent that surfaces work needing attention, carries out assigned tasks in the background, and asks before acting on a user's behalf. Access is by waitlist for US Claude Pro and Max subscribers. It is included in those plans and shares their existing usage limits. Duet runs as a standalone app on iOS, Android and the web, and stays separate from the main Claude app during the preview.\n\nBuilt around Claude Opus 5.5, Duet is aimed at professionals and small business owners with crowded workloads. It sends a morning brief based on connected apps, checks those accounts every few hours, and messages the user when it judges something needs attention. Tasks range from meeting scheduling to dashboards, financial or sales forecasts, prototypes, and web apps. One ongoing text or voice thread handles quick requests and weeklong projects, and a virtual machine with its own browser keeps working when the user's devices are off.\n\nMemory, skills, and connected apps carry over from existing Claude accounts, and Duet can use more than 6,000 connectors and plugins in the Claude Marketplace. It can make business purchases through Stripe's Link or Shopify's Shop Pay, but must show the proposed action and wait for approval before sending a message, making a payment, signing a document, or deleting anything. Securities trading and transfers between accounts remain prohibited. Anthropic notes that Duet may misread threads or rank urgency poorly, personal errands are less developed, and users cannot yet view its browser."
+          }
+        },
         {
           "date": "10/19",
           "platform": "Web",
@@ -1282,6 +1310,74 @@ export const week43: WeeklyData = {
             "deck": "A new speech model and two updates improve transcription accuracy, processing speed, and speaker attribution.",
             "summary": "IBM introduced Granite Speech 5.0 2B and updated Turbo CTC and 4.1 2B Plus. The models target multilingual transcription and translation, on-device transcription, and recordings with multiple speakers.",
             "content": "IBM's new Granite Speech 5.0 2B supports multilingual transcription and translation, with keyword lists of up to 2,000 terms to steer output toward specified vocabulary. As of October 21, 2026, it ranked second among open-weight ASR models with an average word error rate of 5.06% across the Open ASR Leaderboard's public English short-form test sets.\n\nThe updated 470M-parameter Turbo CTC expands from English-only transcription to seven languages and includes native punctuation and capitalization. On the Open ASR Leaderboard's nine public English short-form test sets, it maintained the same accuracy while increasing throughput from roughly 12,600 RTFx at launch to 19,870 RTFx, about 1.6 times faster.\n\nThe updated 4.1 2B Plus improves speaker attribution and timestamps. Compared with the previous release, word error rate fell 24% on long-form test sets, while errors on biased keywords fell 45% with 20-term keyword lists. All three models are released under Apache 2.0 with native Transformers support."
+          }
+        }
+      ]
+    },
+    {
+      "name": "1Password",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/22",
+          "platform": "Web",
+          "title": "1Password, AI 에이전트용 로그인 기능 소개",
+          "deck": "에이전트가 비밀번호를 보지 않고도 계정에 로그인하도록 돕는 1Password for Agents예요.",
+          "summary": "1Password가 개인용 AI 에이전트와 연동되는 1Password for Agents를 소개했어요. 에이전트는 비밀번호를 받지 않고, 사용자가 승인하면 1Password가 로그인 화면에 직접 입력해요.",
+          "content": "1Password가 개인용 AI 에이전트와 연결되는 1Password for Agents를 안내했어요. 에이전트가 로그인 화면에서 계정 정보를 요청하면, 사용자가 1Password에서 승인하거나 거부할 수 있어요. 승인하면 1Password가 비밀번호나 일회용 코드를 로그인 화면에 직접 채워 넣고, 에이전트는 접근이 허용됐다는 사실만 확인해요.\n\n에이전트는 고유한 디지털 키로 자신의 신원을 1Password에 확인받아요. 사용자는 에이전트가 어떤 로그인 정보를 왜 필요로 하는지 확인한 뒤 결정해요. 승인은 사용자 본인의 기기에서 이루어져요. 에이전트를 연결해도 보관함 전체에 접근할 수는 없고, 요청한 작업의 로그인만 승인 대상이 돼요. 저장된 로그인이 여러 개면 사용자가 사용할 항목을 고를 수 있어요.\n\n이 기능은 1Password 개인 및 가족 요금제에 포함돼요. Muse와 SpaceXSI Grok Bot은 며칠에 걸쳐 모든 플랫폼에 순차 제공될 예정이고, 그 밖의 에이전트 연결은 준비 중이에요. 에이전트는 로그인한 뒤 계정 안에서 정보를 보거나 작업을 수행할 수 있어서, 승인하기 전에 작업과 계정을 확인하라고 안내했어요. 지원 범위와 설정 조건은 연동, 지역, 기기, 로그인 방식에 따라 달라질 수 있어요.",
+          "source": "https://1password.com/personal-ai-agent-integrations",
+          "officialUrl": "https://1password.com/personal-ai-agent-integrations",
+          "verifiedAt": "2026-10-25",
+          "slug": "1password-for-agents-personal-ai-agent-login",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "1Password",
+            "Products"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261025/bd8d2a08f279.webp",
+            "alt": "1Password for Agents: Secure AI Password Manager | 1Password"
+          },
+          "en": {
+            "title": "1Password Introduces Secure Logins for AI Agents",
+            "deck": "1Password for Agents lets AI agents sign in to accounts without seeing your passwords.",
+            "summary": "1Password introduced 1Password for Agents, which connects to personal AI agents. The agent never receives the password: once the user approves, 1Password fills it into the sign-in form directly.",
+            "content": "1Password described 1Password for Agents, which connects to personal AI agents. When an agent reaches a sign-in screen and asks for a credential, the user can approve or deny the request in 1Password. If approved, 1Password fills the password or one-time code into the sign-in form, and the agent only sees that access was granted.\n\nThe agent uses a unique digital key to verify its identity to 1Password. The user sees which credential is needed and why, and approves on their own device. Connecting an agent does not give it access to the whole vault: it requests a login for a task, and only that request is subject to approval. If more than one saved login matches, the user can choose which one to use.\n\nThe feature is included in 1Password Individual and Family plans. Muse and SpaceXSI Grok Bot are rolling out over the coming days across all platforms, and more agent connections are in the works. 1Password notes that an agent may be able to see information or take actions within the signed-in account, so users should review the task and the account before approving. Availability and setup requirements can vary by integration, region, device, and sign-in method."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Microsoft AI",
+      "color": "#0078D4",
+      "posts": [
+        {
+          "date": "10/22",
+          "platform": "Web",
+          "title": "Microsoft AI, 진단 시스템 MAI-DxO 연구 발표",
+          "deck": "응급실 사례에서 의사보다 1.7배 정확하고, 비용은 절반에서 3분의 1 수준이에요",
+          "summary": "Microsoft AI가 AI 진단 시스템 MAI-DxO에 관한 연구를 Science에 발표했어요. 미국 응급실의 일반적인 사례에서 의사보다 1.7배 정확했다고 밝혔어요.",
+          "content": "Microsoft AI의 MAI Health Team은 10월 22일, 복잡한 의료 진단을 단계별로 풀어 가는 AI 진단 시스템 MAI-DxO를 소개했어요. 이 연구는 같은 날 Science에 게재됐어요.\n\nMIMIC-IV-ED 사례로 평가한 결과, 미국 응급실의 일반적인 증상에서 MAI-DxO는 의사보다 1.7배 정확했어요. 또 The New England Journal of Medicine에 실린 가장 복잡한 사례에서는 교과서와 인터넷을 활용한 의사보다 두 배 넘게 정확했고, 그런 자료 없이 진단한 의사와 비교하면 거의 네 배 정확했어요.\n\n비용도 절반에서 3분의 1 수준이었고, 더 적은 검사와 시술로 올바른 진단에 도달했다고 해요. 의료 초지능(medical superintelligence)에 대한 비전은 이번 주 BMJ Digital Health and AI에도 함께 게재됐어요.",
+          "source": "https://microsoft.ai/news/building-medical-superintelligence",
+          "officialUrl": "https://microsoft.ai/news/building-medical-superintelligence",
+          "verifiedAt": "2026-10-25",
+          "slug": "microsoft-ai-mai-dxo-medical-superintelligence",
+          "tags": [
+            "AI",
+            "2026-w43",
+            "Microsoft AI",
+            "Research"
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261025/c75341f02561.png",
+            "alt": "A blurred, vibrant landscape featuring a field of wildflowers in various colors with rolling green hills in the background and a soft blue sky above."
+          },
+          "en": {
+            "title": "Microsoft AI Publishes MAI-DxO Diagnostic Research",
+            "deck": "1.7x more accurate than physicians on ED cases, at half to one third of the cost",
+            "summary": "Microsoft AI published research on its AI diagnostic system MAI-DxO in Science. On common US emergency department presentations, it was 1.7 times more accurate than physicians.",
+            "content": "On October 22, the MAI Health Team at Microsoft AI introduced MAI-DxO, an AI diagnostic system that works through a complex medical diagnosis step by step. The research was published the same day in Science.\n\nEvaluated on cases from MIMIC-IV-ED, MAI-DxO was 1.7 times more accurate than physicians on common US emergency department presentations. On the most complex cases, published in The New England Journal of Medicine, it was more than twice as accurate as physicians using textbooks and the internet, and nearly four times as accurate as physicians diagnosing without those resources.\n\nThe system also reached the right diagnosis at half or even one third of the cost, using fewer tests and procedures. The team's vision for medical superintelligence was also published this week in BMJ Digital Health and AI."
           }
         }
       ]

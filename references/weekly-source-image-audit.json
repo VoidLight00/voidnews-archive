@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-22T13:03:59.351Z",
+  "checkedAt": "2026-10-24T23:44:37.676Z",
   "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
   "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
   "counts": {
@@ -8,7 +8,7 @@
     "source-unresolved": 15,
     "no-meaningful-image-verified": 166,
     "fetch-failed": 35,
-    "records": 931
+    "records": 934
   },
   "records": [
     {
@@ -26692,6 +26692,96 @@
       "publicPath": "/source-media/weekly-20261022/b6098094de4a.jpg",
       "sha256": "b6098094de4a6ebb6b62d2580a0edf6ba9f83d01345a83271c0c80a58f70fa8f",
       "byteSize": 242760,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w43|1Password, AI 에이전트용 로그인 기능 소개|https://1password.com/personal-ai-agent-integrations",
+      "week": "2026-w43",
+      "title": "1Password, AI 에이전트용 로그인 기능 소개",
+      "sourceUrl": "https://1password.com/personal-ai-agent-integrations",
+      "status": "available",
+      "checkedAt": "2026-10-24T23:44:37.676Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://1password.com/personal-ai-agent-integrations",
+          "httpStatus": 200,
+          "sha256": "d196f75432e3d3d3d13fab258088779308ae7f5057326b87c86a7c19b89a55ff"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://images.ctfassets.net/2h488pz7kgfv/2Q0UFTL6p2MLCRBlaOom7W/16c0e3a9148adb218c948aec93ff2c9e/simple-promo-gold-50-2x.webp",
+          "httpStatus": 200,
+          "sha256": "bd8d2a08f279a5f12fcf831270c07cd0d7da51f055741bb8e59cd30db4113248",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://images.ctfassets.net/2h488pz7kgfv/2Q0UFTL6p2MLCRBlaOom7W/16c0e3a9148adb218c948aec93ff2c9e/simple-promo-gold-50-2x.webp",
+      "publicPath": "/source-media/weekly-20261025/bd8d2a08f279.webp",
+      "sha256": "bd8d2a08f279a5f12fcf831270c07cd0d7da51f055741bb8e59cd30db4113248",
+      "byteSize": 520,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w43|Anthropic, 선제 대응 에이전트 Claude Duet 프리뷰 공개|https://www.testingcatalog.com/claude-duet",
+      "week": "2026-w43",
+      "title": "Anthropic, 선제 대응 에이전트 Claude Duet 프리뷰 공개",
+      "sourceUrl": "https://www.testingcatalog.com/claude-duet",
+      "status": "available",
+      "checkedAt": "2026-10-24T23:44:37.676Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Claude Duet).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://www.testingcatalog.com/claude-duet",
+          "httpStatus": 200,
+          "sha256": "aa0a1e7d489a94870ab1106aa8bf15083b79715ee31a270609da2e08d6ef4f7a"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://storage.ghost.io/c/2a/1b/2a1b1782-8506-4d7d-bf53-ad3fb52e2a0f/content/images/size/w2000/2026/10/banner-17.webp",
+          "httpStatus": 200,
+          "sha256": "c45d5a0a30456ea409e03d006dbc71b15ab6276a043063878d747a2e685824fd",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://storage.ghost.io/c/2a/1b/2a1b1782-8506-4d7d-bf53-ad3fb52e2a0f/content/images/size/w2000/2026/10/banner-17.webp",
+      "publicPath": "/source-media/weekly-20261025/c45d5a0a3045.webp",
+      "sha256": "c45d5a0a30456ea409e03d006dbc71b15ab6276a043063878d747a2e685824fd",
+      "byteSize": 12310,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w43|Microsoft AI, 진단 시스템 MAI-DxO 연구 발표|https://microsoft.ai/news/building-medical-superintelligence",
+      "week": "2026-w43",
+      "title": "Microsoft AI, 진단 시스템 MAI-DxO 연구 발표",
+      "sourceUrl": "https://microsoft.ai/news/building-medical-superintelligence",
+      "status": "available",
+      "checkedAt": "2026-10-24T23:44:37.676Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: A blurred, vibrant landscape featuring a field of wildflowers in various colors with rolling green hills in the background and a soft blue sky above.).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://microsoft.ai/news/building-medical-superintelligence",
+          "httpStatus": 200,
+          "sha256": "8a65d09401e686787f66c04b25e033368bab70caea17eda2ef76e5c702db1306"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://microsoft.ai/wp-content/uploads/2026/06/Group-2147234768.png",
+          "httpStatus": 200,
+          "sha256": "c75341f025615eaccb47baa1fab7b783cc36a35a38c0c36daa24eecc512676b8",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://microsoft.ai/wp-content/uploads/2026/06/Group-2147234768.png",
+      "publicPath": "/source-media/weekly-20261025/c75341f02561.png",
+      "sha256": "c75341f025615eaccb47baa1fab7b783cc36a35a38c0c36daa24eecc512676b8",
+      "byteSize": 589514,
       "selectionKind": "source-first-image",
       "selectionPolicy": "source-top-image-v1"
     }
