@@ -983,7 +983,10 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   color: var(--on-accent);
 }
 
-@media (max-width: 820px) {
+/* The header wraps into two rows below 1024px. With X·Threads·GitHub in the header the single
+   row needs a viewport of about 872px (natural widths measured 2026-11-01), so the old 820px
+   breakpoint let the primary nav overlap the channel links. Re-measure when header items change. */
+@media (max-width: 1023px) {
   .site-nav-row {
     height: auto !important;
     min-height: 64px;
@@ -1014,6 +1017,91 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 @media (max-width: 480px) {
   .site-nav-main > a > .mono { display: none; }
+  /* X·Threads·GitHub are repeated in the footer '연결' group, so the header drops them here. */
+  .site-nav-social > .site-nav-ext { display: none; }
+}
+
+/* ── Site footer (app/layout.tsx) — owner channels '연결' and site guide '안내'.
+   Links come from lib/site-links.ts. Neutral text colours only; no accent lines. ── */
+.site-footer-inner {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 32px clamp(16px, 3vw, 32px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 56px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.site-footer-brand { min-width: 0; }
+
+.site-footer-meta {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.site-footer-nav {
+  flex: 1 1 420px;
+  max-width: 760px;
+  min-width: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.site-footer-group {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.site-footer-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--dim);
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  list-style: none;
+  min-width: 0;
+}
+
+.site-footer-links > li { min-width: 0; }
+
+.site-footer-links a {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-footer-links a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer-note {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.site-footer-legal {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  line-height: 1.7;
 }
 
 @media (max-width: 640px) {

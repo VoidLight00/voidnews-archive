@@ -5,6 +5,7 @@ import TodayStamp from "./TodayStamp";
 import LocaleToggle from "./LocaleToggle";
 import { LocaleProvider } from "./LocaleProvider";
 import { getLatestSlug, getWeekList } from "@/lib/data";
+import { CHANNELS, GUIDE_LINKS, HEADER_CHANNELS, channelLinkProps, getChannel } from "@/lib/site-links";
 import "./globals.css";
 import "./runway.css";
 
@@ -33,16 +34,7 @@ export const metadata: Metadata = {
   },
 };
 
-// 운영자 채널: 공식 포트폴리오(voidlight.kr) 원본과 GitHub 로그인 계정에서 확인한 주소만 쓴다(2026-11-01)
-const CHANNELS = [
-  { label: "GitHub", href: "https://github.com/VoidLight00" },
-  { label: "X @VoidLight_Hyeon", href: "https://x.com/VoidLight_Hyeon" },
-  { label: "Threads @voidlight00", href: "https://www.threads.com/@voidlight00" },
-  { label: "카카오톡 그룹챗", href: "https://open.kakao.com/o/gugo7tCh" },
-  { label: "카카오톡 1:1", href: "https://open.kakao.com/o/srSlAiLd" },
-  { label: "이메일", href: "mailto:icthyeon00@gmail.com" },
-  { label: "voidlight.kr", href: "https://voidlight.kr" },
-];
+// 운영자 채널 7개와 바닥글 안내 링크는 lib/site-links.ts 한 곳에서 정의합니다(리뉴얼 계획 R1).
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // 첫 화면을 그리기 전에 테마를 정합니다. 저장값(voidnews-theme)이 'light'·'dark'이면 그 값을,
@@ -239,37 +231,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
 
             <div className="site-nav-social" style={{ display: "flex", gap: 14, alignItems: "center" }}>
-              <a
-                href="https://www.threads.com/@voidlight00"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mono"
-                style={{
-                  color: "var(--muted)",
-                  fontSize: 11,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                }}
-              >
-                Threads
-              </a>
-              <a
-                href="https://x.com/VoidLight_Hyeon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mono"
-                style={{
-                  color: "var(--muted)",
-                  fontSize: 11,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                }}
-              >
-                X
-              </a>
-              <span aria-hidden style={{ width: 1, height: 18, background: "var(--border)" }} />
+              {/* X·Threads·GitHub — 480px 이하에서는 숨기고 바닥글 '연결' 묶음으로 대신합니다. */}
+              {HEADER_CHANNELS.map(({ id, label }) => (
+                <a
+                  key={id}
+                  {...channelLinkProps(getChannel(id))}
+                  className="mono site-nav-ext"
+                  style={{
+                    color: "var(--muted)",
+                    fontSize: 11,
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    textDecoration: "none",
+                  }}
+                >
+                  {label}
+                </a>
+              ))}
+              <span aria-hidden className="site-nav-ext" style={{ width: 1, height: 18, background: "var(--border)" }} />
               <LocaleToggle />
               <ThemeToggle />
             </div>
@@ -278,7 +257,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        {/* Footer colophon */}
+        {/* Footer colophon — '연결' 7개와 '안내' 링크는 lib/site-links.ts에서 읽습니다. */}
         <footer
           style={{
             borderTop: "1px solid var(--border)",
@@ -286,19 +265,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             marginTop: 64,
           }}
         >
-          <div
-            style={{
-              maxWidth: 1480,
-              margin: "0 auto",
-              padding: "32px clamp(16px, 3vw, 32px)",
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 24,
-              alignItems: "flex-end",
-              justifyContent: "space-between",
-            }}
-          >
-            <div>
+          <div className="site-footer-inner">
+            <div className="site-footer-brand">
               <p
                 className="serif"
                 style={{
@@ -311,72 +279,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 VoidNews
               </p>
-              <p
-                className="mono"
-                style={{
-                  fontSize: 10.5,
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                }}
-              >
+              <p className="mono site-footer-meta" style={{ color: "var(--muted)" }}>
                 Edited by VOIDLIGHT · Seoul · 2026
               </p>
+              <p className="mono site-footer-meta" style={{ marginTop: 4 }}>
+                An AI intelligence archive — fair use, source-linked.
+              </p>
             </div>
-            <div
-              className="mono"
-              style={{
-                fontSize: 10.5,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "var(--dim)",
-                textAlign: "right",
-              }}
-            >
-              <p>An AI intelligence archive — fair use, source-linked.</p>
-              <nav
-                aria-label="VOIDLIGHT 채널"
-                style={{ marginTop: 4, display: "flex", flexWrap: "wrap", justifyContent: "flex-end", rowGap: 4 }}
-              >
-                {CHANNELS.map((c, i) => (
-                  <span key={c.href}>
-                    {i > 0 && (
-                      <span aria-hidden="true" style={{ margin: "0 8px", color: "var(--dim)" }}>·</span>
-                    )}
-                    <a
-                      href={c.href}
-                      {...(c.href.startsWith("http")
-                        ? { target: "_blank", rel: "noopener noreferrer", "aria-label": `${c.label}, 새 탭` }
-                        : {})}
-                      style={{ color: "var(--muted)", textDecoration: "none" }}
-                    >
-                      {c.label}
-                    </a>
-                  </span>
-                ))}
+            <div className="site-footer-nav">
+              <nav aria-labelledby="site-footer-channels" className="site-footer-group">
+                <p id="site-footer-channels" className="site-footer-label">연결</p>
+                <ul className="site-footer-links">
+                  {CHANNELS.map((channel) => (
+                    <li key={channel.id}>
+                      <a {...channelLinkProps(channel)}>{channel.label}</a>
+                    </li>
+                  ))}
+                </ul>
               </nav>
-              <p
-                style={{
-                  marginTop: 10,
-                  fontSize: 10,
-                  letterSpacing: "0.16em",
-                  color: "var(--dim)",
-                }}
-              >
-                © 2026 VoidLight · No AI training · 무단 전재 및 AI 학습 금지 · 한국 저작권법 제136조 ·{" "}
-                <a
-                  href="/tos"
-                  style={{ color: "var(--muted)", textDecoration: "underline" }}
-                >
-                  이용약관
-                </a>
-                {" · "}
-                <a
-                  href="/.well-known/ai.txt"
-                  style={{ color: "var(--muted)", textDecoration: "underline" }}
-                >
-                  ai.txt
-                </a>
+              <nav aria-labelledby="site-footer-guide" className="site-footer-group">
+                <p id="site-footer-guide" className="site-footer-label">안내</p>
+                <ul className="site-footer-links">
+                  {GUIDE_LINKS.map((link) => (
+                    <li key={link.id}>
+                      <a href={link.href}>{link.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <p className="site-footer-note">
+                내용 정정과 제보는 이메일이나 카카오 일대일 문의로 받습니다.
+              </p>
+              <p className="mono site-footer-meta site-footer-legal">
+                © 2026 VoidLight · No AI training · 무단 전재 및 AI 학습 금지 · 한국 저작권법 제136조
               </p>
             </div>
           </div>
