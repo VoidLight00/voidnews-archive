@@ -71,7 +71,8 @@ export function PostCard({
       style={{
         cursor: hasDetail ? "pointer" : "default",
         opacity: read ? 0.78 : 1,
-        borderTop: expanded ? `2px solid ${companyColor}` : `2px solid transparent`,
+        // 펼침 상태는 강조색 선 대신 옅은 틴트로 나타냅니다(카드 배경색 위에 겹칩니다).
+        backgroundImage: expanded ? "linear-gradient(var(--accent-soft), var(--accent-soft))" : undefined,
       }}
     >
       <SourceThumbnail post={post} companyColor={companyColor} variant="card" />
@@ -119,7 +120,8 @@ export function PostCard({
           </p>
         )}
 
-        <div className="tc-feed-footer mono">
+        {/* 틴트 위에서는 --dim이 다크 4.06:1이라 펼침 상태에서만 --muted(5.34:1)로 올립니다. */}
+        <div className="tc-feed-footer mono" style={expanded ? { color: "var(--muted)" } : undefined}>
           <span>#{formatIntelIndex(index)}</span>
           <div
             style={{ display: "inline-flex", alignItems: "center", gap: 12 }}
@@ -169,6 +171,8 @@ export function PostCard({
             </button>
             {hasDetail && (
               <button
+                type="button"
+                aria-expanded={expanded}
                 onClick={(e) => {
                   e.stopPropagation();
                   setExpanded((current) => !current);

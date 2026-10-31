@@ -492,7 +492,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
                           ))}
                         </dl>
                         {comparison.benchmarkNote ? <p style={{ margin: "16px 0 0", lineHeight: 1.65 }}>{comparison.benchmarkNote}</p> : null}
-                        <aside style={{ marginTop: 14, borderTop: "1px solid var(--gold)", padding: "10px 0", background: "color-mix(in srgb, var(--gold) 8%, transparent)", color: "var(--text-soft)", lineHeight: 1.6 }}>
+                        <aside style={{ marginTop: 14, borderTop: "1px solid var(--border)", padding: "10px 12px", background: "var(--accent-soft)", color: "var(--text-soft)", lineHeight: 1.6 }}>
                           {comparison.caveat}
                         </aside>
                         <a href={comparison.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 16, color: "var(--accent)", fontWeight: 800, textDecoration: "none" }}>
