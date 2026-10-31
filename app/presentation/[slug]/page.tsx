@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { getAllSlugs, getWeek } from "@/lib/data";
 import type { Post } from "@/lib/data";
+import { sourceLabel } from "@/lib/source-tier";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -213,7 +214,7 @@ function collectPresentationLinks(post: Post, slug: string): PresentationLink[] 
 
   add({ label: "상세 카드", url: `/${slug}?post=${encodeURIComponent(post.title)}`, primary: true });
   if (post.officialUrl) {
-    add({ label: labelForUrl(post.officialUrl, "공식 원문"), url: post.officialUrl, primary: true });
+    add({ label: labelForUrl(post.officialUrl, sourceLabel(post.officialUrl, "original")), url: post.officialUrl, primary: true });
   }
   if (post.source) {
     add({ label: labelForUrl(post.source, "자료 원문"), url: post.source });

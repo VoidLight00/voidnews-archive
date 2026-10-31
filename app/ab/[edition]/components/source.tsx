@@ -4,6 +4,7 @@ import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } fr
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick, ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
+import { sourceLabel } from "@/lib/source-tier";
 
 export type SourceLink = { label: string; url: string; primary?: boolean };
 
@@ -45,9 +46,9 @@ export function buildSourceAudit(input: SourceAuditInput) {
   const primaryUrl = input.officialUrl || input.source || input.backupUrls?.[0]?.url;
   const host = primaryUrl ? hostnameOf(primaryUrl) : "출처 대기";
   return {
-    status: input.unofficial ? "비공식 자료" : input.officialUrl ? "공식 발표" : "보조 검증",
+    status: input.unofficial ? "비공식 자료" : input.officialUrl ? sourceLabel(input.officialUrl, "status") : "보조 검증",
     scope: inferReleaseScope(input),
-    source: input.unofficial ? `비공식 · ${host}` : input.officialUrl ? `공식 · ${host}` : `확인 · ${host}`,
+    source: input.unofficial ? `비공식 · ${host}` : input.officialUrl ? `${sourceLabel(input.officialUrl, "host")} · ${host}` : `확인 · ${host}`,
     checked: input.verifiedAt ? `확인일 ${input.verifiedAt}` : null,
   };
 }
@@ -84,7 +85,7 @@ export function collectSourceLinks({
     links.push(link);
   };
 
-  const officialLabel = backupUrls?.find((link) => link.url === officialUrl)?.label || "공식 링크";
+  const officialLabel = backupUrls?.find((link) => link.url === officialUrl)?.label || sourceLabel(officialUrl, "link");
   if (officialUrl) add({ label: officialLabel, url: officialUrl, primary: true });
   if (source) add({ label: "출처", url: source });
   for (const link of backupUrls || []) add(link);

@@ -14,6 +14,7 @@ import {
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
+import { sourceLabel } from "@/lib/source-tier";
 import { useLocale } from "@/app/LocaleProvider";
 import { renderRichText, PostDateLabel, PlatformBadge, highlightText, getPostLink, formatIntelIndex } from "./shared";
 import { TweetEmbed, isXPostUrl, getOfficialTweetUrl } from "./previews";
@@ -267,12 +268,12 @@ export function PostCard({
                   borderRadius: 999,
                 }}
               >
-                공식 원문 →
+                {sourceLabel(getOfficialTweetUrl(post), "original")} →
               </a>
             )}
             {post.officialUrl && !isXPostUrl(post.officialUrl) && (
               <a href={post.officialUrl} target="_blank" rel="noopener noreferrer" className="mono" style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10.5, color: "var(--accent)", letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", padding: "6px 12px", border: "1px solid var(--accent)", borderRadius: 999 }}>
-                공식 링크 →
+                {sourceLabel(post.officialUrl, "link")} →
               </a>
             )}
             {post.source && post.source !== post.officialUrl && !isXPostUrl(post.source) && (

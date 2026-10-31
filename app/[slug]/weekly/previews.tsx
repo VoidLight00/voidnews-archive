@@ -12,6 +12,7 @@ import {
   type ReactNode,
 } from "react";
 import type { Company, Post, WeeklyData } from "@/lib/data";
+import { sourceLabel } from "@/lib/source-tier";
 import { OG_CACHE_TTL_MS, OG_FAILURE_CACHE_TTL_MS, extractDomain } from "./shared";
 
 export function TweetEmbed({ xUrl, expanded }: { xUrl: string; expanded: boolean }) {
@@ -505,7 +506,7 @@ export function EmbedPreview({
       <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
         {officialUrl && (
           <button onClick={() => setTab("official")} style={tabBtnStyle(tab === "official", officialRole)}>
-            공식 원문
+            {sourceLabel(officialUrl, "original")}
           </button>
         )}
         {xUrl && (
@@ -528,7 +529,7 @@ export function EmbedPreview({
           {!officialHtml && !officialLoading && (
             <a href={officialUrl} target="_blank" rel="noopener noreferrer" className="mono"
               style={{ display: "block", background: "var(--card)", border: "1px solid var(--accent)", borderRadius: "var(--radius-xs)", padding: "14px 16px", color: "var(--accent)", fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textDecoration: "none" }}>
-              공식 계정 원문 보기 ↗
+              {sourceLabel(officialUrl, "accountView")} ↗
             </a>
           )}
         </div>

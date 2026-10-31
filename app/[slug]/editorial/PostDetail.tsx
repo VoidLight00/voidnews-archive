@@ -7,6 +7,7 @@ import { type ArticleCacheEntry } from "@/lib/article-cache";
 import { extractGlossaryHits, type GlossaryEntry } from "@/lib/glossary";
 import { useLocale } from "@/app/LocaleProvider";
 import { isKoreanText } from "@/lib/i18n";
+import { sourceLabel } from "@/lib/source-tier";
 import styles from "./editorial.module.css";
 import ArticleSupplement from "./ArticleSupplement";
 import { ImageDisclosure, imageDisclosure } from "@/app/components/ImageDisclosure";
@@ -421,9 +422,9 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
 
           {weekSlug.startsWith("ab/") ? (
             <dl className={styles.sourceAudit} aria-label="검증 메타">
-              <div><dt>상태</dt><dd>{post.officialUrl ? "공식 발표" : "보조 검증"}</dd></div>
+              <div><dt>상태</dt><dd>{post.officialUrl ? sourceLabel(post.officialUrl, "status") : "보조 검증"}</dd></div>
               <div><dt>범위</dt><dd>{inferReleaseScope(post)}</dd></div>
-              <div><dt>출처</dt><dd>{officialHost ? `공식 · ${officialHost}` : "출처 대기"}</dd></div>
+              <div><dt>출처</dt><dd>{officialHost ? `${sourceLabel(post.officialUrl, "host")} · ${officialHost}` : "출처 대기"}</dd></div>
               <div><dt>{activeLang === "ko" ? "확인" : "Verified"}</dt><dd>{post.verifiedAt ?? (activeLang === "ko" ? "확인일 미기록" : "Verification date not recorded")}</dd></div>
               {post.communityDiscovery ? (
                 <div>
@@ -569,10 +570,10 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
           {/* 공식 출처 reference 카드 */}
           {(post.officialUrl || (post.backupUrls && post.backupUrls.length > 0)) ? (
             <section className={styles.referenceBlock}>
-              <h3 className={styles.referenceTitle}>{post.supplement ? (activeLang === "ko" ? "공식 출처와 참고 자료" : "Official sources and further reading") : t("detail.references")}</h3>
+              <h3 className={styles.referenceTitle}>{post.supplement ? sourceLabel(post.officialUrl, "headingWithReading", activeLang) : sourceLabel(post.officialUrl, "heading", locale)}</h3>
               {post.officialUrl ? (
                 <a href={post.officialUrl} target="_blank" rel="noreferrer" className={styles.referenceMain}>
-                  <span className={styles.referenceMainLabel}>{t("detail.referenceMain")}</span>
+                  <span className={styles.referenceMainLabel}>{sourceLabel(post.officialUrl, "view", locale)}</span>
                   <span className={styles.referenceMainTitle}>{officialTitle || post.title}</span>
                   <span className={styles.referenceMainHost}>{officialHost ?? ""} →</span>
                 </a>

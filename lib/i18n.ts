@@ -40,8 +40,6 @@ const messages = {
     "detail.lang.enUnavailable": "English version is not yet available. Please refer to the original source.",
     "detail.officialExcerpt": "공식 본문 발췌",
     "detail.officialOutline": "본문 헤딩",
-    "detail.references": "공식 출처",
-    "detail.referenceMain": "공식 원문 보기",
     "detail.related": "관련 글",
     "detail.glossary": "이 글에 나오는 전문 용어",
     "detail.glossarySub": "본문에 등장한 용어를 한국어로 풀이했습니다 · 비개발자 친화",
@@ -84,8 +82,6 @@ const messages = {
     "detail.lang.enUnavailable": "English source body is not available.",
     "detail.officialExcerpt": "Official excerpt",
     "detail.officialOutline": "Headings",
-    "detail.references": "Official sources",
-    "detail.referenceMain": "View official source",
     "detail.related": "Related",
     "detail.glossary": "Glossary",
     "detail.glossarySub": "Plain-language explanations of terms in this article",
@@ -100,6 +96,36 @@ export type MessageKey = keyof (typeof messages)["ko"];
 export function t(locale: Locale, key: MessageKey): string {
   return messages[locale]?.[key] ?? messages.ko[key] ?? key;
 }
+
+// 출처 링크 문구(리뉴얼 계획 R5). 'official' 묶음은 기존 문구 그대로이고, 뉴스레터 판정기 기준으로
+// 발견 전용(discovery-only)·보도(press)·매체(media) 계층인 링크만 '공식'을 뺀 문구를 씁니다.
+// 등록부에 없는 주소와 1차 연구·벤치마크·보관 계층은 'official' 묶음을 유지합니다(최소안, 엄격안은 R25).
+// 화면은 이 표를 직접 읽지 않고 lib/source-tier.ts의 sourceLabel()로만 읽습니다.
+export type SourceLabelGroup = "official" | "discovery-only" | "press" | "media";
+export type SourceLabelField =
+  | "link" // 공식 링크 버튼
+  | "original" // 공식 원문 버튼·탭
+  | "view" // 상세 참고 블록의 대표 링크
+  | "accountView" // X 임베드를 불러오지 못했을 때의 대체 링크
+  | "heading" // 상세 참고 블록 제목
+  | "headingWithReading" // 보충 자료가 있는 상세의 참고 블록 제목
+  | "host" // '공식 · 호스트'의 앞부분
+  | "status"; // AB 검증 메타의 상태
+
+export const SOURCE_LABELS: Record<Locale, Record<SourceLabelGroup, Record<SourceLabelField, string>>> = {
+  ko: {
+    official: { link: "공식 링크", original: "공식 원문", view: "공식 원문 보기", accountView: "공식 계정 원문 보기", heading: "공식 출처", headingWithReading: "공식 출처와 참고 자료", host: "공식", status: "공식 발표" },
+    "discovery-only": { link: "원문 링크", original: "원문 링크", view: "원문 보기", accountView: "원문 보기", heading: "출처", headingWithReading: "출처와 참고 자료", host: "원문", status: "보조 검증" },
+    press: { link: "보도 기사", original: "보도 기사", view: "보도 기사", accountView: "보도 기사", heading: "출처", headingWithReading: "출처와 참고 자료", host: "보도", status: "보조 검증" },
+    media: { link: "영상", original: "영상", view: "영상", accountView: "영상", heading: "출처", headingWithReading: "출처와 참고 자료", host: "영상", status: "보조 검증" },
+  },
+  en: {
+    official: { link: "Official link", original: "Official post", view: "View official source", accountView: "View the official post", heading: "Official sources", headingWithReading: "Official sources and further reading", host: "Official", status: "Official announcement" },
+    "discovery-only": { link: "Original link", original: "Original link", view: "View original", accountView: "View original", heading: "Sources", headingWithReading: "Sources and further reading", host: "Original", status: "Secondary check" },
+    press: { link: "News report", original: "News report", view: "News report", accountView: "News report", heading: "Sources", headingWithReading: "Sources and further reading", host: "Press", status: "Secondary check" },
+    media: { link: "Video", original: "Video", view: "Video", accountView: "Video", heading: "Sources", headingWithReading: "Sources and further reading", host: "Video", status: "Secondary check" },
+  },
+};
 
 // 한글 포함 여부 → 본문이 한국어인지 영문인지 자동 감지
 export function isKoreanText(text: string | null | undefined): boolean {
