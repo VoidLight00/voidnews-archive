@@ -880,8 +880,8 @@ export default function WeeklyClient({
                   className="chip"
                   style={{
                     borderColor: "var(--accent)",
-                    color: bookmarksCopied ? "var(--ink)" : "var(--accent)",
-                    background: bookmarksCopied ? "var(--accent)" : "transparent",
+                    color: bookmarksCopied ? "var(--on-accent)" : "var(--accent)",
+                    background: bookmarksCopied ? "var(--accent-fill)" : "transparent",
                   }}
                 >
                   {bookmarksCopied ? "복사됨" : "내보내기"}
@@ -1058,8 +1058,8 @@ export default function WeeklyClient({
               height: 44,
               borderRadius: "50%",
               border: "1px solid var(--accent)",
-              background: "var(--accent)",
-              color: "var(--ink)",
+              background: "var(--accent-fill)",
+              color: "var(--on-accent)",
               cursor: "pointer",
               boxShadow: "0 14px 28px rgba(0,0,0,0.28)",
               display: "inline-flex",

@@ -68,8 +68,8 @@ export function highlightText(text: string, query: string): ReactNode {
       <mark
         key={`${part}-${index}`}
         style={{
-          background: "var(--accent)",
-          color: "var(--ink)",
+          background: "var(--accent-fill)",
+          color: "var(--on-accent)",
           borderRadius: "var(--radius-xs)",
           padding: "0 3px",
           boxDecorationBreak: "clone",

@@ -32,8 +32,8 @@ export function PickModal({
       >
         <span
           style={{
-            background: "var(--gold)",
-            color: "var(--ink)",
+            background: "var(--accent-fill)",
+            color: "var(--on-accent)",
             padding: "3px 9px",
             borderRadius: "var(--radius-xs)",
             fontWeight: 800,
@@ -199,8 +199,8 @@ export function PickModal({
             minHeight: 44,
             display: "inline-flex",
             alignItems: "center",
-            background: "var(--gold)",
-            color: "var(--ink)",
+            background: "var(--accent-fill)",
+            color: "var(--on-accent)",
             padding: "0 18px",
             borderRadius: "var(--radius-xs)",
             textDecoration: "none",

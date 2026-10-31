@@ -252,8 +252,8 @@ function SourceButtons({ post, slug }: { post: Post; slug: string }) {
               transition: "background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast)",
               ...(link.primary
                 ? {
-                    color: "var(--ink)",
-                    background: "var(--accent)",
+                    color: "var(--on-accent)",
+                    background: "var(--accent-fill)",
                     border: "1px solid var(--accent)",
                   }
                 : {

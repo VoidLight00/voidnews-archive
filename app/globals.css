@@ -5,38 +5,59 @@
 /* ════════════════════════════════════════════════════════════════
    VoidNews AB — Design System (single site-wide system)
    Hallmark · genre: editorial · macrostructure: Long Document
-   theme: warm-ink-paper (dark = night print · light = warm paper)
+   theme: VOIDLIGHT brand — ink·paper neutrals + daisy orange (--brand-*)
    tokens locked — surfaces reference names only, never raw values
+   accent roles: --accent = text·line (ink in light, orange in dark),
+                 --accent-fill + --on-accent = orange fill with dark text
    spec: _workspace/oneway/20260604-ab-aislop-oneway/redesign/design-system.md
    pre-emit critique: P5 H4 E4 S4 R5 V4
 ═══════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Color · Dark (default) — night newsprint, brand-tinted neutrals ── */
-  --bg: #08070a;
-  --surface: #100f13;
-  --surface-2: #16151b;
-  --card: #121116;
-  --card-hover: #181722;
-  --border: #211f2a;
-  --border2: #2e2c39;
-  --rule: #242230;
-  --text: #f2efe8;
-  --text-strong: #fbf9f4;
-  --text-soft: #cdc7bc;
-  --muted: #8c877f;
-  --dim: #56534d;
-  --accent: #e8703f;
-  --accent-soft: #e8703f1f;
+  /* ── Brand · raw values (VOIDLIGHT ink·paper + daisy orange, theme-independent) ──
+     Role tokens below reference these. Orange is 2.03:1 on white, so the light theme
+     never uses it for text, lines or the only control boundary — only as a fill under
+     --on-accent text. */
+  --brand-ink: #0f0f10;
+  --brand-paper: #ffffff;
+  --brand-orange: #F5A623;
+  --brand-orange-hover: #D98E12;
+  --brand-orange-light: #FFB845;
+  --on-brand: #1a1a1a;
+
+  /* ── Color · roles shared by both themes ── */
+  --accent-fill: var(--brand-orange);             /* 강조 면 */
+  --accent-fill-hover: var(--brand-orange-hover);
+  --on-accent: var(--on-brand);                   /* 면 위 글자 8.59:1 · 호버 면 6.49:1 */
+  --gold: var(--accent);                          /* 별칭 — 두 번째 강조색 제거 */
+  --kicker: var(--accent);                        /* 별칭 */
+  --hero-from: #18181b;                           /* 히어로는 흰 글자를 올리는 중립 면 */
+  --hero-to: #3f3f46;
+  --hero-accent: #a1a1aa;
+
+  /* ── Color · Dark (default) — brand ink ground, neutral greys ──
+     measured (WCAG): text 17.56 · muted 7.48 · dim 5.67 (card 5.08) · accent 9.45
+     · border2 3.63 · focus-ring 9.45 on --bg */
+  --bg: var(--brand-ink);
+  --surface: #151517;
+  --surface-2: #202024;
+  --card: #1b1b1f;
+  --card-hover: #222226;
+  --border: #27272a;
+  --border2: #6b6b74;
+  --rule: #2e2e33;
+  --text: #f5f5f4;
+  --text-strong: var(--brand-paper);
+  --text-soft: #d4d4d8;
+  --muted: #a1a1aa;
+  --dim: #8b8b94;
+  --accent: var(--brand-orange);
+  --accent-soft: #F5A6231f;
+  --focus-ring: var(--brand-orange);
   --red: #cc3300;
-  --gold: #c9a94c;
   --ink: #0a0a0d;
-  --header-bg: rgba(9, 8, 11, 0.86);
+  --header-bg: rgba(15, 15, 16, 0.86);
   --overlay-bg: rgba(0, 0, 0, 0.78);
-  --kicker: #c9a94c;
-  --hero-from: #18251f;
-  --hero-to: #28d28b;
-  --hero-accent: #20e6a0;
 
   /* ── Type roles ── */
   --mono: "JetBrains Mono", "Courier New", monospace;
@@ -89,31 +110,29 @@
 }
 
 :root[data-theme="light"] {
-  /* ── Color · Light — warm paper, brand-tinted neutrals ── */
-  --bg: #f6f3ec;
-  --surface: #efebe0;
-  --surface-2: #f2eee4;
-  --card: #ffffff;
-  --card-hover: #fbf8f0;
-  --border: #dcd8ca;
-  --border2: #c4bfae;
-  --rule: #d0cbb9;
-  --text: #1a181c;
-  --text-strong: #0b0a0c;
-  --text-soft: #46433d;
-  --muted: #5c584f;
-  --dim: #928d82;
-  --accent: #c5491a;
-  --accent-soft: #c5491a16;
+  /* ── Color · Light — brand paper ground, neutral greys, ink accent ──
+     measured (WCAG): text 19.16 · muted 7.39 · dim 5.28 (surface 4.81) · accent 19.16
+     · border2 3.42 · focus-ring 19.16 on --bg */
+  --bg: var(--brand-paper);
+  --surface: #f4f4f5;
+  --surface-2: #f7f7f8;
+  --card: var(--brand-paper);
+  --card-hover: #fafafa;
+  --border: #e4e4e7;
+  --border2: #8a8a93;
+  --rule: #d4d4d8;
+  --text: var(--brand-ink);
+  --text-strong: var(--brand-ink);
+  --text-soft: #3f3f46;
+  --muted: #55555c;
+  --dim: #6b6b73;
+  --accent: var(--brand-ink);
+  --accent-soft: #F5A62326;
+  --focus-ring: var(--brand-ink);
   --red: #a52500;
-  --gold: #947415;
   --ink: #0a0a0a;
-  --header-bg: rgba(246, 243, 236, 0.94);
-  --overlay-bg: rgba(22, 19, 14, 0.55);
-  --kicker: #947415;
-  --hero-from: #e8f7ef;
-  --hero-to: #54d39f;
-  --hero-accent: #0fb879;
+  --header-bg: rgba(255, 255, 255, 0.94);
+  --overlay-bg: rgba(15, 15, 16, 0.55);
   color-scheme: light;
 }
 
@@ -280,13 +299,14 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 }
 
 .chip-active {
-  color: var(--ink);
-  background: var(--accent);
+  color: var(--on-accent);
+  background: var(--accent-fill);
   border-color: var(--accent);
 }
 
 .chip-active:hover {
-  color: var(--ink);
+  color: var(--on-accent);
+  background: var(--accent-fill-hover);
   border-color: var(--accent);
 }
 
@@ -485,8 +505,8 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 }
 
 .tc-current-pill {
-  color: var(--ink);
-  background: var(--accent);
+  color: var(--on-accent);
+  background: var(--accent-fill);
   border: 1px solid var(--accent);
 }
 
@@ -983,7 +1003,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   scrollbar-width: none;
 }
 
-::selection { background: var(--accent); color: var(--ink); }
+::selection { background: var(--accent-fill); color: var(--on-accent); }
 
 /* Restrained motion — spatial motion collapses to a short crossfade */
 @media (prefers-reduced-motion: reduce) {
@@ -1000,7 +1020,7 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 /* Focus visibility for keyboard users — never animated, shows instantly */
 :where(button, a, input, select, textarea):focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
