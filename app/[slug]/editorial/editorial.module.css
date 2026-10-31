@@ -156,8 +156,10 @@
   color: var(--text);
 }
 
+/* The '전체' chip has no --chip-color, so it falls back to the orange fill token. --accent is ink
+   in the light theme, and ink text on it was invisible (1.03:1). Ink on --accent-fill is about 9.8:1. */
 .chipActive {
-  background: var(--chip-color, var(--accent));
+  background: var(--chip-color, var(--accent-fill));
   border-color: transparent;
   color: var(--ink);
 }
