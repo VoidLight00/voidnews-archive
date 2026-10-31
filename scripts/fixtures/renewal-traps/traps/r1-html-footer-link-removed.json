@@ -1,0 +1,15 @@
+{
+  "id": "r1-html-footer-link-removed",
+  "plan": "R1",
+  "check": "check-owner-links.mjs",
+  "mode": "html",
+  "why": "링크 1개 삭제: 빌드된 바닥글에서 이메일 링크가 빠지면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/index.html",
+      "find": "<li><a href=\"mailto:icthyeon00@gmail.com\" aria-label=\"이메일 보내기\">이메일</a></li>",
+      "replace": ""
+    }
+  ],
+  "expect": "FAIL[owner-links:footer-missing]"
+}

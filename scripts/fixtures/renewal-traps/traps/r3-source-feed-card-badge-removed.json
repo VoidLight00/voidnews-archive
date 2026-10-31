@@ -1,0 +1,15 @@
+{
+  "id": "r3-source-feed-card-badge-removed",
+  "plan": "R3",
+  "check": "check-ai-author-label.mjs",
+  "mode": "source",
+  "why": "두 번째 카드 라벨 삭제(원본): 주간 피드 카드(FeedArticleCard)에서 피움 라벨이 빠지면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "app/[slug]/weekly/feed.tsx",
+      "find": "          <AuthorBadge subject={author} id={authorId} />\n",
+      "replace": ""
+    }
+  ],
+  "expect": "FAIL[ai-author-label:location]"
+}

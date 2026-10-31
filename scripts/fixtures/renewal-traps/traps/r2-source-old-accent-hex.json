@@ -1,0 +1,15 @@
+{
+  "id": "r2-source-old-accent-hex",
+  "plan": "R2",
+  "check": "check-brand-tokens.mjs",
+  "mode": "source",
+  "why": "이전 강조색 #e8703f가 다시 들어오면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "app/globals.css",
+      "find": "--hero-accent: #a1a1aa;",
+      "replace": "--hero-accent: #a1a1aa;\n  --legacy-accent: #e8703f;"
+    }
+  ],
+  "expect": "FAIL[brand-tokens:old-accent]"
+}

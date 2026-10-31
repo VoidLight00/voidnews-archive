@@ -1,0 +1,15 @@
+{
+  "id": "r5-html-testingcatalog-official-link",
+  "plan": "R5",
+  "check": "check-official-labels.mjs",
+  "mode": "html",
+  "why": "testingcatalog 주소에 '공식 링크': 발견 전용 계층 링크에 공식 문구가 붙으면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/2099-w01/beta/index.html",
+      "find": ">원문 링크<!-- --> →</a>",
+      "replace": ">공식 링크<!-- --> →</a>"
+    }
+  ],
+  "expect": "FAIL[official-labels:neutral-wording]"
+}

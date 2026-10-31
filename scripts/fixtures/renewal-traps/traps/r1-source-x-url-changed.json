@@ -1,0 +1,15 @@
+{
+  "id": "r1-source-x-url-changed",
+  "plan": "R1",
+  "check": "check-owner-links.mjs",
+  "mode": "source",
+  "why": "주소 1개 변경: lib/site-links.ts의 X 주소가 바뀌면 원본 검사가 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "lib/site-links.ts",
+      "find": "href: \"https://x.com/VoidLight_Hyeon\",",
+      "replace": "href: \"https://x.com/VoidLight_Hyeon_old\","
+    }
+  ],
+  "expect": "FAIL[owner-links:channel]"
+}

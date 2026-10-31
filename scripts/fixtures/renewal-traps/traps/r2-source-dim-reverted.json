@@ -1,0 +1,15 @@
+{
+  "id": "r2-source-dim-reverted",
+  "plan": "R2",
+  "check": "check-brand-tokens.mjs",
+  "mode": "source",
+  "why": "--dim을 이전 값 #928d82로 되돌리면 흰 바탕 대비가 3.30:1로 떨어집니다.",
+  "mutate": [
+    {
+      "file": "app/globals.css",
+      "find": "--dim: #6b6b73;",
+      "replace": "--dim: #928d82;"
+    }
+  ],
+  "expect": "FAIL[brand-tokens:contrast]"
+}

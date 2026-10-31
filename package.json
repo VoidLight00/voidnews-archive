@@ -7,7 +7,7 @@
     "prebuild": "node scripts/normalize-og-cache-names.mjs && node scripts/run-all-gates.mjs",
     "gates": "node scripts/run-all-gates.mjs",
     "build": "next build",
-    "postbuild": "node scripts/check-render-leaks.mjs",
+    "postbuild": "node scripts/check-render-leaks.mjs && node scripts/run-postbuild-gates.mjs",
     "start": "next start",
     "audit:thumbnails": "node scripts/audit-thumbnails.mjs",
     "test:archive": "node scripts/test-weekly-browse.mjs && node scripts/test-thumbnail-inventory.mjs",

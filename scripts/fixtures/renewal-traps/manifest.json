@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "note": "리뉴얼 게이트(계획 R1~R6) 함정 자체시험 설정입니다. scripts/check-renewal-gates.selftest.mjs가 읽습니다. 함정 하나는 traps/*.json 한 파일이며, 원본 함정은 저장소 사본(app/, lib/ 최상위 파일)을, 빌드 함정은 html-site/를 고친 뒤 게이트를 실행해 exit 1과 expect 표식을 확인합니다. 고치지 않은 사본(대조군)은 exit 0이어야 합니다.",
+  "checks": [
+    "check-owner-links.mjs",
+    "check-brand-tokens.mjs",
+    "check-ai-author-label.mjs",
+    "check-newsletter-consent.mjs",
+    "check-official-labels.mjs",
+    "check-theme-contract.mjs"
+  ],
+  "htmlChecks": [
+    "check-owner-links.mjs",
+    "check-ai-author-label.mjs",
+    "check-newsletter-consent.mjs",
+    "check-official-labels.mjs"
+  ],
+  "htmlSite": "html-site",
+  "htmlArgs": {
+    "check-ai-author-label.mjs": [
+      "--data",
+      "{site}/data.json"
+    ],
+    "check-newsletter-consent.mjs": [
+      "--form-url",
+      ""
+    ]
+  }
+}

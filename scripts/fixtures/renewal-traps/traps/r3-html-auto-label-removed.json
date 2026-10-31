@@ -1,0 +1,15 @@
+{
+  "id": "r3-html-auto-label-removed",
+  "plan": "R3",
+  "check": "check-ai-author-label.mjs",
+  "mode": "html",
+  "why": "'자동 게시'만 삭제(빌드): 규칙상 자동 게시 카드에서 표시만 빠지면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/2099-w01/index.html",
+      "find": "<span class=\"css__auto\" data-auto-published=\"\"> · 자동 게시</span>",
+      "replace": ""
+    }
+  ],
+  "expect": "FAIL[ai-author-label:card-auto]"
+}

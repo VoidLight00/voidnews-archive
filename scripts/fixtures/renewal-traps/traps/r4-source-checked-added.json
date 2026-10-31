@@ -1,0 +1,15 @@
+{
+  "id": "r4-source-checked-added",
+  "plan": "R4",
+  "check": "check-newsletter-consent.mjs",
+  "mode": "source",
+  "why": "checked 추가(원본): 미리 체크된 동의 칸은 동의로 인정되지 않으므로 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "app/newsletter/page.tsx",
+      "find": "<p>만 14세 미만은 구독하실 수 없습니다.</p>",
+      "replace": "<p>만 14세 미만은 구독하실 수 없습니다.</p>\n        <input type=\"checkbox\" checked readOnly aria-label=\"만 14세 이상입니다\" />"
+    }
+  ],
+  "expect": "FAIL[newsletter-consent:checked]"
+}

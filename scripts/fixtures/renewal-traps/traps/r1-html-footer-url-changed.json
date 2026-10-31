@@ -1,0 +1,15 @@
+{
+  "id": "r1-html-footer-url-changed",
+  "plan": "R1",
+  "check": "check-owner-links.mjs",
+  "mode": "html",
+  "why": "주소 1개 변경: 빌드된 바닥글의 카카오 일대일 문의 주소가 다른 방으로 바뀌면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/2099-w01/index.html",
+      "find": "href=\"https://open.kakao.com/o/srSlAiLd\"",
+      "replace": "href=\"https://open.kakao.com/o/notOwnerRoom\""
+    }
+  ],
+  "expect": "FAIL[owner-links:footer-extra]"
+}

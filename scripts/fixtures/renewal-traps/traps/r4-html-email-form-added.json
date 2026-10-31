@@ -1,0 +1,15 @@
+{
+  "id": "r4-html-email-form-added",
+  "plan": "R4",
+  "check": "check-newsletter-consent.mjs",
+  "mode": "html",
+  "why": "사이트가 이메일을 직접 받는 폼이 생기면(계획 4.2절 위반) 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/2099-w01/gamma/index.html",
+      "find": "<h1>Gamma</h1>",
+      "replace": "<h1>Gamma</h1><form action=\"https://example.com/subscribe\" method=\"post\"><input type=\"email\" name=\"email\" aria-label=\"이메일\"/></form>"
+    }
+  ],
+  "expect": "FAIL[newsletter-consent:email-form]"
+}

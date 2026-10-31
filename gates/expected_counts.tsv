@@ -4,3 +4,4 @@
 1	docs/redesign/ROTATION-COVERAGE.md
 1	scripts/test-browse-ui.mjs
 1	scripts/test-image-disclosure.mjs
+17	scripts/fixtures/renewal-traps/traps/*.json

@@ -40,6 +40,17 @@ const BUILD_GATES = {
   // 2026-10-18 이전에는 여기 회차 목록이 하드코딩돼 있어서 ① 회차마다 손으로 한 줄 추가해야 했고
   // ② 그 목록 밖 과거 회차의 위반 24건이 매 빌드 조용히 통과했다.
   "check-editorial-tone.mjs": [],
+  // 리뉴얼 계획 R1~R6 원본 계약(REQUIREMENTS R19~R24). 인자 없음 = 원본 검사.
+  // 같은 스크립트의 --html(빌드 HTML) 검사는 postbuild의 run-postbuild-gates.mjs가 돌립니다.
+  "check-owner-links.mjs": [],
+  "check-brand-tokens.mjs": [],
+  "check-ai-author-label.mjs": [],
+  "check-newsletter-consent.mjs": [],
+  "check-official-labels.mjs": [],
+  "check-theme-contract.mjs": [],
+  // 위 6개 게이트의 함정 17개가 매 빌드 exit 1인지(대조군 10개는 exit 0) 별도 프로세스로 증명합니다.
+  // 함정이 통과하면 게이트 자체가 실패로 봅니다(계획 5.5절). 함정: scripts/fixtures/renewal-traps/traps/*.json
+  "check-renewal-gates.selftest.mjs": [],
 };
 // gates that are run-scoped (need a run dir / range) — NOT run at build time
 const RUN_SCOPED = new Set([
@@ -51,6 +62,7 @@ const RUN_SCOPED = new Set([
   "verify-live-thumbnails.mjs",    // live network check (not at build time)
   "verify-site-release.mjs",       // mandatory after deployment; requires the actual --url and runs the master plus browser checks
   "run-all-gates.mjs",
+  "run-postbuild-gates.mjs",       // postbuild: 리뉴얼 게이트 --html 검사(out/ 없으면 실패). 이름이 check-/verify-가 아니라 발견되지 않지만 위치를 밝혀 둡니다.
 ]);
 
 const discovered = fs.readdirSync(SCRIPTS)

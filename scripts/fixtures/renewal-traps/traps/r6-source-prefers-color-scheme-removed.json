@@ -1,0 +1,15 @@
+{
+  "id": "r6-source-prefers-color-scheme-removed",
+  "plan": "R6",
+  "check": "check-theme-contract.mjs",
+  "mode": "source",
+  "why": "prefers-color-scheme 삭제: 저장값이 없을 때 첫 화면이 시스템 설정을 따르지 않으면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "app/layout.tsx",
+      "find": "t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';",
+      "replace": "t='light';"
+    }
+  ],
+  "expect": "FAIL[theme-contract:init-script]"
+}

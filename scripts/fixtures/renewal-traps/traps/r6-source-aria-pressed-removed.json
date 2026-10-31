@@ -1,0 +1,15 @@
+{
+  "id": "r6-source-aria-pressed-removed",
+  "plan": "R6",
+  "check": "check-theme-contract.mjs",
+  "mode": "source",
+  "why": "aria-pressed 삭제: 선택 상태를 색으로만 알리게 되면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "app/ThemeToggle.tsx",
+      "find": "          aria-pressed={theme === option.value}\n",
+      "replace": ""
+    }
+  ],
+  "expect": "FAIL[theme-contract:aria-pressed]"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "r4-html-notice-item-removed",
+  "plan": "R4",
+  "check": "check-newsletter-consent.mjs",
+  "mode": "html",
+  "why": "고지 1항목 삭제(빌드): 빌드된 구독 페이지에서 고지 행이 빠지면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/newsletter/index.html",
+      "find": "<tr data-consent-item=\"refusal\"><th scope=\"row\">동의를 거부할 권리와 불이익</th><td>동의를 거부하실 수 있습니다. 거부하시면 뉴스레터를 받으실 수 없습니다.</td></tr>",
+      "replace": ""
+    }
+  ],
+  "expect": "FAIL[newsletter-consent:notice-item]"
+}
