@@ -722,6 +722,20 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   color: #fff;
 }
 
+/* 피움 작성 표시(R3)는 메타 줄 맨 앞에서 한 줄을 차지하는 바이라인으로 둡니다.
+   메타 항목 사이에 끼우면 좁은 화면에서 두 줄이 늘어 대표 기사 라벨이 위로 잘립니다. */
+.tc-hero-meta > [data-ai-author] {
+  flex-basis: 100%;
+}
+
+/* 히어로 본문은 절대 위치라 카드 높이가 저절로 늘지 않습니다. 바이라인 한 줄(그림 24px, 줄 간격 9px,
+   영문 라벨 줄바꿈 여유)만큼 카드를 늘려 기존 위아래 여백을 모든 너비에서 그대로 둡니다.
+   border-box에서는 padding이 min-height 안에 들어가므로 content-box로 계산합니다. */
+.tc-hero-card--byline {
+  box-sizing: content-box;
+  padding-top: 40px;
+}
+
 .tc-hero-dots {
   position: absolute;
   z-index: 3;
@@ -874,9 +888,10 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 .tc-feed-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 6px 10px;
   margin-top: auto;
   color: var(--dim);
   font-size: 9px;
@@ -887,6 +902,12 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 .tc-feed-footer span:last-child {
   color: var(--accent);
+}
+
+/* 피움 작성 표시(R3)는 번호 옆에 붙이고 '자세히 보기'는 오른쪽 끝에 둡니다.
+   좁은 카드에서는 '자세히 보기'가 다음 줄로 내려가 가로로 넘치지 않습니다. */
+.tc-feed-footer > [data-ai-author] {
+  margin-inline-end: auto;
 }
 
 @media (max-width: 920px) {

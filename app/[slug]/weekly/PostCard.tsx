@@ -11,11 +11,13 @@ import {
   type MouseEvent,
   type ReactNode,
 } from "react";
+import { useParams } from "next/navigation";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
 import { sourceLabel } from "@/lib/source-tier";
 import { useLocale } from "@/app/LocaleProvider";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 import { renderRichText, PostDateLabel, PlatformBadge, highlightText, getPostLink, formatIntelIndex } from "./shared";
 import { TweetEmbed, isXPostUrl, getOfficialTweetUrl } from "./previews";
 import { SourceThumbnail, estimateReadTime, getCompanyShortName } from "./feed";
@@ -46,6 +48,8 @@ export function PostCard({
   const [copied, setCopied] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const { locale } = useLocale();
+  // 회사 아카이브 카드는 주간 페이지(app/[slug])에서만 그려지므로 경로의 slug가 주차 slug입니다(작성 판정 R3).
+  const weekSlug = useParams<{ slug?: string }>()?.slug ?? "";
   const d = displayPost(post, locale); // 표시 전용 — identity 키(post.title)는 그대로 유지
   const hasDetail = !!(post.content || post.source || post.xUrl || post.threadsUrl);
 
@@ -94,6 +98,8 @@ export function PostCard({
             </>
           )}
         </div>
+
+        <AuthorBadge subject={{ scope: weekSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt }} />
 
         <h3 className="tc-feed-title serif article-card-title">
           {highlightText(d.title, searchQuery)}

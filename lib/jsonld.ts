@@ -1,11 +1,24 @@
 // NewsArticle JSON-LD 빌더 — 뉴스 상세 페이지 리치 결과 자격용.
 // 값이 없는 필드는 넣지 않는다(검색엔진이 빈 값을 싫어함).
+import { AI_AUTHOR_NAME, authorshipScope, getAuthorship } from "./authorship";
+
 const SITE = "https://voidnews-archive.vercel.app";
 const PUBLISHER = {
   "@type": "Organization",
   name: "VoidNews Archive",
   url: SITE,
 };
+// AI가 쓴 기사의 작성자(리뉴얼 계획 R3·3.2절). 사람 작성 목록(lib/authorship.ts)에 있는 기사에는 넣지 않습니다.
+const AI_AUTHOR = {
+  "@type": "Organization",
+  name: AI_AUTHOR_NAME,
+};
+
+// 기사 경로("/2026-w43/<slug>/", "/ab/<회차>/<slug>/")에서 작성 판정 입력을 만듭니다.
+function authorshipFromPath(path: string, title: string) {
+  const parts = path.split("/").filter(Boolean);
+  return { scope: authorshipScope(parts.slice(0, -1).join("/")), slug: parts[parts.length - 1], title };
+}
 
 interface NewsArticleInput {
   title: string;
@@ -38,6 +51,7 @@ export function newsArticleLd(input: NewsArticleInput): string {
     url,
     publisher: PUBLISHER,
   };
+  if (getAuthorship(authorshipFromPath(input.path, input.title)).ai) ld.author = AI_AUTHOR;
   if (input.description) ld.description = input.description;
   if (input.imageSrc) {
     ld.image = [input.imageSrc.startsWith("http") ? input.imageSrc : `${SITE}${input.imageSrc}`];

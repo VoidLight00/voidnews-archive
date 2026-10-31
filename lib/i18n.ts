@@ -45,6 +45,9 @@ const messages = {
     "detail.glossarySub": "본문에 등장한 용어를 한국어로 풀이했습니다 · 비개발자 친화",
     "detail.prev": "이전",
     "detail.next": "다음",
+    // AI 작성 표시(리뉴얼 계획 R3)
+    "author.pium": "피움 작성 · AI",
+    "author.autoPublished": "자동 게시",
     // 언어 토글
     "locale.switch": "언어",
   },
@@ -87,6 +90,8 @@ const messages = {
     "detail.glossarySub": "Plain-language explanations of terms in this article",
     "detail.prev": "Previous",
     "detail.next": "Next",
+    "author.pium": "Written by Pium · AI",
+    "author.autoPublished": "Auto-published",
     "locale.switch": "Lang",
   },
 } as const satisfies Record<Locale, Record<string, string>>;

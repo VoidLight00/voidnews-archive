@@ -5,6 +5,7 @@ import {
   useCallback,
   useDeferredValue,
   useEffect,
+  useId,
   useMemo,
   useRef,
   useState,
@@ -14,10 +15,17 @@ import {
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
+import { getAuthorship, type AuthorshipSubject } from "@/lib/authorship";
 import { useLocale } from "@/app/LocaleProvider";
 import { PostDateLabel, parsePostDate, extractDomain } from "./shared";
 import { isSafeImageUrl } from "./previews";
 import { ImageDisclosure } from "@/app/components/ImageDisclosure";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
+
+// 주간 카드의 작성 주체 판정 입력(리뉴얼 계획 R3). 범위는 주차 slug입니다.
+function weeklyAuthorship(issueSlug: string, post: Post): AuthorshipSubject {
+  return { scope: issueSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
+}
 
 export type TopStoryEntry = {
   company: Company;
@@ -130,20 +138,25 @@ export function TopStoriesSection({
   onOpenStory: (post: Post, companyName: string) => void;
 }) {
   const { locale } = useLocale();
+  const authorId = useId();
   if (stories.length === 0) return null;
 
   const lead = stories[0];
   const leadD = displayPost(lead.post, locale);
   const href = getPostIssueHref(issueSlug, lead.post.title, lead.post.slug);
+  const author = weeklyAuthorship(issueSlug, lead.post);
+  // 카드 링크의 이름은 aria-label이라 라벨 글자가 읽히지 않으므로 설명으로 연결합니다.
+  const aiWritten = getAuthorship(author).ai;
 
   return (
     <section className="tc-hero-section rise-in" aria-label="메인 기사">
       <a
         data-weekly-card
         href={href}
-        className="tc-hero-card"
+        className={aiWritten ? "tc-hero-card tc-hero-card--byline" : "tc-hero-card"}
         onClick={(event) => handleArticleClick(event, () => onOpenStory(lead.post, lead.company.name))}
         aria-label={`${lead.post.title} 기사 열기`}
+        aria-describedby={aiWritten ? authorId : undefined}
       >
         <SourceThumbnail post={lead.post} companyColor={lead.company.color} variant="hero" priority />
         <div className="tc-hero-shade" />
@@ -156,6 +169,7 @@ export function TopStoriesSection({
             <p className="tc-hero-summary">{stripMarkdown(leadD.summary)}</p>
           )}
           <div className="tc-hero-meta mono">
+            {aiWritten ? <AuthorBadge subject={author} tone="inherit" id={authorId} /> : null}
             <span style={{ color: lead.company.color }}>{getCompanyShortName(lead.company.name)}</span>
             <span aria-hidden>·</span>
             <span>{lead.post.date}</span>
@@ -187,8 +201,10 @@ export function FeedArticleCard({
 }) {
   const { company, post } = entry;
   const { locale } = useLocale();
+  const authorId = useId();
   const d = displayPost(post, locale);
   const href = getPostIssueHref(issueSlug, post.title, post.slug);
+  const author = weeklyAuthorship(issueSlug, post);
 
   return (
     <a
@@ -197,6 +213,7 @@ export function FeedArticleCard({
       className="tc-feed-card"
       onClick={(event) => handleArticleClick(event, onOpen)}
       aria-label={`${post.title} 기사 열기`}
+      aria-describedby={getAuthorship(author).ai ? authorId : undefined}
     >
       <SourceThumbnail post={post} companyColor={company.color} variant="card" />
       <div className="tc-feed-body">
@@ -213,6 +230,7 @@ export function FeedArticleCard({
         )}
         <div className="tc-feed-footer mono">
           <span>#{String(index).padStart(2, "0")}</span>
+          <AuthorBadge subject={author} id={authorId} />
           <span>자세히 보기 →</span>
         </div>
       </div>

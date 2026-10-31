@@ -1,0 +1,81 @@
+/* 피움 작성 표시(리뉴얼 계획 R3). 카드 하단 줄·메타 줄 안에 들어가므로 주변 줄의 글자 규칙
+   (9~10.5px mono, 대문자, 넓은 자간)을 덮어쓰고, 좁은 화면에서는 어절 단위로 줄을 바꿉니다.
+   강조색 선이나 면은 쓰지 않습니다. 색 규칙은 .tc-feed-footer span:last-child 같은 (0,2,1) 규칙보다
+   구체성이 높도록 속성 선택자를 붙였습니다. */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.badge[data-ai-author][data-tone="muted"] {
+  color: var(--muted);
+}
+
+.badge[data-ai-author][data-tone="inherit"] {
+  color: inherit;
+}
+
+.badge[data-ai-author][data-tone="strong"] {
+  color: var(--text-strong);
+}
+
+.avatar {
+  flex: none;
+  display: block;
+  width: 24px;
+  height: 24px;
+  max-width: none;
+}
+
+.badge[data-ai-author] .text,
+.badge[data-ai-author] .auto {
+  color: inherit;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.text {
+  min-width: 0;
+}
+
+.badge[data-ai-author] .auto {
+  font-weight: 600;
+}
+
+.badge[data-size="48"] {
+  gap: 10px;
+}
+
+.badge[data-size="48"] .avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.badge[data-ai-author][data-size="48"] .text,
+.badge[data-ai-author][data-size="48"] .auto {
+  font-size: 14px;
+}
+
+a.badge:hover .text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a.badge:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}

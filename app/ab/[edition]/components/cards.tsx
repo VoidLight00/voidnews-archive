@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useCallback, useRef, useState, Fragment, type ReactNode } from "react";
+import { useEffect, useCallback, useId, useRef, useState, Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import type { ABEdition, ABHighlight, ABEditorPick, ABDemoCard } from "@/lib/ab/data";
 import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
+import { getAuthorship } from "@/lib/authorship";
 import { useLocale } from "@/app/LocaleProvider";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 import { renderRichText } from "./richtext";
 import { SectionEyebrow, TagList } from "./bits";
 import { SourceAuditStrip } from "./source";
@@ -29,7 +31,9 @@ export function HighlightArticle({
   editionSlug: string;
 }) {
   const cardRef = useRef<HTMLElement>(null);
+  const authorId = useId();
   const { locale } = useLocale();
+  const author = { scope: "ab", slug: item.post.slug, title: item.post.title };
   const d = displayPost(item.post, locale); // 표시 전용 — slug/route/identity는 원본 유지
   const accent = item.tier === "hero" ? "var(--accent)" : "var(--muted)";
   const image = item.post.thumbnail ?? item.post.images?.[0];
@@ -68,6 +72,7 @@ export function HighlightArticle({
         aria-label={nestedHref
           ? `${stripMarkdown(item.post.title)} 상세 페이지 열기`
           : `${stripMarkdown(item.post.title)} ${expanded ? "접기" : "펼치기"}`}
+        aria-describedby={getAuthorship(author).ai ? authorId : undefined}
         onClick={onCardClick}
         onKeyDown={(e) => {
           if (e.key !== "Enter" && e.key !== " ") return;
@@ -157,6 +162,7 @@ export function HighlightArticle({
 
           <div className="tc-feed-footer mono">
             <span>#{String(item.rank).padStart(2, "0")}</span>
+            <AuthorBadge subject={author} id={authorId} />
             <span>{expanded ? "접기 ↑" : "자세히 보기 →"}</span>
           </div>
         </div>
@@ -186,8 +192,9 @@ export function DemoCard({ item }: { item: ABDemoCard }) {
         padding: "clamp(22px, 4vw, 34px)",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
         <SectionEyebrow label={`실전 사례 · ${item.category}`} tone="gold" />
+        <AuthorBadge subject={{ scope: "ab", slug: item.slug, title: item.title }} />
       </div>
 
       <h2
@@ -431,6 +438,7 @@ export function EditorPickCard({
 
         <div className="tc-feed-footer mono">
           <span>{item.sourceLabel || "출처"}</span>
+          <AuthorBadge subject={{ scope: "ab", slug: item.slug, title: item.title }} />
           <span>자세히 보기 →</span>
         </div>
       </div>

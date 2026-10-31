@@ -8,9 +8,11 @@ import { extractGlossaryHits, type GlossaryEntry } from "@/lib/glossary";
 import { useLocale } from "@/app/LocaleProvider";
 import { isKoreanText } from "@/lib/i18n";
 import { sourceLabel } from "@/lib/source-tier";
+import { AI_GUIDE_PATH, authorshipScope, getAuthorship } from "@/lib/authorship";
 import styles from "./editorial.module.css";
 import ArticleSupplement from "./ArticleSupplement";
 import { ImageDisclosure, imageDisclosure } from "@/app/components/ImageDisclosure";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 
 interface PostDetailProps {
   meta: {
@@ -212,6 +214,8 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
   const quotes = article?.quotes ?? [];
 
   const officialHost = post.officialUrl ? hostnameOf(post.officialUrl) : null;
+  // 작성 판정(R3): 주간 기사는 주차 slug, AB 기사("ab/<회차>")는 "ab" 범위로 봅니다.
+  const author = { scope: authorshipScope(weekSlug), slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
 
   const fullText = [
     post.title, post.summary ?? "", post.content ?? "",
@@ -297,7 +301,12 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
           ) : null}
 
           <div className={styles.articleMeta}>
-            <span className={styles.articleMetaByline}>VoidLight</span>
+            {getAuthorship(author).ai ? (
+              // AI 안내 페이지(R12, AI_GUIDE_PATH)가 생기기 전에는 링크 없이 표시만 합니다.
+              <AuthorBadge subject={author} size={48} tone="strong" locale={activeLang} href={AI_GUIDE_PATH ?? undefined} />
+            ) : (
+              <span className={styles.articleMetaByline}>VoidLight</span>
+            )}
             <span className={styles.articleMetaSep} aria-hidden>·</span>
             <span>{dateStr}</span>
             {readStr ? (

@@ -11,11 +11,14 @@ import {
   type MouseEvent,
   type ReactNode,
 } from "react";
+import { useParams } from "next/navigation";
 import type { Company, Post, WeeklyData } from "@/lib/data";
 import { stripMarkdown } from "@/lib/md";
 import { displayPost } from "@/lib/i18n";
+import { getAuthorship } from "@/lib/authorship";
 import { useLocale } from "@/app/LocaleProvider";
 import { ImageDisclosure } from "@/app/components/ImageDisclosure";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 import { renderRichText, PostDateLabel, PlatformBadge, LinkBtn, highlightText, getPostLink, type ModalNavigation } from "./shared";
 import { LinkPreview, EmbedPreview, getOfficialTweetUrl } from "./previews";
 
@@ -39,6 +42,9 @@ export function PostModal({
   const dialogRef = useRef<HTMLDivElement>(null);
   const touchStartYRef = useRef<number | null>(null);
   const { locale } = useLocale();
+  // 카드 모달은 주간 페이지(app/[slug])에서만 열리므로 경로의 slug가 주차 slug입니다(작성 판정 R3).
+  const weekSlug = useParams<{ slug?: string }>()?.slug ?? "";
+  const author = { scope: weekSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
   const d = displayPost(post, locale); // 표시 전용 — titleId 등 identity는 원본 title 유지
   const titleId = `post-modal-title-${post.title.replace(/[^a-zA-Z0-9가-힣]+/g, "-").replace(/^-+|-+$/g, "")}`;
   const navBtnStyle = {
@@ -179,6 +185,13 @@ export function PostModal({
         >
           {d.title}
         </h2>
+
+        {/* 바이라인 자리입니다. 오른쪽 위 북마크·닫기 버튼과 겹치지 않게 제목 아래에 둡니다. */}
+        {getAuthorship(author).ai ? (
+          <div style={{ margin: "-6px 0 18px" }}>
+            <AuthorBadge subject={author} />
+          </div>
+        ) : null}
 
         {d.summary && (
           <p

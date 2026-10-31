@@ -7,6 +7,7 @@ import { stripMarkdown } from "@/lib/md";
 import { renderRichText } from "./richtext";
 import { SectionEyebrow, TagList } from "./bits";
 import { ImageGallery } from "./media";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 
 export type ModalContent = { kind: "pick"; item: ABEditorPick };
 
@@ -25,6 +26,7 @@ export function PickModal({
           display: "flex",
           alignItems: "center",
           gap: 10,
+          flexWrap: "wrap",
           fontSize: 11,
           letterSpacing: "0.14em",
           textTransform: "uppercase",
@@ -43,6 +45,7 @@ export function PickModal({
           Pick
         </span>
         <span style={{ color: "var(--muted)" }}>{item.category}</span>
+        <AuthorBadge subject={{ scope: "ab", slug: item.slug, title: item.title }} />
       </div>
 
       <h2

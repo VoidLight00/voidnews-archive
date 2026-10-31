@@ -10,9 +10,12 @@ import { renderRichText } from "./richtext";
 import { SectionEyebrow, TagList } from "./bits";
 import { collectSourceLinks, SourceButton } from "./source";
 import { ImageGallery, XPostEmbed, getXStatusUrl } from "./media";
+import { getAuthorship } from "@/lib/authorship";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 
 export function HighlightDetail({ item }: { item: ABHighlight }) {
   const { locale } = useLocale();
+  const author = { scope: "ab", slug: item.post.slug, title: item.post.title };
   const d = displayPost(item.post, locale);
   const sourceLinks = collectSourceLinks(item.post);
   const xStatusUrl = getXStatusUrl(item);
@@ -26,6 +29,12 @@ export function HighlightDetail({ item }: { item: ABHighlight }) {
       }}
     >
       <SectionEyebrow label="Detail brief" tone="accent" />
+
+      {getAuthorship(author).ai ? (
+        <div style={{ marginTop: 12 }}>
+          <AuthorBadge subject={author} />
+        </div>
+      ) : null}
 
       <p
         style={{
