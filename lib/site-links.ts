@@ -36,14 +36,14 @@ export const CHANNELS: readonly Channel[] = [
     id: "x",
     label: "X @VoidLight_Hyeon",
     href: "https://x.com/VoidLight_Hyeon",
-    accessibleName: "X 프로필, 새 탭",
+    accessibleName: "X @VoidLight_Hyeon 프로필, 새 탭",
     newTab: true,
   },
   {
     id: "threads",
     label: "Threads @voidlight00",
     href: "https://www.threads.com/@voidlight00",
-    accessibleName: "Threads 프로필, 새 탭",
+    accessibleName: "Threads @voidlight00 프로필, 새 탭",
     newTab: true,
   },
   {

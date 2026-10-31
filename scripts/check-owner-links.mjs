@@ -23,8 +23,8 @@ const GATE = "owner-links";
 /** 계획 2.1절 R1 표. 순서도 계약입니다(바닥글은 이 순서대로 보여 줍니다). */
 const EXPECTED = [
   { id: "github", label: "GitHub", href: "https://github.com/VoidLight00", accessibleName: "GitHub 프로필, 새 탭", newTab: true },
-  { id: "x", label: "X @VoidLight_Hyeon", href: "https://x.com/VoidLight_Hyeon", accessibleName: "X 프로필, 새 탭", newTab: true },
-  { id: "threads", label: "Threads @voidlight00", href: "https://www.threads.com/@voidlight00", accessibleName: "Threads 프로필, 새 탭", newTab: true },
+  { id: "x", label: "X @VoidLight_Hyeon", href: "https://x.com/VoidLight_Hyeon", accessibleName: "X @VoidLight_Hyeon 프로필, 새 탭", newTab: true },
+  { id: "threads", label: "Threads @voidlight00", href: "https://www.threads.com/@voidlight00", accessibleName: "Threads @voidlight00 프로필, 새 탭", newTab: true },
   { id: "kakao-group", label: "카카오톡 그룹챗", href: "https://open.kakao.com/o/gugo7tCh", accessibleName: "카카오톡 그룹챗, 새 탭", newTab: true },
   { id: "kakao-direct", label: "카카오 일대일 문의", href: "https://open.kakao.com/o/srSlAiLd", accessibleName: "카카오 일대일 문의, 새 탭", newTab: true },
   { id: "email", label: "이메일", href: "mailto:icthyeon00@gmail.com", accessibleName: "이메일 보내기", newTab: false },

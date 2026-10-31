@@ -86,7 +86,7 @@ export default function ThemeToggle() {
     <div
       className="vn-theme-toggle"
       role="group"
-      aria-label="화면 테마"
+      aria-label="색 테마 선택"
       data-ready={theme ? "" : undefined}
     >
       {OPTIONS.map((option) => (
