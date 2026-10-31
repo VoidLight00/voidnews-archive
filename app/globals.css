@@ -956,6 +956,15 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   flex-shrink: 0; white-space: nowrap;
 }
 
+/* Masthead issue line (app/layout.tsx): 'VOL. · AI Intelligence Weekly · Seoul'.
+   The site-wide span rule sets overflow-wrap:anywhere, which also lets these inline-flex items
+   shrink to one letter, so at 320–375px 'Seoul' split into 'Seo'+'ul'. break-word still breaks
+   a word that cannot fit, but keeps each item's minimum width at its longest word, so the items
+   wrap between words instead of inside them. */
+.site-masthead-meta > span {
+  overflow-wrap: break-word;
+}
+
 /* Theme toggle — two always-visible buttons (app/ThemeToggle.tsx).
    State = aria-pressed, shown by the orange fill, an ink/orange 1px boundary and bold
    text, so it never relies on colour alone. */

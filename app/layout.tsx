@@ -103,7 +103,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <TodayStamp />
-            <span style={{ display: "inline-flex", gap: 14, color: "var(--dim)" }}>
+            <span className="site-masthead-meta" style={{ display: "inline-flex", gap: 14, color: "var(--dim)" }}>
               <span style={{ color: "var(--gold)" }}>{issueLabel}</span>
               <span aria-hidden>·</span>
               <span>AI Intelligence Weekly</span>
