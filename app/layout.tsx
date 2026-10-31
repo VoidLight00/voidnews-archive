@@ -45,9 +45,12 @@ const CHANNELS = [
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Anti-flicker: apply stored theme before body paints
+  // 첫 화면을 그리기 전에 테마를 정합니다. 저장값(voidnews-theme)이 'light'·'dark'이면 그 값을,
+  // 그 밖에는 시스템 설정(prefers-color-scheme)을 씁니다. 저장소와 matchMedia 접근은 모두
+  // try/catch로 감싸므로, 막힌 브라우저에서도 본문이 읽히고 globals.css의 세 겹 선택자가 동작합니다.
+  // 이후 시스템 변경 추종과 수동 선택 저장은 app/ThemeToggle.tsx가 맡습니다.
   const themeInit = `
-(function(){try{var t=localStorage.getItem('voidnews-theme')||'light';if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+(function(){var d=document.documentElement,t=null;try{var s=window.localStorage.getItem('voidnews-theme');if(s==='light'||s==='dark'){t=s;}}catch(e){}if(!t){try{t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}catch(e){t='light';}}d.setAttribute('data-theme',t);})();
 `;
 
   const latestSlug = getLatestSlug();

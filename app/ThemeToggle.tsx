@@ -1,83 +1,106 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-type Theme = "dark" | "light";
+type Theme = "light" | "dark";
 
-function SunIcon() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <circle cx="12" cy="12" r="4" />
-      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-    </svg>
-  );
+// 저장 키와 값은 기존 방문자의 선택을 그대로 잇기 위해 바꾸지 않습니다.
+// app/layout.tsx의 첫 화면 초기화 스크립트도 같은 키를 읽습니다.
+const STORAGE_KEY = "voidnews-theme";
+const DARK_QUERY = "(prefers-color-scheme: dark)";
+const OPTIONS: ReadonlyArray<{ value: Theme; label: string }> = [
+  { value: "light", label: "라이트" },
+  { value: "dark", label: "다크" },
+];
+
+function isTheme(value: unknown): value is Theme {
+  return value === "light" || value === "dark";
 }
 
-function MoonIcon() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-    </svg>
-  );
+function readStoredTheme(): Theme | null {
+  try {
+    const value = window.localStorage.getItem(STORAGE_KEY);
+    return isTheme(value) ? value : null;
+  } catch {
+    return null; // 저장소가 막히면 시스템 설정을 따릅니다.
+  }
+}
+
+function writeStoredTheme(theme: Theme): void {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, theme);
+  } catch {
+    // 저장소가 막히면 선택을 이 화면의 메모리에만 둡니다.
+  }
+}
+
+function getDarkQuery(): MediaQueryList | null {
+  try {
+    return window.matchMedia(DARK_QUERY);
+  } catch {
+    return null;
+  }
+}
+
+function applyTheme(theme: Theme): void {
+  document.documentElement.setAttribute("data-theme", theme);
 }
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
+  // null = 하이드레이션 전. 이때 눌린 모양은 globals.css가 data-theme으로 보여 줍니다.
+  const [theme, setTheme] = useState<Theme | null>(null);
+  const manualRef = useRef(false);
 
-  // Sync initial state (inline script may have already applied it)
   useEffect(() => {
-    const current = (document.documentElement.getAttribute("data-theme") ||
-      "light") as Theme;
-    setTheme(current);
+    const stored = readStoredTheme();
+    const query = getDarkQuery();
+    manualRef.current = stored !== null;
+    const initial: Theme = stored ?? (query?.matches ? "dark" : "light");
+    applyTheme(initial);
+    setTheme(initial);
+    if (!query) return;
+
+    // 수동 선택 전에는 시스템 변경을 바로 따르고, 수동 선택 뒤에는 덮어쓰지 않습니다.
+    const onSystemChange = (event: MediaQueryListEvent) => {
+      if (manualRef.current) return;
+      const next: Theme = event.matches ? "dark" : "light";
+      applyTheme(next);
+      setTheme(next);
+    };
+    if (typeof query.addEventListener === "function") {
+      query.addEventListener("change", onSystemChange);
+      return () => query.removeEventListener("change", onSystemChange);
+    }
+    query.addListener(onSystemChange); // Safari 13 이하
+    return () => query.removeListener(onSystemChange);
   }, []);
 
-  const toggle = () => {
-    const next: Theme = theme === "dark" ? "light" : "dark";
+  const choose = (next: Theme) => {
+    manualRef.current = true;
+    applyTheme(next);
     setTheme(next);
-    document.documentElement.setAttribute("data-theme", next);
-    try {
-      localStorage.setItem("voidnews-theme", next);
-    } catch {
-      // ignore (private mode 등)
-    }
+    writeStoredTheme(next);
   };
 
-  const isDark = theme === "dark";
-
   return (
-    <button
-      onClick={toggle}
-      aria-label={isDark ? "라이트 모드로 전환" : "다크 모드로 전환"}
-      title={isDark ? "Light mode" : "Dark mode"}
-      className="mono"
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 6,
-        fontSize: 11,
-        color: "var(--muted)",
-        background: "transparent",
-        border: "1px solid var(--border2)",
-        borderRadius: 999,
-        padding: "5px 10px",
-        cursor: "pointer",
-        letterSpacing: "0.14em",
-        textTransform: "uppercase",
-        lineHeight: 1,
-        WebkitTapHighlightColor: "transparent",
-        transition: "color 0.12s, border-color 0.12s",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.color = "var(--text)";
-        e.currentTarget.style.borderColor = "var(--border2)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.color = "var(--muted)";
-        e.currentTarget.style.borderColor = "var(--border2)";
-      }}
+    <div
+      className="vn-theme-toggle"
+      role="group"
+      aria-label="화면 테마"
+      data-ready={theme ? "" : undefined}
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
-      <span>{isDark ? "Light" : "Dark"}</span>
-    </button>
+      {OPTIONS.map((option) => (
+        <button
+          key={option.value}
+          type="button"
+          className="vn-theme-btn"
+          data-theme-option={option.value}
+          aria-pressed={theme === option.value}
+          onClick={() => choose(option.value)}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
   );
 }
