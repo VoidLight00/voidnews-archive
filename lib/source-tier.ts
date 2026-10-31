@@ -127,10 +127,26 @@ export const classifySource = createSourceClassifier(registrySnapshot as unknown
 
 const NEUTRAL_GROUPS: ReadonlySet<string> = new Set<SourceLabelGroup>(["discovery-only", "press", "media"]);
 
-/** 문구 묶음. 발견 전용·보도·매체 계층만 중립 문구를 쓰고, 주소가 없거나 다른 계층이면 기존 'official' 묶음입니다. */
+/** 재생할 수 있는 영상·오디오 주소인지. 매체 계층 등록 항목은 youtube.com 하위 도메인 전체를 잡으므로 경로로 가립니다. */
+function isPlayableMedia(url: string): boolean {
+  try {
+    const { hostname, pathname } = new URL(url);
+    const host = hostname.replace(/^(www|m|music)\./, "");
+    if (host === "youtu.be" || host === "podcasts.apple.com") return true;
+    return host === "youtube.com" && /^\/(watch|shorts\/|live\/|embed\/)/.test(pathname);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * 문구 묶음. 발견 전용·보도·매체 계층만 중립 문구를 쓰고, 주소가 없거나 다른 계층이면 기존 'official' 묶음입니다.
+ * 매체 계층이라도 재생 주소가 아니면(help.youtube.com 도움말, 채널 페이지) '영상' 대신 원문 링크 문구를 씁니다.
+ */
 export function sourceLabelGroup(url?: string | null): SourceLabelGroup {
   if (!url) return "official";
   const { tier } = classifySource(url);
+  if (tier === "media" && !isPlayableMedia(url)) return "discovery-only";
   return NEUTRAL_GROUPS.has(tier) ? (tier as SourceLabelGroup) : "official";
 }
 

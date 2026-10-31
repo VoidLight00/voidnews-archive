@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "note": "lib/source-registry.json과 이 파일은 scripts/sync-source-registry.mjs가 만듭니다. 직접 고치지 말고 스크립트를 다시 실행하십시오.",
+  "inputs": {
+    "registry": {
+      "file": "~/.claude/skills/voidnews-newsletter/references/official-sources.json",
+      "version": "1.0",
+      "updated": "2026-10-31",
+      "sha256": "f717e03946688dbcd206321a76d3ef91d9e820648b221cf193fba26b4e622a30"
+    },
+    "curators": {
+      "file": "~/.claude/skills/voidnews-briefing-pipeline/references/curator-channels.json",
+      "version": "1.5",
+      "updated": "2026-08-24",
+      "sha256": "24c690879bb225ee582903b4415ec98ba0eef8e19c0d4f227654b35067bee762"
+    }
+  }
+}

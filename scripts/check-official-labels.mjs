@@ -11,7 +11,7 @@
 //   받는지, app/·lib/의 문자열에 official 묶음 문구가 직접 적히지 않았는지, 출처 링크 구성요소가 sourceLabel을
 //   부르는지 확인합니다.
 // 빌드 검사(--html, postbuild): 모든 페이지의 외부 링크 중 중립 계층 주소에 official 묶음 문구가 붙은 링크가
-//   0개인지 확인합니다.
+//   0개인지 확인하고, 데이터 라벨에 '공식'이 들어간 중립 계층 링크는 정정 후보로 보고만 합니다.
 // 판정기(Python)와 JS 판정의 1,531건 대조는 판정기가 있는 기기에서만 도는
 // `node scripts/sync-source-registry.mjs --check`가 맡습니다.
 // 종료 코드: 0 통과 · 1 위반 · 2 입력 오류(out/ 없음 포함)
@@ -25,6 +25,8 @@ const GATE = "official-labels";
 const NEUTRAL = ["discovery-only", "press", "media"];
 const OFFICIAL_WORD = /공식|official/i;
 // 계획 R5 표의 계층 표본. TestingCatalog 6건 가운데 두 형식과 보도·영상·포럼, 공식 대조군입니다.
+// 세 번째 값은 계층과 다른 문구 묶음을 기대할 때만 적습니다. 매체 계층이라도 재생 주소가 아닌 도움말 페이지는
+// '영상'이 아니라 원문 링크 문구입니다(2026-11-01 검토: 2026-w22 Gemini in Chrome 기사의 help.youtube.com).
 const SAMPLES = [
   ["https://x.com/testingcatalog/status/2049896926997369194", "discovery-only"],
   ["https://www.testingcatalog.com/claude-duet", "discovery-only"],
@@ -33,6 +35,9 @@ const SAMPLES = [
   ["https://www.cnbc.com/2026/01/01/x.html", "press"],
   ["https://www.bloomberg.com/news/articles/x", "press"],
   ["https://www.youtube.com/watch?v=h-pNWy7v_qc", "media"],
+  ["https://youtu.be/h-pNWy7v_qc", "media"],
+  ["https://help.youtube.com/hc/en-us/articles/1", "media", "discovery-only"],
+  ["https://www.youtube.com/@OpenAI", "media", "discovery-only"],
   ["https://openai.com/index/x/", "official"],
 ];
 // 출처 링크를 그리는 구성요소(계획 R5 대상 파일). 모두 sourceLabel()로 문구를 받아야 합니다.
@@ -74,12 +79,12 @@ function checkLabelTable(labels, report) {
 
 function checkSamples(tier, labels, report) {
   const fields = Object.keys(labels.ko?.official ?? {});
-  for (const [url, want] of SAMPLES) {
+  for (const [url, want, wantGroup = NEUTRAL.includes(want) ? want : "official"] of SAMPLES) {
     const got = tier.classifySource(url).tier;
     if (got !== want) report.fail("tier-sample", `classifySource(${url}).tier = ${got} — 기대 ${want}`);
     const group = tier.sourceLabelGroup(url);
-    if (group !== (NEUTRAL.includes(want) ? want : "official")) report.fail("tier-sample", `sourceLabelGroup(${url}) = ${group}`);
-    if (!NEUTRAL.includes(want)) continue;
+    if (group !== wantGroup) report.fail("tier-sample", `sourceLabelGroup(${url}) = ${group} — 기대 ${wantGroup}`);
+    if (!NEUTRAL.includes(wantGroup)) continue;
     for (const locale of ["ko", "en"]) for (const field of fields) {
       const text = tier.sourceLabel(url, field, locale);
       if (OFFICIAL_WORD.test(text)) report.fail("tier-sample", `sourceLabel(${url}, ${field}, ${locale}) = '${text}'`);
@@ -112,6 +117,7 @@ function checkPages(root, outDir, tier, official, report) {
   const pages = requireOut(outDir);
   let anchors = 0;
   let neutral = 0;
+  const candidates = new Map();
   for (const rel of pages) {
     for (const a of findAll(readPage(outDir, rel), (el) => el.tag === "a" && /^https?:/i.test(el.attrs.href ?? ""))) {
       anchors += 1;
@@ -120,10 +126,17 @@ function checkPages(root, outDir, tier, official, report) {
       const texts = [...textPieces(a), a.attrs["aria-label"] ?? ""].map(normalizeLabel);
       const hit = texts.find((text) => official.has(text));
       if (hit) report.fail("neutral-wording", `${rel}: ${a.attrs.href} 링크에 '${hit}' — 이 주소는 ${tier.classifySource(a.attrs.href).tier} 계층입니다`);
+      // 데이터에 적힌 라벨('X 공식 게시글' 등)은 막지 않고 정정 후보로만 모읍니다(계획 7절, lib/weeks는 승인 뒤 수정).
+      const dataLabel = texts.find((text) => text && !official.has(text) && OFFICIAL_WORD.test(text));
+      if (!hit && dataLabel) candidates.set(`${a.attrs.href} '${dataLabel}'`, rel);
     }
   }
   if (!anchors) report.fail("coverage", "외부 링크를 하나도 찾지 못했습니다 — 측정 없이 통과하지 않습니다");
   report.note(`빌드 페이지 ${pages.length}개 · 외부 링크 ${anchors}개 · 중립 계층 링크 ${neutral}개`);
+  if (candidates.size) {
+    report.note(`데이터 라벨에 '공식'이 들어간 중립 계층 링크 ${candidates.size}개(정정 후보, 빌드는 막지 않음):`);
+    for (const [link, rel] of candidates) report.note(`  ${rel}: ${link}`);
+  }
 }
 
 runGate(GATE, (opts) => {

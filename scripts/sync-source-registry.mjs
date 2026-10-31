@@ -7,12 +7,15 @@
 // 빌드와 lib/source-tier.ts는 커밋된 스냅샷만 읽습니다.
 //
 // 사용:
-//   node scripts/sync-source-registry.mjs          등록부 두 개를 읽어 lib/source-registry.json을 씁니다.
+//   node scripts/sync-source-registry.mjs          등록부 두 개를 읽어 판정 자료 lib/source-registry.json과
+//                                                   출처 기록 references/source-registry.provenance.json(입력 경로·해시)을 씁니다.
+//                                                   판정 자료는 방문자 JS 번들에 실리므로 경로·해시·안내문을 넣지 않습니다.
 //   node scripts/sync-source-registry.mjs --check  다음을 모두 확인합니다.
 //     - 스냅샷이 지금 등록부와 같은 판인지(입력 해시, 다시 만든 결과와의 내용 비교)
 //     - 사이트의 현재 링크 전부에서 JS 판정(lib/source-tier.ts)과 Python 판정기가 같은지
 //     - 스냅샷에서 testingcatalog를 지운 함정을 위 비교가 실제로 잡아내는지
-// 옵션: --registry <json> --curators <json> --classifier <newsletter.py> --snapshot <json>
+//   그리고 '공식' 문구를 떼는 주간 officialUrl과, 데이터 라벨에 '공식'이 들어간 중립 계층 링크를 정정 후보로 보여 줍니다.
+// 옵션: --registry <json> --curators <json> --classifier <newsletter.py> --snapshot <json> --provenance <json>
 // 종료 코드: 0 통과 · 1 판정 차이, 낡은 스냅샷, 함정 미검출 · 2 입력 오류(파일 없음, 판정기 실행 실패)
 // 판정기가 있는 기기에서만 동작하므로 빌드(prebuild·postbuild)에는 넣지 않습니다.
 import { createHash } from "node:crypto";
@@ -30,12 +33,14 @@ const DEFAULTS = {
   curators: path.join(HOME, ".claude/skills/voidnews-briefing-pipeline/references/curator-channels.json"),
   classifier: path.join(HOME, ".claude/skills/voidnews-newsletter/bin/newsletter.py"),
   snapshot: path.join(ROOT, "lib/source-registry.json"),
+  // 입력 파일 경로·해시·안내문은 방문자 JS 번들에 실리지 않도록 판정 자료와 따로 둡니다(2026-11-01 검토).
+  provenance: path.join(ROOT, "references/source-registry.provenance.json"),
 };
 // newsletter.py OFFICIAL_TYPES·channel_role과 같은 규칙입니다.
 const OFFICIAL_TYPES = new Set(["official", "official_blog", "official_developer", "official_developer_tool", "official_media_vendor"]);
 const NEUTRAL_TIERS = ["discovery-only", "press", "media"];
 const TRAP_TOKEN = "testingcatalog";
-const NOTE = "scripts/sync-source-registry.mjs가 만든 스냅샷입니다. 직접 고치지 말고 스크립트를 다시 실행하십시오.";
+const NOTE = "lib/source-registry.json과 이 파일은 scripts/sync-source-registry.mjs가 만듭니다. 직접 고치지 말고 스크립트를 다시 실행하십시오.";
 
 class InputError extends Error {}
 
@@ -47,7 +52,7 @@ const shown = (file) => {
 
 function parseArgs(argv) {
   const opts = { ...DEFAULTS, check: false };
-  const keys = { "--registry": "registry", "--curators": "curators", "--classifier": "classifier", "--snapshot": "snapshot" };
+  const keys = { "--registry": "registry", "--curators": "curators", "--classifier": "classifier", "--snapshot": "snapshot", "--provenance": "provenance" };
   for (let i = 0; i < argv.length; i += 1) {
     if (argv[i] === "--check") { opts.check = true; continue; }
     const key = keys[argv[i]];
@@ -125,14 +130,15 @@ function serialize(snapshot) {
   return [
     "{",
     `  "schema": ${JSON.stringify(snapshot.schema)},`,
-    `  "note": ${JSON.stringify(snapshot.note)},`,
-    `  "inputs": ${JSON.stringify(snapshot.inputs, null, 2).replace(/\n/g, "\n  ")},`,
     `  "entries": ${list(snapshot.entries)},`,
     `  "channels": ${list(snapshot.channels)}`,
     "}",
     "",
   ].join("\n");
 }
+
+const judgment = (snapshot) => ({ schema: snapshot.schema, entries: snapshot.entries, channels: snapshot.channels });
+const serializeProvenance = (snapshot) => `${JSON.stringify({ schema: snapshot.schema, note: snapshot.note, inputs: snapshot.inputs }, null, 2)}\n`;
 
 function countBy(items, key) {
   const counts = {};
@@ -143,10 +149,12 @@ function countBy(items, key) {
 function sync(opts) {
   const snapshot = buildSnapshot(opts);
   const text = serialize(snapshot);
-  if (JSON.stringify(JSON.parse(text)) !== JSON.stringify(snapshot)) throw new Error("직렬화 결과가 원래 객체와 다릅니다.");
-  const previous = fs.existsSync(opts.snapshot) ? fs.readFileSync(opts.snapshot, "utf8") : null;
-  if (previous !== text) fs.writeFileSync(opts.snapshot, text);
-  console.log(`[sync-source-registry] ${shown(opts.snapshot)} ${previous === text ? "변경 없음" : "갱신"}`);
+  if (JSON.stringify(JSON.parse(text)) !== JSON.stringify(judgment(snapshot))) throw new Error("직렬화 결과가 원래 객체와 다릅니다.");
+  for (const [file, body] of [[opts.snapshot, text], [opts.provenance, serializeProvenance(snapshot)]]) {
+    const previous = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+    if (previous !== body) fs.writeFileSync(file, body);
+    console.log(`[sync-source-registry] ${shown(file)} ${previous === body ? "변경 없음" : "갱신"}`);
+  }
   console.log(`  등록 항목 ${snapshot.entries.length}개(${countBy(snapshot.entries, (entry) => entry.tier)})`);
   console.log(`  큐레이터 채널 ${snapshot.channels.length}개(${countBy(snapshot.channels, (channel) => channel.role)})`);
   for (const [name, input] of Object.entries(snapshot.inputs)) console.log(`  ${name}: ${input.file} v${input.version} (${input.updated}) sha256 ${input.sha256.slice(0, 12)}`);
@@ -171,12 +179,12 @@ function loadTypeScript(modulePath) {
 // 사이트가 실제로 그리는 외부 링크 자리: 주간 카드, AB 본편 카드, AB 추천·모델 카드, AB 데모 카드.
 function collectLinks(weeks, editions) {
   const rows = [];
-  const add = (url, field, scope, where) => {
-    if (typeof url === "string" && url.trim()) rows.push({ url, field, scope, where });
+  const add = (url, field, scope, where, label) => {
+    if (typeof url === "string" && url.trim()) rows.push({ url, field, scope, where, label });
   };
   const addPost = (post, scope, where) => {
     for (const field of ["officialUrl", "source", "xUrl", "threadsUrl"]) add(post[field], field, scope, where);
-    for (const link of post.backupUrls ?? []) add(link?.url, "backupUrls", scope, where);
+    for (const link of post.backupUrls ?? []) add(link?.url, "backupUrls", scope, where, link?.label);
   };
   for (const week of weeks) {
     for (const company of week.companies) for (const post of company.posts) addPost(post, "weekly", `${week.slug}/${post.slug ?? post.title}`);
@@ -184,10 +192,10 @@ function collectLinks(weeks, editions) {
   for (const edition of editions) {
     for (const item of edition.highlights ?? []) addPost(item.post, "ab", `ab/${edition.slug}/${item.post.slug ?? item.post.title}`);
     for (const pick of [...(edition.modelWatch ?? []), ...(edition.editorsPicks ?? [])]) {
-      add(pick.sourceUrl, "sourceUrl", "ab", `ab/${edition.slug}/${pick.slug ?? pick.title}`);
-      add(pick.guideUrl, "guideUrl", "ab", `ab/${edition.slug}/${pick.slug ?? pick.title}`);
+      add(pick.sourceUrl, "sourceUrl", "ab", `ab/${edition.slug}/${pick.slug ?? pick.title}`, pick.sourceLabel);
+      add(pick.guideUrl, "guideUrl", "ab", `ab/${edition.slug}/${pick.slug ?? pick.title}`, pick.guideLabel);
     }
-    for (const demo of edition.demoCards ?? []) add(demo.url, "url", "ab", `ab/${edition.slug}/${demo.slug ?? demo.title}`);
+    for (const demo of edition.demoCards ?? []) add(demo.url, "url", "ab", `ab/${edition.slug}/${demo.slug ?? demo.title}`, demo.label);
   }
   return rows;
 }
@@ -235,8 +243,9 @@ function withoutTrapToken(snapshot) {
 function freshnessProblems(opts, snapshot) {
   const problems = [];
   const fresh = buildSnapshot(opts);
+  const provenance = readJson(opts.provenance, "스냅샷 출처 기록").data;
   for (const name of ["registry", "curators"]) {
-    const recorded = snapshot.inputs?.[name]?.sha256;
+    const recorded = provenance.inputs?.[name]?.sha256;
     if (recorded !== fresh.inputs[name].sha256) problems.push(`${name} 해시가 다릅니다(스냅샷 ${String(recorded).slice(0, 12)} · 현재 ${fresh.inputs[name].sha256.slice(0, 12)})`);
   }
   const content = (value) => JSON.stringify({ entries: value.entries, channels: value.channels });
@@ -248,6 +257,14 @@ function reportNeutral(rows, classify) {
   const neutral = rows.filter((row) => NEUTRAL_TIERS.includes(classify(row.url).tier));
   console.log(`  '공식' 문구를 떼는 주간 officialUrl ${neutral.length}건(${countBy(neutral, (row) => classify(row.url).tier)}) — 데이터 정정 후보:`);
   for (const row of neutral) console.log(`    ${row.where} · ${classify(row.url).tier} · ${row.url.slice(0, 96)}`);
+}
+
+// 데이터 라벨(backupUrls.label, AB sourceLabel·guideLabel·label)에 '공식'이 있는데 주소가 중립 계층인 링크입니다.
+// 화면 문구 게이트는 데이터 라벨을 막지 않으므로(계획 7절) 여기서 정정 후보로만 보여 줍니다.
+function reportNeutralLabels(rows, classify) {
+  const hits = rows.filter((row) => row.label && /공식|official/i.test(row.label) && NEUTRAL_TIERS.includes(classify(row.url).tier));
+  console.log(`  데이터 라벨에 '공식'이 들어간 중립 계층 링크 ${hits.length}건(${countBy(hits, (row) => classify(row.url).tier)}) — 데이터 정정 후보:`);
+  for (const row of hits) console.log(`    ${row.where} · ${row.field} · ${classify(row.url).tier} · '${row.label.slice(0, 48)}' · ${row.url.slice(0, 80)}`);
 }
 
 function check(opts) {
@@ -272,6 +289,7 @@ function check(opts) {
   console.log(`  사이트 링크 전체 ${rows.length}건(고유 ${urls.length}) · JS·Python 판정 차이 ${allDiff.length}건`);
   console.log(`  주간 officialUrl 계층: ${countBy(official, (row) => classify(row.url).tier)}`);
   reportNeutral(official, classify);
+  reportNeutralLabels(rows, classify);
   console.log(`  함정(스냅샷에서 ${TRAP_TOKEN} 삭제): 판정 차이 ${trapDiff.length}건 → ${trapDiff.length ? "검출" : "미검출"}`);
   for (const url of allDiff.slice(0, 20)) {
     console.error(`  차이: ${url} · JS ${JSON.stringify(classify(url))} · Python ${JSON.stringify(python.get(url))}`);
