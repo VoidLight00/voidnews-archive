@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-24T23:44:37.676Z",
+  "checkedAt": "2026-10-31T13:21:39.771Z",
   "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
   "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
   "counts": {
@@ -8,7 +8,7 @@
     "source-unresolved": 15,
     "no-meaningful-image-verified": 166,
     "fetch-failed": 35,
-    "records": 934
+    "records": 938
   },
   "records": [
     {
@@ -26782,6 +26782,126 @@
       "publicPath": "/source-media/weekly-20261025/c75341f02561.png",
       "sha256": "c75341f025615eaccb47baa1fab7b783cc36a35a38c0c36daa24eecc512676b8",
       "byteSize": 589514,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|NVIDIA, 다국어 음성 모델과 Granary v2 공개했어요|https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "week": "2026-w44",
+      "title": "NVIDIA, 다국어 음성 모델과 Granary v2 공개했어요",
+      "sourceUrl": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "status": "available",
+      "checkedAt": "2026-10-31T13:21:39.771Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Hugging Face Open ASR English Open (2) Leaderboard table showing model rankings on the Hugging Face English Open ASR leaderboard, with columns for rank, model, average WER, RTFx, and dataset scores. nvidia/Nemotron-3.5-Transcribe is ranked first among open-weight models with an average Word Error Rate (WER) of 5.33% and an RTFx of 462.09.).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+          "httpStatus": 200,
+          "sha256": "ffbd70df89fa745a8496186d7f7382bd17f44640b4c5599d486cb27870aac2d7"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/vGIg17AxweCAnacvnPOet.png",
+          "httpStatus": 200,
+          "sha256": "31109775e0ddb7b21b71d70fb3a77f6da1e9ba88f21a0312ea563a3b44b17553",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://cdn-uploads.huggingface.co/production/uploads/68127936de624fb6f57d9989/vGIg17AxweCAnacvnPOet.png",
+      "publicPath": "/source-media/weekly-20261031/31109775e0dd.png",
+      "sha256": "31109775e0ddb7b21b71d70fb3a77f6da1e9ba88f21a0312ea563a3b44b17553",
+      "byteSize": 210985,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|IBM, Granite Switch 4.1.1을 공개했어요|https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "week": "2026-w44",
+      "title": "IBM, Granite Switch 4.1.1을 공개했어요",
+      "sourceUrl": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "status": "available",
+      "checkedAt": "2026-10-31T13:21:39.771Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: granite_switch_adapter_swap).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+          "httpStatus": 200,
+          "sha256": "d56785dfcdf88dad9a9e242c9092fc12191ea6f77fb5c1d731439592a9ed8033"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://cdn-uploads.huggingface.co/production/uploads/662836b742709fe826510597/F5YZJX3QZ8HbecaJnHe4Q.png",
+          "httpStatus": 200,
+          "sha256": "8deb8fd45642665aae7a604f999700f650b42f45454702997df1aa1db65518d5",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://cdn-uploads.huggingface.co/production/uploads/662836b742709fe826510597/F5YZJX3QZ8HbecaJnHe4Q.png",
+      "publicPath": "/source-media/weekly-20261031/8deb8fd45642.png",
+      "sha256": "8deb8fd45642665aae7a604f999700f650b42f45454702997df1aa1db65518d5",
+      "byteSize": 8603749,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|Google DeepMind, Gemini 4 Carbon 발표했어요|https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "week": "2026-w44",
+      "title": "Google DeepMind, Gemini 4 Carbon 발표했어요",
+      "sourceUrl": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+      "status": "available",
+      "checkedAt": "2026-10-31T13:21:39.771Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Faceted iridescent crystal surrounded by floating white number 4s.).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+          "httpStatus": 200,
+          "sha256": "b608b00b83fb743492e974008f487548cdb4b9df5c983af304d38beca8becf8b"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_header.width-2200.format-webp.webp",
+          "httpStatus": 200,
+          "sha256": "f2d5dd603b70214d295519190e0f856a058e336e9c03c400066c02ad0f53dd88",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_header.width-2200.format-webp.webp",
+      "publicPath": "/source-media/weekly-20261031/f2d5dd603b70.webp",
+      "sha256": "f2d5dd603b70214d295519190e0f856a058e336e9c03c400066c02ad0f53dd88",
+      "byteSize": 33078,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|구글 딥마인드, 소리까지 생성하는 Genie 4 발표|https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "week": "2026-w44",
+      "title": "구글 딥마인드, 소리까지 생성하는 Genie 4 발표",
+      "sourceUrl": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+      "status": "available",
+      "checkedAt": "2026-10-31T13:21:39.771Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+          "httpStatus": 200,
+          "sha256": "5aacdc2d1d9ecf815e5c61b9387b819dd15c1c93b69523e91f9a4ee03d15b57b"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://lh3.googleusercontent.com/mKq26Yz8rlcAthtTHS2GaID7LuUM9a4zM16VHUszY-zyKly80QRUt5nn6V4jQN8_bJ4_UMesp1D_88ethzTEJPoo6NUPyhO76QZ7zNJM5KzfPE5GKjM=w2880-h1620-n-nu-rw-lo",
+          "httpStatus": 200,
+          "sha256": "124e933a2189c2be93de005878e670082729993d6246bc9692891f40340699a1",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://lh3.googleusercontent.com/mKq26Yz8rlcAthtTHS2GaID7LuUM9a4zM16VHUszY-zyKly80QRUt5nn6V4jQN8_bJ4_UMesp1D_88ethzTEJPoo6NUPyhO76QZ7zNJM5KzfPE5GKjM=w2880-h1620-n-nu-rw-lo",
+      "publicPath": "/source-media/weekly-20261031/124e933a2189.webp",
+      "sha256": "124e933a2189c2be93de005878e670082729993d6246bc9692891f40340699a1",
+      "byteSize": 42984,
       "selectionKind": "source-first-image",
       "selectionPolicy": "source-top-image-v1"
     }
