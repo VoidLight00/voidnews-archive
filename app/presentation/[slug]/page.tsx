@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { getAllSlugs, getWeek } from "@/lib/data";
 import type { Post } from "@/lib/data";
 import { sourceLabel } from "@/lib/source-tier";
+import { AuthorBadge } from "@/app/components/AuthorBadge";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-type FeaturedEntry = { company: string; color: string; post: Post };
+type FeaturedEntry = { company: string; post: Post };
 
 function formatTag(tag: string): string {
   return tag;
@@ -282,7 +283,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
   for (const company of data.companies) {
     for (const post of company.posts) {
       if (post.featured) {
-        featured.push({ company: company.name, color: company.color, post });
+        featured.push({ company: company.name, post });
       }
     }
   }
@@ -389,13 +390,12 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
           aria-label="발표 하이라이트"
           style={{ marginTop: "clamp(28px, 5vw, 48px)", display: "grid", gap: "clamp(20px, 3vw, 32px)" }}
         >
-          {featured.map(({ company, color, post }, idx) => (
+          {featured.map(({ company, post }, idx) => (
             <article
               key={post.title}
               className="article-card rise-in"
+              data-presentation-highlight=""
               style={{
-                borderBottom: "2px solid",
-                borderBottomColor: color,
                 padding: "clamp(22px, 3.4vw, 36px)",
                 animationDelay: `${Math.min(idx, 6) * 50}ms`,
               }}
@@ -447,6 +447,11 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
               >
                 {post.title}
               </h2>
+
+              {/* 하이라이트 요약·본문도 AI가 쓴 카드이므로 주간 카드와 같은 피움 표시를 답니다(리뉴얼 R3). */}
+              <div style={{ marginTop: "var(--space-sm)" }}>
+                <AuthorBadge subject={{ scope: slug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt }} />
+              </div>
 
               {post.summary && (
                 <p

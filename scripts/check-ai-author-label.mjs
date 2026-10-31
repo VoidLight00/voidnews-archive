@@ -6,9 +6,10 @@
 // 이 게이트는 계속 통과해야 하고(계획 5.5절), 표시 위치 하나가 빠지면 실패해야 합니다.
 //
 // 원본 검사(prebuild): i18n 라벨 4개, 판정 규칙의 경계값, AuthorBadge의 표식·그림 계약,
-//   계획 R3 표의 표시 위치 11곳(구성요소 8개 파일)이 AuthorBadge를 그리는지 확인합니다.
+//   계획 R3 표의 표시 위치 12곳(구성요소 9개 파일, 발표 하이라이트 포함)이 AuthorBadge를 그리는지 확인합니다.
 // 빌드 검사(--html, postbuild): 주간 페이지의 카드마다 라벨 1개와 규칙에 맞는 '자동 게시',
-//   기사 상세마다 48px 바이라인 1개, AB 카드·기사의 라벨, '자동 게시' 합계 = 규칙 대상 수를 확인합니다.
+//   기사 상세마다 48px 바이라인 1개, AB 카드·기사의 라벨, 발표 하이라이트(featured 글)마다 라벨,
+//   '자동 게시' 합계 = 규칙 대상 수를 확인합니다.
 //   --data <json>  주간 데이터 대신 읽을 자료({ weeks: [{ slug, posts: [{ slug, title, verifiedAt }] }] }, 함정 시험용)
 // 종료 코드: 0 통과 · 1 위반 · 2 입력 오류(out/ 없음 포함)
 import fs from "node:fs";
@@ -37,6 +38,8 @@ const LOCATIONS = [
   ["app/ab/[edition]/components/PickModal.tsx", "PickModal"],
   ["app/ab/[edition]/components/HighlightDetail.tsx", "HighlightDetail"],
   ["app/[slug]/editorial/PostDetail.tsx", "PostDetail", "48"],
+  // 발표 하이라이트도 AI가 쓴 요약·본문을 그대로 보여 주고 sitemap에 있습니다(2026-11-01 독립 검토 지적).
+  ["app/presentation/[slug]/page.tsx", "PresentationPage"],
 ];
 const BADGE_IMPORT = "@/app/components/AuthorBadge";
 
@@ -119,7 +122,7 @@ function loadWeeks(root, dataFile) {
   const { weeks } = loadTsModule(path.join(root, "lib/data.ts"));
   return weeks.map((week) => ({
     slug: week.slug,
-    posts: week.companies.flatMap((company) => company.posts.map(({ slug, title, verifiedAt }) => ({ slug, title, verifiedAt }))),
+    posts: week.companies.flatMap((company) => company.posts.map(({ slug, title, verifiedAt, featured }) => ({ slug, title, verifiedAt, featured: Boolean(featured) }))),
   }));
 }
 
@@ -196,11 +199,30 @@ function checkAbEditionPage(outDir, rel, ctx, report) {
   ctx.abCards += cards.length;
 }
 
+/** 발표 페이지: 하이라이트 블록 수 = 데이터의 featured 글 수, 블록마다 제목으로 글을 찾아 규칙대로 라벨 0·1개. */
+function checkPresentationPage(outDir, rel, week, ctx, report) {
+  const featured = week.posts.filter((post) => post.featured);
+  const blocks = findAll(readPage(outDir, rel), (el) => hasAttr(el, "data-presentation-highlight"));
+  if (blocks.length !== featured.length) report.fail("presentation-coverage", `${rel}: 하이라이트 ${blocks.length}개 — 데이터의 featured 글 ${featured.length}개`);
+  blocks.forEach((block, index) => {
+    const heading = findAll(block, (el) => el.tag === "h2")[0];
+    const title = heading ? innerText(heading).trim() : "";
+    const where = `${rel} 하이라이트 ${index + 1}(${title || "제목 없음"})`;
+    const post = featured.find((item) => item.title === title);
+    if (!post) { report.fail("presentation-unknown", `${where}: 제목이 이 주차의 featured 글과 맞지 않습니다`); return; }
+    const expected = ctx.getAuthorship({ scope: week.slug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt });
+    const badges = findAll(block, (el) => hasAttr(el, "data-ai-author"));
+    ctx.highlights += 1;
+    if (badges.length !== (expected.ai ? 1 : 0)) { report.fail("presentation-label", `${where}: 라벨 ${badges.length}개 — 기대 ${expected.ai ? 1 : 0}개`); return; }
+    for (const badge of badges) for (const [code, detail] of badgeProblems(badge, expected, [24])) report.fail(`presentation-${code}`, `${where}: ${detail}`);
+  });
+}
+
 function checkPages(root, outDir, dataFile, report) {
   const pages = new Set(requireOut(outDir));
   const authorship = loadTsModule(path.join(root, "lib/authorship.ts"));
   const human = [...(authorship.HUMAN_WRITTEN ?? [])];
-  const ctx = { getAuthorship: authorship.getAuthorship, humanAb: human.filter((key) => key.startsWith("ab/")).length, cards: 0, labels: 0, cardAuto: 0, bylineAuto: 0, articles: 0, abCards: 0 };
+  const ctx = { getAuthorship: authorship.getAuthorship, humanAb: human.filter((key) => key.startsWith("ab/")).length, cards: 0, labels: 0, cardAuto: 0, bylineAuto: 0, articles: 0, abCards: 0, highlights: 0 };
   let targets = 0;
   for (const week of loadWeeks(root, dataFile)) {
     const rel = `${week.slug}/index.html`;
@@ -214,6 +236,9 @@ function checkPages(root, outDir, dataFile, report) {
       if (ctx.getAuthorship(subject).autoPublished) targets += 1;
       checkArticlePage(outDir, article, subject, ctx, report);
     }
+    const presentation = `presentation/${week.slug}/index.html`;
+    if (pages.has(presentation)) checkPresentationPage(outDir, presentation, week, ctx, report);
+    else if (week.posts.some((post) => post.featured)) report.fail("coverage", `${presentation}: 발표 페이지가 빌드에 없습니다`);
   }
   for (const rel of pages) {
     const parts = rel.split("/");
@@ -223,7 +248,7 @@ function checkPages(root, outDir, dataFile, report) {
   }
   if (ctx.bylineAuto !== targets) report.fail("auto-count", `기사 바이라인 '자동 게시' ${ctx.bylineAuto}개 — 규칙 대상 ${targets}개`);
   if (!ctx.cards || !ctx.articles) report.fail("coverage", `검사한 카드 ${ctx.cards}개 · 기사 ${ctx.articles}개 — 측정 없이 통과하지 않습니다`);
-  report.note(`주간 카드 ${ctx.cards}개 · 라벨 ${ctx.labels}개 · 카드 '자동 게시' ${ctx.cardAuto}개 · 기사 ${ctx.articles}개 · 바이라인 '자동 게시' ${ctx.bylineAuto}개 · 규칙 대상 ${targets}개 · AB 카드 ${ctx.abCards}개`);
+  report.note(`주간 카드 ${ctx.cards}개 · 라벨 ${ctx.labels}개 · 카드 '자동 게시' ${ctx.cardAuto}개 · 기사 ${ctx.articles}개 · 바이라인 '자동 게시' ${ctx.bylineAuto}개 · 규칙 대상 ${targets}개 · AB 카드 ${ctx.abCards}개 · 발표 하이라이트 ${ctx.highlights}개`);
 }
 
 runGate(GATE, (opts) => {

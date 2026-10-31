@@ -1,5 +1,5 @@
 {
-  "note": "함정 기준 사이트의 주간 자료입니다. alpha는 이전 카드, beta는 자동 게시(verifiedAt 2026-10-22 이후), gamma는 확인일 없는 카드입니다.",
+  "note": "함정 기준 사이트의 주간 자료입니다. alpha는 이전 카드, beta는 자동 게시(verifiedAt 2026-10-22 이후), gamma는 확인일 없는 카드입니다. alpha와 beta는 발표 하이라이트(featured)입니다.",
   "weeks": [
     {
       "slug": "2099-w01",
@@ -7,12 +7,14 @@
         {
           "slug": "alpha",
           "title": "Alpha",
-          "verifiedAt": "2026-10-01"
+          "verifiedAt": "2026-10-01",
+          "featured": true
         },
         {
           "slug": "beta",
           "title": "Beta",
-          "verifiedAt": "2026-10-30"
+          "verifiedAt": "2026-10-30",
+          "featured": true
         },
         {
           "slug": "gamma",

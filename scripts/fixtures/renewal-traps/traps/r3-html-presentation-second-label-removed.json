@@ -1,0 +1,15 @@
+{
+  "id": "r3-html-presentation-second-label-removed",
+  "plan": "R3",
+  "check": "check-ai-author-label.mjs",
+  "mode": "html",
+  "why": "발표 하이라이트 두 번째 블록의 라벨만 삭제(빌드): 발표 페이지도 AI가 쓴 요약을 보여 주므로 블록마다 라벨이 있어야 합니다.",
+  "mutate": [
+    {
+      "file": "out/presentation/2099-w01/index.html",
+      "find": "<span class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI<span class=\"css__auto\" data-auto-published=\"\"> · 자동 게시</span></span></span>",
+      "replace": ""
+    }
+  ],
+  "expect": "FAIL[ai-author-label:presentation-label]"
+}

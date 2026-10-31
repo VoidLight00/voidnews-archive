@@ -19,7 +19,7 @@
 //   tailwind     border-b-2/4/8 · border-t-* 와 amber·yellow·gold·accent 유틸 조합
 //   double-rule  색과 관계없이 double 테두리(신문형 이중선, 사용자 규칙이 이름으로 금지)
 // 강조 계열: var(--gold|accent|accent-fill|kicker|brand-orange*|pill-color), 템플릿 변수
-//   ${…accent…}·${…color…}, 채도가 있는 hex·rgb(채널 차이 24 이상).
+//   ${…accent…}·${…color…}, JS 값의 따옴표 밖 맨 변수(color·company.color 등), 채도가 있는 hex·rgb(채널 차이 24 이상).
 // 허용: 무채색 hairline(--rule, --border, --border2, 회색 hex), transparent, hr, accent-color,
 //   text-decoration 밑줄, 모든 변을 감싸는 border 단축 속성(알약·칩 외곽선).
 // 속성 값만 잘라 판정하고, JS 삼항식처럼 값이 다음 줄로 이어지면 최대 4줄을 이어 읽는다.
@@ -58,6 +58,10 @@ function hasChroma(text) {
   return false;
 }
 const isAccent = (text) => ACCENT_VAR.test(text) || hasChroma(text);
+// JS 스타일 객체에서는 따옴표 밖의 맨 변수(color, company.color, accentColor)도 강조 계열로 본다.
+// 리뉴얼 전 발표 페이지의 borderBottomColor: color 가 템플릿 문자열이 아니어서 빠져나갔다.
+const COLOR_IDENT = /\b[\w$.]*(?:[cC]olor|[aA]ccent)\w*/;
+const isAccentValue = (value, js) => isAccent(value) || (js && COLOR_IDENT.test(value.replace(/"[^"]*"|'[^']*'|`[^`]*`/g, "")));
 
 /** 값이 다음 줄로 이어지는 경우(줄이 ?·:·(·&&·||·+ 로 끝나거나 다음 줄이 ?·: 로 시작)만 최대 4줄을 이어 붙인다. */
 function statement(lines, i) {
@@ -113,9 +117,10 @@ for (const root of SCAN) {
     const rel = path.relative(ROOT, file);
     const src = fs.readFileSync(file, "utf8");
     const lines = src.split("\n");
+    const js = !file.endsWith(".css");
     lines.forEach((line, i) => {
-      if (SIDE_COLOR.test(line) && isAccent(valueAfter(statement(lines, i), SIDE_COLOR))) return hit("side-color", rel, i + 1, line);
-      if (SIDE_BORDER.test(line) && isAccent(valueAfter(statement(lines, i), SIDE_BORDER))) return hit("side-border", rel, i + 1, line);
+      if (SIDE_COLOR.test(line) && isAccentValue(valueAfter(statement(lines, i), SIDE_COLOR), js)) return hit("side-color", rel, i + 1, line);
+      if (SIDE_BORDER.test(line) && isAccentValue(valueAfter(statement(lines, i), SIDE_BORDER), js)) return hit("side-border", rel, i + 1, line);
       if (DOUBLE.test(line)) return hit("double-rule", rel, i + 1, line);
       if (TW_BORDER.test(line) && TW_ACCENT.test(line)) hit("tailwind", rel, i + 1, line);
     });

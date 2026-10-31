@@ -1,0 +1,15 @@
+{
+  "id": "r7-source-bare-color-variable",
+  "plan": "R7",
+  "check": "check-horizontal-accent.mjs",
+  "mode": "source",
+  "why": "JS 스타일 값이 맨 변수(borderBottomColor: color)면 템플릿 문자열 규칙에 걸리지 않습니다. 리뉴얼 전 발표 하이라이트의 회사색 2px 하단선이 이렇게 빠져나갔습니다.",
+  "mutate": [
+    {
+      "file": "app/presentation/[slug]/page.tsx",
+      "find": "data-presentation-highlight=\"\"\n              style={{\n",
+      "replace": "data-presentation-highlight=\"\"\n              style={{\n                borderBottom: \"2px solid\",\n                borderBottomColor: color,\n"
+    }
+  ],
+  "expect": "FAIL[horizontal-accent:side-color]"
+}
