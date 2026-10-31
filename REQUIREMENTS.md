@@ -29,7 +29,7 @@
 | R22 | (리뉴얼 R4) 구독 안내에는 고지 4항목·광고성 정보 수신 동의·만 14세 안내·위탁과 국외 이전이, 처리방침에는 12항목이 있어야 합니다. checked 속성은 0개여야 하고, 사이트 전체에 이메일 입력칸과 form action이 없어야 하며, 폼 주소가 비면 외부 구독 링크가 0개여야 합니다. | check-newsletter-consent.mjs, run-postbuild-gates.mjs, check-renewal-gates.selftest.mjs |
 | R23 | (리뉴얼 R5) 발견 전용·보도·영상 계층 주소에는 '공식' 출처 문구가 붙지 않습니다. 출처 문구는 lib/source-tier.ts 판정만 거쳐 정합니다. JS 판정과 Python 판정기의 대조는 판정기가 있는 기기에서 sync-source-registry.mjs --check로 확인합니다. | check-official-labels.mjs, run-postbuild-gates.mjs, check-renewal-gates.selftest.mjs, sync-source-registry.mjs |
 | R24 | (리뉴얼 R6) 테마 전환은 '라이트'·'다크' 두 버튼(type="button", aria-pressed), 저장값 우선과 prefers-color-scheme 추종, 저장소 try/catch, 첫 화면 전 초기화, CSS 세 겹 선택자를 갖춰야 합니다. 실제 전환 동작은 브라우저 시험으로 따로 확인합니다. | check-theme-contract.mjs, check-renewal-gates.selftest.mjs |
-| R25 | (리뉴얼 R7) 강조색·회사색으로 카드나 상자의 위아래·왼쪽 테두리 선을 다시 만들지 않습니다. 현재 게이트는 2px 이상 강조색 가로선과 CSS·HTML의 좌측 세로줄을 잡고, 삼항식·1px 강조선 보강은 리뉴얼 R16에서 합니다. | check-horizontal-accent.mjs, no_vertical_stripe_gate.sh |
+| R25 | (리뉴얼 R7) 강조색·회사색으로 카드나 상자의 위아래·왼쪽 테두리 선을 다시 만들지 않고, 색과 관계없이 이중선도 쓰지 않습니다. 가로선 게이트는 굵기와 관계없는 강조색 위아래 테두리, hover 때 테두리 색만 바꾸는 선, ::before·::after의 8px 이하 막대, 여러 줄 삼항식 값, double 테두리를 잡습니다. 세로줄은 CSS·HTML 게이트가 잡습니다. 함정 5개(r7-source-*)가 매 빌드 exit 1인지 자체시험이 확인합니다. | check-horizontal-accent.mjs, check-renewal-gates.selftest.mjs, no_vertical_stripe_gate.sh |
 
 마스터: `bash gates/verify_voidnews.sh .`. `npm run build`는 별도로 실제 프로덕션 빌드와 생성 HTML 누수를 검사합니다.
 리뉴얼 게이트(R19~R24)의 원본 검사와 함정 자체시험은 prebuild(`scripts/run-all-gates.mjs`)에서, 빌드 HTML 검사는 postbuild(`scripts/run-postbuild-gates.mjs`)에서 돕니다.

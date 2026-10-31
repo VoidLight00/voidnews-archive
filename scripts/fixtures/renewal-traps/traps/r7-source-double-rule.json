@@ -1,0 +1,15 @@
+{
+  "id": "r7-source-double-rule",
+  "plan": "R7",
+  "check": "check-horizontal-accent.mjs",
+  "mode": "source",
+  "why": "색이 없어도 신문형 이중선(3px double)은 사용자 규칙이 이름으로 금지합니다.",
+  "mutate": [
+    {
+      "file": "app/presentation/[slug]/page.tsx",
+      "find": "\n            borderTop: \"1px solid var(--rule)\",",
+      "replace": "\n            borderTop: \"3px double var(--rule)\","
+    }
+  ],
+  "expect": "FAIL[horizontal-accent:double-rule]"
+}

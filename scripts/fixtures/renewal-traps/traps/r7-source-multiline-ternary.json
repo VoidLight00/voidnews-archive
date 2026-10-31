@@ -1,0 +1,15 @@
+{
+  "id": "r7-source-multiline-ternary",
+  "plan": "R7",
+  "check": "check-horizontal-accent.mjs",
+  "mode": "source",
+  "why": "값이 여러 줄 삼항식으로 이어지는 회사색 상단선(리뉴얼 전 PostCard 펼침 상태)을 놓치면 안 됩니다.",
+  "mutate": [
+    {
+      "file": "app/[slug]/weekly/PostCard.tsx",
+      "find": "<div className=\"tc-feed-body\" style={{ padding: \"15px 15px 14px\", gap: 10 }}>",
+      "replace": "<div className=\"tc-feed-body\" style={{\n            padding: \"15px 15px 14px\",\n            gap: 10,\n            borderTop: expanded\n              ? `2px solid ${companyColor}`\n              : \"0\",\n          }}>"
+    }
+  ],
+  "expect": "FAIL[horizontal-accent:side-border]"
+}

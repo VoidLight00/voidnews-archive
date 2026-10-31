@@ -1,0 +1,15 @@
+{
+  "id": "r7-source-after-bar",
+  "plan": "R7",
+  "check": "check-horizontal-accent.mjs",
+  "mode": "source",
+  "why": "::after로 그린 2px 강조색 막대(리뉴얼 전 편집형 .cover::after)는 테두리가 아니라서 이전 게이트를 통과했습니다.",
+  "mutate": [
+    {
+      "file": "app/[slug]/editorial/editorial.module.css",
+      "find": ".coverImage {",
+      "replace": ".cover::after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: 2px;\n  background: var(--pill-color, var(--accent));\n}\n\n.coverImage {"
+    }
+  ],
+  "expect": "FAIL[horizontal-accent:pseudo-bar]"
+}

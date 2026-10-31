@@ -229,12 +229,6 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   margin: 0;
 }
 
-.rule-double {
-  border: 0;
-  border-top: 3px double var(--rule);
-  margin: 0;
-}
-
 /* ──────────────── Cards ──────────────── */
 
 .intel-card {
@@ -249,7 +243,6 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 .intel-card:hover {
   background: var(--card-hover);
-  border-bottom-color: var(--accent);
 }
 
 .intel-card:hover .card-reveal { opacity: 1; }
@@ -567,7 +560,8 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 }
 
 .tc-hero-card:hover .tc-hero-title {
-  text-decoration-color: var(--accent);
+  /* 히어로 바탕은 두 테마 모두 어두운 면이라, 라이트에서 잉크색이 되는 --accent 대신 주황을 고정합니다. */
+  text-decoration-color: var(--brand-orange);
 }
 
 .tc-source-thumb {
@@ -673,9 +667,9 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 }
 
 .tc-hero-labels span:last-child {
-  color: #08140f;
-  background: #ffd84d;
-  border: 1px solid rgba(255, 216, 77, 0.72);
+  color: var(--on-accent);
+  background: var(--accent-fill);
+  border: 1px solid var(--accent-fill);
   border-radius: 999px;
   padding: 4px 10px;
 }

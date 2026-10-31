@@ -1,0 +1,15 @@
+{
+  "id": "r7-source-company-1px-border",
+  "plan": "R7",
+  "check": "check-horizontal-accent.mjs",
+  "mode": "source",
+  "why": "회사색 템플릿 변수로 그린 1px 가로선(리뉴얼 전 AB media.tsx)이 돌아오면 막아야 합니다. 이전 게이트는 2px 이상만 잡았습니다.",
+  "mutate": [
+    {
+      "file": "app/ab/[edition]/components/media.tsx",
+      "find": "            padding: \"8px 10px\",",
+      "replace": "            borderTop: `1px solid ${color}`,\n            padding: \"8px 10px\","
+    }
+  ],
+  "expect": "FAIL[horizontal-accent:side-border]"
+}

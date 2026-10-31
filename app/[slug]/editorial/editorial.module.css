@@ -28,7 +28,7 @@
   flex-direction: column;
   gap: var(--space-md);
   padding-bottom: var(--space-xl);
-  border-bottom: 3px double var(--rule);
+  border-bottom: 1px solid var(--rule);
   margin-bottom: var(--space-2xl);
 }
 
@@ -248,23 +248,6 @@
   overflow: hidden;
   background: var(--surface-2);
   border-bottom: 1px solid var(--border);
-}
-
-/* hairline accent under thumbnail — surfaces on hover */
-.cover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: var(--pill-color, var(--accent));
-  opacity: 0;
-  transition: opacity var(--dur-base) var(--ease-out);
-}
-
-.card:hover .cover::after {
-  opacity: 1;
 }
 
 .coverImage {
@@ -1064,7 +1047,6 @@
 
 .referenceMain:hover {
   border-color: var(--border2);
-  border-bottom-color: var(--accent);
   background: var(--card-hover);
   transform: translateY(-2px);
 }

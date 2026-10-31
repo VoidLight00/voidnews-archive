@@ -483,7 +483,6 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
                       width: "100%",
                       aspectRatio: "16 / 9",
                       objectFit: "cover",
-                      borderBottom: "1px solid var(--accent)",
                     }}
                   />
                   {post.thumbnail.caption && (
@@ -600,7 +599,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
           style={{
             marginTop: "clamp(48px, 8vw, 80px)",
             paddingTop: "var(--space-xl)",
-            borderTop: "3px double var(--rule)",
+            borderTop: "1px solid var(--rule)",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",

@@ -38,7 +38,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div
           style={{
-            borderTop: "3px double var(--rule)",
+            borderTop: "1px solid var(--rule)",
             paddingTop: 28,
             marginBottom: 22,
           }}
@@ -277,7 +277,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
           <div style={{ maxWidth: 1440, margin: "0 auto" }}>
             <div
               style={{
-                borderTop: "3px double var(--rule)",
+                borderTop: "1px solid var(--rule)",
                 paddingTop: 28,
                 marginBottom: 22,
               }}
@@ -384,7 +384,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             <div style={{ maxWidth: 1280, margin: "0 auto" }}>
               <div
                 style={{
-                  borderTop: "3px double var(--rule)",
+                  borderTop: "1px solid var(--rule)",
                   paddingTop: 28,
                   marginBottom: 22,
                 }}
@@ -426,7 +426,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
             style={{
               maxWidth: 800,
               margin: "0 auto",
-              borderTop: "3px double var(--rule)",
+              borderTop: "1px solid var(--rule)",
               paddingTop: 36,
             }}
           >

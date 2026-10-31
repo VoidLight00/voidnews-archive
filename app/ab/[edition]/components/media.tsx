@@ -11,14 +11,11 @@ import { isSafeImageUrl, useOGData } from "@/app/[slug]/weekly/previews";
 
 export function ThumbnailPreview({
   image,
-  tone = "accent",
 }: {
   image?: { src: string; alt: string; caption?: string };
-  tone?: "accent" | "gold";
 }) {
   const { locale } = useLocale();
   if (!image) return null;
-  const color = tone === "gold" ? "var(--gold)" : "var(--accent)";
   return (
     <figure
       style={{
@@ -44,7 +41,6 @@ export function ThumbnailPreview({
       {image.caption && (
         <figcaption
           style={{
-            borderTop: `1px solid ${color}`,
             padding: "8px 10px",
             fontFamily: "var(--mono)",
             fontSize: 11,
@@ -101,7 +97,6 @@ export function EditorialImageFrame({
       ref={ref}
       className="tc-source-thumb tc-source-thumb--card"
       style={{
-        borderBottom: `1px solid ${color}`,
         background: `radial-gradient(circle at 24% 18%, ${color}33 0%, transparent 42%), linear-gradient(135deg, var(--surface-2), var(--card))`,
       }}
     >
@@ -150,7 +145,7 @@ export function ImageGallery({
       </div>
       <div style={{ display: "grid", gap: 12 }}>
         {images.map((image) => (
-          <ThumbnailPreview key={image.src} image={image} tone={tone} />
+          <ThumbnailPreview key={image.src} image={image} />
         ))}
       </div>
     </div>

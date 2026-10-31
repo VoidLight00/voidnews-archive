@@ -446,7 +446,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
 
           {post.visualComparisons && post.visualComparisons.length > 0 ? (
             <section aria-label={activeLang === "ko" ? "모델 시각 결과 비교" : "Visual model comparisons"} style={{ margin: "28px 0" }}>
-              <div style={{ borderTop: "3px double var(--rule)", paddingTop: 20, marginBottom: 16 }}>
+              <div style={{ borderTop: "1px solid var(--rule)", paddingTop: 20, marginBottom: 16 }}>
                 <span className="mono" style={{ display: "block", color: "var(--accent)", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>
                   {activeLang === "ko" ? "공개 결과 비교" : "Public examples"}
                 </span>
