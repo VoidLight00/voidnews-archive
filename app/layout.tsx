@@ -5,7 +5,14 @@ import TodayStamp from "./TodayStamp";
 import LocaleToggle from "./LocaleToggle";
 import { LocaleProvider } from "./LocaleProvider";
 import { getLatestSlug, getWeekList } from "@/lib/data";
-import { CHANNELS, GUIDE_LINKS, HEADER_CHANNELS, channelLinkProps, getChannel } from "@/lib/site-links";
+import {
+  CHANNELS,
+  GUIDE_LINKS,
+  HEADER_CHANNELS,
+  SUBSCRIBE_LINK,
+  channelLinkProps,
+  getChannel,
+} from "@/lib/site-links";
 import "./globals.css";
 import "./runway.css";
 
@@ -34,7 +41,7 @@ export const metadata: Metadata = {
   },
 };
 
-// 운영자 채널 7개와 바닥글 안내 링크는 lib/site-links.ts 한 곳에서 정의합니다(리뉴얼 계획 R1).
+// 운영자 채널 7개, 바닥글 안내 링크, 구독 링크는 lib/site-links.ts 한 곳에서 정의합니다(리뉴얼 계획 R1·R4).
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // 첫 화면을 그리기 전에 테마를 정합니다. 저장값(voidnews-theme)이 'light'·'dark'이면 그 값을,
@@ -248,7 +255,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {label}
                 </a>
               ))}
-              <span aria-hidden className="site-nav-ext" style={{ width: 1, height: 18, background: "var(--border)" }} />
+              <a href={SUBSCRIBE_LINK.href} className="site-nav-subscribe">
+                {SUBSCRIBE_LINK.label}
+              </a>
+              <span aria-hidden style={{ width: 1, height: 18, background: "var(--border)" }} />
               <LocaleToggle />
               <ThemeToggle />
             </div>

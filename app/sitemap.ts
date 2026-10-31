@@ -51,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...editorialPosts,
     ...abPosts,
     ...presentations,
+    { url: `${BASE}/newsletter/`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/privacy/`, changeFrequency: "yearly", priority: 0.1 },
     { url: `${BASE}/tos/`, changeFrequency: "yearly", priority: 0.1 },
   ];
 }

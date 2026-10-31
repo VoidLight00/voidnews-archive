@@ -983,9 +983,37 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   color: var(--on-accent);
 }
 
-/* The header wraps into two rows below 1024px. With X·Threads·GitHub in the header the single
-   row needs a viewport of about 872px (natural widths measured 2026-11-01), so the old 820px
-   breakpoint let the primary nav overlap the channel links. Re-measure when header items change. */
+/* Header '구독' link to /newsletter/ — a filled ink pill, so it reads as the one action and
+   stays apart from the orange pressed theme button. Text contrast: light #fff on #0f0f10 19.16:1,
+   dark #0f0f10 on #f5f5f4 17.56:1; hover fill --text-soft keeps both above 10:1. */
+.site-nav-subscribe {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 12px;
+  border: 1px solid var(--text);
+  border-radius: var(--radius-pill);
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--dur-fast), border-color var(--dur-fast);
+}
+
+.site-nav-subscribe:hover {
+  background: var(--text-soft);
+  border-color: var(--text-soft);
+}
+
+/* The header wraps into two rows below 1024px. With X·Threads·GitHub and '구독' in the header the
+   single row needs about 880px of content, a viewport of about 936px (natural widths measured
+   2026-11-01), so the old 820px breakpoint let the primary nav overlap the channel links.
+   Re-measure when header items change. */
 @media (max-width: 1023px) {
   .site-nav-row {
     height: auto !important;

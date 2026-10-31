@@ -1,5 +1,5 @@
-// 운영자 연결 링크를 한 곳에서 정의합니다(리뉴얼 계획 R1).
-// 헤더와 바닥글은 이 파일만 읽습니다. 주소를 바꿀 때는 이 파일 한 곳만 고칩니다.
+// 운영자 연결 링크(리뉴얼 계획 R1)와 뉴스레터 구독 주소(R4)를 한 곳에서 정의합니다.
+// 헤더·바닥글·구독 페이지는 이 파일만 읽습니다. 주소를 바꿀 때는 이 파일 한 곳만 고칩니다.
 // 주소는 공식 포트폴리오(voidlight.kr)와 GitHub 로그인 계정에서 확인한 값입니다(2026-11-01).
 
 export type ChannelId =
@@ -103,9 +103,40 @@ export function channelLinkProps(channel: Channel): {
   return channel.newTab ? { ...base, target: "_blank", rel: "noopener noreferrer" } : base;
 }
 
+export const NEWSLETTER_PATH = "/newsletter/";
+export const PRIVACY_PATH = "/privacy/";
+export const RSS_PATH = "/rss.xml";
+
 /** 바닥글 '안내' 묶음의 사이트 안 링크입니다. */
 export const GUIDE_LINKS: ReadonlyArray<{ readonly id: string; readonly label: string; readonly href: string }> = [
   { id: "tos", label: "이용약관", href: "/tos/" },
-  { id: "rss", label: "RSS", href: "/rss.xml" },
+  { id: "privacy", label: "개인정보 처리방침", href: PRIVACY_PATH },
+  { id: "newsletter", label: "뉴스레터 구독", href: NEWSLETTER_PATH },
+  { id: "rss", label: "RSS", href: RSS_PATH },
   { id: "ai-txt", label: "ai.txt", href: "/.well-known/ai.txt" },
 ];
+
+/** 헤더의 구독 링크입니다. 사이트 안 페이지로 이동하므로 새 탭을 쓰지 않습니다. */
+export const SUBSCRIBE_LINK = { label: "구독", href: NEWSLETTER_PATH } as const;
+
+/**
+ * 스티비 호스팅 구독 폼 주소입니다(리뉴얼 계획 R4, 4.2절). 사용자님이 스티비 계정을 만든 뒤 이 값을 넣습니다.
+ * 빈 문자열이면 /newsletter/는 신청 버튼 대신 '아직 받지 않습니다' 안내와 RSS 링크만 그리고,
+ * 외부 구독 링크는 하나도 그리지 않습니다. 사이트는 이메일 주소를 직접 받지 않습니다.
+ */
+export const NEWSLETTER_FORM_URL: string = "";
+
+/**
+ * 구독 폼 주소를 검사해 돌려줍니다. 비어 있거나 https 주소가 아니면 null을 돌려주어
+ * 구독 페이지가 신청 버튼을 그리지 않게 합니다.
+ */
+export function resolveNewsletterFormUrl(raw: string = NEWSLETTER_FORM_URL): string | null {
+  const value = raw.trim();
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
