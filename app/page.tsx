@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const latestSlug = getLatestSlug();
-  const weeks = getWeekList().slice(0, 8);
+  const weeks = getWeekList().slice(-8).reverse(); // getWeekList 는 오래된 순: 마지막 8개를 최신순으로 보여 준다
   const editions = getEditionList().slice(0, 4);
 
   return (
