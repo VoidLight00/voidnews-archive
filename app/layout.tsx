@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import ThemeToggle from "./ThemeToggle";
 import TodayStamp from "./TodayStamp";
 import LocaleToggle from "./LocaleToggle";
@@ -326,12 +325,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </footer>
-
-        <Script
-          src="https://platform.twitter.com/widgets.js"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
+        {/* X 위젯 스크립트는 X 게시물을 보여 주는 컴포넌트(previews.tsx, media.tsx XPostEmbed)가 필요할 때만 불러옵니다.
+            모든 화면에서 부르면 X 게시물이 없는 처리방침·구독 안내 화면에서도 방문자 접속 정보가 X로 갑니다. */}
         </LocaleProvider>
       </body>
     </html>

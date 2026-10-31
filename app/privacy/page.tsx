@@ -33,10 +33,12 @@ const OVERSEAS_TRANSFER: ReadonlyArray<readonly [string, string]> = [
 ];
 
 const EXTERNAL_SERVICES: ReadonlyArray<readonly [string, string]> = [
-  ["X 게시물 표시", "platform.twitter.com, publish.twitter.com"],
+  ["글꼴(Pretendard, 모든 화면)", "cdn.jsdelivr.net"],
+  ["X 게시물 표시", "platform.twitter.com, publish.twitter.com과 X가 게시물 표시에 쓰는 twimg.com 주소"],
+  ["Threads 게시물 표시", "www.threads.com, www.threads.net"],
+  ["YouTube 영상 표시", "www.youtube.com, i.ytimg.com과 YouTube가 영상 재생에 쓰는 주소"],
   ["링크 미리보기", "api.microlink.io"],
-  ["Threads 게시물 표시", "www.threads.net"],
-  ["글꼴(Pretendard)", "cdn.jsdelivr.net"],
+  ["기사 원문 이미지", "기사 원문 사이트와 그 사이트가 쓰는 이미지 서버(예: storage.googleapis.com, storage.ghost.io)"],
 ];
 
 function TermList({ rows }: { rows: ReadonlyArray<readonly [string, string]> }) {
@@ -169,8 +171,9 @@ export default function PrivacyPage() {
           11. 외부 서비스 호출
         </h2>
         <p>
-          일부 화면은 내용을 보여 주기 위해 방문자의 브라우저가 아래 외부 서비스에 직접 접속합니다. 이때 해당
-          서비스에 IP 주소 같은 접속 정보가 전달됩니다.
+          모든 화면은 글꼴을 내려받기 위해 cdn.jsdelivr.net에 접속합니다. 그 밖에 X·Threads 게시물, YouTube 영상,
+          링크 미리보기, 기사 원문 이미지를 보여 주는 화면에서는 방문자의 브라우저가 아래 외부 서비스에 직접 접속합니다.
+          이때 해당 서비스에 IP 주소 같은 접속 정보가 전달됩니다.
         </p>
         <TermList rows={EXTERNAL_SERVICES} />
       </section>

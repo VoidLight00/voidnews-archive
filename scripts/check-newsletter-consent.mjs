@@ -8,9 +8,10 @@
 //
 // 원본 검사(prebuild): app/newsletter/page.tsx의 고지 4항목·광고성 정보 수신 동의·만 14세·위탁과 국외 이전,
 //   app/privacy/page.tsx의 12항목, 두 페이지의 checked 속성 0개, app/ 전체의 이메일 입력칸·form action 0개,
-//   구독 폼 주소 검사 함수(https만 허용)를 확인합니다.
+//   구독 폼 주소 검사 함수(https만 허용), 코드가 직접 부르는 외부 주소가 처리방침 11항 목록에 있는지 확인합니다.
 // 빌드 검사(--html, postbuild): 같은 항목을 out/newsletter/·out/privacy/에서 확인하고, 모든 페이지에서
-//   이메일 입력칸과 form action이 0개인지, 폼 주소가 비었을 때 외부 구독 링크가 0개인지 확인합니다.
+//   이메일 입력칸과 form action이 0개인지, 폼 주소가 비었을 때 외부 구독 링크가 0개인지, 모든 페이지의
+//   iframe·script·link 외부 호스트가 처리방침 11항 목록에 있고 외부 이미지가 있으면 '기사 원문 이미지' 항목이 있는지 확인합니다.
 //   --form-url <주소>  lib/site-links.ts 대신 쓸 구독 폼 주소(빈 문자열 = 미설정, 함정 시험용)
 // 종료 코드: 0 통과 · 1 위반 · 2 입력 오류(out/ 없음 포함)
 import fs from "node:fs";
@@ -179,6 +180,55 @@ function checkSiteForms(outDir, pages, report) {
   }
 }
 
+// ── 외부 서비스 목록 대조(처리방침 11항, 2026-11-01 독립 검토 지적) ──────────────
+// 처리방침은 공개 의무 문서라, 목록이 실제 호출과 다르면 그 자체로 결함입니다.
+// 코드가 직접 부르는 주소(fetch, script·iframe src)는 원본에서, 데이터가 만드는 임베드·이미지 주소는
+// 빌드 HTML에서 모읍니다. 이미지 원본 호스트는 기사마다 달라 '기사 원문 이미지' 항목 하나로 묶습니다.
+const CODE_HOST = /(?:fetch\(\s*|\.src\s*=\s*|src=\{?\s*)[`'"]https:\/\/([a-z0-9.-]+)/g;
+const IMAGE_CATEGORY = "기사 원문 이미지";
+
+function checkSourceHosts(root, report) {
+  const privacy = readText(root, PRIVACY);
+  for (const rel of listFiles(root, ["app", "lib"], [".ts", ".tsx"])) {
+    for (const m of readText(root, rel).matchAll(CODE_HOST)) {
+      if (!privacy.includes(m[1])) report.fail("external-host", `${rel}: 코드가 ${m[1]}에 접속하는데 ${PRIVACY} 외부 서비스 목록에 없습니다`);
+    }
+  }
+}
+
+function pageHosts(html) {
+  const embeds = new Set();
+  const images = new Set();
+  for (const tag of html.matchAll(/<(iframe|script|link|img|source)\b([^>]*)>/gi)) {
+    const name = tag[1].toLowerCase();
+    const attrs = tag[2];
+    const rel = (attrs.match(/\brel="([^"]*)"/i)?.[1] ?? "").toLowerCase();
+    if (name === "link" && /canonical|alternate|icon|manifest/.test(rel)) continue;
+    const image = name === "img" || name === "source" || (name === "link" && /\bas="image"/i.test(attrs));
+    for (const url of attrs.matchAll(/\b(?:src|href|srcset)="([^"]*)"/gi)) {
+      for (const part of url[1].split(",")) {
+        const host = part.trim().match(/^(?:https?:)?\/\/([a-z0-9.-]+)/i)?.[1]?.toLowerCase();
+        if (host) (image ? images : embeds).add(host);
+      }
+    }
+  }
+  return { embeds, images };
+}
+
+function checkPageHosts(outDir, pages, privacy, report) {
+  const listed = section(privacy, 'data-privacy-item="external-services"', "</section>", report, "privacy/index.html external-services");
+  if (listed === null) return;
+  const missing = new Map();
+  let imagePages = 0;
+  for (const rel of pages) {
+    const { embeds, images } = pageHosts(fs.readFileSync(path.join(outDir, rel), "utf8"));
+    for (const host of embeds) if (!listed.includes(host) && !missing.has(host)) missing.set(host, rel);
+    if (images.size) imagePages += 1;
+  }
+  for (const [host, rel] of missing) report.fail("external-host", `${rel}: ${host}에 접속하는데 처리방침 외부 서비스 목록에 없습니다`);
+  if (imagePages && !listed.includes(IMAGE_CATEGORY)) report.fail("external-host", `외부 이미지를 쓰는 페이지 ${imagePages}개 — 처리방침에 '${IMAGE_CATEGORY}' 항목이 없습니다`);
+}
+
 function checkBuilt(opts, report) {
   const pages = requireOut(opts.out);
   const newsletter = readRaw(opts.out, "newsletter/index.html", report);
@@ -190,6 +240,7 @@ function checkBuilt(opts, report) {
   if (privacy !== null) {
     inspectPrivacy(normalizeMarkup(privacy, true), "privacy/index.html", true, report);
     if (findAll(parseHtml(privacy), (el) => hasAttr(el, "checked")).length) report.fail("checked", "privacy/index.html: checked 속성이 있습니다");
+    checkPageHosts(opts.out, pages, normalizeMarkup(privacy, true), report);
   }
   checkSiteForms(opts.out, pages, report);
   return pages.length;
@@ -206,5 +257,6 @@ runGate(GATE, (opts) => {
   inspectPrivacy(normalizeMarkup(readText(opts.root, PRIVACY), false), PRIVACY, false, report);
   checkSourceForms(opts.root, report);
   checkFormUrlGuard(opts.root, report);
+  checkSourceHosts(opts.root, report);
   return report.finish("구독 고지 4항목·광고성 정보 수신 동의·만 14세·위탁과 국외 이전, 처리방침 12항목, checked 0개, 이메일 입력칸·form action 0개를 확인했습니다.");
 });

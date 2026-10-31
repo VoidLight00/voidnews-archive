@@ -1,0 +1,15 @@
+{
+  "id": "r4-source-unlisted-runtime-host",
+  "plan": "R4",
+  "check": "check-newsletter-consent.mjs",
+  "mode": "source",
+  "why": "코드가 처리방침 목록에 없는 주소로 직접 요청(fetch)하면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "app/[slug]/weekly/previews.tsx",
+      "find": "fetch(`https://api.microlink.io/?url=",
+      "replace": "fetch(`https://api.unlisted-preview.io/?url="
+    }
+  ],
+  "expect": "FAIL[newsletter-consent:external-host]"
+}

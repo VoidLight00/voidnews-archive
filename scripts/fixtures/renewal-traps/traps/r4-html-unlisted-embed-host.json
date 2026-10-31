@@ -1,0 +1,15 @@
+{
+  "id": "r4-html-unlisted-embed-host",
+  "plan": "R4",
+  "check": "check-newsletter-consent.mjs",
+  "mode": "html",
+  "why": "처리방침 11항 목록에 없는 외부 임베드(iframe)가 빌드 페이지에 생기면 막아야 합니다. 리뉴얼 전 목록은 YouTube·www.threads.com을 빠뜨렸습니다.",
+  "mutate": [
+    {
+      "file": "out/2099-w01/alpha/index.html",
+      "find": "<main id=\"main-content\">",
+      "replace": "<main id=\"main-content\"><iframe src=\"https://player.vimeo.com/video/1\" title=\"fixture\"></iframe>"
+    }
+  ],
+  "expect": "FAIL[newsletter-consent:external-host]"
+}
