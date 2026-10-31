@@ -33,6 +33,17 @@ export const metadata: Metadata = {
   },
 };
 
+// 운영자 채널: 공식 포트폴리오(voidlight.kr) 원본과 GitHub 로그인 계정에서 확인한 주소만 쓴다(2026-11-01)
+const CHANNELS = [
+  { label: "GitHub", href: "https://github.com/VoidLight00" },
+  { label: "X @VoidLight_Hyeon", href: "https://x.com/VoidLight_Hyeon" },
+  { label: "Threads @voidlight00", href: "https://www.threads.com/@voidlight00" },
+  { label: "카카오톡 그룹챗", href: "https://open.kakao.com/o/gugo7tCh" },
+  { label: "카카오톡 1:1", href: "https://open.kakao.com/o/srSlAiLd" },
+  { label: "이메일", href: "mailto:icthyeon00@gmail.com" },
+  { label: "voidlight.kr", href: "https://voidlight.kr" },
+];
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Anti-flicker: apply stored theme before body paints
   const themeInit = `
@@ -320,25 +331,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }}
             >
               <p>An AI intelligence archive — fair use, source-linked.</p>
-              <p style={{ marginTop: 4 }}>
-                <a
-                  href="https://www.threads.com/@voidlight00"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "var(--muted)", textDecoration: "none" }}
-                >
-                  @voidlight00
-                </a>
-                <span style={{ margin: "0 8px", color: "var(--dim)" }}>·</span>
-                <a
-                  href="https://x.com/VoidLight_Hyeon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "var(--muted)", textDecoration: "none" }}
-                >
-                  @VoidLight_Hyeon
-                </a>
-              </p>
+              <nav
+                aria-label="VOIDLIGHT 채널"
+                style={{ marginTop: 4, display: "flex", flexWrap: "wrap", justifyContent: "flex-end", rowGap: 4 }}
+              >
+                {CHANNELS.map((c, i) => (
+                  <span key={c.href}>
+                    {i > 0 && (
+                      <span aria-hidden="true" style={{ margin: "0 8px", color: "var(--dim)" }}>·</span>
+                    )}
+                    <a
+                      href={c.href}
+                      {...(c.href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer", "aria-label": `${c.label}, 새 탭` }
+                        : {})}
+                      style={{ color: "var(--muted)", textDecoration: "none" }}
+                    >
+                      {c.label}
+                    </a>
+                  </span>
+                ))}
+              </nav>
               <p
                 style={{
                   marginTop: 10,
