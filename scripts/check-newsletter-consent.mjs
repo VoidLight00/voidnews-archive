@@ -183,7 +183,7 @@ function checkSiteForms(outDir, pages, report) {
 // ── 외부 서비스 목록 대조(처리방침 11항, 2026-11-01 독립 검토 지적) ──────────────
 // 처리방침은 공개 의무 문서라, 목록이 실제 호출과 다르면 그 자체로 결함입니다.
 // 코드가 직접 부르는 주소(fetch, script·iframe src)는 원본에서, 데이터가 만드는 임베드·이미지 주소는
-// 빌드 HTML에서 모읍니다. 이미지 원본 호스트는 기사마다 달라 '기사 원문 이미지' 항목 하나로 묶습니다.
+// 빌드 HTML·CSS에서 모읍니다. 이미지 원본 호스트는 기사마다 달라 '기사 원문 이미지' 항목 하나로 묶습니다.
 const CODE_HOST = /(?:fetch\(\s*|\.src\s*=\s*|src=\{?\s*)[`'"]https:\/\/([a-z0-9.-]+)/g;
 const IMAGE_CATEGORY = "기사 원문 이미지";
 
@@ -199,13 +199,14 @@ function checkSourceHosts(root, report) {
 function pageHosts(html) {
   const embeds = new Set();
   const images = new Set();
-  for (const tag of html.matchAll(/<(iframe|script|link|img|source)\b([^>]*)>/gi)) {
+  for (const tag of html.matchAll(/<(iframe|script|link|img|source|video|audio|track)\b([^>]*)>/gi)) {
     const name = tag[1].toLowerCase();
     const attrs = tag[2];
     const rel = (attrs.match(/\brel="([^"]*)"/i)?.[1] ?? "").toLowerCase();
     if (name === "link" && /canonical|alternate|icon|manifest/.test(rel)) continue;
-    const image = name === "img" || name === "source" || (name === "link" && /\bas="image"/i.test(attrs));
-    for (const url of attrs.matchAll(/\b(?:src|href|srcset)="([^"]*)"/gi)) {
+    const playable = /\btype="(video|audio)\//i.test(attrs);
+    const image = name === "img" || (name === "source" && !playable) || (name === "link" && /\bas="image"/i.test(attrs));
+    for (const url of attrs.matchAll(/\b(?:src|href|srcset|poster)="([^"]*)"/gi)) {
       for (const part of url[1].split(",")) {
         const host = part.trim().match(/^(?:https?:)?\/\/([a-z0-9.-]+)/i)?.[1]?.toLowerCase();
         if (host) (image ? images : embeds).add(host);
@@ -213,6 +214,20 @@ function pageHosts(html) {
     }
   }
   return { embeds, images };
+}
+
+// 빌드 CSS의 @import·url() 외부 호스트입니다. 원본의 @import는 번들러가 버리기도 하므로 결과 CSS를 봅니다.
+const CSS_HOST = /(?:@import\s+(?:url\(\s*)?["']?|url\(\s*["']?)(?:https?:)?\/\/([a-z0-9.-]+)/gi;
+
+function cssHosts(outDir) {
+  const hosts = new Map();
+  for (const rel of listFiles(outDir, ["."], [".css"])) {
+    for (const m of fs.readFileSync(path.join(outDir, rel), "utf8").matchAll(CSS_HOST)) {
+      const host = m[1].toLowerCase();
+      if (!hosts.has(host)) hosts.set(host, rel.replace(/^\.\//, ""));
+    }
+  }
+  return hosts;
 }
 
 function checkPageHosts(outDir, pages, privacy, report) {
@@ -225,6 +240,7 @@ function checkPageHosts(outDir, pages, privacy, report) {
     for (const host of embeds) if (!listed.includes(host) && !missing.has(host)) missing.set(host, rel);
     if (images.size) imagePages += 1;
   }
+  for (const [host, rel] of cssHosts(outDir)) if (!listed.includes(host) && !missing.has(host)) missing.set(host, rel);
   for (const [host, rel] of missing) report.fail("external-host", `${rel}: ${host}에 접속하는데 처리방침 외부 서비스 목록에 없습니다`);
   if (imagePages && !listed.includes(IMAGE_CATEGORY)) report.fail("external-host", `외부 이미지를 쓰는 페이지 ${imagePages}개 — 처리방침에 '${IMAGE_CATEGORY}' 항목이 없습니다`);
 }

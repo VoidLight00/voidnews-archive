@@ -8,11 +8,20 @@
 // 사용: node scripts/test-renewal-dynamic.mjs [--url <주소>] [--out <폴더>]
 //   기본 주소: VOIDNEWS_TEST_URL, 없으면 http://127.0.0.1:3142(정적 out/을 띄운 주소)
 // 결과: <out>/dynamic/renewal-dynamic.json과 스크린숏(기본 out = _workspace/renewal/ui)
-// 종료 코드: 0 통과 · 1 실패
+// 종료 코드: 0 통과 · 1 실패 · 2 실행 오류(Playwright·자료 없음)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium } from 'playwright';
+import { loadTsModule } from './lib/renewal-gate-kit.mjs';
+
+// Playwright를 불러오지 못하면 화면 실패(1)와 구분되도록 실행 오류(2)로 끝냅니다.
+let chromium;
+try {
+  ({ chromium } = await import('playwright'));
+} catch (error) {
+  console.error(`CRASH Playwright를 불러오지 못했습니다(${error.message}). 상위 폴더나 이 저장소에 playwright를 설치한 뒤 다시 실행하십시오.`);
+  process.exit(2);
+}
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
@@ -24,7 +33,16 @@ const BASE = arg('--url', process.env.VOIDNEWS_TEST_URL ?? 'http://127.0.0.1:314
 const OUT = path.join(path.resolve(arg('--out', path.join(ROOT, '_workspace/renewal/ui'))), 'dynamic');
 const SHOTS = path.join(OUT, 'shots');
 fs.mkdirSync(SHOTS, { recursive: true });
-const ALLOWED = new Set([new URL(BASE).hostname, '127.0.0.1', 'fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net']);
+const ALLOWED = new Set([new URL(BASE).hostname, '127.0.0.1', 'cdn.jsdelivr.net']);
+// 회사 아카이브 카드 수는 고정하지 않고 lib/data.ts의 그 주 글 수에서 계산합니다. 매일 자동 게시가 w44에 카드를 더해도
+// 시험이 코드 변경 없이 실패하지 않게 하려는 것입니다(2026-11-01 재검토 N1). 시험할 사이트와 같은 커밋에서 실행합니다.
+const ARCHIVE_WEEK = '2026-w44';
+const archiveData = loadTsModule(path.join(ROOT, 'lib/data.ts')).getWeek(ARCHIVE_WEEK);
+if (!archiveData) {
+  console.error(`CRASH lib/data.ts에 ${ARCHIVE_WEEK}가 없습니다.`);
+  process.exit(2);
+}
+const ARCHIVE_POSTS = archiveData.companies.reduce((sum, company) => sum + company.posts.length, 0);
 const failures = [];
 const log = [];
 const ok = (id, cond, detail) => {
@@ -57,7 +75,7 @@ try {
       const ready = () => page.waitForSelector('.vn-theme-toggle[data-ready]', { state: 'attached', timeout: 15000 });
 
       // 1) w44 company archive: expand one company, every PostCard shows one visible 24px badge.
-      await page.goto(`${BASE}/2026-w44/`, { waitUntil: 'networkidle' });
+      await page.goto(`${BASE}/${ARCHIVE_WEEK}/`, { waitUntil: 'networkidle' });
       await ready();
       const archive = page.locator('section[aria-label="회사 아카이브"]');
       const headers = archive.locator('section > button[aria-expanded="false"]');
@@ -70,7 +88,7 @@ try {
       const nCards = await cards.count();
       const perCard = await cards.evaluateAll((els) => els.map((el) => [...el.querySelectorAll('[data-ai-author="pium"]')].filter((b) => b.checkVisibility()).length));
       const archBadges = await badgeInfo(archive.locator('[data-ai-author="pium"]'));
-      ok(`archive-postcard ${tag}`, nCards === 4 && perCard.every((n) => n === 1) && archBadges.every((b) => b.visible && b.loaded && b.imgW === 24 && b.text.startsWith('피움 작성 · AI')), { nHeaders, nCards, perCard, badges: archBadges });
+      ok(`archive-postcard ${tag}`, nCards === ARCHIVE_POSTS && perCard.every((n) => n === 1) && archBadges.every((b) => b.visible && b.loaded && b.imgW === 24 && b.text.startsWith('피움 작성 · AI')), { nHeaders, nCards, expected: ARCHIVE_POSTS, perCard, badges: archBadges });
       if (width === 375) await cards.first().screenshot({ path: path.join(SHOTS, `dyn-archive-postcard-${theme}-0375.png`) });
 
       // 2) header '구독' goes to /newsletter/

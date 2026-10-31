@@ -12,13 +12,23 @@
 //   --trap-css  불러온 뒤 CSS를 끼워 넣어, 알려진 결함이 있으면 이 시험이 실패하는지 확인합니다
 // 결과: <out>/<tag>/renewal-ui.json과 스크린숏(기본 out = _workspace/renewal/ui, git 제외 폴더)
 // 외부 접속: 시험 대상 주소와 글꼴 CDN만 허용하고 나머지(X 위젯·링크 미리보기)는 막아 다른 서비스를 부르지 않습니다.
+// 기대값(최신 회차, 운영자 링크)은 이 저장소의 lib/data.ts·lib/site-links.ts에서 읽으므로, 시험할 사이트와 같은 커밋에서 실행합니다.
+// 회차·글 수를 시험에 고정하면 매일 자동 게시가 카드를 더하는 순간 코드 변경 없이 실패합니다(2026-11-01 재검토 N1).
 // 종료 코드: 0 통과 · 1 실패 · 2 실행 오류
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium } from 'playwright';
 import { loadTsModule } from './lib/renewal-gate-kit.mjs';
 import { analyzePage } from './lib/renewal-ui-page.mjs';
+
+// Playwright를 불러오지 못하면 화면 실패(1)와 구분되도록 실행 오류(2)로 끝냅니다.
+let chromium;
+try {
+  ({ chromium } = await import('playwright'));
+} catch (error) {
+  console.error(`CRASH Playwright를 불러오지 못했습니다(${error.message}). 상위 폴더나 이 저장소에 playwright를 설치한 뒤 다시 실행하십시오.`);
+  process.exit(2);
+}
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
@@ -61,10 +71,11 @@ const THEMES = ['light', 'dark'];
 const siteLinks = loadTsModule(path.join(ROOT, 'lib/site-links.ts'));
 const EXPECTED_CHANNELS = siteLinks.CHANNELS.map((channel) => [channel.href, channel.label]);
 const EXPECTED_HEADER = siteLinks.HEADER_CHANNELS.map(({ id, label }) => [siteLinks.getChannel(id).href, label]);
+const LATEST_PATH = `/${loadTsModule(path.join(ROOT, 'lib/data.ts')).getLatestSlug()}/`;
 
-// Page-initiated loads allowed: the site origin and the two font CDNs the CSS imports.
+// Page-initiated loads allowed: the site origin and the font CDN (jsDelivr Pretendard) that the layout loads.
 // Everything else (X widgets, link previews) is blocked so this check calls no other service.
-const ALLOWED_HOSTS = new Set([new URL(BASE).hostname, '127.0.0.1', 'localhost', 'fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net']);
+const ALLOWED_HOSTS = new Set([new URL(BASE).hostname, '127.0.0.1', 'localhost', 'cdn.jsdelivr.net']);
 
 const failures = [];
 const notes = [];
@@ -334,8 +345,8 @@ async function main() {
       const context = await prepareContext(browser, { width: 375, colorScheme: 'light' });
       const page = await context.newPage();
       await page.goto(BASE + '/', { waitUntil: 'networkidle' });
-      await page.waitForURL((u) => u.pathname === '/2026-w44/', { timeout: 10000 }).catch(() => {});
-      if (new URL(page.url()).pathname === '/2026-w44/') pass('home', 'JS redirect to /2026-w44/');
+      await page.waitForURL((u) => u.pathname === LATEST_PATH, { timeout: 10000 }).catch(() => {});
+      if (new URL(page.url()).pathname === LATEST_PATH) pass('home', `JS redirect to ${LATEST_PATH}`);
       else fail('home', `JS redirect landed on ${page.url()}`);
       await context.close();
     }

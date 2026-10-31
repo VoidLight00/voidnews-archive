@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap");
+/* Google Fonts @import(JetBrains Mono·Space Grotesk·Fraunces)는 빌드 CSS에서 빠져 운영 화면이 한 번도 불러오지 않았으므로 지웠습니다.
+   쓰려면 처리방침 11항 외부 서비스 목록에 fonts.googleapis.com·fonts.gstatic.com을 먼저 넣으십시오(2026-11-01 재검토 N3). */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 @import "tailwindcss";
 

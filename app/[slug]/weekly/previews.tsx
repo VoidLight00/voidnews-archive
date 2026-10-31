@@ -26,8 +26,23 @@ export function TweetEmbed({ xUrl, expanded }: { xUrl: string; expanded: boolean
     const twitterWindow = window as Window & {
       twttr?: { widgets?: { load: (element?: HTMLElement) => void } };
     };
-
-    twitterWindow.twttr?.widgets?.load(tweetRef.current);
+    const target = tweetRef.current;
+    const load = () => twitterWindow.twttr?.widgets?.load(target);
+    if (twitterWindow.twttr?.widgets) {
+      load();
+      return;
+    }
+    // 모든 화면에서 위젯 스크립트를 부르지 않으므로(app/layout.tsx), 카드를 처음 펼칠 때 직접 불러옵니다.
+    const existing = document.querySelector<HTMLScriptElement>('script[src="https://platform.twitter.com/widgets.js"]');
+    if (existing) {
+      existing.addEventListener("load", load, { once: true });
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.onload = load;
+    document.body.appendChild(script);
   }, [expanded, xUrl]);
 
   return <div ref={tweetRef} style={{ margin: "4px 0", minHeight: 120 }} />;

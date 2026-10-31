@@ -1,0 +1,15 @@
+{
+  "id": "r4-html-css-import-unlisted-host",
+  "plan": "R4",
+  "check": "check-newsletter-consent.mjs",
+  "mode": "html",
+  "why": "빌드 CSS가 처리방침 목록에 없는 외부 글꼴(@import)을 부르면 막아야 합니다. 원본 globals.css 1행의 Google Fonts @import는 지금은 번들러가 버리지만, 동작이 바뀌면 모든 화면이 목록 밖 호스트에 접속합니다.",
+  "mutate": [
+    {
+      "file": "out/_next/static/css/fixture.css",
+      "find": "body{margin:0}",
+      "replace": "@import url(\"https://fonts.googleapis.com/css2?family=Fixture\");\nbody{margin:0}"
+    }
+  ],
+  "expect": "FAIL[newsletter-consent:external-host]"
+}
