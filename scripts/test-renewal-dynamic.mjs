@@ -106,6 +106,10 @@ try {
       await hl.click();
       const detail = page.locator(`#${detailId}`);
       await detail.waitFor({ state: 'visible', timeout: 10000 }).catch(() => {});
+      // Routing (context.route) disables the HTTP cache, so each new badge image is fetched again. Against a remote
+      // URL the image is still in flight right after the click; wait up to 10s for it (a missing image still fails).
+      await page.waitForFunction((sel) => [...document.querySelectorAll(sel)].every((img) => img.complete && img.naturalWidth > 0),
+        `#${detailId} [data-ai-author="pium"] img`, { timeout: 10000 }).catch(() => {});
       const detailBadges = await badgeInfo(detail.locator('[data-ai-author="pium"]'));
       ok(`ab-highlight-detail ${tag}`, (await hl.getAttribute('aria-expanded')) === 'true' && detailBadges.length === 1 && detailBadges[0].visible && detailBadges[0].imgW === 24 && detailBadges[0].loaded, { detailBadges });
       if (width === 375) await detail.screenshot({ path: path.join(SHOTS, `dyn-ab-highlight-detail-${theme}-0375.png`) });
@@ -116,6 +120,8 @@ try {
         await pick.click();
         const dialog = page.locator('[role="dialog"]').first();
         await dialog.waitFor({ state: 'visible', timeout: 10000 }).catch(() => {});
+        await page.waitForFunction(() => [...document.querySelectorAll('[role="dialog"] [data-ai-author="pium"] img')]
+          .every((img) => img.complete && img.naturalWidth > 0), null, { timeout: 10000 }).catch(() => {});
         const modalBadges = await badgeInfo(dialog.locator('[data-ai-author="pium"]'));
         ok(`ab-pick-modal ${tag}`, (await dialog.count()) === 1 && modalBadges.length >= 1 && modalBadges.every((b) => b.visible && b.imgW === 24 && b.loaded), { modalBadges });
         if (width === 375) await dialog.screenshot({ path: path.join(SHOTS, `dyn-ab-pick-modal-${theme}-0375.png`) });
