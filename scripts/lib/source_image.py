@@ -106,6 +106,23 @@ def image_url(node, base):
             return url
     return None
 
+IMAGE_FILE_LINK = re.compile(r'\.(?:png|jpe?g|webp|gif|avif|svg)$', re.I)
+
+def related_card(node, base):
+    for parent in list(node.ancestors())[1:]:
+        if parent.tag in {'article', 'main', 'body'}:
+            break
+        classes = parent.attrs.get('class', '')
+        if re.search(r'\b(?:related|recommended|recirculation|snap-start)\b', classes, re.I):
+            return True
+        if parent.tag == 'a':
+            destination = safe_url(parent.attrs.get('href', ''), base)
+            if destination and IMAGE_FILE_LINK.search(urlsplit(destination).path):
+                continue
+            if destination and urlsplit(destination)._replace(query='', fragment='').geturl().rstrip('/') != urlsplit(base)._replace(query='', fragment='').geturl().rstrip('/'):
+                return True
+    return False
+
 def select(html, base):
     d = Document(html)
     h1 = next((n for n in d.nodes if n.tag == 'h1' and not excluded(n)),None)
@@ -120,7 +137,7 @@ def select(html, base):
         scope = next((n for n in d.nodes if n.tag == 'article' and not excluded(n)),None)
     images = []
     for n in d.nodes:
-        if excluded(n) or n.tag not in {'img','source','video','div','figure'}:
+        if excluded(n) or related_card(n, base) or n.tag not in {'img','source','video','div','figure'}:
             continue
         if n.tag == 'source' and not any(x.tag == 'picture' for x in n.ancestors()):
             continue
