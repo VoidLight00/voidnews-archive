@@ -31,6 +31,8 @@ const BUILD_GATES = {
   "check-ledger-open.selftest.mjs": [], // pending 2차 집계(나이·evidence 없는 applied)가 계속 보이는지
   "check-emit-weeks.selftest.mjs": [], // IMP-0010 주간 생성기: --check 무쓰기·멱등·drift 감시
   "check-dangling-thumbs.mjs": [],
+  "check-ab-editions.mjs": [], // AB 등록 회차 ⊆ 게시 승인 목록(references/approved-editions.json) + 참조 이미지·영상 실재(2026-11-01, 10a)
+  "check-ab-editions.selftest.mjs": [], // 위 게이트의 함정 6개 exit 2, 대조군 2개 exit 0
   "check-i18n-coverage.mjs": [], // w29+ 신규 주차 en 필드 필수 — 영문판 회귀 차단
   "verify-07a-closure.mjs": [], // 2026-07a GA/KO·EN/manifest/report closure 회귀 차단
   "check-horizontal-accent.mjs": [],
