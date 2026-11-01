@@ -27,19 +27,35 @@ const OVERSEAS_TRANSFER: ReadonlyArray<readonly [string, string]> = [
   ["이전 항목", "이메일 주소, 수신 동의 기록"],
   ["이전 국가", "미국"],
   ["이전 시기와 방법", "구독 신청과 뉴스레터 발송 때 네트워크로 전송합니다."],
-  ["이전받는 자", "Amazon Web Services, Inc.(스티비의 수탁사)"],
+  ["이전받는 자", "스티비의 수탁사인 Amazon Web Services, Inc."],
   ["이용 목적과 보유 기간", "메일 발송 시스템 운영에 쓰며, 구독을 해지할 때까지 보유합니다."],
-  ["거부 방법과 효과", "구독하지 않거나 해지하시면 이전되지 않으며, 해지하시면 보관된 정보를 파기합니다."],
+  ["거부 방법과 효과", "구독하지 않으시면 이전되지 않습니다. 구독을 해지하시면 보관된 정보를 파기합니다."],
 ];
 
+// 호스트 이름 바로 뒤에 조사나 여는 괄호를 붙이지 않습니다. WebKit은 그런 어절을 점이나 괄호 뒤에서 끊습니다.
 const EXTERNAL_SERVICES: ReadonlyArray<readonly [string, string]> = [
-  ["글꼴(Pretendard, 모든 화면)", "cdn.jsdelivr.net"],
-  ["X 게시물 표시", "platform.twitter.com, publish.twitter.com과 X가 게시물 표시에 쓰는 twimg.com 주소"],
+  ["모든 화면의 Pretendard 글꼴", "cdn.jsdelivr.net"],
+  ["X 게시물 표시", "platform.twitter.com, publish.twitter.com, X가 게시물 표시에 쓰는 twimg.com 주소"],
   ["Threads 게시물 표시", "www.threads.com, www.threads.net"],
-  ["YouTube 영상 표시", "www.youtube.com, i.ytimg.com과 YouTube가 영상 재생에 쓰는 주소"],
+  ["YouTube 영상 표시", "www.youtube.com, i.ytimg.com, YouTube가 영상 재생에 쓰는 주소"],
   ["링크 미리보기", "api.microlink.io"],
-  ["기사 원문 이미지", "기사 원문 사이트와 그 사이트가 쓰는 이미지 서버(예: storage.googleapis.com, storage.ghost.io)"],
+  ["기사 원문 이미지", "기사 원문 사이트와 그 사이트가 쓰는 이미지 서버, 예를 들면 storage.googleapis.com, storage.ghost.io"],
 ];
+
+// WebKit은 한국어(keep-all) 문단 속 호스트 이름을 점에서 끊습니다. 호스트 이름만 영문 줄바꿈 규칙을 따르게 감쌉니다.
+const HOST_NAME = /([a-z0-9-]+(?:\.[a-z0-9-]+)+)/gi;
+
+function withHostNames(text: string) {
+  return text.split(HOST_NAME).map((part, index) =>
+    index % 2 ? (
+      <span key={index} lang="en" className={styles.latin}>
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  );
+}
 
 function TermList({ rows }: { rows: ReadonlyArray<readonly [string, string]> }) {
   return (
@@ -47,7 +63,7 @@ function TermList({ rows }: { rows: ReadonlyArray<readonly [string, string]> }) 
       {rows.map(([term, detail]) => (
         <div key={term}>
           <dt>{term}</dt>
-          <dd>{detail}</dd>
+          <dd>{withHostNames(detail)}</dd>
         </div>
       ))}
     </dl>
@@ -59,7 +75,6 @@ export default function PrivacyPage() {
 
   return (
     <main id="main-content" lang="ko" className={styles.page}>
-      <p className={styles.kicker}>Privacy</p>
       <h1 className={styles.title}>개인정보 처리방침</h1>
       <p className={styles.meta}>시행일 {EFFECTIVE_DATE}</p>
       <p className={styles.lede}>
@@ -107,7 +122,7 @@ export default function PrivacyPage() {
         <h2 id="privacy-entrustment" className={styles.sectionTitle}>
           5. 처리 위탁
         </h2>
-        <p>뉴스레터 운영에 필요한 아래 업무를 맡기고 있습니다.</p>
+        <p>뉴스레터 운영에 필요한 업무를 아래와 같이 위탁합니다.</p>
         <TermList rows={ENTRUSTMENT} />
       </section>
 
@@ -160,7 +175,7 @@ export default function PrivacyPage() {
           10. 브라우저에 저장하는 정보
         </h2>
         <p>
-          화면 테마, 언어, 북마크, 읽음 표시, 최근 검색어, 보기 설정(밀도·정렬 등), 링크 미리보기 결과는
+          화면 테마, 언어, 북마크, 읽음 표시, 최근 검색어, 밀도·정렬 같은 보기 설정, 링크 미리보기 결과는
           방문자의 브라우저 저장소에만 저장합니다. 이 값은 서버로 보내지 않으며, 브라우저에서 이 사이트의
           데이터를 지우면 함께 삭제됩니다.
         </p>
@@ -171,9 +186,9 @@ export default function PrivacyPage() {
           11. 외부 서비스 호출
         </h2>
         <p>
-          모든 화면은 글꼴을 내려받기 위해 cdn.jsdelivr.net에 접속합니다. 그 밖에 X·Threads 게시물, YouTube 영상,
-          링크 미리보기, 기사 원문 이미지를 보여 주는 화면에서는 방문자의 브라우저가 아래 외부 서비스에 직접 접속합니다.
-          이때 해당 서비스에 IP 주소 같은 접속 정보가 전달됩니다.
+          방문자의 브라우저는 모든 화면에서 글꼴을 내려받기 위해 {withHostNames("cdn.jsdelivr.net")} 서버에
+          접속합니다. 그 밖에 X·Threads 게시물, YouTube 영상, 링크 미리보기, 기사 원문 이미지를 보여 주는
+          화면에서는 아래 외부 서비스에 직접 접속합니다. 이때 해당 서비스에 IP 주소 같은 접속 정보가 전달됩니다.
         </p>
         <TermList rows={EXTERNAL_SERVICES} />
       </section>

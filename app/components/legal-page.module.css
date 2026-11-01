@@ -14,13 +14,11 @@
   overflow-wrap: anywhere;
 }
 
-.kicker {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+/* 문단 속 호스트 이름(lang="en")은 영문 규칙으로 줄을 나눕니다. WebKit 26이 keep-all 문단의 호스트 이름을
+   점에서 끊는 문제를 막습니다(Aislop 감사 F06, 2026-11-01). */
+.latin {
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .title {
@@ -175,7 +173,8 @@
   white-space: nowrap;
 }
 
-.primaryButton:hover {
+.primaryButton:hover,
+.primaryButton:active {
   background: var(--accent-fill-hover);
 }
 
@@ -196,6 +195,12 @@
 
 .secondaryButton:hover {
   border-color: var(--text);
+}
+
+/* 누르는 동안의 표시입니다. 터치 화면에서는 hover 없이 바로 눌리므로 따로 둡니다. */
+.secondaryButton:active {
+  border-color: var(--text);
+  background: var(--surface);
 }
 
 /* Empty state: Pium 96px above one line in Pium's voice and a single next action. */

@@ -8,7 +8,7 @@ import { PRIVACY_PATH, RSS_PATH, resolveNewsletterFormUrl } from "@/lib/site-lin
 
 export const metadata: Metadata = {
   title: "뉴스레터 구독 · VoidNews Archive",
-  description: "VoidNews 뉴스레터 구독 안내와 개인정보 수집·이용 안내입니다.",
+  description: "VoidNews 뉴스레터의 구독 방법과 개인정보 수집·이용 내용을 안내합니다.",
   alternates: {
     canonical: "/newsletter/",
     types: { "application/rss+xml": "/rss.xml" },
@@ -20,11 +20,12 @@ export default function NewsletterPage() {
 
   return (
     <main id="main-content" lang="ko" className={styles.page}>
-      <p className={styles.kicker}>Newsletter</p>
       <h1 className={styles.title}>VoidNews 뉴스레터</h1>
+      {/* 구독 폼을 열기 전과 후의 소개 문장이 다릅니다. 폼을 열 때 발송 주기를 이 문장에 함께 적습니다. */}
       <p className={styles.lede}>
-        VoidNews가 공식 발표를 중심으로 정리한 AI 소식을 이메일로 보내 드립니다. 데일리 호와 주간 호를
-        준비하고 있으며, 발송 주기는 발송을 시작할 때 이곳에 안내합니다.
+        {formUrl
+          ? "VoidNews가 공식 발표를 중심으로 정리한 AI 소식을 이메일로 보내 드립니다."
+          : "VoidNews가 공식 발표를 중심으로 정리한 AI 소식을 이메일로 보내 드릴 예정입니다. 데일리 호와 주간 호를 준비하고 있으며, 발송 주기는 첫 호를 보낼 때 이곳에 안내합니다."}
       </p>
 
       <section className={styles.section} aria-labelledby="newsletter-notice" data-consent-notice="">
@@ -82,9 +83,9 @@ export default function NewsletterPage() {
           처리 위탁과 국외 이전
         </h2>
         <p>
-          구독 신청 접수와 메일 발송은 스티비 주식회사가 대행합니다. 스티비는 Amazon Web Services, Inc.의 미국
-          서버에 이메일 주소를 보관합니다. 자세한 내용은 <a href={PRIVACY_PATH}>개인정보 처리방침</a>에서
-          확인하실 수 있습니다.
+          구독 신청 접수와 메일 발송은 스티비 주식회사가 대행합니다. 스티비는 미국에 있는
+          Amazon Web Services, Inc. 서버에 이메일 주소를 보관합니다. 자세한 내용은{" "}
+          <a href={PRIVACY_PATH}>개인정보 처리방침</a>에서 확인하실 수 있습니다.
         </p>
       </section>
 
@@ -116,7 +117,7 @@ export default function NewsletterPage() {
           <div className={styles.emptyState}>
             {/* 그림만 쓰는 자리라 대체 텍스트를 붙입니다(계획 3.3절 6항). 원형으로 자르지 않습니다. */}
             <img src="/brand/pium.svg" alt="피움(AI 작성 캐릭터)" width={96} height={96} />
-            <p>메일 구독 신청은 아직 받지 않습니다. 그동안은 RSS로 새 글을 받아 보실 수 있습니다.</p>
+            <p>메일 구독은 아직 열지 않았습니다.</p>
             <a href={RSS_PATH} className={styles.secondaryButton}>
               RSS 피드 열기
             </a>

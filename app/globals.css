@@ -992,6 +992,9 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
 
 .vn-theme-btn:hover { color: var(--text); border-color: var(--text); }
 
+/* Pressed feedback for touch screens, where a tap does not show the hover state first. */
+.vn-theme-btn:active { color: var(--text); border-color: var(--text); background: var(--border); }
+
 /* Before hydration the pressed look follows data-theme from the inline script in app/layout.tsx. */
 .vn-theme-btn[aria-pressed="true"],
 :root[data-theme="light"] .vn-theme-toggle:not([data-ready]) .vn-theme-btn[data-theme-option="light"],
@@ -1002,7 +1005,8 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   font-weight: 700;
 }
 
-.vn-theme-btn[aria-pressed="true"]:hover {
+.vn-theme-btn[aria-pressed="true"]:hover,
+.vn-theme-btn[aria-pressed="true"]:active {
   background: var(--accent-fill-hover);
   border-color: var(--accent);
   color: var(--on-accent);
@@ -1030,7 +1034,8 @@ p, h1, h2, h3, h4, li, a, blockquote { overflow-wrap: anywhere; }
   transition: background var(--dur-fast), border-color var(--dur-fast);
 }
 
-.site-nav-subscribe:hover {
+.site-nav-subscribe:hover,
+.site-nav-subscribe:active {
   background: var(--text-soft);
   border-color: var(--text-soft);
 }
