@@ -1,8 +1,8 @@
 .git
-.next
-out
+/.next
+/out
 node_modules
-_workspace
+/_workspace
 .claude-*.png
 *.log
 .DS_Store
