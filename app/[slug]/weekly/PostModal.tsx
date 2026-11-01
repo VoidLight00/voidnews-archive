@@ -44,7 +44,7 @@ export function PostModal({
   const { locale } = useLocale();
   // 카드 모달은 주간 페이지(app/[slug])에서만 열리므로 경로의 slug가 주차 slug입니다(작성 판정 R3).
   const weekSlug = useParams<{ slug?: string }>()?.slug ?? "";
-  const author = { scope: weekSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
+  const author = { scope: weekSlug, slug: post.slug, title: post.title, autoPublished: post.autoPublished };
   const d = displayPost(post, locale); // 표시 전용 — titleId 등 identity는 원본 title 유지
   const titleId = `post-modal-title-${post.title.replace(/[^a-zA-Z0-9가-힣]+/g, "-").replace(/^-+|-+$/g, "")}`;
   const navBtnStyle = {

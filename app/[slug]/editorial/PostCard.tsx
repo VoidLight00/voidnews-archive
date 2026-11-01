@@ -73,7 +73,7 @@ export default function PostCard({ post, weekSlug, companyName, companyColor }: 
           {dateText} · {readText}
         </div>
         {/* 카드 전체가 링크이므로 라벨 안에는 링크를 두지 않습니다(작성 표시 R3). */}
-        <AuthorBadge subject={{ scope: weekSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt }} />
+        <AuthorBadge subject={{ scope: weekSlug, slug: post.slug, title: post.title, autoPublished: post.autoPublished }} />
         <h2 className={styles.headline}>
           <Link href={href}>{post.title}</Link>
         </h2>

@@ -24,7 +24,7 @@ import { AuthorBadge } from "@/app/components/AuthorBadge";
 
 // 주간 카드의 작성 주체 판정 입력(리뉴얼 계획 R3). 범위는 주차 slug입니다.
 function weeklyAuthorship(issueSlug: string, post: Post): AuthorshipSubject {
-  return { scope: issueSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
+  return { scope: issueSlug, slug: post.slug, title: post.title, autoPublished: post.autoPublished };
 }
 
 export type TopStoryEntry = {

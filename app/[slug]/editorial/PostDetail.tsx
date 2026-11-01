@@ -215,7 +215,7 @@ export default function PostDetail({ meta, prev, next, weekSlug, article, relate
 
   const officialHost = post.officialUrl ? hostnameOf(post.officialUrl) : null;
   // 작성 판정(R3): 주간 기사는 주차 slug, AB 기사("ab/<회차>")는 "ab" 범위로 봅니다.
-  const author = { scope: authorshipScope(weekSlug), slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
+  const author = { scope: authorshipScope(weekSlug), slug: post.slug, title: post.title, autoPublished: post.autoPublished };
 
   const fullText = [
     post.title, post.summary ?? "", post.content ?? "",

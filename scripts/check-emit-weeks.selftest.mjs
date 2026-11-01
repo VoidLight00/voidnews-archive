@@ -2,7 +2,8 @@
 // scripts/emit-weeks.mjs 자체시험. 실제 lib/weeks 는 건드리지 않는다:
 // 생성기를 임시 트리에 복사하고(EMIT_WEEKS_ROOT) node_modules 만 링크한다.
 // 함정: --check 가 쓰지 않음 · 쓰기 후 --check 멱등 · 미반영 카드 적발 · Partial 머리 주석 재생성과
-// 사용자 주석 보존 · 게시된 글을 바꾸는 변형 생성기를 drift 감시가 잡음. 종료: 0=전부 기대대로, 2=어긋남.
+// 사용자 주석 보존 · 게시된 글을 바꾸는 변형 생성기를 drift 감시가 잡음 · 게시기 표식(autoPublished)은 표식 있는
+// 새 카드에만 옮김(R24). 종료: 0=전부 기대대로, 2=어긋남.
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import os from "node:os";
@@ -67,6 +68,12 @@ if (SRC.split(MUT_FROM).length !== 2) {
   r = emit("mutant.mjs");
   expect("T7 게시된 글의 필드를 지우는 변형 생성기 → FAIL[drift]", r.rc === 2 && r.out.includes("FAIL[drift] 2026-w41"), r.out);
 }
+
+setRun("2026-10-11", [card("a", "10/5 09:00"), card("b", "10/9 10:00"), { ...card("c", "10/10 11:00"), autoPublished: true }]);
+r = emit("emit-weeks.mjs");
+const emitted = fs.readFileSync(WEEK, "utf8");
+expect("T8 게시기 표식은 표식 있는 새 카드에만 옮김(R24)",
+  r.rc === 0 && (emitted.match(/"autoPublished": true/g) || []).length === 1 && /"autoPublished": true,\s*"slug": "c"/.test(emitted), r.out);
 
 fs.rmSync(T, { recursive: true, force: true });
 const pass = results.every(Boolean);

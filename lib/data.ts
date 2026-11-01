@@ -115,6 +115,7 @@ export interface Post {
   source?: string;       // 원본 소스 URL (블로그/기사)
   officialUrl?: string;  // 공식 계정 트윗/게시글 URL (이미지·영상 포함)
   verifiedAt?: string;   // 공식 출처를 마지막으로 재검증한 ISO 날짜 (YYYY-MM-DD)
+  autoPublished?: boolean; // 게시기 표식(R24): 매일 자동 게시(daily_publish.py)가 사람 검토 없이 올린 카드에만 true. '자동 게시' 표시 기준
   releaseScope?: string;
   backupUrls?: { label: string; url: string }[]; // 보조 공식 링크 (벤치마크·문서·콘솔 등)
   threadsUrl?: string;   // 현님 Threads 포스팅

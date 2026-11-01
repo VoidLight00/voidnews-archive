@@ -87,7 +87,7 @@ const FIELD_ORDER = [
   // thumbnail must precede `en`: verify_thumbnail_policy.sh chunks cards by every
   // `"title":` occurrence, so an `en.title` that is followed by the thumbnail gets
   // paired with it and the English title is compared against a Korean slug filename.
-  "officialUrl", "verifiedAt", "slug", "tags", "backupUrls", "thumbnail", "en",
+  "officialUrl", "verifiedAt", "autoPublished", "slug", "tags", "backupUrls", "thumbnail", "en",
 ];
 
 function buildPost(card) {
@@ -104,6 +104,8 @@ function buildPost(card) {
     slug: card.slug,
     tags: card.tags,
   };
+  // 게시기 표식(R24): 매일 자동 게시가 쓴 카드에만 있습니다. AB 카드에는 없으므로 '자동 게시'가 붙지 않습니다.
+  if (card.autoPublished === true) post.autoPublished = true;
   if (Array.isArray(card.backupUrls) && card.backupUrls.length) {
     post.backupUrls = card.backupUrls.filter((b) => b && b.url).map((b) => ({ label: b.label || "관련 자료", url: b.url }));
     if (!post.backupUrls.length) delete post.backupUrls;

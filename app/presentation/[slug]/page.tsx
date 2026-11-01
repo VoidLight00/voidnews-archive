@@ -450,7 +450,7 @@ export default async function PresentationPage({ params }: { params: Promise<{ s
 
               {/* 하이라이트 요약·본문도 AI가 쓴 카드이므로 주간 카드와 같은 피움 표시를 답니다(리뉴얼 R3). */}
               <div style={{ marginTop: "var(--space-sm)" }}>
-                <AuthorBadge subject={{ scope: slug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt }} />
+                <AuthorBadge subject={{ scope: slug, slug: post.slug, title: post.title, autoPublished: post.autoPublished }} />
               </div>
 
               {post.summary && (

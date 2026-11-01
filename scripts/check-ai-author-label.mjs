@@ -10,7 +10,7 @@
 // 빌드 검사(--html, postbuild): 주간 페이지의 카드마다 라벨 1개와 규칙에 맞는 '자동 게시',
 //   기사 상세마다 48px 바이라인 1개, AB 카드·기사의 라벨, 발표 하이라이트(featured 글)마다 라벨,
 //   '자동 게시' 합계 = 규칙 대상 수를 확인합니다.
-//   --data <json>  주간 데이터 대신 읽을 자료({ weeks: [{ slug, posts: [{ slug, title, verifiedAt }] }] }, 함정 시험용)
+//   --data <json>  주간 데이터 대신 읽을 자료({ weeks: [{ slug, posts: [{ slug, title, autoPublished }] }] }, 함정 시험용)
 // 종료 코드: 0 통과 · 1 위반 · 2 입력 오류(out/ 없음 포함)
 import fs from "node:fs";
 import path from "node:path";
@@ -53,13 +53,15 @@ function checkLabelsAndRule(root, report) {
   }
   const authorship = loadTsModule(path.join(root, "lib/authorship.ts"));
   if (authorship.AI_AUTHOR_NAME !== "피움(VoidNews AI)") report.fail("rule", `AI_AUTHOR_NAME = ${JSON.stringify(authorship.AI_AUTHOR_NAME)}`);
-  // 계획 R3 판정 규칙의 경계값. 규칙을 바꾸면(R24) 이 표를 같은 커밋에서 고칩니다.
+  // 판정 규칙의 경계값(R3·R24). 규칙을 바꾸면 이 표를 같은 커밋에서 고칩니다.
+  // '자동 게시'는 게시기 표식이나 표식 도입 전 목록으로만 정합니다. 확인 날짜(verifiedAt)는 더 이상 쓰지 않습니다.
   const cases = [
-    [{ scope: "2026-w44", slug: "rule-probe", title: "probe", verifiedAt: "2026-10-22" }, true, true],
-    [{ scope: "2026-w44", slug: "rule-probe", title: "probe", verifiedAt: "2026-10-21" }, true, false],
+    [{ scope: "2026-w44", slug: "rule-probe", title: "probe", autoPublished: true }, true, true],
+    [{ scope: "2026-w44", slug: "rule-probe", title: "probe", autoPublished: false }, true, false],
     [{ scope: "2026-w44", slug: "rule-probe", title: "probe" }, true, false],
-    [{ scope: "2026-w43", slug: "exa-3-0-search-launch", title: "Exa", verifiedAt: "2026-10-30" }, true, false],
-    [{ scope: "ab", slug: "rule-probe", title: "probe", verifiedAt: "2026-10-30" }, true, false],
+    [{ scope: "2026-w44", slug: "ibm-granite-switch-4-1-1", title: "legacy" }, true, true],
+    [{ scope: "2026-w43", slug: "exa-3-0-search-launch", title: "Exa" }, true, false],
+    [{ scope: "ab", slug: "rule-probe", title: "probe", autoPublished: true }, true, false],
   ];
   for (const [subject, ai, auto] of cases) {
     const got = authorship.getAuthorship(subject);
@@ -122,7 +124,7 @@ function loadWeeks(root, dataFile) {
   const { weeks } = loadTsModule(path.join(root, "lib/data.ts"));
   return weeks.map((week) => ({
     slug: week.slug,
-    posts: week.companies.flatMap((company) => company.posts.map(({ slug, title, verifiedAt, featured }) => ({ slug, title, verifiedAt, featured: Boolean(featured) }))),
+    posts: week.companies.flatMap((company) => company.posts.map(({ slug, title, autoPublished, featured }) => ({ slug, title, autoPublished: autoPublished === true, featured: Boolean(featured) }))),
   }));
 }
 
@@ -163,7 +165,7 @@ function checkWeeklyPage(outDir, rel, week, ctx, report) {
     const { label, post } = cardTarget(card, week);
     const where = `${rel} 카드 ${index + 1}(${label})`;
     if (!post) { report.fail("card-unknown", `${where}: 주소가 이 주차의 글과 맞지 않습니다`); return; }
-    const expected = ctx.getAuthorship({ scope: week.slug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt });
+    const expected = ctx.getAuthorship({ scope: week.slug, slug: post.slug, title: post.title, autoPublished: post.autoPublished });
     const badges = findAll(card, (el) => hasAttr(el, "data-ai-author"));
     ctx.cards += 1;
     if (badges.length !== (expected.ai ? 1 : 0)) { report.fail("card-label", `${where}: 라벨 ${badges.length}개 — 기대 ${expected.ai ? 1 : 0}개`); return; }
@@ -210,7 +212,7 @@ function checkPresentationPage(outDir, rel, week, ctx, report) {
     const where = `${rel} 하이라이트 ${index + 1}(${title || "제목 없음"})`;
     const post = featured.find((item) => item.title === title);
     if (!post) { report.fail("presentation-unknown", `${where}: 제목이 이 주차의 featured 글과 맞지 않습니다`); return; }
-    const expected = ctx.getAuthorship({ scope: week.slug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt });
+    const expected = ctx.getAuthorship({ scope: week.slug, slug: post.slug, title: post.title, autoPublished: post.autoPublished });
     const badges = findAll(block, (el) => hasAttr(el, "data-ai-author"));
     ctx.highlights += 1;
     if (badges.length !== (expected.ai ? 1 : 0)) { report.fail("presentation-label", `${where}: 라벨 ${badges.length}개 — 기대 ${expected.ai ? 1 : 0}개`); return; }
@@ -223,6 +225,14 @@ function checkPages(root, outDir, dataFile, report) {
   const authorship = loadTsModule(path.join(root, "lib/authorship.ts"));
   const human = [...(authorship.HUMAN_WRITTEN ?? [])];
   const ctx = { getAuthorship: authorship.getAuthorship, humanAb: human.filter((key) => key.startsWith("ab/")).length, cards: 0, labels: 0, cardAuto: 0, bylineAuto: 0, articles: 0, abCards: 0, highlights: 0 };
+  // 표식 도입 전 목록(R24)의 키가 실제 주간 카드를 가리키는지 봅니다. 오타가 있으면 그 카드에서 '자동 게시'가 조용히 빠집니다.
+  // 함정 시험의 가상 자료(--data)에는 실제 카드가 없으므로 건너뜁니다. 원본 함정 사본에는 lib/weeks가 없어 이 검사를 빌드 단계에 둡니다.
+  if (!dataFile) {
+    const keys = new Set(loadWeeks(root, null).flatMap((week) => week.posts.map((post) => `${week.slug}/${post.slug || post.title}`)));
+    const legacy = [...(authorship.LEGACY_AUTO_PUBLISHED ?? [])];
+    if (!legacy.length) report.fail("legacy", "LEGACY_AUTO_PUBLISHED가 비어 있습니다 — 표식 도입 전 자동 게시 카드가 '자동 게시'를 잃습니다");
+    for (const key of legacy) if (!keys.has(key)) report.fail("legacy", `LEGACY_AUTO_PUBLISHED의 ${key}에 해당하는 주간 카드가 없습니다`);
+  }
   let targets = 0;
   for (const week of loadWeeks(root, dataFile)) {
     const rel = `${week.slug}/index.html`;
@@ -230,7 +240,7 @@ function checkPages(root, outDir, dataFile, report) {
     checkWeeklyPage(outDir, rel, week, ctx, report);
     // 기사 상세는 slug가 있는 글만 만들어집니다(app/[slug]/[postSlug]). slug가 있는데 페이지가 없으면 빌드 결과가 깨진 것입니다.
     for (const post of week.posts.filter((item) => item.slug)) {
-      const subject = { scope: week.slug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt };
+      const subject = { scope: week.slug, slug: post.slug, title: post.title, autoPublished: post.autoPublished };
       const article = `${week.slug}/${post.slug}/index.html`;
       if (!pages.has(article)) { report.fail("coverage", `${article}: 기사 상세가 빌드에 없습니다`); continue; }
       if (ctx.getAuthorship(subject).autoPublished) targets += 1;

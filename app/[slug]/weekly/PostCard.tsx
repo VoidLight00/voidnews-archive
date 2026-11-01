@@ -99,7 +99,7 @@ export function PostCard({
           )}
         </div>
 
-        <AuthorBadge subject={{ scope: weekSlug, slug: post.slug, title: post.title, verifiedAt: post.verifiedAt }} />
+        <AuthorBadge subject={{ scope: weekSlug, slug: post.slug, title: post.title, autoPublished: post.autoPublished }} />
 
         <h3 className="tc-feed-title serif article-card-title">
           {highlightText(d.title, searchQuery)}
