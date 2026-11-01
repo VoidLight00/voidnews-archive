@@ -10,6 +10,14 @@
 //   --url       시험할 사이트(기본: VOIDNEWS_TEST_URL, 없으면 http://127.0.0.1:3142 = 정적 out/을 띄운 주소)
 //   --extended  계획 6.3절 추가 경로(w43·w18·w21·Duet·AB·약관)와 860px 너비
 //   --trap-css  불러온 뒤 CSS를 끼워 넣어, 알려진 결함이 있으면 이 시험이 실패하는지 확인합니다
+//   --trap      이름 붙은 DOM 함정으로 이미 고친 결함 하나를 되살립니다. 함정이 아무것도 바꾸지 못하면 실행 오류(2)입니다
+//   --engine    chromium(기본) 또는 webkit. 아이폰의 모든 브라우저가 쓰는 Safari 엔진에서만 생기는 줄바꿈 결함
+//               (2026-11-01 Aislop 감사 13건, Chromium 0건)을 잡으려고 npm run test:renewal이 두 엔진을 모두 돌립니다.
+//               Playwright가 기대하는 WebKit 빌드가 없으면 설치를 마친 가장 새 webkit-* 빌드를 쓰고, ENGINE 줄과
+//               renewal-ui.json(browserBuild)에 그 이름을 남깁니다(lib/playwright-engine.mjs).
+//   --widths    기본 너비 대신 300-430:5(시작-끝:간격) 또는 320,375처럼 준 너비로 잽니다(보정 측정을 다시 할 때)
+// 값은 '--engine webkit'처럼 띄어 씁니다. '--engine=webkit'이나 값이 없는 옵션은 실행 오류(2)로 끝냅니다.
+// npm run test:renewal은 명령 여러 개를 잇습니다. 다른 주소를 시험하려면 '-- --url' 대신 VOIDNEWS_TEST_URL=<주소>를 앞에 붙입니다.
 // 결과: <out>/<tag>/renewal-ui.json과 스크린숏(기본 out = _workspace/renewal/ui, git 제외 폴더)
 // 외부 접속: 시험 대상 주소와 글꼴 CDN만 허용하고 나머지(X 위젯·링크 미리보기)는 막아 다른 서비스를 부르지 않습니다.
 // 기대값(최신 회차, 운영자 링크)은 이 저장소의 lib/data.ts·lib/site-links.ts에서 읽으므로, 시험할 사이트와 같은 커밋에서 실행합니다.
@@ -20,11 +28,17 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadTsModule } from './lib/renewal-gate-kit.mjs';
 import { analyzePage } from './lib/renewal-ui-page.mjs';
+import { launchEngine } from './lib/playwright-engine.mjs';
+
+// Any error outside main() (bad --url, unreadable lib file) is a run error (2), not a screen failure (1).
+const crash = (error) => { console.error('CRASH', error); process.exit(2); };
+process.on('uncaughtException', crash);
+process.on('unhandledRejection', crash);
 
 // Playwright를 불러오지 못하면 화면 실패(1)와 구분되도록 실행 오류(2)로 끝냅니다.
-let chromium;
+let playwright;
 try {
-  ({ chromium } = await import('playwright'));
+  playwright = await import('playwright');
 } catch (error) {
   console.error(`CRASH Playwright를 불러오지 못했습니다(${error.message}). 상위 폴더나 이 저장소에 playwright를 설치한 뒤 다시 실행하십시오.`);
   process.exit(2);
@@ -32,17 +46,48 @@ try {
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
+// '--engine=webkit' would silently run Chromium, so only the '--flag value' form is accepted.
+const VALUE_FLAGS = ['--url', '--base', '--engine', '--tag', '--out', '--only', '--trap', '--trap-css', '--widths'];
+for (let i = 0; i < argv.length; i += 1) {
+  const a = argv[i];
+  if (/^--[a-z-]+=/.test(a)) { console.error(`CRASH write '${a.replace('=', ' ')}' (no '=')`); process.exit(2); }
+  if (VALUE_FLAGS.includes(a) && (!argv[i + 1] || argv[i + 1].startsWith('--'))) { console.error(`CRASH ${a} needs a value`); process.exit(2); }
+}
 const arg = (name, fallback) => {
   const i = argv.indexOf(name);
   return i >= 0 && argv[i + 1] ? argv[i + 1] : fallback;
 };
 const BASE = arg('--url', arg('--base', process.env.VOIDNEWS_TEST_URL ?? 'http://127.0.0.1:3142')).replace(/\/+$/, '');
-const TAG = arg('--tag', 'run1');
+const ENGINE = arg('--engine', 'chromium');
+if (!['chromium', 'webkit'].includes(ENGINE)) {
+  console.error(`CRASH unknown --engine ${ENGINE} (chromium | webkit)`);
+  process.exit(2);
+}
+const TAG = arg('--tag', ENGINE === 'chromium' ? 'run1' : ENGINE);
+// Safari moves focus to buttons and links with Option+Tab; plain Tab reaches only form fields unless the user turns
+// on 'Press Tab to highlight each item'. WebKit in Playwright keeps that default, so the WebKit run presses Alt+Tab.
+const TAB_KEY = ENGINE === 'webkit' ? 'Alt+Tab' : 'Tab';
 const LOG_DIR = path.join(path.resolve(arg('--out', path.join(ROOT, '_workspace/renewal/ui'))), TAG);
 const SHOTS = path.join(LOG_DIR, 'shots');
 const ONLY = arg('--only', '');
 // Trap mode: inject CSS after load to prove a check fails when a known defect is present.
 const TRAP_CSS = arg('--trap-css', '');
+// Named DOM traps: each undoes one shipped fix in the loaded page (run by test-renewal-ui.selftest.mjs).
+// Each trap returns how many elements it changed; a trap that changes nothing is a run error.
+const DOM_TRAPS = {
+  // 2026-11-01 Aislop audit: host names in Korean text split at their dots in WebKit only. The fix wraps them in <span lang="en">.
+  'host-names-in-korean': () => {
+    const spans = [...document.querySelectorAll('main span[lang="en"]')];
+    spans.forEach((span) => span.replaceWith(span.textContent));
+    document.body.normalize();
+    return spans.length;
+  },
+};
+const TRAP = arg('--trap', '');
+if (TRAP && !DOM_TRAPS[TRAP]) {
+  console.error(`CRASH unknown --trap ${TRAP} (${Object.keys(DOM_TRAPS).join(' | ')})`);
+  process.exit(2);
+}
 fs.mkdirSync(SHOTS, { recursive: true });
 
 const BASE_ROUTES = [
@@ -64,7 +109,14 @@ const EXTENDED_ROUTES = [
 ];
 const EXTENDED = argv.includes('--extended');
 const ROUTES = (EXTENDED ? EXTENDED_ROUTES : BASE_ROUTES).filter((r) => !ONLY || ONLY.split(',').includes(r.id));
-const WIDTHS = EXTENDED ? [320, 375, 768, 860, 1280] : [320, 375, 768, 1280];
+// --widths 300-430:5 or 320,375 replaces the default widths (used to repeat a calibration sweep).
+const parseWidths = (spec) => {
+  const m = spec.match(/^(\d+)-(\d+):(\d+)$/);
+  if (m) { const out = []; for (let w = +m[1]; w <= +m[2]; w += +m[3]) out.push(w); return out; }
+  return spec.split(',').map(Number).filter((w) => w >= 200 && w <= 2000);
+};
+const WIDTHS = argv.includes('--widths') ? parseWidths(arg('--widths', '')) : EXTENDED ? [320, 375, 768, 860, 1280] : [320, 375, 768, 1280];
+if (!WIDTHS.length) { console.error('CRASH --widths gave no width between 200 and 2000'); process.exit(2); }
 const THEMES = ['light', 'dark'];
 
 // 기대 링크는 lib/site-links.ts(바닥글·헤더의 단일 출처)에서 읽습니다. 목록을 여기에 다시 적지 않습니다.
@@ -153,10 +205,10 @@ function expectTheme(where, state, theme) {
 }
 
 async function measureFocus(page) {
-  // Keyboard: focus the locale button, Tab to '라이트', Space; Tab to '다크', Enter.
+  // Keyboard: focus the locale button, Tab (Option+Tab in WebKit) to '라이트', Space; again to '다크', Enter.
   const res = {};
   await page.locator('header button[aria-label^="Switch language"]').focus();
-  await page.keyboard.press('Tab');
+  await page.keyboard.press(TAB_KEY);
   res.afterTab1 = await page.evaluate(() => ({
     option: document.activeElement?.dataset?.themeOption ?? null,
     focusVisible: document.activeElement?.matches(':focus-visible') ?? false,
@@ -165,7 +217,7 @@ async function measureFocus(page) {
   await page.keyboard.press('Space');
   await settle(page);
   res.afterSpace = await page.evaluate(() => document.documentElement.getAttribute('data-theme'));
-  await page.keyboard.press('Tab');
+  await page.keyboard.press(TAB_KEY);
   res.afterTab2 = await page.evaluate(() => ({
     option: document.activeElement?.dataset?.themeOption ?? null,
     focusVisible: document.activeElement?.matches(':focus-visible') ?? false,
@@ -197,6 +249,10 @@ function checkStatic(where, width, routeId, a, kind) {
   // korean
   if (a.korean.midWord.length) fail(where, `Korean mid-word breaks: ${a.korean.midWord.length}`, a.korean.midWord.slice(0, 6));
   if (a.latinSplit.length) fail(where, `short Latin words split: ${a.latinSplit.length}`, a.latinSplit.slice(0, 6));
+  if (a.forbiddenBreaks.length) {
+    const kinds = a.forbiddenBreaks.reduce((m, f) => ({ ...m, [f.kind]: (m[f.kind] || 0) + 1 }), {});
+    fail(where, `forbidden line breaks (UAX #14, 어절): ${a.forbiddenBreaks.length} ${JSON.stringify(kinds)}`, a.forbiddenBreaks.slice(0, 6));
+  }
   // pium image sizes
   for (const p of a.pium.piums) {
     if (!p.visible) continue;
@@ -254,7 +310,9 @@ function contrastFailures(where, a) {
 }
 
 async function main() {
-  const browser = await chromium.launch();
+  const { browser, build: browserBuild } = await launchEngine(playwright, ENGINE);
+  const browserVersion = browser.version();
+  console.log(`ENGINE ${ENGINE} ${browserVersion} build=${browserBuild} base=${BASE}`);
   const contrastRuns = [];
   const allContrastFails = [];
   const koreanForced = [];
@@ -278,6 +336,7 @@ async function main() {
           if (new URL(page.url()).pathname !== route.path) fail(where, `unexpected URL ${page.url()}`);
           await waitReady(page);
           if (TRAP_CSS) await page.addStyleTag({ content: TRAP_CSS });
+          if (TRAP && !(await page.evaluate(DOM_TRAPS[TRAP]))) throw new Error(`trap ${TRAP} changed nothing on ${route.path}`);
           const first = await themeState(page);
           if (first.stored !== null) fail(where, 'storage not empty on first visit', first);
           if (expectTheme(where, first, theme)) pass(where, `first visit follows system (${theme})`);
@@ -396,11 +455,11 @@ async function main() {
       await page.waitForTimeout(300);
       if (expectTheme(`${where} manual light kept`, await themeState(page), 'light')) pass(where, 'manual light kept after system change');
       const focus = await measureFocus(page);
-      notes.push({ where: 'keyboard', focus });
-      if (focus.afterTab1.option !== 'light' || !focus.afterTab1.focusVisible || focus.afterSpace !== 'light') fail(where, 'keyboard Tab/Space on 라이트', focus);
-      else pass(where, 'Tab reaches 라이트, Space selects it, focus visible');
-      if (focus.afterTab2.option !== 'dark' || !focus.afterTab2.focusVisible || focus.afterEnter !== 'dark') fail(where, 'keyboard Tab/Enter on 다크', focus);
-      else pass(where, 'Tab reaches 다크, Enter selects it, focus visible');
+      notes.push({ where: 'keyboard', key: TAB_KEY, focus });
+      if (focus.afterTab1.option !== 'light' || !focus.afterTab1.focusVisible || focus.afterSpace !== 'light') fail(where, `keyboard ${TAB_KEY}/Space on 라이트`, focus);
+      else pass(where, `${TAB_KEY} reaches 라이트, Space selects it, focus visible`);
+      if (focus.afterTab2.option !== 'dark' || !focus.afterTab2.focusVisible || focus.afterEnter !== 'dark') fail(where, `keyboard ${TAB_KEY}/Enter on 다크`, focus);
+      else pass(where, `${TAB_KEY} reaches 다크, Enter selects it, focus visible`);
       if (focus.ringContrast === null || focus.ringContrast < 3) fail(where, 'focus ring contrast < 3', focus);
       else pass(where, `focus ring contrast ${focus.ringContrast} (dark theme)`);
       await page.locator('header .vn-theme-btn[data-theme-option="dark"]').screenshot({ path: path.join(SHOTS, 'theme-buttons-focus-dark-0375.png') });
@@ -415,9 +474,9 @@ async function main() {
       await page.goto(BASE + '/2026-w44/', { waitUntil: 'networkidle' });
       await waitReady(page);
       await page.locator('header button[aria-label^="Switch language"]').focus();
-      await page.keyboard.press('Tab');
+      await page.keyboard.press(TAB_KEY);
       const ring = await page.evaluate(() => { const cs = getComputedStyle(document.activeElement); return { option: document.activeElement.dataset.themeOption, outline: `${cs.outlineStyle} ${cs.outlineWidth} ${cs.outlineColor}` }; });
-      notes.push({ where, ring });
+      notes.push({ where, key: TAB_KEY, ring });
       if (ring.option !== 'light' || !ring.outline.startsWith('solid 2px rgb(15, 15, 16)')) fail(where, 'light focus ring', ring);
       else pass(where, `light focus ring ${ring.outline}`);
       await page.locator('header .vn-theme-toggle').screenshot({ path: path.join(SHOTS, 'theme-buttons-focus-light-1280.png') });
@@ -548,6 +607,9 @@ async function main() {
   }
   const report = {
     tag: TAG,
+    engine: ENGINE,
+    browserVersion,
+    browserBuild,
     base: BASE,
     finishedAt: new Date().toISOString(),
     failures,

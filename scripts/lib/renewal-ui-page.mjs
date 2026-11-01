@@ -58,7 +58,7 @@ export function analyzePage(opts) {
     let n = el;
     while (n && n !== document.body) {
       const d = getComputedStyle(n).display;
-      if (!d.startsWith('inline') || d === 'inline-block' || d === 'inline-flex' || d === 'inline-grid') return n;
+      if (d !== 'contents' && (!d.startsWith('inline') || d === 'inline-block' || d === 'inline-flex' || d === 'inline-grid')) return n;
       n = n.parentElement;
     }
     return document.body;
@@ -188,6 +188,100 @@ export function analyzePage(opts) {
   out.latinSplit = latin.split;
   out.latinForced = latin.forced;
   out.latinClamped = latin.clamped;
+
+  // 2c) Line breaks inside a unit that UAX #14 or the 어절 rule forbids, in any script. Text nodes are joined in one block, so
+  //     '(' followed by <span>host</span> counts as one unit.
+  //   afterOpen   = right after an opening bracket or quote, e.g. '글꼴(|cdn.jsdelivr.net' (LB14 OP ×).
+  //   beforeClose = right before closing punctuation or '/', e.g. '합니다|.' or 'AI|)' (LB13 × CL CP EX IS SY).
+  //   beforeClose also covers '%', '‰', '…' and '‥' (LB25 NU × PO, LB22 × IN), e.g. '71.0|%를'.
+  //   inDotted    = beside a dot or '@' between Latin letters or digits: a host name, version or address, e.g.
+  //                 'googleapis.|com', 'v1.|3', 'help@|example.com' (LB29, LB25, LB28).
+  //   dotParticle = after a dot that follows a Latin letter or digit and precedes Hangul: an abbreviation and its
+  //                 particle, e.g. 'Inc.|의'. Breaking there leaves the particle without its word (어절 rule).
+  //   acrossNodes = between two letters or digits that sit in different inline elements, e.g. '관리</strong>|에만'
+  //                 or '…net</span>|에'. Sections 2 and 2b compare letters only inside one text node.
+  //   WebKit 26 made 13 of these in keep-all text on /privacy/ and /newsletter/ and Chromium made none
+  //   (Aislop audit, 2026-11-01). The runner repeats this check in WebKit (--engine webkit). Skipped: a unit
+  //   wider than its line (overflow-wrap:anywhere must break it) and text below a line clamp. Failure.
+  const OPEN = /[([{（［｛「『【〈《“‘]/;
+  const CLOSE = /[)\]}）］｝」』】〉》”’.,:;!?。、/%‰…‥]/;
+  const ALNUM = /[A-Za-z0-9]/;
+  const chars = [];
+  // Inline code, kbd and samp stay in the text: they wrap with the words around them, so '(' + <code>host</code> is
+  // one unit. A <br> and a skipped element (pre, svg, …) end the unit, so text on either side is never adjacent.
+  const cw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT, {
+    acceptNode(node) {
+      if (node.nodeType !== 1) return NodeFilter.FILTER_ACCEPT;
+      // A replaced element (img, video, …) also ends the unit: CSS gives a break opportunity on both of its sides.
+      if (node.tagName === 'BR' || node.matches('pre, script, style, noscript, textarea, template, svg, img, input, select, video, audio, iframe, canvas, object, embed, hr')) {
+        chars.push({ ch: '\n' });
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_SKIP;
+    },
+  });
+  while (cw.nextNode()) {
+    const node = cw.currentNode;
+    const el = node.parentElement;
+    if (!el || !visible(el)) continue;
+    const block = blockOf(el);
+    const text = node.textContent;
+    for (let i = 0; i < text.length;) {
+      const len = text.codePointAt(i) > 0xffff ? 2 : 1;
+      chars.push({ node, i, len, ch: text.slice(i, i + len), block });
+      i += len;
+    }
+  }
+  // Only breakable spaces end a unit. A no-break space (U+00A0, U+202F, U+2007) keeps its neighbours in one unit.
+  const inText = (c, block) => Boolean(c && c.node && c.block === block && !/[ \t\n\r\f\u3000\u200b]/.test(c.ch));
+  const charRect = (c, last) => {
+    range.setStart(c.node, c.i);
+    range.setEnd(c.node, c.i + c.len);
+    const rs = [...range.getClientRects()].filter((r) => r.width > 0 || r.height > 0);
+    return rs.length ? rs[last ? rs.length - 1 : 0] : null;
+  };
+  out.forbiddenBreaks = [];
+  for (let k = 1; k < chars.length; k += 1) {
+    const a = chars[k - 1];
+    const b = chars[k];
+    if (!inText(a, a.block) || !inText(b, a.block)) continue;
+    const before = inText(chars[k - 2], a.block) ? chars[k - 2].ch : '';
+    const after = inText(chars[k + 1], a.block) ? chars[k + 1].ch : '';
+    let kind = null;
+    if (OPEN.test(a.ch)) kind = 'afterOpen';
+    else if (CLOSE.test(b.ch)) kind = 'beforeClose';
+    else if ((a.ch === '.' || a.ch === '@') && ALNUM.test(before) && ALNUM.test(b.ch)) kind = 'inDotted';
+    else if (b.ch === '@' && ALNUM.test(a.ch) && ALNUM.test(after)) kind = 'inDotted';
+    else if (a.ch === '.' && ALNUM.test(before) && HANGUL.test(b.ch)) kind = 'dotParticle';
+    else if (a.node !== b.node && LETTER.test(a.ch) && LETTER.test(b.ch)) kind = 'acrossNodes';
+    if (!kind) continue;
+    const ra = charRect(a, true);
+    const rb = charRect(b, false);
+    if (!ra || !rb || rb.top <= ra.top + ra.height * 0.5) continue;
+    const el = b.node.parentElement;
+    const clamp = clampBox(el);
+    if (clamp && rb.top >= clamp.getBoundingClientRect().bottom - 1) continue;
+    let s = k - 1;
+    while (inText(chars[s - 1], a.block)) s -= 1;
+    let e = k;
+    while (inText(chars[e + 1], a.block)) e += 1;
+    // Measure the unit per text node so an inline element's own box is not counted twice.
+    let unitWidth = 0;
+    for (let j = s; j <= e;) {
+      let m = j;
+      while (m < e && chars[m + 1].node === chars[j].node) m += 1;
+      range.setStart(chars[j].node, chars[j].i);
+      range.setEnd(chars[m].node, chars[m].i + chars[m].len);
+      unitWidth += [...range.getClientRects()].reduce((sum, q) => sum + q.width, 0);
+      j = m + 1;
+    }
+    const bcs = getComputedStyle(a.block);
+    const avail = a.block.getBoundingClientRect().width - parseFloat(bcs.paddingLeft) - parseFloat(bcs.paddingRight)
+      - parseFloat(bcs.borderLeftWidth) - parseFloat(bcs.borderRightWidth);
+    if (unitWidth > avail - 1) continue;
+    const join = (from, to) => chars.slice(from, to).map((c) => c.ch).join('');
+    out.forbiddenBreaks.push({ el: describe(el), kind, at: `${join(s, k)}|${join(k, e + 1)}`.slice(0, 80), unitWidth: Math.round(unitWidth), avail: Math.round(avail) });
+  }
 
   // 3) Pium images and badges
   const piums = [...document.querySelectorAll('img[src="/brand/pium.svg"]')].map((img) => {
