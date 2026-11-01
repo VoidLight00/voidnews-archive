@@ -213,7 +213,7 @@ async function main() {
     console.log(`   원인 후보: ssoProtection / passwordProtection / Attack Challenge Mode`);
     console.log(`   조치: TOKEN=$(...) ; curl -X PATCH https://api.vercel.com/v9/projects/<id>?teamId=<team> \\`);
     console.log(`         -d '{"ssoProtection": null}' -H "Authorization: Bearer $TOKEN"`);
-    console.log(`         후 'vercel deploy --prod --force' 로 alias 갱신.`);
+    console.log(`         운영 배포를 바꿔야 하면 push → 미리보기 → vercel promote 순서를 따릅니다('vercel deploy --prod'는 작업 트리를 올립니다).`);
     process.exitCode = 2;
   }
   console.log(`  report: ${mdPath}`);

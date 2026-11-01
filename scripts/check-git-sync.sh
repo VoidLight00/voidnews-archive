@@ -13,6 +13,10 @@
 # 세 갈래(.vercel/project.json 없음 · auth.json 없음 · token/project 부족)가 전부 exit 0 이었다.
 # "확인할 수 없음"을 "정상"으로 보고하던 구조다. 이제 근거 없음은 비영으로 끝내고,
 # Vercel 미설정 환경(CI 패리티 트리·새 클론)만 --allow-unconfigured 로 명시 SKIP 한다.
+#
+# 2026-11-01: 해결 안내를 바꿨다. 'git add -A' 안내를 따르면 무관한 미커밋 변경과 회차가 참조하는 mp4 삭제 28건까지
+# 커밋될 수 있었고, 'vercel deploy --prod'는 작업 트리를 그대로 운영에 올린다. 이제 파일 지정 stage와
+# scripts/check-staged-editions.mjs, 그리고 push → 미리보기 Ready → vercel promote 순서를 안내한다.
 cd "$(dirname "$0")/.."
 
 ALLOW_UNCONFIGURED=0
@@ -92,7 +96,9 @@ echo "=== gate verdict ==="
 
 if [ "$DIRTY" -gt 0 ]; then
   echo "🚨 P0 — uncommitted changes ($DIRTY files). GitHub webhook 이 매번 옛 commit 으로 alias 덮어씌움."
-  echo "       해결: git add -A && git commit -m '...' && git push origin $BRANCH"
+  echo "       해결: 승인된 파일만 이름으로 stage(git add -- <파일>) → node scripts/check-staged-editions.mjs --expect <새 회차> → commit → push"
+  echo "       git add -A 는 쓰지 않습니다. 아래의 무관한 변경·삭제까지 커밋됩니다."
+  git status --porcelain | head -20 | sed 's/^/         /'
   EXIT=2
 fi
 
@@ -108,8 +114,9 @@ fi
 
 if [ "$PROD_SHA" != "$(echo $LOCAL_SHA_SHORT | cut -c1-7)" ]; then
   echo "🟡 WARN — production commit ($PROD_SHA) ≠ local HEAD ($(echo $LOCAL_SHA_SHORT | cut -c1-7))."
-  echo "       원인: local 'vercel deploy --prod' 결과를 GitHub auto-deploy 가 덮어씀."
-  echo "       해결: git push origin $BRANCH 후 30-60s 대기, 또는 'vercel deploy --prod --force' 후 'vercel alias set ...'"
+  echo "       push 는 미리보기만 만들고 운영은 vercel promote 로만 바뀝니다. 맥미니 매일 자동 게시가 더 새 커밋을 올렸다면 먼저 pull 하십시오."
+  echo "       해결: git push origin $BRANCH → bash ~/.claude/skills/voidnews-briefing-pipeline/scripts/promote_after_push.sh <full sha>"
+  echo "       'vercel deploy --prod' 는 작업 트리를 그대로 올리므로 쓰지 않습니다."
   [ $EXIT -lt 1 ] && EXIT=1
 fi
 
