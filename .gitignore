@@ -62,3 +62,7 @@ VOL*_HANDOFF.md
 # these are gate inputs, not build caches.
 !references/backfill-evidence/**/cache/
 !references/backfill-evidence/**/cache/**
+
+# Python bytecode (py_compile or module imports in scripts/lib); untracked files make check-git-sync report a dirty tree
+__pycache__/
+*.pyc
