@@ -1578,3 +1578,8 @@ table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scro
   .tc-current-link,
   .tc-week-link { min-height: 32px; display: inline-flex; align-items: center; }
 }
+
+/* Current AB tool recommendations: retain Korean phrases at narrow widths. */
+.ab-current-pick:lang(ko) :is(h3, p) { word-break: keep-all; overflow-wrap: anywhere; }
+.ab-current-pick:lang(ko) h3 { text-wrap: balance; }
+.ab-current-pick:lang(ko) p { text-wrap: pretty; display: block !important; -webkit-line-clamp: unset !important; overflow: visible !important; }

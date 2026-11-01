@@ -383,7 +383,7 @@ export function EditorPickCard({
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") onCardActivate();
       }}
-      className="tc-feed-card"
+      className={editionSlug === "2026-10a" ? "tc-feed-card ab-current-pick" : "tc-feed-card"}
       style={{
         cursor: "pointer",
         WebkitTapHighlightColor: "transparent",

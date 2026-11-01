@@ -1,7 +1,7 @@
 # VoidNews 개선 이력 (Improvements Ledger)
 
 > SSoT는 `docs/improvements.ledger.json`. 이 파일은 `node scripts/ledger.mjs render`로 자동 생성됨 — 직접 수정 금지.
-> 마지막 갱신: 2026-10-18 · 총 47건
+> 마지막 갱신: 2026-10-18 · 총 50건
 >
 > `applied`/`verified` 항목은 evidence 체크를 달고 있으며 `node scripts/ledger.mjs verify`가 실측한다(선언≠증거).
 
@@ -20,7 +20,7 @@
 | IMP-0041 | 2026-09-20 | workflow | 워크플로우 최소 갱신: 무손실 후보 배정, 원본과 본문 분리, 실측 usage unknown, 모델 입력 감사 결속, 선택 compact, 편집 검사 최신성 계약 | scripts/vgrok-fetch.mjs<br>scripts/test-vgrok-compact.mjs<br>docs/WORKFLOW_RENEWAL_PLAN.md<br>docs/WORKFLOW_RENEWAL_LOG.md<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_cache.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/routing_budget.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/merge_luna_shards.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_contract.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_renewal_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/collection_routing_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/check_collection_routing.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh<br>~/.claude/skills/voidnews-briefing-pipeline/SKILL.md | — |
 | IMP-0042 | 2026-09-20 | workflow | Fable 재검토 잔여 보강: review UTF8 byte 상한, 신규 bound shadow 공용 실행기, slim stdin 소비 및 공급자 응답 usage 자동 finish 연결 | ~/.claude/skills/voidnews-briefing-pipeline/scripts/plan_collection_lanes.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_runner.py<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/workflow_stage3_selftest.py<br>~/.claude/skills/voidnews-briefing-pipeline/gates/verify_collection_routing.sh<br>~/.claude/skills/voidnews-briefing-pipeline/SKILL.md<br>docs/WORKFLOW_RENEWAL_STAGE3.md<br>docs/WORKFLOW_RENEWAL_LOG.md | — |
 
-## 적용됨 (applied) (30)
+## 적용됨 (applied) (33)
 
 | ID | 날짜 | 분류 | 요청/개선 | 파일 | 커밋 |
 |---|---|---|---|---|---|
@@ -52,6 +52,9 @@
 | IMP-0043 | 2026-09-22 | ab-data | 2026-09-09~22 AI 뉴스 공백을 수집·검증해 Weekly 아카이브에 반영 (2026-w37 완성 29건 추가, 2026-w38 신규 63건, 2026-w39 부분 주차 13건) | lib/weeks/2026-w37.ts<br>lib/weeks/2026-w38.ts<br>lib/weeks/2026-w39.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
 | IMP-0044 | 2026-09-23 | ab-data | 2026-09b VIP 준비본: 본편 6개(Opus 5.5·GPT-6 Sol·Luna 별도 카드, GPT-Live-1, Jev, Grok 4.7, Qwen-Image-2.1), 추가로 보면 좋을 뉴스 1개(Cowork), 공개 도구 2개(Graft, AuK)를 공식 원문·이미지 해시로 결속 | lib/ab/editions/2026-09b.ts<br>docs/vip/20260924/SOURCES.json<br>scripts/check-ab-2026-09b.mjs<br>lib/weeks/2026-w39.ts | HEAD |
 | IMP-0045 | 2026-10-05 | ab-data | 2026-09-24~10-06 AI 뉴스를 Weekly에 전체 반영(2026-w39 완성 19건 추가, 2026-w40 신규 74건, 2026-w41 부분 주차 7건). VIP 선정은 Weekly 배포 뒤 사용자가 하기로 해 AB 회차 파일은 쓰지 않음 + 필수 채널(AI Search) 영상 설명문 링크 전수 반영(연구·오픈소스 17건 추가: w39 +3, w40 +14) | lib/weeks/2026-w39.ts<br>lib/weeks/2026-w40.ts<br>lib/weeks/2026-w41.ts<br>lib/data.ts<br>references/weekly-source-image-audit.json<br>docs/redesign/BACKFILL-INTEGRATION.json | HEAD |
+| IMP-0046 | 2026-10-07 | ab-data | AB 2026-10a 도구 추천에 EasyCut과 Rill 추가 | lib/ab/editions/2026-10a.ts | HEAD |
+| IMP-0047 | 2026-10-07 | ab-data | AB VIP 마지막 추천 카드에 VOIDLIGHT 제작 MOTION RECIPE 추가 | lib/ab/editions/2026-10a.ts<br>app/ab/[edition]/components/cards.tsx<br>app/globals.css | HEAD |
+| IMP-0048 | 2026-10-07 | ab-data | 2026-10a FLUX를 Nano Banana 2.1로 교체하고 발표 자료 동기화 | lib/ab/editions/2026-10a.ts | HEAD |
 | IMP-0049 | 2026-10-18 | infra | AB 자동화 감사 0~7단계: fail-open 게이트 수리, run-local 스크립트 키트 승격, pending 나이 집계, 주간·회차 생성기, 사본 차단·정리 도구, 맥미니 일일 결정론 수확(launchd 07:10) | scripts/emit-weeks.mjs<br>scripts/emit_ab_edition.py<br>scripts/prune_workspace.py<br>scripts/ledger.mjs<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/daily_harvest.py | — |
 | IMP-0050 | 2026-10-18 | ab-ranking | Horizon(Thysrael/Horizon) 구조 분석(RFC 게이트 통과·RE 엔진 미지원) 후 Phase 4 랭커를 rank_rubric.py(프로필 고정 루브릭·발췌·2패스·중복 묶기·상위 30 opus 재평가)로 교체. 적용 전후 블라인드 테스트: 맞대결 11:0, 비용 약 12분의 1 | ~/.claude/skills/voidnews-briefing-pipeline/scripts/rank_rubric.py<br>~/.claude/skills/voidnews-briefing-pipeline/references/rank-profiles.json<br>~/.claude/skills/voidnews-briefing-pipeline/scripts/curate_top10.py | — |
 

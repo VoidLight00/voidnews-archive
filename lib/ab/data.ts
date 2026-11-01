@@ -112,6 +112,7 @@ export interface ABEdition {
 }
 
 import { edition2026_10b } from "./editions/2026-10b";
+import { edition2026_10a } from "./editions/2026-10a";
 import { edition2026_09b } from "./editions/2026-09b";
 import { edition2026_09a } from "./editions/2026-09a";
 import { edition2026_04a } from "./editions/2026-04a";
@@ -127,7 +128,7 @@ import { edition2026_07c } from "./editions/2026-07c";
 import { edition2026_08b } from "./editions/2026-08b";
 import { edition2026_08a } from "./editions/2026-08a";
 
-export const editions: ABEdition[] = [edition2026_10b, edition2026_09b, edition2026_09a, edition2026_08b, edition2026_08a, edition2026_07c, edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
+export const editions: ABEdition[] = [edition2026_10b, edition2026_10a, edition2026_09b, edition2026_09a, edition2026_08b, edition2026_08a, edition2026_07c, edition2026_07b, edition2026_07a, edition2026_06b, edition2026_06a, edition2026_05b, edition2026_05a, edition2026_04c, edition2026_04b, edition2026_04a];
 
 // 날짜 URL은 announceDate가 기본이라 과거 회차 데이터 수정 없이 전 회차가 날짜로 접근된다.
 function dateSlugOf(edition: ABEdition): string {
