@@ -24,12 +24,13 @@ if (git.status !== 0) {
   process.exit(1);
 }
 const result = { status: 'RUNNING', baseURL, startedAt: new Date().toISOString(), commit: git.stdout.toString('utf8').trim(), checks: [] };
-const env = { ...process.env, VOIDNEWS_TEST_URL: baseURL, VOIDNEWS_IMAGE_TEST_OUTPUT: path.join(run, 'weekly-images.json'), VOIDNEWS_SUPPLEMENT_TEST_OUTPUT: path.join(run, 'ab-supplements.json') };
+const env = { ...process.env, VOIDNEWS_TEST_URL: baseURL, VOIDNEWS_IMAGE_TEST_OUTPUT: path.join(run, 'weekly-images.json'), VOIDNEWS_SUPPLEMENT_TEST_OUTPUT: path.join(run, 'ab-supplements.json'), VOIDNEWS_AB_EDITION_TEST_OUTPUT: path.join(run, 'ab-latest-edition.json') };
 const checks = [
   ['master', 'bash', ['gates/verify_voidnews.sh', '.']],
   ['browse-and-mobile', process.execPath, ['scripts/test-browse-ui.mjs']],
   ['image-disclosure-and-failure', process.execPath, ['scripts/test-image-disclosure.mjs']],
   ['ab-reader-and-supplements', process.execPath, ['scripts/test-ab-supplements-ui.mjs']],
+  ['ab-latest-edition', process.execPath, ['scripts/test-ab-edition-ui.mjs']], // 등록된 최신 AB 회차 화면(2026-11-01)
   ['all-weekly-images', process.execPath, ['scripts/test-weekly-images-ui.mjs']],
 ];
 const save = () => fs.writeFileSync(path.join(run, 'result.json'), JSON.stringify(result, null, 2) + '\n');
