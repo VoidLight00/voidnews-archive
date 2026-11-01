@@ -7,7 +7,7 @@
   "mutate": [
     {
       "file": "app/newsletter/page.tsx",
-      "find": "            <tr data-consent-item=\"refusal\">\n              <th scope=\"row\">동의를 거부할 권리와 불이익</th>\n              <td>동의를 거부하실 수 있습니다. 거부하시면 뉴스레터를 받으실 수 없습니다.</td>\n            </tr>\n",
+      "find": "              <tr data-consent-item=\"refusal\">\n                <th scope=\"row\">동의를 거부할 권리와 불이익</th>\n                <td>동의를 거부하실 수 있습니다. 거부하시면 뉴스레터를 받으실 수 없습니다.</td>\n              </tr>\n",
       "replace": ""
     }
   ],

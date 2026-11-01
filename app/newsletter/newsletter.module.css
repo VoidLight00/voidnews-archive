@@ -1,0 +1,330 @@
+/* 뉴스레터 구독 안내(/newsletter/)의 표지와 최근 호 목록입니다.
+   구조는 Ghost 뉴스레터 테마 TryGhost/Edition(MIT)의 표지(partials/cover.hbs)와 글 목록(index.hbs)을 따르고,
+   색·글꼴·간격은 VoidNews 토큰만 씁니다. 표현형 Taste(2026-11-01 사용자 선택): 비대칭 분할, 큰 표제,
+   이중 테두리 패널, 버튼 속 화살표, 가벼운 등장 모션. 모서리는 패널 4px·버튼 알약형 두 가지만 씁니다.
+   구분은 중립 1px var(--border)만 쓰고, 강조색 선과 왼쪽 세로 막대는 쓰지 않습니다. */
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 72px) clamp(16px, 4vw, 32px) clamp(40px, 7vw, 72px);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 표지: 좁은 화면은 글 → 그림 순서로 쌓고, 768px부터 7:5로 나눕니다. */
+.cover {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+  padding-bottom: var(--space-2xl);
+}
+
+.title {
+  color: var(--text-strong);
+  font-family: var(--sans);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+/* 라이트 테마의 --accent는 잉크색이라(흰 바탕 주황 글자 1.9:1), 두 테마 모두 주황 면에 잉크 글자(8.59:1)로 강조합니다. */
+.titleAccent {
+  padding: 0 0.12em;
+  border-radius: var(--radius-xs);
+  background: var(--accent-fill);
+  color: var(--on-accent);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.description {
+  max-width: 34em;
+  margin-top: var(--space-md);
+  color: var(--text-soft);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.closedNote {
+  flex-basis: 100%;
+  color: var(--text);
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+/* 알약형 버튼 안에 화살표 원을 따로 둡니다. 글자는 한 줄로 유지합니다. */
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 48px;
+  padding: 6px 6px 6px 22px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+/* Orange fill with dark text (8.59:1). Pium is never placed on this fill. */
+.primaryButton {
+  border: 1px solid var(--accent);
+  background: var(--accent-fill);
+  color: var(--on-accent);
+}
+
+.primaryButton:hover,
+.primaryButton:active {
+  background: var(--accent-fill-hover);
+}
+
+.secondaryButton {
+  border: 1px solid var(--border2);
+  background: var(--card);
+  color: var(--text-strong);
+}
+
+.secondaryButton:hover {
+  border-color: var(--text);
+}
+
+/* 누르는 동안의 표시입니다. 터치 화면에서는 hover 없이 바로 눌리므로 따로 둡니다. */
+.secondaryButton:active {
+  border-color: var(--text);
+  background: var(--surface);
+}
+
+.primaryButton:active,
+.secondaryButton:active {
+  transform: translateY(1px);
+}
+
+.buttonIcon {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text-strong);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.primaryButton .buttonIcon {
+  background: var(--on-accent);
+  color: var(--accent-fill);
+}
+
+.primaryButton:hover .buttonIcon,
+.secondaryButton:hover .buttonIcon {
+  transform: translate(2px, -1px);
+}
+
+.scrollCue {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  text-decoration: underline;
+  text-decoration-color: var(--border2);
+  text-underline-offset: 4px;
+}
+
+.scrollCue:hover {
+  color: var(--text);
+}
+
+/* 이중 테두리 패널: 바깥 판(surface)과 안쪽 판(card)을 배경 차이로만 나눕니다. 선은 바깥 1px 하나입니다. */
+.art {
+  justify-self: center;
+  width: min(100%, 360px);
+  padding: var(--space-xs);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.artCore {
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+  border-radius: var(--radius-xs);
+  background: var(--card);
+}
+
+/* 원형으로 자르지 않고, 픽셀 격자에 맞춰 24px 배수(144·192px)로만 키웁니다. */
+.pium {
+  display: block;
+  width: 144px;
+  height: 144px;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.art:hover .pium {
+  transform: scale(1.04) rotate(-4deg);
+}
+
+/* 최근 호 목록(Edition의 feed-header와 글 목록). 숫자는 회차, 화살표는 이동 방향입니다. */
+.feed {
+  max-width: 760px;
+}
+
+.feedTitle {
+  color: var(--text-strong);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.issues {
+  margin-top: var(--space-md);
+  padding: 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+}
+
+.issue {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xs);
+  border-bottom: 1px solid var(--border);
+  color: inherit;
+  text-decoration: none;
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+.issue:hover {
+  background: var(--surface);
+}
+
+/* 회차 숫자는 끊지 않습니다. 열 너비는 숫자 자신의 글자 크기 기준 2자리(2ch)입니다. */
+.issueNumber {
+  min-width: 2ch;
+  color: var(--text-strong);
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  font-size: var(--text-2xl);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.issue:hover .issueNumber {
+  color: var(--accent);
+}
+
+.issueBody {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.issueMeta {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.issueSummary {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.issueArrow {
+  color: var(--muted);
+  transition: transform var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+
+.issue:hover .issueArrow {
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+/* 고지 구역은 읽기 좋은 폭(760px)으로 둡니다. */
+.notices {
+  max-width: 760px;
+}
+
+@media (min-width: 768px) {
+  .cover {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--space-2xl);
+  }
+
+  .art {
+    justify-self: end;
+  }
+
+  .artCore {
+    aspect-ratio: 1;
+  }
+
+  .pium {
+    width: 192px;
+    height: 192px;
+  }
+}
+
+/* 등장 모션은 transform·opacity만 쓰고, 모션 줄이기 설정에서는 꺼집니다. */
+@media (prefers-reduced-motion: no-preference) {
+  .coverText > *,
+  .art {
+    animation: rise 560ms var(--ease-out) both;
+  }
+
+  .coverText > :nth-child(2) {
+    animation-delay: 70ms;
+  }
+
+  .coverText > :nth-child(3) {
+    animation-delay: 140ms;
+  }
+
+  .coverText > :nth-child(4),
+  .art {
+    animation-delay: 210ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pium,
+  .buttonIcon,
+  .issueArrow,
+  .primaryButton,
+  .secondaryButton {
+    transition: none;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
