@@ -17,14 +17,23 @@
 # 2026-11-01: 해결 안내를 바꿨다. 'git add -A' 안내를 따르면 무관한 미커밋 변경과 회차가 참조하는 mp4 삭제 28건까지
 # 커밋될 수 있었고, 'vercel deploy --prod'는 작업 트리를 그대로 운영에 올린다. 이제 파일 지정 stage와
 # scripts/check-staged-editions.mjs, 그리고 push → 미리보기 Ready → vercel promote 순서를 안내한다.
+#
+# 2026-11-02: AB 게시 마지막 확인용 옵션을 더했다. 파일 지정 stage를 쓰면 다른 작업의 미커밋 변경이 남는 것이 정상이라
+# 이 검사가 항상 실패했다. 또 운영 커밋을 '가장 최근 Ready 운영 배포'로 읽어, 되돌리기 직후에는 실제 운영과 달랐다.
+#   --allow-dirty        미커밋 변경을 판정에 넣지 않고 목록만 보인다
+#   --expect-sha <sha>   그 커밋이 운영 커밋과 같거나 조상인지 본다(맥미니가 더 새 커밋을 올린 경우도 반영으로 본다)
 cd "$(dirname "$0")/.."
 
 ALLOW_UNCONFIGURED=0
-for a in "$@"; do
-  case "$a" in
-    --allow-unconfigured) ALLOW_UNCONFIGURED=1 ;;
-    --warn) ALLOW_UNCONFIGURED=1 ;;
+ALLOW_DIRTY=0
+EXPECT_SHA=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --allow-unconfigured|--warn) ALLOW_UNCONFIGURED=1 ;;
+    --allow-dirty) ALLOW_DIRTY=1 ;;
+    --expect-sha) EXPECT_SHA="${2:-}"; shift ;;
   esac
+  shift
 done
 
 # 근거를 구하지 못한 경우의 단일 종료 경로. 조용히 통과하지 않는다.
@@ -71,30 +80,35 @@ if [ -z "$TOKEN" ] || [ -z "$PROJECT_ID" ]; then
   no_evidence "no-credentials" "Vercel token 또는 projectId 를 읽지 못함"
 fi
 
+# 운영 주소가 지금 가리키는 배포를 읽는다(되돌리기 뒤에도 실제 운영과 같다).
 PROD_INFO=$(curl -s -H "Authorization: Bearer $TOKEN" \
-  "https://api.vercel.com/v6/deployments?projectId=$PROJECT_ID&teamId=$TEAM_ID&limit=1&state=READY&target=production" \
+  "https://api.vercel.com/v13/deployments/voidnews-archive.vercel.app?teamId=$TEAM_ID" \
   | python3 -c "
 import sys, json
-d = json.load(sys.stdin)
-dep = d.get('deployments', [{}])[0]
+dep = json.load(sys.stdin)
 sha = dep.get('meta', {}).get('githubCommitSha', '')
 url = dep.get('url', '')
-print(f'{sha[:7]}|{url}')
+print(f'{sha}|{url}')
 " 2>/dev/null || echo "|")
 
 PROD_SHA=$(echo "$PROD_INFO" | cut -d'|' -f1)
 PROD_URL=$(echo "$PROD_INFO" | cut -d'|' -f2)
+PROD7=$(echo "$PROD_SHA" | cut -c1-7)
+LOCAL7=$(echo "$LOCAL_SHA_SHORT" | cut -c1-7)
 
 echo "=== production ==="
 echo "  alias deployment: $PROD_URL"
-echo "  commit: $PROD_SHA"
+echo "  commit: $PROD7"
 
 # 3. 게이트 판정
 EXIT=0
 echo ""
 echo "=== gate verdict ==="
 
-if [ "$DIRTY" -gt 0 ]; then
+if [ "$DIRTY" -gt 0 ] && [ "$ALLOW_DIRTY" -eq 1 ]; then
+  echo "🟡 NOTE — 미커밋 변경 ${DIRTY}개(다른 작업의 변경일 수 있음). --allow-dirty 라 판정에 넣지 않습니다."
+  git status --porcelain | head -10 | sed 's/^/         /'
+elif [ "$DIRTY" -gt 0 ]; then
   echo "🚨 P0 — uncommitted changes ($DIRTY files). GitHub webhook 이 매번 옛 commit 으로 alias 덮어씌움."
   echo "       해결: 승인된 파일만 이름으로 stage(git add -- <파일>) → node scripts/check-staged-editions.mjs --expect <새 회차> → commit → push"
   echo "       git add -A 는 쓰지 않습니다. 아래의 무관한 변경·삭제까지 커밋됩니다."
@@ -102,7 +116,9 @@ if [ "$DIRTY" -gt 0 ]; then
   EXIT=2
 fi
 
-if [ "$UNPUSHED" -gt 0 ]; then
+if [ "$UNPUSHED" -gt 0 ] && [ -n "$EXPECT_SHA" ]; then
+  echo "🟡 NOTE — local 에 unpushed commits $UNPUSHED 개. --expect-sha 확인에는 넣지 않습니다."
+elif [ "$UNPUSHED" -gt 0 ]; then
   echo "🟡 WARN — local 에 unpushed commits $UNPUSHED 개. push 안 하면 GitHub auto-deploy 가 옛 코드 사용."
   echo "       해결: git push origin $BRANCH"
   [ $EXIT -lt 1 ] && EXIT=1
@@ -112,8 +128,20 @@ if [ -z "$PROD_SHA" ]; then
   no_evidence "no-prod-commit" "production 배포의 commit 을 조회하지 못함(API 응답 비었음)"
 fi
 
-if [ "$PROD_SHA" != "$(echo $LOCAL_SHA_SHORT | cut -c1-7)" ]; then
-  echo "🟡 WARN — production commit ($PROD_SHA) ≠ local HEAD ($(echo $LOCAL_SHA_SHORT | cut -c1-7))."
+if [ -n "$EXPECT_SHA" ]; then
+  # 운영 커밋이 로컬에 없으면 받아 온다. 조상 관계를 판정할 수 없으면 반영 안 됨으로 본다(fail-closed).
+  git cat-file -e "$PROD_SHA^{commit}" 2>/dev/null || git fetch -q origin "$BRANCH" 2>/dev/null
+  if git merge-base --is-ancestor "$EXPECT_SHA" "$PROD_SHA" 2>/dev/null; then
+    echo "PASS[git-sync] 운영 커밋($PROD7)에 $(echo "$EXPECT_SHA" | cut -c1-7) 가 들어 있습니다"
+  else
+    echo "FAIL[git-sync:not-live] 운영 커밋($PROD7)에 $(echo "$EXPECT_SHA" | cut -c1-7) 가 들어 있지 않습니다(승격 실패 또는 되돌림)"
+    EXIT=2
+  fi
+  exit $EXIT
+fi
+
+if [ "$PROD7" != "$LOCAL7" ]; then
+  echo "🟡 WARN — production commit ($PROD7) ≠ local HEAD ($LOCAL7)."
   echo "       push 는 미리보기만 만들고 운영은 vercel promote 로만 바뀝니다. 맥미니 매일 자동 게시가 더 새 커밋을 올렸다면 먼저 pull 하십시오."
   echo "       해결: git push origin $BRANCH → bash ~/.claude/skills/voidnews-briefing-pipeline/scripts/promote_after_push.sh <full sha>"
   echo "       'vercel deploy --prod' 는 작업 트리를 그대로 올리므로 쓰지 않습니다."
@@ -121,7 +149,7 @@ if [ "$PROD_SHA" != "$(echo $LOCAL_SHA_SHORT | cut -c1-7)" ]; then
 fi
 
 if [ $EXIT -eq 0 ]; then
-  echo "PASS[git-sync] local HEAD($(echo $LOCAL_SHA_SHORT | cut -c1-7)) == production commit($PROD_SHA) · dirty 0 · unpushed 0"
+  echo "PASS[git-sync] local HEAD($LOCAL7) == production commit($PROD7) · dirty $DIRTY · unpushed $UNPUSHED"
 fi
 
 exit $EXIT

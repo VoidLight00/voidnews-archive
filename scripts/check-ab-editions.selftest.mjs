@@ -13,10 +13,13 @@ const write = (dir, rel, body) => {
 };
 const approve = (list) => (dir) => write(dir, "references/approved-editions.json", JSON.stringify({ editions: list }));
 const remove = (rel) => (dir) => fs.rmSync(path.join(dir, rel));
+const BASE_DATA = 'import { a } from "./editions/2026-01a";\nimport { b } from "./editions/2026-01b";\n';
+const edition = (body) => (dir) => write(dir, "lib/ab/editions/2026-01a.ts", `export const a = ${body};\n`);
+const register = (line) => (dir) => write(dir, "lib/ab/data.ts", BASE_DATA + line + "\n");
 
 function fixture(mutate) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "ab-editions-"));
-  write(dir, "lib/ab/data.ts", 'import { a } from "./editions/2026-01a";\nimport { b } from "./editions/2026-01b";\n');
+  write(dir, "lib/ab/data.ts", BASE_DATA);
   write(dir, "lib/ab/editions/2026-01a.ts", 'export const a = { image: "/source-media/x/a.webp" };\n');
   write(dir, "lib/ab/editions/2026-01b.ts", 'export const b = { video: "/threads-assets/y/clip%2001.mp4" };\n');
   write(dir, "public/source-media/x/a.webp", "x");
@@ -35,13 +38,28 @@ const cases = [
   ["함정: 회차가 참조하는 이미지가 없음", 2, remove("public/source-media/x/a.webp"), ""],
   ["함정: 등록된 회차 파일이 없음", 2, remove("lib/ab/editions/2026-01b.ts"), ""],
   ["함정: 승인 목록 파일이 깨짐", 2, (dir) => write(dir, "references/approved-editions.json", "{"), ""],
+  // 2026-11-02 검토 추가: 대소문자·따옴표·쿼리·인코딩·주석·@/ 경로·호스팅 빌드의 초안 값
+  ["함정: 대소문자만 다른 이미지 참조(macOS는 통과, Vercel은 실패)", 2, edition('{ image: "/source-media/x/A.webp" }'), ""],
+  ["함정: 작은따옴표와 ?v= 쿼리로 참조한 이미지가 없음", 2, edition("{ image: '/source-media/x/none.webp?v=2' }"), ""],
+  ["대조군: %2B로 인코딩한 경로와 다른 사이트(//) 이미지", 0, (dir) => {
+    edition('{ image: "/source-media/x/C%2B%2B.webp", cdn: "//cdn.example.com/x.png" }')(dir);
+    write(dir, "public/source-media/x/C++.webp", "x");
+  }, ""],
+  ["대조군: 주석 처리한 미승인 회차 import", 0, register('// import { z } from "./editions/2026-09z";'), ""],
+  ["함정: @/ 경로로 등록한 미승인 회차", 2, (dir) => {
+    register('import { z } from "@/lib/ab/editions/2026-09z";')(dir);
+    write(dir, "lib/ab/editions/2026-09z.ts", "export const z = {};\n");
+  }, ""],
+  ["함정: Vercel 빌드에 초안 값이 설정됨", 2, approve(["2026-01a"]), "2026-01b", { VERCEL: "1" }],
 ];
 
 let bad = 0;
-for (const [name, want, mutate, drafts] of cases) {
+for (const [name, want, mutate, drafts, hostEnv = {}] of cases) {
   const dir = fixture(mutate);
+  // 이 자체시험은 Vercel 빌드에서도 돌므로 VERCEL·CI를 지우고 시험마다 명시합니다. 그대로 물려받으면 초안 대조군이 exit 2가 됩니다.
+  const { VERCEL, CI, ...env } = process.env;
   const r = spawnSync(process.execPath, [GATE, "--root", dir], {
-    env: { ...process.env, VN_AB_DRAFT_EDITIONS: drafts },
+    env: { ...env, ...hostEnv, VN_AB_DRAFT_EDITIONS: drafts },
     encoding: "utf8",
   });
   fs.rmSync(dir, { recursive: true, force: true });

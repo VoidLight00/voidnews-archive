@@ -64,6 +64,7 @@ const RUN_SCOPED = new Set([
   "verify-live-thumbnails.mjs",    // live network check (not at build time)
   "verify-site-release.mjs",       // mandatory after deployment; requires the actual --url and runs the master plus browser checks
   "check-staged-editions.mjs",     // pre-commit: reads the git index; the AB publish step runs it right after staging
+  "check-staged-editions.selftest.mjs", // builds throwaway git repos; run it by hand after changing check-staged-editions.mjs
   "run-all-gates.mjs",
   "run-postbuild-gates.mjs",       // postbuild: 리뉴얼 게이트 --html 검사(out/ 없으면 실패). 이름이 check-/verify-가 아니라 발견되지 않지만 위치를 밝혀 둡니다.
 ]);

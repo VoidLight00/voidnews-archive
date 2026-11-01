@@ -12,10 +12,10 @@
 // 커밋 직전 인덱스 대조(작업 트리에만 있고 stage하지 않은 파일)는 scripts/check-staged-editions.mjs가 합니다.
 import fs from "node:fs";
 import path from "node:path";
+import { assetRefs, registeredEditions } from "./lib/ab-editions.mjs";
 
 const i = process.argv.indexOf("--root");
 const ROOT = i === -1 ? path.resolve(import.meta.dirname, "..") : path.resolve(process.argv[i + 1] || ".");
-const ASSET = /"(\/[^"\s]+\.(?:png|jpe?g|webp|gif|avif|svg|mp4|webm))"/gi;
 const fail = (token, msg) => {
   console.error(`FAIL[ab-editions:${token}] ${msg}`);
   process.exit(2);
@@ -38,31 +38,49 @@ try {
 } catch (e) {
   fail("parse", `lib/ab/data.ts를 읽지 못했습니다: ${String(e.message).split("\n")[0]}`);
 }
-const registered = [...dataTs.matchAll(/from\s+["']\.\/editions\/([^"']+)["']/g)].map((m) => m[1]);
+const registered = registeredEditions(dataTs);
 if (registered.length === 0) fail("parse", "lib/ab/data.ts에서 회차 import를 찾지 못했습니다.");
 
-const drafts = (process.env.VN_AB_DRAFT_EDITIONS || "").split(",").map((s) => s.trim()).filter(Boolean);
+// Vercel·CI 빌드에는 초안 허용 값을 적용하지 않습니다. 환경 변수가 잘못 설정되어도 승인 없이 공개되지 않게 합니다.
+const hosted = Boolean(process.env.VERCEL || process.env.CI);
+const drafts = hosted ? [] : (process.env.VN_AB_DRAFT_EDITIONS || "").split(",").map((s) => s.trim()).filter(Boolean);
+if (hosted && process.env.VN_AB_DRAFT_EDITIONS) console.warn("WARN[ab-editions:draft] Vercel·CI 빌드라 VN_AB_DRAFT_EDITIONS를 무시합니다.");
 const unapproved = registered.filter((s) => !approved.includes(s));
 const blocked = unapproved.filter((s) => !drafts.includes(s));
 if (blocked.length) {
   fail("unapproved", `게시 승인 목록에 없는 회차가 등록되어 있습니다: ${blocked.join(", ")}. ` +
-    "게시 승인을 받으면 references/approved-editions.json에 추가하고, 아니면 lib/ab/data.ts 등록을 빼십시오.");
+    "게시 승인을 받으면 references/approved-editions.json에 추가하고, 아니면 lib/ab/data.ts 등록을 빼십시오. " +
+    "승인 전 로컬 QA 빌드라면 VN_AB_DRAFT_EDITIONS=<회차>를 붙여 다시 실행합니다(승인 목록을 미리 고치지 않습니다).");
 }
 
-// ponytail: 존재 확인은 파일 시스템 기준입니다. macOS는 대소문자를 구분하지 않으므로 대소문자만 다른 경로는 로컬에서 통과하고,
-// 대소문자를 구분하는 Vercel(Linux) 빌드에서 실패합니다. 운영 승격은 그 빌드가 Ready여야 하므로 운영으로는 나가지 않습니다.
+// macOS는 대소문자를 구분하지 않아 existsSync가 A.webp와 a.webp를 같은 파일로 봅니다. 그러면 로컬 빌드는 통과하고
+// Vercel(Linux) 빌드만 실패해 매일 게시가 미리보기 단계에서 멈춥니다. 그래서 폴더 목록의 이름과 정확히 비교합니다.
+// 한글 이름은 git이 NFC로 저장하므로 NFC로 맞춰 비교합니다.
+const listing = new Map();
+const namesIn = (dir) => {
+  if (!listing.has(dir)) {
+    let names = null;
+    try { names = new Set(fs.readdirSync(dir).map((n) => n.normalize("NFC"))); } catch { /* 폴더 없음 */ }
+    listing.set(dir, names);
+  }
+  return listing.get(dir);
+};
+const existsExact = (rel) => {
+  let dir = ROOT;
+  for (const seg of rel.split("/").filter(Boolean)) {
+    if (!namesIn(dir)?.has(seg.normalize("NFC"))) return false;
+    dir = path.join(dir, seg);
+  }
+  return true;
+};
 const missing = [];
 const scan = (rel, src) => {
-  for (const [, ref] of src.matchAll(ASSET)) {
-    let p;
-    try { p = decodeURI(ref); } catch { p = ref; }
-    if (!fs.existsSync(path.join(ROOT, "public", p))) missing.push(`public${p} (${rel})`);
-  }
+  for (const p of assetRefs(src)) if (!existsExact(`public${p}`)) missing.push(`public${p} (${rel})`);
 };
 scan("lib/ab/data.ts", dataTs);
 for (const slug of registered) {
   const rel = `lib/ab/editions/${slug}.ts`;
-  if (!fs.existsSync(path.join(ROOT, rel))) { missing.push(`${rel} (등록됨)`); continue; }
+  if (!existsExact(rel)) { missing.push(`${rel} (등록됨)`); continue; }
   scan(rel, read(rel));
 }
 if (missing.length) fail("missing", `참조한 파일이 없습니다 ${missing.length}개:\n  ${missing.slice(0, 30).join("\n  ")}`);
