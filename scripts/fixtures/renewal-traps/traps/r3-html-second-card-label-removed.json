@@ -7,7 +7,7 @@
   "mutate": [
     {
       "file": "out/2099-w01/index.html",
-      "find": "<span id=\"fixture-beta-badge\" class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI<span class=\"css__auto\" data-auto-published=\"\"> · 자동 게시</span></span></span>",
+      "find": "<span id=\"fixture-beta-badge\" class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI</span></span>",
       "replace": ""
     }
   ],

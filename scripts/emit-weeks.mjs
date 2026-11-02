@@ -104,7 +104,7 @@ function buildPost(card) {
     slug: card.slug,
     tags: card.tags,
   };
-  // 게시기 표식(R24): 매일 자동 게시가 쓴 카드에만 있습니다. AB 카드에는 없으므로 '자동 게시'가 붙지 않습니다.
+  // 게시기 표식(R24): 매일 게시 작업이 쓴 카드에만 있습니다. 출처 기록이며 화면에는 그리지 않습니다.
   if (card.autoPublished === true) post.autoPublished = true;
   if (Array.isArray(card.backupUrls) && card.backupUrls.length) {
     post.backupUrls = card.backupUrls.filter((b) => b && b.url).map((b) => ({ label: b.label || "관련 자료", url: b.url }));

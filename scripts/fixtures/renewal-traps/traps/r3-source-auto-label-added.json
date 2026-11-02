@@ -1,0 +1,15 @@
+{
+  "id": "r3-source-auto-label-added",
+  "plan": "R3",
+  "check": "check-ai-author-label.mjs",
+  "mode": "source",
+  "why": "'자동 게시' 표시가 다시 생김(원본): AuthorBadge가 게시기 표식이나 그 문구를 그리면 막아야 합니다(2026-11-02 사용자 요청).",
+  "mutate": [
+    {
+      "file": "app/components/AuthorBadge.tsx",
+      "find": "{t(lang, \"author.pium\")}</span>",
+      "replace": "{t(lang, \"author.pium\")}<span data-auto-published=\"\"> · 자동 게시</span></span>"
+    }
+  ],
+  "expect": "FAIL[ai-author-label:badge]"
+}

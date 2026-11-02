@@ -3,7 +3,7 @@
   "plan": "R3",
   "check": "check-ai-author-label.mjs",
   "mode": "source",
-  "why": "게시기 표식 무시(원본, R24): 판정 규칙이 autoPublished를 보지 않으면 매일 자동 게시의 새 카드에서 '자동 게시'가 빠지므로 막아야 합니다.",
+  "why": "게시기 표식 무시(원본, R24): 판정 규칙이 autoPublished를 보지 않으면 매일 게시 작업이 올린 새 카드의 출처 기록이 빠지므로 막아야 합니다. 화면에는 그리지 않습니다.",
   "mutate": [
     {
       "file": "lib/authorship.ts",

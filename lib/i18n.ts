@@ -47,7 +47,6 @@ const messages = {
     "detail.next": "다음",
     // AI 작성 표시(리뉴얼 계획 R3)
     "author.pium": "피움 작성 · AI",
-    "author.autoPublished": "자동 게시",
     // 언어 토글
     "locale.switch": "언어",
   },
@@ -91,7 +90,6 @@ const messages = {
     "detail.prev": "Previous",
     "detail.next": "Next",
     "author.pium": "Written by Pium · AI",
-    "author.autoPublished": "Auto-published",
     "locale.switch": "Lang",
   },
 } as const satisfies Record<Locale, Record<string, string>>;

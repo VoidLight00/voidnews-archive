@@ -1,0 +1,15 @@
+{
+  "id": "r3-source-auto-text-in-i18n",
+  "plan": "R3",
+  "check": "check-ai-author-label.mjs",
+  "mode": "source",
+  "why": "'자동 게시' 문구가 사전에 다시 생김(원본): 라벨 사전에 쓰지 않는 표현이 들어오면 막아야 합니다(2026-11-02 사용자 요청).",
+  "mutate": [
+    {
+      "file": "lib/i18n.ts",
+      "find": "\"author.pium\": \"피움 작성 · AI\",",
+      "replace": "\"author.pium\": \"피움 작성 · AI\",\n    \"author.autoPublished\": \"자동 게시\","
+    }
+  ],
+  "expect": "FAIL[ai-author-label:label-text]"
+}

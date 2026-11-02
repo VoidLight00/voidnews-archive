@@ -265,7 +265,8 @@ function checkStatic(where, width, routeId, a, kind) {
     a.pium.cards.forEach((c, i) => { if (c.badges !== 1 || c.visibleBadges !== 1) fail(where, `card ${i} badge count`, c); });
     for (const b of a.pium.badges) {
       if (!b.visible || !b.imgVisible || b.imgW !== 24) fail(where, 'card badge not visible at 24px', b);
-      if (!b.text.startsWith('피움 작성 · AI')) fail(where, 'badge label text', b);
+      // '자동 게시'는 쓰지 않습니다(2026-11-02 사용자 요청). 라벨은 정확히 '피움 작성 · AI'입니다.
+      if (b.text !== '피움 작성 · AI' || b.auto) fail(where, 'badge label text', b);
       if (b.right > width) fail(where, 'badge beyond viewport', b);
     }
   }
@@ -274,7 +275,7 @@ function checkStatic(where, width, routeId, a, kind) {
     if (by.length !== 1) fail(where, `byline badge count ${by.length}`);
     for (const b of by) {
       if (!b.visible || !b.imgVisible || b.imgW !== 48) fail(where, 'byline badge not visible at 48px', b);
-      if (!b.text.startsWith('피움 작성 · AI')) fail(where, 'byline label text', b);
+      if (b.text !== '피움 작성 · AI' || b.auto) fail(where, 'byline label text', b);
     }
   }
   // header

@@ -1,5 +1,5 @@
 {
-  "note": "함정 기준 사이트의 주간 자료입니다. alpha는 이전 카드, beta는 자동 게시(게시기 표식 autoPublished, R24), gamma는 확인일 없는 카드입니다. alpha와 beta는 발표 하이라이트(featured)입니다.",
+  "note": "함정 기준 사이트의 주간 자료입니다. alpha는 이전 카드, beta는 게시기 표식(autoPublished, R24)이 있는 카드이며 화면에는 표식을 그리지 않습니다, gamma는 확인일 없는 카드입니다. alpha와 beta는 발표 하이라이트(featured)입니다.",
   "weeks": [
     {
       "slug": "2099-w01",

@@ -7,8 +7,8 @@
   "mutate": [
     {
       "file": "out/presentation/2099-w01/index.html",
-      "find": "<span class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI<span class=\"css__auto\" data-auto-published=\"\"> · 자동 게시</span></span></span>",
-      "replace": ""
+      "find": "<h2 class=\"article-card-title serif\">Beta</h2><div style=\"margin-top:var(--space-sm)\"><span class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI</span></span>",
+      "replace": "<h2 class=\"article-card-title serif\">Beta</h2><div style=\"margin-top:var(--space-sm)\">"
     }
   ],
   "expect": "FAIL[ai-author-label:presentation-label]"

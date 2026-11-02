@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 // check-ai-author-label.mjs — AI 작성 표시 HARD 게이트(리뉴얼 계획 R3·3절, REQUIREMENTS R21)
 //
-// 왜: 방문자가 카드와 기사를 AI가 썼는지, 사람 검토 없이 자동 게시됐는지 알 수 있어야 합니다.
-// 라벨은 데이터가 아니라 lib/authorship.ts 규칙으로 붙으므로, 매일 자동 게시가 카드를 더해도
+// 왜: 방문자가 카드와 기사를 AI가 썼는지 알 수 있어야 합니다.
+// 라벨은 데이터가 아니라 lib/authorship.ts 규칙으로 붙으므로, 매일 게시 작업이 카드를 더해도
 // 이 게이트는 계속 통과해야 하고(계획 5.5절), 표시 위치 하나가 빠지면 실패해야 합니다.
+// '자동 게시'라는 표현은 쓰지 않습니다(2026-11-02 사용자 요청). 이전에는 규칙 대상 카드에 반드시 붙여야 했지만,
+// 이제 라벨·사전·AuthorBadge 어디에든 다시 나타나면 실패합니다. 게시기 표식은 출처 기록으로만 판정합니다.
 //
-// 원본 검사(prebuild): i18n 라벨 4개, 판정 규칙의 경계값, AuthorBadge의 표식·그림 계약,
+// 원본 검사(prebuild): i18n 라벨 2개와 금지 표현, 판정 규칙의 경계값, AuthorBadge의 그림 계약과 금지 표현,
 //   계획 R3 표의 표시 위치 12곳(구성요소 9개 파일, 발표 하이라이트 포함)이 AuthorBadge를 그리는지 확인합니다.
-// 빌드 검사(--html, postbuild): 주간 페이지의 카드마다 라벨 1개와 규칙에 맞는 '자동 게시',
-//   기사 상세마다 48px 바이라인 1개, AB 카드·기사의 라벨, 발표 하이라이트(featured 글)마다 라벨,
-//   '자동 게시' 합계 = 규칙 대상 수를 확인합니다.
+// 빌드 검사(--html, postbuild): 주간 페이지의 카드마다 라벨 1개('피움 작성 · AI' 그대로, '자동 게시' 없음),
+//   기사 상세마다 48px 바이라인 1개, AB 카드·기사의 라벨, 발표 하이라이트(featured 글)마다 라벨을 확인합니다.
 //   --data <json>  주간 데이터 대신 읽을 자료({ weeks: [{ slug, posts: [{ slug, title, autoPublished }] }] }, 함정 시험용)
 // 종료 코드: 0 통과 · 1 위반 · 2 입력 오류(out/ 없음 포함)
 import fs from "node:fs";
@@ -21,9 +22,11 @@ import {
 
 const GATE = "ai-author-label";
 const LABELS = {
-  ko: { pium: "피움 작성 · AI", auto: "자동 게시" },
-  en: { pium: "Written by Pium · AI", auto: "Auto-published" },
+  ko: { pium: "피움 작성 · AI" },
+  en: { pium: "Written by Pium · AI" },
 };
+// 쓰지 않는 표현(2026-11-02 사용자 요청). 사전·AuthorBadge의 문자열과 빌드 라벨에서 찾습니다. 기사 본문은 보지 않습니다.
+const FORBIDDEN = /자동\s*게시|auto-?published/i;
 const AVATAR = "/brand/pium.svg";
 // 계획 R3 표의 표시 위치: [파일, 그 안의 구성요소 함수, 필요한 크기(없으면 24px 기본값)]
 const LOCATIONS = [
@@ -49,12 +52,15 @@ function checkLabelsAndRule(root, report) {
   const { t } = loadTsModule(path.join(root, "lib/i18n.ts"));
   for (const [locale, want] of Object.entries(LABELS)) {
     if (t(locale, "author.pium") !== want.pium) report.fail("label-text", `lib/i18n.ts ${locale} author.pium = ${JSON.stringify(t(locale, "author.pium"))} — 기대 ${JSON.stringify(want.pium)}`);
-    if (t(locale, "author.autoPublished") !== want.auto) report.fail("label-text", `lib/i18n.ts ${locale} author.autoPublished — 기대 ${JSON.stringify(want.auto)}`);
+  }
+  const i18n = "lib/i18n.ts";
+  for (const piece of stringPieces(parseSource(i18n, readText(root, i18n)))) {
+    if (FORBIDDEN.test(piece.text)) report.fail("label-text", `${i18n}: 쓰지 않는 표현 ${JSON.stringify(piece.text)}(2026-11-02 사용자 요청)`);
   }
   const authorship = loadTsModule(path.join(root, "lib/authorship.ts"));
   if (authorship.AI_AUTHOR_NAME !== "피움(VoidNews AI)") report.fail("rule", `AI_AUTHOR_NAME = ${JSON.stringify(authorship.AI_AUTHOR_NAME)}`);
   // 판정 규칙의 경계값(R3·R24). 규칙을 바꾸면 이 표를 같은 커밋에서 고칩니다.
-  // '자동 게시'는 게시기 표식이나 표식 도입 전 목록으로만 정합니다. 확인 날짜(verifiedAt)는 더 이상 쓰지 않습니다.
+  // 게시기 표식 판정(autoPublished)은 출처 기록이며 화면에 그리지 않습니다. 표식이나 표식 도입 전 목록으로만 정합니다.
   const cases = [
     [{ scope: "2026-w44", slug: "rule-probe", title: "probe", autoPublished: true }, true, true],
     [{ scope: "2026-w44", slug: "rule-probe", title: "probe", autoPublished: false }, true, false],
@@ -65,7 +71,7 @@ function checkLabelsAndRule(root, report) {
   ];
   for (const [subject, ai, auto] of cases) {
     const got = authorship.getAuthorship(subject);
-    if (got.ai !== ai || got.autoPublished !== auto) report.fail("rule", `getAuthorship(${JSON.stringify(subject)}) = ${JSON.stringify(got)} — 기대 ai ${ai}, 자동 게시 ${auto}`);
+    if (got.ai !== ai || got.autoPublished !== auto) report.fail("rule", `getAuthorship(${JSON.stringify(subject)}) = ${JSON.stringify(got)} — 기대 ai ${ai}, 게시기 표식 ${auto}`);
   }
   for (const key of authorship.HUMAN_WRITTEN ?? []) {
     const cut = key.lastIndexOf("/");
@@ -77,15 +83,17 @@ function checkLabelsAndRule(root, report) {
 function checkBadge(root, report) {
   const rel = "app/components/AuthorBadge.tsx";
   const source = parseSource(rel, readText(root, rel));
-  const pieces = new Set(stringPieces(source).map((piece) => piece.text));
-  for (const needed of ["data-ai-author", "author.pium", "author.autoPublished", AVATAR]) {
+  const strings = stringPieces(source).map((piece) => piece.text);
+  const pieces = new Set(strings);
+  for (const needed of ["data-ai-author", "author.pium", AVATAR]) {
     if (!pieces.has(needed)) report.fail("badge", `${rel}: '${needed}'가 없습니다`);
   }
+  for (const text of strings) if (FORBIDDEN.test(text) || text === "author.autoPublished") report.fail("badge", `${rel}: 쓰지 않는 표현 ${JSON.stringify(text)}`);
   const openings = jsxOpenings(source);
   const images = openings.filter((item) => item.tag === "img").map((item) => jsxAttributes(item.node));
   if (!images.some((attrs) => attrs.alt?.text === "")) report.fail("badge", `${rel}: 라벨 옆 피움 그림은 장식이라 alt=""여야 합니다(계획 3.3절 6항)`);
-  if (!openings.some((item) => Object.hasOwn(jsxAttributes(item.node), "data-auto-published"))) {
-    report.fail("badge", `${rel}: '자동 게시' 표식(data-auto-published)을 그리는 요소가 없습니다`);
+  if (openings.some((item) => Object.hasOwn(jsxAttributes(item.node), "data-auto-published"))) {
+    report.fail("badge", `${rel}: '자동 게시' 표시(data-auto-published)를 그립니다 — 2026-11-02부터 쓰지 않습니다`);
   }
 }
 
@@ -142,14 +150,14 @@ function cardTarget(card, week) {
   }
 }
 
-/** 라벨 요소 하나가 규칙(ai, autoPublished)과 맞는지 보고 문제 목록을 돌려줍니다. */
-function badgeProblems(badge, expected, sizes) {
+/** 라벨 요소 하나가 계약('피움 작성 · AI' 그대로, '자동 게시' 없음, 피움 그림)과 맞는지 보고 문제 목록을 돌려줍니다. */
+function badgeProblems(badge, sizes) {
   const problems = [];
-  const auto = findAll(badge, (el) => hasAttr(el, "data-auto-published")).length > 0;
-  if (auto !== expected.autoPublished) problems.push(["auto", `'자동 게시' ${auto ? "있음" : "없음"} — 규칙은 ${expected.autoPublished ? "자동 게시" : "검토 또는 이전 카드"}`]);
   const text = innerText(badge);
-  const wants = Object.values(LABELS).map((l) => (expected.autoPublished ? `${l.pium} · ${l.auto}` : l.pium));
-  if (!wants.includes(text)) problems.push(["text", `라벨 글자 '${text}'`]);
+  if (findAll(badge, (el) => hasAttr(el, "data-auto-published")).length || FORBIDDEN.test(text)) {
+    problems.push(["auto", `'자동 게시' 표시가 있습니다('${text}') — 2026-11-02부터 쓰지 않습니다`]);
+  }
+  if (!Object.values(LABELS).some((l) => l.pium === text)) problems.push(["text", `라벨 글자 '${text}'`]);
   const img = findAll(badge, (el) => el.tag === "img")[0];
   const width = Number(img?.attrs.width);
   if (!img || !img.attrs.src?.endsWith(AVATAR) || img.attrs.alt !== "" || !sizes.includes(width)) {
@@ -171,8 +179,7 @@ function checkWeeklyPage(outDir, rel, week, ctx, report) {
     if (badges.length !== (expected.ai ? 1 : 0)) { report.fail("card-label", `${where}: 라벨 ${badges.length}개 — 기대 ${expected.ai ? 1 : 0}개`); return; }
     if (!badges.length) return;
     ctx.labels += 1;
-    if (findAll(badges[0], (el) => hasAttr(el, "data-auto-published")).length) ctx.cardAuto += 1;
-    for (const [code, detail] of badgeProblems(badges[0], expected, [24])) report.fail(`card-${code}`, `${where}: ${detail}`);
+    for (const [code, detail] of badgeProblems(badges[0], [24])) report.fail(`card-${code}`, `${where}: ${detail}`);
   });
 }
 
@@ -182,8 +189,7 @@ function checkArticlePage(outDir, rel, subject, ctx, report) {
   ctx.articles += 1;
   if (bylines.length !== (expected.ai ? 1 : 0)) { report.fail("byline", `${rel}: 48px 바이라인 라벨 ${bylines.length}개 — 기대 ${expected.ai ? 1 : 0}개`); return; }
   if (!bylines.length) return;
-  if (findAll(bylines[0], (el) => hasAttr(el, "data-auto-published")).length) ctx.bylineAuto += 1;
-  for (const [code, detail] of badgeProblems(bylines[0], expected, [48])) report.fail(`byline-${code}`, `${rel}: ${detail}`);
+  for (const [code, detail] of badgeProblems(bylines[0], [48])) report.fail(`byline-${code}`, `${rel}: ${detail}`);
 }
 
 function checkAbEditionPage(outDir, rel, ctx, report) {
@@ -194,7 +200,7 @@ function checkAbEditionPage(outDir, rel, ctx, report) {
     if (badges.length > 1) report.fail("ab-card-label", `${rel}: AB 카드 하나에 라벨 ${badges.length}개`);
     if (badges.length) labeled += 1;
     for (const badge of badges) {
-      for (const [code, detail] of badgeProblems(badge, { ai: true, autoPublished: false }, [24])) report.fail(`ab-card-${code}`, `${rel}: ${detail}`);
+      for (const [code, detail] of badgeProblems(badge, [24])) report.fail(`ab-card-${code}`, `${rel}: ${detail}`);
     }
   }
   if (labeled < cards.length - ctx.humanAb) report.fail("ab-card-label", `${rel}: AB 카드 ${cards.length}개 중 라벨 ${labeled}개`);
@@ -216,7 +222,7 @@ function checkPresentationPage(outDir, rel, week, ctx, report) {
     const badges = findAll(block, (el) => hasAttr(el, "data-ai-author"));
     ctx.highlights += 1;
     if (badges.length !== (expected.ai ? 1 : 0)) { report.fail("presentation-label", `${where}: 라벨 ${badges.length}개 — 기대 ${expected.ai ? 1 : 0}개`); return; }
-    for (const badge of badges) for (const [code, detail] of badgeProblems(badge, expected, [24])) report.fail(`presentation-${code}`, `${where}: ${detail}`);
+    for (const badge of badges) for (const [code, detail] of badgeProblems(badge, [24])) report.fail(`presentation-${code}`, `${where}: ${detail}`);
   });
 }
 
@@ -224,16 +230,15 @@ function checkPages(root, outDir, dataFile, report) {
   const pages = new Set(requireOut(outDir));
   const authorship = loadTsModule(path.join(root, "lib/authorship.ts"));
   const human = [...(authorship.HUMAN_WRITTEN ?? [])];
-  const ctx = { getAuthorship: authorship.getAuthorship, humanAb: human.filter((key) => key.startsWith("ab/")).length, cards: 0, labels: 0, cardAuto: 0, bylineAuto: 0, articles: 0, abCards: 0, highlights: 0 };
-  // 표식 도입 전 목록(R24)의 키가 실제 주간 카드를 가리키는지 봅니다. 오타가 있으면 그 카드에서 '자동 게시'가 조용히 빠집니다.
+  const ctx = { getAuthorship: authorship.getAuthorship, humanAb: human.filter((key) => key.startsWith("ab/")).length, cards: 0, labels: 0, articles: 0, abCards: 0, highlights: 0 };
+  // 표식 도입 전 목록(R24)의 키가 실제 주간 카드를 가리키는지 봅니다. 오타가 있으면 그 카드의 게시기 판정(출처 기록)이 조용히 빠집니다.
   // 함정 시험의 가상 자료(--data)에는 실제 카드가 없으므로 건너뜁니다. 원본 함정 사본에는 lib/weeks가 없어 이 검사를 빌드 단계에 둡니다.
   if (!dataFile) {
     const keys = new Set(loadWeeks(root, null).flatMap((week) => week.posts.map((post) => `${week.slug}/${post.slug || post.title}`)));
     const legacy = [...(authorship.LEGACY_AUTO_PUBLISHED ?? [])];
-    if (!legacy.length) report.fail("legacy", "LEGACY_AUTO_PUBLISHED가 비어 있습니다 — 표식 도입 전 자동 게시 카드가 '자동 게시'를 잃습니다");
+    if (!legacy.length) report.fail("legacy", "LEGACY_AUTO_PUBLISHED가 비어 있습니다 — 표식 도입 전 게시기 카드의 출처 기록이 빠집니다");
     for (const key of legacy) if (!keys.has(key)) report.fail("legacy", `LEGACY_AUTO_PUBLISHED의 ${key}에 해당하는 주간 카드가 없습니다`);
   }
-  let targets = 0;
   for (const week of loadWeeks(root, dataFile)) {
     const rel = `${week.slug}/index.html`;
     if (!pages.has(rel)) { report.fail("coverage", `${rel}: 주간 페이지가 빌드에 없습니다`); continue; }
@@ -243,7 +248,6 @@ function checkPages(root, outDir, dataFile, report) {
       const subject = { scope: week.slug, slug: post.slug, title: post.title, autoPublished: post.autoPublished };
       const article = `${week.slug}/${post.slug}/index.html`;
       if (!pages.has(article)) { report.fail("coverage", `${article}: 기사 상세가 빌드에 없습니다`); continue; }
-      if (ctx.getAuthorship(subject).autoPublished) targets += 1;
       checkArticlePage(outDir, article, subject, ctx, report);
     }
     const presentation = `presentation/${week.slug}/index.html`;
@@ -256,19 +260,18 @@ function checkPages(root, outDir, dataFile, report) {
     if (parts.length === 3) checkAbEditionPage(outDir, rel, ctx, report);
     if (parts.length === 4) checkArticlePage(outDir, rel, { scope: "ab", slug: parts[2], title: parts[2] }, ctx, report);
   }
-  if (ctx.bylineAuto !== targets) report.fail("auto-count", `기사 바이라인 '자동 게시' ${ctx.bylineAuto}개 — 규칙 대상 ${targets}개`);
   if (!ctx.cards || !ctx.articles) report.fail("coverage", `검사한 카드 ${ctx.cards}개 · 기사 ${ctx.articles}개 — 측정 없이 통과하지 않습니다`);
-  report.note(`주간 카드 ${ctx.cards}개 · 라벨 ${ctx.labels}개 · 카드 '자동 게시' ${ctx.cardAuto}개 · 기사 ${ctx.articles}개 · 바이라인 '자동 게시' ${ctx.bylineAuto}개 · 규칙 대상 ${targets}개 · AB 카드 ${ctx.abCards}개 · 발표 하이라이트 ${ctx.highlights}개`);
+  report.note(`주간 카드 ${ctx.cards}개 · 라벨 ${ctx.labels}개 · 기사 ${ctx.articles}개 · AB 카드 ${ctx.abCards}개 · 발표 하이라이트 ${ctx.highlights}개`);
 }
 
 runGate(GATE, (opts) => {
   const report = createReporter(GATE);
   if (opts.html) {
     checkPages(opts.root, opts.out, opts.options.data ? path.resolve(opts.options.data) : null, report);
-    return report.finish("빌드 페이지의 카드·기사 라벨과 '자동 게시' 표시가 lib/authorship.ts 규칙과 같습니다.");
+    return report.finish("빌드 페이지의 카드·기사 라벨이 lib/authorship.ts 규칙과 같고 '자동 게시' 표시가 없습니다.");
   }
   checkLabelsAndRule(opts.root, report);
   checkBadge(opts.root, report);
   checkLocations(opts.root, report);
-  return report.finish(`라벨 4개, 판정 규칙 경계값, AuthorBadge 계약, 표시 위치 ${LOCATIONS.length}곳을 확인했습니다.`);
+  return report.finish(`라벨 2개와 금지 표현, 판정 규칙 경계값, AuthorBadge 계약, 표시 위치 ${LOCATIONS.length}곳을 확인했습니다.`);
 });

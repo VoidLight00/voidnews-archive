@@ -1,0 +1,15 @@
+{
+  "id": "r3-html-auto-label-present",
+  "plan": "R3",
+  "check": "check-ai-author-label.mjs",
+  "mode": "html",
+  "why": "'자동 게시' 표시가 다시 생김(빌드): 2026-11-02 사용자 요청으로 쓰지 않는 표현이므로, 게시기 표식이 있는 카드라도 라벨에 나타나면 막아야 합니다.",
+  "mutate": [
+    {
+      "file": "out/2099-w01/index.html",
+      "find": "<span id=\"fixture-beta-badge\" class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI</span></span>",
+      "replace": "<span id=\"fixture-beta-badge\" class=\"css__badge\" data-ai-author=\"pium\" data-size=\"24\" data-tone=\"muted\"><img src=\"/brand/pium.svg\" alt=\"\" width=\"24\" height=\"24\" class=\"css__avatar\" decoding=\"async\" fetchPriority=\"low\"/><span class=\"css__text\">피움 작성 · AI<span class=\"css__auto\" data-auto-published=\"\"> · 자동 게시</span></span></span>"
+    }
+  ],
+  "expect": "FAIL[ai-author-label:card-auto]"
+}
