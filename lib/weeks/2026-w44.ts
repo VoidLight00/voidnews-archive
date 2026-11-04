@@ -1,12 +1,12 @@
 import type { WeeklyData } from "../data";
 
-// Partial week: 2026-10-31까지 수집한 구간만 담았습니다. 11/1~1은 다음 수집에서 채웁니다. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
+// 2026-10-26~11/1 전 구간. 표시 시각은 한국시간(KST)이며, 발행처가 날짜만 제공한 항목은 날짜만 표시합니다.
 export const week44: WeeklyData = {
   "week": 44,
   "year": 2026,
   "slug": "2026-w44",
   "period": "10/26 ~ 11/1",
-  "totalPosts": 4,
+  "totalPosts": 8,
   "companies": [
     {
       "name": "Google / DeepMind",
@@ -134,6 +134,159 @@ export const week44: WeeklyData = {
             "deck": "Nemotron 3.5 Transcribe combines transcription, speaker attribution, translation, and audio Q&A.",
             "summary": "NVIDIA released the open-weight Nemotron 3.5 Transcribe speech model alongside Granary v2 multilingual data and its curation pipeline. Developers can guide outputs with natural-language instructions and fine-tune the model for domain vocabulary and accents.",
             "content": "NVIDIA released Nemotron 3.5 Transcribe on Hugging Face and ModelScope. One model supports transcription in 40 languages, translation between English and 31 of those languages, and speaker attribution in 13. It handles recordings up to one hour long and up to eight speakers, and is designed for recorded audio rather than live streaming.\n\nOn the English track of the Hugging Face Open ASR Leaderboard, it ranks first among open-weight models at 5.33% average word error rate, with API models excluded. Natural-language instructions can specify transcript formatting or domain terminology, while audio Q&A is trained in English.\n\nThe accompanying Granary v2 data release covers 463,062 hours across 48 languages. Its reusable curation pipeline and NeMo Speech fine-tuning tools support domain adaptation. In a medical case study evaluated on held-out speakers, fine-tuning reduced word error rate by 45.8% relative to the best prompt."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Google",
+      "color": "#4285F4",
+      "posts": [
+        {
+          "date": "10/28",
+          "platform": "Web",
+          "title": "Google·XREAL, 유선 Android XR 안경 AURA 주문 개시",
+          "deck": "유선 Android XR 안경의 한국 주문 개시를 Google이 알렸습니다",
+          "summary": "Google은 유선 Android XR 안경 XREAL AURA를 발표하고 미국·캐나다·한국에서 당일 주문을 시작한다고 밝혔습니다. Gemini 지원과 별도의 휴대용 연산 장치를 설명하며, 무선 독립형 안경은 아닙니다. 주문 개시가 실제 배송을 증명하지는 않습니다.",
+          "content": "Google은 유선 Android XR 안경 XREAL AURA를 발표하고 미국·캐나다·한국에서 당일 주문을 시작한다고 밝혔습니다. Gemini 지원과 별도의 휴대용 연산 장치를 설명하며, 무선 독립형 안경은 아닙니다. 주문 개시가 실제 배송을 증명하지는 않습니다.\n\n공식 발표의 내용과 게시일을 확인한 것으로, 성능이나 실제 이용 결과를 독립적으로 검증한 것은 아닙니다.",
+          "source": "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+          "officialUrl": "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+          "verifiedAt": "2026-11-03",
+          "slug": "google-xreal-aura-orders",
+          "tags": [
+            "Google",
+            "Android XR / XREAL AURA",
+            "Hardware"
+          ],
+          "backupUrls": [
+            {
+              "label": "TestingCatalog 참고 보도",
+              "url": "https://www.testingcatalog.com/google-and-xreal-launch-aura-android-xr-glasses/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261104/d7ff93a5407f.webp",
+            "alt": "XREAL AURA"
+          },
+          "en": {
+            "title": "Google and XREAL announce AURA orders in Korea and other markets",
+            "deck": "Google announced the wired Android XR glasses XREAL AURA and said orders opened that day in the United States, Canada and Korea.",
+            "summary": "Google announced the wired Android XR glasses XREAL AURA and said orders opened that day in the United States, Canada and Korea. It describes Gemini support and a separate portable compute device, not wireless standalone glasses. Order availability does not prove delivery or independently tested performance.",
+            "content": "Google announced the wired Android XR glasses XREAL AURA and said orders opened that day in the United States, Canada and Korea. It describes Gemini support and a separate portable compute device, not wireless standalone glasses. Order availability does not prove delivery or independently tested performance."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mistral AI",
+      "color": "#FA520F",
+      "posts": [
+        {
+          "date": "10/29",
+          "platform": "Web",
+          "title": "Mistral, Large 4 개선 모델 가중치 공개",
+          "deck": "개선 모델의 가중치를 공개했으며 별도 이용 조건이 있습니다",
+          "summary": "Mistral은 앞서 공개 프리뷰로 제공한 Large 4의 개선된 가중치를 공개했습니다. 자체 호스팅과 수정이 가능하지만 Mistral Ecosystem Open-Weight 라이선스가 적용되며, 모델 서비스 사업자의 상업적 이용에는 별도 라이선스 조건이 있습니다.",
+          "content": "Mistral은 앞서 공개 프리뷰로 제공한 Large 4의 개선된 가중치를 공개했습니다. 자체 호스팅과 수정이 가능하지만 Mistral Ecosystem Open-Weight 라이선스가 적용되며, 모델 서비스 사업자의 상업적 이용에는 별도 라이선스 조건이 있습니다.\n\n공식 발표의 내용과 게시일을 확인한 것으로, 성능이나 실제 이용 결과를 독립적으로 검증한 것은 아닙니다.",
+          "source": "https://mistral.ai/news/mistral-large-4-oss/",
+          "officialUrl": "https://mistral.ai/news/mistral-large-4-oss/",
+          "verifiedAt": "2026-11-03",
+          "slug": "mistral-large-4-weight-release",
+          "tags": [
+            "Mistral AI",
+            "Mistral Large 4 open-weight release",
+            "Model"
+          ],
+          "backupUrls": [
+            {
+              "label": "Hugging Face 참고 해설",
+              "url": "https://huggingface.co/blog/mistral-large4"
+            },
+            {
+              "label": "TestingCatalog 참고 보도",
+              "url": "https://www.testingcatalog.com/mistral-opens-large-4-weights-for-coding-and-security/"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261104/cf200321cc90.svg",
+            "alt": "Le Chonk signal"
+          },
+          "en": {
+            "title": "Mistral releases improved Large 4 weights under a custom license",
+            "deck": "Mistral released improved Large 4 weights following an earlier public preview.",
+            "summary": "Mistral released improved Large 4 weights following an earlier public preview. Its Mistral Ecosystem Open-Weight license allows self-hosting and modification but requires a separate commercial license for commercial Model-as-a-Service use. This is not unrestricted open source, and vendor benchmark results have not been independently reproduced.",
+            "content": "Mistral released improved Large 4 weights following an earlier public preview. Its Mistral Ecosystem Open-Weight license allows self-hosting and modification but requires a separate commercial license for commercial Model-as-a-Service use. This is not unrestricted open source, and vendor benchmark results have not been independently reproduced."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Suno",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/29",
+          "platform": "Web",
+          "title": "Suno, Studio 작업을 돕는 Chat 어시스턴트 소개 글 게시",
+          "deck": "Suno는 Chat의 음원 파트 생성·프로젝트 정리 기능을 소개했습니다",
+          "summary": "Suno는 10월 29일 공식 글에서 Studio의 Chat이 개별 음원 파트와 플러그인 생성, 프로젝트 정리, 작업 피드백을 돕는다고 설명했습니다. 글에 따르면 Studio는 Premier 구독에 포함됩니다. 글의 게시일이 Chat의 최초 출시일인지는 확인되지 않았으며, 기능을 독립적으로 시험한 결과는 아닙니다.",
+          "content": "Suno는 10월 29일 공식 글에서 Studio의 Chat이 개별 음원 파트와 플러그인 생성, 프로젝트 정리, 작업 피드백을 돕는다고 설명했습니다. 글에 따르면 Studio는 Premier 구독에 포함됩니다. 글의 게시일이 Chat의 최초 출시일인지는 확인되지 않았으며, 기능을 독립적으로 시험한 결과는 아닙니다.",
+          "source": "https://suno.com/blog/studio-chat-assistant",
+          "officialUrl": "https://suno.com/blog/studio-chat-assistant",
+          "verifiedAt": "2026-11-03",
+          "slug": "suno-studio-chat-assistant",
+          "tags": [
+            "Suno",
+            "Suno Studio",
+            "Chat",
+            "Audio"
+          ],
+          "backupUrls": [
+            {
+              "label": "Suno official blog index",
+              "url": "https://suno.com/blog"
+            }
+          ],
+          "thumbnail": {
+            "src": "/source-media/weekly-20261104/1bee73b44a69.jpg",
+            "alt": "AI-powered chat in Suno Studio"
+          },
+          "en": {
+            "title": "Suno publishes an introduction to its Studio Chat assistant",
+            "deck": "Suno describes Chat assistance with stems and project tidying.",
+            "summary": "Suno's October 29 article describes Studio Chat assisting with stems, plugins, project tidying and feedback. The article states that Studio is included with every Premier subscription. Its publication date does not establish Chat's first launch, and the described capabilities have not been independently tested.",
+            "content": "Suno's October 29 article describes Studio Chat assisting with stems, plugins, project tidying and feedback. The article states that Studio is included with every Premier subscription. Its publication date does not establish Chat's first launch, and the described capabilities have not been independently tested."
+          }
+        }
+      ]
+    },
+    {
+      "name": "UMI-Live",
+      "color": "#6B7280",
+      "posts": [
+        {
+          "date": "10/29",
+          "platform": "Web",
+          "title": "UMI-Live, 현장에서 양손 로봇 학습 데이터를 수집하는 시스템을 제안했습니다",
+          "deck": "사람의 양손 시범을 로봇 학습 데이터로 연결합니다",
+          "summary": "UMI-Live 연구진은 카메라·LiDAR 관성 센서·연산 장치를 통합해 현장에서 양손 작업 데이터를 수집하는 시스템을 제안했습니다. 논문 초록은 세 과제의 데이터 40시간을 공개했다고 설명합니다. 한 양손 집기·놓기 과제에서 보고한 성공률은 π₀.₅ 10회 중 10회, MolmoAct2 10회 중 8회이며, 모든 작업에서의 성능이나 독립 재현 결과를 뜻하지 않습니다.",
+          "content": "UMI-Live 연구진은 10월 29일 제출한 논문에서 현장용 양손 로봇 데이터 수집 시스템을 소개했습니다. 사람의 양손 시범을 기록하고 로봇 정책 학습에 연결하는 데 초점을 둡니다.\n\n카메라와 LiDAR 관성 센서, 연산 장치와 전원을 통합했습니다. 연구진은 수집 환경에 외부 추적 장비를 설치하거나 보정할 필요가 없다고 설명합니다. 녹화 인터페이스와 비동기 처리 과정, 양팔 로봇 원격 조작 및 정책 학습·추론 소프트웨어도 제시했습니다.\n\n논문 초록은 세 과제에 걸친 데이터 40시간과 하드웨어 설계, 소프트웨어, 재현 안내를 공개했다고 밝힙니다. 양손 집기·놓기 한 과제에서 미세 조정한 π₀.₅는 10회 중 10회, MolmoAct2는 10회 중 8회 성공했다고 보고했습니다. 표본이 작은 특정 과제의 결과이므로 일반적인 로봇 성능으로 확대할 수 없습니다.\n\n이 설명은 논문 초록에 근거합니다. 실험 상세 조건과 장기 운영 안정성, 별도 연구진의 재현 결과는 이 요약만으로 판단할 수 없습니다. 실제 도입 전에는 프로젝트 문서의 하드웨어 구성과 배포 라이선스를 별도로 확인해야 합니다.",
+          "source": "https://umi-live.github.io/",
+          "officialUrl": "https://umi-live.github.io/",
+          "backupUrls": [{"label": "연구 논문", "url": "https://arxiv.org/abs/2610.39385"}],
+          "thumbnail": {"src": "/source-media/weekly-20261104/6c1b7a00be21.png", "alt": "UMI-Live 휴대형 장치의 카메라·센서·배터리 분해도"},
+          "verifiedAt": "2026-11-04",
+          "slug": "umi-live-bimanual-data",
+          "tags": [
+            "Physical AI",
+            "UMI-Live",
+            "Robotics"
+          ],
+          "en": {
+            "title": "UMI-Live proposes in-the-wild bimanual robotics data collection",
+            "deck": "Human demonstrations become data for robot policy training.",
+            "summary": "The authors describe an integrated bimanual data collection system and report 40 hours across three tasks. On one bimanual pick-and-place task, fine-tuned π₀.₅ succeeded in 10/10 trials and MolmoAct2 in 8/10. These abstract-reported results are not independent replication or general performance guarantees.",
+            "content": "The October 29 paper presents an integrated bimanual data collection system with camera and LiDAR-inertial sensing, onboard computing, and power. Its abstract reports 40 hours across three tasks and 10/10 and 8/10 successes for fine-tuned π₀.₅ and MolmoAct2 on one pick-and-place task. The small, task-specific results are author-reported; detailed experimental conditions, deployment licensing, and independent replication require separate review."
           }
         }
       ]

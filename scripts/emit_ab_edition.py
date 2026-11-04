@@ -73,6 +73,10 @@ def build(spec: dict) -> tuple[str, str, list[str]]:
     ed["highlights"], ed["modelWatch"] = [], []
     for rank, h in enumerate(spec["highlights"], 1):
         week, company, p = find(h["slug"])
+        text_overrides = {key: h[key] for key in ("title", "deck", "summary", "content") if key in h}
+        if any(not isinstance(value, str) or not value.strip() for value in text_overrides.values()):
+            fail("highlight-text", f"{h['slug']} 회차 문구는 비어 있지 않은 문자열이어야 합니다")
+        p = {**p, **text_overrides}
         if h.get("releaseScope"):  # 주소 속 단어로 추정한 범위가 틀릴 때 회차 spec 에서 바로잡는다
             p = {**p, "releaseScope": h["releaseScope"]}
         if h.get("thumbnail"):  # 원문에 기사 이미지가 없어 공식 페이지 화면을 촬영한 회차 전용 썸네일(Weekly 카드는 그대로)

@@ -72,6 +72,27 @@ def main() -> int:
         ok.append(("T6 없는 카드 → FAIL[no-card], 쓰기 0", rc == 2 and "FAIL[emit-ab-edition:no-card] ghost" in txt and out.read_text() == before, txt))
         rc, txt = call(root, spec(root, watch="nothumb"))
         ok.append(("T7 modelWatch 썸네일 없음 → FAIL[no-thumbnail]", rc == 2 and "FAIL[emit-ab-edition:no-thumbnail]" in txt, txt))
+        spec_path = spec(root)
+        original = json.loads(spec_path.read_text(encoding="utf-8"))
+        week_path = root / "lib/weeks/2026-w40.ts"
+        week_before = week_path.read_bytes()
+        overrides = {key: f"회차 {key}" for key in ("title", "deck", "summary", "content")}
+        changed = {**original, "highlights": [{**original["highlights"][0], **overrides}]}
+        spec_path.write_text(json.dumps(changed), encoding="utf-8")
+        rc, txt = call(root, spec_path)
+        generated = out.read_text(encoding="utf-8")
+        ok += [("T8 회차 문구 변경·Weekly 보존", rc == 0 and all(
+            json.dumps(value, ensure_ascii=False) in generated for value in overrides.values()
+        ) and week_path.read_bytes() == week_before, txt)]
+        rc, txt = call(root, spec(root))
+        ok += [("T9 선택 입력 없는 기존 산출 불변", rc == 0 and out.read_text(encoding="utf-8") == body, txt)]
+        for key in overrides:
+            for bad in ("", "  ", None, 3, [], {}):
+                invalid = {**original, "highlights": [{**original["highlights"][0], key: bad}]}
+                spec_path.write_text(json.dumps(invalid), encoding="utf-8")
+                rc, txt = call(root, spec_path)
+                ok += [(f"T10 {key}={bad!r} 거부·쓰기 없음", rc == 2 and
+                        "FAIL[emit-ab-edition:highlight-text]" in txt and out.read_text(encoding="utf-8") == body, txt)]
     for name, passed, txt in ok:
         print(f"{'OK  ' if passed else 'FAIL'} {name}")
         if not passed:

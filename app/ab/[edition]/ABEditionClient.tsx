@@ -15,6 +15,7 @@ import { Modal, type ModalContent } from "./components/PickModal";
 
 export default function ABEditionClient({ data }: { data: ABEdition }) {
   const { locale } = useLocale();
+  const invitationText = locale === "en" && data.invitation?.en ? data.invitation.en : data.invitation;
   const [modal, setModal] = useState<ModalContent | null>(null);
   const [expandedRank, setExpandedRank] = useState<number | null>(null);
   const openModal = useCallback((c: ModalContent) => setModal(c), []);
@@ -69,7 +70,7 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               color: "var(--text-soft)",
             }}
           >
-            직접 확인해 본 도구 가운데 지금 바로 써 볼 만한 것만 골랐습니다.
+            {data.editorsPicksDescription ?? "직접 확인해 본 도구 가운데 지금 바로 써 볼 만한 것만 골랐습니다."}
           </p>
         </div>
         <div className="tc-article-grid ab-edition-grid">
@@ -176,6 +177,16 @@ export default function ABEditionClient({ data }: { data: ABEdition }) {
               <span style={{ color: "var(--dim)" }}>/</span>
               <span style={{ color: "var(--text)" }}>{data.slug}</span>
             </nav>
+
+            {data.invitation && (
+              <section aria-label={invitationText?.title} style={{ marginTop: 24, padding: 20, background: "var(--card)", color: "var(--text)", wordBreak: "keep-all", overflowWrap: "anywhere" }}>
+                <h2 style={{ fontSize: 18, textWrap: "balance" }}>{invitationText?.title}</h2>
+                <p style={{ marginTop: 8, lineHeight: 1.6, textWrap: "pretty" }}>{invitationText?.description}</p>
+                <a href={data.invitation.url} target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", marginTop: 12, padding: "10px 0", color: "var(--text)", textDecoration: "underline" }}>
+                  {locale === "ko" ? "피클 초대장 열기" : "Open Pickle invitation"}
+                </a>
+              </section>
+            )}
 
             <div className="ab-hero-grid" style={{ alignItems: "start" }}>
               <div className="ab-hero-copy">

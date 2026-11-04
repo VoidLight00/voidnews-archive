@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-31T13:21:39.771Z",
+  "checkedAt": "2026-11-04T13:37:38.598Z",
   "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
   "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
   "counts": {
-    "available": 711,
+    "available": 726,
     "source-unresolved": 15,
     "no-meaningful-image-verified": 166,
     "fetch-failed": 35,
-    "records": 938
+    "records": 942
   },
   "records": [
     {
@@ -26903,6 +26903,280 @@
       "sha256": "124e933a2189c2be93de005878e670082729993d6246bc9692891f40340699a1",
       "byteSize": 42984,
       "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|Mistral, Large 4 개선 모델 가중치 공개|https://mistral.ai/news/mistral-large-4-oss/",
+      "week": "2026-w44",
+      "title": "Mistral, Large 4 개선 모델 가중치 공개",
+      "sourceUrl": "https://mistral.ai/news/mistral-large-4-oss/",
+      "status": "available",
+      "checkedAt": "2026-11-04T01:08:35.180Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Le Chonk signal).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://mistral.ai/news/mistral-large-4-oss/",
+          "httpStatus": 200,
+          "sha256": "12cd0dcdd95235d42196b4f060b68674ba31f71e945a462e646bd3c70837620f"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://mistral.ai/images/heros/ml4-oss/cat-signal.svg?dpl=6aea62e7607dd2605475151b",
+          "httpStatus": 200,
+          "sha256": "cf200321cc9047cbd86b08e845b9ed2ed1ca62af0891e37f3f97b1e569650a04",
+          "contentType": "image/svg+xml"
+        }
+      ],
+      "imageUrl": "https://mistral.ai/images/heros/ml4-oss/cat-signal.svg?dpl=6aea62e7607dd2605475151b",
+      "publicPath": "/source-media/weekly-20261104/cf200321cc90.svg",
+      "sha256": "cf200321cc9047cbd86b08e845b9ed2ed1ca62af0891e37f3f97b1e569650a04",
+      "byteSize": 1157,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|Google·XREAL, 유선 Android XR 안경 AURA 주문 개시|https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+      "week": "2026-w44",
+      "title": "Google·XREAL, 유선 Android XR 안경 AURA 주문 개시",
+      "sourceUrl": "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+      "status": "available",
+      "checkedAt": "2026-11-04T01:08:35.180Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: XREAL AURA).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+          "httpStatus": 200,
+          "sha256": "bd4c283f2a2324ea950cfd851980d4ce23dba0a69402f9a1ba19289714b2f630"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ManinOffice_V2.width-2200.format-webp.webp",
+          "httpStatus": 200,
+          "sha256": "d7ff93a5407fa1080c8f0173d85972dccac7c54dfe9022b2ade4b8d8b993b6a1",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ManinOffice_V2.width-2200.format-webp.webp",
+      "publicPath": "/source-media/weekly-20261104/d7ff93a5407f.webp",
+      "sha256": "d7ff93a5407fa1080c8f0173d85972dccac7c54dfe9022b2ade4b8d8b993b6a1",
+      "byteSize": 210834,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|Suno, Studio 작업을 돕는 Chat 어시스턴트 소개 글 게시|https://suno.com/blog/studio-chat-assistant",
+      "week": "2026-w44",
+      "title": "Suno, Studio 작업을 돕는 Chat 어시스턴트 소개 글 게시",
+      "sourceUrl": "https://suno.com/blog/studio-chat-assistant",
+      "status": "available",
+      "checkedAt": "2026-11-04T01:08:35.180Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: AI-powered chat in Suno Studio).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://suno.com/blog/studio-chat-assistant",
+          "httpStatus": 200,
+          "sha256": "39332b0d5b4ec6b7b96ff2f6228fab97b6a32f96382c285f30c94f0ff86dc1c0"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://cdn.sanity.io/images/cl7b1q1i/production/fc8af4d734f5a625daf3e957d7cdee3f1b2aa3fc-1920x1080.jpg?w=2400&h=1350&fit=crop&auto=format",
+          "httpStatus": 200,
+          "sha256": "1bee73b44a692d48321c6824076d3b89b8803db08a915b10e73ded51cb527693",
+          "contentType": "image/jpeg"
+        }
+      ],
+      "imageUrl": "https://cdn.sanity.io/images/cl7b1q1i/production/fc8af4d734f5a625daf3e957d7cdee3f1b2aa3fc-1920x1080.jpg?w=2400&h=1350&fit=crop&auto=format",
+      "publicPath": "/source-media/weekly-20261104/1bee73b44a69.jpg",
+      "sha256": "1bee73b44a692d48321c6824076d3b89b8803db08a915b10e73ded51cb527693",
+      "byteSize": 170986,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w44|UMI-Live, 현장에서 양손 로봇 학습 데이터를 수집하는 시스템을 제안했습니다|https://umi-live.github.io/",
+      "week": "2026-w44",
+      "title": "UMI-Live, 현장에서 양손 로봇 학습 데이터를 수집하는 시스템을 제안했습니다",
+      "sourceUrl": "https://umi-live.github.io/",
+      "status": "available",
+      "checkedAt": "2026-11-04T01:15:07.581Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Exploded CAD view of the UMI-Live handheld unit, labeling the camera, ArUco tag locations, redesigned gripper fingers, removable battery module, LiDAR, LCD screen, Raspberry Pi 5, and operator-facing buttons).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://umi-live.github.io/",
+          "httpStatus": 200,
+          "sha256": "6de2d9f5ffd8dd1087f312e60ea0d600a7c8ec49a3451b4f4c7ef07d01954102"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://umi-live.github.io/static/images/exploded-view.png",
+          "httpStatus": 200,
+          "sha256": "6c1b7a00be21d83b0b7fa4f47595bd9eedfc611acd83c3364ad97470bbade372",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://umi-live.github.io/static/images/exploded-view.png",
+      "publicPath": "/source-media/weekly-20261104/6c1b7a00be21.png",
+      "sha256": "6c1b7a00be21d83b0b7fa4f47595bd9eedfc611acd83c3364ad97470bbade372",
+      "byteSize": 429404,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    }
+  ],
+  "abRecords": [
+    {
+      "key": "2026-11a|피클에 생활 업무를 맡길 때는 목표와 승인 범위를 함께 정합니다|https://www.ddaily.co.kr/page/view/2026110303331226363",
+      "week": "2026-11a",
+      "title": "피클에 생활 업무를 맡길 때는 목표와 승인 범위를 함께 정합니다",
+      "sourceUrl": "https://www.ddaily.co.kr/page/view/2026110303331226363",
+      "status": "available",
+      "checkedAt": "2026-11-04T13:37:38.598Z",
+      "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://www.ddaily.co.kr/page/view/2026110303331226363",
+          "httpStatus": 200,
+          "sha256": "db1f4e1530cf668700cf4a87d39d696cee9b85886f091b128cf9bcb25cc0e5b8"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://www.ddaily.co.kr/photos/2026/11/03/2026110307352001149_l.jpg",
+          "httpStatus": 200,
+          "sha256": "b9bea248b9e00c8cb9dd1d10d21d9442d2ae6692dd7919d9e78c5445e4c00c2e",
+          "contentType": "image/jpeg"
+        }
+      ],
+      "imageUrl": "https://www.ddaily.co.kr/photos/2026/11/03/2026110307352001149_l.jpg",
+      "publicPath": "/source-media/weekly-20261104/b9bea248b9e0.jpg",
+      "sha256": "b9bea248b9e00c8cb9dd1d10d21d9442d2ae6692dd7919d9e78c5445e4c00c2e",
+      "byteSize": 150884,
+      "selectionKind": "source-share-preview",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-11a|TokenEconomizer의 코딩 에이전트 비용 제어|https://github.com/microsoft/TokenEconomizer",
+      "week": "2026-11a",
+      "title": "TokenEconomizer의 코딩 에이전트 비용 제어",
+      "sourceUrl": "https://github.com/microsoft/TokenEconomizer",
+      "status": "available",
+      "checkedAt": "2026-11-04T13:37:38.598Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://github.com/microsoft/TokenEconomizer",
+          "httpStatus": 200,
+          "sha256": "b1410ae87bc3c31877873ec89bc41e10c76ee283d72619e5f70c327e1847c71c"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://github.com/microsoft/TokenEconomizer/raw/main/docs/assets/teaser.png",
+          "httpStatus": 200,
+          "sha256": "df0901de87cbda27c7c3730064a6000e8f4fd22d24f57ebd4ed474ad7839655a",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://github.com/microsoft/TokenEconomizer/raw/main/docs/assets/teaser.png",
+      "publicPath": "/source-media/weekly-20261104/df0901de87cb.png",
+      "sha256": "df0901de87cbda27c7c3730064a6000e8f4fd22d24f57ebd4ed474ad7839655a",
+      "byteSize": 159491,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-11a|Hindsight의 에이전트 기억과 도입 조건|https://github.com/vectorize-io/hindsight",
+      "week": "2026-11a",
+      "title": "Hindsight의 에이전트 기억과 도입 조건",
+      "sourceUrl": "https://github.com/vectorize-io/hindsight",
+      "status": "available",
+      "checkedAt": "2026-11-04T13:37:38.598Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Hindsight Banner).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://github.com/vectorize-io/hindsight",
+          "httpStatus": 200,
+          "sha256": "4110a1ad0224dc825c7187e400e785062acbca053c2ea61596f756ceee0875bb"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://github.com/vectorize-io/hindsight/raw/main/hindsight-docs/static/img/hindsight-github-banner.png",
+          "httpStatus": 200,
+          "sha256": "c82753536939e36814af1ba4b57334c20a28b5723841df818084cf78b53bf41b",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://github.com/vectorize-io/hindsight/raw/main/hindsight-docs/static/img/hindsight-github-banner.png",
+      "publicPath": "/source-media/weekly-20261104/c82753536939.png",
+      "sha256": "c82753536939e36814af1ba4b57334c20a28b5723841df818084cf78b53bf41b",
+      "byteSize": 32615,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-11a|VibeVoice는 음성 인식과 음성 합성 모델을 구분해 제공합니다|https://github.com/microsoft/VibeVoice",
+      "week": "2026-11a",
+      "title": "VibeVoice는 음성 인식과 음성 합성 모델을 구분해 제공합니다",
+      "sourceUrl": "https://github.com/microsoft/VibeVoice",
+      "status": "available",
+      "checkedAt": "2026-11-04T13:37:38.598Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: DER).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "httpStatus": 200,
+          "sha256": "a6077b1ec497bb03e7c9836de1868e3fd749586da7df83ad887399ab7c196fb8"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://github.com/microsoft/VibeVoice/raw/main/Figures/DER.jpg",
+          "httpStatus": 200,
+          "sha256": "7472f1f44110da44ebfc49f7926096098c8598c0c63dd837cbace3748d9256d1",
+          "contentType": "image/jpeg"
+        }
+      ],
+      "imageUrl": "https://github.com/microsoft/VibeVoice/raw/main/Figures/DER.jpg",
+      "publicPath": "/source-media/weekly-20261104/7472f1f44110.jpg",
+      "sha256": "7472f1f44110da44ebfc49f7926096098c8598c0c63dd837cbace3748d9256d1",
+      "byteSize": 62653,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    }
+  ],
+  "rejectedRecords": [
+    {
+      "key": "2026-w44|UMI-Live, 현장에서 양손 로봇 학습 데이터를 수집하는 시스템을 제안했습니다|https://arxiv.org/abs/2610.39385",
+      "week": "2026-w44",
+      "title": "UMI-Live, 현장에서 양손 로봇 학습 데이터를 수집하는 시스템을 제안했습니다",
+      "sourceUrl": "https://arxiv.org/abs/2610.39385",
+      "status": "rejected",
+      "checkedAt": "2026-11-04T01:08:35.180Z",
+      "reason": "arXiv 공통 로고이므로 기사 이미지로 채택하지 않았습니다. 원래 수집 증거는 보존하며 공식 프로젝트의 장치 분해도 항목으로 대체합니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://arxiv.org/abs/2610.39385",
+          "httpStatus": 200,
+          "sha256": "b8bfed406d001c5e1ad89407c829e587b8287dc594a4533ba1af242cd81f61b1"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+          "httpStatus": 200,
+          "sha256": "ab77af3fa25e0e9002d8c752407598c670984ea6c990494842c2c5a9549d92cb",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "publicPath": "/source-media/weekly-20261104/ab77af3fa25e.png",
+      "sha256": "ab77af3fa25e0e9002d8c752407598c670984ea6c990494842c2c5a9549d92cb",
+      "byteSize": 24783,
+      "selectionKind": "source-share-preview",
       "selectionPolicy": "source-top-image-v1"
     }
   ],
