@@ -1,3 +1,4 @@
+import { week45 } from "./weeks/2026-w45";
 import { week44 } from "./weeks/2026-w44";
 import { week15 } from "./weeks/2026-w15";
 import { week16 } from "./weeks/2026-w16";
@@ -154,6 +155,7 @@ export interface WeeklyData {
 }
 
 export const weeks: WeeklyData[] = [
+  week45,
   week44,
   week43,
   week42,

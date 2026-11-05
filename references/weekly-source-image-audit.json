@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-04T13:37:38.598Z",
+  "checkedAt": "2026-11-05T23:31:28.177Z",
   "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
   "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
   "counts": {
@@ -8,7 +8,7 @@
     "source-unresolved": 15,
     "no-meaningful-image-verified": 166,
     "fetch-failed": 35,
-    "records": 942
+    "records": 945
   },
   "records": [
     {
@@ -27022,6 +27022,96 @@
       "publicPath": "/source-media/weekly-20261104/6c1b7a00be21.png",
       "sha256": "6c1b7a00be21d83b0b7fa4f47595bd9eedfc611acd83c3364ad97470bbade372",
       "byteSize": 429404,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w45|NVIDIA, Cosmos 3 시뮬레이션 모델 4종 공개했어요|https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "week": "2026-w45",
+      "title": "NVIDIA, Cosmos 3 시뮬레이션 모델 4종 공개했어요",
+      "sourceUrl": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "status": "available",
+      "checkedAt": "2026-11-05T23:31:28.177Z",
+      "reason": "기사 상단 이미지가 없어 같은 기사의 공유용 미리보기 이미지를 사용했습니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+          "httpStatus": 200,
+          "sha256": "c16ce4455cad83e64cbcb54bb012e18058f135764591772d35f8257b653f91b9"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://cdn-uploads.huggingface.co/production/uploads/677c471f8b4c4e271e57eaa5/rtmGVvFdD6JqkjBc26vsp.png",
+          "httpStatus": 200,
+          "sha256": "46baa543392191f23d263e76d537b1d7b7b22713e051965085c67c534fedd845",
+          "contentType": "image/png"
+        }
+      ],
+      "imageUrl": "https://cdn-uploads.huggingface.co/production/uploads/677c471f8b4c4e271e57eaa5/rtmGVvFdD6JqkjBc26vsp.png",
+      "publicPath": "/source-media/weekly-20261106/46baa5433921.png",
+      "sha256": "46baa543392191f23d263e76d537b1d7b7b22713e051965085c67c534fedd845",
+      "byteSize": 1542073,
+      "selectionKind": "source-share-preview",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w45|ElevenLabs, ElevenAgents의 컨택센터 연동을 발표했어요|https://elevenlabs.io/blog/elevenagents-contact-center-integrations",
+      "week": "2026-w45",
+      "title": "ElevenLabs, ElevenAgents의 컨택센터 연동을 발표했어요",
+      "sourceUrl": "https://elevenlabs.io/blog/elevenagents-contact-center-integrations",
+      "status": "available",
+      "checkedAt": "2026-11-05T23:31:28.177Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Smiling young man with short brown hair and a trimmed beard, wearing a striped shirt.).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://elevenlabs.io/blog/elevenagents-contact-center-integrations",
+          "httpStatus": 200,
+          "sha256": "9fa8979edbe04778cb581c264258e9124f19de5b709c48b63408b07860d493eb"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fgmw9mbwevzh-T03C60K74NQ-U0BE129M1PC-9c3a1e09a60c-512.webp&w=3840&q=80",
+          "httpStatus": 200,
+          "sha256": "5b290342a5e78e39dcc874cca87f571f4944de74baa07874c625ab68a740df7b",
+          "contentType": "image/jpeg"
+        }
+      ],
+      "imageUrl": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fgmw9mbwevzh-T03C60K74NQ-U0BE129M1PC-9c3a1e09a60c-512.webp&w=3840&q=80",
+      "publicPath": "/source-media/weekly-20261106/5b290342a5e7.jpg",
+      "sha256": "5b290342a5e78e39dcc874cca87f571f4944de74baa07874c625ab68a740df7b",
+      "byteSize": 19764,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w45|구글, 15초 영상 지원하는 Omni 1.2 Flash 공개했어요|https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips",
+      "week": "2026-w45",
+      "title": "구글, 15초 영상 지원하는 Omni 1.2 Flash 공개했어요",
+      "sourceUrl": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips",
+      "status": "available",
+      "checkedAt": "2026-11-05T23:31:28.177Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Text \"Gemini Introducing Gemini Omni 1.2 Flash\" surroudned by images of a beehive, animals in conversation, a squid, and a woman walking down a street).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips",
+          "httpStatus": 200,
+          "sha256": "64cfb609113ffa3e1103c9c6a4d3135543d69a30a70b4ce7ebc3078c6f4a3cb1"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.width-2200.format-webp.webp",
+          "httpStatus": 200,
+          "sha256": "f6f84f55da084bf5e4be5e393caa130450e1c918d01b1443bf65857e58904c34",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.width-2200.format-webp.webp",
+      "publicPath": "/source-media/weekly-20261106/f6f84f55da08.webp",
+      "sha256": "f6f84f55da084bf5e4be5e393caa130450e1c918d01b1443bf65857e58904c34",
+      "byteSize": 127924,
       "selectionKind": "source-first-image",
       "selectionPolicy": "source-top-image-v1"
     }
