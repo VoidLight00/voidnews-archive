@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-05T23:31:28.177Z",
+  "checkedAt": "2026-11-06T23:31:41.842Z",
   "scope": "All 316 Weekly posts without an explicit image at start, plus one previously empty local image file. Existing source images are checked separately.",
   "policy": "Original source article media first, then the publisher image for that same article. Site-wide logos, author portraits and unrelated article media are excluded. Access failure is not evidence of image absence.",
   "counts": {
@@ -8,7 +8,7 @@
     "source-unresolved": 15,
     "no-meaningful-image-verified": 166,
     "fetch-failed": 35,
-    "records": 945
+    "records": 949
   },
   "records": [
     {
@@ -27114,6 +27114,110 @@
       "byteSize": 127924,
       "selectionKind": "source-first-image",
       "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w45|ElevenLabs가 Unity 음성 에이전트 SDK를 공개했어요|https://elevenlabs.io/blog/unity-sdk-release",
+      "week": "2026-w45",
+      "title": "ElevenLabs가 Unity 음성 에이전트 SDK를 공개했어요",
+      "sourceUrl": "https://elevenlabs.io/blog/unity-sdk-release",
+      "status": "available",
+      "checkedAt": "2026-11-06T23:31:41.842Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다 (대체 텍스트: Tadas Petra).",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://elevenlabs.io/blog/unity-sdk-release",
+          "httpStatus": 200,
+          "sha256": "627c45c106a6bb152e31afa0c01a9e25b1103c28657846f2bd46d1b347115340"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fd5oydif6v94-tadas.webp&w=3840&q=80",
+          "httpStatus": 200,
+          "sha256": "8b9ae50d1b1d0e34b880ebd750398aa6b0d06e6cd70da7e1838c8a6dde74f6d2",
+          "contentType": "image/jpeg"
+        }
+      ],
+      "imageUrl": "https://elevenlabs.io/_next/image?url=https%3A%2F%2Feleven-public-cdn.elevenlabs.io%2Fpayloadcms%2Fd5oydif6v94-tadas.webp&w=3840&q=80",
+      "publicPath": "/source-media/weekly-20261107/8b9ae50d1b1d.jpg",
+      "sha256": "8b9ae50d1b1d0e34b880ebd750398aa6b0d06e6cd70da7e1838c8a6dde74f6d2",
+      "byteSize": 51938,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w45|OpenAI, 보안 연구 모델 GPT‑6 Cyber를 발표했어요|https://openai.com/index/introducing-gpt-6-cyber",
+      "week": "2026-w45",
+      "title": "OpenAI, 보안 연구 모델 GPT‑6 Cyber를 발표했어요",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber",
+      "status": "available",
+      "checkedAt": "2026-11-06T23:31:41.842Z",
+      "reason": "기사 상단의 첫 의미 있는 이미지입니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://openai.com/index/introducing-gpt-6-cyber",
+          "httpStatus": 200,
+          "sha256": "64604d48d7cac3f223413d1f76fd46757d7761d90d57dbec3c2c90f70a60d35e"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://openai.com/_next/static/immutable/media/pre-dawn.3n171z7_lqvwk.webp",
+          "httpStatus": 200,
+          "sha256": "bcc13824a182bc45f864d7f66d8dd4f5212cad23174e4bc50b97723e20249885",
+          "contentType": "image/webp"
+        }
+      ],
+      "imageUrl": "https://openai.com/_next/static/immutable/media/pre-dawn.3n171z7_lqvwk.webp",
+      "publicPath": "/source-media/weekly-20261107/bcc13824a182.webp",
+      "sha256": "bcc13824a182bc45f864d7f66d8dd4f5212cad23174e4bc50b97723e20249885",
+      "byteSize": 9410,
+      "selectionKind": "source-first-image",
+      "selectionPolicy": "source-top-image-v1"
+    },
+    {
+      "key": "2026-w45|Higgsfield, AI 진행자 영상 도구 Shorts Studio 출시|https://higgsfield.ai/blog/higgsfield-introduces-shorts-studio",
+      "week": "2026-w45",
+      "title": "Higgsfield, AI 진행자 영상 도구 Shorts Studio 출시",
+      "sourceUrl": "https://higgsfield.ai/blog/higgsfield-introduces-shorts-studio",
+      "status": "fetch-failed",
+      "checkedAt": "2026-11-06T23:31:41.842Z",
+      "reason": "원문에서 기사 이미지를 찾았으나 이미지 파일 내려받기가 실패했습니다 (HTTP 404). 이미지 부재가 아닙니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://higgsfield.ai/blog/higgsfield-introduces-shorts-studio",
+          "httpStatus": 200,
+          "sha256": "3e80248f5a4cc836400f122d0e3bf026574cf993794a56fa89cedbb3340a4685"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://higgsfield.ai/blog/quality=85/https:/cdn.sanity.io/images/s479xw3z/production/4ae19b835182e1981ab118c0c438de42b250d813-2720x1536.png",
+          "httpStatus": 404
+        }
+      ]
+    },
+    {
+      "key": "2026-w45|Higgsfield, 이야기형 영상 광고 기능 선보였어요|https://higgsfield.ai/blog/micro-drama-ads-higgsfield-ads-studio",
+      "week": "2026-w45",
+      "title": "Higgsfield, 이야기형 영상 광고 기능 선보였어요",
+      "sourceUrl": "https://higgsfield.ai/blog/micro-drama-ads-higgsfield-ads-studio",
+      "status": "fetch-failed",
+      "checkedAt": "2026-11-06T23:31:41.842Z",
+      "reason": "원문에서 기사 이미지를 찾았으나 이미지 파일 내려받기가 실패했습니다 (HTTP 404). 이미지 부재가 아닙니다.",
+      "evidence": [
+        {
+          "kind": "source-fetch",
+          "url": "https://higgsfield.ai/blog/micro-drama-ads-higgsfield-ads-studio",
+          "httpStatus": 200,
+          "sha256": "aa1d1116a7679164a3ee11746fc55c445f4c64f4f8037a8ffadfddba551ee804"
+        },
+        {
+          "kind": "image-fetch",
+          "url": "https://higgsfield.ai/blog/quality=85/https:/cdn.sanity.io/images/s479xw3z/production/0dca8e24a81aa061e1c3e096503de2c8e24a07b9-2720x1536.png",
+          "httpStatus": 404
+        }
+      ]
     }
   ],
   "abRecords": [
