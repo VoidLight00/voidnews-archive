@@ -1,0 +1,52 @@
+{
+ "edition": "daily",
+ "date": "2026-10-31",
+ "author": {
+  "name": "VoidNews AI",
+  "kind": "ai"
+ },
+ "items": [
+  {
+   "headline": "Higgsfield, 일부 유료 구독에 이미지·영상 생성 7일 무제한 혜택 제공",
+   "summary": "Higgsfield가 대상 Pro·Plus·Max·Ultra 구독에 7일 무제한 생성 혜택을 안내했습니다. 월간 Pro·Plus는 Seedream 5.0 Pro와 GPT Image 2.5를 포함하며, 연간 Pro·Plus와 월간·연간 Max·Ultra는 Nano Banana Pro와 Seedance 2.5까지 포함합니다. 동시 생성은 이미지 2건과 영상 1건으로 제한되며, 영상 해상도는 구독 조건에 따라 다릅니다. 이용하려면 웹사이트에서 Unlimited 설정을 켜야 하며, MCP·CLI·Canvas·Supercomputer·Marketing Studio는 혜택 대상에서 제외됩니다.",
+   "category": "제품",
+   "sources": [
+    {
+     "publisher": "Higgsfield",
+     "title": "Higgsfield’s New 7-Day Unlimited Bonus: Models, Plans, and Limits",
+     "date": "2026-10-30",
+     "url": "https://higgsfield.ai/blog/higgsfield-7-day-unlimited-bonus",
+     "tier": "official"
+    }
+   ]
+  },
+  {
+   "headline": "NVIDIA, Nemotron으로 음성 대화와 얼굴 애니메이션을 결합한 제작 사례 공개",
+   "summary": "NVIDIA가 음성 인식·언어 모델·음성 합성·얼굴 애니메이션을 연결한 할로윈 캐릭터 MonsterHouse의 구현 사례를 소개했습니다. 이 시스템은 NVIDIA GPU 2개를 탑재한 워크스테이션에서 작동하며, 작성자가 보고한 응답 시간 중앙값은 새로 생성한 답변 1.70초, 미리 저장한 답변 0.72초입니다. 글은 Nemotron 3.5 Bolt와 Nemotron 3 ASR 등 구성 요소로 비슷한 캐릭터를 만드는 방법을 안내하지만, MonsterHouse 자체 코드는 공개하지 않았습니다.",
+   "category": "개발 도구",
+   "sources": [
+    {
+     "publisher": "NVIDIA",
+     "title": "Building a Haunted House with NVIDIA Nemotron Open Models",
+     "date": "2026-10-30",
+     "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+     "tier": "official"
+    }
+   ]
+  },
+  {
+   "headline": "TELUS Digital, ElevenAgents 환영 전화를 받은 고객의 초기 해지율 비교 결과 공개",
+   "summary": "ElevenLabs가 TELUS Digital의 신규 가정용 인터넷 고객 대상 음성 에이전트 실증 사례를 공개했습니다. 에이전트는 개통 후 첫 90일 동안 고객에게 전화해 첫 청구서와 셀프서비스 이용 방법 등을 안내했으며, 실증에서는 약 2,300건의 발신 전화를 처리했습니다. 환영 전화를 받은 고객의 30일 이내 해지율은 전체 신규 개통 고객 집단의 절반 미만이었고, 통화 평점은 평균 10점 만점에 8.5점이었습니다. 다만 이 비교 결과만으로 전화가 해지율 감소의 원인이라고 단정할 수는 없습니다.",
+   "category": "에이전트",
+   "sources": [
+    {
+     "publisher": "ElevenLabs",
+     "title": "TELUS Digital cut early cancellations by more than half with ElevenAgents",
+     "date": "2026-10-30",
+     "url": "https://elevenlabs.io/blog/telus-digital-early-cancellations",
+     "tier": "official"
+    }
+   ]
+  }
+ ]
+}

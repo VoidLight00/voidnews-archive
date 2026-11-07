@@ -43,6 +43,8 @@ const LOCATIONS = [
   ["app/[slug]/editorial/PostDetail.tsx", "PostDetail", "48"],
   // 발표 하이라이트도 AI가 쓴 요약·본문을 그대로 보여 주고 sitemap에 있습니다(2026-11-01 독립 검토 지적).
   ["app/presentation/[slug]/page.tsx", "PresentationPage"],
+  // 데일리 브리핑 한 호도 AI가 쓴 요약을 그대로 보여 주고 sitemap에 있습니다(R30, 2026-11-07).
+  ["app/newsletter/daily/[date]/page.tsx", "DailyIssuePage"],
 ];
 const BADGE_IMPORT = "@/app/components/AuthorBadge";
 

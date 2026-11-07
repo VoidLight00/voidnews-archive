@@ -203,6 +203,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Weekly
                 </a>
                 <a
+                  href="/newsletter/daily/"
+                  className="mono"
+                  style={{
+                    fontSize: 11.5,
+                    color: "var(--text)",
+                    textDecoration: "none",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    padding: "6px 10px",
+                    borderRadius: 2,
+                  }}
+                >
+                  Daily
+                </a>
+                <a
                   href="/ab"
                   className="mono"
                   style={{

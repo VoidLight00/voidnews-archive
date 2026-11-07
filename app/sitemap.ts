@@ -3,6 +3,7 @@ import { getAllSlugs } from "@/lib/data";
 import { getAllEditorialPostParams } from "@/lib/editorial";
 import { editions as abEditions, getEditionHref } from "@/lib/ab/data";
 import { getAllABPostParams } from "@/lib/ab/post-routes";
+import { getDailyIssues } from "@/lib/daily";
 
 const BASE = "https://voidnews-archive.vercel.app";
 
@@ -43,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
+  const daily = getDailyIssues().map(({ date }) => ({
+    url: `${BASE}/newsletter/daily/${date}/`,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     { url: `${BASE}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE}/ab/`, changeFrequency: "weekly", priority: 0.9 },
@@ -52,6 +59,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...abPosts,
     ...presentations,
     { url: `${BASE}/newsletter/`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE}/newsletter/daily/`, changeFrequency: "daily", priority: 0.8 },
+    ...daily,
     { url: `${BASE}/privacy/`, changeFrequency: "yearly", priority: 0.1 },
     { url: `${BASE}/tos/`, changeFrequency: "yearly", priority: 0.1 },
   ];
