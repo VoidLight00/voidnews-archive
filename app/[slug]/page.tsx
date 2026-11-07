@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getAllSlugs, getWeek, getWeekList, weeks, weekDateLabel } from "@/lib/data";
 import WeeklyClient from "./WeeklyClient";
 import EditorialWeeklyClient from "./editorial/EditorialWeeklyClient";
+import TrendingWidget from "@/app/trending/TrendingWidget";
 
 // 사용자 결정:
 // - w21: editorial 카드 그리드 UI (TestingCatalog 스타일)
@@ -58,6 +59,7 @@ export default async function WeekPage({ params }: { params: Promise<{ slug: str
       latestWeek={{ slug: latestWeek.slug, week: latestWeek.week, period: latestWeek.period }}
       weekList={getWeekList()}
       nestedRoutePrefix={nestedRoutePrefix}
+      aside={slug === latestWeek.slug ? <TrendingWidget /> : undefined}
     />
   );
 }

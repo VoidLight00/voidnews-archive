@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/newsletter/`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/newsletter/daily/`, changeFrequency: "daily", priority: 0.8 },
     ...daily,
+    { url: `${BASE}/trending/`, changeFrequency: "daily", priority: 0.7 },
     { url: `${BASE}/privacy/`, changeFrequency: "yearly", priority: 0.1 },
     { url: `${BASE}/tos/`, changeFrequency: "yearly", priority: 0.1 },
   ];

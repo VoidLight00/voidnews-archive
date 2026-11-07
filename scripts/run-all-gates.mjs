@@ -49,6 +49,8 @@ const BUILD_GATES = {
   "check-ai-author-label.mjs": [],
   "check-daily-issues.mjs": [], // 데일리 브리핑 자료 형식·출처·내부 기록 경계(R30, 2026-11-07)
   "check-daily-issues.selftest.mjs": [], // 위 게이트의 함정 6개 exit 1, 대조군 2개 exit 0
+  "check-trending.mjs": [], // GitHub 트렌딩 스냅숏 형식·주소·숫자(R31, 2026-11-08)
+  "check-trending.selftest.mjs": [], // 수집기 해석 6건과 위 게이트의 함정 9개 exit 1, 대조군 2개 exit 0
   "check-newsletter-consent.mjs": [],
   "check-official-labels.mjs": [],
   "check-theme-contract.mjs": [],

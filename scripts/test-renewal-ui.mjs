@@ -109,6 +109,7 @@ const EXTENDED_ROUTES = [
   // 데일리 브리핑(R30, 2026-11-07). 지난 호는 바뀌지 않으므로 날짜를 고정해도 매일 게시가 시험을 깨지 않습니다.
   { id: 'daily', path: '/newsletter/daily/', kind: 'page' },
   { id: 'daily1104', path: '/newsletter/daily/2026-11-04/', kind: 'page' },
+  { id: 'trending', path: '/trending/', kind: 'page' },
 ];
 const EXTENDED = argv.includes('--extended');
 const ROUTES = (EXTENDED ? EXTENDED_ROUTES : BASE_ROUTES).filter((r) => !ONLY || ONLY.split(',').includes(r.id));

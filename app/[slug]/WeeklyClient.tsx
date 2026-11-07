@@ -33,6 +33,7 @@ import {
 import { WeekDropdown } from "./weekly/WeekDropdown";
 import BrowseGrid from "@/app/components/BrowseGrid";
 import { getWeeklyBrowseItems } from "@/lib/weekly-browse";
+import trendingStyles from "@/app/trending/trending.module.css";
 
 // ── 메인 컴포넌트 ────────────────────────────────
 export default function WeeklyClient({
@@ -44,6 +45,8 @@ export default function WeeklyClient({
   weekList,
   // editorial nested route 옵션 — 카드 클릭 시 모달 대신 `${nestedRoutePrefix}/${post.slug}/` 풀 페이지 이동
   nestedRoutePrefix,
+  // 대표 기사 옆 자리 — 최신 호 화면에서 서버가 만든 GitHub 트렌딩 위젯을 넘긴다(R31)
+  aside,
 }: {
   data: WeeklyData;
   prevWeek?: { slug: string; week: number; period: string };
@@ -51,6 +54,7 @@ export default function WeeklyClient({
   latestWeek: { slug: string; week: number; period: string };
   weekList: WeekListItem[];
   nestedRoutePrefix?: string;
+  aside?: ReactNode;
 }) {
   const { t, locale } = useLocale();
   const [selectedPost, setSelectedPost] = useState<SelectedPostState | null>(null);
@@ -607,11 +611,16 @@ export default function WeeklyClient({
           </div>
         </section>
 
-        <TopStoriesSection
-          stories={topStories}
-          issueSlug={data.slug}
-          onOpenStory={openPost}
-        />
+        {aside ? (
+          <div className={trendingStyles.heroWithAside}>
+            <div className={trendingStyles.heroMain}>
+              <TopStoriesSection stories={topStories} issueSlug={data.slug} onOpenStory={openPost} />
+            </div>
+            {aside}
+          </div>
+        ) : (
+          <TopStoriesSection stories={topStories} issueSlug={data.slug} onOpenStory={openPost} />
+        )}
 
 
         <BrowseGrid

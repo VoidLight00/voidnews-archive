@@ -218,6 +218,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Daily
                 </a>
                 <a
+                  href="/trending/"
+                  className="mono"
+                  style={{
+                    fontSize: 11.5,
+                    color: "var(--text)",
+                    textDecoration: "none",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    padding: "6px 10px",
+                    borderRadius: 2,
+                  }}
+                >
+                  Trending
+                </a>
+                <a
                   href="/ab"
                   className="mono"
                   style={{
